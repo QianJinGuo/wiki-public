@@ -1,0 +1,10 @@
+---
+title: "codex-goal-source-code-deep-dive"
+type: source-redirect
+source_url: "https://mp.weixin.qq.com/s/Zzju5ApPRePEmBBsIkpPHg"
+---
+# codex-goal-source-code-deep-dive
+
+本页是公开来源索引，不包含原文正文。
+
+[访问原始来源](https://mp.weixin.qq.com/s/Zzju5ApPRePEmBBsIkpPHg)

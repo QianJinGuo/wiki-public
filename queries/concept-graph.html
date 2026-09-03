@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wiki 概念图谱 — 2026-06-15 15:35</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #0f0f1a; color: #e0e0e0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; overflow: hidden; }
+#graph { width: 100vw; height: 100vh; }
+.tooltip { position: absolute; background: rgba(20,20,40,0.95); border: 1px solid #3a3a5a; border-radius: 8px; padding: 12px 16px; font-size: 13px; pointer-events: none; display: none; max-width: 300px; box-shadow: 0 4px 20px rgba(0,0,0,0.5); }
+.tooltip .name { font-size: 16px; font-weight: 600; color: #7c9fff; margin-bottom: 4px; }
+.tooltip .count { color: #8a8aaa; font-size: 12px; }
+.legend { position: absolute; bottom: 20px; left: 20px; background: rgba(20,20,40,0.85); border: 1px solid #3a3a5a; border-radius: 8px; padding: 12px 16px; font-size: 12px; color: #8a8aaa; }
+.legend strong { color: #c0c0e0; }
+h1 { position: absolute; top: 20px; left: 20px; font-size: 18px; color: #7c9fff; font-weight: 500; }
+.count-badge { position: absolute; top: 20px; right: 20px; background: rgba(30,30,60,0.85); border: 1px solid #3a3a5a; border-radius: 8px; padding: 8px 14px; font-size: 12px; color: #8a8aaa; }
+</style>
+</head>
+<body>
+<h1>🧠 Wiki 概念图谱</h1>
+<div class="count-badge">50 标签 · 200 关联</div>
+<div id="graph"></div>
+<div class="tooltip" id="tooltip"><div class="name" id="tip-name"></div><div class="count" id="tip-count"></div></div>
+<div class="legend"><strong>节点大小</strong> = 标签实体数 &nbsp;·&nbsp; <strong>连线粗细</strong> = 共现实体数<br>拖拽查看 · 悬停显示详情</div>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script>
+const width = window.innerWidth, height = window.innerHeight;
+const nodesData = [{"id": "agent", "size": 802, "group": 1}, {"id": "llm", "size": 413, "group": 1}, {"id": "security", "size": 284, "group": 1}, {"id": "architecture", "size": 277, "group": 1}, {"id": "code", "size": 254, "group": 1}, {"id": "memory", "size": 249, "group": 1}, {"id": "aws", "size": 232, "group": 1}, {"id": "data", "size": 225, "group": 1}, {"id": "ai", "size": 217, "group": 1}, {"id": "tool-use", "size": 206, "group": 1}, {"id": "workflow", "size": 206, "group": 1}, {"id": "prompt", "size": 197, "group": 1}, {"id": "claude-code", "size": 180, "group": 1}, {"id": "evaluation", "size": 171, "group": 1}, {"id": "open-source", "size": 170, "group": 1}, {"id": "mlops", "size": 168, "group": 1}, {"id": "anthropic", "size": 159, "group": 1}, {"id": "rag", "size": 156, "group": 1}, {"id": "rl", "size": 153, "group": 1}, {"id": "observability", "size": 145, "group": 1}, {"id": "harness", "size": 138, "group": 1}, {"id": "claude", "size": 137, "group": 1}, {"id": "newsletter", "size": 137, "group": 1}, {"id": "search", "size": 133, "group": 1}, {"id": "fine-tuning", "size": 118, "group": 1}, {"id": "harness-engineering", "size": 102, "group": 1}, {"id": "openai", "size": 98, "group": 1}, {"id": "skill", "size": 95, "group": 1}, {"id": "vision", "size": 93, "group": 1}, {"id": "engineering", "size": 84, "group": 1}, {"id": "multi-agent", "size": 83, "group": 1}, {"id": "article", "size": 82, "group": 1}, {"id": "openclaw", "size": 80, "group": 1}, {"id": "mcp", "size": 77, "group": 1}, {"id": "nvidia", "size": 70, "group": 1}, {"id": "bedrock", "size": 69, "group": 1}, {"id": "wechat", "size": 66, "group": 1}, {"id": "database", "size": 64, "group": 1}, {"id": "game", "size": 59, "group": 1}, {"id": "ai-agent", "size": 52, "group": 1}, {"id": "aws-china-blog", "size": 50, "group": 1}, {"id": "tool", "size": 47, "group": 1}, {"id": "model", "size": 46, "group": 1}, {"id": "knowledge-mgmt", "size": 41, "group": 1}, {"id": "agentic-ai", "size": 39, "group": 1}, {"id": "google", "size": 39, "group": 1}, {"id": "codex", "size": 39, "group": 1}, {"id": "prompt-engineering", "size": 39, "group": 1}, {"id": "context-management", "size": 38, "group": 1}, {"id": "robotics", "size": 37, "group": 1}];
+const linksData = [{"source": "agent", "target": "llm", "value": 267}, {"source": "agent", "target": "memory", "value": 211}, {"source": "agent", "target": "code", "value": 200}, {"source": "agent", "target": "architecture", "value": 198}, {"source": "code", "target": "data", "value": 180}, {"source": "code", "target": "tool-use", "value": 178}, {"source": "code", "target": "llm", "value": 177}, {"source": "agent", "target": "tool-use", "value": 174}, {"source": "agent", "target": "data", "value": 168}, {"source": "agent", "target": "prompt", "value": 164}, {"source": "agent", "target": "workflow", "value": 162}, {"source": "llm", "target": "memory", "value": 152}, {"source": "llm", "target": "tool-use", "value": 150}, {"source": "code", "target": "memory", "value": 149}, {"source": "code", "target": "prompt", "value": 148}, {"source": "data", "target": "llm", "value": 148}, {"source": "data", "target": "tool-use", "value": 145}, {"source": "llm", "target": "prompt", "value": 145}, {"source": "memory", "target": "tool-use", "value": 137}, {"source": "code", "target": "workflow", "value": 133}, {"source": "agent", "target": "security", "value": 132}, {"source": "code", "target": "rl", "value": 130}, {"source": "architecture", "target": "llm", "value": 129}, {"source": "prompt", "target": "tool-use", "value": 129}, {"source": "agent", "target": "evaluation", "value": 128}, {"source": "data", "target": "memory", "value": 128}, {"source": "architecture", "target": "memory", "value": 126}, {"source": "agent", "target": "mlops", "value": 125}, {"source": "architecture", "target": "code", "value": 125}, {"source": "code", "target": "mlops", "value": 124}, {"source": "memory", "target": "prompt", "value": 120}, {"source": "data", "target": "mlops", "value": 119}, {"source": "data", "target": "prompt", "value": 119}, {"source": "architecture", "target": "data", "value": 118}, {"source": "llm", "target": "workflow", "value": 116}, {"source": "data", "target": "workflow", "value": 115}, {"source": "tool-use", "target": "workflow", "value": 114}, {"source": "agent", "target": "search", "value": 112}, {"source": "code", "target": "search", "value": 111}, {"source": "llm", "target": "mlops", "value": 111}, {"source": "code", "target": "security", "value": 110}, {"source": "mlops", "target": "tool-use", "value": 110}, {"source": "agent", "target": "open-source", "value": 108}, {"source": "agent", "target": "rl", "value": 108}, {"source": "data", "target": "rl", "value": 108}, {"source": "memory", "target": "mlops", "value": 108}, {"source": "code", "target": "observability", "value": 106}, {"source": "memory", "target": "workflow", "value": 105}, {"source": "agent", "target": "rag", "value": 104}, {"source": "code", "target": "evaluation", "value": 104}, {"source": "llm", "target": "security", "value": 102}, {"source": "evaluation", "target": "llm", "value": 101}, {"source": "data", "target": "security", "value": 100}, {"source": "llm", "target": "search", "value": 100}, {"source": "architecture", "target": "tool-use", "value": 99}, {"source": "data", "target": "observability", "value": 98}, {"source": "llm", "target": "rl", "value": 97}, {"source": "agent", "target": "observability", "value": 96}, {"source": "data", "target": "search", "value": 96}, {"source": "search", "target": "tool-use", "value": 96}, {"source": "architecture", "target": "mlops", "value": 94}, {"source": "rl", "target": "tool-use", "value": 94}, {"source": "code", "target": "fine-tuning", "value": 93}, {"source": "code", "target": "open-source", "value": 93}, {"source": "agent", "target": "harness", "value": 92}, {"source": "security", "target": "tool-use", "value": 92}, {"source": "agent", "target": "aws", "value": 90}, {"source": "prompt", "target": "workflow", "value": 90}, {"source": "fine-tuning", "target": "llm", "value": 89}, {"source": "evaluation", "target": "tool-use", "value": 88}, {"source": "mlops", "target": "prompt", "value": 88}, {"source": "mlops", "target": "workflow", "value": 88}, {"source": "architecture", "target": "prompt", "value": 87}, {"source": "data", "target": "evaluation", "value": 87}, {"source": "llm", "target": "open-source", "value": 87}, {"source": "agent", "target": "fine-tuning", "value": 86}, {"source": "memory", "target": "search", "value": 86}, {"source": "prompt", "target": "rl", "value": 86}, {"source": "architecture", "target": "workflow", "value": 85}, {"source": "llm", "target": "rag", "value": 85}, {"source": "memory", "target": "security", "value": 84}, {"source": "data", "target": "fine-tuning", "value": 83}, {"source": "data", "target": "rag", "value": 83}, {"source": "agent", "target": "claude", "value": 82}, {"source": "agent", "target": "claude-code", "value": 82}, {"source": "observability", "target": "tool-use", "value": 81}, {"source": "code", "target": "rag", "value": 80}, {"source": "data", "target": "open-source", "value": 80}, {"source": "llm", "target": "observability", "value": 80}, {"source": "prompt", "target": "search", "value": 80}, {"source": "prompt", "target": "security", "value": 80}, {"source": "evaluation", "target": "memory", "value": 79}, {"source": "evaluation", "target": "prompt", "value": 79}, {"source": "open-source", "target": "tool-use", "value": 79}, {"source": "observability", "target": "rl", "value": 78}, {"source": "memory", "target": "rl", "value": 76}, {"source": "memory", "target": "open-source", "value": 75}, {"source": "architecture", "target": "security", "value": 74}, {"source": "mlops", "target": "rl", "value": 73}, {"source": "search", "target": "workflow", "value": 73}, {"source": "code", "target": "vision", "value": 72}, {"source": "mlops", "target": "search", "value": 72}, {"source": "rl", "target": "workflow", "value": 72}, {"source": "architecture", "target": "open-source", "value": 71}, {"source": "evaluation", "target": "mlops", "value": 71}, {"source": "fine-tuning", "target": "mlops", "value": 71}, {"source": "agent", "target": "anthropic", "value": 70}, {"source": "architecture", "target": "evaluation", "value": 70}, {"source": "rl", "target": "search", "value": 70}, {"source": "agent", "target": "skill", "value": 69}, {"source": "memory", "target": "observability", "value": 69}, {"source": "rag", "target": "tool-use", "value": 69}, {"source": "observability", "target": "workflow", "value": 68}, {"source": "architecture", "target": "search", "value": 67}, {"source": "memory", "target": "rag", "value": 67}, {"source": "evaluation", "target": "workflow", "value": 66}, {"source": "fine-tuning", "target": "memory", "value": 66}, {"source": "fine-tuning", "target": "rl", "value": 66}, {"source": "aws", "target": "bedrock", "value": 65}, {"source": "evaluation", "target": "rl", "value": 65}, {"source": "mlops", "target": "observability", "value": 65}, {"source": "observability", "target": "prompt", "value": 65}, {"source": "security", "target": "workflow", "value": 65}, {"source": "agent", "target": "ai", "value": 64}, {"source": "fine-tuning", "target": "prompt", "value": 64}, {"source": "fine-tuning", "target": "tool-use", "value": 64}, {"source": "mlops", "target": "security", "value": 64}, {"source": "open-source", "target": "prompt", "value": 64}, {"source": "llm", "target": "vision", "value": 63}, {"source": "rag", "target": "search", "value": 63}, {"source": "architecture", "target": "fine-tuning", "value": 61}, {"source": "evaluation", "target": "search", "value": 61}, {"source": "architecture", "target": "rag", "value": 60}, {"source": "mlops", "target": "open-source", "value": 60}, {"source": "open-source", "target": "workflow", "value": 60}, {"source": "agent", "target": "harness-engineering", "value": 59}, {"source": "agent", "target": "vision", "value": 59}, {"source": "architecture", "target": "rl", "value": 59}, {"source": "data", "target": "vision", "value": 59}, {"source": "mlops", "target": "rag", "value": 59}, {"source": "data", "target": "database", "value": 58}, {"source": "observability", "target": "search", "value": 58}, {"source": "rag", "target": "rl", "value": 58}, {"source": "agent", "target": "database", "value": 57}, {"source": "evaluation", "target": "observability", "value": 57}, {"source": "rl", "target": "security", "value": 57}, {"source": "search", "target": "security", "value": 57}, {"source": "evaluation", "target": "fine-tuning", "value": 56}, {"source": "fine-tuning", "target": "search", "value": 56}, {"source": "open-source", "target": "rl", "value": 56}, {"source": "rag", "target": "workflow", "value": 56}, {"source": "architecture", "target": "observability", "value": 55}, {"source": "fine-tuning", "target": "workflow", "value": 55}, {"source": "prompt", "target": "rag", "value": 55}, {"source": "aws", "target": "llm", "value": 53}, {"source": "evaluation", "target": "security", "value": 53}, {"source": "anthropic", "target": "claude-code", "value": 52}, {"source": "code", "target": "database", "value": 52}, {"source": "observability", "target": "security", "value": 52}, {"source": "code", "target": "game", "value": 51}, {"source": "database", "target": "tool-use", "value": 51}, {"source": "open-source", "target": "search", "value": 51}, {"source": "rl", "target": "vision", "value": 51}, {"source": "database", "target": "llm", "value": 49}, {"source": "article", "target": "newsletter", "value": 48}, {"source": "anthropic", "target": "claude", "value": 47}, {"source": "tool-use", "target": "vision", "value": 47}, {"source": "fine-tuning", "target": "observability", "value": 46}, {"source": "aws", "target": "security", "value": 45}, {"source": "claude", "target": "llm", "value": 45}, {"source": "data", "target": "game", "value": 45}, {"source": "database", "target": "memory", "value": 45}, {"source": "memory", "target": "vision", "value": 45}, {"source": "observability", "target": "rag", "value": 45}, {"source": "open-source", "target": "security", "value": 45}, {"source": "evaluation", "target": "rag", "value": 44}, {"source": "observability", "target": "open-source", "value": 44}, {"source": "game", "target": "rl", "value": 43}, {"source": "agent", "target": "nvidia", "value": 42}, {"source": "ai", "target": "security", "value": 42}, {"source": "database", "target": "mlops", "value": 42}, {"source": "fine-tuning", "target": "open-source", "value": 42}, {"source": "game", "target": "llm", "value": 42}, {"source": "prompt", "target": "vision", "value": 42}, {"source": "vision", "target": "workflow", "value": 42}, {"source": "agent", "target": "game", "value": 41}, {"source": "agent", "target": "openclaw", "value": 41}, {"source": "aws", "target": "data", "value": 41}, {"source": "agent", "target": "openai", "value": 40}, {"source": "architecture", "target": "database", "value": 40}, {"source": "aws", "target": "code", "value": 40}, {"source": "evaluation", "target": "open-source", "value": 40}, {"source": "observability", "target": "vision", "value": 40}, {"source": "rag", "target": "security", "value": 40}, {"source": "aws", "target": "rl", "value": 39}, {"source": "fine-tuning", "target": "vision", "value": 39}, {"source": "game", "target": "tool-use", "value": 39}, {"source": "fine-tuning", "target": "rag", "value": 38}, {"source": "mlops", "target": "vision", "value": 38}, {"source": "agent", "target": "engineering", "value": 37}];
+
+const maxCount = 802, minCount = 37;
+
+const svg = d3.select("#graph").append("svg")
+    .attr("width", width).attr("height", height);
+
+const g = svg.append("g");
+
+const zoom = d3.zoom()
+    .scaleExtent([0.1, 4])
+    .on("zoom", (event) => g.attr("transform", event.transform));
+svg.call(zoom);
+
+const simulation = d3.forceSimulation(nodesData)
+    .force("link", d3.forceLink(linksData).id(d => d.id).distance(80).strength(d => d.value / 50))
+    .force("charge", d3.forceManyBody().strength(-200))
+    .force("center", d3.forceCenter(width / 2, height / 2))
+    .force("collision", d3.forceCollide().radius(d => Math.sqrt(d.size) * 2 + 10));
+
+const link = g.append("g")
+    .selectAll("line")
+    .data(linksData)
+    .join("line")
+    .attr("stroke", "#3a3a5a")
+    .attr("stroke-width", d => Math.max(0.5, Math.log(d.value)))
+    .attr("stroke-opacity", 0.4);
+
+const node = g.append("g")
+    .selectAll("g")
+    .data(nodesData)
+    .join("g")
+    .call(d3.drag()
+        .on("start", (event, d) => { if (!event.active) simulation.alphaTarget(0.3).restart(); d.fx = d.x; d.fy = d.y; })
+        .on("drag", (event, d) => { d.fx = event.x; d.fy = event.y; })
+        .on("end", (event, d) => { if (!event.active) simulation.alphaTarget(0); d.fx = null; d.fy = null; }));
+
+const radiusScale = d3.scaleSqrt().domain([minCount, maxCount]).range([6, 30]);
+
+node.append("circle")
+    .attr("r", d => radiusScale(d.size))
+    .attr("fill", d => {
+        const r = Math.min(255, 80 + d.size * 2);
+        const b = Math.min(255, 180 + d.size * 1.5);
+        return `rgb(${r}, 60, ${b})`;
+    })
+    .attr("stroke", "#7c9fff")
+    .attr("stroke-width", 1.5)
+    .attr("opacity", 0.85);
+
+node.append("text")
+    .text(d => d.id)
+    .attr("x", d => radiusScale(d.size) + 5)
+    .attr("y", 4)
+    .attr("font-size", d => Math.max(10, Math.min(16, 10 + d.size / 20)))
+    .attr("fill", "#c0c0e0")
+    .attr("font-family", "sans-serif");
+
+const tooltip = document.getElementById("tooltip");
+const tipName = document.getElementById("tip-name");
+const tipCount = document.getElementById("tip-count");
+
+node.on("mouseover", (event, d) => {
+    tooltip.style.display = "block";
+    tipName.textContent = d.id;
+    tipCount.textContent = `${d.size} 个实体`;
+})
+.on("mousemove", (event) => {
+    tooltip.style.left = (event.pageX + 15) + "px";
+    tooltip.style.top = (event.pageY - 10) + "px";
+})
+.on("mouseout", () => { tooltip.style.display = "none"; });
+
+simulation.on("tick", () => {
+    link.attr("x1", d => d.source.x).attr("y1", d => d.source.y)
+        .attr("x2", d => d.target.x).attr("y2", d => d.target.y);
+    node.attr("transform", d => `translate(${d.x},${d.y})`);
+});
+</script>
+</body>
+</html>

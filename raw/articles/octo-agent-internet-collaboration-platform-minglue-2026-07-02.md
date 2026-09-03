@@ -1,0 +1,10 @@
+---
+title: "一个开源平台，编织起了Agent「互联网」"
+type: source-redirect
+source_url: "https://mp.weixin.qq.com/s/rB51LZBmrUNTPDAjw017qA"
+---
+# 一个开源平台，编织起了Agent「互联网」
+
+本页是公开来源索引，不包含原文正文。
+
+[访问原始来源](https://mp.weixin.qq.com/s/rB51LZBmrUNTPDAjw017qA)

@@ -1,0 +1,10 @@
+---
+title: "automate-progressive-rollouts-with-vercel-flags-vercel"
+type: source-redirect
+source_url: "https://vercel.com/changelog/progressive-rollouts-in-vercel-flags"
+---
+# automate-progressive-rollouts-with-vercel-flags-vercel
+
+本页是公开来源索引，不包含原文正文。
+
+[访问原始来源](https://vercel.com/changelog/progressive-rollouts-in-vercel-flags)

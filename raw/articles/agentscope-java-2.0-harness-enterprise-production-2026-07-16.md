@@ -1,0 +1,10 @@
+---
+title: "AgentScope 2.0 生产可用，企业级 Harness 底座全解析！"
+type: source-redirect
+source_url: "https://mp.weixin.qq.com/s/jIWU-aYtBFbRJSQxXVXaDQ"
+---
+# AgentScope 2.0 生产可用，企业级 Harness 底座全解析！
+
+本页是公开来源索引，不包含原文正文。
+
+[访问原始来源](https://mp.weixin.qq.com/s/jIWU-aYtBFbRJSQxXVXaDQ)

@@ -1,0 +1,10 @@
+---
+title: "开放k3权重抢招全球大使kimi这次想干什么"
+type: source-redirect
+source_url: "https://mp.weixin.qq.com/s/jnIWoL-JV5YVC6altTdGqA"
+---
+# 开放k3权重抢招全球大使kimi这次想干什么
+
+本页是公开来源索引，不包含原文正文。
+
+[访问原始来源](https://mp.weixin.qq.com/s/jnIWoL-JV5YVC6altTdGqA)

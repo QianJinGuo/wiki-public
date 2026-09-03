@@ -1,0 +1,114 @@
+---
+
+title: "用 AgentKit，5 分钟搭建云端安全隔离的 DeepSeek Harness"
+created: 2026-08-30
+updated: 2026-08-30
+type: entity
+tags: ['harness', 'safety', 'ai', 'inference', 'coding', 'agent']
+sources: [raw/articles/用-agentkit5-分钟搭建云端安全隔离的-deepseek-harness]
+confidence: 0.7
+---
+
+# 用 AgentKit，5 分钟搭建云端安全隔离的 DeepSeek Harness
+
+# 用 AgentKit，5 分钟搭建云端安全隔离的 DeepSeek Harness
+
+AgentKit 2026-08-25 18:00 北京
+
+近期，DeepSeek Harness 热度持续走高。尤其在 Coding Agent 场景中，它能够围绕代码库，快速完成代码理解、文件编辑、命令执行等多步开发任务，并提供 Web 界面和基础沙箱，帮助开发者高效搭建和体验 AI 编程智能体。 ^[raw/articles/用-agentkit5-分钟搭建云端安全隔离的-deepseek-harness.md]
+
+但当 Harness 从个人开发工具走向团队研发和企业生产，本地运行模式的局限也随之显现：
+
+  * **长任务难以稳定运行：** 任务依赖个人电脑，休眠、关机或断网都可能导致执行中断。对于耗时数小时甚至更久的代码生成、构建和测试任务，本地环境很难提供稳定、持续的运行保障。
+
+  * **安全治理能力不足：** 高权限 AK/SK、代码和运行数据分散在本地环境，既存在凭据泄露和越权风险，也缺少统一的身份认证、权限控制和操作审计。
+
+  * **部署与管理成本高：** 从 Python、依赖包到模型配置，都需要在本地完成安装和调试，依赖冲突还可能污染开发环境；进入团队后，不同开发者的环境、配置和版本也难以统一，进一步增加维护和协作成本。
+
+
+
+
+因此，要真正进入企业生产，还需要解决如何让 Agent 更安全、更稳定、更低成本地规模化“跑下去”。 ^[raw/articles/用-agentkit5-分钟搭建云端安全隔离的-deepseek-harness.md]
+
+**一句话定位：** 面向想在**团队里试用 DeepSeek Harness、又怕搞坏本地环境、还不想先花大钱的研发团队** ，AgentKit Sandbox 是一个云端隔离的智能体运行环境—— 5 分钟就能创建一个可跑 DeepSeek Harness沙箱，**随用随建、用完即弃，不碰本地任何配置、按量计费极低且与火山方舟 Coding Plan / Agent Plan 无缝打通。** ^[raw/articles/用-agentkit5-分钟搭建云端安全隔离的-deepseek-harness.md]
+
+**AgentKit Sandbox：让 Harness 在云端安全隔离、7×24 小时持续运行** ^[raw/articles/用-agentkit5-分钟搭建云端安全隔离的-deepseek-harness.md]
+
+AgentKit 是火山引擎推出的企业级 AI Agent 基础设施平台，提供 Agent 开发、运行与治理的端到端能力，通过安全隔离的 Sandbox、统一身份与权限、运行治理及企业系统集成，让 Agent 在安全、可控、可观测的环境中持续运行，并真正融入企业业务流程。 ^[raw/articles/用-agentkit5-分钟搭建云端安全隔离的-deepseek-harness.md]
+
+其中，Sandbox 是承载 Agent 实际执行任务的核心运行环境。代码执行、命令调用、浏览器操作等任务都可以在独立的云端沙箱中完成，不再依赖个人电脑。 ^[raw/articles/用-agentkit5-分钟搭建云端安全隔离的-deepseek-harness.md]
+
+针对本地运行的局限，AgentKit Sandbox 提供：
+
+  * **安全隔离：** 基于 microVM 构建独立执行环境，将代码、命令和浏览器操作限制在受控空间内
+
+  * **云端持续运行：** 任务不依赖个人电脑，本地关机或断网也不会影响云端执行
+
+  * **按需创建与回收：** Sandbox 可按任务创建，并支持自动或手动回收，降低长期资源占用
+
+  * **会话状态管理：** 任务过程中可复用上下文和文件状态，会话结束后及时释放环境
+
+  * **统一身份鉴权：** 与身份权限体系打通，减少敏感凭据硬编码和本地散落带来的安全风险
+
+
+
+
+除此之外，这种云端运行方式并不意味着更高的资源成本。以 2 vCPU / 4 GB 规格为例，Sandbox 每小时成本约 0.9 元，并支持按秒计费。即使一个 5 人团队每天每人使用 2 小时，持续一个月，计算资源成本也仅需 200 元左右。 ^[raw/articles/用-agentkit5-分钟搭建云端安全隔离的-deepseek-harness.md]
+
+**快速体验：基于AgentKit，5分钟安装云端DeepSeek Harness**
+
+前置条件：
+
+  * 请确认已完成火山引擎**账号注册** 和**实名认证** ，并确保账户未欠费。
+
+  * 已**开通火山方舟模型服务** 。
+
+
+
+
+**操作步骤**
+
+**步骤 1**
+
+登录AgentKit控制台，并根据引导开通产品
+
+控制台地址：
+
+<https://console.volcengine.com/AgentKit>
+
+**步骤 2**
+
+进入「沙箱模板」，点击「创建沙箱模板」
+
+**步骤 3**
+
+重点填写以下信息，其他保持默认即可，点击提交
+
+  * 基本信息-类型：选择 Code Sandbox
+
+  * 模型与技能配置：
+
+    * 如果你已订购Coding Plan / Agent Pla，可选择该选项
+
+    * 如果仅仅开通了方舟模型服务，则选择模型广场
+
+
+
+
+**步骤 4**
+
+等待沙箱创建，约1分钟左右，直到状态显示「运行中」
+
+**步骤 5**
+
+点击已创建沙箱名称，进入「实例管理」，创建一个实例，执行时长设置为 10800 秒
+
+**步骤 6**
+
+复制 公网访问地址到浏览器
+
+**步骤 7**
+
+完成 DeepSeek Harness 
+
+→ [[raw/articles/用-agentkit5-分钟搭建云端安全隔离的-deepseek-harness|原文存档]] ^[raw/articles/用-agentkit5-分钟搭建云端安全隔离的-deepseek-harness.md]

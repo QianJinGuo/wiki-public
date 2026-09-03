@@ -1,0 +1,10 @@
+---
+title: "Agent Lightning v1.0: Towards Harnessed Agentic RL"
+type: source-redirect
+source_url: "https://arxiv.org/abs/2608.17528"
+---
+# Agent Lightning v1.0: Towards Harnessed Agentic RL
+
+本页是公开来源索引，不包含原文正文。
+
+[访问原始来源](https://arxiv.org/abs/2608.17528)

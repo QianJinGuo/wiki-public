@@ -1,0 +1,10 @@
+---
+title: "openai-buys-ai-consultancy-to-sell-enterprises-on-its-models"
+type: source-redirect
+source_url: "https://www.theregister.com/ai-ml/2026/05/11/openai-buys-ai-consultancy-to-sell-enterprises-on-its-models/5238213"
+---
+# openai-buys-ai-consultancy-to-sell-enterprises-on-its-models
+
+本页是公开来源索引，不包含原文正文。
+
+[访问原始来源](https://www.theregister.com/ai-ml/2026/05/11/openai-buys-ai-consultancy-to-sell-enterprises-on-its-models/5238213)

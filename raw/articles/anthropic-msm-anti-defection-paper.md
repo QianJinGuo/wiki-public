@@ -1,0 +1,10 @@
+---
+title: "Anthropic 最新论文：阻止 AI 叛变的方法（Model Spec Midtraining）"
+type: source-redirect
+source_url: "https://mp.weixin.qq.com/s/ZYZTTcel9_To123vcvoY4w"
+---
+# Anthropic 最新论文：阻止 AI 叛变的方法（Model Spec Midtraining）
+
+本页是公开来源索引，不包含原文正文。
+
+[访问原始来源](https://mp.weixin.qq.com/s/ZYZTTcel9_To123vcvoY4w)

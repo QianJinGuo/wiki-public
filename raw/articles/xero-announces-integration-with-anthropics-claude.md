@@ -1,0 +1,10 @@
+---
+title: "Xero Announces Integration with Anthropic’s Claude"
+type: source-redirect
+source_url: "https://finovate.com/xero-announces-integration-with-anthropics-claude/"
+---
+# Xero Announces Integration with Anthropic’s Claude
+
+本页是公开来源索引，不包含原文正文。
+
+[访问原始来源](https://finovate.com/xero-announces-integration-with-anthropics-claude/)

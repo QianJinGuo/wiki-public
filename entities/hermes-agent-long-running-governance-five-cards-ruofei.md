@@ -1,0 +1,52 @@
+---
+
+title: "长期运行的 Agent 怎么管：Hermes 治理分层与 5 张卡"
+created: 2026-06-10
+updated: 2026-08-29
+tags: [agent, architecture, code, database, evaluation, llm, memory, mlops, open-source, prompt, search, security, tool-use, workflow]
+review_value: 7
+review_confidence: 7
+type: entity
+sources:
+  - raw/articles/hermes-agent-long-running-governance-five-cards-ruofei
+---
+
+# 长期运行的 Agent 怎么管：Hermes 治理分层与 5 张卡
+
+
+## 相关实体
+
+- [[entities/hermes-skill-system-deep-dive|hermes新顶流agent skills闭环系统深度解析]]
+- [[entities/淘天营销中后台生码工作流最佳实践|淘天营销中后台生码工作流最佳实践]]
+→ [[raw/articles/hermes-agent-long-running-governance-five-cards-ruofei|原文存档]] ^[raw/articles/hermes-agent-long-running-governance-five-cards-ruofei.md]
+
+- [[moc/data-infrastructure|MOC]]
+## 深度分析
+
+长期运行的 Agent 怎么管：Hermes 治理分层与 5 张卡 涉及agent领域的核心技术议题。 ^[raw/articles/hermes-agent-long-running-governance-five-cards-ruofei.md]
+### 核心观点
+1. # 长期运行的 Agent 怎么管：Hermes 治理分层与 5 张卡
+> 来源：架构师（JiaGouX）｜作者：若飞｜2026-06-01
+## 核心论点：don't automate slop
+若飞重看 Hermes Agent 时，开篇引用 Shann 转述 Teknium 的话："don't automate slop"——流程还没跑明白，先别急着让 Agent 把它自动化。 ^[raw/articles/hermes-agent-long-running-governance-five-cards-ruofei.md]
+2. 一个松散的流程接上 Agent 后，不会自动变严谨，只会跑得更快、产物更多、问题更容易被推到后面。
+3. 这构成了整篇文章的 thesis：当 Agent 开始长期运行并自己积累记忆、流程和技能时，**问题不是它能不能做事，而是做久了以后现场还能不能被人看懂、接手和修正**。
+4. ## 治理视角：四层 setup 反着看
+Hermes 的官方扩展路径是"主 Agent → 专职 Agent → orchestrator → cron + 事件"，若飞认为这条路径很顺但**不能照抄**。 ^[raw/articles/hermes-agent-long-running-governance-five-cards-ruofei.md]
+5. 他主张**反着看**：
+- 越往后越热闹，越要先回头看第一层
+- 规模会放大质量：质量好，规模是杠杆；质量差，规模就是麻烦
+- 决定系统能否成立的，是最开始的窄场景验证
+### Level 1 四个验收点
+在让 Agent 进入多 Agent 编排之前，主 Agent 必须先在窄场景里跑稳：
+1.
+
+### 关联实体
+
+- [[entities/你不知道的-agent原理架构与工程实践-v2]]
+- [[entities/karpathy-最新访谈从-vibe-coding-到-agentic-engineering]]
+- [[entities/karpathy-vibe-coding-agentic-engineering]]
+- [[entities/龙虾装上了可以用来干啥分享下我的-openclaw-多智能体团队搭建经验-v2]]
+- [[entities/openclaw-完全指南这可能是全网最新最全的系统化教程了32w字建议收藏-v2]]
+- [[entities/openclaw-完全指南这可能是全网最新最全的系统化教程了32w字建议收藏]]
+

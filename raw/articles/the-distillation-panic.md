@@ -1,0 +1,10 @@
+---
+title: "The distillation panic"
+type: source-redirect
+source_url: "https://www.interconnects.ai/p/the-distillation-panic"
+---
+# The distillation panic
+
+本页是公开来源索引，不包含原文正文。
+
+[访问原始来源](https://www.interconnects.ai/p/the-distillation-panic)

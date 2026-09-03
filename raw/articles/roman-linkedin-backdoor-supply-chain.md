@@ -1,0 +1,10 @@
+---
+title: "A backdoor in a LinkedIn job offer"
+type: source-redirect
+source_url: "https://roman.pt/posts/linkedin-backdoor/"
+---
+# A backdoor in a LinkedIn job offer
+
+本页是公开来源索引，不包含原文正文。
+
+[访问原始来源](https://roman.pt/posts/linkedin-backdoor/)

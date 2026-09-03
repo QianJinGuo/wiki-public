@@ -1,0 +1,93 @@
+---
+title: "算力风洞：GPU 集群的 AI Native 稳定性验证系统"
+slug: computing-power-wind-tunnel-ai-native-gpu-stability
+created: 2026-07-08
+updated: 2026-07-08
+type: entity
+tags:
+  - gpu-cluster
+  - ai-native
+  - stability
+  - fault-injection
+  - chaos-engineering
+  - knowledge-graph
+  - multi-agent
+  - alibaba-cloud
+  - simulation
+  - self-evolving
+review_value: 10
+review_confidence: 9
+sources:
+  - raw/articles/gpu-cluster-ai-native-stability-wind-tunnel
+  - raw/articles/从日志学习到风洞验证构建-gpu-集群的-ai-native-稳定性闭环
+---
+
+# 算力风洞：GPU 集群的 AI Native 稳定性验证系统
+
+> 阿里云推出的"算力风洞"是一套面向新引入 GPU 芯片稳定性验证的 AI Native 治理体系，通过全栈 GPU 仿真、原子化故障管理、AI Agent 自主决策、知识图谱自进化四大底座，实现零物理 GPU 依赖的 GPU 集群稳定性验证。^[raw/articles/gpu-cluster-ai-native-stability-wind-tunnel.md]
+
+## 背景
+
+随着智算集群规模从千卡迈向万卡乃至十万卡，GPU 芯片的引入节奏不断加快，传统人工依赖的稳定性验证模式面临三大瓶颈：故障不可复现、验证不可持续、规模不可扩展。传统模式下，新芯片的兼容性验证与故障治理打磨周期以月计，且难以覆盖大规模集群中的复合故障场景。^[raw/articles/gpu-cluster-ai-native-stability-wind-tunnel.md]
+
+→ [[raw/articles/gpu-cluster-ai-native-stability-wind-tunnel|原文存档]]
+
+## 三层架构
+
+算力风洞将 AI Native 的能力拆解为三个递进的层次，形成"学习—验证—进化"的完整闭环：^[raw/articles/gpu-cluster-ai-native-stability-wind-tunnel.md]
+
+### 认知层：双源学习
+
+Agent 从两个来源获取稳定性知识：^[raw/articles/gpu-cluster-ai-native-stability-wind-tunnel.md]
+
+1. **从新卡中自动复刻仿真环境**：通过解析厂商文档、驱动代码和芯片规格，自动构建芯片的仿真模型，在零硬件依赖的环境中复刻厂商环境，包括虚拟 GPU 实例、驱动行为模拟、故障注入接口等
+2. **从现网芯片的生产日志中智能萃取故障知识**：深度分析 SMI、XID、系统日志、容器日志、训练日志等多维数据，自动总结故障表现与处置方案。核心能力包括：
+   - 跨层级语义对齐与因果推理（SMI 状态感知、XID 错误码深度解读、系统日志溯源、容器层逻辑判断、训练日志语义对齐）
+   - 自动化故障画像构建（特征提取、聚类分析、图谱映射）
+
+两者共同汇入结构化的故障知识图谱，为后续的验证和进化提供知识基座。
+
+参见 [[entities/直击gpu集群真实故障首个ai-infra运维智能体基准开源|AI Infra 运维智能体基准]] — GPU 集群故障诊断领域的前沿进展。
+
+### 验证层：在算力风洞中验证决策能力
+
+基于认知层学习到的芯片特性和故障知识，在零硬件依赖的仿真环境中精准复现故障场景。四大核心组件：^[raw/articles/gpu-cluster-ai-native-stability-wind-tunnel.md]
+
+1. **全栈 GPU 仿真引擎**：分层仿真架构（应用层 / 运行时拦截 / 管理层 / 内核态模拟），单机模拟海量 GPU 卡
+2. **原子化故障管理中心**：统一管理故障知识库，支持显存类、环境类、掉卡故障等多维度精准模拟
+3. **弹性容错框架层**：作业编排与调度、故障触发与驱逐、Checkpoint 自动恢复、全链路验证
+4. **AI Native 决策中枢**：红蓝对抗 + 裁判验证的三方博弈架构
+   - **红方 Agent（攻击方）**：从故障库中智能选样，优先选择蓝方未见过的、图谱未覆盖的、爆炸半径大的故障
+   - **蓝方 Agent（防守方）**：自主完成"观测 → 探测 → 图谱检索 → 处置执行"的完整诊断链路，支持 LLM 驱动模式（最多 8 轮迭代）和 Legacy 硬编码模式
+   - **裁判 Agent（验证方）**：双轨验证机制（观测层 diff + 平台层 ground truth 接口），输出 resolved / partial / unresolved / data_anomaly 四种判定
+
+### 进化层：效果评估与反馈闭环
+
+进​化层驱动知识图谱持续自迭代，并通过效果评估量化稳定性体系成熟度：^[raw/articles/gpu-cluster-ai-native-stability-wind-tunnel.md]
+
+- **知识图谱自迭代**：自动遍历故障库 → 红蓝对抗演练 → 裁判更新知识状态 → 收敛判断
+- **效果评估指标**：故障定位准确率、知识图谱覆盖率、验证通过率
+- **反馈闭环**：评估结论反馈至认知层（补充遗漏特征）、验证层（调整选样策略）、进化层自身（调整收敛阈值）
+
+## 核心创新点
+
+1. **零物理 GPU 依赖**：通过全栈 GPU 仿真，所有稳定性验证可以在纯软件环境中完成，无需等待物理硬件到位^[raw/articles/gpu-cluster-ai-native-stability-wind-tunnel.md]
+2. **红蓝对抗三方博弈**：不像传统单一 Agent 决策，采用红方（攻击）、蓝方（防御）、裁判（验证）的三方架构，显著提升故障演练质量^[raw/articles/gpu-cluster-ai-native-stability-wind-tunnel.md]
+3. **双源学习体系**：同时从厂商文档/驱动代码（新卡）和生产日志（现网芯片）学习，实现跨芯片的知识迁移^[raw/articles/gpu-cluster-ai-native-stability-wind-tunnel.md]
+4. **影子回测 (Shadow Mode)**：抽取真实故障日志序列在风洞中"回放"，Agent 方案与人工专家处理结果比对，标记高置信度知识^[raw/articles/gpu-cluster-ai-native-stability-wind-tunnel.md]
+
+## 与传统方式的对比
+
+| 维度 | 传统方式 | 算力风洞 |
+|------|---------|---------|
+| 驱动模式 | 人工经验、被动响应 | AI 主动闭环、知识自生长 |
+| 验证环境 | 依赖真实物理 GPU | 全栈 GPU 仿真，零硬件依赖 |
+| 故障覆盖 | 已知常见故障 | 长尾复合故障，高频注入 |
+| 适配周期 | 月级 | 天级（10x 效率提升） |
+| 知识沉淀 | 人工文档、个体经验 | 知识图谱自进化 |
+
+## 关联
+
+- [[entities/openai携手五巨头开源革命性超算协议一举解决超大集群llm训练不稳定和网络性能难题|LLM 超算协议]] — 解决超大集群训练不稳定性的网络协议层面方案，与算力风洞在 GPU 集群稳定性领域互补
+- [[entities/直击gpu集群真实故障首个ai-infra运维智能体基准开源|AI Infra 运维智能体基准]] — 首个针对 GPU 集群故障的 AI Infra 运维智能体评测基准
+- [[entities/spec-as-aios-anti-entropy-architecture-gaode-ai-native-series-2|Spec as AIOS：AI-Native 全栈交付的抗熵架构]] — 高德的 AI Native 架构实践，与算力风洞同为阿里巴巴系 AI Native 体系
