@@ -1,5 +1,4 @@
 ---
-
 title: "连夜实测DeepSeek V4 Pro 正式版，低于预期，不推荐接入Codex"
 created: 2026-08-30
 updated: 2026-08-30
@@ -17,7 +16,7 @@ confidence: 0.7
 
 刚刚，DeepSeek V4 Pro正式版发布，价格不变，目前已经可以通过 API 访问了。
 
-单从模型卡来看，能力已经基本与 kimi-k3、Fable 5持平。比起这俩模型，V4 Pro简直就是地板价。 ^[raw/articles/连夜实测deepseek-v4-pro-正式版低于预期不推荐接入codex.md]
+单从模型卡来看，能力已经基本与 kimi-k3、Fable 5持平。比起这俩模型，V4 Pro简直就是地板价。
 
 我连夜第一时间把它接进Codex，跑了**4100万 Token，** 结论是：
 
@@ -29,7 +28,7 @@ confidence: 0.7
 
 这是跟 Flash 反差最大的一点。
 
-上次测 V4 Flash，它干活的时候特别碎嘴，你能一直看到它在想什么、卡在哪里、下一步准备干什么。 ^[raw/articles/连夜实测deepseek-v4-pro-正式版低于预期不推荐接入codex.md]
+上次测 V4 Flash，它干活的时候特别碎嘴，你能一直看到它在想什么、卡在哪里、下一步准备干什么。
 
 V4 Pro 则完全相反，它闷头跑了十二三分钟命令，中间几乎不说一句人话。
 
@@ -81,7 +80,7 @@ Flash 那次，我让模型做了 FPS 游戏、还做了数据监测的面板，
 
 个人的体感结果是这样的：
 
-Gemini 3.1 Pro > GPT-5.6 > DeepSeek V4-Pro > Gemini Flash ^[raw/articles/连夜实测deepseek-v4-pro-正式版低于预期不推荐接入codex.md]
+Gemini 3.1 Pro > GPT-5.6 > DeepSeek V4-Pro > Gemini Flash
 
 单看金句，DeepSeek 是有灵气的，但整篇读下来，展开薄，后劲不足。
 
@@ -95,11 +94,11 @@ Gemini 3.1 Pro > GPT-5.6 > DeepSeek V4-Pro > Gemini Flash ^[raw/articles/连夜�
 
 100 并发打满，0 失败 0 限流。
 
-成功率 100%，总吞吐 52.3K tok/s，输出速度 4.6K tok/s，RPS 10.4。稳态缓存命中率 **97.5%** 。 ^[raw/articles/连夜实测deepseek-v4-pro-正式版低于预期不推荐接入codex.md]
+成功率 100%，总吞吐 52.3K tok/s，输出速度 4.6K tok/s，RPS 10.4。稳态缓存命中率 **97.5%** 。
 
 我这边真实账单也印证了，4139 万 token，其中 3972 万命中缓存，命中率约 96%。
 
-不过，因为爱思考，Pro 的延迟体感比 Flash 重不少。主负载下 p50 （中位数延迟）就有4.9秒延迟，p99 （最慢那 1% 的耗时）到12.3秒。 ^[raw/articles/连夜实测deepseek-v4-pro-正式版低于预期不推荐接入codex.md]
+不过，因为爱思考，Pro 的延迟体感比 Flash 重不少。主负载下 p50 （中位数延迟）就有4.9秒延迟，p99 （最慢那 1% 的耗时）到12.3秒。
 
 价格方面，4139万 token，总计消费8块5。
 
@@ -115,8 +114,8 @@ V4-Pro 是好模型，但不是好同事。
 
 话少、爱抄近道、杂活（前端、写作）不出彩。至少，放在 Codex 里是这样。
 
-不过，据说 DeepSeek harness 马上就要发布了，不知道在自家harness的表现会如何，还是可以继续期待一下的！ ^[raw/articles/连夜实测deepseek-v4-pro-正式版低于预期不推荐接入codex.md]
+不过，据说 DeepSeek harness 马上就要发布了，不知道在自家harness的表现会如何，还是可以继续期待一下的！
 
-[跳转微信打开](<https://wechat2rss.xlab.app/link-proxy/?k=7e54a526&r=1&u=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3F__biz%3DMzIwNzc2NTk0NQ%3D%3D%26mid%3D2247619495%26i ^[raw/articles/连夜实测deepseek-v4-pro-正式版低于预期不推荐接入codex.md]
+[跳转微信打开](<https://wechat2rss.xlab.app/link-proxy/?k=7e54a526&r=1&u=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3F__biz%3DMzIwNzc2NTk0NQ%3D%3D%26mid%3D2247619495%26i
 
-→ [[raw/articles/连夜实测deepseek-v4-pro-正式版低于预期不推荐接入codex|原文存档]] ^[raw/articles/连夜实测deepseek-v4-pro-正式版低于预期不推荐接入codex.md]
+→ [[raw/articles/连夜实测deepseek-v4-pro-正式版低于预期不推荐接入codex|原文存档]]

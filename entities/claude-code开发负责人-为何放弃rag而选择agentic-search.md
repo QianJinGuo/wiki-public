@@ -1,14 +1,14 @@
 ---
 title: "Claude Code 开发负责人：为何放弃 RAG 而选择 Agentic Search"
 created: 2026-06-11
-updated: 2026-09-01
+updated: 2026-08-01
 type: entity
-tags: [rag, agentic-search, claude-code, boris-cherny, retrieval, knowledge-management, agent, jit-context-loading, mcp]
-sources: [raw/articles/claude-code开发负责人-为何放弃rag而选择agentic-search, raw/articles/rag-vs-agentic-retrieval-deep-dive-yunduojun-datastudio-2026-09-01]
+tags: [rag, agentic-search, claude-code, boris-cherny, retrieval, knowledge-management, agent]
+sources: [raw/articles/claude-code开发负责人-为何放弃rag而选择agentic-search]
 provenance_state: extracted
 review_value: 5
 review_confidence: 7
-confidence: 0.8
+confidence: 0.75
 ---
 
 # Claude Code 开发负责人：为何放弃 RAG 而选择 Agentic Search
@@ -80,54 +80,6 @@ Claude Code 本身就是一个高度 Agent Harness 化的系统——它给模�
 - **渐进式迁移**：不必一次性废弃 RAG，可以让它成为 Agent 的工具之一而非默认架构。通过 Agentic RAG 实现平滑过渡
 - **关注 Claude Code 的技术选型**：作为 Anthropic 的旗舰 Agent 产品，Claude Code 的架构决策代表了行业最佳实践的方向
 - **Token 成本管理**：Agentic Search 的 Token 消耗显著高于 RAG，需要在效果和成本之间找到平衡点
-
-## 补充：Agent-as-Retriever 五种变体与基准实证（2026-09-01 补充）
-
-> ^[raw/articles/rag-vs-agentic-retrieval-deep-dive-yunduojun-datastudio-2026-09-01.md]
-
-### JIT 上下文加载（Just-In-Time Context Loading）
-
-Anthropic 在 2025 年 9 月工程博客中正式命名这一模式：agent 维护轻量标识符（文件路径、查询、链接），运行时用工具动态加载进上下文，不预载任何内容。与传统 RAG 的本质区别是：token 只花在 agent 判断相关的 chunk 上，彻底避开低信号 chunk。Claude Code 工具懒加载（需要时才加载工具定义）把上下文占用降低约 95%。^[raw/articles/rag-vs-agentic-retrieval-deep-dive-yunduojun-datastudio-2026-09-01.md]
-
-### AAAI 2026 基准：关键词检索追平 RAG
-
-Subramanian 等人《Keyword Search Is All You Need》（AAAI 2026）：同一 LLM、同一框架，唯一区别是检索器——一边 Amazon Bedrock 向量 RAG，另一边调用 pdfmetadata/rga/pdfgrep 的 ReAct agent。全数据集 Faithfulness 94.5%、Context Recall 88.0%、Answer Correctness 91.5%。结论：向量数据库对高质量检索性能不是必需的。^[raw/articles/rag-vs-agentic-retrieval-deep-dive-yunduojun-datastudio-2026-09-01.md]
-
-### Search-R1：检索策略可学习
-
-给 R1 推理模型加上推理中途发出 search 调用的能力，用 RL（veRL + RAGEN）训练何时搜、搜什么、何时够。七个 QA 数据集上 Qwen2.5-7B 平均 EM 0.431 vs RAG 0.304，相对提升 24%。架构意义：一旦检索是工具调用，就成了可学习策略——你没法对冻结的嵌入模型做这件事。^[raw/articles/rag-vs-agentic-retrieval-deep-dive-yunduojun-datastudio-2026-09-01.md]
-
-### 五种 agentic 检索变体
-
-1. **纯 agentic**（Claude Code、Devin）— 无持久索引，Glob/Grep/Read/Bash/Explore 子代理
-2. **混合 lexical + semantic**（Cursor、Sourcegraph Amp）— 精确符号用 Instant Grep，概念查询用语义搜索，+12.5% 精度
-3. **结构 / AST 感知**（Cline、Probe、ast-grep）— tree-sitter 解析代码，按语法模式搜索；Cline 三层检索栈（ripgrep + fzf + AST），token 占用压到 17.5%
-4. **专用检索模型**（Windsurf SWE-grep、Chroma Context-1）— SWE-grep 快 10 倍；Context-1（20B）快 10 倍、成本低 25 倍
-5. **RL 训练的检索策略**（Search-R1、CoSearch）— 可学习系统，不是固定管道
-
-五种变体共享前提：agent 拥有检索。^[raw/articles/rag-vs-agentic-retrieval-deep-dive-yunduojun-datastudio-2026-09-01.md]
-
-### MCP 将 agent-as-retriever 变成生态默认
-
-MCP（JSON-RPC 2.0 协议）让任何 LLM host 连接任意 MCP server，每个数据源变成 agent 可调用的工具。一旦检索是工具调用，每个数据源都成了候选检索器，无需建向量索引。^[raw/articles/rag-vs-agentic-retrieval-deep-dive-yunduojun-datastudio-2026-09-01.md]
-
-### 生产决策矩阵（2026 年）
-
-| 场景 | 推荐方案 |
-|------|----------|
-| 私有仓库代码 | agent-as-retriever（纯或混合） |
-| 大型企业 monorepo + 跨服务 | 混合（Cursor/Amp）或结构（Probe） |
-| 持续变化的语料（日志/CRM/工单） | MCP server + agent-as-retriever |
-| 稳定知识库（文档/FAQ） | 带 reranker 的向量 RAG |
-| 长 PDF（财报/论文/合同） | ColPali/ColQwen2 或 pdfgrep agent |
-| 主题类全局问题 | LazyGraphRAG |
-| 多跳推理 + 动态检索 | Search-R1 RL 检索策略 |
-| 延迟敏感对话 | 专用检索模型或混合 |
-| 广度优先研究 | 多 agent + agentic 检索（15× token） |
-| 强串行编码任务 | 单 agent + 强上下文工程 |
-| 严格数据驻留/合规 | agent-as-retriever（无外部索引） |
-
-^[raw/articles/rag-vs-agentic-retrieval-deep-dive-yunduojun-datastudio-2026-09-01.md]
 
 ## 相关实体
 

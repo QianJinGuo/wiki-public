@@ -1,12 +1,17 @@
 ---
 title: "Anthropic：AI没有导致失业率的增加"
-created: 2026-08-31
-updated: 2026-08-31
-type: redirect
-review_value: 0
-archived_to: _archive/checkup-2026-08-31/anthropicai没有导致失业率的增加.md
-archived_reason: stub_under_300_chars
+created: 2026-08-30
+updated: 2026-08-30
+type: entity
+tags: [agent, ai, model, anthropic, harness, safety, code, architecture]
+sources: [raw/articles/anthropicai没有导致失业率的增加]
+confidence: 0.65
 ---
 
-> 本实体已于 2026-08-31 质量闭环清理中归档（原因: stub_under_300_chars）。
-> 原文见 `raw/articles/`，归档件见 `_archive/checkup-2026-08-31/anthropicai没有导致失业率的增加.md`。
+# Anthropic：AI没有导致失业率的增加
+
+## 来源
+
+→ [[raw/articles/anthropicai没有导致失业率的增加|原文存档]]
+
+v×c=56 | 来源: rss | 入库日期: 2026-08-30

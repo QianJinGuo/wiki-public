@@ -1,5 +1,4 @@
 ---
-
 title: "AI Workflows in Gradio：构建、运行、部署"
 created: 2026-08-30
 updated: 2026-08-30
@@ -11,7 +10,7 @@ confidence: 0.7
 
 # AI Workflows in Gradio：构建、运行、部署
 
-HuggingFace 团队的 Gradio Workflow 指南，介绍如何用 gr.Workflow 构建 AI 应用管道。 ^[raw/articles/gradio-workflow-ai-pipeline-guide.md]
+HuggingFace 团队的 Gradio Workflow 指南，介绍如何用 gr.Workflow 构建 AI 应用管道。
 
 ## 核心概念
 
@@ -30,4 +29,4 @@ HuggingFace 团队的 Gradio Workflow 指南，介绍如何用 gr.Workflow 构�
 - Gradio 提供一键部署能力
 - 支持分享为公开链接或嵌入到其他应用
 
-→ [[raw/articles/gradio-workflow-ai-pipeline-guide|原文存档]] ^[raw/articles/gradio-workflow-ai-pipeline-guide.md]
+→ [[raw/articles/gradio-workflow-ai-pipeline-guide|原文存档]]

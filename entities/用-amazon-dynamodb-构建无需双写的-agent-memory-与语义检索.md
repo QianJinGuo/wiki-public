@@ -1,5 +1,4 @@
 ---
-
 title: "用 Amazon DynamoDB 构建无需双写的 Agent Memory 与语义检索"
 created: 2026-09-01
 updated: 2026-09-01
@@ -17,7 +16,7 @@ provenance_state: extracted
 
 摘要：本文用一个可运行的 Agent 长期记忆场景，说明如何把业务属性和 embedding 放进同一条 item，用一次 PutItem 完成写入，用 SearchVectors 完成语义召回；同时给出这套设计在真实项目里需要提前验证的几个点，以及它明确不适合的场景。  
   
-**目录** ^[raw/articles/用-amazon-dynamodb-构建无需双写的-agent-memory-与语义检索.md]
+**目录**
 
 01 一、引言
 
@@ -53,7 +52,7 @@ provenance_state: extracted
 
 ## **一、引言**
 
-[Amazon DynamoDB](<https://aws.amazon.com/cn/dynamodb/>) 现已支持原生实时向量搜索。对已经把会话状态、用户画像或 Agent 记忆放在 DynamoDB 里的团队来说，这个特性最实际的价值不是「多了一个向量库可选」，而是少了一条数据同步链路。本文用一个可运行的 Agent 长期记忆场景，说明如何把业务属性和 embedding 放进同一条 item，用一次 PutItem 完成写入，用 SearchVectors 完成语义召回；同时给出这套设计在真实项目里需要提前验证的几个点，以及它明确不适合的场景。 ^[raw/articles/用-amazon-dynamodb-构建无需双写的-agent-memory-与语义检索.md]
+[Amazon DynamoDB](<https://aws.amazon.com/cn/dynamodb/>) 现已支持原生实时向量搜索。对已经把会话状态、用户画像或 Agent 记忆放在 DynamoDB 里的团队来说，这个特性最实际的价值不是「多了一个向量库可选」，而是少了一条数据同步链路。本文用一个可运行的 Agent 长期记忆场景，说明如何把业务属性和 embedding 放进同一条 item，用一次 PutItem 完成写入，用 SearchVectors 完成语义召回；同时给出这套设计在真实项目里需要提前验证的几个点，以及它明确不适合的场景。
 
 ## **二、双写从哪来**
 
@@ -64,13 +63,13 @@ provenance_state: extracted
 
 
 
-在没有原生向量索引的年代，这两种读取往往落在两套存储上：事务数据在 DynamoDB，embedding 在一个独立的向量库。于是必须解决一系列问题： ^[raw/articles/用-amazon-dynamodb-构建无需双写的-agent-memory-与语义检索.md]
+在没有原生向量索引的年代，这两种读取往往落在两套存储上：事务数据在 DynamoDB，embedding 在一个独立的向量库。于是必须解决一系列问题：
 
-1. 一致性：写完 DynamoDB 再写向量库，中间失败怎么办？向量库写成功但 DynamoDB 回滚了怎么办？
+  1. 一致性：写完 DynamoDB 再写向量库，中间失败怎么办？向量库写成功但 DynamoDB 回滚了怎么办？
   2. 管道：用 DynamoDB Streams + Lambda 做异步复制，就要处理重试、乱序、幂等、[DLQ](<https://aws.amazon.com/cn/what-is/dead-letter-queue/>)、背压。
   3. 两份 schema：业务属性要在向量库里冗余一份做过滤，于是又多了一处需要同步的地方。
   4. 删除：item 删了，向量库里那条谁来删？TTL 过期的条目呢？
-  5. 运维：两套容量规划、两套监控、两套灾备。 ^[raw/articles/用-amazon-dynamodb-构建无需双写的-agent-memory-与语义检索.md]
+  5. 运维：两套容量规划、两套监控、两套灾备。
 
 
 
@@ -78,7 +77,7 @@ provenance_state: extracted
 
 ## **三、向量索引把这条链路收进了托管服务**
 
-DynamoDB 的向量索引是一种新的索引类型，与 GSI、LSI 并列，但用的是近似最近邻（ANN）检索而不是精确匹配和范围查询。它通过你已经在用的 CreateTable / UpdateTable [API](<https://aws.amazon.com/cn/what-is/api/>) 管理，读取走一个新的 SearchVectors API。 ^[raw/articles/用-amazon-dynamodb-构建无需双写的-agent-memory-与语义检索.md]
+DynamoDB 的向量索引是一种新的索引类型，与 GSI、LSI 并列，但用的是近似最近邻（ANN）检索而不是精确匹配和范围查询。它通过你已经在用的 CreateTable / UpdateTable [API](<https://aws.amazon.com/cn/what-is/api/>) 管理，读取走一个新的 SearchVectors API。
 
 关键在于：索引与基表的同步由 DynamoDB 负责。应用只写基表一次。
 
@@ -107,10 +106,10 @@ embedding | 1024 维向量
 embed_model | 生成该向量的模型 ID，用于检测模型变更  
 expires_at | TTL，短期记忆自动过期  
   
-**两个 schema 上的设计决策值得展开** ^[raw/articles/用-amazon-dynamodb-构建无需双写的-agent-memory-与语义检索.md]
+**两个 schema 上的设计决策值得展开**
 
-排序键前缀带上类型。MEM#conversation#<时间戳> 这样的结构，让「取最近 6 轮对话」变成一次 begins_with 的 Query，不需要额外的 GSI，也不需要过滤。 ^[raw/articles/用-amazon-dynamodb-构建无需双写的-agent-memory-与语义检索.md]
+排序键前缀带上类型。MEM#conversation#<时间戳> 这样的结构，让「取最近 6 轮对话」变成一次 begins_with 的 Query，不需要额外的 GSI，也不需要过滤。
 
-向量索引分区键选 user_id。向量索引的分区键做两件事：把索引数据分片以便独立扩展，以及把每次搜索的范围限定在一个分区键值内。对多租 ^[raw/articles/用-amazon-dynamodb-构建无需双写的-agent-memory-与语义检索.md]
+向量索引分区键选 user_id。向量索引的分区键做两件事：把索引数据分片以便独立扩展，以及把每次搜索的范围限定在一个分区键值内。对多租
 
-→ [[raw/articles/用-amazon-dynamodb-构建无需双写的-agent-memory-与语义检索|原文存档]] ^[raw/articles/用-amazon-dynamodb-构建无需双写的-agent-memory-与语义检索.md]
+→ [[raw/articles/用-amazon-dynamodb-构建无需双写的-agent-memory-与语义检索|原文存档]]

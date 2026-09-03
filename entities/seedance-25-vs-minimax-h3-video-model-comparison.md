@@ -1,5 +1,4 @@
 ---
-
 title: "Seedance 2.5 vs MiniMax H3：国产 AI 视频模型对比"
 created: 2026-08-30
 updated: 2026-08-30
@@ -11,7 +10,7 @@ confidence: 0.65
 
 # Seedance 2.5 vs MiniMax H3：国产 AI 视频模型对比
 
-2026 年 7 月底，Seedance 2.5 和 MiniMax H3 同期上线，视频生成领域再次活跃。 ^[raw/articles/seedance-25-vs-minimax-h3-video-model-comparison.md]
+2026 年 7 月底，Seedance 2.5 和 MiniMax H3 同期上线，视频生成领域再次活跃。
 
 ## Seedance 2.5
 
@@ -35,4 +34,4 @@ confidence: 0.65
 
 国产 AI 视频模型竞争加剧，从单一模型能力比拼转向生态和价格竞争。
 
-→ [[raw/articles/seedance-25-vs-minimax-h3-video-model-comparison|原文存档]] ^[raw/articles/seedance-25-vs-minimax-h3-video-model-comparison.md]
+→ [[raw/articles/seedance-25-vs-minimax-h3-video-model-comparison|原文存档]]

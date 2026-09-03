@@ -1,5 +1,4 @@
 ---
-
 title: "物理 AI 工业落地：一个大脑驱动多种本体"
 created: 2026-08-30
 updated: 2026-08-30
@@ -29,4 +28,4 @@ confidence: 0.7
 
 物理 AI 落地的关键不是模型能力上限，而是在算力约束下的工程效率最大化。
 
-→ [[raw/articles/physical-ai-industrial-deployment-jiangxing-multi-embodiment|原文存档]] ^[raw/articles/physical-ai-industrial-deployment-jiangxing-multi-embodiment.md]
+→ [[raw/articles/physical-ai-industrial-deployment-jiangxing-multi-embodiment|原文存档]]

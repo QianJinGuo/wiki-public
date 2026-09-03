@@ -1,5 +1,4 @@
 ---
-
 title: "用 AgentKit，5 分钟搭建云端安全隔离的 DeepSeek Harness"
 created: 2026-08-30
 updated: 2026-08-30
@@ -15,7 +14,7 @@ confidence: 0.7
 
 AgentKit 2026-08-25 18:00 北京
 
-近期，DeepSeek Harness 热度持续走高。尤其在 Coding Agent 场景中，它能够围绕代码库，快速完成代码理解、文件编辑、命令执行等多步开发任务，并提供 Web 界面和基础沙箱，帮助开发者高效搭建和体验 AI 编程智能体。 ^[raw/articles/用-agentkit5-分钟搭建云端安全隔离的-deepseek-harness.md]
+近期，DeepSeek Harness 热度持续走高。尤其在 Coding Agent 场景中，它能够围绕代码库，快速完成代码理解、文件编辑、命令执行等多步开发任务，并提供 Web 界面和基础沙箱，帮助开发者高效搭建和体验 AI 编程智能体。
 
 但当 Harness 从个人开发工具走向团队研发和企业生产，本地运行模式的局限也随之显现：
 
@@ -28,15 +27,15 @@ AgentKit 2026-08-25 18:00 北京
 
 
 
-因此，要真正进入企业生产，还需要解决如何让 Agent 更安全、更稳定、更低成本地规模化“跑下去”。 ^[raw/articles/用-agentkit5-分钟搭建云端安全隔离的-deepseek-harness.md]
+因此，要真正进入企业生产，还需要解决如何让 Agent 更安全、更稳定、更低成本地规模化“跑下去”。
 
-**一句话定位：** 面向想在**团队里试用 DeepSeek Harness、又怕搞坏本地环境、还不想先花大钱的研发团队** ，AgentKit Sandbox 是一个云端隔离的智能体运行环境—— 5 分钟就能创建一个可跑 DeepSeek Harness沙箱，**随用随建、用完即弃，不碰本地任何配置、按量计费极低且与火山方舟 Coding Plan / Agent Plan 无缝打通。** ^[raw/articles/用-agentkit5-分钟搭建云端安全隔离的-deepseek-harness.md]
+**一句话定位：** 面向想在**团队里试用 DeepSeek Harness、又怕搞坏本地环境、还不想先花大钱的研发团队** ，AgentKit Sandbox 是一个云端隔离的智能体运行环境—— 5 分钟就能创建一个可跑 DeepSeek Harness沙箱，**随用随建、用完即弃，不碰本地任何配置、按量计费极低且与火山方舟 Coding Plan / Agent Plan 无缝打通。**
 
-**AgentKit Sandbox：让 Harness 在云端安全隔离、7×24 小时持续运行** ^[raw/articles/用-agentkit5-分钟搭建云端安全隔离的-deepseek-harness.md]
+**AgentKit Sandbox：让 Harness 在云端安全隔离、7×24 小时持续运行**
 
-AgentKit 是火山引擎推出的企业级 AI Agent 基础设施平台，提供 Agent 开发、运行与治理的端到端能力，通过安全隔离的 Sandbox、统一身份与权限、运行治理及企业系统集成，让 Agent 在安全、可控、可观测的环境中持续运行，并真正融入企业业务流程。 ^[raw/articles/用-agentkit5-分钟搭建云端安全隔离的-deepseek-harness.md]
+AgentKit 是火山引擎推出的企业级 AI Agent 基础设施平台，提供 Agent 开发、运行与治理的端到端能力，通过安全隔离的 Sandbox、统一身份与权限、运行治理及企业系统集成，让 Agent 在安全、可控、可观测的环境中持续运行，并真正融入企业业务流程。
 
-其中，Sandbox 是承载 Agent 实际执行任务的核心运行环境。代码执行、命令调用、浏览器操作等任务都可以在独立的云端沙箱中完成，不再依赖个人电脑。 ^[raw/articles/用-agentkit5-分钟搭建云端安全隔离的-deepseek-harness.md]
+其中，Sandbox 是承载 Agent 实际执行任务的核心运行环境。代码执行、命令调用、浏览器操作等任务都可以在独立的云端沙箱中完成，不再依赖个人电脑。
 
 针对本地运行的局限，AgentKit Sandbox 提供：
 
@@ -53,7 +52,7 @@ AgentKit 是火山引擎推出的企业级 AI Agent 基础设施平台，提供 
 
 
 
-除此之外，这种云端运行方式并不意味着更高的资源成本。以 2 vCPU / 4 GB 规格为例，Sandbox 每小时成本约 0.9 元，并支持按秒计费。即使一个 5 人团队每天每人使用 2 小时，持续一个月，计算资源成本也仅需 200 元左右。 ^[raw/articles/用-agentkit5-分钟搭建云端安全隔离的-deepseek-harness.md]
+除此之外，这种云端运行方式并不意味着更高的资源成本。以 2 vCPU / 4 GB 规格为例，Sandbox 每小时成本约 0.9 元，并支持按秒计费。即使一个 5 人团队每天每人使用 2 小时，持续一个月，计算资源成本也仅需 200 元左右。
 
 **快速体验：基于AgentKit，5分钟安装云端DeepSeek Harness**
 
@@ -111,4 +110,4 @@ AgentKit 是火山引擎推出的企业级 AI Agent 基础设施平台，提供 
 
 完成 DeepSeek Harness 
 
-→ [[raw/articles/用-agentkit5-分钟搭建云端安全隔离的-deepseek-harness|原文存档]] ^[raw/articles/用-agentkit5-分钟搭建云端安全隔离的-deepseek-harness.md]
+→ [[raw/articles/用-agentkit5-分钟搭建云端安全隔离的-deepseek-harness|原文存档]]

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "sourceRevision": "80e21d6483b0e0ebcac60ce528ee4580360124f5",
+  "sourceRevision": "280a4fbb8201053cd53062474af0c5ed9fecc49f",
   "files": [
     {
       "path": "raw/articles/001参数就能接近全量微调低数据微调极致省参方案来了-acl26.md",
@@ -1618,11 +1618,6 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/ONYZFjxpIDgoRBSblLtGZg"
     },
     {
-      "path": "raw/articles/agent-plan-x-deepseek-harness-dsh-practice-guide.md",
-      "title": "agent-plan-x-deepseek-harness-dsh-practice-guide",
-      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzI1MzYzMjE0MQ==&mid=2247521375&idx=1&sn=e11bc1ebfc05563e0d0ab2d5d47835b5"
-    },
-    {
       "path": "raw/articles/agent-principle-architecture-engineering-practice.md",
       "title": "agent principle architecture engineering practice",
       "sourceUrl": "https://mp.weixin.qq.com/s/cIQYl9Wr1Eov4ma-_bYh-w"
@@ -1961,11 +1956,6 @@
       "path": "raw/articles/agentloop-data-flywheel-overview-aliyun-2026.md",
       "title": "AgentLoop 数据飞轮实践（一）：总览 —— 让 Agent 持续调优的闭环",
       "sourceUrl": "https://mp.weixin.qq.com/s/q53_zsgspgaxKgc7YRz_dQ"
-    },
-    {
-      "path": "raw/articles/agentloop-eval-golden-metrics-rubric-mayunlei-aliyun-2026-09-01.md",
-      "title": "评估：从黄金指标到 Rubric丨AgentLoop 数据飞轮实践（三）",
-      "sourceUrl": "https://mp.weixin.qq.com/s/24kNuxyEd5X8CuqztYxtbw"
     },
     {
       "path": "raw/articles/agentloop-experience-self-evolution-aliyun-2026-07-22.md",
@@ -3798,11 +3788,6 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/K_iCypb2a6tuAm-DAwVljQ"
     },
     {
-      "path": "raw/articles/arbor-hypothesis-tree-research-agent-2026.md",
-      "title": "Arbor：假设树驱动的自主科研实验 Agent（本地代码库快照）",
-      "sourceUrl": null
-    },
-    {
       "path": "raw/articles/architecture-data-foundations-for-ai-powered-search.md",
       "title": "Architecture & data foundations for AI-powered Search",
       "sourceUrl": "https://www.algolia.com/resources/asset/white-paper-architecture-data-foundations-for-ai-powered-search"
@@ -3946,11 +3931,6 @@
       "path": "raw/articles/autodesign-meta-harness-design-zhuanzhi-2026-08-19.md",
       "title": "autodesign-meta-harness-design-zhuanzhi-2026-08-19",
       "sourceUrl": "https://mp.weixin.qq.com/s/9U28WdEt8cAXKRYBoAwxGg"
-    },
-    {
-      "path": "raw/articles/autodesign-meta-harness-optimization-2026.md",
-      "title": "AutoDesign：优化「设计方法本身」的元支架优化 Agent（本地代码库快照）",
-      "sourceUrl": null
     },
     {
       "path": "raw/articles/autoharness-warp-self-improving-loop-vibecoder-2026.md",
@@ -7558,11 +7538,6 @@
       "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/evolving-from-legacy-bi-to-agentic-ai-at-tradeshift-with-amazon-quick"
     },
     {
-      "path": "raw/articles/evoscientist-experience-memory-autoskills-2026.md",
-      "title": "EvoScientist：经验积累成图、聚类成 Skill 的自进化 AI 科学家（本地代码库快照）",
-      "sourceUrl": null
-    },
-    {
       "path": "raw/articles/evotrainer-co-evolving-llm-policies-training-harness-agentic-rl-2026.md",
       "title": "EvoTrainer：策略与Harness共进化，跑通自主闭环",
       "sourceUrl": "https://mp.weixin.qq.com/s/9VteqjNLM5slD6qCLe7m-A"
@@ -7676,11 +7651,6 @@
       "path": "raw/articles/factory-missions-multi-agent-shipping-for-days-luke.md",
       "title": "一个 Mission 跑 16 天、烧 7.78 亿 Token：Factory 公开了多 Agent 系统的构建哲学",
       "sourceUrl": "https://mp.weixin.qq.com/s/etiYTXpmVdYWgw6nA6vA7A"
-    },
-    {
-      "path": "raw/articles/faibench-frontier-infra-bench-2026.md",
-      "title": "faibench / Φ-Bench：评测 agent 能否工程化供养自己的 AI 基础设施（本地代码库快照）",
-      "sourceUrl": null
     },
     {
       "path": "raw/articles/fake-job-interview-apps-drop-jobstealer-malware-on-windows-and-macos.md",
@@ -11303,11 +11273,6 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/ML5aD3f2ilHWjSB-wpBukw"
     },
     {
-      "path": "raw/articles/longhorizon-harness-mea-alibaba-dreamx-arxiv-2026-09-01.md",
-      "title": "LongHorizon-Harness: Advancing LongHorizon Agents for Real-World Tasks",
-      "sourceUrl": "https://arxiv.org/abs/2608.01964"
-    },
-    {
       "path": "raw/articles/longhorizon-harness-mea-alibaba-oscholar-2026-08-05.md",
       "title": "阿里提出新框架：三段式管理重构长时程Agent — LongHorizon-Harness",
       "sourceUrl": "https://www.xiaohongshu.com/explore/6a72b4dc0000000006005f4c"
@@ -12963,11 +12928,6 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/H4Wiox43LvRhVJZ4bLzH-Q"
     },
     {
-      "path": "raw/articles/ontology-semantic-control-plane-agent-facts-ruofei-2026-08-08.md",
-      "title": "本体论（Ontology）：Agent 事实系统的语义控制面",
-      "sourceUrl": "https://mp.weixin.qq.com/s/d9C-0aR1fCIkKkFVtz7_jg"
-    },
-    {
       "path": "raw/articles/opd-revisiting-failure-modes-simple-fixes-storm.md",
       "title": "opd-revisiting-failure-modes-simple-fixes-storm",
       "sourceUrl": "https://unknown/opd-revisiting-failure-modes-simple-fixes-storm"
@@ -13738,11 +13698,6 @@
       "sourceUrl": "https://www.pointfive.co/AI-Research"
     },
     {
-      "path": "raw/articles/polaris-voyage-research-platform-2026.md",
-      "title": "Polaris：Voyage 持久化科研内核——不重规划、确定性验证先行、远程 GPU re-attach（本地代码库快照）",
-      "sourceUrl": null
-    },
-    {
       "path": "raw/articles/poolside-laguna-xs-2-1-2026.md",
       "title": "poolside-laguna-xs-2-1-2026",
       "sourceUrl": "https://poolside.ai/blog/introducing-laguna-xs-2-1"
@@ -14181,11 +14136,6 @@
       "path": "raw/articles/rag-vector-knowledge-graph-ontology.md",
       "title": "rag-vector-knowledge-graph-ontology",
       "sourceUrl": "https://mp.weixin.qq.com/s/2pk4Mhr4nLMapJrTqpYX6Q"
-    },
-    {
-      "path": "raw/articles/rag-vs-agentic-retrieval-deep-dive-yunduojun-datastudio-2026-09-01.md",
-      "title": "向量数据库已死，Claude Code、Cursor 为什么集体抛弃 RAG？",
-      "sourceUrl": "https://mp.weixin.qq.com/s/kFtO6xsG09FX0-4pcm8XKg"
     },
     {
       "path": "raw/articles/rag-vs-llm-wiki-enterprise-knowledge-base.md",
@@ -15438,11 +15388,6 @@
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652721876&idx=2&sn=5940bc6c2c7e76a617ca41bbbfc60a08"
     },
     {
-      "path": "raw/articles/spark-to-paper-thirteen-skills-2026.md",
-      "title": "Spark-to-Paper：13 个 Skills 把一句话想法变成编译好的 PDF 论文（本地代码库快照）",
-      "sourceUrl": null
-    },
-    {
       "path": "raw/articles/spec-as-aios-anti-entropy-architecture-gaode-app-platform-2026.md",
       "title": "Spec as AIOS：AI-Native 全栈交付的抗熵架构",
       "sourceUrl": "https://mp.weixin.qq.com/s/85E1QO3xd7lyF0OKZ0JqeQ"
@@ -15736,11 +15681,6 @@
       "path": "raw/articles/superpowers-prompt-dont-experiment-shuge.md",
       "title": "Superpowers 6.0 跑了 25 个实验才发现：prompt 里写的每一条\"不要\"，可能都在帮倒忙",
       "sourceUrl": "https://mp.weixin.qq.com/s/4XTsfY8SzcjusCU6sUg7yg"
-    },
-    {
-      "path": "raw/articles/supervisor-skills-phd-advisor-skills-2026.md",
-      "title": "Supervisor-Skills：把博导十年经验蒸馏成 11 个可执行 Skill（本地代码库快照）",
-      "sourceUrl": null
     },
     {
       "path": "raw/articles/swe-1-7.md",
@@ -16486,11 +16426,6 @@
       "path": "raw/articles/trace-based-causal-attribution-agent-effects-2026-07-16.md",
       "title": "如何基于Trace归因Agent效果问题",
       "sourceUrl": "https://mp.weixin.qq.com/s/9Y21ZiO8tsNYDvMm6cICEQ"
-    },
-    {
-      "path": "raw/articles/trace-context-engineering-vibecoder-2026-09-01.md",
-      "title": "TRACE论文解读：Agent 答错以后，真正该改的是哪份上下文？",
-      "sourceUrl": "https://mp.weixin.qq.com/s/zeaNdHXYKQTNYmMKSZF6pA"
     },
     {
       "path": "raw/articles/trace2skill-trajectory-distillation-agent-skills.md",
@@ -19811,11 +19746,6 @@
       "path": "raw/articles/蒸馏效果起飞dopd破解特权幻觉让在线策略蒸馏更有效.md",
       "title": "蒸馏效果起飞dopd破解特权幻觉让在线策略蒸馏更有效",
       "sourceUrl": "https://mp.weixin.qq.com/s/xlcvfTUivsWGdl9CRgmIGA"
-    },
-    {
-      "path": "raw/articles/牛来3d模型世界模型lux3d-2026.md",
-      "title": "牛来3d模型世界模型lux3d-2026",
-      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652720944&idx=1&sn=23f54e81ab683b10c44af96d15a2f8dd"
     },
     {
       "path": "raw/articles/特斯拉百万年薪招数据标注员朝九晚五无需ai经验.md",
