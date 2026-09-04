@@ -120,3 +120,6 @@ V4-Pro 是好模型，但不是好同事。
 [跳转微信打开](<https://wechat2rss.xlab.app/link-proxy/?k=7e54a526&r=1&u=https%3A%2F%2Fmp.weixin.qq.com%2Fs%3F__biz%3DMzIwNzc2NTk0NQ%3D%3D%26mid%3D2247619495%26i ^[raw/articles/连夜实测deepseek-v4-pro-正式版低于预期不推荐接入codex.md]
 
 → [[raw/articles/连夜实测deepseek-v4-pro-正式版低于预期不推荐接入codex|原文存档]] ^[raw/articles/连夜实测deepseek-v4-pro-正式版低于预期不推荐接入codex.md]
+
+> [!note] 时间对儿
+> 本页是 DeepSeek V4 发布周期的**交付端**（2026-08-30 实测）；预期端见 [[entities/deepseek-v4|论文深度拆解]]（2026-05-13 入库）。对账判定见 [[queries/prediction-ledger|预测对账台账]] #1。

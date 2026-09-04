@@ -37,7 +37,8 @@ confidence: high
 |------|------|------|------|
 | 2026-07 | 结构信号（前身） | [[drafts/wiki-emergent-viewpoints-2026-07]] | 透镜制之前，方法验证轮 |
 | 2026-08-29 | 外部系统（phd） | [[drafts/wiki-emergent-viewpoints-2026-08-phd-lens]] + [[concepts/eval-optimizer-firewall]] 等 | phd 七仓库透镜 |
-| — | （待跑：建议先 1 时间切片） | | 下一轮占位 |
+| 2026-09-05 | **① 时间切片** | [[drafts/wiki-emergent-viewpoints-2026-09-time-slice]] + [[concepts/claim-half-life]] + [[queries/prediction-ledger]]（种子 7 条） | 172 条时间断言撞库；首测半衰期：术语 30d / 代际 59d / 发布预期 109d；supersedes 空转定性 |
+| — | （待跑：建议 2 概念缺位） | | 下一轮占位 |
 
 ## 与其他机制的关系
 
