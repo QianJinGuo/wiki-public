@@ -1,7 +1,7 @@
 ---
 title: "Gene/GEP — EvoMap×清华 提出的「策略基因」经验对象框架（arXiv 2604.15097）"
 created: 2026-06-13
-updated: 2026-09-04
+updated: 2026-09-05
 type: "entity"
 tags: [agent-skill, gene, gep, evomap, evolver, openclaw, critpt, agent-evolution, test-time-evolution, experience-reuse, strategy-gene, arxiv-2604-15097, qinghua, junjie-wang, haoyang-zhang, control-density, protocol-layer, rsi, recursive-self-improvement]
 sources:
@@ -220,8 +220,7 @@ Benchmark70 任务全量复现：https://github.com/EvoMap/critpt-openclaw-repro
 6. **Pro 上 Skill 拖后腿 60.1→50.7（-9.4）** —— 推翻了"更强模型更吃 Skill"的常见假设，与 `agent-harness-12-components-7-decisions` 的"长 context = 更好"前提**直接矛盾** ^[raw/articles/gene-gep-evomap-qinghua-strategy-genes-arxiv-2604-15097-2026.md]
 7. **结构宽容 + 语义挑剔的鲁棒性边界**（stale_paradigm 56.6% > clean 54.0%）—— 现有 entity 未涵盖 ^[raw/articles/gene-gep-evomap-qinghua-strategy-genes-arxiv-2604-15097-2026.md]
 
-> [!contradiction] 参见 现有 Skill 渐进式披露 / 长 context 假设
-> Gene 实验结果（Pro 上 Skill 60.1→50.7）直接挑战"更强模型 + 更长 Skill = 更好"的常见假设。Gene 的立场是"控制对象形态 > 知识完整性"。
+> [!contradiction] 参见 [[entities/agent-harness-12-components-7-decisions|Agent Harness 12 组件 7 决策]] — Gene 实验结果（Pro 上 Skill 60.1→50.7）直接挑战其"更强模型 + 更长 Skill/长 context = 更好"的常见假设。Gene 的立场是"控制对象形态 > 知识完整性"。
 
 ## 深度分析
 

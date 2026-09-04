@@ -3,7 +3,7 @@
 
 title: "Agent 时代的生产力悖论：当协作本身成为最大的瓶颈"
 created: 2026-05-16
-updated: 2026-05-19 
+updated: 2026-09-05
 type: entity
 tags: [agent, engineering, ai]
 sources:
@@ -52,8 +52,7 @@ review_confidence: 7
 5. **安全能力建设**：沙箱环境、权限分级、Dry Run 模式、审计日志等安全机制，是 Agent 从实验室走向生产环境的必要条件。^[raw/articles/agent-时代的生产力悖论当协作本身成为最大的瓶颈.md]
 **关键转变：** 从"让人适应 AI"到"让环境适应 AI"。当研发基础设施为 Agent 优化后，AI 的自主执行潜力才能真正释放。^[raw/articles/agent-时代的生产力悖论当协作本身成为最大的瓶颈.md]
 ---^[raw/articles/agent-时代的生产力悖论当协作本身成为最大的瓶颈.md]
-> [!contradiction] 参见 **持相反观点**：当前 AI 辅助编程范式（包括 vibe coding）已被广泛应用于生产环境，其可行性不应被全盘否定。
-> 关于 Vibe Coding 的生产可行性，另一种观点认为当前的 AI 能力尚未成熟，不应完全依赖 AI 生成代码。
+> [!contradiction] 参见 [[entities/erik-schluntz-vibe-coding-in-production|Vibe Coding 直接进生产]] 持相反观点：当前 AI 辅助编程范式（包括 vibe coding）已被广泛应用于生产环境，其可行性不应被全盘否定。
 ## 相关实体
 - [[entities/打造可靠的-ai-编程环境claude-code-hooks-完整开发者指南-v2]]
 - [[entities/一文带你弄懂-ai-圈爆火的新概念harness-engineering-v2]]

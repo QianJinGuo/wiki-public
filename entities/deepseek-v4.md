@@ -97,6 +97,3 @@ DeepSeek与Moonshot的深度协作关系，暗示一种生态系统分工正在�
 1. **合成数据的战略价值**：32T token训练数据中约50%为合成数据已是常态。在数据采购预算有限的情况下，投资高质量合成数据生成能力可能是更务实的选择。^[raw/articles/deepseek-v4.md]
 2. **生态协作模式**：DeepSeek-Moonshot模式展示了专注基础设施、开放生态合作的可行性。对于资源有限的团队，这提供了一种差异化竞争思路——不必成为全栈选手，而是在某个环节做到极致。^[raw/articles/deepseek-v4.md]
 ---^[raw/articles/deepseek-v4.md]
-> [!contradiction] 参见
-> -  — 不同测试方法论可能得出不同结论
-> -  — 工程实践层面的不同观察

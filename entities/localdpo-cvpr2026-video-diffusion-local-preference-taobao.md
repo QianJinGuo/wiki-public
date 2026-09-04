@@ -2,7 +2,7 @@
 title: "LocalDPO — 面向视频扩散模型的局部细节偏好优化方法 (CVPR 2026)"
 type: entity
 created: 2026-07-05
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [diffusion, video-generation, dpo, preference-optimization, cvpr2026, multimodal, generative-ai, fine-tuning]
 rating: v8c8
 sources:
@@ -45,7 +45,8 @@ LocalDPO 的核心创新在于偏好对构造方式和优化目标设计两个�
 LocalDPO 为视频生成模型的偏好对齐提供了一种高效、稳定且细粒度的新思路，无需外部打分模型或人工标注，即可实现对视频局部细节的高效偏好对齐。论文代码已开源。^[raw/articles/localdpo-cvpr2026-video-diffusion-local-preference-taobao.md]
 
 
-> [!contradiction] 与现有 RLHF/DPO 对齐 中通用的偏好优化方法不同，LocalDPO 专注于视频扩散模型局部细节的优化，是一种领域特化的 DPO 变体。其"真实视频做正样本+局部退化构造负样本"的策略在图像/文本等模态中不可直接复用。
+> [!note] 领域特化说明
+> 与现有 RLHF/DPO 对齐中通用的偏好优化方法不同，LocalDPO 专注于视频扩散模型局部细节的优化，是一种领域特化的 DPO 变体。其"真实视频做正样本+局部退化构造负样本"的策略在图像/文本等模态中不可直接复用。
 
 ## 参考
 

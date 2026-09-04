@@ -4,7 +4,7 @@ title: "一篇看懂 Agent Harness 的结构！ — 12组件+7决策完整框架
 type: entity
 tags: [agent, anthropic, context, harness, model, prompt]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 8
 review_confidence: 7
 sources: [raw/articles/agent-harness-12-components-7-decisions, raw/articles/elvis-saravia-autonomous-coding-7-elements-control-system]
@@ -222,3 +222,5 @@ Manus 6 个月重写 5 次删复杂度，这个案例说明 Harness 不是一次
 - Claude Code release notes (/loop): https://docs.anthropic.com/en/release-notes/claude-code
 
 → [[raw/articles/elvis-saravia-autonomous-coding-7-elements-control-system|第 2 原文存档]] ^[raw/articles/elvis-saravia-autonomous-coding-7-elements-control-system.md]
+
+> [!contradiction] 参见 [[entities/gene-gep-evomap-qinghua-strategy-genes-arxiv-2604-15097-2026|Gene-GEP 策略基因进化]] 持相反观点：Gene 实验（Pro 上 Skill 60.1→50.7）挑战本页"更强模型 + 更长 Skill/长 context = 更好"的前提，主张"控制对象形态 > 知识完整性"。

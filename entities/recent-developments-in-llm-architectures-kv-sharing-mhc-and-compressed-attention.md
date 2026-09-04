@@ -4,7 +4,7 @@ title: "Recent Developments in LLM Architectures: KV Sharing, mHC, and Compresse
 type: entity
 tags: [llm]
 created: 2026-05-19
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 8
 review_confidence: 8
 review_recommendation: worth-reading
@@ -77,7 +77,7 @@ Agent 工作流通常需要长时间记忆和上下文窗口。架构层面的 K
 - 确认硬件和框架对这些注意力变体的支持程度
 - 预留足够的基准测试和 A/B 对比实验
 ---^[raw/articles/recent-developments-in-llm-architectures-kv-sharing-mhc-and-compressed-attention.md]
-> [!contradiction] 相关矛盾
+> [!note] 延伸阅读
 > - MLA、DSA、GQA 等注意力变体的详细解释可参考各模型官方技术报告
 
 ## 相关实体

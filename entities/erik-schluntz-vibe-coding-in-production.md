@@ -4,7 +4,7 @@ title: "Vibe Coding in Production — Erik Schluntz / Anthropic"
 type: entity
 tags: [anthropic, coding, production]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/erik-schluntz-vibe-coding-in-production]
@@ -49,3 +49,5 @@ Schluntz 提出每 7 个月 AI 编程任务时长翻倍的增长曲线，意味�
 - [[entities/anthropic-官方生产级-agent-最佳实践12-个可复用的-mcp-设计模式-v2]]
 
 → [[raw/articles/erik-schluntz-vibe-coding-in-production|原文存档]] ^[raw/articles/erik-schluntz-vibe-coding-in-production.md]
+
+> [!contradiction] 参见 [[entities/agent-时代的生产力悖论当协作本身成为最大的瓶颈|Agent 时代的生产力悖论]] 与 [[entities/engineering-roles-shift-from-developing-code-to-managing-ai|工程角色转向管理 AI]] 持相反观点：本文主张 vibe coding 已可进入生产环境，而两文分别强调协作瓶颈与审查成本不可忽视。

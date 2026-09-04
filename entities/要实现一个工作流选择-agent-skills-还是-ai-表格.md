@@ -4,7 +4,7 @@ title: 要实现一个工作流选择-agent-skills-还是-ai-表格
 type: entity
 tags: [agent, ai, llm, workflow, enterprise, automation, spreadsheet, openclaw, hermes, coze, feishu, dingtalk]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 7
 sources: [raw/articles/要实现一个工作流选择-agent-skills-还是-ai-表格]
 review_confidence: 8
@@ -86,8 +86,8 @@ Coze 相当于多维表格多了一个"皮肤"，让用户端体验更好。但�
 | **最后一块拼图** | 原来自动化难以完成的任务（如身份证、简历 PDF 录入），有 AI 后变得简单 |
 | **压缩复杂度** | 对数据做自动汇总、异常检测、口径解释、报表叙事，把管理层最头疼的"看不懂、对不齐、解释不清"变成可交互分析 |
 
-> [!contradiction]
-> 部分观点认为 Agent 平台（如 OpenClaw）是工作流未来，但实际落地案例显示 AI 表格以更低成本更快交付占据主流。参见 OpenClaw Agent 工具平台 持相反视角。
+> [!note] 路线争议（页内记录，尚无独立反方页）
+> 部分观点认为 Agent 平台（如 OpenClaw）是工作流未来，但实际落地案例显示 AI 表格以更低成本更快交付占据主流。
 
 ## 结语
 

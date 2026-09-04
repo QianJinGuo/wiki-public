@@ -3,7 +3,7 @@ title: "Engineering roles shift from developing code to managing AI"
 type: entity
 tags: [ciodive,engineering-roles,ai-management,software-development,harness,developer-productivity]
 created: 2026-05-16
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 7
 review_confidence: 8
 review_recommendation: worth-reading
@@ -55,7 +55,7 @@ Harness 报告建议技术领导者采取以下步骤更新评估体系： ^[raw
 AI 生成代码后，输出指标改善、周期时间缩短——但这不是组织真正想加速的工作本身，而是附加的 overhead。 ^[raw/articles/engineering-roles-shift-from-developing-code-to-managing-ai.md]
 Harness SVP Trevor Stuart 指出了本质矛盾：**"行业过去十年所依赖的度量框架，并非为这种新型工作单元而构建。"** ^[raw/articles/engineering-roles-shift-from-developing-code-to-managing-ai.md]
 这个转变的深层含义是：AI 并没有替代工程师的工作，而是将工程师的工作重心从"写代码"迁移到了"管理 AI 输出的质量"。这一层"隐形工作"（审查代码、修复 bug、上下文切换）在传统 productivity metrics 中完全不可见，但消耗的时间可能超过实际编码节省的时间。 ^[raw/articles/engineering-roles-shift-from-developing-code-to-managing-ai.md]
-> [!contradiction] 与 Vibe Coding 是否适合生产的结论存在张力：vibe coding 倡导者认为 AI 代码可以直接使用，而本文数据表明审查成本不可忽视。
+> [!contradiction] 参见 [[entities/erik-schluntz-vibe-coding-in-production|Vibe Coding 直接进生产]] — 与 Vibe Coding 是否适合生产的结论存在张力：vibe coding 倡导者认为 AI 代码可以直接使用，而本文数据表明审查成本不可忽视。
 
 ## 实践启示
 1. **重新定义生产力指标**：将"代码交付率"和"工程师审查 AI 结果所花费的时间"纳入工程绩效考核框架，而非只看输出量^[raw/articles/engineering-roles-shift-from-developing-code-to-managing-ai.md]

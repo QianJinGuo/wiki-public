@@ -4,7 +4,7 @@ title: "Building for the Rising Complexity of Agentic Systems with Extreme Co-De
 type: entity
 tags: [agent, nvidia, agent-architecture, inference, harness-engineering, token-economics, prompt-caching, context-management, latency, throughput, hardware, vera, rubin, gb200]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 8
 review_confidence: 7
 provenance_state: extracted
@@ -161,7 +161,7 @@ NVIDIA 的 Extreme Co-Design 强调 Vera CPU 承担「长上下文检索操作�
 
 ## 行业观点与争议
 
-> [!contradiction] 关于专用硬件 vs 通用云基础设施
+> [!note] 行业争议：专用硬件 vs 通用云基础设施（页内记录，尚无独立反方页）
 > 业界对 Agentic 系统是否需要专用硬件存在争议：
 > - **NVIDIA 立场**：Extreme Co-Design 是必要的，没有任何单一处理器能同时解决延迟、吞吐、上下文长度需求
 > - **相反观点**：通用云基础设施通过软件优化可能达到类似效果，专用硬件成本过高

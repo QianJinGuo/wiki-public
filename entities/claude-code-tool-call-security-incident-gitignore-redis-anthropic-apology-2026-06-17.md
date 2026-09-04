@@ -14,7 +14,7 @@ tags:
   - safety-apology
   - bulk-action-mode
 created: 2026-06-17
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 review_value: 9
 review_confidence: 8
@@ -84,7 +84,7 @@ Anthropic 在致歉信中给出的根因是： ^[raw/articles/claude-code-tool-c
 
 但评论员尖锐指出：**LLM 自动批准删除 .gitignore + 自动批准执行 Redis flushall，这正是 prompt injection 的典型后果形态**——即使源头不是 PI，LLM 对这些高危操作的"自动批准"行为本身**放大了 PI 的杀伤面**。^[raw/articles/claude-code-tool-call-security-incident-gitignore-redis-anthropic-apology-2026-06-17.md]
 
-> [!contradiction] **Anthropic 官方 vs 安全研究界**：Anthropic 将根因归结为"配置传播异常"，拒绝 PI 定性；三位安全 CEO 一致认为 bulk-action + 默认信任模式让类似事故"可预测且可重复"。这一分歧实质是**商业风险评估之争**——若承认 PI，整个 Claude Code 工具调用链的信任基础被动摇；若不承认，后续类似事件难以彻底修复。
+> [!note] **页内争议 — Anthropic 官方 vs 安全研究界**：Anthropic 将根因归结为"配置传播异常"，拒绝 PI 定性；三位安全 CEO 一致认为 bulk-action + 默认信任模式让类似事故"可预测且可重复"。这一分歧实质是**商业风险评估之争**——若承认 PI，整个 Claude Code 工具调用链的信任基础被动摇；若不承认，后续类似事件难以彻底修复。
 
 ## 5. 三位安全专家的深度评论
 

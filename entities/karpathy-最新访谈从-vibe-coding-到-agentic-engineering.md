@@ -1,7 +1,7 @@
 ---
 title: "Karpathy 最新访谈：从 Vibe Coding 到 Agentic Engineering"
 created: 2026-06-10
-updated: 2026-06-17
+updated: 2026-09-05
 tags: [agent, ai-coding, architecture, code, data, database, evaluation, fine-tuning, llm, memory, mlops, prompt, rl, security, tool-use, harness-engineering, agentic-engineering, vibe-coding, software-3-0]
 review_value: 8
 review_confidence: 8
@@ -80,4 +80,6 @@ Karpathy 自己做了一个 MenuGen 小应用：拍菜单照片 → OCR 抽菜�
 - [[entities/openclaw-完全指南这可能是全网最新最全的系统化教程了32w字建议收藏]]
 - [[entities/vercel-com-blog-protecting-against-token-theft|protecting against token theft]]
 - [[moc/coding-agent-practice|MOC]]
+
+> [!contradiction] 参见 [[entities/martin-fowler-ai-rd-harness-nondeterminism-devnote|Martin Fowler：非确定性进研发链路]] 持相反观点：Fowler 认为非确定性进入研发链路后 harness 必须承重、工程约束优先；本页 Karpathy 立场是 Vibe Coding 作为合理起点、快速探索有其价值。
 

@@ -4,7 +4,7 @@ title: "Computer Use 45x More Expensive Than Structured APIs"
 type: entity
 tags: [agent, api, benchmark, computer-use, cost-analysis, vision-agent, reflex]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 8
 review_confidence: 9
 sources: [raw/articles/computer-use-45x-more-expensive-than-structured-apis]
@@ -153,7 +153,6 @@ Computer Use 的高成本揭示了 Agent 部署中的一个关键指标：**每�
 - 提供细粒度的 token 消耗仪表盘，帮助开发者识别高成本任务模式
 - 支持 API 优先的 Agent 模板，预置常见 SaaS 服务的 API 封装
 
-> [!contradiction] 参见
->  认为 Computer Use 在某些场景下是合理选择，核心优化在于截图降采样而非完全弃用
+> [!contradiction] 参见 [[entities/anthropic-computer-use-best-practices|Anthropic Computer Use 最佳实践]] 持相反观点：认为 Computer Use 在某些场景下是合理选择，核心优化在于截图降采样而非完全弃用。
 
 → [[raw/articles/computer-use-45x-more-expensive-than-structured-apis|原文存档]] ^[raw/articles/computer-use-45x-more-expensive-than-structured-apis.md]

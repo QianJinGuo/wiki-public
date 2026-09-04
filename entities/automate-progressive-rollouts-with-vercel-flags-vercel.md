@@ -49,7 +49,7 @@ Vercel Flags 是 Vercel 平台推出的 Feature Flag 解决方案，本次更新
 2. **优先在高风险变更时使用**：数据库迁移、大幅重构、依赖升级等场景，建议通过渐进式发布逐步验证，而非全量上线。 ^[raw/articles/automate-progressive-rollouts-with-vercel-flags-vercel.md]
 3. **结合 Flags SDK 实现客户端感知**：Vercel 提供 Flags SDK，客户端代码可以据此条件渲染 UI，结合渐进式发布的百分比控制实现细粒度灰度。 ^[raw/articles/automate-progressive-rollouts-with-vercel-flags-vercel.md]
 4. **CLI 集成支持 GitOps 流程**：`vercel flags rollout` 适合在 GitOps 场景中使用，通过 Infrastructure as Code 管理发布策略，实现审计追溯。 ^[raw/articles/automate-progressive-rollouts-with-vercel-flags-vercel.md]
-> [!contradiction] 与传统 A/B 测试的权衡
+> [!note] 与传统 A/B 测试的权衡
 > 渐进式发布侧重「时间维度」的风险控制，而加权拆分侧重「空间维度」的实验精确度。两者并非替代关系——渐进式发布适用于生产级变更，A/B 测试适用于产品决策验证。
 ## 相关实体
 - [[entities/nvidia-mcg-toolkit-model-documentation]]
