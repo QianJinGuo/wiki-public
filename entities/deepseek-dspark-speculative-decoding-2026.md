@@ -2,10 +2,9 @@
 title: "DeepSeek DSpark：推测性解码工程落地"
 description: "DeepSeek V4 的推测性解码框架 DSpark——半自回归生成 + 置信度调度验证 + 异步零开销调度，已部署线上并开源 DeepSpec 全栈工具链"
 created: 2026-06-29
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [speculative-decoding, deepseek, inference-optimization, llm, open-source, agent-inference, semi-autoregressive, cuda]
-provenance_state: inferred
 sources:
   - raw/articles/deepseek-dspark-speculative-decoding-2026
 confidence: 0.85

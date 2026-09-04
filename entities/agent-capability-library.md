@@ -2,7 +2,7 @@
 
 title: "An agent capability library"
 created: 2026-06-23
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [agent, capability, architecture, engineering]
 source: "[[raw/articles/agent-capability-library]]"
@@ -33,15 +33,15 @@ Continuing on that, I’ve started building a general library of capabilities fo
 ```
 - **Studio machine** — a powerful always-on Mac you can SSH into.
   Reach for it when you need more horsepower or a stable host for a
-  background service. Read @/Users/sami/projects/agent-docs/STUDIO.md.
+  background service. Read @~/projects/agent-docs/STUDIO.md.
 
 - **exe.dev VMs** — on-demand Linux VMs with a public HTTPS proxy.
   Reach for it when you need a real Linux box or a public URL.
-  Read @/Users/sami/projects/agent-docs/EXE-DEV.md.
+  Read @~/projects/agent-docs/EXE-DEV.md.
 
 - **Browser automation** — drive a real Chrome from the shell.
   Reach for it when you need to scrape, fill a form, or visually
-  check a deployed page. Read @/Users/sami/projects/agent-docs/AGENT-BROWSER.md.
+  check a deployed page. Read @~/projects/agent-docs/AGENT-BROWSER.md.
 ```
 
 The agent doesn’t load all specific instructions upfront. It reads the index, decides whether the task matches a capability, and only then reads the relevant doc. The docs themselves are ordinary markdown: what the thing is, when to use it, how to use it. I write and update them almost exclusively with AI. `agent-docs` is itself a purpose-built agent for maintaining the library. ^[raw/articles/agent-capability-library.md]

@@ -6,9 +6,9 @@ tags: [security, api,  dod, military, data-exposure]
 source: newsletter
 source_url:
 created: 2026-05-12
-updated: 2026-08-01
+updated: 2026-09-05
 review_value: 4
-sources: []
+sources: [raw/articles/schemata-dod-contractor-api-flaw-military-data-exposure]
 review_confidence: 7
 ---
 

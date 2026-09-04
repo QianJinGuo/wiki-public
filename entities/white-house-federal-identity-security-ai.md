@@ -3,9 +3,9 @@ title: "White House cyber official: identity security matters more"
 type: entity
 tags: [newsletter, article]
 created: 2026-05-18
-updated: 2026-06-19
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/white-house-federal-identity-security-ai]
 review_confidence: 8
 review_recommendation: worth-reading
 ---

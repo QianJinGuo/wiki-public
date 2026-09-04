@@ -5,13 +5,13 @@ title: "A²RD: Agentic Autoregressive Diffusion for Long Video Consistency"
 source: newsletter
 source_url:
 review_value: 6
-sources: []
+sources: [raw/articles/a2rd-agentic-autoregressive-diffusion-long-video]
 review_confidence: 7
 review_recommendation: worth-reading
 review_stars: 3
 unique_insight: true
 created: 2026-05-13
-updated: 2026-08-01
+updated: 2026-09-05
 tags: [video, agentic-ai, ai, open-source]
 ---
 

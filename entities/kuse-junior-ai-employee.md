@@ -2,7 +2,7 @@
 
 tags: [agent, product, ai-employee]
 title: "Kuse.ai Junior — 全球第一个AI员工"
-updated: 2026-08-29
+updated: 2026-09-05
 created: 2026-04-30
 type: entity
 sources: [raw/articles/kuse-junior-ai-employee]
@@ -67,7 +67,7 @@ Kuse内部案例中，客服端Junior发现投诉问题 → 传递给产品端Ju
 - [[entities/gstack-ai-workflow]] — YC的AI协作工作流
 -  — 企业级Agent落地对比
 
-→ [[raw/articles/05-11-the-great-memory-panic-of-2026.md|原文存档]] ^[raw/articles/kuse-junior-ai-employee.md]
+→ [[raw/articles/kuse-junior-ai-employee|原文存档]] ^[raw/articles/kuse-junior-ai-employee.md]
 
 - [[raw/articles/kuse-junior-ai-employee]] — 原文存档
 

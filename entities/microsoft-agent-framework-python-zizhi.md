@@ -3,11 +3,11 @@ title: "微软 Agent Framework 全栈指南（Python）"
 source: "[[raw/articles/microsoft-agent-framework-python-zizhi|原文存档]]"
 type: entity
 review_value: 8
-sources: []
+sources: [raw/articles/microsoft-agent-framework-python-zizhi]
 review_confidence: 8
 tags: [microsoft, agent-framework, semantic-kernel, multi-agent, workflow]
 created: "2026-05-18"
-updated: 2026-08-29
+updated: 2026-09-05
 ---
 > 来源：[[raw/articles/microsoft-agent-framework-python-zizhi|原文存档]]
 

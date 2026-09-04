@@ -3,12 +3,12 @@ title: "Karpathy 最新访谈：从 Vibe Coding 到 Agentic Engineering"
 slug: karpathy-vibe-coding-agentic-engineering-v2
 type: entity
 created: 2026-05-09
-updated: 2026-08-07
+updated: 2026-09-05
 aliases:
   - Karpathy-Sequoia-2026-Interview
 tags: [agentic-engineering, vibe-coding, karpathy, software-3-0, harness-engineering]
 review_value: 9
-sources: []
+sources: [raw/articles/karpathy-vibe-coding-agentic-engineering, raw/articles/karpathy-vibe-coding-to-agentic-engineering]
 review_confidence: 9
 review_recommendation: strong
 review_stars: 5
@@ -87,6 +87,6 @@ Agentic Engineering 需要接口级约定：Agent 能看到哪些上下文、能
 - [[entities/karpathy-vibe-coding-agentic-engineering-v3|Karpathy 最新访谈：从 Vibe Coding 到 Agentic Engineering]]
 - [[entities/tencent-vibe-coding-to-agentic-engineering-backend|从Vibe Coding到Agentic Engineering：重构后台开发全流程 — 腾讯技术工程]]
 
-→ [[raw/articles/karpathy-vibe-coding-agentic-engineering-v4.md|原文存档]] ^[raw/articles/karpathy-vibe-coding-agentic-engineering.md]
+→ [[raw/articles/karpathy-vibe-coding-agentic-engineering|原文存档]] ^[raw/articles/karpathy-vibe-coding-agentic-engineering.md]
 
 - [[entities/从vibe-coding到agentic-engineering重构后台开发全流程|从Vibe Coding到Agentic Engineering：重构后台开发全流程]]

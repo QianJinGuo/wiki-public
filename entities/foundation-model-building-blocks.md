@@ -5,11 +5,11 @@ source: newsletter
 source_url:
 type: entity
 review_value: 8
-sources: []
+sources: [raw/articles/foundation-model-building-blocks]
 review_confidence: 9
 review_recommendation: strong
 created: 2026-05-13
-updated: 2026-08-07
+updated: 2026-09-05
 ---
 > -> [[raw/articles/foundation-model-building-blocks|原文存档]]
 

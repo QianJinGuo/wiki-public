@@ -4,11 +4,11 @@ title: "Japan’s PM orders cybersecurity review to defend against Anthropic Myt
 type: entity
 tags: [cybersecurity, japan, anthropic, ai-policy]
 created: 2026-05-13
-updated: 2026-08-01
+updated: 2026-09-05
 source: newsletter
 source_url:
 review_value: 7
-sources: []
+sources: [raw/articles/japan-pm-cybersecurity-review-anthropic-mythos]
 review_confidence: 8
 review_recommendation: strong
 ---

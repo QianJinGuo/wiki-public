@@ -6,9 +6,9 @@ tags: [security, deepsec, vulnerability, code, devsecops]
 source: newsletter
 source_url:
 created: 2026-05-12
-updated: 2026-08-01
+updated: 2026-09-05
 review_value: 4
-sources: []
+sources: [raw/articles/introducing-deepsec-find-and-fix-vulnerabilities-in-your-code-base]
 review_confidence: 7
 ---
 
@@ -33,6 +33,6 @@ deepsec 的架构代表了一种新型 AI-native 安全扫描范式：不是用 
 
 - [[entities/platformer-ai-job-loss-levie|The best argument I've heard for why AI won't take your job]]
 
-→ [[raw/articles/cpanel-whm-patch-3-new-vulnerabilities.md|原文存档]] ^[raw/articles/introducing-deepsec-find-and-fix-vulnerabilities-in-your-code-base.md]
+→ [[raw/articles/introducing-deepsec-find-and-fix-vulnerabilities-in-your-code-base|原文存档]] ^[raw/articles/introducing-deepsec-find-and-fix-vulnerabilities-in-your-code-base.md]
 
 - [[entities/vercel-com-how-superset-built-the-ide-for-ai-agents-on-vercel|How Superset built the IDE for AI agents on Vercel]]

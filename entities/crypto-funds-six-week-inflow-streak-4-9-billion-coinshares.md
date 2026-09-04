@@ -5,13 +5,13 @@ title: "Crypto Inflows Hit $858M as CLARITY Lifts Sentiment"
 source: newsletter (cointelegraph.com)
 source_url:
 review_value: 5
-sources: []
+sources: [raw/articles/crypto-funds-six-week-inflow-streak-4-9-billion-coinshares]
 review_confidence: 7
 review_recommendation: worth-reading
 review_stars: 3
 type: entity
 created: 2026-05-13
-updated: 2026-08-29
+updated: 2026-09-05
 ---
 
 > -> [[raw/articles/crypto-funds-six-week-inflow-streak-4-9-billion-coinshares.md|原文存档]]

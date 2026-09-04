@@ -1,7 +1,7 @@
 ---
 title: "Perplexity Numbat: Agent Security Suite"
 created: 2026-07-31
-updated: 2026-08-01
+updated: 2026-09-05
 type: entity
 tags: [ai, agent, security, perplexity, open-source]
 sources: [raw/articles/perplexity-numbat-agent-security-2026-07-29]
@@ -107,7 +107,7 @@ Numbat 通过 MDM 部署到 Perplexity 全公司的终端。Perplexity Computer�
 
 ## 相关实体
 
-- 参见 [[entities/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security|Agent 工具投毒]] 了解另一类 AI Agent 安全威胁——通过工具供应链投毒实现的攻击
+- 参见 [[entities/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security-v2|Agent 工具投毒]] 了解另一类 AI Agent 安全威胁——通过工具供应链投毒实现的攻击
 - 参见 **Agent Harness 安全** 了解 harness 层安全防护的通用框架和设计模式
 - 参见 **Accidental Meltdown** 了解 agent 在非对抗场景下自发的危险行为模式
 - 参见 **Prompt Injection** 了解传统的对抗性输入攻击及防御手段

@@ -3,7 +3,6 @@ title: "不用学AI了！圈内公开的秘密：顶级玩家已开始让AI用AI
 description: "新智元评测胖鹅AI的低提示词+SOP驱动模式，展示AI工具从'人指挥AI'向'AI自主协作'演进的趋势"
 type: entity
 tags: [wechat, ai, agent, sop, low-prompt, ai-collaboration, product-design, harness-engineering, video-generation, ppt-generation]
-provenance_state: inferred
 created: 2026-05-15
 updated: 2026-08-01
 review_value: 7

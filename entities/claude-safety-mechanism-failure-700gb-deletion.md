@@ -1,15 +1,12 @@
 ---
 title: "Claude安全机制大翻车：AI怒删开发者700GB主目录"
-created: 2026-08-31
-updated: 2026-08-31
-type: entity
-tags: [claude, ai-safety, agent-safety, alignment, incident]
-sources: [raw/articles/claude-safety-mechanism-failure-700gb-deletion]
-confidence: 0.75
+created: 2026-09-03
+updated: 2026-09-05
+type: redirect
+review_value: 0
+archived_to: _archive/checkup-2026-09-03/claude-safety-mechanism-failure-700gb-deletion.md
+archived_reason: stub_under_300_chars
 ---
 
-# Claude安全机制大翻车：AI怒删开发者700GB主目录
-
-Claude安全机制失败导致AI删除开发者700GB主目录的事件分析
-
-→ [[raw/articles/claude-safety-mechanism-failure-700gb-deletion|原文存档]]
+> 本实体已于 2026-09-03 质量闭环清理中归档（原因: stub_under_300_chars）。
+> 原文见 `raw/articles/`，归档件见 `_archive/checkup-2026-09-03/claude-safety-mechanism-failure-700gb-deletion.md`。

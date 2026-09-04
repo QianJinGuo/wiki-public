@@ -5,7 +5,7 @@ tags: [aws,redshift,graviton,data-lake,analytics]
 created: 2026-05-16
 updated: 2026-06-30
 review_value: 7
-sources: []
+sources: [raw/articles/amazon-redshift-推出带有集成数据湖查询引擎的基于-aws-graviton-的-rg-实例]
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 3

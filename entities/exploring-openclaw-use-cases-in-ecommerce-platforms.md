@@ -3,12 +3,12 @@
 title: "OpenClaw 在电商平台的应用场景探索 | 亚马逊AWS官方博客"
 created: 2026-05-14
 tags: [aws-china-blog, openclaw]
-sources: []
+sources: [raw/articles/exploring-openclaw-use-cases-in-ecommerce-platforms]
 review_value: 8
 review_confidence: 8
 review_recommendation: strong
 publish_date: 2026-03-11
-updated: 2026-08-01
+updated: 2026-09-05
 type: entity
 ---
 

@@ -3,9 +3,9 @@ title: "Aderant transforms cloud operations with Amazon Quick"
 type: entity
 tags: [aws, quick, legal-tech, case-study]
 created: 2026-05-19
-updated: 2026-06-19
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/aderant-transforms-cloud-operations-with-amazon-quick]
 review_confidence: 7
 review_recommendation: worth-reading
 ---

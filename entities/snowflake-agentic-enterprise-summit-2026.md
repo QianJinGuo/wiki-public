@@ -1,7 +1,7 @@
 ---
 title: "Snowflake Agentic Enterprise — 迈向可信的 Agent 平台"
 created: 2026-06-12
-updated: 2026-08-01
+updated: 2026-09-05
 date: "2026-06-12"
 tags: [snowflake, agentic-enterprise, agent-identity, data-movement-policy, cowork, cortex-code, agentic-search, datastream, agent-governance, summit-2026, trust, intent-driven-governance, cortex-sense]
 provenance_state: inferred
@@ -280,7 +280,7 @@ Cortex Sense 从 Snowflake 已有数据和活动中构建信号，自动增强 A
 - [[entities/spec-as-aios-anti-entropy-architecture-gaode-ai-native-series-2]]（Spec-as-AIOS — 治理即架构同思路）
 - [[entities/taobao-ai-sre-digital-employee-code-quality-governance]]（数字员工治理 — 行业对照）
 - [[entities/agentops-operationalize-agentic-ai-amazon-bedrock]]（AgentOps — 智能体可观测性对照）
-- [[entities/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security]]（企业 Agent 安全风险同主题）
+- [[entities/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security-v2]]（企业 Agent 安全风险同主题）
 - [[entities/amazon-quick-accelerating-the-path-from-enterprise-data-to-ai-powered-decisions]]（Amazon Quick — 另一家企业数据分析平台）
 
 → [[raw/articles/snowflake-agentic-enterprise-summit-2026-infoq|原文存档]] ^[raw/articles/snowflake-agentic-enterprise-summit-2026-infoq.md]

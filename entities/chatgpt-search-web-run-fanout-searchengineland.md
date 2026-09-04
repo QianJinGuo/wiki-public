@@ -4,9 +4,9 @@ title: "Inside ChatGPT Search: how web.run and fan-out queries shape results"
 type: entity
 tags: [gpt, search, openai, web-search, ai-information-retrieval, searchengineland]
 created: 2026-05-15
-updated: 2026-08-07
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/chatgpt-search-web-run-fanout-searchengineland]
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4

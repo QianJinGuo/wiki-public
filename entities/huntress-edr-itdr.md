@@ -3,12 +3,12 @@ title: "How Unified EDR and ITDR Stop Attacks Before They Spread"
 type: entity
 tags: [cybersecurity, edr, itdr, identity-threat, detection]
 review_value: 7
-sources: []
+sources: [raw/articles/huntress-edr-itdr]
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 3
 created: 2026-05-19
-updated: 2026-08-29
+updated: 2026-09-05
 ---
 ## 摘要
 

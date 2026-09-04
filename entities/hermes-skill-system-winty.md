@@ -3,11 +3,11 @@ title: "Skill 系统：Agent 如何把经验沉淀成可复用能力"
 source: "[[raw/articles/hermes-skill-system-winty|原文存档]]"
 type: entity
 review_value: 8
-sources: []
+sources: [raw/articles/hermes-skill-system-winty, raw/articles/hermes-self-improving-overview-winty]
 review_confidence: 7
 tags: [hermes, skill, agent, memory, expertise-reuse]
 created: "2026-05-18"
-updated: 2026-08-24
+updated: 2026-09-05
 ---
 
 # "Skill 系统：Agent 如何把经验沉淀成可复用能力"

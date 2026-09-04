@@ -8,7 +8,7 @@ source: wechat
 source_url:
 sha256: 6f4ade892903642b57a6f27fdda756552c8643ead250be0bb23cdecbf67e7f4a
 review_value: 5
-sources: []
+sources: [raw/articles/ai-内容创作开始进入画布-agent时代]
 confidence: 0.7
 ---
 ## 核心要点

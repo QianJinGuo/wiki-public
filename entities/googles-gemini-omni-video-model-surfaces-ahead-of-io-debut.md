@@ -7,12 +7,12 @@ tags: [google, video]
 source: newsletter
 source_url:
 review_value: 8
-sources: []
+sources: [raw/articles/googles-gemini-omni-video-model-surfaces-ahead-of-io-debut]
 review_confidence: 9
 review_recommendation: strong
 review_stars: 4
 ingested: 2026-05-13
-updated: 2026-08-07
+updated: 2026-09-05
 ---
 
 > -> [[raw/articles/googles-gemini-omni-video-model-surfaces-ahead-of-io-debut|原文存档]]

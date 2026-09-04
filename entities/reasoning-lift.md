@@ -4,9 +4,9 @@ title: "Reasoning lift: What happens to AI visibility when AI thinks harder"
 type: entity
 tags: [ai]
 created: 2026-05-19
-updated: 2026-05-19
+updated: 2026-09-05
 review_value: 8
-sources: []
+sources: [raw/articles/reasoning-lift]
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4

@@ -5,9 +5,9 @@ title: "Gemini 3.5 Flash: more expensive, but Google plan to use it for everythi
 type: entity
 tags: [article,newsletter]
 created: 2026-05-20
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 8
-sources: []
+sources: [raw/articles/gemini-35-flash-more-expensive-but-google-plan-to-use-it-for-everything]
 review_confidence: 8
 review_recommendation: strong
 

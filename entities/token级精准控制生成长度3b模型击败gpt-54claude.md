@@ -6,7 +6,7 @@ updated: 2026-05-10
 type: entity
 tags: [ai-agent, mlops, wechat]
 review_value: 6
-sources: []
+sources: [raw/articles/token级精准控制生成长度3b模型击败gpt-54claude]
 review_confidence: 7
 ---
 

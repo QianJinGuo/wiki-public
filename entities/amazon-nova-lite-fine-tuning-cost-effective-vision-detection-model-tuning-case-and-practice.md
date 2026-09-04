@@ -2,9 +2,9 @@
 
 title: "Amazon Nova Lite Fine-Tuning: 高性价比的视觉检测模型微调案例与实践 | 亚马逊AWS官方博客"
 created: 2026-05-14
-updated: 2026-08-30
+updated: 2026-09-05
 tags: [aws-china-blog, amazon-nova]
-sources: []
+sources: [raw/articles/amazon-nova-lite-fine-tuning-cost-effective-vision-detection-model-tuning-case-and-practice]
 review_value: 8
 review_confidence: 8
 review_recommendation: strong

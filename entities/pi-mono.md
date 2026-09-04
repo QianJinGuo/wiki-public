@@ -2,7 +2,7 @@
 
 title: "pi-mono — 模块化 AI Agent 构建平台（OpenClaw 执行引擎核心）"
 created: 2026-05-01
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [agent-framework, agent-engine, agent-toolkit, openclaw, typescript, monorepo, llm-api]
 review_value: 8
@@ -179,6 +179,6 @@ pi-mono 的流式事件架构天然支持实时 UI 更新（如终端差分渲�
 ## 相关实体
 
 - [[entities/developers.googleblog-announcing-genkit-middleware-intercept-extend-and-harden-y|announcing genkit middleware]]
-→ [[raw/articles/05-11-the-great-memory-panic-of-2026.md|原文存档]] ^[raw/articles/pi-mono-github.md]
+→ [[raw/articles/pi-mono-github|原文存档]] ^[raw/articles/pi-mono-github.md]
 
 - [[entities/agentcore-harness]] — AWS 托管 Harness 平台

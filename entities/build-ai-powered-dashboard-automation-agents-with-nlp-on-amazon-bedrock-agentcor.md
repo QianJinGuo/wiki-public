@@ -4,9 +4,9 @@ title: Bedrock AgentCore NLP 仪表盘自动化 Agent
 type: entity
 tags: [bedrock, aws, agent, llm]
 created: 2026-05-22
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 9
-sources: []
+sources: [raw/articles/build-ai-powered-dashboard-automation-agents-with-nlp-on-amazon-bedrock-agentcor]
 review_confidence: 9
 ---
 

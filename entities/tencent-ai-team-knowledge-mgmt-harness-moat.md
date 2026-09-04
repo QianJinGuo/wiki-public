@@ -1,14 +1,14 @@
 ---
 title: "Harness不是目的，知识才是护城河 —— 一个AI工程交付团队的知识沉淀实践"
 created: 2026-05-16
-updated: 2026-08-29
+updated: 2026-09-05
 date: 2026-05-11
 source: "[[raw/articles/tencent-ai-team-knowledge-mgmt-harness-moat|原文存档]]"
 type: entity
 value: 7
 tags: [agent, harness-engineering, skill, architecture, engineering]
 review_value: 7
-sources: []
+sources: [raw/articles/tencent-ai-team-knowledge-mgmt-harness-moat]
 review_confidence: 7
 ---
 

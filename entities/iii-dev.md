@@ -1,7 +1,7 @@
 ---
 title: "iii.dev"
 created: 2026-04-30
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [company, open-source, agent-infrastructure]
 sources: [raw/articles/iii-dev-worker-trigger-function]
@@ -86,7 +86,7 @@ Sandbox worker（microVM 级别硬件隔离）本身就是一个 worker，这意
 - Quickstart: https://iii.dev/docs/quickstart
 - Manus 谈 Claude Code 架构重建: https://vrungta.substack.com/p/claude-code-architecture-reverse
 
-→ [[raw/articles/05-11-the-great-memory-panic-of-2026.md|原文存档]] ^[raw/articles/iii-dev-worker-trigger-function.md]^[raw/articles/iii-dev-worker-trigger-function.md]
+→ [[raw/articles/iii-dev-worker-trigger-function|原文存档]] ^[raw/articles/iii-dev-worker-trigger-function.md]^[raw/articles/iii-dev-worker-trigger-function.md]
 
 ## 相关页面
 [[entities/agentcore-harness]] — AWS 托管 Harness 平台，同样探索 Agent 基础设施抽象 ^[raw/articles/iii-dev-worker-trigger-function.md]^[raw/articles/iii-dev-worker-trigger-function.md]

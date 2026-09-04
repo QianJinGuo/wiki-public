@@ -1,10 +1,10 @@
 ---
 title: "清华 AI 自进化组织研究报告：AI 业务资产化与公司形态重构"
 created: 2026-06-10
-updated: 2026-08-01
+updated: 2026-09-03
 type: entity
 tags: [ai-native-organization, agent-runtime, capital-markets, valuation-metrics, governance, algorithmic-jurisdiction, intent-compiler, rebuttal-asset, memory-solvency, machine-market, machine-economy, tsinghua, ai-native-company, self-evolving-organization, smart-process-coverage, revenue-per-agent, proprietary-context-index, inference-gross-margin, ai-risk-reserve]
-sources: [raw/articles/tsinghua-ai-self-evving-organization-report]
+sources: [raw/articles/tsinghua-ai-self-evolving-organization-report]
 review_value: 9
 review_confidence: 8
 review_recommendation: strong
@@ -12,7 +12,7 @@ review_stars: 5
 confidence: 0.88
 provenance_state: "merged"
 pdf_pages: 63
-pdf_source: [本地路径已隐藏]：基于 AI 的自进化组织研究报告.pdf
+pdf_source: raw/articles/tsinghua-ai-self-evolving-organization-report.md
 related_entities:
   - acker-agent-evolution-three-routes-convergence
 ---
@@ -183,4 +183,3 @@ related_entities:
 ---
 ## 关联
 - 相关概念: [[concepts/harness-engineering-framework|Harness Engineering]]
-

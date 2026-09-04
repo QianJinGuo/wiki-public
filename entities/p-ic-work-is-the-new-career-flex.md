@@ -4,12 +4,12 @@ title: "IC work is the new career flex"
 type: entity
 tags: [career, ic, engineering, tech-career]
 review_value: 7
-sources: []
+sources: [raw/articles/p-ic-work-is-the-new-career-flex]
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4
 created: 2026-05-15
-updated: 2026-08-07
+updated: 2026-09-05
 ---
 
 ## 核心要点

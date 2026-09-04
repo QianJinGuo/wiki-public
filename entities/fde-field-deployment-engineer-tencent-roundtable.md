@@ -1,10 +1,10 @@
 ---
 title: "FDE（Field Deployment Engineer）非共识与落地指南 — 硅谷一线实践者圆桌"
 created: 2026-07-08
-updated: 2026-08-06
+updated: 2026-09-04
 type: entity
-tags: [fde, field-deployment-engineer, ai-deployment, enterprise-ai, ai-engineering, tencent-research, harness-engineering, distillation, forward-deployed-engineer, fdx, forward-deployed-executive]
-sources: [raw/articles/fde-field-deployment-engineer-tencent-roundtable-2026-07-08, raw/articles/fde-forward-deployed-executive-fdx-infoq-2026-08-04, raw/articles/fde-industry-report-tencent-research-2026-08-05]
+tags: [fde, field-deployment-engineer, ai-deployment, enterprise-ai, ai-engineering, tencent-research, harness-engineering, distillation, forward-deployed-engineer, fdx, forward-deployed-executive, determinism-uncertainty, product-boundary]
+sources: [raw/articles/fde-field-deployment-engineer-tencent-roundtable-2026-07-08, raw/articles/fde-forward-deployed-executive-fdx-infoq-2026-08-04, raw/articles/fde-industry-report-tencent-research-2026-08-05, raw/articles/fde-product-boundary-uncertainty-ye-xiaochai-2026-09-04]
 confidence: 0.9
 provenance_state: extracted
 ---
@@ -155,3 +155,25 @@ Manelius 将 FDX 视为十亿美元级市场机会——AI 时代稀缺的不是
 - CodeBuddy/WorkBuddy 客户成功团队：决策层认知拉齐→工具驱动执行→商业结果验证全链路 ^[raw/articles/fde-industry-report-tencent-research-2026-08-05.md]
 
 → [[raw/articles/fde-industry-report-tencent-research-2026-08-05|原文存档（腾讯研究院报告，Supplementary）]]
+
+## 确定性-不确定性架构：FDE 作为产品体系前的不确定性处理层（2026-09-04 Supplementary）
+
+叶小钗从一场数字员工公司 FDE 负责人与产品负责人的争论出发，给出了 FDE 在 Agent 产品体系中的结构性定位，以及一套可落地的确定性与不确定性分工框架。^[raw/articles/fde-product-boundary-uncertainty-ye-xiaochai-2026-09-04.md]
+
+### FDE 与产品负责人的本质分野
+
+产品负责人面对的是已经知道怎么稳定解决的问题；FDE 负责人面对的是客户确实有问题、但还不知道怎样能被稳定解决的部分。^[raw/articles/fde-product-boundary-uncertainty-ye-xiaochai-2026-09-04.md] 例如客户说"要做经营分析 AI 智能化"不算需求只算想法——继续往下可能发现没有统一数据口径、没有经营分析 SOP、不同管理者关注点各异，企业要的甚至不是报告而是异常发现后的追问、归因和行动建议。FDE 先把模糊问题逐级拆清：客户目标 → 业务建模 → 现状梳理 → 问题诊断 → 优化方案 → 核心 AI 能力 → MVP，去现场把产品暂时无法理解的问题变成可被理解、验证、交付的结构。这就是"FDE 负责人敢说不用产品交付"的合理性来源——他首先负责客户目标能否达成。
+
+### 确定性下沉，不确定性上浮
+
+这是对 Agent 应用内部如何分配确定性与不确定性的架构原则：能写成规则的不要交给大模型，能固化成 Workflow 的不要让 Agent 每次重新规划，真正无法穷举、必须结合上下文动态判断的部分才交给 Agent。^[raw/articles/fde-product-boundary-uncertainty-ye-xiaochai-2026-09-04.md] 现实业务从确定性高到不确定性高构成一条光谱：规则 → 程序 → Workflow → LLM 节点 → Agent → 业务专家。系统内部分工：规则/程序处理高确定性逻辑，Workflow 承接已理清的流程，Skill/LLM Node 承接局部判断与语义理解，Agent 负责目标驱动下的动态规划、跨流程组合和剩余不确定性。Workflow 与 Agent 是分层协作且动态演化的——业务理解加深后，原本交给 Agent 的判断会继续向下沉淀成 Skill、Workflow 甚至规则。
+
+### 生产任务三分与可接受的不确定性边界
+
+生产应用需要验收标准，但 AI 项目要面对的恰是不可穷举任务，往往只能做到风险可控。^[raw/articles/fde-product-boundary-uncertainty-ye-xiaochai-2026-09-04.md] 传统软件"生产可用 = 结果基本可预测"，Agent 系统则是"生产可用 = 确定部分足够稳定 + 不确定部分有边界 + 高风险可发现和接管 + 结果可评估"，由此把 AI 生产任务分成三层：确定性任务（规则/程序/Workflow）、约束型任务（LLM Node 判断，有边界和评价机制）、探索型任务（Agent 动态规划多步探索）。三类任务无法用同一产品设计方法，硬塞进一套平台必然越来越复杂——这也是很多通用数字员工平台不好用的原因。
+
+### 边交付边吃业务，业务长产品产品长底座
+
+B 端 AI 产品采用"边交付边生长"模式：先基于理解最深的业务做出第一个成立的数字员工，放进真实客户发现产品边界，FDE 处理边界外问题，再把反复出现的共性认知吃回产品，一轮轮慢慢长。^[raw/articles/fde-product-boundary-uncertainty-ye-xiaochai-2026-09-04.md] 底层 Agent 底座不用预先设计成万能平台，而是等越来越多数字员工和 FDE 项目出现相同工程问题后，再把权限/安全/企业集成/运行环境/状态管理/监控等公共能力沉到底座。整篇文章收敛为两句话：**确定性下沉、不确定性上浮**（Agent 应用内部设计），**业务长产品、产品长底座**（AI 公司产品体系生长路径）。这与上方"蒸馏"机制的思路同构——都是围绕"经验回流产品"的飞轮，但本文提供了更明确的可交付框架与"不确定性处理层"这一定位。
+
+→ [[raw/articles/fde-product-boundary-uncertainty-ye-xiaochai-2026-09-04|原文存档（叶小钗，Supplementary）]]

@@ -1,10 +1,9 @@
 ---
 title: "New legal questions: agentic pen testing"
 created: 2026-06-19
-updated: 2026-08-01
+updated: 2026-09-05
 type: entity
 tags: [security, ai-agents, pen-testing, legal, cybersecurity, agent-identity, liability]
-provenance_state: inferred
 source: [[raw/articles/agentic-penetration-testing-legal-questions]]
 review_value: 8
 review_confidence: 8

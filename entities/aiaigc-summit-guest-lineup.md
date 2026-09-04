@@ -6,9 +6,9 @@ source: wechat
 type: entity
 tags: [wechat, aigc, summit, agent, openclaw]
 created: 2026-05-11
-updated: 2026-08-07
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/aiaigc-summit-guest-lineup]
 review_confidence: 7
 review_recommendation: strong
 review_stars: 4

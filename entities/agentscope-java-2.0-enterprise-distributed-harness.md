@@ -1,9 +1,8 @@
 ---
 title: "AgentScope Java 2.0：企业级分布式 Harness 框架"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, architecture, harness-engineering, agentscope, agentscope-java, harness-agent, harness-framework, enterprise-distributed, multi-tenant, abstract-filesystem, workspace, context-management, middleware, permission-system, model-fallback, event-stream, java, jvm, spring-boot, kubernetes, builder-pattern, contentblock, data-block, sealed-class, coding-agent, open-swe, stripe-minions, coinbase-cloudbot, organization-level, sandbox, draft-pr, plan-mode, tool-curation, sub-agent]
-provenance_state: inferred
 review_value: 9
 review_confidence: 8
 type: entity

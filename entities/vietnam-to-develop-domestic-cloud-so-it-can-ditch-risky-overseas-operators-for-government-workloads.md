@@ -3,9 +3,9 @@ title: "Vietnam to develop domestic cloud so it can ditch risky overseas operato
 type: entity
 tags: [vietnam, cloud-computing, government, data-sovereignty]
 created: 2026-05-14
-updated: 2026-08-07
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/vietnam-to-develop-domestic-cloud-so-it-can-ditch-risky-overseas-operators-for-government-workloads]
 review_confidence: 8
 review_recommendation: strong
 ---

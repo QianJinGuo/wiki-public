@@ -5,10 +5,10 @@ type: entity
 source: newsletter
 source_url:
 review_value: 7
-sources: []
+sources: [raw/articles/5238213, raw/articles/openai-buys-ai-consultancy-to-sell-enterprises-on-its-models]
 review_confidence: 8
 review_recommendation: worth-reading
-updated: 2026-08-07
+updated: 2026-09-05
 tags: [openai, enterprise-ai, news, ai]
 provenance_state: inferred
 ---

@@ -2,7 +2,7 @@
 
 title: "快时尚电商行业智能体设计思路与应用实践（七）Amazon Bedrock AgentCore Runtime 深度解析和场景分析 | 亚马逊AWS官方博客"
 created: 2026-05-14
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [aws-china-blog, bedrock-agentcore]
 sources: [raw/articles/amazon-bedrock-agentcore-runtime-deep-dive-and-scenario-analysis]
 review_value: 8
@@ -118,6 +118,6 @@ AgentCore Memory 提供双层记忆系统： ^[raw/articles/amazon-bedrock-agent
 - [[entities/intelligent-cost-analysis-and-alerting-system-powered-by-bedrock-agentcore|基于Bedrock Agentcore 实现智能成本分析与告警系统 | 亚马逊AWS官方博客]]
 - [[entities/using-amazon-bedrock-agentcore-openclaw-multi-1|AI Agent 的迁移与现代化 — 使用 Amazon Bedrock AgentCore 将 OpenClaw 从单机改造为多租户 Serverless 架构 第一篇 | 亚马逊AWS官方博客]]
 
-→ [[raw/articles/ai-coding-guide-tmall-deep-dive.md|原文存档]] ^[raw/articles/amazon-bedrock-agentcore-runtime-deep-dive-and-scenario-analysis.md]
+→ [[raw/articles/amazon-bedrock-agentcore-runtime-deep-dive-and-scenario-analysis|原文存档]] ^[raw/articles/amazon-bedrock-agentcore-runtime-deep-dive-and-scenario-analysis.md]
 
 - [[entities/using-amazon-bedrock-agentcore-openclaw-multi-4|AI Agent 的迁移与现代化 — 使用 Amazon Bedrock AgentCore 将 OpenClaw 从单机改造为多租户 Serverless 架构 第四篇 | 亚马逊AWS官方博客]]

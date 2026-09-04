@@ -1,7 +1,7 @@
 ---
 title: Agent Security Threat Models
 created: 2026-05-21
-updated: 2026-08-01
+updated: 2026-09-05
 type: concept
 tags: [security, cybersecurity, ai-security, agent-security, threat-model, tool-poisoning, iam]
 sources: [raw/articles/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security-v2, raw/articles/1password-securing-ai-agents-machine-identities, raw/articles/automation-anywhere-collaborates-with-cisco-nvidia-okta-and-openai-launching-ent]
@@ -27,7 +27,7 @@ AI 代理具有自主决策和行动能力，其身份验证凭证（如 API 密
 
 ## Tool Poisoning：企业 Agent 安全的核心缺陷
 
-[[entities/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security|VentureBeat 的深度报告]]揭示了企业 Agent 安全中一个根本性的架构缺陷：**工具注册表的元数据（描述、规格）与工具实际行为之间存在验证断层**。^[raw/articles/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security-v2.md]
+[[entities/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security-v2|VentureBeat 的深度报告]]揭示了企业 Agent 安全中一个根本性的架构缺陷：**工具注册表的元数据（描述、规格）与工具实际行为之间存在验证断层**。^[raw/articles/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security-v2.md]
 
 ### 当前供应链安全体系的盲区
 
@@ -137,7 +137,7 @@ AI 代理具有自主决策和行动能力，其身份验证凭证（如 API 密
 
 ## 相关概念
 
-- [[entities/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security|Tool Poisoning 报告]] — behavioral integrity vs artifact integrity
+- [[entities/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security-v2|Tool Poisoning 报告]] — behavioral integrity vs artifact integrity
 - [[entities/1password-securing-ai-agents-machine-identities|1Password 机器身份]] — 非人类身份 IAM
 - [[entities/automation-anywhere-collaborates-with-cisco-nvidia-okta-and-openai-launching-ent|EnterpriseClaw]] — 企业级 Agent 安全生态
 - [[entities/claude-code-large-codebase-enterprise-deployment|Claude Code 企业部署]] — 企业级 Agent 的治理框架
@@ -150,11 +150,11 @@ AI 代理具有自主决策和行动能力，其身份验证凭证（如 API 密
 
 **上游依赖**:
 - [[entities/1password-securing-ai-agents-machine-identities]] — 提供基础理论/方法
-- [[entities/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security]] — 提供基础理论/方法
+- [[entities/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security-v2]] — 提供基础理论/方法
 - [[entities/automation-anywhere-collaborates-with-cisco-nvidia-okta-and-openai-launching-ent]] — 提供基础理论/方法
 
 **下游应用**:
-- [[entities/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security]] — 具体应用场景
+- [[entities/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security-v2]] — 具体应用场景
 - [[entities/1password-securing-ai-agents-machine-identities]] — 具体应用场景
 - [[entities/automation-anywhere-collaborates-with-cisco-nvidia-okta-and-openai-launching-ent]] — 具体应用场景
 

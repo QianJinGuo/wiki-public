@@ -1,10 +1,9 @@
 ---
 title: "SkillComposer: 生成式技能组合"
 created: 2026-07-02
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [skill-composition, agent-skills, generative-retrieval, skill-selection, sequence-prediction]
-provenance_state: inferred
 source: "[[raw/articles/skillcomposer-generative-skill-composition-agent-arxiv-2606-32025]]"
 confidence: 0.77
 provenance_state: extracted

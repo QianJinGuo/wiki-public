@@ -1,10 +1,9 @@
 ---
 title: "Netflix 分层通知系统：Thinking Fast & Slow 的 Slow-Fast RL 架构"
 created: 2026-06-23
-updated: 2026-08-01
+updated: 2026-09-05
 type: entity
 tags: [notification-system, hierarchical-rl, reinforcement-learning, netflix, personalization, pacing, slow-fast-architecture, user-engagement, message-frequency]
-provenance_state: inferred
 sources:
   - raw/articles/thinking-fast-slow-for-a-personalized-notification-system
 review_value: 7

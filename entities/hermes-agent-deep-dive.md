@@ -2,7 +2,7 @@
 
 title: "Hermes Agent 深度解析（阿里云/飞樰）"
 created: 2026-04-24
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [hermes-agent, self-evolving, skill-generation, reinforcement-learning, rl, grpo, prompt-engineering, context-engineering, harness-engineering, nous-research, openclaw, claude-code]
 sources: [raw/articles/hermes-agent-deep-dive-alibaba]
@@ -168,7 +168,7 @@ OpenClaw 用绝对 Token 数（18K）触发压缩，在上下文窗口较小的�
 **多维度奖励函数的部分分设计** ^[raw/articles/hermes-agent-deep-dive-alibaba.md]
 给"写了开标签但没闭合"的部分分设计非常符合真实任务的连续性——现实中的解决方案很少是 0/1 的，而是有中间状态的。这种部分奖励的设计可以防止模型在遇到困难时完全放弃，而是尝试走到更接近正确答案的方向。 ^[raw/articles/hermes-agent-deep-dive-alibaba.md]
 
-→ [[raw/articles/05-11-the-great-memory-panic-of-2026.md|原文存档]] ^[raw/articles/hermes-agent-deep-dive-alibaba.md]
+→ [[raw/articles/hermes-agent-deep-dive-alibaba|原文存档]] ^[raw/articles/hermes-agent-deep-dive-alibaba.md]
 
 ### 长期需要注意的风险
 **Skill 数量膨胀后的检索质量** ^[raw/articles/hermes-agent-deep-dive-alibaba.md]

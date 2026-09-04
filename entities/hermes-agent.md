@@ -2,7 +2,7 @@
 
 title: "Hermes Agent"
 created: 2026-04-24
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [hermes-agent, nous-research, agent, self-evolving, open-source, skill]
 sources: [raw/articles/agent-tools-research]
@@ -76,7 +76,7 @@ Hermes Agent 的自进化机制代表了一种新型的 AI Agent 设计范式：
 - [[entities/anthropic-agent-skills-design-patterns-14|Anthropic 14 个 Agent Skills 设计模式]]
 - [[entities/hermes-skill-system-winty|Skill 系统：Agent 如何把经验沉淀成可复用能力]]
 
-→ [[raw/articles/hermes-agent-closed-learning-loop.md|原文存档]] ^[raw/articles/agent-tools-research.md]
+→ [[raw/articles/agent-tools-research|原文存档]] ^[raw/articles/agent-tools-research.md]
 
 - [[entities/trace2skill-trajectory-distillation-agent-skills|Trace2Skill: 轨迹经验蒸馏为可迁移 Agent Skills]]
 - [[moc/claude-code-complete-guide|MOC]]

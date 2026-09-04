@@ -6,7 +6,7 @@ tags: [wechat, tech, organization, ai-native, execution-graph, harness, architec
 created: 2026-05-16
 updated: 2026-08-01
 review_value: 8
-sources: []
+sources: [raw/articles/ai-native-时代-研发组织何去何从]
 review_confidence: 8
 review_recommendation: strong
 ---

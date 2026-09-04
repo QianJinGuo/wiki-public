@@ -4,9 +4,9 @@ title: "Agent orchestration"
 type: entity
 tags: [newsletter, article]
 created: 2026-05-18
-updated: 2026-05-19
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/agent-orchestration]
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 3

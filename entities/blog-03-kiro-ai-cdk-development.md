@@ -2,7 +2,7 @@
 
 title: "使用 Kiro AI IDE 开发 AWS CDK 部署架构：从模糊需求到三层堆栈的协作实战 | 亚马逊AWS官方博客"
 created: 2026-05-14
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [aws-china-blog, kiro]
 sources: [raw/articles/blog-03-kiro-ai-cdk-development]
 review_value: 8
@@ -89,6 +89,6 @@ FrontendStack（前端应用，经常更新）
 - [[entities/ai-network-claude-code-kiro-cli-implement-aws-ipsec-vpn|AI 驱动的跨云网络搭建：用 Claude Code 和 Kiro CLI 实现 AWS-腾讯云 IPSec VPN 双隧道互联 | 亚马逊AWS官方博客]]
 - [[entities/use-kiro-specification-driven-development-to-accelerate-data-quality-construction|使用 Kiro 规范驱动开发加速数据质量建设 | 亚马逊AWS官方博客]]
 
-→ [[raw/articles/autoresearch-software-development.md|原文存档]] ^[raw/articles/blog-03-kiro-ai-cdk-development.md]
+→ [[raw/articles/blog-03-kiro-ai-cdk-development|原文存档]] ^[raw/articles/blog-03-kiro-ai-cdk-development.md]
 
 - [[entities/ai-graviton-migration-kiro-power-guide|AI 驱动的 Graviton 迁移评估：Kiro Power 实战指南 | 亚马逊AWS官方博客]]

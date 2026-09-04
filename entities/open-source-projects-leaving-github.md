@@ -4,9 +4,9 @@ title: 明星开源项目，为什么开始离开 GitHub？
 type: entity
 tags: [open-source, github, microsoft, copilot, licensing, governance, foss]
 created: 2026-05-21
-updated: 2026-08-02
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/open-source-projects-leaving-github]
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4

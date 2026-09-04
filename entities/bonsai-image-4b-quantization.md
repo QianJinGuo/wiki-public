@@ -2,7 +2,7 @@
 
 title: "Bonsai Image 4B: 1-bit 和 Ternary 量化"
 created: 2026-06-01
-updated: 2026-08-06
+updated: 2026-09-05
 type: entity
 tags: [image-generation, quantization, efficient-inference, ml]
 source: [[raw/articles/introducing-1-bit-and-ternary-bonsai-image-4b-image-generati-352fe9.md]]
@@ -24,7 +24,7 @@ sources: [raw/articles/bonsai-image-4b-1-bit-ternary]
 
 ---
 
-→ [[raw/articles/introducing-1-bit-and-ternary-bonsai-image-4b-image-generati-352fe9.md|原文存档]] ^[raw/articles/bonsai-image-4b-1-bit-ternary.md]
+→ [[raw/articles/bonsai-image-4b-1-bit-ternary|原文存档]] ^[raw/articles/bonsai-image-4b-1-bit-ternary.md]
 
 ## 深度分析
 

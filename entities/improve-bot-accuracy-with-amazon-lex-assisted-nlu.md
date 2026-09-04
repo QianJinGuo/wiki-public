@@ -3,9 +3,9 @@ title: "Improve bot accuracy with Amazon Lex Assisted NLU"
 type: entity
 tags: [aws, machine-learning, ai-agents, bedrock]
 created: 2026-05-15
-updated: 2026-06-19
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/improve-bot-accuracy-with-amazon-lex-assisted-nlu]
 review_confidence: 8
 review_recommendation: strong
 ---

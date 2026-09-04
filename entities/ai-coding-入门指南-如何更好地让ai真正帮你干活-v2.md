@@ -5,7 +5,7 @@ tags: [ai-coding, harness-engineering, prompt-engineering, spec-coding, rules, s
 created: 2026-05-10
 updated: 2026-08-01
 review_value: 5
-sources: []
+sources: [raw/articles/ai-coding-入门指南-如何更好地让ai真正帮你干活]
 review_confidence: 10
 review_recommendation: worth-reading
 review_stars: 3

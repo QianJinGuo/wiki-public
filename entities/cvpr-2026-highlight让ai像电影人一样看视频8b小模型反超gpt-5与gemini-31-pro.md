@@ -5,7 +5,7 @@ tags: [wechat,article]
 created: 2026-05-16
 updated: 2026-05-18
 review_value: 8
-sources: []
+sources: [raw/articles/cvpr-2026-highlight让ai像电影人一样看视频8b小模型反超gpt-5与gemini-31-pro]
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4

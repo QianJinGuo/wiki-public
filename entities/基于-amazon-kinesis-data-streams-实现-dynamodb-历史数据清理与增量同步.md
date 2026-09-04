@@ -9,7 +9,7 @@ url:
 ingested: 2026-05-11
 tags: [aws, dynamodb, kinesis, data-engineering]
 review_value: 6
-sources: []
+sources: [raw/articles/基于-amazon-kinesis-data-streams-实现-dynamodb-历史数据清理与增量同步]
 review_confidence: 7
   - AWS China Blog
   - AWS, DynamoDB, Kinesis, Data Engineering, Incremental Sync

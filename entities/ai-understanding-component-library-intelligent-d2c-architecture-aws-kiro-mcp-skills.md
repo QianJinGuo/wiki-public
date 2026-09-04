@@ -3,12 +3,12 @@
 title: "让 AI 理解你的组件库：新一代智能 D2C架构 — 基于 AWS Kiro MCP Skills 的智能转换实践 | 亚马逊AWS官方博客"
 created: 2026-05-14
 tags: [aws-china-blog, kiro]
-sources: []
+sources: [raw/articles/ai-understanding-component-library-intelligent-d2c-architecture-aws-kiro-mcp-skills]
 review_value: 8
 review_confidence: 8
 review_recommendation: strong
 publish_date: 2025-12-08
-updated: 2026-08-01
+updated: 2026-09-05
 type: entity
 ---
 

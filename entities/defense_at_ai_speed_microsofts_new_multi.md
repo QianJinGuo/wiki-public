@@ -4,9 +4,9 @@ title: "Defense at AI speed: Microsoft's new multi-model agentic security system
 type: entity
 tags: [security, multi-agent, vulnerability-discovery, microsoft, agentic-ai]
 created: 2026-05-18
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 8
-sources: []
+sources: [raw/articles/defense_at_ai_speed_microsofts_new_multi]
 review_confidence: 8
 review_recommendation: worth-reading
 ---

@@ -4,9 +4,9 @@ title: "Top 10 Design Gadgets for Creative Professionals That Will Change How Yo
 type: entity
 tags: [design, gadgets, creative, tool, 2026]
 created: 2026-05-14
-updated: 2026-08-01
+updated: 2026-09-05
 review_value: 8
-sources: []
+sources: [raw/articles/top-10-design-gadgets-creative-professionals-2026]
 review_confidence: 9
 review_recommendation: strong
 review_stars: 4

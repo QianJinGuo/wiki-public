@@ -2,9 +2,9 @@
 title: "Claude Code Memory Setup (Obsidian + Graphify)"
 type: entity
 created: 2026-05-13
-updated: 2026-08-05
+updated: 2026-09-05
 tags: [claude-code, memory, architecture]
-sources: []
+sources: [raw/articles/claude-code-memory-setup-token-71x楠楠自瑜]
 review_value: 8
 review_confidence: 7
 provenance_state: inferred

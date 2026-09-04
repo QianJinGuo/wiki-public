@@ -7,7 +7,7 @@ type: entity
 value: 7
 tags: [claude-code, open-source, ai]
 review_value: 9
-sources: []
+sources: [raw/articles/开源-ai-知识管理搭档-obsidian-claude-code-完整集成指南]
 review_confidence: 7
 ---
 [[raw/articles/开源-ai-知识管理搭档-obsidian-claude-code-完整集成指南.md]] ^[raw/articles/开源-ai-知识管理搭档-obsidian-claude-code-完整集成指南.md]

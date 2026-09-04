@@ -3,9 +3,9 @@ title: "Development environments for your cloud agents"
 type: entity
 tags: [cursor,cloud-agent,development-environment,coding-agent]
 created: 2026-05-16
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/development-environments-for-your-cloud-agents]
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 3

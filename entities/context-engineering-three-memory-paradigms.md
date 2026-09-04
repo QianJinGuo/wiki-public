@@ -2,10 +2,10 @@
 source_url:
 title: "上下文工程：三种 Agent Memory 方案对比实验"
 created: 2026-05-19
-updated: 2026-08-29
+updated: 2026-09-05
 summary: 三种 Agent Memory 方案（MSA/Doc-to-lora/RAG）量化对比实验。结论：RAG 在小说QA强推理场景优于MSA（2.152 vs 1.574），MSA在HotpotQA检索场景优于RAG（4.172 vs 3.815），Doc-to-lora全面失败（normalized recall 0.892但幻觉率极高）。压缩换扩展性是MSA合理取舍但有信息有损代价。
 review_value: 7
-sources: []
+sources: [raw/articles/context-engineering-three-memory-paradigms-comparison]
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 3

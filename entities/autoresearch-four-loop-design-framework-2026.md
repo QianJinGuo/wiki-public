@@ -1,7 +1,7 @@
 ---
 title: "AutoResearch 四种常见循环设计框架"
 created: 2026-08-27
-updated: 2026-08-30
+updated: 2026-09-03
 type: entity
 tags: [autoresearch, agent-loop, research-agent, framework, paperweekly]
 sources: [raw/articles/autoresearch怎么设计四种常见循环一套通用框架]
@@ -70,8 +70,8 @@ AutoResearch = 基模 + Agent Loop。当基模（底层模型）趋于同质、�
 
 ## 补遗（2026-08-29）：失败处理的第五种范式——编辑计划而非重新规划
 
-本文通用分析框架给「失败处理」列了回退 / 记录 / 重试三种。Polaris 的 Voyage 内核提供了第五种：**失败时不重生成计划，而是对现有计划发增量 plan edit**（add/update/obsolete），带硬不变量——每次 edit ≤8 个新步骤、只准动未完成步骤、不得在当前执行点之前插入、superseded 步骤标 obsolete 而不删除（历史完整）；plan edit 按**错误签名**限连续 2 次（换了错误即重置），防止同因循环 ^[raw/articles/polaris-voyage-research-platform-2026.md]。
+本文通用分析框架给「失败处理」列了回退 / 记录 / 重试三种。Polaris 的 Voyage 内核提供了第五种：**失败时不重生成计划，而是对现有计划发增量 plan edit**（add/update/obsolete），带硬不变量——每次 edit ≤8 个新步骤、只准动未完成步骤、不得在当前执行点之前插入、superseded 步骤标 obsolete 而不删除（历史完整）；plan edit 按**错误签名**限连续 2 次（换了错误即重置），防止同因循环 。
 
-配套的预算哲学补进「时间预算约束」维度：**限额花在进展上，不是重试次数上**——实验修复循环不设重试计数器，改用墙钟 phase 预算（时钟排除排队/审批/等待时间）；token budget 耗尽时 wrap-up 步骤仍可跑，其余 pending 标 obsolete ^[raw/articles/polaris-voyage-research-platform-2026.md]。与四种循环范式的关系：plan edit 正交于搜索拓扑——线性 keep-or-discard、树搜索、进化池改变的是「往哪搜」，plan edit 改变的是「搜不动时怎么改地图」。综合来源见 [[drafts/wiki-emergent-viewpoints-2026-08-phd-lens|2026-08 涌现观点·观点三]]。
+配套的预算哲学补进「时间预算约束」维度：**限额花在进展上，不是重试次数上**——实验修复循环不设重试计数器，改用墙钟 phase 预算（时钟排除排队/审批/等待时间）；token budget 耗尽时 wrap-up 步骤仍可跑，其余 pending 标 obsolete 。与四种循环范式的关系：plan edit 正交于搜索拓扑——线性 keep-or-discard、树搜索、进化池改变的是「往哪搜」，plan edit 改变的是「搜不动时怎么改地图」。综合来源见 [[drafts/wiki-emergent-viewpoints-2026-08-phd-lens|2026-08 涌现观点·观点三]]。
 
 → [[raw/articles/autoresearch怎么设计四种常见循环一套通用框架|原文存档]]

@@ -3,9 +3,9 @@ title: "Lightfield Skills 系统介绍"
 type: entity
 tags: [lightfield, ai-agents, skills, specialization, learning]
 created: 2026-05-15
-updated: 2026-08-07
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/lightfield-introducing-skills]
 review_confidence: 8
 review_recommendation: strong
 review_stars: 3

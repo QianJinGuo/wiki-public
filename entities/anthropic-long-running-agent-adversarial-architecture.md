@@ -2,12 +2,12 @@
 
 title: "Anthropic 长时运行 Agent 架构：对抗式设计 + 合同谈判 + 审美量化"
 created: 2026-05-20
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, anthropic, claude, long-running, adversarial-architecture, evaluation, gan-style, contract-negotiation]
 rating: 8.0
 confidence: 8.0
 review_value: 6
-sources: []
+sources: [raw/articles/anthropic-long-running-agent-architecture-6h-retroforge]
 related:
   - "agent-eval-wallezhang-yaml-driven-agent-evaluation-framework"
   - "perplexity-internal-skill-design-guide"
@@ -142,7 +142,7 @@ GAN 风格的对抗式架构之所以有效，根本原因在于突破了「谄�
 - [[entities/anthropic-claude-next-gen-alex-infoq|Anthropic 首次揭秘下一代 Claude 怎么造]]
 
 
-→ [[raw/articles/anthropic-to-share-mythos-cyber-flaw-findings-with-global-finance-watchdog-1.md|原文存档]]
+→ [[raw/articles/anthropic-long-running-agent-architecture-6h-retroforge|原文存档]]
 
 - [[entities/agent-engineering-principles-architecture-practice|Agent 原理、架构与工程实践]]
 - [[entities/claude-opus-4-8-system-card-zvi|claude opus 4.8: the system card]]

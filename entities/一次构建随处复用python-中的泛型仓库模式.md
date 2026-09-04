@@ -6,7 +6,7 @@ updated: 2026-05-10
 type: entity
 tags: [engineering, wechat]
 review_value: 6
-sources: []
+sources: [raw/articles/一次构建随处复用python-中的泛型仓库模式]
 review_confidence: 7
 ---
 

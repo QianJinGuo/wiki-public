@@ -2,7 +2,7 @@
 
 title: "AutoResearch-LLM：让 Agent 接手 LLM 训练优化"
 created: 2026-07-06
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [agent, llm, fine-tuning, mlops, autoresearch, sft, dpo, qwen3, deepspeed, alibaba]
 source: [[raw/articles/autoresearch-llm-agent-llm-training-optimization-1688-阿里云开发者]]
@@ -15,7 +15,7 @@ sources: [raw/articles/autoresearch-llm让-agent-接手-llm-训练优化]
 # AutoResearch-LLM：让 Agent 接手 LLM 训练优化
 
 > **来源**：阿里云开发者（吉梦林）。本文是 1688 团队 LLM 微调 AutoResearch 的落地实战，基于 TuningFactory（LLaMA-Factory 内部 Fork）+ 星云平台，覆盖电商场景（Query 改写 / 同款判定 / 重排打分）下 Qwen3 系列模型的三阶段自动化调优框架。
-> → [[raw/articles/autoresearch-llm-agent-llm-training-optimization-1688-阿里云开发者|原文存档]]
+> → [[raw/articles/autoresearch-llm让-agent-接手-llm-训练优化|原文存档]]
 
 ## 核心贡献
 

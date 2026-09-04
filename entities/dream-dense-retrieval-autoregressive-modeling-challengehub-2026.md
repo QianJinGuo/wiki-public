@@ -1,14 +1,13 @@
 ---
 title: "DREAM：用冻结 LLM 的自回归预测训练稠密检索器，无需标注正负样本"
 created: 2026-06-29
-updated: 2026-08-01
+updated: 2026-09-05
 source: wechat
 url:
 paper_url:
 code_url:
 type: entity
 tags: [dense-retrieval, rag, information-retrieval, llm, attention-head, training, contrastive-free, ntp-loss, embedding]
-provenance_state: inferred
 review_value: 8
 review_confidence: 8
 review_stars: 4

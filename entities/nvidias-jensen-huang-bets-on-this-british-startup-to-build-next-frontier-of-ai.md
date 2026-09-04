@@ -3,9 +3,9 @@ title: "Nvidia's Jensen Huang bets on this British startup to build 'next fronti
 type: entity
 tags: [newsletter, cnbc]
 created: 2026-05-16
-updated: 2026-07-31
+updated: 2026-09-05
 review_value: 5
-sources: []
+sources: [raw/articles/nvidias-jensen-huang-bets-on-this-british-startup-to-build-next-frontier-of-ai]
 review_confidence: 10
 review_recommendation: strong
 review_stars: 3

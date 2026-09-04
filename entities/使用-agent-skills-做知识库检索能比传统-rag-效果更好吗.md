@@ -6,7 +6,7 @@ date: 2026-02-03
 type: entity
 tags: [agent, llm, engineering]
 review_value: 7
-sources: []
+sources: [raw/articles/使用-agent-skills-做知识库检索能比传统-rag-效果更好吗]
 review_confidence: 7
 review_recommendation: worth-reading
 created: 2026-05-15

@@ -9,7 +9,7 @@ tags: [wechat, audio-generation, multimodal, cvpr2026, omni2sound]
 created: 2026-05-11
 updated: 2026-08-01
 review_value: 7
-sources: []
+sources: [raw/articles/cvpr-2026-highlight-清华打破多模态音频生成的通才困境omni2sound-音频基础模型开源]
 review_confidence: 7
 review_recommendation: worth-reading
 review_stars: 3

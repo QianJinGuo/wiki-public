@@ -2,12 +2,12 @@
 
 title: "从零构建 LLM 七阶段实战教程"
 created: 2026-05-20
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [llm, transformer, gpt, pretraining, fine-tuning, pytorch, 教程]
 rating: 8.0
 confidence: 7.5
 review_value: 6
-sources: []
+sources: [raw/articles/build-llm-from-scratch-7-chapters-zion]
 related:
   - "Transformer（LLM 基础架构）"
   - "GPT-2（本文实现的目标模型）"

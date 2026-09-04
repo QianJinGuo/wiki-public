@@ -6,12 +6,12 @@ source_url:
 author: ""
 date: Mon, 11 May 2026 01:18:36 GMT
 review_value: 8
-sources: []
+sources: [raw/articles/ntm-normalizing-trajectory-models]
 review_confidence: 8
 review_recommendation: strong
 tags: [normalizing-flows, diffusion-models, generative-ai, text-to-image]
 created: 2026-05-13
-updated: 2026-08-01
+updated: 2026-09-05
 ---
 > -> [[raw/articles/ntm-normalizing-trajectory-models|原文存档]]
 

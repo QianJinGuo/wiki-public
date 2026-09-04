@@ -6,11 +6,11 @@ author: stevenpxiao（腾讯技术工程）
 publisher: 腾讯技术工程
 created: 2026-04-27
 ingested: 2026-04-27
-updated: 2026-08-07
+updated: 2026-09-05
 type: entity
 tags: [harness-engineering, knowledge-management, knowledge-layering, team-knowledge, context-engineering, tencent, workflow-automation, knowledge-lifecycle]
 review_value: 9
-sources: []
+sources: [raw/articles/tencent-knowledge-harness-practice]
 review_confidence: 10
 knowledge_status: active
 provenance_state: inferred

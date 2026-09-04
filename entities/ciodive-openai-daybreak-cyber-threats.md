@@ -4,9 +4,9 @@ title: "OpenAI launches Daybreak to combat cyber threats"
 type: entity
 tags: [openai, cybersecurity, threat, daybreak]
 created: 2026-05-14
-updated: 2026-08-07
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/ciodive-openai-daybreak-cyber-threats]
 review_confidence: 9
 review_recommendation: worth-reading
 review_stars: 3

@@ -3,9 +3,9 @@ title: "Tether launches developer grants program for local-first AI and payments
 type: entity
 tags: [crypto, tether, grants, ai-payments]
 created: 2026-05-15
-updated: 2026-06-19
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/tether-launches-developer-grants-program-for-local-first-ai-and-payments-infrastructure]
 review_confidence: 9
 review_recommendation: strong
 ---

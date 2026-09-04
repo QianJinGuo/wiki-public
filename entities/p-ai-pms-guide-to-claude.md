@@ -3,12 +3,12 @@ title: "Build a self-improving AI PM OS with Claude Code"
 type: entity
 tags: [claude-code, ai, pm, product-management, workflow]
 review_value: 7
-sources: []
+sources: [raw/articles/p-ai-pms-guide-to-claude]
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4
 created: 2026-05-15
-updated: 2026-08-02
+updated: 2026-09-05
 ---
 
 ## 摘要

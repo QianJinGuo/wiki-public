@@ -4,11 +4,11 @@ title: "How to achieve truly serverless GPUs"
 type: entity
 tags: [serverless, gpu, modal, cloud-infrastructure]
 created: 2026-05-13
-updated: 2026-08-01
+updated: 2026-09-05
 source: newsletter
 source_url:
 review_value: 8
-sources: []
+sources: [raw/articles/modal-truly-serverless-gpus]
 review_confidence: 8
 review_recommendation: strong
 ---

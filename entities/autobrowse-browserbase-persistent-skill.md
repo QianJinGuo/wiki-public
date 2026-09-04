@@ -8,10 +8,10 @@ review_product: 64
 review_stars: 4
 review_recommendation: STRONG
 created: 2026-05-10
-updated: 2026-08-07
+updated: 2026-09-05
 tags: [agent, skill, inference, architecture]
 review_value: 8
-sources: []
+sources: [raw/articles/autobrowse-browserbase-persistent-skill-files]
 review_confidence: 8
 provenance_state: inferred
 ---

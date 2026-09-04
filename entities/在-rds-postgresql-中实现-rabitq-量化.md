@@ -6,7 +6,7 @@ date: 2026-04-28
 type: entity
 tags: [agent, llm, engineering]
 review_value: 8
-sources: []
+sources: [raw/articles/在-rds-postgresql-中实现-rabitq-量化]
 review_confidence: 7
 review_recommendation: worth-reading
 created: 2026-05-15

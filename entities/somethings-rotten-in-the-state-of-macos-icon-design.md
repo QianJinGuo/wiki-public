@@ -4,9 +4,9 @@ title: Something's Rotten in the State of macOS Icon Design
 type: entity
 tags: [apple, macos, design, ui, icon]
 created: 2026-05-20
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/somethings-rotten-in-the-state-of-macos-icon-design]
 review_confidence: 8
 review_recommendation: worth-reading
 ---

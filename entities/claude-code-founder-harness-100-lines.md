@@ -6,9 +6,9 @@ title: "最新Claude Code创始人：编程已经解决了，Harness重要性持
 created: 2026-05-12
 source: wechat
 source_url:
-updated: 2026-08-01
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/claude-code-founder-harness-100-lines]
 review_confidence: 8
 review_recommendation: worth-reading
 tags: [claude-code, harness-engineering, ai, engineering]

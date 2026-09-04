@@ -4,9 +4,9 @@ title: "Google 与 Amnesty International 合作加大间谍软件检测难度"
 type: entity
 tags: [newsletter, cyberscoop-com]
 created: 2026-05-15
-updated: 2026-08-01
+updated: 2026-09-05
 review_value: 8
-sources: []
+sources: [raw/articles/google-and-amnesty-international-teamed-up-to-make-it-harder]
 review_confidence: 9
 review_recommendation: strong
 ---

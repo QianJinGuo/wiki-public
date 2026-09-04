@@ -4,9 +4,9 @@ title: "Anthropic Acquires Stainless"
 type: entity
 tags: [ai-agents]
 created: 2026-05-20
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/anthropic-acquires-stainless]
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4

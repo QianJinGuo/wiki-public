@@ -7,7 +7,7 @@ sources:
   - raw/articles/qoder-skills-完全指南从零开始让-ai-按你的标准执行-v2
   - raw/articles/agent-skill-iterative-writing-taobao-logistics
 created: 2026-05-10
-updated: 2026-06-17
+updated: 2026-09-04
 review_value: 9
 review_confidence: 10
 review_recommendation: strong
@@ -388,7 +388,7 @@ skills.sh 提供了配套的 skill 管理工具。多人协作时，可在 code 
 - [[entities/mythos_offensive_security_xbow_evaluatio|Mythos for Offensive Security: XBOW's Evaluation]]
 - [[concepts/hermes-agent-skill|Hermes Agent Skill]]
 
-→ [[raw/articles/05-11-the-great-memory-panic-of-2026.md|原文存档]] ^[raw/articles/qoder-skills-完全指南从零开始让-ai-按你的标准执行-v2.md]
+→ [[raw/articles/qoder-skills-完全指南从零开始让-ai-按你的标准执行-v2|原文存档]] ^[raw/articles/qoder-skills-完全指南从零开始让-ai-按你的标准执行-v2.md]
 
 - [[entities/ai-agent-engineer-capability-map|AI Agent 工程师能力地图]]
 - [[entities/skillx-zhejiang-university]]

@@ -6,7 +6,7 @@ tags: [wechat, quantum-report, summit, aigc]
 created: 2026-05-21
 updated: 2026-05-21
 review_value: 7
-sources: []
+sources: [raw/articles/快来-和ai实战派一起ai-aigc峰会最新嘉宾阵容来了]
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4

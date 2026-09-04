@@ -2,10 +2,9 @@
 title: "Instacart 广告检索架构演进：从 BERT 打分到生成式 token-by-token 检索"
 description: "Instacart 将广告检索系统从传统的 BERT 打分模型重构为生成式检索（token-by-token），展示大规模广告系统架构演进的工程实践"
 created: 2026-06-18
-updated: 2026-08-01
+updated: 2026-09-05
 type: entity
 tags: [ads-retrieval, generative-retrieval, architecture-evolution, search-engine, large-scale-system, bert, instacart]
-provenance_state: inferred
 source: "[[raw/articles/instacart-ads-retrieval-generative-token-by-token]]"
 sources:
   - raw/articles/instacart-ads-retrieval-generative-token-by-token

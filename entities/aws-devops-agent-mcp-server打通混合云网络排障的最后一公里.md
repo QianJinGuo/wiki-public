@@ -5,7 +5,7 @@ tags: [aws,devops,mcp,hybrid-cloud,network]
 created: 2026-05-16
 updated: 2026-06-17
 review_value: 8
-sources: []
+sources: [raw/articles/aws-devops-agent-mcp-server打通混合云网络排障的最后一公里]
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 4

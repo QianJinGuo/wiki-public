@@ -1,13 +1,13 @@
 ---
 title: "浏览器 Agent 的失忆问题：Autobrowse 如何让每次探索变成永久技能"
 created: 2026-05-08
-updated: 2026-08-29
+updated: 2026-09-05
 source: "[[raw/articles/autobrowse-browserbase-persistent-skill-files|原文存档]]"
 type: entity
 value: 7
 tags: [agent, skill, inference, engineering]
 review_value: 7
-sources: []
+sources: [raw/articles/autobrowse-browserbase-persistent-skill-files]
 review_confidence: 7
 ---
 

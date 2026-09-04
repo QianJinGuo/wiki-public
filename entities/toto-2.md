@@ -4,9 +4,9 @@ title: "Toto 2.0: Time series forecasting enters the scaling era"
 type: entity
 tags: [newsletter, ml-serving]
 created: 2026-05-15
-updated: 2026-08-07
+updated: 2026-09-05
 review_value: 8
-sources: []
+sources: [raw/articles/toto-2]
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4

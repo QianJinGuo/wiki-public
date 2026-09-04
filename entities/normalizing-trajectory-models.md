@@ -5,11 +5,11 @@ type: entity
 source: newsletter
 source_url:
 review_value: 8
-sources: []
+sources: [raw/articles/normalizing-trajectory-models-v2]
 review_confidence: 7
 review_recommendation: strong
 created: 2026-05-13
-updated: 2026-08-07
+updated: 2026-09-05
 provenance_state: inferred
 ---
 > -> [[raw/articles/normalizing-trajectory-models-v2|原文存档]]

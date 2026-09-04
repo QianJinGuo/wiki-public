@@ -3,9 +3,9 @@ title: "Fine-Tuning Cosmos"
 type: entity
 tags: [world-model, robotics, video-generation, lora, fine-tuning, nvidia, diffusion]
 created: 2026-05-21
-updated: 2026-08-07
+updated: 2026-09-05
 review_value: 9
-sources: []
+sources: [raw/articles/fine-tuning-nvidia-cosmos-predict-25-with-loradora-for-robot-video-generation, raw/articles/nvidia-cosmos-fine-tuning-robot-video-generation]
 review_confidence: 9
 review_recommendation: strong
 review_stars: 5

@@ -4,9 +4,9 @@ title: Discord 全平台端到端加密
 type: entity
 tags: [security, encryption, messenger, discord]
 created: 2026-05-22
-updated: 2026-07-31
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/discord-e2e-encryption]
 review_confidence: 7
 review_stars: 4
 ---

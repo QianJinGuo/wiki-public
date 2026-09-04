@@ -2,7 +2,7 @@
 
 title: "用 Strands Agents SDK 构建确定性数据分析：语义层 + VQR 在 Amazon Bedrock 上的实践 | 亚马逊AWS官方博客"
 created: 2026-05-14
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [aws-china-blog, strands-sdk]
 sources: [raw/articles/strands-agents-sdk-build-analytics-layer-vqr-amazon-bedrock-practice]
 review_value: 8
@@ -47,6 +47,6 @@ Strands Agent SDK、Amazon Bedrock、AgentCore ^[raw/articles/strands-agents-sdk
 - [[entities/when-ai-agents-learn-to-forget-amazon-bedrock-agentcore-memory-philosophy|当 AI Agent 学会"忘记"：Amazon Bedrock AgentCore Memory 的记忆哲学" | 亚马逊AWS官方博客]]
 - [[entities/amazon-bedrock-agentcore-adds-quality-evaluations-and-policy-controls-for-deploying-trusted-ai-agents|Amazon Bedrock AgentCore 为部署可信人工智能代理增加了质量评估和策略控制 | 亚马逊AWS官方博客]]
 
-→ [[raw/articles/build-financial-document-processing-with-pulse-ai-and-amazon-bedrock.md|原文存档]] ^[raw/articles/strands-agents-sdk-build-analytics-layer-vqr-amazon-bedrock-practice.md]
+→ [[raw/articles/strands-agents-sdk-build-analytics-layer-vqr-amazon-bedrock-practice|原文存档]] ^[raw/articles/strands-agents-sdk-build-analytics-layer-vqr-amazon-bedrock-practice.md]
 
 - [[entities/building-enterprise-level-with-bedrock-agentcore-and-strands|基于Bedrock AgentCore+Strands构建企业级智能搜索平台实践 | 亚马逊AWS官方博客]]

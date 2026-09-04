@@ -2,12 +2,12 @@
 source_url:
 title: "Hermes-Agent Kanban 实测 — 商业 CLI 作为上层 Orchestrator"
 created: 2026-05-20
-updated: 2026-08-29
+updated: 2026-09-05
 author: wjjAGI
 platform: Zhihu
 published: 2026-05-10
 review_value: 9
-sources: []
+sources: [raw/articles/hermes-agent-kanban-deep-test-by-wjjagi-2026]
 review_confidence: 10
 review_recommendation: strong
 review_stars: 5

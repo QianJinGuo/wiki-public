@@ -4,9 +4,9 @@ title: Bedrock AgentCore 多租户 Agent 构建实践
 type: entity
 tags: [bedrock, aws, agent, llm, multi-tenant, saas]
 created: 2026-05-22
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 9
-sources: []
+sources: [raw/articles/building-multi-tenant-agents-with-amazon-bedrock-agentcore]
 review_confidence: 9
 ---
 

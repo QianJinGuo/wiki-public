@@ -3,13 +3,13 @@ title: "CLAUDE.md 规则从 Karpathy 的 4 条增加到 12 条"
 authors:
   - Cf2019
 created: 2026-05-18
-updated: 2026-08-29
+updated: 2026-09-05
 source: wechat
 url:
 type: entity
 tags: [claude, claude-code, claude-md, prompt-engineering, agent, coding-agent]
 review_value: 9
-sources: []
+sources: [raw/articles/claude-md-12-rules-mnilax-cf2019]
 review_confidence: 8
 review_stars: 5
 provenance_state: inferred

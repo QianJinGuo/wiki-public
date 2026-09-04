@@ -5,9 +5,8 @@ source: "[[raw/articles/aws-devops-agent-autonomous-incident-resolution-datadog|
 sources:
   - raw/articles/aws-devops-agent-autonomous-incident-resolution-datadog
 tags: ["aws", "agent", "incident-management", "devops", "mcp", "observability", "agent-infra", "production"]
-provenance_state: inferred
 created: "2026-06-22"
-updated: 2026-08-24
+updated: 2026-09-05
 type: entity
 review_value: 8
 review_confidence: 9

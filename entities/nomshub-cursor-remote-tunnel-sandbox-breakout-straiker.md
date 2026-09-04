@@ -2,7 +2,7 @@
 title: "NomShub — Cursor 远程隧道利用链：Shell Builtin 沙箱逃逸 + Dev Tunnels 武器化"
 description: "Straiker 2026-01 发现、4 月披露、Cursor 3.0 修复的供应链攻击链：单行 prompt injection 触发 7 步自动攻击（sandbox escape + .zshenv 持久化 + cursor-tunnel 武器化 + GitHub 设备码外泄 + 攻击者 C2 入驻），整个链由 AI agent 自主执行。"
 created: 2026-06-09
-updated: 2026-08-30
+updated: 2026-09-05
 type: entity
 tags: [agent-security, cursor, prompt-injection, sandbox-escape, lotl, dev-tunnels, vulnerability, supply-chain, apt, microsoft]
 sources: [raw/articles/nomshub-cursor-remote-tunnel-sandbox-breakout-straiker]
@@ -181,6 +181,6 @@ AI coding assistant 处理 repository 内容（README、代码注释、commit me
 
 - [[entities/microsoft-mxc-execution-containers-agent-sandbox-origin|Microsoft MXC]] — 微软自家跨 OS 沙箱，提供 kernel 隔离，可作 NomShub 的防御侧
 - [[entities/agent-security-three-step-sequence-harness-governance-identity-crewai|CrewAI 三步防护]] — 应用层 guardrail 视角
-- [[entities/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security|AI Tool Poisoning]] — 工具被污染的通用风险
+- [[entities/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security-v2|AI Tool Poisoning]] — 工具被污染的通用风险
 - [[entities/microsoft-open-sources-rampart-clarity|Microsoft RAMPART/Clarity]] — 微软同源栈，检测类似 agent 行为
 - **LotL Attack** — Living-Off-The-Land 在 AI agent 时代的演化

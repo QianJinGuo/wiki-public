@@ -3,9 +3,9 @@ title: Agent Executor, Google's distributed Agent Runtime
 type: entity
 tags: [ai, agent, runtime]
 created: 2026-05-21
-updated: 2026-08-30
+updated: 2026-09-05
 review_value: 8
-sources: []
+sources: [raw/articles/agent-executor-googles-distributed-agent-runtime-da1bb4]
 review_confidence: 9
 review_recommendation: worth-reading
 review_stars: 4

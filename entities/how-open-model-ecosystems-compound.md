@@ -1,12 +1,12 @@
 ---
 title: "How Open Model Ecosystems Compound"
 created: 2026-05-13
-updated: 2026-08-01
+updated: 2026-09-05
 type: entity
 source: rss
 source_url:
 review_value: 7
-sources: []
+sources: [raw/articles/how-open-model-ecosystems-compound]
 review_confidence: 7
 review_recommendation: strong
 date: 2026-05-13

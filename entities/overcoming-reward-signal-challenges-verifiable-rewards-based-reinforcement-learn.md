@@ -6,10 +6,10 @@ created: 2026-05-11
 source: rss
 url:
 ingested: 2026-05-11
-updated: 2026-08-01
+updated: 2026-09-05
 tags: [reinforcement-learning, optimization, aws, sagemaker, grpo]
 review_value: 4
-sources: []
+sources: [raw/articles/overcoming-reward-signal-challenges-verifiable-rewards-based-reinforcement-learn]
 review_confidence: 7
   - AWS ML Blog
   - AWS, SageMaker, Reinforcement Learning, GRPO, RLHF

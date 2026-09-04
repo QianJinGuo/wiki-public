@@ -4,9 +4,9 @@ title: "How Unified EDR and ITDR Stop Attacks Before They Spread"
 type: entity
 tags: [edr, itdr, endpoint-security, identity-security, huntress, mitre-attack]
 created: 2026-05-19
-updated: 2026-05-19
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/huntress-edr-itdr-unified-detection]
 review_confidence: 8
 review_recommendation: strong
 ---

@@ -1,10 +1,9 @@
 ---
 title: "VMAF v1: Netflix 视频质量度量的全面升级"
 created: 2026-06-23
-updated: 2026-08-01
+updated: 2026-09-05
 type: entity
 tags: [vmaf, video-quality, netflix, compression, encoding, csf, cambi, chroma, perceptual-metric, codec-evaluation, svr]
-provenance_state: inferred
 sources:
   - raw/articles/vmaf-v1-good-is-not-good-enough
 review_value: 8

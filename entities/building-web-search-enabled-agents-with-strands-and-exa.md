@@ -7,12 +7,12 @@ title: "Building web search-enabled agents with Strands and Exa"
 source: rss
 source_url:
 review_value: 7
-sources: []
+sources: [raw/articles/building-web-search-enabled-agents-with-strands-and-exa]
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 3
 created: 2026-05-12
-updated: 2026-08-01
+updated: 2026-09-05
 ---
 
 > -> [[raw/articles/building-web-search-enabled-agents-with-strands-and-exa|原文存档]]

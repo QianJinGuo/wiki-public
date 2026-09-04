@@ -1,10 +1,9 @@
 ---
 title: "Skill 编排的 6 种依赖关系"
 created: 2026-07-02
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [skill-orchestration, dependency-management, context-management, versioning, security]
-provenance_state: inferred
 source: "[[raw/articles/skill-orchestration-6-dependencies-javaguide]]"
 confidence: 0.77
 provenance_state: extracted

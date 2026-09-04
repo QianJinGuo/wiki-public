@@ -4,11 +4,11 @@ title: "Semis Memo: Supply Chain Inheritance"
 type: entity
 tags: [supply-chain, semiconductors, investment-research, citrin-research]
 created: 2026-05-13
-updated: 2026-08-07
+updated: 2026-09-05
 source: newsletter
 source_url:
 review_value: 7
-sources: []
+sources: [raw/articles/citriniresearch-supply-chain-inheritance]
 review_confidence: 7
 review_recommendation: strong
 ---

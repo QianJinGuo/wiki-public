@@ -4,9 +4,9 @@ title: "Announcing Genkit Middleware: Intercept, extend, and harden your agentic
 type: entity
 tags: [newsletter, ml-serving]
 created: 2026-05-15
-updated: 2026-08-01
+updated: 2026-09-05
 review_value: 8
-sources: []
+sources: [raw/articles/announcing-genkit-middleware-intercept-extend-and-harden-your-agentic-apps]
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4

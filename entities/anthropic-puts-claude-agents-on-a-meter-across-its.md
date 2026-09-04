@@ -3,9 +3,9 @@ title: "Anthropic puts Claude agents on a meter across its subscriptions"
 type: entity
 tags: [newsletter, infoworld.com]
 created: 2026-05-16
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 5
-sources: []
+sources: [raw/articles/anthropic-puts-claude-agents-on-a-meter-across-its]
 review_confidence: 10
 review_recommendation: strong
 review_stars: 4

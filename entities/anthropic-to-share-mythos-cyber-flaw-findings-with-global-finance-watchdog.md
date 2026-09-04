@@ -3,9 +3,9 @@ title: "Anthropic to share Mythos cyber flaw findings with global finance watchd
 type: entity
 tags: [anthropic, ai]
 created: 2026-05-20
-updated: 2026-08-01
+updated: 2026-09-05
 review_value: 8
-sources: []
+sources: [raw/articles/anthropic-to-share-mythos-cyber-flaw-findings-with-global-finance-watchdog-1]
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4

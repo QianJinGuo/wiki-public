@@ -6,7 +6,7 @@ updated: 2026-05-10
 type: entity
 tags: [ai-agent, engineering, mlops, wechat]
 review_value: 6
-sources: []
+sources: [raw/articles/我把-karpathy-的-autoresearch-搬到了软件开发领域效果炸了]
 review_confidence: 7
 ---
 

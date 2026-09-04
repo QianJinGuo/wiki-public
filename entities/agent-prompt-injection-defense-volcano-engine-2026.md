@@ -1,7 +1,7 @@
 ---
 title: "Agent 提示词注入攻击防护实践（字节/火山引擎）"
 created: 2026-08-27
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [agent-security, prompt-injection, defense, security, bytedance, volcano-engine]
 sources: [raw/articles/字节实践-agent-提示词注入攻击一场需要长期应对的安全挑战]
@@ -62,7 +62,7 @@ AgentSentry 把防护拆成四层互补能力。L1 归一化在入口消除编�
 
 - [[entities/volcano-engine-agent-security-capability-map-2026|智能体安全能力图谱]] 是本文的母框架（10 能力维度/60 要素），本文为其技术实践篇
 - [[entities/mechanistic-explanation-prompt-injection-roles|提示词注入机制解释]] 从机理层解释注入生效原因
-- [[entities/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security|AI 工具投毒]] 是 IPI 的一类攻击面
+- [[entities/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security-v2|AI 工具投毒]] 是 IPI 的一类攻击面
 - [[entities/youre-building-agent-security-in-the-wrong-order|安全建设顺序]] 提供治理层视角
 - [[concepts/agent-security-architecture|Agent 安全架构]] 提供系统性框架
 

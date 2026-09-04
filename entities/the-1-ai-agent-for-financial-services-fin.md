@@ -4,9 +4,9 @@ title: "The #1 AI Agent for financial services | Fin"
 type: entity
 tags: [ai-agent, financial-services]
 created: 2026-05-15
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/the-1-ai-agent-for-financial-services-fin]
 review_confidence: 8
 review_recommendation: worth-reading
 ---

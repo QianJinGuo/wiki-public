@@ -10,10 +10,10 @@ created: 2026-05-08
 source: wechat
 url:
 review_value: 7
-sources: []
+sources: [raw/articles/stop-coding-architect-dennis-doomen-ai-era]
 review_confidence: 8
 review_stars: 4
-updated: 2026-08-29
+updated: 2026-09-05
 ---
 
 > -> [[raw/articles/stop-coding-architect-dennis-doomen-ai-era.md|原文存档]] ^[raw/articles/stop-coding-architect-dennis-doomen-ai-era.md]

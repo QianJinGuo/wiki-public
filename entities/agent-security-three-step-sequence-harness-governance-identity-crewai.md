@@ -3,7 +3,7 @@
 title: "Agent 安全三步法：先 Harness、再 Governance、最后 Identity（顺序反了一切白做）"
 description: "CrewAI 2B+ executions 提炼的安全落地序列：Harness → Governance → Identity。错把 Identity/Auth 当第一步是 Fortune 500 反复踩的坑——花 3 个月建 IAM，发现要 secure 的东西根本不可靠。"
 created: 2026-06-09
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [agent, security, crewai, sequencing, harness-first, governance, identity, iam, deployment]
 source: "[[raw/articles/youre-building-agent-security-in-the-wrong-order]]"
@@ -122,7 +122,7 @@ review_stars: 4
 | **互补关系** | 任何 secure agent 前必读 | 本实体执行后的技术参考 |
 
 **关键互补点**： ^[raw/articles/youre-building-agent-security-in-the-wrong-order.md]
-- `[[entities/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security]]` — MCP supply chain 攻击模型（**怎么攻击**）
+- `[[entities/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security-v2]]` — MCP supply chain 攻击模型（**怎么攻击**）
 - `[[entities/secure-ai-agents-policy-lambda-interceptors-aws]]` — Policy + Lambda 实现 runtime interception（**怎么防御**）
 - 本实体（**什么时候**做）— security 落地的**序列决策**问题
 

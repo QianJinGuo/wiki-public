@@ -5,12 +5,12 @@ description: "深度拆解 Claude Code Agent Teams 的 runtime 架构：Lead、T
 source: "[[raw/articles/claude-code-agent-teams-xingxiaozhao|原文存档]]"
 tags: [claude-code, agent-teams, multi-agent, runtime, orchestration]
 review_value: 8
-sources: []
+sources: [raw/articles/claude-code-agent-teams-xingxiaozhao]
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4
 created: 2026-05-23
-updated: 2026-08-29
+updated: 2026-09-05
 provenance_state: inferred
 ---
 

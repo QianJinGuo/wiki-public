@@ -4,11 +4,11 @@ type: entity
 tags: [newsletter, openai, gpt]
 source_url:
 review_value: 7
-sources: []
+sources: [raw/articles/build-live-translation-apps-with-gpt-realtime-translate]
 review_confidence: 7
 review_recommendation: strong
 created: 2026-05-12
-updated: 2026-08-01
+updated: 2026-09-05
 ---
 
 # Build Live Translation Apps with gpt-realtime-translate

@@ -13,10 +13,10 @@ sources:
   - raw/articles/agentloop-agent-experience-self-evolution-aliyun-2026-07-25
   - raw/articles/agentloop-ugc-game-agent-eval-optimization-aliyun-2026-08-11
   - raw/articles/agentloop-skill-quality-baseline-xhs-2026-08-11
-  - raw/articles/agentloop-eval-golden-metrics-rubric-mayunlei-aliyun-2026-09-01
   - raw/articles/agentloop-experiment-offline-platform-rubric-mayunlei-aliyun-2026-09-02
   - raw/articles/agentloop-data-flywheel-overview-aliyun-2026
-updated: 2026-09-02
+   - raw/articles/agentloop-data-flywheel-experience-library-ablation-mayunlei-aliyun-2026-09-03
+updated: 2026-09-03
 related: [entities/alibaba-agent-observability-audit-loongsuite-pilot-coding-agent-blackbox-to-transparent, entities/harness-engineering实践做了一个平台让ai一晚上自动评测和优化你的系统, entities/agent-evolution-four-stages-six-dimensions-aliyun, entities/loongsuite-genai-semconv-alibaba, entities/agentops-operationalize-agentic-ai-amazon-bedrock, entities/aliyun-cms2-cli-skill-natural-language-observability, entities/aliyun-agentrun, entities/better-harness-eval-trace-harness-hill-climbing, entities/agent-memory-evaluation-landscape-taobao-survey, entities/skills-registry-公测开启为企业打造私有的-skill-管理中心]
 strategic_context: "[[queries/research-frontier-map|Frontier 1 — Harness/Skill 从个人能力到组织资产]]"
 provenance_state: inferred
@@ -358,37 +358,37 @@ AgentLoop 不只关注单一分数，而是同时衡量：成功率、同类任�
 
 ## 十五、2026-09-01 补充：评估体系方法论（5 篇系列第三篇）
 
-> ^[raw/articles/agentloop-eval-golden-metrics-rubric-mayunlei-aliyun-2026-09-01.md]
+>
 
 ### 评估器两层结构
 
-评估分两层：**评估器（Evaluator）** 定义"怎么评"——包含类型、输出定义、Rubric 评判标准，与具体数据无关可复用；**评估任务（Evaluation Task）** 定义"评什么数据、何时评"——指定评估器和数据源的执行配置。比喻：评估器是考卷和评分标准，评估任务是组织考试。^[raw/articles/agentloop-eval-golden-metrics-rubric-mayunlei-aliyun-2026-09-01.md]
+评估分两层：**评估器（Evaluator）** 定义"怎么评"——包含类型、输出定义、Rubric 评判标准，与具体数据无关可复用；**评估任务（Evaluation Task）** 定义"评什么数据、何时评"——指定评估器和数据源的执行配置。比喻：评估器是考卷和评分标准，评估任务是组织考试。
 
 ### 评估器类型：Agent 评估 vs Code 评估
 
 - **Code 评估**：代码规则打分，确定便宜，只覆盖格式/长度/字段完整性等可规则化指标
-- **Agent 评估（Custom Agent）**：评估 Agent 像人一样阅读 input/output/轨迹，按 Rubric 判断打分，覆盖语义级指标（回答是否切题/流程是否合理），代价是消耗更大^[raw/articles/agentloop-eval-golden-metrics-rubric-mayunlei-aliyun-2026-09-01.md]
+- **Agent 评估（Custom Agent）**：评估 Agent 像人一样阅读 input/output/轨迹，按 Rubric 判断打分，覆盖语义级指标（回答是否切题/流程是否合理），代价是消耗更大
 
 ### 黄金指标 → Rubric 拆解
 
-黄金指标分两类：**回答质量**（最终答案对不对）和**执行过程**（工具调用是否合理）。可让 AI 基于业务场景自动拆解成 Rubric——每个指标的分档规则、权重、总分公式。Rubric 把抽象的"好"拆成可判定评分细则，评估从"凭感觉"变成"可复现"。特别关注的指标（如"是否泄露隐私"）可提出来作为顶层评估器单独评估。^[raw/articles/agentloop-eval-golden-metrics-rubric-mayunlei-aliyun-2026-09-01.md]
+黄金指标分两类：**回答质量**（最终答案对不对）和**执行过程**（工具调用是否合理）。可让 AI 基于业务场景自动拆解成 Rubric——每个指标的分档规则、权重、总分公式。Rubric 把抽象的"好"拆成可判定评分细则，评估从"凭感觉"变成"可复现"。特别关注的指标（如"是否泄露隐私"）可提出来作为顶层评估器单独评估。
 
 ### 评估器输入/输出变量
 
-三个输入变量：input（用户输入）、output（Agent 输出）、trace.agent（运行轨迹）——既能评结果也能评过程。输出结构化字段：score / raw-weighted score（0~1）/ final score / decision / scenario type / summary / explanation / **rubric version**（Rubric 迭代时区分"Agent 变了还是标准变了"）。^[raw/articles/agentloop-eval-golden-metrics-rubric-mayunlei-aliyun-2026-09-01.md]
+三个输入变量：input（用户输入）、output（Agent 输出）、trace.agent（运行轨迹）——既能评结果也能评过程。输出结构化字段：score / raw-weighted score（0~1）/ final score / decision / scenario type / summary / explanation / **rubric version**（Rubric 迭代时区分"Agent 变了还是标准变了"）。
 
 ### 评估任务四配置
 
 1. **轨迹数据 vs Trace 数据**：评估 Agent 行为用轨迹数据（智能体行为视角），非 Trace 数据（微服务基础设施视角）
 2. **运行策略**：持续评估（来一条评一条，线上盯盘）/ 历史评估（某时段完整评估，复盘分析）
 3. **采样配置**：最大样本数+采样比例控制成本，先采样跑通再全量
-4. **字段映射**：trace.input→input, trace.output→output, 轨迹数据→trace.agent^[raw/articles/agentloop-eval-golden-metrics-rubric-mayunlei-aliyun-2026-09-01.md]
+4. **字段映射**：trace.input→input, trace.output→output, 轨迹数据→trace.agent
 
 ### Badcase 闭环
 
-评估结果不只打分，还给出"为什么是这个分"——证据字段提供判定依据，低分条目可直接定位调优方向。多次评估看均值消除浮动。在线评估抓出的 badcase 沉淀进数据集，成为实验回测弹药——评估是飞轮承上启下一环：上承观测数据，下接实验回测。^[raw/articles/agentloop-eval-golden-metrics-rubric-mayunlei-aliyun-2026-09-01.md]
+评估结果不只打分，还给出"为什么是这个分"——证据字段提供判定依据，低分条目可直接定位调优方向。多次评估看均值消除浮动。在线评估抓出的 badcase 沉淀进数据集，成为实验回测弹药——评估是飞轮承上启下一环：上承观测数据，下接实验回测。
 
-→ [[raw/articles/agentloop-eval-golden-metrics-rubric-mayunlei-aliyun-2026-09-01|原文存档]]
+→ 待补公开原文
 
 ## 补充：离线实验平台与题目级 Rubric（第 4 篇）
 
@@ -412,3 +412,27 @@ AgentLoop 离线实验平台直接部署在客户内网，解决云端平台无�
 
 → [[raw/articles/agentloop-experiment-offline-platform-rubric-mayunlei-aliyun-2026-09-02|原文存档]]
 
+## 补充：经验库自动挖掘 + 消融实验验证收益（数据飞轮实践第 5 篇）
+
+> 以下内容来自系列第 5 篇（数据飞轮实践最后一篇），落地并量化了总览篇预告的「消融实验」收益。
+
+### 经验库自动挖掘（数据飞轮最自动化一环）
+
+经验库从 Agent 历史运行轨迹中自动挖掘成功/失败模式沉淀为经验资产，是飞轮中**唯一不需要人类专家介入的环节**——通用优化手段（工具调用执行情况/延时/准确率/路径）不依赖具体业务。挖掘结果全程可追溯（每条例含内容、适用场景、来源 Trace）。Agent 侧集成 4 步：创建 API Key → 安装 `alibabacloud-agentloop-experience` Skill → env 配置经验库 → 开白名单 + Shell 权限 + allow shell（三缺一召回不发生）。**召回讲究「宁缺毋滥」**：相关问题才召回、无类似经验不召回，防止无关/错误经验误导 Agent；换 Session 对比显示 12 步请求在注入经验后步骤显著减少（绕过试错）。^[raw/articles/agentloop-data-flywheel-experience-library-ablation-mayunlei-aliyun-2026-09-03.md]
+
+### 消融实验：经验注入策略选优（对本预告的量化落地）
+
+真实业务经验注入方式（召回多少/放哪/怎么呈现）直接影响效果甚至帮倒忙，故部署前须做召回测试。**消融实验对照维度**：①召回阈值（多相关的经验才召回）②注入条数（召回几条）③注入位置（上下文哪里）④呈现方式（怎么呈现）+ ⑤无经验基线——每个参数都是「注入 vs 不注入/换种注入」的对照，逐个拆开验证。
+
+**选定策略 vs 基线的量化收益**（总览篇预告的准确数字在此落地）：
+
+| 指标 | 相比基线 |
+|---|---|
+| 耗时 | 降低 30%~40% |
+| 成本 | 降低 20%~47% |
+| Token 消耗 | 大幅下降 |
+| 工具调用 | 大幅减少 |
+
+^[raw/articles/agentloop-data-flywheel-experience-library-ablation-mayunlei-aliyun-2026-09-03.md]
+
+→ [[raw/articles/agentloop-data-flywheel-experience-library-ablation-mayunlei-aliyun-2026-09-03|原文存档]]

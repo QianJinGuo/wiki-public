@@ -4,9 +4,9 @@ title: "NGINX Rift: Achieving NGINX Remote Code Execution via an 18-Year-Old Vul
 type: entity
 tags: [newsletter, depthfirst.com]
 created: 2026-05-16
-updated: 2026-07-24
+updated: 2026-09-05
 review_value: 5
-sources: []
+sources: [raw/articles/nginx-rift-achieving-nginx-remote-code-execution-v]
 review_confidence: 10
 review_recommendation: strong
 review_stars: 4

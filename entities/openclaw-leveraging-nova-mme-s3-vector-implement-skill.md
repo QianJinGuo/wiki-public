@@ -2,14 +2,14 @@
 
 title: "给 Openclaw瘦身-利用Nova MME 和 S3 Vector实现Skill按需召回 | 亚马逊AWS官方博客"
 tags: [aws-china-blog, openclaw, amazon-nova]
-sources: []
+sources: [raw/articles/openclaw-leveraging-nova-mme-s3-vector-implement-skill]
 review_value: 8
 review_confidence: 8
 review_recommendation: strong
 publish_date: 2026-03-19
 type: entity
 created: 2026-05-16
-updated: 2026-08-30
+updated: 2026-09-05
 ---
 
 ## 概述

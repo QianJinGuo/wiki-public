@@ -3,11 +3,11 @@ title: "三层 Agent 架构：Skill / SubAgent / Agent Team 工程实践"
 description: "百度网盘 Android→KMP 迁移实践中，沉淀 Skill/SubAgent/Agent Team 三层 AI 架构的工程经验"
 source: "[[raw/articles/baidu-netdisk-kmp-migration-three-layer-agent-architecture]]"
 created: "2026-05-20"
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [agent-engineering, skill, subagent, agent-team, code-migration]
 review_value: 8
-sources: []
+sources: [raw/articles/baidu-netdisk-kmp-migration-three-layer-agent-architecture]
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4

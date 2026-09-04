@@ -5,11 +5,11 @@ type: entity
 tags: [newsletter, openai, gpt]
 source_url:
 review_value: 7
-sources: []
+sources: [raw/articles/useful-memories-become-faulty-when-continuously-updated-by-llms]
 review_confidence: 7
 review_recommendation: strong
 created: 2026-05-12
-updated: 2026-08-29
+updated: 2026-09-05
 ---
 
 # Useful Memories Become Faulty When Continuously Updated by LLMs

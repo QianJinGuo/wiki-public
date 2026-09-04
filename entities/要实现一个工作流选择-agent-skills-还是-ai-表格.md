@@ -6,7 +6,7 @@ tags: [agent, ai, llm, workflow, enterprise, automation, spreadsheet, openclaw, 
 created: 2026-05-21
 updated: 2026-08-29
 review_value: 7
-sources: []
+sources: [raw/articles/要实现一个工作流选择-agent-skills-还是-ai-表格]
 review_confidence: 8
 review_stars: 4
 review_recommendation: worth-reading

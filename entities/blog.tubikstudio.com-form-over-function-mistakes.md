@@ -5,9 +5,9 @@ title: "Form-Over-Function Mistakes, or How Not to Harm Your Business With a Pre
 type: entity
 tags: [design, ux-design, product]
 created: 2026-05-20
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 8
-sources: []
+sources: [raw/articles/blog.tubikstudio.com-form-over-function-mistakes]
 review_confidence: 8
 review_recommendation: strong
 source_url:

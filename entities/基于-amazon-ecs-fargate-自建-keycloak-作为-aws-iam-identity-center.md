@@ -5,7 +5,7 @@ updated: 2026-08-29
 type: entity
 tags: [aws, security, identity, sso, fargate, keycloak]
 review_value: 9
-sources: []
+sources: [raw/articles/基于-amazon-ecs-fargate-自建-keycloak-作为-aws-iam-identity-center]
 review_confidence: 9
 review_recommendation: strong
 review_stars: 5

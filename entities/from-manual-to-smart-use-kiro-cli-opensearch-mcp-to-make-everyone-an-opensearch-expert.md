@@ -2,9 +2,9 @@
 
 title: "从手动到智能：用 Kiro CLI + OpenSearch MCP 让每个人都成为 OpenSearch 专家 | 亚马逊AWS官方博客"
 created: 2026-05-14
-updated: 2026-08-30
+updated: 2026-09-05
 tags: [aws-china-blog, kiro]
-sources: []
+sources: [raw/articles/from-manual-to-smart-use-kiro-cli-opensearch-mcp-to-make-everyone-an-opensearch-expert]
 review_value: 8
 review_confidence: 8
 review_recommendation: strong

@@ -3,7 +3,7 @@
 
 title: "向量库是RAG的前菜，知识图谱是答案，本体论是灵魂"
 created: 2026-05-16
-updated: 2026-05-23
+updated: 2026-09-04
 type: entity
 tags: [rag, ai]
 sources:
@@ -369,4 +369,4 @@ PS：从这里也可以看出来，图谱的存在其实是为了解决工程维
 - [[entities/skill-rag-tsinghua-sra]]
 - [[entities/harness-engineering-framework]]
 
-→ [[raw/articles/向量库是rag的前菜知识图谱是答案本体论是灵魂-v2.md|原文存档]]^[raw/articles/向量库是rag的前菜知识图谱是答案本体论是灵魂.md]
+→ [[raw/articles/向量库是rag的前菜知识图谱是答案本体论是灵魂|原文存档]]^[raw/articles/向量库是rag的前菜知识图谱是答案本体论是灵魂.md]

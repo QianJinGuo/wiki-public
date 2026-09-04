@@ -4,9 +4,9 @@ title: "5 Things to Know about the CLARITY Act"
 type: entity
 tags: [regulation, clarity-act, privacy, usa]
 created: 2026-05-15
-updated: 2026-08-07
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/clarity-act-5-things]
 review_confidence: 8
 review_recommendation: strong
 review_stars: 5

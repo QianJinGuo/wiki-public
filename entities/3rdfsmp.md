@@ -4,12 +4,12 @@ title: "Archera • Insured cloud commitments for AWS, Azure, and Google"
 type: entity
 tags: [cloud, aws, azure, google-cloud, commitments]
 review_value: 7
-sources: []
+sources: [raw/articles/3rdfsmp]
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4
 created: 2026-05-15
-updated: 2026-08-29
+updated: 2026-09-05
 ---
 
 ## 核心要点

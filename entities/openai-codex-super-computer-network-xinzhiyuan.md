@@ -3,11 +3,11 @@ title: "OpenAI秘密矩阵曝光：Codex将所有设备连成超级电脑"
 source: ""
 type: entity
 review_value: 7
-sources: []
+sources: [raw/articles/openai-codex-super-computer-network-xinzhiyuan]
 review_confidence: 7
 tags: [openai, codex, computer-use, multi-device, agent]
 created: "2026-05-18"
-updated: 2026-08-24
+updated: 2026-09-05
 ---
 
 > 来源：[[raw/articles/openai-codex-super-computer-network-xinzhiyuan|原文存档]]

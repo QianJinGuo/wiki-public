@@ -7,7 +7,7 @@ type: entity
 value: 7
 tags: [agent, open-source, inference, evaluation]
 review_value: 7
-sources: []
+sources: [raw/articles/腾讯混元新里程碑hy3-preview-发布开源agent-表现全面提升]
 review_confidence: 7
 ---
 

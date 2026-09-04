@@ -2,11 +2,11 @@
 
 title: "Karpathy 最新访谈：从 Vibe Coding 到 Agentic Engineering"
 created: 2026-05-10
-updated: 2026-08-01
+updated: 2026-09-05
 type: entity
 tags: [karpathy, vibe-coding, agentic-engineering, software-3-0, sequoia, ai-coding, agent-harness]
 review_value: 8
-sources: []
+sources: [raw/articles/karpathy-vibe-coding-agentic-engineering-v3]
 review_confidence: 9
 review_recommendation: strong
 review_stars: 5

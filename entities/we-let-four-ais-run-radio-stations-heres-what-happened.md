@@ -3,9 +3,9 @@ title: "We let four AIs run radio stations. Here's what happened. | Andon Labs"
 type: entity
 tags: [ai]
 created: 2026-05-19
-updated: 2026-06-19
+updated: 2026-09-05
 review_value: 8
-sources: []
+sources: [raw/articles/we-let-four-ais-run-radio-stations-heres-what-happened]
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4

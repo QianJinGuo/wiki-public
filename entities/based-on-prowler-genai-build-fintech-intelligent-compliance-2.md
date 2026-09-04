@@ -6,9 +6,9 @@ source: rss
 type: entity
 tags: [aws, prowler, genai, compliance, fintech, security, bedrock, cloud-security]
 created: 2026-05-13
-updated: 2026-08-01
+updated: 2026-09-05
 review_value: 8
-sources: []
+sources: [raw/articles/based-on-prowler-genai-build-fintech-intelligent-compliance-2]
 review_confidence: 9
 review_recommendation: strong
 review_stars: 5

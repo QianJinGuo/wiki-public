@@ -1,7 +1,7 @@
 ---
 title: "OpenClaw 安全和功能增强实践"
 created: 2026-06-11
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [openclaw, security, deployment, self-hosted, telegram, discord, agent, aws, prompt-injection, agentic-security, gateway, ec2]
 sources: [raw/articles/openclaw-security-and-feature-enhancement-practices]
@@ -86,7 +86,7 @@ OpenClaw 这类自托管 AI Agent 与传统 Web 应用的安全模型有本质�
 - 危险操作的二次确认（删除文件、修改配置、转账）
 - 沙箱化 Agent 进程（chroot / 容器 / separate user） ^[raw/articles/openclaw-security-and-feature-enhancement-practices.md]
 
-这与 [[entities/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security|AI Tool Poisoning Exposes a Major Flaw in Enterprise Agent Security]] 中讨论的"工具返回值被恶意篡改"是同一类问题——L3 prompt injection 是 2026 年 Agent 安全的头号威胁。 ^[raw/articles/openclaw-security-and-feature-enhancement-practices.md]
+这与 [[entities/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security-v2|AI Tool Poisoning Exposes a Major Flaw in Enterprise Agent Security]] 中讨论的"工具返回值被恶意篡改"是同一类问题——L3 prompt injection 是 2026 年 Agent 安全的头号威胁。 ^[raw/articles/openclaw-security-and-feature-enhancement-practices.md]
 
 ### 四、4 种 AWS 部署方式的工程含义
 
@@ -127,7 +127,7 @@ OpenClaw 不是孤例——任何"本地优先、用户自治、跨消息通道"
 - [[entities/build-multi-tenant-ai-agent-on-eks-graviton-openclaw-k8s-practice|EKS Graviton 多租户 OpenClaw K8s 实践]]
 - [[entities/ci-t-based-on-amazon-bedrock-agentcore-openclaw-enterprise-intelligent-operations-best-practices|CI/CD on Bedrock AgentCore OpenClaw 企业智能运营最佳实践]]
 - [[entities/agent-security-three-step-sequence-harness-governance-identity-crewai|Agent Security 三步走: Harness + Governance + Identity]]
-- [[entities/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security|AI Tool Poisoning Exposes a Major Flaw in Enterprise Agent Security]]
+- [[entities/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security-v2|AI Tool Poisoning Exposes a Major Flaw in Enterprise Agent Security]]
 - [[entities/claude-code-openclaw-memory-comparison|Claude Code vs OpenClaw Memory 对比]]
 - [[entities/claude-code-openclaw-memory-vector-db-doubt|Claude Code vs OpenClaw Memory 向量数据库之争]]
 - [[entities/claude-code-openclaw-usage-ettin|Claude Code vs OpenClaw 使用 Ettin]]

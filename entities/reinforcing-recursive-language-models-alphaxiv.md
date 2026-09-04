@@ -2,11 +2,11 @@
 description: Auto-generated placeholder
 title: "Reinforcing Recursive Language Models | alphaXiv"
 created: 2026-05-14
-updated: 2026-06-19
+updated: 2026-09-05
 type: entity
 tags: [rlm, reinforcement-learning, language-models]
 review_value: 7
-sources: []
+sources: [raw/articles/reinforcing-recursive-language-models-alphaxiv]
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 3

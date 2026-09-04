@@ -4,12 +4,12 @@ title: "Plaid's Effects on the Financial Ecosystem"
 type: entity
 tags: [fintech, open-banking, plaid, infrastructure, payments]
 review_value: 7
-sources: []
+sources: [raw/articles/plaid-effects]
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 3
 created: 2026-05-19
-updated: 2026-06-26
+updated: 2026-09-05
 ---
 
 ## 核心要点

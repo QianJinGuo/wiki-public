@@ -5,9 +5,9 @@ title: "Introducing Composer 2.5"
 type: entity
 tags: [cursor, ai coding, composer, agent]
 created: 2026-05-20
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 8
-sources: []
+sources: [raw/articles/cursor.com-composer-2-5]
 review_confidence: 8
 review_recommendation: strong
 source_url:

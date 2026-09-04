@@ -3,11 +3,11 @@ title: "Meta announced Muse Spark in Voice Mode and Meta Glasses"
 type: entity
 tags: [meta, muse-spark, voice-mode, smart-glasses, ai-hardware]
 created: 2026-05-13
-updated: 2026-08-01
+updated: 2026-09-05
 source: newsletter
 source_url:
 review_value: 7
-sources: []
+sources: [raw/articles/meta-muse-spark-voice-mode-meta-glasses]
 review_confidence: 8
 review_recommendation: strong
 ---

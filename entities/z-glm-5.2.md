@@ -3,7 +3,7 @@ title: "GLM-5.2: Built for Long-Horizon Tasks"
 type: entity
 tags: [agent, ai, llm]
 created: 2026-06-18
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 9
 review_confidence: 8
 review_recommendation: worth-reading
@@ -83,7 +83,7 @@ Nathan Lambert 认为 GLM-5.2 代表了开源 agent 模型的质变：
 - MIT 许可证消除了区域限制，对全球开发者开放
 - 对 Anthropic/OpenAI 的 agent 生态构成直接竞争
 
-→ [[raw/articles/glm-52-step-change-open-agents-interconnects|原文存档]]
+→ [[raw/articles/z-glm-5.2|原文存档]]
 
 ---
 ## 关联

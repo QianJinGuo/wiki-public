@@ -6,12 +6,12 @@ description: "阿里云CIO蒋林泉的AI产研实践：AI生码率误区、Vibe 
 source: [[raw/articles/alibaba-cloud-cio-ai-productivity-reframe]]
 tags: [ai-transformation, enterprise-ai, organizational-change, productivity, half-stack, pdfe, abe]
 review_value: 7
-sources: []
+sources: [raw/articles/alibaba-cloud-cio-ai-productivity-reframe]
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 3
 created: 2026-05-23
-updated: 2026-08-29
+updated: 2026-09-05
 ---
 
 ## 核心判断

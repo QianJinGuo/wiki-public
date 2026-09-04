@@ -4,9 +4,9 @@ title: Stable Audio 3.0 开源音频生成模型
 type: entity
 tags: [audio, generative-ai, stability-ai, open-weight, music-generation]
 created: 2026-05-22
-updated: 2026-07-31
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/stable-audio-3]
 review_confidence: 6
 review_stars: 4
 ---

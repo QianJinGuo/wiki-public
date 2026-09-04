@@ -4,9 +4,9 @@ title: "Anthropic puts Claude agents on a meter across its subscriptions"
 type: entity
 tags: [anthropic, claude, ai-agents, pricing, subscription]
 created: 2026-05-15
-updated: 2026-08-07
+updated: 2026-09-05
 review_value: 8
-sources: []
+sources: [raw/articles/anthropic-claude-agents-meter-infoworld]
 review_confidence: 9
 review_recommendation: strong
 review_stars: 4

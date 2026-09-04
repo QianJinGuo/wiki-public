@@ -9,7 +9,7 @@ publish_date: 2026-02-02
 type: entity
 tags: [aws-china-blog, agent, testing, web-bot-auth, automation]
 created: 2026-05-15
-updated: 2026-08-29
+updated: 2026-09-05
 ---
 
 ## 概述
@@ -71,7 +71,7 @@ WBA 的出现将对测试生态系统产生深远影响。CAPTCHA 提供商（�
 - [[entities/agent-principle-architecture-engineering-practice|你不知道的 Agent 原理架构与工程实践]]
 - [[entities/introducing-aimap-security-testing-for-ai-agent-bishop-fox|AI MAP: Security Testing for AI Agent Infrastructure — Bishop Fox]]
 
-→ [[raw/articles/code-intelligence-changelog.md|原文存档]] ^[raw/articles/intelligence-agent-driven-testing-transformation-making-agents-the-first-principle-of-testing.md]
+→ [[raw/articles/intelligence-agent-driven-testing-transformation-making-agents-the-first-principle-of-testing|原文存档]] ^[raw/articles/intelligence-agent-driven-testing-transformation-making-agents-the-first-principle-of-testing.md]
 
 - [[entities/anthropic-官方-agent-harness-平台claude-managed-agents-完整指南|Anthropic 官方 Agent Harness 平台：Claude Managed Agents 完整指南]]
 - [[entities/browser-request-recording-ai-code-generation-e2e-api-testing|基于浏览器请求录制与ai代码生成的e2e接口自动化测试实践]]

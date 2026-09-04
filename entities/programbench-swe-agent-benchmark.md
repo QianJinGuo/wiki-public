@@ -7,9 +7,9 @@ date: 2026-05-08
 source: newsletter
 tags: [agent, evaluation, engineering]
 created: 2026-05-10
-updated: 2026-08-07
+updated: 2026-09-05
 review_value: 6
-sources: []
+sources: [raw/articles/programbench-swe-agent-benchmark]
 review_confidence: 7
 ---
 

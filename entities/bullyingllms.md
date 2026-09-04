@@ -4,11 +4,11 @@ title: "Autonomous Vulnerability Hunting with MCP"
 type: entity
 tags: [security, llm, vulnerability]
 created: 2026-05-13
-updated: 2026-08-07
+updated: 2026-09-05
 source: newsletter
 source_url:
 review_value: 8
-sources: []
+sources: [raw/articles/bullyingllms]
 review_confidence: 9
 ---
 

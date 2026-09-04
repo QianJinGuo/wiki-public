@@ -7,10 +7,10 @@ date: 2026-05-08
 source: newsletter
 tags: [nvidia, agent, llm, inference, architecture]
 review_value: 4
-sources: []
+sources: [raw/articles/lightseek-tokenspeed]
 review_confidence: 7
 created: 2026-05-10
-updated: 2026-06-19
+updated: 2026-09-05
 ---
 
 ## 深度分析

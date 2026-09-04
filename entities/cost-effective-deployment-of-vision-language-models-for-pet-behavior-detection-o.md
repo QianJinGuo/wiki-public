@@ -5,12 +5,12 @@ type: entity
 tags: [aws, vision-language, vlm, inferentia2]
 source_url:
 review_value: 7
-sources: []
+sources: [raw/articles/cost-effective-deployment-of-vision-language-models-for-pet-behavior-detection-o]
 review_confidence: 7
 review_recommendation: strong
 review_stars: 4
 created: 2026-05-11
-updated: 2026-08-29
+updated: 2026-09-05
 ---
 
 > 来源：[[raw/articles/cost-effective-deployment-of-vision-language-models-for-pet-behavior-detection-o.md|原文存档]] ^[raw/articles/cost-effective-deployment-of-vision-language-models-for-pet-behavior-detection-o.md]

@@ -2,7 +2,7 @@
 
 title: "Thought-Aligner：智能体行为安全新范式——可插拔思维校正层（ICML 2026）"
 created: 2026-06-01
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [thought-aligner, agent-safety, behavioral-safety, thought-correction, pluggable, icml-2026, fudan, shanghai-innovation-institute, openclaw, arxiv-2505.11063, whitzard, react]
 sources: [raw/articles/thought-aligner-shanghai-fudan-icml-2026]
@@ -143,7 +143,7 @@ Agent 以「**Thought-Action-Observation**」循环完成任务。危险行为�
 本文是**具体方法**层级的安全方案： ^[raw/articles/thought-aligner-shanghai-fudan-icml-2026.md]
 
 - [[entities/ai-agents-security-survey-attack-defense|AI Agents Security Survey]] — 攻击/防御**综述**（清华 Fangcun / Bishop Fox AIMap / 1Password），覆盖威胁格局
-- [[entities/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security|AI Tool Poisoning]] — 工具投毒攻击分析
+- [[entities/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security-v2|AI Tool Poisoning]] — 工具投毒攻击分析
 - [[entities/claw-chain-cyera-research-unveil-four-chainable-vulnerabilities-in-openclaw|Claw Chain]] — OpenClaw 漏洞研究
 - [[entities/anthropic-long-running-agent-adversarial-architecture|Anthropic 长时运行 Agent 架构]] — 对抗式设计 + 合同谈判
 - [[entities/enterprise-openclaw-security-deploy-architecture-guide|Enterprise OpenClaw Security]] — 部署架构

@@ -3,11 +3,11 @@ title: "New cybersecurity industry coalition aims to lead US critical infrastruc
 type: entity
 tags: [cybersecurity, policy, infrastructure]
 created: 2026-05-13
-updated: 2026-08-07
+updated: 2026-09-05
 source: newsletter
 source_url:
 review_value: 8
-sources: []
+sources: [raw/articles/818662]
 review_confidence: 7
 provenance_state: inferred
 ---

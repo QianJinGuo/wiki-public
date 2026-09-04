@@ -2,7 +2,6 @@
 
 title: "GPT-5.6 Preview System Card — Community Detection & Benchmarks"
 created: 2026-06-29
-updated: 2026-08-29
 type: entity
 tags: [agent, llm, security, mlops, openai]
 source: "[[raw/articles/gpt-5-6-preview]]"
@@ -11,7 +10,7 @@ sources:
   - raw/articles/gpt-5-6-偷偷灰度-codex提前用上-夕小瑶-2026-07-04
   - raw/articles/gpt-56-发布需要了解的-10-个重点
   - raw/articles/实测gpt-56跑分赢了却输给了fable-5
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 9
 review_confidence: 9
 review_stars: 5

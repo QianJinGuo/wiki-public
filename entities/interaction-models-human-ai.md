@@ -6,12 +6,12 @@ source: newsletter
 source_url:
 author: ""
 review_value: 8
-sources: []
+sources: [raw/articles/interaction-models-human-ai]
 review_confidence: 8
 review_recommendation: strong
 tags: [ai]
 created: 2026-05-13
-updated: 2026-08-07
+updated: 2026-09-05
 ---
 
 > -> [[raw/articles/interaction-models-human-ai.md|原文存档]]

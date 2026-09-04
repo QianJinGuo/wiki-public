@@ -1,10 +1,9 @@
 ---
 title: "Tapered Language Models：锥形参数分配的免费午餐"
 created: 2026-06-29
-updated: 2026-08-01
+updated: 2026-09-05
 type: entity
 tags: [architecture, parameter-efficiency, transformer, tapering, zero-cost-improvement, moe]
-provenance_state: inferred
 sources:
   - raw/articles/tapered-language-models-cosine-width-redistribution-mila-2026
 confidence: 0.85

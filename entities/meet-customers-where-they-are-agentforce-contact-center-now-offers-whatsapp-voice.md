@@ -3,9 +3,9 @@ title: "Meet Customers Where They Are: Agentforce Contact Center Now Offers What
 type: entity
 tags: [agentforce, salesforce, whatsapp, contact-center, crm]
 created: 2026-05-15
-updated: 2026-08-03
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/meet-customers-where-they-are-agentforce-contact-center-now-offers-whatsapp-voice]
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4

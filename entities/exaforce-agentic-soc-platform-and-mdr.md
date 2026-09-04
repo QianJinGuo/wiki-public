@@ -3,9 +3,9 @@ title: "Exaforce | Agentic SOC Platform and MDR"
 type: entity
 tags: [newsletter, www-exaforce-ai]
 created: 2026-05-15
-updated: 2026-07-27
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/exaforce-agentic-soc-platform-and-mdr]
 review_confidence: 9
 review_recommendation: strong
 ---

@@ -5,9 +5,8 @@ source: "[[raw/articles/www-sans-org-ai-in-cybersecurity-training-resources-sans
 sources:
   - raw/articles/www-sans-org-ai-in-cybersecurity-training-resources-sans-instit
 tags: ["security", "ai-security", "training", "sans", "cybersecurity", "certification", "llm-security"]
-provenance_state: inferred
 created: "2026-05-14"
-updated: 2026-08-24
+updated: 2026-09-05
 type: entity
 review_value: 7
 review_confidence: 8

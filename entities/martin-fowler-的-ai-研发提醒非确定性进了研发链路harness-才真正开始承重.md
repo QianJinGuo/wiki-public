@@ -6,7 +6,7 @@ type: entity
 value: 7
 tags: [agent, harness-engineering, engineering, ai]
 review_value: 9
-sources: []
+sources: [raw/articles/martin-fowler-的-ai-研发提醒非确定性进了研发链路harness-才真正开始承重]
 review_confidence: 7
 updated: 2026-08-01
 ---

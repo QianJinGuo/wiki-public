@@ -6,7 +6,7 @@ updated: 2026-06-17
 type: entity
 tags: [mlops, ai-agent, wechat, agent-tools, engineering]
 review_value: 6
-sources: []
+sources: [raw/articles/你写的-skill及格了吗]
 review_confidence: 7
 ---
 

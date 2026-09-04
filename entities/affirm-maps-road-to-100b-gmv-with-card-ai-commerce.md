@@ -3,9 +3,9 @@ title: "Affirm Maps Road to $100B GMV With Card, AI Commerce"
 type: entity
 tags: [fintech, affirm, payments, ai-commerce, gmv]
 created: 2026-05-15
-updated: 2026-08-01
+updated: 2026-09-05
 review_value: 8
-sources: []
+sources: [raw/articles/affirm-maps-road-to-100b-gmv-with-card-ai-commerce]
 review_confidence: 8
 review_recommendation: strong
 ---

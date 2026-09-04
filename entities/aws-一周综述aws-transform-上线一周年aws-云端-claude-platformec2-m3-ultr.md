@@ -5,7 +5,7 @@ updated: 2026-08-29
 type: entity
 tags: [aws, cloud, ai, infrastructure]
 review_value: 6
-sources: []
+sources: [raw/articles/aws-一周综述aws-transform-上线一周年aws-云端-claude-platformec2-m3-ultr]
 review_confidence: 9
 review_recommendation: worth-reading
 review_stars: 3

@@ -4,14 +4,14 @@ type: entity
 name: New in Claude Managed Agents
 description: "Anthropic's official Claude managed agents: persistent sessions, tool use, memory across conversations, enterprise SSO, agent patterns and API details."
 review_value: 8
-sources: []
+sources: [raw/articles/claude-managed-agents-official]
 review_confidence: 9
 review_verdict: strong
 stars: 4
 source: newsletter
 source_url: ""
 ingested: 2026-05-08
-updated: 2026-08-24
+updated: 2026-09-05
 created: 2026-05-10
 tags: [anthropic, agent, claude-code, multi-agent]
 provenance_state: inferred

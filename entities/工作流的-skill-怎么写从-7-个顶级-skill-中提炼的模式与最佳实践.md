@@ -6,7 +6,7 @@ updated: 2026-08-01
 type: entity
 tags: [llm, agent-tools, wechat]
 review_value: 6
-sources: []
+sources: [raw/articles/工作流的-skill-怎么写从-7-个顶级-skill-中提炼的模式与最佳实践]
 review_confidence: 7
 ---
 

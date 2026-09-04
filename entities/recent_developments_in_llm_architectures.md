@@ -4,9 +4,9 @@ title: "Recent Developments in LLM Architectures: KV Sharing, mHC, a"
 type: entity
 tags: [newsletter, article]
 created: 2026-05-18
-updated: 2026-08-01
+updated: 2026-09-05
 review_value: 8
-sources: []
+sources: [raw/articles/recent_developments_in_llm_architectures]
 review_confidence: 9
 review_recommendation: worth-reading
 ---

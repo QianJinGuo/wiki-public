@@ -4,10 +4,10 @@ description: "格灵深瞳灵感实验室 LLaVA-OneVision-2.0：OneVision-Encode
 source: ""
 tags: [vlm, 视频理解, 全帧率, 视觉编码, llava]
 created: 2026-05-20
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 review_value: 5
-sources: []
+sources: [raw/articles/llava-onevision-2-full-frame-rate-vlm-glintlab]
 provenance_state: inferred
 confidence: 0.8
 ---

@@ -4,15 +4,14 @@ source: newsletter
 source_url:
 fetcher: jina
 tags: [claude, best-practices, enterprise, large-codebase]
-provenance_state: inferred
 created: 2026-05-19
-updated: 2026-08-29
+updated: 2026-09-05
 sha256: 29469e68ea7ab9fa
 confidence: 0.8
 provenance_state: extracted
 type: entity
 review_value: 5
-sources: []
+sources: [raw/articles/ai-era-git-version-control-agentic-coding-practices]
 ---
 ## 核心导航机制
 Claude Code 导航代码库的方式与软件工程师相同：遍历文件系统、读取文件、使用 grep 精确定位所需内容、追踪代码库中的引用。它在开发者的本地机器上运行，无需构建、维护或上传代码库索引到服务器。^[raw/articles/ai-era-git-version-control-agentic-coding-practices.md]

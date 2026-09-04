@@ -4,12 +4,12 @@ title: "How to Calculate the Inference Efficiency Ratio"
 type: entity
 tags: [inference, efficiency, metrics, benchmark, llm]
 review_value: 8
-sources: []
+sources: [raw/articles/how-to-calculate-the-inference-efficiency-ratio]
 review_confidence: 9
 review_recommendation: strong
 review_stars: 4
 created: 2026-05-15
-updated: 2026-08-01
+updated: 2026-09-05
 ---
 
 ## 深度分析

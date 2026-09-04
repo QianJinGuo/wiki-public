@@ -3,10 +3,9 @@
 title: "Mollick 的 AI 实用指南：免费 vs 付费·模型选择·深度研究（2025-10）"
 description: "Ethan Mollick（One Useful Thing，2025-10-19）基于 OpenAI 真实使用数据（10% 人类每周使用 AI）给出实用选型建议：免费模型足够休闲使用；$20 付费选 Agent 模型（GPT-5 Thinking Extended）做真实工作；Deep Research 是大多数人忽视的核心功能；AIs still hallucinate but less；prompt engineering 不再重要（chain-of-thought 无效）。"
 created: 2026-06-07
-updated: 2026-08-01
+updated: 2026-09-05
 type: entity
 tags: [ai-selection, free-vs-paid, deep-research, model-tier, ethan-mollick, one-useful-thing, gpt-5, claude, gemini, agentic-model, chain-of-thought, hallucination]
-provenance_state: inferred
 sources: [raw/articles/an-opinionated-guide-to-using-ai-right-now, raw/articles/an-opinionated-guide-to-which-ai-to-use-to-do-stuff]
 review_value: 9
 review_confidence: 9
@@ -14,7 +13,6 @@ review_recommendation: strong
 review_stars: 5
 confidence: 0.88
 provenance_state: extracted
-sources:
 ---
 
 # Mollick 的 AI 实用指南：免费 vs 付费·模型选择·深度研究（2025-10）

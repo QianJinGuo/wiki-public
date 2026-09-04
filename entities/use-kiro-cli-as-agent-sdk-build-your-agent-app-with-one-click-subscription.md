@@ -1,7 +1,7 @@
 ---
 title: "把 Kiro CLI 当作 Agent SDK：一键订阅即可构建你的Agent应用 | 亚马逊AWS官方博客"
 created: 2026-05-14
-updated: 2026-08-01
+updated: 2026-09-05
 tags: [aws-china-blog, kiro]
 sources: [raw/articles/use-kiro-cli-as-agent-sdk-build-your-agent-app-with-one-click-subscription]
 review_value: 8
@@ -38,6 +38,6 @@ Kiro CLI、Kiro IDE、Kiro MCP Skills、Amazon Bedrock ^[raw/articles/use-kiro-c
 - [[entities/ai-network-claude-code-kiro-cli-implement-aws-ipsec-vpn|AI 驱动的跨云网络搭建：用 Claude Code 和 Kiro CLI 实现 AWS-腾讯云 IPSec VPN 双隧道互联 | 亚马逊AWS官方博客]]
 - [[entities/kiro-cli-rest-api-architecture-practice|将 Kiro CLI 封装为 REST API：双通道架构实践 | 亚马逊AWS官方博客]]
 
-→ [[raw/articles/freelance-designers-cant-compete-ai-subscription.md|原文存档]] ^[raw/articles/use-kiro-cli-as-agent-sdk-build-your-agent-app-with-one-click-subscription.md]
+→ [[raw/articles/use-kiro-cli-as-agent-sdk-build-your-agent-app-with-one-click-subscription|原文存档]] ^[raw/articles/use-kiro-cli-as-agent-sdk-build-your-agent-app-with-one-click-subscription.md]
 
 - [[entities/use-kiro-specification-driven-development-to-accelerate-data-quality-construction|使用 Kiro 规范驱动开发加速数据质量建设 | 亚马逊AWS官方博客]]

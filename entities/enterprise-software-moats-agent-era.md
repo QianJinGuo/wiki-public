@@ -1,7 +1,7 @@
 ---
 title: "Enterprise Software Moats in the Agent Era — 系统性护城河分析框架"
 created: 2026-05-15
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [enterprise-software, moats, agent-era, system-of-record, headless, data-exhaust, action-layer, network-effects, a16z, salesforce]
 sources: [raw/articles/salesforce-headless-software-losing-head-a16z]
@@ -106,7 +106,7 @@ SaaS 时代记录系统几乎没有飞轮效应，因为软件是单向记录工
 ## 相关实体
 - [[entities/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security-v2|AI tool poisoning exposes a major flaw in enterprise agent security]]
 - [[entities/alibaba-eventhouse-enterprise-agent-context|阿里云 EventHouse 企业级 Agent 上下文供给体系]]
-- [[entities/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security|AI tool poisoning exposes a major flaw in enterprise agent security | VentureBeat]]
+- [[entities/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security-v2|AI tool poisoning exposes a major flaw in enterprise agent security | VentureBeat]]
 - [[entities/foundation-capital-agent-era-six-insights|foundation capital agent era six insights]]
 - [[entities/agent-era-architect-skills-guide|Agent 时代架构师技能指南]]
 - [[entities/kuaishou-worker-agent-desktop-software|快手首个打工人Agent]]

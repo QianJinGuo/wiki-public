@@ -2,7 +2,7 @@
 
 title: "The New Era of Cloud AI Mobile Testing: Amazon Device Farm MCP Server Practical Guide | 亚马逊AWS官方博客"
 created: 2026-05-14
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [aws-china-blog]
 sources: [raw/articles/cloud-ai-mobile-testing-new-era-amazon-device-farm-mcp-server-practical-guide-en]
 review_value: 8
@@ -103,6 +103,6 @@ Amazon Web Services (AWS) ^[raw/articles/cloud-ai-mobile-testing-new-era-amazon-
 - [[entities/stop-coding-architect-dennis-doomen-ai-era|停止编码的那天，就是失去架构判断力的开始：一位 30 年架构师的 AI 生存指南]]
 - [[entities/ai-era-git-version-control-agentic-coding-practices|AI 时代 Git 版本管理 — Agentic Coding 最佳实践]]
 
-→ [[raw/articles/aws-bedrock-agentcore-doris-mcp-server.md|原文存档]] ^[raw/articles/cloud-ai-mobile-testing-new-era-amazon-device-farm-mcp-server-practical-guide-en.md]
+→ [[raw/articles/cloud-ai-mobile-testing-new-era-amazon-device-farm-mcp-server-practical-guide-en|原文存档]] ^[raw/articles/cloud-ai-mobile-testing-new-era-amazon-device-farm-mcp-server-practical-guide-en.md]
 
 - [[entities/agent-era-architect-skills-guide|Agent 时代架构师技能指南]]

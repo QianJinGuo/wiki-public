@@ -6,7 +6,7 @@ tags: [wechat, tech, opentelemetry, genai, observability, semconv, loongsuite, a
 created: 2026-05-16
 updated: 2026-08-29
 review_value: 8
-sources: []
+sources: [raw/articles/阿里巴巴蚂蚁-loongsuite-genai-可观测语义规范从统一数据语言到规模化落地]
 review_confidence: 8
 review_recommendation: strong
 ---

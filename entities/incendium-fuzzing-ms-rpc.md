@@ -7,10 +7,10 @@ date: 2026-05-08
 source: newsletter
 tags: [security]
 review_value: 4
-sources: []
+sources: [raw/articles/incendium-fuzzing-ms-rpc]
 review_confidence: 7
 created: 2026-05-10
-updated: 2026-06-30
+updated: 2026-09-05
 ---
 
 > -> [[raw/articles/incendium-fuzzing-ms-rpc.md|原文存档]]

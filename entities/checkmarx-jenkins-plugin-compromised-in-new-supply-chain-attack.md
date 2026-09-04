@@ -1,13 +1,13 @@
 ---
 title: "Checkmarx Jenkins plugin compromised in new supply chain attack"
 created: 2026-05-16
-updated: 2026-08-29
+updated: 2026-09-05
 source: "[[raw/articles/checkmarx-jenkins-plugin-compromised-in-new-supply-chain-attack|原文存档]]"
 type: entity
 value: 7
 tags: [security, ai]
 review_value: 7
-sources: []
+sources: [raw/articles/checkmarx-jenkins-plugin-compromised-in-new-supply-chain-attack]
 review_confidence: 7
 ---
 

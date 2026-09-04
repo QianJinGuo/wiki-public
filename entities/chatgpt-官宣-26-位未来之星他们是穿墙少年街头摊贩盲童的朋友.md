@@ -5,7 +5,7 @@ updated: 2026-06-30
 type: entity
 tags: [wechat, engineering, mlops]
 review_value: 6
-sources: []
+sources: [raw/articles/chatgpt-官宣-26-位未来之星他们是穿墙少年街头摊贩盲童的朋友]
 review_confidence: 7
 ---
 > -> [[raw/articles/chatgpt-官宣-26-位未来之星他们是穿墙少年街头摊贩盲童的朋友.md|原文存档]]

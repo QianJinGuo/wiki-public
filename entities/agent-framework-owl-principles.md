@@ -1,13 +1,13 @@
 ---
 title: "Agent框架OWL原理详解"
 created: 2026-05-16
-updated: 2026-08-29
+updated: 2026-09-05
 source: "[[raw/articles/agent-framework-owl-principles|原文存档]]"
 type: entity
 value: 8
 tags: [agent, open-source, evaluation, architecture, ai]
 review_value: 7
-sources: []
+sources: [raw/articles/agent-framework-owl-principles]
 review_confidence: 8
 ---
 

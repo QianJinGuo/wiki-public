@@ -6,14 +6,14 @@ tags: [security, ai, vulnerability, hackernews, cybersecurity]
 source: newsletter
 source_url:
 review_value: 8
-sources: []
+sources: [raw/articles/1-million-exposed-ai-services-hackernews]
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4
 topics: [ollama, flowise, n8n, openui, ai-infrastructure, api-security, vulnerability, docker-security, zero-trust, certificate-transparency]
 related: [bleeding-llama-critical-unauthenticated-memory-leak-in-ollama, ai-agents-inside-perimeter-hackernews, enterprise-openclaw-security-deploy-architecture-guide]
 created: 2026-05-12
-updated: 2026-08-29
+updated: 2026-09-05
 ---
 
 > -> [[raw/articles/1-million-exposed-ai-services-hackernews|原文存档]]

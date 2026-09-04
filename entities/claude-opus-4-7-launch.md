@@ -2,7 +2,7 @@
 
 title: "Claude Opus 4.7 发布分析"
 created: 2026-05-07
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [claude-opus, anthropic, model-release, benchmark, tokenizer, claude-code, agent-coding, harness-engineering]
 sources:
@@ -174,6 +174,6 @@ Opus 4.7 是 Anthropic 在安全护栏和网络保护技术上的**试验场**�
 - 开放式分析/复杂任务会更长——这是「聪明」的代价，不必强行压缩
 - `/focus` 模式让 CLI 用户可以在不关心过程时隐藏干扰，专注结果
 
-→ [[raw/articles/claude-code-tool-design-evolution-anthropic.md|原文存档]] ^[raw/articles/opus-4-7-launch-claude-code-best-practices-wechat.md]
+→ [[raw/articles/opus-4-7-launch-claude-code-best-practices-wechat|原文存档]] ^[raw/articles/opus-4-7-launch-claude-code-best-practices-wechat.md]
 
 - 建议先用 `xhigh` 跑一个完整项目再决定是否调整，而不是凭直觉选择低 effort 省成本

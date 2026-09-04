@@ -4,9 +4,9 @@ title: "Fine-Tuning NVIDIA Cosmos Predict 2.5 with LoRA/DoRA for Robot Video Gen
 type: entity
 tags: [robotics, world-model, lora, fine-tuning]
 created: 2026-05-20
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 8
-sources: []
+sources: [raw/articles/nvidia-cosmos-fine-tuning-robot-video-generation]
 review_confidence: 9
 review_recommendation: strong
 review_stars: 4

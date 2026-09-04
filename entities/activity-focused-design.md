@@ -4,9 +4,9 @@ title: Activity-Focused Design
 type: entity
 tags: [ux-design, methodology, ux-design]
 created: 2026-05-21
-updated: 2026-08-01
+updated: 2026-09-05
 review_value: 8
-sources: []
+sources: [raw/articles/activity-focused-design]
 review_confidence: 9
 review_stars: 4
 review_recommendation: strong

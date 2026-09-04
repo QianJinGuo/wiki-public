@@ -3,12 +3,12 @@
 source_url:
 title: "Agentium — 从零实现 Agent 系统的开源框架"
 created: 2026-05-20
-updated: 2026-08-01
+updated: 2026-09-05
 author: 贵慜 (IchbinDerek)
 platform: WeChat
 published: 2026-05-17
 review_value: 8
-sources: []
+sources: [raw/articles/agentium-agent-framework]
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4

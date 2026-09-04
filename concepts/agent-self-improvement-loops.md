@@ -1,7 +1,7 @@
 ---
 title: "Agent 自改进循环"
 created: 2026-06-12
-updated: 2026-08-30
+updated: 2026-09-03
 type: concept
 tags: [concept, self-improvement, agent, bootstrapping, feedback-loop, evolution]
 sources: [entities/agent-self-improvement-six-mechanisms, concepts/ai-self-improvement-bootstrapping, entities/hermes-agent-self-evolving]
@@ -69,4 +69,4 @@ skill acquisition 机制在这个循环中扮演核心角色：agent 不仅要�
 - [[moc/layer-4-ecosystem|Layer 4 Ecosystem]]
 - [[moc/loop-engineering|Loop Engineering]]
 
-> [!contradiction] 参见 [[raw/articles/arbor-hypothesis-tree-research-agent-2026|Arbor（假设树科研 agent）]] 持相反观点：经验**保持具体、不做抽象**、per-session 存储、复用需人工同意——与「连续 N 次成功自动蒸馏为 skill、M 次后合并通用化」的路线直接对立。Arbor 的立场对应 [[concepts/agent-memory-lifecycle-philosophies|Memory 生命周期哲学]] 中「skill distillation 最高效固化错误」的警告。综合分析见 [[drafts/wiki-emergent-viewpoints-2026-08-phd-lens|2026-08 涌现观点·观点一（经验抽象度）]]。
+> [!contradiction] 参见 待补公开原文 持相反观点：经验**保持具体、不做抽象**、per-session 存储、复用需人工同意——与「连续 N 次成功自动蒸馏为 skill、M 次后合并通用化」的路线直接对立。Arbor 的立场对应 [[concepts/agent-memory-lifecycle-philosophies|Memory 生命周期哲学]] 中「skill distillation 最高效固化错误」的警告。综合分析见 [[drafts/wiki-emergent-viewpoints-2026-08-phd-lens|2026-08 涌现观点·观点一（经验抽象度）]]。

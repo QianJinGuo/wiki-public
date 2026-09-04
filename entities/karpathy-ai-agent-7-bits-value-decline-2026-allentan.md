@@ -1,13 +1,13 @@
 ---
 title: "Karpathy 怎么看 AI Agent（七）：当程序员贡献的 bits 越来越少，什么技能还值钱"
 created: 2026-05-13
-updated: 2026-08-29
+updated: 2026-09-05
 source: "[[raw/articles/karpathy-ai-agent-7-bits-value-decline-2026-allentan|原文存档]]"
 type: entity
 value: 8
 tags: [agent, ai]
 review_value: 9
-sources: []
+sources: [raw/articles/karpathy-ai-agent-7-bits-value-decline-2026-allentan]
 review_confidence: 7
 ---
 

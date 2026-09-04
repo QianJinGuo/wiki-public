@@ -3,9 +3,9 @@ title: "Skill Issues: Compromising Claude Code with malicious skills & agents --
 type: entity
 tags: [claude-code, security, agent, skill, ai]
 created: 2026-05-20
-updated: 2026-06-19
+updated: 2026-09-05
 review_value: 8
-sources: []
+sources: [raw/articles/skill-issues-compromising-claude-code-with-malicious-skills-agents-part-1]
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4

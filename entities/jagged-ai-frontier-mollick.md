@@ -2,10 +2,9 @@
 title: "AI 的形状：Jagged Frontier·Bottleneck·Reverse Salient（Mollick）"
 description: "Ethan Mollick（One Useful Thing，2025-12-20）深化 Jagged Frontier 概念：Jaggedness 来自 AI 的不均匀能力（超强诊断 vs 弱视觉/无法操作自动售货机）；Bottleneck（瓶颈）是即使超强 AI 也无法自动化的卡点（LLM 视觉不够精确/幻觉/无长期记忆）；Reverse Salient 是卡住整个系统的单个弱点（图像生成曾卡住 PowerPoint）；当瓶颈打破时整个系统跃进。"
 created: 2026-06-07
-updated: 2026-08-01
+updated: 2026-09-05
 type: entity
 tags: [jagged-frontier, bottleneck, reverse-salient, ai-capability, ethan-mollick, one-useful-thing, nano-banana, powerpoint, cochrane-reviews, memory, multimodal]
-provenance_state: inferred
 source: [[raw/articles/the-shape-of-ai-jaggedness-bottlenecks-and-salients]]
 review_value: 9
 review_confidence: 9

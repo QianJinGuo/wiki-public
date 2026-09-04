@@ -5,9 +5,8 @@ description: "Windows 11 haptics guide: InputHapticsManager API, waveform langua
 source: "[[raw/articles/haptics-design-implementation-microsoft-windows11]]"
 type: entity
 tags: [design, haptics, UX, microsoft, windows, interaction-design]
-provenance_state: inferred
 created: "2026-06-21"
-updated: 2026-07-31
+updated: 2026-09-05
 review_value: 6
 review_confidence: 8
 review_stars: 4

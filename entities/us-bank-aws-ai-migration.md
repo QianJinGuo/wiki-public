@@ -5,12 +5,12 @@ source: newsletter
 source_url:
 date: "May 11, 2026"
 review_value: 7
-sources: []
+sources: [raw/articles/us-bank-aws-ai-migration]
 review_confidence: 8
 review_stars: 4
 tags: [aws, ai, news]
 created: 2026-05-13
-updated: 2026-08-01
+updated: 2026-09-05
 ---
 > -> [[raw/articles/us-bank-aws-ai-migration.md|原文存档]]
 

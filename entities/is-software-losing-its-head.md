@@ -4,9 +4,9 @@ title: "Is Software Losing Its Head?"
 type: entity
 tags: [a16z,software-development,ai,software-engineering]
 created: 2026-05-16
-updated: 2026-07-27
+updated: 2026-09-05
 review_value: 6
-sources: []
+sources: [raw/articles/is-software-losing-its-head-1]
 review_confidence: 9
 review_recommendation: worth-reading
 review_stars: 3

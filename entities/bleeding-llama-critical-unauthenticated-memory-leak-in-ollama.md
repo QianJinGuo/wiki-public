@@ -6,11 +6,11 @@ type: entity
 source: newsletter
 source_url:
 review_value: 9
-sources: []
+sources: [raw/articles/bleeding-llama-critical-unauthenticated-memory-leak-in-ollama]
 review_confidence: 9
 review_recommendation: strong
 date: 2026-05-13
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [vulnerability, cve, memory-leak, ollama, gguf, heap-overflow, ai-security]
 ---
 

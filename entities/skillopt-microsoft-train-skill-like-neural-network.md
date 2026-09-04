@@ -2,9 +2,8 @@
 title: "别再手写 Skill 了！微软最新研究：像神经网络一样训练 Skill"
 description: "SkillOpt：将 Skill 文档当作神经网络权重，用 rollout→reflection→edit 循环自动优化，52/52 最优，平均 +23.5 分"
 created: 2026-06-10
-updated: 2026-08-01
+updated: 2026-09-05
 tags: [agent, code, evaluation, fine-tuning, llm, microsoft, open-source, prompt, rl, search, skill, tool-use, optimization, harness-engineering]
-provenance_state: inferred
 review_value: 7
 review_confidence: 7
 type: entity

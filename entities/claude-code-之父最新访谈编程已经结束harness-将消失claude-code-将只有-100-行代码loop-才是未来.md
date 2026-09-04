@@ -7,7 +7,7 @@ updated: 2026-05-18
 type: entity
 tags: [agent, llm, engineering]
 review_value: 8
-sources: []
+sources: [raw/articles/claude-code-之父最新访谈编程已经结束harness-将消失claude-code-将只有-100-行代码loop-才是未来]
 review_confidence: 7
 review_recommendation: worth-reading
 created: 2026-05-15

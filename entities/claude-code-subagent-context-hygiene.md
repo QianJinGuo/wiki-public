@@ -1,7 +1,7 @@
 ---
 title: "Claude Code Subagent 上下文卫生"
 created: "2026-04-30"
-updated: 2026-08-29
+updated: 2026-09-05
 type: "entity"
 tags: [claude-code, subagent, context-management, contextual-boundaries, agent-harness, workspace-hygiene]
 sources:
@@ -121,7 +121,7 @@ Subagent的本质被广泛误解——它不是"多一个Agent帮忙"，而是�
 **Kaxil Naik的判断"Harness matters more than the model"在Subagent语境下的含义**：Subagent是Harness在上下文管理层最重要的具体实现——模型能力决定上限，Harness决定能否稳定发挥这个上限。 ^[raw/articles/claude-code-subagents-context-hygiene.md]
 
 
-→ [[raw/articles/qy_zaCZTCs1Ql3BIFmBMgg.md|原文存档]] ^[raw/articles/claude-code-subagents-context-hygiene.md]
+→ [[raw/articles/claude-code-subagents-context-hygiene|原文存档]] ^[raw/articles/claude-code-subagents-context-hygiene.md]
 
 ## 实践启示
 1. **建立"上下文边界"思维而非"角色分工"思维**：判断任务是否适合Subagent的标准不是"谁来做"，而是"这个任务的探索过程留在主窗口会不会污染主会话"   ^[raw/articles/claude-code-subagents-context-hygiene.md]

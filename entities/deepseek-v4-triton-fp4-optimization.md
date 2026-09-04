@@ -2,9 +2,9 @@
 title: "DeepSeek V4 Triton FP4 优化实战"
 type: entity
 created: 2026-05-07
-updated: 2026-08-01
+updated: 2026-09-05
 review_value: 9
-sources: []
+sources: [raw/articles/deepseek-v4-triton-fp4-optimization]
 review_confidence: 8
 review_recommendation: strong
 review_stars: 5

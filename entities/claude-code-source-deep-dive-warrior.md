@@ -2,9 +2,9 @@
 title: "Claude Code 源码深度解析（13 核心机制）"
 type: entity
 created: 2026-05-07
-updated: 2026-08-01
+updated: 2026-09-05
 review_value: 10
-sources: []
+sources: [raw/articles/claude-code-source-deep-dive-warrior]
 review_confidence: 8
 review_recommendation: strong
 review_stars: 5

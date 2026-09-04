@@ -6,7 +6,7 @@ tags: [wechat, tech]
 created: 2026-05-16
 updated: 2026-05-18
 review_value: 8
-sources: []
+sources: [raw/articles/给氛围编程系上安全带阿里集团-ai-代码评审实践与-benchmark-开源]
 review_confidence: 8
 review_recommendation: strong
 source_url:

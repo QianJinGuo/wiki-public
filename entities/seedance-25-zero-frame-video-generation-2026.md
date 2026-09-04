@@ -1,15 +1,12 @@
 ---
 title: "Seedance 2.5海外火出圈：0帧起手实拍级视频生成"
-created: 2026-08-31
-updated: 2026-08-31
-type: entity
-tags: [seedance, video-generation, multimodal, bytedance, model-release]
-sources: [raw/articles/seedance-25-zero-frame-video-generation-2026]
-confidence: 0.75
+created: 2026-09-03
+updated: 2026-09-05
+type: redirect
+review_value: 0
+archived_to: _archive/checkup-2026-09-03/seedance-25-zero-frame-video-generation-2026.md
+archived_reason: stub_under_300_chars
 ---
 
-# Seedance 2.5海外火出圈：0帧起手实拍级视频生成
-
-Seedance 2.5视频生成模型的新特性和海外表现
-
-→ [[raw/articles/seedance-25-zero-frame-video-generation-2026|原文存档]]
+> 本实体已于 2026-09-03 质量闭环清理中归档（原因: stub_under_300_chars）。
+> 原文见 `raw/articles/`，归档件见 `_archive/checkup-2026-09-03/seedance-25-zero-frame-video-generation-2026.md`。

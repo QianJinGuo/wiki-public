@@ -7,9 +7,9 @@ tags: [newsletter, honeypot, ai-security, threat-detection, deception]
 source: newsletter
 source_url:
 created: 2026-05-12
-updated: 2026-08-07
+updated: 2026-09-05
 review_value: 4
-sources: []
+sources: [raw/articles/ai-powered-honeypots-turning-the-tables-on-malicious-ai-agents]
 review_confidence: 7
 
 ---

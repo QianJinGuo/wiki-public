@@ -4,9 +4,9 @@ title: "PyTorch 2.12 Release Blog – PyTorch"
 type: entity
 tags: [newsletter, ai, ml]
 created: 2026-05-15
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/pytorch212releaseblogpytorch]
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 3

@@ -2,7 +2,7 @@
 
 title: "基于 MIG 技术在 Amazon SageMaker HyperPod 上实现 GPU 虚拟化的最佳实践 | 亚马逊AWS官方博客"
 created: 2026-05-14
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [aws-china-blog, sagemaker]
 sources: [raw/articles/gpu-virtualization-using-mig-technology-on-amazon-sagemaker-hyperpod]
 review_value: 8
@@ -98,7 +98,7 @@ MIG的价值最终体现在成本降低上，需要建立配套的监控体系�
 - [[entities/using-amazon-bedrock-agentcore-openclaw-multi-1|AI Agent 的迁移与现代化 — 使用 Amazon Bedrock AgentCore 将 OpenClaw 从单机改造为多租户 Serverless 架构 第一篇 | 亚马逊AWS官方博客]]
 - [[entities/using-amazon-emr-serverless-storage-to-simplify-operations-and-reduce-costs|使用Amazon EMR Serverless Storage简化运维节省成本 | 亚马逊AWS官方博客]]
 
-→ [[raw/articles/fine-tune-llm-with-databricks-unity-catalog-and-amazon-sagemaker.md|原文存档]] ^[raw/articles/gpu-virtualization-using-mig-technology-on-amazon-sagemaker-hyperpod.md]
+→ [[raw/articles/gpu-virtualization-using-mig-technology-on-amazon-sagemaker-hyperpod|原文存档]] ^[raw/articles/gpu-virtualization-using-mig-technology-on-amazon-sagemaker-hyperpod.md]
 
 - [[entities/fine-tune-llm-with-databricks-unity-catalog-and-amazon-sagemaker|Fine-tune LLM with Databricks Unity Catalog and Amazon SageMaker AI]]
 - [[moc/amazon-aws-ai|MOC]]

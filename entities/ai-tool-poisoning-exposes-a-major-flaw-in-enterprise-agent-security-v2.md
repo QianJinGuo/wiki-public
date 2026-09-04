@@ -6,12 +6,12 @@ source: newsletter
 source_url:
 date: 2026-05-13
 review_value: 8
-sources: []
+sources: [raw/articles/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security-v2]
 review_confidence: 9
 review_recommendation: strong
 tags: [agent, security, tool-registry, supply-chain, mcp]
 created: 2026-05-16
-updated: 2026-08-07
+updated: 2026-09-05
 ---
 
 > -> [[raw/articles/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security-v2.md|原文存档]]

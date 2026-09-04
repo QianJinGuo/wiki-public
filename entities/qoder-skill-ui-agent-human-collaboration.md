@@ -1,13 +1,13 @@
 ---
 title: "Agent Skills 终于有 UI 了"
 created: 2026-04-30
-updated: 2026-08-29
+updated: 2026-09-05
 source: "[[raw/articles/qoder-skill-ui-agent-human-collaboration|原文存档]]"
 type: entity
 value: 7
 tags: [agent, skill]
 review_value: 9
-sources: []
+sources: [raw/articles/qoder-skill-ui-agent-human-collaboration]
 review_confidence: 7
 ---
 

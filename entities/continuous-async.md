@@ -3,9 +3,9 @@ title: "Unlocking asynchronicity in continuous batching"
 type: entity
 tags: [llm, inference, cuda, huggingface, performance-optimization]
 created: 2026-05-17
-updated: 2026-08-30
+updated: 2026-09-05
 review_value: 8
-sources: []
+sources: [raw/articles/continuous-async]
 review_confidence: 9
 source_url:
 

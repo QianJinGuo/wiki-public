@@ -2,9 +2,9 @@
 title: "Multica — 开源 Managed Agents 平台"
 type: entity
 created: 2026-05-07
-updated: 2026-08-01
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/multica-managed-agents-platform]
 review_confidence: 7
 review_recommendation: strong
 review_stars: 3

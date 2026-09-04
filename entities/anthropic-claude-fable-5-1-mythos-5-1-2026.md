@@ -1,7 +1,8 @@
 ---
+
 title: "Anthropic Claude Fable 5.1 / Mythos 5.1 发布"
 created: 2026-09-03
-updated: 2026-09-03
+updated: 2026-09-05
 type: entity
 tags: [anthropic, claude, fable, mythos, model-release, benchmark, safety, protein-design, cybersecurity]
 sources: [raw/articles/anthropic-claude-fable-5-1-mythos-5-1-2026]
@@ -12,13 +13,13 @@ confidence: 0.9
 
 ## 核心信息
 
-Claude Fable 5.1 和 Mythos 5.1 是同一模型的不同安全等级版本。Fable 5.1 为通用版本，Mythos 5.1 仅通过 trusted access programs 提供，专门支持网络安全和生命科学研究。两者于 2026 年 9 月发布。
+Claude Fable 5.1 和 Mythos 5.1 是同一模型的不同安全等级版本。Fable 5.1 为通用版本，Mythos 5.1 仅通过 trusted access programs 提供，专门支持网络安全和生命科学研究。两者于 2026 年 9 月发布。 ^[raw/articles/anthropic-claude-fable-5-1-mythos-5-1-2026.md]
 
 **关键变化：**
 - 价格降低 25%（典型工作负载），agentic 工作负载最高降低 45%（通过 cache read 定价优化）
 - 企业级前沿安全防护（Enterprise Frontier Safeguards, EFS）：客户完全控制数据存储，等效零数据保留
 - 安全误报减少 60%（网络安全领域）
-- Fable 5.1 默认 High effort（Claude Code），Medium effort（Claude Cowork / Claude.ai）
+- Fable 5.1 默认 High effort（Claude Code），Medium effort（Claude Cowork / Claude.ai） ^[raw/articles/anthropic-claude-fable-5-1-mythos-5-1-2026.md]
 
 ## 基准测试结果
 
@@ -34,15 +35,15 @@ Claude Fable 5.1 和 Mythos 5.1 是同一模型的不同安全等级版本。Fab
 | 业务流程 AutomationBench | 31.4% | 17.1% | 26.9% | 19.6% |
 | Agentic 编程 CursorBench 3.2.0 | 73.4% | 70.5% | 70.0% | 67.2% |
 
-**Terminal-Bench-Science 0.1 提升幅度最大：52.6% vs 24.7%（Fable 5），接近翻倍。**
+**Terminal-Bench-Science 0.1 提升幅度最大：52.6% vs 24.7%（Fable 5），接近翻倍。** ^[raw/articles/anthropic-claude-fable-5-1-mythos-5-1-2026.md]
 
 ## 科学研究能力
 
 ### 分子设计
-Mythos 5.1 能设计高亲和力的蛋白质结合剂。在 3 个靶点上，其结合亲和力比 Adaptyv Bio 蛋白质设计竞赛中最佳设计高 10 倍。在 12 个靶点上的命中率接近 50%（当前行业典型为 10-15%）。
+Mythos 5.1 能设计高亲和力的蛋白质结合剂。在 3 个靶点上，其结合亲和力比 Adaptyv Bio 蛋白质设计竞赛中最佳设计高 10 倍。在 12 个靶点上的命中率接近 50%（当前行业典型为 10-15%）。 ^[raw/articles/anthropic-claude-fable-5-1-mythos-5-1-2026.md]
 
 ### 计算分析与建模
-Fable 5.1 训练了一个神经网络，基于 NASA Magellan 任务 30 多年前的雷达图像，创建了金星三分之一区域的高分辨率高程图。新地图分辨率达 2-3 公里（此前 10-20 公里），高度精度提高 25%。以 Creative Commons 许可证发布。
+Fable 5.1 训练了一个神经网络，基于 NASA Magellan 任务 30 多年前的雷达图像，创建了金星三分之一区域的高分辨率高程图。新地图分辨率达 2-3 公里（此前 10-20 公里），高度精度提高 25%。以 Creative Commons 许可证发布。 ^[raw/articles/anthropic-claude-fable-5-1-mythos-5-1-2026.md]
 
 ## 安全与合规
 

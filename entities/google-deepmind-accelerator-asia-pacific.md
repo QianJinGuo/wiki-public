@@ -4,9 +4,9 @@ title: We're launching the Google DeepMind Accelerator program in Asia Pacific t
 type: entity
 tags: [healthcare, ai-agents, aws, radiology]
 created: 2026-05-22
-updated: 2026-08-06
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/google-deepmind-accelerator-asia-pacific]
 review_confidence: 8
 review_stars: 4
 ---

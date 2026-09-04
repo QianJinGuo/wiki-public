@@ -2,7 +2,7 @@
 title: "Qoder Skills 完全指南"
 type: entity
 created: 2026-05-10
-updated: 2026-06-17
+updated: 2026-09-05
 tags: [skill, qoder, agent, tooling, best-practice]
 sources:
   - raw/articles/qoder-skills-完全指南从零开始让-ai-按你的标准执行
@@ -69,7 +69,7 @@ provenance_state: inferred
 - **用户级安装**: `~/.qoder/skills/` — 个人偏好、跨项目通用
 - **项目级安装**: `<项目根>/.qoder/skills/` — 团队规范、项目特定流程（推荐提交到 Git）
 ---
-→ [[raw/articles/qoder-skills-完全指南从零开始让-ai-按你的标准执行-v2.md|原文存档]] ^[raw/articles/qoder-skills-完全指南从零开始让-ai-按你的标准执行.md]
+→ [[raw/articles/qoder-skills-完全指南从零开始让-ai-按你的标准执行|原文存档]] ^[raw/articles/qoder-skills-完全指南从零开始让-ai-按你的标准执行.md]
 
 ## 深度分析
 **Qoder Skills 的本质是"知识封装"而非"工具集成"**。与传统的 prompt 模板或固定指令不同，Skill 通过三级渐进式披露机制（YAML meta → SKILL.md → scripts/references/assets）实现了"按需加载"的知识管理范式。这种设计让 AI 在每次执行时只加载必要的上下文，避免了上下文窗口的浪费，同时保留了深度执行复杂任务的能力。 ^[raw/articles/qoder-skills-完全指南从零开始让-ai-按你的标准执行.md]

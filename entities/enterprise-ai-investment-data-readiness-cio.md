@@ -4,9 +4,9 @@ title: "Nearly every enterprise is investing in AI, but only 5% say their data i
 type: entity
 tags: [ai-strategy, data-infrastructure, enterprise-ai, cio]
 created: 2026-05-15
-updated: 2026-08-01
+updated: 2026-09-05
 review_value: 8
-sources: []
+sources: [raw/articles/enterprise-ai-investment-data-readiness-cio]
 review_confidence: 9
 review_recommendation: strong
 review_stars: 4

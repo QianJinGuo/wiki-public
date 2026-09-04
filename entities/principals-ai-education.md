@@ -4,9 +4,9 @@ title: "CEOs of the classroom: Why principals are the key to the AI era"
 type: entity
 tags: [ai, education, school, principal, edtech]
 created: 2026-05-15
-updated: 2026-08-02
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/principals-ai-education]
 review_confidence: 8
 review_recommendation: strong
 ---

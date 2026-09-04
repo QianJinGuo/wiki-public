@@ -2,11 +2,11 @@
 title: "Fake OpenAI Privacy Filter Repo Hits #1 on Hugging Face, Draws 244K Downloads"
 type: entity
 created: 2026-05-13
-updated: 2026-08-03
+updated: 2026-09-05
 source_url:
 tags: [security, ai, threat-intelligence, huggingface, openai]
 review_value: 7
-sources: []
+sources: [raw/articles/thehackernews-fake-openai-privacy-filter]
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 3

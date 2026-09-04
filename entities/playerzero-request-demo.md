@@ -4,9 +4,9 @@ title: "Book a Demo | See PlayerZero in Action"
 type: entity
 tags: [playerzero, demo, request, product, sales]
 created: 2026-05-16
-updated: 2026-06-19
+updated: 2026-09-05
 review_value: 6
-sources: []
+sources: [raw/articles/playerzero-request-demo]
 review_confidence: 9
 review_recommendation: worth-reading
 ---

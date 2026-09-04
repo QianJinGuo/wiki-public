@@ -4,9 +4,9 @@ title: "Versa takes aim at fragmented enterprise security with CSPM, orchestrati
 type: entity
 tags: [newsletter, security, sase, cspm, ai-agent]
 created: 2026-05-14
-updated: 2026-08-01
+updated: 2026-09-05
 review_value: 8
-sources: []
+sources: [raw/articles/www-networkworld-com-versa-takes-aim-at-fragmented-enterprise-security]
 review_confidence: 8
 review_recommendation: worth-reading
 source_url:
@@ -60,5 +60,5 @@ Versa 的三路更新（CSPM + Orchestration + Agent Trust）勾勒出 SASE 平�
 
 ## 相关实体
 - [[entities/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security-v2|AI tool poisoning exposes a major flaw in enterprise agent security]]
-- [[entities/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security|AI tool poisoning — VentureBeat]]
+- [[entities/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security-v2|AI tool poisoning — VentureBeat]]
 - [[entities/enterprise-openclaw-security-deploy-architecture-guide|企业级OpenClaw安全部署架构指南]]

@@ -4,9 +4,9 @@ title: "Restrict access to sensitive documents in your Amazon Quick knowledge ba
 type: entity
 tags: [aws, quicksight, security, iam, document-access]
 created: 2026-05-16
-updated: 2026-08-01
+updated: 2026-09-05
 review_value: 8
-sources: []
+sources: [raw/articles/restrict-access-to-sensitive-documents-in-your-amazon-quick-knowledge-bases-for-]
 review_confidence: 9
 review_recommendation: worth-reading
 review_stars: 4

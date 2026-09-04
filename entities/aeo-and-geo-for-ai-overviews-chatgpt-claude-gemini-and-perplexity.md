@@ -4,9 +4,9 @@ title: "AEO and GEO for AI Overviews, ChatGPT, Claude, Gemini, and Perplexity"
 type: entity
 tags: [newsletter, article]
 created: 2026-05-19
-updated: 2026-05-19
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/aeo-and-geo-for-ai-overviews-chatgpt-claude-gemini-and-perplexity]
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 3

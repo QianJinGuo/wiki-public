@@ -2,7 +2,7 @@
 
 title: "OpenCLI"
 created: 2026-04-24
-updated: 2026-05-23
+updated: 2026-09-05
 type: entity
 tags: [open-source, agent, tool, typescript, browser-automation, web-scraping]
 sources: [raw/articles/agent-tools-research, raw/articles/crawler-vs-opencli-doubao, raw/articles/opencli-browser-automation-jingxing]
@@ -127,6 +127,6 @@ Agent 不会欣赏按钮做得多圆，只在乎能不能稳定调用。GUI 服�
 
 ## 相关实体
 
-→ [[raw/articles/crawler-vs-opencli-doubao.md|原文存档]] ^[raw/articles/agent-tools-research.md]
+→ [[raw/articles/agent-tools-research|原文存档]] ^[raw/articles/agent-tools-research.md]
 
 - [[entities/gbrain|GBrain]]

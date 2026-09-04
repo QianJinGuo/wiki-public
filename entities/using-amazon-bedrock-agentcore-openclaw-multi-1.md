@@ -2,9 +2,9 @@
 
 title: "AI Agent 的迁移与现代化 — 使用 Amazon Bedrock AgentCore 将 OpenClaw 从单机改造为多租户 Serverless 架构 第一篇 | 亚马逊AWS官方博客"
 created: 2026-05-14
-updated: 2026-08-30
+updated: 2026-09-05
 tags: [aws-china-blog, bedrock-agentcore, openclaw]
-sources: []
+sources: [raw/articles/using-amazon-bedrock-agentcore-openclaw-multi-1]
 review_value: 8
 review_confidence: 8
 review_recommendation: strong
@@ -51,6 +51,6 @@ Amazon Bedrock AgentCore、Strands Agent SDK、OpenClaw、MCP Server、OpenClaw�
 - [[entities/ci-t-based-on-amazon-bedrock-agentcore-openclaw-enterprise-intelligent-operations-best-practices|CI&amp;T基于 Amazon Bedrock AgentCore 与 OpenClaw 的企业级智能运维最佳实践 | 亚马逊AWS官方博客]]
 - [[entities/ai-agent-的迁移与现代化-使用-amazon-bedrock-agentcore-将-openclaw-从单机改造为多租户-serverless-架构-|AI Agent 的迁移与现代化 — 使用 Amazon Bedrock AgentCore 将 OpenClaw 从单机改造为多租户 Serverless 架构 第六篇]]
 
-→ [[raw/articles/build-custom-code-based-evaluators-in-amazon-bedrock-agentco.md|原文存档]] ^[raw/articles/using-amazon-bedrock-agentcore-openclaw-multi-1.md]
+→ [[raw/articles/using-amazon-bedrock-agentcore-openclaw-multi-1|原文存档]] ^[raw/articles/using-amazon-bedrock-agentcore-openclaw-multi-1.md]
 
 - [[entities/when-ai-agents-learn-to-forget-amazon-bedrock-agentcore-memory-philosophy|当 AI Agent 学会"忘记"：Amazon Bedrock AgentCore Memory 的记忆哲学" | 亚马逊AWS官方博客]]

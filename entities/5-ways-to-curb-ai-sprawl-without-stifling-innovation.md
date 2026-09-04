@@ -2,7 +2,7 @@
 
 title: "5 Ways to Curb AI Sprawl Without Stifling Innovation"
 created: 2026-05-20
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [ai-governance, ai-risk, enterprise-ai, it-management, shadow-ai]
 sources:
@@ -81,7 +81,7 @@ AI sprawl 反映了一个更深层次的转变：软件不再只由 IT 构建。
 越来越多的 AI 根本不是内部构建的，而是通过供应商、合作伙伴和现有软件提供商引入的。^[raw/articles/5-ways-to-curb-ai-sprawl-without-stifling-innovation.md]
 
 
-许多组织通过他们已经信任的工具使用 AI（这些工具处理企业数据），但并未意识到。领先组织正在通过在 RFP 中添加 AI 特定问题、更新合同以解决数据使用和模型行为问题，使第三方期望与内部 AI 政策保持一致来加强供应商监督。参见：[[entities/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security|AI 工具中毒：企业 Agent 安全的一大缺陷]] ^[raw/articles/5-ways-to-curb-ai-sprawl-without-stifling-innovation.md]
+许多组织通过他们已经信任的工具使用 AI（这些工具处理企业数据），但并未意识到。领先组织正在通过在 RFP 中添加 AI 特定问题、更新合同以解决数据使用和模型行为问题，使第三方期望与内部 AI 政策保持一致来加强供应商监督。参见：[[entities/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security-v2|AI 工具中毒：企业 Agent 安全的一大缺陷]] ^[raw/articles/5-ways-to-curb-ai-sprawl-without-stifling-innovation.md]
 
 ## 关键结论
 AI sprawl 不再是未来风险——它已经是企业的一部分，而且越来越多地成为工作方式的组成部分。对 CIO 来说，挑战不是阻止它，而是塑造它，建立足够的结构来管理风险，同时不减缓使 AI 有价值的创新。 ^[raw/articles/5-ways-to-curb-ai-sprawl-without-stifling-innovation.md]

@@ -1,7 +1,7 @@
 ---
 title: "Postmortem: TanStack npm supply-chain compromise | TanStack Blog"
 created: 2026-05-14
-updated: 2026-08-01
+updated: 2026-09-05
 type: entity
 tags: [supply-chain, npm, security, github-actions, cache-poisoning]
 review_value: 9
@@ -10,7 +10,7 @@ review_recommendation: worth-reading
 review_stars: 3
 sources: [raw/articles/npm-supply-chain-compromise-postmortem, raw/articles/postmortem-tanstack-npm-supply-chain-compromise-tanstack-blog]
 ---
-> -> [[raw/articles/postmortem-tanstack-npm-supply-chain-compromise-tanstack-blog|原文存档]]
+> -> [[raw/articles/npm-supply-chain-compromise-postmortem|原文存档]]
 
 ## 相关实体
 - [[entities/rigged-game-scarcruft-compromises-gaming-platform-supply-chain-attack|rigged-game-scarcruft-compromises-gaming-platform-supply-chain-attack]]

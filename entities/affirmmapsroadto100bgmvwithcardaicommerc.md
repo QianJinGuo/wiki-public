@@ -4,9 +4,9 @@ title: "Affirm Maps Road to $100B GMV With Card, AI Commerce and Global Expansio
 type: entity
 tags: [newsletter, ai, security]
 created: 2026-05-15
-updated: 2026-06-19
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/affirmmapsroadto100bgmvwithcardaicommerc]
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 3

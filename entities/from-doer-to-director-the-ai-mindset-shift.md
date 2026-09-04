@@ -3,11 +3,11 @@ title: "From Doer To Director: The AI Mindset Shift"
 type: entity
 tags: [newsletter, article]
 created: 2026-05-13
-updated: 2026-08-01
+updated: 2026-09-05
 source: newsletter
 source_url:
 review_value: 8
-sources: []
+sources: [raw/articles/from-doer-to-director-the-ai-mindset-shift]
 review_confidence: 9
 review_recommendation: strong
 ---

@@ -4,9 +4,9 @@ title: "Generalization Dynamics of LM Pre-training — Jiaxin Wen"
 type: entity
 tags: [generalization,lm,pre-training]
 created: 2026-05-19
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 9
-sources: []
+sources: [raw/articles/generalization-dynamics-pre-training-jiaxin-wen]
 review_confidence: 9
 review_recommendation: strong
 ---

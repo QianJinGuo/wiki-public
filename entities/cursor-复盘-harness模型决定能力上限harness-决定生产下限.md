@@ -6,7 +6,7 @@ tags: [ai-agent, engineering, wechat, cursor, harness, agentic-engineering]
 created: 2026-05-16
 updated: 2026-05-20
 review_value: 8
-sources: []
+sources: [raw/articles/cursor-复盘-harness模型决定能力上限harness-决定生产下限]
 review_confidence: 8
 ---
 

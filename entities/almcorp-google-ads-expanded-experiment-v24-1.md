@@ -4,11 +4,11 @@ title: "Google Ads Expanded Experiment Support in v24.1: What Changed for AI Max
 type: entity
 tags: [google-ads, advertising, ai-max, performance-max]
 created: 2026-05-19
-updated: 2026-08-29
+updated: 2026-09-05
 source: newsletter
 source_url:
 review_value: 5
-sources: []
+sources: [raw/articles/almcorp-google-ads-expanded-experiment-v24-1]
 confidence: 0.7
 ---
 

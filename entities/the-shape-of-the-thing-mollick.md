@@ -2,10 +2,9 @@
 title: "The Shape of the Thing：AI 指数曲线·软件工厂·滚动颠覆（Mollick 2026-03）"
 description: "Ethan Mollick（One Useful Thing，2026-03-12）系统性分析 AI 当前状态：指数能力曲线（METR/GPQA/GDPval/Humanity's Last Exam 全部指向同一曲线）；StrongDM Software Factory 案例（2 human engineers = $1K/day AI tokens，全流程无人类写代码/ review）；滚动颠覆模式（AI 能力阈值跨越 → 突然改变游戏规则）；RSI 递归自我改进是明确路线图而非科幻；我们仍在窗口期可以塑造 AI 的影响。"
 created: 2026-06-07
-updated: 2026-08-01
+updated: 2026-09-05
 type: entity
 tags: [exponential-curve, software-factory, rolling-disruption, recursive-self-improvement, rsi, strongdm, ethan-mollick, one-useful-thing, agentic-ai, metr, gdpval]
-provenance_state: inferred
 source: [[raw/articles/the-shape-of-the-thing]]
 review_value: 9
 review_confidence: 9

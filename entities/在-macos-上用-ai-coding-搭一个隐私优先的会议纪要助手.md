@@ -9,7 +9,7 @@ url:
 ingested: 2026-05-11
 tags: [claude-code, privacy, macos, productivity, tool]
 review_value: 6
-sources: []
+sources: [raw/articles/在-macos-上用-ai-coding-搭一个隐私优先的会议纪要助手]
 review_confidence: 7
   - AWS China Blog
   - macOS, AI, Meeting Notes, Privacy, AWS, Bedrock

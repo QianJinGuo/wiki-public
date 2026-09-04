@@ -1,10 +1,9 @@
 ---
 title: "GrowLoop：开放域对话的真人感评测 — 用种子+Rubrics自动生长Benchmark"
 created: 2026-07-01
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [evaluation, dialogue, benchmark, growloop, human-likeness, llm]
-provenance_state: inferred
 source: "[[raw/articles/growloop-dialogue-human-likeness-evaluation-benchmark]]"
 confidence: 0.85
 provenance_state: extracted

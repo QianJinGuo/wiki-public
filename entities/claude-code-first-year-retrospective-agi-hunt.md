@@ -2,7 +2,7 @@
 
 title: "Claude Code 一周年回顾：Boris Cherny + Cat Wu 对话"
 created: 2026-06-11
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [claude-code, boris-cherny, cat-wu, anthropic, anniversary, retrospective, routines, agent, auto-mode, source-leak, kairos, agent-view, dynamic-workflows, voice-mode, remote-control, agi-hunt]
 sources: [raw/articles/claude-code-first-year-retrospective-agi-hunt]
@@ -160,6 +160,6 @@ Boris 明确表态："一年后的使用方式如果还跟现在一样，我反�
 - [[entities/anthropic-prompt-caching-claude-code|Anthropic Prompt Caching 与 Claude Code]]
 - [[entities/24h-worker-agent|24h Worker Agent]]
 - [[entities/agent-security-three-step-sequence-harness-governance-identity-crewai|Agent Security 三步走: Harness + Governance + Identity]]
-- [[entities/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security|AI Tool Poisoning Exposes a Major Flaw in Enterprise Agent Security]]
+- [[entities/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security-v2|AI Tool Poisoning Exposes a Major Flaw in Enterprise Agent Security]]
 - [[entities/karpathy-software3-vibe-coding-dead-agentic-engineering|Karpathy: Software 3.0 与 vibe coding 时代的终结]]
 - [[concepts/harness-engineering-framework|Harness Engineering]]

@@ -4,9 +4,9 @@ title: "EntryPoint Hijacking"
 type: entity
 tags: [newsletter, ai, security]
 created: 2026-05-15
-updated: 2026-08-01
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/entrypointhijacking]
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 3

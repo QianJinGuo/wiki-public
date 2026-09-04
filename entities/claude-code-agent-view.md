@@ -1,13 +1,13 @@
 ---
 title: "Claude Code Agent View"
 created: 2026-05-13
-updated: 2026-08-07
+updated: 2026-09-05
 name: claude-code-agent-view
 full_name: "Claude Code Agent View"
 tags: [claude-code, multi-agent, agent-ui, anthropic, developer-tools]
 type: entity
 review_value: 8
-sources: []
+sources: [raw/articles/claude-code-agent-view-huashu]
 review_confidence: 7
 provenance_state: inferred
 ---

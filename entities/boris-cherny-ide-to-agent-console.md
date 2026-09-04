@@ -2,7 +2,7 @@
 
 title: "Boris Cherny — 从 IDE 到 Agent 控制台"
 created: 2026-05-07
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [boris-cherny, claude-code, agent, ide, sequoia, loop, saas]
 sources: [raw/articles/boris-cherny-interview-2026-ide-to-agent-console]
@@ -129,7 +129,7 @@ Boris 强调的 Loop（长驻 Agent 工作进程）与 Karpathy 谈的"外包思
 - [[entities/刚刚opus-47发布相比46核心变化与claude-code搭配最佳实践-v2|刚刚Opus 4.7发布，相比4.6核心变化，与Claude Code搭配最佳实践]]
 - [[entities/tencent-vibe-coding-to-agentic-engineering-backend|从Vibe Coding到Agentic Engineering：重构后台开发全流程 — 腾讯技术工程]]
 
-→ [[raw/articles/anthropic-to-share-mythos-cyber-flaw-findings-with-global-finance-watchdog-1.md|原文存档]] ^[raw/articles/boris-cherny-interview-2026-ide-to-agent-console.md]
+→ [[raw/articles/boris-cherny-interview-2026-ide-to-agent-console|原文存档]] ^[raw/articles/boris-cherny-interview-2026-ide-to-agent-console.md]
 
 - [[concepts/kairos-claude-code-paradigm|KAIROS — Claude Code 常驻协作范式]]
 - [[moc/coding-agent-practice|MOC]]

@@ -2,9 +2,9 @@
 
 title: "基于Bedrock Agentcore 实现智能成本分析与告警系统 | 亚马逊AWS官方博客"
 created: 2026-05-14
-updated: 2026-08-30
+updated: 2026-09-05
 tags: [aws-china-blog, bedrock-agentcore]
-sources: []
+sources: [raw/articles/intelligent-cost-analysis-and-alerting-system-powered-by-bedrock-agentcore]
 review_value: 8
 review_confidence: 8
 review_recommendation: strong

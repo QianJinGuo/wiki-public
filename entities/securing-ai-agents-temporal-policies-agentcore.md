@@ -1,7 +1,7 @@
 ---
 title: "Agent 时间性策略（Temporal Policies）：基于轨迹的有状态授权架构"
 created: 2026-08-07
-updated: 2026-08-21
+updated: 2026-09-05
 type: entity
 tags: [agent, security, authorization, temporal-policy, stateful, trajectory, agentcore, governance, cedar, dogwood]
 sources: [raw/articles/securing-ai-agents-with-temporal-policies-in-amazon-bedrock-agentcore, raw/articles/authoring-dogwood-policies-from-natural-language-in-amazon-bedrock-agentcore]
@@ -58,7 +58,7 @@ Temporal policies 使用 **Dogwood**——一种为 agent 及其工具设计的�
 
 - [[entities/agent-security-three-step-sequence-harness-governance-identity-crewai|Agent 安全三步法]]：三步法把 Governance 放在 Identity 之前；temporal policy 正是 Governance 层的有状态实现形态，补充了"如何具体实施 governance"的机制细节
 - [[entities/secure-ai-agents-policy-lambda-interceptors-aws|Policy + Lambda interceptors]]：stateless Cedar policy 的先行方案；temporal policy 是其有状态扩展（同一 Policy engine 之上）
-- [[entities/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security|AI 工具投毒]]：工具调用层面的攻击面；temporal policy 的 output-integrity 规则正是防御此类攻击的授权层手段
+- [[entities/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security-v2|AI 工具投毒]]：工具调用层面的攻击面；temporal policy 的 output-integrity 规则正是防御此类攻击的授权层手段
 - [[entities/agentcore-harness|AgentCore Harness]]：temporal policies 运行于 AgentCore Gateway 外围，是 harness 安全边界的组成部分
 
 ## 局限性

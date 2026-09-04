@@ -5,7 +5,7 @@ updated: 2026-05-23
 type: entity
 tags: [rl, llm, news]
 review_value: 5
-sources: []
+sources: [raw/articles/llm-rl中的熵-part-1-熵的调控]
 review_confidence: 7
 ---
 > -> [[raw/articles/llm-rl中的熵-part-1-熵的调控.md|原文存档]]

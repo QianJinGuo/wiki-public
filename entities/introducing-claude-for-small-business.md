@@ -4,9 +4,9 @@ title: "Introducing Claude for Small Business"
 type: entity
 tags: [anthropic, claude, small-business, product, agentic-workflows, smb-tech-adoption]
 created: 2026-05-15
-updated: 2026-08-01
+updated: 2026-09-05
 review_value: 8
-sources: []
+sources: [raw/articles/introducing-claude-for-small-business]
 review_confidence: 9
 review_recommendation: strong
 ---

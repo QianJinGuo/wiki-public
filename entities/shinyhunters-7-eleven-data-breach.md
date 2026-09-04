@@ -3,9 +3,9 @@ title: "ShinyHunters hack 7-Eleven: franchisee data and Salesforce records expos
 type: entity
 tags: [data-breach, cybersecurity, shinyhunters, 7-eleven]
 created: 2026-05-20
-updated: 2026-08-04
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/shinyhunters-7-eleven-data-breach]
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 3

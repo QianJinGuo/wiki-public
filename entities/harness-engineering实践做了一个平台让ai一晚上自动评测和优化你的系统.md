@@ -6,7 +6,7 @@ date: 2026-04-29
 type: entity
 tags: [agent, llm, engineering]
 review_value: 7
-sources: []
+sources: [raw/articles/harness-engineering实践做了一个平台让ai一晚上自动评测和优化你的系统]
 review_confidence: 7
 review_recommendation: worth-reading
 created: 2026-05-15

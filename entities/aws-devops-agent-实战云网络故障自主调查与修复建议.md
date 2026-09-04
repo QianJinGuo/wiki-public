@@ -6,7 +6,7 @@ tags: [aws, devops, agent, hybrid-cloud, network, mcp]
 created: 2026-05-16
 updated: 2026-08-01
 review_value: 7
-sources: []
+sources: [raw/articles/aws-devops-agent-实战云网络故障自主调查与修复建议]
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 3

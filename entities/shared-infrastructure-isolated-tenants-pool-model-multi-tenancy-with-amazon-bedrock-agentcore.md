@@ -3,10 +3,9 @@
 title: "Bedrock AgentCore Pool Model Multi-Tenancy"
 description: "基于 Amazon Bedrock AgentCore 实现 AI Agent 多租户架构：池模型、租户隔离、分层服务、成本追踪"
 created: 2026-06-24
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [agent, aws, bedrock, agentcore, multi-tenancy, architecture, saas, healthcare]
-provenance_state: inferred
 source: [[raw/articles/shared-infrastructure-isolated-tenants-pool-model-multi-tenancy-with-amazon-bedrock-agentcore]]
 sources:
   - raw/articles/shared-infrastructure-isolated-tenants-pool-model-multi-tenancy-with-amazon-bedrock-agentcore

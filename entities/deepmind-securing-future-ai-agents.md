@@ -1,10 +1,9 @@
 ---
 title: "Securing the future of AI agents"
 created: 2026-06-19
-updated: 2026-08-01
+updated: 2026-09-05
 type: entity
 tags: [ai-safety, agent-security, deepmind, ai-agents, ai-control, threat-modeling]
-provenance_state: inferred
 source: [[raw/articles/deepmind-securing-future-ai-agents]]
 review_value: 8
 review_confidence: 9

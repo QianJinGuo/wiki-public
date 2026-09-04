@@ -1,10 +1,9 @@
 ---
 title: "Dynamic Subagents: 代码驱动的 Subagent 编排"
 created: 2026-07-02
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [dynamic-subagents, subagent-orchestration, langchain, deep-agents, code-interpreter, agent-patterns, parallel-execution]
-provenance_state: inferred
 source: "[[raw/articles/dynamic-subagents-code-driven-orchestration-langchain-2026]]"
 confidence: 0.76
 provenance_state: extracted

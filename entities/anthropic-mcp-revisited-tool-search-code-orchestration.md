@@ -8,9 +8,9 @@ type: entity
 value: 7
 tags: [claude-code, anthropic, agent, mcp, skill]
 review_value: 6
-sources: []
+sources: [raw/articles/anthropic-mcp-revisited-tool-search-code-orchestration]
 review_confidence: 7
-updated: 2026-08-29
+updated: 2026-09-05
 ---
 
 [[raw/articles/anthropic-mcp-revisited-tool-search-code-orchestration]] ^[raw/articles/anthropic-mcp-revisited-tool-search-code-orchestration.md]^[raw/articles/anthropic-mcp-revisited-tool-search-code-orchestration.md]

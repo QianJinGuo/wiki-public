@@ -8,9 +8,9 @@ sha256: dfc5eb055a0e18299dbf433e7a81fa2933ae9145871d16847bd3a5103f84afcf
 review_stars: 4
 review_recommendation: STRONG
 created: 2026-05-10
-updated: 2026-08-07
+updated: 2026-09-05
 review_value: 8
-sources: []
+sources: [raw/articles/deepseek-v4-ds4c-antirez-local-inference-qbitai, raw/articles/deepseek-v4]
 review_confidence: 9
 tags: [antirez, deepseek, local-inference, ds4c, apple-silicon]
 provenance_state: inferred

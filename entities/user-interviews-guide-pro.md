@@ -3,9 +3,9 @@ title: "User Interviews Guide: How to Interview Users Like a Pro"
 type: entity
 tags: [robotics, ai]
 created: 2026-05-19
-updated: 2026-06-19
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/user-interviews-guide-pro]
 review_confidence: 8
 review_recommendation: worth-reading
 ---

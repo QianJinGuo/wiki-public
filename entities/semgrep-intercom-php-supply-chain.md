@@ -4,14 +4,14 @@ type: entity
 name: Malicious Intercom PHP Package Mini-Shai-Hulud
 description: "Semgrep security research: malicious Intercom PHP package spreading Mini-Shai-Hulud attack via Packagist/Composer. Attack chain, IOCs, code-level analysis."
 review_value: 7
-sources: []
+sources: [raw/articles/semgrep-intercom-php-security]
 review_confidence: 8
 review_verdict: strong
 stars: 4
 source: newsletter
 source_url: ""
 ingested: 2026-05-08
-updated: 2026-08-24
+updated: 2026-09-05
 created: 2026-05-10
 tags: [security, open-source, supply-chain]
 provenance_state: inferred
@@ -48,7 +48,7 @@ PHP 生态的供应链攻击揭示了一个深层问题：Composer 的插件机�
 - [[entities/amazon-supply-chain-services|Amazon launches Supply Chain Services for businesses of all sizes]]
 
 
-→ [[raw/articles/2026.md|原文存档]]
+→ [[raw/articles/semgrep-intercom-php-security|原文存档]]
 
 - [[entities/citriniresearch-supply-chain-inheritance|Semis Memo: Supply Chain Inheritance]]
 - [[moc/security-landscape|MOC]]

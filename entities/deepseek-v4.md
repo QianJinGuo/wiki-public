@@ -2,12 +2,12 @@
 
 title: "DeepSeek-V4深度拆解：一篇论文同时做了五件大事"
 created: 2026-05-13
-updated: 2026-08-07
+updated: 2026-09-05
 type: entity
 source: wechat
 source_url:
 review_value: 7
-sources: []
+sources: [raw/articles/deepseek-v4, raw/articles/deepseek-v4-training-58-page-paper-deep-dive]
 review_confidence: 8
 review_recommendation: worth-reading
 date: 2026-05-13

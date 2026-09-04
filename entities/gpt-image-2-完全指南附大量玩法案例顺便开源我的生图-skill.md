@@ -6,7 +6,7 @@ updated: 2026-05-10
 type: entity
 tags: [engineering, agent-tools, wechat]
 review_value: 6
-sources: []
+sources: [raw/articles/gpt-image-2-完全指南附大量玩法案例顺便开源我的生图-skill]
 review_confidence: 7
 ---
 

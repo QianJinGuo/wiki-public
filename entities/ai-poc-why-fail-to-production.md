@@ -1,12 +1,12 @@
 ---
 title: "很多企业做完 AI PoC，为什么还是上不了生产"
 created: 2026-05-13
-updated: 2026-08-07
+updated: 2026-09-05
 type: entity
 source: wechat
 source_url:
 review_value: 7
-sources: []
+sources: [raw/articles/ai-poc-why-fail-to-production]
 review_confidence: 7
 review_recommendation: worth-reading
 date: 2026-05-13

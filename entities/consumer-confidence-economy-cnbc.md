@@ -4,9 +4,9 @@ title: "Americans still feel pessimistic about the economy. When will it change?
 type: entity
 tags: [economics, consumer-confidence, inflation, sentiment, cnbc]
 created: 2026-05-15
-updated: 2026-08-07
+updated: 2026-09-05
 review_value: 8
-sources: []
+sources: [raw/articles/consumer-confidence-economy-cnbc]
 review_confidence: 7
 review_recommendation: strong
 review_stars: 4

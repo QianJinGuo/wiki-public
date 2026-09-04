@@ -4,10 +4,10 @@ title: "阿里云 EventHouse 企业级 Agent 上下文构建五维框架"
 type: entity
 tags: [alibaba-cloud, eventhouse, enterprise-agent, context-engineering, dikw, knowledge-catalog, change-governance, ai-coding, serverless, eda, context-supply]
 created: 2026-05-21
-updated: 2026-08-01
 review_value: 8
 review_confidence: 8
-sources: [raw/articles/alibaba-eventhouse-enterprise-agent-context, raw/articles/aliyun-eventhouse-ai-agent实时事件-2026]
+sources: [raw/articles/alibaba-eventhouse-enterprise-agent-context, raw/articles/aliyun-eventhouse-ai-agent实时事件-2026, raw/articles/eventhouse-architecture-message-base-semantic-layer-shenlin-aliyun-2026]
+updated: 2026-09-05
 provenance_state: extracted
 ---
 
@@ -136,6 +136,38 @@ EventHouse 的定位是 AI 时代面向 Agent 的"标准插座"。^[raw/articles
 → [[raw/articles/alibaba-eventhouse-enterprise-agent-context|原文存档]] ^[raw/articles/alibaba-eventhouse-enterprise-agent-context.md]
 
 → [[raw/articles/aliyun-eventhouse-ai-agent实时事件-2026|第 2 来源原文]]
+
+## 第 3 来源 — AiDD 演讲深化：消息底座 + 统一元数据层 + 语义层 + Benchmark + PR 治理
+
+2026-09-03 阿里云云原生（沈林）AiDD TOP10 演讲《Agent 做了这么多轮重构，企业到底该留下什么？》给 EventHouse 架构的完整深化。核心命题「正交生长」：横向通用智能（Memory/Planner/Runtime）跟进复用即可，纵向业务深度（业务事实/对象关系/统一语义/流程规则/行业知识）才是企业长期资产；判断投入标准=**下一次模型升级后是被替代还是被放大**。^[raw/articles/eventhouse-architecture-message-base-semantic-layer-shenlin-aliyun-2026.md]
+
+### 消息服务 = 实时数据集成天然底座
+
+为什么消息服务天然适合（Linux 管道的分布式扩展）：①Append-only Log 追加写、路径短近硬件上限、上下游解耦（生产者只写消费者按位点读）；②接入灵活连接异构系统（Put/Pull、Push/Pull 四向）；③数据可缓存/订阅/回放（吸峰、一次接多路、失败位点回放）。RocketMQ/Kafka/EventBridge 连接器生态已从传输组件升级为企业实时数据集成基础设施。^[raw/articles/eventhouse-architecture-message-base-semantic-layer-shenlin-aliyun-2026.md]
+
+### 可访问 ≠ 可用：Agent 三个判断
+
+数据可访问不等于可用（Schema/语义/血缘/实时性有断点）。三个判断：①**源头数据语义持续传递演进**（每环节交付数据+定义/版本/变换/可信解释，交接确认含义/Schema/可追溯）；②**存储可分散但语义检索提前统一**（Catalog 找得到/Schema 看得懂/Entity+Lineage 关联/Freshness+Quality+Policy 判可信；把"调用时临时理解"变"调用前持续沉淀认知"）；③**整条链路不断收拢**（一个服务对数据从进入到使用全过程负责，不强制搬数据）。^[raw/articles/eventhouse-architecture-message-base-semantic-layer-shenlin-aliyun-2026.md]
+
+### 语义层五类 + 初始化四步 + 认证四责任
+
+EventHouse 语义层五类：对象语义/范围语义/关系语义/计算语义/值语义。**不用 Semantic Web Ontology/Knowledge Graph**（维护成本高无 FDE 跑不起来，Palantir 是选客户而非客户选 Palantir）；改用结构化+wiki 弱语义灵活方案，使用环节 ReAct 闭环（Reason→Act→Observe→Reflect）在真实执行反馈中修正，只注入相关 ≤15 张表的可信语义。
+
+**语义初始化四步**：继承上游 Schema（确定性原样继承）→采样代表值→发现 PK/FK 确定关系→AI 提候选（SQL Expression/补充 Join）→Semantic Draft v0 待认证。**AI 缩短从空白到可评审草案的距离，不跳过业务判断。**
+
+**语义认证四责任**（不交给模型）：定义责任（指标口径）/关系责任（Join 基数）/边界责任（实体映射适用）/发布责任（Owner/版本/回滚决定）。机器提供来源元数据/代表值/PKFK/候选 SQL，专家接受/修改/拒绝。
+
+### Benchmark 三层 + 语义变更 PR 治理
+
+Benchmark 三层：探索层（问题是否可问）/正确性层（Gold SQL+预期结果，主体）/生产可靠性层（上线风险，覆盖高频高风险）。SQL 能执行≠业务答案正确。
+
+语义按代码治理：语义变更一次受控 PR（变更内容+涉及表指标/必须回归用例/预期收益风险）；发布门槛核心 KPI 零回归+总体准确率不降+成本达标+Owner 批准；流程 **Draft→Review→Benchmark→Merge/Rollback**。持续升级闭环记录完整 Trace（原始问题/生成的 SQL/工具调用/结果/回答）+LLM Judge+专家归因，产出语义修复+失败样本入测试集。**失败会话变下一轮可复用可验证的资产。**
+
+### 两个场景
+
+场景一退单溯源：customer_id+时间窗口关联实时退单消息/MySQL/搜索文本成客户时间轴（12 天首次投诉→8 天催促→4 天工单升级→今天退单），多源混合检索+统一元数据口径，输出高风险挽留客户。场景二制造数据：IoT 电芯温度异常一条主链路（实时告警/录质量库/归档/维修 Agent 用），四环节按需开放（加工外接/存储 Iceberg/查询 Trino/元数据开放给多 Agent），不需一次性替换。
+
+→ [[raw/articles/eventhouse-architecture-message-base-semantic-layer-shenlin-aliyun-2026|第 3 来源原文]]
 
 ## 相关实体
 

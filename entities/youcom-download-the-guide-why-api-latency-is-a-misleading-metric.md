@@ -3,9 +3,9 @@ title: "You.com | Download the Guide: Why API Latency Is a Misleading Metric"
 type: entity
 tags: [newsletter, youcom]
 created: 2026-05-16
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 5
-sources: []
+sources: [raw/articles/youcom-download-the-guide-why-api-latency-is-a-misleading-metric]
 review_confidence: 10
 review_recommendation: strong
 review_stars: 3

@@ -3,7 +3,7 @@ title: "Harness Engineering: 让 Coding Agent 可靠完成长程任务"
 type: entity
 tags: [ai-agent, engineering, wechat]
 review_value: 7
-sources: []
+sources: [raw/articles/harness-engineering-让-coding-agent-可靠完成长程任务]
 review_confidence: 7
 created: 2026-05-16
 updated: 2026-09-01

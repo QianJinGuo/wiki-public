@@ -7,7 +7,7 @@ type: entity
 value: 7
 tags: [claude-code, anthropic, aws, engineering, ai]
 review_value: 9
-sources: []
+sources: [raw/articles/刚刚opus-47发布相比46核心变化与claude-code搭配最佳实践]
 review_confidence: 7
 ---
 

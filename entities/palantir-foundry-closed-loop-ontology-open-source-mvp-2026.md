@@ -1,10 +1,10 @@
 ---
 title: "Palantir Foundry 闭环操作范式：Ontology 三层 + 开源 Foundry MVP"
 created: 2026-08-26
-updated: 2026-08-26
+updated: 2026-09-04
 type: entity
-tags: [palantir, foundry, ontology, closed-loop, operational-intelligence, semantic-layer, digital-operational-twin, duckdb, agent]
-sources: [raw/articles/palantir-foundry-closed-loop-ontology-open-source-mvp-reboot2026, raw/articles/palantir-foundry-open-source-replica-kggpt-2026]
+tags: [palantir, foundry, ontology, closed-loop, operational-intelligence, semantic-layer, digital-operational-twin, duckdb, agent, decision-orchestration, adoption, legacy-interop]
+sources: [raw/articles/palantir-foundry-closed-loop-ontology-open-source-mvp-reboot2026, raw/articles/palantir-foundry-open-source-replica-kggpt-2026, raw/articles/palantir-ontology-adoption-decision-orchestration-xiaoyi-2026-09-04]
 confidence: 0.85
 provenance_state: merged
 ---
@@ -44,3 +44,27 @@ Foundry 不是又一个数据仓库，Palantir 给它的定位是"操作系统"�
 
 ## 相关
 与 [[entities/enterprise-ai-ontology-agent-knowledge-governance|企业 AI 本体驱动 Agent 与知识治理]]、[[entities/rag-vector-knowledge-graph-ontology|向量库·知识图谱·本体论]] 同为"本体语义层"主题；本文贡献是 Foundry 的闭环操作范式 + Ontology 三层 + 开源 MVP 落地。与 [[entities/metric-semantic-layer-how-lyft-governs-and-scales-key-data-definitions|Lyft 语义层]] 同为语义层实践。与 [[entities/ai-true-moat-not-llm-but-organization|AI 时代真正的护城河不是大模型]] 互补（该实体讲 Palantir Forward Deployment 组织护城河，本文讲 Foundry 语义层+闭环技术护城河）。→ [[raw/articles/palantir-foundry-closed-loop-ontology-open-source-mvp-reboot2026|原文存档（rebootingwithai）]]、[[raw/articles/palantir-foundry-open-source-replica-kggpt-2026|原文存档（KGGPT）]]
+
+## 落地与遗留系统互操作：decision orchestration + 四步采用路线（2026-09-04 Supplementary）
+
+AI打工人小伊的 Palantir Ontology 系列番外篇回答"上了 Ontology，CRM/ERP 要不要重做"。结论：多数企业第一步不是重做，而是在它们之上补上跨系统的**决策与行动闭环**。^[raw/articles/palantir-ontology-adoption-decision-orchestration-xiaoyi-2026-09-04.md]
+
+### 决策编排（decision orchestration）
+
+当 Foundry 之外的系统仍是事实来源时，Palantir 把与现有流程的协作称为 decision orchestration——解决的不是"数据最后存哪儿"，而是"这次决定如何在多套系统之间可靠地发生"。^[raw/articles/palantir-ontology-adoption-decision-orchestration-xiaoyi-2026-09-04.md] 第一阶段职责分工：CRM/ERP 继续承担客户记录与交易处理，Ontology 给跨系统业务对象/关系/决策逻辑/行动入口提供共同语境，Action 把通过权限与业务校验的决定写回应记录的系统。"统一业务对象"不等于把所有数据复制一遍——为完成某次决策，只需建立所需对象（如延误订单闭环的 Customer Order/Customer/Inventory Position/Shipment），关键不是物理存储位置而是使用者看到的是业务对象而非四套系统表名。
+
+### Writeback vs Side effect 的写回事务性警示
+
+Palantir Action 的 Webhook 以两种方式工作：**writeback** 在 Ontology 对象修改**之前**请求外部系统（请求失败则 Action 停止、修改不继续，适合"ERP 必须先创建调拨单"）；**side effect** 在修改**之后**执行（适合发通知/尽力同步多系统，不保证调用顺序）。^[raw/articles/palantir-ontology-adoption-decision-orchestration-xiaoyi-2026-09-04.md] 关键边界：writeback 只提供一定程度的事务性，不是跨系统完美分布式事务（外部请求可能已成功、随后 Ontology 修改仍可能失败）。生产级写回须说清：请求是否幂等、哪个系统生成最终单号、超时重试还是转人工、两边状态不一致谁来对账——否则漂亮的 Action 只是把集成风险藏在按钮后面。
+
+### 四步落地路线与四责任模型
+
+有大量旧系统时按四步走：①只读观察（先证明业务人员看到同一张订单，不写回）；②组织语义与判断（把 Excel/SQL/会议里的隐性判断收敛成可测试 Function）；③打通一个受控 Action（选一个高频可验证可恢复的动作，配参数/权限/超时/幂等/异常升级）；④用证据选择替换（统计切换系统数/决策周期/Action 失败/对账量，由真实使用证据而非目标架构图决定替换）。^[raw/articles/palantir-ontology-adoption-decision-orchestration-xiaoyi-2026-09-04.md] 跨系统决策最易缺失的是"整条链的 owner"——至少明确四种责任：源系统 owner（数据正确性/接口契约）、业务流程 owner（何时介入/什么算成功）、Ontology 产品团队（语义一致性）、安全运维（权限/审计/对账/升级）。
+
+### Agent 与边界的收束
+
+没有 Ontology，Agent 需分别学会 CRM/ERP/WMS/TMS 的表结构/API/权限/失败方式；有了 Ontology，Agent 面向稳定业务对象调用同一 Function 解释风险，再在权限和 Action 提交条件允许时发起调拨——复杂度从每个 Agent/应用收回，放到可测试可审计的共享业务能力里。**Agent 不应拿着多系统超级账号越过 Action**。真正的分水岭判断：不要用"接了多少张表"证明落地，而看处理异常需切换几套系统、决策周期、Action 失败率；"真正需要先被重做的往往不是 CRM 和 ERP，而是它们之间那条仍依赖人工搜索、复制粘贴和群聊确认的决策链"。
+
+这与上方"先有语义再长 Agent"哲学一致——本番外补充的是"语义层如何与既有系统共存"的落地与责任归位维度（decision orchestration / writeback 事务性 / 四步采用 / 四责任零覆盖）。
+
+→ [[raw/articles/palantir-ontology-adoption-decision-orchestration-xiaoyi-2026-09-04|原文存档（AI打工人小伊 番外篇，Supplementary）]]

@@ -4,9 +4,9 @@ title: "Toto 2: Context-aware log analytics for complex distributed systems"
 type: entity
 tags: [datadog,toto,log-analytics,distributed-systems]
 created: 2026-05-16
-updated: 2026-05-18
+updated: 2026-09-05
 review_value: 8
-sources: []
+sources: [raw/articles/toto-2-context-aware-log-analytics-for-complex-distributed-systems]
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 4

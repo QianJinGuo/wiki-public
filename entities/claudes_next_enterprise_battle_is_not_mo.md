@@ -3,9 +3,9 @@ title: "Claude's next enterprise battle is not models: it's the agent control pl
 type: entity
 tags: [newsletter, agent-orchestration, enterprise-ai, anthropic, microsoft, openai]
 created: 2026-05-18
-updated: 2026-08-07
+updated: 2026-09-05
 review_value: 8
-sources: []
+sources: [raw/articles/claudes_next_enterprise_battle_is_not_mo]
 review_confidence: 9
 review_recommendation: worth-reading
 ---

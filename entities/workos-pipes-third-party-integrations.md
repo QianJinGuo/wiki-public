@@ -4,9 +4,9 @@ title: "WorkOS Pipes: Third-party integrations without the headache"
 type: entity
 tags: [newsletter, workos, oauth, integration, api]
 created: 2026-05-18
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/workos-pipes-third-party-integrations]
 review_confidence: 7
 review_recommendation: worth-reading
 ---

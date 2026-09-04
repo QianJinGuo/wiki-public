@@ -6,7 +6,7 @@ updated: 2026-05-19
 type: entity
 tags: [ai-agent, wechat, mlops]
 review_value: 6
-sources: []
+sources: [raw/articles/anthropic-最新论文阻止-ai-叛变的方法]
 review_confidence: 7
 ---
 > -> [[raw/articles/anthropic-最新论文阻止-ai-叛变的方法|原文存档]]

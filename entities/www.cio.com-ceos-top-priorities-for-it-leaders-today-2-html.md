@@ -4,9 +4,9 @@ title: "CEOs’ top priorities for IT leaders today"
 type: entity
 tags: [benchmark, prediction]
 created: 2026-05-20
-updated: 2026-08-03
+updated: 2026-09-05
 review_value: 8
-sources: []
+sources: [raw/articles/www.cio.com-ceos-top-priorities-for-it-leaders-today-2-html]
 review_confidence: 8
 review_recommendation: strong
 source_url:

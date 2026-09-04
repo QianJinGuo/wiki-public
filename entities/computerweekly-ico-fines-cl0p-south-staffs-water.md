@@ -3,9 +3,9 @@ title: "ICO fines Cl0p victim South Staffs Water over data breach"
 type: entity
 tags: [data-breach, ransomware, ico, uk, critical-infrastructure]
 created: 2026-05-15
-updated: 2026-08-04
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/computerweekly-ico-fines-cl0p-south-staffs-water]
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 3

@@ -4,9 +4,9 @@ title: "We Tested DeepSeek V4 Pro and Flash Against Claude Opus 4.7"
 type: entity
 tags: [newsletter, ai, security]
 created: 2026-05-15
-updated: 2026-06-12
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/wetesteddeepseekv4proandflashagainstclau]
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 3

@@ -4,10 +4,10 @@ description: "复旦/北大/奇绩智峰 AHE：可观测性驱动的 Harness 自
 source: ""
 tags: [harnessengineering, ahe, 自动化优化, 可观测性, 复旦]
 created: 2026-05-20
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 review_value: 5
-sources: []
+sources: [raw/articles/fudan-agentic-harness-engineering-ahe-gpt54-7points]
 provenance_state: inferred
 confidence: 0.8
 ---

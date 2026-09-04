@@ -3,10 +3,9 @@
 title: "Anthropic Economic Index report: Cadences"
 description: "Anthropic 2026年6月经济指数报告：AI 使用节奏模式、产出分类与用户预期调查"
 created: 2026-06-30
-updated: 2026-08-01
+updated: 2026-09-05
 type: entity
 tags: [anthropic, ai-economy, labor-market, ai-adoption, economic-analysis, claude]
-provenance_state: inferred
 source: "[[raw/articles/anthropic-economic-index-cadences-june-2026]]"
 sources:
   - raw/articles/anthropic-economic-index-cadences-june-2026

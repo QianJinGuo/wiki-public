@@ -1,7 +1,7 @@
 ---
 title: "Karpathy 最新访谈：从 Vibe Coding 到 Agentic Engineering"
 created: 2026-05-10
-updated: 2026-08-07
+updated: 2026-09-05
 type: entity
 tags: [agent, llm, harness, vibe-coding, software-3]
 source: wechat
@@ -9,7 +9,7 @@ source_url:
 feed_name: 架构师
 source_published: 2026-05-01
 review_value: 10
-sources: []
+sources: [raw/articles/karpathy-vibe-coding-agentic-engineering-v4]
 review_confidence: 10
 review_recommendation: worth-reading
 review_stars: 3

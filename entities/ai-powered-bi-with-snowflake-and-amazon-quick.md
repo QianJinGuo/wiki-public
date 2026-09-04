@@ -1,7 +1,7 @@
 ---
 title: "AI-powered BI with Snowflake and Amazon QuickSight"
 created: 2026-06-25
-updated: 2026-08-01
+updated: 2026-09-05
 type: entity
 tags: [aws, snowflake, quicksight, bi, data-engineering, ai, semantic-views, hallucination-reduction]
 provenance_state: inferred
@@ -45,7 +45,7 @@ AWS 与 Snowflake 联合发布的端到端 AI-powered BI 集成方案。核心�
 │  └─────────┘ └──────────┘ └──────────────┘  │
 ├──────────────────────────────────────────────┤
 │           Snowflake Data Warehouse            │
-│              (Movies/Users/Ratings)            │
+│              (Movies·Users·Ratings)            │
 ├──────────────────────────────────────────────┤
 │              Amazon S3 (数据源)                │
 └──────────────────────────────────────────────┘

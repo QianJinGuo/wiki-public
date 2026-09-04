@@ -5,12 +5,12 @@ description: "深度拆解 Hermes Agent 的工具系统：ToolRegistry 单例注
 source: "[[raw/articles/hermes-agent-tool-system-analysis|原文存档]]"
 tags: [hermes-agent, tool-system, registry, toolset, agent-framework, nous-research]
 review_value: 9
-sources: []
+sources: [raw/articles/hermes-agent-tool-system-analysis]
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4
 created: 2026-05-23
-updated: 2026-08-29
+updated: 2026-09-05
 provenance_state: inferred
 ---
 

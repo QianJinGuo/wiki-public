@@ -1,8 +1,9 @@
 ---
+
 title: "PixVerse R2：实时世界模型在互动娱乐场景的落地实践"
 type: entity
 created: 2026-08-30
-updated: 2026-08-30
+updated: 2026-09-05
 tags: [world-model, video-generation, interactive-entertainment, pixverse, real-time, gaming]
 sources:
   - raw/articles/都在问世界模型怎么落地pixverse把答案做成了好玩
@@ -49,7 +50,7 @@ PixVerse（爱诗科技）发布了实时世界模型 **R2 版本**，将世界�
 R2 回答了"实时视频世界模型如何持续 scaling"的问题：
 1. **计算效率**：实时生成需要极低延迟
 2. **一致性维护**：世界状态在交互中保持连贯
-3. **可玩性设计**：技术能力转化为用户体验
+3. **可玩性设计**：技术能力转化为用户体验 ^[raw/articles/都在问世界模型怎么落地pixverse把答案做成了好玩.md]
 
 ## 商业模式
 
@@ -77,6 +78,6 @@ R2 回答了"实时视频世界模型如何持续 scaling"的问题：
 世界模型从"能生成视频"进化到"能创造可交互的世界"，标志着 AI 在创意产业的应用进入新阶段。关键问题：
 1. **实时性**：如何进一步降低生成延迟？
 2. **一致性**：长时程交互中如何保持世界状态连贯？
-3. **商业化**：如何将技术能力转化为可持续的商业模式？
+3. **商业化**：如何将技术能力转化为可持续的商业模式？ ^[raw/articles/都在问世界模型怎么落地pixverse把答案做成了好玩.md]
 
-→ [[raw/articles/都在问世界模型怎么落地pixverse把答案做成了好玩|原文存档]]
+→ [[raw/articles/都在问世界模型怎么落地pixverse把答案做成了好玩|原文存档]] ^[raw/articles/都在问世界模型怎么落地pixverse把答案做成了好玩.md]

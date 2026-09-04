@@ -3,12 +3,12 @@ title: "Fed Data Shows Cash Use Holding Steady"
 type: entity
 tags: [payments, federal-reserve, cash, financial-inclusion]
 review_value: 7
-sources: []
+sources: [raw/articles/fed-cash-use]
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 3
 created: 2026-05-19
-updated: 2026-08-29
+updated: 2026-09-05
 ---
 ## 核心要点
 - 美联储"消费者支付选择日记"(Diary of Consumer Payment Choice) 2025 年度调查

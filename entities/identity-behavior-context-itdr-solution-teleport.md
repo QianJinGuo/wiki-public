@@ -3,9 +3,9 @@ title: "Identity Behavior & Context: ITDR Solution | Teleport"
 type: entity
 tags: [newsletter, fandf-co]
 created: 2026-05-15
-updated: 2026-08-02
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/identity-behavior-context-itdr-solution-teleport]
 review_confidence: 8
 review_recommendation: strong
 ---

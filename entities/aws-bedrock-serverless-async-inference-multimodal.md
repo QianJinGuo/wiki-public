@@ -4,11 +4,11 @@ type: entity
 title: "Amazon Bedrock模型推理的Serverless异步架构 – 处理在线多模态高负载案例"
 tags: [aws, bedrock, serverless, async-inference, sqs, lambda, multimodal, agent]
 review_value: 9
-sources: []
+sources: [raw/articles/aws-bedrock-serverless-async-inference-multimodal]
 review_confidence: 8
 description: Auto-generated entity for raw article
 created: 2026-05-10
-updated: 2026-08-29
+updated: 2026-09-05
 ---
 
 [[raw/articles/aws-bedrock-serverless-async-inference-multimodal.md|"Amazon Bedrock模型推理的Serverless异步架构 – 处理在线多模态高负载案例"]] ^[raw/articles/aws-bedrock-serverless-async-inference-multimodal.md]

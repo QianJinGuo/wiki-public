@@ -3,9 +3,9 @@ title: "Engineering roles shift from developing code to managing AI"
 type: entity
 tags: [newsletter, ciodive.com]
 created: 2026-05-16
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 5
-sources: []
+sources: [raw/articles/engineering-roles-shift-from-developing-code-to-ma]
 review_confidence: 10
 review_recommendation: strong
 review_stars: 4

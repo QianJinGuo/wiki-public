@@ -8,12 +8,12 @@ source_url:
 feed_name: AWS China ML
 source_published: 2026-05-21T22:22:28Z
 review_value: 7
-sources: []
+sources: [raw/articles/amazon-nova-act-is-now-hipaa-eligible]
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4
 created: 2026-05-22
-updated: 2026-08-01
+updated: 2026-09-05
 ---
 
 ## 核心要点

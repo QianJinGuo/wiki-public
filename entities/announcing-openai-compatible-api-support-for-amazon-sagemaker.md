@@ -4,9 +4,9 @@ title: Announcing OpenAI-compatible API support for Amazon SageMaker AI Endpoint
 type: entity
 tags: [aws, sagemaker, llm, openai, api, model-serving]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 9
-sources: []
+sources: [raw/articles/announcing-openai-compatible-api-support-for-amazon-sagemaker]
 review_confidence: 9
 ---
 

@@ -3,9 +3,9 @@ title: "Linn Fritz looks at the lighter side of life"
 type: entity
 tags: [culture, life, work-life-balance, humor]
 created: 2026-05-20
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/linn-fritz-looks-at-the-lighter-side-of-life]
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4

@@ -1,7 +1,7 @@
 ---
 title: "飞连 AI 办公安全体系 1+3+N 架构"
 created: 2026-07-10
-updated: 2026-07-12
+updated: 2026-09-05
 type: entity
 tags: [agent, security, enterprise, governance, ai-security, mcp, byte-dance, feilian]
 confidence: 0.75
@@ -61,7 +61,7 @@ AI Coding 场景的专项保护能力：将 AI IDE、AI Coding Agent、IDE 内�
 
 ## 对比与关联
 
-该体系与 [[entities/ai-gateways-vs-mcp-gateways-what-security-teams-need-to-know|AI Gateway vs MCP Gateway]] 互补——飞连侧重于企业内部的办公安全治理（人+Agent+数据），而 AI Gateway 侧重外部 API 调用管控。同样涉及 [[entities/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security|AI Tool Poisoning]] 中提出的 Skill 投毒和 MCP 安全风险。
+该体系与 [[entities/ai-gateways-vs-mcp-gateways-what-security-teams-need-to-know|AI Gateway vs MCP Gateway]] 互补——飞连侧重于企业内部的办公安全治理（人+Agent+数据），而 AI Gateway 侧重外部 API 调用管控。同样涉及 [[entities/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security-v2|AI Tool Poisoning]] 中提出的 Skill 投毒和 MCP 安全风险。
 
 → [[raw/articles/feilian-ai-office-security-1-plus-3-plus-n-bytedance-2026|原文存档]]
 

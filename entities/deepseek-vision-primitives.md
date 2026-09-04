@@ -1,13 +1,13 @@
 ---
 title: "DeepSeek视觉原语论文：当所有人在堆图像分辨率时，它在堆「指代精度」"
 created: 2026-05-10
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [deepseek, multimodal, vision, grounding, research]
 source: wechat
 source_url:
 review_value: 10
-sources: []
+sources: [raw/articles/deepseek-visual-primitives-thinking, raw/articles/deepseek视觉原语论文当所有人在堆图像分辨率时它在堆指代精度-v2]
 review_confidence: 10.0
 review_recommendation: worth-reading
 review_stars: 5

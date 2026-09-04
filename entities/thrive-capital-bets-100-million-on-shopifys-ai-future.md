@@ -4,9 +4,9 @@ title: "Thrive Capital Bets $100 Million on Shopify's AI Future"
 type: entity
 tags: [newsletter, startup, ai]
 created: 2026-05-19
-updated: 2026-05-19
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/Thrive-Capital-Bets-100-Million-on-Shopifys-AI-Future]
 review_confidence: 8
 review_recommendation: worth-reading
 ---

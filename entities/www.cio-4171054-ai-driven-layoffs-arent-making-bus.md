@@ -5,9 +5,9 @@ type: entity
 tags: [cio, ai, layoffs, productivity, business-strategy]
 source_url:
 created: 2026-05-16
-updated: 2026-08-01
+updated: 2026-09-05
 review_value: 6
-sources: []
+sources: [raw/articles/www.cio-4171054-ai-driven-layoffs-arent-making-bus]
 review_confidence: 6
 review_recommendation: worth-reading
 ---

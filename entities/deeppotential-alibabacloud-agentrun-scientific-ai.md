@@ -7,9 +7,9 @@ source: wechat
 type: entity
 tags: [wechat, agent, alibaba, deeppotential, ai4s]
 created: 2026-05-11
-updated: 2026-08-07
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/deeppotential-alibabacloud-agentrun-scientific-ai]
 review_confidence: 7
 review_recommendation: strong
 review_stars: 4

@@ -7,11 +7,11 @@ source: wechat
 source_url:
 ingested: 2026-05-12
 review_value: 8
-sources: []
+sources: [raw/articles/iclr-agent-3d-generation]
 review_confidence: 8
 review_recommendation: strong
 tags: [agent, llm]
-updated: 2026-08-29
+updated: 2026-09-05
 ---
 
 > -> [[raw/articles/iclr-agent-3d-generation|原文存档]]

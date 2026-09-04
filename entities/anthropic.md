@@ -1,11 +1,11 @@
 ---
 title: "Anthropic"
 created: 2026-04-23
-updated: 2026-08-05
+updated: 2026-09-05
 type: entity
 tags: [company, lab, anthropic]
 review_value: 6
-sources: []
+sources: [raw/articles/anthropic-最新论文阻止-ai-叛变的方法]
 review_confidence: 9
 provenance_state: inferred
 ---

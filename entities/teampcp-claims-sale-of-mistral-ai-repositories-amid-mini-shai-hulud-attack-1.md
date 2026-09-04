@@ -3,9 +3,9 @@ title: "TeamPCP Claims Sale of Mistral AI Repositories Amid Mini Shai-Hulud Atta
 type: entity
 tags: [hackread,mistral-ai,security,vulnerability,repository-attack]
 created: 2026-05-16
-updated: 2026-08-01
+updated: 2026-09-05
 review_value: 8
-sources: []
+sources: [raw/articles/teampcp-claims-sale-of-mistral-ai-repositories-amid-mini-shai-hulud-attack-1]
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 4

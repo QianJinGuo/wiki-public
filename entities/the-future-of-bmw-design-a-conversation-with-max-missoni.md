@@ -5,9 +5,9 @@ Design: A Conversation with Max Missoni
 type: entity
 tags: [newsletter, automotive, design, bmw, neue-klasse]
 created: 2026-05-20
-updated: 2026-05-21
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/the-future-of-bmw-design-a-conversation-with-max-missoni]
 review_confidence: 8
 review_recommendation: worth-reading
 ---

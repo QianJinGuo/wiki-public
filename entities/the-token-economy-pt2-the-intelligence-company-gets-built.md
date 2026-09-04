@@ -4,7 +4,7 @@ title: "🧠 The Token Economy pt2: The Intelligence Company Gets Built"
 type: entity
 tags: [newsletter, ai-operating-model, fintech, anthropic, ramp, allica-bank, fis]
 created: 2026-05-18
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 7
 review_confidence: 8
 review_recommendation: worth-reading
@@ -201,6 +201,6 @@ Anthropic-Blackstone $1.5B JV 模式展示 PE 作为 AI 转型加速器的潜力
 - [[entities/anthropic-to-share-mythos-cyber-flaw-findings-with-global-finance-watchdog]]
 - [[entities/anthropic-联创2028-年实现-ai-自我构建的概率超过-60]]
 
-→ [[raw/articles/code-intelligence-changelog.md|原文存档]] ^[raw/articles/the-token-economy-pt2-the-intelligence-company-gets-built.md]
+→ [[raw/articles/the-token-economy-pt2-the-intelligence-company-gets-built|原文存档]] ^[raw/articles/the-token-economy-pt2-the-intelligence-company-gets-built.md]
 
 - [Fiserv agentOS × OpenAI](https://investors.fiserv.com/news-releases/news-release-details/fiserv-launches-agentos-operating-system-agentic-ai-banking) 

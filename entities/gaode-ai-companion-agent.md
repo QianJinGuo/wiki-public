@@ -7,9 +7,9 @@ platform: "wechat"
 author: "高德技术"
 publish_date: "2026-05-14"
 created: "2026-05-14"
-updated: 2026-08-24
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/gaode-ai-companion-agent-architecture]
 review_confidence: 8
 review_recommendation: "strong"
 review_stars: 4

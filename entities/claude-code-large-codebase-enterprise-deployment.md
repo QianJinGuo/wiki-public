@@ -2,11 +2,11 @@
 title: "Claude Code 大型代码库最佳实践 — Anthropic 企业级部署指南"
 type: entity
 review_value: 7
-sources: []
+sources: [raw/articles/claude-code-large-codebase-enterprise-deployment-anthropic-aihanshijì]
 review_confidence: 8
 tags: [anthropic, claude-code, enterprise-deployment, large-codebase, harness]
 created: "2026-05-18"
-updated: 2026-08-07
+updated: 2026-09-05
 provenance_state: inferred
 ---
 ## 核心判断

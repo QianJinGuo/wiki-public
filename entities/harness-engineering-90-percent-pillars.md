@@ -2,11 +2,11 @@
 
 title: "Harness Engineering 四根支柱与四要素架构"
 created: 2026-05-13
-updated: 2026-06-19
+updated: 2026-09-05
 type: entity
 tags: [harness-engineering, four-pillars, architecture, experience]
 review_value: 9
-sources: []
+sources: [raw/articles/harness-engineering-90-percent-pillars]
 review_confidence: 7
 ---
 

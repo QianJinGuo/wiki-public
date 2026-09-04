@@ -4,9 +4,9 @@ title: "The Agentic Trust Management Platform | Drata"
 type: entity
 tags: [newsletter, drata-com]
 created: 2026-05-15
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/the-agentic-trust-management-platform-drata]
 review_confidence: 8
 review_recommendation: strong
 ---

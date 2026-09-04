@@ -4,9 +4,9 @@ title: "Agent orchestration"
 type: entity
 tags: [aws, agent, orchestration, workshop]
 created: 2026-05-19
-updated: 2026-08-30
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/aws-agent-orchestration-workshop]
 review_confidence: 8
 review_recommendation: worth-reading
 ---

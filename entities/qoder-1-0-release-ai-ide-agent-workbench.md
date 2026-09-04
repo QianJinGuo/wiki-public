@@ -4,9 +4,9 @@ title: "Qoder 1.0正式发布！从AI IDE迈向智能体自主开发工作台"
 type: entity
 tags: [wechat, article]
 created: 2026-05-18
-updated: 2026-05-19
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/qoder-1-0-release-ai-ide-agent-workbench]
 review_confidence: 8
 review_recommendation: worth-reading
 ---

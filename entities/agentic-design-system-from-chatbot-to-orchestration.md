@@ -4,9 +4,9 @@ title: "Agentic Design System - From Chatbot to Orchestration"
 type: entity
 tags: [article, newsletter]
 created: 2026-05-14
-updated: 2026-08-07
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/agentic-design-system-from-chatbot-to-orchestration]
 review_confidence: 8
 review_recommendation: worth-reading
 ---

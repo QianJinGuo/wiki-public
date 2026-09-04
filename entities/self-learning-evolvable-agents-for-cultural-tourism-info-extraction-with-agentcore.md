@@ -1,7 +1,7 @@
 ---
 title: "基于AgentCore构建自学习、可进化的文旅行业近似信息抽取Agents | 亚马逊AWS官方博客"
 created: 2026-05-14
-updated: 2026-08-30
+updated: 2026-09-05
 tags: [aws-china-blog, bedrock-agentcore]
 sources: [raw/articles/self-learning-evolvable-agents-for-cultural-tourism-info-extraction-with-agentcore]
 review_value: 8
@@ -34,7 +34,7 @@ Amazon Bedrock AgentCore、Strands Agent SDK、OpenClaw、MCP Server ^[raw/artic
 **3. OTA 报价单处理的工程化启示：文档理解 vs. 信息抽取** ^[raw/articles/self-learning-evolvable-agents-for-cultural-tourism-info-extraction-with-agentcore.md]
 从实体描述推断：这个 use case 涉及 Word、Excel、PDF 等多种格式的非结构化文档处理。这揭示了一个在 AI Agent 领域常被低估的工程复杂度：多格式文档解析（Document Parsing）本身就是独立的难题——PDF 的表格结构提取、Excel 的合并单元格、Word 的修订痕迹处理，每一个都比纯文本抽取复杂得多。一个能在文旅行业落地的 Agent 系统，文档解析层的能力直接决定了上层信息抽取质量的天花板。 ^[raw/articles/self-learning-evolvable-agents-for-cultural-tourism-info-extraction-with-agentcore.md]
 
-→ [[raw/articles/intelligent-cost-analysis-and-alerting-system-powered-by-bedrock-agentcore.md|原文存档]] ^[raw/articles/self-learning-evolvable-agents-for-cultural-tourism-info-extraction-with-agentcore.md]
+→ [[raw/articles/self-learning-evolvable-agents-for-cultural-tourism-info-extraction-with-agentcore|原文存档]] ^[raw/articles/self-learning-evolvable-agents-for-cultural-tourism-info-extraction-with-agentcore.md]
 
 ## 实践启示
 **1. 近似文本领域的信息抽取评估指标设计** ^[raw/articles/self-learning-evolvable-agents-for-cultural-tourism-info-extraction-with-agentcore.md]

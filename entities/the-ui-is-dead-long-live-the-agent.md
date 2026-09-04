@@ -3,9 +3,9 @@ title: "The UI is dead, long live the agent: ServiceNow goes headless and opens 
 type: entity
 tags: [servicenow, agentic-ai, enterprise-software, headless, workflow-automation]
 created: 2026-05-14
-updated: 2026-08-01
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/the-ui-is-dead-long-live-the-agent]
 review_confidence: 8
 review_recommendation: worth-reading
 ---

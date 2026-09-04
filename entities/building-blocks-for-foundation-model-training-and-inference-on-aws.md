@@ -5,12 +5,12 @@ source: newsletter
 source_url:
 date: 2026-05-13
 review_value: 8
-sources: []
+sources: [raw/articles/building-blocks-for-foundation-model-training-and-inference-on-aws]
 review_confidence: 9
 review_recommendation: strong
 tags: [aws, foundation-model, training, inference, gpu, infrastructure]
 created: 2026-05-16
-updated: 2026-08-29
+updated: 2026-09-05
 ---
 > -> [[raw/articles/building-blocks-for-foundation-model-training-and-inference-on-aws.md|原文存档]]
 

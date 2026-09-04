@@ -2,13 +2,13 @@
 
 title: "Anthropic 上线「做梦」功能，让 Agent 越睡越聪明"
 created: 2026-05-08
-updated: 2026-08-29
+updated: 2026-09-05
 source: "]"
 type: entity
 value: 7
 tags: [claude-code, anthropic, agent, multi-agent, harness-engineering]
 review_value: 6
-sources: []
+sources: [raw/articles/anthropic-dreaming-claude-managed-agents-ovZ5v7jJkqDKSu9xmxwt8w]
 review_confidence: 8
 ---
 

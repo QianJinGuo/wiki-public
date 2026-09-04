@@ -1,11 +1,12 @@
 ---
 title: "Gene/GEP — EvoMap×清华 提出的「策略基因」经验对象框架（arXiv 2604.15097）"
 created: 2026-06-13
-updated: 2026-08-29
+updated: 2026-09-04
 type: "entity"
-tags: [agent-skill, gene, gep, evomap, evolver, openclaw, critpt, agent-evolution, test-time-evolution, experience-reuse, strategy-gene, arxiv-2604-15097, qinghua, junjie-wang, haoyang-zhang, control-density, protocol-layer]
+tags: [agent-skill, gene, gep, evomap, evolver, openclaw, critpt, agent-evolution, test-time-evolution, experience-reuse, strategy-gene, arxiv-2604-15097, qinghua, junjie-wang, haoyang-zhang, control-density, protocol-layer, rsi, recursive-self-improvement]
 sources:
   - raw/articles/gene-gep-evomap-qinghua-strategy-genes-arxiv-2604-15097-2026
+  - raw/articles/rsi-evomap-experience-driven-test-time-evolution-2026-09-03
 related:
   - entities/agent-skill-writing
   - entities/agent-skill-writing-advanced
@@ -247,6 +248,25 @@ Benchmark70 任务全量复现：https://github.com/EvoMap/critpt-openclaw-repro
 3. **强模型（Pro 级）上长 Skill 会压住固有能力**：在部署 Gene 时，对强模型优先使用 Gene 而非完整 Skill 包——这与 [[entities/agent-skill-writing-advanced|Skill 高级实践]] 中"根据模型能力梯度选择注入内容"的设计原则一致 ^[raw/articles/gene-gep-evomap-qinghua-strategy-genes-arxiv-2604-15097-2026.md]
 4. **GEP 协议是 A2A 群体智能的基础设施**：若计划让多个 Agent 之间交换经验，传输结构化 Gene 对象（而非 Skill 文档）才能实现可匹配、可验证、可累积的群体进化——[[entities/hermes-agent-skill-crossover-optimization-skillevolver-darwin|Darwin Skill 互优化]]的跨 Agent 经验交换实验可作为参考实现 ^[raw/articles/gene-gep-evomap-qinghua-strategy-genes-arxiv-2604-15097-2026.md]
 5. **结构宽容意味着 Gene 可以跨版本复用**：过时 Gene 只要控制框架对仍可用——在更新 Gene 池时优先更新 strategy 层和 AVOID 警告，而非推翻重来 ^[raw/articles/gene-gep-evomap-qinghua-strategy-genes-arxiv-2604-15097-2026.md]
+
+## 2nd Source — 机器之心 2026-09-03（RSI 工程化报道）
+
+### vx c 评估
+- 候选：`RSI 离我们有多远？这家中国团队给出了第一梯队的工程解`（机器之心，2026-09-03）
+- 同主题：Gene/GEP 经验对象框架已有深度 entity（263 行，1 source），本报道是同团队（EvoMap）的工程叙事延伸
+- 决策：**MERGE 作 2nd source** —— 70%+ overlap，但新增 3+ 互补角度（见下），非纯传播 ^[raw/articles/rsi-evomap-experience-driven-test-time-evolution-2026-09-03.md]
+
+### 互补角度 5 条
+1. **RSI 工程化破局点（新框架）**：把 RSI 从"模型训练模型"的远期叙事，重构成"在智能体和系统协议层解锁 RSI"——不更新基模参数、不加 SFT/RLHF，纯靠经验对象（Gene）在系统内自动提取与流转进化即可提升评测通过率。这是对既有 entity 中"测试时进化/经验复用"命题的 RSI 语境升格 ^[raw/articles/rsi-evomap-experience-driven-test-time-evolution-2026-09-03.md]
+2. **规模化流转数据（新数据点）**：EvoMap 网络已接入 **35.7 万个 Agent、481 万项被目录化管理的经验资产**，GEP 协议支撑 35.7 万智能体与 480 万+ 经验资产之间的"匹配注入→执行回写→全局进化（Validate/Mutate/Solidify）"真实闭环 ^[raw/articles/rsi-evomap-experience-driven-test-time-evolution-2026-09-03.md]
+3. **新基准：LongWoF-Bench**：含 778 个复杂长流程任务，共享隐蔽验证器监控下，注入 Gene 的 EvoX 在 7 款主流大模型上的任务通过率比依赖 Skill 文件的基线高 **8.7-15.5 个百分点**（arXiv 2608.23200） ^[raw/articles/rsi-evomap-experience-driven-test-time-evolution-2026-09-03.md]
+4. **AutoResearch 科研闭环实验**：在 arXiv 2608.17906 中，系统把问题发现/计划生成/Swarm 实验/独立验证连接成无人干预闭环——Django 修复任务中 Evolver 区分"偶然成功"vs"实质性突破"，官方新特性测试通过率从 2/7 抬到 7/7，203 个回归测试全通过 ^[raw/articles/rsi-evomap-experience-driven-test-time-evolution-2026-09-03.md]
+5. **Token 效率量化（新数据点）**：Claude Opus 上复用 Gene 的智能体比用 Skill 多解决 39 个长流程任务、执行 Token 消耗反而降 9.9%——与既有 entity 中"Skill 稀释控制信号"的结论呼应并给出算力侧收益 ^[raw/articles/rsi-evomap-experience-driven-test-time-evolution-2026-09-03.md]
+
+**实践价值（RSI 语境增量）**：本文把 Gene/GEP 从"经验复用优化"进一步凝练为"群体智能的经验分发网络"——Gene 不再只是单 Agent 的控制对象，而是带版本控制、适用边界、达尔文式淘汰机制的可分发对象。对 Agent 系统开发者，这意味着经验沉淀应优先做成跨 Agent 可交换的结构化对象（Gene），而非个人备忘的 Skill 文档。 ^[raw/articles/rsi-evomap-experience-driven-test-time-evolution-2026-09-03.md]
+
+→ [[raw/articles/rsi-evomap-experience-driven-test-time-evolution-2026-09-03|2nd source 原文存档]] ^[raw/articles/rsi-evomap-experience-driven-test-time-evolution-2026-09-03.md]
+
 
 - [[entities/agent-skill-writing]] — Agent Skill 编写指南（渐进式披露三阶段）
 - [[entities/agent-skill-writing-advanced]] — Skill 高级实践

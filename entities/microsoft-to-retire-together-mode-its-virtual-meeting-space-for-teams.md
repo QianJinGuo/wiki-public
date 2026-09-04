@@ -3,9 +3,9 @@ title: "Microsoft to retire ‘Together Mode,’ its virtual meeting space for T
 type: entity
 tags: [microsoft, teams, metaverse, vr, meeting]
 created: 2026-05-20
-updated: 2026-08-03
+updated: 2026-09-05
 review_value: 5
-sources: []
+sources: [raw/articles/microsoft-to-retire-together-mode-its-virtual-meeting-space-for-teams]
 review_confidence: 6
 review_recommendation: worth-reading
 review_stars: 3

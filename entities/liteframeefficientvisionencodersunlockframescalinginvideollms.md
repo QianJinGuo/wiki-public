@@ -4,9 +4,9 @@ title: "LiteFrame: Efficient Vision Encoders Unlock Frame Scaling in Video LLMs"
 type: entity
 tags: [google, llm, optimization, vision, video-llm]
 created: 2026-05-22
-updated: 2026-08-01
+updated: 2026-09-05
 review_value: 8
-sources: []
+sources: [raw/articles/liteframeefficientvisionencodersunlockframescalinginvideollms]
 review_confidence: 9
 review_stars: 4
 ---

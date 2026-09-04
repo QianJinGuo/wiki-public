@@ -4,9 +4,9 @@ title: "世界读书日｜AI时代，我们该读什么？"
 type: entity
 tags: [wechat, reading, ai-era]
 created: 2026-05-18
-updated: 2026-06-19
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/ai-era-what-to-read-world-book-day]
 review_confidence: 8
 review_recommendation: worth-reading
 

@@ -3,10 +3,10 @@ title: "qoder skills"
 name: Qoder Skills
 type: entity
 created: 2026-05-10
-updated: 2026-08-07
+updated: 2026-09-05
 tags: ['ai-skill', 'prompt-engineering', 'workflow', 'agent', 'qoder']
 review_value: 6
-sources: []
+sources: [raw/articles/qoder-skills-完全指南从零开始让-ai-按你的标准执行-v2]
 review_confidence: 7
 provenance_state: inferred
 ---

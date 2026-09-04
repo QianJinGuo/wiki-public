@@ -1,7 +1,7 @@
 ---
 title: "Wiki Audit Skill"
 created: 2026-05-23
-updated: 2026-08-01
+updated: 2026-09-03
 type: concept
 tags: [wiki, maintenance, analysis, skill]
 summary: 生成 wiki 真实客观的质量分析报告。使用正确的 regex + shell 交叉验证，逐项透明核查，不估算、不假设。
@@ -48,7 +48,7 @@ grep "^Total pages" index.md
 ```python
 import os, re, glob, yaml
 
-wiki = "[本地路径已隐藏]"
+wiki = "/path/to/wiki"
 wikilink_pat = re.compile(r'\[' + r'\[([^\]]+)\]' + r'\]')  # 正确 regex: [^\]] 不是 [^|\]]
 
 def get_fm(path):

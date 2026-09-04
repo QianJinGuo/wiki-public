@@ -3,7 +3,7 @@
 
 title: "CLAUDE.md"
 created: 2026-05-07
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [claude-code, anthropic, agent, harness-engineering, llm]
 sources:
@@ -72,11 +72,11 @@ Anthropic Claude Code 源码泄露事件（.map 文件未排除，1900+ TypeScri
 1. /etc/claude-code/CLAUDE.md          (系统级)
 2. ~/.claude/CLAUDE.md                  (用户级)
 3. ~/.claude/rules/*.md                 (用户级)
-4. /Users/me/projects/CLAUDE.md         (项目级)
-5. /Users/me/projects/myapp/CLAUDE.md   (项目级)
-6. /Users/me/projects/myapp/.claude/CLAUDE.md  (项目级)
-7. /Users/me/projects/myapp/.claude/rules/*.md  (项目级)
-8. /Users/me/projects/myapp/CLAUDE.local.md     (本地级，gitignore)
+4. ~/projects/CLAUDE.md         (项目级)
+5. ~/projects/myapp/CLAUDE.md   (项目级)
+6. ~/projects/myapp/.claude/CLAUDE.md  (项目级)
+7. ~/projects/myapp/.claude/rules/*.md  (项目级)
+8. ~/projects/myapp/CLAUDE.local.md     (本地级，gitignore)
 ```
 
 ### @include 指令

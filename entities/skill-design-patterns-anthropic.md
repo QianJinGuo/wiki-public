@@ -1,11 +1,11 @@
 ---
 title: "Anthropic 官方 14 种 Skill 设计模式"
 created: 2026-05-13
-updated: 2026-08-07
+updated: 2026-09-05
 type: entity
 tags: [skill-design-patterns, anthropic, skill-writing]
 review_value: 9
-sources: []
+sources: [raw/articles/anthropic-14-skill-patterns-best-practices]
 review_confidence: 7
 provenance_state: inferred
 ---

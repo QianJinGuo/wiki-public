@@ -1,11 +1,10 @@
 ---
 title: "Agentic Overlays -- Retrofit Legacy REST Services into A2A Agents"
 created: 2026-06-26
-updated: 2026-08-01
+updated: 2026-09-05
 type: entity
 source: "[[raw/articles/retrofit-dont-rebuild-agentic-overlays-for-transforming-lega]]"
 tags: [agent, a2a, mcp, enterprise, legacy-systems, rest-api, aws, agentcore, json-rpc, cisco]
-provenance_state: inferred
 review_value: 8
 review_confidence: 8
 provenance_state: extracted

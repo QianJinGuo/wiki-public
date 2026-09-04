@@ -4,9 +4,9 @@ title: GitHub Breached — Employee Device Hack Led to Exfiltration of 3,800+ In
 type: entity
 tags: [security, agent, ai]
 created: 2026-05-21
-updated: 2026-08-01
+updated: 2026-09-05
 review_value: 8
-sources: []
+sources: [raw/articles/github-investigating-teampcp-claimed-17cc77]
 review_confidence: 9
 review_recommendation: worth-reading
 review_stars: 4

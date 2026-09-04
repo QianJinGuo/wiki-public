@@ -4,9 +4,9 @@ title: "5 Things to Know about the CLARITY Act"
 type: entity
 tags: [newsletter, ai, security, digital-assets, regulation, clarity-act, fintech]
 created: 2026-05-15
-updated: 2026-06-19
+updated: 2026-09-05
 review_value: 8
-sources: []
+sources: [raw/articles/5thingstoknowabouttheclarityact]
 review_confidence: 7
 review_recommendation: worth-reading
 review_stars: 3

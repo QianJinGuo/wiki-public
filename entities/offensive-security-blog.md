@@ -6,9 +6,9 @@ title: "Offensive Security Blog"
 source_url:
 source: newsletter
 date: 2026-05-14
-updated: 2026-08-01
+updated: 2026-09-05
 review_value: 8
-sources: []
+sources: [raw/articles/offensive-security-blog]
 review_confidence: 7
 review_recommendation: worth-reading
 review_stars: 3

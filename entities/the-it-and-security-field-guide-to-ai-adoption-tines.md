@@ -4,9 +4,9 @@ title: "The IT and security field guide to AI adoption | Tines"
 type: entity
 tags: [ai, security, it, adoption-guide]
 created: 2026-05-19
-updated: 2026-06-19
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/the-it-and-security-field-guide-to-ai-adoption-tines]
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4

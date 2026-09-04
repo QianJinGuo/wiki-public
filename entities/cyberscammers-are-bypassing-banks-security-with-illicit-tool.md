@@ -1,7 +1,7 @@
 ---
 title: "Cyberscammers are bypassing banks' security with illicit tools sold on Telegram"
 created: 2026-06-02
-updated: 2026-08-01
+updated: 2026-09-05
 type: entity
 tags: [news, security]
 source: [[raw/articles/Cyberscammers-are-bypassing-banks-security-with-illicit-tool]]
@@ -25,7 +25,7 @@ MIT Technology Review 在为期两个月的调查中发现了 22 个中越英语
 - [[entities/cyberscammers-bypassing-bank-telegram]]
 - [[entities/mozilla-warns-uk-breaking-vpns-will-not-magically-fix-britain-s-age-check-mess]]
 - [[entities/weve-been-here-before-ai-vulnerability-research]]
-- [[entities/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security]]
+- [[entities/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security-v2]]
 - [[entities/rigged-game-scarcruft-compromises-gaming-platform-supply-chain-attack]]
 
 - [[moc/security-privacy-landscape|MOC]]

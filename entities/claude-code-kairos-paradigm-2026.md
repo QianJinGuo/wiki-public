@@ -1,13 +1,13 @@
 ---
 title: "Claude Code KAIROS 范式深度解析"
 created: 2026-05-07
-updated: 2026-08-24
+updated: 2026-09-05
 source: "[[raw/articles/claude-code-kairos-paradigm-2026|原文存档]]"
 type: entity
 value: 7
 tags: [claude-code, ai]
 review_value: 6
-sources: []
+sources: [raw/articles/claude-code-kairos-paradigm-2026]
 review_confidence: 7
 ---
 

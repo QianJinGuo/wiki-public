@@ -2,9 +2,9 @@
 
 title: "使用 Kiro AI IDE 开发 基于Amazon EMR 的Flink 智能监控系统实践 | 亚马逊AWS官方博客"
 created: 2026-05-14
-updated: 2026-08-30
+updated: 2026-09-05
 tags: [aws-china-blog, kiro, flink, emr]
-sources: []
+sources: [raw/articles/developing-flink-monitoring-system-on-amazon-emr-with-kiro-ai-ide]
 review_value: 8
 review_confidence: 8
 review_recommendation: strong

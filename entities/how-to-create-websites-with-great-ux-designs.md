@@ -3,9 +3,9 @@ title: "How to create websites with great UX designs: Principles and examples"
 type: entity
 tags: [article, newsletter]
 created: 2026-05-14
-updated: 2026-08-21
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/how-to-create-websites-with-great-ux-designs]
 review_confidence: 8
 review_recommendation: worth-reading
 ---

@@ -4,9 +4,9 @@ title: "Google & Amnesty International：联手打击商业间谍软件"
 type: entity
 tags: [google, amnesty, spyware, nso, pegasus, android]
 created: 2026-05-15
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 9
-sources: []
+sources: [raw/articles/google-amnesty-spyware-detection]
 review_confidence: 8
 review_recommendation: strong
 review_stars: 5

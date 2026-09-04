@@ -10,10 +10,10 @@ sha256: 3d8f9c7e2b1a4e6d0c8f3a7b5c9e1d4f6a8b7c3d9e1f4a6b8c0d2e4f6a8b7c5d9
 review_stars: 4
 review_recommendation: STRONG
 created: 2026-05-10
-updated: 2026-08-07
+updated: 2026-09-05
 tags: [agent, multi-agent, harness-engineering, open-source, architecture]
 review_value: 9
-sources: []
+sources: [raw/articles/factory-mission-multi-agent-architecture]
 review_confidence: 7
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Agentic RL 后训练资源怎么分？港中文、恒生大学提出 Libra，吞吐最高提升 3 倍"
 created: 2026-08-13
-updated: 2026-08-15
+updated: 2026-09-04
 type: entity
 tags: [ai, research, agent, ai-agent, multi-agent, rl, reinforcement-learning, post-training, inference, llm-inference, fine-tuning, sft, search, agent-search, causality, evaluation]
 sources: [raw/articles/agentic-rl-后训练资源怎么分港中文恒生大学提出-libra吞吐最高提升-3-倍.md, raw/articles/吞吐最高提升300港中文开源librarl训练提速25倍.md]
@@ -19,7 +19,7 @@ provenance_state: extracted
 
 ## 关键要点
 
-- 原文完整记录：[[raw/articles/agentic-rl-后训练资源怎么分港中文恒生大学提出-libra吞吐最高提升-3-倍.md|原文存档]]
+- 原文完整记录：[[raw/articles/吞吐最高提升300港中文开源librarl训练提速25倍|原文存档]]
 - 关联主题："Agent 架构"、[[concepts/agent-orchestration-patterns]]、[[concepts/evaluation-harness-design]]
 
 ## 第 2 来源 — 港中文开源 Libra：RL 训练提速 2.5 倍（2026-08-15 入库，vxc=72）

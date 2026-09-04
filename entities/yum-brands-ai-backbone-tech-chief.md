@@ -4,13 +4,13 @@ title: "Yum Brands' tech chief on building its AI backbone"
 source: newsletter
 source_url:
 review_value: 5
-sources: []
+sources: [raw/articles/819775]
 review_confidence: 7
 review_recommendation: worth-reading
 review_stars: 3
 type: entity
 created: 2026-05-13
-updated: 2026-08-29
+updated: 2026-09-05
 provenance_state: inferred
 ---
 ## Summary

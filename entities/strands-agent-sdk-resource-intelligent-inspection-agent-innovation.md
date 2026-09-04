@@ -2,7 +2,7 @@
 
 title: "从0到1:联想基于Strands Agent SDK的资源智能巡检Agent创新 | 亚马逊AWS官方博客"
 created: 2026-05-14
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [aws-china-blog, strands-sdk, amazon-nova]
 sources: [raw/articles/strands-agent-sdk-resource-intelligent-inspection-agent-innovation]
 review_value: 8
@@ -56,6 +56,6 @@ Lenovo在技术选型时提出了三个核心需求：**上手快、复杂度低
 - [[entities/cline-open-source-agent-runtime-sdk|Cline releases open-source agent runtime SDK]]
 - [[entities/cli-mcp-sdk-agent-tool-selection|CLI、MCP、API 选型：Agent 接入层决策指南]]
 
-→ [[raw/articles/5-ways-to-curb-ai-sprawl-without-stifling-innovation.md|原文存档]] ^[raw/articles/strands-agent-sdk-resource-intelligent-inspection-agent-innovation.md]
+→ [[raw/articles/strands-agent-sdk-resource-intelligent-inspection-agent-innovation|原文存档]] ^[raw/articles/strands-agent-sdk-resource-intelligent-inspection-agent-innovation.md]
 
 - [[entities/easy-deployment-of-claude-agent-sdk-in-production|快时尚电商行业智能体设计思路与应用实践（五）借助 AgentCore Runtime 与 Bedrock 模型平台，轻松实现 Claude Agent SDK 的生产级部署 | 亚马逊AWS官方博客]]

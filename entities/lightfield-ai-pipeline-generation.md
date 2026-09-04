@@ -4,9 +4,9 @@ title: "Lightfield AI pipeline generation"
 type: entity
 tags: [lightfield, ai, pipeline, generation, 3d]
 created: 2026-05-14
-updated: 2026-08-01
+updated: 2026-09-05
 review_value: 8
-sources: []
+sources: [raw/articles/lightfield-ai-pipeline-generation]
 review_confidence: 9
 review_recommendation: worth-reading
 review_stars: 3

@@ -2,9 +2,9 @@
 
 title: "CI&amp;T基于 Amazon Bedrock AgentCore 与 OpenClaw 的企业级智能运维最佳实践 | 亚马逊AWS官方博客"
 created: 2026-05-14
-updated: 2026-08-30
+updated: 2026-09-05
 tags: [aws-china-blog, bedrock-agentcore, openclaw]
-sources: []
+sources: [raw/articles/ci-t-based-on-amazon-bedrock-agentcore-openclaw-enterprise-intelligent-operations-best-practices]
 review_value: 8
 review_confidence: 8
 review_recommendation: strong

@@ -4,9 +4,9 @@ title: "Sandworm Hackers Shift From IT Breaches to Critical OT Targets"
 type: entity
 tags: [cybersecurity, sandworm, ot, ics, nation-state, gru]
 created: 2026-05-15
-updated: 2026-08-03
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/sandworm-hackers-shift-it-breaches-ot-gbhackers]
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4

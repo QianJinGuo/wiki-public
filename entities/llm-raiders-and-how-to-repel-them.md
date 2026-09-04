@@ -3,9 +3,9 @@ title: "LLM raiders and how to repel them"
 type: entity
 tags: [llmjacking, ai-security, lvm-servers, threat-intel]
 created: 2026-05-14
-updated: 2026-07-27
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/llm-raiders-and-how-to-repel-them]
 review_confidence: 8
 review_recommendation: strong
 ---

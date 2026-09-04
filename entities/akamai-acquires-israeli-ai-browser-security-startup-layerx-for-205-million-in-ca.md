@@ -4,9 +4,9 @@ title: "Akamai acquires Israeli AI browser security startup LayerX for $205 mill
 type: entity
 tags: [newsletter, startup, ai]
 created: 2026-05-19
-updated: 2026-08-01
+updated: 2026-09-05
 review_value: 8
-sources: []
+sources: [raw/articles/Akamai-acquires-Israeli-AI-browser-security-startup-LayerX-for-205-million-in-ca]
 review_confidence: 9
 review_recommendation: worth-reading
 ---

@@ -4,14 +4,14 @@ type: entity
 name: "vLLM V0 to V1: Correctness Before Corrections in RL"
 description: ServiceNow AI team's deep dive into vLLM correctness issues in attention implementation, CUDA kernel correctness vs performance tradeoffs in RL training.
 review_value: 8
-sources: []
+sources: [raw/articles/servicenow-vllm-correctness-huggingface]
 review_confidence: 8
 review_verdict: strong
 stars: 4
 source: newsletter
 source_url: ""
 ingested: 2026-05-08
-updated: 2026-08-24
+updated: 2026-09-05
 created: 2026-05-10
 tags: [vllm, reinforcement-learning, correctness, inference-backend, servicnow]
 provenance_state: inferred

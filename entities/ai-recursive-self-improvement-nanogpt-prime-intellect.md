@@ -16,7 +16,7 @@ review_confidence: 8
 review_recommendation: strong
 review_stars: 5
 year: 2026
-updated: 2026-08-30
+updated: 2026-09-05
 
 provenance_state: inferred
 ---
@@ -104,6 +104,6 @@ nanoGPT速通的约束条件（固定架构、固定数据）限制了递归的�
 ## See Also
 -  — ETCLOVG taxonomy中的验证与评估层（V层）如何评测此类自主科研能力
 
-→ [[raw/articles/stochastic-parrot-thought-experiment.md|原文存档]] ^[raw/articles/prime-intellect-auto-nanogpt-opus-2930.md]]"] ^[raw/articles/prime-intellect-auto-nanogpt-opus-2930.md]
+→ [[raw/articles/prime-intellect-auto-nanogpt-opus-2930|原文存档]] ^[raw/articles/prime-intellect-auto-nanogpt-opus-2930.md]]"] ^[raw/articles/prime-intellect-auto-nanogpt-opus-2930.md]
 
 -  — 递归自改进与harness演化的学术脉络

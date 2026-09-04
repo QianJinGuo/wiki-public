@@ -4,9 +4,9 @@ title: "Fedora Hummingbird brings the container security model to a Linux host O
 type: entity
 tags: [fedora, linux, container, security, hummingbird]
 created: 2026-05-15
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 8
-sources: []
+sources: [raw/articles/fedora-hummingbird-container-security]
 review_confidence: 7
 review_recommendation: strong
 review_stars: 5

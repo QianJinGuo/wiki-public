@@ -3,10 +3,10 @@
 type: entity
 title: "AI伴行技术解析：基于空间智能的高可用Agent架构实践"
 created: 2026-05-17
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [raw-article]
 review_value: 5
-sources: []
+sources: [raw/articles/gaode-ai-companion-agent-architecture, raw/articles/05-11-the-great-memory-panic-of-2026]
 review_confidence: 10
 description: Auto-generated entity for raw article
 ---

@@ -1,7 +1,7 @@
 ---
 title: Agent Memory 生命周期与架构哲学
 created: 2026-05-13
-updated: 2026-08-30
+updated: 2026-09-03
 type: concept
 tags: [agent-memory, lifecycle, architecture-philosophies, governance]
 ---
@@ -112,7 +112,7 @@ Reflexion / ExpeL / ReMe all ask: How can experiences not just be preserved, but
 
 ## 何时不要蒸馏：经验抽象度光谱（2026-08 补遗）
 
-上表把 skill distillation-driven 列为「最高天花板、最危险」。2026 年的自主科研系统把这条警告升级成了显式设计轴——**经验抽象度**，其站位由「复用频率 × 领域漂移速度」决定。Arbor 在科研场景（漂移快、复用低）选择**拒绝抽象**：经验保持具体、per-session 存储、复用需 intake 对话征询用户同意，文档原话「不试图把发现抽象成通用原则」^[raw/articles/arbor-hypothesis-tree-research-agent-2026.md]；EvoScientist 在通用助手场景走向观察自动聚类成 skill 提案，但安装必经人审 ^[raw/articles/evoscientist-experience-memory-autoskills-2026.md]；AutoDesign 允许优化最抽象的 harness 层，但每次外层迭代只改一个组件、且必须过 train 提升 + dev 不降的双验收门 ^[raw/articles/autodesign-meta-harness-optimization-2026.md]。
+上表把 skill distillation-driven 列为「最高天花板、最危险」。2026 年的自主科研系统把这条警告升级成了显式设计轴——**经验抽象度**，其站位由「复用频率 × 领域漂移速度」决定。Arbor 在科研场景（漂移快、复用低）选择**拒绝抽象**：经验保持具体、per-session 存储、复用需 intake 对话征询用户同意，文档原话「不试图把发现抽象成通用原则」；EvoScientist 在通用助手场景走向观察自动聚类成 skill 提案，但安装必经人审 ；AutoDesign 允许优化最抽象的 harness 层，但每次外层迭代只改一个组件、且必须过 train 提升 + dev 不降的双验收门 。
 
 蒸馏的判据因此从「经验是否重复出现」升级为三个条件：**重复出现、领域未漂移、验收门可回归**。三者缺一时，正确动作是把经验留在具体的 findings 里（Arbor 的 findings.jsonl 形态），而不是固化成 skill。参见 [[concepts/agent-self-improvement-loops|Agent 自改进循环]] 页的矛盾注记与 [[drafts/wiki-emergent-viewpoints-2026-08-phd-lens|2026-08 涌现观点·观点一]]。
 

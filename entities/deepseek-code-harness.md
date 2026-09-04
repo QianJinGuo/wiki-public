@@ -2,10 +2,10 @@
 
 title: "DeepSeek Code Harness"
 created: 2026-05-23
-updated: 2026-08-31
+updated: 2026-09-04
 type: entity
-tags: [deepseek, harness, claude-code, agent, coding-agent, china-ai, evaluation, terminal-bench, three-dimension, agent-plan]
-sources: [raw/articles/deepseek-code-harness-competitor-tina, raw/articles/deepseek-harness-v01-open-source-everything-plugin-infoq-2026, raw/articles/deepseek-harness-orange-book-shuhua-2026, raw/articles/deepseek-harness-agent-engineering-new-paradigm-aliyun-2026, raw/articles/deepseek-harness-cordis-runtime-mechanics-tencent-chino-2026, raw/articles/deepseek-harness-拆解一套能拼装的-agent-架构, raw/articles/deepseek-harness是今年最有野心的一次agent开源, raw/articles/deepseek-harness-实测模型之外的那一半到底带来了什么, raw/articles/deepseek-harness-agentloop-three-dimension-eval-qianwen-2026-08-19, raw/articles/dsh-observability-tencentcloud-agent-obs-2026-08-24, raw/articles/deepseek-harness-ptc-creation-cordis-baidu-geek-2026, raw/articles/agent-plan-x-deepseek-harness-dsh-practice-guide]
+tags: [deepseek, harness, claude-code, agent, coding-agent, china-ai, evaluation, terminal-bench, three-dimension, agent-plan, cordis, spatiotemporal-composability]
+sources: [raw/articles/deepseek-code-harness-competitor-tina, raw/articles/deepseek-harness-v01-open-source-everything-plugin-infoq-2026, raw/articles/deepseek-harness-orange-book-shuhua-2026, raw/articles/deepseek-harness-agent-engineering-new-paradigm-aliyun-2026, raw/articles/deepseek-harness-cordis-runtime-mechanics-tencent-chino-2026, raw/articles/deepseek-harness-拆解一套能拼装的-agent-架构, raw/articles/deepseek-harness是今年最有野心的一次agent开源, raw/articles/deepseek-harness-实测模型之外的那一半到底带来了什么, raw/articles/deepseek-harness-agentloop-three-dimension-eval-qianwen-2026-08-19, raw/articles/dsh-observability-tencentcloud-agent-obs-2026-08-24, raw/articles/deepseek-harness-ptc-creation-cordis-baidu-geek-2026, raw/articles/deepseek-harness-cordis-spatiotemporal-composability-paper-lss233-2026-09-04]
 review_value: 8
 review_confidence: 8
 ---
@@ -272,16 +272,36 @@ DSH 用 node:worker_threads 跑模型写的编排代码：node:vm 同进程沙�
 
 ## 第 12 来源 — Agent Plan x DeepSeek Harness 实践指南（火山方舟，2026-08-19）
 
-v×c=56, stars=4. 火山方舟（字节跳动技术团队）发布 Agent Plan 与 DSH 的集成实践指南。^[raw/articles/agent-plan-x-deepseek-harness-dsh-practice-guide.md]
+v×c=56, stars=4. 火山方舟（字节跳动技术团队）发布 Agent Plan 与 DSH 的集成实践指南。
 
 **互补角度 5 条：**
-1. **Agent Plan 作为 Plugin 工具箱** — DSH 提供插槽，Agent Plan 提供"量大管饱"的组件包：模型、搜索、专业数据集、Agent 记忆、Agent 进化、AI Native 开发底座。^[raw/articles/agent-plan-x-deepseek-harness-dsh-practice-guide.md]
-2. **Agent 记忆（OpenViking Context）** — 虚拟文件系统 + 语义检索的上下文数据库，把记忆/资源/技能统一抽象为文件，分层加载、按需召回，会话结束后自动沉淀长期记忆。^[raw/articles/agent-plan-x-deepseek-harness-dsh-practice-guide.md]
-3. **Agent 进化（Evolve 组件）** — 学习近期会话，识别可优化的指令文件（CLAUDE.md、AGENTS.md、Skills），生成带 diff、证据、风险值和置信度的优化建议，确认后才写入。^[raw/articles/agent-plan-x-deepseek-harness-dsh-practice-guide.md]
-4. **AI Native 开发底座** — 基于火山引擎 Supabase 的 Serverless PostgreSQL + 认证 + 对象存储 + 边缘函数 + 实时同步 + 推送即发布前端部署，agent 可用自然语言建表、写策略、部署。^[raw/articles/agent-plan-x-deepseek-harness-dsh-practice-guide.md]
-5. **投资研究助手实战案例** — 完整演示 DSH + Agent Plan 五组件协作：专业数据集查财务指标 → 豆包搜索获取实时新闻 → AI Native 底座建页面 → Agent 记忆跨会话保持偏好 → Agent 进化学习分析方法。^[raw/articles/agent-plan-x-deepseek-harness-dsh-practice-guide.md]
+1. **Agent Plan 作为 Plugin 工具箱** — DSH 提供插槽，Agent Plan 提供"量大管饱"的组件包：模型、搜索、专业数据集、Agent 记忆、Agent 进化、AI Native 开发底座。
+2. **Agent 记忆（OpenViking Context）** — 虚拟文件系统 + 语义检索的上下文数据库，把记忆/资源/技能统一抽象为文件，分层加载、按需召回，会话结束后自动沉淀长期记忆。
+3. **Agent 进化（Evolve 组件）** — 学习近期会话，识别可优化的指令文件（CLAUDE.md、AGENTS.md、Skills），生成带 diff、证据、风险值和置信度的优化建议，确认后才写入。
+4. **AI Native 开发底座** — 基于火山引擎 Supabase 的 Serverless PostgreSQL + 认证 + 对象存储 + 边缘函数 + 实时同步 + 推送即发布前端部署，agent 可用自然语言建表、写策略、部署。
+5. **投资研究助手实战案例** — 完整演示 DSH + Agent Plan 五组件协作：专业数据集查财务指标 → 豆包搜索获取实时新闻 → AI Native 底座建页面 → Agent 记忆跨会话保持偏好 → Agent 进化学习分析方法。
 
-→ [[raw/articles/agent-plan-x-deepseek-harness-dsh-practice-guide|原文存档]]
+→ [火山方舟 Agent Plan × DSH 实践指南](https://mp.weixin.qq.com/s?__biz=MzI1MzYzMjE0MQ==&mid=2247521375&idx=1&sn=e11bc1ebfc05563e0d0ab2d5d47835b5)（原始 Markdown 未随本次公开清理提交）
+
+## Cordis 运行时与时空可组合性范式（2026-09-04 Supplementary）
+
+lss233（腾讯技术工程）深度解析 DSH"一切皆插件"的心——**Cordis 框架**及其配套 88 页论文《A Programming Paradigm for Spatiotemporal Composability》（北大+DeepSeek，Yifan Shi 等），补上既有 chino 拆解（深机制）之外的**论文形式化（深理论）**维度。^[raw/articles/deepseek-harness-cordis-spatiotemporal-composability-paper-lss233-2026-09-04.md]
+
+### Cordis 五概念与 fiber/effect 机制
+
+Cordis 五个概念：插件、上下文、注入、事件、可逆副作用。^[raw/articles/deepseek-harness-cordis-spatiotemporal-composability-paper-lss233-2026-09-04.md] 插件事物树由 ctx.plugin(child) 派生子上下文构成（继承父、卸载按层级递归）。fiber 生命周期状态机（PENDING/LOADING/ACTIVE/FAILED/UNLOADING/DISPOSED）。**核心原语：ctx.effect**——"Cordis 中所有对上下文的变更都归结为 ctx.effect 这一个原语"（提供服务/挂载插件/注册监听器全是特例），因此"任何通过上下文的操作自动可追踪、可恢复"是结构事实；副作用可逆 → 热重载/故障自动恢复/测试隔离，DSH"改配置不用重启"底层即此。服务注入是响应式依赖：inject 声明后 fiber 保持 PENDING 直到服务就绪，提供方卸载→依赖方自动卸载、恢复→自动重载，与传统 DI"绑定即永久"相反。waterfall 事件（中间件）把多个互不相识插件组成决策链。
+
+### 论文：时空可组合性范式
+
+论文把动态组合拆成**时间维度**（temporal composability：组件移除时对共享环境的修改必须完整安全逆转）与**空间维度**（spatial composability：组件声明/发现/解析依赖）两个正交轴——因传统粗粒度替代（进程粒度重启丢状态 + 编排器粒度无法表达共享地址空间依赖）代价沉重。^[raw/articles/deepseek-harness-cordis-spatiotemporal-composability-paper-lss233-2026-09-04] 两个支柱是把编程语言理论的 **effect/coeffect** 从编译期静态分析工具提升为运行时机制：**可逆副作用**把 effect 建模为 e:Γ→Γ×(Γ→Γ)（当前上下文→新上下文+逆函数），逆交运行时组合，恢复成为结构保证（twisted composition 天然 LIFO、observational equivalence ≃ 而非字面相等、独立一族 effect 可任意顺序撤销）；**响应式余效应**把 IoC 形式化为类型化依赖表 Σ，activating/deactivating 分类通知使 inject 的"依赖变化被观察到"是代数保证非轮询，isolate（realm 域 ad-hoc 多态）/intercept（元数据幺半群右偏）。统一为 Context 范式 Γ∞=μΓ.Γ×(Γ→Γ)×Σ，定位为显式状态传递（函数式）与隐式变更（命令式）之间的第三极——"正确卸载、正确接线从开发者纪律变成定理"。
+
+**元理论五性质**：Preservation（保型）、全局 Temporal composability（撤一 fiber 贡献归零）、全局 Spatial composability（提供方离开前依赖方先停用）、Progress（无死锁且必然终止，前提依赖图无环）、Confluence（稳定状态只由最终配置决定，与装卸顺序无关→Loader 可增量对账任意顺序）。理论→代码完整映射（Γ∞→ctx、∂Γ→ctx.effect+fiber.accumulator、隔离拦截→ctx.isolate/intercept）；HMR 三阶段事务性重载不需开发者标注 accept 边界（fiber 界定效果边界）。工程延伸：系统边界（外部不可追踪位置可 reify 成可逆操作使边界内移）、补偿（不可逆"发射"按 LIFO 应用级补偿）、服务多路复用（service broker 负载均衡/滚动更新/跨进程，DSH llm 适配器注册表原型）。
+
+### DSH 自指工具集与插件槽位
+
+DSH 最值得注意的 @deepseek-ai/dsh-tool-cordis"自指的 Cordis 工具集"：cordis_inspect（只读巡检进程）、cordis_define（现场定义插件包）、cordis_run（宿主半 node:vm 沙箱执行+浏览器半推送每个网页）、cordis_stop/cordis_undefine——Agent 可检查自己运行的框架、现场编写运行动态插件、用完即卸，全程不动 cordis.yml/不装包/不重启 = **可进化 Agent 雏形**（论文结论把"自进化 Agent 运行时"列为该理论未来验证方向）。^[raw/articles/deepseek-harness-cordis-spatiotemporal-composability-paper-lss233-2026-09-04] 插件扩展点不是 API 列表而是一张服务注册表（capability-seams：执行/模型/智能/数据/环境/治理/编排/自指/前端九类槽位，每类可替换提供方）；"一切皆插件"在字面意义成立——浏览器里也运行独立 Cordis 客户端运行时（双半插件 RPC）。生态：Koishi 4000+ 插件（@koishijs 155 包、koishi-plugin-* 3951 包、cordis npm 近一年 51 万下载）、@cordisjs 独立通用生态 101 包、awesome-dsh-plugin 收录 174 个插件。论文与 8 类系统对比（传统 DI/React/OSGi/VS Code/微服务/monadic effect/代数效应/HMR），收束出"针对 Agent 运行时"的需求表。
+
+**与既有 chino 拆解的关系**：chino（deepseek-harness-cordis-runtime-mechanics，v×c=56）讲 Cordis fiber/effect/Loop/Preset/Code Mode 的**机制与工程对比**；本文以其**配套论文的形式化证明 + 自指工具集 + 插件槽位**为不可替代增量，两者同补到本实体，构成 DSH 运行时"机制×理论"两翼。这也解释了为何一篇 88 页论文以 Cordis 为研究对象——"安全地动态装卸组件"是自进化软件唯一靠得住的地基。
 
 ## 相关实体
 

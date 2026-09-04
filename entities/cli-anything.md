@@ -2,7 +2,7 @@
 
 title: "CLI-Anything"
 created: 2026-04-24
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [open-source, agent, tool, python]
 sources: [raw/articles/agent-tools-research, raw/articles/cli-anything-wechat-demo]
@@ -140,6 +140,6 @@ HKUDS 通过 CLI-Anything 建立了在 Agent Tools 领域的技术影响力，St
 
 ## 相关实体
 
-→ [[raw/articles/05-11-the-great-memory-panic-of-2026.md|原文存档]] ^[raw/articles/agent-tools-research.md]
+→ [[raw/articles/agent-tools-research|原文存档]] ^[raw/articles/agent-tools-research.md]
 
 - [[entities/gbrain|GBrain]]

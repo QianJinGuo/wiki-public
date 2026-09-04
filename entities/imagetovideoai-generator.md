@@ -4,9 +4,9 @@ title: "ImageToVideoAI - #1 Image to Video AI Generator Online"
 type: entity
 tags: [ai-video, image-to-video, content-creation, tool]
 created: 2026-05-15
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 6
-sources: []
+sources: [raw/articles/imagetovideoai-generator]
 review_confidence: 9
 review_recommendation: worth-reading
 review_stars: 3

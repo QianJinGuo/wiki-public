@@ -7,12 +7,12 @@ source_url:
 source: newsletter
 date: 2026-05-14
 review_value: 7
-sources: []
+sources: [raw/articles/automate-progressive-rollouts-with-vercel-flags-vercel]
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 3
 created: 2026-05-16
-updated: 2026-08-01
+updated: 2026-09-05
 ---
 
 > -> [[raw/articles/automate-progressive-rollouts-with-vercel-flags-vercel.md|原文存档]]

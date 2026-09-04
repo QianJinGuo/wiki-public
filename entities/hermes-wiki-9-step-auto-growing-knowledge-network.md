@@ -1,7 +1,7 @@
 ---
 title: "Hermes-Wiki 实战 — Obsidian + Hermes Agent 自动生长知识网络的 9 步搭建法"
 created: 2026-06-11
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [hermes-agent, obsidian, llm-wiki, knowledge-network, wikilink, knowledge-base, knowledge-compilation, self-growing, schema-driven, hermes-wiki, moc, source-first, knowledge-flywheel, mcp, scratch-vault, super-meng, network-effect]
 sources: [raw/articles/obsidian-hermes-wiki-auto-growing-knowledge-network]
@@ -121,7 +121,7 @@ SCHEMA.md / index.md / log.md，**这三件套比文件夹重要**。 ^[raw/arti
 
 **最容易出错的是 Windows 用户**： ^[raw/articles/obsidian-hermes-wiki-auto-growing-knowledge-network.md]
 - WSL/Ubuntu 里运行 Hermes → `WIKI_PATH` 要设置在 WSL 里，**不是 Windows PowerShell**
-- Windows + WSL：`export WIKI_PATH="/mnt/c/Users/你的用户名/Hermes-Wiki"`
+- Windows + WSL：`export WIKI_PATH=$(wslpath 'C:\Users\你的用户名\Hermes-Wiki')`
 - Mac：`export WIKI_PATH="$HOME/Hermes-Wiki"`
 
 ### 步骤 5 — 先只读，不要急着改

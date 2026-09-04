@@ -5,10 +5,10 @@ title: "Claude Code 工具设计复盘（官方）"
 created: 2026-05-17
 tags: [raw-article, claude, agent, harness, tool-design]
 review_value: 6
-sources: []
+sources: [raw/articles/claude-code-tool-design-evolution-anthropic]
 review_confidence: 10
 description: Anthropic 官方复盘 Claude Code 工具设计演进，揭示"能力适配"核心原则
-updated: 2026-06-19
+updated: 2026-09-05
 ---
 
 [[raw/articles/claude-code-tool-design-evolution-anthropic|Claude Code 工具设计复盘（官方）]] ^[raw/articles/claude-code-tool-design-evolution-anthropic.md]

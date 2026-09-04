@@ -7,12 +7,12 @@ type: entity
 source: newsletter
 source_url:
 review_value: 7
-sources: []
+sources: [raw/articles/localmaxxing]
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 3
 ingested: 2026-05-13
-updated: 2026-08-29
+updated: 2026-09-05
 ---
 
 ## Summary

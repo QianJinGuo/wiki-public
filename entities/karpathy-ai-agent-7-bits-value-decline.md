@@ -2,9 +2,9 @@
 title: "Karpathy AI Agent（七）：bits 与程序员价值"
 type: entity
 created: 2026-05-13
-updated: 2026-08-07
+updated: 2026-09-05
 tags: [agent, evaluation, architecture, ai]
-sources: []
+sources: [raw/articles/karpathy-vibe-coding-agentic-engineering-v4]
 review_value: 8
 review_confidence: 7
 provenance_state: inferred
@@ -96,6 +96,6 @@ Karpathy 的"bits"框架揭示了 AI Agent 时代程序员价值重构的核心�
 - [[entities/要实现一个工作流选择-agent-skills-还是-ai-表格|要实现一个工作流选择-agent-skills-还是-ai-表格]]
 
 
-→ [[raw/articles/karpathy-ai-agent-7-bits-value-decline-2026-allentan.md|原文存档]]
+→ [[raw/articles/karpathy-vibe-coding-agentic-engineering-v4|原文存档]]
 
 - [[entities/ai-agent-memory-systems|ai agent memory systems]]

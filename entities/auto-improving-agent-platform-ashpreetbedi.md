@@ -1,11 +1,11 @@
 ---
 title: "Auto-Improving Agent Platform (Ashpreet Bedi)"
 created: 2026-05-13
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [agent, open-source, ai]
 review_value: 7
-sources: []
+sources: [raw/articles/auto-improving-agent-platform-ashpreetbedi-shensi]
 review_confidence: 8
 provenance_state: inferred
 ---

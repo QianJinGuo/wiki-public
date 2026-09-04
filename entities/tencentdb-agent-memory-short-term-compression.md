@@ -5,12 +5,12 @@ description: "腾讯云 Agent Memory 的上下文卸载 + Mermaid 无限画布�
 source: "[[raw/articles/tencentdb-agent-memory-context-offloading|原文存档]]"
 tags: [agent-memory, context-offloading, mermaid, context-window, long-session, agent-framework, tencent]
 review_value: 8
-sources: []
+sources: [raw/articles/tencentdb-agent-memory-context-offloading]
 review_confidence: 7
 review_recommendation: strong
 review_stars: 4
 created: 2026-05-23
-updated: 2026-08-29
+updated: 2026-09-05
 provenance_state: inferred
 ---
 

@@ -4,9 +4,9 @@ title: "别让你的 Amazon Bedrock 模型为他人打工——API 调用安全�
 type: entity
 tags: [aws, bedrock, security, api, llm, infrastructure]
 created: 2026-05-14
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 8
-sources: []
+sources: [raw/articles/amazon-bedrock-api-security-guide]
 review_confidence: 9
 review_recommendation: strong
 review_stars: 4

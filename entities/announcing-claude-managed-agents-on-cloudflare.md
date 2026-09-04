@@ -4,9 +4,9 @@ title: Announcing Claude Managed Agents on Cloudflare
 type: entity
 tags: [article,newsletter]
 created: 2026-05-20
-updated: 2026-08-01
+updated: 2026-09-05
 review_value: 8
-sources: []
+sources: [raw/articles/announcing-claude-managed-agents-on-cloudflare]
 review_confidence: 8
 review_recommendation: strong
 ---

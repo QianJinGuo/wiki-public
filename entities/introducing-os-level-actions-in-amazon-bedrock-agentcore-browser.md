@@ -5,12 +5,12 @@ type: entity
 tags: [aws, bedrock, agent, browser, rss]
 source_url:
 review_value: 8
-sources: []
+sources: [raw/articles/introducing-os-level-actions-in-amazon-bedrock-agentcore-browser]
 review_confidence: 7
 review_recommendation: strong
 review_stars: 4
 created: 2026-05-11
-updated: 2026-08-01
+updated: 2026-09-05
 ---
 
 > -> [[raw/articles/introducing-os-level-actions-in-amazon-bedrock-agentcore-browser.md|原文存档]]

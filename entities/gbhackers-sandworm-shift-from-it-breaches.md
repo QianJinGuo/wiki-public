@@ -4,9 +4,9 @@ title: "Sandworm Hackers Shift From IT Breaches to Critical OT Targets"
 type: entity
 tags: [newsletter, apt, ot-security, critical-infrastructure]
 created: 2026-05-16
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/gbhackers-sandworm-shift-from-it-breaches]
 review_confidence: 8
 review_recommendation: worth-reading
 ---

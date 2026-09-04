@@ -1,14 +1,14 @@
 ---
 title: "Introducing Claude Platform on AWS: Anthropic's native platform, through your AWS account"
 created: 2026-05-12
-updated: 2026-08-24
+updated: 2026-09-05
 date: 2026-05-11T18:43:03Z
 source: "[[raw/articles/introducing-claude-platform-on-aws-anthropics-native-platfor|原文存档]]"
 type: entity
 value: 7
 tags: [claude-code, anthropic, aws, ai]
 review_value: 7
-sources: []
+sources: [raw/articles/introducing-claude-platform-on-aws-anthropics-native-platfor]
 review_confidence: 7
 ---
 

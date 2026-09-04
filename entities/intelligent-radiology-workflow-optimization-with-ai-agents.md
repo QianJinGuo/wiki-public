@@ -4,9 +4,9 @@ title: Intelligent radiology workflow optimization with AI agents
 type: entity
 tags: [healthcare, ai-agents, aws, radiology]
 created: 2026-05-22
-updated: 2026-05-22
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/intelligent-radiology-workflow-optimization-with-ai-agents]
 review_confidence: 8
 review_stars: 4
 ---

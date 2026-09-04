@@ -5,9 +5,9 @@ future: Developer highlights from I/O 2026
 type: entity
 tags: [newsletter, google-io-2026, agentic-ai, gemini, antigravity]
 created: 2026-05-20
-updated: 2026-05-21
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/building-the-agentic-future-developer-highlights-from-io-2026]
 review_confidence: 8
 review_recommendation: worth-reading
 ---

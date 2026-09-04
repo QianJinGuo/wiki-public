@@ -2,7 +2,7 @@
 title: "Microsoft MXC — 跨 OS 代理代码执行容器：AppContainer/Sandbox/Hyperlight 三层隔离"
 description: "Microsoft Build 2026 开源的 Microsoft eXecution Container (MXC)：单一 dispatcher 跨 Windows/Linux/macOS 调度 10 种 OS-原生沙箱后端，AppContainer 三层 fallback、bubblewrap/seatbelt 稳定，Hyperlight/NanVix/WSLC 实验性。"
 created: 2026-06-09
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [sandbox, microsoft, agent-security, open-source, mxc, appcontainer, hyper-v, seatbelt, bubblewrap, os-containment, harness-engineering]
 sources: [raw/articles/microsoft-mxc-execution-containers-agent-sandbox-origin]
@@ -160,5 +160,5 @@ Hyperlight 让 CPython 直接 library call 进 Unikraft micro-VM，每次 rewind
 - [[entities/microsoft-open-sources-rampart-clarity|Microsoft RAMPART/Clarity]] — 同期微软开源的 agent 红队 + 可观测性栈
 - **Cloud Agent Infrastructure** — 云端 agent state/凭据隔离
 - [[entities/agent-security-three-step-sequence-harness-governance-identity-crewai|CrewAI Agent Security 三步防护]] — 应用层 guardrail 视角
-- [[entities/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security|AI Tool Poisoning 调查]] — agent 工具被污染的攻击面
+- [[entities/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security-v2|AI Tool Poisoning 调查]] — agent 工具被污染的攻击面
 - **Harness Engineering** — 隔离是 harness 的关键支柱之一

@@ -4,13 +4,13 @@ slug: openclaw-multi-2
 type: entity
 title: "AI Agent 的迁移与现代化 — 使用 Amazon Bedrock AgentCore 将 OpenClaw 从单机改造为多租户 Serverless 架构 第二篇"
 created: 2026-05-11
-updated: 2026-08-29
+updated: 2026-09-05
 source: rss
 url:
 ingested: 2026-05-11
 tags: [openclaw, bedrock-agentcore, multi-tenant, architecture, migration]
 review_value: 6
-sources: []
+sources: [raw/articles/openclaw-multi-2]
 review_confidence: 7
   - AWS China ML
   - AWS, Bedrock, AgentCore, OpenClaw, Serverless

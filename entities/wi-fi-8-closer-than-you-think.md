@@ -3,9 +3,9 @@ title: "Wi-Fi 8 is closer than you think. Here’s what you need to know"
 type: entity
 tags: [wi-fi, networking, wireless, ieee, 80211]
 created: 2026-05-15
-updated: 2026-06-19
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/wi-fi-8-closer-than-you-think]
 review_confidence: 9
 review_recommendation: strong
 review_stars: 5

@@ -4,11 +4,11 @@ title: "量子位编辑作者招聘"
 type: entity
 tags: [recruitment, media, ai]
 created: 2026-05-13
-updated: 2026-08-01
+updated: 2026-09-05
 source: wechat
 source_url:
 review_value: 7
-sources: []
+sources: [raw/articles/liangzi-Recruitment]
 review_confidence: 8
 ---
 

@@ -4,9 +4,9 @@ title: "Square Adds Drive-Thru to the Menu"
 type: entity
 tags: [newsletter, article]
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/square-adds-drive-thru-to-the-menu]
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 4

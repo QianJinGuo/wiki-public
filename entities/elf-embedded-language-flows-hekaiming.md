@@ -3,9 +3,9 @@
 title: "ELF: Embedded Language Flows (何恺明)"
 type: entity
 created: 2026-05-13
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [he-kaiming, diffusion, language-model, elf, flow-matching]
-sources: []
+sources: [raw/articles/elf-embedded-language-flows-hekaiming-105m]
 review_value: 8
 review_confidence: 9
 

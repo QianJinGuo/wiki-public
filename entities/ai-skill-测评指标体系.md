@@ -7,7 +7,7 @@ type: entity
 tags: [ai-skill, evaluation, metrics, framework]
 value: 7
 review_value: 9
-sources: []
+sources: [raw/articles/ai-skill-测评指标体系]
 review_confidence: 7
 ---
 

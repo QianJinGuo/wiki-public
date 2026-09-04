@@ -5,9 +5,9 @@ author: AI 小老六
 publish_date: 2026-05-19
 tags: [wechat, hermes-agent, agent, runtime, engineering]
 created: 2026-05-19
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 8
-sources: []
+sources: [raw/articles/hermes-agent-goal-runtime-architecture-state-persistence-judge-closed-loop]
 review_stars: 4
 sha256: 9819ead7b0dd01694b9f2b5c32eaa9556fe1643a0a8b063a8651b2e4260fc1d1
 type: entity

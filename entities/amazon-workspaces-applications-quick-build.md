@@ -4,9 +4,9 @@ title: "基于 Amazon WorkSpaces Applications 快速搭建企业级应用培训�
 type: entity
 tags: [aws, amazon-workspaces, training, cloudformation, devops]
 created: 2026-05-19
-updated: 2026-08-07
+updated: 2026-09-05
 review_value: 8
-sources: []
+sources: [raw/articles/amazon-workspaces-applications-quick-build]
 review_confidence: 8
 review_recommendation: strong
 ---

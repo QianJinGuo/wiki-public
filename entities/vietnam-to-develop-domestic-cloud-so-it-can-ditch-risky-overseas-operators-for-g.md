@@ -3,9 +3,9 @@ title: "Vietnam to develop domestic cloud so it can ditch risky overseas operato
 type: entity
 tags: [newsletter, www-theregister-com]
 created: 2026-05-15
-updated: 2026-06-19
+updated: 2026-09-05
 review_value: 8
-sources: []
+sources: [raw/articles/vietnam-to-develop-domestic-cloud-so-it-can-ditch-risky-overseas-operators-for-g]
 review_confidence: 8
 review_recommendation: strong
 ---

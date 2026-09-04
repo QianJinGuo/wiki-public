@@ -7,7 +7,7 @@ review_value: 8
 review_confidence: 8
 review_recommendation: strong
 publish_date: 2026-04-23
-updated: 2026-08-01
+updated: 2026-09-05
 type: entity
 ---
 ## 概述
@@ -66,10 +66,10 @@ AgentCore Runtime 的核心价值在于为每个任务提供独立隔离执行�
 - [[entities/amazon-cloudfront-deploy-guide-cloudfront-domain-multi-tenant-architecture|Amazon CloudFront部署小指南（二十四）：将CloudFront “多域名”改造为”多租户”架构 | 亚马逊AWS官方博客]]
 - [[entities/www-networkworld-com-versa-takes-aim-at-fragmented-enterprise-security|Versa takes aim at fragmented enterprise security with CSPM, orchestration update, and AI agent controls]]
 - [[entities/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security-v2|AI tool poisoning exposes a major flaw in enterprise agent security]]
-- [[entities/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security|AI tool poisoning exposes a major flaw in enterprise agent security | VentureBeat]]
+- [[entities/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security-v2|AI tool poisoning exposes a major flaw in enterprise agent security | VentureBeat]]
 - [[entities/openclaw-service-enterprise-share-system-design|当 OpenClaw 学会”团队记忆”：一个面向多客户服务的企业级共享记忆系统设计 | 亚马逊AWS官方博客]]
 
-→ [[raw/articles/amazon-cloudfront-deploy-guide-cloudfront-domain-multi-tenant-architecture.md|原文存档]] ^[raw/articles/enterprise-openclaw-security-deploy-architecture-guide.md]
+→ [[raw/articles/enterprise-openclaw-security-deploy-architecture-guide|原文存档]] ^[raw/articles/enterprise-openclaw-security-deploy-architecture-guide.md]
 
 - [[entities/ci-t-based-on-amazon-bedrock-agentcore-openclaw-enterprise-intelligent-operations-best-practices|CI&amp;T基于 Amazon Bedrock AgentCore 与 OpenClaw 的企业级智能运维最佳实践 | 亚马逊AWS官方博客]]
 - [[moc/openclaw-architecture|MOC]]

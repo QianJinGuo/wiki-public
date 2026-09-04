@@ -2,7 +2,7 @@
 title: 'RAG深度解析：分块、向量化、召回、重排，才是"蒸馏同事skill"的关键'
 type: entity
 review_value: 6
-sources: []
+sources: [raw/articles/rag深度解析分块向量化召回重排才是蒸馏同事skill的关键]
 review_confidence: 8
 tags: [mlops, rag, llm, engineering]
 created: "2026-05-16"

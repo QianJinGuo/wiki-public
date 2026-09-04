@@ -4,14 +4,14 @@ type: entity
 name: Stripe Sessions 2026
 description: "Stripe Sessions 2026 announcements: Stripe Agents (AI agents for payments), Stripe Elevate fraud, new SDK features for AI-native payment development."
 review_value: 7
-sources: []
+sources: [raw/articles/stripe-sessions-2026-ai-agents]
 review_confidence: 8
 review_verdict: strong
 stars: 4
 source: newsletter
 source_url: ""
 ingested: 2026-05-08
-updated: 2026-08-24
+updated: 2026-09-05
 created: 2026-05-10
 tags: [stripe, payment, agent, engineering]
 provenance_state: inferred

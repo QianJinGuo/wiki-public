@@ -5,7 +5,7 @@ updated: 2026-05-10
 type: entity
 tags: [mlops, deepseek, wechat]
 review_value: 6
-sources: []
+sources: [raw/articles/redis之父下场给deepseek-v4单独造了一台推理引擎]
 review_confidence: 7
 ---
 > → [[raw/articles/redis之父下场给deepseek-v4单独造了一台推理引擎.md|原文存档]]

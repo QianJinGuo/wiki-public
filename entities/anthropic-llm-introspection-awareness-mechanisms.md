@@ -10,7 +10,7 @@ url:
 review_value: 9
 review_confidence: 9
 review_stars: 5
-updated: 2026-08-29
+updated: 2026-09-05
 sources: [raw/articles/anthropic-llm-introspection-awareness-mechanisms]
 ---
 ## 核心摘要
@@ -99,5 +99,5 @@ Lindsey（2025）首次在 Claude 模型中观察到内省现象，但对其机�
 - [[entities/hermes-self-evolution-closed-loop-skill-reuse-winty]]
 - [[entities/four-browser-automation-tools-comparison]]
 
-→ [[raw/articles/agent-self-improvement-six-mechanisms.md|原文存档]]
+→ [[raw/articles/anthropic-llm-introspection-awareness-mechanisms|原文存档]]
 > ai agent platforms topic map（已删除） ^[raw/articles/anthropic-llm-introspection-awareness-mechanisms.md]

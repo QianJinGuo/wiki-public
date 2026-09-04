@@ -4,9 +4,9 @@ title: "Pinterest Is Making Ads More Intent-Aware, Not Just Interest"
 type: entity
 tags: [pinterest, advertising, intent-targeting, digital-marketing, wersm]
 created: 2026-05-15
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/pinterest-intent-aware-ads-wersm]
 review_confidence: 8
 review_recommendation: strong
 review_stars: 3

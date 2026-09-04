@@ -2,12 +2,12 @@
 
 title: "Perplexity 内部 Skill 设计指南：四维体系与维护方法论"
 created: 2026-05-20
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, skill, perplexity, evaluation, hub-and-spoke, 路由触发器]
 rating: 8.5
 confidence: 8.5
 review_value: 7
-sources: []
+sources: [raw/articles/perplexity-internal-skill-design-guide-xiaojianke]
 related:
   - "agent-skill-writing-guide"
   - "agent-skill-writing-evaluation"
@@ -187,6 +187,6 @@ Perplexity 的 Skill 设计体系折射出 LLM 应用工程的根本性范式转
 - [[concepts/hermes-agent-skill|Hermes Agent Skill]]
 
 
-→ [[raw/articles/aeo-and-geo-for-ai-overviews-chatgpt-claude-gemini-and-perplexity.md|原文存档]]
+→ [[raw/articles/perplexity-internal-skill-design-guide-xiaojianke|原文存档]]
 
 - [[entities/agent-engineering-principles-architecture-practice|Agent 原理、架构与工程实践]]

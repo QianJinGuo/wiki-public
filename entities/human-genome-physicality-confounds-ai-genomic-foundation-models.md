@@ -1,10 +1,9 @@
 ---
 title: "Why the Human Genome's Tangled Physicality May Confound AI"
 created: 2026-06-19
-updated: 2026-08-01
+updated: 2026-09-05
 type: entity
 tags: [ai-for-science, genomics, foundation-model, ai4s, deepmind, biological-ai]
-provenance_state: inferred
 source: "[[raw/articles/human-genome-physicality-confounds-ai-genomic-foundation-models]]"
 sources:
   - raw/articles/human-genome-physicality-confounds-ai-genomic-foundation-models

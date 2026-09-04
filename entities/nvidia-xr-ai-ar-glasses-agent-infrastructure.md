@@ -3,10 +3,9 @@
 title: "NVIDIA XR AI：AR 眼镜与 XR 设备的 AI Agent 基础设施"
 description: "NVIDIA 开源 XR AI 库，连接 XR 设备与 GPU 加速 AI 服务，支持视觉接地、语音交互、MCP 企业工具集成"
 created: 2026-06-19
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [nvidia, xr, ar, agent, mcp, edge-ai, multimodal, computer-vision]
-provenance_state: inferred
 source: "[[raw/articles/building-ai-agents-for-ar-glasses-and-xr-devices-with-nvidia-xr-ai]]"
 sources:
   - raw/articles/building-ai-agents-for-ar-glasses-and-xr-devices-with-nvidia-xr-ai

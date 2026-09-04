@@ -3,9 +3,9 @@ title: "Public Stealth Leaves Opportunity on the Table"
 type: entity
 tags: [startup, stealth, funding, strategy]
 created: 2026-05-14
-updated: 2026-08-04
+updated: 2026-09-05
 review_value: 8
-sources: []
+sources: [raw/articles/thisisgoingtobebig-public-stealth]
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 3

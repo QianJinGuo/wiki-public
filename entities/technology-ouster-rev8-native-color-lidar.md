@@ -4,12 +4,12 @@ title: "World’s first native color LiDAR gives machines human-like vision"
 type: entity
 tags: [lidar, hardware, 3d-vision, autonomous]
 review_value: 7
-sources: []
+sources: [raw/articles/technology-ouster-rev8-native-color-lidar]
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4
 created: 2026-05-15
-updated: 2026-08-29
+updated: 2026-09-05
 ---
 
 # World’s first native color LiDAR gives machines human-like vision

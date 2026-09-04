@@ -4,7 +4,7 @@ title: Securing AI Agents and Machine Identities
 type: entity
 tags: [1password, ai-security, iam, authentication, non-human-identity, credential-management, visualization]
 created: 2026-05-20
-updated: "2026-06-02"
+updated: 2026-09-05
 review_value: 7
 review_confidence: 8
 review_recommendation: worth-reading
@@ -114,7 +114,7 @@ AI 代理具有自主决策和行动能力，其身份验证凭证（如 API 密
 - 以机器身份执行敏感操作
 - 绕过基于人类行为的异常检测机制
 
-这与 [[entities/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security|Tool Poisoning 攻击]] 形成互补威胁——后者针对工具供应链，前者针对身份认证层。 ^[raw/articles/1password-securing-ai-agents-machine-identities.md]
+这与 [[entities/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security-v2|Tool Poisoning 攻击]] 形成互补威胁——后者针对工具供应链，前者针对身份认证层。 ^[raw/articles/1password-securing-ai-agents-machine-identities.md]
 
 ### 传统 IAM 的局限性
 

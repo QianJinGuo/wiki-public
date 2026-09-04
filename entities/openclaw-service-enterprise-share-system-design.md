@@ -2,7 +2,7 @@
 
 title: "当 OpenClaw 学会”团队记忆”：一个面向多客户服务的企业级共享记忆系统设计 | 亚马逊AWS官方博客"
 created: 2026-05-14
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [aws-china-blog, openclaw]
 sources: [raw/articles/openclaw-service-enterprise-share-system-design]
 review_value: 8
@@ -110,6 +110,6 @@ memory-agentcore 的核心架构决策是**不占用 OpenClaw 独占 Slot**，�
 - [[moc/openclaw-architecture|MOC]]
 ## Related
 
-→ [[raw/articles/claude-managed-agents-self-hosted-sandbox-mcp-tunnels-enterprise.md|原文存档]] ^[raw/articles/openclaw-service-enterprise-share-system-design.md]
+→ [[raw/articles/openclaw-service-enterprise-share-system-design|原文存档]] ^[raw/articles/openclaw-service-enterprise-share-system-design.md]
 
 - [[800行代码实现-open-claw-的-tool消息总线子agent管理架构|OpenClaw Tool 消息总线架构]]

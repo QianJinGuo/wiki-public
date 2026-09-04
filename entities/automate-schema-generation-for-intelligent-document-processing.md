@@ -5,13 +5,13 @@ type: entity
 source: rss
 source_url:
 review_value: 8
-sources: []
+sources: [raw/articles/automate-schema-generation-for-intelligent-document-processing]
 review_confidence: 9
 review_recommendation: strong
 date: 2026-05-13
 tags: [aws]
 created: 2026-05-16
-updated: 2026-08-07
+updated: 2026-09-05
 ---
 
 > → [[raw/articles/automate-schema-generation-for-intelligent-document-processing.md|原文存档]] ^[raw/articles/automate-schema-generation-for-intelligent-document-processing.md]

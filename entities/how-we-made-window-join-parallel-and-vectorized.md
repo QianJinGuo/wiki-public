@@ -4,9 +4,9 @@ title: "How we made WINDOW JOIN parallel and vectorized"
 type: entity
 tags: [article, newsletter]
 created: 2026-05-14
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 8
-sources: []
+sources: [raw/articles/how-we-made-window-join-parallel-and-vectorized]
 review_confidence: 9
 review_recommendation: worth-reading
 ---

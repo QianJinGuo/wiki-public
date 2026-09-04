@@ -3,9 +3,9 @@ title: "Hackers accessed BWH Hotels reservation system for months"
 type: entity
 tags: [security, breach, hotels, data-leak, cyber]
 created: 2026-05-14
-updated: 2026-08-05
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/securityaffairs-bwh-hotels-breach]
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 3

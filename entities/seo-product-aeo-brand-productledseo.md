@@ -4,9 +4,9 @@ title: "SEO is a product, AEO is brand"
 type: entity
 tags: [seo, aeo, content-strategy, search-marketing, productledseo]
 created: 2026-05-15
-updated: 2026-06-19
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/seo-product-aeo-brand-productledseo]
 review_confidence: 8
 review_recommendation: strong
 review_stars: 3

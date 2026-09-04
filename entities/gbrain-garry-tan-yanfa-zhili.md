@@ -5,9 +5,9 @@ source: "[[raw/articles/gbrain-garry-tan-yanfa-zhili|原文存档]]"
 type: entity
 value: 7
 tags: [claude-code, agent, skill, open-source, ai]
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 9
-sources: []
+sources: [raw/articles/gbrain-garry-tan-yanfa-zhili]
 review_confidence: 7
 ---
 

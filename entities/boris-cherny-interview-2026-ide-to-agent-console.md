@@ -3,11 +3,11 @@ title: "Boris Cherny 新访谈：开发工具正在从 IDE 变成 Agent 控制�
 source: "[[raw/articles/boris-cherny-interview-2026-ide-to-agent-console|原文存档]]"
 type: entity
 review_value: 7
-sources: []
+sources: [raw/articles/boris-cherny-interview-2026-ide-to-agent-console]
 review_confidence: 7
 tags: [claude-code, agent, engineering, ai]
 created: "2026-05-18"
-updated: 2026-08-24
+updated: 2026-09-05
 ---
 > 来源：[[raw/articles/boris-cherny-interview-2026-ide-to-agent-console|原文存档]]
 

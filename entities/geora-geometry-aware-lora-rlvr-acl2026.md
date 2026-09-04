@@ -1,7 +1,8 @@
 ---
+
 title: "GeoRA: Geometry-Aware Low-Rank Adaptation for RLVR"
 created: 2026-08-30
-updated: 2026-08-30
+updated: 2026-09-05
 type: entity
 tags: [lora, rlvr, fine-tuning, reinforcement-learning, acl2026, low-rank]
 sources: [raw/articles/geora-geometry-aware-lora-rlvr-acl2026]
@@ -10,7 +11,7 @@ confidence: 0.85
 
 # GeoRA: Geometry-Aware Low-Rank Adaptation for RLVR
 
-ACL 2026 杰出论文。美团履约技术团队提出了一种专为 RLVR（Reinforcement Learning from Verifiable Rewards）设计的低秩训练方法。
+ACL 2026 杰出论文。美团履约技术团队提出了一种专为 RLVR（Reinforcement Learning from Verifiable Rewards）设计的低秩训练方法。 ^[raw/articles/geora-geometry-aware-lora-rlvr-acl2026.md]
 
 ## 核心问题
 
@@ -32,4 +33,4 @@ RLVR 场景下，标准 LoRA 的低秩约束与 RL 训练的几何特性不匹�
 
 - 论文：[GeoRA: Geometry-Aware Low-Rank Adaptation for RLVR](https://aclanthology.org/2026.acl-long.1110/)
 
-→ [[raw/articles/geora-geometry-aware-lora-rlvr-acl2026|原文存档]]
+→ [[raw/articles/geora-geometry-aware-lora-rlvr-acl2026|原文存档]] ^[raw/articles/geora-geometry-aware-lora-rlvr-acl2026.md]

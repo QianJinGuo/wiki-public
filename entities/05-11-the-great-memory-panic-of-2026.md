@@ -4,12 +4,12 @@ title: "The great memory panic of 2026"
 type: entity
 tags: [memory, hardware, llm, inference, 2026]
 review_value: 7
-sources: []
+sources: [raw/articles/05-11-the-great-memory-panic-of-2026]
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4
 created: 2026-05-15
-updated: 2026-09-01
+updated: 2026-09-05
 ---
 
 ## 摘要

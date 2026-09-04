@@ -4,9 +4,9 @@ title: "Building is just the beginning: Introducing Discoverability"
 type: entity
 tags: [newsletter, lovable.dev]
 created: 2026-05-16
-updated: 2026-05-20
+updated: 2026-09-05
 review_value: 5
-sources: []
+sources: [raw/articles/building-is-just-the-beginning-introducing-discove]
 review_confidence: 10
 review_recommendation: strong
 review_stars: 4

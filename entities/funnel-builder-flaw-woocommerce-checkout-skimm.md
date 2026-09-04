@@ -3,9 +3,9 @@ title: "Funnel Builder Flaw Under Active Exploitation Enables WooCommerce Checko
 type: entity
 tags: [security, ai-agents, bug-bounty]
 created: 2026-05-20
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 8
-sources: []
+sources: [raw/articles/funnel-builder-flaw-woocommerce-checkout-skimm]
 review_confidence: 9
 review_recommendation: strong
 review_stars: 4

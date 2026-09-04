@@ -2,11 +2,11 @@
 
 title: "CyberSecQwen-4B: Why Defensive Cyber Needs Small, Specialized, Locally-Runnable Models"
 created: 2026-05-12
-updated: 2026-05-20
+updated: 2026-09-05
 type: entity
 tags: [newsletter, security, small-language-model, defensive-cyber, local-ai, amd-mi300x]
 review_value: 6
-sources: []
+sources: [raw/articles/cybersecqwen-4b-why-defensive-cyber-needs-small-specialized-locally-runnable-mod]
 review_confidence: 7
 ---
 

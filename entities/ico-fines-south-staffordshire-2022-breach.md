@@ -4,13 +4,13 @@ title: "ICO fines South Staffordshire £963K over 2022 breach"
 source: newsletter (www.theregister.com)
 source_url:
 review_value: 5
-sources: []
+sources: [raw/articles/computerweekly-ico-fines-cl0p-south-staffs-water]
 review_confidence: 7
 review_recommendation: worth-reading
 review_stars: 3
 type: entity
 created: 2026-05-13
-updated: 2026-08-07
+updated: 2026-09-05
 provenance_state: inferred
 ---
 

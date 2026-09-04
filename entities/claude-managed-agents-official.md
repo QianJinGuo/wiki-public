@@ -7,9 +7,9 @@ date: 2026-05-08
 source: newsletter
 tags: [claude-code, anthropic, agent, multi-agent]
 created: 2026-05-10
-updated: 2026-06-30
+updated: 2026-09-05
 review_value: 6
-sources: []
+sources: [raw/articles/claude-managed-agents-official]
 review_confidence: 7
 ---
 

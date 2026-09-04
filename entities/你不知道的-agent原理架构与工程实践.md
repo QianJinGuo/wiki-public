@@ -4,7 +4,7 @@ title: "你不知道的 Agent：原理、架构与工程实践"
 type: entity
 tags: [mlops, wechat, llm, ai-agent, engineering]
 review_value: 7
-sources: []
+sources: [raw/articles/你不知道的-agent原理架构与工程实践]
 review_confidence: 8
 created: 2026-05-16
 updated: 2026-05-16

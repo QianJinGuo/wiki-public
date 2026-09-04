@@ -7,7 +7,7 @@ type: entity
 value: 8
 tags: [claude-code, agent, harness-engineering, architecture]
 review_value: 9
-sources: []
+sources: [raw/articles/subagents-详解claude-code-如何避免上下文污染]
 review_confidence: 7
 ---
 

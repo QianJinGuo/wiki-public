@@ -2,10 +2,9 @@
 title: "SageMaker 推理可观测性：100+ 详细指标 + CloudWatch Insights Dashboard"
 description: "AWS SageMaker AI 推理端点详细可观测性方案，含 GPU 健康、Token 级延迟、KV Cache 压力、AZ 分布、冷启动诊断等 100+ 指标，内置 CloudWatch Insights Dashboard 支持 Performance/Capacity/Reliability 三视图，可对接 Grafana PromQL。"
 created: 2026-06-19
-updated: 2026-08-30
+updated: 2026-09-05
 type: entity
 tags: [mlops, inference, observability, aws, sagemaker, cloudwatch, llm-serving, monitoring]
-provenance_state: inferred
 source: [[raw/articles/monitor-and-debug-generative-ai-inference-with-sagemaker-det]]
 confidence: 0.8
 provenance_state: extracted

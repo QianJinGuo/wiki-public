@@ -9,10 +9,10 @@ sha256: c0f8e3a1d7b2f4e9a6c8d1b3f5a7e2c4d8b6f1a3e5c7d9b2f4a6e8c1d3b7f9a5
 review_stars: 3
 review_recommendation: STRONG
 created: 2026-05-10
-updated: 2026-08-07
+updated: 2026-09-05
 tags: [claude-code, skill, ai]
 review_value: 8
-sources: []
+sources: [raw/articles/tmall-ai-coding-practice-team-knowledge-base-npm]
 review_confidence: 7
 provenance_state: inferred
 ---

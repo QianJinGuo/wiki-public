@@ -4,9 +4,9 @@ title: 第一批「AI原生」本科生，要毕业了
 type: entity
 tags: [ai, education, llm, openai]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 5
-sources: []
+sources: [raw/articles/ai-native-undergrads-graduation-2026]
 review_confidence: 6
 review_recommendation: worth-reading
 review_stars: 3

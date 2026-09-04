@@ -4,9 +4,9 @@ title: "What political censorship looks like inside an LLM's weights — a mecha
 type: entity
 tags: [article, newsletter]
 created: 2026-05-20
-updated: 2026-09-03
+updated: 2026-09-05
 review_value: 8
-sources: []
+sources: [raw/articles/what-political-censorship-looks-like-inside-an-llm-s-weights]
 review_confidence: 8
 review_recommendation: strong
 ---

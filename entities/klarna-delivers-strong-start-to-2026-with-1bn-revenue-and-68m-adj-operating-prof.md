@@ -4,9 +4,9 @@ title: "Klarna delivers strong start to 2026 with $1bn revenue and $68m adj. ope
 type: entity
 tags: [newsletter, fintech, buy-now-pay-later, q1-2026]
 created: 2026-05-18
-updated: 2026-05-20
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/klarna-delivers-strong-start-to-2026-with-1bn-revenue-and-68m-adj-operating-prof]
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 3

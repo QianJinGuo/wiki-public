@@ -9,13 +9,13 @@ feed_name: ""
 published: 2026-05-10
 source_url:
 review_value: 8
-sources: []
+sources: [raw/articles/pi-main-agent-engineering-17-dimensions]
 review_confidence: 9
 review_recommendation: strong
 review_stars: 5
 tags: [ai-agent, pi-main, 工程实践, react, 工具系统, 记忆系统, hitl]
 created: 2026-05-20
-updated: 2026-08-29
+updated: 2026-09-05
 summary: "pi-main 开源 AI 编程引擎的 17 个工程设计维度源码级拆解，含核心主循环、纠错机制、工具系统、记忆压缩、扩展性等可直接照抄的设计清单"
 
 ---

@@ -3,7 +3,7 @@
 type: entity
 title: "小米AI — ICML 2026 论文矩阵（11篇）"
 created: 2026-05-15
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [icml-2026, xiaomi, gui-agent, video2gui, wildgui, guievalkit, come, led, veritime, visual-para-thinker, video-opd, mec, gad, r3, spark, mixture-of-experts, latent-exploration-decoding, neural-architecture-search, multimodal, audio-understanding, llm-reasoning, distillation, autonomous-agent]
 review_value: 7
 review_confidence: 7
@@ -134,7 +134,7 @@ LLM 驱动的神经架构搜索： ^[raw/articles/xiaomi-icml-2026-11papers-da76
 - [[entities/sensnova-u1|SenseNova-U1 — 商汤原生统一多模态模型]]
 
 
-→ [[raw/articles/2026.md|原文存档]] ^[raw/articles/xiaomi-icml-2026-11papers-da769794d77c.md]
+→ [[raw/articles/xiaomi-icml-2026-11papers-da769794d77c|原文存档]] ^[raw/articles/xiaomi-icml-2026-11papers-da769794d77c.md]
 
 - [[entities/deepseek-visual-primitives|DeepSeek Visual Primitives：视觉原语作为思考媒介]]
 - [[entities/icml-2026-position-turing-completeness-context-management-ruc-wei-2026|icml 2026 position paper — transformer 图灵完备性高度依赖上下文管理 (ruc 魏]]

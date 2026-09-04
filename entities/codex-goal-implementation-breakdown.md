@@ -3,10 +3,10 @@
 type: entity
 title: "Codex /goal 实现拆解：长任务 Agent 不只是多跑几轮"
 created: 2026-05-17
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [raw-article]
 review_value: 5
-sources: []
+sources: [raw/articles/codex-goal-implementation-breakdown, raw/articles/2026]
 review_confidence: 10
 description: Auto-generated entity for raw article
 ---

@@ -6,7 +6,7 @@ tags: [openspec, sdd, ai-development-workflow, quality-assurance]
 created: 2026-05-19
 updated: 2026-05-20
 review_value: 7
-sources: []
+sources: [raw/articles/openspec-四步法深度复盘-流程完整不等于代码正确]
 review_confidence: 7
 review_recommendation: strong
 review_stars: 4

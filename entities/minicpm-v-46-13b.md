@@ -1,11 +1,11 @@
 ---
 title: "MiniCPM-V 4.6 (1.3B) 面壁智能"
 created: 2026-05-13
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [open-source, architecture]
 review_value: 6
-sources: []
+sources: [raw/articles/minicpm-v-46-13b-xinazhiyuan]
 review_confidence: 7
 provenance_state: inferred
 ---

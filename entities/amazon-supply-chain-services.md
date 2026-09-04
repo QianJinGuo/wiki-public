@@ -7,12 +7,12 @@ source: newsletter
 source_url:
 published: 2026-05-04
 review_value: 7
-sources: []
+sources: [raw/articles/amazon-supply-chain-services]
 review_confidence: 7
 review_recommendation: worth-reading
 review_stars: 3
 created: 2026-05-13
-updated: 2026-08-01
+updated: 2026-09-05
 ---
 
 > -> [[raw/articles/amazon-supply-chain-services.md|原文存档]]

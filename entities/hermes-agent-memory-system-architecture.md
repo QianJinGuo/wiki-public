@@ -2,14 +2,14 @@
 source_url: "https://mp.weixin.qq.com/s/8NJUWyR_u9UNM_9J4l_NGg"
 title: "Hermes Agent 记忆系统"
 created: 2026-05-19
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [hermes-agent, nous-research, memory-system, agent-architecture, layered-memory, memory-provider, prefix-cache, context-fencing, prompt-injection, atomic-write, sqlite, fts5]
 related: []
 author: "VibeCoder"
 year: 2026
 rating: 8/8.0
 review_value: 8
-sources: []
+sources: [raw/articles/hermes-agent-memory-system-architecture]
 review_confidence: 8
 review_result: worth-reading
 sha256: "7aa779ce5254a6bc9e3b475619d39c4e56244a073291e77f72882ff8b732959b"

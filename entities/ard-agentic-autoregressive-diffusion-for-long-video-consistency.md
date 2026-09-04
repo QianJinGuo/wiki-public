@@ -7,12 +7,12 @@ type: entity
 source: newsletter
 source_url:
 review_value: 8
-sources: []
+sources: [raw/articles/ard-agentic-autoregressive-diffusion-for-long-video-consistency]
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4
 ingested: 2026-05-13
-updated: 2026-08-01
+updated: 2026-09-05
 ---
 
 > -> [[raw/articles/ard-agentic-autoregressive-diffusion-for-long-video-consistency|原文存档]]

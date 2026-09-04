@@ -4,9 +4,9 @@ title: "Is Software Losing Its Head?"
 type: entity
 tags: [software-architecture, llm, headless, a16z]
 created: 2026-05-15
-updated: 2026-05-18
+updated: 2026-09-05
 review_value: 8
-sources: []
+sources: [raw/articles/is-software-losing-its-head-a16z]
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4

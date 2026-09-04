@@ -8,7 +8,7 @@ source_url:
 feed_name: 机器之心
 source_published: 2026-05-08
 review_value: 7
-sources: []
+sources: [raw/articles/openai官方cli上线跟复杂的sdk说拜拜]
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 3

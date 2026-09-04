@@ -5,11 +5,11 @@ title: "这个五一节我做了个总结，在 2 年多的创业里，我一共
 type: entity
 tags: [ai, startup, entrepreneurship, 项目复盘, AI学习路径]
 created: 2026-05-13
-updated: 2026-08-07
+updated: 2026-09-05
 source: wechat
 source_url:
 review_value: 7
-sources: []
+sources: [raw/articles/2-year-25-ai-projects-summary]
 review_confidence: 8
 ---
 

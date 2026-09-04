@@ -4,7 +4,7 @@ title: "Introducing AIMap: Security Testing For AI Agent… | Bishop Fox"
 type: entity
 tags: [agent, security]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 6
 review_confidence: 6
 sources: [raw/articles/introducing-aimap-security-testing-for-ai-agent-bishop-fox]
@@ -14,7 +14,7 @@ sources: [raw/articles/introducing-aimap-security-testing-for-ai-agent-bishop-fo
 ![Image 2](https://bishopfox.com/static/assets/images/backgrounds/promobar-bg-lines-left.svg) ^[raw/articles/introducing-aimap-security-testing-for-ai-agent-bishop-fox.md]
 
 ## 相关实体
-- [[entities/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security]]
+- [[entities/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security-v2]]
 - [[entities/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security-v2]]
 - [[entities/introducing-deepsec-find-and-fix-vulnerabilities-in-your-code-base]]
 - [[entities/alphaevolve-deepmind-discovery-agent]]

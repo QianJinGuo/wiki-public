@@ -4,9 +4,9 @@ title: Fusedash -  Generative Analytics Platform | AI Dashboard Software
 type: entity
 tags: [ai, analytics, llm, dashboard]
 created: 2026-05-22
-updated: 2026-08-01
+updated: 2026-09-05
 review_value: 9
-sources: []
+sources: [raw/articles/fusedash-generative-analytics-platform]
 review_confidence: 9
 ---
 

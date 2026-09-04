@@ -1,13 +1,13 @@
 ---
 title: "Agent Memory 架构本质"
 created: 2026-04-30
-updated: 2026-08-29
+updated: 2026-09-05
 source: "[[raw/articles/agent-memory-architecture-essence|原文存档]]"
 type: entity
 value: 7
 tags: [agent, rag, memory, llm, inference]
 review_value: 8
-sources: []
+sources: [raw/articles/agent-memory-architecture-essence]
 review_confidence: 9
 ---
 

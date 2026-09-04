@@ -1,10 +1,9 @@
 ---
 title: "开源 AI 编程可查询的软件工程知识图谱：Graphify 完整上手攻略"
 created: 2026-05-24
-updated: 2026-08-01
+updated: 2026-09-05
 type: entity
 tags: [ai-programming, knowledge-graph, tool, ast-parsing, tree-sitter, mcp]
-provenance_state: inferred
 source: "[[raw/articles/graphify-software-engineering-knowledge-graph]]"
 confidence: 0.75
 provenance_state: extracted

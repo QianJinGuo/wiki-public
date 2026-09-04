@@ -7,11 +7,11 @@ source: newsletter
 source_url:
 date: 2026-05-13
 review_value: 8
-sources: []
+sources: [raw/articles/normalizing-trajectory-models-v2]
 review_confidence: 9
 review_recommendation: strong
 tags: [diffusion, normalizing-flow, likelihood-based, few-step-generation]
-updated: 2026-08-07
+updated: 2026-09-05
 ---
 
 > -> [[raw/articles/normalizing-trajectory-models-v2|原文存档]] ^[raw/articles/normalizing-trajectory-models-v2.md]

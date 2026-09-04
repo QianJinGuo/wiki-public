@@ -2,10 +2,9 @@
 title: "给 AI 做工作面试：Mollick 的模型评估方法论"
 description: "Ethan Mollick（One Useful Thing，2025-11-12）提出用 job interview 方法评估 AI：benchmark 有缺陷（公开题/不校准/top score 无法达到），vibes 测试（otter test/写作测试）能发现标准化测试看不到的差异，GDPval 提供真实工作评估框架，不同模型对模糊问题有系统性态度差异（风险倾向/保守程度），企业选 AI 需要像招聘一样做结构化面试。"
 created: 2026-06-07
-updated: 2026-08-01
+updated: 2026-09-05
 type: entity
 tags: [ai-evaluation, benchmarking, gdpval, job-interview, vibes-test, model-selection, ethan-mollick, one-useful-thing, arc-agi, jagged-frontier, otter-test]
-provenance_state: inferred
 source: [[raw/articles/giving-your-ai-a-job-interview]]
 review_value: 9
 review_confidence: 8

@@ -2,7 +2,7 @@
 
 title: "LBS-IntentBench — 首个真实出行隐式意图评测基准"
 created: 2026-05-07
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [lbs, intent-benchmark, agent, spatio-temporal, gaode, evaluation, implicit-intent]
 sources: [raw/articles/lbs-intent-bench-lbs-intentbench]
@@ -106,6 +106,6 @@ Qwen3.5-35B-A3B 在 POI 语义理解和事实检索上逼近顶级闭源模型�
 
 - [[entities/ai-skill-metrics-system|AI Skill 测评指标体系]] ^[raw/articles/lbs-intent-bench-lbs-intentbench.md]
 
-→ [[raw/articles/agent-tools-research.md|原文存档]] ^[raw/articles/lbs-intent-bench-lbs-intentbench.md]^[raw/articles/lbs-intent-bench-lbs-intentbench.md]
+→ [[raw/articles/lbs-intent-bench-lbs-intentbench|原文存档]] ^[raw/articles/lbs-intent-bench-lbs-intentbench.md]^[raw/articles/lbs-intent-bench-lbs-intentbench.md]
 
 - [[entities/skills-refiner-design-quality-evaluation-framework|Skills赏析：使用skills-refiner提升skill质量]]

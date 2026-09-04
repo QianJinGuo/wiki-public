@@ -1,7 +1,7 @@
 ---
 title: "RAG 深度解析：分块向量化召回重排才是蒸馏同事 Skill 的关键"
 created: 2026-05-10
-updated: 2026-08-07
+updated: 2026-09-05
 type: entity
 tags: [rag, llm, skill, distillation, retrieval]
 source: wechat
@@ -9,7 +9,7 @@ source_url:
 feed_name: 叶小钗
 source_published: 2026-05-06
 review_value: 10
-sources: []
+sources: [raw/articles/rag-chunking-vectorization-rerank-distillation]
 review_confidence: 10
 review_recommendation: worth-reading
 review_stars: 3

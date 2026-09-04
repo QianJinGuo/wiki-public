@@ -1,7 +1,7 @@
 ---
 title: "以Kiro快速部署云上Agent：只需几个小时，从业务需求到部署于Amazon Bedrock Agentcore落地 | 亚马逊AWS官方博客"
 created: 2026-05-14
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [aws-china-blog, kiro, bedrock-agentcore]
 sources: [raw/articles/kiro-quick-deploy-agent-deploy-amazon-bedrock-agentcore]
 review_value: 8
@@ -49,6 +49,6 @@ Agent应用涉及敏感数据处理时，隔离性和安全策略至关重要。
 - [[entities/introducing-os-level-actions-in-amazon-bedrock-agentcore-browser|Introducing OS Level Actions in Amazon Bedrock AgentCore Browser]]
 - [[entities/using-amazon-bedrock-agentcore-openclaw-multi-1|AI Agent 的迁移与现代化 — 使用 Amazon Bedrock AgentCore 将 OpenClaw 从单机改造为多租户 Serverless 架构 第一篇 | 亚马逊AWS官方博客]]
 
-→ [[raw/articles/build-custom-code-based-evaluators-in-amazon-bedrock-agentco.md|原文存档]] ^[raw/articles/kiro-quick-deploy-agent-deploy-amazon-bedrock-agentcore.md]
+→ [[raw/articles/kiro-quick-deploy-agent-deploy-amazon-bedrock-agentcore|原文存档]] ^[raw/articles/kiro-quick-deploy-agent-deploy-amazon-bedrock-agentcore.md]
 
 - [[entities/using-amazon-bedrock-agentcore-openclaw-multi-4|AI Agent 的迁移与现代化 — 使用 Amazon Bedrock AgentCore 将 OpenClaw 从单机改造为多租户 Serverless 架构 第四篇 | 亚马逊AWS官方博客]]

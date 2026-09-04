@@ -4,9 +4,9 @@ title: "Consumer Confidence"
 type: entity
 tags: [economy, consumer-confidence, inflation, geopolitics]
 created: 2026-05-15
-updated: 2026-08-07
+updated: 2026-09-05
 review_value: 8
-sources: []
+sources: [raw/articles/consumer-confidence-us-economy-inflation-iran-war-trade-html]
 review_confidence: 8
 review_recommendation: strong
 ---

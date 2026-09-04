@@ -6,9 +6,9 @@ source: wechat
 type: entity
 tags: [wechat, article]
 created: 2026-05-11
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/tencent-hunyuan-hy3-preview-open-source-agent]
 review_confidence: 7
 review_recommendation: strong
 review_stars: 4

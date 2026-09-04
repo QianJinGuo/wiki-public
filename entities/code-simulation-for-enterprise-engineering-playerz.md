@@ -3,9 +3,9 @@ title: "Code Simulation for Enterprise Engineering | PlayerZero"
 type: entity
 tags: [newsletter, ai, startup]
 created: 2026-05-16
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/code-simulation-for-enterprise-engineering-playerz]
 review_confidence: 8
 review_recommendation: worth-reading
 ---

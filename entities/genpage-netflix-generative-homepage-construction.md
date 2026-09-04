@@ -3,10 +3,9 @@
 title: "GenPage: Netflix 端到端生成式首页构建"
 description: "Netflix 用单一 Transformer 模型替代多阶段推荐流水线，自回归生成完整首页布局。通过 RL 后训练实现整页优化，A/B 测试显示 20% 延迟降低 + 显著参与度提升。"
 created: 2026-06-29
-updated: 2026-07-31
+updated: 2026-09-05
 type: entity
 tags: [recommendation-system, generative-model, reinforcement-learning, netflix, transformer, production-system, autoregressive]
-provenance_state: inferred
 source: [[raw/articles/genpage-netflix-generative-homepage-construction]]
 confidence: 0.92
 provenance_state: extracted

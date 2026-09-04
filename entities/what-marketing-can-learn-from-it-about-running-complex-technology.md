@@ -4,9 +4,9 @@ title: What marketing can learn from IT about running complex technology
 type: entity
 tags: [marketing, it, enterprise, technology]
 created: 2026-05-20
-updated: 2026-05-21
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/what-marketing-can-learn-from-it-about-running-complex-technology]
 review_confidence: 8
 review_recommendation: worth-reading
 ---

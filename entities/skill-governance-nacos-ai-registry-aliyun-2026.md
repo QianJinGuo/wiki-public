@@ -1,7 +1,7 @@
 ---
 title: "一份可信来源，终结 Skill 管理混乱：Skill 治理最佳实践"
 created: 2026-07-07
-updated: 2026-08-29
+updated: 2026-09-03
 type: entity
 tags: [skill, agent, skill-management, nacos, alibaba-cloud, agent-engineering]
 sources: [raw/articles/skill-governance-nacos-ai-registry-aliyun-2026]
@@ -14,7 +14,7 @@ aliases:
 
 # 一份可信来源，终结 Skill 管理混乱：Skill 治理最佳实践
 
-> **来源**：[阿里云云原生]([本地路径已隐藏]) | vxc=49 | stars=4
+> **来源**：[[raw/articles/skill-governance-nacos-ai-registry-aliyun-2026|阿里云云原生]] | vxc=49 | stars=4
 
 阿里云云原生团队提出了一套基于 Nacos AI Registry 的 Skill 治理方案，解决多 Agent 时代 Skill 散落、版本冲突、手动同步成本高的问题。^[raw/articles/skill-governance-nacos-ai-registry-aliyun-2026.md]
 
@@ -54,4 +54,3 @@ Nacos Skill Sync 的 Local mode 在本机建立中心仓库，通过软链接或
 ## 关联
 - 相关概念: [[concepts/harness-engineering-framework|Harness Engineering]]
 - 相关: Agent 架构
-

@@ -6,7 +6,7 @@ updated: 2026-06-17
 type: entity
 tags: [ai-agent, wechat, engineering]
 review_value: 6
-sources: []
+sources: [raw/articles/agent-开发范式演进从环境工程出发简化多源实时上下文]
 review_confidence: 10
 ---
 

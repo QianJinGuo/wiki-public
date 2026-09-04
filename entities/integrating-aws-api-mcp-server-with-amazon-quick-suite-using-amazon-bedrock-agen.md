@@ -4,9 +4,9 @@ title: "AWS API MCP Server + Quick Suite + Bedrock AgentCore 集成"
 type: entity
 tags: [bedrock, aws, agent, llm]
 created: 2026-05-22
-updated: 2026-08-01
+updated: 2026-09-05
 review_value: 9
-sources: []
+sources: [raw/articles/integrating-aws-api-mcp-server-with-amazon-quick-suite-using-amazon-bedrock-agen]
 review_confidence: 9
 ---
 

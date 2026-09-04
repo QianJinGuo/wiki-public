@@ -1,7 +1,8 @@
 ---
+
 title: "端侧模型专用Harness：Qwen3.8-27B + Perplexity Portable Computer"
 created: 2026-08-30
-updated: 2026-08-30
+updated: 2026-09-05
 type: entity
 tags: [harness, on-device, local-inference, qwen, agent, privacy]
 sources: [raw/articles/on-device-harness-qwen38-27b-portable-computer]
@@ -10,7 +11,7 @@ confidence: 0.75
 
 # 端侧模型专用Harness：Qwen3.8-27B + Perplexity Portable Computer
 
-Perplexity 推出的 Portable Computer 是一种端侧 Agent 运行范式：整个技术栈（模型、框架、对话、轨迹）默认在本地运行，仅在必要时调用外部服务。
+Perplexity 推出的 Portable Computer 是一种端侧 Agent 运行范式：整个技术栈（模型、框架、对话、轨迹）默认在本地运行，仅在必要时调用外部服务。 ^[raw/articles/on-device-harness-qwen38-27b-portable-computer.md]
 
 ## 核心设计
 
@@ -35,6 +36,6 @@ Perplexity 推出的 Portable Computer 是一种端侧 Agent 运行范式：整�
 
 ## 启示
 
-端侧 Harness 的核心洞察：不要让小模型管理为大模型设计的框架。框架应根据模型能力特性量身定制，而非期望小模型达到前沿模型的能力水平。这与 Harness Engineering 中"框架适配模型"的设计哲学一致。
+端侧 Harness 的核心洞察：不要让小模型管理为大模型设计的框架。框架应根据模型能力特性量身定制，而非期望小模型达到前沿模型的能力水平。这与 Harness Engineering 中"框架适配模型"的设计哲学一致。 ^[raw/articles/on-device-harness-qwen38-27b-portable-computer.md]
 
-→ [[raw/articles/on-device-harness-qwen38-27b-portable-computer|原文存档]]
+→ [[raw/articles/on-device-harness-qwen38-27b-portable-computer|原文存档]] ^[raw/articles/on-device-harness-qwen38-27b-portable-computer.md]

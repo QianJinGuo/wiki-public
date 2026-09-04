@@ -9,10 +9,10 @@ review_product: 64
 review_stars: 4
 review_recommendation: STRONG
 created: 2026-05-10
-updated: 2026-08-07
+updated: 2026-09-05
 tags: [agent, llm, inference]
 review_value: 9
-sources: []
+sources: [raw/articles/foundation-capital-agent-era-six-insights]
 review_confidence: 7
 ---
 

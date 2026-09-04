@@ -1,7 +1,7 @@
 ---
 title: "OpenClaw 多智能体团队搭建实战经验"
 created: 2026-05-09
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [openclaw, multi-agent, agent-team, practice, tutorial]
 summary: "ConardLi 分享 OpenClaw 7个Agent多智能体团队经验：生图/资讯/开发/投资/社区/写作/智能专家，全流程零人工干预"
@@ -41,7 +41,7 @@ ConardLi 的实践经验揭示了多智能体团队从"安装了什么"到"能�
 - Agent 不是设计出来的，是用出来的 — 从每日最高频需求出发逐个搭建
 - 写了 Agent Skill 后要反复调试，确保工具调用准确
 - 多 Agent 团队的价值在于"联邦学习"——各 Agent 在自己的领域持续优化
-→ [[raw/articles/openclaw-multi-agent-team-practice-v2.md|原文存档]] ^[raw/articles/openclaw-multi-agent-team-practice.md]^[raw/articles/openclaw-multi-agent-team-practice.md]
+→ [[raw/articles/openclaw-multi-agent-team-practice|原文存档]] ^[raw/articles/openclaw-multi-agent-team-practice.md]^[raw/articles/openclaw-multi-agent-team-practice.md]
 
 ## 相关实体
 - [[entities/openclaw-multi-agent-team-practice-v2|龙虾装上了可以用来干啥 - OpenCLAW 多智能体团队搭建经验]]

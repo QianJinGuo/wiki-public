@@ -5,9 +5,8 @@ source: "[[raw/articles/cloudflare-temporary-accounts-ai-agents|原文存档]]"
 sources:
   - raw/articles/cloudflare-temporary-accounts-ai-agents
 tags: ["ai-agent", "security", "cloudflare", "authentication", "infrastructure", "agent-infra", "mcp"]
-provenance_state: inferred
 created: "2026-06-22"
-updated: 2026-08-24
+updated: 2026-09-05
 type: entity
 review_value: 9
 review_confidence: 9

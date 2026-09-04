@@ -6,7 +6,7 @@ updated: 2026-05-10
 type: entity
 tags: [ai-agent, engineering, wechat]
 review_value: 6
-sources: []
+sources: [raw/articles/国产顶尖模型-benchmark-评分那么高可实际效果为什么差看完-anthropic-这篇博客刷分的因素太单一了]
 review_confidence: 7
 ---
 

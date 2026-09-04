@@ -6,7 +6,7 @@ tags: [llm, openai, gpt, alignment]
 created: 2026-05-21
 updated: 2026-05-21
 review_value: 6
-sources: []
+sources: [raw/articles/chatgpt小心翼翼回复风格技术原因]
 review_confidence: 9
 review_recommendation: worth-reading
 review_stars: 4

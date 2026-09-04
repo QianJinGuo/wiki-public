@@ -3,9 +3,9 @@ title: "Vera Arrives: NVIDIA’s First CPU Built for Agents Lands at Top AI Labs
 type: entity
 tags: [nvidia, anthropic, agent, ai]
 created: 2026-05-20
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/vera-arrives-nvidia-s-first-cpu-built-for-agents-lands-at-top-ai-labs]
 review_confidence: 7
 review_recommendation: worth-reading
 review_stars: 3

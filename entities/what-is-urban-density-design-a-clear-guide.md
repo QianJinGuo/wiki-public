@@ -2,9 +2,8 @@
 title: "What Is Urban Density Design? A Clear Guide to How Cities Get Built Denser"
 type: entity
 tags: [urban-design, density, city-planning, transit, housing, architecture, sustainability]
-provenance_state: inferred
 created: 2026-05-14
-updated: 2026-08-01
+updated: 2026-09-05
 review_value: 7
 sources:
   - raw/articles/what-is-urban-density-design-a-clear-guide

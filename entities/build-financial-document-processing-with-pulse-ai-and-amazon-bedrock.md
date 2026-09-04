@@ -4,7 +4,7 @@ title: "Build financial document processing with Pulse AI and Amazon Bedrock"
 type: entity
 tags: [aws, machine-learning, llm, document-processing]
 created: 2026-05-14
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 7
 review_confidence: 8
 review_recommendation: worth-reading
@@ -84,7 +84,7 @@ Pulse + Bedrock 方案的核心差异是**领域自适应**：Pulse 提取的是
 - **文档复杂度中（合同、报告）**：Pulse AI 单阶段方案，考虑微调必要性
 - **文档复杂度高（多数据源金融报表、合规文件）**：Pulse + Bedrock Nova Micro 两阶段流水线
 
-→ [[raw/articles/automate-schema-generation-for-intelligent-document-processing.md|原文存档]] ^[raw/articles/build-financial-document-processing-with-pulse-ai-and-amazon-bedrock.md]
+→ [[raw/articles/build-financial-document-processing-with-pulse-ai-and-amazon-bedrock|原文存档]] ^[raw/articles/build-financial-document-processing-with-pulse-ai-and-amazon-bedrock.md]
 
 ### 监控与迭代
 上线后需监控：提取字段级 precision/recall（按金融重要性加权）、下游分析系统偏差率、模型版本间一致性。建议每季度用新文档样本重新评估微调模型，捕捉金融术语和报表格式的演变。 ^[raw/articles/build-financial-document-processing-with-pulse-ai-and-amazon-bedrock.md]

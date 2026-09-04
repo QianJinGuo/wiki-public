@@ -3,9 +3,9 @@ title: "The new AI lock-in"
 type: entity
 tags: [ai,vendor,lock-in]
 created: 2026-05-19
-updated: 2026-08-03
+updated: 2026-09-05
 review_value: 7
-sources: []
+sources: [raw/articles/new-lock]
 review_confidence: 8
 review_recommendation: worth-reading
 ---

@@ -3,9 +3,9 @@ title: "Spotify Logo Gets a Makeover, Turns Into a Disco Ball"
 type: entity
 tags: [spotify, brand, design, logo, marketing]
 created: 2026-05-20
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 4
-sources: []
+sources: [raw/articles/spotify-logo-gets-a-makeover-turns-into-a-disco-ball]
 review_confidence: 9
 review_recommendation: worth-reading
 review_stars: 3

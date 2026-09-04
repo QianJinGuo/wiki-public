@@ -13,8 +13,8 @@ rating: 8.5/9.0
 review_value: 8.5
 review_confidence: 9
 review_result: strong
-updated: 2026-08-30
-sources: []
+updated: 2026-09-05
+sources: [raw/articles/claude-managed-agents-self-hosted-sandbox-mcp-tunnels-enterprise]
 type: entity
 provenance_state: inferred
 ---

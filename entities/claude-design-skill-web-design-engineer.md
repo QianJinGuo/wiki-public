@@ -1,13 +1,13 @@
 ---
 title: "我把 Claude Design 做成了 Skill，人人都能成为顶级网站设计师"
 created: 2026-05-16
-updated: 2026-08-29
+updated: 2026-09-05
 source: "[[raw/articles/claude-design-skill-web-design-engineer|原文存档]]"
 type: entity
 value: 7
 tags: [claude-code, agent, skill, engineering]
 review_value: 9
-sources: []
+sources: [raw/articles/claude-design-skill-web-design-engineer]
 review_confidence: 7
 ---
 

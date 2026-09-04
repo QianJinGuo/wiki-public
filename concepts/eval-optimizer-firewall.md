@@ -1,10 +1,10 @@
 ---
 title: "评测防火墙（Eval–Optimizer Information Isolation）"
 created: 2026-08-29
-updated: 2026-08-30
+updated: 2026-09-03
 type: concept
 tags: [concept, evaluation, verifier, anti-leakage, anti-gaming, benchmark, harness, quality-gate]
-sources: [raw/articles/autodesign-meta-harness-optimization-2026, raw/articles/faibench-frontier-infra-bench-2026, raw/articles/polaris-voyage-research-platform-2026, raw/articles/spark-to-paper-thirteen-skills-2026, entities/self-harness-shanghai-ai-lab-agent-improves-harness]
+sources: [entities/self-harness-shanghai-ai-lab-agent-improves-harness]
 confidence: 0.75
 provenance_state: merged
 ---
@@ -19,13 +19,13 @@ provenance_state: merged
 
 ## 四个机制（附一手证据）
 
-**1. 信息隔离（eval 对 optimizer 保密）**。AutoDesign 的外层 MetaHarnessOptimizer 接受候选的依据是「training set 提升 且 独立 development set 不降」，且 **development set 的执行轨迹不暴露给更新提议器**——不是隐藏分数，是隐藏轨迹 ^[raw/articles/autodesign-meta-harness-optimization-2026.md]。faibench 把 tests/（test.sh + compute_reward.py + anchors）**永不烘焙进镜像**、评分时只读挂载，镜像内 manifest 故意不含真 anchor：不挂载 tests/ 就大声失败，而不是给出可疑分数 ^[raw/articles/faibench-frontier-infra-bench-2026.md]。
+**1. 信息隔离（eval 对 optimizer 保密）**。AutoDesign 的外层 MetaHarnessOptimizer 接受候选的依据是「training set 提升 且 独立 development set 不降」，且 **development set 的执行轨迹不暴露给更新提议器**——不是隐藏分数，是隐藏轨迹 。faibench 把 tests/（test.sh + compute_reward.py + anchors）**永不烘焙进镜像**、评分时只读挂载，镜像内 manifest 故意不含真 anchor：不挂载 tests/ 就大声失败，而不是给出可疑分数 。
 
-**2. 执行分离（评测环境与被评物物理分离）**。faibench 评分永远 `--network=none`、vendored 挖掘树用 oracle.patch 正向可 apply / 反向不可 apply 双向自证 provenance、同 upstream 家族任务互相持有对方 scope 文件于挖掘态（防一个任务的镜像里藏着另一个任务的答案）^[raw/articles/faibench-frontier-infra-bench-2026.md]。
+**2. 执行分离（评测环境与被评物物理分离）**。faibench 评分永远 `--network=none`、vendored 挖掘树用 oracle.patch 正向可 apply / 反向不可 apply 双向自证 provenance、同 upstream 家族任务互相持有对方 scope 文件于挖掘态（防一个任务的镜像里藏着另一个任务的答案）。
 
-**3. 激励函数设计（把「被游戏」写进曲线）**。faibench 的 oracle-zero 对数曲线 `reward = min(1, ln(speedup/ref)/ln(ref))` 把「打平 oracle」的分数大团整个压缩为 0，整个 [0,1] 留给超越 oracle 的幅度；配六条零分硬门与「宁可拒评不出可疑分」的拒评语义，`hard_fail`（运行无效/作弊）与「曲线得 0」（只是没打过 oracle）严格分账 ^[raw/articles/faibench-frontier-infra-bench-2026.md]。
+**3. 激励函数设计（把「被游戏」写进曲线）**。faibench 的 oracle-zero 对数曲线 `reward = min(1, ln(speedup/ref)/ln(ref))` 把「打平 oracle」的分数大团整个压缩为 0，整个 [0,1] 留给超越 oracle 的幅度；配六条零分硬门与「宁可拒评不出可疑分」的拒评语义，`hard_fail`（运行无效/作弊）与「曲线得 0」（只是没打过 oracle）严格分账 。
 
-**4. 成本分层的确定性先行（让 LLM 只做代码做不了的最后一步）**。Polaris 的 Sextant 按成本排序 check 链：`observation.error` → self_check → 结构化确定性 checks（先行、短路）→ `llm_rubric`（唯一一次模型调用）；失败字符串刻意写得可注入（`[metric] accuracy = 0.62, does not satisfy >= 0.8`），被复用为重试参数与 replanning prompt 的输入 ^[raw/articles/polaris-voyage-research-platform-2026.md]。spark-to-paper 的 `draft_lint` 只把**语境无关**的规则交给代码硬 fail（AI 套话、proposal 模式的具体数字禁令），语境相关的判断留给模型——防止 lint 误伤产生「逗号汤」^[raw/articles/spark-to-paper-thirteen-skills-2026.md]。
+**4. 成本分层的确定性先行（让 LLM 只做代码做不了的最后一步）**。Polaris 的 Sextant 按成本排序 check 链：`observation.error` → self_check → 结构化确定性 checks（先行、短路）→ `llm_rubric`（唯一一次模型调用）；失败字符串刻意写得可注入（`[metric] accuracy = 0.62, does not satisfy >= 0.8`），被复用为重试参数与 replanning prompt 的输入 。spark-to-paper 的 `draft_lint` 只把**语境无关**的规则交给代码硬 fail（AI 套话、proposal 模式的具体数字禁令），语境相关的判断留给模型——防止 lint 误伤产生「逗号汤」。
 
 ## 谱系与定位
 
@@ -39,7 +39,7 @@ provenance_state: merged
 
 - [[concepts/verifier-driven-development|verifier 驱动开发]] — 上位概念：verifier 必须存在
 - [[entities/self-harness-shanghai-ai-lab-agent-improves-harness|Self-Harness]] — held-in/held-out 双门的先声
-- [[raw/articles/faibench-frontier-infra-bench-2026|faibench 存档]] — 防火墙机制最完备的样本
+- 待补公开原文 — 防火墙机制最完备的样本
 - [[drafts/wiki-emergent-viewpoints-2026-08-phd-lens|2026-08 涌现观点·观点二]] — 概念来源
 
 ## 所属 MOC

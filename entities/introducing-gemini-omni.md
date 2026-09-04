@@ -3,9 +3,9 @@ title: "Introducing Gemini Omni"
 type: entity
 tags: [gemini, google-deepmind, multimodal, ai-model]
 created: 2026-05-20
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 8
-sources: []
+sources: [raw/articles/introducing-gemini-omni]
 review_confidence: 9
 review_recommendation: strong
 review_stars: 4

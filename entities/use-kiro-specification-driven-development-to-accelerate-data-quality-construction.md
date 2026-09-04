@@ -1,7 +1,7 @@
 ---
 title: "使用 Kiro 规范驱动开发加速数据质量建设 | 亚马逊AWS官方博客"
 created: 2026-05-14
-updated: 2026-08-01
+updated: 2026-09-05
 tags: [aws-china-blog, kiro]
 sources: [raw/articles/use-kiro-specification-driven-development-to-accelerate-data-quality-construction]
 review_value: 8
@@ -38,6 +38,6 @@ Kiro CLI、Kiro IDE、Kiro MCP Skills、Amazon Bedrock ^[raw/articles/use-kiro-s
 - [[entities/from-manual-to-smart-use-kiro-cli-opensearch-mcp-to-make-everyone-an-opensearch-expert|从手动到智能：用 Kiro CLI + OpenSearch MCP 让每个人都成为 OpenSearch 专家 | 亚马逊AWS官方博客]]
 - [[entities/use-kiro-cli-as-agent-sdk-build-your-agent-app-with-one-click-subscription|把 Kiro CLI 当作 Agent SDK：一键订阅即可构建你的Agent应用 | 亚马逊AWS官方博客]]
 
-→ [[raw/articles/autoresearch-software-development.md|原文存档]] ^[raw/articles/use-kiro-specification-driven-development-to-accelerate-data-quality-construction.md]
+→ [[raw/articles/use-kiro-specification-driven-development-to-accelerate-data-quality-construction|原文存档]] ^[raw/articles/use-kiro-specification-driven-development-to-accelerate-data-quality-construction.md]
 
 - [[entities/aws-aidl-paradigm-shift-platform-driven-data-engineering|AIDLC范式: 平台驱动到大数据工程的范式迁移]]
