@@ -8,7 +8,7 @@ source: "[[raw/articles/baidu-unlimited-ocr-sliding-window-attention]]"
 confidence: 0.75
 provenance_state: extracted
 review_value: 7
-review_confidence: 0.85
+review_confidence: 8.5
 sources:
   - raw/articles/baidu-unlimited-ocr-sliding-window-attention
 ---

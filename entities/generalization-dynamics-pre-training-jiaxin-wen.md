@@ -23,7 +23,6 @@ review_recommendation: strong
 ## 相关实体
 - [[entities/generalization-dynamics-of-lm-pre-training-jiaxin-wen]]
 - [[entities/generalization-dynamics-lm-pretraining]]
-- [[entities/generalization-dynamics-of-lm-pre-training-jiaxin-wen]]
 - [[entities/yann-dubois-openai-post-training-interview]]
 
 → [[raw/articles/generalization-dynamics-pre-training-jiaxin-wen|原文存档]]^[raw/articles/generalization-dynamics-pre-training-jiaxin-wen.md]

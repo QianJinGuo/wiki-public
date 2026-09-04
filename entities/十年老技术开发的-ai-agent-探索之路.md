@@ -5,7 +5,7 @@ source: "[[raw/articles/十年老技术开发的-ai-agent-探索之路|原文存
 type: entity
 value: 8
 tags: [claude-code, agent, ai]
-review_value: 5
+review_value: 7
 review_confidence: 7
   - raw/articles/十年老技术开发的-ai-agent-探索之路
 updated: 2026-08-01

@@ -4,12 +4,13 @@ description: "Vincenzo Iozzo empirical study: 5 open-weight LLMs + 1 bug, GLM-5.
 source: "[[raw/articles/how-harnesses-and-post-training-close-the-open-weight-bug-finding-gap-20260606]]"
 tags: [ai, security, harness, post-training, vulnerability-research, bug-finding, open-weight, oss]
 created: 2026-06-06
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 review_value: 9
 review_confidence: 9
 review_recommendation: strong
 review_stars: 5
+contradicted_by: [cloudflare-glasswing-mythos-security]
 sources:
 ---
 

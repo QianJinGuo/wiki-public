@@ -145,7 +145,6 @@ Karpathy 的例子很具体：他不再记 NumPy 和 PyTorch 之间 API 的细�
 - [[entities/karpathy-vibe-coding-agentic-engineering-v4|Karpathy 最新访谈：从 Vibe Coding 到 Agentic Engineering]]
 - [[entities/karpathy-vibe-coding-to-agentic-engineering|Karpathy 最新访谈：从 Vibe Coding 到 Agentic Engineering]]
 - [[entities/karpathy-vibe-coding-agentic-engineering-v2|Karpathy 最新访谈：从 Vibe Coding 到 Agentic Engineering]]
-- [[entities/karpathy-vibe-coding-to-agentic-engineering|Karpathy 最新访谈：从 Vibe Coding 到 Agentic Engineering]]
 - [[entities/tencent-vibe-coding-to-agentic-engineering-backend|从Vibe Coding到Agentic Engineering：重构后台开发全流程 — 腾讯技术工程]]
 - [[entities/从vibe-coding到agentic-engineering重构后台开发全流程|从Vibe Coding到Agentic Engineering：重构后台开发全流程]]
 - [[moc/coding-agent-practice|MOC]]

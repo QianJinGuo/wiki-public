@@ -2,11 +2,12 @@
 title: "Spec-Driven Development (SDD) 全面总结：从5人7天案例到方法论全集"
 type: entity
 created: 2026-07-02
-updated: 2026-08-01
+updated: 2026-09-05
 tags: [sdd, spec-driven-development, ai-coding, methodology, qoder, alibaba, harness, spec-kit, engineering-paradigm]
 rating: v9c9
 sources:
   - raw/articles/sdd-spec-driven-development-summary-qoder
+  - raw/articles/sdd-qoderwork-spec-driven-development-5-people-7-days-ali-2026
 provenance_state: expanded
 confidence: 0.85
 ---
@@ -136,6 +137,19 @@ SDD 的真正价值不在于文档本身，而在于 Spec 创建过程中建立�
 4. **SDD 的 ROI 在时间轴上的拐点在 2-4 周**：对于短于 2 周的项目（黑客松、紧急修复），Vibe Coding 更高效。超过 4 周的项目，SDD 节省的返工成本已超过 Spec 书写的投入。拐点位置取决于团队规模和项目复杂度。
 
 5. **不要跳过 Validate 阶段**：SDD 最常见的失败模式是"Spec + AI 生成 → 直接上线"。Validate 阶段（自动化测试 + 人工 Review）是不可或缺的，AI 生成的代码即使通过了 Spec 检查，仍可能有边缘情况错误、安全隐患和架构偏差。
+
+## 第 2 来源 — 阿里技术（王砚舒/彦纾）全文本（2026-09-04）
+
+阿里技术官方号发布王砚舒（彦纾）30KB 全文本，是 1st 来源（阿里云开发者 2.9KB 摘要）的**同一篇文章完整正文**，交叉验证并补足细节。^[raw/articles/sdd-qoderwork-spec-driven-development-5-people-7-days-ali-2026.md]
+
+互补角度（5+）：
+1. **Spec Kit 三文件完整示例代码**：spec.md（含 Problem Statement/Success Metrics/User Stories/Acceptance Criteria/Non-Goals/Constraints 六段完整模板）+ plan.md（Architecture Decision/Module Breakdown/Interface Contracts/Risk Assessment）+ tasks.md（原子任务+验证标准），可作 Spec 写作起点。
+2. **constitution.md 项目宪法**：不可变原则分层（API Design RESTful/OpenAPI 3.0、Security 参数化查询/敏感数据不入日志、Code Quality 覆盖率≥80%/依赖审计、Infrastructure 优雅关闭/环境变量注入/结构化日志）——把团队技术决策固化为 AI"潜意识"，避免每个 Spec 重复声明。
+3. **好 Spec 六要素对照表**：Problem Statement/Success Metrics/User Stories/Acceptance Criteria/Non-Goals/Constraints 六要素作用与示例（"P95<50ms"而非"系统应该很快"）。
+4. **Microsoft 点评**："SDD is version control for your thinking"——管理思考的演变历史（为什么做/边界/成功标准），而非仅代码演变。
+5. **DAY 0-6 时间线逐日复盘**：DAY0 只写 Spec（MVP 边界/模块拆解/入 Repo Wiki）→ DAY1-2 架构开发（Skill 驱动+Quest 模式并行）→ DAY3-4 增量 Spec 委派 Quest → DAY5-6 Dogfooding 自举 → DAY7 上线。全文本确认 1st 来源摘要的完整性。
+
+两个来源共同定义同一 QoderWork/5人7天案例，权威一致。^[raw/articles/sdd-qoderwork-spec-driven-development-5-people-7-days-ali-2026.md]
 
 ## 相关实体
 

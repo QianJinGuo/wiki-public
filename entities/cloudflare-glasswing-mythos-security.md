@@ -4,11 +4,12 @@ title: "Project Glasswing: what Mythos showed us"
 type: entity
 tags: [robotics, ai, security, llm, vulnerability-research, cloudflare, anthropic]
 created: 2026-05-19
-updated: 2026-08-29
+updated: 2026-09-05
 confidence: 0.8
 provenance_state: extracted
 sources: [raw/articles/cloudflare-glasswing-mythos-security]
 review_value: 5
+contradicted_by: [how-harnesses-and-post-training-close-the-open-weight-bug-finding-gap-20260606]
 ---
 
 ## 核心要点

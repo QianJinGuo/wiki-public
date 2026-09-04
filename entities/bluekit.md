@@ -4,7 +4,7 @@ title: "Meet Bluekit: The AI-Powered All-in-One Phishing Kit"
 type: entity
 tags: [security]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 6
 review_confidence: 6
 sources: [raw/articles/bluekit]
@@ -16,7 +16,6 @@ Introducing Varonis Atlas: Secure everything you build and run with AI [Learn mo
 Data Security Platform ^[raw/articles/bluekit.md]
 
 ## 相关实体
-- [[entities/ai-phishing-attacks-are-on-the-rise-are-you-prepared-bitward]]
 - [[entities/ai-phishing-attacks-are-on-the-rise-are-you-prepared-bitward]]
 - [[entities/amazon-quick-accelerating-the-path-from-enterprise-data-to-ai-powered-decisions]]
 - [[entities/thehackernews-com-the-new-phishing-click-how-oauth]]

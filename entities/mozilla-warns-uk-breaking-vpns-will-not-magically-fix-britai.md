@@ -3,7 +3,7 @@ title: "Mozilla warns UK: Breaking VPNs will not magically fix Britain's age-che
 type: entity
 tags: [privacy, vpn, uk-policy, age-verification, mozilla]
 created: 2026-05-20
-updated: 2026-06-26
+updated: 2026-09-05
 review_value: 7
 review_confidence: 8
 review_recommendation: worth-reading
@@ -18,7 +18,6 @@ sources: [raw/articles/mozilla-warns-uk-breaking-vpns-will-not-magically-fix-bri
 - Mozilla 警告：强制 VPN 年龄验证会产生"首先提供个人信息才能使用隐私保护工具"的悖论
 - Mozilla 已在 Firefox 中测试内置 VPN 功能，浏览器层面的 VPN 屏蔽不可行
 ## 相关实体
-- [[entities/mozilla-warns-uk-breaking-vpns-will-not-magically-fix-britain-s-age-check-mess]]
 - [[entities/mozilla-warns-uk-breaking-vpns-will-not-magically-fix-britain-s-age-check-mess]]
 - You Ll Soon Be Able To Bet On Bitcoin Volatility Not Just Price On Cme
 - [[entities/london-met-police-big-tech-data-requests]]

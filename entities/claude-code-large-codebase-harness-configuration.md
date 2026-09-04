@@ -8,7 +8,7 @@ created: 2026-05-20
 updated: 2026-08-29
 tags: [claude-code, agent, harness, enterprise, large-codebase, monorepo]
 review_value: 8
-review_confidence: 0.85
+review_confidence: 8.5
 sources:
   - raw/articles/how-claude-code-works-in-large-codebases-best-practices-and-where-to-start
   - raw/articles/qq-music-harness-engineering-monorepo-microservices

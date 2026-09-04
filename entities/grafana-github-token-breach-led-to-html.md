@@ -3,7 +3,7 @@ title: "Grafana GitHub Token Breach Led to Codebase Download and Ext"
 type: entity
 tags: [newsletter, article]
 created: 2026-05-18
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 7
 sources: [raw/articles/grafana-github-token-breach-led-to-html]
 review_confidence: 8
@@ -23,7 +23,6 @@ Grafana 披露一起安全事件：一名"未授权方"获取了一个可访问�
 - 事件发生数天前，教育科技公司 Instructure 刚做出与 ShinyHunters 和解的争议决定，形成对照
 
 ## 相关实体
-- [[entities/grafana-github-token-breach-led-to-codebase-download-and-extortion-attempt]]
 - [[entities/grafana-github-token-breach-led-to-codebase-download-and-extortion-attempt]]
 - [[entities/from-doer-to-director-the-ai-mindset-shift]]
 - [[entities/microsoft-for-startups-microsoft]]

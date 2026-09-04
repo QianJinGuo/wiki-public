@@ -8,7 +8,7 @@ tags: [pytorch, release, deep-learning, cuda, rocm]
 sources:
   - raw/articles/pytorch-2-12-release
 review_value: 6
-review_confidence: 7
+review_confidence: 8
 
 ---
 

@@ -4,7 +4,7 @@ title: "Scalable voice agent design with Amazon Nova Sonic: multi-agent, tools, 
 type: entity
 tags: [voice-ai, amazon-nova-sonic, multi-agent, aws, architecture]
 created: 2026-05-20
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 7
 review_confidence: 9
 review_recommendation: worth-reading
@@ -26,7 +26,6 @@ sources: [raw/articles/scalable-voice-agent-design-with-amazon-nova-sonic-multi-
 - [[entities/context-isolation|上下文隔离]]
 - [[entities/agentium-agent-framework|Agentium — 从零实现 Agent 系统的开源框架]]
 - [[entities/owner-worker-verifier-architecture|Owner-Worker-Verifier 架构]]
-- [[entities/构建基于多智能体架构的深度思考交易系统.md|基于多智能体架构的深度思考交易系统]]
 - [[entities/agent-engineering-principles-architecture-practice|Agent 原理、架构与工程实践]]
 
 - [[entities/livekit-agents-voice-ai-streaming-cascade-interruption-detection|livekit agents：给大模型接上麦克风，没你想的那么简单]]

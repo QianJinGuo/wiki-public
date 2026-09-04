@@ -106,10 +106,8 @@ SaaS 时代记录系统几乎没有飞轮效应，因为软件是单向记录工
 ## 相关实体
 - [[entities/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security-v2|AI tool poisoning exposes a major flaw in enterprise agent security]]
 - [[entities/alibaba-eventhouse-enterprise-agent-context|阿里云 EventHouse 企业级 Agent 上下文供给体系]]
-- [[entities/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security-v2|AI tool poisoning exposes a major flaw in enterprise agent security | VentureBeat]]
 - [[entities/foundation-capital-agent-era-six-insights|foundation capital agent era six insights]]
 - [[entities/agent-era-architect-skills-guide|Agent 时代架构师技能指南]]
 - [[entities/kuaishou-worker-agent-desktop-software|快手首个打工人Agent]]
 - [[entities/from-system-of-record-to-system-of-intelligence|from]]
-- [[entities/from-system-of-record-to-system-of-intelligence]]
 - [[entities/meet-customers-where-they-are-agentforce-contact-center-now-offers-whatsapp-voice|meet customers where they are: agentforce contact center now]]

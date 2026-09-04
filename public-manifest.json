@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "sourceRevision": "dc9b23d77a04e0e54ddc9088bb37460778f428d5",
+  "sourceRevision": "24dd9f1c8ee586f8f82182ee4c5d9f98785fa895",
   "files": [
     {
       "path": "raw/articles/0.25秒识破未见攻击-lod-lvlm-jailbreak-detection-emnlp2026.md",
@@ -10313,6 +10313,11 @@
       "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/introducing-web-search-on-amazon-bedrock-agentcore/"
     },
     {
+      "path": "raw/articles/intuit-ewok-agent-disaster-recovery-deterministic-execution-2026.md",
+      "title": "intuit-ewok-agent-disaster-recovery-deterministic-execution-2026",
+      "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/how-intuit-built-an-agentic-disaster-recovery-assistant-with-amazon-bedrock"
+    },
+    {
       "path": "raw/articles/investing-in-multi-agent-ai-safety-research.md",
       "title": "investing-in-multi-agent-ai-safety-research",
       "sourceUrl": "https://deepmind.google/blog/investing-in-multi-agent-ai-safety-research/"
@@ -14846,6 +14851,11 @@
       "path": "raw/articles/sdd-practice-lattice-harness-team-ai-coding.md",
       "title": "爆肝长文：SDD 实战下篇，从渐进式 SDD 到 Lattice Harness：AI Coding 的团队级闭环",
       "sourceUrl": "https://mp.weixin.qq.com/s/VlEVdzRsuX_uEyyVVfs9RQ"
+    },
+    {
+      "path": "raw/articles/sdd-qoderwork-spec-driven-development-5-people-7-days-ali-2026.md",
+      "title": "sdd-qoderwork-spec-driven-development-5-people-7-days-ali-2026",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=Mzg4NTczNzg2OA==&mid=2247511376&idx=1&sn=24f1d3ed57ccb6b4faad4a1aaac091bd"
     },
     {
       "path": "raw/articles/sdd-spec-driven-development-summary-qoder.md",

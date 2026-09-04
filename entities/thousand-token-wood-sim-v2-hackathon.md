@@ -4,7 +4,7 @@ title: "Thousand Token Wood v2: Multi-Model Heterogeneous Agent Council"
 description: "Lester Leong Build Small Hackathon v2: 4 labs' 小模型 (gpt-oss-20b + MiniCPM3-4B + Nemotron-Mini-4B + Qwen 0.5B fine-tune) 组成 council 共启金融市场游戏，Patron 玩家操作内幕信息 / 借贷 / 联盟，含 heterogeneity-as-product / info firewall / bounded memory 三大工程原则"
 type: entity
 created: 2026-06-09
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [multi-agent, small-models, hackathon, heterogeneous-models, agent-economy, simulation, vllm, gpt-oss, minicpm, nemotron, qwen, multi-lab]
 source: [[raw/articles/thousand-token-wood-sim-v2-hackathon]]
 confidence: 0.82
@@ -152,7 +152,6 @@ AI 的最大价值可能不在通用场景而在你领域的特定痛点——�
 - [[entities/构建基于多智能体架构的深度思考交易系统.md]]
 - [[entities/scalable-voice-agent-design-with-amazon-nova-sonic-multi-agent-tools-and-session]]
 - [[entities/factory-mission-multi-agent-architecture]]
-- [[entities/构建基于多智能体架构的深度思考交易系统.md]]
 - [[entities/openclaw-multi-agent-team-practice-v2]]
 
 ## 原文链接

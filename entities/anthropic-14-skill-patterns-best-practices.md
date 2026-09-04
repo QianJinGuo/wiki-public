@@ -5,7 +5,7 @@ updated: 2026-09-02
 source: "[[raw/articles/anthropic-14-skill-patterns-best-practices|原文存档]]"
 type: entity
 value: 7
-review_value: 6
+review_value: 7
 sources:
   - raw/articles/skill-development-best-practices-bybt-detail-assistant-taobao-2026
 review_confidence: 7

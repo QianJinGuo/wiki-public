@@ -4,7 +4,7 @@ title: "5 Things to Know about the CLARITY Act"
 type: entity
 tags: [finance, policy, digital-assets, regulation, fintech, stablecoin]
 created: 2026-05-15
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 7
 review_confidence: 8
 review_recommendation: strong
@@ -125,7 +125,6 @@ CLARITY Act 并不打算解决所有问题。实际上，围绕以下议题的�
 ## 相关概念
 
 - [[entities/clarity-act-5-things|CLARITY Act 五要点（另一版本）]]
-- [[entities/clarity-act-5-things|CLARITY Act 金融版]]
 
 ## 相关话题
 

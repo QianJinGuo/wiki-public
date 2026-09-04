@@ -372,8 +372,6 @@ skills.sh 提供了配套的 skill 管理工具。多人协作时，可在 code 
 - [[entities/要实现一个工作流选择-agent-skills-还是-ai-表格|要实现一个工作流选择-agent-skills-还是-ai-表格]]
 - [[entities/精选-10-个开发者常用的-ai-智能体技能agent-skills|精选 10 个开发者常用的 AI 智能体技能（Agent Skills）]]
 - [[entities/ai-understanding-component-library-intelligent-d2c-architecture-aws-kiro-mcp-skills|让 AI 理解你的组件库：新一代智能 D2C 架构 — 基于 AWS Kiro MCP Skills 的智能转换实践]]
-- [[entities/anthropic-agent-skills-design-patterns-14|Anthropic 14 个 Agent Skills 设计模式]]
-- [[entities/skill-development-guide-aliyun-2026|重新定义Skill开发：保姆级教程&一站式开发助手发布]]
 - [[entities/从-anthropic-到-googleagent-skills-正在进入设计模式阶段|Agent Skill 设计模式]]
 - [[entities/ai-employment-eight-changes-tencent-research|AI 行业就业八大变化（腾讯研究院纵向对比）]]
 - [[entities/cdp-bridge-mcp-real-browser-agent|CDP Bridge MCP：真实浏览器直连 MCP 工具]]

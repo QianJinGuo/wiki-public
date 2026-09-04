@@ -66,7 +66,6 @@ AgentCore Runtime 的核心价值在于为每个任务提供独立隔离执行�
 - [[entities/amazon-cloudfront-deploy-guide-cloudfront-domain-multi-tenant-architecture|Amazon CloudFront部署小指南（二十四）：将CloudFront “多域名”改造为”多租户”架构 | 亚马逊AWS官方博客]]
 - [[entities/www-networkworld-com-versa-takes-aim-at-fragmented-enterprise-security|Versa takes aim at fragmented enterprise security with CSPM, orchestration update, and AI agent controls]]
 - [[entities/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security-v2|AI tool poisoning exposes a major flaw in enterprise agent security]]
-- [[entities/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security-v2|AI tool poisoning exposes a major flaw in enterprise agent security | VentureBeat]]
 - [[entities/openclaw-service-enterprise-share-system-design|当 OpenClaw 学会”团队记忆”：一个面向多客户服务的企业级共享记忆系统设计 | 亚马逊AWS官方博客]]
 
 → [[raw/articles/enterprise-openclaw-security-deploy-architecture-guide|原文存档]] ^[raw/articles/enterprise-openclaw-security-deploy-architecture-guide.md]

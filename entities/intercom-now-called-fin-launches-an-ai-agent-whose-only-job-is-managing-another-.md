@@ -3,7 +3,7 @@ title: "Intercom, now called Fin, launches an AI agent whose only job is managin
 type: entity
 tags: [venturebeat]
 created: 2026-05-19
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 7
 review_confidence: 9
 review_recommendation: worth-reading
@@ -15,7 +15,6 @@ sources: [raw/articles/intercom-now-called-fin-launches-an-ai-agent-whose-only-j
 ## 相关实体
 - [[entities/opensquilla-launches-open-source-ai-agent-to-cut-token-costs]]
 - [[entities/introducing-seer-agent-the-answer-is-already-in-sentry-now-you-can-ask-for-it]]
-- [[entities/opensquilla-launches-open-source-ai-agent-to-cut-token-costs]]
 - [[entities/the-1-ai-agent-for-financial-services-fin]]
 
 → [[raw/articles/intercom-now-called-fin-launches-an-ai-agent-whose-only-job-is-managing-another-|原文存档]]^[raw/articles/intercom-now-called-fin-launches-an-ai-agent-whose-only-job-is-managing-another-.md]

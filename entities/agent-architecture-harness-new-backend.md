@@ -8,7 +8,7 @@ type: entity
 tags: [agent, harness, architecture, backend, worker, iii]
 sources:
   - raw/articles/agent-architecture-harness-new-backend
-review_value: 6
+review_value: 7
 review_confidence: 7
 
 ---

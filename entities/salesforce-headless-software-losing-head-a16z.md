@@ -4,7 +4,7 @@ title: "Salesforce 主动砍掉了界面，a16z 合伙人说：护城河从来�
 type: entity
 tags: [agent, api, crm, saas, data-moot, system-of-record, headless, moat, enterprise-software, a16z, salesforce]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 9
 review_confidence: 8
 sources: [raw/articles/salesforce-headless-software-losing-head-a16z]
@@ -175,7 +175,6 @@ Agent 治理是尚未被解决的难题，企业应该现在开始试点而非�
 
 → [[raw/articles/salesforce-headless-software-losing-head-a16z|原文存档]] ^[raw/articles/salesforce-headless-software-losing-head-a16z.md]
 - [[entities/from-system-of-record-to-system-of-intelligence|from]]
-- [[entities/from-system-of-record-to-system-of-intelligence]]
 - [[entities/meet-customers-where-they-are-agentforce-contact-center-now-offers-whatsapp-voice|meet customers where they are: agentforce contact center now]]
 
 

@@ -8,7 +8,7 @@ source: "[[raw/articles/ai-agent-trace-evals-stability-cost-evaluation-zhangyanf
 confidence: 0.88
 provenance_state: extracted
 review_value: 8
-review_confidence: 0.92
+review_confidence: 9.2
 sources:
   - raw/articles/ai-agent-trace-evals-stability-cost-evaluation-zhangyanfei
 ---

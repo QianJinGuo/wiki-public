@@ -13,7 +13,7 @@ review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 4
 created: 2026-06-26
-updated: 2026-07-20
+updated: 2026-09-05
 ---
 
 # SeedVR2 on Amazon SageMaker: 视频超分辨率部署实践
@@ -80,5 +80,4 @@ SeedVR2 专注于**修复/超分辨率**（输入低清 → 输出高清），�
 
 ## 相关实体
 
-- [[concepts/inference-optimization|推理优化]]
 - [[concepts/inference-optimization|推理优化]]

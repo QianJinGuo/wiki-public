@@ -8,7 +8,7 @@ source: "[[raw/articles/ali-open-code-review-cli-tool]]"
 confidence: 0.85
 provenance_state: extracted
 review_value: 8
-review_confidence: 0.9
+review_confidence: 9.0
 sources:
   - raw/articles/ali-open-code-review-cli-tool
   - raw/articles/open-code-review-github-trending-5-days-retrospective-2026-08-11

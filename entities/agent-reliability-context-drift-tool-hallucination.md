@@ -88,7 +88,6 @@ Agent 运行多轮后可靠性的两个核心问题： ^[raw/articles/kamacoder-
 - [[entities/agent-harness-context-management-working-set|Agent Harness 上下文管理：工作集视角]]
 - [[entities/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security-v2|AI tool poisoning exposes a major flaw in enterprise agent security]]
 - [[entities/cli-mcp-sdk-agent-tool-selection|CLI、MCP、API 选型：Agent 接入层决策指南]]
-- [[entities/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security-v2|AI tool poisoning exposes a major flaw in enterprise agent security | VentureBeat]]
 - [[entities/martin-fowler-ai-rd-harness-nondeterminism|Martin Fowler AI 研发 Harness：非确定性承重层]]
 - [[entities/harness-engineering-long-term-agent-tasks|Harness Engineering：让 Coding Agent 可靠完成长程任务]]
 - [[entities/harness-engineering-让-coding-agent-可靠完成长程任务-v2|Harness Engineering: 让 Coding Agent 可靠完成长程任务]]

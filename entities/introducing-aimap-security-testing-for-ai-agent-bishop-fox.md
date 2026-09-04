@@ -15,7 +15,6 @@ sources: [raw/articles/introducing-aimap-security-testing-for-ai-agent-bishop-fo
 
 ## 相关实体
 - [[entities/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security-v2]]
-- [[entities/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security-v2]]
 - [[entities/introducing-deepsec-find-and-fix-vulnerabilities-in-your-code-base]]
 - [[entities/alphaevolve-deepmind-discovery-agent]]
 - [[entities/cisco-preps-for-a-world-of-ai-agent-coworkers-frontier-model-threats]]

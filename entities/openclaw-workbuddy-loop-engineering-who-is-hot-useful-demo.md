@@ -8,7 +8,7 @@ source: "[[raw/articles/openclaw-workbuddy-loop-engineering-who-is-hot-useful-de
 confidence: 0.85
 provenance_state: extracted
 review_value: 8
-review_confidence: 0.95
+review_confidence: 9.5
 sources:
   - raw/articles/openclaw-workbuddy-loop-engineering-who-is-hot-useful-demo
 ---

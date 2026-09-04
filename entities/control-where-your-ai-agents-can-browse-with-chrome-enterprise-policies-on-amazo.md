@@ -67,7 +67,6 @@ AgentCore 的方案是将组织根 CA 存储在 AWS Secrets Manager，引用时�
 - [[entities/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security-v2|AI tool poisoning exposes a major flaw in enterprise agent security]]
 - [[entities/amazon-quick-accelerating-the-path-from-enterprise-data-to-ai-powered-decisions|Amazon Quick: Accelerating the path from enterprise data to AI-powered decisions]]
 - [[entities/building-enterprise-agentic-ai-with-kiro-on-aws|用 Kiro构建 AI：基于 AWS 基础设施快速构建企业级 Agentic AI 平台 | 亚马逊AWS官方博客]]
-- [[entities/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security-v2|AI tool poisoning exposes a major flaw in enterprise agent security | VentureBeat]]
 - [[entities/saastr-who-winning-enterprise-ai|Who Winning Enterprise AI Now]]
 - [[entities/real-time-voice-agents-with-stream-vision-agents-and-amazon-nova-2-sonic|Real-time voice agents with Stream Vision Agents and Amazon Nova 2 Sonic]]
 - [[entities/航班变更信息智能识别解决方案.md|航班变更信息智能识别解决方案 | Amazon Web Services]]

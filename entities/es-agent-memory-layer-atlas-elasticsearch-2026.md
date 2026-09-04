@@ -8,7 +8,7 @@ source: "[[raw/articles/es-agent-memory-layer-atlas-elasticsearch-2026]]"
 confidence: 0.9
 provenance_state: extracted
 review_value: 9
-review_confidence: 0.95
+review_confidence: 9.5
 sources:
   - raw/articles/es-agent-memory-layer-atlas-elasticsearch-2026
 ---

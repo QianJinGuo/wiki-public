@@ -2,7 +2,7 @@
 
 title: "Token 经济学与 AI 效率"
 created: 2026-04-30
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [token-economics, ai-productivity, model-routing, enterprise-ai, ai-pricing, harness, inference-optimization]
 sources:
@@ -142,5 +142,4 @@ Steve Yegge 为游戏项目开 12 个订阅，按真实 token 价格折算每月
 ## 相关实体
 - [[entities/github-token-efficiency-agentic-workflows|Improving token efficiency in GitHub Agentic Workflows]]
 - [[entities/github-agentic-token-efficiency|Token Efficiency]]
-- [[entities/github-agentic-token-efficiency|Improving Token Efficiency in GitHub Agentic Workflows — GitHub 内部 Agent 工作流 Token 优化实践]]
 - [[entities/yumanju-ai-full-flow-efficiency|柚漫剧 AI 全流程提效拆解]]

@@ -1,7 +1,7 @@
 ---
 title: "Yann LeCun 谈 LLM 不是智能与世界模型 JEPA"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, architecture, code, data, fine-tuning, llm, mlops, nvidia, observability, prompt, rag, rl, robotics, trading, vision, workflow]
 review_value: 7
 review_confidence: 7
@@ -120,6 +120,5 @@ CoT（Chain of Thought）之所以"低效"，是因为它要求 LLM 用"逐步�
 - [[entities/minicpm5-1b-forgetrain-agh-hunt|面壁让ai写了训练框架forgetrain，然后它自己训出了最强1b模型]]
 - [[entities/news-bonsai-image-4b|introducing 1-bit and ternary bonsai image 4b: image generat]]
 - [[entities/private-fintech-has-quietly-become-bigger-than-public-fintec|private fintech has quietly become bigger than public fintec]]
-- [[entities/private-fintech-has-quietly-become-bigger-than-public-fintec]]
 - [[entities/the-inevitable-need-for-an-open-model-consortium|the inevitable need for an open model consortium]]
  

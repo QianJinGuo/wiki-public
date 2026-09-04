@@ -32,7 +32,6 @@ review_stars: 4
 ## 相关实体
 - [[entities/how-to-build-audio-transcription-agent]]
 - [[entities/helloworldmedia.notion-self-filming-guide-by-hello-world-media-2f60dfa5e2e180cfa]]
-- [[entities/helloworldmedia.notion-self-filming-guide-by-hello-world-media-2f60dfa5e2e180cfa]]
 - [[entities/ntm-normalizing-trajectory-models]]
 - [[entities/nvidia-gamma-world-multi-agent-world-model]]
 

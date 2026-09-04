@@ -101,8 +101,6 @@ RAD-DPO 选择 DPO 路线而非 GRPO 或 PPO，有明确的技术考量：DPO �
 
 - [[entities/ebay-generative-retrieval-rq-vae-semantic-id-2026-06-30|eBay 生成式检索实践]]
 - [[entities/2026-llm-rl-algorithms-deeplog-imba-ppo-dpo-grpo-marl|RL 对齐算法演进]]
-- [[entities/ebay-generative-retrieval-rq-vae-semantic-id-2026-06-30|生成式检索 RQ-VAE]]
-- [[entities/2026-llm-rl-algorithms-deeplog-imba-ppo-dpo-grpo-marl|LLM RL 算法深度分析]]
 - Agentic 搜索检索
 - RLHF/DPO/GRPO 对齐
 - [[entities/dream-dense-retrieval-autoregressive-modeling-challengehub-2026|DREAM 密集检索]]

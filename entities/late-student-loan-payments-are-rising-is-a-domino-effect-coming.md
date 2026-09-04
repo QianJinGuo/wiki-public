@@ -1,18 +1,12 @@
 ---
 title: "late-student-loan-payments-are-rising-is-a-domino-effect-coming"
-created: 2026-05-15
-updated: 2026-08-01
-type: entity
-tags: ['payments', 'federal-reserve', 'cash', 'financial-inclusion']
-sources: [raw/articles/late-student-loan-payments-are-rising-is-a-domino-effect-coming]
-provenance_state: extracted
+created: 2026-09-05
+updated: 2026-09-05
+type: redirect
+review_value: 0
+archived_to: _archive/checkup-2026-09-05/late-student-loan-payments-are-rising-is-a-domino-effect-coming.md
+archived_reason: blacklisted_offtopic_scrape_stub
 ---
 
-> -> [[raw/articles/late-student-loan-payments-are-rising-is-a-domino-effect-coming.md|原文存档]]
-
-Published Time: 2026-05-12T21:11:24.123Z ^[raw/articles/late-student-loan-payments-are-rising-is-a-domino-effect-coming.md]
-
-## 来源
-
-- 原文: [[raw/articles/late-student-loan-payments-are-rising-is-a-domino-effect-coming.md|late-student-loan-payments-are-rising-is-a-domino-effect-coming]]
-- 原始链接: : https://www.americanbanker.com/news/late-student-loan-payments-are-rising-is-a-domino-effect-coming
+> 本实体已于 2026-09-05 质量闭环清理中归档（原因: blacklisted_offtopic_scrape_stub）。
+> 原文见 `raw/articles/`，归档件见 `_archive/checkup-2026-09-05/late-student-loan-payments-are-rising-is-a-domino-effect-coming.md`。

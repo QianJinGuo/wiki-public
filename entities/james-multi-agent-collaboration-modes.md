@@ -4,7 +4,7 @@ title: "Multi-Agent 的四种协作模式：Supervisor、Swarm、网状、流水
 type: entity
 tags: [agent, memory, multi-agent, prompt, rag]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 6
 review_confidence: 6
 sources: [raw/articles/james-multi-agent-collaboration-modes]
@@ -21,7 +21,6 @@ sources: [raw/articles/james-multi-agent-collaboration-modes]
 - [[entities/factory-mission-multi-agent-architecture]]
 - [[entities/anthropic-multi-agent-research-system]]
 - [[entities/multi-agent-mission-factory-luke-aiengineer]]
-- [[entities/构建基于多智能体架构的深度思考交易系统.md]]
 
 → [[raw/articles/james-multi-agent-collaboration-modes|原文存档]] ^[raw/articles/james-multi-agent-collaboration-modes.md]
 

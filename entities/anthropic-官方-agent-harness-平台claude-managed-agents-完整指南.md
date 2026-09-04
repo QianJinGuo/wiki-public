@@ -98,7 +98,6 @@ Anthropic 的 Agent 产品矩阵按"用户自管理程度"排列，覆盖从完�
 - [[entities/imclaw通过微信飞书操控claude-code-coodex-gemini-clipi-agent蜂群|IMClaw：通过微信/飞书操控ClaudeCode/Codex/GeminiCLI/Pi Agent蜂群]]
 - [[entities/claude-code-20000-char-source-analysis|两万字详解Claude Code源码核心机制]]
 - [[entities/天猫新品团队ai编码实战指南下|天猫新品营销技术团队AI编码实战指南（上）]]
-- [[entities/深入理解-claude-code-源码中的-agent-harness-构建之道-v2|深入理解 Claude Code 源码中的 Agent Harness 构建之道]]
 - [[entities/从vibe-coding到agentic-engineering重构后台开发全流程|从Vibe Coding到Agentic Engineering：重构后台开发全流程]]
 - [[entities/告别氛围编程基于-harness-治理和-sdd-的团队级-ai-研发范式演进与实践|告别“氛围编程”：基于 Harness 治理和 SDD 的团队级 AI 研发范式演进与实践]]
 - [[entities/别再把上下文当聊天记录|别再把上下文当聊天记录]]

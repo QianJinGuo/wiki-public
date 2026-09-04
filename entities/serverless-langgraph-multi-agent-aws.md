@@ -2,7 +2,7 @@
 
 title: "Build a highly scalable serverless LangGraph multi-agent system"
 created: 2026-06-01
-updated: 2026-07-31
+updated: 2026-09-05
 type: entity
 tags: ['aws', 'langgraph', 'serverless', 'multi-agent', 'architecture']
 source: [[raw/articles/serverless-langgraph-multi-agent-aws]]
@@ -82,7 +82,6 @@ Docker 容器化提供了移植性但引入了冷启动问题。在选择部署�
 - [[entities/构建基于多智能体架构的深度思考交易系统.md]]
 - [[entities/anthropic-multi-agent-research-system]]
 - [[entities/scalable-voice-agent-design-with-amazon-nova-sonic-multi-agent-tools-and-session]]
-- [[entities/构建基于多智能体架构的深度思考交易系统.md]]
 - [[entities/netflix-real-time-service-topology]]
 
 → [[raw/articles/serverless-langgraph-multi-agent-aws|原文存档]] ^[raw/articles/serverless-langgraph-multi-agent-aws.md]

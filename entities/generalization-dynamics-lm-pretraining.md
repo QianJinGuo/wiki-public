@@ -4,7 +4,7 @@ title: "Generalization Dynamics of LM Pre-training — Jiaxin Wen"
 type: entity
 tags: [ai-strategy, lm-pretraining, generalization, mode-hopping]
 created: 2026-05-20
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 9
 review_confidence: 8
 review_recommendation: strong
@@ -385,7 +385,6 @@ Mode-hopping 在不同数据集上的普遍性如何？例如，在 Flipped Answ
 ## 相关实体
 - [[entities/generalization-dynamics-of-lm-pre-training-jiaxin-wen]]
 - [[entities/generalization-dynamics-pre-training-jiaxin-wen]]
-- [[entities/generalization-dynamics-of-lm-pre-training-jiaxin-wen]]
 - [[entities/new-ai-lock-in]]
 - [[entities/ai-driven-layoffs-business-sense-cio]]
 

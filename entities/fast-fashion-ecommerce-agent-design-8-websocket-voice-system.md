@@ -7,7 +7,7 @@ review_value: 8
 review_confidence: 8
 review_recommendation: strong
 publish_date: 2026-01-30
-updated: 2026-08-01
+updated: 2026-09-05
 type: entity
 ---
 ## 概述
@@ -57,4 +57,3 @@ Strands Agents 的 Tool Calling 将语音 Agent 从"回答问题"升级为"直�
 - [[entities/anthropic-google-agent-skills-design-patterns|从 Anthropic 到 Google：Agent Skills 进入设计模式阶段]]
 - [[entities/hermes-agent-memory-system|Hermes Agent 记忆系统 vs OpenClaw 记忆观]]
 - [[entities/hermes-agent-memory-system-openclaw-comparison|深度拆解 Hermes Agent 记忆系统]]
-- [[entities/构建基于多智能体架构的深度思考交易系统.md|构建基于多智能体架构的深度思考交易系统]]

@@ -8,7 +8,7 @@ source: "[[raw/articles/growloop-dialogue-human-likeness-evaluation-benchmark]]"
 confidence: 0.85
 provenance_state: extracted
 review_value: 8
-review_confidence: 0.9
+review_confidence: 9.0
 sources:
   - raw/articles/growloop-dialogue-human-likeness-evaluation-benchmark
 ---
