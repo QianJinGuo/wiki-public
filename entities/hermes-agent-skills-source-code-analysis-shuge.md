@@ -2,7 +2,7 @@
 
 title: "Hermes Agent Skills 源码级拆解：3级渐进加载 × 6步调度 × 5维安全扫描"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, aws, code, data, memory, open-source, prompt, rl, search, security, skill, tool-use, workflow]
 review_value: 7
 review_confidence: 7
@@ -22,7 +22,7 @@ sources:
 - [[moc/data-infrastructure|MOC]]
 ## 深度分析
 
-Hermes Agent Skills 源码级拆解：3级渐进加载 × 6步调度 × 5维安全扫描 涉及agent领域的核心技术议题。 ^[raw/articles/hermes-agent-skills-source-code-analysis-shuge.md]
+Hermes Agent Skills 源码级拆解：3级渐进加载 × 6步调度 × 5维安全扫描 ^[raw/articles/hermes-agent-skills-source-code-analysis-shuge.md]
 ### 核心观点
 1. # Hermes Agent Skills 源码级拆解：3级渐进加载 × 6步调度 × 5维安全扫描 ^[raw/articles/hermes-agent-skills-source-code-analysis-shuge.md]
 > 源码分析版（vs [[entities/hermes-skill-system|Hermes Agent Skill 系统深度解析]] winty版）

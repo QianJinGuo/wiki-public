@@ -2,7 +2,7 @@
 
 title: "OpenAI Codex Sites：AI 一句话建站部署，Cloudflare Worker + D1 + R2 全套（极客之家译介）"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [code, data, database, game, knowledge-mgmt, llm, mlops, open-source, openai, rl, tool-use, trading]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-OpenAI Codex Sites：AI 一句话建站部署，Cloudflare Worker + D1 + R2 全套（极客之家译介） 涉及code领域的核心技术议题。 ^[raw/articles/codex-sites-cloudflare-worker-one-click-deploy-geekhome.md]
+OpenAI Codex Sites：AI 一句话建站部署，Cloudflare Worker + D1 + R2 全套（极客之家译介） ^[raw/articles/codex-sites-cloudflare-worker-one-click-deploy-geekhome.md]
 ### 核心观点
 1. # OpenAI Codex Sites：AI 一句话建站部署，Cloudflare Worker + D1 + R2 全套（极客之家译介） ^[raw/articles/codex-sites-cloudflare-worker-one-click-deploy-geekhome.md]
 > 来源：极客之家 · OpenAI 官方译介

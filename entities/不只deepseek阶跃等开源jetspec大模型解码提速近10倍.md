@@ -42,7 +42,7 @@ JetSpec 的因果并行草稿头正是在这个困境中找到的折中点：保
 
 在高并发、吞吐量导向场景下，DSpark 保持并行草稿主干的低成本，加入轻量级串行头和置信度估计，在不增加每个请求验证成本的前提下提高整体吞吐量。在低并发、延迟导向场景下，系统拥有更充足的 FLOPs 预算，JetSpec 将计算预算转化为单次验证中的更高接受率，从而降低单用户延迟。^[raw/articles/不只deepseek阶跃等开源jetspec大模型解码提速近10倍.md:64-69]
 
-一个可预见的下一步是构建动态服务框架，同时推动吞吐量-延迟帕累托边界的两端。这与 [[deepseek-dspark-speculative-decoding-2026|DeepSeek DSpark 投机解码]] 中讨论的预算感知推理策略方向一致。^[raw/articles/不只deepseek阶跃等开源jetspec大模型解码提速近10倍.md:171-173]
+一个可预见的下一步是构建动态服务框架，同时推动吞吐量-延迟帕累托边界的两端。这与 [[deepseek-dspark-speculative-decoding-2026|DeepSeek DSpark 投机解码]] 中讨论的预算感知推理策略方向一致。^[raw/articles/不只deepseek阶跃等开源jetspec大模型解码提速近10倍.md]
 
 ### Agent 场景驱动推理效率创新
 

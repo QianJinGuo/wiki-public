@@ -2,7 +2,7 @@
 
 title: "How To Measure Development Productivity?"
 created: 2026-06-26
-updated: 2026-08-01
+updated: 2026-09-05
 type: entity
 tags: [article]
 source: "[[raw/articles/how-dev-productivity]]"
@@ -19,10 +19,8 @@ review_recommendation: worth-reading
 > **来源**: [How To Measure Development Productivity?](https://itamargilad.com/how-dev-productivity/)
 
 
-Published Time: 2026-06-21T13:42:51+00:00^[raw/articles/how-dev-productivity.md]
 
 
-Markdown Content:
 Last week I published this cartoon on LinkedIn. It went instantly viral: ^[raw/articles/how-dev-productivity.md]
 
 ![Image 1](https://itamargilad.com/wp-content/uploads/2026/06/Museum-of-meaningless-metrics-1024x1024.png)^[raw/articles/how-dev-productivity.md]

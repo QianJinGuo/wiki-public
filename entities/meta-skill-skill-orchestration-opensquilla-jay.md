@@ -2,7 +2,7 @@
 
 title: "Meta Skill：Skill 之上编排 Skill 的抽象层"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, data, llm, memory, open-source, prompt, rl, search, security, skill, tool-use, workflow]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-Meta Skill：Skill 之上编排 Skill 的抽象层 涉及agent领域的核心技术议题。 ^[raw/articles/meta-skill-skill-orchestration-opensquilla-jay.md]
+Meta Skill：Skill 之上编排 Skill 的抽象层 ^[raw/articles/meta-skill-skill-orchestration-opensquilla-jay.md]
 ### 核心观点
 1. # Meta Skill：Skill 之上编排 Skill 的抽象层 ^[raw/articles/meta-skill-skill-orchestration-opensquilla-jay.md]
 > 整理自量子位 Jay 报道

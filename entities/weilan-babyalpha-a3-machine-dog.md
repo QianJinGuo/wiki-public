@@ -2,7 +2,7 @@
 
 title: "蔚蓝BabyAlpha A3消费级机器狗撕开英伟达垄断"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, architecture, data, game, llm, mlops, robotics, security, vision]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-蔚蓝BabyAlpha A3消费级机器狗撕开英伟达垄断 涉及agent领域的核心技术议题。 ^[raw/articles/weilan-babyalpha-a3-machine-dog.md]
+蔚蓝BabyAlpha A3消费级机器狗撕开英伟达垄断 ^[raw/articles/weilan-babyalpha-a3-machine-dog.md]
 ### 核心观点
 1. # 蔚蓝BabyAlpha A3消费级机器狗撕开英伟达垄断 ^[raw/articles/weilan-babyalpha-a3-machine-dog.md]
 ## 核心亮点

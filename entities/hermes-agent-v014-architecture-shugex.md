@@ -2,7 +2,7 @@
 
 title: "简单接口：返回最终响应字符串"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, architecture, code, data, database, llm, memory, open-source, prompt, rag, rl, robotics, search, security, tool-use, workflow]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-简单接口：返回最终响应字符串 涉及agent领域的核心技术议题。 ^[raw/articles/hermes-agent-v014-architecture-shugex.md]
+简单接口：返回最终响应字符串 ^[raw/articles/hermes-agent-v014-architecture-shugex.md]
 ### 核心观点
 1. 🚩 2026 年「术哥无界」系列实战文档 X 篇原创计划 第 119 篇，Hermes Agent  最佳实战「2026」系列第 2 篇 ^[raw/articles/hermes-agent-v014-architecture-shugex.md]
 大家好，欢迎来到 术哥无界 | ShugeX ｜ 运维有术。 ^[raw/articles/hermes-agent-v014-architecture-shugex.md]

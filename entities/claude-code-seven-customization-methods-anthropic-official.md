@@ -2,7 +2,7 @@
 
 title: "Claude Code 七种自定义方法：官方全景指南"
 created: 2026-06-26
-updated: 2026-08-01
+updated: 2026-09-05
 type: entity
 tags: [claude-code, customization, claude-md, rules, skills, subagents, hooks, output-styles, system-prompt, anthropic, harness]
 sources: [raw/articles/claude-code-seven-customization-methods-anthropic-official]
@@ -110,7 +110,7 @@ Claude Code 七种自定义方法的本质区别在于**上下文成本模型**�
 
 ### "事实 vs 流程 vs 护栏"的三层分类法
 
-官方给出的核心原则——"CLAUDE.md 保存事实，不保存流程和护栏"——实际上定义了自定义方法的三层分类法：事实（构建命令、目录布局）放 CLAUDE.md，流程（部署、发布检查清单）放技能，护栏（绝不要做的事）放钩子+权限。这个分类法解决了开发者最常见的困惑："这段指令应该放在哪里？"^[raw/articles/claude-code-seven-customization-methods-anthropic-official.md:89-97]。
+官方给出的核心原则——"CLAUDE.md 保存事实，不保存流程和护栏"——实际上定义了自定义方法的三层分类法：事实（构建命令、目录布局）放 CLAUDE.md，流程（部署、发布检查清单）放技能，护栏（绝不要做的事）放钩子+权限。这个分类法解决了开发者最常见的困惑："这段指令应该放在哪里？"^[raw/articles/claude-code-seven-customization-methods-anthropic-official.md]。
 
 ### 子智能体的隔离价值不仅是上下文卫生
 
@@ -118,7 +118,7 @@ Claude Code 七种自定义方法的本质区别在于**上下文成本模型**�
 
 ### 钩子是"确定性自动化"的唯一可靠路径
 
-Claude Code 中，钩子是唯一能保证"确定性触发、确定性执行"的自定义方法。CLAUDE.md 中的"每次 X，都要 Y"依赖 LLM 的指令遵循能力，而钩子通过退出码 2 拒绝工具调用是硬性的。对于安全护栏（阻止危险命令）和质量门控（lint 检查），钩子比 CLAUDE.md 中的软规则可靠得多^[raw/articles/claude-code-seven-customization-methods-anthropic-official.md:73-77]。
+Claude Code 中，钩子是唯一能保证"确定性触发、确定性执行"的自定义方法。CLAUDE.md 中的"每次 X，都要 Y"依赖 LLM 的指令遵循能力，而钩子通过退出码 2 拒绝工具调用是硬性的。对于安全护栏（阻止危险命令）和质量门控（lint 检查），钩子比 CLAUDE.md 中的软规则可靠得多^[raw/articles/claude-code-seven-customization-methods-anthropic-official.md]。
 
 ### 输出风格的"权重最高"是双刃剑
 

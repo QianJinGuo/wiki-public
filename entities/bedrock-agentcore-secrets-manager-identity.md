@@ -2,7 +2,7 @@
 
 title: "Reference your own AWS Secrets Manager secrets in Amazon Bedrock AgentCore Identity"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, aws, code, data, open-source, prompt, rl, security, tool-use]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-Reference your own AWS Secrets Manager secrets in Amazon Bedrock AgentCore Identity 涉及agent领域的核心技术议题。 ^[raw/articles/bedrock-agentcore-secrets-manager-identity.md]
+Reference your own AWS Secrets Manager secrets in Amazon Bedrock AgentCore Identity ^[raw/articles/bedrock-agentcore-secrets-manager-identity.md]
 ### 核心观点
 1. sha256: 59ab9fcf9525ccb30d11b2162928a4cc0e1955d3db620fb2db6f9f07bc28ed70
 # Reference your own AWS Secrets Manager secrets in Amazon Bedrock AgentCore Identity

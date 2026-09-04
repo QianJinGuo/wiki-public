@@ -2,7 +2,7 @@
 
 title: "5分钟AI长视频不翻车！国产开源框架杀到全球第一梯队"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, architecture, code, evaluation, fine-tuning, game, llm, memory, mlops, open-source, prompt, rl, search, tool-use, video, vision]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-5分钟AI长视频不翻车！国产开源框架杀到全球第一梯队 涉及agent领域的核心技术议题。 ^[raw/articles/joyai-echo-long-video-jd-qbitai.md]
+5分钟AI长视频不翻车！国产开源框架杀到全球第一梯队 ^[raw/articles/joyai-echo-long-video-jd-qbitai.md]
 ### 核心观点
 1. 国产开源框架杀到全球第一梯队 ^[raw/articles/joyai-echo-long-video-jd-qbitai.md]
 > 作者：梦瑶 闻乐（量子位 QbitAI） · 发布：2026-06-07

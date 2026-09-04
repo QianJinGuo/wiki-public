@@ -2,7 +2,7 @@
 
 title: "Dynamically Splitting Wide Partitions in Cassandra for Time Series Workloads"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [aws, code, data, observability, open-source, rag, rl, tool-use, vision, workflow]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-Dynamically Splitting Wide Partitions in Cassandra for Time Series Workloads 涉及aws领域的核心技术议题。 ^[raw/articles/dynamically-splitting-wide-partitions-in-cassandra-for-time-.md]
+Dynamically Splitting Wide Partitions in Cassandra for Time Series Workloads ^[raw/articles/dynamically-splitting-wide-partitions-in-cassandra-for-time-.md]
 ### 核心观点
 1. We use Apache Cassandra 4. ^[raw/articles/dynamically-splitting-wide-partitions-in-cassandra-for-time-.md]
 2. x as the underlying storage for these main reasons: ^[raw/articles/dynamically-splitting-wide-partitions-in-cassandra-for-time-.md]

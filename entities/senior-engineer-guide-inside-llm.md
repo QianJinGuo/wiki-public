@@ -2,7 +2,7 @@
 
 title: "Everything a Senior Engineer Needs to Know About What's Inside an LLM"
 created: 2026-06-23
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [llm, transformer, architecture, engineering]
 provenance_state: inferred
@@ -22,9 +22,7 @@ review_recommendation: strong
 ## 概述
 
 
-Published Time: 2026-06-20T17:00:09+00:00
 
-Markdown Content:
 Welcome back to Path to Staff! This series is a little different from our usual programming. In this series, we’re covering LLMs and AI in-depth. ^[raw/articles/senior-engineer-guide-inside-llm.md]
 
 As an engineer, I never really had the time to understand AI’s internals. But I’ve spent the past few weeks doing deep research to unpack it all. ^[raw/articles/senior-engineer-guide-inside-llm.md]

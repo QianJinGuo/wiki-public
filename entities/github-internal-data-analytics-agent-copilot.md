@@ -11,7 +11,7 @@ tags:
   - agent-architecture
   - internal-tools
 created: 2026-06-22
-updated: 2026-07-27
+updated: 2026-09-05
 type: entity
 review_value: 8
 review_confidence: 8
@@ -28,9 +28,7 @@ sources:
 ## 核心内容
 
 
-Published Time: 2026-06-19T09:00:00-07:00
 
-Markdown Content:
 Qubot, our internal Copilot-powered analytics agent, allows any GitHub employee to ask questions about our data in plain language. Here’s what we learned as we built it. ^[raw/articles/github-internal-data-analytics-agent-copilot.md]
 
 June 19, 2026

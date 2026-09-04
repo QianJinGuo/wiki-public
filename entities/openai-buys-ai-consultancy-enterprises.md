@@ -17,9 +17,7 @@ Title: OpenAI buys AI consultancy to sell enterprises on its models^[raw/article
 
 URL Source: https://www.theregister.com/ai-ml/2026/05/11/openai-buys-ai-consultancy-to-sell-enterprises-on-its-models/5238213/^[raw/articles/5238213.md]
 
-Published Time: 2026-05-11T18:33:11.000Z^[raw/articles/5238213.md]
 
-Markdown Content:
 OpenAI buys AI consultancy to sell enterprises on its models^[raw/articles/5238213.md]
 
 Jump to main content^[raw/articles/5238213.md]

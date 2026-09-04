@@ -2,7 +2,7 @@
 
 title: "How to Automate AI Model Documentation with NVIDIA MCG Toolkit"
 created: 2026-06-02
-updated: 2026-08-01
+updated: 2026-09-05
 type: entity
 tags: [nvidia, documentation, tool]
 source: [[raw/articles/nvidia-mcg-toolkit-model-documentation]]
@@ -17,10 +17,8 @@ sources:
 ## 深度分析
 
 
-Published Time: 2026-05-29T16:00:00+00:00^[raw/articles/nvidia-mcg-toolkit-model-documentation.md]
 
 
-Markdown Content:
 As AI models grow in complexity and regulatory scrutiny intensifies under frameworks including California’s AB-2013 and the EU AI Act, software teams face a challenge beyond delivering great code: They need to produce comprehensive, auditable model documentation before the models are released. ^[raw/articles/nvidia-mcg-toolkit-model-documentation.md]
 
 Model cards describe how a model works, its intended use and license, training data, performance, and limitations. They [promote transparency and accountability](https://developer.nvidia.com/blog/enhancing-ai-transparency-and-ethical-considerations-with-model-card/) so downstream users—customers, regulators, and affected communities—can make informed decisions when selecting and deploying AI. That audience extends beyond developers: Policymakers, procurement teams, and risk assessors rely on model cards to evaluate fitness for use and compare models across vendors. ^[raw/articles/nvidia-mcg-toolkit-model-documentation.md]

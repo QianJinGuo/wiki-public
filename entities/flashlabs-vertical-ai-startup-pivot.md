@@ -2,7 +2,7 @@
 
 title: "垂类 AI 创企的自救：FlashLabs 从 FlashIntel 到 AI Native"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, architecture, code, data, evaluation, game, llm, mlops, prompt, robotics, search, security, tool-use, trading]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-垂类 AI 创企的自救：FlashLabs 从 FlashIntel 到 AI Native 涉及agent领域的核心技术议题。 ^[raw/articles/flashlabs-vertical-ai-startup-pivot.md]
+垂类 AI 创企的自救：FlashLabs 从 FlashIntel 到 AI Native ^[raw/articles/flashlabs-vertical-ai-startup-pivot.md]
 ### 核心观点
 1. # 垂类 AI 创企的自救：FlashLabs 从 FlashIntel 到 AI Native ^[raw/articles/flashlabs-vertical-ai-startup-pivot.md]
 **来源：** 极客公园 | 徐珊 | 2026年5月23日 ^[raw/articles/flashlabs-vertical-ai-startup-pivot.md]

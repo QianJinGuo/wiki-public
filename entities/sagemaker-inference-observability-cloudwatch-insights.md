@@ -111,7 +111,7 @@ SageMaker 推理端点原生发射 OpenTelemetry 格式指标到 CloudWatch，�
 
 **Token 级指标是 LLM 推理可观测性的分水岭**：传统推理监控只关注请求级指标（延迟、吞吐、错误率），但 LLM 推理的流式输出特性要求更细粒度的监控——TTFT（首 token 延迟）决定用户体验的"响应感"，ITL（token 间延迟）决定输出的"流畅度"。SageMaker 将这些指标原生集成到 CloudWatch，而非依赖用户自建 vLLM metrics 导出，大幅降低了 LLM 推理监控的工程门槛 ^[raw/articles/monitor-and-debug-generative-ai-inference-with-sagemaker-det.md]。
 
-**KV Cache 压力指标是容量规划的"早期预警系统"**：KV Cache 使用率是 LLM 推理特有的资源瓶颈——当使用率超过 40-50% 时，推理引擎开始拒绝新请求或降级服务质量。SageMaker 将这一指标纳入原生监控，使得运维团队可以在用户感知到问题之前触发扩缩。这比传统的"请求失败后扩容"模式提前了数分钟 ^[raw/articles/monitor-and-debug-generative-ai-inference-with-sagemaker-det.md:36-36]。
+**KV Cache 压力指标是容量规划的"早期预警系统"**：KV Cache 使用率是 LLM 推理特有的资源瓶颈——当使用率超过 40-50% 时，推理引擎开始拒绝新请求或降级服务质量。SageMaker 将这一指标纳入原生监控，使得运维团队可以在用户感知到问题之前触发扩缩。这比传统的"请求失败后扩容"模式提前了数分钟 ^[raw/articles/monitor-and-debug-generative-ai-inference-with-sagemaker-det.md]。
 
 **三视图设计体现了"分层诊断"的运维哲学**：Performance（一切正常吗？）→ Capacity（资源够吗？）→ Reliability（AZ 故障能活吗？）三个视图对应了运维诊断的三个层次——从"发现问题"到"定位原因"到"评估风险"。这种分层设计比单一 dashboard 更高效，因为它引导运维人员按照诊断逻辑逐步深入 ^[raw/articles/monitor-and-debug-generative-ai-inference-with-sagemaker-det.md]。
 
@@ -123,7 +123,7 @@ SageMaker 推理端点原生发射 OpenTelemetry 格式指标到 CloudWatch，�
 
 1. **LLM 推理监控必须覆盖 Token 级指标**：如果你在用 SageMaker 部署 LLM，确保启用详细可观测性（新端点默认开启）。重点关注 TTFT P99 和 ITL P99——这两个指标直接决定用户体验 ^[raw/articles/monitor-and-debug-generative-ai-inference-with-sagemaker-det.md]。
 
-2. **设置 KV Cache 使用率告警**：在 CloudWatch 中为 `vllm:kv_cache_usage_perc` 设置告警阈值（建议 40% 警告、60% 严重）。当 KV Cache 压力上升时，提前扩容而不是等待请求失败 ^[raw/articles/monitor-and-debug-generative-ai-inference-with-sagemaker-det.md:36-36]。
+2. **设置 KV Cache 使用率告警**：在 CloudWatch 中为 `vllm:kv_cache_usage_perc` 设置告警阈值（建议 40% 警告、60% 严重）。当 KV Cache 压力上升时，提前扩容而不是等待请求失败 ^[raw/articles/monitor-and-debug-generative-ai-inference-with-sagemaker-det.md]。
 
 3. **用 Reliability Tab 评估 AZ 风险**：定期检查 AZ 分布——如果推理实例集中在 1-2 个 AZ，单个 AZ 故障会导致显著的服务降级。目标：每个 AZ 至少有 25% 的推理容量 ^[raw/articles/monitor-and-debug-generative-ai-inference-with-sagemaker-det.md:66-66]。
 

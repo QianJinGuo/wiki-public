@@ -24,7 +24,7 @@ type: entity
 - [[moc/data-infrastructure|MOC]]
 ## 深度分析
 
-Harness 之后：Agent 可靠性的关键，是状态边界和失败闭环 涉及agent领域的核心技术议题。 ^[raw/articles/harness-之后-状态边界与失败闭环-若飞.md]
+Harness 之后：Agent 可靠性的关键，是状态边界和失败闭环 ^[raw/articles/harness-之后-状态边界与失败闭环-若飞.md]
 ### 核心观点
 1. # Harness 之后：Agent 可靠性的关键，是状态边界和失败闭环 ^[raw/articles/harness-之后-状态边界与失败闭环-若飞.md]
 ## 太长不看

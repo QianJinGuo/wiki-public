@@ -19,9 +19,7 @@ review_recommendation: strong
 # Towards Native Post-Quantum Private ETH - Privacy - Ethereum Research
 
 
-Published Time: 2026-06-24T15:53:26+00:00
 
-Markdown Content:
 _Thanks to [@winderica](https://ethresear.ch/u/winderica), [@mmjahanara](https://ethresear.ch/u/mmjahanara), [Kenny Paterson](https://scholar.google.com/citations?user=NkuWcH0AAAAJ&hl=en), [Varun Maram](https://varun-maram.github.io/) and [@keewoolee](https://ethresear.ch/u/keewoolee) for their valuable suggestions and feedbacks._ ^[raw/articles/towards-native-post-quantum-private-eth.md]
 
 #### [](http://ethresear.ch/t/towards-native-post-quantum-private-eth/25291#p-60931-beyond-hndl-1)Beyond HNDL

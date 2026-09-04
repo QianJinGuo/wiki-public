@@ -1,7 +1,7 @@
 ---
 title: "What Job Interviews Taught Me About Kubernetes"
 created: 2026-06-16
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [article, newsletter]
 source_url: "https://notnotp.com/notes/what-job-interviews-taught-me-about-kubernetes/"
@@ -24,9 +24,7 @@ review_stars: 4
 
 ## 内容提炼
 
-Published Time: 2026-06-15 ^[raw/articles/notnotp-k8s-interviews-non-technical.md]
 
-Markdown Content: ^[raw/articles/notnotp-k8s-interviews-non-technical.md]
 Published on 15 June 2026 ^[raw/articles/notnotp-k8s-interviews-non-technical.md]
 So I've been job hunting lately. Reading job postings, doing interviews, talking to engineering teams at like a dozen companies. And I noticed something compared to five years ago when I was last doing this: literally everyone is on Kubernetes now. Every single company I talked to. ^[raw/articles/notnotp-k8s-interviews-non-technical.md]
 

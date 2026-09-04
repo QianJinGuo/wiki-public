@@ -2,7 +2,7 @@
 
 title: "Building is just the beginning: Introducing Discoverability | Lovable"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [code, data, game, llm, observability, prompt, rag, rl, robotics, search, security, tool-use, vision]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-Building is just the beginning: Introducing Discoverability | Lovable 涉及code领域的核心技术议题。 ^[raw/articles/lovable-building-is-just-the-beginning-introducing-discoverability.md]
+Building is just the beginning: Introducing Discoverability | Lovable ^[raw/articles/lovable-building-is-just-the-beginning-introducing-discoverability.md]
 ### 核心观点
 1. Markdown Content: ^[raw/articles/lovable-building-is-just-the-beginning-introducing-discoverability.md]
 # Building is just the beginning: Introducing Discoverability | Lovable

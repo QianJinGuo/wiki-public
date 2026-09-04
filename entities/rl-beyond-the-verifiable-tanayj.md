@@ -1,7 +1,7 @@
 ---
 title: "RL Beyond the Verifiable: 当奖励信号无法自动验证时"
 created: 2026-06-30
-updated: 2026-08-30
+updated: 2026-09-05
 type: entity
 tags: [rl, rlvr, reinforcement-learning, training, alignment, reward-model]
 sources: [raw/articles/rl-beyond-the-verifiable]
@@ -137,7 +137,7 @@ OpenRubrics 等工作现在专注于规模化生成这些评分标准。这是�
 
 ### 打法三：拥有完整闭环
 
-**代表公司**：Periodic Labs、Isomorphic Labs、Lila Sciences^[raw/articles/rl-beyond-the-verifiable.md:74-78]
+**代表公司**：Periodic Labs、Isomorphic Labs、Lila Sciences^[raw/articles/rl-beyond-the-verifiable.md]
 
 **适用场景**：
 答案难以验证但可以被验证——只是无法在计算机上验证。无法通过 Rubric 或证明来检查新材料或药物，必须运行实验。^[raw/articles/rl-beyond-the-verifiable.md:74-76]
@@ -172,7 +172,7 @@ OpenRubrics 等工作现在专注于规模化生成这些评分标准。这是�
 
 **低可验证性领域**（需形式化或物理验证）：^[raw/articles/rl-beyond-the-verifiable.md]
 
-- 科学发现、材料设计、药物开发、艺术创作^[raw/articles/rl-beyond-the-verifiable.md:74-78]
+- 科学发现、材料设计、药物开发、艺术创作^[raw/articles/rl-beyond-the-verifiable.md]
 
 **关键洞察**：当前 RLVR 方法能走多远，以及是否需要新突破，是重大开放问题。如果当前方法能够泛化到经济其余部分，将产生巨大影响；如果需要全新突破，时间线将大大延长。^[raw/articles/rl-beyond-the-verifiable.md:78-79]
 
@@ -198,8 +198,8 @@ OpenRubrics 等工作现在专注于规模化生成这些评分标准。这是�
    - 允许动态切换验证策略^[raw/articles/rl-beyond-the-verifiable.md:62-64]
 
 3. **人机协作边界**
-   - 明确界定自动化验证和人工审核的边界^[raw/articles/rl-beyond-the-verifiable.md:74-78]
-   - 设计高效的人工介入机制^[raw/articles/rl-beyond-the-verifiable.md:74-78]
+   - 明确界定自动化验证和人工审核的边界^[raw/articles/rl-beyond-the-verifiable.md]
+   - 设计高效的人工介入机制^[raw/articles/rl-beyond-the-verifiable.md]
 
 ## 实践启示
 
@@ -214,12 +214,12 @@ OpenRubrics 等工作现在专注于规模化生成这些评分标准。这是�
 3. **长期需要新的奖励信号设计方法**
    - 关注生成式奖励模型和过程奖励模型的发展^[raw/articles/rl-beyond-the-verifiable.md:58-62]
    - 探索领域形式化的可能性^[raw/articles/rl-beyond-the-verifiable.md:70-73]
-   - 考虑物理验证闭环的商业模式^[raw/articles/rl-beyond-the-verifiable.md:74-78]
+   - 考虑物理验证闭环的商业模式^[raw/articles/rl-beyond-the-verifiable.md]
 
 4. **创业机会分布**
    - **数据层**：垂直领域的 Rubric 构建和验证服务（Mercor 模式）^[raw/articles/rl-beyond-the-verifiable.md:68-68]
    - **工具层**：形式化验证和自动证明系统（Pramaana 模式）^[raw/articles/rl-beyond-the-verifiable.md:71-73]
-   - **应用层**：拥有完整验证闭环的 AI+Science 公司（Periodic Labs 模式）^[raw/articles/rl-beyond-the-verifiable.md:74-78]
+   - **应用层**：拥有完整验证闭环的 AI+Science 公司（Periodic Labs 模式）^[raw/articles/rl-beyond-the-verifiable.md]
 
 ## 相关实体
 

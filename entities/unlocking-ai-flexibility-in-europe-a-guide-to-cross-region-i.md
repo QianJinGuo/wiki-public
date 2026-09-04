@@ -2,7 +2,7 @@
 
 title: "Unlocking AI flexibility in Europe: A guide to cross-region inference for EU data processing and model access"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [aws, code, data, inference, mlops, prompt, rl, security, tool-use]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-Unlocking AI flexibility in Europe: A guide to cross-region inference for EU data processing and model access 涉及aws领域的核心技术议题。 ^[raw/articles/unlocking-ai-flexibility-in-europe-a-guide-to-cross-region-i.md]
+Unlocking AI flexibility in Europe: A guide to cross-region inference for EU data processing and model access ^[raw/articles/unlocking-ai-flexibility-in-europe-a-guide-to-cross-region-i.md]
 ### 核心观点
 1. cross-Region Inference (CRIS) on Amazon Bedrock meets these needs by automatically routing requests across multiple AWS Regions within predefined geographic boundaries. ^[raw/articles/unlocking-ai-flexibility-in-europe-a-guide-to-cross-region-i.md]
 2. This allows generative AI applications to consume broad capacity in the geography, helping customers to build more resilient applications that reflect their geographic intricacies. ^[raw/articles/unlocking-ai-flexibility-in-europe-a-guide-to-cross-region-i.md]

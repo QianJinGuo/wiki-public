@@ -2,7 +2,7 @@
 
 title: "让 Coding Agent 从黑盒到透明：阿里云 Agent 观测审计数据采集实践"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, ai-coding, architecture, code, data, database, evaluation, llm, memory, mlops, nvidia, observability, prompt, security, tool-use]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-让 Coding Agent 从黑盒到透明：阿里云 Agent 观测审计数据采集实践 涉及agent领域的核心技术议题。 ^[raw/articles/alibaba-agent-observability-audit-loongsuite-pilot-coding-agent-blackbox-transparent.md]
+让 Coding Agent 从黑盒到透明：阿里云 Agent 观测审计数据采集实践 ^[raw/articles/alibaba-agent-observability-audit-loongsuite-pilot-coding-agent-blackbox-transparent.md]
 ### 核心观点
 1. # 让 Coding Agent 从黑盒到透明：阿里云 Agent 观测审计数据采集实践 ^[raw/articles/alibaba-agent-observability-audit-loongsuite-pilot-coding-agent-blackbox-transparent.md]
 > AI Agent 规模化落地带来执行黑盒、行为难追溯、成本难度量三大难题。

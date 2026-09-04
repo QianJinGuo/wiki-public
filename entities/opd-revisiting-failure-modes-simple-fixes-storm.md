@@ -2,7 +2,7 @@
 
 title: "OPD 重新审视失败模式与简单修复"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, code, fine-tuning, llm, memory, mlops, observability, open-source, prompt, rl]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-Opd Revisiting Failure Modes Simple Fixes Storm 涉及agent领域的核心技术议题。 ^[raw/articles/opd-revisiting-failure-modes-simple-fixes-storm.md]
+Opd Revisiting Failure Modes Simple Fixes Storm ^[raw/articles/opd-revisiting-failure-modes-simple-fixes-storm.md]
 ### 核心观点
 1. 大模型智能｜分享 ^[raw/articles/opd-revisiting-failure-modes-simple-fixes-storm.md]
 来源 | 知乎 ^[raw/articles/opd-revisiting-failure-modes-simple-fixes-storm.md]

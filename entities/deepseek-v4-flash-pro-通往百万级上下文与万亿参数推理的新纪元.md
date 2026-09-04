@@ -22,7 +22,7 @@ sources:
 - [[moc/observability-monitoring|MOC]]
 ## 深度分析
 
-DeepSeek V4 (Flash & Pro) ：通往百万级上下文与万亿参数推理的新纪元 涉及agent领域的核心技术议题。 ^[raw/articles/deepseek-v4-flash-pro-通往百万级上下文与万亿参数推理的新纪元.md]
+DeepSeek V4 (Flash & Pro) ：通往百万级上下文与万亿参数推理的新纪元 ^[raw/articles/deepseek-v4-flash-pro-通往百万级上下文与万亿参数推理的新纪元.md]
 ### 核心观点
 1. # DeepSeek V4 (Flash & Pro) ：通往百万级上下文与万亿参数推理的新纪元
 在 2026 年 4 月 24 日，全球人工智能领域见证了一场具有里程碑意义的发布。

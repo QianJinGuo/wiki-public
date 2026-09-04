@@ -2,7 +2,7 @@
 
 title: "The Unbearable Cheapness of Open Weight Models – James O'Claire"
 created: 2026-06-26
-updated: 2026-07-27
+updated: 2026-09-05
 type: entity
 tags: [article]
 source: "[[raw/articles/25-the-unbearable-cheapness-of-open-weight-models]]"
@@ -19,7 +19,6 @@ review_recommendation: worth-reading
 > **来源**: [The Unbearable Cheapness of Open Weight Models – James O'Claire](https://jamesoclaire.com/2026/06/25/the-unbearable-cheapness-of-open-weight-models/)
 
 
-Markdown Content:
 Today I was setting up Hermes to see how it does with web research. I chose DeepSeek V4 because I know it is cheap, but seeing it’s pricing next to Anthropic and OpenAI ‘frontier’ models is crazy. Nearly a 50x price increase based on tokens alone, let alone how much pondering any of their models might fall into (using more tokens for the same task). ^[raw/articles/25-the-unbearable-cheapness-of-open-weight-models.md]
 
 What worries me about this is that Anthropic and OpenAI seem to have backed themselves into a corner of high costs. Can they reasonably decrease their prices by 20-50x to compete with DeepSeek or Xiaomi’s Mimo? ^[raw/articles/25-the-unbearable-cheapness-of-open-weight-models.md]

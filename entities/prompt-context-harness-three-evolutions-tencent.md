@@ -2,7 +2,7 @@
 
 title: "从Prompt、Context到Harness，工程的三次进化与终局之战"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, code, evaluation, harness-engineering, llm, memory, prompt, prompt-engineering, rag, tool-use, loop-engineering, skills, paradigm-shift]
 review_value: 7
 review_confidence: 7
@@ -23,7 +23,7 @@ sources:
 
 ## 深度分析
 
-从Prompt、Context到Harness，工程的三次进化与终局之战 涉及agent领域的核心技术议题。 ^[raw/articles/prompt-context-harness-three-evolutions-tencent.md]
+从Prompt、Context到Harness，工程的三次进化与终局之战 ^[raw/articles/prompt-context-harness-three-evolutions-tencent.md]
 ### 核心观点
 1. # 从Prompt、Context到Harness，工程的三次进化与终局之战 ^[raw/articles/prompt-context-harness-three-evolutions-tencent.md]
 OpenAI 内部 3-7 人小团队，在五个月内让 AI 生成了将近 100 万行生产级别代码。 ^[raw/articles/prompt-context-harness-three-evolutions-tencent.md]

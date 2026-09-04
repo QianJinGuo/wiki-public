@@ -1,7 +1,7 @@
 ---
 title: "PostHog 用 Claude Code 重写 SQL 解析器：PBT + 影子模式的生产级 AI 重写实践"
 created: "2026-07-14"
-updated: 2026-08-30
+updated: 2026-09-05
 type: "entity"
 tags: [claude-code, ai-coding, sql-parser, rust, pbt, posthog, rewriting]
 confidence: 0.8
@@ -35,7 +35,7 @@ PostHog 案例揭示了一个可复现的模式：LLM 生成代码的能力已�
 
 ### 脆弱修复的识别与约束
 
-实验中一个关键发现是 Claude 经常做"脆弱修复"——比如加 1 Token 前瞻但实际上需要 2 Token。修复方案是**在编写修复代码前，强制将语法文件和 C++ 源代码加载到上下文**。这意味着对 LLM 的上下文管理不仅是信息提供的问题，也直接影响输出质量。这一经验与 [[claude-code-tool-system-architecture-deep-dive|Claude Code 工具系统架构]] 中的上下文构建设计相互印证。^[raw/articles/posthog-claude-rewrite-sql-parser-70x.md:38-39]
+实验中一个关键发现是 Claude 经常做"脆弱修复"——比如加 1 Token 前瞻但实际上需要 2 Token。修复方案是**在编写修复代码前，强制将语法文件和 C++ 源代码加载到上下文**。这意味着对 LLM 的上下文管理不仅是信息提供的问题，也直接影响输出质量。这一经验与 [[claude-code-tool-system-architecture-deep-dive|Claude Code 工具系统架构]] 中的上下文构建设计相互印证。^[raw/articles/posthog-claude-rewrite-sql-parser-70x.md]
 
 ### 代码覆盖率的非传统用法
 

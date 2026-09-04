@@ -2,7 +2,7 @@
 
 title: "Stripe 高管 Emily Sands：agent 是互联网的新经济主体 — 5 套基础设施全面上线"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, code, data, database, evaluation, fine-tuning, mlops, prompt, security, tool-use, workflow]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-Stripe 高管 Emily Sands：agent 是互联网的新经济主体 — 5 套基础设施全面上线 涉及agent领域的核心技术议题。 ^[raw/articles/stripe-agent-economic-infrastructure-emily-sands.md]
+Stripe 高管 Emily Sands：agent 是互联网的新经济主体 — 5 套基础设施全面上线 ^[raw/articles/stripe-agent-economic-infrastructure-emily-sands.md]
 ### 核心观点
 1. # Stripe 高管 Emily Sands：agent 是互联网的新经济主体 — 5 套基础设施全面上线 ^[raw/articles/stripe-agent-economic-infrastructure-emily-sands.md]
 > 整理：深思圈 · 2026-06-05

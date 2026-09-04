@@ -79,8 +79,6 @@ TeamPCP 并非首次对 Checkmarx 发起攻击——2026 年 3 月就曾入侵 c
 
 # "Checkmarx Jenkins plugin compromised in new supply chain attack"
 URL Source: https://www.techzine.eu/news/security/141212/checkmarx-jenkins-plugin-compromised-in-new-supply-chain-attack/ ^[raw/articles/checkmarx-jenkins-plugin-compromised-in-new-supply-chain-attack.md]
-Published Time: 2026-05-11T13:29:24+00:00
-Markdown Content:
 
 # Checkmarx Jenkins plugin compromised in new supply chain attack - Techzine Global
 [Skip to content](https://www.techzine.eu/news/security/141212/checkmarx-jenkins-plugin-compromised-in-new-supply-chain-attack/#main) ^[raw/articles/checkmarx-jenkins-plugin-compromised-in-new-supply-chain-attack.md]

@@ -2,7 +2,7 @@
 
 title: "看完 Claude Code Agent Teams，我更确定接下来拼的是 Agent Runtime，技术拆解：Lead、Task List、Mailbox 和 Hooks 是什么东西"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, architecture, claude, code, data, llm, memory, prompt, rag, search, security, tool-use, workflow]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-看完 Claude Code Agent Teams，我更确定接下来拼的是 Agent Runtime，技术拆解：Lead、Task List、Mailbox 和 Hooks 是什么东西 涉及agent领域的核心技术议题。 ^[raw/articles/claude-code-agent-teams-xingxiaozhao.md]
+看完 Claude Code Agent Teams，我更确定接下来拼的是 Agent Runtime，技术拆解：Lead、Task List、Mailbox 和 Hooks 是什么东西 ^[raw/articles/claude-code-agent-teams-xingxiaozhao.md]
 ### 核心观点
 1. # 看完 Claude Code Agent Teams，我更确定接下来拼的是 Agent Runtime，技术拆解：Lead、Task List、Mailbox 和 Hooks 是什么东西 ^[raw/articles/claude-code-agent-teams-xingxiaozhao.md]
 嗨，大家好，我是行小招。 ^[raw/articles/claude-code-agent-teams-xingxiaozhao.md]

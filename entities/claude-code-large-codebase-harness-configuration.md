@@ -5,7 +5,7 @@ type: entity
 source: wechat
 source_url:
 created: 2026-05-20
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [claude-code, agent, harness, enterprise, large-codebase, monorepo]
 review_value: 8
 review_confidence: 8.5

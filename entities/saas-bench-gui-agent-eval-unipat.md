@@ -3,7 +3,7 @@ title: "SaaS-Bench：浙大阿里 Steering Computer-Use Agent 真实系统评测
 type: entity
 tags: [benchmark, computer-use, gui-agent, saas-bench, unipat, long-horizon, eval, agent-failure, zhejiang-university, alibaba, docker-real-system, path-dependence, checkpoint-score, resolved-score, cua-paradigm-limit]
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 8
 review_confidence: 8
 provenance_state: extracted
@@ -101,7 +101,7 @@ Claude Opus 4.6 在 Step 124 识别并修复了日期错误，但到 Step 210 �
 
 **4. SaaS 为 Agent 重设计：界面形态的保质期** ^[raw/articles/saas-bench-gui-agent-eval-unipat.md]
 
-今天的 SaaS 界面（菜单、按钮、表单）是给人设计的，不是给 Agent 设计的。^[raw/articles/saas-bench-gui-agent-eval-unipat.md:114-116] 当 Agent 成为主要用户，这些界面就变成了累赘。这揭示的不只是 Agent 的短板，也是当前软件形态的保质期——面向人类的 SaaS 可能都要为 Agent 重做一遍。这意味着未来软件形态演进的方向是"面向 API/Agent 的界面设计"，而非继续优化人类用户体验。
+今天的 SaaS 界面（菜单、按钮、表单）是给人设计的，不是给 Agent 设计的。^[raw/articles/saas-bench-gui-agent-eval-unipat.md] 当 Agent 成为主要用户，这些界面就变成了累赘。这揭示的不只是 Agent 的短板，也是当前软件形态的保质期——面向人类的 SaaS 可能都要为 Agent 重做一遍。这意味着未来软件形态演进的方向是"面向 API/Agent 的界面设计"，而非继续优化人类用户体验。
 
 **5. 多尝试能部分缓解但不能解决 pass@k 的根本问题** ^[raw/articles/saas-bench-gui-agent-eval-unipat.md]
 

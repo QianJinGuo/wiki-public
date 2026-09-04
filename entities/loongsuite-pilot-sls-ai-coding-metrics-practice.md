@@ -2,7 +2,7 @@
 
 title: "龙套件 Pilot SLS AI 编程指标实践"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, ai-coding, code, data, database, llm, mlops, observability, open-source, prompt, tool-use, workflow]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-Loongsuite Pilot Sls Ai Coding Metrics Practice 涉及agent领域的核心技术议题。 ^[raw/articles/loongsuite-pilot-sls-ai-coding-metrics-practice.md]
+Loongsuite Pilot Sls Ai Coding Metrics Practice ^[raw/articles/loongsuite-pilot-sls-ai-coding-metrics-practice.md]
 ### 核心观点
 1. > 来源：阿里云云原生 ^[raw/articles/loongsuite-pilot-sls-ai-coding-metrics-practice.md]
 > 作者：徐可甲

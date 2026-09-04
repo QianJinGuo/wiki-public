@@ -10,7 +10,7 @@ tags:
   - indie-dev
   - ai-native
 created: 2026-06-22
-updated: 2026-07-27
+updated: 2026-09-05
 type: entity
 review_value: 8
 review_confidence: 8
@@ -27,7 +27,6 @@ sources:
 ## 核心内容
 
 
-Markdown Content:
 Last week I wrote about [leaving Stainless](https://brandur.org/nanoglyphs/051-that-was-fast) and my intention to work on building my side project [River](https://riverqueue.com/) into a small, sustainable business. When I sent that letter, a few people asked about my thought process in trying to run a software company in the age of AI: “Are you crazy?! Anything you ship can be instantly displaced by an internal package built by an LLM!” Having become as much of an LLM convert as anyone at this point, I acknowledge that it’s a very fair question. Indeed I might be crazy, but I’ll talk through my thought process, and you can decide. ^[raw/articles/minimum-viable-unit-saleable-software-brandur.md]
 
 Let me start with an anecdote. This morning I was browsing the internet’s most wretched hive of engagement farmers and master solicitors of fake information and fictional anecdotes, LinkedIn. One user there posted about how his company had been spending $400/mo on Atlassian’s Jira. He’d felt personally slighted by this outrageous bill, so he’d had his team build a new internal task tracker using Claude. Gone was Jira and the $400/mo spend, replaced by a custom package that could be tooled out in any way they needed via continued refinement by an LLM. ^[raw/articles/minimum-viable-unit-saleable-software-brandur.md]

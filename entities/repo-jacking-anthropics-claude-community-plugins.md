@@ -2,7 +2,7 @@
 title: "Anthropic Claude Community 插件仓库劫持事件：SHA 校验如何避免供应链攻击"
 description: "多个 Claude Community 插件存在 repo-jacking 漏洞，直接代码安装路径被 SHA 校验阻断，但 Claude Code 的插件 UI 浏览功能仍会重定向用户到被劫持仓库，形成社交工程攻击面。"
 created: 2026-07-01
-updated: 2026-08-30
+updated: 2026-09-05
 type: entity
 tags: [security, supply-chain, claude, claude-code, plugin, repo-jacking]
 sources: [raw/articles/repo-jacking-anthropics-claude-community-plugins]
@@ -70,10 +70,10 @@ Claude Code Community 插件是社区开发的扩展，用于增强 Claude Code 
 研究员选择 `deep-research-claude` 插件进行 PoC：^[raw/articles/repo-jacking-anthropics-claude-community-plugins.md]
 
 
-1. **原始状态**：指向 `github.com/oduffy-delphi/deep-research-claude`，但 `oduffy-delphi` 账户已不存在^[raw/articles/repo-jacking-anthropics-claude-community-plugins.md:47-48]
-2. **真实迁移**：实际项目已移至 `dbc-oduffy/deep-research-claude`，但市场未更新^[raw/articles/repo-jacking-anthropics-claude-community-plugins.md:47-48]
-3. **攻击执行**：研究员注册 `oduffy-delphi` 组织，重建同名仓库，克隆合法代码作为种子^[raw/articles/repo-jacking-anthropics-claude-community-plugins.md:48-49]
-4. **唯一改动**：在 README 顶部添加 "PoC — John Stawinski" 标记^[raw/articles/repo-jacking-anthropics-claude-community-plugins.md:49-50]
+1. **原始状态**：指向 `github.com/oduffy-delphi/deep-research-claude`，但 `oduffy-delphi` 账户已不存在^[raw/articles/repo-jacking-anthropics-claude-community-plugins.md]
+2. **真实迁移**：实际项目已移至 `dbc-oduffy/deep-research-claude`，但市场未更新^[raw/articles/repo-jacking-anthropics-claude-community-plugins.md]
+3. **攻击执行**：研究员注册 `oduffy-delphi` 组织，重建同名仓库，克隆合法代码作为种子^[raw/articles/repo-jacking-anthropics-claude-community-plugins.md]
+4. **唯一改动**：在 README 顶部添加 "PoC — John Stawinski" 标记^[raw/articles/repo-jacking-anthropics-claude-community-plugins.md]
 
 ### 攻击路径演示
 

@@ -2,7 +2,7 @@
 
 title: "optimize_anything: A Universal API for Optimizing any Text Parameter"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, architecture, code, data, evaluation, llm, memory, mlops, nvidia, observability, open-source, prompt, rag, search, vision]
 review_value: 7
 review_confidence: 7
@@ -22,7 +22,7 @@ sources:
 - [[moc/vision-multimodal|MOC]]
 ## 深度分析
 
-optimize_anything: A Universal API for Optimizing any Text Parameter 涉及agent领域的核心技术议题。 ^[raw/articles/gepa-optimize-anything-universal-text-optimization.md]
+optimize_anything: A Universal API for Optimizing any Text Parameter ^[raw/articles/gepa-optimize-anything-universal-text-optimization.md]
 ### 核心观点
 1. # optimize_anything: A Universal API for Optimizing any Text Parameter ^[raw/articles/gepa-optimize-anything-universal-text-optimization.md]
 **来源：** GEPA 官方博客 ^[raw/articles/gepa-optimize-anything-universal-text-optimization.md]

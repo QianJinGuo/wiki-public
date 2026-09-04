@@ -2,7 +2,7 @@
 
 title: "Secure AI agents with Policy and Lambda interceptors in Amazon Bedrock AgentCore gateway"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, architecture, aws, code, data, database, evaluation, llm, memory, mlops, observability, open-source, rl, security, tool-use, workflow]
 review_value: 7
 review_confidence: 7
@@ -21,7 +21,7 @@ sources:
 
 ## 深度分析
 
-Secure AI agents with Policy and Lambda interceptors in Amazon Bedrock AgentCore gateway 涉及agent领域的核心技术议题。 ^[raw/articles/secure-ai-agents-with-policy-and-lambda-interceptors-in-amaz.md]
+Secure AI agents with Policy and Lambda interceptors in Amazon Bedrock AgentCore gateway ^[raw/articles/secure-ai-agents-with-policy-and-lambda-interceptors-in-amaz.md]
 ### 核心观点
 1. # Secure AI agents with Policy and Lambda interceptors in Amazon Bedrock AgentCore gateway
 Securing AI agent behavior is a key customer challenge in building agentic solutions. ^[raw/articles/secure-ai-agents-with-policy-and-lambda-interceptors-in-amaz.md]

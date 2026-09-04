@@ -2,7 +2,7 @@
 
 title: "How We’d Market to Software Developers at Startups"
 created: 2026-06-06
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [article, code, data, game, llm, open-source, prompt, rag, rl, search, source-archive, tool-use, workflow]
 sources: [raw/articles/how-wed-market-to-software-developers-at-startups-20260606]
@@ -26,7 +26,7 @@ review_stars: 4
 - [[moc/data-infrastructure|MOC]]
 ## 深度分析
 
-How We’d Market to Software Developers at Startups 涉及article领域的核心技术议题。 ^[raw/articles/how-wed-market-to-software-developers-at-startups-20260606.md]
+How We’d Market to Software Developers at Startups ^[raw/articles/how-wed-market-to-software-developers-at-startups-20260606.md]
 ### 核心观点
 1. How do you market to developers? ^[raw/articles/how-wed-market-to-software-developers-at-startups-20260606.md]
 2. Developers have a reputation: they block your ads, they smell marketing-speak from three sentences away, they trust a random GitHub repo over your whole campaign, and if they’re reading this, they are rolling their eyes (hi Casey! ^[raw/articles/how-wed-market-to-software-developers-at-startups-20260606.md]

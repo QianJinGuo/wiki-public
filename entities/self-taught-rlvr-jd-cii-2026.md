@@ -2,7 +2,7 @@
 
 title: "让大模型学会「自己教自己」！京东&中科院信工所连发三篇论文定义Self-TaughtRLVR"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [code, data, evaluation, fine-tuning, llm, mlops, open-source, prompt, rl, vision, workflow]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-让大模型学会「自己教自己」！京东&中科院信工所连发三篇论文定义Self-TaughtRLVR 涉及code领域的核心技术议题。 ^[raw/articles/self-taught-rlvr-jd-cii-2026.md]
+让大模型学会「自己教自己」！京东&中科院信工所连发三篇论文定义Self-TaughtRLVR ^[raw/articles/self-taught-rlvr-jd-cii-2026.md]
 ### 核心观点
 1. # 让大模型学会「自己教自己」！ ^[raw/articles/self-taught-rlvr-jd-cii-2026.md]
 2. 京东&中科院信工所连发三篇论文定义Self-TaughtRLVR ^[raw/articles/self-taught-rlvr-jd-cii-2026.md]

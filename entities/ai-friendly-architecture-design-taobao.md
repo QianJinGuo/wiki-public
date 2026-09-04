@@ -2,7 +2,7 @@
 
 title: "面向 LLM 的架构设计：什么是真正的 AI Friendly 架构？"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, architecture, code, data, database, evaluation, fine-tuning, knowledge-mgmt, llm, memory, mlops, observability, prompt, rag, robotics, search, security, tool-use, trading, vision, workflow]
 review_value: 7
 review_confidence: 7
@@ -35,7 +35,7 @@ sources:
 - [[moc/mlops-training-inference|MOC]]
 ## 深度分析
 
-面向 LLM 的架构设计：什么是真正的 AI Friendly 架构？ 涉及agent领域的核心技术议题。 ^[raw/articles/ai-friendly-architecture-design-taobao.md]
+面向 LLM 的架构设计：什么是真正的 AI Friendly 架构？ ^[raw/articles/ai-friendly-architecture-design-taobao.md]
 ### 核心观点
 1. # 面向 LLM 的架构设计：什么是真正的 AI Friendly 架构？ ^[raw/articles/ai-friendly-architecture-design-taobao.md]
 2. **作者：** 久游，淘天集团-营销&交易技术团队 ^[raw/articles/ai-friendly-architecture-design-taobao.md]

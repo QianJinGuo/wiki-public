@@ -2,7 +2,7 @@
 
 title: "视频 RAG 中分块策略：基于停顿、滑动窗口与基于 LLM 的方法"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, architecture, data, database, llm, memory, mlops, rag, search, video, vision, workflow]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-视频 RAG 中分块策略：基于停顿、滑动窗口与基于 LLM 的方法 涉及agent领域的核心技术议题。 ^[raw/articles/video-rag-chunking-strategy-deephub-imba.md]
+视频 RAG 中分块策略：基于停顿、滑动窗口与基于 LLM 的方法 ^[raw/articles/video-rag-chunking-strategy-deephub-imba.md]
 ### 核心观点
 1. # 视频 RAG 中分块策略：基于停顿、滑动窗口与基于 LLM 的方法 ^[raw/articles/video-rag-chunking-strategy-deephub-imba.md]
 > DeepHub IMBA 作者 Rishav Aich 原文，数据派THU 2026-06-09 17:00 翻译转发。

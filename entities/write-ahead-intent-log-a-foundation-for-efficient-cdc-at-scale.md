@@ -3,7 +3,7 @@
 title: "Write-Ahead Intent Log: a Foundation for Efficient CDC at Scale"
 description: "Excellent technical depth on building WAIL for CDC at DoorDash, addressing Debezium limitations with a novel producer/consumer pattern. Highly original and practical."
 created: 2026-06-22
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [agent, cdc, analytics, architecture]
 provenance_state: inferred
@@ -18,7 +18,6 @@ review_stars: 5
 
 # Write-Ahead Intent Log: a Foundation for Efficient CDC at Scale
 
-Markdown Content:
 [InfoQ Homepage](https://www.infoq.com/ "InfoQ Homepage")[Presentations](https://www.infoq.com/presentations "Presentations")Write-Ahead Intent Log: a Foundation for Efficient CDC at Scale ^[raw/articles/write-ahead-intent-log-a-foundation-for-efficient-cdc-at-scale.md]
 
 ![Image 1](https://imgopt.infoq.com/fit-in/1288x0/filters:quality(80)/presentations/write-ahead-intent-log/en/slides/Doi-1781788191276.jpg) ^[raw/articles/write-ahead-intent-log-a-foundation-for-efficient-cdc-at-scale.md]

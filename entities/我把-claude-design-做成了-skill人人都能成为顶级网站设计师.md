@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-我把 Claude Design 做成了 Skill，人人都能成为顶级网站设计师 涉及agent领域的核心技术议题。 ^[raw/articles/我把-claude-design-做成了-skill人人都能成为顶级网站设计师.md]
+我把 Claude Design 做成了 Skill，人人都能成为顶级网站设计师 ^[raw/articles/我把-claude-design-做成了-skill人人都能成为顶级网站设计师.md]
 ### 核心观点
 1. # 我把 Claude Design 做成了 Skill，人人都能成为顶级网站设计师 ^[raw/articles/我把-claude-design-做成了-skill人人都能成为顶级网站设计师.md]
 ##  一、Claude Design 是什么？

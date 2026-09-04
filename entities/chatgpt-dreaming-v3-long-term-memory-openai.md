@@ -2,7 +2,7 @@
 
 title: "ChatGPT 的'失忆症'终于被治好了！Dreaming V3 让大模型拥有长期记忆"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, architecture, data, database, knowledge-mgmt, llm, memory, mlops, openai, prompt, rag, search, tool-use, workflow]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-ChatGPT 的'失忆症'终于被治好了！Dreaming V3 让大模型拥有长期记忆 涉及agent领域的核心技术议题。 ^[raw/articles/chatgpt-dreaming-v3-long-term-memory-openai.md]
+ChatGPT 的'失忆症'终于被治好了！Dreaming V3 让大模型拥有长期记忆 ^[raw/articles/chatgpt-dreaming-v3-long-term-memory-openai.md]
 ### 核心观点
 1. # ChatGPT 的"失忆症"终于被治好了！ ^[raw/articles/chatgpt-dreaming-v3-long-term-memory-openai.md]
 2. Dreaming V3 让大模型拥有长期记忆 ^[raw/articles/chatgpt-dreaming-v3-long-term-memory-openai.md]

@@ -2,7 +2,7 @@
 title: "Perplexity Brain: Self-improving Agent Memory Architecture"
 description: "Perplexity's Brain system implements work-memory (not user-memory) with recursive self-improvement via context graphs and overnight learning cycles."
 created: 2026-06-20
-updated: 2026-08-01
+updated: 2026-09-05
 type: entity
 tags: [agent, memory, self-improvement, perplexity, context-graph, agent-memory]
 provenance_state: inferred
@@ -67,11 +67,11 @@ Brain 的自改进机制：
 
 ### 递归自改进循环是 Brain 的核心竞争力
 
-Brain 的自改进机制形成一个四步循环：收集（每次交互产生新上下文节点）→ 反思（设定间隔审查上下文图）→ 学习（识别成功/失败模式，更新策略）→ 应用（下次任务从更优起点开始）。关键特性：**当前 token 使用是对未来更高效 token 使用的投资**。随着 Brain 学习，agent 需要更少的轮次、更少的模型调用就能获得更好的输出。这种"复利型"知识积累是静态 RAG/KV 记忆系统无法实现的。^[raw/articles/perplexity-brain-self-improving-memory-agents.md:36-48]
+Brain 的自改进机制形成一个四步循环：收集（每次交互产生新上下文节点）→ 反思（设定间隔审查上下文图）→ 学习（识别成功/失败模式，更新策略）→ 应用（下次任务从更优起点开始）。关键特性：**当前 token 使用是对未来更高效 token 使用的投资**。随着 Brain 学习，agent 需要更少的轮次、更少的模型调用就能获得更好的输出。这种"复利型"知识积累是静态 RAG/KV 记忆系统无法实现的。^[raw/articles/perplexity-brain-self-improving-memory-agents.md]
 
 ### Context Graph 的单一图结构 vs 模块化分层存储
 
-Brain 采用单一动态上下文图追踪：用户最可能希望完成的任务模式、历史会话中有效的策略和来源、失败路径和修正记录。与模块化记忆框架（如 MemGPT 的分层存储）不同，Brain 的图结构随每次交互演化，形成一个连贯的知识网络。这种设计的优势是图中节点之间的关系可以被自动发现和利用；劣势是图的规模上限和衰减策略未披露，长期使用可能面临图膨胀问题。^[raw/articles/perplexity-brain-self-improving-memory-agents.md:46-48]
+Brain 采用单一动态上下文图追踪：用户最可能希望完成的任务模式、历史会话中有效的策略和来源、失败路径和修正记录。与模块化记忆框架（如 MemGPT 的分层存储）不同，Brain 的图结构随每次交互演化，形成一个连贯的知识网络。这种设计的优势是图中节点之间的关系可以被自动发现和利用；劣势是图的规模上限和衰减策略未披露，长期使用可能面临图膨胀问题。^[raw/articles/perplexity-brain-self-improving-memory-agents.md]
 
 ### 产品公告的技术细节缺失值得警惕
 

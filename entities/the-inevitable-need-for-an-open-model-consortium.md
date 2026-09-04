@@ -2,7 +2,7 @@
 
 title: "The inevitable need for an open model consortium"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, data, fine-tuning, game, nvidia, observability, rl, search, trading, workflow]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-The inevitable need for an open model consortium 涉及agent领域的核心技术议题。 ^[raw/articles/the-inevitable-need-for-an-open-model-consortium.md]
+The inevitable need for an open model consortium ^[raw/articles/the-inevitable-need-for-an-open-model-consortium.md]
 ### 核心观点
 1. It’s not clear when this’ll emerge, and Nemotron (Coalition) is Nvidia’s attempt to bankroll and bootstrap this approach within a single wealthy company, but a consortium is the only long-term stable path to well-funded, near-frontier open models. ^[raw/articles/the-inevitable-need-for-an-open-model-consortium.md]
 2. In recent months, we’ve seen a lot of turnover in open model labs, with high-profile departures at Qwen and Ai2 (my comment). ^[raw/articles/the-inevitable-need-for-an-open-model-consortium.md]

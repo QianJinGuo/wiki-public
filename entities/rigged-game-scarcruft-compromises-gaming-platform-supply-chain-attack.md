@@ -17,7 +17,6 @@ tags: [security, supply-chain, news]
 ## 摘要
 Title: A rigged game: ScarCruft compromises gaming platform in a supply-chain attack ^[raw/articles/rigged-game-scarcruft-compromises-gaming-platform-supply-chain-attack.md]
 URL Source: https://www.welivesecurity.com/en/eset-research/rigged-game-scarcruft-compromises-gaming-platform-supply-chain-attack/ ^[raw/articles/rigged-game-scarcruft-compromises-gaming-platform-supply-chain-attack.md]
-Markdown Content: ^[raw/articles/rigged-game-scarcruft-compromises-gaming-platform-supply-chain-attack.md]
 ESET researchers uncovered a multiplatform supply-chain attack by North Korea-aligned APT group ScarCruft, targeting the Yanbian region in China – home to ethnic Koreans and a crossing point for North Korean refugees and defectors. In the attack, probably ongoing si... ^[raw/articles/rigged-game-scarcruft-compromises-gaming-platform-supply-chain-attack.md]
 
 ## 关键要点

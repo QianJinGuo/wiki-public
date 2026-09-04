@@ -21,7 +21,7 @@ sources:
 
 ## 深度分析
 
-让 Amazon Quick 操作飞书：构建远程 MCP 服务的设计实践 涉及agent领域的核心技术议题。 ^[raw/articles/让-amazon-quick-操作飞书构建远程-mcp-服务的设计实践.md]
+让 Amazon Quick 操作飞书：构建远程 MCP 服务的设计实践 ^[raw/articles/让-amazon-quick-操作飞书构建远程-mcp-服务的设计实践.md]
 ### 核心观点
 1. # 让 Amazon Quick 操作飞书：构建远程 MCP 服务的设计实践 ^[raw/articles/让-amazon-quick-操作飞书构建远程-mcp-服务的设计实践.md]
 摘要：当 AI 助手需要操作飞书完成多步任务时，200+ 工具的上下文膨胀、多步编排的准确性和 Token 安全是三大挑战。 ^[raw/articles/让-amazon-quick-操作飞书构建远程-mcp-服务的设计实践.md]

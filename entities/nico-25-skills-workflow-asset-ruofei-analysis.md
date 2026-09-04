@@ -2,7 +2,7 @@
 
 title: "25个Skills详解：从生产力清单到AI工作流资产"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, architecture, code, data, database, memory, mlops, prompt, rag, search, skill, tool-use, workflow]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-25个Skills详解：从生产力清单到AI工作流资产 涉及agent领域的核心技术议题。 ^[raw/articles/nico-25-skills-workflow-asset-ruofei-analysis.md]
+25个Skills详解：从生产力清单到AI工作流资产 ^[raw/articles/nico-25-skills-workflow-asset-ruofei-analysis.md]
 ### 核心观点
 1. # 25个Skills详解：从生产力清单到AI工作流资产 ^[raw/articles/nico-25-skills-workflow-asset-ruofei-analysis.md]
 > 来源：架构师（若飞）| 2026-05-28 | 分析 Nico 整理的25个生产力 Skills

@@ -1,7 +1,7 @@
 ---
 title: "Three Years from GPT-3 to Gemini 3"
 created: 2026-06-10
-updated: 2026-08-30
+updated: 2026-09-05
 tags: [agent, code, evaluation, game, llm, mlops, observability, openai, prompt, rag, rl, search, tool-use, gemini-3, antigravity, phd-intelligence, ethan-mollick]
 review_value: 7
 review_confidence: 7
@@ -56,7 +56,7 @@ Google 配套 Gemini 3 推出的 Antigravity 工具引入 **Inbox** 概念——
 - **多 Agent 并行**：可以同时管理多个 Agent，识别"哪个在工作、哪个需要你的帮助"
 - **权限模型**：Agent 自主工作时，遇到关键决策点会 ping 用户等待授权
 
-Mollick 截图展示的工作场景："同时有四个不同 Agent 在工作，一个在工作，另一个需要你的帮助才能继续" ^[raw/articles/three-years-from-gpt-3-to-gemini-3.md:40-40]——这与 [[entities/multi-agent-mission-factory-luke-aiengineer|Factory Mission]] 中 Orchestrator 协调多 Worker 的模式有异曲同工之妙，但 Inbox 把"协调者"角色直接交给了用户。 ^[raw/articles/three-years-from-gpt-3-to-gemini-3.md]
+Mollick 截图展示的工作场景："同时有四个不同 Agent 在工作，一个在工作，另一个需要你的帮助才能继续" ^[raw/articles/three-years-from-gpt-3-to-gemini-3.md]——这与 [[entities/multi-agent-mission-factory-luke-aiengineer|Factory Mission]] 中 Orchestrator 协调多 Worker 的模式有异曲同工之妙，但 Inbox 把"协调者"角色直接交给了用户。 ^[raw/articles/three-years-from-gpt-3-to-gemini-3.md]
 
 ### 3. "管理数字同事"的人机协作模式
 

@@ -1,7 +1,7 @@
 ---
 title: "Apple Foundation Models"
 created: 2026-06-16
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [article, newsletter]
 source_url: "https://platform.claude.com/docs/en/cli-sdks-libraries/libraries/apple-foundation-models"
@@ -24,7 +24,6 @@ review_stars: 4
 
 ## 内容提炼
 
-Markdown Content: ^[raw/articles/anthropic-apple-foundation-models-claude.md]
 CLI, SDKs, and libraries Libraries and integrations ^[raw/articles/anthropic-apple-foundation-models-claude.md]
 
 Use Claude on Apple platforms through the Foundation Models framework with the Claude for Foundation Models Swift package. ^[raw/articles/anthropic-apple-foundation-models-claude.md]

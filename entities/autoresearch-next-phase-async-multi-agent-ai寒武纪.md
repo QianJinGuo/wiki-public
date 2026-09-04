@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-Autoresearch Next Phase Async Multi Agent Ai寒武纪 涉及agent领域的核心技术议题。 ^[raw/articles/autoresearch-next-phase-async-multi-agent-ai寒武纪.md]
+Autoresearch Next Phase Async Multi Agent Ai寒武纪 ^[raw/articles/autoresearch-next-phase-async-multi-agent-ai寒武纪.md]
 ### 核心观点
 1. ## 核心内容 ^[raw/articles/autoresearch-next-phase-async-multi-agent-ai寒武纪.md]
 ### AutoResearch 当前状态

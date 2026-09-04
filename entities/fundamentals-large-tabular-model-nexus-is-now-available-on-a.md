@@ -2,7 +2,7 @@
 
 title: "Fundamental’s Large Tabular Model NEXUS is now available on Amazon SageMaker JumpStart"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, architecture, aws, code, data, database, fine-tuning, llm, memory, mlops, nvidia, rag, rl, search, tool-use, workflow]
 review_value: 7
 review_confidence: 7
@@ -23,7 +23,7 @@ sources:
 - [[moc/data-infrastructure|MOC]]
 ## 深度分析
 
-Fundamental’s Large Tabular Model NEXUS is now available on Amazon SageMaker JumpStart 涉及agent领域的核心技术议题。 ^[raw/articles/fundamentals-large-tabular-model-nexus-is-now-available-on-a.md]
+Fundamental’s Large Tabular Model NEXUS is now available on Amazon SageMaker JumpStart ^[raw/articles/fundamentals-large-tabular-model-nexus-is-now-available-on-a.md]
 ### 核心观点
 1. # Fundamental’s Large Tabular Model NEXUS is now available on Amazon SageMaker JumpStart
 Today, we’re announcing support for Fundamental’s NEXUS model on Amazon SageMaker AI. ^[raw/articles/fundamentals-large-tabular-model-nexus-is-now-available-on-a.md]

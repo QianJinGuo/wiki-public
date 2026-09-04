@@ -2,7 +2,7 @@
 
 title: "Amazon Quick ARNs: Cross-account migration and namespace permissions"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [architecture, aws, code, data, mlops, observability, rl, workflow]
 review_value: 7
 review_confidence: 7
@@ -22,7 +22,7 @@ sources:
 - [[moc/mlops-training-inference|MOC]]
 ## 深度分析
 
-Amazon Quick ARNs: Cross-account migration and namespace permissions 涉及architecture领域的核心技术议题。 ^[raw/articles/amazon-quick-arns-cross-account-migration-and-namespace-perm.md]
+Amazon Quick ARNs: Cross-account migration and namespace permissions ^[raw/articles/amazon-quick-arns-cross-account-migration-and-namespace-perm.md]
 ### 核心观点
 1. # Amazon Quick ARNs: Cross-account migration and namespace permissions
 You migrate dashboards from development to production, but the permissions don’t carry over. ^[raw/articles/amazon-quick-arns-cross-account-migration-and-namespace-perm.md]

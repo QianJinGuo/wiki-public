@@ -3,7 +3,7 @@ title: "never waste a token"
 type: entity
 tags: [agent, ai, llm]
 created: 2026-06-18
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 8
 review_confidence: 7
 review_recommendation: worth-reading
@@ -19,9 +19,7 @@ sources: [raw/articles/sunilpai]
 ## 核心要点
 
 
-Published Time: 2026-06-15T00:00:00.000Z ^[raw/articles/sunilpai.md]
 
-Markdown Content: ^[raw/articles/sunilpai.md]
 _(this post itself is LLM slop, but it tastes alright)_ ^[raw/articles/sunilpai.md]
 
 tl;dr - put a durable buffer between your agent and the LLM provider. the provider connection now outlives your process, so a deploy in the middle of a stream doesn’t cost you the tokens you already paid for. and the same buffer that lets a disconnected browser catch back up is the thing that recovers a crashed turn. one log, two readers. ^[raw/articles/sunilpai.md]

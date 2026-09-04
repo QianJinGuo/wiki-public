@@ -2,7 +2,7 @@
 
 title: "Qoder 发布团队知识引擎：组织级知识记忆是 Harness 自进化的重要组件"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, architecture, code, data, harness-engineering, knowledge-mgmt, memory, observability, rag, search, security, workflow]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-Qoder 发布团队知识引擎：组织级知识记忆是 Harness 自进化的重要组件 涉及agent领域的核心技术议题。 ^[raw/articles/qoder-team-knowledge-engine-compiled-knowledge.md]
+Qoder 发布团队知识引擎：组织级知识记忆是 Harness 自进化的重要组件 ^[raw/articles/qoder-team-knowledge-engine-compiled-knowledge.md]
 ### 核心观点
 1. # Qoder 发布团队知识引擎：组织级知识记忆是 Harness 自进化的重要组件 ^[raw/articles/qoder-team-knowledge-engine-compiled-knowledge.md]
 **作者：** VibeCoder ^[raw/articles/qoder-team-knowledge-engine-compiled-knowledge.md]

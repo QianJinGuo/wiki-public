@@ -4,7 +4,7 @@ title: "AI Detection and Response Aidr a Zero Impact Operating Model"
 type: entity
 tags: [model, security]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 6
 review_confidence: 6
 sources: [raw/articles/ai-detection-and-response-aidr-a-zero-impact-operating-model]
@@ -12,7 +12,6 @@ sources: [raw/articles/ai-detection-and-response-aidr-a-zero-impact-operating-mo
 
 # ai detection and response aidr a zero impact operating model
 
-Published Time: Thu, 14 May 2026 21:30:20 GMT ^[raw/articles/ai-detection-and-response-aidr-a-zero-impact-operating-model.md]
 AI Detection and Response (AIDR) ^[raw/articles/ai-detection-and-response-aidr-a-zero-impact-operating-model.md]
 AI has moved from experimentation to infrastructure. Attackers have followed, using the technology to accelerate attacks, automate credential abuse, and compress timelines. Prevention-focused security models weren't built for this. Once valid credentials or trusted integrations come into play, the outcome is determined by visibility, investigative fidelity, and response speed. ^[raw/articles/ai-detection-and-response-aidr-a-zero-impact-operating-model.md]
 AI Detection and Response (AIDR) is the [operating model](https://www.mitiga.io/videos/the-three-pillars-of-aidr-mitiga-mic-with-ofer-maor) built for that reality, organized around three imperatives: defend with AI, defend your AI, and defend from AI. Mitiga's AI-native [Cloud Detection and Response platform](https://www.mitiga.io/platform)with [Helios AIDR](https://www.mitiga.io/helios-ai) puts this model into action across cloud, SaaS, identity, and AI, turning fragmented telemetry into clear attack narratives and moving from signal to Zero-Impact Breach Prevention. ^[raw/articles/ai-detection-and-response-aidr-a-zero-impact-operating-model.md]

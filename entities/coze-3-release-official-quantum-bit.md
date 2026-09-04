@@ -2,7 +2,7 @@
 
 title: "扣子 3.0 正式发布：@ 一下全员开工"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, code, data, database, knowledge-mgmt, llm, memory, mlops, open-source, prompt, search, tool-use, vision, workflow]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-扣子 3.0 正式发布：@ 一下全员开工 涉及agent领域的核心技术议题。 ^[raw/articles/coze-3-release-official-quantum-bit.md]
+扣子 3.0 正式发布：@ 一下全员开工 ^[raw/articles/coze-3-release-official-quantum-bit.md]
 ### 核心观点
 1. 0 正式发布：@ 一下全员开工 ^[raw/articles/coze-3-release-official-quantum-bit.md]
 > 整理自量子位（编辑：金磊）报道

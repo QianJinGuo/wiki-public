@@ -2,7 +2,7 @@
 
 title: "Introducing Vercel Connect"
 created: 2026-06-19
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [agent, vercel]
 source: "[[raw/articles/introducing-vercel-connect]]"
@@ -18,10 +18,8 @@ sources:
 ## Overview
 
 
-Published Time: 2026-06-17T09:17:12.380Z^[raw/articles/introducing-vercel-connect.md]
 
 
-Markdown Content:
 Giving your agents access to your tools, data, and services is what makes them useful. As agents perform deeper work across systems, authenticating and authorizing that access becomes central to your application architecture. ^[raw/articles/introducing-vercel-connect.md]
 
 Today, agent access is usually granted through long-lived provider tokens stored in your environment variables, provisioned for everything your agent might need. These tokens are shared across every user, never expire, and give your agent full reach across every task, no matter how small the job. ^[raw/articles/introducing-vercel-connect.md]

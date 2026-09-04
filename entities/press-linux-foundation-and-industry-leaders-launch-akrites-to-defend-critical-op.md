@@ -2,7 +2,7 @@
 
 title: "Linux Foundation and Industry Leaders Launch Akrites to Defend Critical Open Source Software Against AI-Enabled Cyber Threats"
 created: 2026-06-26
-updated: 2026-07-27
+updated: 2026-09-05
 type: entity
 tags: [article]
 provenance_state: inferred
@@ -20,9 +20,7 @@ review_recommendation: strong
 > **来源**: [Linux Foundation and Industry Leaders Launch Akrites to Defend Critical Open Source Software Against AI-Enabled Cyber Threats](https://linuxfoundation.org/press/linux-foundation-and-industry-leaders-launch-akrites-to-defend-critical-open-source-software-against-ai-enabled-cyber-threats)
 
 
-Published Time: 2026-06-25T18:59:59.000Z
 
-Markdown Content:
 _![Image 1: 1200x628-Jun-24-2026-09-38-16-2854-PM](https://www.linuxfoundation.org/hs-fs/hubfs/1200x628-Jun-24-2026-09-38-16-2854-PM.png?width=911&height=477&name=1200x628-Jun-24-2026-09-38-16-2854-PM.png)_ ^[raw/articles/press-linux-foundation-and-industry-leaders-launch-akrites-to-defend-critical-op.md]
 
 _Amazon Web Services, Anthropic, Chainguard, Cisco, Citi, Endor Labs, Ericsson, Google, IBM, JPMorganChase, Microsoft and GitHub, NVIDIA, OpenAI, RapidFort, Red Hat, Rust Foundation, Sonatype, Vodafone and Zscaler join coordinated effort to find, fix and responsibly disclose vulnerabilities in open source software the world runs on_ ^[raw/articles/press-linux-foundation-and-industry-leaders-launch-akrites-to-defend-critical-op.md]

@@ -2,7 +2,7 @@
 
 title: "Repricing of Software Engineering Labor"
 created: 2026-06-26
-updated: 2026-07-27
+updated: 2026-09-05
 type: entity
 tags: [article]
 provenance_state: inferred
@@ -20,9 +20,7 @@ review_recommendation: worth-reading
 > **来源**: [Repricing of Software Engineering Labor](https://blog.grandimam.com/posts/repricing-of-software-engineering-labor)
 
 
-Published Time: Fri, 26 Jun 2026 09:41:27 GMT
 
-Markdown Content:
 I started my career in the late 2010s, and I have had a front-row seat to the growth of the industry that has given me everything: software engineering. ^[raw/articles/posts-repricing-of-software-engineering-labor.md]
 
 Looking back over the last decade, I have mixed feelings about some of the calls I made. And I am seeing the same patterns play out again now. So for engineers who are confused about where this is headed and how to navigate it, here is how I think about it. ^[raw/articles/posts-repricing-of-software-engineering-labor.md]

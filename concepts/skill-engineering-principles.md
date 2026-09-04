@@ -3,7 +3,7 @@ title: "Skill 工程原则"
 created: 2026-07-02
 updated: 2026-08-01
 type: concept
-tags: [skill, harness-engineering, agent, methodology]
+tags: [skill, agent-skill, harness-engineering, agent, methodology]
 provenance_state: inferred
 confidence: 0.7
 ---

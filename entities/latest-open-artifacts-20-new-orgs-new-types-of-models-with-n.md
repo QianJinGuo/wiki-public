@@ -2,7 +2,7 @@
 
 title: "Latest open artifacts (#20): New orgs! New types of models! With Nemotron Super, Sarvam, Cohere Transcribe, & others"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, architecture, code, data, fine-tuning, llm, memory, mlops, nvidia, observability, open-source, rag, rl, search, tool-use, vision, workflow]
 review_value: 7
 review_confidence: 7
@@ -29,7 +29,7 @@ sources:
 - [[moc/nvidia-gpu-acceleration|MOC]]
 ## 深度分析
 
-Latest open artifacts (#20): New orgs! New types of models! With Nemotron Super, Sarvam, Cohere Transcribe, & others 涉及agent领域的核心技术议题。 ^[raw/articles/latest-open-artifacts-20-new-orgs-new-types-of-models-with-n.md]
+Latest open artifacts (#20): New orgs! New types of models! With Nemotron Super, Sarvam, Cohere Transcribe, & others ^[raw/articles/latest-open-artifacts-20-new-orgs-new-types-of-models-with-n.md]
 ### 核心观点
 1. # Latest open artifacts (#20): New orgs!
 2. New types of models!

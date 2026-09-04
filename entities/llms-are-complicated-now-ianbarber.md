@@ -10,7 +10,7 @@ tags:
   - complexity
   - model-architecture
 created: 2026-06-22
-updated: 2026-07-27
+updated: 2026-09-05
 type: entity
 review_value: 7
 review_confidence: 7
@@ -27,9 +27,7 @@ sources:
 ## 核心内容
 
 
-Published Time: 2026-06-19T21:39:25+00:00
 
-Markdown Content:
 Back in 2022 and 2023 there were two big branches of machine learning happening at Meta[1](http://ianbarber.blog/2026/06/19/llms-are-complicated-now/#2c91a856-5a90-414f-bc85-26d82760c71d). The LLM work that led to Llama was a clean, smooth stack of repeated Transformer modules; the recommendation systems graphs were, by contrast, terrifying. Luckily, the industry has remedied that state of affairs by making LLMs a lot more complicated. ^[raw/articles/llms-are-complicated-now-ianbarber.md]
 
 Seb Raschka maintains an excellent [gallery](https://sebastianraschka.com/llm-architecture-gallery/) of model architectures. You can use it to diff two of the best open models of their respective eras, Llama 3 and Nemotron 3 Ultra. ^[raw/articles/llms-are-complicated-now-ianbarber.md]

@@ -2,7 +2,7 @@
 
 title: "Scaling Laws, Carefully"
 created: 2026-06-26
-updated: 2026-08-01
+updated: 2026-09-05
 type: entity
 tags: [article]
 provenance_state: inferred
@@ -20,10 +20,8 @@ review_recommendation: strong
 > **来源**: [Scaling Laws, Carefully](https://lilianweng.github.io/posts/2026-06-24-scaling-laws/)
 
 
-Published Time: 2026-06-24T00:00:00Z^[raw/articles/posts-2026-06-24-scaling-laws.md]
 
 
-Markdown Content:
 Scaling laws are one of the most critical empirical findings in deep learning. The observation is simple in form: the training loss decreases predictably as we scale up model size , dataset size , and compute , following a power-law curve, which appears as a straight line on a log-log plot. We can view scaling laws as a framework for describing the relationship between compute, loss, model size and data; at its core, it is about how to allocate precious compute optimally between and . ^[raw/articles/posts-2026-06-24-scaling-laws.md]
 
 This predictability makes scaling laws highly valuable in practice. A common workflow is to fit scaling laws on a handful of small runs and then extrapolate to estimate the token and compute requirements for larger models. ^[raw/articles/posts-2026-06-24-scaling-laws.md]

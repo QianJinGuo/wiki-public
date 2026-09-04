@@ -2,7 +2,7 @@
 
 title: "OpenAI models and Codex on Amazon Bedrock are now generally available"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, aws, code, data, evaluation, fine-tuning, llm, memory, mlops, observability, openai, prompt, rl, security, tool-use, workflow]
 review_value: 7
 review_confidence: 7
@@ -22,7 +22,7 @@ sources:
 - [[moc/reinforcement-learning-rlhf|MOC]]
 ## 深度分析
 
-OpenAI models and Codex on Amazon Bedrock are now generally available 涉及agent领域的核心技术议题。 ^[raw/articles/openai-models-and-codex-on-amazon-bedrock-are-now-generally-.md]
+OpenAI models and Codex on Amazon Bedrock are now generally available ^[raw/articles/openai-models-and-codex-on-amazon-bedrock-are-now-generally-.md]
 ### 核心观点
 1. # OpenAI models and Codex on Amazon Bedrock are now generally available ^[raw/articles/openai-models-and-codex-on-amazon-bedrock-are-now-generally-.md]
 GPT-5. ^[raw/articles/openai-models-and-codex-on-amazon-bedrock-are-now-generally-.md]

@@ -2,7 +2,7 @@
 
 title: "深入浅出 Harness Engineering 之核心模式与理念"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, architecture, claude, code, data, evaluation, harness-engineering, k8s, llm, memory, mlops, prompt, rag, search, security, tool-use, workflow]
 review_value: 7
 review_confidence: 7
@@ -24,7 +24,7 @@ sources:
 - [[moc/data-infrastructure|MOC]]
 ## 深度分析
 
-深入浅出 Harness Engineering 之核心模式与理念 涉及agent领域的核心技术议题。 ^[raw/articles/harness-engineering-core-patterns-claude-code.md]
+深入浅出 Harness Engineering 之核心模式与理念 ^[raw/articles/harness-engineering-core-patterns-claude-code.md]
 ### 核心观点
 1. # 深入浅出 Harness Engineering 之核心模式与理念 ^[raw/articles/harness-engineering-core-patterns-claude-code.md]
 **作者：** 张碧泉 ^[raw/articles/harness-engineering-core-patterns-claude-code.md]

@@ -2,7 +2,7 @@
 
 title: "Agents as Webs of Beliefs"
 created: 2026-06-29
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [agent, mlops, research]
 provenance_state: inferred
@@ -25,9 +25,7 @@ Synthesizes ideas from active inference, agent foundations, and ML into a 'belie
 ## Content Summary
 
 
-Published Time: 2026-06-27T21:45:29.440Z
 
-Markdown Content:
 In this post I’ll sketch out an informal model of intelligent agents as webs of beliefs (or belief webs for short). The belief webs framework pulls together ideas from active inference, agent foundations and machine learning. In doing so it aims to unify beliefs, goals and actions as three facets of a single phenomenon. Few of these ideas are original to me, but I haven't seen anyone tie them together in a single place before. I've flagged the frameworks I'm drawing from throughout the post. ^[raw/articles/posts-m39z2cvyfaxzdaxr4-agents-as-webs-of-beliefs.md]
 
 ### Beliefs are held together by local consistency constraints

@@ -2,7 +2,7 @@
 
 title: "ChatGPT记忆大升级，十亿人免费用！"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [architecture, data, knowledge-mgmt, llm, memory, openai, prompt]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-ChatGPT记忆大升级，十亿人免费用！ 涉及architecture领域的核心技术议题。 ^[raw/articles/chatgpt-dreaming-v3-long-term-memory-xinzhiyuan.md]
+ChatGPT记忆大升级，十亿人免费用！ ^[raw/articles/chatgpt-dreaming-v3-long-term-memory-xinzhiyuan.md]
 ### 核心观点
 1. # ChatGPT记忆大升级，十亿人免费用！ ^[raw/articles/chatgpt-dreaming-v3-long-term-memory-xinzhiyuan.md]
 2. > 作者：ASI启示录（新智元） · 发布：2026-06-07 ^[raw/articles/chatgpt-dreaming-v3-long-term-memory-xinzhiyuan.md]

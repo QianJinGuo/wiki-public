@@ -7,7 +7,7 @@ sha256: pending-jina
 source: newsletter
 tags: [stablecoin, fintech, banking, tokenized-deposits, jp-morgan-kinexys, clarity-act, genius-act, payments, kinexys, weekly-rant]
 created: 2026-06-05
-updated: 2026-08-30
+updated: 2026-09-05
 review_value: 7
 review_confidence: 8
 review_recommendation: strong
@@ -102,7 +102,7 @@ The article documents a "subtle vibe shift" in banks over 2026 Q1-Q2: from loudl
 ## 实践启示
 
 1. **中小银行应优先定位于"稳定币 off-ramp 基础设施提供商"，而非发行自有稳定币**   ^[raw/articles/the-stablecoin-24x7-money-loop-fintechbrainfood.md]
-   Lead、Coastal Community Bank、Cross River 的成功案例表明，中小银行不需要与 G-SIB 正面竞争发币能力，而是可以成为稳定币与传统银行体系之间的桥接层：提供托管、on/off-ramp、本地支付清算服务。这种角色的护城河在于本地监管关系和银行执照，而非技术。对于区域银行来说，这是 2026-2027 年最可实现的稳定币收入路径 ^[raw/articles/the-stablecoin-24x7-money-loop-fintechbrainfood.md:50-50]^[raw/articles/the-stablecoin-24x7-money-loop-fintechbrainfood.md]
+   Lead、Coastal Community Bank、Cross River 的成功案例表明，中小银行不需要与 G-SIB 正面竞争发币能力，而是可以成为稳定币与传统银行体系之间的桥接层：提供托管、on/off-ramp、本地支付清算服务。这种角色的护城河在于本地监管关系和银行执照，而非技术。对于区域银行来说，这是 2026-2027 年最可实现的稳定币收入路径 ^[raw/articles/the-stablecoin-24x7-money-loop-fintechbrainfood.md]^[raw/articles/the-stablecoin-24x7-money-loop-fintechbrainfood.md]
 
 2. **AI Agent 产品团队：支付架构设计阶段即应将稳定币通道纳入，而非后置**   ^[raw/articles/the-stablecoin-24x7-money-loop-fintechbrainfood.md]
    文章中"24/7 资金流 = 24/7 agent economy"的洞察直接指出，AI agent 的商业化架构如果依赖传统支付通道（ ACH、T+1），将在结算时效上形成瓶颈。实践建议：在 AgentCore、LangChain Agents 等框架的产品设计阶段，尽早接入 x402 协议或 JP Morgan Kinexys 类通道，并将稳定币支付能力封装为可配置选项，而非上线后追加 ^[raw/articles/the-stablecoin-24x7-money-loop-fintechbrainfood.md]^[raw/articles/the-stablecoin-24x7-money-loop-fintechbrainfood.md]
@@ -114,7 +114,7 @@ The article documents a "subtle vibe shift" in banks over 2026 Q1-Q2: from loudl
    Cash App 集成的 stablecoin 功能明确标注"转错地址不退款"且未支持账户抽象（account abstraction），这是"简单实现优先于安全"的典型权衡。作者评论暗示：如果面向高价值用户群体，这种 UX 简化会构成严重的资金安全隐患。实践中，任何面向 AI agent 或自动化场景的稳定币钱包，都应默认启用智能合约钱包（SCW）和多签机制，而非依赖 EOAs（ externally owned accounts ） ^[raw/articles/the-stablecoin-24x7-money-loop-fintechbrainfood.md]^[raw/articles/the-stablecoin-24x7-money-loop-fintechbrainfood.md]
 
 5. **跨境稳定币支付的产品机会：奇异货币对（Hedging Exotic Currency Pairs）**   ^[raw/articles/the-stablecoin-24x7-money-loop-fintechbrainfood.md]
-   文章明确提到Deutsche Bank 客户要求"access exotic currency pairs"和稳定币互操作。这揭示了一个被忽视的产品方向：在主流货币对（EUR/USD）之外的奇异货币对上，稳定币可以提供比传统外汇市场更低成本、更快速的跨境结算。目前稳定币支付主要集中在 USDT/USDC 的主流场景，但随着代币化本地货币（如 BRL、PHP、INR 的链上版本）增加，支持这些奇异货币对的稳定币支付基础设施将成为差异化竞争点 ^[raw/articles/the-stablecoin-24x7-money-loop-fintechbrainfood.md:48-48]^[raw/articles/the-stablecoin-24x7-money-loop-fintechbrainfood.md]
+   文章明确提到Deutsche Bank 客户要求"access exotic currency pairs"和稳定币互操作。这揭示了一个被忽视的产品方向：在主流货币对（EUR/USD）之外的奇异货币对上，稳定币可以提供比传统外汇市场更低成本、更快速的跨境结算。目前稳定币支付主要集中在 USDT/USDC 的主流场景，但随着代币化本地货币（如 BRL、PHP、INR 的链上版本）增加，支持这些奇异货币对的稳定币支付基础设施将成为差异化竞争点 ^[raw/articles/the-stablecoin-24x7-money-loop-fintechbrainfood.md]^[raw/articles/the-stablecoin-24x7-money-loop-fintechbrainfood.md]
 
 ## 引用与回链
 

@@ -2,7 +2,7 @@
 
 title: "Hermes Agent 工具系统实战解析：40+ 工具为什么不用配置表"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, architecture, code, data, llm, memory, observability, open-source, rl, search, security, tool-use, vision]
 review_value: 7
 review_confidence: 7
@@ -22,7 +22,7 @@ sources:
 - [[moc/vision-multimodal|MOC]]
 ## 深度分析
 
-Hermes Agent 工具系统实战解析：40+ 工具为什么不用配置表 涉及agent领域的核心技术议题。 ^[raw/articles/hermes-agent-tool-system-analysis.md]
+Hermes Agent 工具系统实战解析：40+ 工具为什么不用配置表 ^[raw/articles/hermes-agent-tool-system-analysis.md]
 ### 核心观点
 1. # Hermes Agent 工具系统实战解析：40+ 工具为什么不用配置表 ^[raw/articles/hermes-agent-tool-system-analysis.md]
 GitHub 上不到一年的项目，Star 数冲到 14. ^[raw/articles/hermes-agent-tool-system-analysis.md]

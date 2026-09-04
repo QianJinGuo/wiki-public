@@ -2,7 +2,7 @@
 
 title: "Spec as AIOS：AI-Native 全栈交付的抗熵架构"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, architecture, code, data, evaluation, knowledge-mgmt, llm, prompt, search, security, tool-use, workflow]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-Spec as AIOS：AI-Native 全栈交付的抗熵架构 涉及agent领域的核心技术议题。 ^[raw/articles/spec-as-aios-anti-entropy-architecture-gaode-app-platform-2026.md]
+Spec as AIOS：AI-Native 全栈交付的抗熵架构 ^[raw/articles/spec-as-aios-anti-entropy-architecture-gaode-app-platform-2026.md]
 ### 核心观点
 1. # Spec as AIOS：AI-Native 全栈交付的抗熵架构 ^[raw/articles/spec-as-aios-anti-entropy-architecture-gaode-app-platform-2026.md]
 > 当多元 Agent 在同一代码库高速并行时，我们如何将规范体系打造为 AI 的"可执行操作系统"，从源头构建起对抗代码熵增的免疫屏障，让速度红利不再被债务成本吞噬。

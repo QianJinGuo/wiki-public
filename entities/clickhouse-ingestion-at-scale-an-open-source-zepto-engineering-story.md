@@ -3,7 +3,7 @@
 title: "ClickHouse Ingestion at Scale: An Open-Source Zepto Engineering Story"
 description: "Deep technical engineering story with specific performance tuning details, batching optimizations, and open-source contributions. High practical value for scale engineers."
 created: 2026-06-22
-updated: 2026-07-27
+updated: 2026-09-05
 type: entity
 tags: [data-engineering, clickhouse, cdc, analytics, startup, architecture]
 source: [[raw/articles/clickhouse-ingestion-at-scale-an-open-source-zepto-engineering-story]]
@@ -17,7 +17,6 @@ review_stars: 4
 
 # ClickHouse Ingestion at Scale: An Open-Source Zepto Engineering Story
 
-Markdown Content:
 [![Image 1: Zepto Tech](https://miro.medium.com/v2/da:true/resize:fill:64:64/0*Zdo4al9KE5LuqNxm)](https://medium.com/@tech.culture?source=post_page---byline--7f57309e2175---------------------------------------) ^[raw/articles/clickhouse-ingestion-at-scale-an-open-source-zepto-engineering-story.md]
 
 ![Image 2](https://miro.medium.com/v2/resize:fit:700/0*RaaiaRuTYvCKxyMs.png)

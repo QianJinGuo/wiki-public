@@ -2,7 +2,7 @@
 
 title: "深度拆解：AI 智能体 Harness 的构造【译】"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, architecture, code, data, database, evaluation, fine-tuning, game, harness-engineering, llm, memory, mlops, observability, prompt, rag, search, security, tool-use, vision, workflow]
 review_value: 7
 review_confidence: 7
@@ -36,7 +36,7 @@ sources:
 - [[moc/mlops-training-inference|MOC]]
 ## 深度分析
 
-深度拆解：AI 智能体 Harness 的构造【译】 涉及agent领域的核心技术议题。 ^[raw/articles/ai-agent-harness-construction-akshay-baoyu.md]
+深度拆解：AI 智能体 Harness 的构造【译】 ^[raw/articles/ai-agent-harness-construction-akshay-baoyu.md]
 ### 核心观点
 1. # 深度拆解：AI 智能体 Harness 的构造【译】 ^[raw/articles/ai-agent-harness-construction-akshay-baoyu.md]
 > 原文：https://x.

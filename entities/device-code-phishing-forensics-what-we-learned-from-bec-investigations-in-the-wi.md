@@ -2,7 +2,7 @@
 
 title: "Device Code Phishing Forensics: What We Learned from BEC Investigations in the Wild"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, code, data, evaluation, memory, observability, rl, security, trading, vision, workflow]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-Device Code Phishing Forensics: What We Learned from BEC Investigations in the Wild 涉及agent领域的核心技术议题。 ^[raw/articles/device-code-phishing-forensics-what-we-learned-from-bec-investigations-in-the-wi.md]
+Device Code Phishing Forensics: What We Learned from BEC Investigations in the Wild ^[raw/articles/device-code-phishing-forensics-what-we-learned-from-bec-investigations-in-the-wi.md]
 ### 核心观点
 1. Over the years, attacks have evolved from simple pages that steal your password to full-blown attacker-in-the-middle proxies designed to bypass MFA and steal session tokens.
 2. In this article, we explain how device code phishing is returning at scale, how users are tricked, and what defenders can do to prevent, detect, and investigate these attacks.

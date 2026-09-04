@@ -1,7 +1,7 @@
 ---
 title: "百度提出 Unlimited OCR：用 Reference Sliding Window Attention 实现长文档 OCR 常量 KV Cache"
 created: 2026-07-01
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [ocr, baidu, attention, deepseek-ocr, long-document]
 source: "[[raw/articles/baidu-unlimited-ocr-sliding-window-attention]]"

@@ -2,7 +2,7 @@
 
 title: "腾讯混元新里程碑：Hy3 preview 发布开源，Agent 表现全面提升"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, architecture, code, data, evaluation, fine-tuning, game, llm, memory, mlops, open-source, prompt, rag, rl, search, tool-use, vision, workflow]
 review_value: 7
 review_confidence: 7
@@ -31,7 +31,7 @@ sources:
 
 ## 深度分析
 
-腾讯混元新里程碑：Hy3 preview 发布开源，Agent 表现全面提升 涉及agent领域的核心技术议题。 ^[raw/articles/tencent-hunyuan-hy3-preview-open-source.md]
+腾讯混元新里程碑：Hy3 preview 发布开源，Agent 表现全面提升 ^[raw/articles/tencent-hunyuan-hy3-preview-open-source.md]
 ### 核心观点
 1. # 腾讯混元新里程碑：Hy3 preview 发布开源，Agent 表现全面提升
 ** 4 月 23 日，  ** 腾讯混元  Hy3 preview 语言模型发布并开源  。

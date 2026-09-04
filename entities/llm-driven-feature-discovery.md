@@ -2,7 +2,7 @@
 
 title: "LLM-Driven Feature Discovery"
 created: 2026-06-23
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [llm, feature-discovery, alignment, interpretability]
 provenance_state: inferred
@@ -22,9 +22,7 @@ review_recommendation: strong
 ## 概述
 
 
-Published Time: 2026-06-22T22:26:51.599Z
 
-Markdown Content:
 We would often like to get a qualitative sense of a target model’s behaviors in important distributions (e.g. deployment, RL training, or evals). For example, we might want to [discover novel behaviors](https://alignment.anthropic.com/2026/petri-v2/), figure out what causes some target behavior to occur, or find [surprising correlations](https://arxiv.org/abs/2602.05910v1) between behaviors. ^[raw/articles/llm-driven-feature-discovery.md]
 
 In a recent short exploratory project, we tackled this problem via _LLM-Driven Feature Discovery._ Our method works as follows: ^[raw/articles/llm-driven-feature-discovery.md]

@@ -2,7 +2,7 @@
 
 title: "Agentic RL: Token-In, Token-Out Done Right"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, code, data, fine-tuning, llm, mlops, prompt, rl, tool-use, workflow]
 review_value: 7
 review_confidence: 7
@@ -17,11 +17,9 @@ sources:
 
 ## 深度分析
 
-Agentic RL: Token-In, Token-Out Done Right 涉及agent领域的核心技术议题。 ^[raw/articles/agentic-rl-token-in-token-out-done-right-c6aaa4.md]
+Agentic RL: Token-In, Token-Out Done Right ^[raw/articles/agentic-rl-token-in-token-out-done-right-c6aaa4.md]
 ### 核心观点
 1. # Agentic RL: Token-In, Token-Out Done Right ^[raw/articles/agentic-rl-token-in-token-out-done-right-c6aaa4.md]
-Published Time: May 28, 2026 ^[raw/articles/agentic-rl-token-in-token-out-done-right-c6aaa4.md]
-Markdown Content: ^[raw/articles/agentic-rl-token-in-token-out-done-right-c6aaa4.md]
 You’re training an LLM with RL. ^[raw/articles/agentic-rl-token-in-token-out-done-right-c6aaa4.md]
 2. Single-turn looks great: clean curves, sane rewards, things converge. ^[raw/articles/agentic-rl-token-in-token-out-done-right-c6aaa4.md]
 3. But modern models are enhanced with tools, and that’s exactly what you want: to train an _agent_. ^[raw/articles/agentic-rl-token-in-token-out-done-right-c6aaa4.md]

@@ -2,7 +2,7 @@
 
 title: "Claude Code Dynamic Workflows 第 6 译本（玉澄 / 51CTO 视角）"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, claude, code, evaluation, llm, memory, prompt, search, security, tool-use, trading, workflow]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-Claude Code Dynamic Workflows 第 6 译本（玉澄 / 51CTO 视角） 涉及agent领域的核心技术议题。 ^[raw/articles/claude-code-dynamic-workflows-zhuge6-yucheng-translation.md]
+Claude Code Dynamic Workflows 第 6 译本（玉澄 / 51CTO 视角） ^[raw/articles/claude-code-dynamic-workflows-zhuge6-yucheng-translation.md]
 ### 核心观点
 1. # Claude Code Dynamic Workflows 第 6 译本（玉澄 / 51CTO 视角） ^[raw/articles/claude-code-dynamic-workflows-zhuge6-yucheng-translation.md]
 > 整理：Hermes Agent

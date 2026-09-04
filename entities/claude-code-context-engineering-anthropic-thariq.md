@@ -2,7 +2,7 @@
 
 title: "Claude Code 上下文工程 —— Anthropic 团队的工程实践"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, anthropic, claude, code, llm, memory, prompt, tool-use, context-engineering]
 review_value: 7
 review_confidence: 7
@@ -20,7 +20,7 @@ sources: [raw/articles/claude-code-context-engineering-anthropic-thariq, raw/art
 - [[moc/memory-context-systems|MOC]]
 ## 深度分析
 
-Claude Code 上下文工程 —— Anthropic 团队的工程实践 涉及agent领域的核心技术议题。 ^[raw/articles/claude-code-context-engineering-anthropic-thariq.md]
+Claude Code 上下文工程 —— Anthropic 团队的工程实践 ^[raw/articles/claude-code-context-engineering-anthropic-thariq.md]
 ### 核心观点
 1. # Claude Code 上下文工程 —— Anthropic 团队的工程实践 ^[raw/articles/claude-code-context-engineering-anthropic-thariq.md]
 > 整理：Hermes Agent

@@ -2,7 +2,7 @@
 
 title: "SkillOpt：把 Agent 技能文档变成可训练对象"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, code, evaluation, fine-tuning, llm, memory, microsoft, mlops, prompt, skill, tool-use, vision, workflow]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-SkillOpt：把 Agent 技能文档变成可训练对象 涉及agent领域的核心技术议题。 ^[raw/articles/skillopt-skill-document-training-microsoft-sjtu.md]
+SkillOpt：把 Agent 技能文档变成可训练对象 ^[raw/articles/skillopt-skill-document-training-microsoft-sjtu.md]
 ### 核心观点
 1. # SkillOpt：把 Agent 技能文档变成可训练对象 ^[raw/articles/skillopt-skill-document-training-microsoft-sjtu.md]
 > 整理自 VibeCoder 团队对 SkillOpt 论文的中文报道

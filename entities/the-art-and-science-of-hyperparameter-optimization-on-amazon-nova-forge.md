@@ -2,7 +2,7 @@
 
 title: "The art and science of hyperparameter optimization on Amazon Nova Forge"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [aws, code, data, fine-tuning, llm, observability, prompt, rl]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-The art and science of hyperparameter optimization on Amazon Nova Forge 涉及aws领域的核心技术议题。 ^[raw/articles/the-art-and-science-of-hyperparameter-optimization-on-amazon-nova-forge.md]
+The art and science of hyperparameter optimization on Amazon Nova Forge ^[raw/articles/the-art-and-science-of-hyperparameter-optimization-on-amazon-nova-forge.md]
 ### 核心观点
 1. Amazon Nova Forge addresses this by enabling you to build your own frontier models using Amazon Nova. ^[raw/articles/the-art-and-science-of-hyperparameter-optimization-on-amazon-nova-forge.md]
 2. You can start development from early model checkpoints, blend proprietary data with Amazon Nova-curated training data, and host custom models securely on AWS. ^[raw/articles/the-art-and-science-of-hyperparameter-optimization-on-amazon-nova-forge.md]

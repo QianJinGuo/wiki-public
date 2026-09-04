@@ -2,7 +2,7 @@
 
 title: "Claude Opus 4.8: The System Card"
 created: 2026-06-02
-updated: 2026-08-01
+updated: 2026-09-05
 type: entity
 tags: [claude, anthropic, system-card, evaluation]
 source: [[raw/articles/claude-opus-4-8-system-card-zvi]]
@@ -17,10 +17,8 @@ sources:
 ## 深度分析
 
 
-Published Time: 2026-05-29T20:50:28+00:00^[raw/articles/claude-opus-4-8-system-card-zvi.md]
 
 
-Markdown Content:
 Only six weeks after Opus 4.7, we have Opus 4.8.^[raw/articles/claude-opus-4-8-system-card-zvi.md]
 
 

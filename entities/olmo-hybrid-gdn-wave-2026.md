@@ -3,7 +3,7 @@
 title: "Olmo Hybrid and the Hybrid Architecture Wave (2026)"
 description: "Hybrid Transformer+RNN/GDN 架构 2026 集体爆发：Olmo Hybrid 7B pretraining 2x 训练效率提升，理论证明 hybrid > transformer，Gated DeltaNet 成为主流选择。"
 created: 2026-06-07
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [hybrid-architecture, gdn, mamba, transformer, olmo, allen-ai, nathan-lambert, interconnects, model-architecture, post-training]
 source: "[[raw/articles/olmo-hybrid-and-future-llm-architectures]]"
@@ -195,7 +195,7 @@ Chinese AI labs（Qwen 3.5, Kimi Linear）也在 2026 春季同时采用 hybrid 
    沿用成熟 post-training 配方（基于其他架构训练）不一定适用于 hybrid base model。社区共识是「最强 overall model ≠ 最好 teacher」，且不同 base model 可能需要不同 teachers。这是尚待探索的研究方向，团队应预留时间进行 teacher model 的 ablation 实验。^[raw/articles/olmo-hybrid-and-future-llm-architectures.md:64-68]
 
 5. **Long-context >32K 且 RL/Agent 场景是 Hybrid 架构的最佳适用场景**   ^[raw/articles/olmo-hybrid-and-future-llm-architectures.md]
-   KV cache 压缩带来的内存效率提升在长上下文和 RL 训练场景中价值最大。如果业务场景以短上下文（<8K）为主、或强依赖成熟工具链（vLLM/SGLang 的完全优化版），则纯 Transformer 仍是更稳妥的选择。^[raw/articles/olmo-hybrid-and-future-llm-architectures.md:145-154]
+   KV cache 压缩带来的内存效率提升在长上下文和 RL 训练场景中价值最大。如果业务场景以短上下文（<8K）为主、或强依赖成熟工具链（vLLM/SGLang 的完全优化版），则纯 Transformer 仍是更稳妥的选择。^[raw/articles/olmo-hybrid-and-future-llm-architectures.md]
 
 ## 关键引用
 

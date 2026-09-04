@@ -2,7 +2,7 @@
 
 title: "Rod Johnson 回归：Embabel 与「最后一波由人类选择的框架」"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, architecture, code, data, fine-tuning, game, llm, memory, open-source, prompt, tool-use, trading, workflow]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-Rod Johnson 回归：Embabel 与「最后一波由人类选择的框架」 涉及agent领域的核心技术议题。 ^[raw/articles/embabel-rod-johnson-framework-era-interview.md]
+Rod Johnson 回归：Embabel 与「最后一波由人类选择的框架」 ^[raw/articles/embabel-rod-johnson-framework-era-interview.md]
 ### 核心观点
 1. # Rod Johnson 回归：Embabel 与「最后一波由人类选择的框架」 ^[raw/articles/embabel-rod-johnson-framework-era-interview.md]
 > 整理自 InfoQ 翻译的 Simon Whittaker 播客访谈

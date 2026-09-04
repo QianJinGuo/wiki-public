@@ -2,7 +2,7 @@
 
 title: "Network Firewall 部署小指南 (六) 利用 Amazon Bedrock AI 实现Network Firewall规则冲突的实时检测与智能分析"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [architecture, aws, code, evaluation, llm, memory, mlops, observability, prompt, rl, security, workflow]
 review_value: 7
 review_confidence: 7
@@ -22,7 +22,7 @@ sources:
 - [[moc/reinforcement-learning-rlhf|MOC]]
 ## 深度分析
 
-Network Firewall 部署小指南 (六) 利用 Amazon Bedrock AI 实现Network Firewall规则冲突的实时检测与智能分析 涉及architecture领域的核心技术议题。 ^[raw/articles/network-firewall-deploy-guide-6-bedrock-ai-conflict-detection.md]
+Network Firewall 部署小指南 (六) 利用 Amazon Bedrock AI 实现Network Firewall规则冲突的实时检测与智能分析 ^[raw/articles/network-firewall-deploy-guide-6-bedrock-ai-conflict-detection.md]
 ### 核心观点
 1. # Network Firewall 部署小指南 (六) 利用 Amazon Bedrock AI 实现Network Firewall规则冲突的实时检测与智能分析
 摘要：目前Network Firewall没有规则配置冲突检测的能力，用户借助此方案可以对编辑的规则进行实时的冲突检测，并借助AI提供智能分析与修改建议。 ^[raw/articles/network-firewall-deploy-guide-6-bedrock-ai-conflict-detection.md]

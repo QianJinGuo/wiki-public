@@ -2,7 +2,7 @@
 
 title: "PROJECT_ANALYSIS.md — PromptQueue + OpenGorilla 项目全景分析"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, architecture, code, database, llm, mlops, observability, prompt, prompt-engineering, security, tool-use, workflow]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-PROJECT_ANALYSIS.md — PromptQueue + OpenGorilla 项目全景分析 涉及agent领域的核心技术议题。 ^[raw/articles/promptqueue-opengorilla-project-analysis-ljguo.md]
+PROJECT_ANALYSIS.md — PromptQueue + OpenGorilla 项目全景分析 ^[raw/articles/promptqueue-opengorilla-project-analysis-ljguo.md]
 ### 核心观点
 1. # PROJECT_ANALYSIS. ^[raw/articles/promptqueue-opengorilla-project-analysis-ljguo.md]
 2. md — PromptQueue + OpenGorilla 项目全景分析 ^[raw/articles/promptqueue-opengorilla-project-analysis-ljguo.md]

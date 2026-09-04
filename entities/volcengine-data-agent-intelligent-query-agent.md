@@ -2,7 +2,7 @@
 
 title: "智能问数Agent--数据智能体-火山引擎"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, data, database, observability, tool-use]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-智能问数Agent--数据智能体-火山引擎 涉及agent领域的核心技术议题。 ^[raw/articles/volcengine-data-agent-intelligent-query-agent.md]
+智能问数Agent--数据智能体-火山引擎 ^[raw/articles/volcengine-data-agent-intelligent-query-agent.md]
 ### 核心观点
 1. # 智能问数Agent--数据智能体-火山引擎 ^[raw/articles/volcengine-data-agent-intelligent-query-agent.md]
 **智能分析Agent是一款基于AI深度思考与大数据分析的专家顾问**。 ^[raw/articles/volcengine-data-agent-intelligent-query-agent.md]

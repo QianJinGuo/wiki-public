@@ -2,7 +2,7 @@
 
 title: "Accelerate LLM model loading and increase context windows with GPUDirect on Amazon FSx for Lustre and TurboQuant"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [architecture, aws, code, data, fine-tuning, llm, memory, mlops, nvidia, observability, rag, rl, workflow]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-Accelerate LLM model loading and increase context windows with GPUDirect on Amazon FSx for Lustre and TurboQuant 涉及architecture领域的核心技术议题。 ^[raw/articles/accelerate-llm-model-loading-and-increase-context-windows-wi.md]
+Accelerate LLM model loading and increase context windows with GPUDirect on Amazon FSx for Lustre and TurboQuant ^[raw/articles/accelerate-llm-model-loading-and-increase-context-windows-wi.md]
 ### 核心观点
 1. As models grow to hundreds of billions of parameters and GPU environments grow ever larger, model load time negatively affects your end-to-end total time to first token (TTFT).
 2. This post explores how Amazon FSx for Lustre, combined with NVIDIA GPUDirect Storage (GDS), plus a bit of clever planning, can fundamentally change the cold-start TTFT equation.

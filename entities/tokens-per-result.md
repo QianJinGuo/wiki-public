@@ -2,7 +2,7 @@
 
 title: "Intelligence Per Dollar"
 created: 2026-06-05
-updated: 2026-08-01
+updated: 2026-09-05
 type: entity
 tags: [article, newsletter]
 source: [[raw/articles/tokens-per-result]]
@@ -17,9 +17,7 @@ sources:
 ## 概要
 
 
-Published Time: 2026-06-03T00:00:00Z
 
-Markdown Content:
 [![Image 1: Screenshot 2026-06-02 at 9.22.43 PM](https://res.cloudinary.com/dzawgnnlr/image/upload/w_1512,h_806,c_fill,g_auto,q_auto,f_auto/fczixgwvrhqhqt5uxfto)](https://res.cloudinary.com/dzawgnnlr/image/upload/q_auto,f_auto/fczixgwvrhqhqt5uxfto) ^[raw/articles/tokens-per-result.md]
 
 Yesterday Microsoft added a new metric to a model release card, one that will likely become a standard.[1](http://tomtunguz.com/tokens-per-result/#fn:1) ^[raw/articles/tokens-per-result.md]

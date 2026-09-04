@@ -2,7 +2,7 @@
 
 title: "It’s safe to close your laptop now: Hosting coding agents on Amazon Bedrock AgentCore"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, ai-coding, aws, code, database, game, llm, memory, observability, open-source, prompt, rl, tool-use]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-It’s safe to close your laptop now: Hosting coding agents on Amazon Bedrock AgentCore 涉及agent领域的核心技术议题。 ^[raw/articles/its-safe-to-close-your-laptop-now-hosting-coding-agents-on-a.md]
+It’s safe to close your laptop now: Hosting coding agents on Amazon Bedrock AgentCore ^[raw/articles/its-safe-to-close-your-laptop-now-hosting-coding-agents-on-a.md]
 ### 核心观点
 1. # It’s safe to close your laptop now: Hosting coding agents on Amazon Bedrock AgentCore ^[raw/articles/its-safe-to-close-your-laptop-now-hosting-coding-agents-on-a.md]
 There’s a habit going around. ^[raw/articles/its-safe-to-close-your-laptop-now-hosting-coding-agents-on-a.md]

@@ -2,7 +2,7 @@
 
 title: "Getting more from each token: How Copilot improves context handling and model routing"
 created: 2026-06-26
-updated: 2026-08-01
+updated: 2026-09-05
 type: entity
 tags: [article]
 source: "[[raw/articles/github-copilot-getting-more-from-each-token-how-copilot-improves-context-handlin]]"
@@ -19,10 +19,8 @@ review_recommendation: strong
 > **来源**: [Getting more from each token: How Copilot improves context handling and model routing](https://github.blog/ai-and-ml/github-copilot/getting-more-from-each-token-how-copilot-improves-context-handling-and-model-routing/)
 
 
-Published Time: 2026-06-17T12:41:46-07:00^[raw/articles/github-copilot-getting-more-from-each-token-how-copilot-improves-context-handlin.md]
 
 
-Markdown Content:
 How GitHub Copilot is making more of each session go toward useful work, so your credits go further. ^[raw/articles/github-copilot-getting-more-from-each-token-how-copilot-improves-context-handlin.md]
 
 June 17, 2026 | Updated June 18, 2026^[raw/articles/github-copilot-getting-more-from-each-token-how-copilot-improves-context-handlin.md]

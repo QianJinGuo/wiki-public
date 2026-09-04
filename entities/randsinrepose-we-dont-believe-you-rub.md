@@ -1,7 +1,7 @@
 ---
 title: "Here's The Rub: We Don't Believe You"
 created: 2026-06-16
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [article, newsletter]
 source_url: "https://randsinrepose.com/archives/heres-the-rub-we-dont-believe-you/"
@@ -24,9 +24,7 @@ review_stars: 4
 
 ## 内容提炼
 
-Published Time: 2026-06-15T11:29:20-07:00 ^[raw/articles/randsinrepose-we-dont-believe-you-rub.md]
 
-Markdown Content: ^[raw/articles/randsinrepose-we-dont-believe-you-rub.md]
 Welcome, new leader. We’re glad that you are here. Your arrival fills a critical vacancy in our team, and we can’t wait to see what you can do at this company. We’re going to say that we’re not in a hurry and you should take your time, but we’re in a hurry. ^[raw/articles/randsinrepose-we-dont-believe-you-rub.md]
 
 Before you arrive, we’re going to tell you what we think needs to be fixed. You should listen to us, but the issue is that we probably don’t know what is broken. Either we’re too busy to notice, or we’re too close to the source material. We wrote the current script, so we’re required to believe it is good. It’s not. It’s a disaster, and it’s breaking, and we need you to investigate, and then to tell us what’s wrong. ^[raw/articles/randsinrepose-we-dont-believe-you-rub.md]

@@ -3,7 +3,7 @@
 title: "Running an AI-native engineering org"
 type: entity
 created: 2026-06-05
-updated: 2026-08-01
+updated: 2026-09-05
 tags: [article, newsletter, ai, agent]
 sources:
   - raw/articles/running-an-ai-native-engineering-org
@@ -54,10 +54,8 @@ AI 生成代码 → AI 自动审查 → 人类重点审查——三层审查模�
 ## 摘要
 
 
-Published Time: Jun 03, 2026^[raw/articles/running-an-ai-native-engineering-org.md]
 
 
-Markdown Content:
 [Video 4](https://www.youtube.com/watch?v=igO8iyca2_g) ^[raw/articles/running-an-ai-native-engineering-org.md]
 
 For years, engineering bandwidth was the expensive part of building applications. Every process we used to have around software planning and shipping, first waterfall and then agile, was built around that cost. ^[raw/articles/running-an-ai-native-engineering-org.md]

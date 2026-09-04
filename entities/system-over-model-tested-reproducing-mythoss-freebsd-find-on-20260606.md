@@ -2,7 +2,7 @@
 
 title: "System Over Model, Tested: Reproducing Mythos’s FreeBSD Find on Local Open-Weight Models"
 created: 2026-06-06
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [article, code, data, evaluation, llm, memory, open-source, prompt, security, source-archive, vision, workflow]
 sources: [raw/articles/system-over-model-tested-reproducing-mythoss-freebsd-find-on-20260606]
@@ -25,7 +25,7 @@ review_stars: 4
 
 ## 深度分析
 
-System Over Model, Tested: Reproducing Mythos’s FreeBSD Find on Local Open-Weight Models 涉及article领域的核心技术议题。 ^[raw/articles/system-over-model-tested-reproducing-mythoss-freebsd-find-on-20260606.md]
+System Over Model, Tested: Reproducing Mythos’s FreeBSD Find on Local Open-Weight Models ^[raw/articles/system-over-model-tested-reproducing-mythoss-freebsd-find-on-20260606.md]
 ### 核心观点
 1. A week later, Stanislav Fort at AISLE published a counter-thesis and reproduced the same find with `gpt-5. ^[raw/articles/system-over-model-tested-reproducing-mythoss-freebsd-find-on-20260606.md]
 2. 4-nano` using their published `nano-analyzer` pipeline for under $100. ^[raw/articles/system-over-model-tested-reproducing-mythoss-freebsd-find-on-20260606.md]

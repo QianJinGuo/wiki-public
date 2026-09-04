@@ -23,7 +23,7 @@ sources:
 - [[moc/workflow-orchestration|MOC]]
 ## 深度分析
 
-Claude Code Team 10 Tips Boris Data派Thu 涉及agent领域的核心技术议题。 ^[raw/articles/claude-code-team-10-tips-boris-data派THU.md]
+Claude Code Team 10 Tips Boris Data派Thu ^[raw/articles/claude-code-team-10-tips-boris-data派THU.md]
 ### 核心观点
 1. 这是 Boris 在 X 上**第二次**公开的 Claude Code 使用技巧——这次是来自 Claude Code **团队内部**的 10 个技巧，干货满满。
 2. 年初第一次公开的是 Boris 个人的使用习惯，本次则是团队成员的多样化实践汇总。

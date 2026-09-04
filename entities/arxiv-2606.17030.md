@@ -4,7 +4,7 @@ title: "Qwen-RobotWorld Technical Report: Unifying Embodied World Modeling throu
 type: entity
 tags: [agent, ai, llm]
 created: 2026-06-18
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 6
 review_confidence: 4
 review_recommendation: worth-reading
@@ -20,9 +20,7 @@ sources: [raw/articles/arxiv-2606.17030]
 ## 核心要点
 
 
-Published Time: Wed, 17 Jun 2026 01:07:18 GMT ^[raw/articles/arxiv-2606.17030.md]
 
-Markdown Content: ^[raw/articles/arxiv-2606.17030.md]
 Authors:[Jie Zhang](https://arxiv.org/search/cs?searchtype=author&query=Zhang,+J), [Xiaoyue Chen](https://arxiv.org/search/cs?searchtype=author&query=Chen,+X), [Anzhe Chen](https://arxiv.org/search/cs?searchtype=author&query=Chen,+A), [Deqing Li](https://arxiv.org/search/cs?searchtype=author&query=Li,+D), [Gengze Zhou](https://arxiv.org/search/cs?searchtype=author&query=Zhou,+G), [Hale Yin](https://arxiv.org/search/cs?searchtype=author&query=Yin,+H), [Haoqi Yuan](https://arxiv.org/search/cs?searchtype=author&query=Yuan,+H), [Haoyang Li](https://arxiv.org/search/cs?searchtype=author&query=Li,+H), [Jiahao Li](https://arxiv.org/search/cs?searchtype=author&query=Li,+J), [Jiazhao Zhang](https://arxiv.org/search/cs?searchtype=author&query=Zhang,+J), [Jingren Zhou](https://arxiv.org/search/cs?searchtype=author&query=Zhou,+J), [Kaiyuan Gao](https://arxiv.org/search/cs?searchtype=author&query=Gao,+K), [Kun Yan](https://arxiv.org/search/cs?searchtype=author&query=Yan,+K), [Lihan Jiang](https://arxiv.org/search/cs?searchtype=author&query=Jiang,+L), [Ningyuan Tang](https://arxiv.org/search/cs?searchtype=author&query=Tang,+N), [Pei Lin](https://arxiv.org/search/cs?searchtype=author&query=Lin,+P), [Qihang Peng](https://arxiv.org/search/cs?searchtype=author&query=Peng,+Q), [Shengming Yin](https://arxiv.org/search/cs?searchtype=author&query=Yin,+S), [Tianhe Wu](https://arxiv.org/search/cs?searchtype=author&query=Wu,+T), [Tianyi Yan](https://arxiv.org/search/cs?searchtype=author&query=Yan,+T), [Xiao Xu](https://arxiv.org/search/cs?searchtype=author&query=Xu,+X), [Yan Shu](https://arxiv.org/search/cs?searchtype=author&query=Shu,+Y), [Yanran Zhang](https://arxiv.org/search/cs?searchtype=author&query=Zhang,+Y), [Ye Wang](https://arxiv.org/search/cs?searchtype=author&query=Wang,+Y), [Yi Wang](https://arxiv.org/search/cs?searchtype=author&query=Wang,+Y), [Yilei Chen](https://arxiv.org/search/cs?searchtype=author&query=Chen,+Y), [Yixian Xu](https://arxiv.org/search/cs?searchtype=author&query=Xu,+Y), [Yiyang Huang](https://arxiv.org/search/cs?searchtype=author&query=Huang,+Y), [Yuxiang Chen](https://arxiv.org/search/cs?searchtype=author&query=Chen,+Y), [Zekai Zhang](https://arxiv.org/search/cs?searchtype=author&query=Zhang,+Z), [Zhendong Wang](https://arxiv.org/search/cs?searchtype=author&query=Wang,+Z), [Zixing Lei](https://arxiv.org/search/cs?searchtype=author&query=Lei,+Z), [Zhixuan Liang](https://arxiv.org/search/cs?searchtype=author&query=Liang,+Z), [Zihao Liu](https://arxiv.org/search/cs?searchtype=author&query=Liu,+Z), [Zikai Zhou](https://arxiv.org/search/cs?searchtype=author&query=Zhou,+Z), [Chenxu Lv](https://arxiv.org/search/cs?searchtype=author&query=Lv,+C), [Xiong-Hui Chen](https://arxiv.org/search/cs?searchtype=author&query=Chen,+X), [Chenfei Wu](https://arxiv.org/search/cs?searchtype=author&query=Wu,+C) ^[raw/articles/arxiv-2606.17030.md]
 
 [View PDF](https://arxiv.org/pdf/2606.17030)

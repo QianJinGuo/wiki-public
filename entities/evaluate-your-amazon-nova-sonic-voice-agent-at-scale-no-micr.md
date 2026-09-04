@@ -2,7 +2,7 @@
 
 title: "Evaluate your Amazon Nova Sonic voice agent at scale, no microphone required"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, architecture, aws, data, evaluation, game, llm, memory, mlops, open-source, prompt, rl, tool-use, voice, workflow]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-Evaluate your Amazon Nova Sonic voice agent at scale, no microphone required 涉及agent领域的核心技术议题。 ^[raw/articles/evaluate-your-amazon-nova-sonic-voice-agent-at-scale-no-micr.md]
+Evaluate your Amazon Nova Sonic voice agent at scale, no microphone required ^[raw/articles/evaluate-your-amazon-nova-sonic-voice-agent-at-scale-no-micr.md]
 ### 核心观点
 1. But as these agents grow more capable, a fundamental challenge emerges: how do you test them? ^[raw/articles/evaluate-your-amazon-nova-sonic-voice-agent-at-scale-no-micr.md]
 2. Unlike text-based chatbots where you can script inputs and assert outputs, voice agents operate in a fundamentally different paradigm. ^[raw/articles/evaluate-your-amazon-nova-sonic-voice-agent-at-scale-no-micr.md]

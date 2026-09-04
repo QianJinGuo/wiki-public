@@ -2,7 +2,7 @@
 
 title: "Introducing 1-bit and Ternary Bonsai Image Models"
 created: 2026-06-02
-updated: 2026-08-01
+updated: 2026-09-05
 type: entity
 tags: [vision, model-compression, 1-bit]
 source: [[raw/articles/bonsai-image-4b-1-bit-ternary]]
@@ -17,10 +17,8 @@ sources:
 ## 深度分析
 
 
-Published Time: 2026-05-26^[raw/articles/bonsai-image-4b-1-bit-ternary.md]
 
 
-Markdown Content:
 ![Image 1](https://cdn.prod.website-files.com/699604cc2b9dd89bdbda0608/6a15cec375689f915406cc3c_grid.png)^[raw/articles/bonsai-image-4b-1-bit-ternary.md]
 
 

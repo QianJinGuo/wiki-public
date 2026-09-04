@@ -54,17 +54,17 @@ Karpathy 自己做了一个 MenuGen 小应用：拍菜单照片 → OCR 抽菜�
 
 ### 6. 人的位置上移：从搬砖者到包工头
 
-访谈里给了一个很具体的对比：以前高级工程师和初级工程师的差距在「能不能写更复杂的代码、记住更多 API、排查更隐蔽的问题」；在 Agentic Engineering 里这种差异上移到「能不能定义业务语义、设计 Agent 执行边界、建立验证体系、控制系统后果」。^[raw/articles/karpathy-最新访谈从-vibe-coding-到-agentic-engineering.md:225-236] 招聘也要换：现场算法题测的是「能不能在白板上手写一个 trie」，跟一个人在 Agentic Engineering 里能不能干活基本两码事。Karpathy 提的替代方案是甩一个超大型项目，挂 10 个 Cursor 当红队，评估候选人能不能「把模糊目标变成清晰规格、指挥多个 Agent 完成大规模实现、识别安全和架构风险、设置测试与验证」。^[raw/articles/karpathy-最新访谈从-vibe-coding-到-agentic-engineering.md:243-252] 这条线连到一个反直觉的结论：当代码越来越多由 Agent 生成，**保住系统**就慢慢变成了工程师的核心能力——这正是过去做架构的人比较熟悉的事。
+访谈里给了一个很具体的对比：以前高级工程师和初级工程师的差距在「能不能写更复杂的代码、记住更多 API、排查更隐蔽的问题」；在 Agentic Engineering 里这种差异上移到「能不能定义业务语义、设计 Agent 执行边界、建立验证体系、控制系统后果」。^[raw/articles/karpathy-最新访谈从-vibe-coding-到-agentic-engineering.md] 招聘也要换：现场算法题测的是「能不能在白板上手写一个 trie」，跟一个人在 Agentic Engineering 里能不能干活基本两码事。Karpathy 提的替代方案是甩一个超大型项目，挂 10 个 Cursor 当红队，评估候选人能不能「把模糊目标变成清晰规格、指挥多个 Agent 完成大规模实现、识别安全和架构风险、设置测试与验证」。^[raw/articles/karpathy-最新访谈从-vibe-coding-到-agentic-engineering.md] 这条线连到一个反直觉的结论：当代码越来越多由 Agent 生成，**保住系统**就慢慢变成了工程师的核心能力——这正是过去做架构的人比较熟悉的事。
 
 ## 实践启示
 
 1. **按所有权拆开制品**：用户自己改的环境（包、文件、配置）和平台频繁部署的 Runner 代码应该按变更频率解耦，平台升级不能毁掉用户的状态。借鉴操作系统「内核升级不影响 home 目录」的思路。^[raw/articles/karpathy-最新访谈从-vibe-coding-到-agentic-engineering.md:36-54]
 2. **把验证体系当作 Agent 自动化能走多远的天花板**：先看哪些事能被验证（L1 静态校验 / L2 编译测试 / L3 集成测试 / L4 业务规则状态变更 / L5 资金身份权限数据 / L6 组织判断法律责任），再决定哪些事交给 Agent。L1-L3 高适用，L4 需审批审计，L5-L6 人必须主导。^[raw/articles/karpathy-最新访谈从-vibe-coding-到-agentic-engineering.md:168-177]
-3. **过程资产 > 聊天记录**：把稳定的排障路径、PR review 清单、安全红线、发布检查、数据迁移步骤写成可执行资产，让 Agent 沿团队走过的路径走，而不是每次重新猜资深工程师会怎么想。^[raw/articles/karpathy-最新访谈从-vibe-coding-到-agentic-engineering.md:236-240]
+3. **过程资产 > 聊天记录**：把稳定的排障路径、PR review 清单、安全红线、发布检查、数据迁移步骤写成可执行资产，让 Agent 沿团队走过的路径走，而不是每次重新猜资深工程师会怎么想。^[raw/articles/karpathy-最新访谈从-vibe-coding-到-agentic-engineering.md]
 4. **默认护栏代替信任补丁**：工具调用前校验、分支隔离、只读默认权限、灰度回滚、稳定用户 ID、私有数据/不可信输入/外部通信三分、Token 限额——这些应该是默认配置而不是「出事了再加」。^[raw/articles/karpathy-最新访谈从-vibe-coding-到-agentic-engineering.md:189-200]
 5. **设计判断要给中间层做风险评估**：当一个新功能在纸上画出来时，顺手问一句「这是终态还是模型能力不到位时的中间层」。被模型吞掉的风险随时间增长，业务状态、权限模型、数据闭环、验证体系、审计链路是更难被一次升级抹平的资产。^[raw/articles/karpathy-最新访谈从-vibe-coding-到-agentic-engineering.md:147-162]
-6. **AI-native 工程师的工程习惯要重新投资**：花时间把 Cursor/Claude Code 调成真正适合自己的样子——Skill、CLAUDE.md、Hooks、Subagent、Review 流程——就像以前花时间配 Vim、VS Code、命令行。面试也要从算法 puzzle 切换到「把模糊目标变成清晰规格、指挥多个 Agent 实施、识别安全架构风险」。^[raw/articles/karpathy-最新访谈从-vibe-coding-到-agentic-engineering.md:243-252]
-7. **盯三个 6-12 个月的信号**：① 前沿实验室在编程和数学之外往哪些领域注入 RL 数据（被注入的领域能力会突然冒出来）；② Agent-first 基础设施（部署/auth/payments/DNS/配置）有没有开始收敛；③ 下一代模型有没有把审美和代码质量纳入 RL 目标。三者决定 Agentic Engineering 边界外推的速度。^[raw/articles/karpathy-最新访谈从-vibe-coding-到-agentic-engineering.md:276-280]
+6. **AI-native 工程师的工程习惯要重新投资**：花时间把 Cursor/Claude Code 调成真正适合自己的样子——Skill、CLAUDE.md、Hooks、Subagent、Review 流程——就像以前花时间配 Vim、VS Code、命令行。面试也要从算法 puzzle 切换到「把模糊目标变成清晰规格、指挥多个 Agent 实施、识别安全架构风险」。^[raw/articles/karpathy-最新访谈从-vibe-coding-到-agentic-engineering.md]
+7. **盯三个 6-12 个月的信号**：① 前沿实验室在编程和数学之外往哪些领域注入 RL 数据（被注入的领域能力会突然冒出来）；② Agent-first 基础设施（部署/auth/payments/DNS/配置）有没有开始收敛；③ 下一代模型有没有把审美和代码质量纳入 RL 目标。三者决定 Agentic Engineering 边界外推的速度。^[raw/articles/karpathy-最新访谈从-vibe-coding-到-agentic-engineering.md]
 
 ## 相关实体
 

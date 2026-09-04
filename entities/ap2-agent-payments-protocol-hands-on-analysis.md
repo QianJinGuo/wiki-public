@@ -2,7 +2,7 @@
 
 title: "AP2 协议实测：Mandate 机制、Task 状态机与多 Agent 支付"
 created: 2026-06-26
-updated: 2026-08-01
+updated: 2026-09-05
 type: entity
 tags: [ap2, agent-payments, agentic-commerce, mandate, sd-jwt, a2a-protocol, task-state-machine, google, ecdsa, multi-agent]
 sources: [raw/articles/ap2-agent-payments-protocol-hands-on-analysis]
@@ -101,7 +101,7 @@ A2A 协议的 Task 生命周期设计（completed/failed/cancelled 均为终态�
 
 ### 授权粒度与长周期任务的矛盾
 
-CartMandate 一小时有效期 + 单次 OTP 的设计，本质上是为 Human-Present 场景优化的。当 Agent 需要自主完成跨平台、长周期任务（如代购比价后分批下单），当前授权模型会成为瓶颈。下一代协议需要支持：可续期的委托凭证、分阶段授权（先比价、再下单、最后支付）、以及跨平台凭证互认^[raw/articles/ap2-agent-payments-protocol-hands-on-analysis.md:79-81]。
+CartMandate 一小时有效期 + 单次 OTP 的设计，本质上是为 Human-Present 场景优化的。当 Agent 需要自主完成跨平台、长周期任务（如代购比价后分批下单），当前授权模型会成为瓶颈。下一代协议需要支持：可续期的委托凭证、分阶段授权（先比价、再下单、最后支付）、以及跨平台凭证互认^[raw/articles/ap2-agent-payments-protocol-hands-on-analysis.md]。
 
 ## 实践启示
 

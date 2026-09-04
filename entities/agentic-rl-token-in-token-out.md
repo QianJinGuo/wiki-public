@@ -2,7 +2,7 @@
 
 title: "Agentic RL: Token-In, Token-Out Done Right"
 created: 2026-06-02
-updated: 2026-08-01
+updated: 2026-09-05
 type: entity
 tags: [rl, agent, reinforcement-learning]
 source: [[raw/articles/agentic-rl-token-in-token-out]]
@@ -17,10 +17,8 @@ sources:
 ## 深度分析
 
 
-Published Time: May 28, 2026^[raw/articles/agentic-rl-token-in-token-out.md]
 
 
-Markdown Content:
 You’re training an LLM with RL. Single-turn looks great: clean curves, sane rewards, things converge. But modern models are enhanced with tools, and that’s exactly what you want: to train an _agent_. ^[raw/articles/agentic-rl-token-in-token-out.md]
 
 So you upgrade your training loop to allow the model to call a tool mid-rollout. You start with an easy task, and the curves get weird. Loss occasionally spikes for no obvious reason. And eventually it fails with a shape mismatch error. ^[raw/articles/agentic-rl-token-in-token-out.md]

@@ -2,7 +2,7 @@
 
 title: "PyTorch 2.12 Release Blog"
 created: 2026-05-14
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [pytorch, release, deep-learning, cuda, rocm]
 sources:

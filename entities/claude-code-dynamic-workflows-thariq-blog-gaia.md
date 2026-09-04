@@ -2,7 +2,7 @@
 
 title: "从 Harness 到动态工作流：Claude Code 多智能体任务编排的新范式"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, architecture, claude, code, data, evaluation, harness-engineering, llm, memory, observability, prompt, search, security, tool-use, workflow]
 review_value: 7
 review_confidence: 7
@@ -23,7 +23,7 @@ sources:
 - [[moc/observability-monitoring|MOC]]
 ## 深度分析
 
-从 Harness 到动态工作流：Claude Code 多智能体任务编排的新范式 涉及agent领域的核心技术议题。 ^[raw/articles/claude-code-dynamic-workflows-thariq-blog-gaia.md]
+从 Harness 到动态工作流：Claude Code 多智能体任务编排的新范式 ^[raw/articles/claude-code-dynamic-workflows-thariq-blog-gaia.md]
 ### 核心观点
 1. # 从 Harness 到动态工作流：Claude Code 多智能体任务编排的新范式
 > 来源：高可用架构 | 原文作者：Thariq Shihipar (@trq212, Anthropic Claude Code 团队)

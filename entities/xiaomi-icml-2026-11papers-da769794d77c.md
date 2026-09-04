@@ -2,7 +2,7 @@
 
 title: "5亿视频炼出全球最大GUI开源数据集、推理Token省71%小模型反超大模型——小米AI团队多篇论文入选ICML 2026"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, architecture, code, data, evaluation, fine-tuning, game, llm, mlops, open-source, prompt, rl, search, vision, workflow]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-5亿视频炼出全球最大GUI开源数据集、推理Token省71%小模型反超大模型——小米AI团队多篇论文入选ICML 2026 涉及agent领域的核心技术议题。 ^[raw/articles/xiaomi-icml-2026-11papers-da769794d77c.md]
+5亿视频炼出全球最大GUI开源数据集、推理Token省71%小模型反超大模型——小米AI团队多篇论文入选ICML 2026 ^[raw/articles/xiaomi-icml-2026-11papers-da769794d77c.md]
 ### 核心观点
 1. "元信息粗筛+视频内容细筛"两阶段流水线 ^[raw/articles/xiaomi-icml-2026-11papers-da769794d77c.md]
 2. ^[raw/articles/xiaomi-icml-2026-11papers-da769794d77c.md]

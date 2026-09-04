@@ -1,7 +1,7 @@
 ---
 title: TRAE SOLO Work 模式 + 飞书多维表格：5 步搭建全自动作品采集系统（3400+ 帖子稳定运行）
 created: 2026-06-04
-updated: 2026-08-30
+updated: 2026-09-05
 type: entity
 tags: [trae, solo, solo-work, work-mode, code-mode, feishu, bitable, agent-tutorial, practical-pipeline, incremental-sync, md5-fingerprint, content-hash, retry-backoff, discourse-api]
 confidence: 0.78
@@ -250,11 +250,11 @@ MD5(content hash) 作为增量同步的核心机制，背后是精确的成本�
 
 ### 4. 指数退避重试：限流场景下的标准应对模式
 
-"指数退避 1s→2s→4s→8s" ^[raw/articles/trae-solo-work-feishu-bitable-tutorial.md:184-184] 是应对 API 限流的工程常识，但其背后的数学原理值得深究：指数退避将最坏情况的等待时间从线性增长的 T*n 控制在 O(2^m)，同时通过随机抖动（Jitter）避免多客户端同步冲撞（Thundering Herd Problem）。**这套机制在分布式系统中的普适性远超飞书 API 场景**，适用于任何带 Rate Limit 的第三方服务集成。
+"指数退避 1s→2s→4s→8s" ^[raw/articles/trae-solo-work-feishu-bitable-tutorial.md] 是应对 API 限流的工程常识，但其背后的数学原理值得深究：指数退避将最坏情况的等待时间从线性增长的 T*n 控制在 O(2^m)，同时通过随机抖动（Jitter）避免多客户端同步冲撞（Thundering Herd Problem）。**这套机制在分布式系统中的普适性远超飞书 API 场景**，适用于任何带 Rate Limit 的第三方服务集成。
 
 ### 5. "需求具体化"：AI Agent 时代的输入工程（Input Engineering）
 
-作者金句"需求越具体越好" ^[raw/articles/trae-solo-work-feishu-bitable-tutorial.md:54-54] 在 AI Agent 语境下有更深含义：传统编程中"具体"意味着给出精确的算法和数据结构；而对 AI Agent 而言，"具体"意味着**给出清晰的边界条件、成功标准、字段定义和目标系统约束**。这实际上是 Prompt Engineering 的进阶版本——不是优化单个 Prompt 的措辞，而是**通过结构化需求描述引导 AI Agent 进行正确的任务分解**。Work 模式下的 /plan 命令本质上是一个元 Prompt（Meta-Prompt），让 AI 先规划再执行，降低了"AI 理解偏差导致返工"的概率。
+作者金句"需求越具体越好" ^[raw/articles/trae-solo-work-feishu-bitable-tutorial.md] 在 AI Agent 语境下有更深含义：传统编程中"具体"意味着给出精确的算法和数据结构；而对 AI Agent 而言，"具体"意味着**给出清晰的边界条件、成功标准、字段定义和目标系统约束**。这实际上是 Prompt Engineering 的进阶版本——不是优化单个 Prompt 的措辞，而是**通过结构化需求描述引导 AI Agent 进行正确的任务分解**。Work 模式下的 /plan 命令本质上是一个元 Prompt（Meta-Prompt），让 AI 先规划再执行，降低了"AI 理解偏差导致返工"的概率。
 
 ## 实践启示
 
@@ -268,7 +268,7 @@ config.py（通用配置）vs .env（敏感信息）的分离原则 ^[raw/articl
 
 ### 3. 超链接字段必须用复合对象格式而非纯字符串
 
-飞书 Bitable 超链接字段的 `{"link": "url", "text": "display_text"}` 格式 ^[raw/articles/trae-solo-work-feishu-bitable-tutorial.md:79-79] 是多维表格与传统电子表格的本质区别之一。**这不是飞书特有的设计，而是结构化数据字段类型的正确用法**：当字段类型从"文本"升级为"超链接"时，数据模型要求结构化对象而非字符串。这个教训适用于任何支持富字段类型的数据存储系统——字段类型决定了数据格式，格式不匹配是静默错误的主要来源。
+飞书 Bitable 超链接字段的 `{"link": "url", "text": "display_text"}` 格式 ^[raw/articles/trae-solo-work-feishu-bitable-tutorial.md] 是多维表格与传统电子表格的本质区别之一。**这不是飞书特有的设计，而是结构化数据字段类型的正确用法**：当字段类型从"文本"升级为"超链接"时，数据模型要求结构化对象而非字符串。这个教训适用于任何支持富字段类型的数据存储系统——字段类型决定了数据格式，格式不匹配是静默错误的主要来源。
 
 ### 4. Prompt 中明确指定分类选项，减少 AI 输出解析成本
 
@@ -276,7 +276,7 @@ AI 智能分析模块的 Prompt 设计中，"明确指定分类选项" ^[raw/art
 
 ### 5. Work 模式不支持直连远程服务器——预留手动部署时间
 
-"Work 模式不支持直接远程服务器部署" ^[raw/articles/trae-solo-work-feishu-bitable-tutorial.md:157-157] 是目前 SOLO Work 模式的边界约束。这意味着**AI Agent 开发完代码后，必须有手动部署步骤**（scp 上传 / git clone + 环境配置 + crontab 设置）。在规划包含远程部署的数据流水线时，应当在时间估算中额外加入这部分人工操作时间，不能假设 AI 能端到端完成。建议在 /plan 阶段就明确告知 AI"需要部署到远程服务器"，让 AI 在代码中生成适配服务器环境的启动脚本和日志路径。
+"Work 模式不支持直接远程服务器部署" ^[raw/articles/trae-solo-work-feishu-bitable-tutorial.md] 是目前 SOLO Work 模式的边界约束。这意味着**AI Agent 开发完代码后，必须有手动部署步骤**（scp 上传 / git clone + 环境配置 + crontab 设置）。在规划包含远程部署的数据流水线时，应当在时间估算中额外加入这部分人工操作时间，不能假设 AI 能端到端完成。建议在 /plan 阶段就明确告知 AI"需要部署到远程服务器"，让 AI 在代码中生成适配服务器环境的启动脚本和日志路径。
 
 ## 与已有实体的关系
 

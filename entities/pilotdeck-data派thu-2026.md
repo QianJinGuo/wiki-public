@@ -15,7 +15,7 @@ sources:
 
 ## 深度分析
 
-曾经爆火的小龙虾凉了？现在圈内都在用这款新 Agent 涉及agent领域的核心技术议题。 ^[raw/articles/pilotdeck-data派thu-2026.md]
+曾经爆火的小龙虾凉了？现在圈内都在用这款新 Agent ^[raw/articles/pilotdeck-data派thu-2026.md]
 ### 核心观点
 1. 现在圈内都在用这款新 Agent ^[raw/articles/pilotdeck-data派thu-2026.md]
 > 数据派THU 2026-06-09 17:00 报道，转发新智元原稿。

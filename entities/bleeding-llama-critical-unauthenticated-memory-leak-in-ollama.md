@@ -19,8 +19,6 @@ tags: [vulnerability, cve, memory-leak, ollama, gguf, heap-overflow, ai-security
 ## 摘要
 Title: Bleeding Llama: Critical Unauthenticated Memory Leak in Ollama | Cyera Research ^[raw/articles/bleeding-llama-critical-unauthenticated-memory-leak-in-ollama.md]
 URL Source: https://www.cyera.com/research/bleeding-llama-critical-unauthenticated-memory-leak-in-ollama ^[raw/articles/bleeding-llama-critical-unauthenticated-memory-leak-in-ollama.md]
-Published Time: Tue, 12 May 2026 15:50:08 GMT ^[raw/articles/bleeding-llama-critical-unauthenticated-memory-leak-in-ollama.md]
-Markdown Content: ^[raw/articles/bleeding-llama-critical-unauthenticated-memory-leak-in-ollama.md]
 .png) ^[raw/articles/bleeding-llama-critical-unauthenticated-memory-leak-in-ollama.md]
 TL;DR ^[raw/articles/bleeding-llama-critical-unauthenticated-memory-leak-in-ollama.md]
 We discovered a critical vulnerability (CVE-2026–7482, CVSS 9.1) in Ollama that enables unauthenticated attackers to leak the entire Ollama process memory, potentially impacting 300,000 servers globally. ^[raw/articles/bleeding-llama-critical-unauthenticated-memory-leak-in-ollama.md]

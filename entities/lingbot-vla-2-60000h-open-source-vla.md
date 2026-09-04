@@ -2,7 +2,7 @@
 title: "蚂蚁灵波 LingBot-VLA 2.0：60,000 小时开源通用 VLA 模型"
 slug: lingbot-vla-2-60000h-open-source-vla
 created: 2026-07-08
-updated: 2026-08-30
+updated: 2026-09-05
 type: entity
 tags:
   - vla
@@ -54,7 +54,7 @@ VLA 2.0 的一个关键架构创新是将深度估计（LingBot-Depth 2.0）与�
 
 ### GM-100 基准的竞争格局
 
-在 GM-100 Generalist Benchmark 上，VLA 2.0 在大多数任务上超越 GR00T N1.7 和 π0.5。值得注意的是 OOD（分布外）场景的表现——冰箱收纳任务的 OOD 得分 37.0/13.3 虽然领先对手，但相比 ID 得分 77.1/60.0 仍有大幅下降，说明分布外泛化仍是具身智能面临的核心挑战。这个差距也暗示了数据多样性（而非单纯的数据量）对于 OOD 泛化的重要性。^[raw/articles/lingbot-vla-2-60000h-open-source-vla.md:47-54]
+在 GM-100 Generalist Benchmark 上，VLA 2.0 在大多数任务上超越 GR00T N1.7 和 π0.5。值得注意的是 OOD（分布外）场景的表现——冰箱收纳任务的 OOD 得分 37.0/13.3 虽然领先对手，但相比 ID 得分 77.1/60.0 仍有大幅下降，说明分布外泛化仍是具身智能面临的核心挑战。这个差距也暗示了数据多样性（而非单纯的数据量）对于 OOD 泛化的重要性。^[raw/articles/lingbot-vla-2-60000h-open-source-vla.md]
 
 ### 从 VLA 到通用机器人基座
 

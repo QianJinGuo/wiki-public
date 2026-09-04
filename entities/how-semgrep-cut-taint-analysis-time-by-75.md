@@ -2,7 +2,7 @@
 title: "How Semgrep Cut Taint Analysis Time by 75%"
 description: "How Semgrep Cut Taint Analysis Time by 75% — technical deep-dive"
 created: 2026-06-18
-updated: 2026-07-27
+updated: 2026-09-05
 type: entity
 tags: [security, static-analysis, semgrep, engineering, ai]
 source: [[raw/articles/how-semgrep-cut-taint-analysis-time-by-75]]
@@ -18,7 +18,6 @@ provenance_state: extracted
 # How Semgrep Cut Taint Analysis Time by 75%
 
 
-Markdown Content: ^[raw/articles/how-semgrep-cut-taint-analysis-time-by-75.md]
 _Semgrep Pro Engine 1.158.0 and onwards is now shipping a redesigned taint analysis engine resulting in up to 75% speedups on full scans. This is the second in a three part series on improving the performance of Semgrep._ ^[raw/articles/how-semgrep-cut-taint-analysis-time-by-75.md]
 
 In the [previous blog post](https://semgrep.dev/blog/2026/announcing-pyro-caml-continuous-profiler-ocaml/) we discussed a new continuous profiler we released for OCaml, called Pyro Caml. The motivation behind building it was so we could improve the performance of Semgrep, whose core analysis engine is written in OCaml. In this blog post we’ll explore how we used it to validate where we thought our biggest bottleneck was, and how doing something once instead of twice is a great way to improve the performance of your programs. Specifically, the 95th percentile of Semgrep scan times went from 10 minutes, to 7 minutes 30 seconds, and our P99 went from a very noisy ~45 minutes on average, to a much more consistent 35 minutes. Additionally, the number of scans reaching the max allowable scan time dropped significantly. ^[raw/articles/how-semgrep-cut-taint-analysis-time-by-75.md]

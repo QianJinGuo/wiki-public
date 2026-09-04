@@ -3,7 +3,7 @@
 title: "Cisco Preps For A World Of AI Agent Coworkers, Frontier Model Threats"
 type: entity
 created: 2026-06-05
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [article, newsletter, ai, agent]
 sources:
   - raw/articles/cisco-preps-for-a-world-of-ai-agent-coworkers-frontier-model-threats
@@ -52,9 +52,7 @@ Agent 流量的模式不同于人类——需要独立的异常检测和安全�
 ## 摘要
 
 
-Published Time: 2026-06-03T00:10:37.000Z ^[raw/articles/cisco-preps-for-a-world-of-ai-agent-coworkers-frontier-model-threats.md]
 
-Markdown Content: ^[raw/articles/cisco-preps-for-a-world-of-ai-agent-coworkers-frontier-model-threats.md]
 Last month, we did a deep dive into [Cisco Systems’ third quarter fiscal 2026 numbers](https://www.nextplatform.com/connect/2026/05/18/cisco-wins-over-ai-customers-with-merchant-silicon-and-optics/5242200) to get a gauge on what the AI market looks like when you strip away what the hyperscalers, cloud builders, and AI model makers are spending for their AI datacenter buildouts and instead focus on the up-and-coming AI users – think enterprises, neoclouds, and sovereigns – and the traditional hardware vendors that will supply them. ^[raw/articles/cisco-preps-for-a-world-of-ai-agent-coworkers-frontier-model-threats.md]
 
 Those include system builders like Dell – and we heard a lot about [what the company is doing with AI](https://www.nextplatform.com/compute/2026/05/19/dell-bulks-up-hardware-as-ai-infrastructure-shifts-to-on-premises/5242811) last month during the Dell Technologies World 2026 show – and later this month, HPE will weigh in at HPE Discover 2026 in Las Vegas. This week it’s Cisco at [Cisco Live 2026](https://www.ciscolive.com/), also in Vegas. Cisco made a [strong push into the AI field](https://www.nextplatform.com/compute/2025/06/12/ciscos-hyperscale-and-cloud-ai-push-will-give-it-enterprise-clout/100798) at last year’s event, and this year they further outlined the latest efforts to build out its AI infrastructure stack for enterprises, particularly in this still emerging world of agentic AI – and now frontier AI models – and the challenges they present. ^[raw/articles/cisco-preps-for-a-world-of-ai-agent-coworkers-frontier-model-threats.md]

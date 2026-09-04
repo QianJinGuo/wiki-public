@@ -2,7 +2,7 @@
 
 title: "SchemaFlow: OpenAI Cookbook Partner — Agentic Database Change Impact Analysis, SQL Generation, and Eval Guardrails"
 created: 2026-06-09
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [agent, harness, openai, sql, eval, pydantic, guardrails, cookbook, schemaflow]
 sources: [raw/articles/schemaflow-agentic-database-sql-generation-openai-cookbook]
@@ -105,10 +105,10 @@ rules:
 ## 实践启示（Actionable）
 
 1. **拆 5 stage 而非 1 prompt**：复杂 LLM 任务必须 staged，每 stage 独立可观测^[raw/articles/schemaflow-agentic-database-sql-generation-openai-cookbook.md:26-30]
-2. **Pydantic 强类型**：LLM 输出从文本转数据结构，下游代码无需模糊解析^[raw/articles/schemaflow-agentic-database-sql-generation-openai-cookbook.md:39-51]
-3. **RAG 而非全量 prompt**：大型上下文（DB schema、API docs）必须分块向量化^[raw/articles/schemaflow-agentic-database-sql-generation-openai-cookbook.md:54-61]
+2. **Pydantic 强类型**：LLM 输出从文本转数据结构，下游代码无需模糊解析^[raw/articles/schemaflow-agentic-database-sql-generation-openai-cookbook.md]
+3. **RAG 而非全量 prompt**：大型上下文（DB schema、API docs）必须分块向量化^[raw/articles/schemaflow-agentic-database-sql-generation-openai-cookbook.md]
 4. **Eval guardrails 不是可选**：LLM 输出不能直接进生产，必须有 Promptfoo 之类的 gate^[raw/articles/schemaflow-agentic-database-sql-generation-openai-cookbook.md:31-36]
-5. **Stage-level 监控**：5 stage pipeline 需要每 stage 独立 metrics，便于定位瓶颈^[raw/articles/schemaflow-agentic-database-sql-generation-openai-cookbook.md:85-90]
+5. **Stage-level 监控**：5 stage pipeline 需要每 stage 独立 metrics，便于定位瓶颈^[raw/articles/schemaflow-agentic-database-sql-generation-openai-cookbook.md]
 
 ## 深度分析
 
@@ -126,19 +126,19 @@ SchemaFlow 的三层护栏（SQL injection detection、schema drift check、LLM-
 
 ### 3. RAG 是上下文窗口的成本优化策略
 
-PDF RAG schema context 的设计逻辑：大型企业 DB 可能有几千张表，全量 schema 喂给 LLM 会超出 context window 且 hallucination 率升高。RAG 让 LLM 只看 Top-K=5 相关表——这是**以检索精度换上下文长度**的经典工程权衡。^[raw/articles/schemaflow-agentic-database-sql-generation-openai-cookbook.md:54-61]
+PDF RAG schema context 的设计逻辑：大型企业 DB 可能有几千张表，全量 schema 喂给 LLM 会超出 context window 且 hallucination 率升高。RAG 让 LLM 只看 Top-K=5 相关表——这是**以检索精度换上下文长度**的经典工程权衡。^[raw/articles/schemaflow-agentic-database-sql-generation-openai-cookbook.md]
 
 向量化（text-embedding-3）+ 分块（~500 tokens）+ Top-K 检索的组合，使 LLM 在有限 context 内始终看到高相关度 schema，生成准确率系统性提升。 ^[raw/articles/schemaflow-agentic-database-sql-generation-openai-cookbook.md]
 
 ### 4. Pydantic schema 将 LLM 输出从"模糊文本"变成"可编程数据结构"
 
-这是 SchemaFlow 最重要的工程贡献。传统 LLM 输出是"文本"，需要正则解析才能取字段。Pydantic model 定义后，LLM 输出直接是类型化对象，下游代码 `output.affected_tables` 取值——**彻底消除文本解析层，降低约 30% 的下游脆弱性**。^[raw/articles/schemaflow-agentic-database-sql-generation-openai-cookbook.md:39-51]
+这是 SchemaFlow 最重要的工程贡献。传统 LLM 输出是"文本"，需要正则解析才能取字段。Pydantic model 定义后，LLM 输出直接是类型化对象，下游代码 `output.affected_tables` 取值——**彻底消除文本解析层，降低约 30% 的下游脆弱性**。^[raw/articles/schemaflow-agentic-database-sql-generation-openai-cookbook.md]
 
 配合 3 次重试机制（失败重试最多 3 次），强类型约束使 pipeline 的可预期性大幅提升。 ^[raw/articles/schemaflow-agentic-database-sql-generation-openai-cookbook.md]
 
 ### 5. 5 stage pipeline 的监控设计启示
 
-Stage-level 监控（token 上限 2000、P95 < 5s、重试 > 2 次告警）揭示了一个关键工程原则：**pipeline 中任意一 stage 超时都导致整体失败，需要精确定位瓶颈**。^[raw/articles/schemaflow-agentic-database-sql-generation-openai-cookbook.md:85-90]
+Stage-level 监控（token 上限 2000、P95 < 5s、重试 > 2 次告警）揭示了一个关键工程原则：**pipeline 中任意一 stage 超时都导致整体失败，需要精确定位瓶颈**。^[raw/articles/schemaflow-agentic-database-sql-generation-openai-cookbook.md]
 
 如果只监控"整体成功率"，在 5 stage 中定位具体瓶颈需要大量人工排查。Stage-level metrics 让平均修复时间（MTTR）从小时级降到分钟级。 ^[raw/articles/schemaflow-agentic-database-sql-generation-openai-cookbook.md]
 

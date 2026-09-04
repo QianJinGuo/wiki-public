@@ -19,9 +19,7 @@ updated: 2026-09-05
 ## 摘要
 Title: Automate schema generation for intelligent document processing | Amazon Web Services   ^[raw/articles/automate-schema-generation-for-intelligent-document-processing.md]
 URL Source: https://aws.amazon.com/blogs/machine-learning/automate-schema-generation-for-intelligent-document-processing/ ^[raw/articles/automate-schema-generation-for-intelligent-document-processing.md]
-Published Time: 2026-05-12T07:54:08-08:00^[raw/articles/automate-schema-generation-for-intelligent-document-processing.md]
 
-Markdown Content:
 Before you can extract information from documents using intelligent document processing (IDP) techniques, you need a schema for each document class that defines what to extract. But how do you create schemas when you have thou... ^[raw/articles/automate-schema-generation-for-intelligent-document-processing.md]
 
 ## 关键要点

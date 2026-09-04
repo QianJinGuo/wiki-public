@@ -2,7 +2,7 @@
 
 title: "Kimi 决定，要用 300 个 Agent 解救非程序员们"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, code, data, database, llm, mlops, prompt, search, security, tool-use]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-Kimi 决定，要用 300 个 Agent 解救非程序员们 涉及agent领域的核心技术议题。 ^[raw/articles/kimi-work-300-agent-cluster-yin-john-agi-hunt.md]
+Kimi 决定，要用 300 个 Agent 解救非程序员们 ^[raw/articles/kimi-work-300-agent-cluster-yin-john-agi-hunt.md]
 ### 核心观点
 1. # Kimi 决定，要用 300 个 Agent 解救非程序员们 ^[raw/articles/kimi-work-300-agent-cluster-yin-john-agi-hunt.md]
 > 作者：尹John（AGI Hunt） · 发布：2026-06-05

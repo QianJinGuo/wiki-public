@@ -2,7 +2,7 @@
 
 title: "国内首个 Frontier 三件套开源大模型：MiniMax M3 完整技术拆解"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, code, data, evaluation, fine-tuning, llm, memory, mlops, nvidia, open-source, prompt, rl, tool-use, vision]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-国内首个 Frontier 三件套开源大模型：MiniMax M3 完整技术拆解 涉及agent领域的核心技术议题。 ^[raw/articles/minimax-m3-frontier-three-set-open-source.md]
+国内首个 Frontier 三件套开源大模型：MiniMax M3 完整技术拆解 ^[raw/articles/minimax-m3-frontier-three-set-open-source.md]
 ### 核心观点
 1. # 国内首个 Frontier 三件套开源大模型：MiniMax M3 完整技术拆解
 **发布日期：** 2026年6月1日

@@ -4,14 +4,13 @@ title: "Open Defense Initiative"
 type: entity
 tags: [open-source]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 6
 review_confidence: 6
 sources: [raw/articles/open-defense-initiative]
 ---
 
 # Open Defense Initiative
-Published Time: Wed, 13 May 2026 15:55:13 GMT ^[raw/articles/open-defense-initiative.md]
 
 # Open Defense Initiative | depthfirst
 [depthfirst](https://depthfirst.com/) ^[raw/articles/open-defense-initiative.md]

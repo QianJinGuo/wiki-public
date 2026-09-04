@@ -2,7 +2,7 @@
 
 title: "Claude Code 泄露后的漏网之鱼 claude-code-best 这两个月到底演进了什么"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, claude, code, data, llm, memory, mlops, observability, open-source, prompt, search, security, tool-use, workflow]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-Claude Code 泄露后的漏网之鱼 claude-code-best 这两个月到底演进了什么 涉及agent领域的核心技术议题。 ^[raw/articles/claude-code-best-community-fork-evolution-vibecoder.md]
+Claude Code 泄露后的漏网之鱼 claude-code-best 这两个月到底演进了什么 ^[raw/articles/claude-code-best-community-fork-evolution-vibecoder.md]
 ### 核心观点
 1. # Claude Code 泄露后的漏网之鱼 claude-code-best 这两个月到底演进了什么 ^[raw/articles/claude-code-best-community-fork-evolution-vibecoder.md]
 ## 项目背景

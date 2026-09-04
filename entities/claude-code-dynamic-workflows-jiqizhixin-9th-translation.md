@@ -2,7 +2,7 @@
 
 title: "Claude Code 团队成员亲述：动态工作流该怎么用（机器之心译本）"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, claude, code, evaluation, llm, memory, prompt, security, tool-use, workflow]
 review_value: 7
 review_confidence: 7
@@ -22,7 +22,7 @@ sources:
 - [[moc/memory-context-systems|MOC]]
 ## 深度分析
 
-Claude Code 团队成员亲述：动态工作流该怎么用（机器之心译本） 涉及agent领域的核心技术议题。 ^[raw/articles/claude-code-dynamic-workflows-jiqizhixin-9th-translation.md]
+Claude Code 团队成员亲述：动态工作流该怎么用（机器之心译本） ^[raw/articles/claude-code-dynamic-workflows-jiqizhixin-9th-translation.md]
 ### 核心观点
 1. # Claude Code 团队成员亲述：动态工作流该怎么用（机器之心译本） ^[raw/articles/claude-code-dynamic-workflows-jiqizhixin-9th-translation.md]
 > 原文作者：Thariq Shihipar（@trq212, Anthropic Claude Code 团队）

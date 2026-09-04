@@ -2,7 +2,7 @@
 
 title: "Agent 记忆存储方案深度洞察"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, architecture, data, database, knowledge-mgmt, llm, memory, mlops, observability, open-source, rag, search, tool-use]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-Agent 记忆存储方案深度洞察 涉及agent领域的核心技术议题。 ^[raw/articles/agent-memory-storage-six-schools-quantumtransf-debate-frank.md]
+Agent 记忆存储方案深度洞察 ^[raw/articles/agent-memory-storage-six-schools-quantumtransf-debate-frank.md]
 ### 核心观点
 1. # Agent 记忆存储方案深度洞察 ^[raw/articles/agent-memory-storage-six-schools-quantumtransf-debate-frank.md]
 > 原文讨论来自 Twitter @QuantumTransf，围绕 ai-memory 项目的 Wiki 编译模式与原始数据直存模式的争论展开。

@@ -1,7 +1,7 @@
 ---
 title: "Qwen-Image-Flash: Beyond Objective Design — Few-step Distillation Training Recipe"
 created: 2026-06-05
-updated: 2026-08-01
+updated: 2026-09-05
 type: entity
 tags: [vision, image-generation, distillation, few-step, qwen, training-recipe, arxiv]
 source: [[raw/articles/qwen-image-flash-beyond-objective-design]]
@@ -117,7 +117,7 @@ The Qwen-Image-Flash paper is best read as a case study of a **recipe-first** ap
 
 4. **从"目标设计"到"配方设计"的范式转变具有广泛适用性。** 论文明确指出 few-step 蒸馏的效果取决于数据组合、教师引导和任务混合三个纬度的协同设计，而非单纯改进损失函数。这一 systems-level 视角在 LLM 蒸馏、Agent 轨迹蒸馏和工具调用微调中同样适用——这些场景中"配方"（数据构成、教师选择、任务配比）往往比损失函数本身更决定最终学生质量。^[raw/articles/qwen-image-flash-beyond-objective-design.md:79-88]
 
-5. **Few-step 模型的评估需要专属基准而非通用基准。** 论文构建的 T2I-Bench（1800 cases，3 categories）和 Editing-Bench（1500 cases，6 categories）专门针对 few-step 场景下的退化模式设计（如 dense text rendering、structured layout、instruction following）。MS-COCO 等通用基准无法捕捉这些特定退化。这一教训对构建其他少步生成模型的评估体系有直接参考价值。^[raw/articles/qwen-image-flash-beyond-objective-design.md:324-328]
+5. **Few-step 模型的评估需要专属基准而非通用基准。** 论文构建的 T2I-Bench（1800 cases，3 categories）和 Editing-Bench（1500 cases，6 categories）专门针对 few-step 场景下的退化模式设计（如 dense text rendering、structured layout、instruction following）。MS-COCO 等通用基准无法捕捉这些特定退化。这一教训对构建其他少步生成模型的评估体系有直接参考价值。^[raw/articles/qwen-image-flash-beyond-objective-design.md]
 
 ## 实践启示
 

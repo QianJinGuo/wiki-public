@@ -2,7 +2,7 @@
 
 title: "Well-architected best practices for software supply chain security"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [architecture, aws, code, data, mlops, observability, open-source, rag, rl, security, workflow]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-Well-architected best practices for software supply chain security 涉及architecture领域的核心技术议题。 ^[raw/articles/aws-software-supply-chain-security-well-architected.md]
+Well-architected best practices for software supply chain security ^[raw/articles/aws-software-supply-chain-security-well-architected.md]
 ### 核心观点
 1. xyz tokens, and recently axios. ^[raw/articles/aws-software-supply-chain-security-well-architected.md]
 2. Thanks to community efforts involving the Amazon Inspector team, the Open Source Security Foundation, and others, the affected packages were quickly flagged, which reduced the impact of these incidents. ^[raw/articles/aws-software-supply-chain-security-well-architected.md]

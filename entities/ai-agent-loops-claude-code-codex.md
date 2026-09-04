@@ -2,7 +2,7 @@
 
 title: "🎙️ How I AI: How to write AI agent loops in Claude Code and Codex + How Claude Mythos found a 15-year-old bug in Mozilla Firefox | Brian Grinstead"
 created: 2026-06-23
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [agent, claude-code, codex, harness, loop]
 source: "[[raw/articles/ai-agent-loops-claude-code-codex]]"
@@ -21,9 +21,7 @@ review_recommendation: strong
 ## 概述
 
 
-Published Time: 2026-06-22T15:02:37+00:00
 
-Markdown Content:
 [![Image 1](https://substackcdn.com/image/fetch/$s_!gWeJ!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F361d81ef-7faf-4d8e-8028-5d5e03432a9a_2329x551.png)](https://substackcdn.com/image/fetch/$s_!gWeJ!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F361d81ef-7faf-4d8e-8028-5d5e03432a9a_2329x551.png) ^[raw/articles/ai-agent-loops-claude-code-codex.md]
 
 [Video 5](https://www.youtube.com/watch?v=JoXbk2fm7jM) ^[raw/articles/ai-agent-loops-claude-code-codex.md]

@@ -1,7 +1,7 @@
 ---
 title: "Wiki 中 60+ 概念骨架的补建路线图（0 inlink + <2KB 模板）"
 created: 2026-06-11
-updated: 2026-06-11
+updated: 2026-09-05
 type: moc
 tags: [wiki-maintenance, concept-page, todo, roadmap, knowledge-gap, pending, skeleton, inlink-debt]
 sources: []
@@ -156,3 +156,26 @@ confidence: high
 - [[concepts/ai-cost-optimization-framework|AI 成本优化框架]]
 - Human-in-the-Loop AI
 - [[concepts/alibaba-llm-wiki-enterprise-practice|阿里数据团队 LLM Wiki 企业实践：LLM 编译思维构建结构化知识资产]]
+
+---
+
+## 缺位主题清单（2026-09-05 · 概念缺位透镜轮，与上方骨架待扩互补）
+
+> 本段由 `scripts/concept-gap-detector.py`（可重复运行，输出 `metrics/concept-gaps.json`）驱动，管"**有实体质量但没有 concept 页**"的主题；上方 2026-06-11 段管"有骨架但没内容"的页。两类债务方向相反。
+
+### 检测结论四条
+
+1. **D2 实体伪 hub（结构性）**：概念层的角色正被文章型 entity 扮演——`harness-engineering-framework` 同时存在 concepts/（12.6KB）与 entities/（12.1KB）**跨目录孪生**；`agent-memory-architecture` 在 entities/ 与 moc/ 双胞胎。入链 ≥20 的伪 hub 全量 229 个，见 JSON d2 字段。
+2. **D3 标签漂移（假阴性来源）**：部分概念存在但标签断线——`embodied-intelligence-frontier`（1.4KB 骨架，且不带 `embodied-ai` tag）、`skill-engineering-principles`（tag 用 `skill` 非 `agent-skill`）。检测器 v1 按标签匹配会漏报；本轮已修 2 页标签。
+3. **真缺口（本轮已补 2 个）**：world-model（51 实体→`concepts/world-models`）、sandbox（38 实体→`concepts/agent-sandbox`）。
+4. **D1/D4 噪声教训**：`wechat/article/raw/newsletter` 是来源标签不是话题标签（却各有 100-258 实体），tag 体系需要"来源/话题"分层；D4 共现对的 top 全被泛标签占据，需窄标签才有信号。
+
+### 待建候选（按实体质量排序，均为 D3 真缺口）
+
+| 候选概念 | 簇大小 | 备注 |
+|----------|--------|------|
+| video-generation + diffusion（可合并"媒体生成"） | 42+35 | 库内有大量视频/图像生成实体，无收拢 |
+| knowledge-mgmt | 33 | 与 RAG/moc 层重叠，需先查重 |
+| inference-optimization | 28 | 推理优化散页多，vLLM/量化/KV 相关概念部分存在 |
+| ai-safety | 32 | `ai-ethics-responsible-ai` 存在但语义不同（伦理≠安全），建议新页+互链 |
+| computer-vision | 26 | 经典主题，确认无页后低优先补 |

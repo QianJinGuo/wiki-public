@@ -2,7 +2,7 @@
 
 title: "AI Agent 工程师学习路线：面向资深后端/大数据工程师的能力地图"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, architecture, code, data, database, evaluation, llm, memory, mlops, prompt, rag, search, security, tool-use, workflow]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-AI Agent 工程师学习路线：面向资深后端/大数据工程师的能力地图 涉及agent领域的核心技术议题。 ^[raw/articles/ai-agent-engineer-learning-roadmap-backend-2026.md]
+AI Agent 工程师学习路线：面向资深后端/大数据工程师的能力地图 ^[raw/articles/ai-agent-engineer-learning-roadmap-backend-2026.md]
 ### 核心观点
 1. # AI Agent 工程师学习路线：面向资深后端/大数据工程师的能力地图 ^[raw/articles/ai-agent-engineer-learning-roadmap-backend-2026.md]
 ## 核心判断

@@ -22,7 +22,7 @@ sources:
 
 ## 深度分析
 
-全球AI新王诞生！Anthropic估值冲爆1.2万亿，首次反超OpenAI 涉及agent领域的核心技术议题。 ^[raw/articles/全球ai新王诞生anthropic估值冲爆12万亿首次反超openai.md]
+全球AI新王诞生！Anthropic估值冲爆1.2万亿，首次反超OpenAI ^[raw/articles/全球ai新王诞生anthropic估值冲爆12万亿首次反超openai.md]
 ### 核心观点
 1. Anthropic估值冲爆1. ^[raw/articles/全球ai新王诞生anthropic估值冲爆12万亿首次反超openai.md]
 2. 2万亿，首次反超OpenAI ^[raw/articles/全球ai新王诞生anthropic估值冲爆12万亿首次反超openai.md]

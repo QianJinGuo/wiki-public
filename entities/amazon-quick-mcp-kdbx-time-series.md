@@ -2,7 +2,7 @@
 
 title: "Amazon Quick integration with time-series databases for market intelligence using MCP"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, architecture, aws, code, data, database, mcp, memory, mlops, observability, open-source, prompt, rl, search, tool-use, trading, workflow]
 review_value: 7
 review_confidence: 7
@@ -23,7 +23,7 @@ sources:
 - [[moc/mlops-training-inference|MOC]]
 ## 深度分析
 
-Amazon Quick integration with time-series databases for market intelligence using MCP 涉及agent领域的核心技术议题。 ^[raw/articles/amazon-quick-mcp-kdbx-time-series.md]
+Amazon Quick integration with time-series databases for market intelligence using MCP ^[raw/articles/amazon-quick-mcp-kdbx-time-series.md]
 ### 核心观点
 1. As a financial analyst, you navigate millions of stock trades flowing through markets every second, searching for patterns that drive trading decisions.
 2. Financial institutions often use time series databases to analyze high-frequency market data.

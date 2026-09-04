@@ -2,7 +2,7 @@
 
 title: "从人机协作到AI主导：我们是怎么把代码质量交给'数字SRE'的？"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, code, data, llm, memory, mlops, observability, prompt, rl, tool-use, workflow]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-从人机协作到AI主导：我们是怎么把代码质量交给'数字SRE'的？ 涉及agent领域的核心技术议题。 ^[raw/articles/taobao-ai-sre-digital-employee-code-quality-governance.md]
+从人机协作到AI主导：我们是怎么把代码质量交给'数字SRE'的？ ^[raw/articles/taobao-ai-sre-digital-employee-code-quality-governance.md]
 ### 核心观点
 1. # 从人机协作到AI主导：我们是怎么把代码质量交给"数字SRE"的？ ^[raw/articles/taobao-ai-sre-digital-employee-code-quality-governance.md]
 2. ## 背景：AI参与开发模式的四个阶段 ^[raw/articles/taobao-ai-sre-digital-employee-code-quality-governance.md]

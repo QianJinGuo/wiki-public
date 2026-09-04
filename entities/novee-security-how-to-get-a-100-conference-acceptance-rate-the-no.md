@@ -1,7 +1,7 @@
 ---
 
 created: 2026-06-10
-updated: 2026-08-01
+updated: 2026-09-05
 title: "How to Get a 100% Conference Acceptance Rate, The Novee Way: A High-Severity CVE in Leading Call-for-Papers Software"
 type: entity
 tags: [article, agent, ai, llm, model, security, xss, vulnerability]
@@ -19,10 +19,8 @@ sources:
 
 URL Source: https://novee.security/blog/pretalx-stored-xss-vulnerability-account-takeover/ ^[raw/articles/novee-security-how-to-get-a-100-conference-acceptance-rate-the-no.md]
 
-Published Time: 2026-05-27T12:06:20+00:00^[raw/articles/novee-security-how-to-get-a-100-conference-acceptance-rate-the-no.md]
 
 
-Markdown Content:
 _A walkthrough of how Novee finds the type of chained exploit that SAST and DAST miss, and how to speed-run your next CFP cycle (kidding). A massive thank-you to the pretalx team and creator Tobias Kunze for their extraordinarily rapid and cooperative disclosure._ ^[raw/articles/novee-security-how-to-get-a-100-conference-acceptance-rate-the-no.md]
 
 ## What you need to know

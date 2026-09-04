@@ -2,7 +2,7 @@
 
 title: "新智源：OpenAI Tax AI 自改进 Codex 评估循环"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, code, data, evaluation, fine-tuning, knowledge-mgmt, llm, memory, mlops, nvidia, observability, open-source, openai, prompt, rl, tool-use, trading, workflow]
 review_value: 7
 review_confidence: 7
@@ -24,7 +24,7 @@ sources:
 
 ## 深度分析
 
-Xinzhiyuan Openai Tax Ai Self Improving Codex Eval Loop 20260606 涉及agent领域的核心技术议题。 ^[raw/articles/xinzhiyuan-openai-tax-ai-self-improving-codex-eval-loop-20260606.md]
+Xinzhiyuan Openai Tax Ai Self Improving Codex Eval Loop 20260606 ^[raw/articles/xinzhiyuan-openai-tax-ai-self-improving-codex-eval-loop-20260606.md]
 ### 核心观点
 1. 【新智元导读】 ^[raw/articles/xinzhiyuan-openai-tax-ai-self-improving-codex-eval-loop-20260606.md]
 没人重训模型，没人重写代码，OpenAI的AI系统六周内自己把准确率从25%拉到86%。 ^[raw/articles/xinzhiyuan-openai-tax-ai-self-improving-codex-eval-loop-20260606.md]

@@ -2,7 +2,7 @@
 
 title: "云端 Agent 基础设施两条硬经验：CreaoAI 联合创始人的状态/代码解耦 + 凭据隔离"
 created: "2026-06-06"
-updated: 2026-08-30
+updated: 2026-09-05
 type: entity
 tags: [cloud-agent, sandbox, creaoai, infrastructure, snapshot, hot-swap, jwt, api-bridge, credential-isolation, execution-boundary, zero-trust, runner-code, multi-tenant, security, first-hand, hard-won-lesson, ownership-boundary, hot-swap-runner, os-analogy]
 sources: [raw/articles/ai-techliwen-creaoai-cloud-agent-infrastructure-two-lessons-20260606]
@@ -222,7 +222,7 @@ Hot-swap 的工程意义在于：它把"平台升级"和"用户状态"从**必�
 
 ### 4. 短期 JWT + IP 白名单的双层校验，是把"零信任"从概念变成可执行工程约束的最小方案
 
-零信任是一个被广泛引用的安全概念，但文章给出了一个**在云端 Agent 场景下可执行的最小实现**：网络层 IP 白名单 + 应用层短期 JWT。两层叠加的目的是让**每一层的失效都有独立的兜底**。^[raw/articles/ai-techliwen-creaoai-cloud-agent-infrastructure-two-lessons-20260606.md:117-130]
+零信任是一个被广泛引用的安全概念，但文章给出了一个**在云端 Agent 场景下可执行的最小实现**：网络层 IP 白名单 + 应用层短期 JWT。两层叠加的目的是让**每一层的失效都有独立的兜底**。^[raw/articles/ai-techliwen-creaoai-cloud-agent-infrastructure-two-lessons-20260606.md]
 
 IP 白名单解决的问题是：**网络层拒绝所有非内网来源的请求**，即使有人拿到了沙箱地址也無法绕过这一层。这绑定了桥接层对特定物理基础设施的依赖，消除了"地址泄露 → 外部直连"这条攻击路径。 ^[raw/articles/ai-techliwen-creaoai-cloud-agent-infrastructure-two-lessons-20260606.md]
 
@@ -232,7 +232,7 @@ IP 白名单解决的问题是：**网络层拒绝所有非内网来源的请求
 
 ### 5. "统一执行管道"是把 Agent 从"产品"变成"基础设施"的关键架构决策
 
-文章把 Agent 定义为"**带自然语言接口的函数**"，并指出这个函数必须通过一个统一的 `executeAgent` 管道服务所有触发方。这个定义不是一个隐喻，而是一个**架构约束**：如果 Agent 对不同的触发源有不同的执行路径，它就不再是一个函数，而是一个需要维护 N×M 复杂度矩阵的产品。^[raw/articles/ai-techliwen-creaoai-cloud-agent-infrastructure-two-lessons-20260606.md:151-155]
+文章把 Agent 定义为"**带自然语言接口的函数**"，并指出这个函数必须通过一个统一的 `executeAgent` 管道服务所有触发方。这个定义不是一个隐喻，而是一个**架构约束**：如果 Agent 对不同的触发源有不同的执行路径，它就不再是一个函数，而是一个需要维护 N×M 复杂度矩阵的产品。^[raw/articles/ai-techliwen-creaoai-cloud-agent-infrastructure-two-lessons-20260606.md]
 
 这个架构决策的商业含义是：平台可以**低成本地引入新的触发源**（加一条路由，不需要改 Agent 本身），而 Agent 开发者可以假设运行时行为与触发方式无关。这把 Agent 从一个"用户交互产品"提升为"技术栈内部可随时调用的基础设施函数"——这是云端 Agent 平台能够形成网络效应的技术基础。 ^[raw/articles/ai-techliwen-creaoai-cloud-agent-infrastructure-two-lessons-20260606.md]
 

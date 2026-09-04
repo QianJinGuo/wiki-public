@@ -1,7 +1,7 @@
 ---
 
 created: 2026-06-10
-updated: 2026-08-01
+updated: 2026-09-05
 title: "Software After AI"
 type: entity
 tags: [article, agent, ai, llm, model]
@@ -20,10 +20,8 @@ sources:
 URL Source: https://tomtunguz.com/harnessing-ai/^[raw/articles/tomtunguz-com-software-after-ai.md]
 
 
-Published Time: 2026-05-27T00:00:00Z^[raw/articles/tomtunguz-com-software-after-ai.md]
 
 
-Markdown Content:
 The end of the software era is the beginning of the harness era. ^[raw/articles/tomtunguz-com-software-after-ai.md]
 
 AI outmoded SaaS managed databases with fixed workflows with intelligence. Like a mustang, AI is powerful but wild. Harnessing the power means domestication. ^[raw/articles/tomtunguz-com-software-after-ai.md]

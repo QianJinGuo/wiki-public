@@ -2,7 +2,7 @@
 
 title: "浏览器 Agent 的失忆问题：Autobrowse 如何让每次探索变成永久技能"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, data, knowledge-mgmt, memory, mlops, open-source, prompt, rag, search, skill, tool-use, workflow]
 review_value: 7
 review_confidence: 7
@@ -22,7 +22,7 @@ sources:
 - [[moc/mlops-training-inference|MOC]]
 ## 深度分析
 
-浏览器 Agent 的失忆问题：Autobrowse 如何让每次探索变成永久技能 涉及agent领域的核心技术议题。 ^[raw/articles/autobrowse-browser-agent-persistent-skills-sense-ai.md]
+浏览器 Agent 的失忆问题：Autobrowse 如何让每次探索变成永久技能 ^[raw/articles/autobrowse-browser-agent-persistent-skills-sense-ai.md]
 ### 核心观点
 1. > **Source**: https://mp. ^[raw/articles/autobrowse-browser-agent-persistent-skills-sense-ai.md]
 2. com/s/QvYspe3V6eoA9ZUA0AxocA ^[raw/articles/autobrowse-browser-agent-persistent-skills-sense-ai.md]

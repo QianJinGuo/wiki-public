@@ -2,7 +2,7 @@
 
 title: "Karpathy加入Anthropic后首讲：Vibe Coding已死，Software3.0来了"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, ai-coding, anthropic, code, data, evaluation, fine-tuning, llm, memory, prompt, rl, security, tool-use, workflow]
 review_value: 7
 review_confidence: 7
@@ -22,7 +22,7 @@ sources:
 - [[moc/data-infrastructure|MOC]]
 ## 深度分析
 
-Karpathy加入Anthropic后首讲：Vibe Coding已死，Software3.0来了 涉及agent领域的核心技术议题。 ^[raw/articles/karpathy-software3-vibe-coding-dead-agentic-engineering.md]
+Karpathy加入Anthropic后首讲：Vibe Coding已死，Software3.0来了 ^[raw/articles/karpathy-software3-vibe-coding-dead-agentic-engineering.md]
 ### 核心观点
 1. # Karpathy加入Anthropic后首讲：Vibe Coding已死，Software3. ^[raw/articles/karpathy-software3-vibe-coding-dead-agentic-engineering.md]
 2. 0来了 ^[raw/articles/karpathy-software3-vibe-coding-dead-agentic-engineering.md]

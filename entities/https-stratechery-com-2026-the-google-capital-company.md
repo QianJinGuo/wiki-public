@@ -2,7 +2,7 @@
 
 title: "The Google Capital Company"
 created: 2026-06-03
-updated: 2026-08-01
+updated: 2026-09-05
 type: entity
 tags: [newsletter, ai]
 source: "[[raw/articles/https-stratechery-com-2026-the-google-capital-company.md|The Google Capital Company]]"
@@ -23,10 +23,8 @@ Newsletter 评分 7×7=49，stars=4，来源 URL: https://stratechery.com/2026/t
 
 ## 正文要点
 
-Published Time: 2026-06-02T10:00:00+00:00^[raw/articles/https-stratechery-com-2026-the-google-capital-company.md]
 
 
-Markdown Content:
 **Listen to this **post**:**^[raw/articles/https-stratechery-com-2026-the-google-capital-company.md]
 
 

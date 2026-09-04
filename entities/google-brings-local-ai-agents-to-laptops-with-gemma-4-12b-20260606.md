@@ -2,7 +2,7 @@
 
 title: "Google brings local AI agents to laptops with Gemma 4 12B"
 created: 2026-06-06
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [agent, article, code, data, database, llm, memory, mlops, nvidia, observability, rag, rl, search, security, source-archive, tool-use, workflow]
 sources: [raw/articles/google-brings-local-ai-agents-to-laptops-with-gemma-4-12b-20260606]
@@ -27,7 +27,7 @@ review_stars: 4
 - [[moc/data-infrastructure|MOC]]
 ## 深度分析
 
-Google brings local AI agents to laptops with Gemma 4 12B 涉及agent领域的核心技术议题。 ^[raw/articles/google-brings-local-ai-agents-to-laptops-with-gemma-4-12b-20260606.md]
+Google brings local AI agents to laptops with Gemma 4 12B ^[raw/articles/google-brings-local-ai-agents-to-laptops-with-gemma-4-12b-20260606.md]
 ### 核心观点
 1. Google has released new tools that allow developers to run agentic AI workflows locally using Gemma 4 12B, a 12-billion-parameter model from Google DeepMind. ^[raw/articles/google-brings-local-ai-agents-to-laptops-with-gemma-4-12b-20260606.md]
 2. In a blog post, the company said the model, combined with the Google AI Edge stack, can be used to build and test applications on everyday machines. ^[raw/articles/google-brings-local-ai-agents-to-laptops-with-gemma-4-12b-20260606.md]

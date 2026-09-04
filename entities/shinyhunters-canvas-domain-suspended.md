@@ -3,7 +3,7 @@
 
 title: "Canvas Hackers ShinyHunters Say Their Official Domain Was Suspended"
 created: 2026-05-16
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [security, ai]
 sources:
@@ -15,8 +15,6 @@ review_confidence: 7
 
 # "Canvas Hackers ShinyHunters Say Their Official Domain Was Suspended"
 # Canvas Hackers ShinyHunters Say Their Official Domain Was Suspended
-Published Time: 2026-05-12T22:18:09+01:00   ^[raw/articles/shinyhunters-canvas-domain-suspended.md]
-Markdown Content: ^[raw/articles/shinyhunters-canvas-domain-suspended.md]
 [![Image 4: Hackread - Cybersecurity News, Data Breaches, AI and More](https://hackread.com/wp-content/uploads/2023/08/Hackread-logo.png)](https://hackread.com/)[![Image 5: Hackread - Cybersecurity News, Data Breaches, AI and More](https://hackread.com/wp-content/uploads/2023/08/Hackread-logo.png)](https://hackread.com/) ^[raw/articles/shinyhunters-canvas-domain-suspended.md]
 
 *   [Hacking News](https://hackread.com/category/data-breaches/hacking-news/)

@@ -2,7 +2,7 @@
 
 title: "一个 Mission 跑 16 天、烧 7.78 亿 Token：Factory 公开了多 Agent 系统的构建哲学"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, architecture, code, data, evaluation, llm, memory, mlops, multi-agent, observability, open-source, search, tool-use, trading, workflow]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-一个 Mission 跑 16 天、烧 7.78 亿 Token：Factory 公开了多 Agent 系统的构建哲学 涉及agent领域的核心技术议题。 ^[raw/articles/factory-missions-multi-agent-shipping-for-days-luke.md]
+一个 Mission 跑 16 天、烧 7.78 亿 Token：Factory 公开了多 Agent 系统的构建哲学 ^[raw/articles/factory-missions-multi-agent-shipping-for-days-luke.md]
 ### 核心观点
 1. # 一个 Mission 跑 16 天、烧 7. ^[raw/articles/factory-missions-multi-agent-shipping-for-days-luke.md]
 2. 78 亿 Token：Factory 公开了多 Agent 系统的构建哲学 ^[raw/articles/factory-missions-multi-agent-shipping-for-days-luke.md]

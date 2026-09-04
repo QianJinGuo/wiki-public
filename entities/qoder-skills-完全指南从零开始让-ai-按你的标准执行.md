@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-Qoder Skills 完全指南：从零开始，让 AI 按你的标准执行 涉及agent领域的核心技术议题。 ^[raw/articles/qoder-skills-完全指南从零开始让-ai-按你的标准执行.md]
+Qoder Skills 完全指南：从零开始，让 AI 按你的标准执行 ^[raw/articles/qoder-skills-完全指南从零开始让-ai-按你的标准执行.md]
 ### 核心观点
 1. # Qoder Skills 完全指南：从零开始，让 AI 按你的标准执行 ^[raw/articles/qoder-skills-完全指南从零开始让-ai-按你的标准执行.md]
 文章内容基于作者个人技术实践与独立思考，旨在分享经验，仅代表个人观点。 ^[raw/articles/qoder-skills-完全指南从零开始让-ai-按你的标准执行.md]

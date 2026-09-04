@@ -2,7 +2,7 @@
 
 title: "DeepSeek陈德里AI论文第二弹：从6分到8分，DeliAutoResearch SKILL又进化了"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, architecture, data, deepseek, evaluation, fine-tuning, game, llm, memory, mlops, open-source, search, security, skill, vision, workflow]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-DeepSeek陈德里AI论文第二弹：从6分到8分，DeliAutoResearch SKILL又进化了 涉及agent领域的核心技术议题。 ^[raw/articles/deli-auto-research-skill-v2-continual-learning-self-improvement.md]
+DeepSeek陈德里AI论文第二弹：从6分到8分，DeliAutoResearch SKILL又进化了 ^[raw/articles/deli-auto-research-skill-v2-continual-learning-self-improvement.md]
 ### 核心观点
 1. # DeepSeek陈德里AI论文第二弹：从6分到8分，DeliAutoResearch SKILL又进化了
 机器之心编辑部 | 2026-05-30

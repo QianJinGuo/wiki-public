@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-读完这篇，你就搞懂 DeepSeek v4 了 涉及agent领域的核心技术议题。 ^[raw/articles/读完这篇你就搞懂-deepseek-v4-了.md]
+读完这篇，你就搞懂 DeepSeek v4 了 ^[raw/articles/读完这篇你就搞懂-deepseek-v4-了.md]
 ### 核心观点
 1. # 读完这篇，你就搞懂 DeepSeek v4 了 ^[raw/articles/读完这篇你就搞懂-deepseek-v4-了.md]
 作者  ：d  orian ^[raw/articles/读完这篇你就搞懂-deepseek-v4-了.md]

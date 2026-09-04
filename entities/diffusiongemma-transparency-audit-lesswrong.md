@@ -11,7 +11,7 @@ tags:
   - google
   - model-audit
 created: 2026-06-22
-updated: 2026-08-01
+updated: 2026-09-05
 type: entity
 review_value: 9
 review_confidence: 9
@@ -30,10 +30,8 @@ related:
 ## 核心内容
 
 
-Published Time: 2026-06-20T20:05:50.053Z^[raw/articles/diffusiongemma-transparency-audit-lesswrong.md]
 
 
-Markdown Content:
 Authors: Joshua Engels*, Callum McDougall*, Bilal Chughtai*, Janos Kramar, Senthoran Rajamanoharan, Cindy Wu, Arthur Conmy, Asic Q Chen, Jean Tarbouriech, Min Ma, Brendan O'Donoghue+, João Gabriel Lopes de Oliveira+, Rohin Shah+, Neel Nanda+ ^[raw/articles/diffusiongemma-transparency-audit-lesswrong.md]
 
 *Primary Contributor^[raw/articles/diffusiongemma-transparency-audit-lesswrong.md]

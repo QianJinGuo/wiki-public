@@ -1,7 +1,7 @@
 ---
 title: "AI Agent 落地：如何攻克稳定性、成本与评估难题？ — Trace即Evals"
 created: 2026-07-01
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [agent, evaluation, trace, harness, observability, evals]
 source: "[[raw/articles/ai-agent-trace-evals-stability-cost-evaluation-zhangyanfei]]"

@@ -1,7 +1,7 @@
 ---
 title: "The golden rule of Customizable Select"
 created: 2026-06-16
-updated: 2026-08-24
+updated: 2026-09-05
 type: entity
 tags: [article, newsletter]
 source_url: "https://webkit.org/blog/18117/the-golden-rule-of-customizable-select/"
@@ -24,9 +24,7 @@ review_stars: 4
 
 ## 内容提炼
 
-Published Time: 2026-06-15T14:20:31-07:00 ^[raw/articles/webkit-customizable-select-golden-rule.md]
 
-Markdown Content: ^[raw/articles/webkit-customizable-select-golden-rule.md]
 Customizable select is coming to Safari 27. With this technology, developers can fully control the appearance of `<select>` elements — custom arrows, option layouts, color swatches, icons, full visual styling — without the need for JavaScript libraries or an endless parade of `<div>` elements. And because it’s a built-in control, you don’t have to compromise on keyboard navigation or accessibility semantics. ^[raw/articles/webkit-customizable-select-golden-rule.md]
 
 But, to ensure this built-in control works well for everyone, it’s important to follow this single but essential rule: **always provide text content or accessible text attributes for your `option` elements.** ^[raw/articles/webkit-customizable-select-golden-rule.md]

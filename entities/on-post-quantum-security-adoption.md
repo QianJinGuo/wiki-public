@@ -2,7 +2,7 @@
 title: "On Post-Quantum Security Adoption"
 description: "On Post-Quantum Security Adoption — technical deep-dive"
 created: 2026-06-18
-updated: 2026-07-27
+updated: 2026-09-05
 type: entity
 tags: [security, cryptography, post-quantum, ai]
 source: [[raw/articles/on-post-quantum-security-adoption]]
@@ -18,9 +18,7 @@ provenance_state: extracted
 # On Post-Quantum Security Adoption
 
 
-Published Time: 2026-06-15 ^[raw/articles/on-post-quantum-security-adoption.md]
 
-Markdown Content: ^[raw/articles/on-post-quantum-security-adoption.md]
 From Alex’s [blog post](https://alexwlchan.net/2026/post-quantum-blog/), I’ve learned that there are enough recent breakthroughs in quantum computing that I should take post-quantum cryptography seriously. [Google](https://blog.google/innovation-and-ai/technology/safety-security/cryptography-migration-timeline/) and [Cloudflare](https://blog.cloudflare.com/post-quantum-roadmap/) both set a target of 2029 for having their systems secure against quantum computers. Similarly, the [UK government](https://www.ncsc.gov.uk/guidance/pqc-migration-timelines) is targeting 2035. ^[raw/articles/on-post-quantum-security-adoption.md]
 
 The issue is that cryptography is built upon math problems that are difficult to solve. Quantum computers make solving some of these problems such as integer factorization and discrete logs easier. If someone has a quantum computer that can sufficiently solve those two problems, then they can likely decrypt many ciphertexts that were produced using [asymmetric cryptography](https://en.wikipedia.org/wiki/Public-key_cryptography) techniques (think public/private key-pairs). Wikipedia has a great article discussing [post-quantum cryptography](https://en.wikipedia.org/wiki/Post-quantum_cryptography) if you want to read more. ^[raw/articles/on-post-quantum-security-adoption.md]

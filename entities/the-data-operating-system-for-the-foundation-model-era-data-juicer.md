@@ -3,7 +3,7 @@
 title: "The Data Operating System for the Foundation Model Era — Data Juicer"
 description: "Comprehensive open-source data processing framework with 200+ operators, modular architecture, and clear technical documentation. Strong practical value for AI data pipelines."
 created: 2026-06-22
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [agent, llm, analytics, mlops, architecture]
 provenance_state: inferred
@@ -18,7 +18,6 @@ review_stars: 4
 
 # The Data Operating System for the Foundation Model Era — Data Juicer
 
-Markdown Content:
 [![Image 1: PyPI](https://img.shields.io/pypi/v/py-data-juicer?logo=pypi&color=026cad)](https://pypi.org/project/py-data-juicer)[![Image 2: Downloads](https://static.pepy.tech/personalized-badge/py-data-juicer?period=total&units=INTERNATIONAL_SYSTEM&left_color=grey&right_color=green&left_text=downloads)](https://pepy.tech/projects/py-data-juicer)[![Image 3: Docker](https://img.shields.io/docker/v/datajuicer/data-juicer?logo=docker&label=Docker&color=498bdf)](https://hub.docker.com/r/datajuicer/data-juicer) ^[raw/articles/the-data-operating-system-for-the-foundation-model-era-data-juicer.md]
 
 [![Image 4: Docs](https://img.shields.io/badge/%F0%9F%93%96_Docs-Website-026cad)](https://datajuicer.github.io/data-juicer/)[![Image 5: Operators](https://img.shields.io/badge/%F0%9F%A7%A9_Operators-200+-blue)](https://datajuicer.github.io/data-juicer/en/main/docs/Operators.html)[![Image 6: Recipes](https://img.shields.io/badge/%F0%9F%8D%B3_Recipes-50+-brightgreen)](https://github.com/datajuicer/data-juicer-hub) ^[raw/articles/the-data-operating-system-for-the-foundation-model-era-data-juicer.md]

@@ -17,7 +17,6 @@ review_recommendation: worth-reading
 - 由 AWS 技术团队主持
 
 ## 摘要
-Markdown Content: ^[raw/articles/aws-agent-orchestration-workshop.md]
 
 # Agent Orchestration Workshop | AWS Marketplace
 ## Select your cookie preferences

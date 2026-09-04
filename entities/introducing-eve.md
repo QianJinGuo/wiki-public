@@ -2,7 +2,7 @@
 
 title: "Introducing eve"
 created: 2026-06-19
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [agent, ai, vercel]
 source: "[[raw/articles/introducing-eve]]"
@@ -18,7 +18,6 @@ sources:
 ## Overview
 
 
-Markdown Content:
 Today, we are proud to introduce [eve](https://vercel.com/eve), an open-source agent framework for building, running, and scaling agents. eve is designed around the idea that building an agent should mean defining what it does without assembling all of the pieces that it needs to run in production. Instead, eve comes with production already built in: ^[raw/articles/introducing-eve.md]
 
 *   Durable execution

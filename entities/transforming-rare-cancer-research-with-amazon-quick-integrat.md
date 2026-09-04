@@ -2,7 +2,7 @@
 
 title: "Transforming rare cancer research with Amazon Quick: Integrating biomedical databases for breakthrough discoveries"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, aws, code, data, database, evaluation, k8s, llm, observability, rag, rl, search, trading, vision, workflow]
 review_value: 7
 review_confidence: 7
@@ -22,7 +22,7 @@ sources:
 
 ## 深度分析
 
-Transforming rare cancer research with Amazon Quick: Integrating biomedical databases for breakthrough discoveries 涉及agent领域的核心技术议题。 ^[raw/articles/transforming-rare-cancer-research-with-amazon-quick-integrat.md]
+Transforming rare cancer research with Amazon Quick: Integrating biomedical databases for breakthrough discoveries ^[raw/articles/transforming-rare-cancer-research-with-amazon-quick-integrat.md]
 ### 核心观点
 1. Integrating these sources for a single investigation typically requires custom ETL pipelines, manual schema reconciliation, and iterative querying across disconnected systems—a process that can take weeks before any analysis begins. ^[raw/articles/transforming-rare-cancer-research-with-amazon-quick-integrat.md]
 2. Amazon Quick Research addresses this integration challenge by providing a unified research environment. ^[raw/articles/transforming-rare-cancer-research-with-amazon-quick-integrat.md]

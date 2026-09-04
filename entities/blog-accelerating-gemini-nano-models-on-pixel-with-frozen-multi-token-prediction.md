@@ -2,7 +2,7 @@
 
 title: "Accelerating Gemini Nano models on Pixel with frozen Multi-Token Prediction"
 created: 2026-06-29
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [llm, mlops, research, google]
 source: "[[raw/articles/blog-accelerating-gemini-nano-models-on-pixel-with-frozen-multi-token-prediction]]"
@@ -24,7 +24,6 @@ Specific technique (frozen Multi-Token Prediction) with implementation details f
 ## Content Summary
 
 
-Markdown Content:
 Having powerful Large Language Models (LLMs) right in your pocket is now a reality with on-device models like [Gemini Nano](https://developer.android.com/ai/gemini-nano) and [Gemma](https://deepmind.google/models/gemma/). This technology enables everyday features on your phone — such as instantly summarizing a flurry of notifications or proofreading an important text message — all without sending your private data off device. But to make these features useful for everyday users, they need to happen very efficiently. ^[raw/articles/blog-accelerating-gemini-nano-models-on-pixel-with-frozen-multi-token-prediction.md]
 
 Delivering this kind of speed on a mobile device is a significant challenge. Unlike vast server environments, mobile phones operate under a strict energy budget and hard memory (RAM) limits. Furthermore, standard language models generate text "autoregressively" — meaning they process and output just one word (or token) at a time. This step-by-step process creates a bottleneck, underutilizing the phone's processing power while straining its memory bandwidth, which can ultimately slow down the user experience and drain the battery. ^[raw/articles/blog-accelerating-gemini-nano-models-on-pixel-with-frozen-multi-token-prediction.md]

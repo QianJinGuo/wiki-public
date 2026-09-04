@@ -15,7 +15,6 @@ review_confidence: 8
 ## 摘要
 Title: The Main Path to Truly Creative AI ^[raw/articles/the-main-path-to-truly-creative-ai.md]
 URL Source: https://danielmiessler.com/blog/the-main-path-to-truly-creative-ai ^[raw/articles/the-main-path-to-truly-creative-ai.md]
-Markdown Content: ^[raw/articles/the-main-path-to-truly-creative-ai.md]
 Why real creativity might require real feeling — and what we'd owe an AI that had it ^[raw/articles/the-main-path-to-truly-creative-ai.md]
 May 11, 2026 ^[raw/articles/the-main-path-to-truly-creative-ai.md]
 79 reading now ^[raw/articles/the-main-path-to-truly-creative-ai.md]

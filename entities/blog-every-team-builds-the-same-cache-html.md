@@ -2,7 +2,7 @@
 
 title: "Every Team is Building the Same Cache — TierFS"
 created: 2026-06-26
-updated: 2026-07-27
+updated: 2026-09-05
 type: entity
 tags: [article]
 source: "[[raw/articles/blog-every-team-builds-the-same-cache-html]]"
@@ -19,9 +19,7 @@ review_recommendation: worth-reading
 > **来源**: [Every Team is Building the Same Cache — TierFS](https://tierfs.com/blog/every-team-builds-the-same-cache.html)
 
 
-Published Time: Thu, 25 Jun 2026 21:41:37 GMT
 
-Markdown Content:
 Why infrastructure teams keep solving the same storage problem from scratch, and what would happen if they didn't have to. ^[raw/articles/blog-every-team-builds-the-same-cache-html.md]
 
 If you work at a company that runs serious compute workloads in the cloud, there's a good chance one of your engineers has spent the last quarter building a cache. ^[raw/articles/blog-every-team-builds-the-same-cache-html.md]

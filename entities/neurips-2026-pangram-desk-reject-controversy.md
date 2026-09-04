@@ -2,7 +2,7 @@
 
 title: "NeurIPS 2026 使用闭源 AI 检测器 Pangram 批量 desk-reject 论文事件"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [data, llm, observability, security, tool-use]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-NeurIPS 2026 使用闭源 AI 检测器 Pangram 批量 desk-reject 论文事件 涉及data领域的核心技术议题。 ^[raw/articles/neurips-2026-pangram-desk-reject-controversy.md]
+NeurIPS 2026 使用闭源 AI 检测器 Pangram 批量 desk-reject 论文事件 ^[raw/articles/neurips-2026-pangram-desk-reject-controversy.md]
 ### 核心观点
 1. # NeurIPS 2026 使用闭源 AI 检测器 Pangram 批量 desk-reject 论文事件 ^[raw/articles/neurips-2026-pangram-desk-reject-controversy.md]
 > 整理自机器之心 SOTA 报道（编辑：杜伟）

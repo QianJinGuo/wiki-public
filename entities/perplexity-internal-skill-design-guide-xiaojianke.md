@@ -2,7 +2,7 @@
 
 title: "Perplexity 首次公开了内部 Skill 设计指南"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, architecture, code, data, evaluation, fine-tuning, llm, memory, observability, prompt, search, skill, tool-use, workflow]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-Perplexity 首次公开了内部 Skill 设计指南 涉及agent领域的核心技术议题。 ^[raw/articles/perplexity-internal-skill-design-guide-xiaojianke.md]
+Perplexity 首次公开了内部 Skill 设计指南 ^[raw/articles/perplexity-internal-skill-design-guide-xiaojianke.md]
 ### 核心观点
 1. # Perplexity 首次公开了内部 Skill 设计指南 ^[raw/articles/perplexity-internal-skill-design-guide-xiaojianke.md]
 > 进化 AI 实验室 | 2026-05-19 | 安徽

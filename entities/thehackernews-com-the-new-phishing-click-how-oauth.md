@@ -4,14 +4,13 @@ title: "The New Phishing Click: How OAuth Consent Bypasses MFA"
 type: entity
 tags: [google]
 created: 2026-05-21
-updated: 2026-07-31
+updated: 2026-09-05
 review_value: 6
 review_confidence: 6
 sources: [raw/articles/thehackernews-com-the-new-phishing-click-how-oauth]
 ---
 
 # The New Phishing Click: How OAuth Consent Bypasses MFA
-Published Time: Wed, 20 May 2026 13:43:00 GMT ^[raw/articles/thehackernews-com-the-new-phishing-click-how-oauth.md]
 [![Image 1](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiLnnvBvl0Gs5pfpUcrlJ_Ni62CyGs5UpoGCmpUAjReyBpExj5FzhuxSwuUcfQiyxDqeeoy6jSAHq4tA2KUnO5CRfbpfd_jN1ndeXgC0MiG0TrAfAyW67eybZeHMY-t6_kICQdPPKqK-1n9Ngkrj7UJrZZa1KQWqN9WjaTaDuHA_t6RW9Stul6tb82OS_4/s1700-e365/reco1.jpg)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiLnnvBvl0Gs5pfpUcrlJ_Ni62CyGs5UpoGCmpUAjReyBpExj5FzhuxSwuUcfQiyxDqeeoy6jSAHq4tA2KUnO5CRfbpfd_jN1ndeXgC0MiG0TrAfAyW67eybZeHMY-t6_kICQdPPKqK-1n9Ngkrj7UJrZZa1KQWqN9WjaTaDuHA_t6RW9Stul6tb82OS_4/s1700-e365/reco1.jpg) ^[raw/articles/thehackernews-com-the-new-phishing-click-how-oauth.md]
 In February 2026, a phishing-as-a-service (PhaaS) platform called [EvilTokens](https://labs.cloudsecurityalliance.org/research/csa-research-note-oauth-device-code-phishing-m365-20260325-c/) went live. Within five weeks, it had compromised more than 340 Microsoft 365 organizations across five countries. ^[raw/articles/thehackernews-com-the-new-phishing-click-how-oauth.md]
 

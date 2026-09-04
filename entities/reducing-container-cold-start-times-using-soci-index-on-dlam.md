@@ -2,7 +2,7 @@
 
 title: "Reducing container cold start times using SOCI index on DLAMI and DLC"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [architecture, aws, code, data, evaluation, fine-tuning, k8s, llm, mlops, nvidia, observability, rag, rl, tool-use, vision]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-Reducing container cold start times using SOCI index on DLAMI and DLC 涉及architecture领域的核心技术议题。 ^[raw/articles/reducing-container-cold-start-times-using-soci-index-on-dlam.md]
+Reducing container cold start times using SOCI index on DLAMI and DLC ^[raw/articles/reducing-container-cold-start-times-using-soci-index-on-dlam.md]
 ### 核心观点
 1. # Reducing container cold start times using SOCI index on DLAMI and DLC
 Deep Learning AMI and AWS Deep Learning Containers are now enabled with support for SOCI snapshotter and index. ^[raw/articles/reducing-container-cold-start-times-using-soci-index-on-dlam.md]

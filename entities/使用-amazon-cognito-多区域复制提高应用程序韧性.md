@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-使用 Amazon Cognito 多区域复制提高应用程序韧性 涉及agent领域的核心技术议题。 ^[raw/articles/使用-amazon-cognito-多区域复制提高应用程序韧性.md]
+使用 Amazon Cognito 多区域复制提高应用程序韧性 ^[raw/articles/使用-amazon-cognito-多区域复制提高应用程序韧性.md]
 ### 核心观点
 1. # 使用 Amazon Cognito 多区域复制提高应用程序韧性 ^[raw/articles/使用-amazon-cognito-多区域复制提高应用程序韧性.md]
 作为一名与 Web 和移动应用程序开发者合作的开发者布道师，我经常听到一项需求：在不太可能发生的区域性服务中断情况下，也要保持一致的用户身份验证。 ^[raw/articles/使用-amazon-cognito-多区域复制提高应用程序韧性.md]

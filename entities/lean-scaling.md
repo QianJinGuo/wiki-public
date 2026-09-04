@@ -2,7 +2,7 @@
 
 title: "Lean Software Scaling Laws"
 created: 2026-06-29
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [llm, security, mlops, research]
 provenance_state: inferred
@@ -25,7 +25,6 @@ Novel research proposal with specific methodology (perplexity scaling over codeb
 ## Content Summary
 
 
-Markdown Content:
 Research proposal for measuring how coding LLM perplexity scales with codebase context size, using Lean as a test case for whether formal languages have better predictability exponents and could lead to safer, more secure software worldwide. ^[raw/articles/lean-scaling.md]
 
 > Research idea: empirically measure the scaling of coding LLM perplexity over codebase size to estimate the scaling laws of ‘predictability’ by programming language or other factors. This should translate into overall security and safety.

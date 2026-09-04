@@ -1,7 +1,7 @@
 ---
 title: "Multi-Agent 架构：Factory Mission 系统的方法论"
 created: 2026-06-11
-updated: 2026-08-30
+updated: 2026-09-05
 type: entity
 tags: [multi-agent, factory, luke-alvoeiro, agent-architecture, task-decomposition, validation-contract, harness-engineering]
 sources: [raw/articles/multi-agent-mission-factory-luke-aiengineer]
@@ -128,7 +128,7 @@ Luke 公开的 Mission 实战数字值得仔细解读：^[raw/articles/multi-age
 
 ### 3. Validation Contract 可迁移出 Coding 场景
 
-这一思想**可以推广到所有需要"先定义对错"的任务**——做报告生成、市场研究、多日复杂流程自动化时，都可以先写几百条断言，把"怎样算做完"锁死在实现前面。^[raw/articles/multi-agent-mission-factory-luke-aiengineer.md:103-103]
+这一思想**可以推广到所有需要"先定义对错"的任务**——做报告生成、市场研究、多日复杂流程自动化时，都可以先写几百条断言，把"怎样算做完"锁死在实现前面。^[raw/articles/multi-agent-mission-factory-luke-aiengineer.md]
 
 ### 4. Droid Whispering 的成本工程意义
 

@@ -2,7 +2,7 @@
 
 title: "百型智能 OntoZ：企业本体论 + 群智能体协同体系，新一代企业级 AI 基础设施"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, architecture, data, fine-tuning, llm, memory, mlops, rl, robotics, tool-use, trading, workflow]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-百型智能 OntoZ：企业本体论 + 群智能体协同体系，新一代企业级 AI 基础设施 涉及agent领域的核心技术议题。 ^[raw/articles/baixing-ontoz-enterprise-ontology-xinzhiyuan.md]
+百型智能 OntoZ：企业本体论 + 群智能体协同体系，新一代企业级 AI 基础设施 ^[raw/articles/baixing-ontoz-enterprise-ontology-xinzhiyuan.md]
 ### 核心观点
 1. # 百型智能 OntoZ：企业本体论 + 群智能体协同体系，新一代企业级 AI 基础设施
 > 来源：新智元（秒追ASI）· 2026-06-05

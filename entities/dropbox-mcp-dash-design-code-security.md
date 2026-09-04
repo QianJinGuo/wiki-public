@@ -1,7 +1,7 @@
 ---
 title: "How Dropbox uses MCP and Dash to close the design-to-code security gap"
 created: 2026-06-16
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [article, newsletter]
 source_url: "https://dropbox.tech/security/dropbox-mcp-dash-design-code-security"
@@ -24,7 +24,6 @@ review_stars: 4
 
 ## 内容提炼
 
-Markdown Content: ^[raw/articles/dropbox-mcp-dash-design-code-security.md]
 Every security team knows the drill: a new feature goes through design review, a threat model is produced, mitigations are agreed upon, and then development begins. In many cases, by the time implementation reaches code review, the process where engineers review code changes before they go live, the original security requirements are no longer visible in the workflow. A threat model, which outlines potential security risks and the protections a feature should include, often lives in a separate document or system from the code itself. ^[raw/articles/dropbox-mcp-dash-design-code-security.md]
 
 This separation creates a challenge. Implementation often happens weeks or months after the original security review, making it difficult for reviewers to verify that the agreed-upon security requirements were actually implemented. At Dropbox, we wanted to understand how often this gap appears in practice. ^[raw/articles/dropbox-mcp-dash-design-code-security.md]

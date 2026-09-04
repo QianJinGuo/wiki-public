@@ -2,7 +2,7 @@
 
 title: "The annotated PyTorch training loop"
 created: 2026-06-26
-updated: 2026-08-01
+updated: 2026-09-05
 type: entity
 tags: [article]
 source: "[[raw/articles/essays-pytorch-training-loop]]"
@@ -19,10 +19,8 @@ review_recommendation: worth-reading
 > **来源**: [The annotated PyTorch training loop](https://idlemachines.co.uk/essays/pytorch-training-loop)
 
 
-Published Time: 2026-06-20T10:00:00.000Z^[raw/articles/essays-pytorch-training-loop.md]
 
 
-Markdown Content:
 ![Image 1: A three-class spiral dataset. Shaded regions show the model's softmax confidence. The boundary sharpens as training progresses.](https://idlemachines.co.uk/essays/figs/training_loop_animation.webp)^[raw/articles/essays-pytorch-training-loop.md]
 
 

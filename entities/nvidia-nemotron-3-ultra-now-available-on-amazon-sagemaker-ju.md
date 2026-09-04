@@ -2,7 +2,7 @@
 
 title: "NVIDIA Nemotron 3 Ultra now available on Amazon SageMaker JumpStart"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, architecture, aws, code, evaluation, memory, mlops, nvidia, rl, search, tool-use, workflow]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-NVIDIA Nemotron 3 Ultra now available on Amazon SageMaker JumpStart 涉及agent领域的核心技术议题。 ^[raw/articles/nvidia-nemotron-3-ultra-now-available-on-amazon-sagemaker-ju.md]
+NVIDIA Nemotron 3 Ultra now available on Amazon SageMaker JumpStart ^[raw/articles/nvidia-nemotron-3-ultra-now-available-on-amazon-sagemaker-ju.md]
 ### 核心观点
 1. # NVIDIA Nemotron 3 Ultra now available on Amazon SageMaker JumpStart
 Today, we are excited to announce the day-zero availability of **NVIDIA Nemotron 3 Ultra** on Amazon SageMaker JumpStart. ^[raw/articles/nvidia-nemotron-3-ultra-now-available-on-amazon-sagemaker-ju.md]

@@ -58,8 +58,6 @@ Nightmare-Eclipse 声称拥有"dead man's switch"（死人开关），预示着�
 | 推荐入库 | **strong** | ^[raw/articles/microsoft-zero-days-researcher-disgruntled-theregister.md]
 
 ## 摘要
-Published Time: 2026-05-13T16:16:02.000Z ^[raw/articles/microsoft-zero-days-researcher-disgruntled-theregister.md]
-Markdown Content: ^[raw/articles/microsoft-zero-days-researcher-disgruntled-theregister.md]
 Disgruntled researcher releases two more Microsoft zero-days ^[raw/articles/microsoft-zero-days-researcher-disgruntled-theregister.md]
 Jump to main content ^[raw/articles/microsoft-zero-days-researcher-disgruntled-theregister.md]
 Search ^[raw/articles/microsoft-zero-days-researcher-disgruntled-theregister.md]

@@ -21,9 +21,7 @@ review_recommendation: strong
 ## 概述
 
 
-Published Time: 2026-06-22T12:00:00+03:00
 
-Markdown Content:
 In the [last post](https://samihonkonen.com/posts/purpose-built-local-ai-agents/) I described how I set up a local LLM and how I create purpose-built agents: ^[raw/articles/agent-capability-library.md]
 
 > Whenever I want AI help with something specific, I make a new directory under `~/projects/` on my Air and just start working with pi. Once I’ve done what I want to do, I tell pi to record the process in an `AGENTS.md`. From that point on, every time I open pi in that directory it reads the file and is immediately ready to continue.

@@ -76,7 +76,7 @@ Obsidian 虽然提供了「排除文件」的设置（设置 > 文件与链接�
 * •  ** 根目录的  ` CLAUDE.md  ` ** ：当作整个 Vault 的「操作手册」
 * •  **` VAULT-INDEX.md  ` ** ：给 Claude 用的入口，相当于一个实时总览
 * •  ** 每个目录下配一个  ` index.md  ` ** ：由 Claude 自动维护（新建/删除文件时更新）
-比如  ballred/obsidian-claude-pkm  [1]  这种项目，会再加一层目标管理（年 / 月 / 周）。^[开源-ai-知识管理搭档-obsidian-claude-code-完整集成指南.md:115-115]^[raw/articles/开源-ai-知识管理搭档-obsidian-claude-code-完整集成指南.md]
+比如  ballred/obsidian-claude-pkm  [1]  这种项目，会再加一层目标管理（年 / 月 / 周）。^[开源-ai-知识管理搭档-obsidian-claude-code-完整集成指南.md]^[raw/articles/开源-ai-知识管理搭档-obsidian-claude-code-完整集成指南.md]
 还有像  ** Noah Vincent  ** 的  IPARAG 结构  [2]  ，本质上是把内容分成：收件箱、项目、领域、资源、归档，以及类似 Zettelkasten 的笔记体系。^[开源-ai-知识管理搭档-obsidian-claude-code-完整集成指南.md:116-116]^[raw/articles/开源-ai-知识管理搭档-obsidian-claude-code-完整集成指南.md]
 这种方式在  ** 你的 Vault 本身就是工作内容  ** 时特别好用，比如写作、研究、个人项目管理。但如果你已经有一套成熟的代码仓库结构，再硬套进来，反而会比较别扭。^[开源-ai-知识管理搭档-obsidian-claude-code-完整集成指南.md:118-118]^[raw/articles/开源-ai-知识管理搭档-obsidian-claude-code-完整集成指南.md]
 
@@ -128,7 +128,7 @@ Obsidian 虽然提供了「排除文件」的设置（设置 > 文件与链接�
 2. ** sync-claude-sessions  ** ：会话结束时自动导出为 Markdown ^[raw/articles/开源-ai-知识管理搭档-obsidian-claude-code-完整集成指南.md]
 3. **` /recall  ` 技能  ** ：新会话开始前，把相关上下文拉回来 ^[raw/articles/开源-ai-知识管理搭档-obsidian-claude-code-完整集成指南.md]
 这样一来，Claude Code 的每次对话都会变成可搜索的笔记，慢慢沉淀在你的本地仓库里。^[开源-ai-知识管理搭档-obsidian-claude-code-完整集成指南.md:173-173]^[raw/articles/开源-ai-知识管理搭档-obsidian-claude-code-完整集成指南.md]
-** 这套方案的特点  ** ：^[开源-ai-知识管理搭档-obsidian-claude-code-完整集成指南.md:176-176]^[raw/articles/开源-ai-知识管理搭档-obsidian-claude-code-完整集成指南.md]
+** 这套方案的特点  ** ：^[开源-ai-知识管理搭档-obsidian-claude-code-完整集成指南.md]^[raw/articles/开源-ai-知识管理搭档-obsidian-claude-code-完整集成指南.md]
 
 * • 全部本地运行，不依赖云端
 * • 会话可以复用，不再是「一次性上下文」
@@ -167,14 +167,14 @@ Obsidian 虽然提供了「排除文件」的设置（设置 > 文件与链接�
 ** 注意  ** ：这只是「软隐藏」。这些文件在界面上看不到了，但 Obsidian 还是会在内部索引它们，所以并不是彻底隔离。^[开源-ai-知识管理搭档-obsidian-claude-code-完整集成指南.md:220-220]^[raw/articles/开源-ai-知识管理搭档-obsidian-claude-code-完整集成指南.md]
 
 ###  步骤 3：用 File Explorer++ 做「硬过滤」
-可以装一个  File Explorer++  [6]  插件，它支持按文件名或路径做通配符 / 正则过滤，而且可以随时开关，比内置的排除功能更灵活。^[开源-ai-知识管理搭档-obsidian-claude-code-完整集成指南.md:223-223]^[raw/articles/开源-ai-知识管理搭档-obsidian-claude-code-完整集成指南.md]
+可以装一个  File Explorer++  [6]  插件，它支持按文件名或路径做通配符 / 正则过滤，而且可以随时开关，比内置的排除功能更灵活。^[开源-ai-知识管理搭档-obsidian-claude-code-完整集成指南.md]^[raw/articles/开源-ai-知识管理搭档-obsidian-claude-code-完整集成指南.md]
 
 ###  步骤 4：关闭「检测所有文件扩展名」
 在「设置 → 文件与链接」里，把「检测所有文件扩展名」关掉。这样像 JS、TS、JSON 这些 Obsidian 本身不处理的文件，就不会再出现在文件列表里。^[开源-ai-知识管理搭档-obsidian-claude-code-完整集成指南.md:227-227]^[raw/articles/开源-ai-知识管理搭档-obsidian-claude-code-完整集成指南.md]
 
 ###  替代方案：File Ignore 插件
 如果你想要更彻底一点，可以用  File Ignore  [7]  插件。它支持  ` .gitignore  ` 风格的规则，并通过给文件加前缀的方式，让 Obsidian 在索引时直接跳过这些文件。^[开源-ai-知识管理搭档-obsidian-claude-code-完整集成指南.md:231-231]^[raw/articles/开源-ai-知识管理搭档-obsidian-claude-code-完整集成指南.md]
-不过要注意，这种方式会  ** 实际修改文件名  ** ，所以更适合你能接受这种改动、或者本身就是个人仓库的场景。^[开源-ai-知识管理搭档-obsidian-claude-code-完整集成指南.md:233-233]^[raw/articles/开源-ai-知识管理搭档-obsidian-claude-code-完整集成指南.md]
+不过要注意，这种方式会  ** 实际修改文件名  ** ，所以更适合你能接受这种改动、或者本身就是个人仓库的场景。^[开源-ai-知识管理搭档-obsidian-claude-code-完整集成指南.md]^[raw/articles/开源-ai-知识管理搭档-obsidian-claude-code-完整集成指南.md]
 
 ##  插件推荐
 ###  开发者 Vault 必备
@@ -254,7 +254,7 @@ Hide Folders  [15]  |  按规则控制文件夹的显示与隐藏，用起来更
 
 ##  Obsidian CLI 的突破性进展
 Obsidian  ` 1.12  ` 引入的 CLI，可以说把整个集成方式往前推了一大步。现在像 Claude Code、Codex、Gemini CLI 这类工具，都可以直接「使用」 Obsidian，而不只是简单地读文件。^[开源-ai-知识管理搭档-obsidian-claude-code-完整集成指南.md:329-329]^[raw/articles/开源-ai-知识管理搭档-obsidian-claude-code-完整集成指南.md]
-有开发者在一个 4,000+ 文件、16GB 的仓库上做过测试，结果很直观：^[开源-ai-知识管理搭档-obsidian-claude-code-完整集成指南.md:331-331]^[raw/articles/开源-ai-知识管理搭档-obsidian-claude-code-完整集成指南.md]
+有开发者在一个 4,000+ 文件、16GB 的仓库上做过测试，结果很直观：^[开源-ai-知识管理搭档-obsidian-claude-code-完整集成指南.md]^[raw/articles/开源-ai-知识管理搭档-obsidian-claude-code-完整集成指南.md]
 
 * •  ** 找孤立笔记  ** ：从十几秒降到不到 1 秒（大约 50 倍提升）
 * •  ** 全仓搜索  ** ：也有明显加速
@@ -269,7 +269,7 @@ Obsidian  ` 1.12  ` 引入的 CLI，可以说把整个集成方式往前推了�
 社区里有个挺有共识的原则，可以用一句话来概括：^[开源-ai-知识管理搭档-obsidian-claude-code-完整集成指南.md:348-348]^[raw/articles/开源-ai-知识管理搭档-obsidian-claude-code-完整集成指南.md]
 > ** AI 负责读取，人负责书写  **
 意思是，你的 vault 应该记录的是  ** 你自己的思考  ** 。Claude 用来读这些内容、补充上下文，但不应该把生成的内容一股脑写进去，把 vault 变成「AI 输出的集合」。^[开源-ai-知识管理搭档-obsidian-claude-code-完整集成指南.md:352-352]^[raw/articles/开源-ai-知识管理搭档-obsidian-claude-code-完整集成指南.md]
-更清晰一点的做法是：把 Claude 的输出（比如计划、会话、记忆）放在  ` ~/.claude/  ` ，而 vault 本身只保留真正有价值的知识和思考。^[开源-ai-知识管理搭档-obsidian-claude-code-完整集成指南.md:354-354]^[raw/articles/开源-ai-知识管理搭档-obsidian-claude-code-完整集成指南.md]
+更清晰一点的做法是：把 Claude 的输出（比如计划、会话、记忆）放在  ` ~/.claude/  ` ，而 vault 本身只保留真正有价值的知识和思考。^[开源-ai-知识管理搭档-obsidian-claude-code-完整集成指南.md]^[raw/articles/开源-ai-知识管理搭档-obsidian-claude-code-完整集成指南.md]
 在这个思路下，一些自定义命令也挺有意思：^[开源-ai-知识管理搭档-obsidian-claude-code-完整集成指南.md:356-356]^[raw/articles/开源-ai-知识管理搭档-obsidian-claude-code-完整集成指南.md]
 
 * •  **` /my-world  ` ** — 加载整个 vault 的上下文

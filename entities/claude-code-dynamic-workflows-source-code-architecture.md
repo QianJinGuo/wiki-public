@@ -2,7 +2,7 @@
 
 title: "Claude Code 动态工作流源码解析：pi-dynamic-workflows 架构实现"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, architecture, claude, code, data, llm, observability, open-source, prompt, security, tool-use, workflow]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-Claude Code 动态工作流源码解析：pi-dynamic-workflows 架构实现 涉及agent领域的核心技术议题。 ^[raw/articles/claude-code-dynamic-workflows-source-code-architecture.md]
+Claude Code 动态工作流源码解析：pi-dynamic-workflows 架构实现 ^[raw/articles/claude-code-dynamic-workflows-source-code-architecture.md]
 ### 核心观点
 1. # Claude Code 动态工作流源码解析：pi-dynamic-workflows 架构实现 ^[raw/articles/claude-code-dynamic-workflows-source-code-architecture.md]
 AI技术立文 | 2026-05-30 ^[raw/articles/claude-code-dynamic-workflows-source-code-architecture.md]

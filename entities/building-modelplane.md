@@ -2,7 +2,7 @@
 
 title: "Building Modelplane on Crossplane"
 created: 2026-06-26
-updated: 2026-07-27
+updated: 2026-09-05
 type: entity
 tags: [article]
 source: "[[raw/articles/building-modelplane]]"
@@ -19,9 +19,7 @@ review_recommendation: strong
 > **来源**: [Building Modelplane on Crossplane](https://blog.crossplane.io/building-modelplane/)
 
 
-Published Time: 2026-06-23T15:08:59.000Z
 
-Markdown Content:
 ![Image 1](https://blog.crossplane.io/content/images/2026/06/Modelplane---Crossplane-Blog-Hero.png)
 I've worked on Crossplane for almost eight years, since the v0.1 release. In that time I've watched a lot of people use it to put cloud infrastructure behind an API. For the last few months I've been using it to put a particular, demanding kind of infrastructure behind an API: a fleet of GPUs running model inference. ^[raw/articles/building-modelplane.md]
 

@@ -1,7 +1,7 @@
 ---
 title: "GitLab CI/CD Kill Chain Audit — Black Hills InfoSec 2026 大规模审计研究"
 created: 2026-06-09
-updated: 2026-08-30
+updated: 2026-09-05
 type: entity
 tags: [security, gitlab, ci-cd, supply-chain, audit, kill-chain, devsecops, black-hills]
 sources: [raw/articles/auditing-gitlab-cicd-kill-chain-black-hills-2026]
@@ -113,7 +113,7 @@ Black Hills Info Security 在 2026-06-03 发布的审计研究是 GitLab 生态*
 
 4. **构建内部威胁模型时必须将 CI/CD 流水线纳入攻击树**：Black Hills 的 kill chain 框架可直接作为红队评估的 checklist——每条 CI/CD 攻击路径（recon → initial access → privilege escalation → exfiltration）都应有对应的检测与缓解控制点 ^[raw/articles/auditing-gitlab-cicd-kill-chain-black-hills-2026.md]
 
-5. **黑盒外部审计与 SAST/SCA 形成纵深覆盖**：Black Hills 的第三方黑盒视角弥补了内部工具的盲区。建议每季度引入一次外部 CI/CD 安全审计，配合内部 SAST（.gitlab-ci.yml 配置检查）与 SCA（CI 依赖分析），形成内外双层防线 ^[raw/articles/auditing-gitlab-cicd-kill-chain-black-hills-2026.md:79-79]
+5. **黑盒外部审计与 SAST/SCA 形成纵深覆盖**：Black Hills 的第三方黑盒视角弥补了内部工具的盲区。建议每季度引入一次外部 CI/CD 安全审计，配合内部 SAST（.gitlab-ci.yml 配置检查）与 SCA（CI 依赖分析），形成内外双层防线 ^[raw/articles/auditing-gitlab-cicd-kill-chain-black-hills-2026.md]
 
 ## 原文存档
 

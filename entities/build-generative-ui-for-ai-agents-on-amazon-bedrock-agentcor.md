@@ -2,7 +2,7 @@
 title: "Amazon Bedrock AgentCore AG-UI 协议：为 AI Agent 构建生成式 UI"
 description: "AWS 推出 AG-UI 协议，让 Agent 在 AgentCore Runtime 上动态生成交互式 UI，实现从纯文本对话到富交互界面的 Agent 体验升级。"
 created: 2026-07-01
-updated: 2026-08-30
+updated: 2026-09-05
 type: entity
 tags: [aws, bedrock, agentcore, agent, generative-ui, mcp]
 sources: [raw/articles/build-generative-ui-for-ai-agents-on-amazon-bedrock-agentcor]
@@ -32,7 +32,7 @@ AG-UI 定义了 Agent 后端与前端之间的标准化事件通信协议。它�
 - **共享状态（Shared State）**：前后端双向同步状态，如实时更新的待办画布^[raw/articles/build-generative-ui-for-ai-agents-on-amazon-bedrock-agentcor.md:203-213]
 - **人机协同（Human-in-the-loop）**：Agent 可在执行中暂停，等待用户输入后继续^[raw/articles/build-generative-ui-for-ai-agents-on-amazon-bedrock-agentcor.md:215-231]
 
-AG-UI 与多种 Agent 框架（Strands Agents、LangGraph、CrewAI）和前端库（React、Angular、Vue）兼容，实现前后端解耦。^[raw/articles/build-generative-ui-for-ai-agents-on-amazon-bedrock-agentcor.md:11-16]
+AG-UI 与多种 Agent 框架（Strands Agents、LangGraph、CrewAI）和前端库（React、Angular、Vue）兼容，实现前后端解耦。^[raw/articles/build-generative-ui-for-ai-agents-on-amazon-bedrock-agentcor.md]
 
 ### Amazon Bedrock AgentCore 的三协议架构
 

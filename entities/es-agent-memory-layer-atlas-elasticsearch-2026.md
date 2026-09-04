@@ -1,7 +1,7 @@
 ---
 title: "ES 做 Agent 记忆层，召回率0.89"
 created: 2026-07-01
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [agent, memory, elasticsearch, retrieval, hybrid-search, atlas]
 source: "[[raw/articles/es-agent-memory-layer-atlas-elasticsearch-2026]]"

@@ -2,7 +2,7 @@
 title: "Sakana Fugu 发布：Claude 禁令后的多 Agent 编排 API，LiveCodeBench 93.2"
 description: "Sakana AI 在 Anthropic 暂停 Fable 5/Mythos 5 后发布 Fugu，Fugu Ultra 在 LiveCodeBench 上超越 Fable，但黑盒路由器的可信问题引发关注。"
 created: 2026-07-01
-updated: 2026-08-30
+updated: 2026-09-05
 type: entity
 tags: [sakana, ai-agent, multi-agent, coding-agent, benchmark, livecodebench]
 sources: [raw/articles/sakana-fugu-livecodebench-93-2]
@@ -65,7 +65,7 @@ Fugu 的发布时机非常精准——Anthropic 在 2026 年 6 月 12 日宣布�
 - **主权 AI 叙事**：契合日本和欧洲对 AI 供应链自主可控的政策需求
 - **企业定制**：支持排除特定供应商或模型，可选择不将提示用于训练
 
-然而，Beta 用户的实测结果喜忧参半。Mark Studios 的对比测试显示，Fugu Ultra 在 Three.js 游戏构建中仅用 22 分钟、~89K token、~$7.32，而 Claude Opus 4.8 用了 79 分钟、~940K token、~$37.85——但最终应用设计和功能质量上 Opus 更优。^[raw/articles/sakana-fugu-livecodebench-93-2.md:56-56]
+然而，Beta 用户的实测结果喜忧参半。Mark Studios 的对比测试显示，Fugu Ultra 在 Three.js 游戏构建中仅用 22 分钟、~89K token、~$7.32，而 Claude Opus 4.8 用了 79 分钟、~940K token、~$37.85——但最终应用设计和功能质量上 Opus 更优。^[raw/articles/sakana-fugu-livecodebench-93-2.md]
 
 ## 实践启示
 

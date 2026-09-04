@@ -2,7 +2,7 @@
 
 title: "DeepSeek V4是怎么训练出来的？58页论文深入解读"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, architecture, code, data, deepseek, evaluation, fine-tuning, llm, memory, mlops, open-source, rag, tool-use]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-DeepSeek V4是怎么训练出来的？58页论文深入解读 涉及agent领域的核心技术议题。 ^[raw/articles/deepseek-v4-training-58-page-paper-deep-dive.md]
+DeepSeek V4是怎么训练出来的？58页论文深入解读 ^[raw/articles/deepseek-v4-training-58-page-paper-deep-dive.md]
 ### 核心观点
 1. # DeepSeek V4是怎么训练出来的？ ^[raw/articles/deepseek-v4-training-58-page-paper-deep-dive.md]
 2. 58页论文深入解读 ^[raw/articles/deepseek-v4-training-58-page-paper-deep-dive.md]

@@ -3,7 +3,7 @@ title: "Google Open-Sources OKF, a Markdown Format for AI Agents"
 type: entity
 tags: [agent, ai, llm]
 created: 2026-06-18
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 7
 review_confidence: 7
 review_recommendation: worth-reading
@@ -19,9 +19,7 @@ sources: [raw/articles/implicator]
 ## 核心要点
 
 
-Published Time: 2026-06-16T03:41:17.000Z ^[raw/articles/implicator.md]
 
-Markdown Content: ^[raw/articles/implicator.md]
 [Tools & Workflows](https://www.implicator.ai/tag/vibecoding/)
 
 ## Google Open-Sources a Knowledge Format and Wires It Into Its Catalog

@@ -2,7 +2,7 @@
 
 title: "Harness 工程分享：LLM Agent 的 prompt cache 命中率 90% 实战"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, code, evaluation, harness-engineering, llm, memory, prompt, prompt-engineering, rag, rl, search, security, tool-use, workflow]
 review_value: 7
 review_confidence: 7
@@ -22,7 +22,7 @@ sources:
 - [[moc/reinforcement-learning-rlhf|MOC]]
 ## 深度分析
 
-Harness 工程分享：LLM Agent 的 prompt cache 命中率 90% 实战 涉及agent领域的核心技术议题。 ^[raw/articles/openclacky-prompt-cache-harness-v2ex-799662c56ba6.md]
+Harness 工程分享：LLM Agent 的 prompt cache 命中率 90% 实战 ^[raw/articles/openclacky-prompt-cache-harness-v2ex-799662c56ba6.md]
 ### 核心观点
 1. # Harness 工程分享：LLM Agent 的 prompt cache 命中率 90% 实战 ^[raw/articles/openclacky-prompt-cache-harness-v2ex-799662c56ba6.md]
 > 来源：V2EX（yafeilee）· 2026-05-14 · 前篇：https://v2ex.

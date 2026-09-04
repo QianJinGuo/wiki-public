@@ -2,7 +2,7 @@
 
 title: "2026 年面向 LLM 的 RL 方法总结：从 PPO 到 DPO 到 GRPO，再到多智能体 RL"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, architecture, code, data, evaluation, fine-tuning, game, llm, mlops, nvidia, observability, open-source, prompt, rl, robotics, workflow]
 review_value: 7
 review_confidence: 7
@@ -23,7 +23,7 @@ sources:
 - [[moc/llm-core-technology|MOC]]
 ## 深度分析
 
-2026 年面向 LLM 的 RL 方法总结：从 PPO 到 DPO 到 GRPO，再到多智能体 RL 涉及agent领域的核心技术议题。 ^[raw/articles/2026-llm-rl-algorithms-deeplog-imba-ppo-dpo-grpo-marl.md]
+2026 年面向 LLM 的 RL 方法总结：从 PPO 到 DPO 到 GRPO，再到多智能体 RL ^[raw/articles/2026-llm-rl-algorithms-deeplog-imba-ppo-dpo-grpo-marl.md]
 ### 核心观点
 1. # 2026 年面向 LLM 的 RL 方法总结：从 PPO 到 DPO 到 GRPO，再到多智能体 RL ^[raw/articles/2026-llm-rl-algorithms-deeplog-imba-ppo-dpo-grpo-marl.md]
 > 来源：DeepHub IMBA

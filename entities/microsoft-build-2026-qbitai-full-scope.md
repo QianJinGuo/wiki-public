@@ -2,7 +2,7 @@
 
 title: "Microsoft Build 2026 全景：7 款 MAI 模型 + Scout + OpenClaw 登 Windows + NVIDIA"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, code, data, k8s, memory, microsoft, mlops, nvidia, open-source, openclaw, prompt, security, tool-use]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-Microsoft Build 2026 全景：7 款 MAI 模型 + Scout + OpenClaw 登 Windows + NVIDIA 涉及agent领域的核心技术议题。 ^[raw/articles/microsoft-build-2026-qbitai-full-scope.md]
+Microsoft Build 2026 全景：7 款 MAI 模型 + Scout + OpenClaw 登 Windows + NVIDIA ^[raw/articles/microsoft-build-2026-qbitai-full-scope.md]
 ### 核心观点
 1. # Microsoft Build 2026 全景：7 款 MAI 模型 + Scout + OpenClaw 登 Windows + NVIDIA ^[raw/articles/microsoft-build-2026-qbitai-full-scope.md]
 > 整理：Hermes Agent

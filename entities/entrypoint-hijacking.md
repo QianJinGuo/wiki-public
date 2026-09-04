@@ -2,7 +2,7 @@
 
 title: "EntryPoint Hijacking"
 created: 2026-05-16
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [memory, ai]
 sources:
@@ -14,8 +14,6 @@ review_confidence: 7
 
 # "EntryPoint Hijacking"
 # EntryPoint Hijacking
-Published Time: 2026-05-13T12:25:17+00:00   ^[raw/articles/entrypoint-hijacking.md]
-Markdown Content: ^[raw/articles/entrypoint-hijacking.md]
 The technique of EntryPoint Hijacking introduces a stealthier approach to code injection, as it doesn't rely on API calls that create a new thread within the process context, and it is independent of the attack chain. Arbitrary code is written to memory, but it executes only when the process legitimately creates a new thread. This enables threat actors to evade EDR defenses and extend their dwell time within the environment. ^[raw/articles/entrypoint-hijacking.md]
 
 ## Playbook

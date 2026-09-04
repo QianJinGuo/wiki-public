@@ -1,7 +1,7 @@
 ---
 title: "The Oracle and the Firm"
 created: 2026-06-16
-updated: 2026-08-24
+updated: 2026-09-05
 type: entity
 tags: [article, newsletter]
 source_url: "https://calv.info/the-oracle-and-the-firm"
@@ -24,9 +24,7 @@ review_stars: 4
 
 ## 内容提炼
 
-Published Time: Sat, 13 Jun 2026 14:16:25 GMT ^[raw/articles/calv-oracle-and-the-firm.md]
 
-Markdown Content: ^[raw/articles/calv-oracle-and-the-firm.md]
 Like most of the internet, I've been diving into Fable 5 over the last 24h. And like most of the internet, I've been pretty blown away with the quality. ^[raw/articles/calv-oracle-and-the-firm.md]
 
 But as I've been using both Fable and GPT-5.5, I couldn't help but notice there are clear differences in approach which make the two models behave quite differently. And we're seeing two very different training regimes play out. ^[raw/articles/calv-oracle-and-the-firm.md]

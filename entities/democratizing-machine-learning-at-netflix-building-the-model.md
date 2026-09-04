@@ -2,7 +2,7 @@
 
 title: "Democratizing Machine Learning at Netflix: Building the Model Lifecycle Graph"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [code, data, evaluation, fine-tuning, game, memory, mlops, netflix, observability, rag, rl, tool-use, trading, workflow]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-Democratizing Machine Learning at Netflix: Building the Model Lifecycle Graph 涉及code领域的核心技术议题。 ^[raw/articles/democratizing-machine-learning-at-netflix-building-the-model.md]
+Democratizing Machine Learning at Netflix: Building the Model Lifecycle Graph ^[raw/articles/democratizing-machine-learning-at-netflix-building-the-model.md]
 ### 核心观点
 1. When Netflix began investing in machine learning over a decade ago, it was primarily focused on a single domain: personalization.
 2. Scala was the industry standard, our ML teams were relatively small, and optimizing member engagement was our primary use case.

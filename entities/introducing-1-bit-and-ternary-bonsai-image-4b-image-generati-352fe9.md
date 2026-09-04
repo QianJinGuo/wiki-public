@@ -2,7 +2,7 @@
 
 title: "Introducing 1-bit and Ternary Bonsai Image 4B: Image Generation for Local Devices"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [architecture, code, data, evaluation, fine-tuning, memory, mlops, nvidia, prompt, rl, vision, workflow]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-Introducing 1-bit and Ternary Bonsai Image 4B: Image Generation for Local Devices 涉及architecture领域的核心技术议题。 ^[raw/articles/introducing-1-bit-and-ternary-bonsai-image-4b-image-generati-352fe9.md]
+Introducing 1-bit and Ternary Bonsai Image 4B: Image Generation for Local Devices ^[raw/articles/introducing-1-bit-and-ternary-bonsai-image-4b-image-generati-352fe9.md]
 ### 核心观点
 1. Bonsai Image 4B comes in two variants: ^[raw/articles/introducing-1-bit-and-ternary-bonsai-image-4b-image-generati-352fe9.md]
 *   **1-bit Bonsai Image 4B** uses binary {−1, +1} transformer weights with an FP16 group-wise scaling factor, giving 1.

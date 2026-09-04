@@ -2,7 +2,7 @@
 
 title: "长周期 Agent 详解：从 Ralph Loop 到可接管 Harness"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, architecture, code, harness-engineering, memory, open-source, search, security]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-长周期 Agent 详解：从 Ralph Loop 到可接管 Harness 涉及agent领域的核心技术议题。 ^[raw/articles/long-running-agent-ralph-loop-harness-takeover.md]
+长周期 Agent 详解：从 Ralph Loop 到可接管 Harness ^[raw/articles/long-running-agent-ralph-loop-harness-takeover.md]
 ### 核心观点
 1. # 长周期 Agent 详解：从 Ralph Loop 到可接管 Harness ^[raw/articles/long-running-agent-ralph-loop-harness-takeover.md]
 > 来源：架构师（JiaGouX） | 作者：若飞 | 2026-05-10

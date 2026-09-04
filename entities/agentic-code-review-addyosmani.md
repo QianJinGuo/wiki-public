@@ -1,7 +1,7 @@
 ---
 title: "Agentic Code Review"
 created: 2026-06-16
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [article, newsletter]
 source_url: "https://addyosmani.com/blog/agentic-code-review/"
@@ -24,7 +24,6 @@ review_stars: 4
 
 ## 内容提炼
 
-Markdown Content: ^[raw/articles/agentic-code-review-addyosmani.md]
 _Coding agents are extraordinarily good now, and getting better fast. The interesting consequence is that the hard part of engineering moved from writing code to deciding whether to trust it, which makes review the most leveraged skill in software right now. How you approach it depends enormously on who you are: a solo developer with no users and a team maintaining a ten-year-old application are not solving the same problem._ ^[raw/articles/agentic-code-review-addyosmani.md]
 
 * * *

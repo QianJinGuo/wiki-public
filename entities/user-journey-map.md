@@ -3,7 +3,7 @@
 
 title: "User Journey Maps: How UX Teams Turn Friction Into Better Products"
 created: 2026-05-16
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [ai]
 sources:
@@ -15,9 +15,7 @@ review_confidence: 7
 
 # "User Journey Maps: How UX Teams Turn Friction Into Better Products"
 URL Source: https://uxcrush.com/user-journey-map   ^[raw/articles/user-journey-map.md]
-Published Time: 2026-05-02T21:03:16.777Z^[raw/articles/user-journey-map.md]
 
-Markdown Content:
 A user journey map is a visual document that captures every action, emotion, and pain point a user encounters while trying to accomplish a specific goal in your product. Unlike analytics dashboards that tell you where users drop off, journey maps explain why they do. [NNGroup's research](https://www.nngroup.com/articles/journey-mapping-impact/) on 300+ UX professionals found that [64% of teams](https://www.nngroup.com/articles/journey-mapping-impact/) create journey maps collaboratively, making them one of the most widely-used alignment tools in product design. ^[raw/articles/user-journey-map.md]
 This guide covers everything from core components and types to a five-step creation process, tool recommendations, and the most common mistakes that turn journey maps into shelf-ware. ^[raw/articles/user-journey-map.md]
 

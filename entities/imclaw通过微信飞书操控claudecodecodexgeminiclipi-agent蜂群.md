@@ -22,7 +22,7 @@ sources:
 - [[moc/reinforcement-learning-rlhf|MOC]]
 ## 深度分析
 
-IMClaw：通过微信/飞书操控ClaudeCode/Codex/GeminiCLI/Pi Agent蜂群 涉及agent领域的核心技术议题。 ^[raw/articles/imclaw通过微信飞书操控claudecodecodexgeminiclipi-agent蜂群.md]
+IMClaw：通过微信/飞书操控ClaudeCode/Codex/GeminiCLI/Pi Agent蜂群 ^[raw/articles/imclaw通过微信飞书操控claudecodecodexgeminiclipi-agent蜂群.md]
 ### 核心观点
 1. source: wechat ^[raw/articles/imclaw通过微信飞书操控claudecodecodexgeminiclipi-agent蜂群.md]
 source_url: https://mp. ^[raw/articles/imclaw通过微信飞书操控claudecodecodexgeminiclipi-agent蜂群.md]

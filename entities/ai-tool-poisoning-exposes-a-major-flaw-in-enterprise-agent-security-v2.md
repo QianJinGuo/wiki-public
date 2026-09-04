@@ -15,7 +15,6 @@ updated: 2026-09-05
 ---
 
 > -> [[raw/articles/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security-v2.md|原文存档]]
-Published Time: 2026-05-10T17:22:13.590Z ^[raw/articles/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security-v2.md]
 
 ## 深度分析
 ### 根本性缺陷：元数据与指令边界的崩塌

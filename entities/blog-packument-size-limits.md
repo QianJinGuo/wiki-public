@@ -2,7 +2,7 @@
 
 title: "Why Drizzle ORM couldn't publish new releases on NPM for a month | vlt /vōlt/"
 created: 2026-06-26
-updated: 2026-07-27
+updated: 2026-09-05
 type: entity
 tags: [article]
 source: "[[raw/articles/blog-packument-size-limits]]"
@@ -19,9 +19,7 @@ review_recommendation: strong
 > **来源**: [Why Drizzle ORM couldn't publish new releases on NPM for a month | vlt /vōlt/](https://vlt.io/blog/packument-size-limits)
 
 
-Published Time: Wed, 27 May 2026 13:52:58 GMT
 
-Markdown Content:
 On June 4th the [Drizzle ORM](https://orm.drizzle.team/) team [published on Twitter](https://x.com/DrizzleORM/status/2062629339556921581) that they were no longer able to publish new releases to NPM due to running into a 100 MB limit for 'packuments'. ^[raw/articles/blog-packument-size-limits.md]
 
 This eventually [got resolved with the help of NPM support](https://x.com/andrii_sherman/status/2067495638489592156) by deleting a number of unused older versions. ^[raw/articles/blog-packument-size-limits.md]

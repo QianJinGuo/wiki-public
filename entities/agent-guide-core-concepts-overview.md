@@ -2,7 +2,7 @@
 
 title: "AgentGuide AI Agent 核心概念速查"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, code, data, evaluation, fine-tuning, llm, memory, mlops, prompt, rag, search, tool-use]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-AgentGuide AI Agent 核心概念速查 涉及agent领域的核心技术议题。 ^[raw/articles/agent-guide-core-concepts-overview.md]
+AgentGuide AI Agent 核心概念速查 ^[raw/articles/agent-guide-core-concepts-overview.md]
 ### 核心观点
 1. # AgentGuide AI Agent 核心概念速查 ^[raw/articles/agent-guide-core-concepts-overview.md]
 **来源：** AgentGuide | 2026年5月18日 ^[raw/articles/agent-guide-core-concepts-overview.md]

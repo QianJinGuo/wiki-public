@@ -2,7 +2,7 @@
 
 title: "知识库问答 @文档：从 DOM 方案到 ProseMirror 落地"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, architecture, data, k8s, rag, search]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-知识库问答 @文档：从 DOM 方案到 ProseMirror 落地 涉及agent领域的核心技术议题。 ^[raw/articles/prosemirror-knowledge-base-mention-vivo.md]
+知识库问答 @文档：从 DOM 方案到 ProseMirror 落地 ^[raw/articles/prosemirror-knowledge-base-mention-vivo.md]
 ### 核心观点
 1. # 知识库问答 @文档：从 DOM 方案到 ProseMirror 落地 ^[raw/articles/prosemirror-knowledge-base-mention-vivo.md]
 > 作者：vivo 互联网项目团队 · Ding Junjie

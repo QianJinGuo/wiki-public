@@ -2,7 +2,7 @@
 
 title: "How Baz improved its AI Agent Code Review accuracy using Amazon Bedrock AgentCore"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, architecture, aws, code, data, evaluation, mlops, open-source, rag, rl, tool-use, workflow]
 review_value: 7
 review_confidence: 7
@@ -22,7 +22,7 @@ sources:
 - [[moc/data-infrastructure|MOC]]
 ## 深度分析
 
-How Baz improved its AI Agent Code Review accuracy using Amazon Bedrock AgentCore 涉及agent领域的核心技术议题。 ^[raw/articles/how-baz-improved-its-ai-agent-code-review-accuracy-using-ama.md]
+How Baz improved its AI Agent Code Review accuracy using Amazon Bedrock AgentCore ^[raw/articles/how-baz-improved-its-ai-agent-code-review-accuracy-using-ama.md]
 ### 核心观点
 1. # How Baz improved its AI Agent Code Review accuracy using Amazon Bedrock AgentCore
 Code review was always manual and ineffective because of the inherent disconnect between code and product. ^[raw/articles/how-baz-improved-its-ai-agent-code-review-accuracy-using-ama.md]

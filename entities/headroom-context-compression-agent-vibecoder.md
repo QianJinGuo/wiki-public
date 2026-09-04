@@ -2,7 +2,7 @@
 
 title: "Headroom 是怎么省上下文的"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, architecture, aws, code, data, database, evaluation, llm, memory, mlops, observability, prompt, rag, rl, search, security, tool-use, workflow]
 review_value: 7
 review_confidence: 7
@@ -22,7 +22,7 @@ sources:
 - [[moc/data-infrastructure|MOC]]
 ## 深度分析
 
-Headroom 是怎么省上下文的 涉及agent领域的核心技术议题。 ^[raw/articles/headroom-context-compression-agent-vibecoder.md]
+Headroom 是怎么省上下文的 ^[raw/articles/headroom-context-compression-agent-vibecoder.md]
 ### 核心观点
 1. # Headroom 是怎么省上下文的 ^[raw/articles/headroom-context-compression-agent-vibecoder.md]
 > 作者：VibeCoder（Vibe编码） · 发布：2026-06-07

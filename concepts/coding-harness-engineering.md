@@ -97,11 +97,11 @@ prompt scaffolding 会变薄，runtime harness 会变硬。
 ### 3. 权限管线的前后拦截：比 Prompt 约束更可靠的方案
 beforeToolCall / afterToolCall 的拦截设计，解决的是一个被广泛忽视的问题：Prompt 约束对 AI 的约束力是软性的（模型可以选择忽略），而运行时拦截是硬性的（在工具真正执行前就可以拒绝或修改）。OpenClaw 在此基础上增加了动态工具策略：按 owner/provider/channel/sender 规则计算 effective tool policy ^[raw/articles/pi-openclaw-coding-harness.md:77-82]。这种"规则计算"比"枚举允许列表"更灵活也更安全，因为它把权限判断从静态配置变成了运行时决策。
 ### 4. 稳定路线揭示的工程真相：Agent 无法一次建成
-六步稳定路线（只读 Agent → 精确修改 → 命令执行 → event log → context builder/compaction → skills/extensions/MCP/memory）的真正含义是：每一步都在修复前一步暴露的 Harness 漏洞 ^[raw/articles/pi-openclaw-coding-harness.md:123-131]。只读 Agent 的核心挑战是"工具 schema、上下文组装、结果截断"——这些看似简单的问题在生产环境中会暴露大量边缘 case。跳过步骤的直接后果是：在不稳定的基层上叠加复杂功能，底层问题会以更高频率和更大破坏力在上层爆发。
+六步稳定路线（只读 Agent → 精确修改 → 命令执行 → event log → context builder/compaction → skills/extensions/MCP/memory）的真正含义是：每一步都在修复前一步暴露的 Harness 漏洞 ^[raw/articles/pi-openclaw-coding-harness.md]。只读 Agent 的核心挑战是"工具 schema、上下文组装、结果截断"——这些看似简单的问题在生产环境中会暴露大量边缘 case。跳过步骤的直接后果是：在不稳定的基层上叠加复杂功能，底层问题会以更高频率和更大破坏力在上层爆发。
 ### 5. "Prompt scaffolding 会变薄，runtime harness 会变硬"的深远含义
-这个判断的深层含义是：随着模型能力提升，AI 能够自主完成更多认知任务，但真实环境中的执行约束（文件系统边界、用户身份、权限层级、session 恢复）不会消失——这些约束只能被转移到 Harness 层 ^[raw/articles/pi-openclaw-coding-harness.md:146-146]。这意味着 Harness Engineering 不是过渡方案，而是长期系统：模型越强，Harness 越需要硬化，因为模型出错的破坏半径变大了。
+这个判断的深层含义是：随着模型能力提升，AI 能够自主完成更多认知任务，但真实环境中的执行约束（文件系统边界、用户身份、权限层级、session 恢复）不会消失——这些约束只能被转移到 Harness 层 ^[raw/articles/pi-openclaw-coding-harness.md]。这意味着 Harness Engineering 不是过渡方案，而是长期系统：模型越强，Harness 越需要硬化，因为模型出错的破坏半径变大了。
 ## 实践启示
-1. **用 Pi 六步路线评估团队当前阶段**：在引入 skills、MCP、memory 等高级功能前，先确认只读 Agent（read、grep、find、ls）是否已稳定。特别关注工具 schema 定义和结果截断——这两个问题会在规模上导致严重的上下文污染 ^[raw/articles/pi-openclaw-coding-harness.md:123-131]。
+1. **用 Pi 六步路线评估团队当前阶段**：在引入 skills、MCP、memory 等高级功能前，先确认只读 Agent（read、grep、find、ls）是否已稳定。特别关注工具 schema 定义和结果截断——这两个问题会在规模上导致严重的上下文污染 ^[raw/articles/pi-openclaw-coding-harness.md]。
 2. **Transcript + Working Context 的双层保留原则**：Compaction 时必须同时保留完整 JSONL transcript 和摘要 entry。验证标准：摘要丢失时能否从 transcript 完整重建当前 session 状态？能，则设计正确；不能，则在 Compaction 前加防丢机制 ^[raw/articles/pi-openclaw-coding-harness.md:63-73]。
 3. **beforeToolCall / afterToolCall 是权限设计的最小必要集**：对于高风险工具（bash、write、edit），必须在这两个拦截点实现参数校验、路径限制和审计日志。OpenClaw 的动态工具策略（按 channel/sender 计算 effective policy）是一个可借鉴的权限抽象模式 ^[raw/articles/pi-openclaw-coding-harness.md:77-82]。
 4. **Runtime kernel 与 control plane 的分离是长期多通道 Agent 的技术基础**：如果系统需要支持多 channel（本地 CLI、IM、移动端、webhook），必须将 runtime kernel（模型+loop+工具调用）与 control plane（路由+会话管理+通道适配）严格分离。Pi → OpenClaw 的演进路线是这个分离的最佳参考 ^[raw/articles/pi-openclaw-coding-harness.md:83-90]。

@@ -2,7 +2,7 @@
 
 title: "长期运行的 Agent 怎么管：Hermes 治理分层与 5 张卡"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, architecture, code, database, evaluation, llm, memory, mlops, open-source, prompt, search, security, tool-use, workflow]
 review_value: 7
 review_confidence: 7
@@ -23,7 +23,7 @@ sources:
 - [[moc/data-infrastructure|MOC]]
 ## 深度分析
 
-长期运行的 Agent 怎么管：Hermes 治理分层与 5 张卡 涉及agent领域的核心技术议题。 ^[raw/articles/hermes-agent-long-running-governance-five-cards-ruofei.md]
+长期运行的 Agent 怎么管：Hermes 治理分层与 5 张卡 ^[raw/articles/hermes-agent-long-running-governance-five-cards-ruofei.md]
 ### 核心观点
 1. # 长期运行的 Agent 怎么管：Hermes 治理分层与 5 张卡
 > 来源：架构师（JiaGouX）｜作者：若飞｜2026-06-01

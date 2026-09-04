@@ -19,9 +19,7 @@ tags: [eu-ai-act, llm, fine-tuning, aws]
 ## 摘要
 Title: Navigating EU AI Act requirements for LLM fine-tuning on Amazon SageMaker AI | Amazon Web Services   ^[raw/articles/navigating-eu-ai-act-requirements-for-llm-fine-tuning-on-amazon-sagemaker-ai.md]
 URL Source: https://aws.amazon.com/blogs/machine-learning/navigating-eu-ai-act-requirements-for-llm-fine-tuning-on-amazon-sagemaker-ai/ ^[raw/articles/navigating-eu-ai-act-requirements-for-llm-fine-tuning-on-amazon-sagemaker-ai.md]
-Published Time: 2026-05-12T07:48:52-08:00^[raw/articles/navigating-eu-ai-act-requirements-for-llm-fine-tuning-on-amazon-sagemaker-ai.md]
 
-Markdown Content:
 The EU AI Act requires organizations fine-tuning large language models (LLMs) to track computational resources measured in floating-point operations (FLOPs) to determine compliance obligations. As c... ^[raw/articles/navigating-eu-ai-act-requirements-for-llm-fine-tuning-on-amazon-sagemaker-ai.md]
 
 ## 关键要点

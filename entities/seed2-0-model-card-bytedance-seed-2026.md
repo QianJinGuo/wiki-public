@@ -1,7 +1,7 @@
 ---
 title: "Seed2.0 Model Card: Towards Intelligence Frontier for Real-World Complexity"
 created: 2026-07-04
-updated: 2026-08-30
+updated: 2026-09-05
 type: entity
 tags: [model, bytedance, seed, llm, multimodal, reasoning, evaluation, real-world]
 sources: [raw/articles/seed2-0-model-card-bytedance-seed-2026]
@@ -25,7 +25,7 @@ ByteDance Seed 于 2026 年 6 月发布了 Seed2.0 模型系列 Model Card，标
 
 ## 模型系列架构
 
-Seed2.0 是一个模型系列（model series），包含不同规模和能力等级的变体。完整的架构细节和技术规格需参考原始论文。模型卡范式本身也代表了 ByteDance 对模型透明度的一种承诺——以真实世界用例文档化替代纯 benchmark 报告。^[raw/articles/seed2-0-model-card-bytedance-seed-2026.md:28-28]
+Seed2.0 是一个模型系列（model series），包含不同规模和能力等级的变体。完整的架构细节和技术规格需参考原始论文。模型卡范式本身也代表了 ByteDance 对模型透明度的一种承诺——以真实世界用例文档化替代纯 benchmark 报告。^[raw/articles/seed2-0-model-card-bytedance-seed-2026.md]
 
 ## 深度分析
 
@@ -64,7 +64,7 @@ Seed2.0 聚焦的三大挑战代表了当前大模型在真实世界落地中的
 Seed2.0 采用 Model Card 范式而非传统技术论文，体现了 ByteDance 在 AI 透明度方面的实践。Model Card 包含真实世界使用案例、能力边界说明和评估结果，更适合实际用户评估模型适用性。^[raw/articles/seed2-0-model-card-bytedance-seed-2026.md]
 
 
-这一做法与大模型行业的透明度趋势一致——Anthropic 的 Model Card、OpenAI 的 System Card、Google 的 Model Card 都是类似实践。Seed2.0 的特色在于其"用例优先"的叙事结构，强调"模型能帮我解决什么具体问题"而非仅关注学术指标。^[raw/articles/seed2-0-model-card-bytedance-seed-2026.md:28-28]
+这一做法与大模型行业的透明度趋势一致——Anthropic 的 Model Card、OpenAI 的 System Card、Google 的 Model Card 都是类似实践。Seed2.0 的特色在于其"用例优先"的叙事结构，强调"模型能帮我解决什么具体问题"而非仅关注学术指标。^[raw/articles/seed2-0-model-card-bytedance-seed-2026.md]
 
 ## 实践启示
 

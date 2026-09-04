@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-今天起，Claude正式接入Office全家桶，跨应用还能共享记忆 涉及claude领域的核心技术议题。 ^[raw/articles/今天起claude正式接入office全家桶跨应用还能共享记忆.md]
+今天起，Claude正式接入Office全家桶，跨应用还能共享记忆 ^[raw/articles/今天起claude正式接入office全家桶跨应用还能共享记忆.md]
 ### 核心观点
 1. # 今天起，Claude正式接入Office全家桶，跨应用还能共享记忆 ^[raw/articles/今天起claude正式接入office全家桶跨应用还能共享记忆.md]
 机器之心编辑部 ^[raw/articles/今天起claude正式接入office全家桶跨应用还能共享记忆.md]

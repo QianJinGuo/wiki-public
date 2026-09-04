@@ -27,7 +27,6 @@ Novel research/architecture for GPT-5.6 model family with detailed system card i
 ## Content Summary
 
 
-Markdown Content:
 ## 1. Introduction
 
 GPT-5.6 is a new family of three models: Sol, our new flagship model; Terra, a capable lower-cost option; and Luna, our fastest and most cost-efficient model. The safeguards we have built for this launch—our most robust yet—are built to deliver these models safely and at scale, around the world. ^[raw/articles/gpt-5-6-preview.md]

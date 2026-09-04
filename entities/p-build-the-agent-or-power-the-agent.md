@@ -2,7 +2,7 @@
 
 title: "Build the Agent or Power the Agent?"
 created: 2026-06-26
-updated: 2026-07-27
+updated: 2026-09-05
 type: entity
 tags: [article]
 provenance_state: inferred
@@ -20,9 +20,7 @@ review_recommendation: worth-reading
 > **来源**: [Build the Agent or Power the Agent?](https://tanayj.com/p/build-the-agent-or-power-the-agent)
 
 
-Published Time: 2026-06-24T22:09:58+00:00
 
-Markdown Content:
 _I’m Tanay Jaipuria, a partner at [Wing](https://www.wing.vc/) and this is a weekly newsletter about the business of the technology industry. To receive Tanay’s Newsletter in your inbox, subscribe here for free:_ ^[raw/articles/p-build-the-agent-or-power-the-agent.md]
 
 Hi friends,

@@ -2,7 +2,7 @@
 
 title: "How to Detect AI Agents on Your Website"
 created: 2026-05-16
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [agent, ai]
 sources:
@@ -15,8 +15,6 @@ review_confidence: 7
 
 # "How to Detect AI Agents on Your Website"
 # How to Detect AI Agents on Your Website
-Published Time: 2026-05-13 ^[raw/articles/detect-ai-agent-traffic.md]
-Markdown Content: ^[raw/articles/detect-ai-agent-traffic.md]
 
 # How to Detect AI Agents on Your Website | Full Guide - cside Blog
 [Skip to main content](https://cside.com/blog/guide-to-detect-ai-agent-traffic-on-your-website#main-content) ^[raw/articles/detect-ai-agent-traffic.md]

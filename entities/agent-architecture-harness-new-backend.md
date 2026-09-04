@@ -3,7 +3,7 @@
 
 title: "Agent架构关键变化：Harness正在成为新后端"
 created: 2026-05-16
-updated: 2026-08-01
+updated: 2026-09-05
 type: entity
 tags: [agent, harness, architecture, backend, worker, iii]
 sources:

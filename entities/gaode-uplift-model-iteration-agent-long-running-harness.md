@@ -2,7 +2,7 @@
 
 title: "高德 Uplift 模型迭代 Agent：长时间运行 Harness"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, architecture, code, data, database, evaluation, fine-tuning, game, harness-engineering, llm, memory, mlops, nvidia, observability, open-source, search, tool-use, workflow]
 review_value: 7
 review_confidence: 7
@@ -26,7 +26,7 @@ sources:
 - [[moc/data-infrastructure|MOC]]
 ## 深度分析
 
-Gaode Uplift Model Iteration Agent Long Running Harness 涉及agent领域的核心技术议题。 ^[raw/articles/gaode-uplift-model-iteration-agent-long-running-harness.md]
+Gaode Uplift Model Iteration Agent Long Running Harness ^[raw/articles/gaode-uplift-model-iteration-agent-long-running-harness.md]
 ### 核心观点
 1. > 来源：高德技术
 > 作者：信息业务中心

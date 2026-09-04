@@ -17,8 +17,6 @@ tags: [llm, open-source, ai, architecture]
 ## 摘要
 Title: How open model ecosystems compound   ^[raw/articles/how-open-model-ecosystems-compound.md]
 URL Source: https://www.interconnects.ai/p/how-open-model-ecosystems-compound ^[raw/articles/how-open-model-ecosystems-compound.md]
-Published Time: 2026-05-12T15:54:47+00:00 ^[raw/articles/how-open-model-ecosystems-compound.md]
-Markdown Content: ^[raw/articles/how-open-model-ecosystems-compound.md]
 Note: Voice-overs for paywalled posts are available for paid subscribes in podcast apps if you click on settings on Interconnects, then manage your description. Thanks for listening! ^[raw/articles/how-open-model-ecosystems-compound.md]
 Most of the compute to build a leading frontier model comes from R&D costs, rather than the compute to train the final, big model end-to-... ^[raw/articles/how-open-model-ecosystems-compound.md]
 

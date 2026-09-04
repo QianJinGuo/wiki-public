@@ -2,7 +2,7 @@
 
 title: "How to Write an Effective Software Design Document"
 created: 2026-06-26
-updated: 2026-07-27
+updated: 2026-09-05
 type: entity
 tags: [article]
 source: "[[raw/articles/excerpts-write-an-effective-design-doc]]"
@@ -19,9 +19,7 @@ review_recommendation: strong
 > **来源**: [How to Write an Effective Software Design Document](https://refactoringenglish.com/excerpts/write-an-effective-design-doc/)
 
 
-Published Time: 2026-06-24T00:00:00+00:00
 
-Markdown Content:
 A good design doc can save you years of development time. Writing a design doc forces you to think through important decisions before you waste time on the wrong implementation or paint yourself into a corner. It’s also the best way to coordinate design decisions among teammates and partner teams. ^[raw/articles/excerpts-write-an-effective-design-doc.md]
 
 I’ve written design docs as a developer at Google, Microsoft, and within [my own companies](https://mtlynch.io/projects/). The specifics vary, but the underlying principles remain the same. A design doc should articulate the hard problems you’re solving and help your teammates give you feedback. ^[raw/articles/excerpts-write-an-effective-design-doc.md]

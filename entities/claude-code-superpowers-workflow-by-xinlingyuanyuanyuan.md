@@ -2,7 +2,7 @@
 
 title: "给 Claude Code 装上'超能力' — 它干活比我还靠谱"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, claude, code, llm, open-source, tool-use, workflow]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-给 Claude Code 装上'超能力' — 它干活比我还靠谱 涉及agent领域的核心技术议题。 ^[raw/articles/claude-code-superpowers-workflow-by-xinlingyuanyuanyuan.md]
+给 Claude Code 装上'超能力' — 它干活比我还靠谱 ^[raw/articles/claude-code-superpowers-workflow-by-xinlingyuanyuanyuan.md]
 ### 核心观点
 1. # 给 Claude Code 装上"超能力" — 它干活比我还靠谱 ^[raw/articles/claude-code-superpowers-workflow-by-xinlingyuanyuanyuan.md]
 > 来源：新世界圆圆圆 - 赛博虾酱，2026-03-24

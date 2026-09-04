@@ -2,7 +2,7 @@
 
 title: "Mnilax：CLAUDE.md 规则从 Karpathy 的 4 条增加到 12 条，Claude 错误率从 41% 降到 3%"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, architecture, claude, code, data, database, game, llm, memory, open-source, prompt, tool-use, workflow]
 review_value: 7
 review_confidence: 7
@@ -24,7 +24,7 @@ sources:
 - [[moc/workflow-orchestration|MOC]]
 ## 深度分析
 
-Mnilax：CLAUDE.md 规则从 Karpathy 的 4 条增加到 12 条，Claude 错误率从 41% 降到 3% 涉及agent领域的核心技术议题。 ^[raw/articles/claude-md-12-rules-mnilax-cf2019.md]
+Mnilax：CLAUDE.md 规则从 Karpathy 的 4 条增加到 12 条，Claude 错误率从 41% 降到 3% ^[raw/articles/claude-md-12-rules-mnilax-cf2019.md]
 ### 核心观点
 1. # Mnilax：CLAUDE.
 2. md 规则从 Karpathy 的 4 条增加到 12 条，Claude 错误率从 41% 降到 3%

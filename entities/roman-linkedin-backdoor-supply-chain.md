@@ -1,7 +1,7 @@
 ---
 title: "A backdoor in a LinkedIn job offer"
 created: 2026-06-16
-updated: 2026-08-24
+updated: 2026-09-05
 type: entity
 tags: [article, newsletter]
 source_url: "https://roman.pt/posts/linkedin-backdoor/"
@@ -24,9 +24,7 @@ review_stars: 4
 
 ## 内容提炼
 
-Published Time: 2026-06-15T00:00:00+00:00 ^[raw/articles/roman-linkedin-backdoor-supply-chain.md]
 
-Markdown Content: ^[raw/articles/roman-linkedin-backdoor-supply-chain.md]
 ![Image 1: A backdoor in a LinkedIn job offer](https://roman.pt/posts/linkedin-backdoor/splash_hu_6f6d450d0d33e225.png) ^[raw/articles/roman-linkedin-backdoor-supply-chain.md]
 Last week, I got a LinkedIn message from a recruiter at a small crypto startup. We exchanged a few messages over a couple of days, she described a broken proof-of-concept they needed a lead engineer for, and then sent me a public GitHub repo to review. Specifically, she asked me to “check out the deprecated Node modules issue.” ^[raw/articles/roman-linkedin-backdoor-supply-chain.md]
 

@@ -2,7 +2,7 @@
 
 title: "CHERIoT-Ibex: Closing the door on memory safety vulnerabilities with hardware-enforced protection"
 created: 2026-05-16
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [memory, open-source, architecture]
 sources:
@@ -24,8 +24,6 @@ CHERIoT 在 CHERI 基础上专为嵌入式 / IoT 场景做了轻量化适配，�
 
 # "CHERIoT-Ibex: Closing the door on memory safety vulnerabilities with hardware-enforced protection"
 URL Source: https://techcommunity.microsoft.com/blog/azureinfrastructureblog/cheriot-ibex-closing-the-door-on-memory-safety-vulnerabilities-with-hardware-enf/4517904 ^[raw/articles/cheriot-ibex-memory-safety-hardware-enforcement.md]
-Published Time: 5/9/2026, 5:08:11 AM ^[raw/articles/cheriot-ibex-memory-safety-hardware-enforcement.md]
-Markdown Content: ^[raw/articles/cheriot-ibex-memory-safety-hardware-enforcement.md]
 
 # CHERIoT-Ibex: Closing the door on memory safety vulnerabilities with hardware-enforced protection | Microsoft Community Hub
 Open Side Menu ^[raw/articles/cheriot-ibex-memory-safety-hardware-enforcement.md]

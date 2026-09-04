@@ -2,7 +2,7 @@
 
 title: "大模型可控新突破：Steering 机制、评估体系与开源落地"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [code, data, evaluation, fine-tuning, llm, mlops, observability, open-source, prompt, rag, security, tool-use]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-大模型可控新突破：Steering 机制、评估体系与开源落地 涉及code领域的核心技术议题。 ^[raw/articles/steering-mechanism-evaluation-easyedit2-zju-alibaba.md]
+大模型可控新突破：Steering 机制、评估体系与开源落地 ^[raw/articles/steering-mechanism-evaluation-easyedit2-zju-alibaba.md]
 ### 核心观点
 1. # 大模型可控新突破：Steering 机制、评估体系与开源落地 ^[raw/articles/steering-mechanism-evaluation-easyedit2-zju-alibaba.md]
 **来源：** 机器之心 (转载于数据派THU) ^[raw/articles/steering-mechanism-evaluation-easyedit2-zju-alibaba.md]

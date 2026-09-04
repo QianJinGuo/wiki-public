@@ -2,7 +2,7 @@
 
 title: "Enable safe agentic payments with built-in guardrails using Amazon Bedrock AgentCore payments"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, aws, code, llm, memory, observability, prompt, rl, security, tool-use]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-Enable safe agentic payments with built-in guardrails using Amazon Bedrock AgentCore payments 涉及agent领域的核心技术议题。 ^[raw/articles/enable-safe-agentic-payments-with-built-in-guardrails-using-.md]
+Enable safe agentic payments with built-in guardrails using Amazon Bedrock AgentCore payments ^[raw/articles/enable-safe-agentic-payments-with-built-in-guardrails-using-.md]
 ### 核心观点
 1. When the tools, MCP endpoints, or web resources an agent reaches are paid, the agent gets stuck without the ability to transact. ^[raw/articles/enable-safe-agentic-payments-with-built-in-guardrails-using-.md]
 2. Amazon Bedrock AgentCore payments, announced in preview in partnership with Coinbase and Stripe (Privy), gives agents the ability to access paid resources on the end user’s behalf to complete the task. ^[raw/articles/enable-safe-agentic-payments-with-built-in-guardrails-using-.md]

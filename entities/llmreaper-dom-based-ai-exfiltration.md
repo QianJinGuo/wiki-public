@@ -2,7 +2,7 @@
 
 title: "LLMReaper - DOM Based AI Conversation Exfiltration"
 created: 2026-06-02
-updated: 2026-08-01
+updated: 2026-09-05
 type: entity
 tags: [security, llm, exfiltration]
 source: [[raw/articles/llmreaper-dom-based-ai-exfiltration]]
@@ -17,10 +17,8 @@ sources:
 ## 深度分析
 
 
-Published Time: 2026-05-27T00:00:00.000Z^[raw/articles/llmreaper-dom-based-ai-exfiltration.md]
 
 
-Markdown Content:
 Every time someone pastes their code or config files into LLMs to debug something, or to review code, they assume the conversation stays between them and the AI. ^[raw/articles/llmreaper-dom-based-ai-exfiltration.md]
 
 But it doesn't.

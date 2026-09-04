@@ -2,7 +2,7 @@
 
 title: "OpenAI大神教你如何榨干Codex"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, code, data, knowledge-mgmt, memory, mlops, observability, open-source, openai, prompt, rag, tool-use, workflow]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-OpenAI大神教你如何榨干Codex 涉及agent领域的核心技术议题。 ^[raw/articles/openai-codex-jasonliu-maxxing-playbook.md]
+OpenAI大神教你如何榨干Codex ^[raw/articles/openai-codex-jasonliu-maxxing-playbook.md]
 ### 核心观点
 1. " ^[raw/articles/openai-codex-jasonliu-maxxing-playbook.md]
 案例：让 Codex 把 Python Rich 库迁移到 Rust——**硬性要求通过所有单元测试**。 ^[raw/articles/openai-codex-jasonliu-maxxing-playbook.md]

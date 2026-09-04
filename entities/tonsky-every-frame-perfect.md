@@ -1,7 +1,7 @@
 ---
 title: "Every Frame Perfect"
 created: 2026-06-16
-updated: 2026-08-24
+updated: 2026-09-05
 type: entity
 tags: [article, newsletter]
 source_url: "https://tonsky.me/blog/every-frame-perfect/"
@@ -24,9 +24,7 @@ review_stars: 4
 
 ## 内容提炼
 
-Published Time: 2026-06-13 ^[raw/articles/tonsky-every-frame-perfect.md]
 
-Markdown Content: ^[raw/articles/tonsky-every-frame-perfect.md]
 A while ago I was reading about Wayland and this quote stuck with me: ^[raw/articles/tonsky-every-frame-perfect.md]
 
 > A stated goal of Wayland is “[every frame is perfect](https://wayland-book.com/protocol-design/design-patterns.html)”.

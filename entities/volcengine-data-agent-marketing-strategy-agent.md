@@ -2,7 +2,7 @@
 
 title: "使用营销策略助手--数据智能体-火山引擎"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, data, mlops, workflow]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-使用营销策略助手--数据智能体-火山引擎 涉及agent领域的核心技术议题。 ^[raw/articles/volcengine-data-agent-marketing-strategy-agent.md]
+使用营销策略助手--数据智能体-火山引擎 ^[raw/articles/volcengine-data-agent-marketing-strategy-agent.md]
 ### 核心观点
 1. # 使用营销策略助手--数据智能体-火山引擎 ^[raw/articles/volcengine-data-agent-marketing-strategy-agent.md]
 营销策略助手是一款基于 AI 深度思考与大数据分析的数字营销中枢，通过 "目标输入 - 策略生成 - 任务配置 - 动态优化" 的智能闭环，实现从营销要素解析、智能圈群匹配到全渠道策略输出的全流程自动化，为企业打造具备持续进化能力的 "AI 总参谋" 系统。 ^[raw/articles/volcengine-data-agent-marketing-strategy-agent.md]

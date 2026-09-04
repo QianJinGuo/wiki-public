@@ -23,6 +23,15 @@ confidence: high
 | 6 | Jack Clark：2028 年底 60%+ 概率出现可完全自主训练下一代 AI 的系统 | [[entities/alphaevolve交出一周年炸裂成绩单ai自我改进不再科幻]] | 2026-05-21 | 2028-12-31 | pending | — |
 | 7 | AIDLC：3 年内 AI 原生与平台驱动数据团队人效差距拉大 5-10 倍 | [[entities/ai-驱动的大数据工程-从平台驱动到-aidlc-的范式迁移]] | 2026-05-21 | 2029-05-21 | pending | — |
 
+## 中期检视（2026-09-05 · 非判定）
+
+台账 #2-#5 距到期尚有 ~4 个月，按对账仪式提前记轨迹，不硬判：
+
+- **#2 Gartner 40%**：`data-insufficient`。近 90 天簇内只有零散企业 agent 部署页（浪潮 OCP agent 规模基建、火山引擎 agentic 数据底座），无可对账的渗透率口径。12 月回访时需先定"企业应用嵌入"的计量来源。
+- **#3 METR 100h**：`on-track`（弱证据）。[[entities/mirrorcode-long-horizon-benchmark-epoch-ai-metr|MirrorCode 长程基准]]（08-05）记录 Claude Opus 4.7 以 14 小时/$251 重写人类需 2-17 周的 1.6 万行生物信息工具包——长程任务时长在快速爬坡，但"自主工作时长"口径与该基准不同，只作方向性佐证。另见 [[entities/metr-openai-hugging-face-agent-altruism-investigation|METR OpenAI/HF 调查]]（08-28）。
+- **#4 分水岭论**：`unfalsifiable-at-midterm`。主观判断无客观口径；[[drafts/2026-h1-agent-engineering-trends|2026-H1 趋势稿]]可作年终回访的对照基线。
+- **#5 能力边界 6-12 个月**：`on-track`。#3 的 MirrorCode 证据 + 本轮撞库发现的 harness 工程化速度（矛盾升级线首日即产出 debate 页）与"快速扩展"方向一致。2026-11 起可进入判定。
+
 ## 对账仪式
 
 1. **登记**：摄入或透镜轮发现带到期日的预测时追加行；无到期日的改进性断言不登记（那是 [[concepts/claim-half-life|半衰期]] 的范畴）。

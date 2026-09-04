@@ -2,7 +2,7 @@
 
 title: "从手动到自动化：用AgentEval构建Agent评测体系"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, architecture, code, data, database, evaluation, fine-tuning, llm, memory, observability, open-source, prompt, rl, security, workflow]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-从手动到自动化：用AgentEval构建Agent评测体系 涉及agent领域的核心技术议题。 ^[raw/articles/agent-eval-wallezhang-yaml-driven-agent-evaluation.md]
+从手动到自动化：用AgentEval构建Agent评测体系 ^[raw/articles/agent-eval-wallezhang-yaml-driven-agent-evaluation.md]
 ### 核心观点
 1. # 从手动到自动化：用AgentEval构建Agent评测体系 ^[raw/articles/agent-eval-wallezhang-yaml-driven-agent-evaluation.md]
 > 来源：WalleZhang，2026-03-21

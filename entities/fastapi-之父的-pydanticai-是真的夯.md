@@ -45,7 +45,7 @@ PydanticAI 最优雅的设计之一是 `ModelRetry` 不是异常，而是控制�
 
 ### provider 抽象的层次与取舍
 
-PydanticAI 的 ModelRequestNode 封装了 25+ provider，优先使用各 provider 的 native structured output API（如 OpenAI 的 `response_format`、Anthropic 的 `tool_use`），只有 provider 不支持时才退化到 prompted JSON parsing。这意味着切换模型不会降低输出可靠性——合约跟模型解耦。这与 LangChain 的"链"哲学（灵活但类型安全靠自己）和 CrewAI 的"团队"哲学（角色协作强但输出约束弱）形成鲜明对比^[raw/articles/fastapi-之父的-pydanticai-是真的夯.md:300-323]。
+PydanticAI 的 ModelRequestNode 封装了 25+ provider，优先使用各 provider 的 native structured output API（如 OpenAI 的 `response_format`、Anthropic 的 `tool_use`），只有 provider 不支持时才退化到 prompted JSON parsing。这意味着切换模型不会降低输出可靠性——合约跟模型解耦。这与 LangChain 的"链"哲学（灵活但类型安全靠自己）和 CrewAI 的"团队"哲学（角色协作强但输出约束弱）形成鲜明对比^[raw/articles/fastapi-之父的-pydanticai-是真的夯.md]。
 
 ### 与 CrewAI/LangGraph 的边界对照
 

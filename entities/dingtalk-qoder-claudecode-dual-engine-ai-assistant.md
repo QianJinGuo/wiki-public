@@ -2,7 +2,7 @@
 
 title: "基于钉钉机器人的 Qoder CLI / Claude Code 双引擎 AI 助手实践"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, architecture, claude, code, fine-tuning, k8s, llm, memory, mlops, prompt, rl, robotics, search, security, tool-use]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-基于钉钉机器人的 Qoder CLI / Claude Code 双引擎 AI 助手实践 涉及agent领域的核心技术议题。 ^[raw/articles/dingtalk-qoder-claudecode-dual-engine-ai-assistant.md]
+基于钉钉机器人的 Qoder CLI / Claude Code 双引擎 AI 助手实践 ^[raw/articles/dingtalk-qoder-claudecode-dual-engine-ai-assistant.md]
 ### 核心观点
 1. # 基于钉钉机器人的 Qoder CLI / Claude Code 双引擎 AI 助手实践 ^[raw/articles/dingtalk-qoder-claudecode-dual-engine-ai-assistant.md]
 > 闪购搜索团队 久梦 @阿里云开发者

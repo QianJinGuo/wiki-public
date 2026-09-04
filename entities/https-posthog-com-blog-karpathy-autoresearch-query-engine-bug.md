@@ -2,7 +2,7 @@
 
 title: "Karpathy's Autoresearch found a 3-year-old bug in our query engine (and improved performance by 11%) - PostHog"
 created: 2026-06-03
-updated: 2026-08-01
+updated: 2026-09-05
 type: entity
 tags: [newsletter, ai]
 source: "[[raw/articles/https-posthog-com-blog-karpathy-autoresearch-query-engine-bug.md|Karpathy's Autoresearch found a 3-year-old bug in our query engine (and improved performance by 11%) - PostHog]]"
@@ -22,7 +22,6 @@ Newsletter 评分 8×9=72，stars=4，来源 URL: https://posthog.com/blog/karpa
 
 ## 正文要点
 
-Published Time: Wed, 03 Jun 2026 11:24:08 GMT
 
 A few weeks ago at a team offsite in Lisbon, we pointed an AI agent at our query engine, fed it slow queries from production, and let it run overnight. ^[raw/articles/https-posthog-com-blog-karpathy-autoresearch-query-engine-bug.md]
 

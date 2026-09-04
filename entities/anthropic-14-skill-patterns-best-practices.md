@@ -1,7 +1,7 @@
 ---
 title: "Anthropic 官方技能最佳实践：14 个可复用的 Agent Skills 设计模式"
 created: 2026-05-16
-updated: 2026-09-02
+updated: 2026-09-05
 source: "[[raw/articles/anthropic-14-skill-patterns-best-practices|原文存档]]"
 type: entity
 value: 7

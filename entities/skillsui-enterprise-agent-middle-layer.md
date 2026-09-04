@@ -2,7 +2,7 @@
 
 title: "SkillsUI 企业 Agent 中间层"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, architecture, data, fine-tuning, llm, memory, observability, prompt, skill, tool-use]
 review_value: 7
 review_confidence: 7
@@ -20,7 +20,7 @@ sources:
 
 ## 深度分析
 
-SkillsUI 企业 Agent 中间层 涉及agent领域的核心技术议题。 ^[raw/articles/skillsui-enterprise-agent-middle-layer.md]
+SkillsUI 企业 Agent 中间层 ^[raw/articles/skillsui-enterprise-agent-middle-layer.md]
 ### 核心观点
 1. # SkillsUI 企业 Agent 中间层 ^[raw/articles/skillsui-enterprise-agent-middle-layer.md]
 **来源:** CSDN（转载） ^[raw/articles/skillsui-enterprise-agent-middle-layer.md]

@@ -11,7 +11,7 @@ tags:
   - real-world-robotics
   - policy-learning
 created: 2026-06-22
-updated: 2026-08-01
+updated: 2026-09-05
 type: entity
 review_value: 9
 review_confidence: 9
@@ -28,10 +28,8 @@ sources:
 ## 核心内容
 
 
-Published Time: Wed, 17 Jun 2026 23:48:33 GMT^[raw/articles/nvidia-enpire-agentic-robot-policy-self-improvement.md]
 
 
-Markdown Content:
 ## ENPIRE: Agentic Robot Policy Self-Improvement in the Real World
 
 , [Jia Xie](https://jia-xie.com/)2†, [Tonghe Zhang](https://tonghe-zhang.github.io/)2†, [Haotian Lin](https://darthutopian.github.io/)2†, [Letian "Max" Fu](https://max-fu.github.io/)3, [Haoru Xue](https://haoruxue.github.io/)3, Jalen Lu 2, ^[raw/articles/nvidia-enpire-agentic-robot-policy-self-improvement.md]

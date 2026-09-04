@@ -2,7 +2,7 @@
 
 title: "End-to-end encrypted ML inference with Amazon SageMaker AI and FHE"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [apple, aws, data, evaluation, fine-tuning, inference, k8s, memory, mlops, rl, security]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-End-to-end encrypted ML inference with Amazon SageMaker AI and FHE 涉及apple领域的核心技术议题。基于原文内容的深入分析： ^[raw/articles/end-to-end-encrypted-ml-inference-with-amazon-sagemaker-ai-a.md]
+End-to-end encrypted ML inference with Amazon SageMaker AI and FHE基于原文内容的深入分析： ^[raw/articles/end-to-end-encrypted-ml-inference-with-amazon-sagemaker-ai-a.md]
 
 ### 核心观点
 

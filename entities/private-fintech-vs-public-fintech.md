@@ -2,7 +2,7 @@
 
 title: "Private Fintech Has Quietly Become Bigger Than Public Fintech"
 created: 2026-06-02
-updated: 2026-07-31
+updated: 2026-09-05
 type: entity
 tags: [fintech, private-market]
 source: [[raw/articles/private-fintech-vs-public-fintech]]
@@ -17,9 +17,7 @@ sources:
 ## 深度分析
 
 
-Published Time: 2026-05-28T21:28:52+00:00
 
-Markdown Content:
 The top 100 private fintech companies in the world are now worth $1.9 trillion, nearly three times the combined market cap of the 100 largest public fintechs founded in the last twenty years. They generate about 10% more revenue, too. That’s the headline finding from a new [report](https://bluedotinvestors.com/research/bluedot-ft-partners-report) jointly produced by Blue Dot Investors and FT Partners, and it should make every fintech founder, investor, and board member rethink what “winning” looks like. ^[raw/articles/private-fintech-vs-public-fintech.md]
 
 For most of the last decade, the assumed endgame for a successful fintech was an IPO. That assumption is breaking down. The companies people most want to own, including Stripe, Revolut, and Ramp are private, growing fast, and showing no urgency to change that. When I sat down with Sahej Suri, founder of Blue Dot Investors and Steve McLaughlin, founder of FT Partners, to walk through the data, both made the same point in different ways: the private market is not the waiting room anymore. It’s the destination. ^[raw/articles/private-fintech-vs-public-fintech.md]

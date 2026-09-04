@@ -2,7 +2,7 @@
 
 title: "小刘商业 Agent 增强层通用基座"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, architecture, code, data, evaluation, llm, memory, mlops, observability, prompt, rag, robotics, search, security, tool-use]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-Ai Xiaolaoliu Business Agent Augmentation Layer General Base 20260606 涉及agent领域的核心技术议题。 ^[raw/articles/ai-xiaolaoliu-business-agent-augmentation-layer-general-base-20260606.md]
+Ai Xiaolaoliu Business Agent Augmentation Layer General Base 20260606 ^[raw/articles/ai-xiaolaoliu-business-agent-augmentation-layer-general-base-20260606.md]
 ### 核心观点
 1. 复用通用 Agent 基座，把业务知识、工具、流程和评测做成可验证增强层。 ^[raw/articles/ai-xiaolaoliu-business-agent-augmentation-layer-general-base-20260606.md]
 2. 很多团队一说要做业务 Agent，第一反应是搭一个自己的 Agent Framework：规划器、执行循环、工具调度、记忆、权限、人机交互，最好再做成平台。 ^[raw/articles/ai-xiaolaoliu-business-agent-augmentation-layer-general-base-20260606.md]

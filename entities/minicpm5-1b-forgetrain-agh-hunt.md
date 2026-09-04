@@ -2,7 +2,7 @@
 
 title: "面壁让AI写了训练框架ForgeTrain，然后它自己训出了最强1B模型"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, architecture, code, data, fine-tuning, llm, workflow]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-面壁让AI写了训练框架ForgeTrain，然后它自己训出了最强1B模型 涉及agent领域的核心技术议题。 ^[raw/articles/minicpm5-1b-forgetrain-agh-hunt.md]
+面壁让AI写了训练框架ForgeTrain，然后它自己训出了最强1B模型 ^[raw/articles/minicpm5-1b-forgetrain-agh-hunt.md]
 ### 核心观点
 1. # 面壁让AI写了训练框架ForgeTrain，然后它自己训出了最强1B模型 ^[raw/articles/minicpm5-1b-forgetrain-agh-hunt.md]
 ## 核心亮点

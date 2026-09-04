@@ -2,7 +2,7 @@
 
 title: "本地 vs 云端 Agent 的现场之争：当下选本地，终局云端（行小招）"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, code, data, database, knowledge-mgmt, llm, memory, mlops, observability, prompt, rag, rl, tool-use, workflow]
 review_value: 7
 review_confidence: 7
@@ -24,7 +24,7 @@ sources:
 - [[moc/reinforcement-learning-rlhf|MOC]]
 ## 深度分析
 
-本地 vs 云端 Agent 的现场之争：当下选本地，终局云端（行小招） 涉及agent领域的核心技术议题。 ^[raw/articles/local-vs-cloud-agent-onsite-context-debate-xingxiaozhao.md]
+本地 vs 云端 Agent 的现场之争：当下选本地，终局云端（行小招） ^[raw/articles/local-vs-cloud-agent-onsite-context-debate-xingxiaozhao.md]
 ### 核心观点
 1. # 本地 vs 云端 Agent 的现场之争：当下选本地，终局云端（行小招） ^[raw/articles/local-vs-cloud-agent-onsite-context-debate-xingxiaozhao.md]
 > 来源：科技充电站 · 行小招

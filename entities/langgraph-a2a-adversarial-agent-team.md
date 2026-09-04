@@ -2,7 +2,7 @@
 
 title: "逆天的架构：用 Harness+LangGraph+A2A 写一个 Agent Team"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, architecture, code, data, evaluation, harness-engineering, memory, tool-use]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-逆天的架构：用 Harness+LangGraph+A2A 写一个 Agent Team 涉及agent领域的核心技术议题。 ^[raw/articles/langgraph-a2a-adversarial-agent-team.md]
+逆天的架构：用 Harness+LangGraph+A2A 写一个 Agent Team ^[raw/articles/langgraph-a2a-adversarial-agent-team.md]
 ### 核心观点
 1. **Info Harness**：多路 Worker 并行调研 → Verifier 核验来源/去重/辨伪/三角验证 ^[raw/articles/langgraph-a2a-adversarial-agent-team.md]
 2. ^[raw/articles/langgraph-a2a-adversarial-agent-team.md]

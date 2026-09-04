@@ -2,7 +2,7 @@
 
 title: "Scale Robot Reinforcement Learning with NVIDIA Isaac Lab on Amazon SageMaker AI"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, architecture, aws, code, data, fine-tuning, k8s, memory, mlops, nvidia, open-source, rag, rl, robotics, vision]
 review_value: 7
 review_confidence: 7
@@ -17,7 +17,7 @@ sources:
 
 ## 深度分析
 
-Scale Robot Reinforcement Learning with NVIDIA Isaac Lab on Amazon SageMaker AI 涉及agent领域的核心技术议题。基于原文内容的深入分析： ^[raw/articles/scale-robot-reinforcement-learning-with-nvidia-isaac-lab-on-.md]
+Scale Robot Reinforcement Learning with NVIDIA Isaac Lab on Amazon SageMaker AI基于原文内容的深入分析： ^[raw/articles/scale-robot-reinforcement-learning-with-nvidia-isaac-lab-on-.md]
 
 ### 核心观点
 
