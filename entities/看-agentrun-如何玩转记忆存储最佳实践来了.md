@@ -6,8 +6,9 @@ tags: [agent, cloud]
 created: 2026-05-21
 updated: 2026-05-21
 review_value: 6
-review_confidence: 6
+review_confidence: 8
 sources: [raw/articles/看-agentrun-如何玩转记忆存储最佳实践来了]
+score_validated: 2026-09-05
 ---
 
 # 看 AgentRun 如何玩转记忆存储，最佳实践来了！

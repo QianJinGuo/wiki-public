@@ -1,13 +1,14 @@
 ---
 title: "知识库构建方法论"
 created: 2026-07-02
-updated: 2026-08-05
+updated: 2026-09-05
 type: entity
 tags: [knowledge-base, rag, methodology, practice]
-review_value: 5
+review_value: 7
 review_confidence: 5
 provenance_state: stub-upgraded
 confidence: 0.6
+score_validated: 2026-09-05
 ---
 
 # 知识库构建方法论

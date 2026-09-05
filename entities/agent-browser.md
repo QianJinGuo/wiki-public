@@ -1,12 +1,12 @@
 ---
 title: "AgentBrowser：Agent 浏览器工具框架"
 created: 2026-04-24
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [open-source, agent, tool, browser-automation]
 sources: [raw/articles/agent-tools-research]
-review_value: 6
-review_confidence: 8
+review_value: 7
+review_confidence: 7
 ---
 ## Overview
 AgentBrowser 是专供 AI Agent 使用的浏览器运行时，从通用浏览器自动化演进而来，具备语义理解、站点记忆、自愈执行等能力。   ^[raw/articles/agent-tools-research.md]

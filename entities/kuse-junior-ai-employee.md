@@ -8,6 +8,7 @@ type: entity
 sources: [raw/articles/kuse-junior-ai-employee]
 review_value: 6
 review_confidence: 7
+score_validated: 2026-09-05
 ---
 
 # Kuse.ai Junior

@@ -4,7 +4,7 @@
 
 title: "SenseNova-U1 — 商汤原生统一多模态模型"
 created: 2026-04-29
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [model, architecture, open-source, image-generation, multimodal, reasoning, neo-unify, encoder-free, mixture-of-transformers, flow-matching, sensenova, 商汤]
 review_value: 7
@@ -29,7 +29,7 @@ NEO-Unify 完全去掉 VE 和 VAE，图像直接转化为 token，理解和生�
 - 输入：两层卷积+GELU 替代预训练 VE，每个 token 对应 32×32 像素块
 - 输出：MLP 直接预测原始像素块
 - 效果：NEO-unify（2B）在 MS COCO 2017 图像重建 PSNR 达 31.56、SSIM 达 0.85，接近 Flux VAE 的 32.65/0.91
-**矛盾二（训练层）**：动态分辨率信噪比失衡 → **分辨率自适应噪声尺度**   ^[raw/articles/sensnova-u1-sensetime.md]
+**矛盾二（训练层）**：动态分辨率信噪比失衡 → **分辨率自适应噪声尺度**
 
 - 分辨率越高 → token 数越多 → 噪声标准差按平方根比例同步上调
 - 保证 Flow Matching 过程中 SNR 分布一致
@@ -90,7 +90,7 @@ NEO-Unify 的釜底抽薪之计是把 VE 和 VAE 都拿掉，让图像直接进�
 
 ### 三组核心矛盾的设计启示
 **接口层（矛盾一）**：用两层卷积+GELU 替代预训练 VE，看似简单，却抓住了关键——32×32 像素块直接 token 化，等于是把图像当作一种「高带宽语言」来处理。这与 Diffusion Transformer 将图像视为 patch 序列的思路一脉相承，但 NEO-Unify 的创新在于输入输出使用同一套表示，彻底消除了编码器和解码器之间的重建误差。 ^[raw/articles/sensnova-u1-sensetime.md]
-**训练层（矛盾二）**：分辨率自适应噪声尺度的设计极为精妙。Flow Matching 的核心是在噪声和数据之间插值，SNR（信噪比）分布决定了学习信号的质量。高分辨率图像 token 数多，若噪声标准差不变，则高分辨率区域的 SNR 偏低，导致结构崩坏；低分辨率若标准差过高，则细节丢失。按平方根比例同步上调噪声标准差，本质上是在保持不同分辨率在特征域的 SNR 一致性，从而让模型对分辨率缩放具有鲁棒性。 ^[raw/articles/sensnova-u1-sensetime.md]
+**训练层（矛盾二）**：分辨率自适应噪声尺度的设计极为精妙。Flow Matching 的核心是在噪声和数据之间插值，SNR（信噪比）分布决定了学习信号的质量。高分辨率图像 token 数多，若噪声标准差不变，则高分辨率区域的 SNR 偏低，导致结构崩坏；低分辨率若标准差过高，则细节丢失。按平方根比例同步上调噪声标准差，本质上是在保持不同分辨率在特征域的 SNR 一致性，从而让模型对分辨率缩放具有鲁棒性。
 **参数层（矛盾三）**：MoT（Mixture-of-Transformers）的路由机制解决了统一模型中最棘手的问题——理解任务和生成任务对模型参数的需求是不同的，有时甚至冲突。共享底层自注意力保证了知识共享，按 token 类型动态路由 Q/K/V/O 和 MLP 则让「专才专用」成为可能。这种设计在 MoE 架构中常见，但 NEO-Unify 将其引入统一多模态任务，是一种有效的跨任务参数隔离方案。 ^[raw/articles/sensnova-u1-sensetime.md]
 
 ### 开源战略的市场意义

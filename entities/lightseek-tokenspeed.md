@@ -11,6 +11,7 @@ sources: [raw/articles/lightseek-tokenspeed]
 review_confidence: 7
 created: 2026-05-10
 updated: 2026-09-05
+score_validated: 2026-09-05
 ---
 
 ## 深度分析

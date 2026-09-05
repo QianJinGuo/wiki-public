@@ -1,18 +1,12 @@
 ---
 title: "2026-top-12-open-source-ai-projects-上半年度盘点"
-created: 2026-07-13
-updated: 2026-08-01
-type: entity
-tags: ['auto-harvested']
-sources: [raw/articles/2026-top-12-open-source-ai-projects-上半年度盘点]
-provenance_state: extracted
+created: 2026-09-06
+updated: 2026-09-06
+type: redirect
+review_value: 0
+archived_to: _archive/checkup-2026-09-06/2026-top-12-open-source-ai-projects-上半年度盘点.md
+archived_reason: link_only_shell 扣链后正文<150字符 零知识内容
 ---
 
-> -> [[raw/articles/2026-top-12-open-source-ai-projects-上半年度盘点.md|原文存档]]
-
-2026 年刚过半，开源 AI 项目的热闹已经有点看不过来了。 ^[raw/articles/2026-top-12-open-source-ai-projects-上半年度盘点.md]
-
-## 来源
-
-- 原文: [[raw/articles/2026-top-12-open-source-ai-projects-上半年度盘点.md|2026-top-12-open-source-ai-projects-上半年度盘点]]
-- 原始链接: : https://mp.weixin.qq.com/s/PslsmlR6zl6u_iIXj_ajvg
+> 本实体已于 2026-09-06 质量闭环清理中归档（原因: link_only_shell 扣链后正文<150字符 零知识内容）。
+> 原文见 `raw/articles/`，归档件见 `_archive/checkup-2026-09-06/2026-top-12-open-source-ai-projects-上半年度盘点.md`。

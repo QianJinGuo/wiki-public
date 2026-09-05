@@ -4,9 +4,9 @@ title: "Hermes Agent 保姆级教程：一句话组建你的 AI 打工团队"
 type: entity
 tags: [agent, api, llm, research]
 created: 2026-05-21
-updated: 2026-08-29
-review_value: 4
-review_confidence: 9
+updated: 2026-09-05
+review_value: 7
+review_confidence: 7
 sources: [raw/articles/hermes-agent-getting-started-guide-2026]
 ---
 

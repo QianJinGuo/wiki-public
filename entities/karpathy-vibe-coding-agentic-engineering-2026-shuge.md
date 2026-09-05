@@ -1,18 +1,12 @@
 ---
 title: "Karpathy 最新判断：Vibe Coding 没死，Software 3.0 正在分出 Agentic Engineering"
-created: 2026-07-15
-updated: 2026-08-01
-type: entity
-tags: ['auto-harvested']
-sources: [raw/articles/karpathy-vibe-coding-agentic-engineering-2026-shuge]
-provenance_state: extracted
+created: 2026-09-06
+updated: 2026-09-06
+type: redirect
+review_value: 0
+archived_to: _archive/checkup-2026-09-06/karpathy-vibe-coding-agentic-engineering-2026-shuge.md
+archived_reason: link_only_shell 扣链后正文<150字符 零知识内容
 ---
 
-> -> [[raw/articles/karpathy-vibe-coding-agentic-engineering-2026-shuge.md|原文存档]]
-
-Karpathy 最新判断：Vibe Coding 没死，Software 3.0 正在分出 Agentic Engineering ^[raw/articles/karpathy-vibe-coding-agentic-engineering-2026-shuge.md]
-
-## 来源
-
-- 原文: [[raw/articles/karpathy-vibe-coding-agentic-engineering-2026-shuge.md|Karpathy 最新判断：Vibe Coding 没死，Software 3.0 正在分出 Agentic Engineering]]
-- 原始链接: : https://mp.weixin.qq.com/s/r7haj0lwGNgtCnbfx574Hg
+> 本实体已于 2026-09-06 质量闭环清理中归档（原因: link_only_shell 扣链后正文<150字符 零知识内容）。
+> 原文见 `raw/articles/`，归档件见 `_archive/checkup-2026-09-06/karpathy-vibe-coding-agentic-engineering-2026-shuge.md`。

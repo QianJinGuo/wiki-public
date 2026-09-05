@@ -1,18 +1,12 @@
 ---
 title: "利用-amazon-bedrock-agentcore-快速为您的-agent-接入联网搜索和网页浏览"
-created: 2026-07-10
-updated: 2026-08-01
-type: entity
-tags: ['auto-harvested']
-sources: [raw/articles/利用-amazon-bedrock-agentcore-快速为您的-agent-接入联网搜索和网页浏览]
-provenance_state: extracted
+created: 2026-09-06
+updated: 2026-09-06
+type: redirect
+review_value: 0
+archived_to: _archive/checkup-2026-09-06/利用-amazon-bedrock-agentcore-快速为您的-agent-接入联网搜索和网页浏览.md
+archived_reason: link_only_shell 扣链后正文<150字符 零知识内容
 ---
 
-> -> [[raw/articles/利用-amazon-bedrock-agentcore-快速为您的-agent-接入联网搜索和网页浏览.md|原文存档]]
-
-中文版本 | [English Version](<https://aws.amazon.com/cn/blogs/china/leveraging-amazon-bedrock-agentcore-quick-en/>) ^[raw/articles/利用-amazon-bedrock-agentcore-快速为您的-agent-接入联网搜索和网页浏览.md]
-
-## 来源
-
-- 原文: [[raw/articles/利用-amazon-bedrock-agentcore-快速为您的-agent-接入联网搜索和网页浏览.md|利用-amazon-bedrock-agentcore-快速为您的-agent-接入联网搜索和网页浏览]]
-- 原始链接: : https://aws.amazon.com/cn/blogs/china/leveraging-amazon-bedrock-agentcore-quick
+> 本实体已于 2026-09-06 质量闭环清理中归档（原因: link_only_shell 扣链后正文<150字符 零知识内容）。
+> 原文见 `raw/articles/`，归档件见 `_archive/checkup-2026-09-06/利用-amazon-bedrock-agentcore-快速为您的-agent-接入联网搜索和网页浏览.md`。

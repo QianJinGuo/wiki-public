@@ -4,9 +4,9 @@ created: 2026-05-12
 updated: 2026-09-05
 type: entity
 tags: [agent-tools, ai-agent, llm, newsletter, agent]
-review_value: 6
+review_value: 7
 sources: [raw/articles/skillos-learning-skill-curation-for-self-evolving-agents]
-review_confidence: 7
+review_confidence: 8
 ---
 > -> [[raw/articles/skillos-learning-skill-curation-for-self-evolving-agents.md|原文存档]]
 来自 newsletter 文章 [[raw/articles/skillos-learning-skill-curation-for-self-evolving-agents.md|SkillOS: Learning Skill Curation for Self-Evolving Agents]] 提取。 ^[raw/articles/skillos-learning-skill-curation-for-self-evolving-agents.md]

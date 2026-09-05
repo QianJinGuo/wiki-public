@@ -3,7 +3,7 @@
 title: "AWS Bedrock AgentCore"
 description: "AWS 的 Agent 基础设施平台，提供 sandbox 运行时、Memory、Gateway、Browser、Identity、Observability 六大原语"
 created: 2026-06-29
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [aws, bedrock, agent, agent-infrastructure, harness, mcp]
 confidence: 0.70
@@ -11,6 +11,7 @@ provenance_state: inferred
 review_value: 6
 review_confidence: 5
 sources: [raw/articles/aws-bedrock-agentcore-doris-mcp-server]
+score_validated: 2026-09-05
 ---
 
 AWS Bedrock AgentCore 是 AWS 推出的 Agent 基础设施平台，旨在为开发者提供生产级 AI Agent 部署能力。通过 `CreateHarness` 和 `InvokeHarness` 两个核心 API，覆盖 Agent 运行所需的六大基础设施原语。 ^[raw/articles/aws-bedrock-agentcore-doris-mcp-server.md]

@@ -2,7 +2,7 @@
 
 title: Your defect backlog is a retention report
 created: 2026-05-22
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [developer, productivity, management, engineering, retention]
 sources: [raw/articles/defect-backlog-retention-report]
@@ -11,6 +11,7 @@ review_value: 6
 review_confidence: 7
 review_stars: 3
 review_recommendation: worth-reading
+score_validated: 2026-09-05
 ---
 
 [[raw/articles/defect-backlog-retention-report.md|原文存档]] ^[raw/articles/defect-backlog-retention-report.md]

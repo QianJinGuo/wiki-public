@@ -4,10 +4,11 @@ description: "科技行业招聘专家 seb@hiiinternet 对 Anthropic 1680 份 Li
 type: entity
 tags: [anthropic, hiring, talent, infrastructure, ai-lab, career, organization, research-vs-engineering]
 created: 2026-06-16
-updated: 2026-06-16
+updated: 2026-09-05
 review_value: 6
-review_confidence: 8
+review_confidence: 7
 sources: [raw/articles/anthropic-hiring-1680-resumes-infrastructure-veterans-machinespirit-2026]
+score_validated: 2026-09-05
 ---
 
 # Anthropic 招人底牌：1680 份员工履历揭示「基础设施老兵」吃香

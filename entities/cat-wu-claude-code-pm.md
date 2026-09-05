@@ -1,12 +1,12 @@
 ---
 title: "Cat Wu — Anthropic Claude Code/Cowork产品负责人"
 created: 2026-04-27
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [person, anthropic, product, claude-code, cowork]
 sources: [raw/articles/cat-wu-anthropic-pm-interview]
-review_value: 6
-review_confidence: 7
+review_value: 8
+review_confidence: 8
 ---
 ## 核心洞察
 | 话题 | 洞察 |   ^[raw/articles/cat-wu-anthropic-pm-interview.md]

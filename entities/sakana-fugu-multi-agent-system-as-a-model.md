@@ -1,18 +1,12 @@
 ---
 title: "sakana-fugu-multi-agent-system-as-a-model"
-created: 2026-07-09
-updated: 2026-08-01
-type: entity
-tags: ['auto-harvested']
-sources: [raw/articles/sakana-fugu-multi-agent-system-as-a-model]
-provenance_state: extracted
+created: 2026-09-06
+updated: 2026-09-06
+type: redirect
+review_value: 0
+archived_to: _archive/checkup-2026-09-06/sakana-fugu-multi-agent-system-as-a-model.md
+archived_reason: link_only_shell 扣链后正文<150字符 零知识内容
 ---
 
-> -> [[raw/articles/sakana-fugu-multi-agent-system-as-a-model.md|原文存档]]
-
-Sakana Fugu — "One Model to Command Them All". ^[raw/articles/sakana-fugu-multi-agent-system-as-a-model.md]
-
-## 来源
-
-- 原文: [[raw/articles/sakana-fugu-multi-agent-system-as-a-model.md|sakana-fugu-multi-agent-system-as-a-model]]
-- 原始链接: : https://sakana.ai/fugu/
+> 本实体已于 2026-09-06 质量闭环清理中归档（原因: link_only_shell 扣链后正文<150字符 零知识内容）。
+> 原文见 `raw/articles/`，归档件见 `_archive/checkup-2026-09-06/sakana-fugu-multi-agent-system-as-a-model.md`。

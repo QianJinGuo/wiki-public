@@ -2,11 +2,11 @@
 
 title: "Agent Workflows"
 created: 2026-05-10
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [agent, workflow, automation]
-review_value: 6
-review_confidence: 7
+review_value: 8
+review_confidence: 8
 sources: [raw/articles/github-token-efficiency-agentic-workflows]
 ---
 

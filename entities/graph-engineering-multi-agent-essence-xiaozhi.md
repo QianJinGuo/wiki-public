@@ -1,18 +1,12 @@
 ---
 title: "解析Graph Engineering ：AI 多智能体协作的本质与底层逻辑"
-created: 2026-07-29
-updated: 2026-08-01
-type: entity
-tags: ['auto-harvested']
-sources: [raw/articles/graph-engineering-multi-agent-essence-xiaozhi]
-provenance_state: extracted
+created: 2026-09-06
+updated: 2026-09-06
+type: redirect
+review_value: 0
+archived_to: _archive/checkup-2026-09-06/graph-engineering-multi-agent-essence-xiaozhi.md
+archived_reason: link_only_shell 扣链后正文<150字符 零知识内容
 ---
 
-> -> [[raw/articles/graph-engineering-multi-agent-essence-xiaozhi.md|原文存档]]
-
-解析 Graph Engineering 的本质与落地准则。 ^[raw/articles/graph-engineering-multi-agent-essence-xiaozhi.md]
-
-## 来源
-
-- 原文: [[raw/articles/graph-engineering-multi-agent-essence-xiaozhi.md|解析Graph Engineering ：AI 多智能体协作的本质与底层逻辑]]
-- 原始链接: : "https://mp.weixin.qq.com/s/CZExFET0qEzK3QQaSbQ2Bg
+> 本实体已于 2026-09-06 质量闭环清理中归档（原因: link_only_shell 扣链后正文<150字符 零知识内容）。
+> 原文见 `raw/articles/`，归档件见 `_archive/checkup-2026-09-06/graph-engineering-multi-agent-essence-xiaozhi.md`。

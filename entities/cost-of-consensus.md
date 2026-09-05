@@ -2,12 +2,12 @@
 type: entity
 title: "Cost of Consensus"
 created: 2026-05-13
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [multi-agent, consensus, research]
 provenance_state: inferred
 sources: [raw/minimax-agent-team-mavis-owner-worker-verifier]
 
-review_value: 4
+review_value: 7
 review_confidence: 7
 ---
 ## 摘要

@@ -10,8 +10,8 @@ sources:
   - raw/articles/amazon-bedrock-agentcore-harness-is-now-generally-available-
 confidence: 0.80
 provenance_state: extracted
-review_value: 6
-review_confidence: 8
+review_value: 7
+review_confidence: 9
 review_stars: 4
 ---
 
@@ -94,7 +94,7 @@ Skills 元数据在会话启动时加载，完整内容仅在任务实际需要�
 
 ## 与现有 wiki 实体的差异化
 
-与 `aws-bedrock-agentcore-doris-mcp-server` 的对比：^[raw/articles/amazon-bedrock-agentcore-harness-is-now-generally-available-.md]
+与 `aws-bedrock-agentcore-doris-mcp-server` 的对比：
 
 
 | 维度 | Doris MCP on AgentCore | AgentCore Harness GA |

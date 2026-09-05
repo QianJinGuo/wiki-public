@@ -2,7 +2,7 @@
 
 title: "AI Agent 时代 CI/CD 生存指南 — 阿里 a1 CLI 生产级实践"
 created: 2026-07-07
-updated: 2026-08-01
+updated: 2026-09-05
 type: entity
 tags: [alibaba, ci-cd, ai-agent, a1-cli, gate-scripts, dynamic-smoke-test, dogfooding, beta-telemetry, deny-list, harness-ai-randomness, go-cli, release-engineering, self-healing-pipeline]
 sources:
@@ -37,12 +37,12 @@ sha256: tbd
 | 3 | 文档同步 + 测试清单一致性 | 硬阻断 |
 | 4 | 命令下线规范（废弃/测试/文档/smoke） | 硬阻断 |
 
-**逃生舱**：MR 标题含 `[skip-*]` 标记可跳过特定门禁。[^1]^[raw/articles/0NuS75Bcys0xNCp9wNl8aw.md]
+**逃生舱**：MR 标题含 `[skip-*]` 标记可跳过特定门禁。[^1]
 
 
 ## AI 动态冒烟测试（核心创新）
 
-**让 AI 自己写测试验证 AI 的代码变更**，形成自检闭环。[^1]^[raw/articles/0NuS75Bcys0xNCp9wNl8aw.md]
+**让 AI 自己写测试验证 AI 的代码变更**，形成自检闭环。[^1]
 
 
 ### 五把锁约束随机性
@@ -58,16 +58,16 @@ sha256: tbd
 
 ## CI 历史反馈闭环（Dogfooding 模式）
 
-**AI Agent 无状态** → 重跑犯相同错误 → **人为赋予短期记忆**。^[raw/articles/0NuS75Bcys0xNCp9wNl8aw.md]
+**AI Agent 无状态** → 重跑犯相同错误 → **人为赋予短期记忆**。
 
 
-a1 CLI **在自己的 CI 流水线里调用自己**查 CI 运行记录：[^1]^[raw/articles/0NuS75Bcys0xNCp9wNl8aw.md]
+a1 CLI **在自己的 CI 流水线里调用自己**查 CI 运行记录：[^1]
 
 ```bash
 a1 ci run list --pipeline "$PIPELINE_ID" --repo "$REPO" -f json
 ```
 
-**Soft-skip**：CI 历史获取失败永不阻塞，LLM best-effort 继续。^[raw/articles/0NuS75Bcys0xNCp9wNl8aw.md]
+**Soft-skip**：CI 历史获取失败永不阻塞，LLM best-effort 继续。
 
 
 ## 发布流水线
@@ -106,5 +106,5 @@ beta 构建时记录 commit SHA + 版本号 + 发布时刻为 artifact。打 tag
 
 → [raw/articles/0NuS75Bcys0xNCp9wNl8aw|原文存档]
 
-[^1]: raw/articles/0NuS75Bcys0xNCp9wNl8aw^[raw/articles/0NuS75Bcys0xNCp9wNl8aw.md]
+[^1]: raw/articles/0NuS75Bcys0xNCp9wNl8aw
 

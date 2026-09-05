@@ -2,12 +2,12 @@
 
 title: "SkillX — 层次化技能知识库"
 created: 2026-04-27
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [open-source, research, agent, skill, training]
 sources: [raw/articles/skillx-zhejiang-university]
-review_value: 6
-review_confidence: 7
+review_value: 8
+review_confidence: 9
 ---
 
 ## 概述

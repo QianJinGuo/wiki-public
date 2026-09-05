@@ -39,10 +39,11 @@ Vincenzo Iozzo 用 5 个开源权重模型对同一个真实 C 漏洞做受控�
 
 ## 裁定状态
 
-- verdict: **debate**（维持对抗，等待一方出现对照实验级证据）
-- 甲方需补：剥离 harness 贡献后 Mythos 与同尺寸通用模型的同条件对照
-- 乙方需补：多 bug / 多代码库重复实验，证明 1.4-1.6x 不是单点运气
-- 下一个证据窗：任一方公开可复现实验时重开裁定
+- verdict: **debate**（维持对抗）
+- 独立裁决（2026-09-05，Codex o-series read-only，简报自包含）：**BOTH_PARTIALLY**——"A 证明的是能力结果（Mythos+安全闭路 harness 达到通用模型未展示的水平，curl 案例提供独立佐证），但专用化与 harness 设计/任务选择/工具访问混杂，无法单独归因于模型；B 的归因证据更强（受控对照），但单 bug×5 模型外推性弱"。与建页时双方预登记的重开条件一致。
+- 结算实验（独立裁决提议，替代原表述）：**预注册因子交叉基准**——跨多真实漏洞/多仓库，交叉「通用 vs 安全专用模型」×「同一 harness vs 专用 harness」且后训练对齐，比较利用链与可用 PoC 成功率
+- 下一个证据窗：任一方公开上述因子交叉实验时重开裁定
 
 → [[entities/cloudflare-glasswing-mythos-security|甲方页]] · → [[entities/how-harnesses-and-post-training-close-the-open-weight-bug-finding-gap-20260606|乙方页]]
+→ [[entities/mythos-finds-a-curl-vulnerability|curl 案例一手记录（Stenberg）]]
 → [[raw/articles/cloudflare-glasswing-mythos-security|甲方原文存档]] · → [[raw/articles/how-harnesses-and-post-training-close-the-open-weight-bug-finding-gap-20260606|乙方原文存档]]

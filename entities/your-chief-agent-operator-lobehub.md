@@ -4,10 +4,11 @@ title: "Your Chief Agent Operator · LobeHub"
 type: entity
 tags: [agent, lobehub, multi-agent, platform]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 6
-review_confidence: 6
+review_confidence: 7
 sources: [raw/articles/your-chief-agent-operator-lobehub]
+score_validated: 2026-09-05
 ---
 
 ## 产品概述

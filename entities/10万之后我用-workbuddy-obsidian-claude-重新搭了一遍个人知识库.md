@@ -1,18 +1,12 @@
 ---
 title: "10万之后我用-workbuddy-obsidian-claude-重新搭了一遍个人知识库"
-created: 2026-07-08
-updated: 2026-08-01
-type: entity
-tags: ['auto-harvested']
-sources: [raw/articles/10万之后我用-workbuddy-obsidian-claude-重新搭了一遍个人知识库]
-provenance_state: extracted
+created: 2026-09-06
+updated: 2026-09-06
+type: redirect
+review_value: 0
+archived_to: _archive/checkup-2026-09-06/10万之后我用-workbuddy-obsidian-claude-重新搭了一遍个人知识库.md
+archived_reason: link_only_shell 扣链后正文<150字符 零知识内容
 ---
 
-> -> [[raw/articles/10万之后我用-workbuddy-obsidian-claude-重新搭了一遍个人知识库.md|原文存档]]
-
-做了快 2 年的 AI 课题了，终于出了一篇 10万+ 爆款： ^[raw/articles/10万之后我用-workbuddy-obsidian-claude-重新搭了一遍个人知识库.md]
-
-## 来源
-
-- 原文: [[raw/articles/10万之后我用-workbuddy-obsidian-claude-重新搭了一遍个人知识库.md|10万之后我用-workbuddy-obsidian-claude-重新搭了一遍个人知识库]]
-- 原始链接: : https://mp.weixin.qq.com/s/glIysqtuuvKTcoLzveCnaA
+> 本实体已于 2026-09-06 质量闭环清理中归档（原因: link_only_shell 扣链后正文<150字符 零知识内容）。
+> 原文见 `raw/articles/`，归档件见 `_archive/checkup-2026-09-06/10万之后我用-workbuddy-obsidian-claude-重新搭了一遍个人知识库.md`。

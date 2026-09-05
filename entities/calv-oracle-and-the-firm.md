@@ -10,6 +10,7 @@ review_value: 6
 review_confidence: 5
 review_recommendation: strong
 review_stars: 4
+score_validated: 2026-09-05
 ---
 
 # The Oracle and the Firm

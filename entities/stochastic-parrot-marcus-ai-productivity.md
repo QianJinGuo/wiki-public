@@ -4,10 +4,11 @@ title: "Stochastic Parrot Marcus AI Productivity"
 type: entity
 tags: [aws, model, research]
 created: 2026-05-21
-updated: 2026-06-30
-review_value: 6
+updated: 2026-09-05
+review_value: 5
 review_confidence: 6
 sources: [raw/articles/stochastic-parrot-marcus-ai-productivity]
+score_validated: 2026-09-05
 ---
 
 # Marcus on AI Productivity

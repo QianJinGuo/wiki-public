@@ -1,12 +1,13 @@
 ---
 title: "AutoCLI"
 created: 2026-04-24
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [open-source, agent, tool, rust, web-scraping]
 sources: [raw/articles/agent-tools-research]
-review_value: 5
-review_confidence: 7
+review_value: 6
+review_confidence: 8
+score_validated: 2026-09-05
 ---
 ## Overview
 AutoCLI 是一个用 Rust 实现的高速、内存安全的命令行网页信息获取工具，Stars 2.4k。专注于让 AI Agent 能够用一条命令从任意网站获取信息。   ^[raw/articles/agent-tools-research.md]

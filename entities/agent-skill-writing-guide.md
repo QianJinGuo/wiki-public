@@ -3,13 +3,13 @@
 
 title: '从 0 到 1 教你写 Agent Skill，让 AI 懂你的"潜规则"'
 created: 2026-05-16
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [agent, skill, prompt-engineering, context-injection]
 sources:
   - raw/articles/agent-skill-writing-guide
-review_value: 4
-review_confidence: 5
+review_value: 7
+review_confidence: 7
 
 ---
 

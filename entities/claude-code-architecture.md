@@ -1,13 +1,13 @@
 ---
 title: "Claude Code 架构解析"
 created: 2026-04-24
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [claude-code, agent, architecture, runtime, multi-agent, tool-runtime, permission, context-isolation, orchestrator, subagent]
 sources:
   - raw/articles/claude-code-architecture-analysis
   - raw/articles/claude-code-multi-agent-collaboration-allentang-2026-07-22
-review_value: 6
+review_value: 8
 review_confidence: 7
 ---
 ## Overview

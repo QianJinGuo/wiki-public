@@ -1,10 +1,10 @@
 ---
 title: "复旦 AHE：让 Harness 自进化的 Agentic Harness Engineering"
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, coding, gpt, harness, self-evolution, fudan, ahe, observability, memory, terminal-bench]
-review_value: 6
-review_confidence: 6
+review_value: 8
+review_confidence: 8
 sources: [raw/articles/fudan-agentic-harness-engineering-ahe-gpt54-7points]
 type: entity
 ---

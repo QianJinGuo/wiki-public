@@ -3,8 +3,8 @@ created: 2026-06-10
 title: "deepseek-v4深度拆解一篇论文同时做了五件大事"
 type: entity
 tags: [deepseek, news]
-review_value: 6
-review_confidence: 7
+review_value: 8
+review_confidence: 8
 updated: 2026-06-10
 provenance_state: inferred
 sources: [raw/articles/deepseek-v4]

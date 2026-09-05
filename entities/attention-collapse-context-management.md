@@ -1,13 +1,14 @@
 ---
 title: "注意力塌缩与上下文管理"
 created: 2026-07-02
-updated: 2026-08-04
+updated: 2026-09-05
 type: entity
 tags: [context-management, attention, llm, phenomenon]
-review_value: 5
+review_value: 7
 review_confidence: 5
 provenance_state: stub-upgraded
 confidence: 0.6
+score_validated: 2026-09-05
 ---
 
 # 注意力塌缩与上下文管理

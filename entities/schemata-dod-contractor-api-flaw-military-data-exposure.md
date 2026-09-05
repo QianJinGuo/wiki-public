@@ -10,6 +10,7 @@ updated: 2026-09-05
 review_value: 4
 sources: [raw/articles/schemata-dod-contractor-api-flaw-military-data-exposure]
 review_confidence: 7
+score_validated: 2026-09-05
 ---
 
 > -> [[raw/articles/schemata-dod-contractor-api-flaw-military-data-exposure.md|原文存档]]

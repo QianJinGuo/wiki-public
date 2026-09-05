@@ -4,9 +4,9 @@ title: "AWS Transform Ezconvertbi BI Migration"
 type: entity
 tags: [aws, security]
 created: 2026-05-21
-updated: 2026-06-30
+updated: 2026-09-05
 review_value: 6
-review_confidence: 6
+review_confidence: 9
 sources: [raw/articles/aws-transform-ezconvertbi-bi-migration]
 ---
 

@@ -4,9 +4,9 @@ title: "Hermes Agent /goal 长任务运行时架构拆解：状态持久化、Ju
 type: entity
 tags: [agent, architecture]
 created: 2026-05-21
-updated: 2026-08-29
-review_value: 6
-review_confidence: 6
+updated: 2026-09-05
+review_value: 8
+review_confidence: 7
 sources: [raw/articles/hermes-agent-goal-runtime-architecture-state-persistence-judge-closed-loop]
 ---
 

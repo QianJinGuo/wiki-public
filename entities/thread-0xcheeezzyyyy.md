@@ -4,10 +4,11 @@ title: "Thread by @0xCheeezzyyyy on Thread Reader App – Thread Reader App"
 type: entity
 tags: [open-source]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 6
 review_confidence: 6
 sources: [raw/articles/thread-0xcheeezzyyyy]
+score_validated: 2026-09-05
 ---
 
 ## 深度分析

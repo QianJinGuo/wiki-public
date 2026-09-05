@@ -4,10 +4,11 @@ title: "Block leans into its AI future | Payments Dive"
 type: entity
 tags: [web]
 created: 2026-05-21
-updated: 2026-07-31
-review_value: 6
-review_confidence: 6
+updated: 2026-09-05
+review_value: 5
+review_confidence: 7
 sources: [raw/articles/block-leans-into-its-ai-future-payments-dive]
+score_validated: 2026-09-05
 ---
 
 # Block leans into its AI future | Payments Dive

@@ -1,13 +1,13 @@
 ---
 title: "基于 Strands Agents SDK 和 Amazon Bedrock AgentCore 的商品广告图审查 Agent"
 created: 2026-06-11
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [strands-sdk, bedrock, agentcore, multi-agent, product-review, aws, computer-vision, agents-as-tools, ocr, compliance]
 sources: [raw/articles/product-ad-review-agent-with-strands-sdk-bedrock]
 provenance_state: extracted
-review_value: 6
-review_confidence: 7
+review_value: 7
+review_confidence: 9
 ---
 
 # 基于 Strands Agents SDK 和 Amazon Bedrock AgentCore 的商品广告图审查 Agent

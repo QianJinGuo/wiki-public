@@ -2,7 +2,7 @@
 
 title: "腾讯 TAB Harness 全链路实战：从 Vibe Coding 到 13 阶段接力赛"
 created: 2026-07-07
-updated: 2026-08-01
+updated: 2026-09-05
 type: entity
 tags: [tencent, tab, harness-engineering, production-harness, microservices, monorepo, gate-scripts, mcp, workflow-design, sub-agent, skill, code-review, semi-automatic, baseline-diff, team-mode, a-b-testing]
 sources:
@@ -43,13 +43,13 @@ Harness **主要不是给 AI 用的，是给团队用的**。目标是让 AI 在
 3. **开发 Agent** — 业务代码 + 单测 + 接口用例文档 + 增量接口测试代码
 4. **代码审查 Agent** — 4 维度审查（方案一致性/验收覆盖/质量基线/前端增量） ^[raw/articles/LGo7daiYYRf1r_YY3r-cXw]
 
-**核心纪律**：下游 Agent 不可直接修改上游产物（只能提阻塞项）。[^1]^[raw/articles/LGo7daiYYRf1r_YY3r-cXw.md]
+**核心纪律**：下游 Agent 不可直接修改上游产物（只能提阻塞项）。[^1]
 
 
 ### 13 阶段工作流
 初始化 → 需求分析 → [需求确认] → [Bug 复现] → 技术方案 → [方案确认] → 方案评审 → 分支准备 → 开发 → **集成测试** → 代码审查 → 验收 → 交付收尾 ^[raw/articles/LGo7daiYYRf1r_YY3r-cXw]
 
-**关键决策**：集成测试前置到代码审查之前（CR 打回率 1.8→0.4）。[^1]^[raw/articles/LGo7daiYYRf1r_YY3r-cXw.md]
+**关键决策**：集成测试前置到代码审查之前（CR 打回率 1.8→0.4）。[^1]
 
 
 ### 7 道门禁脚本
@@ -67,7 +67,7 @@ Harness **主要不是给 AI 用的，是给团队用的**。目标是让 AI 在
 | 前端冒烟选择 | 5s | 前端时触发 |
 | 熔断暂停 | — | 异常 | ^[raw/articles/LGo7daiYYRf1r_YY3r-cXw]
 
-**三级兜底**：UI 按钮 → 文本关键词 → 语义识别^[raw/articles/LGo7daiYYRf1r_YY3r-cXw.md]
+**三级兜底**：UI 按钮 → 文本关键词 → 语义识别
 
 
 ### 关键撞墙：Team Mode 卡死
@@ -77,7 +77,7 @@ Harness **主要不是给 AI 用的，是给团队用的**。目标是让 AI 在
 1. **仓库代码导航地图**（~26KB）：由开发 Agent 自维护
 2. **任务看板**（CheckPoint）：跨需求总控 ^[raw/articles/LGo7daiYYRf1r_YY3r-cXw]
 
-**纪律**：团队知识必须落仓库（可审计可交接）；Memory 只放个人偏好。[^1]^[raw/articles/LGo7daiYYRf1r_YY3r-cXw.md]
+**纪律**：团队知识必须落仓库（可审计可交接）；Memory 只放个人偏好。[^1]
 
 
 ## 实测数据（50+ 需求）
@@ -101,5 +101,5 @@ Harness **主要不是给 AI 用的，是给团队用的**。目标是让 AI 在
 
 → [raw/articles/LGo7daiYYRf1r_YY3r-cXw|原文存档]
 
-[^1]: raw/articles/LGo7daiYYRf1r_YY3r-cXw^[raw/articles/LGo7daiYYRf1r_YY3r-cXw.md]
+[^1]: raw/articles/LGo7daiYYRf1r_YY3r-cXw
 

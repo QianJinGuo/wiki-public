@@ -8,6 +8,7 @@ sources: [raw/articles/gpt-image-2完全指南]
 review_value: 5
 review_confidence: 6
 review_recommendation: worth-reading
+score_validated: 2026-09-05
 ---
 ## 相关实体
 - [[entities/gpt-image-2-完全指南附大量玩法案例顺便开源我的生图-skill|GPT-Image-2 完全指南！附大量玩法案例，顺便开源我的生图 Skill ～]]

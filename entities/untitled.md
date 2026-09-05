@@ -4,10 +4,11 @@ title: "untitled v2"
 type: entity
 tags: [api, model, training]
 created: 2026-05-21
-updated: 2026-07-27
+updated: 2026-09-05
 review_value: 6
 review_confidence: 6
 sources: [raw/articles/untitled-v2]
+score_validated: 2026-09-05
 ---
 
 ## 深度分析

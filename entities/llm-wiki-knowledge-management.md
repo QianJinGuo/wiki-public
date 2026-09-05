@@ -1,13 +1,14 @@
 ---
 title: "LLM Wiki 知识管理"
 created: 2026-07-02
-updated: 2026-08-05
+updated: 2026-09-05
 type: entity
 tags: [knowledge-base, llm, wiki, knowledge-management]
-review_value: 5
-review_confidence: 5
+review_value: 7
+review_confidence: 6
 provenance_state: stub-upgraded
 confidence: 0.6
+score_validated: 2026-09-05
 ---
 
 

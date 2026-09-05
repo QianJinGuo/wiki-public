@@ -51,7 +51,7 @@ Skill 文件物理形态：普通 markdown 文件，存在 `[本地运行时路�
 `trigger` 字段是匹配入口。Hermes 在用户提需求时，先扫所有 Skill 的 trigger 关键字粗筛 → 再用语义补一刀。为什么不用纯语义匹配？因为**太贵也太慢**。 ^[raw/articles/hermes-skill-system-winty.md]
 
 ### 第 2 块：适用场景
-写明哪些场景能用、哪些不能用。省掉至少一半的误用。^[raw/articles/hermes-self-improving-overview-winty.md]
+写明哪些场景能用、哪些不能用。省掉至少一半的误用。
 
 
 ### 第 3 块：步骤清单（核心）

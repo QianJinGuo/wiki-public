@@ -7,6 +7,7 @@ type: entity
 sources: [raw/articles/openchronicle-opensource-memory-layer]
 review_value: 6
 review_confidence: 7
+score_validated: 2026-09-05
 ---
 # OpenChronicle
 > 00后团队Vida开源的AI记忆层项目，将"屏幕感知+持续记忆"从付费墙中拆解出来，变成可复用基础设施。

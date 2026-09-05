@@ -13,6 +13,7 @@ review_value: 6
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 4
+score_validated: 2026-09-05
 ---
 
 # Why the Human Genome's Tangled Physicality May Confound AI

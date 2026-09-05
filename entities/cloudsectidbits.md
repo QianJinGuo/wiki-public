@@ -1,14 +1,14 @@
 ---
 title: "CloudSecTidbits：云安全研究摘要"
 created: 2026-05-17
-updated: 2026-08-02
+updated: 2026-09-05
 type: entity
 tags: [security, aws, cognito, sso, zero-trust]
 provenance_state: inferred
 sources: [raw/cloudsectidbits-masso-cognito-sso.html]
 
-review_value: 4
-review_confidence: 7
+review_value: 8
+review_confidence: 9
 aliases:
   - CloudSectiDbits
   - Masso Cognito SSO

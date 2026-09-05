@@ -9,6 +9,7 @@ review_value: 6
 review_confidence: 7
 sources:
   - raw/articles/agent架构关键变化harness正在成为新后端
+score_validated: 2026-09-05
 ---
 
 > -> [[raw/articles/agent架构关键变化harness正在成为新后端.md|原文存档]]

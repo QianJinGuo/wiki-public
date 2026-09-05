@@ -5,8 +5,8 @@ updated: 2026-09-05
 type: entity
 tags: [research, model, multimodal, memory, personalization, cvpr2026]
 sources: [raw/articles/personavlm-long-term-personalization]
-review_value: 6
-review_confidence: 7
+review_value: 7
+review_confidence: 8
 ---
 ## 概述
 南京大学 + 字节跳动联合提出（CVPR 2026 Highlight）。解决核心问题：大模型是"静态系统"，而真实用户是"动态的"——偏好会改变，情绪会波动，性格会在长期互动中逐渐显现。   ^[raw/articles/personavlm-long-term-personalization.md]

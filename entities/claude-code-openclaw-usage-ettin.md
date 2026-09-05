@@ -116,7 +116,7 @@ model = CrossEncoder(
 
 ## OpenClaw 集成 Ettin Reranker
 
-OpenClaw 当前使用 sqlite-vec + BM25 双路检索 ，可升级为 **三路检索**： ^[raw/articles/ettin-reranker-family.md]
+OpenClaw 当前使用 sqlite-vec + BM25 双路检索 ，可升级为 **三路检索**：
 
 ### 升级方案：sqlite-vec + BM25 + Ettin Rerank
 

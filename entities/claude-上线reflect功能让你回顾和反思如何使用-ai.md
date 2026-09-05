@@ -1,18 +1,12 @@
 ---
 title: "claude-上线reflect功能让你回顾和反思如何使用-ai"
-created: 2026-07-10
-updated: 2026-08-01
-type: entity
-tags: ['auto-harvested']
-sources: [raw/articles/claude-上线reflect功能让你回顾和反思如何使用-ai]
-provenance_state: extracted
+created: 2026-09-06
+updated: 2026-09-06
+type: redirect
+review_value: 0
+archived_to: _archive/checkup-2026-09-06/claude-上线reflect功能让你回顾和反思如何使用-ai.md
+archived_reason: link_only_shell 扣链后正文<150字符 零知识内容
 ---
 
-> -> [[raw/articles/claude-上线reflect功能让你回顾和反思如何使用-ai.md|原文存档]]
-
-source_url: https://mp.weixin.qq.com/s/tUK8hrhBr6zK2lAuwjdWrQ ^[raw/articles/claude-上线reflect功能让你回顾和反思如何使用-ai.md]
-
-## 来源
-
-- 原文: [[raw/articles/claude-上线reflect功能让你回顾和反思如何使用-ai.md|claude-上线reflect功能让你回顾和反思如何使用-ai]]
-- 原始链接: : https://mp.weixin.qq.com/s/tUK8hrhBr6zK2lAuwjdWrQ
+> 本实体已于 2026-09-06 质量闭环清理中归档（原因: link_only_shell 扣链后正文<150字符 零知识内容）。
+> 原文见 `raw/articles/`，归档件见 `_archive/checkup-2026-09-06/claude-上线reflect功能让你回顾和反思如何使用-ai.md`。

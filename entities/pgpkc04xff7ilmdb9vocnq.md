@@ -4,10 +4,11 @@ title: "为OpenClaw配置网盘空间的最佳实践"
 type: entity
 tags: [microsoft, rag, web]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 6
 review_confidence: 6
 sources: [raw/articles/PGpkC04XfF7ilMDb9vOcNQ]
+score_validated: 2026-09-05
 ---
 
 # 为OpenClaw配置网盘空间的最佳实践

@@ -4,10 +4,11 @@ title: "cPanel, WHM Release Fixes for Three New Vulnerabilities — Patch Now"
 type: entity
 tags: [security]
 created: 2026-05-21
-updated: 2026-05-21
-review_value: 6
-review_confidence: 6
+updated: 2026-09-05
+review_value: 4
+review_confidence: 7
 sources: [raw/articles/cpanel-whm-patch-3-new-vulnerabilities]
+score_validated: 2026-09-05
 ---
 
 # cPanel, WHM Release Fixes for Three New Vulnerabilities — Patch Now

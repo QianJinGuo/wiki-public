@@ -1,7 +1,7 @@
 ---
 title: "EVA-Bench Data 2.0"
 created: 2026-06-07
-updated: 2026-08-01
+updated: 2026-09-05
 type: entity
 tags: [servicenow, eva-bench, voice-agent, benchmark, agent-evaluation, dataset]
 source: "[[raw/articles/eva-bench-data-2-voice-agent-evaluation]]"
@@ -11,6 +11,7 @@ review_recommendation: worth-reading
 review_stars: 4
 provenance_state: inferred
 sources: [raw/articles/eva-bench-data-2-voice-agent-evaluation]
+score_validated: 2026-09-05
 ---
 
 # EVA-Bench Data 2.0

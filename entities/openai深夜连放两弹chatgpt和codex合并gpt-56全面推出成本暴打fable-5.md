@@ -1,18 +1,12 @@
 ---
 title: "openai深夜连放两弹chatgpt和codex合并gpt-56全面推出成本暴打fable-5"
-created: 2026-07-10
-updated: 2026-08-01
-type: entity
-tags: ['auto-harvested']
-sources: [raw/articles/openai深夜连放两弹chatgpt和codex合并gpt-56全面推出成本暴打fable-5]
-provenance_state: extracted
+created: 2026-09-06
+updated: 2026-09-06
+type: redirect
+review_value: 0
+archived_to: _archive/checkup-2026-09-06/openai深夜连放两弹chatgpt和codex合并gpt-56全面推出成本暴打fable-5.md
+archived_reason: link_only_shell 扣链后正文<150字符 零知识内容
 ---
 
-> -> [[raw/articles/openai深夜连放两弹chatgpt和codex合并gpt-56全面推出成本暴打fable-5.md|原文存档]]
-
-↑阅读之前记得关注+星标⭐️，😄，每天才能第一时间接收到更新 ^[raw/articles/openai深夜连放两弹chatgpt和codex合并gpt-56全面推出成本暴打fable-5.md]
-
-## 来源
-
-- 原文: [[raw/articles/openai深夜连放两弹chatgpt和codex合并gpt-56全面推出成本暴打fable-5.md|openai深夜连放两弹chatgpt和codex合并gpt-56全面推出成本暴打fable-5]]
-- 原始链接: : https://mp.weixin.qq.com/s/V1Kx-NO66ipXqxjtcWkqJQ
+> 本实体已于 2026-09-06 质量闭环清理中归档（原因: link_only_shell 扣链后正文<150字符 零知识内容）。
+> 原文见 `raw/articles/`，归档件见 `_archive/checkup-2026-09-06/openai深夜连放两弹chatgpt和codex合并gpt-56全面推出成本暴打fable-5.md`。

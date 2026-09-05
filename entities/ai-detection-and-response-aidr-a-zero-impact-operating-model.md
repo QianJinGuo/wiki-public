@@ -8,6 +8,7 @@ updated: 2026-09-05
 review_value: 6
 review_confidence: 6
 sources: [raw/articles/ai-detection-and-response-aidr-a-zero-impact-operating-model]
+score_validated: 2026-09-05
 ---
 
 # ai detection and response aidr a zero impact operating model

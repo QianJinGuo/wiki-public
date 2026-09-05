@@ -1,11 +1,11 @@
 ---
 title: "Anthropic 14 个 Agent Skills 设计模式"
 created: 2026-05-10
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [anthropic, skill, agent, design-patterns, best-practices]
 sources: [raw/articles/anthropic-agent-skills-design-patterns-14]
-review_value: 6
+review_value: 7
 review_confidence: 7
 ---
 ## 核心洞察

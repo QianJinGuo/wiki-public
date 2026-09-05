@@ -6,8 +6,9 @@ updated: 2026-08-06
 type: entity
 tags: [article, wechat]
 sources: （来源：raw）
-review_value: 6
-review_confidence: 7
+review_value: 5
+review_confidence: 6
+score_validated: 2026-09-05
 ---
 
 # GPT-5.5来了！我撤回了退订ChatGPT的决定

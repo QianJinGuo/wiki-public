@@ -1,7 +1,7 @@
 ---
 title: "Recursive First Steps Toward Automated AI Research：SOTA 三基准自动化研究系统"
 created: 2026-06-13
-updated: 2026-08-30
+updated: 2026-09-05
 type: entity
 tags: [ai-research, automation, recursive-self-improvement, alphaevolve, nanogpt, nanochat, kernel-optimization, sota, recursive, agent, eval-loop, ai4ai-bench, algorithmic-design]
 sources: [raw/articles/recursive-automated-ai-research-first-steps-2026, raw/articles/ai4ai-bench-agent-algorithmic-design-rsi-einsia-2026]
@@ -53,7 +53,7 @@ review_confidence: 7
 | 开源 | 部分 | 全部 artifacts 开源 ([GitHub recursive-org](https://github.com/recursive-org/first-steps-toward-automated-ai-research)) |
 | 部署 | Google 内部 | 通用研究基础设施 |
 
-参考 [[entities/alphaevolve-impact-deepmind|AlphaEvolve Impact]] 和 [[entities/alphaevolve交出一周年炸裂成绩单ai自我改进不再科幻|AlphaEvolve 一周年]] 了解 DeepMind 路线。 ^[raw/articles/recursive-automated-ai-research-first-steps-2026.md]
+参考 [[entities/alphaevolve-impact-deepmind|AlphaEvolve Impact]] 和 [[entities/alphaevolve交出一周年炸裂成绩单ai自我改进不再科幻|AlphaEvolve 一周年]] 了解 DeepMind 路线。
 
 ## 深度分析
 

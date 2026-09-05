@@ -5,9 +5,9 @@ type: entity
 tags: [aws, llm-migration, mlops, llmops]
 summary: "6步LLM迁移框架：跨代际自动化评估 / 方案选择与路由 / 成本效益分析"
 sources: [raw/articles/aws-generative-ai-model-agility-framework]
-review_value: 5
-review_confidence: 8
-updated: 2026-08-01
+review_value: 6
+review_confidence: 9
+updated: 2026-09-05
 ---
 # AWS Model Agility: 6步LLM跨代际迁移框架
 ## 核心内容

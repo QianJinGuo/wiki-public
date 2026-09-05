@@ -7,7 +7,7 @@ source: "]"
 type: entity
 value: 7
 tags: [claude-code, anthropic, agent, multi-agent, harness-engineering]
-review_value: 6
+review_value: 7
 sources: [raw/articles/anthropic-dreaming-claude-managed-agents-ovZ5v7jJkqDKSu9xmxwt8w]
 review_confidence: 8
 ---

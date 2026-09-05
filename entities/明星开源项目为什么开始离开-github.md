@@ -7,6 +7,7 @@ updated: 2026-07-02
 review_value: 6
 review_confidence: 6
 sources: [raw/articles/明星开源项目为什么开始离开-github]
+score_validated: 2026-09-05
 ---
 
 ## 深度分析

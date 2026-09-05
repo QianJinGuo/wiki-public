@@ -6,7 +6,7 @@ source: "[[raw/articles/claude-code-kairos-paradigm-2026|原文存档]]"
 type: entity
 value: 7
 tags: [claude-code, ai]
-review_value: 6
+review_value: 8
 sources: [raw/articles/claude-code-kairos-paradigm-2026]
 review_confidence: 7
 ---

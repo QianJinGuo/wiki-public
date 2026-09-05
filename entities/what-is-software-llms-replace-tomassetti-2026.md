@@ -1,7 +1,7 @@
 ---
 title: "What Is Software, and Will LLMs Replace It?"
 created: 2026-06-25
-updated: 2026-08-01
+updated: 2026-09-05
 type: entity
 tags: ["llm", "software-engineering", "ai-future", "analysis"]
 provenance_state: inferred
@@ -80,7 +80,7 @@ Tomassetti 归纳了软件持续提供价值的四个维度：^[raw/articles/wha
 └─────────────────────────────────────┘
 ```
 
-这与 [[concepts/harness-engineering-framework|Harness Engineering]] 的核心理念完全一致：^[raw/articles/what-is-software-llms-replace-tomassetti-2026.md]
+这与 [[concepts/harness-engineering-framework|Harness Engineering]] 的核心理念完全一致：
 
 - LLM 做意图理解和任务规划（概率层）
 - 工具做确定性执行（确定性层）
@@ -88,7 +88,7 @@ Tomassetti 归纳了软件持续提供价值的四个维度：^[raw/articles/wha
 
 ### Agent 架构验证了这一分层
 
-现代 agent 架构（如 [[entities/claude-code-dynamic-workflows-thariq-practical-patterns|Claude Code]]、Codex）的设计本质上就是这一分层的实现：^[raw/articles/what-is-software-llms-replace-tomassetti-2026.md]
+现代 agent 架构（如 [[entities/claude-code-dynamic-workflows-thariq-practical-patterns|Claude Code]]、Codex）的设计本质上就是这一分层的实现：
 
 
 1. **LLM 层**：理解用户意图，规划执行步骤

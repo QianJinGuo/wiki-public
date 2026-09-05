@@ -1,18 +1,12 @@
 ---
 title: "腾讯ray团队实践k8s-ray如何支撑超大规模ai-workload"
-created: 2026-07-14
-updated: 2026-08-01
-type: entity
-tags: ['auto-harvested']
-sources: [raw/articles/腾讯ray团队实践k8s-ray如何支撑超大规模ai-workload]
-provenance_state: extracted
+created: 2026-09-06
+updated: 2026-09-06
+type: redirect
+review_value: 0
+archived_to: _archive/checkup-2026-09-06/腾讯ray团队实践k8s-ray如何支撑超大规模ai-workload.md
+archived_reason: link_only_shell 扣链后正文<150字符 零知识内容
 ---
 
-> -> [[raw/articles/腾讯ray团队实践k8s-ray如何支撑超大规模ai-workload.md|原文存档]]
-
-source_url: https://mp.weixin.qq.com/s/j1pq-Fus3Rr-9ATsIQYKwg ^[raw/articles/腾讯ray团队实践k8s-ray如何支撑超大规模ai-workload.md]
-
-## 来源
-
-- 原文: [[raw/articles/腾讯ray团队实践k8s-ray如何支撑超大规模ai-workload.md|腾讯ray团队实践k8s-ray如何支撑超大规模ai-workload]]
-- 原始链接: : https://mp.weixin.qq.com/s/j1pq-Fus3Rr-9ATsIQYKwg
+> 本实体已于 2026-09-06 质量闭环清理中归档（原因: link_only_shell 扣链后正文<150字符 零知识内容）。
+> 原文见 `raw/articles/`，归档件见 `_archive/checkup-2026-09-06/腾讯ray团队实践k8s-ray如何支撑超大规模ai-workload.md`。

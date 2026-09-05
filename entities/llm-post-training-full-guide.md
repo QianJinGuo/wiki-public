@@ -1,11 +1,11 @@
 ---
 title: "LLM Post-Training全景指南：从RLHF到GRPO再到AgenticRL"
 created: 2026-04-25
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [llm, post-training, rlhf, dpo, grpo, rlvr, sft, agentic-rl, deepseek-r1, dapo, reward-model]
 sources: [raw/articles/llm-post-training-full-guide]
-review_value: 6
+review_value: 7
 review_confidence: 7
 ---
 ## 核心框架

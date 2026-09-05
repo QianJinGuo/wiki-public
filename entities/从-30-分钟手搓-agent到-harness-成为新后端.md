@@ -5,8 +5,8 @@ type: entity
 tags: [agent, harness, llm, memory, tool]
 created: 2026-05-21
 updated: 2026-05-21
-review_value: 6
-review_confidence: 6
+review_value: 7
+review_confidence: 7
 sources: [raw/articles/从-30-分钟手搓-agent到-harness-成为新后端]
 ---
 

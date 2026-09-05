@@ -8,7 +8,7 @@ source: "[[raw/articles/dockerless-environment-free-verifier-coding-agent-arxiv-
 confidence: 0.80
 provenance_state: extracted
 review_value: 8
-review_confidence: 6
+review_confidence: 8
 sources: [raw/articles/dockerless-environment-free-verifier-coding-agent-arxiv-2606-28436]
 ---
 

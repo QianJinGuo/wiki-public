@@ -5,8 +5,8 @@ type: entity
 tags: [agent, framework]
 created: 2026-05-21
 updated: 2026-09-05
-review_value: 6
-review_confidence: 6
+review_value: 7
+review_confidence: 7
 sources: [raw/articles/lowcode-framework-custom-agent-decision-framework-hello-agents]
 ---
 

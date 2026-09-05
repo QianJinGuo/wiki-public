@@ -8,9 +8,9 @@ source: newsletter
 tags: [agent, evaluation, engineering]
 created: 2026-05-10
 updated: 2026-09-05
-review_value: 6
+review_value: 7
 sources: [raw/articles/programbench-swe-agent-benchmark]
-review_confidence: 7
+review_confidence: 8
 ---
 
 > -> [[raw/articles/programbench-swe-agent-benchmark.md|原文存档]]

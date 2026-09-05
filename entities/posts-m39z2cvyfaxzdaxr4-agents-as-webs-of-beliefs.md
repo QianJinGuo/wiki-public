@@ -14,6 +14,7 @@ review_confidence: 6
 review_stars: 4
 review_recommendation: worth-reading
 confidence: 0.6
+score_validated: 2026-09-05
 ---
 
 # Agents as Webs of Beliefs

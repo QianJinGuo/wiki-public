@@ -14,6 +14,7 @@ review_recommendation: worth-reading
 review_stars: 4
 confidence: 0.7
 provenance_state: extracted
+score_validated: 2026-09-05
 ---
 
 # Qwen-AgentWorld: Language World Models for General Agents

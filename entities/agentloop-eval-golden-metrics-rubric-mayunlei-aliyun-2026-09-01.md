@@ -1,11 +1,11 @@
 ---
 title: "评估：从黄金指标到 Rubric丨AgentLoop 数据飞轮实践（三）"
 created: 2026-09-04
-updated: 2026-09-04
+updated: 2026-09-05
 type: entity
 tags: [agent, evaluation, llm, workflow]
 review_value: 7
-review_confidence: 6
+review_confidence: 7
 ---
 
 # 评估：从黄金指标到 Rubric丨AgentLoop 数据飞轮实践（三）

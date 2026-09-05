@@ -2,12 +2,13 @@
 
 title: "FastAPI 生产级认证与限流实战"
 created: 2026-05-10
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [fastapi, authentication, rate-limiting, devops, deployment]
 sources: [raw/articles/fastapi-auth-rate-limit-zero-downtime]
-review_value: 6
+review_value: 5
 review_confidence: 7
+score_validated: 2026-09-05
 ---
 
 ## 核心洞察

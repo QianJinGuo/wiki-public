@@ -10,6 +10,7 @@ sources: [raw/articles/ai-native-undergrads-graduation-2026]
 review_confidence: 6
 review_recommendation: worth-reading
 review_stars: 3
+score_validated: 2026-09-05
 ---
 
 ## 核心要点

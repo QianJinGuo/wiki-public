@@ -3,10 +3,11 @@ created: 2026-06-10
 title: "Google shipped Gemini 3.1 Flash-Lite in General Availability"
 type: entity
 tags: [google, news]
-review_value: 6
-review_confidence: 7
-updated: 2026-08-05
+review_value: 5
+review_confidence: 6
+updated: 2026-09-05
 provenance_state: inferred
+score_validated: 2026-09-05
 ---
 # Google shipped Gemini 3.1 Flash-Lite in General Availability
 

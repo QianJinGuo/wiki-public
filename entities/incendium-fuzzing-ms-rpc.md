@@ -6,11 +6,12 @@ sha256: 7ac849d451f11d30be87187c8e9a7d75935199937b1a1c100ffa4d75a047acc4
 date: 2026-05-08
 source: newsletter
 tags: [security]
-review_value: 4
+review_value: 6
 sources: [raw/articles/incendium-fuzzing-ms-rpc]
-review_confidence: 7
+review_confidence: 8
 created: 2026-05-10
 updated: 2026-09-05
+score_validated: 2026-09-05
 ---
 
 > -> [[raw/articles/incendium-fuzzing-ms-rpc.md|原文存档]]

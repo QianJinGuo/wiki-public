@@ -1,12 +1,12 @@
 ---
 title: "Anthropic 的 Harness 没管住 Claude Code？软规则 vs 硬约束"
-updated: 2026-05-16
+updated: 2026-09-05
 type: entity
 created: 2026-05-16
 tags: [claude-code, harness-governance, soft-rules, hard-constraints, 200k-ghost, context-rot]
 sources: [raw/articles/claude-code-governance-soft-rules-hard-constraints]
 reference_backlink: "[[raw/articles/claude-code-governance-soft-rules-hard-constraints.md|原文存档]]"
-review_value: 4
+review_value: 7
 review_confidence: 7
 ---
 ## 核心洞察

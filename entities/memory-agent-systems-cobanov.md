@@ -12,6 +12,7 @@ updated: 2026-09-05
 review_value: 6
 sources: [raw/articles/memory-agent-systems-cobanov]
 review_confidence: 7
+score_validated: 2026-09-05
 ---
 
 > -> [[raw/articles/memory-agent-systems-cobanov.md|原文存档]]

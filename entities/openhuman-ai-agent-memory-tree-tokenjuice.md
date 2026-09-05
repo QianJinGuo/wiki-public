@@ -4,9 +4,9 @@ title: "1.6万 Star，AI Agent 赛道又杀出一匹黑马！"
 type: entity
 tags: [agent, claude, memory]
 created: 2026-05-21
-updated: 2026-08-29
-review_value: 6
-review_confidence: 6
+updated: 2026-09-05
+review_value: 7
+review_confidence: 7
 sources: [raw/articles/openhuman-ai-agent-memory-tree-tokenjuice]
 ---
 

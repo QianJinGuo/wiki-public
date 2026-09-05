@@ -1,18 +1,12 @@
 ---
 title: "Matt Pocock main flow：5 环节 3 反例，把 AI 拽回工程纪律"
-created: 2026-07-29
-updated: 2026-08-01
-type: entity
-tags: ['auto-harvested']
-sources: [raw/articles/matt-pocock-main-flow-5-stages-3-antipatterns]
-provenance_state: extracted
+created: 2026-09-06
+updated: 2026-09-06
+type: redirect
+review_value: 0
+archived_to: _archive/checkup-2026-09-06/matt-pocock-main-flow-5-stages-3-antipatterns.md
+archived_reason: link_only_shell 扣链后正文<150字符 零知识内容
 ---
 
-> -> [[raw/articles/matt-pocock-main-flow-5-stages-3-antipatterns.md|原文存档]]
-
-🚩 2026 年「术哥无界」系列实战文档 X 篇原创计划 第 180 篇，AI 编程最佳实战「2026」系列第 62 篇 ^[raw/articles/matt-pocock-main-flow-5-stages-3-antipatterns.md]
-
-## 来源
-
-- 原文: [[raw/articles/matt-pocock-main-flow-5-stages-3-antipatterns.md|Matt Pocock main flow：5 环节 3 反例，把 AI 拽回工程纪律]]
-- 原始链接: : "https://mp.weixin.qq.com/s/4C4-u7bEd9kFZMcO3KYzcQ
+> 本实体已于 2026-09-06 质量闭环清理中归档（原因: link_only_shell 扣链后正文<150字符 零知识内容）。
+> 原文见 `raw/articles/`，归档件见 `_archive/checkup-2026-09-06/matt-pocock-main-flow-5-stages-3-antipatterns.md`。

@@ -2,13 +2,14 @@
 
 title: "Lessons From 2 Billion Agentic Workflows"
 created: "2026-06-10"
-updated: 2026-08-29
+updated: 2026-09-05
 tags: "agent, ai, llm, crewai, production, trust, architecture, enterprise"
 review_value: "6"
 review_confidence: "6"
 type: "entity"
 review_stars: "4"
 sources: [raw/articles/lessons-from-2-billion-agentic-workflows]
+score_validated: 2026-09-05
 ---
 
 # Lessons From 2 Billion Agentic Workflows

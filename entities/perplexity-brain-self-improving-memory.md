@@ -16,6 +16,7 @@ related:
   - entities/agent-memory-modular-framework
   - entities/perplexity-computer-knowledge-work-empirical-study
 sources: [raw/articles/perplexity-brain-self-improving-memory-agents]
+score_validated: 2026-09-05
 ---
 
 # Perplexity Brain: Self-improving Agent Memory Architecture

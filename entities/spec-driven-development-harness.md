@@ -2,11 +2,11 @@
 
 title: "规格驱动开发与 Harness"
 created: 2026-07-02
-updated: 2026-08-06
+updated: 2026-09-05
 type: entity
 tags: [spec-driven, harness-engineering, ai-coding, methodology]
-review_value: 5
-review_confidence: 5
+review_value: 7
+review_confidence: 7
 provenance_state: stub-upgraded
 confidence: 0.6
 sources: [raw/articles/ssd-spec-driven-development-harness-asd-shuge-2026-06-17]

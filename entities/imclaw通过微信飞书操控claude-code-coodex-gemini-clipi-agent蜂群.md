@@ -6,8 +6,8 @@ updated: 2026-06-17
 type: entity
 tags: [wechat, agent, openclaw, acp-protocol, remote-control, claude-code, gemini]
 sources: [raw/articles/imclaw通过微信飞书操控claudecodecodexgeminiclipi-agent蜂群, raw/articles/imclaw通过微信飞书操控claude-code-coodex-gemini-clipi-agent蜂群]
-review_value: 5
-review_confidence: 6
+review_value: 7
+review_confidence: 7
 review_recommendation: worth-reading
 ---
 

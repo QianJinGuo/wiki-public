@@ -1,18 +1,12 @@
 ---
 title: "codexchatgpt为何合体codex未来何去何从openai核心leader回应一切"
-created: 2026-07-05
-updated: 2026-08-01
-type: entity
-tags: ['auto-harvested']
-sources: [raw/articles/codexchatgpt为何合体codex未来何去何从openai核心leader回应一切]
-provenance_state: extracted
+created: 2026-09-06
+updated: 2026-09-06
+type: redirect
+review_value: 0
+archived_to: _archive/checkup-2026-09-06/codexchatgpt为何合体codex未来何去何从openai核心leader回应一切.md
+archived_reason: link_only_shell 扣链后正文<150字符 零知识内容
 ---
 
-> -> [[raw/articles/codexchatgpt为何合体codex未来何去何从openai核心leader回应一切.md|原文存档]]
-
-如果你问 2026 年哪个 AI 产品的增长最令人瞩目，那「Codex」肯定是排在第一位的。 ^[raw/articles/codexchatgpt为何合体codex未来何去何从openai核心leader回应一切.md]
-
-## 来源
-
-- 原文: [[raw/articles/codexchatgpt为何合体codex未来何去何从openai核心leader回应一切.md|codexchatgpt为何合体codex未来何去何从openai核心leader回应一切]]
-- 原始链接: : https://mp.weixin.qq.com/s/Lp9bjQ3lH2oaiBHswoNbXQ
+> 本实体已于 2026-09-06 质量闭环清理中归档（原因: link_only_shell 扣链后正文<150字符 零知识内容）。
+> 原文见 `raw/articles/`，归档件见 `_archive/checkup-2026-09-06/codexchatgpt为何合体codex未来何去何从openai核心leader回应一切.md`。

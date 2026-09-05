@@ -1,11 +1,11 @@
 ---
 title: "Agent Skill 高质量编写规范"
 created: 2026-05-13
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [agent-skill, writing-practices, gotchas, progressive-disclosure]
 sources: [raw/articles/agent-skill-writing-guide]
-review_value: 6
+review_value: 7
 review_confidence: 7
 ---
 ### 1. 从真实经验提炼

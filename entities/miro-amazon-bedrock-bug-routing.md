@@ -2,13 +2,13 @@
 
 title: "Miro + Amazon Bedrock 路由 Bug 排查"
 created: 2026-05-16
-updated: 2026-06-30
+updated: 2026-09-05
 type: entity
 tags: [aws]
 sources:
   - raw/articles/miro-amazon-bedrock-bug-routing
-review_value: 4
-review_confidence: 7
+review_value: 6
+review_confidence: 9
 
 ---
 [[raw/articles/miro-amazon-bedrock-bug-routing]] ^[raw/articles/miro-amazon-bedrock-bug-routing.md]

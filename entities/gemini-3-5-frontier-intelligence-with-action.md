@@ -1,13 +1,13 @@
 ---
 
 created: 2026-06-10
-updated: 2026-08-01
+updated: 2026-09-05
 title: "Gemini 3.5: frontier intelligence with action"
 type: entity
 tags: [rss, article, agent, ai, financial]
 source: [[raw/articles/gemini-3-5-frontier-intelligence-with-action]]
 review_value: 6
-review_confidence: 8
+review_confidence: 9
 review_stars: 4
 sources:
   - raw/articles/gemini-3-5-frontier-intelligence-with-action
@@ -23,7 +23,7 @@ date: 2026-05-19
 source_url: https://deepmind.google/blog/gemini-3-5-frontier-intelligence-with-action/ ^[raw/articles/gemini-3-5-frontier-intelligence-with-action.md]
 feed_name: Google DeepMind Blog^[raw/articles/gemini-3-5-frontier-intelligence-with-action.md]
 
-fetched: 2026-05-24T00:58:30.206918^[raw/articles/gemini-3-5-frontier-intelligence-with-action.md]
+fetched: 2026-05-24T00:58:30.206918
 
 fetcher: trafilatura^[raw/articles/gemini-3-5-frontier-intelligence-with-action.md]
 

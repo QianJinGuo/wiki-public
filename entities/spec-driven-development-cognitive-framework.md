@@ -2,7 +2,7 @@
 
 title: "Spec-Driven AI 编程半年实战 — 有损管道、三工具比较与三大认知陷阱"
 created: 2026-07-07
-updated: 2026-08-01
+updated: 2026-09-05
 type: entity
 tags: [sdd, spec-driven-development, lossy-pipeline, spec-kit, openspec, kiro, cognitive-traps, intent-holder, verification, ai-coding, prompt-vs-spec]
 sources:
@@ -24,7 +24,7 @@ AI 时代软件开发的核心矛盾变了：不是写不出代码，是**没人
 
 ## 有损管道框架
 
-所有开发范式都是同一条管道：**人有意图，机器产生行为。中间是一条有损管道。**^[raw/articles/d4MCEB91ppMVrNO4JQaI7Q.md]
+所有开发范式都是同一条管道：**人有意图，机器产生行为。中间是一条有损管道。**
 
 
 | 范式 | 控制点 | 损耗处理 |
@@ -39,7 +39,7 @@ AI 时代软件开发的核心矛盾变了：不是写不出代码，是**没人
 
 > `spec = 对"可接受实现空间"的**最小、可验证、可演进**的显式编码`
 
-Prompt 是一次性指令，Spec 是可审计的责任链。[^1]^[raw/articles/d4MCEB91ppMVrNO4JQaI7Q.md]
+Prompt 是一次性指令，Spec 是可审计的责任链。[^1]
 
 
 ## 三大工具结构性代价对比（实测 30+ 需求）
@@ -82,5 +82,5 @@ Prompt 是一次性指令，Spec 是可审计的责任链。[^1]^[raw/articles/d
 
 → [raw/articles/d4MCEB91ppMVrNO4JQaI7Q|原文存档]
 
-[^1]: raw/articles/d4MCEB91ppMVrNO4JQaI7Q^[raw/articles/d4MCEB91ppMVrNO4JQaI7Q.md]
+[^1]: raw/articles/d4MCEB91ppMVrNO4JQaI7Q
 

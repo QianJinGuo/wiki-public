@@ -9,6 +9,7 @@ sources: [raw/articles/microsoft-to-retire-together-mode-its-virtual-meeting-spa
 review_confidence: 6
 review_recommendation: worth-reading
 review_stars: 3
+score_validated: 2026-09-05
 ---
 
 # Microsoft 退役 Teams Together Mode：元宇宙办公愿景的一次撤退

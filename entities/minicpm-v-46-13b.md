@@ -6,8 +6,9 @@ type: entity
 tags: [open-source, architecture]
 review_value: 6
 sources: [raw/articles/minicpm-v-46-13b-xinazhiyuan]
-review_confidence: 7
+review_confidence: 8
 provenance_state: inferred
+score_validated: 2026-09-05
 ---
 > -> [[raw/articles/minicpm-v-46-13b-xinazhiyuan.md|原文存档]]
 

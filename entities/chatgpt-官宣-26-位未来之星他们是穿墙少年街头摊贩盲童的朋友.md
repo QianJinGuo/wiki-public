@@ -4,9 +4,10 @@ created: 2026-05-12
 updated: 2026-06-30
 type: entity
 tags: [wechat, engineering, mlops]
-review_value: 6
+review_value: 5
 sources: [raw/articles/chatgpt-官宣-26-位未来之星他们是穿墙少年街头摊贩盲童的朋友]
 review_confidence: 7
+score_validated: 2026-09-05
 ---
 > -> [[raw/articles/chatgpt-官宣-26-位未来之星他们是穿墙少年街头摊贩盲童的朋友.md|原文存档]]
 从微信文章 [[raw/articles/chatgpt-官宣-26-位未来之星他们是穿墙少年街头摊贩盲童的朋友.md|ChatGPT 官宣 26 位未来之星，他们是：穿墙少年、街头摊贩、盲童的朋友……]] 提取。  ^[raw/articles/chatgpt-官宣-26-位未来之星他们是穿墙少年街头摊贩盲童的朋友.md]

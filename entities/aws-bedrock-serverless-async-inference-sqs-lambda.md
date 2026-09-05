@@ -5,9 +5,9 @@ type: entity
 tags: [aws, bedrock, serverless, async, inference, sqs, lambda]
 summary: "SQS+Lambda异步管道：2000并发0%限流/三层timeout配置/mc=RPM/TPM公式/Partial Batch Failure"
 sources: [raw/articles/aws-bedrock-serverless-async-inference-sqs-lambda]
-review_value: 5
-review_confidence: 8
-updated: 2026-08-01
+review_value: 7
+review_confidence: 9
+updated: 2026-09-05
 ---
 # SQS+Lambda异步管道：2000并发0%限流的工程细节
 ## 三个关键洞察

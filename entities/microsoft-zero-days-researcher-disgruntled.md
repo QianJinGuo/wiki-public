@@ -4,10 +4,11 @@ title: "Mystery Microsoft bug leaker keeps the zero-days coming"
 type: entity
 tags: [microsoft, research, security]
 created: 2026-05-21
-updated: 2026-05-21
-review_value: 6
+updated: 2026-09-05
+review_value: 5
 review_confidence: 6
 sources: [raw/articles/microsoft-zero-days-researcher-disgruntled]
+score_validated: 2026-09-05
 ---
 
 # Mystery Microsoft bug leaker keeps the zero-days coming

@@ -6,8 +6,9 @@ tags: [agent, security]
 created: 2026-05-21
 updated: 2026-09-05
 review_value: 6
-review_confidence: 6
+review_confidence: 8
 sources: [raw/articles/introducing-aimap-security-testing-for-ai-agent-bishop-fox]
+score_validated: 2026-09-05
 ---
 
 # Introducing AIMap: Security Testing For AI Agent… | Bishop Fox

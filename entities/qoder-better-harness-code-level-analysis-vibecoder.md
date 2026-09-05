@@ -1,18 +1,12 @@
 ---
 title: "Qoder 开源 Better Harness，专门审查 Coding Agent 的外部系统"
-created: 2026-07-29
-updated: 2026-08-01
-type: entity
-tags: ['auto-harvested']
-sources: [raw/articles/qoder-better-harness-code-level-analysis-vibecoder]
-provenance_state: extracted
+created: 2026-09-06
+updated: 2026-09-06
+type: redirect
+review_value: 0
+archived_to: _archive/checkup-2026-09-06/qoder-better-harness-code-level-analysis-vibecoder.md
+archived_reason: link_only_shell 扣链后正文<150字符 零知识内容
 ---
 
-> -> [[raw/articles/qoder-better-harness-code-level-analysis-vibecoder.md|原文存档]]
-
-VibeCoder 对阿里 Qoder 团队开源的 Better Harness 的代码级深度分析。基于阅读源码 + 跑主链测试和全量 833 项测试。 ^[raw/articles/qoder-better-harness-code-level-analysis-vibecoder.md]
-
-## 来源
-
-- 原文: [[raw/articles/qoder-better-harness-code-level-analysis-vibecoder.md|Qoder 开源 Better Harness，专门审查 Coding Agent 的外部系统]]
-- 原始链接: : "https://mp.weixin.qq.com/s/VQBxx1vFHNl7bUFcd0a-2A
+> 本实体已于 2026-09-06 质量闭环清理中归档（原因: link_only_shell 扣链后正文<150字符 零知识内容）。
+> 原文见 `raw/articles/`，归档件见 `_archive/checkup-2026-09-06/qoder-better-harness-code-level-analysis-vibecoder.md`。

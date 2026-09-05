@@ -1,18 +1,12 @@
 ---
 title: "Mem0、Letta、Zep 和 VoltMem —— Agent记忆系统该选哪个？"
-created: 2026-07-22
-updated: 2026-08-01
-type: entity
-tags: ['memory', 'agent-memory', 'mem0', 'letta', 'zep', 'voltmem', 'comparison']
-sources: [raw/articles/agent-memory-four-schools-comparison-2026-07-22]
-provenance_state: extracted
+created: 2026-09-06
+updated: 2026-09-06
+type: redirect
+review_value: 0
+archived_to: _archive/checkup-2026-09-06/agent-memory-four-schools-comparison-2026-07-22.md
+archived_reason: link_only_shell 扣链后正文<150字符 零知识内容
 ---
 
-> -> [[raw/articles/agent-memory-four-schools-comparison-2026-07-22.md|原文存档]]
-
-将文档 chunk → embedding → 向量数据库，用户提问时相似度匹配 top_k。 ^[raw/articles/agent-memory-four-schools-comparison-2026-07-22.md]
-
-## 来源
-
-- 原文: [[raw/articles/agent-memory-four-schools-comparison-2026-07-22.md|Mem0、Letta、Zep 和 VoltMem —— Agent记忆系统该选哪个？]]
-- 原始链接: : "https://mp.weixin.qq.com/s/UA3xgiXmB7De7qp6MzIzDw
+> 本实体已于 2026-09-06 质量闭环清理中归档（原因: link_only_shell 扣链后正文<150字符 零知识内容）。
+> 原文见 `raw/articles/`，归档件见 `_archive/checkup-2026-09-06/agent-memory-four-schools-comparison-2026-07-22.md`。

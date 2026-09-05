@@ -4,10 +4,11 @@ title: "Canvas Breach Disrupts Schools & Colleges Nationwide"
 type: entity
 tags: [agent, security, training]
 created: 2026-05-21
-updated: 2026-08-29
-review_value: 6
-review_confidence: 6
+updated: 2026-09-05
+review_value: 4
+review_confidence: 7
 sources: [raw/articles/canvas-breach-disrupts-schools-colleges-nationwide]
+score_validated: 2026-09-05
 ---
 
 # Canvas Breach Disrupts Schools & Colleges Nationwide – Krebs on Security

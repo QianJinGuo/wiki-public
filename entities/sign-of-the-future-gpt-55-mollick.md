@@ -2,7 +2,7 @@
 title: "GPT-5.5：Sign of the Future — Mollick 的模型/Apps/Harnesses 三层框架与 4 提示 PhD 论文实验"
 description: "Ethan Mollick（One Useful Thing，2026-04-23）早期体验 GPT-5.5 的核心洞察：(1) Models/Apps/Harnesses 三层独立推进但需组合才能产出真实价值；(2) 4 提示从 100+ 份 STATA/CSV 原始数据生成接近 PhD 水平的学术论文（统计真实但假设平庸）；(3) GPT-imagegen-2 让 Otter Test 跨过可用门槛（可渲染文字 + 高细节）；(4) 进步速度仍在加速，jagged frontier 边界外推到一年前不可想象的领域；(5) 长篇虚构仍卡在同样的瓶颈（uncanny、奇喻、对话同质化）。"
 created: 2026-06-08
-updated: 2026-07-31
+updated: 2026-09-05
 type: entity
 tags: [gpt-5, gpt-5-5, agentic-ai, model-apps-harnesses, ethan-mollick, one-useful-thing, image-generation, otter-test, openai-codex, jagged-frontier, long-form-fiction]
 source: [[raw/articles/sign-of-the-future-gpt-55-mollick]]
@@ -22,6 +22,7 @@ related:
   - entities/bitter-lesson-garbage-can-mollick
 sources:
   - raw/articles/sign-of-the-future-gpt-55-mollick
+score_validated: 2026-09-05
 ---
 
 # GPT-5.5：Sign of the Future — Mollick 的模型/Apps/Harnesses 三层框架与 4 提示 PhD 论文实验

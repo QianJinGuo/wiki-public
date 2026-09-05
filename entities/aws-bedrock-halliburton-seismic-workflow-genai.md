@@ -4,10 +4,11 @@ title: "Halliburton enhances seismic workflow creation with Amazon Bedrock and G
 type: entity
 tags: [aws, cloud, tool, workflow]
 created: 2026-05-21
-updated: 2026-06-19
-review_value: 6
-review_confidence: 6
+updated: 2026-09-05
+review_value: 5
+review_confidence: 9
 sources: [raw/articles/aws-bedrock-halliburton-seismic-workflow-genai]
+score_validated: 2026-09-05
 ---
 
 # Halliburton enhances seismic workflow creation with Amazon Bedrock and Generative AI

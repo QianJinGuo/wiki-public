@@ -6,8 +6,8 @@ updated: 2026-09-05
 type: entity
 tags: [open-source, agent, tool, python]
 sources: [raw/articles/agent-tools-research, raw/articles/cli-anything-wechat-demo]
-review_value: 6
-review_confidence: 7
+review_value: 8
+review_confidence: 8
 ---
 
 ## Overview

@@ -5,8 +5,8 @@ type: entity
 tags: [agent, coding, devops]
 created: 2026-05-21
 updated: 2026-05-21
-review_value: 6
-review_confidence: 6
+review_value: 7
+review_confidence: 7
 sources: [raw/articles/从vibe-coding到agentic-engineering重构后台开发全流程]
 ---
 

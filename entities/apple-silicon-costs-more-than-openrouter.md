@@ -4,7 +4,7 @@ title: "Apple Silicon costs more than OpenRouter"
 type: entity
 tags: [apple, apple-silicon, local-inference, openrouter, inference-cost, tokenomics, llm, cost-analysis, Gemma]
 created: 2026-05-19
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 8
 review_confidence: 8
 review_recommendation: worth-reading
@@ -69,7 +69,7 @@ Apple Silicon 在本地推理领域的核心竞争力不是性价比，而是**�
 
 ### 专用引擎 vs 通用引擎的成本结构
 
-[[entities/deepseek-v4-ds4c-antirez-local-inference-qbitai|ds4.c 项目]]（Redis 作者 antirez 开发的 DeepSeek V4 专用推理引擎）展示了另一种路线： ^[raw/articles/apple-silicon-costs-more-than-openrouter.md]
+[[entities/deepseek-v4-ds4c-antirez-local-inference-qbitai|ds4.c 项目]]（Redis 作者 antirez 开发的 DeepSeek V4 专用推理引擎）展示了另一种路线：
 
 - **通用引擎**（llama.cpp、vLLM）：支持多模型，代价是间接成本和抽象层妥协
 - **专用引擎**：针对单一模型 + 硬件组合深度优化，放弃跨模型兼容性换取极致性能

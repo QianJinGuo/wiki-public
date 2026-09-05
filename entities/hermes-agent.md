@@ -6,8 +6,8 @@ updated: 2026-09-05
 type: entity
 tags: [hermes-agent, nous-research, agent, self-evolving, open-source, skill]
 sources: [raw/articles/agent-tools-research]
-review_value: 6
-review_confidence: 7
+review_value: 7
+review_confidence: 8
 ---
 
 ## Overview

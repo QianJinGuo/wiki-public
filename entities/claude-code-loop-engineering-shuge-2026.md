@@ -1,18 +1,12 @@
 ---
 title: "Anthropic 官方拆解 Claude Code Loop 工程：4 层能力、2 起事故、30 轮卡住的根因"
-created: 2026-07-28
-updated: 2026-08-01
-type: entity
-tags: ['auto-harvested']
-sources: [raw/articles/claude-code-loop-engineering-shuge-2026]
-provenance_state: extracted
+created: 2026-09-06
+updated: 2026-09-06
+type: redirect
+review_value: 0
+archived_to: _archive/checkup-2026-09-06/claude-code-loop-engineering-shuge-2026.md
+archived_reason: link_only_shell 扣链后正文<150字符 零知识内容
 ---
 
-> -> [[raw/articles/claude-code-loop-engineering-shuge-2026.md|原文存档]]
-
-| Loop 类型 | 特点 | 适合场景 | 关键边界 | ^[raw/articles/claude-code-loop-engineering-shuge-2026.md]
-
-## 来源
-
-- 原文: [[raw/articles/claude-code-loop-engineering-shuge-2026.md|Anthropic 官方拆解 Claude Code Loop 工程：4 层能力、2 起事故、30 轮卡住的根因]]
-- 原始链接: : https://mp.weixin.qq.com/s/9P05ILwlDU5xCocDBU9nUA
+> 本实体已于 2026-09-06 质量闭环清理中归档（原因: link_only_shell 扣链后正文<150字符 零知识内容）。
+> 原文见 `raw/articles/`，归档件见 `_archive/checkup-2026-09-06/claude-code-loop-engineering-shuge-2026.md`。

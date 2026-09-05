@@ -7,8 +7,9 @@ type: entity
 tags: [wechat, agent]
 sources: （来源：raw）
 review_value: 5
-review_confidence: 6
+review_confidence: 7
 review_recommendation: worth-reading
+score_validated: 2026-09-05
 ---
 
 # 一次构建随处复用python-泛型仓库模式

@@ -9,6 +9,7 @@ sources: [raw/articles/spotify-logo-gets-a-makeover-turns-into-a-disco-ball]
 review_confidence: 9
 review_recommendation: worth-reading
 review_stars: 3
+score_validated: 2026-09-05
 ---
 
 ## 核心要点

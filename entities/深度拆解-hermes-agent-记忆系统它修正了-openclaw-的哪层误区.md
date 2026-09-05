@@ -5,8 +5,8 @@ type: entity
 tags: [agent, aws]
 created: 2026-05-21
 updated: 2026-08-01
-review_value: 6
-review_confidence: 6
+review_value: 8
+review_confidence: 7
 sources: [raw/articles/深度拆解-hermes-agent-记忆系统它修正了-openclaw-的哪层误区]
 ---
 

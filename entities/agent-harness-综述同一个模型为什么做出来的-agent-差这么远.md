@@ -3,11 +3,12 @@
 title: "Agent Harness 综述：同一个模型，为什么做出来的 Agent 差这么远"
 type: entity
 created: 2026-07-04
-updated: 2026-08-01
+updated: 2026-09-05
 tags: [wechat, ai]
 rating: v8c8
 sources:
   - raw/articles/agent-harness-综述同一个模型为什么做出来的-agent-差这么远
+  - raw/articles/harness-what-is-model-outside-execution-system-ruofei
 ---
 
 # Agent Harness 综述：同一个模型，为什么做出来的 Agent 差这么远
@@ -101,4 +102,18 @@ Harness 回答的是一个工程问题：怎样把一个无状态、会推理的
 ---
 ## 关联
 - 相关概念: [[concepts/harness-engineering-framework|Harness Engineering]]
+
+## 补强（2026-09-05）：Translation Layer 解决接入、不解决等价 + Earendil 四元定义（若飞）
+
+2026-09-04 若飞《Harness 到底是什么》在既有综述的"同一个模型换 Harness 结果不同"主线上，补两个此前零覆盖的维度：^[raw/articles/harness-what-is-model-outside-execution-system-ruofei.md]
+
+- **Earendil《What is a Harness?》四元定义**：把 Harness 最小结构拆成 System Prompt（给规则与背景）、Tools（让模型读写执行）、Agentic Loop（把调用与结果串成循环）、Translation Layer（处理不同模型接口/消息/工具格式差异）四项；并给出架构视角——Harness 既是模型运行环境，也是模型与真实系统之间的执行边界。^[raw/articles/harness-what-is-model-outside-execution-system-ruofei.md]
+
+- **Translation Layer 解决接入、解决不了等价**：接口接通 ≠ 行为等价。不同模型对系统消息、工具定义、推理信息、提示词缓存、流式事件处理各不相同，有些字段还要下一轮原样带回；Pi 作者 Mario Zechner 将跨 Provider 上下文交接称为 `best effort`（尽力转换、不承诺语义无损），Armin Ronacher 也因统一 SDK 无法抹平模型/Provider 侧差异而改直接掌握各家 SDK。**模型迁移三道关**：①API 能调用、②任务状态与产物能带走、③换完后质量/成本/安全过线——前两道靠适配与自身数据边界，最后一道只能重新评测。^[raw/articles/harness-what-is-model-outside-execution-system-ruofei.md]
+
+- **安全边界与动作/证据双链**：提示词只是第一道约束、不是最后一道安全边界（Pi 的 Project Trust 不是沙箱，默认继承启动用户权限，真实隔离靠容器/VM/microVM/远程沙箱）；代码任务走"动作向外（模型→校验权限→系统调用）、证据向内（输出/结果/产物/审批放回上下文）"两条方向相反的链，工程难题多出在两条链交接处。^[raw/articles/harness-what-is-model-outside-execution-system-ruofei.md]
+
+- **架构设计五问**：谁拥有业务事实/谁批准动作与权限校验/中断后从哪恢复、结果不明找谁确认/模型说"完成"后哪份证据才算完成/Provider 工具提示词变化后拿什么重新评估质量。^[raw/articles/harness-what-is-model-outside-execution-system-ruofei.md]
+
+→ [[raw/articles/harness-what-is-model-outside-execution-system-ruofei|原文存档]]
 

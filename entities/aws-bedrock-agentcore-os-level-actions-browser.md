@@ -1,13 +1,13 @@
 ---
 title: "AgentCore Browser OS级操作：Action-Screenshot-Reaction闭环"
 created: 2026-05-08
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [agent, aws, bedrock, browser-automation, tool-use]
 summary: "OS级操作4步闭环：Action-Screenshot-Reaction / 8个原子操作（鼠标/键盘/截图） / 浏览器自动化"
 sources: [raw/articles/aws-bedrock-agentcore-os-level-actions-browser]
-review_value: 5
-review_confidence: 8
+review_value: 7
+review_confidence: 9
 ---
 ## 核心内容
 Amazon Bedrock AgentCore引入OS-level Actions，允许Agent直接操控GUI界面——通过Action-Screenshot-Reaction闭环实现浏览器自动化。8个原子操作覆盖鼠标、键盘、截图等OS层交互，Agent通过视觉反馈（截图）感知环境状态并决定下一步操作。   ^[raw/articles/aws-bedrock-agentcore-os-level-actions-browser.md]

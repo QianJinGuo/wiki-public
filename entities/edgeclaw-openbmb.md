@@ -1,12 +1,13 @@
 ---
 tags: [agent-framework, open-source]
 title: "EdgeClaw — 端云两栖龙虾框架"
-updated: 2026-07-27
+updated: 2026-09-05
 created: 2026-04-30
 type: entity
 sources: [raw/articles/edgeclaw-bemit-lobster]
 review_value: 6
 review_confidence: 7
+score_validated: 2026-09-05
 ---
 # EdgeClaw
 > 面壁智能联合清华大学、OpenBMB社区开源的Agent框架，"端云两栖"架构。 ^[raw/articles/edgeclaw-bemit-lobster.md]

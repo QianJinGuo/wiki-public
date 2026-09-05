@@ -5,8 +5,8 @@ type: entity
 tags: [anthropic, claude, deployment, rag]
 created: 2026-05-21
 updated: 2026-06-17
-review_value: 6
-review_confidence: 6
+review_value: 7
+review_confidence: 8
 sources: [raw/articles/claude-code-large-codebase-enterprise-deployment-anthropic-aihanshijì]
 ---
 

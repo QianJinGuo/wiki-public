@@ -9,6 +9,7 @@ review_value: 6
 sources: [raw/articles/qoder-skills-完全指南从零开始让-ai-按你的标准执行-v2]
 review_confidence: 7
 provenance_state: inferred
+score_validated: 2026-09-05
 ---
 > -> [[raw/articles/qoder-skills-完全指南从零开始让-ai-按你的标准执行-v2.md|原文存档]]
 

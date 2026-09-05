@@ -1,11 +1,11 @@
 ---
 title: "LongHorizon-Harness: Advancing LongHorizon Agents for Real-World Tasks"
 created: 2026-09-04
-updated: 2026-09-04
+updated: 2026-09-05
 type: entity
 tags: [agent, harness, long-horizon, arxiv]
-review_value: 7
-review_confidence: 6
+review_value: 8
+review_confidence: 9
 ---
 
 # LongHorizon-Harness: Advancing LongHorizon Agents for Real-World Tasks

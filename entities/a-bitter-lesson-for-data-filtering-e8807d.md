@@ -10,6 +10,7 @@ sources: [raw/articles/a-bitter-lesson-for-data-filtering-e8807d]
 review_confidence: 6
 review_recommendation: worth-reading
 review_stars: 4
+score_validated: 2026-09-05
 ---
 
 # A Bitter Lesson for Data Filtering

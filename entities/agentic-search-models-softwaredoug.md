@@ -6,7 +6,7 @@ created: 2026-05-13
 updated: 2026-09-05
 source: newsletter
 source_url:
-review_value: 4
+review_value: 7
 sources: [raw/articles/agentic-search-models-softwaredoug]
 review_confidence: 7
 review_recommendation: marginal

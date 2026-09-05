@@ -1,17 +1,12 @@
 ---
 title: "Introducing AWS Continuum for security at machine speed"
-created: 2026-06-20
-updated: 2026-09-05
-type: entity
-tags: ['aws', 'security', 'agent-security', 'cloud-security']
-sources: [raw/articles/aws-continuum-security-machine-speed]
-provenance_state: extracted
+created: 2026-09-06
+updated: 2026-09-06
+type: redirect
+review_value: 0
+archived_to: _archive/checkup-2026-09-06/aws-continuum-security-machine-speed.md
+archived_reason: link_only_shell 扣链后正文<150字符 零知识内容
 ---
 
-> -> [[raw/articles/aws-continuum-security-machine-speed.md|原文存档]]
-
-
-## 来源
-
-- 原文: [[raw/articles/aws-continuum-security-machine-speed.md|Introducing AWS Continuum for security at machine speed]]
-- 原始链接: : "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-continuum/
+> 本实体已于 2026-09-06 质量闭环清理中归档（原因: link_only_shell 扣链后正文<150字符 零知识内容）。
+> 原文见 `raw/articles/`，归档件见 `_archive/checkup-2026-09-06/aws-continuum-security-machine-speed.md`。

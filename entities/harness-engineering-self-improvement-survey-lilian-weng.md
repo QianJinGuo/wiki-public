@@ -2,7 +2,7 @@
 
 title: "Harness Engineering for Self-Improvement — 翁荔 Lilian Weng 系统梳理 Harness 自我提升研究全景"
 created: 2026-07-07
-updated: 2026-08-01
+updated: 2026-09-05
 type: entity
 tags: [lilian-weng, harness-engineering, self-improvement, recursive-self-improvement, ace, meta-context-engineering, meta-harness, self-harness, stop, ai-scientist, adas, aflow, darwin-godel-machine, alphaevolve, sia, evolutionary-search, context-engineering, workflow-design, rsi, memoharness, per-instance-tuning]
 sources:
@@ -39,7 +39,7 @@ Karpathy's autoresearch: 规划 → 执行 → 观察/测试 → 改进 的目�
 长时程智能体中，Harness 应将持久化状态保存为文件而非塞进上下文。读写文件是 LLM 的基础技能，以文件管理记忆会随模型能力提升而受益。[^1] ^[raw/articles/kZrryL8_fxfq2pSFw6LSqg]
 
 ### 模式三：子智能体与后台任务
-关键设计：并行性应显式可检查——子智能体输出保存为文件/日志/状态记录，模型可中断后恢复。[^1]^[raw/articles/kZrryL8_fxfq2pSFw6LSqg.md]
+关键设计：并行性应显式可检查——子智能体输出保存为文件/日志/状态记录，模型可中断后恢复。[^1]
 
 
 ## Harness 优化演进路径
@@ -91,7 +91,7 @@ Karpathy's autoresearch: 规划 → 执行 → 观察/测试 → 改进 的目�
 | 测试期自适应 | 无（部署固定） | 无（部署固定） | **每道新题单独改编** |
 | 失败归因 | 执行结果 | 测试是否通过 | **分维度诊断** |
 
-**结果**：Terminal-Bench 0.722→0.806 (+8.4pp)，同模型同工具，只换 Harness。^[raw/articles/kZrryL8_fxfq2pSFw6LSqg.md]
+**结果**：Terminal-Bench 0.722→0.806 (+8.4pp)，同模型同工具，只换 Harness。
 
 
 → [[raw/articles/memoharness-harness-learns-from-experience-nd-saint-marys-2026-07-20|原文存档]]
@@ -134,5 +134,5 @@ Karpathy's autoresearch: 规划 → 执行 → 观察/测试 → 改进 的目�
 → [raw/articles/kZrryL8_fxfq2pSFw6LSqg|原文存档]
 → [Lilian Weng 原博客](https://lilianweng.github.io/posts/2026-07-04-harness/) ^[raw/articles/kZrryL8_fxfq2pSFw6LSqg]
 
-[^1]: raw/articles/kZrryL8_fxfq2pSFw6LSqg^[raw/articles/memoharness-harness-learns-from-experience-nd-saint-marys-2026-07-20.md]
+[^1]: raw/articles/kZrryL8_fxfq2pSFw6LSqg
 

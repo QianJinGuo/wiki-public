@@ -5,7 +5,7 @@ created: 2026-05-10
 updated: 2026-05-10
 type: entity
 tags: [ai-agent, engineering, llm, wechat]
-review_value: 6
+review_value: 7
 sources: [raw/articles/告别氛围编程基于-harness-治理和-sdd-的团队级-ai-研发范式演进与实践]
 review_confidence: 7
 ---

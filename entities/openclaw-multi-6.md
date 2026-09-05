@@ -11,7 +11,7 @@ ingested: 2026-05-11
 tags: [openclaw, bedrock-agentcore, multi-tenant, architecture, migration]
 review_value: 6
 sources: [raw/articles/openclaw-multi-6]
-review_confidence: 7
+review_confidence: 9
   - AWS China ML
   - AWS, Bedrock, AgentCore, OpenClaw, Serverless
 ---

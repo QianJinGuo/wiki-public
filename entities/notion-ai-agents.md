@@ -4,10 +4,11 @@ title: "Notion just turned its workspace into a hub for AI agents | TechCrunch"
 type: entity
 tags: [agent, context, newsletter, security]
 created: 2026-05-21
-updated: 2026-08-29
-review_value: 6
-review_confidence: 6
+updated: 2026-09-05
+review_value: 5
+review_confidence: 7
 sources: [raw/articles/notion-ai-agents]
+score_validated: 2026-09-05
 ---
 
 ## 深度分析

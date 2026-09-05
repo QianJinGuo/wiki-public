@@ -3,9 +3,9 @@ created: 2026-06-10
 title: "the anti singularity"
 type: entity
 tags: [ai-safety, news]
-review_value: 6
+review_value: 7
 review_confidence: 7
-updated: 2026-08-29
+updated: 2026-09-05
 provenance_state: inferred
 ---
 # the anti singularity

@@ -3,10 +3,11 @@ created: 2026-06-10
 title: "第一批ai原生本科生要毕业了"
 type: entity
 tags: [industry, news]
-review_value: 6
-review_confidence: 7
+review_value: 4
+review_confidence: 5
 updated: 2026-08-06
 provenance_state: inferred
+score_validated: 2026-09-05
 ---
 # 第一批ai原生本科生要毕业了
 

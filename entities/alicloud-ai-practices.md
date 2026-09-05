@@ -1,13 +1,14 @@
 ---
 title: "阿里云 AI 工程实践合集"
 created: 2026-07-02
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [alicloud, ai, practice, cloud]
-review_value: 5
+review_value: 6
 review_confidence: 5
 provenance_state: stub-upgraded
 confidence: 0.6
+score_validated: 2026-09-05
 ---
 
 # 阿里云 AI 工程实践合集

@@ -6,8 +6,9 @@ tags: [agent]
 created: 2026-05-21
 updated: 2026-05-21
 review_value: 6
-review_confidence: 6
+review_confidence: 7
 sources: [raw/articles/范凌当公司变成agent关于-ai-时代组织的-5-个反思]
+score_validated: 2026-09-05
 ---
 
 # 范凌：当公司变成Agent，关于 AI 时代组织的 5 个反思

@@ -8,6 +8,7 @@ updated: 2026-06-17
 review_value: 6
 review_confidence: 6
 sources: [raw/articles/我把mac留在家用手机让trae-solo替我打了一天工]
+score_validated: 2026-09-05
 ---
 
 # 我把Mac留在家，用手机让TRAE SOLO替我打了一天工

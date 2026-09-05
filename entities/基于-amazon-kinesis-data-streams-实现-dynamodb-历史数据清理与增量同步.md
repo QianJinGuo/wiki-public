@@ -8,11 +8,12 @@ source: rss
 url:
 ingested: 2026-05-11
 tags: [aws, dynamodb, kinesis, data-engineering]
-review_value: 6
+review_value: 5
 sources: [raw/articles/基于-amazon-kinesis-data-streams-实现-dynamodb-历史数据清理与增量同步]
-review_confidence: 7
+review_confidence: 8
   - AWS China Blog
   - AWS, DynamoDB, Kinesis, Data Engineering, Incremental Sync
+score_validated: 2026-09-05
 ---
 > -> [[raw/articles/基于-amazon-kinesis-data-streams-实现-dynamodb-历史数据清理与增量同步.md|原文存档]]
 

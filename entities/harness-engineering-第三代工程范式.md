@@ -6,8 +6,9 @@ tags: [agent, harness, llm, model, tool]
 created: 2026-05-21
 updated: 2026-05-21
 review_value: 6
-review_confidence: 6
+review_confidence: 7
 sources: [raw/articles/harness-engineering-第三代工程范式]
+score_validated: 2026-09-05
 ---
 
 # Harness Engineering：AI 从"聪明"到"可靠"的第三代工程范式

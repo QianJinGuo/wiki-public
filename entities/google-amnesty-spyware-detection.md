@@ -101,7 +101,7 @@ Intrusion Logging 的推出对商业 spyware 生态构成了实质性压力： ^
 - Citizen Lab 披露 Pegasus 被用于追踪阿联酋异议人士 Ahmed Mansoor
 - NSO Group 否认但随后被证实
 
-**2021：飞马座项目（Project Pegasus）** ^[raw/articles/google-amnesty-spyware-detection.md]
+**2021：飞马座项目（Project Pegasus）**
 
 - Forbidden Stories 与 Amnesty International 合作调查
 - 50,000+ 记者、活动家、政府官员被列入潜在目标
@@ -155,7 +155,7 @@ Intrusion Logging 的推出对商业 spyware 生态构成了实质性压力： ^
 
 ### 国际监管框架进展
 
-** Wassenaar Arrangement（瓦森纳协定）** ^[raw/articles/google-amnesty-spyware-detection.md]
+** Wassenaar Arrangement（瓦森纳协定）**
 
 - 2013 年将入侵软件纳入出口管制
 - 2020 年进一步明确「零点击」漏洞利用技术管控

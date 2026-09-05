@@ -4,9 +4,9 @@ title: "AWS 强化微调：LLM-as-Judge 训练范式"
 type: entity
 tags: [agent, aws, fine-tuning, llm, model, tool]
 created: 2026-05-21
-updated: 2026-08-29
-review_value: 6
-review_confidence: 6
+updated: 2026-09-05
+review_value: 7
+review_confidence: 9
 sources: [raw/articles/aws-reinforcement-fine-tuning-llm-as-judge]
 ---
 

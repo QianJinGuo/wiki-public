@@ -2,7 +2,7 @@
 
 title: "Agent Harness Skill 系统实战指南 — Reference/Action 类型、动态注入与 frontmatter 全解"
 created: 2026-07-07
-updated: 2026-08-01
+updated: 2026-09-05
 type: entity
 tags: [agent-harness, skills, skilmd, frontmatter, reference-skill, action-skill, dynamic-context, anthropic, agent-teams, context-engineering, harness-engineering]
 sources:
@@ -22,7 +22,7 @@ sha256: b05ca9b984d12a1c79f63474e8d7519cf08d0a0e89a8189a5138f9f248bf532f
 
 ## Skill 的本质
 
-Skill = **可复用指令单元**。不是"工具"，是"知识的打包"[^1]。^[raw/articles/gaLEAjOz8xLAi8ABnG855g.md]
+Skill = **可复用指令单元**。不是"工具"，是"知识的打包"[^1]。
 
 
 | 对比维度 | Skill | Subagent |
@@ -66,7 +66,7 @@ allowed-tools: Bash(gh *)
 Summarize this pull request...
 ```
 
-执行流程：`!` 命令（预处理）→ 输出替换进 body → 拼好的内容发给模型。[^1]^[raw/articles/gaLEAjOz8xLAi8ABnG855g.md]
+执行流程：`!` 命令（预处理）→ 输出替换进 body → 拼好的内容发给模型。[^1]
 
 
 ## Frontmatter 字段参考
@@ -132,5 +132,5 @@ code-reviewer/
 
 → [raw/articles/gaLEAjOz8xLAi8ABnG855g|原文存档]
 
-[^1]: raw/articles/gaLEAjOz8xLAi8ABnG855g^[raw/articles/gaLEAjOz8xLAi8ABnG855g.md]
+[^1]: raw/articles/gaLEAjOz8xLAi8ABnG855g
 

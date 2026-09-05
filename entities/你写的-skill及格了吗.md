@@ -5,9 +5,10 @@ created: 2026-05-10
 updated: 2026-06-17
 type: entity
 tags: [mlops, ai-agent, wechat, agent-tools, engineering]
-review_value: 6
+review_value: 5
 sources: [raw/articles/你写的-skill及格了吗]
-review_confidence: 7
+review_confidence: 6
+score_validated: 2026-09-05
 ---
 
 > -> [[raw/articles/你写的-skill及格了吗.md|原文存档]]

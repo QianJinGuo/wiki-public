@@ -5,8 +5,8 @@ type: entity
 tags: [agent, evaluation, quality, skill-sentry]
 created: 2026-05-21
 updated: 2026-05-21
-review_value: 6
-review_confidence: 6
+review_value: 7
+review_confidence: 7
 sources: [raw/articles/ai-skill-四层验证体系]
 related:
   - entities/ai-skill-evolution底层逻辑

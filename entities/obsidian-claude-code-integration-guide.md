@@ -8,7 +8,7 @@ source: newsletter
 tags: [claude-code, ai]
 created: 2026-05-10
 updated: 2026-09-05
-review_value: 6
+review_value: 7
 sources: [raw/articles/obsidian-claude-code-integration-guide]
 review_confidence: 7
 ---

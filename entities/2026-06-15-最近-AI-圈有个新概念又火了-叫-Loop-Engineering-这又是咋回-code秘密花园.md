@@ -1,18 +1,12 @@
 ---
 title: "最近 AI 圈有个新概念又火了，叫 Loop Engineering"
-created: 2026-07-01
-updated: 2026-08-01
-type: entity
-tags: ['auto-harvested']
-sources: [raw/articles/2026-06-15-最近-AI-圈有个新概念又火了-叫-Loop-Engineering-这又是咋回-code秘密花园]
-provenance_state: extracted
+created: 2026-09-06
+updated: 2026-09-06
+type: redirect
+review_value: 0
+archived_to: _archive/checkup-2026-09-06/2026-06-15-最近-AI-圈有个新概念又火了-叫-Loop-Engineering-这又是咋回-code秘密花园.md
+archived_reason: link_only_shell 扣链后正文<150字符 零知识内容
 ---
 
-> -> [[raw/articles/2026-06-15-最近-AI-圈有个新概念又火了-叫-Loop-Engineering-这又是咋回-code秘密花园.md|原文存档]]
-
-最近 AI 圈有个新概念又火了，叫 Loop Engineering ^[raw/articles/2026-06-15-最近-AI-圈有个新概念又火了-叫-Loop-Engineering-这又是咋回-code秘密花园.md]
-
-## 来源
-
-- 原文: [[raw/articles/2026-06-15-最近-AI-圈有个新概念又火了-叫-Loop-Engineering-这又是咋回-code秘密花园.md|最近 AI 圈有个新概念又火了，叫 Loop Engineering]]
-- 原始链接: : "https://mp.weixin.qq.com/s/Tzyekcte8cnUoCw32q85Fg
+> 本实体已于 2026-09-06 质量闭环清理中归档（原因: link_only_shell 扣链后正文<150字符 零知识内容）。
+> 原文见 `raw/articles/`，归档件见 `_archive/checkup-2026-09-06/2026-06-15-最近-AI-圈有个新概念又火了-叫-Loop-Engineering-这又是咋回-code秘密花园.md`。

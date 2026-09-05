@@ -13,6 +13,7 @@ unique_insight: true
 created: 2026-05-13
 updated: 2026-09-05
 tags: [video, agentic-ai, ai, open-source]
+score_validated: 2026-09-05
 ---
 
 > -> [[raw/articles/a2rd-agentic-autoregressive-diffusion-long-video.md|原文存档]]

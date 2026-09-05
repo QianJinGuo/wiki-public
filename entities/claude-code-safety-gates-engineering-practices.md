@@ -1,18 +1,12 @@
 ---
 title: "Claude Code 写得越快，越要把错误控制在可回滚范围内"
-created: "2026-07-14"
-updated: 2026-08-01
-type: entity
-tags: ['claude-code', 'safety', 'permissions', 'sandbox', 'engineering-practices']
-sources: [raw/articles/claude-code-safety-gates-engineering-practices]
-provenance_state: extracted
+created: 2026-09-06
+updated: 2026-09-06
+type: redirect
+review_value: 0
+archived_to: _archive/checkup-2026-09-06/claude-code-safety-gates-engineering-practices.md
+archived_reason: link_only_shell 扣链后正文<150字符 零知识内容
 ---
 
-> -> [[raw/articles/claude-code-safety-gates-engineering-practices.md|原文存档]]
-
-| 状态 | 做什么 | 结果停在哪儿 | ^[raw/articles/claude-code-safety-gates-engineering-practices.md]
-
-## 来源
-
-- 原文: [[raw/articles/claude-code-safety-gates-engineering-practices.md|Claude Code 写得越快，越要把错误控制在可回滚范围内]]
-- 原始链接: : "https://mp.weixin.qq.com/s/cRf21RwJcPMYZK5oOdHIyw
+> 本实体已于 2026-09-06 质量闭环清理中归档（原因: link_only_shell 扣链后正文<150字符 零知识内容）。
+> 原文见 `raw/articles/`，归档件见 `_archive/checkup-2026-09-06/claude-code-safety-gates-engineering-practices.md`。

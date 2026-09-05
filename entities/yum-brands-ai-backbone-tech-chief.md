@@ -12,6 +12,7 @@ type: entity
 created: 2026-05-13
 updated: 2026-09-05
 provenance_state: inferred
+score_validated: 2026-09-05
 ---
 ## Summary
 *(AI-generated summary - TODO: manually review)*^[raw/articles/819775.md]

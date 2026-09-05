@@ -8,6 +8,7 @@ tags: [newsletter, security, small-language-model, defensive-cyber, local-ai, am
 review_value: 6
 sources: [raw/articles/cybersecqwen-4b-why-defensive-cyber-needs-small-specialized-locally-runnable-mod]
 review_confidence: 7
+score_validated: 2026-09-05
 ---
 
 > -> [[raw/articles/cybersecqwen-4b-why-defensive-cyber-needs-small-specialized-locally-runnable-mod.md|原文存档]]

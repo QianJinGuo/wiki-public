@@ -5,9 +5,9 @@ type: entity
 tags: [rss, aws]
 summary: "Capacity Blocks vs SageMaker Training Plans决策树 / 40-50%/70-75%折扣对比"
 sources: [raw/articles/aws-ec2-capacity-blocks-gpu-ml]
-review_value: 4
-review_confidence: 8
-updated: 2026-08-01
+review_value: 6
+review_confidence: 9
+updated: 2026-09-05
 ---
 # EC2 Capacity Blocks：GPU短期容量决策指南
 ## 三个关键洞察

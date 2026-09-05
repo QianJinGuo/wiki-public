@@ -5,7 +5,7 @@ source: "[[raw/articles/openclaw-hermes-source-code-agent-architecture-review]]"
 sources: [raw/articles/openclaw-hermes-source-code-agent-architecture-review]
 tags: [agent, openclaw, hermes, architecture, source-code, local-first, channel, gateway, memory, sandbox]
 created: 2026-05-29
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 confidence: 0.9
 provenance_state: extracted
@@ -127,7 +127,7 @@ Hermes补充了另4个重要问题的解法： ^[raw/articles/openclaw-hermes-so
 > Hermes Agent 并不是一个绑定在 IDE 中的编程 Copilot，也不是仅封装了单一 API 的聊天机器人外壳。它是一个部署在服务器上的自主智能体，能够记住所学内容，并且运行时间越长，能力就越强。
 > — Nous Research 官方定位
 
-详见 [[concepts/hermes-agent|Hermes-Agent 概念]]。 ^[raw/articles/openclaw-hermes-source-code-agent-architecture-review.md]
+详见 [[concepts/hermes-agent|Hermes-Agent 概念]]。
 
 ## 两者的局限
 

@@ -5,10 +5,11 @@ type: entity
 tags: [audio, generative-ai, stability-ai, open-weight, music-generation]
 created: 2026-05-22
 updated: 2026-09-05
-review_value: 7
+review_value: 5
 sources: [raw/articles/stable-audio-3]
-review_confidence: 6
+review_confidence: 8
 review_stars: 4
+score_validated: 2026-09-05
 ---
 
 ## 核心要点

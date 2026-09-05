@@ -1,18 +1,12 @@
 ---
 title: "transformer能通向agi吗布林能但它已经变了"
-created: 2026-07-09
-updated: 2026-08-01
-type: entity
-tags: ['auto-harvested']
-sources: [raw/articles/transformer能通向agi吗布林能但它已经变了]
-provenance_state: extracted
+created: 2026-09-06
+updated: 2026-09-06
+type: redirect
+review_value: 0
+archived_to: _archive/checkup-2026-09-06/transformer能通向agi吗布林能但它已经变了.md
+archived_reason: link_only_shell 扣链后正文<150字符 零知识内容
 ---
 
-> -> [[raw/articles/transformer能通向agi吗布林能但它已经变了.md|原文存档]]
-
-6 月初，Google DeepMind Build Day 活动期间，他坐下来，接受了一场完全没有脚本的现场问答，主题是「前沿 AI」。 ^[raw/articles/transformer能通向agi吗布林能但它已经变了.md]
-
-## 来源
-
-- 原文: [[raw/articles/transformer能通向agi吗布林能但它已经变了.md|transformer能通向agi吗布林能但它已经变了]]
-- 原始链接: : https://mp.weixin.qq.com/s/nHjkM39rZCW87T8qmGUqXw
+> 本实体已于 2026-09-06 质量闭环清理中归档（原因: link_only_shell 扣链后正文<150字符 零知识内容）。
+> 原文见 `raw/articles/`，归档件见 `_archive/checkup-2026-09-06/transformer能通向agi吗布林能但它已经变了.md`。

@@ -8,10 +8,11 @@ source: newsletter
 source_url:
 created: 2026-05-12
 updated: 2026-09-05
-review_value: 4
+review_value: 6
 sources: [raw/articles/ai-powered-honeypots-turning-the-tables-on-malicious-ai-agents]
 review_confidence: 7
 
+score_validated: 2026-09-05
 ---
 
 > -> [[raw/articles/ai-powered-honeypots-turning-the-tables-on-malicious-ai-agents.md|原文存档]]

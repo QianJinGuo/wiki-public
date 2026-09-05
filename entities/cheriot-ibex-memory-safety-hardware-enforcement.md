@@ -7,9 +7,10 @@ type: entity
 tags: [memory, open-source, architecture]
 sources:
   - raw/articles/cheriot-ibex-memory-safety-hardware-enforcement
-review_value: 4
-review_confidence: 9
+review_value: 5
+review_confidence: 7
 
+score_validated: 2026-09-05
 ---
 
 ## 深度分析

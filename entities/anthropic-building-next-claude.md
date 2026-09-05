@@ -4,9 +4,9 @@ title: "Anthropic 最新播客：如何打造下一代 Claude"
 type: entity
 tags: [anthropic, claude, prompt]
 created: 2026-05-21
-updated: 2026-08-29
-review_value: 6
-review_confidence: 6
+updated: 2026-09-05
+review_value: 7
+review_confidence: 9
 sources: [raw/articles/anthropic-building-next-claude]
 ---
 

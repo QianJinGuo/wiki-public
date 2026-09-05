@@ -1,7 +1,7 @@
 ---
 title: "Google Agentic RAG — Sufficient Context Agent + FramesQA 90.1% Cross-Corpus"
 created: 2026-06-08
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [agent, rag, multi-agent, google, gemini, framesqa, sufficient-context, agentic-rag, evaluation, harness, ai]
 description: "Google Research 2026-04-27 blog on agentic RAG with the new Sufficient Context Agent — a quality-control inspector that loops back to Query Rewriter when context is missing. Evaluated on FramesQA: 90.1% accuracy in cross-corpus setting, 34% improvement over vanilla RAG."
@@ -13,6 +13,7 @@ review_recommendation: strong
 review_stars: 4
 confidence: 0.8
 provenance_state: extracted
+score_validated: 2026-09-05
 ---
 
 # Google Agentic RAG — Sufficient Context Agent + FramesQA 90.1% Cross-Corpus

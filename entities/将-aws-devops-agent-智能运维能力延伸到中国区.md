@@ -10,9 +10,9 @@ url:
 ingested: 2026-05-11
 updated: 2026-05-20
 tags: [aws, devops, agent, multi-region, aws-china-blog]
-review_value: 5
+review_value: 7
 sources: [raw/articles/将-aws-devops-agent-智能运维能力延伸到中国区]
-review_confidence: 7
+review_confidence: 9
   - AWS China Blog
   - AWS, DevOps Agent, China Region, MCP
 ---

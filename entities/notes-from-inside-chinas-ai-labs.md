@@ -4,9 +4,9 @@ title: "Notes From Inside Chinas AI Labs"
 type: entity
 tags: [lab, company]
 created: 2026-05-21
-updated: 2026-06-30
-review_value: 6
-review_confidence: 6
+updated: 2026-09-05
+review_value: 7
+review_confidence: 8
 sources: [raw/articles/notes-from-inside-chinas-ai-labs]
 ---
 

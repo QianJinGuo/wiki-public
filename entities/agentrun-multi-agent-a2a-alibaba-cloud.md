@@ -1,13 +1,13 @@
 ---
 title: "AgentRun：阿里云多 Agent 生产级协作方案（A2A 开放协议）"
 created: 2026-06-15
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [agentrun, multi-agent, a2a, agentcard, service-discovery, alibaba-cloud, orchestrator, workspace]
 sources:
   - raw/articles/agentrun-multi-agent-a2a-alibaba-cloud
-review_value: 6
-review_confidence: 7
+review_value: 7
+review_confidence: 8
 provenance_state: extracted
 ---
 

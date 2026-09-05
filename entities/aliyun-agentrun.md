@@ -3,11 +3,12 @@
 title: "AgentRun"
 type: entity
 created: 2026-05-11
-updated: 2026-08-29
+updated: 2026-09-05
 tags: [agent, aliyun, serverless, platform, tool]
 sources: [raw/articles/aliyun-agentrun-5min-quickstart, raw/articles/aliyun-agentrun-2line-integration]
 review_value: 6
 review_confidence: 8
+score_validated: 2026-09-05
 ---
 
 ## 核心能力

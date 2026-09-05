@@ -7,9 +7,10 @@ type: entity
 tags: [memory, ai]
 sources:
   - raw/articles/entrypoint-hijacking
-review_value: 6
+review_value: 5
 review_confidence: 7
 
+score_validated: 2026-09-05
 ---
 
 # "EntryPoint Hijacking"

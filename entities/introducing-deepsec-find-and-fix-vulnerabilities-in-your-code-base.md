@@ -7,7 +7,7 @@ source: newsletter
 source_url:
 created: 2026-05-12
 updated: 2026-09-05
-review_value: 4
+review_value: 7
 sources: [raw/articles/introducing-deepsec-find-and-fix-vulnerabilities-in-your-code-base]
 review_confidence: 7
 ---

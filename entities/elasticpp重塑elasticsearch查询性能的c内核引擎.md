@@ -5,9 +5,10 @@ type: entity
 tags: [optimization, inference]
 created: 2026-05-21
 updated: 2026-05-21
-review_value: 6
-review_confidence: 6
+review_value: 5
+review_confidence: 7
 sources: [raw/articles/elasticpp重塑elasticsearch查询性能的c内核引擎]
+score_validated: 2026-09-05
 ---
 
 # elasticpp：重塑Elasticsearch查询性能的C++内核引擎

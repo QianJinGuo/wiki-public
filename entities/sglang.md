@@ -1,12 +1,12 @@
 ---
 title: "SGLang"
 created: 2026-04-30
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [open-source, inference, llm-serving, framework, sglang]
 sources: [raw/articles/glm5-scaling-pain-inference]
-review_value: 6
-review_confidence: 7
+review_value: 7
+review_confidence: 8
 ---
 ## 概述
 SGLang 是一个开源的大语言模型推理服务框架，由 UC Berkeley、CMU、 Stability AI 等机构联合开发（LMSYS 团队主导）。本次 GLM-5 的 BugFix #2（HiCache 加载时序修复）已通过 Pull Request #22811 提交至 SGLang 社区。   ^[raw/articles/glm5-scaling-pain-inference.md]

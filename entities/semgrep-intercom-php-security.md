@@ -11,7 +11,8 @@ created: 2026-05-10
 updated: 2026-09-05
 review_value: 6
 sources: [raw/articles/semgrep-intercom-php-security]
-review_confidence: 7
+review_confidence: 8
+score_validated: 2026-09-05
 ---
 
 > -> [[raw/articles/semgrep-intercom-php-security.md|原文存档]]

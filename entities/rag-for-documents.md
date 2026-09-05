@@ -1,23 +1,12 @@
 ---
 title: "RAG for Documents"
-created: 2026-07-27
-updated: 2026-08-01
-type: entity
-tags: ["rag", "document", "retrieval"]
-sources: [raw/articles/nvidia-nemotron-3-agents-rag-voice-safety]
-provenance_state: extracted
-confidence: 0.6
+created: 2026-09-06
+updated: 2026-09-06
+type: redirect
+review_value: 0
+archived_to: _archive/checkup-2026-09-06/rag-for-documents.md
+archived_reason: link_only_shell 扣链后正文<150字符 零知识内容
 ---
 
-# RAG for Documents
-
-> -> [[raw/articles/nvidia-nemotron-3-agents-rag-voice-safety.md|原文存档]]
-
-## 概述
-
- ^[raw/articles/nvidia-nemotron-3-agents-rag-voice-safety.md]
-
-## 来源
-
-- [[raw/articles/nvidia-nemotron-3-agents-rag-voice-safety.md|原文存档]]
-- 原始链接: https://developer.nvidia.com/blog/building-nvidia-nemotron-3-agents-for-reasoning-multimodal-rag-voice-and-safety/
+> 本实体已于 2026-09-06 质量闭环清理中归档（原因: link_only_shell 扣链后正文<150字符 零知识内容）。
+> 原文见 `raw/articles/`，归档件见 `_archive/checkup-2026-09-06/rag-for-documents.md`。

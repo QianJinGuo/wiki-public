@@ -1,18 +1,12 @@
 ---
 title: "Karpathy又封神！掀翻RAG，把你的笔记变成第二大脑"
-created: 2026-07-01
-updated: 2026-08-01
-type: entity
-tags: ['auto-harvested']
-sources: [raw/articles/karpathy又封神掀翻rag把你的笔记变成第二大脑]
-provenance_state: extracted
+created: 2026-09-06
+updated: 2026-09-06
+type: redirect
+review_value: 0
+archived_to: _archive/checkup-2026-09-06/karpathy又封神掀翻rag把你的笔记变成第二大脑.md
+archived_reason: link_only_shell 扣链后正文<150字符 零知识内容
 ---
 
-> -> [[raw/articles/karpathy又封神掀翻rag把你的笔记变成第二大脑.md|原文存档]]
-
-source_url: https://mp.weixin.qq.com/s/G7Fna5qK20lFji4Lqx8GMA ^[raw/articles/karpathy又封神掀翻rag把你的笔记变成第二大脑.md]
-
-## 来源
-
-- 原文: [[raw/articles/karpathy又封神掀翻rag把你的笔记变成第二大脑.md|Karpathy又封神！掀翻RAG，把你的笔记变成第二大脑]]
-- 原始链接: : "https://mp.weixin.qq.com/s/G7Fna5qK20lFji4Lqx8GMA
+> 本实体已于 2026-09-06 质量闭环清理中归档（原因: link_only_shell 扣链后正文<150字符 零知识内容）。
+> 原文见 `raw/articles/`，归档件见 `_archive/checkup-2026-09-06/karpathy又封神掀翻rag把你的笔记变成第二大脑.md`。

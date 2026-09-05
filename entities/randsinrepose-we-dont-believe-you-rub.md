@@ -10,6 +10,7 @@ review_value: 6
 review_confidence: 7
 review_recommendation: strong
 review_stars: 4
+score_validated: 2026-09-05
 ---
 
 # Here's The Rub: We Don't Believe You

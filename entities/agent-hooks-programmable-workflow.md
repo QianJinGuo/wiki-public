@@ -4,9 +4,9 @@ title: "Agent Hooks：把 Agent 工作流变成可编程的"
 type: entity
 tags: [agent, claude, tool, workflow]
 created: 2026-05-21
-updated: 2026-08-29
-review_value: 6
-review_confidence: 6
+updated: 2026-09-05
+review_value: 7
+review_confidence: 7
 sources: [raw/articles/agent-hooks-programmable-workflow]
 ---
 

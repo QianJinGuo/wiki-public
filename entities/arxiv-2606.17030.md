@@ -10,6 +10,7 @@ review_confidence: 4
 review_recommendation: worth-reading
 review_stars: 4
 sources: [raw/articles/arxiv-2606.17030]
+score_validated: 2026-09-05
 ---
 
 # Qwen-RobotWorld Technical Report: Unifying Embodied World Modeling through Language-Conditioned Video Generation

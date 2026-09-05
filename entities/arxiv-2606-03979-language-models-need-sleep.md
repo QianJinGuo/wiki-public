@@ -3,7 +3,7 @@
 title: "Language Models Need Sleep: arxiv 2606.03979 持续学习 2 阶段范式"
 description: "Ali Behrouz et al. 提出 LLM 持续学习 Sleep 范式: 两阶段 (1) Memory Consolidation via Knowledge Seeding (upward distillation) + (2) Dreaming via RL 自改进 (synthetic curriculum)。arxiv 2606.03979, 2026-06-02, OpenReview 2025-09 已公开。 与 Mind Lab LoRA 在线路径 (delta-mem) 互补, 离线 consolidation 是 parameter-layer memory 的另一面"
 created: 2026-06-05
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [arxiv, neuroscience, continual-learning, 持续学习, memory-consolidation, sleep-paradigm, knowledge-seeding, dreaming, reinforcement-learning, llm-training, arxiv]
 sources:
@@ -16,6 +16,7 @@ arxiv_id: 2606.03979
 related:
   - entities/mind-lab-lora-continual-learning-system
   - entities/agent-memory-architecture
+score_validated: 2026-09-05
 ---
 
 # Language Models Need Sleep: arxiv 2606.03979 持续学习 2 阶段范式
@@ -60,7 +61,7 @@ Behrouz et al. (2026-06-02 arxiv) 提出 **"Sleep" paradigm** 让 LLM 持续学�
 
 ## 与 Mind Lab LoRA 体系的对照
 
-Mind Lab LoRA 持续学习 (mind-lab-lora-continual-learning-system) 与本文是**持续学习两条互补路径**: ^[raw/articles/arxiv-2606-03979-language-models-need-sleep.md]
+Mind Lab LoRA 持续学习 (mind-lab-lora-continual-learning-system) 与本文是**持续学习两条互补路径**:
 
 | 维度 | arxiv 2606.03979 Sleep | Mind Lab LoRA (delta-mem) |
 |------|------------------------|---------------------------|
@@ -120,7 +121,7 @@ Mind Lab LoRA 持续学习 (mind-lab-lora-continual-learning-system) 与本文�
 
 ## 关联阅读
 
-由于 wiki 中尚未存在可交叉引用的相关 entity 文件 (mind-lab-lora-continual-learning-system 和 agent-memory-architecture 两条 related 路径暂无对应 page), 当前暂无有效的 关联阅读 链接。建议后续，当 `entities/mind-lab-lora-continual-learning-system.md` 或 `entities/agent-memory-architecture.md` 创建后，在本文 `related` 字段和本节同步添加双向链接。 ^[raw/articles/arxiv-2606-03979-language-models-need-sleep.md]
+由于 wiki 中尚未存在可交叉引用的相关 entity 文件 (mind-lab-lora-continual-learning-system 和 agent-memory-architecture 两条 related 路径暂无对应 page), 当前暂无有效的 关联阅读 链接。建议后续，当 `entities/mind-lab-lora-continual-learning-system.md` 或 `entities/agent-memory-architecture.md` 创建后，在本文 `related` 字段和本节同步添加双向链接。
 ## 相关实体
 - [[entities/stochastic-parrot-language-models-and-meaning]]
 - [[entities/reinforcing-recursive-language-models-alphaxiv]]

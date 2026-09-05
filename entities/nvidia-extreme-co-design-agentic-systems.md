@@ -4,7 +4,7 @@ title: "Nvidia Extreme Co Design Agentic Systems"
 type: entity
 tags: [agent, nvidia, training]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 8
 review_confidence: 7
 sources: [raw/articles/nvidia-extreme-co-design-agentic-systems]
@@ -69,6 +69,6 @@ NeMo Agent Toolkit可对来自LangChain/AutoGen/AWS Strands的agent进行无代�
 
 ---
 
-![架构图（nvidia-extreme-co-design-agentic-systems）](../assets/entities/nvidia-extreme-co-design-agentic-systems.png) ^[raw/articles/nvidia-extreme-co-design-agentic-systems.md]
+![架构图（nvidia-extreme-co-design-agentic-systems）](../assets/entities/nvidia-extreme-co-design-agentic-systems.png)
 
 → 查看可交互 HTML 版本 ^[raw/articles/nvidia-extreme-co-design-agentic-systems.md]

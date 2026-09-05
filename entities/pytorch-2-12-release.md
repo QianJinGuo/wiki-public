@@ -10,6 +10,7 @@ sources:
 review_value: 6
 review_confidence: 8
 
+score_validated: 2026-09-05
 ---
 
 ### Featured projects

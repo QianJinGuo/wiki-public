@@ -3,13 +3,14 @@ title: "AI Agent 工程师能力地图"
 type: entity
 tags: [agent, llm, workflow, context-engineering, memory, rag, mcp, backend, engineering]
 created: "2026-05-20"
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 6
 review_confidence: 7
 review_recommendation: strong
 review_stars: 4
 provenance_state: extracted
 sources: [raw/articles/ai-agent-engineer-learning-roadmap-backend-2026]
+score_validated: 2026-09-05
 ---
 ## 核心判断
 - **Workflow-first，Agent-second** 是最务实范式

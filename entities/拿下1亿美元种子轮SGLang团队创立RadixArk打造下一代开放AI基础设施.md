@@ -5,8 +5,8 @@ type: entity
 tags: [api, nvidia]
 created: 2026-05-21
 updated: 2026-05-21
-review_value: 6
-review_confidence: 6
+review_value: 7
+review_confidence: 8
 sources: [raw/articles/拿下1亿美元种子轮SGLang团队创立RadixArk打造下一代开放AI基础设施]
 ---
 

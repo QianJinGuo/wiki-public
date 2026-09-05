@@ -5,7 +5,7 @@ updated: 2026-06-15
 type: entity
 tags: [article, wechat]
 sources: [raw/articles/r1复现拒绝采样微调加速rl收敛及模型遗忘问题探究]
-review_value: 6
+review_value: 7
 review_confidence: 7
 ---
 ## 摘要

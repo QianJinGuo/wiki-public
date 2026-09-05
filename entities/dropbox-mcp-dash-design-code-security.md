@@ -10,6 +10,7 @@ review_value: 7
 review_confidence: 6
 review_recommendation: strong
 review_stars: 4
+score_validated: 2026-09-05
 ---
 
 # How Dropbox uses MCP and Dash to close the design-to-code security gap

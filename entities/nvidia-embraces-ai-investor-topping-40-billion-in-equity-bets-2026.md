@@ -4,10 +4,11 @@ title: "Nvidia embraces role of AI investor, pushing past $40 billion in equity 
 type: entity
 tags: [api, nvidia]
 created: 2026-05-21
-updated: 2026-08-29
-review_value: 6
-review_confidence: 6
+updated: 2026-09-05
+review_value: 5
+review_confidence: 7
 sources: [raw/articles/nvidia-embraces-ai-investor-topping-40-billion-in-equity-bets-2026]
+score_validated: 2026-09-05
 ---
 
 # Nvidia embraces role of AI investor, pushing past $40 billion in equity bets this year

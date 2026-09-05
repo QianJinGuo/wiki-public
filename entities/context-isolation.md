@@ -7,7 +7,7 @@ tags: [architecture, multi-agent, context, isolation]
 provenance_state: inferred
 sources: [raw/articles/agent-context-management-architecture-patterns]
 
-review_value: 5
+review_value: 7
 review_confidence: 7
 ---
 ## 核心问题

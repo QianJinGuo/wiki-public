@@ -12,6 +12,7 @@ review_stars: 3
 type: entity
 created: 2026-05-13
 updated: 2026-09-05
+score_validated: 2026-09-05
 ---
 
 > -> [[raw/articles/crypto-funds-six-week-inflow-streak-4-9-billion-coinshares.md|原文存档]]

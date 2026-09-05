@@ -4,10 +4,11 @@ title: "Task Queue Priority and Fairness Your Task Queue Your Way"
 type: entity
 tags: [task-queue, distributed-systems, priority]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 6
 review_confidence: 6
 sources: [raw/articles/task-queue-priority-and-fairness-your-task-queue]
+score_validated: 2026-09-05
 ---
 
 ## 深度分析

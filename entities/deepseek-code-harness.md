@@ -2,10 +2,10 @@
 
 title: "DeepSeek Code Harness"
 created: 2026-05-23
-updated: 2026-09-04
+updated: 2026-09-05
 type: entity
-tags: [deepseek, harness, claude-code, agent, coding-agent, china-ai, evaluation, terminal-bench, three-dimension, agent-plan, cordis, spatiotemporal-composability]
-sources: [raw/articles/deepseek-code-harness-competitor-tina, raw/articles/deepseek-harness-v01-open-source-everything-plugin-infoq-2026, raw/articles/deepseek-harness-orange-book-shuhua-2026, raw/articles/deepseek-harness-agent-engineering-new-paradigm-aliyun-2026, raw/articles/deepseek-harness-cordis-runtime-mechanics-tencent-chino-2026, raw/articles/deepseek-harness-拆解一套能拼装的-agent-架构, raw/articles/deepseek-harness是今年最有野心的一次agent开源, raw/articles/deepseek-harness-实测模型之外的那一半到底带来了什么, raw/articles/deepseek-harness-agentloop-three-dimension-eval-qianwen-2026-08-19, raw/articles/dsh-observability-tencentcloud-agent-obs-2026-08-24, raw/articles/deepseek-harness-ptc-creation-cordis-baidu-geek-2026, raw/articles/deepseek-harness-cordis-spatiotemporal-composability-paper-lss233-2026-09-04]
+tags: [deepseek, harness, claude-code, agent, coding-agent, china-ai, evaluation, terminal-bench, three-dimension, agent-plan, cordis, spatiotemporal-composability, post-training, self-evolution]
+sources: [raw/articles/deepseek-code-harness-competitor-tina, raw/articles/deepseek-harness-v01-open-source-everything-plugin-infoq-2026, raw/articles/deepseek-harness-orange-book-shuhua-2026, raw/articles/deepseek-harness-agent-engineering-new-paradigm-aliyun-2026, raw/articles/deepseek-harness-cordis-runtime-mechanics-tencent-chino-2026, raw/articles/deepseek-harness-拆解一套能拼装的-agent-架构, raw/articles/deepseek-harness是今年最有野心的一次agent开源, raw/articles/deepseek-harness-实测模型之外的那一半到底带来了什么, raw/articles/deepseek-harness-agentloop-three-dimension-eval-qianwen-2026-08-19, raw/articles/dsh-observability-tencentcloud-agent-obs-2026-08-24, raw/articles/deepseek-harness-ptc-creation-cordis-baidu-geek-2026, raw/articles/deepseek-harness-cordis-spatiotemporal-composability-paper-lss233-2026-09-04, raw/articles/deepseek-harness-post-training-enterprise-evolution-aliyun-2026-09-05]
 review_value: 8
 review_confidence: 8
 ---
@@ -302,6 +302,18 @@ Cordis 五个概念：插件、上下文、注入、事件、可逆副作用。^
 DSH 最值得注意的 @deepseek-ai/dsh-tool-cordis"自指的 Cordis 工具集"：cordis_inspect（只读巡检进程）、cordis_define（现场定义插件包）、cordis_run（宿主半 node:vm 沙箱执行+浏览器半推送每个网页）、cordis_stop/cordis_undefine——Agent 可检查自己运行的框架、现场编写运行动态插件、用完即卸，全程不动 cordis.yml/不装包/不重启 = **可进化 Agent 雏形**（论文结论把"自进化 Agent 运行时"列为该理论未来验证方向）。^[raw/articles/deepseek-harness-cordis-spatiotemporal-composability-paper-lss233-2026-09-04] 插件扩展点不是 API 列表而是一张服务注册表（capability-seams：执行/模型/智能/数据/环境/治理/编排/自指/前端九类槽位，每类可替换提供方）；"一切皆插件"在字面意义成立——浏览器里也运行独立 Cordis 客户端运行时（双半插件 RPC）。生态：Koishi 4000+ 插件（@koishijs 155 包、koishi-plugin-* 3951 包、cordis npm 近一年 51 万下载）、@cordisjs 独立通用生态 101 包、awesome-dsh-plugin 收录 174 个插件。论文与 8 类系统对比（传统 DI/React/OSGi/VS Code/微服务/monadic effect/代数效应/HMR），收束出"针对 Agent 运行时"的需求表。
 
 **与既有 chino 拆解的关系**：chino（deepseek-harness-cordis-runtime-mechanics，v×c=56）讲 Cordis fiber/effect/Loop/Preset/Code Mode 的**机制与工程对比**；本文以其**配套论文的形式化证明 + 自指工具集 + 插件槽位**为不可替代增量，两者同补到本实体，构成 DSH 运行时"机制×理论"两翼。这也解释了为何一篇 88 页论文以 Cordis 为研究对象——"安全地动态装卸组件"是自进化软件唯一靠得住的地基。
+
+### 后训练视角：DSH 作为安全试验场与企业进化闭环（基于阿里云 POC）
+
+阿里云云原生史明伟（世如）用**后训练视角**重新审读 DSH——前几批（chino/cordis 论文/自指工具集）聚焦运行时"机制×理论"，本文提供的是**目的论维度**：为什么一家模型厂商要做 Harness，以及它如何构成企业进化路径。^[raw/articles/deepseek-harness-post-training-enterprise-evolution-aliyun-2026-09-05.md]
+
+**三层视界**：预训练（通识能力）、后训练（SFT/RLHF/agentic RL 在权重里塑形行为，离线/周期性/不可轻易撤销但全体生效）、工作现场（工具/护栏/审批引导模型行为）。Harness 是**在环境里塑形行为**，与后训练在权重里塑形指向同一目标，区别只在生效时延、可撤销性、爆炸半径——据此推出核心判断 **"Harness 是后训练的安全试验场"**：新行为先以可撤销方式在环境中验证，高频且被人类审批放行的模式再蒸馏进权重。^[raw/articles/deepseek-harness-post-training-enterprise-evolution-aliyun-2026-09-05.md]
+
+**企业进化三段式**（信任等级单调递减、生效范围单调递增）：①实验（会话内、进程内存、零审批）→②固化（skill 文档/真插件，人类评审签字）→③蒸馏（进权重全实例生效）。DSH 刻意只实现前两段、把第三段留给模型厂商（即 DeepSeek 自己），这条留白正是企业平台的**数据飞轮接口位**。^[raw/articles/deepseek-harness-post-training-enterprise-evolution-aliyun-2026-09-05.md]
+
+**护栏 = 训练数据采集器**：审批的 asked/decided 审计对就是 RLHF/DPO 偏好信号（生产自然产生、无需标注）；沙箱越权记录是边界探测行为标注；审计与对话分离存储使行为克隆用对话流、偏好学习用审计对，**人类监督信号不泄漏进模型输入、避免标签污染**；每调用一个锚点事件使轨迹轮次边界天然干净。"你的安全机制越严格，你的数据资产越值钱"——护栏既是拦截器也是采集器。企业三个转变：发版驱动→生长驱动（能力闸 capability gate 校验工具真在运行）、日志即排查→日志即数据资产、纪律维持→结构保证。^[raw/articles/deepseek-harness-post-training-enterprise-evolution-aliyun-2026-09-05.md]
+
+**自进化 POC 实机证据**（DSH 0.1.0-rc.5 + qwen3-max，竞技场中宿主持隐藏验收口径当裁判）：「进化」须过四道闸门（能力存在/正确/holdout 真实/增量可归因，不采信模型自述）；三组对照实验量化了进化路径断裂点——**接口设计决定泛化**（V18 缺地形成分输入 0/146 背图 vs 含地形 146/146 学会）、**契约的信息形态比契约有无更关键**（V19 文字契约 97 次全失败 vs 逐字模板 32 次 0 失败）、**反馈不等于能力**（V14 无结构任务 holdout 4/16 等于随机 vs V15 可归纳 4 轮 holdout 20/20）。映射到 RL：动作空间可被 Agent 自撑大、宿主裁判=可验证奖励、能力账本=稠密 credit assignment、策略是可读可回滚的 package 代码。边界声明：未做权重更新（仅 RL 基础设施可行性）、能力默认不跨会话、跨会话遗传是宿主侧自建非 DSH 能力。^[raw/articles/deepseek-harness-post-training-enterprise-evolution-aliyun-2026-09-05.md]
 
 ## 相关实体
 

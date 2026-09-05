@@ -6,8 +6,8 @@ type: entity
 tags: [rag, agentic-search, claude-code, boris-cherny, retrieval, knowledge-management, agent]
 sources: [raw/articles/claude-code开发负责人-为何放弃rag而选择agentic-search]
 provenance_state: extracted
-review_value: 5
-review_confidence: 7
+review_value: 8
+review_confidence: 8
 confidence: 0.75
 ---
 

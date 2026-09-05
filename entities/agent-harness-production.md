@@ -1,13 +1,14 @@
 ---
 title: "Agent 生产级 Harness 工程实践"
 created: 2026-07-02
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [agent, harness-engineering, production, architecture]
-review_value: 5
+review_value: 7
 review_confidence: 5
 provenance_state: stub-upgraded
 confidence: 0.6
+score_validated: 2026-09-05
 ---
 
 # Agent 生产级 Harness 工程实践

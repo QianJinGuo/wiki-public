@@ -6,8 +6,9 @@ updated: 2026-05-20
 type: entity
 tags: [wechat, ai-design, brand, one-person-company]
 sources: [raw/articles/你的一人公司品牌部带着image-2模型的lovart中文版来了]
-review_value: 6
-review_confidence: 7
+review_value: 5
+review_confidence: 6
+score_validated: 2026-09-05
 ---
 
 ## 摘要

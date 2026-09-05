@@ -4,9 +4,9 @@ title: "Trace2Skill 把\"轨迹里的局部经验\"蒸馏成可迁移的 Agent S
 type: entity
 tags: [agent, llm, memory]
 created: 2026-05-21
-updated: 2026-05-21
-review_value: 6
-review_confidence: 6
+updated: 2026-09-05
+review_value: 7
+review_confidence: 8
 sources: [raw/articles/trace2skill-trajectory-distillation-agent-skills]
 ---
 

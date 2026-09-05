@@ -4,9 +4,9 @@ title: "OpenClaw 多用户部署（三）：Replatform 云迁移策略"
 type: entity
 tags: [agent, aws]
 created: 2026-05-21
-updated: 2026-06-30
+updated: 2026-09-05
 review_value: 6
-review_confidence: 6
+review_confidence: 9
 sources: [raw/articles/openclaw-multi-3]
 ---
 

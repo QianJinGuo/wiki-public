@@ -5,9 +5,10 @@ type: entity
 tags: [context, rag, web]
 created: 2026-05-21
 updated: 2026-09-05
-review_value: 6
+review_value: 5
 review_confidence: 6
 sources: [raw/articles/identity-behavior-context-itdr-solution]
+score_validated: 2026-09-05
 ---
 
 ## See exactly what every identity did, and why.

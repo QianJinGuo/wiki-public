@@ -4,6 +4,7 @@ created: 2026-09-05
 updated: 2026-09-05
 type: entity
 tags: [claude-code, harness-engineering, community, agents, skills, hooks, probe]
+source_url: https://github.com/affaan-m/everything-claude-code
 confidence: 0.6
 provenance_state: extracted
 status: probe-archive
@@ -11,7 +12,7 @@ status: probe-archive
 
 # Everything Claude Code（ECC）——社区 Harness 蒸馏集
 
-> 本地探针存档页（2026-09 外部系统透镜轮）：`~/projects/everything-claude-code`（公开源 URL 待补）。社区维护的 Claude Code 生产级配置蒸馏集——**30 个专业 agents、135 skills、60 commands、自动化 hook 工作流**（SOUL.md 自述），1756 个 md 文件。
+> 本地探针存档页（2026-09 外部系统透镜轮）：`~/projects/everything-claude-code`，公开源 [github.com/affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code)。社区维护的 Claude Code 生产级配置蒸馏集——**30 个专业 agents、135 skills、60 commands、自动化 hook 工作流**（SOUL.md 自述），1756 个 md 文件。
 
 ## 结构速览
 

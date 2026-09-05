@@ -2,7 +2,7 @@
 
 title: "Extending MCP support for Amazon Bedrock AgentCore Gateway"
 created: 2026-06-02
-updated: 2026-08-01
+updated: 2026-09-05
 type: entity
 tags: [agent, aws, bedrock, mcp, agentcore, tool-schema]
 sources: [raw/articles/extending-mcp-support-for-amazon-bedrock-agentcore-gateway, raw/articles/how-agentcore-gateway-supports-the-mcp-2026-07-28-spec]
@@ -83,7 +83,7 @@ To enable sessions, add a `sessionConfiguration` block during the `CreateGateway
       "mcp": {
         "sessionConfiguration": {^[raw/articles/extending-mcp-support-for-amazon-bedrock-agentcore-gateway.md]
 
-          "sessionTimeoutInSeconds": 3600^[raw/articles/how-agentcore-gateway-supports-the-mcp-2026-07-28-spec.md]
+          "sessionTimeoutInSeconds": 3600
 
         }
       }

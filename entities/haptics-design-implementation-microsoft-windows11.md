@@ -7,13 +7,14 @@ type: entity
 tags: [design, haptics, UX, microsoft, windows, interaction-design]
 created: "2026-06-21"
 updated: 2026-09-05
-review_value: 6
-review_confidence: 8
+review_value: 4
+review_confidence: 7
 review_stars: 4
 confidence: 0.85
 provenance_state: extracted
 sources:
   - raw/articles/haptics-design-implementation-microsoft-windows11
+score_validated: 2026-09-05
 ---
 
 # Haptics Design and Implementation — Microsoft Windows 11

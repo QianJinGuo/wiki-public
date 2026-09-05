@@ -4,10 +4,11 @@ title: "Restive Ventures Announces $45M Fund III to Back AI-Native Financial Ser
 type: entity
 tags: [google]
 created: 2026-05-21
-updated: 2026-05-21
-review_value: 6
-review_confidence: 6
+updated: 2026-09-05
+review_value: 4
+review_confidence: 7
 sources: [raw/articles/restive-ventures-announces-45m-fund-iii-to-back-ai-native-financial-services-tar]
+score_validated: 2026-09-05
 ---
 
 # Restive Ventures Announces $45M Fund III to Back AI-Native Financial Services; Targets $1T Market Opportunity

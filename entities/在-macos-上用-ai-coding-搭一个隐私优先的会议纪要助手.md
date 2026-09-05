@@ -13,6 +13,7 @@ sources: [raw/articles/在-macos-上用-ai-coding-搭一个隐私优先的会议
 review_confidence: 7
   - AWS China Blog
   - macOS, AI, Meeting Notes, Privacy, AWS, Bedrock
+score_validated: 2026-09-05
 ---
 ## 标签
 #macos #ai #meeting-notes #privacy #aws #bedrock ^[raw/articles/在-macos-上用-ai-coding-搭一个隐私优先的会议纪要助手.md]

@@ -1,7 +1,7 @@
 ---
 title: "How to build Agents Where Data Already Lives"
 created: 2026-06-10
-updated: 2026-08-01
+updated: 2026-09-05
 tags: [agent, data-infrastructure, architecture, deployment, data-locality]
 review_value: 7
 review_confidence: 7
@@ -55,7 +55,7 @@ Agent 可以部署在数据所在的多种位置：^[raw/articles/how-to-build-a
 
 ### 4. 与 RAG 模式的关系
 
-RAG（Retrieval-Augmented Generation）是数据驻留优先理念的一个特例：^[raw/articles/how-to-build-agents-where-data-already-lives.md]
+RAG（Retrieval-Augmented Generation）是数据驻留优先理念的一个特例：
 
 
 - **传统 RAG**：将文档索引到向量数据库，Agent 查询向量库

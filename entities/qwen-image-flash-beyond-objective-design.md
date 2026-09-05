@@ -13,6 +13,7 @@ review_stars: 4
 arxiv_id: "2606.03746"
 sources:
   - raw/articles/qwen-image-flash-beyond-objective-design
+score_validated: 2026-09-05
 ---
 
 # Qwen-Image-Flash: Beyond Objective Design

@@ -1,18 +1,12 @@
 ---
 title: "MCP 协议史诗级更新"
-created: 2026-07-29
-updated: 2026-08-01
-type: entity
-tags: ['auto-harvested']
-sources: [raw/articles/mcp-2026-07-28-vibecoder-engineering-analysis]
-provenance_state: extracted
+created: 2026-09-06
+updated: 2026-09-06
+type: redirect
+review_value: 0
+archived_to: _archive/checkup-2026-09-06/mcp-2026-07-28-vibecoder-engineering-analysis.md
+archived_reason: link_only_shell 扣链后正文<150字符 零知识内容
 ---
 
-> -> [[raw/articles/mcp-2026-07-28-vibecoder-engineering-analysis.md|原文存档]]
-
-VibeCoder 对 MCP 2026-07-28 第五版规范的工程视角分析。与新闻媒体报道不同，本文侧重架构影响和迁移策略。 ^[raw/articles/mcp-2026-07-28-vibecoder-engineering-analysis.md]
-
-## 来源
-
-- 原文: [[raw/articles/mcp-2026-07-28-vibecoder-engineering-analysis.md|MCP 协议史诗级更新]]
-- 原始链接: : "https://mp.weixin.qq.com/s/Dm8oWJam7QpKqAurrKvAew
+> 本实体已于 2026-09-06 质量闭环清理中归档（原因: link_only_shell 扣链后正文<150字符 零知识内容）。
+> 原文见 `raw/articles/`，归档件见 `_archive/checkup-2026-09-06/mcp-2026-07-28-vibecoder-engineering-analysis.md`。

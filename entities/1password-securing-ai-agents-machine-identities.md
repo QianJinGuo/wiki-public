@@ -20,7 +20,7 @@ provenance_state: extracted
 
 Shareable link: https://excalidraw.com/#json=OUQMTvqOC0O-tqvY2kjvR,0k90NsmJUHkicR8wSny03A ^[raw/articles/1password-securing-ai-agents-machine-identities.md]
 
-文件位置：`assets/entities/1password-securing-ai-agents-machine-identities.excalidraw` ^[raw/articles/1password-securing-ai-agents-machine-identities.md]
+文件位置：`assets/entities/1password-securing-ai-agents-machine-identities.excalidraw`
 
 > Flow moves from AI agents and developer endpoints through 1Password's three core capabilities to risks and best practices, with traditional IAM shown as a limitation requiring replacement.
 

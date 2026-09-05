@@ -2,12 +2,12 @@
 
 title: "腾讯CDN LEGO Harness Engineering实战"
 created: 2026-04-28
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [entity, company, tencent, cdn, harness-engineering, ai-coding, backend]
 sources: [raw/articles/tencent-cdn-lego-harness-engineering]
-review_value: 6
-review_confidence: 7
+review_value: 8
+review_confidence: 8
 ---
 
 ## 概述

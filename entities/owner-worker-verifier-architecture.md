@@ -1,13 +1,13 @@
 ---
 title: "Owner-Worker-Verifier 架构"
 created: 2026-05-13
-updated: 2026-08-01
+updated: 2026-09-05
 type: entity
 tags: [multi-agent, architecture, verification]
 provenance_state: inferred
 sources: [raw/minimax-agent-team-mavis-owner-worker-verifier]
 
-review_value: 6
+review_value: 8
 review_confidence: 7
 ---
 ## 三角色

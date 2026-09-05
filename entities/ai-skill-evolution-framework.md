@@ -2,10 +2,10 @@
 
 title: "AI Skill Evolution Framework"
 created: 2026-05-14
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [ai-skill, evaluation, measurement]
-review_value: 6
+review_value: 7
 review_confidence: 7
 sources: [raw/articles/ai-skill-evolution底层逻辑]
 ---

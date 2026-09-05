@@ -6,8 +6,9 @@ tags: [open-source]
 created: 2026-05-21
 updated: 2026-09-05
 review_value: 6
-review_confidence: 6
+review_confidence: 7
 sources: [raw/articles/open-defense-initiative]
+score_validated: 2026-09-05
 ---
 
 # Open Defense Initiative

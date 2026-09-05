@@ -11,9 +11,9 @@ sha256: 1bc5d6494fec5481af00a2c1b6c4c12d1d4082cb0fd470209ab293aea54020de
 created: 2026-05-10
 updated: 2026-09-05
 tags: [inference, ai]
-review_value: 6
+review_value: 8
 sources: [raw/articles/laser-acl2026-latent-superposition-visual-reasoning]
-review_confidence: 7
+review_confidence: 8
 ---
 
 > -> [[raw/articles/laser-acl2026-latent-superposition-visual-reasoning|原文存档]]

@@ -5,8 +5,9 @@ updated: 2026-06-17
 type: entity
 tags: [article, wechat]
 sources: [raw/articles/快手首个打工人agent来了工作秒变桌面软件零代码不烧token]
-review_value: 6
-review_confidence: 7
+review_value: 5
+review_confidence: 6
+score_validated: 2026-09-05
 ---
 ## 摘要
 本文档从微信平台抓取，原始URL: https://mp.weixin.qq.com/s/7SKBhIUrxI1SD1_svAxvtQ ^[raw/articles/快手首个打工人agent来了工作秒变桌面软件零代码不烧token.md]

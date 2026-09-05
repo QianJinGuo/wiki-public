@@ -2,7 +2,7 @@
 
 title: "严格 CSP 下的密码窃取：HTML 注入 + Chrome 自动填充攻击"
 created: 2026-06-03
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [ai, content, security]
 source: "[[raw/articles/afine-csp-html-injection-password-exfiltration]]"
@@ -146,7 +146,7 @@ AFINE 的攻击路径刻意不依赖任何 JavaScript 执行，这是该研究�
 
 `Referrer-Policy: no-referrer` 应作为登录页面的 HTTP 强制响应头，而不仅仅是一个可选的安全增强。 虽然在 Chrome 中注入的 `<meta>` 仍可覆盖它，但这是纵深防御的关键一层。没有它，默认的 `strict-origin-when-cross-origin` 会在跨域导航时泄漏完整的登录 URL（可能包含 SAML 参数或重定向 URL）。 ^[raw/articles/afine-csp-html-injection-password-exfiltration.md]
 
-建议在 Nginx/Apache/Caddy 层统一为敏感路径设置： ^[raw/articles/afine-csp-html-injection-password-exfiltration.md]
+建议在 Nginx/Apache/Caddy 层统一为敏感路径设置：
 ```nginx
 add_header Referrer-Policy "no-referrer" always;
 ```

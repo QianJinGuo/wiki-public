@@ -5,9 +5,10 @@ created: 2026-05-10
 updated: 2026-05-20
 type: entity
 tags: [engineering, wechat, fastapi, api-design]
-review_value: 6
+review_value: 5
 review_confidence: 7
 sources: [raw/articles/fastapi-apirouter如何正确组织路由]
+score_validated: 2026-09-05
 ---
 
 > → [[raw/articles/fastapi-apirouter如何正确组织路由.md|原文存档]]

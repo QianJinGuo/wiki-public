@@ -4,9 +4,9 @@ title: "Claude Code 核心开发者经验：Action Space 设计"
 type: entity
 tags: [agent, claude]
 created: 2026-05-21
-updated: 2026-06-30
-review_value: 6
-review_confidence: 6
+updated: 2026-09-05
+review_value: 8
+review_confidence: 8
 sources: [raw/articles/claude-code-core-developer-lessons-action-space-design]
 ---
 

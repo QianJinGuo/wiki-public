@@ -2,7 +2,7 @@
 
 title: "AI Memory Architecture: Deep Dive"
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [agent-memory, memory-architecture, deep-dive, llm-agent, knowledge-management, belief-tracking, context-management, memory-governance, hierarchical-memory, memory-evolution]
 sources: [raw/articles/memory-in-the-llm-era-iclr2026, raw/articles/memory-vs-rag-agent-memory-systematic-framework]
@@ -129,7 +129,7 @@ The **central component** of the four-model framework — responsible for mainta
 
 The write decision should evaluate **marginal value relative to existing beliefs**, not the information's standalone worth. When a belief is already highly established, the same signal's fourth occurrence has near-zero marginal value. Conversely, a **conflicting signal** carries high marginal value — it challenges the existing belief structure and forces integration or revision. ^[raw/articles/memory-in-the-llm-era-iclr2026.md]
 
-**Belief Provenance Hierarchy:** ^[raw/articles/memory-in-the-llm-era-iclr2026.md]
+**Belief Provenance Hierarchy:**
 
 | Type | Reliability | Example |
 |------|-------------|---------|
@@ -213,7 +213,7 @@ Memory write is fundamentally a **decision under resource constraint**. Key prin
 - High-confidence belief + same signal again = low marginal value write
 - High-confidence belief + contradicting signal = high marginal value write
 
-**Behavioral Evidence > Stated Preference:** ^[raw/articles/memory-in-the-llm-era-iclr2026.md]
+**Behavioral Evidence > Stated Preference:**
 
 - Three instances of user writing SQL manually carry higher write priority than one verbal statement "I don't like ORMs"
 - Behavioral evidence has harder provenance
@@ -256,7 +256,7 @@ The solution requires: ^[raw/articles/memory-in-the-llm-era-iclr2026.md]
 
 **Forget vs. Delete:** ^[raw/articles/memory-in-the-llm-era-iclr2026.md]
 
-These are fundamentally different operations: ^[raw/articles/memory-in-the-llm-era-iclr2026.md]
+These are fundamentally different operations:
 
 | Operation | Scope |
 |-----------|-------|
@@ -415,7 +415,7 @@ Skills represent the highest form of memory evolution: **experience compressed i
 
 ### 6.3 Reflexion / ExpeL / ReMe
 
-These frameworks answer: *How can experience be not just preserved but distilled into directly callable capabilities?* ^[raw/articles/memory-in-the-llm-era-iclr2026.md]
+These frameworks answer: *How can experience be not just preserved but distilled into directly callable capabilities?*
 
 The architectural implication: memory systems should eventually output **Skills** as a primary artifact, not just preserve conversational state. ^[raw/articles/memory-in-the-llm-era-iclr2026.md]
 

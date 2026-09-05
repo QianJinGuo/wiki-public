@@ -8,6 +8,7 @@ sources: [raw/articles/time-series-forecasting-augmentation-methods]
 review_value: 6
 review_confidence: 7
 provenance_state: inferred
+score_validated: 2026-09-05
 ---
 ## 核心挑战
 时间序列预测增强比分类更难：方法必须同时做到（1）引入足够多样性让模型见到训练数据之外的变化，（2）保持时间一致性让增强后的信号仍是合法连续序列。只破坏 input-target 对齐（look-back 窗口与预测 horizon 的连续关系），性能反而下降。^[raw/articles/time-series-forecasting-augmentation-methods.md]

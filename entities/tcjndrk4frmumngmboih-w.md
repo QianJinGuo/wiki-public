@@ -4,9 +4,9 @@ title: "花费 2 个星期写了 8 篇 OpenClaw 源码拆解文章，我发现90
 type: entity
 tags: [microsoft, rag]
 created: 2026-05-21
-updated: 2026-08-29
-review_value: 6
-review_confidence: 6
+updated: 2026-09-05
+review_value: 7
+review_confidence: 7
 sources: [raw/articles/tCjNDrk4fRMUmngmbOih-w]
 ---
 

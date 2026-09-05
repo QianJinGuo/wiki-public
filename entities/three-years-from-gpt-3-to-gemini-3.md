@@ -148,7 +148,7 @@ Mollick 明确把 Antigravity 与 Claude Code、OpenAI Codex 并列 ^[raw/articl
 
 ### 3. 训练"指导者"而非"提示者"的能力
 
-Human-in-the-loop 的角色在演变，团队需要相应升级： ^[raw/articles/three-years-from-gpt-3-to-gemini-3.md]
+Human-in-the-loop 的角色在演变，团队需要相应升级：
 
 - **从"修复 AI 错误"到"指导 AI 工作"**——这需要不同的技能组合
 - **培养方法论判断力**：识别 AI 工作的"哪种思路是对的"

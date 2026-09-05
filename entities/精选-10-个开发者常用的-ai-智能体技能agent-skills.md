@@ -5,9 +5,10 @@ created: 2026-05-10
 updated: 2026-06-17
 type: entity
 tags: [mlops, ai-agent, wechat, agent-tools, engineering]
-review_value: 6
+review_value: 5
 sources: [raw/articles/精选-10-个开发者常用的-ai-智能体技能agent-skills]
-review_confidence: 7
+review_confidence: 6
+score_validated: 2026-09-05
 ---
 
 > -> [[raw/articles/精选-10-个开发者常用的-ai-智能体技能agent-skills.md|原文存档]]

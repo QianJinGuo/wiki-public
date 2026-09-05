@@ -5,8 +5,9 @@ updated: 2026-06-17
 type: entity
 tags: [article, wechat]
 sources: [raw/articles/特斯拉百万年薪招数据标注员朝九晚五无需ai经验]
-review_value: 6
-review_confidence: 7
+review_value: 5
+review_confidence: 6
+score_validated: 2026-09-05
 ---
 ## 摘要
 本文档从微信平台抓取，原始URL: https://mp.weixin.qq.com/s/gkZLaXQO-FlDdmtydwj4Vg ^[raw/articles/特斯拉百万年薪招数据标注员朝九晚五无需ai经验.md]

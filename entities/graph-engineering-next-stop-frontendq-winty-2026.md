@@ -1,18 +1,12 @@
 ---
 title: "Loop 不够用了？AI 工程下一站叫 Graph"
-created: 2026-07-31
-updated: 2026-08-01
-type: entity
-tags: ['graph-engineering', 'ai-engineering', 'loop-engineering', 'agents']
-sources: [raw/articles/graph-engineering-next-stop-frontendq-winty-2026]
-provenance_state: extracted
+created: 2026-09-06
+updated: 2026-09-06
+type: redirect
+review_value: 0
+archived_to: _archive/checkup-2026-09-06/graph-engineering-next-stop-frontendq-winty-2026.md
+archived_reason: link_only_shell 扣链后正文<150字符 零知识内容
 ---
 
-> -> [[raw/articles/graph-engineering-next-stop-frontendq-winty-2026.md|原文存档]]
-
-最近一周，AI 圈又冒出一个新词：Graph Engineering。 ^[raw/articles/graph-engineering-next-stop-frontendq-winty-2026.md]
-
-## 来源
-
-- 原文: [[raw/articles/graph-engineering-next-stop-frontendq-winty-2026.md|Loop 不够用了？AI 工程下一站叫 Graph]]
-- 原始链接: : "https://mp.weixin.qq.com/s/w4YFYVgzkgB0NPeM4yeVzw
+> 本实体已于 2026-09-06 质量闭环清理中归档（原因: link_only_shell 扣链后正文<150字符 零知识内容）。
+> 原文见 `raw/articles/`，归档件见 `_archive/checkup-2026-09-06/graph-engineering-next-stop-frontendq-winty-2026.md`。

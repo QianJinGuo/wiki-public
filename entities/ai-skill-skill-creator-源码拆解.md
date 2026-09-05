@@ -5,8 +5,8 @@ type: entity
 tags: [agent, llm, skill, evaluation, skill-creator]
 created: 2026-05-21
 updated: 2026-05-21
-review_value: 6
-review_confidence: 6
+review_value: 8
+review_confidence: 7
 sources: [raw/articles/ai-skill-skill-creator-源码拆解]
 ---
 

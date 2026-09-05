@@ -2,7 +2,7 @@
 
 title: "Microsoft Build 2026：微软 AI 独立日 —— 7 款 MAI 模型 + Scout 智能体"
 created: 2026-06-04
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [microsoft, build-2026, mai, mai-thinking, mai-code, mai-image, mai-voice, mai-transcribe, scout, openclaw, agent, microsoft-365, reasoning-model, ai-stack, full-stack-ai, enterprise-ai]
 sources: [raw/articles/microsoft-build-2026-mai-models-scout-agent, raw/articles/microsoft-build-2026-qbitai-full-scope]
@@ -236,7 +236,7 @@ review_recommendation: strong
 - 分析原因 → **自动执行多步骤任务** → 整个排错过程**都留在终端里完成**
 - **预览阶段**——正式上线后将"**给 StackOverflow 雪上加霜**"
 
-**Windows Developer Configurations 一键装机**： ^[raw/articles/microsoft-build-2026-mai-models-scout-agent.md]
+**Windows Developer Configurations 一键装机**：
 - **WinGet 一条命令搞定**：VS Code、GitHub Copilot、PowerShell 7
 - 启动 WSL、Git 版本控制、隐藏文件显示
 - "**新电脑的装机噩梦，终结！**"

@@ -1,12 +1,13 @@
 ---
 tags: [model, self-evolution, company]
 title: "MiniMax M2.7 — 自我进化LLM"
-updated: 2026-08-29
+updated: 2026-09-05
 created: 2026-04-30
 type: entity
 sources: [raw/articles/minimax-m2-7-self-evolution]
 review_value: 6
 review_confidence: 7
+score_validated: 2026-09-05
 ---
 # MiniMax M2.7
 > 首个模型深度参与迭代自身的LLM版本，主打自我进化+Agent Teams+专业办公。

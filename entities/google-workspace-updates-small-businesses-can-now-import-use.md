@@ -4,10 +4,11 @@ title: "Google Workspace Updates: Small businesses can now seamlessly import use
 type: entity
 tags: [api, google, microsoft, rag]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 6
 review_confidence: 6
 sources: [raw/articles/google-workspace-updates-small-businesses-can-now-import-use]
+score_validated: 2026-09-05
 ---
 
 ## 深度分析

@@ -1,18 +1,12 @@
 ---
 title: "openclaw-vs-hermes-agent-三个重度日常场景深度体验后我为什么放弃了爱马仕选择了小龙虾"
-created: 2026-07-05
-updated: 2026-08-01
-type: entity
-tags: ['auto-harvested']
-sources: [raw/articles/openclaw-vs-hermes-agent-三个重度日常场景深度体验后我为什么放弃了爱马仕选择了小龙虾]
-provenance_state: extracted
+created: 2026-09-06
+updated: 2026-09-06
+type: redirect
+review_value: 0
+archived_to: _archive/checkup-2026-09-06/openclaw-vs-hermes-agent-三个重度日常场景深度体验后我为什么放弃了爱马仕选择了小龙虾.md
+archived_reason: link_only_shell 扣链后正文<150字符 零知识内容
 ---
 
-> -> [[raw/articles/openclaw-vs-hermes-agent-三个重度日常场景深度体验后我为什么放弃了爱马仕选择了小龙虾.md|原文存档]]
-
-最近 Hermes 太火了，很多人说它要替代 OpenClaw。 ^[raw/articles/openclaw-vs-hermes-agent-三个重度日常场景深度体验后我为什么放弃了爱马仕选择了小龙虾.md]
-
-## 来源
-
-- 原文: [[raw/articles/openclaw-vs-hermes-agent-三个重度日常场景深度体验后我为什么放弃了爱马仕选择了小龙虾.md|openclaw-vs-hermes-agent-三个重度日常场景深度体验后我为什么放弃了爱马仕选择了小龙虾]]
-- 原始链接: : https://mp.weixin.qq.com/s/TNByu2tENhnE481eEM9TRQ
+> 本实体已于 2026-09-06 质量闭环清理中归档（原因: link_only_shell 扣链后正文<150字符 零知识内容）。
+> 原文见 `raw/articles/`，归档件见 `_archive/checkup-2026-09-06/openclaw-vs-hermes-agent-三个重度日常场景深度体验后我为什么放弃了爱马仕选择了小龙虾.md`。

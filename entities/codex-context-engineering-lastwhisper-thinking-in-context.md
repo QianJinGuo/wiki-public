@@ -2,14 +2,16 @@
 
 title: Codex 上下文工程 — Prompt Layout + Append-only + Latent Space Moat（LastWhisper 解读）
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-06
 type: entity
-tags: [codex, openai, context-engineering, prompt-caching, append-only, latent-space, moat, event-sourcing, agent]
+tags: [codex, openai, context-engineering, prompt-caching, append-only, latent-space, moat, event-sourcing, agent, context-management, new-context, notes, history, state-ownership]
 confidence: 0.85
 provenance_state: extracted
 stars: 4
 value: 8
-sources: [raw/articles/codex-context-engineering-lastwhisper-thinking-in-context]
+sources:
+  - raw/articles/codex-context-engineering-lastwhisper-thinking-in-context
+  - raw/articles/codex-context-management-cutover-ruofei-2026-09-05
 review_value: 7
 ---
 
@@ -187,4 +189,31 @@ LastWhisper 开源了 **context-kit**（教学原型），覆盖三大模块： 
 
 - [[entities/reverse-audit-prompt-paradigm-codex-5-line-version|反向审计 prompt 范式 — 从 vb 50 行 codex 自我蒸馏到 5 行核心]]
 - [[moc/prompt-engineering-guide|MOC]]
+
+## 2026-09-05 SUPP：Codex 上下文管理切窗机制（若飞源码/PR 级拆解）
+
+> 本文档早期版本聚焦 LastWhisper 对 OpenAI《Unrolling the Codex agent loop》的解读（Prompt Layout / Append-only / Latent Space Moat）。2026-09-05 若飞《Codex 的「记忆」大改？上下文管理架构拆解》补充了 Codex CLI 0.153.0 实验性 context management 的**切窗协议与状态分离**维度——四类状态分离框架、new_context/notes/history 工具协议、状态所有权表，扩展了本实体从「压缩/缓存」到「切换窗口 + 交接」的完整上下文管理图景。 ^[raw/articles/codex-context-management-cutover-ruofei-2026-09-05.md]
+
+### 四类状态分离：把「记忆」拆成不同生命周期
+
+Codex 实验性 context management 将常被统称为「记忆」的内容拆成四类状态，每类的写入者、保存时长、覆盖规则与冲突裁决权都不同： ^[raw/articles/codex-context-management-cutover-ruofei-2026-09-05.md]
+
+| 状态 | 载体 | 作用 | 生命周期 |
+|---|---|---|---|
+| 当前工作集 | context window | 眼前推理材料（系统指令/用户要求/最近对话/工具结果） | 当前窗口，token 预算管理 |
+| 交接状态 | notes | 跨窗口接手所需信息（目标/关键决策/当前进展/下一步），带 window ID + item ID 指向原始记录 | 跨窗口，模型筛选整理（检查点而非前情提要） |
+| 会话历史 | history | 旧窗口原始条目，可列出/读取/字面子串搜索 | 持久，搜索非语义检索（区分大小写） |
+| 外部权威事实 | 代码/Git/CI/工单 | 任务真实状态，不受切窗影响 | 独立于模型上下文 |
+
+核心判断：这组实现没有为 Agent 凭空增加「永久记忆」，而是**把不同可信度与生命周期的状态分开放置**。模型上下文丢失可从 notes/history 重建；但外部副作用（已发请求/已提交事务）不能靠笔记猜测——结果未知时先查权威系统，再依据幂等键决定重试。 ^[raw/articles/codex-context-management-cutover-ruofei-2026-09-05.md]
+
+### 切窗协议：模型主动收尾 + Harness 硬边界兜底
+
+切窗由模型与 Harness 共同完成，关键 PR：token budget context feature（#27438）、new context window tool（#27488）、fallback phase before automatic context rollover（#33255）、history and notes tools（#39827）、inject history notes hints（#40539）、experimental context management activation（#42385）。 ^[raw/articles/codex-context-management-cutover-ruofei-2026-09-05.md]
+
+两层的分工：模型判断「这一阶段是否做完」「哪些决策值得交接」（可主动调用 new_context）；运行时盯住 token 余量——余量跨阈值提醒一次、基础预算耗尽注入兜底提示并留出缓冲让模型写 notes，缓冲耗尽才自动切换。thread_hint 注入上限 4000 字节、单项注入上限 1 万 token——系统不追求把旧内容重新塞满窗口，而是「短交接 + 原始历史按需读取」在预算内恢复。 ^[raw/articles/codex-context-management-cutover-ruofei-2026-09-05.md]
+
+### 与 compaction 的关系：不同成本的读取层级
+
+摘要适合快速恢复全局，notes 适合保存明确交接状态，history 适合核对关键细节——compaction 与硬切窗口不是互斥路线，而是同一条运行链路上不同成本的读取层级。Codex 当前实验采用「短交接 + 原始历史」组合，官方产品仍保留 compaction（0.150.1 还有 remote compaction 修复），与本文档早前记录的 `encrypted_content` compaction 载体并存。Hermes 也在加入 compaction recall（回看压缩前内容），两个项目给压缩/交接后的内容都留了回查原始记录的入口。 ^[raw/articles/codex-context-management-cutover-ruofei-2026-09-05.md]
 

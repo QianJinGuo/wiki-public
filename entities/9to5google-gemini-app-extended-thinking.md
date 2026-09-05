@@ -4,10 +4,11 @@ title: "Gemini app rolling out 'Extended' thinking level, new 3rd-party app inte
 type: entity
 tags: [google, model]
 created: 2026-05-21
-updated: 2026-08-29
-review_value: 6
-review_confidence: 6
+updated: 2026-09-05
+review_value: 5
+review_confidence: 7
 sources: [raw/articles/9to5google-gemini-app-extended-thinking]
+score_validated: 2026-09-05
 ---
 
 # Gemini app rolling out 'Extended' thinking level, new 3rd-party app integrations

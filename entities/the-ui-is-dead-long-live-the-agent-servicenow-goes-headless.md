@@ -4,10 +4,11 @@ title: "The UI is dead, long live the agent: ServiceNow goes headless and opens 
 type: entity
 tags: [agent]
 created: 2026-05-21
-updated: 2026-05-21
+updated: 2026-09-05
 review_value: 6
 review_confidence: 6
 sources: [raw/articles/the-ui-is-dead-long-live-the-agent-servicenow-goes-headless]
+score_validated: 2026-09-05
 ---
 
 [Skip to content](https://www.techzine.eu/blogs/analytics/141272/the-ui-is-dead-long-live-the-agent-servicenow-goes-headless-and-opens-its-platform/#main) ^[raw/articles/the-ui-is-dead-long-live-the-agent-servicenow-goes-headless.md]

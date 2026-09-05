@@ -5,9 +5,10 @@ created: 2026-05-10
 updated: 2026-05-20
 type: entity
 tags: [engineering, mlops, fastapi, authentication, rate-limiting, deployment]
-review_value: 6
+review_value: 5
 sources: [raw/articles/fastapi上线实战认证限流零停机一套代码搞定]
 review_confidence: 7
+score_validated: 2026-09-05
 ---
 
 > -> [[raw/articles/fastapi上线实战认证限流零停机一套代码搞定.md|原文存档]]

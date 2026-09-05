@@ -8,7 +8,7 @@ type: entity
 tags: [agent, engineering, ai]
 sources:
   - raw/articles/agent-时代的生产力悖论当协作本身成为最大的瓶颈
-review_value: 6
+review_value: 7
 review_confidence: 7
 
 ---

@@ -4,10 +4,11 @@ title: "Openai GPT Realtime Voice Models Qbitai"
 type: entity
 tags: [google, gpt, model, openai]
 created: 2026-05-21
-updated: 2026-08-29
-review_value: 6
+updated: 2026-09-05
+review_value: 5
 review_confidence: 6
 sources: [raw/articles/openai-gpt-realtime-voice-models-qbitai]
+score_validated: 2026-09-05
 ---
 
 # GPT-5级推理能力塞进语音模型，OpenAI把同传翻译成本砍穿地板价

@@ -2,11 +2,11 @@
 
 title: "AI 友好架构设计"
 created: 2026-07-02
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [architecture, ai-native, backend, design, ai-engineering]
-review_value: 5
-review_confidence: 5
+review_value: 7
+review_confidence: 7
 provenance_state: inferred
 confidence: 0.6
 sources: [raw/articles/ai-friendly-architecture-design-taobao]

@@ -5,8 +5,8 @@ type: entity
 tags: [coding, harness]
 created: 2026-05-21
 updated: 2026-05-21
-review_value: 6
-review_confidence: 6
+review_value: 7
+review_confidence: 7
 sources: [raw/articles/harness-engineeringai-能在真正出事会炸的后端系统里写代码吗-v2]
 ---
 

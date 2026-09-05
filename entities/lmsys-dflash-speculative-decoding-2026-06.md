@@ -1,7 +1,7 @@
 ---
 title: "The next generation of speculative decoding: DFlash and Spec V2 - LMSYS Blog"
 created: 2026-06-17
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 sources: [raw/articles/lmsys-dflash-speculative-decoding-2026-06]
 tags: [ml, inference, speculative-decoding, lmsys, dflash, sglang, diffusion, kv-injection, modal, z-lab]
@@ -9,6 +9,7 @@ review_value: 7
 review_confidence: 6
 review_recommendation: worth-reading
 review_stars: 4
+score_validated: 2026-09-05
 ---
 
 # The next generation of speculative decoding: DFlash and Spec V2 - LMSYS Blog

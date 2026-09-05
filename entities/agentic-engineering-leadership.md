@@ -2,13 +2,13 @@
 
 title: You can't afford to lead agentic engineering from the sidelines
 created: 2026-05-22
-updated: 2026-08-01
+updated: 2026-09-05
 type: entity
 tags: [agentic, engineering, leadership, organization, ai-engineers]
 sources: [raw/articles/agentic-engineering-leadership]
 source_url:
 review_value: 7
-review_confidence: 6
+review_confidence: 7
 review_stars: 4
 review_recommendation: strong
 ---

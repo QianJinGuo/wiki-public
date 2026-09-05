@@ -1,13 +1,14 @@
 ---
 title: "SWE-bench Agent 评估方法论"
 created: 2026-07-02
-updated: 2026-08-05
+updated: 2026-09-05
 type: entity
 tags: [evaluation, swe-bench, agent, benchmark]
-review_value: 5
+review_value: 6
 review_confidence: 5
 provenance_state: stub-upgraded
 confidence: 0.6
+score_validated: 2026-09-05
 ---
 
 # SWE-bench Agent 评估方法论

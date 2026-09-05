@@ -4,9 +4,9 @@ title: "Anthropic Multi Agent Research System"
 type: entity
 tags: [agent, anthropic, evaluation, multi-agent, orchestration, research]
 created: 2026-05-21
-updated: 2026-08-29
-review_value: 6
-review_confidence: 6
+updated: 2026-09-05
+review_value: 8
+review_confidence: 9
 sources: [raw/articles/anthropic-multi-agent-research-system]
 ---
 

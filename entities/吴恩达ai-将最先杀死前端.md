@@ -5,9 +5,10 @@ created: 2026-05-10
 updated: 2026-06-17
 type: entity
 tags: [ai-agent, engineering, mlops, wechat]
-review_value: 6
+review_value: 5
 sources: [raw/articles/吴恩达ai-将最先杀死前端]
 review_confidence: 7
+score_validated: 2026-09-05
 ---
 
 > -> [[raw/articles/吴恩达ai-将最先杀死前端.md|原文存档]]

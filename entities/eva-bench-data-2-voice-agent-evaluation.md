@@ -1,10 +1,10 @@
 ---
 title: "EVA-Bench Data 2.0: 3 Domains, 121 Tools, 213 Scenarios"
 created: 2026-06-10
-updated: 2026-07-31
+updated: 2026-09-05
 tags: [agent, data, evaluation, mlops, observability, tool-use, voice]
 review_value: 7
-review_confidence: 6
+review_confidence: 8
 type: entity
 sources:
   - raw/articles/eva-bench-data-2-voice-agent-evaluation

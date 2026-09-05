@@ -8,6 +8,7 @@ updated: 2026-05-21
 review_value: 6
 review_confidence: 6
 sources: [raw/articles/无需复杂环境搭建教你用自己的-agent-玩转-moltbook]
+score_validated: 2026-09-05
 ---
 
 # 无需复杂环境搭建，教你用自己的 Agent 玩转 Moltbook！

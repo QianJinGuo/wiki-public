@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "sourceRevision": "eea76f6df2b51ad4644bcf46b2c4cbf0b0177374",
+  "sourceRevision": "a4dbe900dfa09380648bbc6422daa0af6cf5f359",
   "files": [
     {
       "path": "raw/articles/0.25秒识破未见攻击-lod-lvlm-jailbreak-detection-emnlp2026.md",
@@ -1658,6 +1658,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/0N-RnpGVy_PLSDHMwAIFNg"
     },
     {
+      "path": "raw/articles/agent-ready-api-design-restless-2026.md",
+      "title": "agent-ready-api-design-restless-2026",
+      "sourceUrl": "https://www.restless.ai/blog/agent-ready-apis"
+    },
+    {
       "path": "raw/articles/agent-redefining-observability-guancecloud-infoq.md",
       "title": "从看见问题到解决问题，Agent 正重新定义可观测",
       "sourceUrl": "https://mp.weixin.qq.com/s/O2JRjj0do9XPv-7u4szCUg"
@@ -2801,6 +2806,11 @@
       "path": "raw/articles/aide-squared-recursive-self-improvement-weco-2026-07-16.md",
       "title": "AIDE²: The First Evidence of Recursive Self-Improvement — Weco AI",
       "sourceUrl": "https://mp.weixin.qq.com/s/jWzDBAUzGeNNQUDH1gw1vg"
+    },
+    {
+      "path": "raw/articles/aidlc-replace-openspec-team-ai-coding-qiansir-2026-09-06.md",
+      "title": "从 OpenSpec 到 AIDLC，我是如何提升团队 AI 代码质量的",
+      "sourceUrl": "https://mp.weixin.qq.com/s/Rfn50Y62m_SgRZqErrp1Vw"
     },
     {
       "path": "raw/articles/aigatewayproductionindex.md",
@@ -6098,6 +6108,11 @@
       "sourceUrl": "https://zhuanlan.zhihu.com/p/2001069051741496397"
     },
     {
+      "path": "raw/articles/codex-context-management-cutover-ruofei-2026-09-05.md",
+      "title": "Codex 的「记忆」大改？上下文管理架构拆解",
+      "sourceUrl": "https://mp.weixin.qq.com/s/s7jLKhfg4sKOIisI2P6ddw"
+    },
+    {
       "path": "raw/articles/codex-goal-implementation-breakdown.md",
       "title": "Codex /goal 实现拆解：长任务 Agent 不只是多跑几轮",
       "sourceUrl": "https://mp.weixin.qq.com/s/7vqPgUmfrpIHtf__Z4M_KA"
@@ -6416,6 +6431,11 @@
       "path": "raw/articles/crewai-fintech-compliance-reporting-agentic-ai.md",
       "title": "crewai-fintech-compliance-reporting-agentic-ai",
       "sourceUrl": "https://blog.crewai.com/how-a-leading-fintech-cuts-weekly-compliance-reporting-from-2-days-to-2-hours"
+    },
+    {
+      "path": "raw/articles/cross-model-universal-jailbreak-research-2026.md",
+      "title": "cross-model-universal-jailbreak-research-2026",
+      "sourceUrl": "https://www.lesswrong.com/posts/hHk5CpiqZTBBiHmYt/from-safety-research-prompt-to-cross-model-universal"
     },
     {
       "path": "raw/articles/crypto-funds-six-week-inflow-streak-4-9-billion-coinshares.md",
@@ -6801,6 +6821,16 @@
       "path": "raw/articles/deepseek-harness-orange-book-shuhua-2026.md",
       "title": "deepseek-harness-orange-book-shuhua-2026",
       "sourceUrl": null
+    },
+    {
+      "path": "raw/articles/deepseek-harness-pi-agent-loop-ending-architecture-panjin-2026-08-30.md",
+      "title": "DeepSeek Harness 和 Pi 的 Agent Loop 循环结束判断架构细节解析",
+      "sourceUrl": "https://mp.weixin.qq.com/s/1NWC0Qk-bDkvr8QIVPr1Zg"
+    },
+    {
+      "path": "raw/articles/deepseek-harness-post-training-enterprise-evolution-aliyun-2026-09-05.md",
+      "title": "模型后训练视角：DeepSeek Harness 把企业进化做进了架构",
+      "sourceUrl": "https://mp.weixin.qq.com/s/JzkELoKKL7mA-35mnWZvCw"
     },
     {
       "path": "raw/articles/deepseek-harness-ptc-creation-cordis-baidu-geek-2026.md",
@@ -7708,6 +7738,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/3ytcAX9ndWFJkW6DPSCg5A"
     },
     {
+      "path": "raw/articles/facebook-org-second-brain-agent-learns-from-experts-2026.md",
+      "title": "facebook-org-second-brain-agent-learns-from-experts-2026",
+      "sourceUrl": "https://engineering.fb.com/2026/09/02/ml-applications/organizational-second-brain-ai-learns-from-experts/"
+    },
+    {
       "path": "raw/articles/factory-mission-multi-agent-architecture.md",
       "title": "一个 Mission 跑 16 天、烧 7.78 亿 Token：Factory 公开了多 Agent 系统的构建哲学",
       "sourceUrl": "https://mp.weixin.qq.com/s/etiYTXpmVdYWgw6nA6vA7A"
@@ -8463,6 +8498,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/ZhvGN8YvR9nIv0KgCUYOPA"
     },
     {
+      "path": "raw/articles/give-your-coding-agents-a-memory-you-own.md",
+      "title": "Give Your Coding Agents a Memory You Own（funes）",
+      "sourceUrl": "https://huggingface.co/blog/funes"
+    },
+    {
       "path": "raw/articles/giving-your-ai-a-job-interview.md",
       "title": "giving-your-ai-a-job-interview",
       "sourceUrl": "https://www.oneusefulthing.org/p/giving-your-ai-a-job-interview"
@@ -9206,6 +9246,11 @@
       "path": "raw/articles/harness-vla-tsinghua-embodied-intelligence-2026.md",
       "title": "具身智能或进入token时代，清华团队提出Harness VLA引领范式变迁",
       "sourceUrl": "https://mp.weixin.qq.com/s/jt5KZ0pYDzUn7i4u6Nn3qg"
+    },
+    {
+      "path": "raw/articles/harness-what-is-model-outside-execution-system-ruofei.md",
+      "title": "Harness 到底是什么：为什么同一个模型，换个 Coding Agent 结果会不一样？",
+      "sourceUrl": "https://mp.weixin.qq.com/s/TusR9UFK6YIfpre7puKbIg"
     },
     {
       "path": "raw/articles/harness-之后-状态边界与失败闭环-若飞.md",
@@ -11903,6 +11948,11 @@
       "sourceUrl": "https://www.xiaohongshu.com/explore/6a86847d000000002800629c?xsec_source=app_share&xsec_token=CBtBWq2Djc4mXJIrkMeRVi2EktwNrlvd9xaU7o4bhfF6E="
     },
     {
+      "path": "raw/articles/mesh-spiralformer-recurrent-transformer-ali-qbitai-2026-09-06.md",
+      "title": "GPT-6 带火循环 Transformer，阿里早已布局（MeSH + SpiralFormer）",
+      "sourceUrl": "https://mp.weixin.qq.com/s/q3cjIus8SEt-9vpTpEdBfA"
+    },
+    {
       "path": "raw/articles/meta-agent-image-generation-model.md",
       "title": "meta-agent-image-generation-model",
       "sourceUrl": "https://mp.weixin.qq.com/s/setqqCn5z8z1kd2lpVsURg"
@@ -12071,6 +12121,11 @@
       "path": "raw/articles/milvus-segment-lifecycle-delete-4-states-shuge-2026.md",
       "title": "一条 delete 走过 4 个状态：拆开 Milvus 的 Segment，我发现删除才是最复杂的操作",
       "sourceUrl": "https://mp.weixin.qq.com/s/d9ESK0SZ9wVUOF7bdszRHA"
+    },
+    {
+      "path": "raw/articles/mimflow-masked-image-modeling-normalizing-flow-nju-eccv-2026.md",
+      "title": "ECCV 2026 Long Oral｜MIMFlow：以 MIM 重塑语义潜空间，构建 Normalizing Flow 端到端生成新范式",
+      "sourceUrl": "https://mp.weixin.qq.com/s/iErWLKomHZ0H9JF-cMrE2A"
     },
     {
       "path": "raw/articles/mimo-code-model-agent-cooptimization-self-evolution-2026-08.md",
@@ -13096,6 +13151,11 @@
       "path": "raw/articles/openagents-workspace-multi-agent-collaboration-itech.md",
       "title": "OpenAgents Workspace：让 Claude Code 和 Codex 在同一个群里干活",
       "sourceUrl": "https://www.cnblogs.com/itech/p/19889215"
+    },
+    {
+      "path": "raw/articles/openai-astra-looped-transformer-debunk-raschka-2026.md",
+      "title": "openai-astra-looped-transformer-debunk-raschka-2026",
+      "sourceUrl": "https://sebastianraschka.com/blog/2026/openai-astra-looped-transformers.html"
     },
     {
       "path": "raw/articles/openai-beneficial-rl-broadly-persistently.md",

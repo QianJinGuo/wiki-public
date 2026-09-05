@@ -6,8 +6,9 @@ tags: [agent, context, framework, llm, microsoft, model, openai, workflow]
 created: 2026-05-21
 updated: 2026-09-05
 review_value: 6
-review_confidence: 6
+review_confidence: 8
 sources: [raw/articles/microsoft-agent-framework-python-full-guide-zizhi]
+score_validated: 2026-09-05
 ---
 
 Agent Framework 是微软面向 .NET / Python 的统一 Agent 开发框架，承接 Semantic Kernel 与 AutoGen 的核心能力，并新增： ^[raw/articles/microsoft-agent-framework-python-full-guide-zizhi.md]

@@ -12,6 +12,7 @@ created: 2026-05-16
 updated: 2026-05-16
 review_value: 5
 
+score_validated: 2026-09-05
 ---
 
 # 柚漫剧 AI全流程提效拆解---从单点提效到工程融合

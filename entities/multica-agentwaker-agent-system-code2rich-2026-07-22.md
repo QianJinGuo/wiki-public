@@ -1,18 +1,12 @@
 ---
 title: "改造 Multica 再让它读懂 AgentWaker"
-created: 2026-07-22
-updated: 2026-08-01
-type: entity
-tags: ['multica', 'agentwaker', 'agent-system', 'role-management', 'personal-agent', 'snapshot-plan', 'runtime']
-sources: [raw/articles/multica-agentwaker-agent-system-code2rich-2026-07-22]
-provenance_state: extracted
+created: 2026-09-06
+updated: 2026-09-06
+type: redirect
+review_value: 0
+archived_to: _archive/checkup-2026-09-06/multica-agentwaker-agent-system-code2rich-2026-07-22.md
+archived_reason: link_only_shell 扣链后正文<150字符 零知识内容
 ---
 
-> -> [[raw/articles/multica-agentwaker-agent-system-code2rich-2026-07-22.md|原文存档]]
-
-个人 Agent 系统搭建经验，将 Multica（看板/任务框架）与 AgentWaker（角色定义系统）整合。 ^[raw/articles/multica-agentwaker-agent-system-code2rich-2026-07-22.md]
-
-## 来源
-
-- 原文: [[raw/articles/multica-agentwaker-agent-system-code2rich-2026-07-22.md|改造 Multica 再让它读懂 AgentWaker]]
-- 原始链接: : "https://mp.weixin.qq.com/s/8BIwK9If5nBJwEtEbLNE3w
+> 本实体已于 2026-09-06 质量闭环清理中归档（原因: link_only_shell 扣链后正文<150字符 零知识内容）。
+> 原文见 `raw/articles/`，归档件见 `_archive/checkup-2026-09-06/multica-agentwaker-agent-system-code2rich-2026-07-22.md`。

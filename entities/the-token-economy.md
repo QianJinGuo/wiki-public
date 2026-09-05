@@ -6,8 +6,9 @@ type: entity
 tags: [cryptocurrency, news]
 review_value: 6
 sources: [raw/articles/the-token-economy-pt2-the-intelligence-company-gets-built]
-review_confidence: 7
+review_confidence: 6
 provenance_state: inferred
+score_validated: 2026-09-05
 ---
 # The Token Economy
 

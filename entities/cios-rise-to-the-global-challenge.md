@@ -1,17 +1,12 @@
 ---
 title: "CIOs rise to the global challenge"
-created: 2026-08-01
-updated: 2026-09-05
-type: entity
-tags: ['ai', 'coding', 'enterprise', 'governance']
-sources: [raw/articles/cios-rise-to-the-global-challenge]
-provenance_state: extracted
+created: 2026-09-06
+updated: 2026-09-06
+type: redirect
+review_value: 0
+archived_to: _archive/checkup-2026-09-06/cios-rise-to-the-global-challenge.md
+archived_reason: link_only_shell 扣链后正文<150字符 零知识内容
 ---
 
-> -> [[raw/articles/cios-rise-to-the-global-challenge.md|原文存档]]
-
-
-## 来源
-
-- 原文: [[raw/articles/cios-rise-to-the-global-challenge.md|CIOs rise to the global challenge]]
-- 原始链接: : https://www.cio.com/article/4168666/cios-rise-to-the-global-challenge.html
+> 本实体已于 2026-09-06 质量闭环清理中归档（原因: link_only_shell 扣链后正文<150字符 零知识内容）。
+> 原文见 `raw/articles/`，归档件见 `_archive/checkup-2026-09-06/cios-rise-to-the-global-challenge.md`。

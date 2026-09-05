@@ -4,9 +4,9 @@ title: "从 Autoresearch 到 Better-Harness：自动优化真正难在评价信�
 type: entity
 tags: [harness, research]
 created: 2026-05-21
-updated: 2026-08-29
-review_value: 6
-review_confidence: 6
+updated: 2026-09-05
+review_value: 8
+review_confidence: 7
 sources: [raw/articles/better-harness-eval-trace-harness-hill-climbing]
 ---
 

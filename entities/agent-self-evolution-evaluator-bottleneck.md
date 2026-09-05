@@ -2,7 +2,7 @@
 
 title: "Agent 自进化评估瓶颈 — 外置 evaluator 是自动自进化的前提条件"
 created: 2026-07-07
-updated: 2026-08-01
+updated: 2026-09-05
 type: entity
 tags: [self-evolution, evaluator, reward-hacking, darwin-godel-machine, alphaevolve, deepseek-r1, self-rewarding, meta-rewarding, swe-bench-illusion, agent-evaluation, llm-as-judge, goodharts-law]
 sources:
@@ -36,7 +36,7 @@ sha256: tbd
 | AlphaEvolve | 架构层 | 候选解可判真伪 | 4×4 复数矩阵 48 乘法, 56 年首次超 Strassen |
 | DeepSeek-R1-Zero | 权重层 | 规则奖励(答案/编译器/格式) | 避开 neural reward model 防 reward hacking |
 
-关键洞察：这些系统能自动不是因为反省能力，而是因为 **任务本身提供外置可验证分数**。[^1]^[raw/articles/tzxbqmBhPlQOarakeeMQaQ.md]
+关键洞察：这些系统能自动不是因为反省能力，而是因为 **任务本身提供外置可验证分数**。[^1]
 
 
 ## 反例：优化器会攻击分数
@@ -45,14 +45,14 @@ sha256: tbd
 - **Self-Rewarding LM**：裁判和选手同脑 → 偏向迎合自家裁判而非外部质量
 - **SWE-bench 污染**：去掉仓库只给 issue 文本，SoTA 76% 押中改文件；换基准外仓库 53%
 
-**evaluator 三种死法**：被优化器篡改 / 被模型自偏污染 / 被训练数据污染。[^1]^[raw/articles/tzxbqmBhPlQOarakeeMQaQ.md]
+**evaluator 三种死法**：被优化器篡改 / 被模型自偏污染 / 被训练数据污染。[^1]
 
 
 ## LLM-as-Judge 的风险
 
 生产闭环中同一基座生成方案、评价方案、决定经验沉淀 → **奖励"像自己认可的好答案"而非真实业务结果**。这不是评估，是自我强化。[^1] ^[raw/articles/tzxbqmBhPlQOarakeeMQaQ]
 
-已知偏差：位置偏差、长度偏差、自增强偏差（Panickssery: 模型越大越偏爱自己答案）。^[raw/articles/tzxbqmBhPlQOarakeeMQaQ.md]
+已知偏差：位置偏差、长度偏差、自增强偏差（Panickssery: 模型越大越偏爱自己答案）。
 
 
 ## 三层评估框架
@@ -68,7 +68,7 @@ sha256: tbd
 
 ## 最终边界
 
-多数"自进化"只自动化了**提议**（写记忆、写技能、改流程）。真正困难的是**判定**。^[raw/articles/tzxbqmBhPlQOarakeeMQaQ.md]
+多数"自进化"只自动化了**提议**（写记忆、写技能、改流程）。真正困难的是**判定**。
 
 
 > **最终边界**：有可信外部信号的更新可以自动；没有可信外部信号的更新必须留人或禁止上线。[^1]
@@ -77,5 +77,5 @@ sha256: tbd
 
 → [raw/articles/tzxbqmBhPlQOarakeeMQaQ|原文存档]
 
-[^1]: raw/articles/tzxbqmBhPlQOarakeeMQaQ^[raw/articles/tzxbqmBhPlQOarakeeMQaQ.md]
+[^1]: raw/articles/tzxbqmBhPlQOarakeeMQaQ
 

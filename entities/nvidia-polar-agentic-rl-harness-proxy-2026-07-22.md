@@ -1,18 +1,12 @@
 ---
 title: "NVIDIA 开源 Agentic RL 框架 Polar：支持任意 Harness，零改动 Agent 代码"
-created: 2026-07-22
-updated: 2026-08-01
-type: entity
-tags: ['nvidia', 'polar', 'agentic-rl', 'reinforcement-learning', 'rollout', 'harness', 'harness-as-environment', 'proxy', 'prefix-merging']
-sources: [raw/articles/nvidia-polar-agentic-rl-harness-proxy-2026-07-22]
-provenance_state: extracted
+created: 2026-09-06
+updated: 2026-09-06
+type: redirect
+review_value: 0
+archived_to: _archive/checkup-2026-09-06/nvidia-polar-agentic-rl-harness-proxy-2026-07-22.md
+archived_reason: link_only_shell 扣链后正文<150字符 零知识内容
 ---
 
-> -> [[raw/articles/nvidia-polar-agentic-rl-harness-proxy-2026-07-22.md|原文存档]]
-
-Polar 是 NVIDIA 研究团队开源的 RL Rollout 框架，核心思路：不在 Agent 内部改动，而是寄生在模型调用边界。 ^[raw/articles/nvidia-polar-agentic-rl-harness-proxy-2026-07-22.md]
-
-## 来源
-
-- 原文: [[raw/articles/nvidia-polar-agentic-rl-harness-proxy-2026-07-22.md|NVIDIA 开源 Agentic RL 框架 Polar：支持任意 Harness，零改动 Agent 代码]]
-- 原始链接: : "https://mp.weixin.qq.com/s/4zWgu2bso9U07L3nU7-2Rw
+> 本实体已于 2026-09-06 质量闭环清理中归档（原因: link_only_shell 扣链后正文<150字符 零知识内容）。
+> 原文见 `raw/articles/`，归档件见 `_archive/checkup-2026-09-06/nvidia-polar-agentic-rl-harness-proxy-2026-07-22.md`。

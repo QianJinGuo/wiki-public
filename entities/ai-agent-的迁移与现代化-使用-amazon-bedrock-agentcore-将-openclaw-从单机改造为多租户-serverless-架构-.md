@@ -5,8 +5,8 @@ type: entity
 tags: [agent, aws]
 created: 2026-05-21
 updated: 2026-05-21
-review_value: 6
-review_confidence: 6
+review_value: 7
+review_confidence: 9
 sources: [raw/articles/ai-agent-的迁移与现代化-使用-amazon-bedrock-agentcore-将-openclaw-从单机改造为多租户-serverless-架构-]
 ---
 

@@ -4,10 +4,11 @@ title: "Airbyte Agents: A New Era for Airbyte | Airbyte"
 type: entity
 tags: [agent, model]
 created: 2026-05-21
-updated: 2026-05-21
-review_value: 6
-review_confidence: 6
+updated: 2026-09-05
+review_value: 5
+review_confidence: 7
 sources: [raw/articles/airbyte-agents]
+score_validated: 2026-09-05
 ---
 
 ## **The Real Reason Agents Fail**

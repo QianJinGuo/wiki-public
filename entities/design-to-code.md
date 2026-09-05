@@ -2,14 +2,15 @@
 
 title: "设计稿转代码（Design to Code）"
 created: 2026-07-02
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [frontend, design, ai-coding, visual-reduction]
-review_value: 5
-review_confidence: 5
+review_value: 6
+review_confidence: 6
 provenance_state: stub-upgraded
 confidence: 0.6
 sources: [raw/articles/design-to-code-loop-figma]
+score_validated: 2026-09-05
 ---
 
 # 设计稿转代码（Design to Code）

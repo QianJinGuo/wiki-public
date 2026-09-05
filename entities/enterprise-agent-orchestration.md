@@ -2,14 +2,15 @@
 
 title: "企业级 Agent 编排"
 created: 2026-07-02
-updated: 2026-08-06
+updated: 2026-09-05
 type: entity
 tags: [enterprise, agent, orchestration, architecture]
-review_value: 5
-review_confidence: 5
+review_value: 6
+review_confidence: 8
 provenance_state: stub-upgraded
 confidence: 0.6
 sources: [raw/articles/agent-orchestration]
+score_validated: 2026-09-05
 ---
 
 # 企业级 Agent 编排

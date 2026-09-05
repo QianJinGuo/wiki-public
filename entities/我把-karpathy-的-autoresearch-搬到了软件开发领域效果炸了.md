@@ -7,7 +7,8 @@ type: entity
 tags: [ai-agent, engineering, mlops, wechat]
 review_value: 6
 sources: [raw/articles/我把-karpathy-的-autoresearch-搬到了软件开发领域效果炸了]
-review_confidence: 7
+review_confidence: 6
+score_validated: 2026-09-05
 ---
 
 > -> [[raw/articles/我把-karpathy-的-autoresearch-搬到了软件开发领域效果炸了.md|原文存档]]

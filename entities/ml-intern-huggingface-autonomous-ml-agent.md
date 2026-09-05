@@ -4,10 +4,11 @@ title: "ML Intern Huggingface Autonomous ML Agent"
 type: entity
 tags: [agent, research]
 created: 2026-05-21
-updated: 2026-06-30
+updated: 2026-09-05
 review_value: 6
-review_confidence: 6
+review_confidence: 7
 sources: [raw/articles/ml-intern-huggingface-autonomous-ml-agent]
+score_validated: 2026-09-05
 ---
 
 # ml-intern: Hugging Face 开源自主 ML 工程代理

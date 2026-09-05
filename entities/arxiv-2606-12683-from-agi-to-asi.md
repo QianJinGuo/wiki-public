@@ -2,7 +2,7 @@
 title: "From AGI to ASI"
 description: "从 AGI 到 ASI 的转换路径分析：四大路径、摩擦因素与开放研究问题。DeepMind 团队 arxiv 2606.12683"
 created: 2026-06-17
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [agi, asi, superintelligence, recursive-self-improvement, ai-frontier, arxiv, deepmind, alignment, multi-agent]
 sources: [raw/articles/arxiv-2606-12683-from-agi-to-asi]
@@ -12,6 +12,7 @@ review_recommendation: worth-reading
 review_stars: 4
 confidence: 0.8
 provenance_state: extracted
+score_validated: 2026-09-05
 ---
 
 # From AGI to ASI

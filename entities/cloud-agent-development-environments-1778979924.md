@@ -1,17 +1,12 @@
 ---
 title: "Development environments for your cloud agents"
-created: 2026-05-17
-updated: 2026-09-05
-type: entity
-tags: ['article']
-sources: [raw/articles/cloud-agent-development-environments-1778979924]
-provenance_state: extracted
+created: 2026-09-06
+updated: 2026-09-06
+type: redirect
+review_value: 0
+archived_to: _archive/checkup-2026-09-06/cloud-agent-development-environments-1778979924.md
+archived_reason: link_only_shell 扣链后正文<150字符 零知识内容
 ---
 
-> -> [[raw/articles/cloud-agent-development-environments-1778979924.md|原文存档]]
-
-
-## 来源
-
-- 原文: [[raw/articles/cloud-agent-development-environments-1778979924.md|Development environments for your cloud agents]]
-- 原始链接: : https://cursor.com/blog/cloud-agent-development-environments
+> 本实体已于 2026-09-06 质量闭环清理中归档（原因: link_only_shell 扣链后正文<150字符 零知识内容）。
+> 原文见 `raw/articles/`，归档件见 `_archive/checkup-2026-09-06/cloud-agent-development-environments-1778979924.md`。

@@ -2,13 +2,14 @@
 
 title: "Headless cloud security: Rewriting security without the UI."
 created: 2026-05-11
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [security, cloud, sysdig, headless, cnapp, agentic-ai, mcp]
 sources: [raw/articles/sysdig-headless-cloud-security]
-review_value: 6
-review_confidence: 7
+review_value: 5
+review_confidence: 6
 
+score_validated: 2026-09-05
 ---
 ## 摘要
 （见原文） ^[raw/articles/sysdig-headless-cloud-security.md]

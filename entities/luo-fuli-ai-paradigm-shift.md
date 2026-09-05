@@ -14,9 +14,9 @@ score: 81
 recommendation: strong
 knowledge_base_status: 新建
 raw_file: raw/articles/luo-fuli-ai-paradigm-shift.md
-review_value: 6
+review_value: 8
 sources: [raw/articles/luo-fuli-ai-paradigm-shift]
-review_confidence: 7
+review_confidence: 8
 ---
 
 > -> [[raw/articles/luo-fuli-ai-paradigm-shift.md|原文存档]]

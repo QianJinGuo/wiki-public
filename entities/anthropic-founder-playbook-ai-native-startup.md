@@ -4,9 +4,9 @@ title: "Anthropic创始人行动手册：打造一家AI-Native创业公司（附
 type: entity
 tags: [anthropic, claude]
 created: 2026-05-21
-updated: 2026-05-21
-review_value: 6
-review_confidence: 6
+updated: 2026-09-05
+review_value: 7
+review_confidence: 9
 sources: [raw/articles/anthropic-founder-playbook-ai-native-startup]
 ---
 
