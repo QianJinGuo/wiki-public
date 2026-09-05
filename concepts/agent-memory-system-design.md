@@ -1,7 +1,7 @@
 ---
 title: Agent Memory System Design
 created: 2026-04-30
-updated: 2026-08-01
+updated: 2026-09-05
 type: concept
 tags: [agent, architecture, memory, context-management]
 related:
@@ -196,6 +196,6 @@ Memory System 的质量不能靠单一指标衡量，必须建立多维度评测
 
 ## 所属 MOC
 
-- [[moc/agent-memory-architecture|Agent Memory Architecture]]
+- [[moc/agent-memory-architecture-decision-points|Agent Memory Architecture]]
 - [[moc/layer-3-agent-engineering|Layer 3 Agent Engineering]]
 - [[moc/wiki-pending-concepts-roadmap|Wiki Pending Concepts Roadmap]]

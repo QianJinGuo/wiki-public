@@ -1,7 +1,7 @@
 ---
 title: "ChatGPT Memory"
 created: 2026-04-24
-updated: 2026-08-01
+updated: 2026-09-05
 type: entity
 tags: [openai, gpt, memory, custom-gpt, project, ai]
 sources: [raw/articles/ai-knowledge-tools-comparison]
@@ -160,4 +160,4 @@ Canvas 被设计为"独立画布"而非对话线程的延伸，这是它与普�
 ## 相关实体
 
 - [[entities/entrypoint-hijacking|entrypoint hijacking]]
-- [[moc/agent-memory-architecture|MOC]]
+- [[moc/agent-memory-architecture-decision-points|MOC]]

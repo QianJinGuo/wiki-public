@@ -1,7 +1,7 @@
 ---
 title: "State of Memory in Agent Harness — mem0 视角的九大 harness 横评"
 created: 2026-06-12
-updated: 2026-08-01
+updated: 2026-09-05
 type: entity
 tags: [agent, harness, memory, mem0, comparison, landscape, survey, benchmark]
 sources: [raw/articles/state-of-memory-in-agent-harness-mem0-2026]
@@ -142,7 +142,7 @@ Mem0 把 memory 做成 **基础设施层**而非 harness 内部功能。混合�
 - [[agent-memory-architecture-ruofei]] — 若飞视角的 memory 架构
 - [[hermes-agent-memory-system]] — Hermes memory 系统深度
 - [[claude-code-7-layer-memory-architecture]] — Claude Code memory 七层
-- [[harness-engineering-framework]] — harness engineering 总览
+- [[concepts/harness-engineering-framework]] — harness engineering 总览
 - [[agent-memory-evaluation-landscape-taobao-survey]] — memory benchmark 综述（淘宝视角）
 - [[harness-engineering-future-persistence-vs-erosion]] — harness boundary 与持续性
 ## 相关实体

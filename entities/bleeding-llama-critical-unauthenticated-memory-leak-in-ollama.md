@@ -36,7 +36,7 @@ The leaked memory contains u... ^[raw/articles/bleeding-llama-critical-unauthent
 - [[raw/articles/bleeding-llama-critical-unauthenticated-memory-leak-in-ollama|原文]]
 
 ## 相关实体
-> [[queries/ai-agent-security-threat-vectors-mitigation|AI 安全与对齐]] | > [[moc/agent-memory-architecture|Agent 记忆架构]]
+> [[queries/ai-agent-security-threat-vectors-mitigation|AI 安全与对齐]] | > [[moc/agent-memory-architecture-decision-points|Agent 记忆架构]]
 
 ## 深度分析
 ### 漏洞根因分析

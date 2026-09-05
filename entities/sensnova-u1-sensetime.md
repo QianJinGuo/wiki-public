@@ -4,7 +4,7 @@ title: "商汤开源 SenseNova-U1：一个模型，同时「看懂」和「画�
 type: entity
 tags: [model, open-source]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/sensnova-u1-sensetime]
@@ -43,7 +43,7 @@ NEO-unify 架构的核心创新在于**移除了视觉编码器（VE）和变分
 ## 相关实体
 - [[entities/sensnova-u1]]
 - [[entities/loongsuite-genai-semconv-alibaba]]
-- [[entities/harness-engineering-framework]]
+- [[concepts/harness-engineering-framework]]
 - [[entities/aws-sagemaker-ai-agent-guided-workflows-finetuning]]
 - [[entities/genesis-ai-gene-25-embodied-foundation-model]]
 

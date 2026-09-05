@@ -38,7 +38,11 @@ confidence: high
 | 2026-07 | 结构信号（前身） | [[drafts/wiki-emergent-viewpoints-2026-07]] | 透镜制之前，方法验证轮 |
 | 2026-08-29 | 外部系统（phd） | [[drafts/wiki-emergent-viewpoints-2026-08-phd-lens]] + [[concepts/eval-optimizer-firewall]] 等 | phd 七仓库透镜 |
 | 2026-09-05 | **① 时间切片** | [[drafts/wiki-emergent-viewpoints-2026-09-time-slice]] + [[concepts/claim-half-life]] + [[queries/prediction-ledger]]（种子 7 条） | 172 条时间断言撞库；首测半衰期：术语 30d / 代际 59d / 发布预期 109d；supersedes 空转定性 |
-| — | （待跑：建议 2 概念缺位） | | 下一轮占位 |
+| 2026-09-05 | **② 概念缺位** | [[drafts/wiki-emergent-viewpoints-2026-09-concept-gap]] + [[concepts/world-models]] + [[concepts/agent-sandbox]] + 工具 concept-gap-detector.py | D1:4/D2:229/D3:133/D4:106；伪 hub 与跨目录孪生、标签-概念断线两结构发现；台账中期检视附带完成 |
+| 2026-09-05 | **③ 反方立场** | [[drafts/wiki-emergent-viewpoints-2026-09-adversarial]] + [[concepts/when-not-to-harness-engineering]] + [[comparisons/model-capability-vs-harness-engineering]] + [[queries/negative-results-registry]] | harness 簇检验：厂商指控被驳回（1%）、同温层 49%、衰减推论缺席；5 条负结果入册；跨目录孪生同步清理 |
+| 2026-09-05 | **④ 跨簇迁移** | [[drafts/wiki-emergent-viewpoints-2026-09-cross-cluster]] + [[concepts/channel-enumeration-criterion]] + [[comparisons/information-isolation-vs-execution-isolation]] | 评测防火墙 × 沙箱：通道枚举判据合成；判分 2 成功 1 半成功 1 空白；对抗页三问登记台账 #8-#10 |
+| 2026-09-05 | **⑤ 概念缺位·复测（度量轮）** | [[drafts/wiki-emergent-viewpoints-2026-09-metrology]] + 检测器升级（delta/history/D2 排除）+ 仪表板六指标基线 | D3 133→128（覆盖 5：实覆盖 2/重标签 2/借道 1）；新增缺口 0；合约 v2（度量轮免定额）；节奏分化决议 |
+| — | （待跑：内容轮——外部系统透镜需备素材，或 roadmap 在册候选批量走 quality 轮） | | 下一轮占位 |
 
 ## 与其他机制的关系
 

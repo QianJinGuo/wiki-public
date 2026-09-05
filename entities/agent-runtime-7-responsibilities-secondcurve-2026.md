@@ -1,7 +1,7 @@
 ---
 title: "Agent 的骨架:Agent Runtime 7 大职责 + 3 主流框架对比 (LangGraph / OpenAI Agents SDK / 自研)"
 created: 2026-06-15
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [agent-runtime, runtime-architecture, tool-registry, state-management, context-engineering, guardrail, trace, observability, langgraph, openai-agents-sdk, multi-agent, agent-framework, hitl, agent-engineering, second-curve, 二曲线工程师]
 sources: [raw/articles/agent-runtime-7-responsibilities-secondcurve-2026, raw/articles/ai-infra-task-infrastructure-ruofei-2026-08-12]
@@ -125,7 +125,7 @@ Runtime 是**模型可替换性的工程保障** — 这与 [[entities/nadella-t
 **Agent Loop / Context / Tool 系列**(本文 7 职责的前 3 块与这些 entity 强相关): ^[raw/articles/agent-runtime-7-responsibilities-secondcurve-2026.md]
 
 - vs **[[entities/agent-evolution-four-stages-six-dimensions-aliyun|阿里云 Agent 演化四阶段六维度]]** — 阿里云是**演化阶段视角**;本文是**职责解剖视角**。两者都讲 Runtime 但切入维度不同
-- vs **[[entities/harness-engineering-framework|Harness Engineering Framework]]** — Harness 是 Runtime 的**外壳**;Runtime 是 Harness 的**内脏**。Runtime 7 职责 = Harness 的实现细节
+- vs **[[concepts/harness-engineering-framework|Harness Engineering Framework]]** — Harness 是 Runtime 的**外壳**;Runtime 是 Harness 的**内脏**。Runtime 7 职责 = Harness 的实现细节
 - vs **[[entities/agent-harness-architecture-design-production-guide|Agent Harness 架构设计与生产实践]]** — Production 视角更全;本文是入门视角
 
 **框架生态**(本文 3 主流框架): ^[raw/articles/agent-runtime-7-responsibilities-secondcurve-2026.md]
@@ -167,7 +167,7 @@ Runtime 是**模型可替换性的工程保障** — 这与 [[entities/nadella-t
 
 ### 5. Runtime 是模型可替换性的工程底座,与"Token 资本"哲学异曲同工
 
-本文核心洞察 — **Runtime 把 LLM 差异封装在执行层，让业务不被任一模型锁定** — 与 [[entities/nadella-token-capital-microsoft-ai-economy-2026|纳德拉「Token 资本」论]] 的"模型可替换性是主权测试"哲学在工程层面高度吻合。[[entities/harness-engineering-framework|Harness Engineering Framework]] 将 Runtime 定位为 Harness 的内脏，而 Runtime 的模型隔离能力正是 Harness 层实现"模型无关性"的底层机制。 ^[raw/articles/agent-runtime-7-responsibilities-secondcurve-2026.md]
+本文核心洞察 — **Runtime 把 LLM 差异封装在执行层，让业务不被任一模型锁定** — 与 [[entities/nadella-token-capital-microsoft-ai-economy-2026|纳德拉「Token 资本」论]] 的"模型可替换性是主权测试"哲学在工程层面高度吻合。[[concepts/harness-engineering-framework|Harness Engineering Framework]] 将 Runtime 定位为 Harness 的内脏，而 Runtime 的模型隔离能力正是 Harness 层实现"模型无关性"的底层机制。 ^[raw/articles/agent-runtime-7-responsibilities-secondcurve-2026.md]
 
 ## 实践启示(5 条 actionable)
 
@@ -207,7 +207,7 @@ Runtime 是**模型可替换性的工程保障** — 这与 [[entities/nadella-t
 - [[entities/claude-fable-5-agent-runtime-contract-ruofei-2026|若飞 Fable 5 Runtime Contract]]
 - [[entities/aliyun-cloud-native-safety-guardrails-three-domains|阿里云安全护栏三域]]
 - [[entities/agent-evolution-four-stages-six-dimensions-aliyun|阿里云 Agent 演化四阶段]]
-- [[entities/harness-engineering-framework|Harness Engineering Framework]]
+- [[concepts/harness-engineering-framework|Harness Engineering Framework]]
 - [[entities/agent-harness-architecture-design-production-guide|Agent Harness 架构设计与生产实践]]
 - [[entities/agentexecutorgooglesdistributedagentruntime|Google Agent Executor Runtime]]
 - [[entities/anthropic-claude-managed-agents-platform-launch|Anthropic Claude Managed Agents]]

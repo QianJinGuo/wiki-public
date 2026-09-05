@@ -1,7 +1,7 @@
 ---
 title: "Harness Engineering 实践指南：10 步路线图 + 8 失败模式 + 设计 Checklist — 系列第 15 篇收官"
 created: 2026-06-18
-updated: 2026-08-01
+updated: 2026-09-05
 type: entity
 tags: [harness-engineering, agent, architecture, engineering, production, devops, practical-guide]
 sources: [raw/articles/harness-engineering-10-step-practical-guide-2026]
@@ -113,7 +113,7 @@ Hermes Agent 已实现路线图中的大部分步骤：Step 1 = AGENTS.md + CLAU
 
 ## 相关实体
 
-- [[entities/harness-engineering-framework|Harness Engineering Framework]]
+- [[concepts/harness-engineering-framework|Harness Engineering Framework]]
 - [[entities/production-harness-12-components-framework-comparison|Production Harness 12 Components]]
 - [[entities/harness-engineering-14-step-roadmap|Harness Engineering 14 步路线图]]
 - [[entities/ai-agent-harness-construction-akshay|AI Agent Harness Construction — Akshay]]

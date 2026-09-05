@@ -1,7 +1,7 @@
 ---
 title: "PersonaVLM — 长期个性化多模态大模型"
 created: 2026-04-27
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [research, model, multimodal, memory, personalization, cvpr2026]
 sources: [raw/articles/personavlm-long-term-personalization]
@@ -64,4 +64,4 @@ Response Stage 和 Update Stage 的解耦设计值得借鉴：交互时专注生
 
 ## 相关实体
 
-- [[moc/agent-memory-architecture|MOC]]
+- [[moc/agent-memory-architecture-decision-points|MOC]]

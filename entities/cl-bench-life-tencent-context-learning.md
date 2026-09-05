@@ -4,7 +4,7 @@ title: "腾讯混元 CL-Bench Life：让大模型读懂你的日常生活"
 type: entity
 tags: [context, model, research]
 created: 2026-05-21
-updated: 2026-06-19
+updated: 2026-09-05
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/cl-bench-life-tencent-context-learning]
@@ -18,7 +18,7 @@ sources: [raw/articles/cl-bench-life-tencent-context-learning]
 博客链接：https://hy.tencent.com/research/100039
 
 ## 相关实体
-- [[entities/harness-engineering-framework]]
+- [[concepts/harness-engineering-framework]]
 - [[entities/microsoft-agent-framework-python-full-guide-zizhi]]
 - [[entities/hermes-agent-deep-dive-alibaba]]
 - [[entities/aws-bedrock-agentcore-quality-optimization-flywheel]]
@@ -26,7 +26,7 @@ sources: [raw/articles/cl-bench-life-tencent-context-learning]
 
 → [[raw/articles/cl-bench-life-tencent-context-learning|原文存档]] ^[raw/articles/cl-bench-life-tencent-context-learning.md]
 
-- [[moc/agent-memory-architecture|MOC]]
+- [[moc/agent-memory-architecture-decision-points|MOC]]
 ## 深度分析
 
 CL-Bench Life 不是 CL-Bench 的升级版，而是一个互补的评测维度。 CL-Bench 评估的是模型在专业、结构化 context 中的表现，而 CL-Bench Life 面对的是日常生活中的混乱、碎片化、持续变化的 context，两者的难度来源完全不同。这意味着仅有长上下文能力并不足以应对真实场景，模型需要具备在高噪声、不完整、反复修改的信息中进行鲁棒推理的能力。 ^[raw/articles/cl-bench-life-tencent-context-learning.md]

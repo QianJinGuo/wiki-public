@@ -1,7 +1,7 @@
 ---
 tags: [memory, open-source, infrastructure]
 title: "OpenChronicle — AI可复用记忆层"
-updated: 2026-08-29
+updated: 2026-09-05
 created: 2026-04-30
 type: entity
 sources: [raw/articles/openchronicle-opensource-memory-layer]
@@ -50,4 +50,4 @@ OpenChronicle的出现揭示了AI记忆层的核心争议——记忆究竟应�
 
 ## 相关实体
 
-- [[moc/agent-memory-architecture|MOC]]
+- [[moc/agent-memory-architecture-decision-points|MOC]]

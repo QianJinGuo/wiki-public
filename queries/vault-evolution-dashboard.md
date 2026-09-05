@@ -32,7 +32,7 @@ tags: [dashboard, quality, metrics, evolution, emergence]
 | L1 事实层 | raw + entities | 厚（4154 + 4178） | 孤儿率 26.4%（1071 页 0 入链）、dup_suffix 618 |
 | L2 概念层 | concepts + comparisons | 薄（164 + 32 vs 4178 entity） | **概念缺位**：高入链主题无 concept hub 收拢 |
 | L3 张力层 | [!contradiction] + 裁决队列 | 机制已接通 | 队列消费速度：60 对待四裁，依赖每日 LLM 环节 |
-| L4 原理层 | 涌现稿（design axes） | 偶发→轮换制 | 透镜轮频率，见 [[queries/emergence-lens-rotation]] |
+| L4 原理层 | 涌现稿（design axes） | 4 轮透镜 + 度量基线建立 | 节奏分化：度量轮月度、内容轮按素材，见 [[queries/emergence-lens-rotation]] |
 | L5 叙事层 | drafts / 月报 / 周报 | 事件驱动 | 选题应改从 L3 队列 + L4 涌现稿取材 |
 
 **判断（2026-09-05）**：摄入不再是瓶颈（日均 ~10+ raw 入库），L2 概念缺位与 L3 队列消费是当前两大瓶颈。每日质量闭环（vault-metrics → daily-checkup 三裁）只作用于 L1，向上合成依赖矛盾升级线与透镜轮。
@@ -52,6 +52,19 @@ daily-checkup.py 日报「矛盾四裁队列」节（每日 LLM 环节消费）
 ```
 
 当前队列：候选 1746 对 → 过滤后 60 对（已排除：已标记 / comparisons 已同台 / 已裁定）。
+
+## 🔬 透镜制效果度量（基线 2026-09-05，复算：`python3 scripts/concept-gap-detector.py` + 各容器页）
+
+| 度量 | 定义 | 基线 | 复算方式 |
+|------|------|------|----------|
+| D3 概念缺口 | 窄 tag（10~100 实体）无 concept 覆盖 | 133 → 128（-5） | 检测器自动 delta + metrics/concept-gaps-history.jsonl |
+| 负结果在册 | 有对照的变差证据 | 5 | [[queries/negative-results-registry|登记簿]] |
+| 台账判定吞吐 | 已判定/总条目 | 1/10 | [[queries/prediction-ledger|台账]] |
+| 对抗页产出 | 矛盾队列 → comparisons 对抗页 | 2 | git log |
+| 透镜新页引力 | 透镜轮新建页被入链数 | 0 轮龄（季度复测） | 入链图 |
+| 补页定额达成 | 各轮产出 vs 合约 | 4/4（度量轮免定额，合约 v2） | 轮换表 |
+
+节奏分化决议：度量轮月度、内容轮按素材触发、缺口大头转常规 quality 轮——透镜制角色是打样与发现结构性缺口，不是内容生产线。详见 [[drafts/wiki-emergent-viewpoints-2026-09-metrology|度量轮涌现稿]]。
 
 ## 📏 质量指标 (vault-metrics 2026-09-05)
 

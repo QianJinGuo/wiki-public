@@ -2,7 +2,7 @@
 
 title: "Context Window Management Comparison"
 created: 2026-05-16
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [agent, architecture, context-window, context-management, compaction, subagent-isolation, pi-mono, openclaw, claude-code, letta, memory, harness, llm, token-budget, sliding-window, summarization]
 sources:
@@ -216,7 +216,7 @@ Agent harness 正在朝同一个方向移动。目标不是向模型展示一切
 - Letta — 向量索引优先，颠覆性的 memory-first 架构
 - Arize Alyx — 独立收敛到相同设计的内部工具
 - Agent Runtime — 上下文管理是 Agent 运行时系统的核心子系统
-- [[moc/agent-memory-architecture|MOC]]
+- [[moc/agent-memory-architecture-decision-points|MOC]]
 
 ---
 ## 关联

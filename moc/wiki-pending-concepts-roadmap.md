@@ -174,8 +174,8 @@ confidence: high
 
 | 候选概念 | 簇大小 | 备注 |
 |----------|--------|------|
-| video-generation + diffusion（可合并"媒体生成"） | 42+35 | 库内有大量视频/图像生成实体，无收拢 |
+| ~~video-generation + diffusion~~ | 42+35 | **已建** [[concepts/media-generation]]（2026-09-05） |
 | knowledge-mgmt | 33 | 与 RAG/moc 层重叠，需先查重 |
 | inference-optimization | 28 | 推理优化散页多，vLLM/量化/KV 相关概念部分存在 |
-| ai-safety | 32 | `ai-ethics-responsible-ai` 存在但语义不同（伦理≠安全），建议新页+互链 |
+| ~~ai-safety~~ | 32 | **已建** [[concepts/ai-safety]]（2026-09-05，与伦理页互链） |
 | computer-vision | 26 | 经典主题，确认无页后低优先补 |

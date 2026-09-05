@@ -20,7 +20,7 @@ Agent = Model + Harness ^[raw/articles/harness-engineering-第三代工程范式
 ## 相关实体
 - [[entities/fudan-peking-ahe-agentic-harness-engineering]]
 - [[entities/huggingface-ai-agent-glossary-model-scaffolding-harness-tool-skill-subagent]]
-- [[entities/harness-engineering-framework]]
+- [[concepts/harness-engineering-framework]]
 - [[entities/harness-engineering-systematic-explainer]]
 - [[entities/cong-30-fen-zhong-shou-gu-agent-dao-harness-cheng-wei-xin-hou-duan]]
 

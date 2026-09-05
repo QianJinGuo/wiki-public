@@ -19,7 +19,7 @@ LangChain 证明：只改 Harness（不改模型权重），TerminalBench 2.0 �
 
 ## 相关实体
 - [[entities/长周期-agent-详解-从-ralph-loop-到可接管-harness]]
-- [[entities/harness-engineering-framework]]
+- [[concepts/harness-engineering-framework]]
 - [[entities/langchain-anatomy-agent-harness]]
 - [[entities/huggingface-ai-agent-glossary-model-scaffolding-harness-tool-skill-subagent]]
 - [[entities/code-as-agent-harness-survey]]

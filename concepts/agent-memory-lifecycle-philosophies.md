@@ -1,7 +1,7 @@
 ---
 title: Agent Memory 生命周期与架构哲学
 created: 2026-05-13
-updated: 2026-09-03
+updated: 2026-09-05
 type: concept
 tags: [agent-memory, lifecycle, architecture-philosophies, governance]
 ---
@@ -215,5 +215,5 @@ Without consistency → system has not shared history, just conflicting narrativ
 
 ## 所属 MOC
 
-- [[moc/agent-memory-architecture|Agent Memory Architecture]]
+- [[moc/agent-memory-architecture-decision-points|Agent Memory Architecture]]
 - [[moc/layer-3-agent-engineering|Layer 3 Agent Engineering]]

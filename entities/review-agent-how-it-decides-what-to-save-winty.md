@@ -4,7 +4,7 @@ title: "Review Agent：后台复盘 Agent 如何判断什么值得保存"
 type: entity
 tags: [agent, prompt]
 created: 2026-05-21
-updated: 2026-05-21
+updated: 2026-09-05
 review_value: 6
 review_confidence: 6
 sources: [raw/articles/review-agent-how-it-decides-what-to-save-winty]
@@ -21,7 +21,7 @@ Review Agent 解决的就是这个问题。它换了个角色、换了个 prompt
 - [[entities/tencent-vibe-coding-to-agentic-engineering-backend]]
 - [[entities/claude-code-search-architecture-tencent-2026]]
 - [[entities/openclaw-prompt-context-harness]]
-- [[entities/harness-engineering-framework]]
+- [[concepts/harness-engineering-framework]]
 
 → [[raw/articles/review-agent-how-it-decides-what-to-save-winty|原文存档]] ^[raw/articles/review-agent-how-it-decides-what-to-save-winty.md]
 

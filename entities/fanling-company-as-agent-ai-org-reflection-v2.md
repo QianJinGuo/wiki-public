@@ -4,7 +4,7 @@ title: "Fanling：AI Agent 时代的组织反思"
 type: entity
 tags: [agent, context, orchestration]
 created: 2026-05-21
-updated: 2026-06-30
+updated: 2026-09-05
 review_value: 6
 review_confidence: 6
 sources: [raw/articles/fanling-company-as-agent-ai-org-reflection-v2]
@@ -20,7 +20,7 @@ sources: [raw/articles/fanling-company-as-agent-ai-org-reflection-v2]
 - [[entities/acker-agent-evolution-three-routes-convergence]]
 - [[entities/agent-context-management-architecture-patterns]]
 - [[entities/openclaw-prompt-context-harness]]
-- [[entities/harness-engineering-framework]]
+- [[concepts/harness-engineering-framework]]
 - [[entities/agent-harness-12-components-7-decisions]]
 
 → [[raw/articles/fanling-company-as-agent-ai-org-reflection-v2|原文存档]] ^[raw/articles/fanling-company-as-agent-ai-org-reflection-v2.md]

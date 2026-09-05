@@ -1,7 +1,7 @@
 ---
 title: "Claw-SWE-Bench：首个独立测量Harness对编程Agent影响的基准"
 created: 2026-06-15
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [benchmark, harness-evaluation, coding-agent, swe-bench, openclaw, tokenrhythm, agent-evaluation, multi-language]
 review_value: 8
@@ -105,7 +105,7 @@ SWE-bench 长期以 Python 为绝对主力，而 Claw-SWE-Bench 的 350 个实�
 
 **1. 评测报告必须包含 API 总成本，而不只是 Pass@1** ^[raw/articles/claw-swe-bench-harness-evaluation-benchmark-tokenrhythm.md]
 
-单一 Pass@1 数字无法支撑真实决策。同等准确率下成本可能相差两个数量级，而成本直接影响可持续的迭代频率。未来的编程 Agent 评测规范应强制要求汇报完整运行成本，让横向比较真正有意义。 [[entities/harness-engineering-framework|Harness Engineering]] ^[raw/articles/claw-swe-bench-harness-evaluation-benchmark-tokenrhythm.md]
+单一 Pass@1 数字无法支撑真实决策。同等准确率下成本可能相差两个数量级，而成本直接影响可持续的迭代频率。未来的编程 Agent 评测规范应强制要求汇报完整运行成本，让横向比较真正有意义。 [[concepts/harness-engineering-framework|Harness Engineering]] ^[raw/articles/claw-swe-bench-harness-evaluation-benchmark-tokenrhythm.md]
 
 **2. 使用 Lite-80 进行高频迭代，full-350 用于正式汇报** ^[raw/articles/claw-swe-bench-harness-evaluation-benchmark-tokenrhythm.md]
 

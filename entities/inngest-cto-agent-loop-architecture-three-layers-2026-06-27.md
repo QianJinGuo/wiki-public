@@ -1,7 +1,7 @@
 ---
 title: "Agent Loop 架构三层模型：Loop + Skill + Orchestrator"
 created: 2026-06-27
-updated: 2026-08-01
+updated: 2026-09-05
 type: entity
 tags: [agent-loop, durable-execution, orchestration, skill, checkpoint, self-building-agent, architecture]
 review_value: 8
@@ -134,6 +134,6 @@ Van Horn 框架 Stage 5 的五个挑战：^[raw/articles/inngest-cto-agent-loop-
 - [[entities/loop-engineering-addy-osmani-challengehub|Loop Engineering (Addy Osmani)]]——Osmani 拆解 loop 内部构成模块，本文把 loop 放进耐久执行层
 - [[entities/loop-engineering-feedback-control-system|Loop Engineering 反馈控制系统]]——反馈控制的前提是耐久执行层提供可靠 checkpoint
 - [[entities/agent-loop-engineering-handbook-8-questions-chen-jin-tencent-self-2026|Agent Loop 工程手册]]——8 问框架与本文三层模型互补
-- [[entities/harness-engineering-framework|Harness Engineering 框架]]——三层中 Orchestrator 层对应 Harness 的运行时职责
+- [[concepts/harness-engineering-framework|Harness Engineering 框架]]——三层中 Orchestrator 层对应 Harness 的运行时职责
 - [[entities/self-harness-shanghai-ai-lab-agent-improves-harness|Self-Harness]]——自建 Skill agent 是 Self-Harness 的工程实现路径
 - [[entities/agentic-environment-engineering-jiagoux-2026-06-27|Agentic Environment Engineering]]——Environment 决定反馈质量，Orchestrator 决定执行耐久性

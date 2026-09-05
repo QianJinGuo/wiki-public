@@ -4,7 +4,7 @@ title: "Harness工程火遍硅谷，AgentCore今天交卷!"
 type: entity
 tags: [agent, api, browser, context, harness, openai, prompt]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/agentcore-managed-harness]
@@ -21,7 +21,7 @@ sources: [raw/articles/agentcore-managed-harness]
 
 ## 相关实体
 - [[entities/openclaw-prompt-context-harness]]
-- [[entities/harness-engineering-framework]]
+- [[concepts/harness-engineering-framework]]
 - [[entities/agent-harness-12-components-7-decisions]]
 - [[entities/from-prompt-to-harness-claude-official]]
 - [[entities/agentcore-harness]]

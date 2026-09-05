@@ -4,7 +4,7 @@ title: "Claude Code Prompt 与上下文 Harness 设计"
 type: entity
 tags: [agent, claude, coding, context, harness, prompt]
 created: 2026-05-21
-updated: 2026-06-30
+updated: 2026-09-05
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/claude-code-prompt-context-harness]
@@ -21,7 +21,7 @@ sources: [raw/articles/claude-code-prompt-context-harness]
 - [[entities/claude-code-harness-deep-dive-founder-park]]
 - [[entities/hermes-agent-deep-dive-alibaba]]
 - [[entities/openclaw-prompt-context-harness]]
-- [[entities/harness-engineering-framework]]
+- [[concepts/harness-engineering-framework]]
 
 → [[raw/articles/claude-code-prompt-context-harness|原文存档]]^[raw/articles/claude-code-prompt-context-harness.md]
 

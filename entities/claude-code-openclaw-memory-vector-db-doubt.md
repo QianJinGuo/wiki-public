@@ -4,7 +4,7 @@ title: "Claude Code vs OpenClaw 记忆：向量数据库是否必要"
 type: entity
 tags: [agent, anthropic, claude-code, openclaw, memory-system, vector-database, llm-routing, sqlite-vec, context-management, autonomous-agent, local-first, enterprise-agent, bm25, rag]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 8
 review_confidence: 8
 sources: [raw/articles/claude-code-openclaw-memory-comparison]
@@ -230,7 +230,7 @@ Claude Code 的六层记忆架构与软件工程中的权限模型高度对齐�
 
 ## 相关实体
 
-- [[agent-memory-architecture|Agent Memory 架构本质]]
+- [[entities/agent-memory-architecture|Agent Memory 架构本质]]
 - [[ai-agent-memory-systems|AI Agent 记忆系统]]
 - [[agentmemory-coding-agent-local-memory|AgentMemory 本地记忆]]
 - [[moc/memory-context-systems|MOC]]

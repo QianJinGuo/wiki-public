@@ -4,7 +4,7 @@ title: "清华大学：驾驭工程 (Harness Engineering) 研究报告"
 type: entity
 tags: [harness]
 created: 2026-05-21
-updated: 2026-05-21
+updated: 2026-09-05
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/tsinghua-harness-engineering-report]
@@ -22,7 +22,7 @@ sources: [raw/articles/tsinghua-harness-engineering-report]
 - [[entities/fudan-agentic-harness-engineering-ahe-gpt54-7points]]
 - [[entities/harness-engineering-long-term-agent-tasks]]
 - [[entities/harness-engineering-systematic-explainer]]
-- [[entities/harness-engineering-framework]]
+- [[concepts/harness-engineering-framework]]
 
 → [[raw/articles/tsinghua-harness-engineering-report|原文存档]]^[raw/articles/tsinghua-harness-engineering-report.md]
 

@@ -1,7 +1,7 @@
 ---
 title: "具身智能前沿"
 created: 2026-07-02
-updated: 2026-08-01
+updated: 2026-09-05
 type: concept
 tags: [embodied, embodied-ai, world-model, robotics, agent, frontier]
 provenance_state: inferred

@@ -1,7 +1,7 @@
 ---
 title: "Skill 工程原则"
 created: 2026-07-02
-updated: 2026-08-01
+updated: 2026-09-05
 type: concept
 tags: [skill, agent-skill, harness-engineering, agent, methodology]
 provenance_state: inferred

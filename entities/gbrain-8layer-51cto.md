@@ -4,7 +4,7 @@ title: "捅破个人AI天花板！YC总裁开源GBrain：8层架构打造AI第�
 type: entity
 tags: [rag]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 6
 review_confidence: 6
 sources: [raw/articles/gbrain-8layer-51cto]
@@ -24,7 +24,7 @@ YC总裁Garry Tan开源的AI第二大脑，8层架构从"找得到"到"真正记
 ## 相关实体
 - [[entities/rag技术框架的演进方向]]
 - [[entities/skill-rag-tsinghua-sra]]
-- [[entities/harness-engineering-framework]]
+- [[concepts/harness-engineering-framework]]
 - [[entities/anthropic-claude-code-large-codebase-best-practices-50002a089323]]
 - [[entities/aws-sagemaker-ai-agent-guided-workflows-finetuning]]
 

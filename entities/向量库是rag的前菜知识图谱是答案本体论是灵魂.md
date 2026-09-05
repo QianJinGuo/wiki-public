@@ -367,6 +367,6 @@ PS：从这里也可以看出来，图谱的存在其实是为了解决工程维
 - [[entities/architecture-data-foundations-for-ai-powered-search]]
 - [[entities/rag技术框架的演进方向]]
 - [[entities/skill-rag-tsinghua-sra]]
-- [[entities/harness-engineering-framework]]
+- [[concepts/harness-engineering-framework]]
 
 → [[raw/articles/向量库是rag的前菜知识图谱是答案本体论是灵魂|原文存档]]^[raw/articles/向量库是rag的前菜知识图谱是答案本体论是灵魂.md]

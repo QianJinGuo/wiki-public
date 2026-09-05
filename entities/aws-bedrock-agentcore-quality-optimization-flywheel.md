@@ -4,7 +4,7 @@ title: "AWS Bedrock Agentcore Quality Optimization Flywheel"
 type: entity
 tags: [agent, aws, context, evaluation, model, production, prompt]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 6
 review_confidence: 6
 sources: [raw/articles/aws-bedrock-agentcore-quality-optimization-flywheel]
@@ -38,7 +38,7 @@ AgentCore 的质量优化飞轮代表了一种从直觉驱动到数据驱动的�
 - [[entities/sap-intelligent-procurement-assistant-solution]]
 - [[entities/using-amazon-bedrock-agentcore-openclaw-multi-5]]
 - [[entities/introducing-os-level-actions-in-amazon-bedrock-agentcore-browser]]
-- [[entities/harness-engineering-framework]]
+- [[concepts/harness-engineering-framework]]
 - [[entities/agent-harness-12-components-7-decisions]]
 - [[moc/prompt-engineering-guide|MOC]]
 

@@ -1,7 +1,7 @@
 ---
 title: "Harness Handbook — 行为级 Agent Harness 手册：可理解、可审计、可编辑"
 created: 2026-07-18
-updated: 2026-08-01
+updated: 2026-09-05
 type: entity
 tags: [agent, harness, harness-engineering, behavior, manual, tencent, research]
 sources: [raw/articles/harness-handbook-tencent-ruhan-wang-2026]
@@ -73,7 +73,7 @@ Interactive workbench —— 连接仓库 → 生成三层 Handbook → 在同�
 已有大量 [[entities/agent-harness-architecture.md|agent harness 架构]] 实体覆盖 harness 的设计模式、组件和工程实践。Harness Handbook 提供了不同的角度——**以 behavior 为核心的导航系统**（而非以组件/模块为核心）。它与以下实体互补：^[raw/articles/harness-handbook-tencent-ruhan-wang-2026.md]
 
 
-- [[entities/harness-engineering.md|Harness Engineering]]、[[entities/harness-engineering-framework.md|Harness Engineering Framework]]（工程范式）
+- [[entities/harness-engineering.md|Harness Engineering]]、[[concepts/harness-engineering-framework|Harness Engineering Framework]]（工程范式）
 - [[entities/agentic-loop-engineering-handbook-empirical-framework.md|Agentic Loop Engineering]]（loop 工程）
 - [[entities/agent-harness-12-components-7-decisions.md|Agent Harness 12 Components]]（组件架构）
 - [[entities/better-harness-eval-trace-methodology.md|Better Harness Eval]]（评估方法）

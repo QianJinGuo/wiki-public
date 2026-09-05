@@ -4,7 +4,7 @@ title: "复旦北大 AHE：Agentic Harness Engineering 瓶颈分析"
 type: entity
 tags: [agent, coding, harness, memory, model, prompt, tool]
 created: 2026-05-21
-updated: 2026-08-01
+updated: 2026-09-05
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/fudan-peking-ahe-agentic-harness-engineering]
@@ -138,7 +138,7 @@ AHE 的架构选择（Tool Description、Middleware、Skill 作为独立可编�
 在分配进化计算资源时，优先选择「离饱和越远」的模型和任务组合——同样的进化投入，在低饱和场景下可以获得 3-5 倍的相对收益。对于已接近任务上界的模型，应该将优化方向从「提升绝对性能」转向「降低 token 消耗」或「提升跨任务鲁棒性」。 ^[raw/articles/fudan-peking-ahe-agentic-harness-engineering.md]
 
 ## 相关实体
-- [[entities/harness-engineering-framework]]
+- [[concepts/harness-engineering-framework]]
 - [[entities/harness-engineering-第三代工程范式]]
 - [[entities/huggingface-ai-agent-glossary-model-scaffolding-harness-tool-skill-subagent]]
 - [[entities/tencent-vibe-coding-to-agentic-engineering-backend]]

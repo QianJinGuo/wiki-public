@@ -4,7 +4,7 @@ title: "Claude Code Openclaw Usage Ettin"
 type: entity
 tags: [agent, claude-code, openclaw, ettin-reranker, reranker, memory-system, retrieve-then-rerank, modernbert, cross-encoder, information-retrieval, agent-architecture, huggingface]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 8
 review_confidence: 8
 sources: [raw/articles/ettin-reranker-family, raw/articles/claude-code-openclaw-memory-comparison]
@@ -239,5 +239,5 @@ Claude Code 是延迟敏感型场景——每次对话都需要检索，32M 的 
 - [[ettin-reranker-family|Ettin Reranker Family]] — 模型详情
 - [[claude-code-openclaw-memory-comparison|Claude Code vs OpenClaw 记忆系统对比]] — 两者检索机制原状
 - [[claude-code-openclaw-memory-vector-db-doubt|向量数据库必要性反思]] — LLM 路由 vs 向量检索哲学讨论
-- [[agent-memory-architecture|Agent Memory 架构本质]] — 记忆系统设计模式
+- [[entities/agent-memory-architecture|Agent Memory 架构本质]] — 记忆系统设计模式
 - [[concepts/openclaw-architecture|OpenClaw 架构解析]] — OpenClaw 整体架构

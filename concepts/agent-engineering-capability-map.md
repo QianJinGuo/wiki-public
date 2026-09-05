@@ -1,7 +1,7 @@
 ---
 title: "Agent Engineering 能力地图"
 created: 2026-06-12
-updated: 2026-08-01
+updated: 2026-09-05
 type: concept
 tags: [concept, agent-engineering, capability, skill, career, engineer]
 sources: [entities/ai-agent-engineer-capability-map, entities/agent-engineering-principles-architecture-practice]
@@ -26,7 +26,7 @@ Agent Engineering 作为独立职能在 2026 年成型——它不是 ML Enginee
 
 Agent Engineering 的能力地图分 6 个域。上下文工程：working set 管理、prompt 设计、memory 策略、context 裁剪。这是最独特的域——传统 SE 没有「管理概率性上下文」的需求。Harness 设计：agent 主循环架构、工具设计、错误恢复、状态管理。最接近传统 SE 但多了概率层。Verifier 设计：测试策略、LLM-as-judge、安全扫描、人类 gate。传统测试的升级版，需要处理开放式输出。可观测性：trace/spans/metrics/logging，agent 行为的可解释性。部署运维：cron 调度、多 agent 编排、成本控制、灰度。领域知识：对具体业务场景的理解，决定 agent 的上限。6 个域中，上下文工程和 verifier 设计是 Agent Engineering 最独特的——其他 4 个在传统 SE 中有对应但范式不同。^[entities/agent-engineering-principles-architecture-practice]
 
-具体而言，[[entities/agent-context-management-architecture-patterns|上下文管理架构模式]] 覆盖了 working set 的裁剪策略与优先级调度；[[entities/harness-engineering-framework|Harness Engineering Framework]] 定义了 agent 主循环的标准组件与状态迁移规则；[[entities/llm-as-a-verifier-framework|LLM-as-Verifier 框架]] 提供了开放式输出的自动评估方法论；[[entities/agent-harness-observability-production|生产级可观测性方案]] 则解决了 agent 行为的 trace 与 metrics 采集问题。[[entities/agent-orchestration|多 Agent 编排]] 是部署运维域的核心能力，涉及任务分解与结果聚合。[[entities/agent-memory-architecture-essence|Memory 架构本质]] 揭示了如何设计有效的 memory schema 使模型表现翻倍。
+具体而言，[[entities/agent-context-management-architecture-patterns|上下文管理架构模式]] 覆盖了 working set 的裁剪策略与优先级调度；[[concepts/harness-engineering-framework|Harness Engineering Framework]] 定义了 agent 主循环的标准组件与状态迁移规则；[[entities/llm-as-a-verifier-framework|LLM-as-Verifier 框架]] 提供了开放式输出的自动评估方法论；[[entities/agent-harness-observability-production|生产级可观测性方案]] 则解决了 agent 行为的 trace 与 metrics 采集问题。[[entities/agent-orchestration|多 Agent 编排]] 是部署运维域的核心能力，涉及任务分解与结果聚合。[[entities/agent-memory-architecture-essence|Memory 架构本质]] 揭示了如何设计有效的 memory schema 使模型表现翻倍。
 
 ## 局限与反对声音
 

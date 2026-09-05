@@ -4,7 +4,7 @@ title: "蛰伏一年，周衔团队带来首个具身基础模型，烹饪做实
 type: entity
 tags: [model]
 created: 2026-05-21
-updated: 2026-05-21
+updated: 2026-09-05
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/genesis-ai-gene-25-embodied-foundation-model]
@@ -20,7 +20,7 @@ GENE-26.5 不是孤立模型，而是全栈系统：
 
 ## 相关实体
 - [[entities/loongsuite-genai-semconv-alibaba]]
-- [[entities/harness-engineering-framework]]
+- [[concepts/harness-engineering-framework]]
 - [[entities/aws-sagemaker-ai-agent-guided-workflows-finetuning]]
 - [[entities/stochastic-parrot-thought-experiment.md]]
 - [[entities/microsoft-agent-framework-python-full-guide-zizhi]]

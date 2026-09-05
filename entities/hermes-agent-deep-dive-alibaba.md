@@ -4,7 +4,7 @@ title: "深度解析 Hermes Agent 如何实现\"自进化\"及其 Prompt / Conte
 type: entity
 tags: [agent, claude, context, harness, prompt, research]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/hermes-agent-deep-dive-alibaba]
@@ -22,7 +22,7 @@ Hermes Agent = Nous Research 开源 Agent（2月底发布，GitHub 4万+ Stars�
 - [[entities/claude-code-prompt-context-harness]]
 - [[entities/claude-code-harness-deep-dive-founder-park]]
 - [[entities/openclaw-prompt-context-harness]]
-- [[entities/harness-engineering-framework]]
+- [[concepts/harness-engineering-framework]]
 
 → [[raw/articles/hermes-agent-deep-dive-alibaba|原文存档]] ^[raw/articles/hermes-agent-deep-dive-alibaba.md]
 

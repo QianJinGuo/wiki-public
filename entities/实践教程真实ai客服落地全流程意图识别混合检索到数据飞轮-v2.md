@@ -16,7 +16,7 @@ sources: [raw/articles/实践教程真实ai客服落地全流程意图识别混�
 ## 相关实体
 - [[entities/rag技术框架的演进方向]]
 - [[entities/skill-rag-tsinghua-sra]]
-- [[entities/harness-engineering-framework]]
+- [[concepts/harness-engineering-framework]]
 - [[entities/anthropic-claude-code-large-codebase-best-practices-50002a089323]]
 - [[entities/aws-sagemaker-ai-agent-guided-workflows-finetuning]]
 

@@ -26,10 +26,10 @@ provenance_state: merged
 
 ## 具身连接
 
-世界模型是 [[concepts/embodied-intelligence-frontier|具身智能]] 的数据引擎：真机数据贵且慢，世界模型提供可并行的合成经验。库内 [[entities/powering-the-future-of-robotics-in-europe-deepmind-2026|DeepMind Robotics Accelerator]]、各 VLA 本体页（见 `embodied-ai` 标签簇）构成需求侧；Cosmos/Wall-OSS/Flash 构成供给侧。**"世界模型 → sim-to-real → VLA 训练"这条管线在库内散落成十几页，本页是它们的第一个收拢点。**
+世界模型是 [[concepts/embodied-intelligence-frontier|具身智能]] 的数据引擎：真机数据贵且慢，世界模型提供可并行的合成经验。库内 DeepMind Robotics Accelerator、各 VLA 本体页（见 `embodied-ai` 标签簇）构成需求侧；Cosmos/Wall-OSS/Flash 构成供给侧。**"世界模型 → sim-to-real → VLA 训练"这条管线在库内散落成十几页，本页是它们的第一个收拢点。**
 
 ## 检索入口
 
 - 高分簇页：[[entities/fine-tuning-cosmos|Fine-Tuning Cosmos]] · [[entities/世界模型的deepseek时刻魔芯flash-world-model降本70跑出50fps实时交互|魔芯 Flash]] · [[entities/amap-abot-earth-0.5-3d-native-world-model|ABot-Earth]] · [[entities/yann-lecun-jepa-world-model|JEPA/AMI]]
-- 相邻概念：[[concepts/embodied-intelligence-frontier|具身智能前沿]] · [[concepts/video-generation|视频生成]]（待建）· [[concepts/diffusion-models|扩散模型]]（待建）
+- 相邻概念：[[concepts/embodied-intelligence-frontier|具身智能前沿]] · 视频生成（待建，见 roadmap）· 扩散模型（待建，见 roadmap）
 - 检测数据：[[queries/vault-evolution-dashboard|进化仪表板]] · `metrics/concept-gaps.json`

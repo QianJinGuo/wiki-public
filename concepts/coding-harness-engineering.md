@@ -1,7 +1,7 @@
 ---
 title: Coding Harness 工程本质
 created: 2026-05-07
-updated: 2026-08-30
+updated: 2026-09-05
 type: concept
 tags: [harness, agent, coding, engineering, pi, openclaw]
 related:

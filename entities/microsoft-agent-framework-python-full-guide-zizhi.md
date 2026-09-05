@@ -4,7 +4,7 @@ title: "微软 Agent Framework 全栈指南：从 Hello Agent 到生产托管（
 type: entity
 tags: [agent, context, framework, llm, microsoft, model, openai, workflow]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 6
 review_confidence: 6
 sources: [raw/articles/microsoft-agent-framework-python-full-guide-zizhi]
@@ -27,7 +27,7 @@ Agent Framework 是微软面向 .NET / Python 的统一 Agent 开发框架，承
 
 ## 相关实体
 - [[entities/microsoft-agent-framework-python-zizhi]]
-- [[entities/harness-engineering-framework]]
+- [[concepts/harness-engineering-framework]]
 - [[entities/agentscope-java-harness-framework-enterprise-distributed]]
 - [[entities/要实现一个工作流选择-agent-skills-还是-ai-表格]]
 - [[entities/agent-harness-12-components-7-decisions]]

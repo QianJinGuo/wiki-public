@@ -108,7 +108,7 @@ chap-17 Harness 框架（75min）→ chap-18 多 Agent（50min）→ chap-19 开
 ## 本层 raw
 
 - [[raw/articles/harness-engineering-systematic-explainer|Harness 系统解释]]
-- [[entities/harness-engineering-framework|Harness 七层]]
+- [[concepts/harness-engineering-framework|Harness 七层]]
 - [[raw/articles/openclaw-multi-agent-team-practice|OpenClaw 多 Agent]]
 - [[raw/articles/agent-eval-wallezhang-yaml-driven-agent-evaluation|YAML 评测]]
 

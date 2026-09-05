@@ -4,7 +4,7 @@ title: "Claude Code vs Hermes — Session 工程师 vs Goal Runtime"
 type: entity
 tags: [claude-code, hermes, agent, lifecycle, runtime, harness, architecture, persistent-loop]
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 8
 review_confidence: 9
 sources: [raw/articles/claude-code-vs-hermes-engineer-vs-runtime-lifecycle]
@@ -245,7 +245,7 @@ Session 和 Goal 是两套完全不同的**生命周期抽象**，不是同一�
 
 Claude Code 的 Human-in-loop 把最后一公里责任留给工程师，是**刻意设计的可靠性边界**；Hermes 的 Goal-in-loop 把长期目标挂载在 runtime 状态里，是**刻意设计的持续性**。两者在各自的设计语境里都是正确的——混淆两者才是"错配思维"的根源。 ^[raw/articles/claude-code-vs-hermes-engineer-vs-runtime-lifecycle.md]
 
-[[entities/harness-engineering-framework|Harness Engineering]] 关心的是"这一刀能不能切准"；Persistent Runtime 关心的是"这台机器能不能连续切一周，而且知道什么时候该停"。前者偏工程方法，后者偏系统架构。 ^[raw/articles/claude-code-vs-hermes-engineer-vs-runtime-lifecycle.md]
+[[concepts/harness-engineering-framework|Harness Engineering]] 关心的是"这一刀能不能切准"；Persistent Runtime 关心的是"这台机器能不能连续切一周，而且知道什么时候该停"。前者偏工程方法，后者偏系统架构。 ^[raw/articles/claude-code-vs-hermes-engineer-vs-runtime-lifecycle.md]
 
 ### 实践价值：流水线组合是最优解
 

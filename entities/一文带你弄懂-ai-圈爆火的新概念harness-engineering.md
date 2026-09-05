@@ -315,7 +315,7 @@ OpenAI 那条铁律特别值得抄下来：「当出了问题，修复方案几�
 - [[entities/agent-harness-context-management-working-set]]
 - [[entities/agent-harness-engineering-survey-2026]]
 - [[entities/agent-harness-architecture]]
-- [[entities/harness-engineering-framework]]
+- [[concepts/harness-engineering-framework]]
 - [[concepts/harness-engineering-7-layers-framework]]
 - [[concepts/harness-context-window-management]]
 - [[concepts/harness-tool-design-evolution]]

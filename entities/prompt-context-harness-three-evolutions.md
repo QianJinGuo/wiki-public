@@ -4,7 +4,7 @@ title: "Prompt Context Harness 三次演进"
 type: entity
 tags: [context, harness, openai, prompt]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 6
 review_confidence: 6
 sources: [raw/articles/prompt-context-harness-three-evolutions]
@@ -18,7 +18,7 @@ sources: [raw/articles/prompt-context-harness-three-evolutions]
 - [[entities/openclaw-prompt-context-harness]]
 - [[entities/from-prompt-to-harness-claude-official]]
 - [[entities/agentcore-managed-harness]]
-- [[entities/harness-engineering-framework]]
+- [[concepts/harness-engineering-framework]]
 - [[entities/hermes-agent-deep-dive-alibaba]]
 
 → [[raw/articles/prompt-context-harness-three-evolutions|原文存档]] ^[raw/articles/prompt-context-harness-three-evolutions.md]

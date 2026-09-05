@@ -2,7 +2,7 @@
 
 title: Is Grep All You Need? — 检索 × Harness × 交付方式耦合三元组（PwC 论文 arXiv 2605.15184 解读）
 created: 2026-06-04
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [grep-vs-vector, retrieval, agentic-rag, harness, inline-delivery, longmemeval, context-engineering, pwc, arxiv-2605-15184, harness-engineering, harness-coupling, file-read-vs-inline, ablate]
 confidence: 0.94
@@ -188,6 +188,6 @@ Q3: 长记忆对话还是一次性任务？
 ## 关联阅读
 
 - [[agent-harness-context-management-working-set]] — Harness 上下文管理 Working Set 模式，与本文交付方式决策呼应
-- [[harness-engineering-framework]] — Harness 工程框架，提供了 triplet 之外的工程化视角
+- [[concepts/harness-engineering-framework]] — Harness 工程框架，提供了 triplet 之外的工程化视角
 - [[protocol-h-hierarchical-agentic-rag-enterprise]] — Agentic RAG 企业级协议，与检索器选型直接相关
 - [[better-harness-eval-trace-methodology]] — Harness 评估方法论，呼应本文的多变量联合优化主张

@@ -4,7 +4,7 @@ title: "低代码 Agent、框架 Agent、自研 Agent，分别适合谁"
 type: entity
 tags: [agent, framework]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 6
 review_confidence: 6
 sources: [raw/articles/lowcode-framework-custom-agent-decision-framework-hello-agents]
@@ -17,7 +17,7 @@ sources: [raw/articles/lowcode-framework-custom-agent-decision-framework-hello-a
 | 低代码 Agent | 先把东西跑起来 | 速度、协作、可视化 |
 
 ## 相关实体
-- [[entities/harness-engineering-framework]]
+- [[concepts/harness-engineering-framework]]
 - [[entities/agentscope-java-harness-framework-enterprise-distributed]]
 - [[entities/openclaw-comprehensive-guide]]
 - [[entities/ai-context-layer-kgc-2026]]

@@ -9,7 +9,7 @@ priority: p0
 ---
 # 如何成为 AI Agent 工程专家并获得大厂 Offer？
 > 目标：有开发基础 → 成为 AI Agent 工程专家，能拿大厂 AI infra / Agent engineering / AI platform 方向 offer。
-> 核心教材：本知识库 2378 页，主线是 [[queries/harness-engineering-core-principles-best-practices|Agent Harness Engineering]]、Claude Code Ecosystem Topic Map（已删除）、[[moc/ai-skill-design|AI Skill 设计]]、[[moc/agent-memory-architecture|Agent 记忆架构]]。
+> 核心教材：本知识库 2378 页，主线是 [[queries/harness-engineering-core-principles-best-practices|Agent Harness Engineering]]、Claude Code Ecosystem Topic Map（已删除）、[[moc/ai-skill-design|AI Skill 设计]]、[[moc/agent-memory-architecture-decision-points|Agent 记忆架构]]。
 ## 严厉导师规则
 1. 每天必须产出 1 份学习记录，写入 ：3 个事实、2 个判断、1 个可复用设计原则。
 2. 每周必须交付 1 个可运行项目、1 张架构图、1 次 30 分钟口述复盘。

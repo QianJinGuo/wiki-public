@@ -4,7 +4,7 @@ title: "Agent 时代，我们架构师应该学什么？"
 type: entity
 tags: [agent, harness, sdk]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-05
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/agent-era-architect-skills-guide]
@@ -57,7 +57,7 @@ sources: [raw/articles/agent-era-architect-skills-guide]
 
 ## 相关阅读
 
-- [[entities/harness-engineering-framework|Harness Engineering 框架]] — Agent 运行底座的系统性方法论
+- [[concepts/harness-engineering-framework|Harness Engineering 框架]] — Agent 运行底座的系统性方法论
 - [[entities/agent-harness-context-management-working-set|上下文工作集管理]] — 上下文作为运行时工作集的具体实践
 - [[entities/agent-architecture-harness-new-backend|Harness 正在成为新后端]] — 从后端视角看 Agent 作为新调用方
 - [[concepts/model-context-protocol-mcp|Model Context Protocol]] — 文章中提到的工具协议方向

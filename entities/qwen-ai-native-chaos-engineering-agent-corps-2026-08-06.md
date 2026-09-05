@@ -2,7 +2,7 @@
 title: "AI Native 混沌工程——Agent 军团 + 共享黑板的韧性验证平台"
 description: "千问AI平台混沌工程实践：9 层 Agent 军团 + Redis 共享黑板 + 三道安全闸门 + 双进化回路（经验反馈+AI 飞轮）+ A2A 标准化接入，单次验证闭环数天→40 分钟、SRE 专职→0.1 人执行"
 created: 2026-08-06
-updated: 2026-08-06
+updated: 2026-09-05
 review_value: 8
 review_confidence: 9
 type: entity
@@ -65,7 +65,7 @@ AI Native 三大硬性标准：①全链路 AI 驱动（任何环节不能有人
 
 ### 共享黑板 vs 其他多 Agent 协作模式
 
-共享黑板的设计要点：Agent 互不感知（只认数据结构不认对方）→ 可随时增删不影响其他 Agent；Redis Hash + Lua 原子写 + 乐观锁 + ACL 角色隔离 + SSE 推送——把"协作"简化为"读写约定字段"。这与 [[entities/harness-engineering-framework|Harness 框架]] 中状态外部化的思想一致：跨 Agent 状态显式外置到共享介质，而非在对话流中隐式传递。^[raw/articles/qwen-ai-native-chaos-engineering-agent-corps-2026-08-06.md]
+共享黑板的设计要点：Agent 互不感知（只认数据结构不认对方）→ 可随时增删不影响其他 Agent；Redis Hash + Lua 原子写 + 乐观锁 + ACL 角色隔离 + SSE 推送——把"协作"简化为"读写约定字段"。这与 [[concepts/harness-engineering-framework|Harness 框架]] 中状态外部化的思想一致：跨 Agent 状态显式外置到共享介质，而非在对话流中隐式传递。^[raw/articles/qwen-ai-native-chaos-engineering-agent-corps-2026-08-06.md]
 
 ### 安全左移与不可逆操作授权
 
@@ -83,7 +83,7 @@ AI Native 三大硬性标准：①全链路 AI 驱动（任何环节不能有人
 - [[entities/算力风洞-ai-native-gpu-stability-wind-tunnel|算力风洞：GPU 集群的 AI Native 稳定性验证系统]]——同属阿里 AI Native 稳定性体系，芯片级 GPU 仿真验证 vs 业务系统故障注入闭环，姊妹实践
 - [[entities/rca-agent-kuaishou-guo-yongliang-qcon-2026|快手 RCA Agent：复杂业务场景排障 Agent]]——诊断/根因分析 Agent 的同类实践，本文的诊断 Agent 是 RCA 的混沌工程场景应用
 - [[entities/aws-devops-agent-实战如何使用生成式-ai-加速故障演练|AWS DevOps Agent 故障演练]]——云厂商故障演练 Agent 实践对照
-- [[entities/harness-engineering-framework|Harness Engineering 框架]]——状态外部化/共享介质的协作思想同源
+- [[concepts/harness-engineering-framework|Harness Engineering 框架]]——状态外部化/共享介质的协作思想同源
 - [[entities/tdsql-harness-subtraction-l0-l3-tencent-2026-08-06|Harness 减法工程（腾讯 tdsql-harness）]]——不可逆动作授权边界与本文执行 Agent 唯一破坏性权限同构
 
 → [[raw/articles/qwen-ai-native-chaos-engineering-agent-corps-2026-08-06|原文存档]] ^[raw/articles/qwen-ai-native-chaos-engineering-agent-corps-2026-08-06.md]

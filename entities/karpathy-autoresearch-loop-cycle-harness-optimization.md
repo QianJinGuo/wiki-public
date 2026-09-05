@@ -1,7 +1,7 @@
 ---
 title: "Karpathy AutoResearch Loop Cycle & Harness Optimization"
 created: 2026-07-07
-updated: 2026-08-29
+updated: 2026-09-05
 type: entity
 tags: [agent, harness, loop-engineering, karpathy, auto-research, llm-optimization, agent-framework]
 sources: [raw/articles/karpathy-autoresearch-loop-harness-76pct-agent-misconception]
@@ -78,7 +78,7 @@ Codila 将其提炼为 **Loop Engineering** 五步法：^[raw/articles/karpathy-
 
 ## 与已有实体的关系
 
-- [[entities/harness-engineering-framework|Harness Engineering Framework]] — 同为 Agent 系统工程方法论，但本实体聚焦于 Karpathy 的 Loop 自动迭代实验 + Harness 优化的具体实验数据
+- [[concepts/harness-engineering-framework|Harness Engineering Framework]] — 同为 Agent 系统工程方法论，但本实体聚焦于 Karpathy 的 Loop 自动迭代实验 + Harness 优化的具体实验数据
 - [[entities/agent-harness-engineering-survey-2026|Agent Harness Engineering Survey]] — 补充 Harness 优化的具体实验证据（Niklaus 实验的量化数据）
 
 ## 参考

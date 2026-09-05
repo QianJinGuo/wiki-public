@@ -2,7 +2,7 @@
 type: entity
 title: "多智能体上下文隔离机制"
 created: 2026-05-13
-updated: 2026-09-01
+updated: 2026-09-05
 tags: [architecture, multi-agent, context, isolation]
 provenance_state: inferred
 sources: [raw/articles/agent-context-management-architecture-patterns]
@@ -72,4 +72,4 @@ Claude Code 的分类最为精细：分支子代理（完整对话轨迹）、�
 - [[entities/claude-code-architecture|Claude Code 架构]]
 - [[entities/agent-era-architect-skills-guide|Agent 时代架构师技能指南]]
 - [[entities/scalable-voice-agent-design-with-amazon-nova-sonic-multi-agent-tools-and-session|Scalable voice agent design with Amazon Nova Sonic]]
-- [[moc/agent-memory-architecture|MOC: Agent 记忆架构]]
+- [[moc/agent-memory-architecture-decision-points|MOC: Agent 记忆架构]]

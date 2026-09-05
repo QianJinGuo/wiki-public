@@ -1,7 +1,7 @@
 ---
 title: "Agentic Environment Engineering：Harness 之上下一层门槛"
 created: 2026-06-27
-updated: 2026-06-27
+updated: 2026-09-05
 type: entity
 tags: [agent, environment-engineering, harness, loop-engineering, self-harness, feedback-loop, pomdp, architecture]
 review_value: 8
@@ -128,7 +128,7 @@ Harness 和 Environment 不是替代关系：^[raw/articles/agentic-environment-
 
 ## 与现有知识的关联
 
-- [[entities/harness-engineering-framework|Harness Engineering 框架]]——Environment 是 Harness 的外层延伸
+- [[concepts/harness-engineering-framework|Harness Engineering 框架]]——Environment 是 Harness 的外层延伸
 - [[entities/harness-engineering-deletable-worksite-ruofei|Harness 之后：可删的工作现场]]——"可删的工作现场"概念与 Environment 的可恢复性呼应
 - [[entities/loop-engineering-addy-osmani-challengehub|Loop Engineering]]——Loop 关心任务怎么持续发生，Environment 关心循环所依赖的事实源是否可靠
 - [[entities/loop-engineering-feedback-control-system|Loop Engineering 反馈控制系统]]——反馈控制的前提是环境能给出可信反馈

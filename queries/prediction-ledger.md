@@ -22,6 +22,9 @@ confidence: high
 | 5 | AI 编程辅助能力边界在 6-12 个月内快速扩展 | [[entities/2028-two-scenarios-for-global-ai-leadership]] | 2026-05-16 | 2026-11 ~ 2027-05 | pending | — |
 | 6 | Jack Clark：2028 年底 60%+ 概率出现可完全自主训练下一代 AI 的系统 | [[entities/alphaevolve交出一周年炸裂成绩单ai自我改进不再科幻]] | 2026-05-21 | 2028-12-31 | pending | — |
 | 7 | AIDLC：3 年内 AI 原生与平台驱动数据团队人效差距拉大 5-10 倍 | [[entities/ai-驱动的大数据工程-从平台驱动到-aidlc-的范式迁移]] | 2026-05-21 | 2029-05-21 | pending | — |
+| 8 | 对抗页三问①：长程任务上裸模型与 harness-agent 差距持续 ≥2 代模型不收敛（正方赢；一代内收敛 ≥50% = 反方赢） | [[comparisons/model-capability-vs-harness-engineering]] | 2026-09-05 | 2027-09-05（跨 2 代） | pending | — |
+| 9 | 对抗页三问②：harness 工件平均存活期随模型升级**变长**（正方赢；变短 = 衰减假说成立）。证据口径：框架页"衰减"节记录链（现值 -38%/代）+ 后续同源记录追加 | [[comparisons/model-capability-vs-harness-engineering]] · [[concepts/harness-engineering-framework]] | 2026-09-05 | 2027-03-01（半年度） | pending | — |
+| 10 | 对抗页三问③：同任务 harness 开销占比下降且绝对收益上升（正方赢；绝对收益同步下降 = 反方赢）。证据口径：成本可对账的任务页对（如 [[entities/computer-use-45x-more-expensive-than-structured-apis|Computer Use 45x]] 族） | [[comparisons/model-capability-vs-harness-engineering]] | 2026-09-05 | 2027-03-01（半年度） | pending | — |
 
 ## 中期检视（2026-09-05 · 非判定）
 
