@@ -1,27 +1,12 @@
 ---
 title: "免蒸馏，只改一个Loss！5行代码实现扩散模型4步生成"
-created: 2026-08-13
-updated: 2026-08-13
-type: entity
-tags: [ai, research, llm, training, post-training, multimodal, vlm, vision, inference, llm-inference, fine-tuning, sft, diffusion, video-generation]
-sources: [raw/articles/免蒸馏只改一个loss5行代码实现扩散模型4步生成.md]
-confidence: 0.6
-provenance_state: extracted
+created: 2026-09-07
+updated: 2026-09-07
+type: redirect
+review_value: 0
+archived_to: _archive/checkup-2026-09-07/免蒸馏只改一个loss5行代码实现扩散模型4步生成.md
+archived_reason: thin-0.78
 ---
 
-# 免蒸馏，只改一个Loss！5行代码实现扩散模型4步生成
-
-> WeChat-PaperWeekly | 发布于 2026-08-11 | 评分入库 v×c≥49
-
-## 核心内容
-
-赵楚洋 2026-08-11 18:40 北京 感知损失改写少步生成 ©PaperWeekly 原创 · 作者 赵楚洋 单位 京东探索研究院 研究方向 扩散模型、多模态生成 扩散模型的少步生成，或许不需要复杂的蒸馏和额外训练目标。 我们发现，只需将传统Flow Matching 训练中的MSE Loss 替换为Perceptual Loss ，即可让模型具备高质量的少步生成能力，将推理步数从35–50步 降低到4–8步 ，同时保持接近的生成质量。 论文标题： Perceptual Flow Matching for Few-Step Generative Modeling 论文地址： <https://arxiv.org/pdf/2607.03524 与现有少步生成方法不同，PFM ： 不需要 Teacher 模型； 不需要分布蒸馏（DistributionDistillation）； 不需要轨迹蒸馏（TrajectoryDistillation）； 不需要设计额外的训练目标。 PFM 在原本的 Flow Matching 预训练/微调代码上仅需将训练损失从MSE 替换为Perceptual Loss ，就可以快速获得少步生成能力。 我们在文生图、图像编辑和视频生成 等多个任务上验证了这一方法，实验结果表明，仅需4–8步 即可达到媲美传统35–50步 Flow Matching 的生成效果。 文生图： 图像编辑： 视频生成： 为了探究为什么感知空间能够激发模型的少步生成能力，我们开展了一系列分析实验。 我们发现，传统Flow Matching 在训练过程中，尤其是在高噪声区域，。^[raw/articles/免蒸馏只改一个loss5行代码实现扩散模型4步生成.md]
-
-## 关键要点
-
-- 原文完整记录：[[raw/articles/免蒸馏只改一个loss5行代码实现扩散模型4步生成.md|原文存档]]
-- 关联主题："Agent 架构"、"Agent 评估基准体系"
-
-## 相关实体
-
-"Agent 架构" "Agent 评估基准体系"
+> 本实体已于 2026-09-07 质量闭环清理中归档（原因: thin-0.78）。
+> 原文见 `raw/articles/`，归档件见 `_archive/checkup-2026-09-07/免蒸馏只改一个loss5行代码实现扩散模型4步生成.md`。

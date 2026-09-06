@@ -1,94 +1,12 @@
 ---
-
 title: "AI Skill Evolution Framework"
-created: 2026-05-14
-updated: 2026-09-05
-type: entity
-tags: [ai-skill, evaluation, measurement]
-review_value: 7
-review_confidence: 7
-sources: [raw/articles/ai-skill-evolution底层逻辑]
+created: 2026-09-07
+updated: 2026-09-07
+type: redirect
+review_value: 0
+archived_to: _archive/checkup-2026-09-07/ai-skill-evolution-framework.md
+archived_reason: dup-0.8
 ---
 
-## 相关实体
-- [[entities/ai-skill-metrics-system|AI Skill 测评指标体系]]
-- [[entities/skill-engineering-ai-as-algorithm|Skill工程化设计：把Agent当算法用]]
-- [[entities/agentic-ai-system-architecture-harness-skill-mcp|Agentic AI 系统架构与分层模型]]
-- [[entities/aws-generative-ai-model-agility-framework|AWS Model Agility: 6步LLM跨代际迁移框架]]
-
-- [[moc/ai-skill-design|MOC]]
-## 深度分析
-### AI Skill 的本质定义
-AI Skill 是一种以 Markdown 编写的「给模型看的说明书」，是 LLM 应用质量的核心载体。它告诉大模型在特定场景下该怎么做：模型读懂了才能按规则执行，模型没读懂，规则就形同虚设。   ^[raw/articles/ai-skill-evolution底层逻辑.md]
-Skill 的核心是 `SKILL.md`，包含： ^[raw/articles/ai-skill-evolution底层逻辑.md]
-
-- **触发条件**：什么情况下使用这个 Skill
-- **业务规则**：具体怎么做，有哪些约束
-- **接口调用**：调用哪些工具，参数怎么传
-- **异常处理**：出错了怎么办 ^[raw/articles/ai-skill-evolution底层逻辑.md]
-
-### 三个传统软件测试覆盖不了的结构性问题
-**问题一：自判卷偏差** ^[raw/articles/ai-skill-evolution底层逻辑.md]
-传统测试：代码执行 → 断言框架验证（执行者和验证者完全分离） ^[raw/articles/ai-skill-evolution底层逻辑.md]
-AI Skill 测试（不设计好时）：模型执行 Skill → **同一个模型**判断结果是否正确 ^[raw/articles/ai-skill-evolution底层逻辑.md]
-这就像让学生自己批改自己的试卷。模型倾向于认为自己做对了，即使实际上规则没有被正确执行。 ^[raw/articles/ai-skill-evolution底层逻辑.md]
-**问题二：随机性** ^[raw/articles/ai-skill-evolution底层逻辑.md]
-同一个 prompt，今天运行通过，明天运行失败。这不是 bug，是大模型的本质特性——采样温度大于 0，导致每次生成略有差异。 ^[raw/articles/ai-skill-evolution底层逻辑.md]
-单次测试的结论不可靠。需要多次运行，用统计方法描述 Skill 的真实表现。例如：「通过率 87% ± 5%」比「通过了」提供的信息量大得多。 ^[raw/articles/ai-skill-evolution底层逻辑.md]
-**问题三：负向增益** ^[raw/articles/ai-skill-evolution底层逻辑.md]
-最隐蔽的问题：84 个有效任务里，约 19%（16 个）加了 Skill 反而比没加更差。 ^[raw/articles/ai-skill-evolution底层逻辑.md]
-原因可能是： ^[raw/articles/ai-skill-evolution底层逻辑.md]
-
-- Skill 的规则过于死板，限制了模型本来能做好的灵活性
-- Skill 的指令和模型的默认行为冲突，模型「不知道该听谁的」
-- Skill 文档太长太复杂，模型「选择性忽略」了部分规则
-如果你只测「加了 Skill 之后能不能跑通」，永远发现不了这个问题。需要同时测「没有 Skill 时模型表现如何」，然后对比增益差值 Δ（delta）= 有 Skill 时通过率 − 无 Skill 时通过率。Δ 为负就是发布红线。 ^[raw/articles/ai-skill-evolution底层逻辑.md]
-
-### 三个核心测评设计
-**1. 执行者和评审者分离（解决自判卷偏差）** ^[raw/articles/ai-skill-evolution底层逻辑.md]
-执行 Skill 的 Agent 和评审结果的 Agent 完全独立，运行在不同的上下文中。评审 Agent 必须引用原文证据，不能凭感觉判断。 ^[raw/articles/ai-skill-evolution底层逻辑.md]
-**2. 多次运行取均值（解决随机性）** ^[raw/articles/ai-skill-evolution底层逻辑.md]
-标准模式下每个用例运行 3 次，计算通过率的均值和标准差。标准差 > 0.3 说明结果高度不稳定，通常意味着 prompt 存在歧义或 Skill 规则有冲突。 ^[raw/articles/ai-skill-evolution底层逻辑.md]
-**3. 有 Skill vs 无 Skill 对比（解决负向增益）** ^[raw/articles/ai-skill-evolution底层逻辑.md]
-每个用例同时跑两个版本： ^[raw/articles/ai-skill-evolution底层逻辑.md]
-
-- **with_skill**：加载 Skill 指令，模型按规则执行
-- **without_skill**：不加载任何 Skill，纯模型通用能力
-计算增益 Δ = with_skill 通过率 − without_skill 通过率。Δ < 0 立即触发预警，必须查明根因再决定是否上线。 ^[raw/articles/ai-skill-evolution底层逻辑.md]
-
-## 实践启示
-### 1. 建立 Skill 测评意识
-AI Skill 需要专门测评，因为它有三个传统软件测试根本覆盖不了的结构性问题。在发布任何 Skill 之前，必须： ^[raw/articles/ai-skill-evolution底层逻辑.md]
-
-- 用独立评审者验证执行结果
-- 多次运行取统计均值
-- 对比有/无 Skill 的增益差
-
-### 2. 识别负向增益是发布红线
-负向增益（Δ < 0）比直接失败更危险，因为它极度隐蔽。解决方案是强制进行有/无 Skill 对比测试。 ^[raw/articles/ai-skill-evolution底层逻辑.md]
-
-### 3. 设计 Skill 规则时的关键原则
-Skill 规则不只是"做什么"，还要说清楚"为什么"和"做不到会怎样"。 ^[raw/articles/ai-skill-evolution底层逻辑.md]
-报销助手的真实踩坑案例：SKILL.md 里写「最终调用 saveExpenseDoc 保存草稿」，但没有明确约束 docStatus 参数必须固定为 "10"。模型自行推断参数值，有时传了 "20"（提交审批），直接提交了用户根本没有核对过的单据。 ^[raw/articles/ai-skill-evolution底层逻辑.md]
-修复方式：补一句「docStatus 固定为 '10'，对应草稿状态，传其他值会导致单据直接进入审批流，不可撤回」——加上「为什么」之后，模型正确执行概率显著提升。 ^[raw/articles/ai-skill-evolution底层逻辑.md]
-
-### 4. 判断 Skill 是否可以上线
-同时满足三条标准： ^[raw/articles/ai-skill-evolution底层逻辑.md]
-1. 通过率达到该风险等级的准入阈值（S 级关键场景要求 ≥ 95%） ^[raw/articles/ai-skill-evolution底层逻辑.md]
-2. 增益 Δ > 0，确认 Skill 有正向价值而非帮倒忙 ^[raw/articles/ai-skill-evolution底层逻辑.md]
-3. IFR（指令遵循率）达标，S 级要求 100% ^[raw/articles/ai-skill-evolution底层逻辑.md]
-Δ < 0 是硬性红线，不接受「先上线再观察」。 ^[raw/articles/ai-skill-evolution底层逻辑.md]
-
-### 5. 测评前的三类资产准备
-1. **测试账号**：拥有对应权限，能触发 Skill 的目标流程 ^[raw/articles/ai-skill-evolution底层逻辑.md]
-2. **测试数据**：对应场景的发票、单据等，类型必须和测试用例匹配 ^[raw/articles/ai-skill-evolution底层逻辑.md]
-3. **规则清单**：对被测 Skill 的规则清单，测评工具可以自动从 SKILL.md 提炼，但人工确认一遍更准确 ^[raw/articles/ai-skill-evolution底层逻辑.md]
-
-### 6. 理解 AI Skill 测评与传统软件测试的区别
-| 维度 | 传统软件测试 | AI Skill 测评 |
-|------|------------|--------------|
-| 输出特性 | 确定性，同输入同输出 | 概率性，需多次运行取均值 |
-| 执行方式 | 代码执行 | 模型推理，规则可能被忽略 |
-| 结果验证 | 断言框架直接比较 | 需独立 Agent 评审，防自判卷 |
-| 测评目标 | 能不能跑通 | 还要测「加了有没有帮助」（Δ） |
-→ [[raw/articles/ai-skill-evolution底层逻辑|原文存档]] ^[raw/articles/ai-skill-evolution底层逻辑.md]
+> 本实体已于 2026-09-07 质量闭环清理中归档（原因: dup-0.8）。
+> 原文见 `raw/articles/`，归档件见 `_archive/checkup-2026-09-07/ai-skill-evolution-framework.md`。

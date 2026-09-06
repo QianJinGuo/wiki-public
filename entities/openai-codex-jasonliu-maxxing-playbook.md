@@ -1,40 +1,12 @@
 ---
-
 title: "OpenAI大神教你如何榨干Codex"
-created: 2026-06-10
-updated: 2026-09-05
-tags: [agent, code, data, knowledge-mgmt, memory, mlops, observability, open-source, openai, prompt, rag, tool-use, workflow]
-review_value: 7
-review_confidence: 7
-type: entity
-sources:
-  - raw/articles/openai-codex-jasonliu-maxxing-playbook
+created: 2026-09-07
+updated: 2026-09-07
+type: redirect
+review_value: 0
+archived_to: _archive/checkup-2026-09-07/openai-codex-jasonliu-maxxing-playbook.md
+archived_reason: thin-0.78
 ---
 
-# OpenAI大神教你如何榨干Codex
-
-→ [[raw/articles/openai-codex-jasonliu-maxxing-playbook|原文存档]] ^[raw/articles/openai-codex-jasonliu-maxxing-playbook.md]
-
-## 深度分析
-
-OpenAI大神教你如何榨干Codex ^[raw/articles/openai-codex-jasonliu-maxxing-playbook.md]
-### 核心观点
-1. " ^[raw/articles/openai-codex-jasonliu-maxxing-playbook.md]
-案例：让 Codex 把 Python Rich 库迁移到 Rust——**硬性要求通过所有单元测试**。 ^[raw/articles/openai-codex-jasonliu-maxxing-playbook.md]
-2. 测试通过 = 任务完成；失败 = Agent 继续修。 ^[raw/articles/openai-codex-jasonliu-maxxing-playbook.md]
-3. ### Goal 模式（正式转正） ^[raw/articles/openai-codex-jasonliu-maxxing-playbook.md]
-明确最终目标和验收标准 → Codex 自主持续推进（几小时到数天），中途可查进度/调方向/暂停。 ^[raw/articles/openai-codex-jasonliu-maxxing-playbook.md]
-4. ### Obsidian 本地记忆层 ^[raw/articles/openai-codex-jasonliu-maxxing-playbook.md]
-**核心思路**：个人工作记忆不应该托管在平台内部。 ^[raw/articles/openai-codex-jasonliu-maxxing-playbook.md]
-5. - 所有长期线程从 Obsidian vault 起步（TODO/people/projects/agent/notes） ^[raw/articles/openai-codex-jasonliu-maxxing-playbook.md]
-- AGENTS.
-
-### 关联实体
-
-- [[entities/龙虾装上了可以用来干啥分享下我的-openclaw-多智能体团队搭建经验-v2]]
-- [[entities/openclaw-完全指南这可能是全网最新最全的系统化教程了32w字建议收藏-v2]]
-- [[entities/openclaw-完全指南这可能是全网最新最全的系统化教程了32w字建议收藏]]
-- [[entities/ethan-he-cosmos-grok-imagine-latent-space-video-agent-20260606]]
-- [[entities/agentops-operationalize-agentic-ai-at-scale-with-amazon-bedr]]
-- [[entities/存之有序治之有矩agent-记忆系统的工程实践与演进]]
-
+> 本实体已于 2026-09-07 质量闭环清理中归档（原因: thin-0.78）。
+> 原文见 `raw/articles/`，归档件见 `_archive/checkup-2026-09-07/openai-codex-jasonliu-maxxing-playbook.md`。

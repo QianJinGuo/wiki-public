@@ -1,27 +1,12 @@
 ---
 title: "SkyPilot × Hugging Face — 零出口流量 AI 工作负载存储"
-created: 2026-08-14
-updated: 2026-08-14
-type: entity
-tags: [skypilot, huggingface, storage, multi-cloud, ai-infra, zero-egress, xet]
-sources: [raw/articles/skypilot-hf-zero-egress-storage]
-confidence: 0.75
-provenance_state: extracted
+created: 2026-09-07
+updated: 2026-09-07
+type: redirect
+review_value: 0
+archived_to: _archive/checkup-2026-09-07/skypilot-hf-zero-egress-storage.md
+archived_reason: thin-0.78
 ---
 
-# SkyPilot × Hugging Face — 零出口流量 AI 工作负载存储
-
-SkyPilot 与 Hugging Face 联合发布：**模型/数据集留在 HF Hub，SkyPilot 在任意有 GPU 的集群（20+ 云、Kubernetes、Slurm、本地）跑计算**。通过 `hf://` URL + 已有 HF_TOKEN 把 HF Bucket 或任意 Hub repo 挂载进任务，跨云读取数据零出口费用。^[raw/articles/skypilot-hf-zero-egress-storage.md]
-
-## 关键机制
-
-- **`store: hf`**：HF Bucket（读写）或 model/dataset/Space repo（只读）以 `hf://` 挂载进 SkyPilot 任务
-- **零出口流量**：HF Storage 不收 egress/CDN 费，数据无需跨云复制
-- **Xet 去重**：Bucket 基于 Xet，增量 checkpoint/模型变体只存储和传输变更 chunk
-- **FUSE 上游化**：HF 团队把 `hf-mount` FUSE 修复上游到 unprivileged 容器可用
-
-## 意义
-
-把"数据与算力分离"的跨云 AI 工作负载从成本噩梦变成默认选项——云间数据迁移税（cross-cloud transfer tax）被结构性消除。属于 AI 基础设施层的存储编排创新，与 [[entities/slack-ai-path-to-multi-cloud|Slack 多云路径]] 同主题不同解法。
-
-→ [[raw/articles/skypilot-hf-zero-egress-storage|原文存档]]
+> 本实体已于 2026-09-07 质量闭环清理中归档（原因: thin-0.78）。
+> 原文见 `raw/articles/`，归档件见 `_archive/checkup-2026-09-07/skypilot-hf-zero-egress-storage.md`。

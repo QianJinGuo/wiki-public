@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "sourceRevision": "a4dbe900dfa09380648bbc6422daa0af6cf5f359",
+  "sourceRevision": "184b910b3864dbaa6b650ccefea3f0d3ee893b4f",
   "files": [
     {
       "path": "raw/articles/0.25秒识破未见攻击-lod-lvlm-jailbreak-detection-emnlp2026.md",
@@ -3813,6 +3813,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/i4SR6xGG_TuSBzuk3e_AQA"
     },
     {
+      "path": "raw/articles/approximate-speculative-decoding-asd-relaxed-validation-2026.md",
+      "title": "给大模型「投机解码」松绑：免训练，即插即用近似验证，速度再提15%（ASD, arXiv 2608.03447）",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652723024&idx=3&sn=747a5ef4f91c447b5a417a3bbb"
+    },
+    {
       "path": "raw/articles/apter-adaptive-post-training-expert-rubrics-xhs-2026-08-24.md",
       "title": "蚂蚁：专家准则驱动的自适应后训练框架（APTER）",
       "sourceUrl": "https://www.xiaohongshu.com/explore/6a8b06e70000000028025f6e"
@@ -7046,6 +7051,11 @@
       "path": "raw/articles/designing-better-lou-cognitive-load-design-systems.md",
       "title": "Designing A Better Lou: Reducing Cognitive Load Through Design, Content, and Systems",
       "sourceUrl": "https://tympanus.net/codrops/2026/06/16/designing-a-better-lou-reducing-cognitive-load-through-design-content-and-systems/"
+    },
+    {
+      "path": "raw/articles/designing-lifecycle-policies-for-agentcore-memory.md",
+      "title": "Designing lifecycle policies for AgentCore memory",
+      "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/designing-lifecycle-policies-for-agentcore-memory"
     },
     {
       "path": "raw/articles/designing-small-is-harder-than-designing-big-ux-magazine.md",
@@ -10978,6 +10988,11 @@
       "sourceUrl": "https://gwern.net/lean-scaling"
     },
     {
+      "path": "raw/articles/leap-likelihood-elicitation-aggregation-probabilistic-forecasting-2026.md",
+      "title": "告别一次性全盘推理，这套skill让每条证据都能追溯预测结果 | EMNLP'26",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247919159&idx=3&sn=4e0af9b9b88ab5fe764680e94e398613"
+    },
+    {
       "path": "raw/articles/learning-from-failure-cua-inference-time-self-improvement-xhs-2026.md",
       "title": "斯坦福：失败轨迹是天然、高价值的监督信号",
       "sourceUrl": "https://www.xiaohongshu.com/discovery/item/6a4799a600000000160269d4"
@@ -13761,6 +13776,11 @@
       "path": "raw/articles/phi-bench-frontier-ai-infra-benchmark-oscholar-2026-08-19.md",
       "title": "阶跃✖️中科大新研究：AI能给自己造Infra吗？——Φ-Bench 前沿AI基础设施基准",
       "sourceUrl": "https://www.xiaohongshu.com/explore/6a83d84f000000002403cae4"
+    },
+    {
+      "path": "raw/articles/phiwm-acteffect-physical-native-world-model-training-only-2026.md",
+      "title": "phiwm-acteffect-physical-native-world-model-training-only-2026",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247919159&idx=1&sn=571720e58b986aa3187a79ddd058f930"
     },
     {
       "path": "raw/articles/phoneworld-mobile-agent-scaling-mock-environments-tencent-hunyuan-arxiv-2605-29486.md",
@@ -16838,6 +16858,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/wKnGLew1EIwOIyUPBZevaw"
     },
     {
+      "path": "raw/articles/unifiedmodel-agent-semantic-layer-object-graph-aliyun-2026-09-06.md",
+      "title": "AI Agent 时代，需要的不是更多数据，而是一个语义层",
+      "sourceUrl": "https://mp.weixin.qq.com/s/tWFfO8kINq68e2nbcg5fzA"
+    },
+    {
       "path": "raw/articles/unitree-ipo-robotics-market.md",
       "title": "Unitree's IPO Filing: The State of the Robotics Market",
       "sourceUrl": "https://www.tanayj.com/p/unitrees-ipo-filing-the-state-of"
@@ -17751,6 +17776,11 @@
       "path": "raw/articles/xiaomi-robotics-1-embodied-base-model-scaling-2026.md",
       "title": "Xiaomi-Robotics-1: 10万小时训出开箱即用机器人基座模型，探索具身智能 Scaling 效应",
       "sourceUrl": "https://mp.weixin.qq.com/s/t6WepsCQhiKfICfdxJR7zg"
+    },
+    {
+      "path": "raw/articles/xiaomi-tabldm-tabular-foundation-model-scaling-law-2026.md",
+      "title": "小米发布结构化数据大模型 Xiaomi-TabLDM：开启表格数据 Scaling Law（arXiv 2609.03880）",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzUxMDQxMDMyNg==&mid=2247520299&idx=1&sn=6e9c0214b9773a4f2f16006694"
     },
     {
       "path": "raw/articles/xinzhiyuan-openai-tax-ai-self-improving-codex-eval-loop-20260606.md",

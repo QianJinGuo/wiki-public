@@ -1,46 +1,12 @@
 ---
-
 title: "Langsmith Evaluation Concepts"
-type: entity
-tags: [agent, benchmark, evaluation, tool]
-created: 2026-05-21
-updated: 2026-09-05
-review_value: 6
-review_confidence: 6
-sources: [raw/articles/langsmith-evaluation-concepts]
-score_validated: 2026-09-05
+created: 2026-09-07
+updated: 2026-09-07
+type: redirect
+review_value: 0
+archived_to: _archive/checkup-2026-09-07/langsmith-evaluation-concepts.md
+archived_reason: thin-0.75
 ---
 
-# LangSmith Evaluation Concepts
-
-- 对 agent 要拆成 output、retrieval、tool invocation、trajectory 等关键部件
-- 先用 5-10 个 curated examples 定义 ground truth
-- offline evaluation 适合 benchmarking / regression / backtesting
-- online evaluation 适合生产监控与异常发现
-
-## 相关实体
-- [[entities/cursor-harness-model-production-floor]]
-- [[entities/agent-eval-wallezhang-yaml-driven-agent-evaluation-framework]]
-- [[entities/four-browser-automation-tools-comparison]]
-- [[entities/agent-memory-architecture-past-influence-future-ruofei]]
-- [[entities/cong-30-fen-zhong-shou-gu-agent-dao-harness-cheng-wei-xin-hou-duan]]
-
-→ [[raw/articles/langsmith-evaluation-concepts|原文存档]]^[raw/articles/langsmith-evaluation-concepts.md]
-
-## 深度分析
-
-LangSmith 的评估体系揭示了 agent 评估的核心挑战：与传统 ML 评估不同，agent 的输出具有多维性——不仅包含最终答案，还涉及检索过程、工具调用序列和完整轨迹。这种多维度特性使得简单的输出比对无法满足评估需求，必须对每个关键组件进行独立评估。 ^[raw/articles/langsmith-evaluation-concepts.md]
-
-Ground truth 的定义是评估的基础。LangSmith 建议使用 5-10 个精心策划的示例来建立基准数据集。这个数字看似很少，但恰恰体现了"小而精"的评估哲学——在 agent 开发初期，与其追求大规模数据集，不如先确保核心场景的正确性。当基础场景稳定后，再逐步扩展评估集。 ^[raw/articles/langsmith-evaluation-concepts.md]
-
-Offline 与 online 评估的选择反映了对评估目的的深刻理解。Offline 评估适用于 benchmarking、regression testing 和 backtesting，这些场景需要对实验进行精确控制，不受生产环境波动影响。Online 评估则更适合生产监控，能够实时捕捉模型退化、异常模式和用户行为变化。两者并非替代关系，而是形成闭环：线上发现的问题转化为线下数据集，经过回归验证后再部署。 ^[raw/articles/langsmith-evaluation-concepts.md]
-
-对于 wiki-evolver 这类知识管理工具，LangSmith 的框架提供了直接的实践指引。当前阶段适合采用 offline benchmarking 方法，因为任务可以被整理成小规模的 curated suite，先比较 with/without skill 的效果差异。等工具高频运行后，再考虑引入 online monitoring 机制实现持续评估。 ^[raw/articles/langsmith-evaluation-concepts.md]
-
-## 实践启示
-
-1. **分解评估维度**：在设计 agent 评估体系时，首先将 agent 拆分为 output、retrieval、tool invocation、trajectory 等关键组件，为每个组件设计独立的评估指标 ^[raw/articles/langsmith-evaluation-concepts.md]
-2. **小规模 Ground Truth**：使用 5-10 个精心策划的示例定义 ground truth，优先保证核心场景的正确性，而非追求数据集规模 ^[raw/articles/langsmith-evaluation-concepts.md]
-3. **Offline 首步**：新 agent 或 skill 开发阶段采用 offline evaluation 进行基准测试和回归验证，确保实验可复现 ^[raw/articles/langsmith-evaluation-concepts.md]
-4. **闭环迭代**：建立线上问题→线下数据集→回归验证→部署的反馈循环机制，实现评估的持续优化 ^[raw/articles/langsmith-evaluation-concepts.md]
-5. **场景适配**：根据评估目的选择 offline 或 online 评估——开发期重控制，生产期重监控 ^[raw/articles/langsmith-evaluation-concepts.md]
+> 本实体已于 2026-09-07 质量闭环清理中归档（原因: thin-0.75）。
+> 原文见 `raw/articles/`，归档件见 `_archive/checkup-2026-09-07/langsmith-evaluation-concepts.md`。

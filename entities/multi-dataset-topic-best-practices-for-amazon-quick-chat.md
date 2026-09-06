@@ -1,18 +1,12 @@
 ---
 title: "multi-dataset-topic-best-practices-for-amazon-quick-chat"
-created: 2026-07-08
-updated: 2026-08-01
-type: entity
-tags: ['auto-harvested']
-sources: [raw/articles/multi-dataset-topic-best-practices-for-amazon-quick-chat]
-provenance_state: extracted
+created: 2026-09-07
+updated: 2026-09-07
+type: redirect
+review_value: 0
+archived_to: _archive/checkup-2026-09-07/multi-dataset-topic-best-practices-for-amazon-quick-chat.md
+archived_reason: thin-0.95
 ---
 
-> -> [[raw/articles/multi-dataset-topic-best-practices-for-amazon-quick-chat.md|原文存档]]
-
-**Note** : The topics referenced throughout this document refer to the new Topics experience (not legacy Topics). For details on the differences, see [Build a unified semantic layer across datasets with multi-dataset Topics in Amazon Quick](<https://aws.amazon.com/blogs/machine-learning/build-a-unif ^[raw/articles/multi-dataset-topic-best-practices-for-amazon-quick-chat.md]
-
-## 来源
-
-- 原文: [[raw/articles/multi-dataset-topic-best-practices-for-amazon-quick-chat.md|multi-dataset-topic-best-practices-for-amazon-quick-chat]]
-- 原始链接: : https://aws.amazon.com/blogs/machine-learning/multi-dataset-topic-best-practices-for-amazon-quick-chat
+> 本实体已于 2026-09-07 质量闭环清理中归档（原因: thin-0.95）。
+> 原文见 `raw/articles/`，归档件见 `_archive/checkup-2026-09-07/multi-dataset-topic-best-practices-for-amazon-quick-chat.md`。

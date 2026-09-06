@@ -1,18 +1,12 @@
 ---
 title: "Agent 审计：从海量噪音中捞出真风险"
-created: 2026-07-31
-updated: 2026-08-01
-type: entity
-tags: ['agentloop', 'agent-audit', 'aliyun', 'loongsuite-pilot', 'security', 'risk-detection', 'high-confidence-event', 'context-semantic-judgment', 'entity-investigation', 'data-leak']
-sources: [raw/articles/agent-audit-risk-noise-aliyun-agentloop-2026]
-provenance_state: extracted
+created: 2026-09-07
+updated: 2026-09-07
+type: redirect
+review_value: 0
+archived_to: _archive/checkup-2026-09-07/agent-audit-risk-noise-aliyun-agentloop-2026.md
+archived_reason: thin-0.85
 ---
 
-> -> [[raw/articles/agent-audit-risk-noise-aliyun-agentloop-2026.md|原文存档]]
-
-阿里云 AgentLoop（Agent 观测与优化平台）审计视角分享：Coding Agent 的能力越强，工作空间就越不只是编辑器，而是代码仓库、模型上下文、工具调用、外部授权和企业内部数据共同组成的**一条执行链路**。Agent 审计的目标不是风吹草动就告警，而是让真正进入高危队列的风险更准——单点命中要能回到上下文里被解释，风险事件要能说明越过了哪条边界、影响了哪些对象、证据在哪里、下一步怎么处置。 ^[raw/articles/agent-audit-risk-noise-aliyun-agentloop-2026.md]
-
-## 来源
-
-- 原文: [[raw/articles/agent-audit-risk-noise-aliyun-agentloop-2026.md|Agent 审计：从海量噪音中捞出真风险]]
-- 原始链接: : "https://mp.weixin.qq.com/s/Pa7FpJhdcLYj7U3Sn1JIjA
+> 本实体已于 2026-09-07 质量闭环清理中归档（原因: thin-0.85）。
+> 原文见 `raw/articles/`，归档件见 `_archive/checkup-2026-09-07/agent-audit-risk-noise-aliyun-agentloop-2026.md`。

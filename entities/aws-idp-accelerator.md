@@ -1,34 +1,12 @@
 ---
 title: "AWS IDP Accelerator"
-created: 2026-07-27
-updated: 2026-08-01
-type: entity
-tags: ["aws", "document-processing"]
-sources: [raw/articles/automate-schema-generation-for-intelligent-document-processing]
-provenance_state: extracted
-confidence: 0.6
+created: 2026-09-07
+updated: 2026-09-07
+type: redirect
+review_value: 0
+archived_to: _archive/checkup-2026-09-07/aws-idp-accelerator.md
+archived_reason: dup-0.85
 ---
 
-# AWS IDP Accelerator
-
-> -> [[raw/articles/automate-schema-generation-for-intelligent-document-processing.md|原文存档]]
-
-## 概述
-
-Title: Automate schema generation for intelligent document processing | Amazon Web Services URL Source: https://aws.amazon.com/blogs/machine-learning/automate-schema-generation-for-intelligent-document-processing/ Published Time: 2026-05-12T07:54:08-08:00 Markdown Content: Before you can extract information from documents using intelligent document processing (IDP) techniques, you need a schema for each document class that defines what to extract. But how do you create schemas when you have thousands of documents and don’t know what classes exist? Doing this at scale can take substantial manua... ^[raw/articles/automate-schema-generation-for-intelligent-document-processing.md]
-
-## 主要内容
-
-- IDP Accelerator
-- Solution overview
-- Technical details
-- Embedding generation
-- Document clustering
-- Benchmarking embeddings and clustering
-- Agentic schema generation
-- Schema analysis
-
-## 来源
-
-- [[raw/articles/automate-schema-generation-for-intelligent-document-processing.md|原文存档]]
-- 原始链接: https://aws.amazon.com/blogs/machine-learning/automate-schema-generation-for-intelligent-document-processing/
+> 本实体已于 2026-09-07 质量闭环清理中归档（原因: dup-0.85）。
+> 原文见 `raw/articles/`，归档件见 `_archive/checkup-2026-09-07/aws-idp-accelerator.md`。

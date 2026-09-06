@@ -2,7 +2,7 @@
 
 title: "端侧模型专用Harness：Qwen3.8-27B + Perplexity Portable Computer"
 created: 2026-08-30
-updated: 2026-09-06
+updated: 2026-09-07
 type: entity
 tags: [harness, on-device, local-inference, qwen, agent, privacy]
 sources: [raw/articles/on-device-harness-qwen38-27b-portable-computer]

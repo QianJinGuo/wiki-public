@@ -1,18 +1,12 @@
 ---
 title: "清华浙大等开源发布SEED：自进化OPD的长程Agent强化学习训练方法"
-created: 2026-07-18
-updated: 2026-08-01
-type: entity
-tags: ['auto-harvested']
-sources: [raw/articles/seed-self-evolving-opd-long-horizon-agent-rl-tsinghua-zju-2026]
-provenance_state: extracted
+created: 2026-09-07
+updated: 2026-09-07
+type: redirect
+review_value: 0
+archived_to: _archive/checkup-2026-09-07/seed-self-evolving-opd-long-horizon-agent-rl-tsinghua-zju-2026.md
+archived_reason: thin-0.9
 ---
 
-> -> [[raw/articles/seed-self-evolving-opd-long-horizon-agent-rl-tsinghua-zju-2026.md|原文存档]]
-
-一句话讲清楚👉🏻 SEED 让 Agent 在训练时复盘自己刚完成的任务轨迹，把整条任务结束后的经验，细化成每一步输出该不该加强的训练信号。 ^[raw/articles/seed-self-evolving-opd-long-horizon-agent-rl-tsinghua-zju-2026.md]
-
-## 来源
-
-- 原文: [[raw/articles/seed-self-evolving-opd-long-horizon-agent-rl-tsinghua-zju-2026.md|清华浙大等开源发布SEED：自进化OPD的长程Agent强化学习训练方法]]
-- 原始链接: : https://mp.weixin.qq.com/s/1tPAWiT7U76Uabq3JvhCkw
+> 本实体已于 2026-09-07 质量闭环清理中归档（原因: thin-0.9）。
+> 原文见 `raw/articles/`，归档件见 `_archive/checkup-2026-09-07/seed-self-evolving-opd-long-horizon-agent-rl-tsinghua-zju-2026.md`。

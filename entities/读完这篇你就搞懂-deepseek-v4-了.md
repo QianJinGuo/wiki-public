@@ -1,38 +1,12 @@
 ---
-
 title: "读完这篇，你就搞懂 DeepSeek v4 了"
-created: 2026-06-10
-updated: 2026-06-10
-tags: [agent, architecture, code, deepseek, fine-tuning, llm, memory, mlops, nvidia, open-source, prompt, rag, search]
-review_value: 7
-review_confidence: 7
-type: entity
-sources:
-  - raw/articles/读完这篇你就搞懂-deepseek-v4-了
+created: 2026-09-07
+updated: 2026-09-07
+type: redirect
+review_value: 0
+archived_to: _archive/checkup-2026-09-07/读完这篇你就搞懂-deepseek-v4-了.md
+archived_reason: dup-0.8
 ---
 
-# 读完这篇，你就搞懂 DeepSeek v4 了
-
-→ [[raw/articles/读完这篇你就搞懂-deepseek-v4-了|原文存档]]^[raw/articles/读完这篇你就搞懂-deepseek-v4-了.md]
-
-## 深度分析
-
-读完这篇，你就搞懂 DeepSeek v4 了 ^[raw/articles/读完这篇你就搞懂-deepseek-v4-了.md]
-### 核心观点
-1. # 读完这篇，你就搞懂 DeepSeek v4 了 ^[raw/articles/读完这篇你就搞懂-deepseek-v4-了.md]
-作者  ：d  orian ^[raw/articles/读完这篇你就搞懂-deepseek-v4-了.md]
-丨 导语  2026 年 4 月 24 日上午，DeepSeek 又一次把"开源炸弹"丢进了大模型圈。 ^[raw/articles/读完这篇你就搞懂-deepseek-v4-了.md]
-2. 没有预热，官微只有一句话：“今天，我们全新系列模型 DeepSeek-V4 的预览版本正式上线并同步开源”。 ^[raw/articles/读完这篇你就搞懂-deepseek-v4-了.md]
-3. 从评分上看，这次的模型已经非常接近“闭源三巨头”的水平了，同时也是当之无愧的“地表最强开源模型”。 ^[raw/articles/读完这篇你就搞懂-deepseek-v4-了.md]
-4. 但细读这份技术报告「DeepSeek-V4: Towards Highly Efficient Million-Token Context Intelligence」，会发现DeepSeek的工作远比评分更硬核，无论是架构创新还是工程优化都是一如既往的精雕细琢。 ^[raw/articles/读完这篇你就搞懂-deepseek-v4-了.md]
-5. ###  ** DeepSeek V4到底强在哪？ ^[raw/articles/读完这篇你就搞懂-deepseek-v4-了.md]
-
-### 关联实体
-
-- [[entities/ethan-he-cosmos-grok-imagine-latent-space-video-agent-20260606]]
-- [[entities/scale-robot-reinforcement-learning-with-nvidia-isaac-lab-on-]]
-- [[entities/nvidia-isaac-lab-sagemaker-robot-rl-humanoid]]
-- [[entities/openclaw-完全指南这可能是全网最新最全的系统化教程了32w字建议收藏-v2]]
-- [[entities/openclaw-完全指南这可能是全网最新最全的系统化教程了32w字建议收藏]]
-- [[entities/存之有序治之有矩agent-记忆系统的工程实践与演进]]
-
+> 本实体已于 2026-09-07 质量闭环清理中归档（原因: dup-0.8）。
+> 原文见 `raw/articles/`，归档件见 `_archive/checkup-2026-09-07/读完这篇你就搞懂-deepseek-v4-了.md`。
