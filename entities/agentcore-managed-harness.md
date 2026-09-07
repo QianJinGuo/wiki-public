@@ -12,57 +12,39 @@ reviewed: 2026-09-07
 review_verdict: hub-retained
 review_category: dup
 review_note: "judged dup-0.8: 与AgentCore条重复; retained as hub (in-links>=20); MOC rewrite candidate"
----
+moc_rebuilt: 2026-09-07
+---# Harness工程火遍硅谷，AgentCore今天交卷!
 
-# Harness工程火遍硅谷，AgentCore今天交卷!
+> 本页原内容在 2026-09-07 质量闭环中判定为 **dup-0.8**，已按导航页（MOC）重建；
+> 原文备份见 `_archive/hub-rewrite-2026-09-07/agentcore-managed-harness.md`，一手来源仍见下方 sources。
 
-**Harness = 模型之外的一切**：编排逻辑、执行环境、工具连接、状态管理、身份认证、可观测性。 ^[raw/articles/agentcore-managed-harness.md]
+## 机制与论文
+- [[entities/kimi-work-codex-vibe-working-paradigm-shift|Kimi Work：通用 Agent 战场从云端迁移到本地]] — Vibe Working开启+本地Harness 20356字rv9
+- [[entities/harness-engineering-paradigm-comprehensive-2026|Harness Engineering 综合论述：为什么 2026 年真正重要的是它（含 ECC 开源实现案例）]] — 综合论述17305字含ECC案例rv9
+- [[entities/agent-harness-12-components-7-decisions|一篇看懂 Agent Harness 的结构！ — 12组件+7决策完整框架]] — harness 12组件框架
+- [[entities/openclaw-prompt-context-harness|深度解析 OpenClaw 在 Prompt / Context / Harness 三个维度中的设计哲学与实践]] — 三维度源码：23模块拼装+自适应分块+双层Memory
+- [[entities/cloudflare-kitesurf-agent-first-browser-workers-2026|Cloudflare Kitesurf：运行在 Workers V8 isolate 上的 agent-first 浏览器]] — agent-first浏览器
+- [[entities/agent-self-improvement-six-mechanisms|Agent 自我改进的六条路]] — 六种自改进机制
+- [[entities/agent-harness-architecture-deep-dive-aksahy|Agent Harness 解析：智能体架构深度拆解]] — harness解剖深度
+- [[entities/from-prompt-to-harness-claude-official|从 Prompt 到 Harness：Claude 官方学习资料]] — Harness五子系统闭环解读
+- [[entities/claude-opus-47|Claude Opus 4.7 并不是一次全面升级，甚至部分能力大幅衰退]] — 4.7衰退面分析
+- [[entities/fudan-peking-ahe-agentic-harness-engineering|复旦北大 AHE：Agentic Harness Engineering 瓶颈分析]] — AHE三支柱可观测性5622字深析版
+- [[entities/prompt-context-harness-three-evolutions|Prompt Context Harness 三次演进]] — Harness衰变定律：模型越强harness越简3681字
+- [[entities/three-years-from-gpt-3-to-gemini-3|Three Years from GPT-3 to Gemini 3]] — 9699字最全三年演进版
+- [[entities/grok-bot-agent-runtime-five-layer-vibecoder-2026|Grok Bot 0.18 运行时重建：Agent 的五层运行时与可靠性协议]] — 145万行bundle重建五层运行时+可靠性协议
 
-**三个工程阶段**： ^[raw/articles/agentcore-managed-harness.md]
-1. Prompt Engineering — 怎么跟模型说话 ^[raw/articles/agentcore-managed-harness.md]
-2. Context Engineering — 怎么给模型喂信息 ^[raw/articles/agentcore-managed-harness.md]
-3. **Harness Engineering** — 怎么让 Agent 真正跑起来（2026 年新风潮） ^[raw/articles/agentcore-managed-harness.md]
+## 工程实践
+- [[entities/long-running-agent-ralph-loop-handover-harness-ruofei|'长周期 Agent 详解：从 Ralph Loop 到可接管 Harness']] — 三类漂移+5张卡治理12390字rv10全版
+- [[entities/karpathy-vibe-coding-agentic-engineering-v4|Karpathy 最新访谈：从 Vibe Coding 到 Agentic Engineering]] — v4 8090字rv10：可验证性上限+MenuGen警示
+- [[entities/codex-goal-agent-runtime|Codex /goal：长任务Agent的目标运行时]] — goal运行时rv9主版
+- [[entities/schemaflow-openai-cookbook-staged-agentic-workflow|SchemaFlow: OpenAI Cookbook Partner — Agentic Database Change Impact Analysis, SQL Generation, and Eval Guardrails]] — 五阶段staged workflow+Pydantic约束+Promptfoo护栏
+- [[entities/anthropic-computer-use-best-practices|Anthropic 发布 Computer Use 最佳实践]] — 坐标映射与梯度分配
+- [[entities/aws-bedrock-agentcore-quality-optimization-flywheel|AWS Bedrock Agentcore Quality Optimization Flywheel]] — 质量飞轮
+- [[entities/长周期-agent-详解-从-ralph-loop-到可接管-harness|长周期-agent-详解-从-ralph-loop-到可接管-harness]] — Ralph loop到接管harness
+- [[entities/anthropic-managed-agents-scaling|Anthropic Managed Agents：用 K8s 思路虚拟化 Agent 组件]] — 宠物到牛群
+- [[entities/prime-intellect-auto-nanogpt-opus-2930|AI第一次科研竞赛中击败人类！Opus 4.7狂飙2930步创世界纪录]] — AI首胜人类科研竞赛：2930步+两种研究人格
+- [[entities/prompt-debugger-compare-templates-winty|Prompt 调试器：A/B 测试模板对比]] — Prompt调试器三件套：A/B+评分沉淀+模板库
+- [[entities/agent-config-model-tool-skill-mcp-prompt-combination-yexiaochai-09|第 09 篇 · Agent 配置：模型、工具、技能、MCP 与提示词的组合]] — 配置驱动架构教程
 
-## 相关实体
-- [[entities/openclaw-prompt-context-harness]]
-- [[concepts/harness-engineering-framework]]
-- [[entities/agent-harness-12-components-7-decisions]]
-- [[entities/from-prompt-to-harness-claude-official]]
-- [[entities/agentcore-harness]]
-
-→ [[raw/articles/agentcore-managed-harness|原文存档]] ^[raw/articles/agentcore-managed-harness.md]
-
-- [[moc/prompt-engineering-guide|MOC]]
-## 深度分析
-
-1. **Harness 工程是 2026 年 AI Agent 领域的重心转移** ^[raw/articles/agentcore-managed-harness.md]
-   从 Prompt Engineering（如何跟模型说话）到 Context Engineering（如何给模型喂信息），再到 Harness Engineering（如何让 Agent 真正跑起来），工程重心一直在往"让 Agent 真正能落地"的方向移动 。这反映了行业从"模型能力崇拜"向"系统工程能力"的成熟化转变。 ^[raw/articles/agentcore-managed-harness.md]
-
-2. **多模型灵活性是企业级 Agent 平台的核心竞争力** ^[raw/articles/agentcore-managed-harness.md]
-   AgentCore Managed Harness 支持 Bedrock/OpenAI/Gemini/兼容模型在 session 内随时切换且不丢上下文 。这种"模型随便换"的能力降低了企业因单一模型供应商锁定或模型迭代而带来的业务风险，是企业级平台的关键差异化特性。 ^[raw/articles/agentcore-managed-harness.md]
-
-3. **工具即插即用 + 自定义环境 = 通用性和深度兼顾** ^[raw/articles/agentcore-managed-harness.md]
-   通过 MCP Server、REST API 转工具、Browser 自动化、Code Interpreter 等多种工具集成方式，结合自有 Docker 镜像支持，平台实现了"开箱即用"与"深度定制"的平衡 。这解决了"什么都懂但都不精"的普遍痛点。 ^[raw/articles/agentcore-managed-harness.md]
-
-4. **Firecracker microVM 隔离保障多租户安全** ^[raw/articles/agentcore-managed-harness.md]
-   每个 session 独立使用硬件级 microVM 隔离 ，这在保障安全性的同时提供了接近 bare-metal 的性能，是 AWS 在云端安全隔离方面的核心技术积累在 Agent 场景的复用。 ^[raw/articles/agentcore-managed-harness.md]
-
-5. **Shell 直跑实现确定性操作的零 token 费用** ^[raw/articles/agentcore-managed-harness.md]
-   对于克隆、安装、测试等确定性操作不走模型，直接执行 。这是成本优化的关键设计——模型推理成本远高于直接执行成本，将两者分离可显著降低 Agent 运行的整体花费。 ^[raw/articles/agentcore-managed-harness.md]
-
-## 实践启示
-
-1. **评估 Agent 平台时优先关注 Harness 能力而非模型种类** ^[raw/articles/agentcore-managed-harness.md]
-   模型会快速迭代，但 Harness 的稳定性、工具集成深度、环境隔离安全性决定了 Agent 的长期运维成本。选择时应问："换模型时 Harness 层需要改动多少？" ^[raw/articles/agentcore-managed-harness.md]
-
-2. **利用断点续跑能力设计长时间任务的 checkpoint 机制** ^[raw/articles/agentcore-managed-harness.md]
-   文件系统持久化 + 跨会话保持记忆意味着可以设计分阶段任务，每个阶段结束时保存状态，便于人工介入或异常恢复。这是生产环境 Agent 必备的韧性设计。 ^[raw/articles/agentcore-managed-harness.md]
-
-3. **将确定性操作剥离出模型调用以控制成本** ^[raw/articles/agentcore-managed-harness.md]
-   梳理 Agent workflow 中的确定性步骤（文件操作、环境检查、结果验证），优先使用 Shell 直跑而非模型调用，既降低 token 消耗又提升响应速度。 ^[raw/articles/agentcore-managed-harness.md]
-
-4. **借助 Skills 知识包解决垂直领域"泛而不精"问题** ^[raw/articles/agentcore-managed-harness.md]
-   Markdown+脚本格式的领域知识按需加载机制，是让通用 Agent 具备专业能力的高效方式。设计 Agent 时应规划知识包的拆分、版本管理和按场景加载策略。 ^[raw/articles/agentcore-managed-harness.md]
-
-5. **优先选择基于开源框架且不锁定的平台** ^[raw/articles/agentcore-managed-harness.md]
-   AgentCore 基于 Strands Agents 开源框架，可随时导出代码自部署 。这确保了技术自主性和迁移灵活性，避免被供应商绑定带来的长期风险。 ^[raw/articles/agentcore-managed-harness.md]
+## 延伸导航
+- [[moc/agent-engineering-guide|Agent 工程全景指南]]

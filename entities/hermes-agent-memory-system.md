@@ -20,71 +20,39 @@ reviewed: 2026-09-07
 review_verdict: hub-retained
 review_category: dup
 review_note: "judged dup-0.8: 记忆vs OpenClaw 4573字版，同族五胞胎; retained as hub (in-links>=20); MOC rewrite candidate"
----
+moc_rebuilt: 2026-09-07
+---# Hermes Agent 记忆系统 vs OpenClaw 记忆观
 
-## 四层分框架
-| 层级 | 存储 | 容量 | 定位 |
-|------|------|------|------|
-| **热记忆** | MEMORY.md + USER.md | 2,200 + 1,375 字符 | 每轮都该知道的事实和偏好 |
-| **会话检索** | session_search (SQLite + FTS5) | 无硬上限 | 档案室，"上次那个问题" |
-| **程序性记忆** | Skills | 无硬上限 | SOP，"这类任务下次怎么做" |
-| **深层用户建模** | Honcho（外部） | 可选 | 跨平台/跨设备长周期画像 |
-> 和 [[entities/agent-memory-architecture|Agent Memory 架构本质]] 的"write-manage-read 三链路闭环"角度不同，Hermes 更侧重**运行时成本控制和分层治理**。
+> 本页原内容在 2026-09-07 质量闭环中判定为 **dup-0.8**，已按导航页（MOC）重建；
+> 原文备份见 `_archive/hub-rewrite-2026-09-07/hermes-agent-memory-system.md`，一手来源仍见下方 sources。
 
-## 核心设计：cache-aware
-**不轻易改系统提示词**。会话中途记忆写入先落盘，不立刻修改当前 system prompt——保护 prompt cache。牺牲即时性，换缓存命中和提示词结构稳定。 ^[raw/articles/hermes-agent-memory-system-vs-openclaw.md]
-**压缩前 memory flush**：长会话压缩前，模型先提取"值得长期保存的事实"写入 durable memory，再压缩历史。**记忆压缩不是把历史变短，而是把任务状态迁移到更稳定的位置。** ^[raw/articles/hermes-agent-memory-system-vs-openclaw.md]
-**记忆是提示词供应链**：写入前检查提示词注入、凭证泄露、SSH 后门等模式——因为 memory 内容未来可能进入 system prompt。 ^[raw/articles/hermes-agent-memory-system-vs-openclaw.md]
-这和 [[entities/agent-harness-context-management-working-set|Agent Harness 上下文管理：工作集视角]] 的判断一致：**窗口里留下来的，不应该是发生过的一切，而应该是下一轮推理真的要用的工作集**。 ^[raw/articles/hermes-agent-memory-system-vs-openclaw.md]
+## 机制与论文
+- [[entities/agentscope-java-harness-framework-enterprise-distributed|AgentScope Java Harness Framework 2.0 — 企业级 Agent 分布式场景的 Harness 实现 (Java 2.0 重大升级)]] — AgentScope Java全版
+- [[entities/hermes-agent-memory-system-openclaw-comparison|深度拆解 Hermes Agent 记忆系统]] — 记忆成本账四层体系15260字rv10最深版
+- [[entities/hermes-agent-skill-crossover-optimization|Hermes Agent Skill 互优化：SkillEvolver × Darwin × EmbodiSkill 4 轮闭环]] — SkillEvolver×Darwin×EmbodiSkill互优化13412字
+- [[entities/miroflow-deep-research-agent-harness-mirothinker|MiroFlow：Deep Research Agent 脚手架 —— 与 Code Agent 的 6 大工程差异]] — Code vs Research Agent 6大工程差异16596字rv10
+- [[entities/hermes-agent-deep-dive|Hermes Agent 深度解析（阿里云/飞樰）]] — 自进化内外双路径+四维工程7934字rv9全版
+- [[entities/context-window-management-comparison|Context Window Management Comparison]] — 四框架对比rv9
+- [[entities/agent-harness-context-management-working-set|Agent Harness 上下文管理：工作集视角]] — 工作集视角上下文管理
+- [[entities/openclaw-prompt-context-harness|深度解析 OpenClaw 在 Prompt / Context / Harness 三个维度中的设计哲学与实践]] — 三维度源码：23模块拼装+自适应分块+双层Memory
+- [[entities/hermes-agent-vs-openclaw-comparison|Hermes Agent 为什么火了？和 OpenClaw 龙虾比一比]] — 爱马仕vs龙虾：控制面vs成长型定位对比
+- [[entities/ai-coding-agent-memory-system|AI Coding Agent 记忆系统]] — 分层记忆设计
+- [[entities/hiclaw-v110-k8s-hermes-worker|HiClaw v1.1.0 — Kubernetes 集群部署与 Hermes Worker 运行时]] — HiClaw K8s Controller-Reconciler架构分析
+- [[entities/ai-agent-tool-count-trap|AI Agent工具数量陷阱——5个边界清楚的工具胜过20个模糊工具]] — 工具税数据与机制
+- [[entities/openclaw-hermes-source-code-agent-architecture-review|OpenClaw与Hermes源码架构对比]] — 双框架源码对比：OpenClaw四亮点+Hermes四补充
+- [[entities/hermes-agent-three-layer-memory-architecture-one|Hermes Agent 爱马仕的三级 memory，到底在记什么？]] — 三级memory详解7410字，80% consolidation
+- [[entities/agent-memory-main-contradiction-context-scheduling|Agent 记忆系统的主矛盾：历史增长 vs 临场上下文调度]] — 主矛盾框架分析
 
-## vs OpenClaw：不是谁有记忆，而是谁把记忆放对了位置
-| | OpenClaw | Hermes |
-|--|---------|--------|
-| **重心** | Gateway / workspace / 多 Agent / 工作区隔离 | cache-aware 执行型 runtime |
-| **记忆厚在** | Memory plane + workspace | 热记忆 + 会话检索 + Skills |
-| **哲学** | 长期状态放进工作区和记忆平面管理 | 先保护提示词稳定性，资产分到各层 |
-**真正被修正的记忆观**：不是"把更多东西存下来、搜回来、塞给模型，Agent 就会越来越好用"。更多记忆会带来更多成本——破坏缓存、召回质量瓶颈、错误经验固化。 ^[raw/articles/hermes-agent-memory-system-vs-openclaw.md]
+## 工程实践
+- [[entities/claude-code-source-deep-dive-warrior|Claude Code 源码深度解析（13 核心机制）]] — 13机制rv10
+- [[entities/claude-code-openclaw-memory-comparison|Claude Code Openclaw Memory Comparison]] — 记忆系统对比rv9
+- [[entities/memos-hermes-plugin|MemOS Hermes 记忆插件]] — MemOS插件：智能去重+混合检索7225字
+- [[entities/openclaw-multi-agent-team-practice-v2|Openclaw Multi Agent Team Practice V2]] — 七Agent花园团队：专精胜于全能12180字全版
+- [[entities/zilliztech-mfs-open-tag-claude-tag-shuge-2026|MFS：zilliztech 的 Agent 统一上下文 harness，一套动词打通 20+ 数据源]] — 统一动词文件树寻址
+- [[entities/claude-code-demo-to-production-8-gates-huang-jia-csdn-2026|Claude Code 从 Demo 到产线 · 企业 Harness 工程化的 8 道关卡（黄佳/咖哥 CSDN）]] — 8道关卡清单
+- [[entities/aliyun-mse-ai-task-scheduling-agent-sandbox-cost-90-percent|阿里云 MSE AI 任务调度 + Agent Sandbox：动态休眠/唤醒 OpenClaw Agent 成本下降 90%+]] — 休眠唤醒短条borderline
+- [[entities/openclaw-multi-7-ecs-fargate-graviton|OpenClaw 多租户系列 #7 — 基于 ECS Fargate + Graviton 的轻量级企业 AI Agent 平台 | 亚马逊AWS官方博客]] — ECS变体+双Agent并行+四层隔离
+- [[entities/taobao-live-anchor-agent-harness-engineering-2026|淘宝主播 Agent Harness 工程：六元组框架与直播场景八项实战]] — harness六元组八项实战
 
-## 给自研 Agent 的三问
-1. **什么配得上热记忆？** → 用户偏好/环境事实/稳定约定；任务进度/TODO/流水账不进   ^[raw/articles/hermes-agent-memory-system-vs-openclaw.md]
-2. **历史有没有档案层？** → 完整事件+关键词搜索+按 session 聚合+摘要召回，而非全塞进 memory   ^[raw/articles/hermes-agent-memory-system-vs-openclaw.md]
-3. **压缩前有没有状态迁移？** → 长任务压缩前先做 durable state extraction   ^[raw/articles/hermes-agent-memory-system-vs-openclaw.md]
-
-## 深度分析
-Hermes 的记忆系统本质上是一套**分层成本治理**架构，而非单一的大容量记忆存储。其核心洞察是：记忆的代价不仅在于存储，更在于它进入推理上下文的路径成本。 ^[raw/articles/hermes-agent-memory-system-vs-openclaw.md]
-**热记忆的精准克制**：MEMORY.md + USER.md 的 2,200 + 1,375 字符限制看似严格，实则刻意为之。用字符而非 token 限制，规避了对特定模型 tokenizer 的依赖，实现真正的存储无关性。更关键的是，这两块内容在会话期间作为 frozen snapshot 注入系统提示词——写入时落盘但不修改已构建的 prompt，保护的是 prompt cache 的命中稳定性。 ^[raw/articles/hermes-agent-memory-system-vs-openclaw.md]
-**记忆压缩即状态迁移**：传统视角将压缩理解为"把历史变短"，Hermes 的压缩前 memory flush 机制揭示了另一种范式：压缩前先做 durable state extraction，把值得长期保存的事实（用户偏好、修正、重复模式）迁移到更稳定的热记忆层，再压缩旧历史。这意味着压缩的质量标准不是信息密度，而是**状态位置是否正确**。 ^[raw/articles/hermes-agent-memory-system-vs-openclaw.md]
-**session_search 的设计哲学**：档案室不等于随身备忘录。FTS5 搜索 + 按 session 聚合 + 父会话关系解析 + 便宜模型 focused summary，构成了一条清晰的召回链路。热记忆回答"每轮都要知道什么"，session_search 回答"上次那个问题怎么找回来"——两者定位不重叠，不互相替代。 ^[raw/articles/hermes-agent-memory-system-vs-openclaw.md]
-**Skills 作为程序性记忆的注入策略**：skills index 轻量注入主上下文，真正需要时才加载完整 skill。这解决了 SOP 类知识"存得住但用不上"的问题——关键不是数量，而是按需获取的能力。 ^[raw/articles/hermes-agent-memory-system-vs-openclaw.md]
-
-## 实践启示
-1. **用字符限制作热记忆边界，而非 token**：解耦对特定模型 tokenizer 的依赖，容量预测更稳定。MEMORY.md 和 USER.md 的分工（事实 vs 偏好）值得直接借鉴。   ^[raw/articles/hermes-agent-memory-system-vs-openclaw.md]
-2. **会话中途记忆落盘不修修改 prompt**：任何 memory write 先落盘，会话结束或明确触发点再统一重建 system prompt。保护 prompt cache 的收益远大于即时更新的体验收益。   ^[raw/articles/hermes-agent-memory-system-vs-openclaw.md]
-3. **压缩前必须有一轮状态提取**：在历史被摘要磨薄之前，用独立模型调用 + 仅开放 memory 工具的方式，显式提取 durable facts。别让压缩算法决定什么该留下。   ^[raw/articles/hermes-agent-memory-system-vs-openclaw.md]
-4. **热记忆内容必须通过安全检查**：memory 内容可能进入 system prompt，提示词注入、凭证泄露、SSH 后门等模式必须在写入前被扫描——记忆是提示词供应链的一部分。   ^[raw/articles/hermes-agent-memory-system-vs-openclaw.md]
-5. **区分"环境事实"和"任务流水账"**：前者（环境配置、用户偏好、稳定约定）值得进热记忆；后者（任务进度、中间 TODO、流水账）留在 session_search 层，不要因为"怕忘记"就往热记忆里塞。   ^[raw/articles/hermes-agent-memory-system-vs-openclaw.md]
-6. **深层用户建模守住缓存边界**：Honcho 等外部画像系统在第一轮注入 system prompt，后续轮次通过消息附件动态提供——稳定前缀不动，缓存命中率不降。   ^[raw/articles/hermes-agent-memory-system-vs-openclaw.md]
-7. **给自研 Agent 的三问清单**：   ^[raw/articles/hermes-agent-memory-system-vs-openclaw.md]
-
-   - 什么配得上热记忆？→ 用户偏好/环境事实/稳定约定
-   - 历史有没有档案层？→ 完整事件+关键词搜索+session 聚合+摘要召回
-   - 压缩前有没有状态迁移？→ durable state extraction 先于压缩执行 ^[raw/articles/hermes-agent-memory-system-vs-openclaw.md]
-
-## 与相关条目的关系
-- [[entities/agent-memory-modular-framework|Agent Memory 模块化框架与评测]] — 学术视角（ICLR 2026），四组件统一框架
--  — write-manage-read 三链路闭环，六维度记忆单元
-- [[concepts/openclaw-architecture|OpenClaw 架构解析]] — OpenClaw 薄抽象+显式控制流原始设计
--  — 工作集视角，session/harness/sandbox 解耦
-
-## 关联阅读
-- [[raw/articles/hermes-agent-memory-system-vs-openclaw|原文存档]]
-- [[entities/hermes-agent-memory-system-openclaw-comparison|深度拆解 Hermes Agent 记忆系统]]
-- [[entities/memory-agent-systems-cobanov|memory agent systems cobanov]]
-- [[entities/how-ai-agent-memory-works|AI Agent 记忆系统架构]]
--  ^[raw/articles/hermes-agent-memory-system-vs-openclaw.md]
-
-- [[entities/ai-agent-memory-systems|ai agent memory systems]]
-
-→ [[raw/articles/hermes-agent-memory-system-architecture.md|原文存档]] ^[raw/articles/hermes-agent-memory-system-vs-openclaw.md]
-
-- [[entities/agent-memory-architecture-ruofei|Agent Memory 架构解析]]
+## 延伸导航
+- [[moc/memory-context-systems|Agent 记忆与上下文系统]]

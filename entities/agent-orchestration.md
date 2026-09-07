@@ -14,33 +14,36 @@ reviewed: 2026-09-07
 review_verdict: hub-retained
 review_category: dup
 review_note: "judged dup-0.8: 与编排系统条重复短版; retained as hub (in-links>=20); MOC rewrite candidate"
----
+moc_rebuilt: 2026-09-07
+---# Agent orchestration
 
-## 核心要点
-- **控制平面缺失是 Agent 网络失效的根本原因**：状态丢失、人为审批缺失、单点故障导致静默级联失败
-- **AWS Step Functions** 提供确定性工作流编排，支持状态管理、重试逻辑、分支与并行执行
-- **Amazon Bedrock Agents** 实现推理驱动的 Agent 协调，内置工具调用、记忆与动态路由
-- **Human-in-the-loop** 审批工作流：关键决策节点暂停等待人工确认
-- **Amazon MWAA**（Managed Workflows for Apache Airflow）基于 DAG 的编排，处理复杂多步骤管道
+> 本页原内容在 2026-09-07 质量闭环中判定为 **dup-0.8**，已按导航页（MOC）重建；
+> 原文备份见 `_archive/hub-rewrite-2026-09-07/agent-orchestration.md`，一手来源仍见下方 sources。
 
-## 深度分析
-Agent 编排（Agent Orchestration）是多 Agent 系统从「实验原型」走向「生产可靠」的关键跨越。当单个 Agent 独立运行时，问题相对可控——调用工具、执行任务、返回结果。但一旦将多个专业化 Agent 编织成网络，如果没有控制平面（Control Plane）来管理执行流程、状态持久化和审批门控，整个系统会在三个维度上暴露脆弱性。 ^[raw/articles/agent-orchestration.md]
-**状态丢失问题**尤为典型。在一个典型的多 Agent 协作流程中：Agent A 负责任务拆解，Agent B 负责具体执行，Agent C 负责结果整合。如果某个步骤失败，缺乏持久化状态的系统无法从断点恢复，只能从头重启，导致重复计算和资源浪费。AWS Step Functions 通过其内置的状态管理机制解决了这一问题——每个状态转换都有记录，失败后可精确重试而非全链路重启。 ^[raw/articles/agent-orchestration.md]
-**审批门控的缺失**是生产环境的另一大隐患。在企业级应用中，某些操作具有不可逆性：删除资源、发送外部通信、审批财务流程等。这些操作如果由 Agent 自主执行，一旦出错代价极高。工作流中嵌入人工审批节点（Human-in-the-loop Approval）使得系统能够在关键步骤暂停，将控制权交还给人类操作员，这是 Agent 系统获得企业信任的技术基础。 ^[raw/articles/agent-orchestration.md]
-**静默级联失败**则是缺乏编排层的最严重后果。当某个 Agent 节点宕机或返回异常时，没有编排层通知的系统会继续将任务发送给已失效的节点，导致整条链路返回错误结果或超时。MWAA 等 DAG-based 编排工具通过任务依赖图和健康检查机制，能够在某个节点失败时及时终止下游任务并向上游传递错误信号，避免错误结果的沉默扩散。 ^[raw/articles/agent-orchestration.md]
-从架构视角看，Agent 编排层本质上是一个**元认知系统**——它不直接执行业务任务，而是管理任务执行的方式、时机和条件。这种关注点分离（Separation of Concerns）使得业务 Agent 的开发可以专注于领域能力，而编排逻辑的演进不影响单个 Agent 的内部实现。 ^[raw/articles/agent-orchestration.md]
+## 机制与论文
+- [[entities/how-we-made-window-join-parallel-and-vectorized|How we made WINDOW JOIN parallel and vectorized]] — 专用算子25倍提速+AVX2 SIMD工程细节
+- [[entities/rajveerbachkaniwalacom-blog-2026-05-24-on-the-difficulty-of-pasting-a-pic|Why Ctrl+V won't paste images in Claude Code on WSL, with a fix]] — WSL三层故障链：BMP+静默覆写+快捷键拦截
+- [[entities/gemini-35-flash-more-expensive-but-google-plan-to-use-it-for-everything|Gemini 3.5 Flash: more expensive, but Google plan to use it for everything]] — 三实验室同步涨价趋势+平台化战略
+- [[entities/dumb-ways-for-an-open-source-project-to-die|Dumb Ways for an Open Source Project to Die]] — 开源死法分类
+- [[entities/roman-linkedin-backdoor-supply-chain|A backdoor in a LinkedIn job offer]] — LinkedIn招聘投毒：npm prepare生命周期后门一手案例
+- [[entities/lucasfcostacom-blog-backpressure-is-all-you-need|Backpressure is all you need]] — 反压机制：把人从昂贵剪贴板解放
+- [[entities/what-political-censorship-looks-like-inside-an-llm-s-weights|What political censorship looks like inside an LLM's weights — a mechanistic-interpretability study of Qwen 3.5]] — 审查电路 Writer/Reader定位
+- [[entities/tokens-per-result|Intelligence Per Dollar]] — 单位token智能指标
+- [[entities/malware-crew-teampcp-opensources-its-shaihulud-worm-on|Malware crew TeamPCP open-sources its Shai-Hulud worm on GitHub]] — 恶意软件开源化：从工具销售到能力扩散
+- [[entities/cisco-preps-for-a-world-of-ai-agent-coworkers-frontier-model-threats|Cisco Preps For A World Of AI Agent Coworkers, Frontier Model Threats]] — agent数字工位
+- [[entities/anthropic_cache_tokenomics|Tokenomics: the 62.5-minute rule for Claude's cache]] — 62.5分钟缓存经济学
+- [[entities/agentic-design-system-from-chatbot-to-orchestration|Agentic Design System - From Chatbot to Orchestration]] — 设计系统三层演进
+- [[entities/kristoffit-blog-fix-your-asserts|You Must Fix Your Asserts]] — 断言是编译器优化信号+禁用是反模式
+- [[entities/eclecticlightco-2026-05-29-what-happens-in-the-log-when-an-app-cra|What happens in the log when an app crashes as it starts up?]] — macOS崩溃日志机制解析，长青参考
 
-## 实践启示
-1. **从确定性工作流入手，逐步引入智能路由**：先用 Step Functions 固定核心业务流程的骨架，再在需要动态判断的节点嵌入 Bedrock Agents 的推理能力。渐进式演进比一步到位的架构更可控。
-2. **为每个 Agent 定义清晰的健康检查和降级策略**：当某个 Agent 无响应时，编排层应能自动切换到备用路径或人工干预节点，而非静默超时。
-3. **审批节点的设计需要克制**：并非所有操作都需要人工审批，过多的停顿会破坏用户体验并抵消 Agent 自动化带来的效率提升。建议只在「不可逆操作」「高价值操作」「合规要求」三类场景中嵌入审批门控。
-4. **状态持久化是容错的基础**：确保每个关键状态转换都被记录，支持精确断点恢复。这在长时间运行的任务中尤为重要——Agent 执行可能跨越数小时甚至数天。
-5. **编排层也需要监控**：传统意义上监控系统监控业务服务的健康状况，但编排层本身的状态（Pending/Running/Failed 任务数、超时率、人工审批平均等待时长）同样需要可观测性，以便在编排层本身发生问题时及时告警。
-
-## 关联阅读
-→ [[raw/articles/agent-orchestration|原文存档]]
-
-- [[entities/构建基于多智能体架构的深度思考交易系统.md|Multi-Agent 深度思考交易系统]] — 多 Agent 协作模式的具体实践
-- [[entities/agent-harness-engineering-survey-etcvlovg-taxonomy|Agent Harness 工程学调研]] — Agent 系统构建的核心架构要素
-- [[entities/building-enterprise-level-with-bedrock-agentcore-and-strands|基于 Bedrock AgentCore 构建企业级应用]] — AWS 生态中 Agent 编排的具体实现路径
-- [[entities/james-multi-agent-collaboration-modes|James 多 Agent 协作模式]] — 不同多 Agent 协作架构的对比分析
+## 工程实践
+- [[entities/back-up-and-restore-your-amazon-eks-cluster-resources-using-velero-amazon-web-se|Back up and restore your Amazon EKS cluster resources using Velero | Amazon Web Services]] — Velero分析版
+- [[entities/freelance-designers-cant-compete-ai-subscription|Freelance Designers Can't Compete With a $20/Month AI Subscription - Here's What Actually Works Now]] — 三组独立数据交叉验证创意市场塌陷
+- [[entities/announcing-claude-managed-agents-on-cloudflare|Announcing Claude Managed Agents on Cloudflare]] — 脑手分离架构
+- [[entities/announcing-aws-cdk-mixins-composable-abstractions-for-aws-resources-amazon-web-s|Announcing AWS CDK Mixins: Composable Abstractions for AWS Resources | Amazon Web Services]] — CDK特性borderline
+- [[entities/vercel-com-how-superset-built-the-ide-for-ai-agents-on-vercel|How Superset built the IDE for AI agents on Vercel]] — 并行agent基础设施需求
+- [[entities/running-an-ai-native-engineering-org|Running an AI-native engineering org]] — AI原生组织：三层审查模型+审查基础设施投资
+- [[entities/why-internally-built-ai-fails-fund-accounting-audits|Why Internally-Built AI Fails Fund Accounting Audits]] — 审计就绪是架构决策
+- [[entities/seangoedeckecom-build-agents-not-pipelines|Build agents, not pipelines]] — pipeline库vs agent框架类比+context-gathering隐形债务
+- [[entities/offline-llm-energy-use-html|Apple Silicon costs more than OpenRouter]] — 本地推理成本解构：硬件折旧主导3x于云端
+- [[entities/brethorstingcom-blog-2026-05-domain-expertise-has-always-been-the-|Domain Expertise Has Always Been the Real Moat]] — 领域知识护城河

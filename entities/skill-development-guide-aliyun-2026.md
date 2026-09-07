@@ -16,109 +16,36 @@ reviewed: 2026-09-07
 review_verdict: hub-retained
 review_category: dup
 review_note: "judged dup-0.8: 同一保姆级教程较短版; retained as hub (in-links>=20); MOC rewrite candidate"
----
+moc_rebuilt: 2026-09-07
+---# 重新定义Skill开发：保姆级教程&一站式开发助手发布
 
-→ [[raw/articles/skill-development-guide-aliyun-2026|原文存档]] ^[raw/articles/skill-development-guide-aliyun-2026.md]
+> 本页原内容在 2026-09-07 质量闭环中判定为 **dup-0.8**，已按导航页（MOC）重建；
+> 原文备份见 `_archive/hub-rewrite-2026-09-07/skill-development-guide-aliyun-2026.md`，一手来源仍见下方 sources。
 
-## 核心价值
-阿里内部工程师分享的 **Skill（技能）开发完整教程**，从概念定义到一站式开发助手，覆盖 Skill 整个生命周期。   ^[raw/articles/skill-development-guide-aliyun-2026.md]
+## 机制与论文
+- [[entities/agent-oriented-infra-intent-driven-code-sedimentation|晓斌：从 People-Oriented 到 Agent-Oriented Infra —— 意图驱动 + 代码沉淀的进化体]] — Agent-Oriented Infra长文
+- [[entities/muse-autoskill-bytebrain-self-evolving-agent-arxiv-2605-27366|MUSE-Autoskill：字节 ByteBrain 自进化 Agent 五阶段技能生命周期，arXiv 2605.27366]] — 五阶段技能生命周期，自生成87.94%超人类68.40%
+- [[entities/skill-system-design-three-way-comparison|AI Agent 架构设计（七）：Skills 系统设计（OpenClaw、Claude Code、Hermes Agent 对比）]] — 三框架skill系统设计对比
+- [[entities/huggingface-ai-agent-glossary-model-scaffolding-harness-tool-skill-subagent|Hugging Face AI Agent 术语表：Model / Agent / Scaffolding / Harness / Context Engineering / Policy / Tool / Skill / Sub-agent 完整区分]] — HF术语表16399字：Scaffolding/Harness/Policy辨析
+- [[entities/agent-skills-comprehensive-survey|Agent Skills 系统性综述：表示→获取→检索→进化]] — skill综述三元组
+- [[entities/skill-self-evolution-three-approaches|Skill自进化三路线：Trace2Skill归纳法 / EvoSkill验证闭环 / SkillOpt训练范式]] — 自进化三路线对比解析
+- [[entities/mira-mpa-deep-principle-ai4s-40-sota|MIRA + MPA：深度原理 AI Scientist 递归自训练打造材料基座模型，40 项实验全面 SOTA]] — AI Scientist递归自训练，35/40胜前SOTA
+- [[entities/openclaw-agent-loop-design-patterns|OpenClaw 与 Claude Code 的 Agent Loop 设计范式]] — 五级跃迁史+循环管控三硬约束5696字全版
 
-## 关键知识点
-### Skill 定义与加载机制
-- **定义**：结构化指令文档，告诉 Agent「在什么场景下、按什么步骤、用什么工具、完成什么任务」
-- **三级加载**：渐进式加载策略，按需提供信息，节省上下文空间
-
-### Skill 平台生态
-| 平台 | 类型 | 特点 |
-|------|------|------|
-| skills.sh | 外部 | 开源工作流自动化 |
-| ClawHub | 外部 | 社区驱动，版本管理 |
-| SkillsMP | 外部 | 283K+ 最大数据库 |
-| Aone Skills | 内部 | 阿里内部，与 Aone Copilot 深度集成 |
-
-### Agent 平台 Skill 使用
-- **Aone Copilot**：放入 ~/.aone_copilot/skills/ 或市场一键安装
-- **AccioWork**：内置 Skill 直接安装，自定义需上传安装包
-- **QCoder**：放入项目级 .skills/ 目录
-- **悟空**：平台 UI 上传或系统提示词加载
-
-### SKILL.md 规范
-- **必需字段**：name（最长64字符）、description（最长1024字符，是触发关键）
-- **可选字段**：license, compatibility, allowed-tools, metadata
-- **正文结构**：快速开始 → 参数列表 → 工作流 → 错误处理 → 附加资源引用
-
-### 三大痛点与解决方案
-**痛点一：跨平台一致性** ^[raw/articles/skill-development-guide-aliyun-2026.md]
-
-- 三纯净原则：正文纯文本、工具用能力描述、路径不写死
-- 用 HTML 注释隔离平台增量语法
-- 确定性逻辑下沉到 scripts/
-**痛点二：版本管理和更新分发** ^[raw/articles/skill-development-guide-aliyun-2026.md]
-
-- 强制 PR + 1人 CR
-- CI 跑 schema 校验、prompt-lint
-- 平台支持时优先发 beta 通道
-- 弃用时在 description 加 [DEPRECATED]
-**痛点三：开发调试效率低** ^[raw/articles/skill-development-guide-aliyun-2026.md]
-
-- Hot Reload（Claude Code 2.1+）
-- Symlink 软链方案
-- 双窗口对照：dev 版 vs prod 版并排对比
-
-### Skill 自我进化机制
-- Binary Eval 自动打分（pass/fail）
-- 失败时 Reflection Agent 提炼修复 patch
-- 每次改完跑回归用例，通过率不达标自动阻断
-
-## 深度分析
-### 跨平台一致性的工程挑战
-三纯净原则（正文纯文本、工具用能力描述、路径不写死）是该文最核心的方法论创新。本质上，这是将 Skill 从"平台绑定指令"转化为"语义驱动指令"的范式转变。HTML 注释隔离增量语法的设计尤为巧妙——允许多平台共存而不引入冗余维护成本，同时也为未来新平台预留扩展空间。 ^[raw/articles/skill-development-guide-aliyun-2026.md]
-
-### 版本管理的流水线设计
-强制 PR + 1人 CR + CI schema 校验构成三重门禁，将版本管理从人力驱动转为流程驱动。beta 通道设计体现了灰度发布的工程思维，description 加 [DEPRECATED] 则是一种低技术成本的优雅弃用协议。这些设计共同构成一个小型但完整的软件交付流水线。 ^[raw/articles/skill-development-guide-aliyun-2026.md]
-
-### 自我进化机制的战略价值
-Binary Eval + Reflection Agent 的组合，实质上是将 Agent 的自我改进从"隐式经验积累"变成"显式可度量的迭代优化"。每次改完跑回归用例、通过率不达标自动阻断——这引入了一个自动化的质量门禁，填补了传统 skill 开发中缺失的测试环节。这一机制与学术界关于 LLM 自动评估（LLM-Eval）的研究方向高度吻合，表明阿里内部已在将学术前沿转化为工程实践。 ^[raw/articles/skill-development-guide-aliyun-2026.md]
-
-## 实践启示
-### 开发阶段
-- **起点**：严格遵循 SKILL.md 规范，特别是 name（≤64字符）和 description（≤1024字符）字段——description 是触发的关键，措辞要精准
-- **结构化**：采用标准五段正文（快速开始 → 参数列表 → 工作流 → 错误处理 → 附加资源引用），便于用户理解和平台解析
-- **调试效率**：善用 Hot Reload 和 Symlink 软链方案，特别是 Claude Code 2.1+ 环境，可显著缩短迭代周期
-
-### 发布阶段
-- **跨平台**：始终以三纯净原则为基准，用 HTML 注释隔离平台增量语法，避免"写死平台"的常见陷阱
-- **版本控制**：提交前必走 CI 流程（schema 校验、prompt-lint），发布前优先走 beta 通道验证
-- **协作规范**：强制 PR + 1人 CR，代码审查不只是质量保障，也是知识传递机制
-
-### 运维阶段
-- **质量门禁**：建立 Binary Eval 回归机制，每次修改后必须通过自动化评估，不达标则阻断发布
-- **弃用协议**：需要弃用时，在 description 首行加 [DEPRECATED]，不要直接删除——保障用户侧的平稳过渡
-- **持续进化**：Reflection Agent 思路可推广至其他 AI 工作流，将人工修复经验结构化为可复用的 patch 资产
-
-## 相关页面
-- [[entities/agent-skill-writing-guide|Skill 写作基础指南]] — 入门级别的 Skill 写作教程
-- [[entities/agent-skill-writing-advanced|Skill 写作进阶]] — 高级技巧
-- [[entities/agent-skill-writing-evaluation|Skill 评估方法]] — 如何评估 Skill 质量
-
-## 相关实体
-- [[entities/十年老技术开发的-ai-agent-探索之路-v2|十年老技术开发的 AI Agent 探索之路]]
-- [[entities/aws-sagemaker-ai-agent-guided-workflows-finetuning|9个Agent技能模块化SageMaker微调生命周期]]
-- [[entities/skillx-hierarchical-skill-library|SkillX — 层次化技能知识库]]
-- [[entities/anthropic-agent-skills-design-patterns-14|Anthropic 14 个 Agent Skills 设计模式]]
-- [[entities/perplexity-internal-skill-design-guide|Perplexity 内部 Skill 设计指南：四维体系与维护方法论]]
-- [[entities/skillclaw|SkillClaw]]
-- [[entities/hermes-skill-system-winty|Skill 系统：Agent 如何把经验沉淀成可复用能力]]
-- [[entities/four-sub-agent-patterns|四种 Sub Agent 模式]]
-- [[entities/trace2skill-trajectory-distillation-agent-skills|Trace2Skill: 轨迹经验蒸馏为可迁移 Agent Skills]]
-
-- [[entities/qoder-skills-complete-guide|Qoder Skills 完全指南]]
-- [[entities/要实现一个工作流选择-agent-skills-还是-ai-表格|要实现一个工作流选择-agent-skills-还是-ai-表格]]
-- [[entities/garry-tan-yc-ceo|Garry Tan]]
-- [[entities/agent-workflows|Agent Workflows]]
-- [[entities/hermes-agent|Hermes Agent]]
-- [[concepts/hermes-agent-onboarding|Hermes Agent 新手上手指南]]
-- [[entities/ni-xie-de-skill-ji-ge-liao-ma|你写的 Skill，及格了吗？]]
-- [[concepts/hermes-agent-skill|Hermes Agent Skill]]
-- [[entities/ai-agent-engineer-capability-map|AI Agent 工程师能力地图]]
-- [[entities/aliyun-end-to-end-business-requirements-agent-multica-2026|阿里云端到端业务需求专家 agent：multica 平台 + superai-* 技能集群 + tdd/pre-pus]]
+## 工程实践
+- [[entities/yumanju-ai-full-flow-efficiency|柚漫剧 AI 全流程提效拆解]] — rv10全流程提效规则基建
+- [[entities/qoder-skills-完全指南从零开始让-ai-按你的标准执行-v2|Qoder Skills 完全指南 + Agent Skill 迭代式编写 — AI 按你的标准执行]] — 菜单菜谱比喻+三级渐进披露18168字rv9全版
+- [[entities/claude-code-agent-teams-task-decomposition-ruofei|Claude Code Agent Teams 实战：怎么拆任务、控权限、收证据]] — 拆任务控权限
+- [[entities/impeccable-frontend-design-skill-harness-vibecoder|Impeccable：把 AI 前端设计变成可检查的工作流 — 33.4k Star 开源项目深度分析]] — Impeccable四层架构9210字rv9全版
+- [[entities/hermes-observability-aliyun|给 Hermes 装上显微镜：Agent 执行全知道]] — OTel链路追踪四问题8800字rv9全版
+- [[entities/aliyun-cio-ai-rd-efficiency|阿里云CIO：AI产研效能规模化提升实践（抛弃生码率、重构Half-Stack）]] — CIO实践rv9版
+- [[entities/yc-ceo-garry-tan-200-dollar-vs-4-million|YC CEO Garry Tan：200美元重构400万美元项目，AI Agent协作开发实践]] — token maxxing双AI协作
+- [[entities/claude-design-skill-web-design-engineer|我把 Claude Design 做成了 Skill，人人都能成为顶级网站设计师]] — Claude Design拆解全版
+- [[entities/tmall-marketing-ai-workflow-best-practices|淘天营销中后台生码工作流最佳实践]] — 10826字最全生码工作流
+- [[entities/skill-system-design-taobao-technology-2026|AI Agent Skill 系统设计：淘宝技术工程实践]] — HARD-GATE行为编程实践
+- [[entities/aliyun-end-to-end-business-requirements-agent-multica-2026|阿里云端到端业务需求专家 Agent：Multica 平台 + superai-* 技能集群 + TDD/pre-push 质量门禁]] — 需求专家agent闭环
+- [[entities/aliyun-agentrun-5min-quickstart|5 分钟上手 AgentRun：从注册到第一个 Agent 运行]] — 产品上手主版
+- [[entities/claude-code-skills-workflow-encapsulation-costa-long|Skills：让 Claude 记住「怎么做」，告别重复教学]] — context:fork隔离
+- [[entities/skillclaw-nacos-evolution-registry|SkillClaw × Nacos：从一次 Agent 会话到可治理 Skill Registry 的自动演化闭环]] — Nacos治理闭环独特内容
+- [[entities/skill-iteration-evaluation-trajectory-sunchengxin-2026|改 Skill 的可重复流程 — 评测与轨迹驱动（孙成心）]] — 评测轨迹驱动skill回归闭环
+- [[entities/workbuddy-skill-全拆解从创建到自进化|WorkBuddy Skill 全拆解]] — 渐进式披露自进化闭环

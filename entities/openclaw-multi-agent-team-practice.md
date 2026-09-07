@@ -14,43 +14,36 @@ reviewed: 2026-09-07
 review_verdict: hub-retained
 review_category: dup
 review_note: "judged dup-0.8: 同团队2857字版，留12180字版; retained as hub (in-links>=20); MOC rewrite candidate"
----
-## 花园多智能体团队（7个Agent）
-1. **花园生图助手** — Nanobana + Seedream 模型，定义审美偏好   ^[raw/articles/openclaw-multi-agent-team-practice.md]
-2. **花园资讯助手** — 每日自动抓取AI动态，整理日报推送 ^[raw/articles/openclaw-multi-agent-team-practice.md]^[raw/articles/openclaw-multi-agent-team-practice.md]
-3. **花园开发助手** — 手机飞书远程控制 Claude Code ^[raw/articles/openclaw-multi-agent-team-practice.md]^[raw/articles/openclaw-multi-agent-team-practice.md]
-4. **花园投资助手** — 个股数据分析、走势指标、买卖建议 ^[raw/articles/openclaw-multi-agent-team-practice.md]^[raw/articles/openclaw-multi-agent-team-practice.md]
-5. **花园社区助手** — Moltbook 运营、内容发布、评论互动 ^[raw/articles/openclaw-multi-agent-team-practice.md]^[raw/articles/openclaw-multi-agent-team-practice.md]
-6. **花园写作助手** — 写作搭档：记忆风格、搜索资料、梳理大纲 ^[raw/articles/openclaw-multi-agent-team-practice.md]^[raw/articles/openclaw-multi-agent-team-practice.md]
-7. **花园智能专家** — 协调各Agent协作处理复杂任务 ^[raw/articles/openclaw-multi-agent-team-practice.md]^[raw/articles/openclaw-multi-agent-team-practice.md]
+moc_rebuilt: 2026-09-07
+---# OpenClaw 多智能体团队搭建实战经验
 
-## 核心设计原则
-- **每个 Agent 一个飞书 Bot** — 像在公司群里 @不同同事
-- **单 Agent 只做一件事** — 不堆叠技能，模块化设计
-- **主管 Agent 协调** — 智能专家了解所有 Agent 的能力，复杂任务编排
-- **零人工干预** — 日报生成、股票分析等已做到每日自动运行
+> 本页原内容在 2026-09-07 质量闭环中判定为 **dup-0.8**，已按导航页（MOC）重建；
+> 原文备份见 `_archive/hub-rewrite-2026-09-07/openclaw-multi-agent-team-practice.md`，一手来源仍见下方 sources。
 
-## 深度分析
-ConardLi 的实践经验揭示了多智能体团队从"安装了什么"到"能做什么"的关键跃迁。核心洞察是：**Agent 不是设计出来的，是用出来的**——从每日最高频需求出发逐个搭建，而非一开始就规划完整的体系。 ^[raw/articles/openclaw-multi-agent-team-practice.md]^[raw/articles/openclaw-multi-agent-team-practice.md]
-**不做全能 Agent 的三大理由**：上下文污染（一个 Agent 的注意力被多领域术语分散）、技能冲突（开发协议权限对写作助手多余且有安全风险）、人设冲突（投资助手的严谨与写作助手的有温度无法共存）。这对应了 Agent 设计的最小权限原则和关注点分离原则。 ^[raw/articles/openclaw-multi-agent-team-practice.md]^[raw/articles/openclaw-multi-agent-team-practice.md]
-**联邦学习效应**：多 Agent 团队的价值不仅在于并行处理，更在于各 Agent 在自己领域持续优化形成的能力积累。当生图助手积累了审美偏好、投资助手积累了金融模型、写作助手学会了风格偏好，整个团队的能力在各自维度上持续进化，这是单一全能 Agent 难以实现的。 ^[raw/articles/openclaw-multi-agent-team-practice.md]^[raw/articles/openclaw-multi-agent-team-practice.md]
+## 机制与论文
+- [[entities/agentscope-java-harness-framework-enterprise-distributed|AgentScope Java Harness Framework 2.0 — 企业级 Agent 分布式场景的 Harness 实现 (Java 2.0 重大升级)]] — AgentScope Java全版
+- [[entities/hermes-agent-memory-system-openclaw-comparison|深度拆解 Hermes Agent 记忆系统]] — 记忆成本账四层体系15260字rv10最深版
+- [[entities/agent-harness-architecture-design-production-guide|Agent Harness 架构设计与实现：生产级 Agent 系统落地指南]] — 七层金字塔生产指南
+- [[entities/17-agent-architectures-evolution|17种Agent架构演进：控制流设计的完整演化史]] — 17架构系统拆解高价值
+- [[entities/harness-engineering-7-layers-openclaw-hermes-claude-code-p1anu|Harness 到底是什么？看看 OpenClaw、Hermes、Claude Code 的演绎吧]] — 三框架演绎七层模型12857字rv9
+- [[entities/skill-system-design-three-way-comparison|AI Agent 架构设计（七）：Skills 系统设计（OpenClaw、Claude Code、Hermes Agent 对比）]] — 三框架skill系统设计对比
+- [[entities/microsoft-build-2026-mai-models-scout-agent|Microsoft Build 2026：微软 AI 独立日 —— 7 款 MAI 模型 + Scout 智能体]] — Build 2026：MAI独立日13755字rv9全版
+- [[entities/hermes-agent-deep-dive|Hermes Agent 深度解析（阿里云/飞樰）]] — 自进化内外双路径+四维工程7934字rv9全版
+- [[entities/hiclaw-v110-k8s-hermes-worker|HiClaw v1.1.0 — Kubernetes 集群部署与 Hermes Worker 运行时]] — HiClaw K8s Controller-Reconciler架构分析
 
-## 实践启示
-- **从高频场景切入**：不要试图规划完美的 Agent 体系，先观察自己每天重复最高频的任务是什么，从那里开始一个个搭建
-- **人设即边界**：每个 Agent 的人设（role + behavior + communication style）就是它的边界，定义清楚比塞更多技能更重要
-- **主管 Agent 的协调价值**：当任务需要多个 Agent 协作时，主管 Agent 的存在使得复杂任务的编排成为可能，而不是让用户自己决定该 @谁
-- **Bot 即入口**：每个 Agent 绑定独立飞书 Bot 的设计降低了使用门槛——用户不需要学习复杂的命令或工作流，只需要像在群里 @同事一样自然地对话
-
-## 实践经验
-- Agent 不是设计出来的，是用出来的 — 从每日最高频需求出发逐个搭建
-- 写了 Agent Skill 后要反复调试，确保工具调用准确
-- 多 Agent 团队的价值在于"联邦学习"——各 Agent 在自己的领域持续优化
-→ [[raw/articles/openclaw-multi-agent-team-practice|原文存档]] ^[raw/articles/openclaw-multi-agent-team-practice.md]^[raw/articles/openclaw-multi-agent-team-practice.md]
-
-## 相关实体
-- [[entities/openclaw-multi-agent-team-practice-v2|龙虾装上了可以用来干啥 - OpenCLAW 多智能体团队搭建经验]]
-- [[entities/build-multi-tenant-ai-agent-on-eks-graviton-openclaw-k8s-practice|基于 Amazon EKS 和 Graviton 构建多租户 AI Agent 平台：OpenClaw on Kubernetes 实践 | 亚马逊AWS官方博客]]
-- [[entities/multi-agent-architecture-retail-practice|Multi-Agent 架构在零售供应链运营中的实践：贯穿数据、洞察与行动 | 亚马逊AWS官方博客]]
-- [[entities/agent-principle-architecture-engineering-practice|你不知道的 Agent 原理架构与工程实践]]
-- [[entities/agent-engineering-principles-architecture-practice|Agent 原理、架构与工程实践]]
-- [[entities/openclaw-comprehensive-guide|OpenCLAW 完全指南]]
+## 工程实践
+- [[entities/long-running-agent-ralph-loop-handover-harness-ruofei|'长周期 Agent 详解：从 Ralph Loop 到可接管 Harness']] — 三类漂移+5张卡治理12390字rv10全版
+- [[entities/wow-harness-v3-governance-protocol|wow-harness v3：AI 开发的治理协议]] — 事件溯源跨session治理协议
+- [[entities/claude-code-openclaw-memory-comparison|Claude Code Openclaw Memory Comparison]] — 记忆系统对比rv9
+- [[entities/using-amazon-bedrock-agentcore-openclaw-multi-2|基于 AWS 示例项目，展示如何将 OpenClaw 迁移为基于 Amazon Bedrock AgentCore 的多租户 Serverless 架构]] — 环境准备步骤篇
+- [[entities/claude-code-dynamic-workflows-multi-agent-orchestration|Claude Code Dynamic Workflows 多Agent编排]] — Dynamic Workflows主版32k
+- [[entities/claude-code-agent-teams-task-decomposition-ruofei|Claude Code Agent Teams 实战：怎么拆任务、控权限、收证据]] — 拆任务控权限
+- [[entities/hermes-agent-12-layer-full-configuration-guide|Hermes Agent 满配 12 层配置完整指南（从裸装到 24h Agent 团队）]] — 12层满配指南11566字rv9
+- [[entities/openclaw-comprehensive-guide|OpenCLAW 完全指南]] — OpenClaw系统教程5760字
+- [[entities/openclaw-multi-agent-team-practice-v2|Openclaw Multi Agent Team Practice V2]] — 七Agent花园团队：专精胜于全能12180字全版
+- [[entities/coze-3-0-collaboration-system|扣子 3.0 协作系统：项目化 + Agent 编排 + 工具链打通]] — 扣子协作系统
+- [[entities/coze-3-multimagent-team-orchestration-wangheige|扣子 3.0 多 Agent 协同实战：指挥所有 Agent 的 Agent + 5 人团队 6 步流水线]] — 三案例实战报告
+- [[entities/waylens-openclaw-multi-agent-eks-operator-case|Waylens OpenClaw 多智能体平台 EKS+Operator 改造案例]] — EKS+CRD+Operator平台自管理
+- [[entities/hermes-agent-k2-6-tutorial|Hermes+Kimi K2.6 多Agent军团实战教程]] — 六Profile军团实战9590字全教程
+- [[entities/我用阿里-agentscope-复刻了一个-workbuddy|我用阿里 AgentScope 复刻了一个 WorkBuddy — 从开源框架到可运行 Agent 的实践拆解]] — Toolkit权限四层工具架构
+- [[entities/openagents-workspace-multi-agent-collaboration-itech|OpenAgents Workspace：多 Agent 协作平台]] — Agent孤岛问题：Workspace+Launcher+Network SDK

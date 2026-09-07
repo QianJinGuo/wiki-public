@@ -4,7 +4,7 @@ title: "看 AgentRun 如何玩转记忆存储，最佳实践来了！"
 type: entity
 tags: [agent, cloud]
 created: 2026-05-21
-updated: 2026-05-21
+updated: 2026-09-07
 review_value: 6
 review_confidence: 8
 sources: [raw/articles/看-agentrun-如何玩转记忆存储最佳实践来了]
@@ -13,40 +13,36 @@ reviewed: 2026-09-07
 review_verdict: hub-retained
 review_category: pr
 review_note: "judged pr-0.75: 产品文档; retained as hub (in-links>=20); MOC rewrite candidate"
----
+moc_rebuilt: 2026-09-07
+---# 看 AgentRun 如何玩转记忆存储，最佳实践来了！
 
-# 看 AgentRun 如何玩转记忆存储，最佳实践来了！
-阿里云 AgentRun 是一个以高代码为核心的一站式 Agentic AI 基础设施平台。秉持生态开放和灵活组装的理念，为企业级 Agent 应用提供从开发、部署到运维的全生命周期管理。  AgentRun 通过集成表格存储（Tablestore），为智能体提供三种持久化记忆能力：在同一对话中维持上下文的会话历史、跨会话保留用户偏好等结构化信息的长期记忆，以及可直接读写的会话状态。本文介绍如何创建并配置记忆存储，并通过可运行的代码示例演示三种记忆类型的使用方式。 ^[raw/articles/看-agentrun-如何玩转记忆存储最佳实践来了.md]
+> 本页原内容在 2026-09-07 质量闭环中判定为 **pr-0.75**，已按导航页（MOC）重建；
+> 原文备份见 `_archive/hub-rewrite-2026-09-07/看-agentrun-如何玩转记忆存储最佳实践来了.md`，一手来源仍见下方 sources。
 
-## 相关实体
-- [[entities/skills-registry-公测开启为企业打造私有的-skill-管理中心]]
-- [[entities/从-anthropic-到-googleagent-skills-正在进入设计模式阶段]]
-- [[entities/cong-anthropic-dao-googleagent-skills-zhengzai-jinru-sheji-moshi-jieduan]]
-- [[entities/阿里云可观测-2026-年-4-月产品动态]]
-- [[entities/agent-从能用到管好中间差了什么]]
+## 机制与论文
+- [[entities/agentscope-java-harness-framework-enterprise-distributed|AgentScope Java Harness Framework 2.0 — 企业级 Agent 分布式场景的 Harness 实现 (Java 2.0 重大升级)]] — AgentScope Java全版
+- [[entities/agent-oriented-infra-intent-driven-code-sedimentation|晓斌：从 People-Oriented 到 Agent-Oriented Infra —— 意图驱动 + 代码沉淀的进化体]] — Agent-Oriented Infra长文
+- [[entities/skill-os-learning-skill-curation-self-evolving-agents|SkillOS: Learning Skill Curation for Self-Evolving Agents]] — SkillOS策展RL架构清晰rv10
+- [[entities/muse-autoskill-bytebrain-self-evolving-agent-arxiv-2605-27366|MUSE-Autoskill：字节 ByteBrain 自进化 Agent 五阶段技能生命周期，arXiv 2605.27366]] — 五阶段技能生命周期，自生成87.94%超人类68.40%
+- [[entities/agent-harness-engineering-survey-2026|Agent Harness Engineering: A Survey]] — harness工程survey
+- [[entities/agent-harness-architecture-design-production-guide|Agent Harness 架构设计与实现：生产级 Agent 系统落地指南]] — 七层金字塔生产指南
+- [[entities/17-agent-architectures-evolution|17种Agent架构演进：控制流设计的完整演化史]] — 17架构系统拆解高价值
+- [[entities/kimi-work-codex-vibe-working-paradigm-shift|Kimi Work：通用 Agent 战场从云端迁移到本地]] — Vibe Working开启+本地Harness 20356字rv9
+- [[entities/从-anthropic-到-googleagent-skills-正在进入设计模式阶段|从 Anthropic 到 Google：Agent Skills 正在进入\]] — 过程资产五类设计模式
+- [[entities/agent-从能用到管好中间差了什么|Agent 从\]] — agent治理分析
 
-→ [[raw/articles/看-agentrun-如何玩转记忆存储最佳实践来了|原文存档]]
-
-## 深度分析
-
-阿里云 AgentRun 的记忆存储体系，本质上是在 Serverless 架构下为 AI Agent 补充"记忆"这一关键能力。三种记忆类型——会话历史、长期记忆、会话状态——各自对应了不同的技术实现和业务场景。会话历史依赖 Tablestore 的消息表，通过 `session_id` 关联同一轮对话的上下文；长期记忆则借助 mem0 的向量检索能力，将非结构化信息语义化存储并支持相似性查询；会话状态直接读写 Tablestore，适合需要灵活自定义结构的场景。这种分层设计让开发者可以根据场景需求选择最适合的记忆方案，而非用一种技术栈硬套所有需求。 ^[raw/articles/看-agentrun-如何玩转记忆存储最佳实践来了.md]
-
-在实现层面，AgentRun 采用了 MCP（Model Context Protocol）作为记忆工具的标准集成协议。MCP 工具的优势在于"零代码接入"——开发者只需在控制台开启 MCP 服务配置，无需在代码中手动管理连接和认证，就能让 Agent 在每轮对话中自动完成记忆的检索与写入。这种设计思路体现了平台对 Agent 开发体验的核心判断：记忆管理应该是声明式的，而非命令式的——开发者描述"需要什么记忆"，平台负责"如何存储和获取"。这对降低 Agent 开发门槛有重要意义。 ^[raw/articles/看-agentrun-如何玩转记忆存储最佳实践来了.md]
-
-值得注意的是，长期记忆的"自动提取"机制（方式一）依赖 Agent 在对话中主动识别"可结构化记忆"的内容（如用户提到"我喜欢喝咖啡"），然后自动存入向量库。这是一种隐式记忆模式，与显式调用 `memory.add()` 的方式二形成对比。前者适合用户自然对话中浮现的偏好信息，后者则更适合有明确记忆意图的场景。两者并不互斥，可以共存于同一应用——方式一负责"顺手"沉淀，方式二负责"刻意"记录。这种双轨并存的设计在工程上非常务实。 ^[raw/articles/看-agentrun-如何玩转记忆存储最佳实践来了.md]
-
-在多框架集成方面，AgentRun 展示了 LangChain 生态集成和 Google ADK 集成两套范式。LangChain 方案体现了"记忆注入 prompt"的经典模式——每轮对话先检索相关记忆，再组装进 ChatPromptTemplate，最后生成回复。Google ADK 方案则更进一步，通过 OTSSessionService 将 Tablestore 本身变成 ADK Agent 的会话状态后端，实现进程重启后上下文无缝恢复。这两条集成路径覆盖了当前主流的 AI Agent 开发框架，也暗示了 AgentRun 的平台定位：不绑定特定框架，而是成为各框架的持久化底座。 ^[raw/articles/看-agentrun-如何玩转记忆存储最佳实践来了.md]
-
-从市场竞争角度观察，AgentRun 的记忆存储能力是阿里云在 AI Agent 平台赛道上的一次主动卡位。Serverless + 记忆存储的组合，直击 AI Agent 开发者最痛的两个问题：冷启动延迟和上下文管理。相比自建记忆系统，AgentRun 的方案在集成便利性上有明显优势——开发者无需自行维护向量数据库和会话存储基础设施，就能获得完整的记忆能力。但这也意味着应用层对阿里云生态的深度耦合，对于追求多云或开源方案的团队而言，需要谨慎评估锁定风险。 ^[raw/articles/看-agentrun-如何玩转记忆存储最佳实践来了.md]
-
-## 实践启示
-
-- **按场景选择记忆类型**：对话历史适合用 Tablestore 原生会话表，长期偏好适合用 mem0 向量存储，而需要灵活自定义结构的场景（如购物车状态）则走 Tablestore 直接读写。混合使用比单一方案更贴合真实业务。
-
-- **利用 MCP 集成降低开发成本**：在控制台开启 MCP 服务配置后，Agent 运行时能自动完成记忆的读写，无需在业务代码中处理认证和连接管理。这是 AgentRun 最值得优先上手的特性。
-
-- **用流式模式避免冷启动超时**：文档明确推荐 `stream=True`，因为 Agent 处理消息时会调用 MCP 工具（读写 Tablestore），非流式模式下客户端容易因等待 MCP 工具调用而超时。在真实生产环境中这是一个必须提前配置的选项。
-
-- **架构文档先行于代码开发**：在接入 LangChain 或 Google ADK 之前，建议先用伪代码或流程图梳理清楚"每轮对话的记忆流向"——谁写、存在哪、读取引擎是谁、如何注入上下文。思路清晰后再动手能避免大量返工。
-
-- **评估多框架集成的维护成本**：AgentRun 支持 LangChain 和 Google ADK 两个集成路径，但如果团队计划同时使用多个 Agent 框架，需要分别维护各自的会话存储配置和记忆检索逻辑。长期看，统一抽象层或选定单一框架路径是更可持续的策略。
+## 工程实践
+- [[entities/long-running-agent-ralph-loop-handover-harness-ruofei|'长周期 Agent 详解：从 Ralph Loop 到可接管 Harness']] — 三类漂移+5张卡治理12390字rv10全版
+- [[entities/boris-cherny-新访谈开发工具正在从-ide-变成-agent-控制台|Boris Cherny 新访谈：开发工具正在从 IDE 变成 Agent 控制台]] — Boris访谈rv10全版
+- [[entities/karpathy-vibe-coding-agentic-engineering-v4|Karpathy 最新访谈：从 Vibe Coding 到 Agentic Engineering]] — v4 8090字rv10：可验证性上限+MenuGen警示
+- [[entities/yumanju-ai-full-flow-efficiency|柚漫剧 AI 全流程提效拆解]] — rv10全流程提效规则基建
+- [[entities/claude-code-core-internals|Claude Code 源码核心机制详解]] — 源码机制18k主版
+- [[entities/harness-engineering-long-term-agent-tasks|Harness Engineering：让 Coding Agent 可靠完成长程任务]] — 长程任务四原则+3000行粒度公式rv9
+- [[entities/claude-code-deep-architecture-analysis|Claude Code 架构深度解析]] — 并发与延迟加载深析
+- [[entities/harness-generator-evaluator-anthropic|Claude Harness 设计：Generator-Evaluator 架构与 Context Reset 演进]] — Generator-Evaluator+context reset 10329字rv9全版
+- [[entities/wow-harness-v3-governance-protocol|wow-harness v3：AI 开发的治理协议]] — 事件溯源跨session治理协议
+- [[entities/claude-code-openclaw-memory-comparison|Claude Code Openclaw Memory Comparison]] — 记忆系统对比rv9
+- [[entities/building-multi-tenant-agents-with-amazon-bedrock-agentcore|Bedrock AgentCore 多租户 Agent 构建实践]] — 十组件多租户
+- [[entities/qoder-skills-完全指南从零开始让-ai-按你的标准执行-v2|Qoder Skills 完全指南 + Agent Skill 迭代式编写 — AI 按你的标准执行]] — 菜单菜谱比喻+三级渐进披露18168字rv9全版
+- [[entities/alibaba-agentic-cloud|阿里云 Agentic Cloud]] — 云战略有架构层borderline
+- [[entities/阿里云刚发布的-agentloop-是什么|阿里云刚发布的 AgentLoop 是什么？]] — MVP五环ATIF标准

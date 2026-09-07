@@ -12,65 +12,39 @@ reviewed: 2026-09-07
 review_verdict: hub-retained
 review_category: dup
 review_note: "judged dup-0.75: harness分析重复版; retained as hub (in-links>=20); MOC rewrite candidate"
----
+moc_rebuilt: 2026-09-07
+---# Claude Code Harness 深度分析
 
-## TAOR Loop：Orchestrator 越笨越稳定
+> 本页原内容在 2026-09-07 质量闭环中判定为 **dup-0.75**，已按导航页（MOC）重建；
+> 原文备份见 `_archive/hub-rewrite-2026-09-07/claude-code-harness-deep-dive-founder-park.md`，一手来源仍见下方 sources。
 
-Claude Code 的核心是 Think-Act-Observe-Repeat（TAOR）循环：模型控制循环决策，运行时只是执行器。Orchestrator 仅约 50 行核心代码，暴露 4 种工具原语：Read/Write/Execute/Connect。Bash 是通用适配器。脚手架应随模型变强而变薄——这是 Claude Code 架构的核心理念 。 ^[raw/articles/claude-code-harness-deep-dive-founder-park.md]
+## 机制与论文
+- [[entities/agentscope-java-harness-framework-enterprise-distributed|AgentScope Java Harness Framework 2.0 — 企业级 Agent 分布式场景的 Harness 实现 (Java 2.0 重大升级)]] — AgentScope Java全版
+- [[entities/agent-oriented-infra-intent-driven-code-sedimentation|晓斌：从 People-Oriented 到 Agent-Oriented Infra —— 意图驱动 + 代码沉淀的进化体]] — Agent-Oriented Infra长文
+- [[entities/context-window-management-comparison|Context Window Management Comparison]] — 四框架对比rv9
+- [[entities/anthropic-n-days-frontier-agent-vulnerability-research|Anthropic N-days: Frontier Agent Vulnerability Research]] — N-day研究
+- [[entities/perplexity-search-as-code-generation|Rethinking Search as Code Generation]] — Search as Code：查询变可执行代码对象7660字rv9
+- [[entities/agent-harness-12-components-7-decisions|一篇看懂 Agent Harness 的结构！ — 12组件+7决策完整框架]] — harness 12组件框架
+- [[entities/openclaw-prompt-context-harness|深度解析 OpenClaw 在 Prompt / Context / Harness 三个维度中的设计哲学与实践]] — 三维度源码：23模块拼装+自适应分块+双层Memory
+- [[entities/code-as-agent-harness-survey|Code as Agent Harness 综述]] — 102页综述
+- [[entities/深入理解-claude-code-源码中的-agent-harness-构建之道|深入理解 Claude Code 源码中的 Agent Harness 构建之道]] — 16095字源码8步循环
+- [[entities/from-prompt-to-harness-claude-official|从 Prompt 到 Harness：Claude 官方学习资料]] — Harness五子系统闭环解读
+- [[entities/claude-code-search-architecture-tencent-2026|原始文章存档]] — ripgrep五层过滤
+- [[entities/claude-code-and-what-comes-next|Claude Code and What Comes Next]] — 压缩/Skills/Subagents
+- [[entities/claude-perceived-degradation-anthropic-effort-model-explanation-2026|全网骂Claude变笨，Anthropic下场揭秘：坑你的不是模型]] — Model vs Effort框架
 
-## Context 管理
+## 工程实践
+- [[entities/karpathy-vibe-coding-agentic-engineering-v4|Karpathy 最新访谈：从 Vibe Coding 到 Agentic Engineering]] — v4 8090字rv10：可验证性上限+MenuGen警示
+- [[entities/andrej-karpathy-claude-md-134k-stars-2026|最佳 Claude Code 配置：Andrej Karpathy 的 CLAUDE.md，134+k star了！]] — CLAUDE.md四规则解析
+- [[entities/anthropic-95pct-data-analysis-jiagoux-data-level-harness-20260606|数据级 Harness：架构师 JiaGouX 解读 Anthropic 95% 数据分析与 5 个反直觉边界]] — 数据级harness解读
+- [[entities/vivo-agent-brain-body-icu-harness-evolutionary-framework-2026|vivo Agent 系统分析：大模型是大脑不是马，Harness 是 ICU 不是马鞍]] — 大脑身体ICU隐喻框架
+- [[entities/autoresearch-marketing-growth-amap-ai-native|高德 Marketing AutoResearch：AI Native 营销增长经营托管框架]] — 营销经营托管
+- [[entities/claude-code-context-engineering-anthropic-thariq|Claude Code 上下文工程 —— Anthropic 团队的工程实践]] — 上下文工程官方表述
+- [[entities/anthropic-managed-agents-scaling|Anthropic Managed Agents：用 K8s 思路虚拟化 Agent 组件]] — 宠物到牛群
+- [[entities/claude-code-best-community-fork-evolution-vibecoder|Claude Code 泄露后的漏网之鱼 claude-code-best 这两个月到底演进了什么]] — 社区fork演进短条
+- [[entities/coze-3-0-local-agent-codex-claude-code-project|扣子 3.0 离谱更新：把 Codex、Claude Code 拉进一个项目工作？]] — coze-bridge本地接入
+- [[entities/claude-code-skills-workflow-encapsulation-costa-long|Skills：让 Claude 记住「怎么做」，告别重复教学]] — context:fork隔离
+- [[entities/iqsixinp9lxnkg7avfhfcq|Boris Cherny 新访谈：开发工具正在从 IDE 变成 Agent 控制台]] — Boris新访谈：IDE→Agent控制台控制点迁移
 
-Claude Code 实现 Auto-compaction 在 50% 上下文水位时自动触发，由 LLM 摘要替代原始对话而非简单截断。Sub-Agent 使用独立 Context 预算实现隔离。Prompt Cache 经济学涉及 14 种 cache-break 向量。Session Continuity 实现了类似 git branch 的 checkpoint/rollback/fork 机制 。 ^[raw/articles/claude-code-harness-deep-dive-founder-park.md]
-
-## 六层记忆系统
-
-1. Managed Policy（组织策略） ^[raw/articles/claude-code-harness-deep-dive-founder-park.md]
-2. Project CLAUDE.md（项目配置） ^[raw/articles/claude-code-harness-deep-dive-founder-park.md]
-3. User Preferences（用户偏好） ^[raw/articles/claude-code-harness-deep-dive-founder-park.md]
-4. Auto-Memory（自动学习用户模式） ^[raw/articles/claude-code-harness-deep-dive-founder-park.md]
-5. Session（会话上下文） ^[raw/articles/claude-code-harness-deep-dive-founder-park.md]
-6. Sub-Agent Memory（子 Agent 专项记忆） ^[raw/articles/claude-code-harness-deep-dive-founder-park.md]
-
-记忆是索引不是存储，可自我编辑和去重 。 ^[raw/articles/claude-code-harness-deep-dive-founder-park.md]
-
-## 五档权限光谱
-
-权限系统从宽松到严格分为五档：plan → default → acceptedEdits → dontAsk → bypassPermissions。底层有 bashSecurity.ts 实现的 23 项安全检查，包括 Unicode 零宽字符注入、IFS null-byte、Zsh equals expansion 等防御 。 ^[raw/articles/claude-code-harness-deep-dive-founder-park.md]
-
-## 多 Agent 编排
-
-Sub-Agent 使用独立进程/TAOR/Context，提供 3 种预设（Explore/Haiku/Plan/General-purpose）。Agent Teams 是独立实例通过共享文件系统协调（实验性）。KAIROS（未发布）定位为 Always-On Agent，支持 nightly memory distillation、GitHub webhook 和 Cron 5min 调度 。 ^[raw/articles/claude-code-harness-deep-dive-founder-park.md]
-
-## Anti-Distillation & Undercover
-
-Claude Code 实现了 fake_tool_injection 防御以污染训练数据，connector-text 摘要机制生成 API 推理链摘要+加密签名，Undercover Mode 作为单向门不提及内部代号 。 ^[raw/articles/claude-code-harness-deep-dive-founder-park.md]
-
-## 深度分析
-
-**1. Thin Harness 作为架构哲学的落地**：Claude Code 的 50 行 Orchestrator + 4 种工具原语是"Thin Harness"理念的极致实践。与 [[entities/thin-harness-fat-skills]] 描述的"~200行轻量框架"一脉相承——脚手架不承载业务逻辑，模型越强框架越薄 。 ^[raw/articles/claude-code-harness-deep-dive-founder-park.md]
-
-**2. 六层记忆系统是 Context 工程的完整范式**：Claude Code 的记忆层次覆盖从组织策略到会话上下文的全光谱，且记忆是"索引而非存储"的设计让系统可以主动编辑和去重。这是 [[entities/agentmemory-coding-agent-local-memory]] 讨论的本地记忆系统在产品级实现中的完整形态 。 ^[raw/articles/claude-code-harness-deep-dive-founder-park.md]
-
-**3. 五档权限光谱是 Agent 信任分级的基础设施**：从 plan（仅规划）到 bypassPermissions（完全放权），配合 23 项安全检查，是 Agent 安全架构的完整实践。这种权限光谱设计解决了"Agent 应该有多少自主权"这个核心问题 。 ^[raw/articles/claude-code-harness-deep-dive-founder-park.md]
-
-**4. Session Continuity 的 git 类比揭示了 Agent 状态管理本质**：checkpoint/rollback/fork 机制将 Agent 的不确定性执行变成了可版本化的确定性状态机。这是解决 Agent 不可靠性（hallucination、drift）的产品级方案，而非简单地在模型层打补丁 。 ^[raw/articles/claude-code-harness-deep-dive-founder-park.md]
-
-**5. Anti-Distillation 体现了闭源模型公司的防御性工程**：fake_tool_injection 污染训练数据、connector-text 摘要+加密签名、Undercover Mode 单向门——这些不是功能，而是对竞争性蒸馏的主动防御。这揭示了顶级 AI 公司已将"防止模型被蒸馏"作为产品工程的核心优先级 。 ^[raw/articles/claude-code-harness-deep-dive-founder-park.md]
-
-## 实践启示
-
-1. **用 TAOR 循环设计你的 Agent 核心**：保持 Orchestrator 足够薄（<100行），将业务逻辑下沉到 Skill/工具层。模型的判断能力应该控制循环，而非被循环淹没 。 ^[raw/articles/claude-code-harness-deep-dive-founder-park.md]
-
-2. **在 50% 上下文水位触发压缩而非等到耗尽**：Claude Code 的 auto-compaction 阈值（50%）是工程经验值。主动压缩比被动截断保留更多有效信息，适用于任何长上下文 LLM 应用 。 ^[raw/articles/claude-code-harness-deep-dive-founder-park.md]
-
-3. **建立权限分级的显式评估标准**：根据任务风险等级选择对应权限档位——plan 模式用于高风险操作，bypassPermissions 仅用于经过充分测试的确定性任务。不存在"全用最高权限"的合理场景 。 ^[raw/articles/claude-code-harness-deep-dive-founder-park.md]
-
-4. **为 Sub-Agent 设计独立 Context 预算**：当多 Agent 协作时，强制每个 Agent 使用独立上下文预算，避免单一 Agent 的上下文膨胀拖垮整个系统。这是多 Agent 系统的必备隔离机制 。 ^[raw/articles/claude-code-harness-deep-dive-founder-park.md]
-
-5. **在模型 API 层面防御蒸馏**：如果你的产品输出包含高价值推理过程，考虑实现 connector-text 摘要+签名机制，使外部调用无法获取完整推理链。这在 [[entities/agent-harness-context-management-working-set]] 的安全设计中有类似体现 。 ^[raw/articles/claude-code-harness-deep-dive-founder-park.md]
-
-→ [[raw/articles/claude-code-harness-deep-dive-founder-park|原文存档]] ^[raw/articles/claude-code-harness-deep-dive-founder-park.md]
-
-## 相关实体
-
-- [[moc/prompt-engineering-guide|MOC]]
+## 延伸导航
+- [[moc/agent-engineering-guide|Agent 工程全景指南]]

@@ -14,130 +14,36 @@ reviewed: 2026-09-07
 review_verdict: hub-retained
 review_category: dup
 review_note: "judged dup-0.8: 开发者指南与平台主版重复; retained as hub (in-links>=20); MOC rewrite candidate"
----
+moc_rebuilt: 2026-09-07
+---# Claude Managed Agents 开发者指南
 
-## Overview
-Claude Managed Agents 是 Anthropic 推出的托管 Agent 平台 API，核心是一个叫 **Harness** 的编排引擎：将工具调用、上下文管理、错误恢复、沙箱环境等基础设施收走，开发者只需关注任务本身。 ^[raw/articles/claude-managed-agents-developer-guide.md]
-> 定位：从 Messages API（自己管一切）到 Managed Agents（只管提示词和任务），类比 AWS 从 EC2 到 Lambda 的演进。
+> 本页原内容在 2026-09-07 质量闭环中判定为 **dup-0.8**，已按导航页（MOC）重建；
+> 原文备份见 `_archive/hub-rewrite-2026-09-07/claude-managed-agents-developer-guide.md`，一手来源仍见下方 sources。
 
-## 四大核心概念
-### 1. Agent（配置模板）
-可复用的配置定义：模型、system prompt、工具集、MCP 服务。 ^[raw/articles/claude-managed-agents-developer-guide.md]
+## 机制与论文
+- [[entities/agent-oriented-infra-intent-driven-code-sedimentation|晓斌：从 People-Oriented 到 Agent-Oriented Infra —— 意图驱动 + 代码沉淀的进化体]] — Agent-Oriented Infra长文
+- [[entities/anthropic-n-days-frontier-agent-vulnerability-research|Anthropic N-days: Frontier Agent Vulnerability Research]] — N-day研究
+- [[entities/agent-harness-12-components-7-decisions|一篇看懂 Agent Harness 的结构！ — 12组件+7决策完整框架]] — harness 12组件框架
+- [[entities/harness-之后-状态边界与失败闭环-ruofei|'Harness 之后：状态边界与失败闭环（若飞续篇）']] — 运行时契约/提交闸门/失败回写10308字全版
+- [[entities/from-prompt-to-harness-claude-official|从 Prompt 到 Harness：Claude 官方学习资料]] — Harness五子系统闭环解读
+- [[entities/claude-opus-47|Claude Opus 4.7 并不是一次全面升级，甚至部分能力大幅衰退]] — 4.7衰退面分析
+- [[entities/ai-agent-harness-construction-akshay|深度拆解：AI 智能体 Harness 的构造（译）]] — harness构造译全版
 
-- 创建后返回 Agent ID，可在不同会话中复用
-- 内置 `agent_toolset_20260401`：Bash + 文件读写 + 代码搜索 + Web 访问，可选择性禁用
-- **带版本管理**：每次更新生成新版本，可查看历史、将会话固定在指定版本
-
-### 2. Environment（运行模板）
-定义智能体的运行环境：依赖包、网络规则、文件挂载。 ^[raw/articles/claude-managed-agents-developer-guide.md]
-
-- 支持包管理器：pip/npm/apt/cargo/gem/go
-- 环境缓存机制：同环境后续会话启动更快
-- 网络模式：`unrestricted`（默认）或 `limited`（域名白名单）
-- **GitHub 仓库挂载**：直接指定 `repository + branch`，会话启动时自动 clone
-
-### 3. Session（运行实例）
-智能体真正执行任务的实例，每个 Session 有独立容器（文件系统/进程/网络）。 ^[raw/articles/claude-managed-agents-developer-guide.md]
-
-- 持续到手动关闭或超时
-- 多轮对话间保留状态
-- 状态：`"running"` / `"idle"` / 其他
-
-### 4. Events（通信通道）
-SSE（Server-Sent Events）流式通信。 ^[raw/articles/claude-managed-agents-developer-guide.md]
-
-- 事件类型：`agent.message`（响应文本）、`agent.tool_use`（工具调用）、`session.status_idle`（完成）
-- 可实时观察智能体行为（读文件/跑命令/查 Web/调工具）
-- 支持中途打断
-
-## 扩展能力
-### 自定义工具（JSON Schema）
-以 JSON Schema 定义工具接口，智能体调用时发出结构化请求，开发者在事件流接住执行并回传结果。可接入内部 API、数据库、CI/CD 流水线。 ^[raw/articles/claude-managed-agents-developer-guide.md]
-
-### MCP 服务器
-直接连接 MCP 服务器，复用 Slack/GitHub/Jira 等现成工具接口。 ^[raw/articles/claude-managed-agents-developer-guide.md]
-
-## 多智能体编排（研究预览版）
-### 协调器 + 工作者模式
-- 协调器（Coordinator）：负责任务拆分、分配、结果汇合；通常用更强模型（Opus）
-- 工作者（Worker）：各自在独立上下文中运行，**对话隔离但共享容器+文件系统**
-- 限制：仅支持一层分工，工作者不可再拆
-
-### 与 Agent Teams 模式的区别
-| 维度 | Managed Agents 多智能体 | 通用 Agent Teams 模式 |
-|------|------------------------|----------------------|
-| 通信 | 共享文件系统 + 协调器调度 | 多种编排原语（广播/RPC/消息队列） |
-| 隔离 | 对话隔离 + 文件系统共享 | 完全隔离或消息传递 |
-| 适用 | AI 版 CI/CD 流水线 | 通用多 Agent 协作 |
-| 成熟度 | 研究预览版 | 社区成熟方案 |
-
-## 产品定位对比
-| 方法 | 你管什么 | 适合场景 |
-|------|---------|---------|
-| Messages API | 全部（循环、工具、容器） | 需要完全自定义 |
-| Agent SDK | 工具执行、容器 | 想用工具但自己托管 |
-| **Managed Agents** | **只管提示词和任务** | **后端自动化** |
-| Claude Code CLI | 基本不用管 | 本地交互式开发 |
-| Claude Cowork | 不用管 | 非技术用户 |
-
-## 定价
-- Token 费用（同标准 API）
-- 会话运行时间：**$0.08/小时**（精确到毫秒，仅运行中计费）
-- Web 搜索：$10/1000 次
-- 提示词缓存：命中缓存 0.1x
-Token = 思考成本，Runtime = 环境成本。 ^[raw/articles/claude-managed-agents-developer-guide.md]
-
-## 与 PM 视角的关系
-| 视角 | 本文（开发者指南） | [[entities/anthropic-pm-agentic-workflow|PM 视角]] |
-|------|-----------------|-----------------|
-| 焦点 | API 接口/代码示例/架构 | PM 工作流/效率提升 |
-| 代码 | ✅ 完整 Python SDK 示例 | ❌ 无代码 |
-| 定价 | ✅ 分项+示例计算 | ❌ 仅一句 |
-| 对比 | ✅ 5 方法定位矩阵 | ❌ 无 |
-| 场景 | ✅ 5 个技术场景 | ✅ 3 个 PM Agent |
-| 多智能体 | ✅ 代码示例 | ❌ 仅概念提及 |
-
-## 深度分析
-### 1. Harness 编排引擎的产品哲学
-Managed Agents 的核心不是某个算法创新，而是一个工程哲学的落地：**将 Agent 运行的基础设施抽象成托管服务**。传统 Messages API 要求开发者自行实现 ReAct 循环、工具调用、上下文窗口管理、错误恢复和沙箱隔离 — 这些基础设施代码与业务逻辑混杂，维护成本极高 。Managed Agents 将 Harness（编排引擎）作为平台能力提供，开发者只需关注"告诉 Agent 做什么"，而不是"如何让 Agent 做事"。这与 AWS 从 EC2（自己管服务器）到 Lambda（只管函数代码）的演进逻辑完全一致：基础设施复杂度被平台吸收，用户界面向上收缩。 ^[raw/articles/claude-managed-agents-developer-guide.md]
-
-### 2. 四层概念模型的语义层级
-Agent → Environment → Session → Events 构成了一套从**配置定义到运行时实例**的完整生命周期。四者区分清晰但相互依赖：Agent 是静态配置模板（可版本化、可复用），Environment 是运行时的依赖与网络声明（可缓存），Session 是实际执行的容器实例（按时间计费），Events 是通信通道（流式 SSE）。这种分层设计的优势在于：**修改 Agent 配置不会影响已有 Session，新 Session 可以绑定到旧 Agent 版本**，实现了配置与运行时的解耦 。 ^[raw/articles/claude-managed-agents-developer-guide.md]
-
-### 3. 多智能体架构的当前限制
-协调器 + 工作者模式目前处于研究预览阶段，有几个关键限制：仅支持一层分工（协调器不能委托给另一个协调器），工作者之间无直接通信只能通过共享文件系统协作，且整个模式被官方定位为"AI 版 CI/CD 流水线"而非通用多 Agent 协作框架 。这意味着该模式适合**任务可明确拆解、结果可独立验证**的流水线场景（如代码审查 + 测试生成），但不适合需要动态协商、循环迭代的复杂协作流程。 ^[raw/articles/claude-managed-agents-developer-guide.md]
-
-### 4. 定价模型的双重成本结构
-Managed Agents 的计费由两部分构成：**Token 费用（思考成本）+ Session 运行时费用（环境成本）** 。$0.08/小时的运行时费率看似低廉，但精确到毫秒且仅计运行中时间，这意味着：短时任务（秒级）实际成本可能低于预期，但长时间运行的 Agent（如监控任务）成本会快速累积。提示词缓存命中可享 0.1x 折扣，这对 system prompt 较长而用户输入较短的场景（如固定审查流程）有显著优化空间。 ^[raw/articles/claude-managed-agents-developer-guide.md]
-
-### 5. 与 Agent SDK 的竞合边界
-Agent SDK（`@anthropic-agents/sdk`）和 Managed Agents 解决的是同一类问题，但运维边界不同：Agent SDK 需要**自己托管运行环境**（提供容器/工具执行逻辑），Managed Agents 则由 Anthropic 云端托管。迁移路径是单向的：Messages API → Agent SDK → Managed Agents，是一个**控制权递减但运维负担也递减**的选择链 。如果团队已有成熟的 CI/CD 和容器化能力，Agent SDK 提供更多定制灵活性；如果团队希望最小化运维投入，Managed Agents 是更自然的选择。 ^[raw/articles/claude-managed-agents-developer-guide.md]
-
-## 实践启示
-### 1. 从 Messages API 迁移的评估决策树
-并非所有 Messages API 用户都应迁移Managed Agents。建议满足以下任一条件时考虑迁移：（1）工具调用逻辑超过 500 行且跨项目复用；（2）需要沙箱隔离但缺乏运维资源；（3）任务执行时间超过 5 分钟且需要中途可观察。如果只是简单的单轮问答或工具调用逻辑极轻，Messages API 的透明性和可控性仍是首选。 ^[raw/articles/claude-managed-agents-developer-guide.md]
-
-### 2. Environment 缓存与环境复用策略
-同类任务的多个 Session 应尽可能复用同一 Environment（尤其是包含 pip/npm 安装的），利用平台缓存机制加速启动。建议为每类任务（代码审查、文档生成、数据调试）创建专用的 Environment 配置并固化 Agent 绑定，避免每次启动 Session 重新安装依赖 。 ^[raw/articles/claude-managed-agents-developer-guide.md]
-
-### 3. 多智能体场景的选择框架
-只有当任务满足以下全部条件时才使用协调器 + 工作者模式：任务可明确拆分为独立子任务、子任务结果可独立验证、不需要跨工作者动态协商。对于复杂状态协作（如多方代码冲突解决），应等待通用 Agent Teams 模式成熟后再迁移。当前阶段更稳妥的做法是在单一 Agent 内通过 system prompt 分阶段处理。 ^[raw/articles/claude-managed-agents-developer-guide.md]
-
-### 4. 生产环境的成本监控与优化
-在生产环境中引入 Managed Agents 前，必须建立 Token 使用量和 Session 运行时的双重监控机制。建议在 Events 流中记录每次 Session 的实际运行时长和 Token 消耗，计算单次任务的真实单位成本。对于高频调用场景（每日数百次），提示词缓存的 0.1x 折扣值得系统性利用 。 ^[raw/articles/claude-managed-agents-developer-guide.md]
-
-### 5. 安全性配置：有限网络模式优先
-除非明确需要 unrestricted 网络访问，应默认使用 `limited` 模式并配置域名白名单 。自定义工具（JSON Schema 定义的 `trigger_deploy` 类）应在工具描述中明确标注操作的影响范围，并在工具执行层实现幂等性和权限校验 — 因为一旦工具暴露给 Agent，Agent 可能以非预期方式组合调用。 ^[raw/articles/claude-managed-agents-developer-guide.md]
-
-## Related
-- [[entities/claude-code-agent-engineering|Claude Code Agent 工程设计]] — Claude Code 的本地 Harness 架构
-- [[entities/agent-harness-context-management-working-set|Agent Harness 上下文管理：工作集视角]] — 托管 Harness 与本地 Harness 的上下文管理对比
-- [[concepts/harness-engineering-framework|Harness Engineering 框架]] — Managed Agents 的 Harness 工程背景
-- [[raw/articles/claude-managed-agents-developer-guide.md|原文存档]]
-- [[raw/articles/anthropic-pm-jess-yan-managed-agents.md|PM 视角原始存档]]
-- [[entities/从-anthropic-到-googleagent-skills-正在进入设计模式阶段|Agent Skill 设计模式]]
-
-## 相关实体
-- [[entities/claude-code-large-codebase-enterprise-deployment|Claude Code 大型代码库最佳实践 — Anthropic 企业级部署指南]]
-- [[moc/claude-code-complete-guide|MOC]]
-- [[moc/anthropic-ecosystem|MOC]]
+## 工程实践
+- [[entities/long-running-agent-ralph-loop-handover-harness-ruofei|'长周期 Agent 详解：从 Ralph Loop 到可接管 Harness']] — 三类漂移+5张卡治理12390字rv10全版
+- [[entities/loop-engineering-addy-osmani-challengehub|Loop Engineering:不再写提示词,而是设计替你写提示词的循环——先写刹车再写循环（19 来源深度合并：Addy Osmani / Boris Cherny+Peter Steinberger / 教科书 / 若飞 工程现场 / TechFarrari 批判 / 若飞 实用指南 / 爱范儿 科普批判 / AllenTang Karpathy 尺子 / winty 7架构中文主流视角 / AutoResearch 5 决策 / 三层结构 + 三款产品对比 + Ralph Loop + 准备度总表 / Shubham Saboo PM 视角 / 若飞 吴恩达三层Loop）]] — 19来源合并Loop Engineering巨著73742字rv10
+- [[entities/boris-cherny-新访谈开发工具正在从-ide-变成-agent-控制台|Boris Cherny 新访谈：开发工具正在从 IDE 变成 Agent 控制台]] — Boris访谈rv10全版
+- [[entities/karpathy-vibe-coding-agentic-engineering-v4|Karpathy 最新访谈：从 Vibe Coding 到 Agentic Engineering]] — v4 8090字rv10：可验证性上限+MenuGen警示
+- [[entities/mac-multi-agent-coding-skills-hooks-harness|MAC（multi-agent-coding）：Skills + Hooks 两层 Harness —— 完全委托 0-20% 的解法]] — Skills概率层+Hooks确定性层两层Harness
+- [[entities/anthropic-claude-managed-agents-platform-2026|Anthropic Claude Managed Agents 平台正式发布]] — 平台发布14k主版
+- [[entities/anthropic-demystifying-evals-for-ai-agents|Anthropic Demystifying Evals for AI Agents]] — eval概念框架
+- [[entities/claude-code-routines-proactive-agent|Claude Code Routines：从工具到队友的主动 Agent 模式]] — Routines三能力
+- [[entities/anthropic-computer-use-best-practices|Anthropic 发布 Computer Use 最佳实践]] — 坐标映射与梯度分配
+- [[entities/anthropic-claude-managed-agents-guide|Claude Managed Agents 官方 Harness 平台指南]] — 平台指南分析版
+- [[entities/anthropic-managed-agents-scaling|Anthropic Managed Agents：用 K8s 思路虚拟化 Agent 组件]] — 宠物到牛群
+- [[entities/长周期-agent-详解-从-ralph-loop-到可接管-harness|长周期-agent-详解-从-ralph-loop-到可接管-harness]] — Ralph loop到接管harness
+- [[entities/anthropic-pm-jess-yan-managed-agents|Anthropic PM Jess Yan 的三个 Claude Agent 实践]] — PM三agent实践
+- [[entities/claude-code-seven-customization-methods-anthropic-official|Claude Code 七种自定义方法：官方全景指南]] — 七种自定义对比
+- [[entities/prompt-debugger-compare-templates-winty|Prompt 调试器：A/B 测试模板对比]] — Prompt调试器三件套：A/B+评分沉淀+模板库
+- [[entities/专为-managed-agents-而生的-harness-底座agentscope-20|专为 Managed Agents 而生的 Harness 底座：AgentScope 2.0]] — brain hands拆分控制面数据面
+- [[entities/ai-native-sdlc-playbook-anthropic|AI Native SDLC Playbook：Anthropic 应用 AI 团队的软件开发生命周期重构方法论]] — SDLC六阶段重构

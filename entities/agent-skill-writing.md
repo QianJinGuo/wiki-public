@@ -11,88 +11,39 @@ reviewed: 2026-09-07
 review_verdict: hub-retained
 review_category: dup
 review_note: "judged dup-0.85: 与从0到1篇同文重复; retained as hub (in-links>=20); MOC rewrite candidate"
----
-## Overview
-Agent Skill = **岗位职责说明书 + 操作SOP + 避坑指南**的合集。让通用大模型秒变领域专家，不改变模型本身，通过结构化上下文注入实现。   ^[raw/articles/agent-skill-writing-guide.md]
-核心设计哲学：**渐进式披露**（Progressive Disclosure）——AI 的上下文窗口不会被所有 Skill 细节塞满，只有在需要时才加载必要信息。 ^[raw/articles/agent-skill-writing-guide.md]
+moc_rebuilt: 2026-09-07
+---# Agent Skill 编写指南
 
-## Skill 目录结构
-```
-my-skill/
-├── SKILL.md         # 必须：YAML元数据 + Markdown正文
-├── scripts/         # 可选：可执行脚本（Python/Bash等）
-├── references/       # 可选：参考文档（API说明、详细指南等）
-└── assets/          # 可选：静态资源（模板、图片等）
-```
+> 本页原内容在 2026-09-07 质量闭环中判定为 **dup-0.85**，已按导航页（MOC）重建；
+> 原文备份见 `_archive/hub-rewrite-2026-09-07/agent-skill-writing.md`，一手来源仍见下方 sources。
 
-## 渐进式披露三阶段
-| 阶段 | AI 行为 | 对应比喻 |
-|------|---------|---------|
-| 发现 | 只加载 name + description，轻量判断是否匹配 | 外卖骑手看订单概要 |
-| 激活 | 加载完整 SKILL.md 到上下文 | 骑手接单看详情 |
-| 执行 | 按需加载 references/ 或执行 scripts/ | 看地图/联系客户 |
+## 机制与论文
+- [[entities/skill-design-patterns|Skill 设计模式]] — 5社区模式+14官方模式全集
+- [[entities/hermes-agent-deep-dive|Hermes Agent 深度解析（阿里云/飞樰）]] — 自进化内外双路径+四维工程7934字rv9全版
+- [[entities/skill-rm-qwen-agent-skill-reward-model|阿里Qwen提出Skill-RM：把奖励模型做成可复用Agent Skill]] — Skill-RM奖励模型技能化
+- [[entities/skillcorpus-consolidating-open-skill-ecosystem|SkillCorpus: 大规模社区 Skill 生态的筛选、评测与边界分析]] — 96k技能提纯流水线评测
+- [[entities/ai能接管实验室了中国科大最新研究给出真实物理世界的压力测试|AI能接管实验室了？中国科大最新研究给出真实物理世界的压力测试]] — 机器实验室评测
 
-## SKILL.md 格式
-### YAML 元数据字段
-```yaml
----
-name: pdf-processing
-description: 从PDF中提取文本和表格、填写表单、合并文件。当用户需要处理PDF文档时使用此技能。
-license: Apache-2.0
-compatibility: "Python 3.10+, uv 包管理器"
-metadata:
-  author: your-team
-  version: "1.0"
----
-```
-| 字段 | 必须 | 说明 |
-|------|------|------|
-| name | 是 | 小写字母、数字、连字符，不超过64字符，必须与父目录名一致 |
-| description | 是 | 核心！告诉Agent何时激活，最多1024字符，要包含关键词 |
-| license | 否 | 许可证 |
-| compatibility | 否 | 环境要求 |
-| metadata | 否 | 自定义键值对 |
-| allowed-tools | 否 | 实验性，预批准工具列表 |
-> ⚠️ **90%的人踩的坑**：description 不准确或缺少关键词 → Agent 根本不激活 Skill。
+## 工程实践
+- [[entities/qoder-skills-完全指南从零开始让-ai-按你的标准执行-v2|Qoder Skills 完全指南 + Agent Skill 迭代式编写 — AI 按你的标准执行]] — 菜单菜谱比喻+三级渐进披露18168字rv9全版
+- [[entities/skill-design-spec-8-block-checklist-winty|企业级 Skill 8 块最小骨架 + 8 条 checklist 设计规范]] — 8块骨架checklist设计规范
+- [[entities/harness-engineering-comprehensive-guide-conardli|Harness Engineering 综合性指南（ConardLi 系列 · 含 Beautiful Article 实证 + Reacticle 协议）]] — ConardLi六层架构14634字rv9
+- [[entities/harness-engineered-business-agent-evaluation-aliyun-boyu|Harness 工程搭建式业务 Agent 评测方案：Claude Code 作 Harness 搭建者]] — CC搭评测Harness，1.5周→1-2天
+- [[entities/skill-version-management-semantic-versioning-practices-winty|Skill 版本管理五大原则：从越改越差到持续演进]] — skill语义化版本五原则
+- [[entities/skill-development-guide-linyi|重新定义Skill开发：保姆级教程&一站式开发助手]] — 11320字最全教程版
+- [[entities/skill-version-comparison-five-principles-winty|Skill 版本对比五大原则：从'两个数字比大小'到工程化质量门禁]] — 版本对比五原则六陷阱
+- [[entities/harness-skill-engineering-alibaba-practice|Harness 工程之道：Skill 原理与最佳实践]] — Skill渐进披露三阶段+作用域优先级
+- [[entities/qoder-skill-ui|Qoder Skill UI — Agent 与人类的协作界面层]] — 软件双形态：Agent用CLI人用GUI，HTML沙箱路线
+- [[entities/ai-agent-trace-evals-stability-cost-evaluation-zhangyanfei|AI Agent 落地：如何攻克稳定性、成本与评估难题？ — Trace即Evals]] — trace即evals
+- [[entities/alibaba-skill-up-agent-skill-evaluation|skill-up: 阿里开源 Agent Skill 评测框架]] — skill-up主版
+- [[entities/agent-skill-writing-evaluation|Agent Skill 评估与迭代]] — skill评估迭代
+- [[entities/agent-skill-writing-practices|Agent Skill 高质量编写规范]] — 编写规范六条
+- [[entities/claude-code-dynamic-workflows-thariq-practical-patterns|Claude Code Dynamic Workflows 实战模式与构建技巧]] — 3失败6模式11用例
+- [[entities/claude-skill-quality-tool-skill-craft|Skill Craft：Claude Skill 质量工程工具]] — skill质量工程
+- [[entities/harness-engineering-systematic-explainer|Harness Engineering 系统性解读]] — 李宏毅课程解读7933字最全版
+- [[entities/tencent-token-optimization-agent-architecture|腾讯 Token 优化实战 — 省 Token 和用好 AI 是同一件事]] — context rot四步工程化
+- [[entities/agent-skills-development-guide|Agent Skills 开发指南：6 字段规范、3 级加载、5 步评估闭环]] — 6字段开发指南
+- [[entities/tencent-ai-coding-deep-water-fact-vs-judgment-2026|腾讯 AI Coding 深水区 — 事实vs判断尺子与提示词→框架→runtime 下沉方法论]] — 事实判断尺子runtime主权
 
-## 子页面
-- [[entities/agent-skill-writing-practices|高质量编写规范]] — 6 条核心编写原则
-- [[entities/agent-skill-writing-evaluation|评估与迭代]] — 触发测试、功能测试、基线对比方法论
-- [[entities/agent-skill-writing-advanced|进阶模式与治理]] — Anthropic 5 种进阶模式、安装部署、YAML 完整规范、实战调试案例
-
-## Related
-- [[entities/hermes-agent|Hermes Agent]] — Skill 机制是 Hermes 的核心特性之一
-- [[concepts/openclaw-architecture|OpenClaw 架构解析]] — OpenClaw 内置 Skill 系统实现
-- [[entities/memos-hermes-plugin|MemOS Hermes 插件]] — MemOS 的 Skill 管理能力
-- [[raw/articles/agent-skill-writing-guide.md|原始文章存档]]
-- [[entities/skill-design-patterns|Skill 设计模式]] — 5种设计模式系统指南
-
-## 深度分析
-### 渐进式披露的工程价值
-渐进式披露（Progressive Disclosure）不只是一个 UX 模式，更是一种**上下文经济学**。当 Agent 需要在数千个 Skill 中做选择时，每次都加载完整文档会迅速耗尽上下文窗口。分阶段加载机制让 AI 在"发现阶段"只获取最小线索，在"激活阶段"才注入完整指令，在"执行阶段"才调用外部资源。这种分层策略本质上是在用空间换时间和精度。 ^[raw/articles/agent-skill-writing-guide.md]
-
-### Description 字段的决定性作用
-文章指出"90%的人踩的坑"集中在 description 字段，其核心问题在于：**Agent 的激活逻辑本质上是语义匹配**，而不是精确查找。如果 description 缺少领域关键词，Agent 的路由层就无法将用户请求正确路由到这个 Skill。这意味着 description 的编写质量直接决定了 Skill 是否被触发。一个好的 description 需要包含触发场景的多个变体（同义词、场景描述、用户可能的表达方式），而不仅仅是功能堆砌。 ^[raw/articles/agent-skill-writing-guide.md]
-
-### 评估方法论的核心逻辑
-对比评估（with_skill vs without_skill）的设计体现了**增量价值度量**的思想。Skill 的价值不在于它做了什么，而在于它相比基线模型带来了什么提升。通过 delta 指标（pass_rate、time_seconds、tokens）可以量化 Skill 对最终效果的影响。但关键在于：断言设计必须可验证、可观察、可计数——模糊的评估标准只会产生噪音而非信号。 ^[raw/articles/agent-skill-writing-guide.md]
-
-### Agentic 脚本的设计约束
-脚本设计规范中，"避免交互式提示"被作为硬性要求提出，这是因为 Agent 运行在非交互式 Shell 环境中。这揭示了一个核心原则：**工具的调用方式必须与执行环境匹配**。其他约束（--help、幂等性、空运行支持、有意义的退出码）都服务于同一个目标：让 AI 能够可靠地预测和验证脚本行为，而不是在运行时遭遇意外。 ^[raw/articles/agent-skill-writing-guide.md]
-
-## 实践启示
-### 从最小可用 Skill 开始
-不要试图一开始就设计一个"完美"的 Skill。正确的姿势是：从真实任务中提炼，从 2-3 个测试用例开始。先让 Skill 能工作，再通过评估结果迭代优化。过于宏大的设计只会让 Skill 变得臃肿且难以调试。 ^[raw/articles/agent-skill-writing-guide.md]
-
-### Description 编写要"多触点"
-在编写 description 时，需要考虑用户会用哪些自然语言表达来请求这个功能。建议列出至少 5-10 种不同的触发方式，包括正式请求、口语化表达、错误尝试场景等。例如，"PDF处理"的 description 不仅要写"处理PDF文档"，还应该包含"提取PDF内容"、"合并PDF文件"、"填写PDF表单"等具体场景。 ^[raw/articles/agent-skill-writing-guide.md]
-
-### 用评估驱动迭代
-建立**量化反馈闭环**：每次修改 Skill 后，运行评估对比 with_skill 和 without_skill 的差异。重点关注"带 Skill 才通过"的断言，这些是 Skill 真正产生价值的地方。如果某些断言在两种配置下都通过，说明这不是 Skill 的增量贡献，可以考虑移除。 ^[raw/articles/agent-skill-writing-guide.md]
-
-### Scripts 作为 Skill 的延伸
-当 Skill 中的描述性知识不足以完成复杂任务时，应该将重复性操作封装为 scripts。但必须遵循 agentic 脚本规范：非交互式、有 --help、支持 --dry-run、幂等性、结构化输出。这些约束不是负担，而是让 AI 能够可靠调用脚本的信任基础设施。 ^[raw/articles/agent-skill-writing-guide.md]
-## 相关实体
-
-- [[entities/gene-gep-evomap-qinghua-strategy-genes-arxiv-2604-15097-2026|gene/gep — evomap×清华 提出的「策略基因」经验对象框架（arxiv 2604.15097）]]
-- [[moc/prompt-engineering-guide|MOC]]
+## 延伸导航
+- [[moc/evaluation-benchmarks-extended|评测体系与基准测试扩展]]

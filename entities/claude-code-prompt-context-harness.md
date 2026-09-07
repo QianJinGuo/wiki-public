@@ -12,44 +12,39 @@ reviewed: 2026-09-07
 review_verdict: hub-retained
 review_category: dup
 review_note: "judged dup-0.8: prompt模块重复版; retained as hub (in-links>=20); MOC rewrite candidate"
----
+moc_rebuilt: 2026-09-07
+---# Claude Code Prompt 与上下文 Harness 设计
 
-# fb134668f09a3b45c1813781f912ae4e7e26294d3b60332606983b946944c328
-> 本文原文来自微信公众平台（飞樰/阿里云开发者），仅供存档和个人学习研究之用。
-> 原始URL：https://mp.weixin.qq.com/s/YgGW92VBP8s846yzIxjVWQ
-> 发布日期：2026-04-20 | 来源：阿里云开发者
-> SHA-256: `fb134668f09a3b45c1813781f912ae4e7e26294d3b60332606983b946944c328`
+> 本页原内容在 2026-09-07 质量闭环中判定为 **dup-0.8**，已按导航页（MOC）重建；
+> 原文备份见 `_archive/hub-rewrite-2026-09-07/claude-code-prompt-context-harness.md`，一手来源仍见下方 sources。
 
-## 相关实体
-- [[entities/llm-wiki-obsidian-wiki-gbrain-self-organization-self-evolution]]
-- [[entities/claude-code-harness-deep-dive-founder-park]]
-- [[entities/hermes-agent-deep-dive-alibaba]]
-- [[entities/openclaw-prompt-context-harness]]
-- [[concepts/harness-engineering-framework]]
+## 机制与论文
+- [[entities/agentscope-java-harness-framework-enterprise-distributed|AgentScope Java Harness Framework 2.0 — 企业级 Agent 分布式场景的 Harness 实现 (Java 2.0 重大升级)]] — AgentScope Java全版
+- [[entities/agent-oriented-infra-intent-driven-code-sedimentation|晓斌：从 People-Oriented 到 Agent-Oriented Infra —— 意图驱动 + 代码沉淀的进化体]] — Agent-Oriented Infra长文
+- [[entities/pi-openclaw-coding-harness|Coding Harness 工程本质：从 Pi 到 OpenClaw]] — Harness八能力+五工程模式：Context像投影8441字rv9
+- [[entities/anthropic-n-days-frontier-agent-vulnerability-research|Anthropic N-days: Frontier Agent Vulnerability Research]] — N-day研究
+- [[entities/agent-harness-12-components-7-decisions|一篇看懂 Agent Harness 的结构！ — 12组件+7决策完整框架]] — harness 12组件框架
+- [[entities/openclaw-prompt-context-harness|深度解析 OpenClaw 在 Prompt / Context / Harness 三个维度中的设计哲学与实践]] — 三维度源码：23模块拼装+自适应分块+双层Memory
+- [[entities/glm-52-is-the-step-change-for-open-agents|GLM-5.2 is the step change for open agents]] — Interconnects评GLM-5.2开放Agent跃迁
+- [[entities/agent-harness-architecture-deep-dive-aksahy|Agent Harness 解析：智能体架构深度拆解]] — harness解剖深度
+- [[entities/深入理解-claude-code-源码中的-agent-harness-构建之道|深入理解 Claude Code 源码中的 Agent Harness 构建之道]] — 16095字源码8步循环
+- [[entities/from-prompt-to-harness-claude-official|从 Prompt 到 Harness：Claude 官方学习资料]] — Harness五子系统闭环解读
+- [[entities/claude-code-search-architecture-tencent-2026|原始文章存档]] — ripgrep五层过滤
+- [[entities/claude-opus-47|Claude Opus 4.7 并不是一次全面升级，甚至部分能力大幅衰退]] — 4.7衰退面分析
+- [[entities/fudan-peking-ahe-agentic-harness-engineering|复旦北大 AHE：Agentic Harness Engineering 瓶颈分析]] — AHE三支柱可观测性5622字深析版
+- [[entities/claude-code-and-what-comes-next|Claude Code and What Comes Next]] — 压缩/Skills/Subagents
 
-→ [[raw/articles/claude-code-prompt-context-harness|原文存档]]^[raw/articles/claude-code-prompt-context-harness.md]
+## 工程实践
+- [[entities/tencent-vibe-coding-to-agentic-engineering-backend|Tencent Vibe Coding to Agentic Engineering Backend]] — 全流程串终端会话实践
+- [[entities/gaode-sdd-harness-team-ai-coding-paradigm-ibjfu|高德广告工程 Harness/SDD 体系演进：从\]] — SDD+Harness团队级范式11119字
+- [[entities/build-a-serverless-image-editing-agent-with-amazon-bedrock-a|Build a serverless image editing agent with Amazon Bedrock AgentCore harness]] — 图像编辑agent
+- [[entities/aws-bedrock-agentcore-quality-optimization-flywheel|AWS Bedrock Agentcore Quality Optimization Flywheel]] — 质量飞轮
+- [[entities/ai-production-development-workflow-openspec-superpowers-gstack|AI 生产开发工作流：OpenSpec 规范驱动 + Superpowers 工具链]] — 三件套工作流
+- [[entities/2-小时0-行手写代码我用-claude-做了一个生产级-vscode-插件|2 小时，0 行手写代码，我用 Claude 做了一个生产级 VSCode 插件]] — 实践复盘有具体经验教训
+- [[entities/claude-code-context-engineering-anthropic-thariq|Claude Code 上下文工程 —— Anthropic 团队的工程实践]] — 上下文工程官方表述
+- [[entities/anthropic-managed-agents-scaling|Anthropic Managed Agents：用 K8s 思路虚拟化 Agent 组件]] — 宠物到牛群
+- [[entities/长周期-agent-详解-从-ralph-loop-到可接管-harness|长周期-agent-详解-从-ralph-loop-到可接管-harness]] — Ralph loop到接管harness
+- [[entities/准备开一个新坑从零复刻一个-claude-codenn目标是在这个过程中和大家一起学习-claude-code-的-harness-是如何做的nnclaude-|从零复刻 Claude Code：Harness 构建学习笔记]] — easy-agent复刻路线图
 
-- [[moc/prompt-engineering-guide|MOC]]
-## 深度分析
-
-Claude Code 在 Prompt Engineering 层面展现了极为精细的模块化思维。System Prompt 由 7 个静态模块与 10+ 个动态模块构成，中间通过 `__SYSTEM_PROMPT_DYNAMIC_BOUNDARY__` 边界标记分隔，这种结构既保证了身份、行为规则、安全守则等核心内容的一致性，又允许会话特定指导、MCP 服务器指令、Token 预算等动态内容按需注入。5 级优先级决策链（overrideSystemPrompt → Coordinator prompt → Agent prompt → customSystemPrompt → defaultSystemPrompt）确保了用户意图的精确覆盖，这种分层优先级设计在复杂多 Agent 系统中具有重要的架构参考价值。KV Cache 友好分块（`splitSysPromptPrefix()`）则体现了对推理成本的工程化考量，而非单纯追求功能完整。 ^[raw/articles/claude-code-prompt-context-harness.md]
-
-Context Engineering 的三级压缩体系（MicroCompact → Session Memory Compact → Full LLM Compact）构成了一个成本感知的自适应上下文管理机制。MicroCompact 以零成本保留 Edit/Write 等核心工具调用的完整性，仅在时间阈值或 KV Cache 边界触发时进行轻量压缩；Session Memory Compact 在 ≥10,000 tokens 且 ≥5 条消息时强制触发 9 段式结构化摘要；Full LLM Compact 则用于前两层无法满足召回需求时的高成本场景。CLAUDE.md 的四层路径体系（全局 → 项目 → 个人本地 → 规则文件）实现了跨粒度的上下文继承与覆盖机制，与 Memdir 四类记忆（User/Feedback/Project/Reference）结合后，构成了一套完整的项目级语义记忆体系。 ^[raw/articles/claude-code-prompt-context-harness.md]
-
-Harness Engineering 的 Permission Engine 三行为模型（Allow/Deny/Ask）是安全架构的核心抽象。Allow 通道实现低风险操作的自动放行，Deny 通道在高危操作（如网络请求、敏感文件访问）触发时强制阻断，Ask 通道则在中间地带要求用户显式确认。Settings.json → CLI 参数 → 命令行规则 → session 规则的四层配置优先级为不同场景提供了灵活的权限管控粒度。bubblewrap 沙箱（约 986 行代码）通过文件系统只读挂载、网络/PID 命名空间、用户权限降级三重机制构建了进程级别的隔离环境。 ^[raw/articles/claude-code-prompt-context-harness.md]
-
-8 类内置 Agent（General-Purpose、Explore、Plan、Verification、Guide、Statusline Setup、Fork Sub Agent 等）通过差异化的模型选择与权限配置实现了任务分治。Explore Agent 使用 Haiku 模型且只读、不加载 CLAUDE.md，适合快速侦察；Verification Agent 承担红蓝对抗职责，采用 5 种验证策略进行质量检验。Fork Sub Agent 通过 Worktree 隔离实现进程分身，共享 Prompt Cache 以降低推理成本，这种设计在高并发、长时程的任务拆解中具有重要实用价值。 ^[raw/articles/claude-code-prompt-context-harness.md]
-
-20+ 种 Hook 事件覆盖了工具调用、会话生命周期、消息采样、文件操作等全链路，其中 PreToolUse/PostToolUse/ToolError 构成了工具层面的安全与审计机制，PreSampling/PostSampling 允许在模型输入输出层注入自定义逻辑。Anti-Distillation（`anti_distillation: ['fake_tools']`）和 Undercover Mode 等彩蛋设计则揭示了 Claude Code 对自身工具调用链被爬取和滥用的防御意识，这在代码大模型时代具有普遍的安全参考意义。 ^[raw/articles/claude-code-prompt-context-harness.md]
-
-## 实践启示
-
-**模块化 Prompt 设计优于单一字符串拼接。** 将 System Prompt 拆分为静态模块与动态模块，通过明确的边界标记（`__SYSTEM_PROMPT_DYNAMIC_BOUNDARY__`）分隔，使核心规则保持稳定的同时允许动态内容按需注入。KV Cache 友好分块（`splitSysPromptPrefix()`）应成为大型 System Prompt 的标准实践，而非性能优化选项。 ^[raw/articles/claude-code-prompt-context-harness.md]
-
-**上下文管理必须建立成本感知的自适应压缩机制。** 不应依赖单一的全量压缩策略，而应根据 token 阈值、消息数量、Kv Cache 边界等多维条件触发不同级别的压缩。MicroCompact 以零成本保留关键工具调用（Edit/Write）完整性的设计原则值得借鉴——压缩的目标是降低召回成本，而非牺牲核心任务执行能力。 ^[raw/articles/claude-code-prompt-context-harness.md]
-
-**Permission Engine 的 Allow/Deny/Ask 三行为模型是安全架构的基础抽象。** 任何 Agent 系统都应在架构层面定义权限决策的三元模型，并通过配置文件 → CLI 参数 → 运行规则 → session 规则的四层优先级实现灵活的权限管控。bubblewrap 沙箱等进程级隔离手段应作为高风险操作的默认保障机制。 ^[raw/articles/claude-code-prompt-context-harness.md]
-
-**多 Agent 系统的设计应采用差异化模型选择与权限隔离策略。** 不同 Agent 承担不同任务域（侦察、规划、验证、执行），应选择与其任务复杂度匹配的模型规格，并通过只读/读写、加载/不加载 CLAUDE.md 等差异化配置实现最小权限原则。Worktree 隔离是实现并发安全拆分的关键技术。 ^[raw/articles/claude-code-prompt-context-harness.md]
-
-**Hook 机制是实现可观测性与安全审计的核心基础设施。** PreToolUse/PostToolUse/ToolError 覆盖了工具层的完整调用链路，应作为 Agent 系统的标准可观测性基础设施。Anti-Distillation 等彩蛋设计提醒我们，代码 Agent 的工具调用链本身是需要保护的核心资产，应在架构层面考虑防爬取和防蒸馏策略。 ^[raw/articles/claude-code-prompt-context-harness.md]
+## 延伸导航
+- [[moc/agent-engineering-guide|Agent 工程全景指南]]

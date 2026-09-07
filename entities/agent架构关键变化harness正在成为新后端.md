@@ -2,7 +2,7 @@
 
 title: "Agent架构关键变化：Harness正在成为新后端"
 created: 2026-05-10
-updated: 2026-05-10
+updated: 2026-09-07
 type: entity
 tags: [ai-agent, engineering, agent-tools, wechat]
 review_value: 6
@@ -14,75 +14,36 @@ reviewed: 2026-09-07
 review_verdict: hub-retained
 review_category: dup
 review_note: "judged dup-0.85: 与17k全版条重复; retained as hub (in-links>=20); MOC rewrite candidate"
----
+moc_rebuilt: 2026-09-07
+---# Agent架构关键变化：Harness正在成为新后端
 
-> -> [[raw/articles/agent架构关键变化harness正在成为新后端.md|原文存档]]
-从微信文章 [[raw/articles/agent架构关键变化harness正在成为新后端.md|Agent架构关键变化：Harness正在成为新后端]] 提取。 ^[raw/articles/agent架构关键变化harness正在成为新后端.md]
+> 本页原内容在 2026-09-07 质量闭环中判定为 **dup-0.85**，已按导航页（MOC）重建；
+> 原文备份见 `_archive/hub-rewrite-2026-09-07/agent架构关键变化harness正在成为新后端.md`，一手来源仍见下方 sources。
 
-## 核心内容
-source_url: https://mp.weixin.qq.com/s/VYZq3CzaQ72-gq1FlzniMw ^[raw/articles/agent架构关键变化harness正在成为新后端.md]
+## 机制与论文
+- [[entities/agent-harness-engineering-survey-2026|Agent Harness Engineering: A Survey]] — harness工程survey
+- [[entities/huggingface-ai-agent-glossary-model-scaffolding-harness-tool-skill-subagent|Hugging Face AI Agent 术语表：Model / Agent / Scaffolding / Harness / Context Engineering / Policy / Tool / Skill / Sub-agent 完整区分]] — HF术语表16399字：Scaffolding/Harness/Policy辨析
+- [[entities/刚刚opus-47发布相比46核心变化与claude-code搭配最佳实践|刚刚Opus 4.7发布，相比4.6核心变化，与Claude Code搭配最佳实践]] — 6588字最全发布分析
+- [[entities/skill-formal-theory-survey-10papers|10篇论文看懂AI Agent Skill：表示、执行、评估与进化]] — 技能六元组形式化综述
+- [[entities/hermes-agent-goal-runtime-architecture|Hermes Agent /goal 长任务运行时架构]] — GoalState四部件+Judge保守优先5161字全版
+- [[entities/国产顶尖模型-benchmark-评分那么高可实际效果为什么差看完-anthropic-这篇博客刷分的因素太单一了|国产顶尖模型 benchmark 评分那么高，可实际效果为什么差？看完 Anthropic 这篇博客，刷分的因素太单一了]] — 评测环境系统性偏差
+- [[entities/token级精准控制生成长度3b模型击败gpt-54claude|token级，精准控制生成长度：3B模型击败GPT 5.4、Claude]] — 长度即值函数LenVM
 
-### 主要章节
-- ###  今天的 Agent 如何工作
-- ###  退后一步看
-- ###  抽象后端
-- ###  一切向下都是 Worker
-- ###  一个活系统
-- ###  会创建 Worker 的 Agent
-- ###  区别消失
-- ###  任何东西都是 Worker
-- ###  这个赌注
-- ###  参考阅读
-- ####  References
-sources:
-
-  - https://mp.weixin.qq.com/s/VYZq3CzaQ72-gq1FlzniMw
-  - https://mp.weixin.qq.com/s/6bKuYLV1E5LGqUEKV0tbtA
-related:
-
-  - [[entities/harness-engineering-systematic-explainer|Harness 工程化体系]]
-  - [[entities/agent-harness-context-management-working-set|Context Management 与 Working Set]]
-- [[entities/harness-engineering-reliable-long-term-agent|Harness Engineering - 让 Coding Agent 可靠完成长程任务]]
-- [[entities/anthropic-官方-agent-harness-平台claude-managed-agents-完整指南|Anthropic 官方 Agent Harness 平台：Claude Managed Agents 完整指南]]
-- [[entities/深入理解-claude-code-源码中的-agent-harness-构建之道-v2|深入理解 Claude Code 源码中的 Agent Harness 构建之道]]
-- [[entities/agent-harness-12-components-7-decisions|Agent Harness 12 组件与 7 个关键决策]]
-- [[entities/harness-engineering-long-term-agent-tasks|Harness Engineering：让 Coding Agent 可靠完成长程任务]]
-
-## 深度分析
-### 核心命题：harness 与后端的边界是临时状态
-本文的核心论点是：当前行业将 agent harness 视为独立于传统后端的一层，这并非必然架构，而是一个阶段性误解。作者 Mike Piccolo 认为，随着 agent 系统规模扩大，这种分离造成的复杂性会迫使基础设施演进，而正确的方向是用 **Worker、Trigger、Function** 三个原语重新定义"后端"，让 agent 成为与其他组件同等的 Worker。 ^[raw/articles/agent架构关键变化harness正在成为新后端.md]
-
-### 为什么传统分离是问题
-当 agent harness 与后端分离时，系统调试面临指数级复杂性。每增加一个 agent，可能的交互路径数为 agents² × services——4 个 agent 加 5 个后端服务产生 80 条需要关联调试的随机路径。传统后端的确定性调试方法（跨系统关联日志、重建时间线）在 agent 场景下失效，因为 agent 的随机性是有意设计的，而非需要消除的缺陷。 ^[raw/articles/agent架构关键变化harness正在成为新后端.md]
-薄 harness（Anthropic）和厚 harness（LangGraph）之争因此是伪命题：两者争论的是同一设计空间内部的权衡，而默认假设 harness 与后端分离本身并未被质疑。当 agent 是 Worker 时，薄还是厚只是注册多少 functions、如何组合它们的问题，而非两种架构之间的抉择。 ^[raw/articles/agent架构关键变化harness正在成为新后端.md]
-
-### 三个原语如何简化架构
-**Function** 是带稳定标识符的工作单元（如 `orders::validate`），可存在于任何进程、用任何语言编写，输入输出稳定。**Trigger** 是让 function 运行的条件——HTTP 调用、cron 调度、队列订阅、状态变化均可，声明式绑定而非硬编码路由。**Worker** 是连接到 engine 并注册 functions 和 triggers 的任何进程。 ^[raw/articles/agent架构关键变化harness正在成为新后端.md]
-这一抽象的关键价值在于：语义存在于 functions 内部，而非基础设施层。队列的 broker 语义、HTTP 的路由语义、agent 的编排语义，都被折叠成"注册 function 和 trigger 的进程"。添加新能力不再是评估新产品类别，而是"添加一个 worker"——sandbox 是 worker、ml pipeline 是 worker、浏览器 tab 也可以是 worker。 ^[raw/articles/agent架构关键变化harness正在成为新后端.md]
-
-### 涌现的系统性质
-当一切都是 Worker，三个传统架构无法产生的性质自然出现：**实时发现**——worker 连接时收到完整 function 目录，断开时自动注销，agent 不会拿到过期上下文；**实时扩展**——添加新 worker 不需要重新部署或重启；**实时可观测性**——每一次 trigger() 调用跨 workers、跨语言、跨队列传播 trace ID，OpenTelemetry log 自动关联到 active trace。 ^[raw/articles/agent架构关键变化harness正在成为新后端.md]
-
-### Agent 创建 Worker 的递归性
-当 agent 能启动 sandbox worker（硬件隔离的 microVM）时，架构进一步递归：sandbox 不是独立产品类别，而是碰巧提供硬件隔离的 Worker；agent 创建 sandbox 不过是 Worker 创建另一个 Worker。基础设施从产品类别变成设计模式——不可信代码隔离是一个 sandbox worker，临时专家 agent 是另一个 worker，并行执行器是 worker 创建其他 workers。 ^[raw/articles/agent架构关键变化harness正在成为新后端.md]
-
-## 实践启示
-1. **架构设计层面**：评估 agent 基础设施平台时，关注是否暴露 Worker/Trigger/Function 原语，而非提供的功能类别数量。如果平台对队列、streaming、sandboxing 使用不同机制，它还在用产品目录而非设计模式思维。
-2. **调试与可观测性**：当 agent 是 Worker 时，调试路径从"跨系统关联日志"变成"一条跨语言跨队列的 trace"。选择基础设施时应优先考虑 OpenTelemetry 原生支持，让 trace ID 自动贯穿 agent 决策→工具调用→状态持久化整条链路。
-3. **Harness 厚薄的选择**：在 Worker 模型下，薄 harness 是注册少量 functions、让模型决定 trigger 什么的 agent worker；厚 harness 是带更多显式审批关卡和条件逻辑的 agent worker。两者使用同一组 primitives，区别仅在于组合方式，而非两种不同的架构选择。
-4. **Sandbox 作为 Worker**：如果 agent 系统需要隔离不可信代码，不应引入独立的 sandbox 产品，而应将隔离环境实现为一种 Worker 类型，其 primitives interface 与其他所有 Worker 相同。评估方案时看 sandbox 是否能与系统内其他组件通过同一套 trigger/function 机制交互。
-5. **规模化路径**：Agent 系统扩展时，应采用"添加 Worker"而非"添加集成"的方式。每新增加一种能力（不论是新的微服务、新的 ML pipeline 还是新的 agent），让它以 Worker 身份接入实时发现目录，而非通过点对点集成的方式连接。
-
-## 相关实体
-- [[entities/告别氛围编程基于-harness-治理和-sdd-的团队级-ai-研发范式演进与实践|告别“氛围编程”：基于 Harness 治理和 SDD 的团队级 AI 研发范式演进与实践]]
-
-- [[entities/别再把上下文当聊天记录|别再把上下文当聊天记录]]
-- [[entities/harness不是目的知识才是护城河-一个ai工程交付团队的知识沉淀实践|Harness不是目的，知识才是护城河 —— 一个AI工程交付团队的知识沉淀实践]]
-- [[entities/深度拆解-hermes-agent-记忆系统它修正了-openclaw-的哪层误区|深度拆解 Hermes Agent 记忆系统：它修正了 OpenClaw 的哪层误区？]]
-- [[entities/cursor-复盘-harness模型决定能力上限harness-决定生产下限|Cursor 复盘 Harness：模型决定能力上限，Harness 决定生产下限]]
-- [[entities/你不知道的-agent原理架构与工程实践|你不知道的 Agent：原理、架构与工程实践]]
-- [[entities/看-agentrun-如何玩转记忆存储最佳实践来了|看 AgentRun 如何玩转记忆存储，最佳实践来了！]]
-- [[entities/karpathy-vibe-coding-to-agentic-engineering|Karpathy 最新访谈：从 Vibe Coding 到 Agentic Engineering]]
-- [[entities/harness-engineering|一文带你弄懂 AI 圈爆火的新概念：Harness Engineering]]
-- [[entities/龙虾装上了可以用来干啥分享下我的-openclaw-多智能体团队搭建经验|龙虾装上了，可以用来干啥？分享下我的 OpenClaw 多智能体团队搭建经验！]]
-- [[entities/harness-engineering耗时一周我是如何将应用的ai-coding率提升至90的|Harness Engineering：耗时一周，我是如何将应用的AI Coding率提升至90%的]]
+## 工程实践
+- [[entities/harness-engineering|'Harness Engineering：AI 从]] — 六层架构+七大反模式+分级决策树19712字rv9
+- [[entities/opus-4-7-launch-claude-code-best-practices-wechat|刚刚Opus 4.7发布，相比4.6核心变化，与Claude Code搭配最佳实践]] — Opus 4.7核心变化+CC六新功能14779字rv9
+- [[entities/yidian-tianxia-context-engineering-agentic-ai-qcon|一点天下：Context Engineering 与 Agentic AI (QCon)]] — 7114字最全六层上下文版
+- [[entities/harness-engineeringai-能在真正出事会炸的后端系统里写代码吗|'Harness Engineering：AI 能在真正]] — 腾讯CDN LEGO五层架构+对抗式CR全版
+- [[entities/complexity-ratchet-garry-tan|你的AI代码越写越乱，他72小时合了14个PR每个都更好——差距只在一个机制]] — 棘轮机制rv9主版
+- [[entities/claude-design-skill-web-design-engineer|我把 Claude Design 做成了 Skill，人人都能成为顶级网站设计师]] — Claude Design拆解全版
+- [[entities/qunar-ai-coding-platform-practice-l0-l5-harness|去哪儿网 AI Coding 研发平台实践：L0-L5 自动化分级 + Harness 四把锁 + QunarDevCenter + 天弦 QDO]] — L0-L5分级+四把锁+度量体系2289字rv9
+- [[entities/cursor-复盘-harness模型决定能力上限harness-决定生产下限|Cursor 复盘 Harness：模型决定能力上限，Harness 决定生产下限]] — Cursor复盘主版
+- [[entities/three-tools-in-one-gstack-superpowers-openspec-engineering-ai-coding|三器合一：gstack + Superpowers + OpenSpec 工程化 AI 编程实战]] — gstack变体四串联点
+- [[entities/harness不是目的知识才是护城河-一个ai工程交付团队的知识沉淀实践|Harness不是目的，知识才是护城河 —— 一个AI工程交付团队的知识沉淀实践]] — 知识五层存储×五类型×三成熟度15831字
+- [[entities/别再把上下文当聊天记录|别再把上下文当聊天记录]] — 上下文是工作空间四家趋同
+- [[entities/告别氛围编程基于-harness-治理和-sdd-的团队级-ai-研发范式演进与实践|告别“氛围编程”：基于 Harness 治理和 SDD 的团队级 AI 研发范式演进与实践]] — 确定性承重层四步骤
+- [[entities/我把-karpathy-的-autoresearch-搬到了软件开发领域效果炸了|我把 Karpathy 的 AutoResearch 搬到了软件开发领域，效果炸了]] — val loss换多维评分
+- [[entities/精选-10-个开发者常用的-ai-智能体技能agent-skills|精选 10 个开发者常用的 AI 智能体技能（Agent Skills）]] — 四类技能质量筛选节点
+- [[entities/你写的-skill及格了吗|你写的 Skill，及格了吗？]] — D1元数据定生死评估框架
+- [[entities/ollama-已经不是-2024-年那个了一键配齐-claude-codecodexopenclaw|Ollama 已经不是 2024 年那个了！一键配齐 Claude Code/Codex/OpenClaw]] — GGUF解锁+launch：从Docker到入口层
+- [[entities/从不敢发到天天发ai-agent-时代的-cicd-生存指南|从「不敢发」到「天天发」：AI Agent 时代的 CI/CD 生存指南]] — 分层门禁逃生舱机制

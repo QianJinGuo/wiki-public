@@ -16,186 +16,36 @@ reviewed: 2026-09-07
 review_verdict: hub-retained
 review_category: dup
 review_note: "judged dup-0.75: 自进化机制9319字rv9版，留14550字版; retained as hub (in-links>=20); MOC rewrite candidate"
----
+moc_rebuilt: 2026-09-07
+---# Hermes Agent 自进化机制源码解析
 
-## 核心定位
-Hermes Agent 是一个通用日常 AI Agent 脚手架，相比 Claude Code（专注文档编程），定位更广泛：覆盖问答、代码、分析、创作、工具执行等全场景任务，支持 Telegram/Discord/微信多平台。 ^[raw/articles/hermes-agent-self-evolving-source-analysis.md]
-**Self-Evolving 不等于 RL**：Hermes 虽提供 `rl_start_training` / `rl_get_results` 等工具调用自家 Tinker-Atropos 训练平台，但文章解析的 self-improve 机制**不依赖模型权重更新**，而是通过以下三层记忆系统实现能力积累： ^[raw/articles/hermes-agent-self-evolving-source-analysis.md]
+> 本页原内容在 2026-09-07 质量闭环中判定为 **dup-0.75**，已按导航页（MOC）重建；
+> 原文备份见 `_archive/hub-rewrite-2026-09-07/hermes-agent-self-evolving.md`，一手来源仍见下方 sources。
 
-## 三层记忆架构
-| 层级 | 机制 | 作用 | 
-|------|------|------| 
-| **Memory** | 会话自动加载，Agent 无需主动调用 | 被动回忆用户偏好 | 
-| **Skills** | 主动 `skill_view` 加载 + 自主维护（create/patch/delete） | 主动调用、显式管理复杂操作流程 | 
-| **Session Search** | FTS5 全文索引 + 相关性排序 + 会话分组 | 从历史会话中找回具体经验 | 
+## 机制与论文
+- [[entities/hermes-agent-memory-system-openclaw-comparison|深度拆解 Hermes Agent 记忆系统]] — 记忆成本账四层体系15260字rv10最深版
+- [[entities/skill-os-learning-skill-curation-self-evolving-agents|SkillOS: Learning Skill Curation for Self-Evolving Agents]] — SkillOS策展RL架构清晰rv10
+- [[entities/hermes-agent-skill-crossover-optimization|Hermes Agent Skill 互优化：SkillEvolver × Darwin × EmbodiSkill 4 轮闭环]] — SkillEvolver×Darwin×EmbodiSkill互优化13412字
+- [[entities/agent-memory-modular-framework|Agent Memory 模块化框架与评测：Memory in the LLM Era 4 模块 + 10 方案对比 + 新方法 F1 38.79 + 4 条工程原则]] — 四组件统一框架
+- [[entities/agentic-rl-frameworks-practices-long-horizon-wolfe-2026|Agentic RL 六框架实践地图：从算法到系统的长程智能体训练]] — RL六框架地图
+- [[entities/hermes-agent-deep-dive|Hermes Agent 深度解析（阿里云/飞樰）]] — 自进化内外双路径+四维工程7934字rv9全版
+- [[entities/llm-agent脚手架如何具备自进化能力以hermes-agent为例|LLM agent脚手架如何具备自进化能力？——以hermes agent为例]] — Hermes自进化15402字最全版
+- [[entities/agent-memory-storage-six-schools-wiki-compile-vs-raw-data-debate|Agent 记忆存储方案深度洞察：6 大流派分歧、Wiki 编译 vs 原始数据之争、Hermes Agent 启示]] — 六派之争全版
+- [[entities/harness-engineering-paradigm-comprehensive-2026|Harness Engineering 综合论述：为什么 2026 年真正重要的是它（含 ECC 开源实现案例）]] — 综合论述17305字含ECC案例rv9
+- [[entities/agent-harness-engineering-survey-etcvlovg-taxonomy|Agent Harness Engineering: A Survey — ETCLOVG Taxonomy]] — ETCLOVG分类补充
+- [[entities/claude-fable-5-prompt-leak-runtime-control-plane-vibecoder-2026|Claude Fable 5 提示词泄漏 — 1585 行 120K 字符的产品运行时控制平面与安全工程启示]] — 1585行控制平面
+- [[entities/ai-memory-architecture-deep-dive|AI Memory Architecture: Deep Dive]] — 29k记忆架构深度
+- [[entities/memory-in-the-llm-era-iclr2026|Memory in the LLM Era: Modular Architectures and Strategies in a Unified Framework]] — 四组件统一框架10658字
+- [[entities/agent-tools-research|深度解析 Hermes Agent 如何实现自进化及其 Prompt / Context / Harness 的设计实践]] — Hermes自进化解析
 
-## Skills 系统设计
-Hermes 为 Skills 设计了三种工具：  ^[raw/articles/hermes-agent-self-evolving-source-analysis.md]
-
-- **`skills_list`**：列出所有可用技能
-- **`skill_view`**：加载特定技能（回复前通读所有相关技能）
-- **`skill_manage`**：维护技能（create/patch/edit/delete/write_file/remove_file） ^[raw/articles/hermes-agent-self-evolving-source-analysis.md]
-
-### skill_manage Schema
-支持六种操作：create / patch / edit / delete / write_file / remove_file ^[raw/articles/hermes-agent-self-evolving-source-analysis.md]
-触发条件（写入 System Prompt）：  ^[raw/articles/hermes-agent-self-evolving-source-analysis.md]
-> 完成复杂任务（调用工具 ≥5 次）、修复棘手报错、或摸索出实用流程后，要用 `skill_manage` 保存这套方法为技能
-
-### Skill 加载原则
-> 回复前，请先通读所有技能。若某项技能与任务匹配，哪怕部分相关，都必须 `skill_view` 加载并严格遵循指令执行。宁可多加载无关技能，也绝不遗漏关键流程、坑点和工作规范。
-
-## Session Search 技术方案
-- **FTS5 全文索引**：所有消息实时索引到 SQLite FTS5 虚拟表
-- **相关性排序**：按关键词匹配度排序结果
-- **会话分组**：取最相关的几个会话
-- **LLM 提取**：从候选会话中提取与当前任务相关的经验
-
-## 完整 Self-Improve 流程示例
-以"整理 HN 头条摘要发到 Telegram"为例：  ^[raw/articles/hermes-agent-self-evolving-source-analysis.md]
-1. 用户发起任务  ^[raw/articles/hermes-agent-self-evolving-source-analysis.md]
-2. Agent 启动会话，加载 Memory（用户偏好）  ^[raw/articles/hermes-agent-self-evolving-source-analysis.md]
-3. Agent 查看 Skills（是否有相关沉淀流程）  ^[raw/articles/hermes-agent-self-evolving-source-analysis.md]
-4. Agent 执行任务，过程中调用工具 ≥5 次 → 触发 skill_manage 沉淀流程  ^[raw/articles/hermes-agent-self-evolving-source-analysis.md]
-5. 任务完成，结果写入 Session  ^[raw/articles/hermes-agent-self-evolving-source-analysis.md]
-6. 下次类似任务：Memory 提供偏好 + Skills 提供流程 + Session Search 找回经验  ^[raw/articles/hermes-agent-self-evolving-source-analysis.md]
-→ 每次任务起点比上一次更高  ^[raw/articles/hermes-agent-self-evolving-source-analysis.md]
-
-## 与 Claude Code / OpenClaw 的关键差异
-|| 维度 | Claude Code | Hermes Agent | OpenClaw || 
-||------|-------------|--------------|-----------|| 
-|| 定位 | Code Agent 专用 | 通用日常助手 | 消息网关+Agent || 
-|| System Prompt | 静态为主 | 大量动态 skill/memory 注入 | 动态 skill || 
-|| 自进化 | 依赖 skill 机制 | Memory + Skills + Session Search 三层 | 无 || 
-|| 工具集 | 开发工具为主 | Web/浏览器/多模态/多平台 | MCP 扩展 || 
-|| 架构 | 单一 Agent | 多 profile 隔离 | 消息网关为核心 || 
-**架构区别**：  ^[raw/articles/hermes-agent-self-evolving-source-analysis.md]
-
-- **OpenClaw**：围绕消息网关包了一层 Agent（消息→Agent→工具）
-- **Hermes**：围绕学习型 Agent 包了一层消息网关（Agent 能力→多平台出口）
-
-## 多 Agent Profiles 配置
-Hermes 支持创建多个完全隔离的 profile，每个拥有独立的配置、记忆、skill、会话和 SOUL.md。 ^[raw/articles/hermes-agent-self-evolving-source-analysis.md]
-
-### 典型团队配置
-```bash 
-hermes profile create designer --clone 
-hermes profile create programmer --clone 
-hermes profile create researcher --clone 
-``` 
-
-### 各角色 SOUL.md 示例
-**设计师** (`[本地运行时路径已隐藏]`)：  ^[raw/articles/hermes-agent-self-evolving-source-analysis.md]
-```markdown 
-
-# Soul
-You are an expert at creating hand-drawn illustrations that explain 
-AI, machine learning, and software engineering concepts. 
-``` 
-**程序员** (`[本地运行时路径已隐藏]`)：  ^[raw/articles/hermes-agent-self-evolving-source-analysis.md]
-```markdown 
-You are my staff engineer. Terse, direct, pragmatic. 
-You read code before you write code. 
-Always check: does this already exist? Are there tests? 
-``` 
-**研究员** (`[本地运行时路径已隐藏]`)：  ^[raw/articles/hermes-agent-self-evolving-source-analysis.md]
-```markdown 
-You are my deep researcher for AI/ML space. 
-Cover four streams: GitHub trending, big tech announcements, 
-fresh papers, social pulse. Lead with what changed since yesterday. 
-``` 
-
-## 目录结构
-``` 
-[本地运行时路径已隐藏] 
-├── config.yaml           # 主配置 
-├── .env                  # API keys 
-├── SOUL.md               # Agent 身份 (#1 system prompt) 
-├── memories/ 
-│   ├── MEMORY.md         # Agent 事实记忆 (2200 字符) 
-│   └── USER.md           # 用户画像 (1375 字符) 
-├── skills/               # 所有 skill 
-├── sessions/             # 会话元数据 
-├── state.db              # SQLite + FTS5 全文搜索 
-├── cron/ 
-│   ├── jobs.json         # 定时任务 
-│   └── output/           # 任务输出 
-└── logs/ 
-``` 
-
-## 自然语言 Cron
-Hermes 内置 scheduler，用自然语言描述即可自动转换：  ^[raw/articles/hermes-agent-self-evolving-source-analysis.md]
-```bash 
-
-# 工作日早上 9 点
-/cron add "0 9 * * 1-5" "Prepare daily digest" 
-
-# 每两小时
-/cron add "every 2h" "Check server status" 
-
-# 附加 skill
-/cron add "every 1h" "Summarize feeds" --skill blogwatcher 
-``` 
-
-## 自进化 skill 与 Curator
-### 触发条件
-- 完成复杂任务（≥5 次工具调用）
-- 遇到错误并找到可行路径
-- 用户纠正了做法
-- 发现非平凡工作流
-
-### Curator 维护
-- **触发**：空闲 2 小时 + 距上次运行 7 天
-- **自动转换**：30 天未用 → stale，90 天未用 → archive
-- **LLM 审查**：最多 8 轮迭代决定保留/patch/合并/归档
-- **快照**：每次运行前自动 tar.gz 备份
-
-## GEPA 离线优化
-GEPA（Genetic-Pareto Prompt Evolution）是独立于 Hermes runtime 的离线优化管线： ^[raw/articles/hermes-agent-self-evolving-source-analysis.md]
-1. 读取当前 skill  ^[raw/articles/hermes-agent-self-evolving-source-analysis.md]
-2. 生成评估数据集（合成/真实会话/golden set）  ^[raw/articles/hermes-agent-self-evolving-source-analysis.md]
-3. LLM-as-judge 按 rubric 评分  ^[raw/articles/hermes-agent-self-evolving-source-analysis.md]
-4. 约束门：测试 100% 通过、<15KB、缓存兼容  ^[raw/articles/hermes-agent-self-evolving-source-analysis.md]
-5. 以 PR 形式提交最优变体  ^[raw/articles/hermes-agent-self-evolving-source-analysis.md]
-成本：每次优化 $2-10（无需 GPU）  ^[raw/articles/hermes-agent-self-evolving-source-analysis.md]
-
-## 深度分析
-1. **Self-Evolving ≠ RL：不改权重的进化范式**  ^[raw/articles/hermes-agent-self-evolving-source-analysis.md]
-   主流认知将 Agent 能力提升等同于 RLHF 或模型微调，但 Hermes 的 self-improve 机制完全不触及模型权重。它通过三层记忆系统（Memory 记结论、Skill 存方法、Session Search 召回试错过程）实现渐进式能力积累，每次会话起点比上一次更高。这种「显式知识沉淀」路线的计算成本远低于训练，且结果可审计、可回滚，对生产环境更友好。 ^[raw/articles/hermes-agent-self-evolving-source-analysis.md]
-2. **三层记忆激活模式的三要素设计**  ^[raw/articles/hermes-agent-self-evolving-source-analysis.md]
-   Memory（被动注入）、Skill（主动加载）、Session Search（按需召回）构成互补的三要素：Memory 保证关键事实常驻上下文，Skill 让 Agent 主动调用经过验证的流程，Session Search 在用户提及历史时触发原始推理轨迹回溯。三者激活频率和方式各异但互相增强，共同避免「重复发明轮子」。这一设计与 Claude Code 的七层记忆架构（7-layer-memory-architecture）形成有趣对照——两者都通过多层记忆解决上下文有限问题，但 Hermes 更强调 Agent 自主维护而非被动积累。 ^[raw/articles/hermes-agent-self-evolving-source-analysis.md]
-3. **Memory 写入的 Prompt 注入防线是 Self-Improving 的安全基座**  ^[raw/articles/hermes-agent-self-evolving-source-analysis.md]
-   Hermes 在 MEMORY.md / USER.md 写入前增加了正则匹配防护层，拦截 prompt injection、role hijack、凭据泄露等威胁模式。这个设计常被忽略，但它实际上是 self-improving 能否安全运转的前提——若攻击者能通过「remember this」持久化污染 system prompt，整个进化机制反而会成为攻击载体。相比之下，多数 Agent 框架将 memory 视为纯存储问题，忽略了写入安全。 ^[raw/articles/hermes-agent-self-evolving-source-analysis.md]
-4. **Skill_Manage 的「宁可多加载」原则重构了工具调用语义**  ^[raw/articles/hermes-agent-self-evolving-source-analysis.md]
-   System Prompt 明确要求 Agent「宁可多加载无关技能，也绝不遗漏关键流程」。这将 skill 加载从「精准匹配」转变为「保守加载」，本质是用少量额外 token 换取了漏检风险的急剧下降。该原则与 Claude Code 的工具设计哲学（将常用操作封装为独立工具而非用通用 shell 替代）一脉相承——降低模型调用复杂度和出错率是跨框架共识。 ^[raw/articles/hermes-agent-self-evolving-source-analysis.md]
-5. **Session Search 的价值在于捕获「失败的推理轨迹」**  ^[raw/articles/hermes-agent-self-evolving-source-analysis.md]
-   Memory 记结论、Skill 记方法，但真正有价值的往往是试错过程中的错误假设和顿悟时刻。Session Search 的核心创新在于：它不是返回原始对话，而是用廉价模型（如 Gemini Flash）生成「问题→尝试过程→最终解法」的摘要，实现信息提炼的同时控制 token 成本。这一设计对错误模式学习和经验传承尤为重要。 ^[raw/articles/hermes-agent-self-evolving-source-analysis.md]
-
-## 实践启示
-1. **为 Agent 设计 skill 触发规则时，以「工具调用次数」而非「任务时长」为阈值**  ^[raw/articles/hermes-agent-self-evolving-source-analysis.md]
-   复杂任务往往体现为连续工具调用，而非单次长时间操作。Hermes 以 ≥5 次工具调用作为沉淀 skill 的触发条件，直接关联认知负荷而非表面耗时，更精准。自行搭建 Agent 时可参考此阈值，并根据领域任务复杂度适当调整。 ^[raw/articles/hermes-agent-self-evolving-source-analysis.md]
-2. **Memory 文件写入前必须加注入检测，不可用作纯存储**  ^[raw/articles/hermes-agent-self-evolving-source-analysis.md]
-   若在生产环境中为 Agent 添加 memory 机制，必须同步实现 prompt 注入防护。正则匹配虽非完美但足够轻量，可覆盖「ignore previous instructions」「you are now」等典型模式。若已有更完善的 LLM-based 安全方案（如 dual-llm guard），可替代正则方案。 ^[raw/articles/hermes-agent-self-evolving-source-analysis.md]
-3. **Session Search 应作为会话结束后的自动归档步骤，而非用户触发才运行**  ^[raw/articles/hermes-agent-self-evolving-source-analysis.md]
-   Hermes 的 session_search 是用户主动触发（提及「上次」「还记得」等），但更高效的做法是在每次会话结束时自动索引本次对话。这样当用户问起历史时，搜索结果已经就绪，不需要依赖用户的显式回忆措辞。实现上可在会话关闭钩子中调用 FTS5 索引 API。 ^[raw/articles/hermes-agent-self-evolving-source-analysis.md]
-4. **Skill 的 Curator 机制值得直接复用：空闲触发 + LLM 迭代审查 + 快照备份**  ^[raw/articles/hermes-agent-self-evolving-source-analysis.md]
-   Hermes Curator 的三要素——空闲 2 小时触发、LLM 8 轮迭代决定保留/patch/合并/归档、运行前自动 tar.gz 快照——是一套可独立移植的技能生命周期管理方案。Curator 的存在解决了「技能越积越多、无人维护」的维护困境，而非仅在 creation 时提供价值。 ^[raw/articles/hermes-agent-self-evolving-source-analysis.md]
-5. **Profile 隔离机制是团队多角色场景的必要设计**  ^[raw/articles/hermes-agent-self-evolving-source-analysis.md]
-   Hermes 的多 profile（designer / programmer / researcher）支持完全隔离的配置、记忆、skill 和 SOUL.md。对应到工程实践：为每个角色维护独立身份定义（SOUL.md）和专属技能集，可避免通用 Agent 在混合任务中的上下文污染问题。这是比单一 system prompt 更可扩展的多租户方案。 ^[raw/articles/hermes-agent-self-evolving-source-analysis.md]
-
-## 相关页面
-→ [[raw/articles/hermes-agent-self-evolving-source-analysis|原文存档]] ^[raw/articles/hermes-agent-self-evolving-source-analysis.md]
-→ [[entities/claude-code-prompt-source-analysis]] — Claude Code 提示词体系对比 ^[raw/articles/hermes-agent-self-evolving-source-analysis.md]
-→ [[entities/agent-context-management-architecture-patterns]] — Agent 上下文管理工程模式 ^[raw/articles/hermes-agent-self-evolving-source-analysis.md]
-→ [[entities/agent-harness-context-management-working-set]] — Agent Harness 上下文管理 ^[raw/articles/hermes-agent-self-evolving-source-analysis.md]
-
-## 相关实体
-- [[entities/memento-skills-agent-self-evolving|Memento-Skills — 技能外部记忆让 Agent 自进化（arXiv 2603.18743）]]
-- [[entities/skillos-learning-skill-curation-for-self-evolving-agents|SkillOS: Learning Skill Curation for Self-Evolving Agents]]
-- [[entities/self-evolving-agents-survey|Self-Evolving Agents 系统性综述]]
-- [[entities/hermes-self-improving-loop-winty|Hermes Self-Improving 闭环详解（winty）]]
-- [[entities/agent-self-improvement-six-mechanisms|Agent 自我改进的六条路]]
-- [[entities/skill-os-learning-skill-curation-self-evolving-agents|SkillOS: Learning Skill Curation for Self-Evolving Agents]]
-
-## Related
-
-- [[hermes-agent-loop-architecture|Hermes Agent Loop 架构]]
+## 工程实践
+- [[entities/didi-ibg-customer-experience-llm-quality-inspection-3-pipelines|滴滴 IBG 智能客服质检系统：3 管线（意图 86% / 合规 90%+ / VOC）+ 企业 LLM 落地方法论]] — 三管线质检14k
+- [[entities/qoder-skills-完全指南从零开始让-ai-按你的标准执行-v2|Qoder Skills 完全指南 + Agent Skill 迭代式编写 — AI 按你的标准执行]] — 菜单菜谱比喻+三级渐进披露18168字rv9全版
+- [[entities/hermes-agent-12-layer-full-configuration-guide|Hermes Agent 满配 12 层配置完整指南（从裸装到 24h Agent 团队）]] — 12层满配指南11566字rv9
+- [[entities/skill-design-spec-8-block-checklist-winty|企业级 Skill 8 块最小骨架 + 8 条 checklist 设计规范]] — 8块骨架checklist设计规范
+- [[entities/harness-engineering-comprehensive-guide-conardli|Harness Engineering 综合性指南（ConardLi 系列 · 含 Beautiful Article 实证 + Reacticle 协议）]] — ConardLi六层架构14634字rv9
+- [[entities/skill-hub-organization-asset-winty|Skill Hub：企业级 AI 经验资产化的关键（组织能力视角）— winty 前端Q 3 篇合集：组织资产 + 质量门禁 4 关 + 生命周期 6 阶段治理]] — Skill组织资产化治理五件事
+- [[entities/karpathy-claude-md-rules|Karpathy CLAUDE.md — 四条行为准则让 AI 编程 Agent 减少结构性失败]] — CLAUDE.md四行为准则rv9
+- [[entities/claude-code-skills-practical-guide-discovery-frontmatter|Claude Code Skills 实战指南 — 发现机制、编写与安全]] — 发现机制与安全
+- [[entities/skill-version-management-semantic-versioning-practices-winty|Skill 版本管理五大原则：从越改越差到持续演进]] — skill语义化版本五原则
+- [[entities/chromium-ai-coding-development-system|Chromium AI Coding 开发体系]] — Chromium AI基建

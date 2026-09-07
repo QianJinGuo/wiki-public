@@ -12,49 +12,36 @@ reviewed: 2026-09-07
 review_verdict: hub-retained
 review_category: thin
 review_note: "judged thin-0.75: 容器化部署步骤文; retained as hub (in-links>=20); MOC rewrite candidate"
----
+moc_rebuilt: 2026-09-07
+---# OpenClaw 多用户部署（四）：AgentCore Serverless 容器化
 
-## 深度分析
+> 本页原内容在 2026-09-07 质量闭环中判定为 **thin-0.75**，已按导航页（MOC）重建；
+> 原文备份见 `_archive/hub-rewrite-2026-09-07/openclaw-multi-4.md`，一手来源仍见下方 sources。
 
-**1. AgentCore Runtime 代表了 Serverless 在 AI Agent 领域的关键落地** ^[raw/articles/openclaw-multi-4.md]
+## 机制与论文
+- [[entities/agent-harness-engineering-survey-2026|Agent Harness Engineering: A Survey]] — harness工程survey
+- [[entities/agentic-overlays-rest-to-a2a-enterprise|Agentic Overlays -- Retrofit Legacy REST Services into A2A Agents]] — REST转A2A模式
 
-AgentCore Runtime 将 OpenClaw 从"一台服务器上的 Node.js 进程"变成 AWS 托管的 Serverless 容器，实现了从手动管理进程到自动按需启停 microVM 的根本转变 。这意味着 AI Agent 的运行时管理正式进入了 Serverless 时代——用户无需为闲置容量付费，空闲超时自动销毁，成本模型从"包月服务器"变为"按调用计费" 。 ^[raw/articles/openclaw-multi-4.md]
-
-**2. Phase 2/3 的阶段性部署设计体现了 IaC 编排的核心价值** ^[raw/articles/openclaw-multi-4.md]
-
-Phase 2 必须先于 Phase 3 完成，因为 Router Lambda 和 Cron Lambda 需要知道 AgentCore Runtime ID 才能部署 。这种依赖关系通过 CDK IaC 声明式管理，使得"部署"变成了可重复、可审计、可回滚的操作。对于复杂的多租户系统，分阶段部署是管理依赖链路的唯一有效手段 。 ^[raw/articles/openclaw-multi-4.md]
-
-**3. ARM64 容器镜像构建是 AgentCore 部署的技术门槛** ^[raw/articles/openclaw-multi-4.md]
-
-AgentCore Runtime 要求容器镜像必须是 ARM64 架构（运行在 AWS Graviton 芯片上），CodeBuild 提供 ARM64 构建机原生构建，无需本地 QEMU 模拟 。这一细节对有 ARM 适配需求的团队有重要启示：云端构建服务（如 CodeBuild）可以屏蔽底层架构差异，但构建产物仍然必须符合目标运行平台的架构要求 。 ^[raw/articles/openclaw-multi-4.md]
-
-**4. 消息路由层（OpenClawRouter）重构为 Serverless 是 Refactor 策略的核心体现** ^[raw/articles/openclaw-multi-4.md]
-
-迁移前 OpenClaw 的 Gateway 直接监听 webhook；迁移后通过 Amazon API Gateway + Lambda Router 处理所有渠道的 webhook，实现了多渠道接入的统一入口 。这是从"应用层协议处理"到"平台层网关服务"的关键重构——API Gateway 自带的限流（burst 50/s sustained 100/s）和访问日志能力，直接替换了原来需要自行开发或配置的反向代理/负载均衡组件 。 ^[raw/articles/openclaw-multi-4.md]
-
-**5. Token 用量监控体系为多租户成本分摊奠定了数据基础** ^[raw/articles/openclaw-multi-4.md]
-
-OpenClawTokenMonitoring 通过订阅 Bedrock 调用日志实时解析 Token 数并估算成本，配合 CloudWatch Dashboard 和 Alarm 实现用量可视化 。DynamoDB 单表 + 3 个 GSI 支持按渠道/模型/日期多维查询，90 天 TTL 自动清理——这种设计在小红书、Slack、飞书等多渠道并行使用的场景下，是实现精细化成本管控的基础设施 。 ^[raw/articles/openclaw-multi-4.md]
-
-## 实践启示
-
-1. **采用 Starter Toolkit 的 `agentcore deploy` 两命令部署模式** — Phase 2 的部署通过 `agentcore configure` + `agentcore deploy` 两条命令完成，比手动逐步执行 docker build → ecr push → create-agent-runtime → create-endpoint 更高效且可靠，生产部署应优先使用官方工具链 。 ^[raw/articles/openclaw-multi-4.md]
-
-2. **用 EventBridge Scheduler Group 实现多租户定时任务的统一管理** — OpenClawCron 通过一个 EventBridge Scheduler Group 容纳所有用户的定时任务，按用户 ID 做权限隔离，所有任务共用一个 Cron Lambda 执行器 。这种"共享执行器 + 隔离任务定义"的模式是 Serverless 定时任务的最佳实践。 ^[raw/articles/openclaw-multi-4.md]
-
-3. **构建 Token 用量异常检测机制** — Anomaly Detector 基于历史数据学习正常用量范围，偏离 2 个标准差即触发告警 。对于多租户 AI Agent 服务，建议配置双阈值告警（每小时 Token 总量和估算成本），避免总量未超标但调用模式异常的情况。 ^[raw/articles/openclaw-multi-4.md]
-
-4. **部署完成后验证 Runtime 状态** — 去 Amazon Bedrock 控制台 → AgentCore → Agent Runtimes 确认 openclaw_agent Runtime 状态为 Ready，同时检查 cdk.json 中的 runtime_id 和 runtime_endpoint_id 已被正确填充 。 ^[raw/articles/openclaw-multi-4.md]
-
-5. **Phase 3 的 Router Lambda 需要 Phase 2 输出的 Runtime ID** — 在自动化部署脚本中确保两个 Phase 的依赖顺序，或在 CDK 中通过 CloudFormation 隐式引用处理 。 ^[raw/articles/openclaw-multi-4.md]
-
-## 关联阅读
-
-## 相关实体
-- [[entities/openclaw-multi-1]]
-- [[entities/openclaw-multi-3]]
-- [[entities/introducing-os-level-actions-in-amazon-bedrock-agentcore-browser]]
-- [[entities/strands-agents-cloud-cost-optimizer]]
-- [[entities/aws-bedrock-agentcore-identity-security]]
-
-→ [[raw/articles/openclaw-multi-4|原文存档]] ^[raw/articles/openclaw-multi-4.md]
+## 工程实践
+- [[entities/building-multi-tenant-agents-with-amazon-bedrock-agentcore|Bedrock AgentCore 多租户 Agent 构建实践]] — 十组件多租户
+- [[entities/build-ai-agents-for-business-intelligence-with-amazon-bedrock-agentcore|Bedrock AgentCore 构建 BI 智能体]] — BI三agent案例
+- [[entities/yidian-tianxia-context-engineering-agentic-ai-qcon|一点天下：Context Engineering 与 Agentic AI (QCon)]] — 7114字最全六层上下文版
+- [[entities/integrating-aws-api-mcp-server-with-amazon-quick-suite-using-amazon-bedrock-agen|AWS API MCP Server + Quick Suite + Bedrock AgentCore 集成]] — NL→AWS API范式+AgentCore认证模型
+- [[entities/break-the-context-window-barrier-with-amazon-bedrock-agentcore|Bedrock AgentCore RLM：突破上下文窗口限制]] — RLM程序化环境
+- [[entities/aws-bedrock-serverless-async-inference-multimodal|Amazon Bedrock模型推理的Serverless异步架构 – 处理在线多模态高负载案例]] — 异步推理rv9主版
+- [[entities/agentic-ai-data-mesh-aws-s3-vectors-mcp|Building Agentic AI Applications with Data Mesh on AWS]] — data mesh治理架构
+- [[entities/finops-devops-dual-agent-cost-optimization|FinOps + DevOps 双Agent 协作：AI驱动的云成本优化实战]] — 双Agent结构化交接+边界意识，$47629隐性成本案例
+- [[entities/amazon-bedrock-agentcore-web-search-ga|Amazon Bedrock AgentCore Web Search: 托管式网页搜索能力 GA]] — 托管搜索GA
+- [[entities/build-a-healthcare-appointment-agent-with-amazon-nova-2-soni|Build a Healthcare Appointment Agent with Amazon Nova 2 Sonic]] — 语音agent方案
+- [[entities/build-ai-powered-dashboard-automation-agents-with-nlp-on-amazon-bedrock-agentcor|Bedrock AgentCore NLP 仪表盘自动化 Agent]] — 仪表盘三代理
+- [[entities/introducing-os-level-actions-in-amazon-bedrock-agentcore-browser|Introducing OS Level Actions in Amazon Bedrock AgentCore Browser]] — OS层动作补全浏览器自动化盲区
+- [[entities/深度拆解-hermes-agent-记忆系统它修正了-openclaw-的哪层误区|深度拆解 Hermes Agent 记忆系统：它修正了 OpenClaw 的哪层误区？]] — 记忆四问frozen snapshot
+- [[entities/amazon-bedrock-agentcore-gateway-mcp-extension|Extending MCP support for Amazon Bedrock AgentCore Gateway]] — MCP网关27k深度
+- [[entities/automate-aml-alert-triage-with-amazon-quick-and-snowflake-co|Solution overview]] — AML triage方案
+- [[entities/aws-sagemaker-sft-dpo-tool-calling|SFT+DPO 双阶段微调：Qwen3-1.7B Tool Calling 精度提升方案]] — 双阶段微调数据
+- [[entities/滴滴国际化客服质检智能化之路基于-amazon-bedrock-的多语种多业务线质检实践|滴滴国际化客服质检智能化之路：基于 Amazon Bedrock 的多语种多业务线质检实践]] — 三条管线38%到86%
+- [[entities/deep-agents-bedrock-agentcore-subagent-orchestration-aws|Deep Agents + Bedrock AgentCore：多 Agent 编排 + 隔离基础设施的端到端研究 Agent 实战]] — 两层编排参考实现
+- [[entities/agentic-incident-triage-assistant-amazon-quick-new-relic-asana|Agentic Incident Triage Assistant with Amazon Quick, New Relic MCP Server, and Asana]] — incident编排实战
+- [[entities/agent-memory-engineering-tax-aws-china-2026|Agent 记忆系统工程税：写入纪律·Prompt Cache 冲突·跨模型容量·Embedding 迁移·自产 Skill 治理]] — 记忆工程税框架
+- [[entities/amazon-bedrock-agentic-payments-guardrails|Enable safe agentic payments with built-in guardrails using Amazon Bedrock]] — agent支付护栏15k
+- [[entities/data-for-ai明其所耗知其所因让每一分-token-消耗都可量化的全栈实践|Data for AI：明其所耗，知其所因！让每一分 Token 消耗都可量化的全栈实践]] — token可观测四方案

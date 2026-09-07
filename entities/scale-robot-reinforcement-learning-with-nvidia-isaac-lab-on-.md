@@ -13,47 +13,41 @@ reviewed: 2026-09-07
 review_verdict: hub-retained
 review_category: dup
 review_note: "judged dup-0.8: Isaac Lab 1963字版，batch-43已留相关版; retained as hub (in-links>=20); MOC rewrite candidate"
----
+moc_rebuilt: 2026-09-07
+---# Scale Robot Reinforcement Learning with NVIDIA Isaac Lab on Amazon SageMaker AI
 
-# Scale Robot Reinforcement Learning with NVIDIA Isaac Lab on Amazon SageMaker AI
+> 本页原内容在 2026-09-07 质量闭环中判定为 **dup-0.8**，已按导航页（MOC）重建；
+> 原文备份见 `_archive/hub-rewrite-2026-09-07/scale-robot-reinforcement-learning-with-nvidia-isaac-lab-on-.md`，一手来源仍见下方 sources。
 
-→ [[raw/articles/scale-robot-reinforcement-learning-with-nvidia-isaac-lab-on-|原文存档]] ^[raw/articles/scale-robot-reinforcement-learning-with-nvidia-isaac-lab-on-.md]
+## 机制与论文
+- [[entities/zapocalypse-the-attack-chain-that-could-have-hijacked-zapier-20260606|Zapocalypse: The Attack Chain That Could Have Hijacked Zapier]] — 五步已知模式组合攻击链
+- [[entities/一文带你弄懂-ai-圈爆火的新概念harness-engineering|一文带你弄懂 AI 圈爆火的新概念：Harness Engineering]] — 13141字最全科普版
+- [[entities/cuhk-slim-skill-lifecycle-agentic-rl-arxiv-2605-10923|港中文 SLIM：动态技能生命周期管理，arXiv 2605.10923]] — 技能生命周期研究
+- [[entities/iclr-2026-英伟达-普渡大学用agent闭环实现文生3d|Scenethesis（ICLR 2026）英伟达 & 普渡大学用 Agent 闭环实现文生 3D]] — Scenethesis四阶段闭环，碰撞率6.1%→0.8%
+- [[entities/introducing-1-bit-and-ternary-bonsai-image-4b-image-generati-352fe9|Introducing 1-bit and Ternary Bonsai Image 4B: Image Generation for Local Devices]] — 1-bit/ternary量化图像生成规格
+- [[entities/news-bonsai-image-4b|Introducing 1-bit and Ternary Bonsai Image 4B: Image Generation for Local Devices]] — Bonsai Image 4B量化帕累托外推3664字全版
+- [[entities/build-llm-from-scratch-7-chapters-zion|从零构建大语言模型 —— 读完这篇你就懂了]] — LLM教程七章
+- [[entities/yann-lecun-llm-not-intelligence-jepa|Yann LeCun 谈 LLM 不是智能与世界模型 JEPA]] — 5738字最全JEPA论证
 
-## 深度分析
+## 工程实践
+- [[entities/impeccable-frontend-design-skill-harness-vibecoder|Impeccable：把 AI 前端设计变成可检查的工作流 — 33.4k Star 开源项目深度分析]] — Impeccable四层架构9210字rv9全版
+- [[entities/anthropic-95pct-data-analysis-jiagoux-data-level-harness-20260606|数据级 Harness：架构师 JiaGouX 解读 Anthropic 95% 数据分析与 5 个反直觉边界]] — 数据级harness解读
+- [[entities/autoresearch-marketing-growth-amap-ai-native|高德 Marketing AutoResearch：AI Native 营销增长经营托管框架]] — 营销经营托管
+- [[entities/存之有序治之有矩agent-记忆系统的工程实践与演进|存之有序，治之有矩——Agent 记忆系统的工程实践与演进]] — 写入纪律prompt cache冲突
+- [[entities/agentops-operationalize-agentic-ai-at-scale-with-amazon-bedr|AgentOps: Operationalize agentic AI at scale with Amazon Bedrock AgentCore]] — 四支柱解析版
+- [[entities/anthropic-institute-when-ai-builds-itself-jiagoux-interpretation|Anthropic Institute《When AI builds itself》深度解读：AI 进入 AI 研发执行层、瓶颈迁移与研发级 Harness（架构师 JiaGouX）]] — 解读短条borderline
+- [[entities/构建无服务器kiro调度平台用kiro-cli-eventbridge-ecs-fargate实现定时ai任务|构建无服务器Kiro调度平台：用Kiro CLI + EventBridge + ECS Fargate实现定时AI任务]] — 定时AI任务7x24
+- [[entities/让-amazon-quick-操作飞书构建远程-mcp-服务的设计实践|让 Amazon Quick 操作飞书：构建远程 MCP 服务的设计实践]] — MetaTool分层注册设计
+- [[entities/secure-ai-agents-with-policy-and-lambda-interceptors-in-amaz|Secure AI agents with Policy and Lambda interceptors in Amazon Bedrock AgentCore gateway]] — Cedar策略+Lambda拦截器双模式
+- [[entities/amazon-quick-mcp-kdbx-time-series|Amazon Quick integration with time-series databases for market intelligence using MCP]] — 集成短条
+- [[entities/aliyun-mse-ai-task-scheduling-agent-sandbox-cost-90-percent|阿里云 MSE AI 任务调度 + Agent Sandbox：动态休眠/唤醒 OpenClaw Agent 成本下降 90%+]] — 休眠唤醒短条borderline
+- [[entities/tencentdb-agent-memory-context-offloading|腾讯云Agent Memory：Mermaid无限画布×上下文卸载]] — Mermaid画布上下文卸载
+- [[entities/better-decisions-at-scale-how-mathematical-optimization-deli|Better decisions at scale: How mathematical optimization delivers where intuition fails]] — 数学优化案例borderline
+- [[entities/ai-xiaolaoliu-business-agent-augmentation-layer-general-base-20260606|小刘商业 Agent 增强层通用基座]] — 基座+增强层论点短条
+- [[entities/giving-your-ai-a-job-interview|Giving your AI a Job Interview]] — Mollick评估三重困境+三种路径
+- [[entities/karpathy-autoresearch-software-development-niaowo|我把 Karpathy 的 AutoResearch 搬到了软件开发领域，效果炸了]] — AutoResearch迁移软开+交叉审核
 
-Scale Robot Reinforcement Learning with NVIDIA Isaac Lab on Amazon SageMaker AI基于原文内容的深入分析： ^[raw/articles/scale-robot-reinforcement-learning-with-nvidia-isaac-lab-on-.md]
-
-### 核心观点
-
-1. # Scale Robot Reinforcement Learning with NVIDIA Isaac Lab on Amazon SageMaker AI ^[raw/articles/scale-robot-reinforcement-learning-with-nvidia-isaac-lab-on-.md]
-2. Physical AI is moving from research into production ^[raw/articles/scale-robot-reinforcement-learning-with-nvidia-isaac-lab-on-.md]
-3. The full code of this solution is available in the [accompanying GitHub repository](<https://github ^[raw/articles/scale-robot-reinforcement-learning-with-nvidia-isaac-lab-on-.md]
-4. Why Amazon SageMaker AI for Physical AI training ^[raw/articles/scale-robot-reinforcement-learning-with-nvidia-isaac-lab-on-.md]
-
-### 技术要点
-
-本文在agent方向提供以下关键技术洞察： ^[raw/articles/scale-robot-reinforcement-learning-with-nvidia-isaac-lab-on-.md]
-
-- **技术架构**: 基于agent的设计理念和实现路径
-- **工程挑战**: 实际落地中面临的关键问题和解决思路
-- **行业趋势**: 该领域的发展方向和新兴范式
-
-### 与现有知识体系的关联
-
-- [[entities/nvidia-isaac-lab-sagemaker-robot-rl-humanoid]]
-- [[entities/ethan-he-cosmos-grok-imagine-latent-space-video-agent-20260606]]
-- [[entities/存之有序治之有矩agent-记忆系统的工程实践与演进]]
-- [[entities/openclaw-完全指南这可能是全网最新最全的系统化教程了32w字建议收藏]]
-- [[entities/openclaw-完全指南这可能是全网最新最全的系统化教程了32w字建议收藏-v2]]
-
-
-## 实践启示
-
-1. **工程落地**: 将agent领域的理论转化为可执行方案时，需关注可观测性和可维护性 ^[raw/articles/scale-robot-reinforcement-learning-with-nvidia-isaac-lab-on-.md]
-2. **技术选型**: 根据实际场景需求选择合适的技术栈，避免过度工程化 ^[raw/articles/scale-robot-reinforcement-learning-with-nvidia-isaac-lab-on-.md]
-3. **持续迭代**: 建立反馈闭环，通过数据驱动的方式持续优化系统表现 ^[raw/articles/scale-robot-reinforcement-learning-with-nvidia-isaac-lab-on-.md]
-4. **风险管控**: 在引入新技术时，充分评估其对现有系统稳定性的影响 ^[raw/articles/scale-robot-reinforcement-learning-with-nvidia-isaac-lab-on-.md]
-
-## 相关实体
-
-- [[moc/aws-cloud-ai-infrastructure|MOC]]
+## 延伸导航
+- [[moc/agent-memory-architecture-decision-points|Agent Memory 架构选择的关键决策点是什么？]]
+- [[moc/agent-engineering-guide|Agent 工程全景指南]]
+- [[moc/mlops-training-inference|MLOps：训练、推理与模型运维全景]]
