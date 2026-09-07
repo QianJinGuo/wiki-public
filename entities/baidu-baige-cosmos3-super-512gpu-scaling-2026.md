@@ -2,13 +2,16 @@
 title: "百度百舸 Cosmos3-Super 512 卡 Scaling：无 NVLink 通用 GPU 集群的 AI Infra 工程优化"
 type: entity
 created: "2026-08-03"
-updated: 2026-08-03
+updated: 2026-09-07
 tags: [wechat, ai-infra, distributed-training, world-model, fsdp2, scaling, baidu]
 rating: v8c9
 confidence: 0.85
 provenance_state: extracted
 sources:
   - raw/articles/baidu-baige-cosmos3-super-512gpu-scaling-2026-08-03
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 百度百舸 Cosmos3-Super 512 卡 Scaling：无 NVLink 通用 GPU 集群的 AI Infra 工程优化

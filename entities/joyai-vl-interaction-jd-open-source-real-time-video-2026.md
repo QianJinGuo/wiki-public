@@ -1,12 +1,15 @@
 ---
 title: "京东JoyAI-VL-Interaction：全球首个全栈开源实时视频交互模型"
 created: 2026-07-03
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [ai, multimodal, vision, video, interaction, jd, open-source, real-time, agent, vlm, streaming-video]
 sources: [raw/articles/joyai-vl-interaction-jd-open-source-real-time-video-2026]
 confidence: 0.75
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 京东JoyAI-VL-Interaction：全球首个全栈开源实时视频视觉语言交互模型

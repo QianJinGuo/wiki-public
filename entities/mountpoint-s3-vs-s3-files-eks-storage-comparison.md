@@ -1,7 +1,7 @@
 ---
 title: "Mountpoint S3 vs S3 Files：EKS 上 S3 数据接入的两种方案实战对比"
 created: 2026-06-15
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [aws, eks, s3, mountpoint, s3-files, efs, csi, storage, ai-ml, performance, aws-china-blog]
 sources: [raw/articles/mountpoint-s3-与-s3-files-在-eks-上的实战对比]
@@ -9,6 +9,9 @@ review_value: 8
 review_confidence: 7
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Mountpoint S3 vs S3 Files：EKS 上 S3 数据接入的两种方案实战对比

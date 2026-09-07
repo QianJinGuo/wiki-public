@@ -2,7 +2,7 @@
 title: "高德Proactive Agent — LBS场景时空思考型主动服务Agent"
 created: 2026-05-18
 date: "2026-05-18"
-updated: 2026-08-01
+updated: 2026-09-07
 tags: [proactive-agent, lbs, amap, spacetime-reasoning, recommendation-system, genui]
 review_value: 8
 review_confidence: 7
@@ -12,6 +12,9 @@ sources:
   - raw/articles/amap-proactive-agent-lbs-spacetime
 type: entity
 series: "智能时空思考Agent"
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 ## 核心定位
 高德地图 Proactive Agent：将传统"搜与推"升级为**会思考、会主动决策**的时空思考型 Agent，在用户开口之前就提供量身定制的贴心服务。   ^[raw/articles/amap-proactive-agent-lbs-spacetime.md]

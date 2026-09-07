@@ -9,6 +9,9 @@ sources: [raw/articles/amazon-redshift-推出带有集成数据湖查询引擎�
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 3
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 ## 核心要点
 - AWS 技术实践

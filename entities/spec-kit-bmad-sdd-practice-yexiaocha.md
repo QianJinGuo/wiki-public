@@ -2,13 +2,16 @@
 
 title: "Spec-Kit vs BMAD：AI 原生 SDD 双框架实战对比（叶小钗重构迁移案例）"
 created: 2026-06-05
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, sdd, spec-driven-development, spec-kit, bmad, ai-native-team, multi-agent, roundtable, refactor-migration, yexiaocha]
 sources: [raw/articles/spec-kit-bmad-sdd-practice-yexiaocha]
 review_value: 8
 review_confidence: 8
 summary: 叶小钗用 Spec-Kit + BMAD 跑重构迁移 SDD 实战：Spec-Kit 多仓 3 类补充(子仓/多视角评审/门禁) + BMAD 圆桌挑战"基线硬约束"纠正 SaaS→BPO 认知 + 砍需求 13 项 + "Spec-Kit 拉上限 / BMAD 拉下限"互补公式
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Spec-Kit vs BMAD：AI 原生 SDD 双框架实战对比（叶小钗重构迁移案例）

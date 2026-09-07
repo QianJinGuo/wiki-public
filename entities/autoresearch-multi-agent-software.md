@@ -2,7 +2,7 @@
 
 title: "AutoResearch：多 Agent 自动化软件开发"
 created: 2026-04-30
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [autoresearch, multi-agent, code-review, automated-development, karpathy, software-engineering, codex, claude-code, harness]
 sources:
@@ -15,6 +15,9 @@ review_confidence: 8
 review_recommendation: strong
 review_stars: 4
 provenance_state: inferred
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 核心命题

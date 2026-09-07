@@ -2,7 +2,7 @@
 
 title: "Claude Code Session 管理与 1M 上下文最佳实践"
 created: "2026-05-09"
-updated: 2026-08-29
+updated: 2026-09-07
 type: "entity"
 tags: [claude-code, session-management, context-management, context-rot, compaction, subagent, rewind]
 review_value: 8
@@ -14,6 +14,9 @@ related:
   - "concepts/gsd-get-shit-done-context-management-tool"
   - "entities/agent-harness-context-management-working-set"
   - "concepts/hermes-agent"
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 核心洞察：每轮对话都是一个分叉决策点

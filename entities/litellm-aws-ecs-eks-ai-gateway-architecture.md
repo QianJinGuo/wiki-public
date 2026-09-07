@@ -3,13 +3,16 @@ title: "LiteLLM 生产级部署：AWS ECS/EKS 双方案 + Control Plane / Data P
 type: entity
 tags: [litellm, aws, ecs, eks, kubernetes, ai-gateway, production-deployment, multi-region, high-availability, control-plane, data-plane]
 created: 2026-06-15
-updated: 2026-06-16
+updated: 2026-09-07
 review_value: 8
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4
 sources: [raw/articles/litellm-生产级部署基于-aws-ecseks-的-ai-gateway-架构]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > [!abstract] ^[raw/articles/litellm-生产级部署基于-aws-ecseks-的-ai-gateway-架构.md]

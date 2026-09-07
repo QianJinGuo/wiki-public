@@ -7,6 +7,9 @@ tags: [boogu-image, image-generation, text-to-image, huawei, open-weights, 2k, �
 sources: [raw/articles/boogu-image-01-华为-2k-图像模型-40万美元]
 confidence: 0.75
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Boogu-Image-0.1 — 40 万美元训出 2K 开源图像模型

@@ -8,8 +8,11 @@ review_value: 8
 review_confidence: 9
 tags: [anthropic, claude, next-gen, adaptive-thinking, dreaming, personality-training, consciousness, pm-workflow, evals]
 created: "2026-05-18"
-updated: 2026-08-29
+updated: 2026-09-07
 sources: [raw/articles/anthropic-claude-next-gen-alex-infoq]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > 来源：[[raw/articles/anthropic-claude-next-gen-alex-infoq|原文存档]]

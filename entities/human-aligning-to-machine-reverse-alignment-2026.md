@@ -1,13 +1,16 @@
 ---
 title: "人机对齐？不，是人正在向机器对齐"
 created: 2026-07-06
-updated: 2026-08-24
+updated: 2026-09-07
 type: entity
 tags: [agent, ai, llm, alignment, reverse-alignment, human-ai-interaction]
 source_url: "https://mp.weixin.qq.com/s/eP0PnN8fnDpxFpyfO_rkDw"
 confidence: 0.75
 provenance_state: extracted
 sources: [raw/articles/human-aligning-to-machine-reverse-alignment-2026]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 人机对齐？不，是人正在向机器对齐

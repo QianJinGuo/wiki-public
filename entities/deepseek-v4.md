@@ -2,7 +2,7 @@
 
 title: "DeepSeek-V4深度拆解：一篇论文同时做了五件大事"
 created: 2026-05-13
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 source: wechat
 source_url:
@@ -12,6 +12,9 @@ review_confidence: 8
 review_recommendation: worth-reading
 date: 2026-05-13
 tags: [deepseek, llm, moe, architecture, inference-optimization]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > -> [[raw/articles/deepseek-v4-training-58-page-paper-deep-dive.md|原文存档]]

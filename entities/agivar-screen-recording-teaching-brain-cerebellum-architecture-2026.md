@@ -2,13 +2,16 @@
 
 title: "Agivar 录屏教学桌面 Agent：清华非十科技 大脑小脑双层架构 + Jittor 推理引擎 + 2.3× 速度 + 三层确定性"
 created: 2026-06-16
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agivar, screen-recording-teaching, desktop-agent, computer-use, brain-cerebellum, jittor, tsinghua-university, fittentech, fitten-code, fde, forward-deployment-engineer, three-layer-determinism, multi-agent-validation, 2026, machine-spirit, product-launch, soft-content, 2-3x-speedup]
 sources: [raw/articles/agivar-screen-recording-teaching-brain-cerebellum-architecture-2026]
 review_value: 8
 review_confidence: 8
 summary: 机器之心 2026-06-16 报道清华非十科技 Agivar 桌面 Agent：录屏教学 (用户演示一次 AI 学习后自动执行) + 大脑小脑双层架构 (大模型规划/小模型高频执行) + 清华自研 Jittor 推理引擎 + 同任务 2.3× 提速 (57s vs 132s) + 三层确定性 (训练收敛/多重校验/规则约束) + 适用场景 (政务/ERP/CRM/财务/OA 无 API 重复操作); 软文部分批判性吸收
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Agivar 录屏教学桌面 Agent

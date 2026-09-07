@@ -7,6 +7,9 @@ tags: [entity, desktop-agent, comparison, doubao, workbuddy, qoderwork, ai-agent
 source_url:
 sources: [raw/articles/豆包workbuddyqoderwork怎么选我用8个真实办公任务把三家桌面agent测明白了]
 vxc: 56
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 豆包、WorkBuddy、QoderWork怎么选？我用8个真实办公任务把三家桌面Agent测明白了

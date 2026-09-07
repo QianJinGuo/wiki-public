@@ -8,6 +8,9 @@ tags: [wechat, ai]
 rating: v7c7
 sources:
   - raw/articles/拆解-openclaw-架构三4-组件-6-级降级agent-运行引擎的源码级设计
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 拆解 OpenClaw 架构（三）：4 组件 + 6 级降级，Agent 运行引擎的源码级设计

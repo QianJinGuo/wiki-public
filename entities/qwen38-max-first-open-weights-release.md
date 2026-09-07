@@ -1,11 +1,14 @@
 ---
 title: "Qwen 3.8-Max：首个开源权重的 Qwen-Max 级模型"
 created: 2026-08-04
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [qwen, alibaba, model, open-weights, moe, agent, autonomous-coding, harness, self-evolution, long-horizon, rl]
 sources: [raw/articles/qwen38-max-open-weights-release]
 confidence: 0.7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Qwen 3.8-Max：首个开源权重的 Qwen-Max 级模型

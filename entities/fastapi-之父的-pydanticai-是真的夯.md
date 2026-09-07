@@ -8,6 +8,9 @@ tags: [wechat, ai, agent, llm, pydantic, type-safety]
 rating: v8c7
 sources:
   - raw/articles/fastapi-之父的-pydanticai-是真的夯
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # FastAPI 之父的 PydanticAI 是真的夯！

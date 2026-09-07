@@ -1,7 +1,7 @@
 ---
 title: "面向复杂算法任务的 AI Agent：高德 Long-Running Harness 架构与 Uplift 模型迭代应用"
 created: 2026-06-09
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [gaode, amap, uplift-model, long-running-agent, harness, durable-execution, critic-agent, self-healing, enterprise-ai, marketing-algorithm, ml-engineering, playwrigh, explicit-handoff, tool-registry, tracing-spans]
 sources:
@@ -9,6 +9,9 @@ sources:
 review_value: 9
 review_confidence: 9
 provenance_state: inferred
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > 原文归档：[[raw/articles/gaode-uplift-model-iteration-agent-long-running-harness|原文归档]] ^[raw/articles/gaode-uplift-model-iteration-agent-long-running-harness.md]

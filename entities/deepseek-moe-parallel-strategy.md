@@ -3,11 +3,14 @@ title: "DeepSeek MoE 并行策略与GPU通信优化"
 type: entity
 tags: [deepseek, moe, expert-parallel, gpu-parallel, distributed-training, dualpipe, waved-ep, tile-lang]
 created: 2026-05-17
-updated: 2026-08-29
+updated: 2026-09-07
 sources: [raw/articles/deepseek-moe-parallel-strategy]
 review_value: 8
 review_confidence: 8
 review_recommendation: worth-reading
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 ## 核心观点
 从Dense切到MoE后MFU暴跌的原因不在于Expert切分维度小（实际≥1024），而在于**通信bound**。解决方法是设计合理的GPU并行策略，做好计算和通信的overlap。 ^[raw/articles/deepseek-moe-parallel-strategy.md]

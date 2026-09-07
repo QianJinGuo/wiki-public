@@ -1,7 +1,7 @@
 ---
 title: "Apple Foundation Models"
 created: 2026-06-16
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [article, newsletter]
 source_url: "https://platform.claude.com/docs/en/cli-sdks-libraries/libraries/apple-foundation-models"
@@ -10,6 +10,9 @@ review_value: 7
 review_confidence: 7
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Apple Foundation Models

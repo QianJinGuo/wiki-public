@@ -2,12 +2,15 @@
 
 title: "Claude Managed Agents 官方 Harness 平台指南"
 created: 2026-05-10
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [anthropic, claude, managed-agents, harness, platform]
 sources: [raw/articles/anthropic-claude-managed-agents-guide]
 review_value: 7
 review_confidence: 8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 核心洞察

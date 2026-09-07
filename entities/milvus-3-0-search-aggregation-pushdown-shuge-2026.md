@@ -1,11 +1,14 @@
 ---
 title: "Milvus 3.0 聚合下推：3 层隔离、2 条路径、4 倍安全因子"
 created: 2026-08-02
-updated: 2026-08-07
+updated: 2026-09-07
 type: entity
 tags: [milvus, vector-database, search-aggregation, group-by, order-by, segcore, proxy, ann-search, source-code-analysis, shugex, database-internals]
 sources: [raw/articles/milvus-3-0-search-aggregation-pushdown-shuge-2026]
 confidence: 0.6
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Milvus 3.0 聚合下推（Search Aggregation & Order By）

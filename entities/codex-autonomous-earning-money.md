@@ -4,10 +4,13 @@ title: "Codex 自主赚钱：全自动商业闭环实验"
 type: entity
 tags: [gpt]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/codex-autonomous-earning-money]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # codex-autonomous-earning-money

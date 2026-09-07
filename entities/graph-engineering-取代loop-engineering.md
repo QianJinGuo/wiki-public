@@ -7,6 +7,9 @@ tags: [ai, graph-engineering, loop-engineering, multi-agent, orchestration, lang
 sources: [raw/articles/loop-engineering-已死-一文带你了解graph-engineering]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Graph Engineering：从"编排一个智能体"到"编排一群智能体"

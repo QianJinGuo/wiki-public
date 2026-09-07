@@ -2,13 +2,16 @@
 title: "Latest open artifacts (#20): New orgs! New types of models! With Nemotron Super, Sarvam, Cohere Transcribe, & others"
 type: entity
 created: '2026-06-07'
-updated: 2026-08-28
+updated: 2026-09-07
 review_confidence: 8
 review_recommendation: strong
 review_value: 10
 tags: [interconnects-latest-open-artifacts-20-new-orgs-new-types-of-models-with-nemotron-super-sarvam]
 provenance_state: inferred
 sources:
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Latest open artifacts (#20): New orgs! New types of models! With Nemotron Super, Sarvam, Cohere Transcribe, & others

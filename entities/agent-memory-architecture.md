@@ -2,12 +2,16 @@
 
 title: "Agent Memory 架构本质"
 created: 2026-04-27
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent-memory, memory-system, belief-tracking, context-management, agent-architecture, knowledge-governance, harness]
 sources: [raw/articles/agent-memory-architecture-essence, raw/articles/self-improving-memory-for-agents]
 review_value: 8
 review_confidence: 9
+reviewed: 2026-09-07
+review_verdict: hub-retained
+review_category: dup
+review_note: "judged dup-0.85: 与04-30版memory本质重复; retained as hub (in-links>=20); MOC rewrite candidate"
 ---
 
 ## Overview

@@ -9,6 +9,9 @@ review_value: 5
 sources: [raw/articles/精选-10-个开发者常用的-ai-智能体技能agent-skills]
 review_confidence: 6
 score_validated: 2026-09-05
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > -> [[raw/articles/精选-10-个开发者常用的-ai-智能体技能agent-skills.md|原文存档]]

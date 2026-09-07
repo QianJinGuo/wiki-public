@@ -8,6 +8,9 @@ tags: [wechat, ai]
 rating: v7c8
 sources:
   - raw/articles/长时自主agent先解决这8个harness核心问题
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 长时自主Agent，先解决这8个Harness核心问题

@@ -8,6 +8,9 @@ sources: [raw/articles/nvidia-bluefield-dpu-助力-ai-云兼顾效率与可信, 
 publish_date: 2026-07-05
 vxc: 49
 confidence: 0.7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # NVIDIA BlueField DPU：助力 AI 云兼顾效率与可信

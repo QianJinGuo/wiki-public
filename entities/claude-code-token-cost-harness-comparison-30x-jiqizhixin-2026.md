@@ -1,11 +1,14 @@
 ---
 title: "Claude Code到底有多费token？对比实验来了：三大框架最多差30倍"
 created: 2026-07-31
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: ['harness', 'token-efficiency', 'claude-code', 'hermes', 'kimi-code', 'composio', 'benchmark', 'agent-cost', 'harness-tax']
 sources: [raw/articles/claude-code-token-cost-harness-comparison-30x-jiqizhixin-2026]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > -> [[raw/articles/claude-code-token-cost-harness-comparison-30x-jiqizhixin-2026.md|原文存档]]

@@ -3,10 +3,13 @@ title: "深度解析 Hermes Agent 如何实现自进化及其 Prompt / Context /
 type: entity
 tags: [agent, fine-tuning, harness-engineering, memory, open-source, prompt, prompt-engineering, rl, tool-use, self-evolving]
 created: 2026-06-10
-updated: 2026-06-19
+updated: 2026-09-07
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/agent-tools-research]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 深度解析 Hermes Agent 如何实现自进化及其 Prompt / Context / Harness 的设计实践

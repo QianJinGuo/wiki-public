@@ -3,7 +3,7 @@ title: "无障碍设计师 vibe coding：当所有同事都在用 AI 写代码�
 description: "Eric Bailey（GitHub accessibility designer）2026-06-15 发表：当团队 100% 转向 LLM-first 工作流、且个人 token 使用被追踪排名时，无障碍设计师也被结构性强制 vibe coding。文章探讨：(1) LLM 让不能写 JS 但能写 detailed specs 的设计师能直接做出产品增强；(2) \"vibe coding\" 的真实定义远不止简单提示词；(3) 质量提升（aria-label、信息层次、互动组件）vs 实际可访问性的张力。"
 source: "[[raw/articles/the-case-for-an-accessibility-designer-vibe-coding-when-all-his-coworkers-are-also-vibe-coding]]"
 created: 2026-06-18
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [vibe-coding, accessibility, llm, ai-coding, ux, aria, github, design, agentic-coding]
 review_value: 7
@@ -14,6 +14,9 @@ sources:
   - raw/articles/the-case-for-an-accessibility-designer-vibe-coding-when-all-his-coworkers-are-also-vibe-coding
 confidence: high
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 无障碍设计师 vibe coding：当所有同事都在用 AI 写代码时

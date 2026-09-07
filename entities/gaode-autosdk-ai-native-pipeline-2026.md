@@ -2,13 +2,16 @@
 title: "高德汽车工程 AI Native：AutoSDK 全链路 AI Native 开发（架构篇）"
 type: entity
 created: "2026-08-03"
-updated: 2026-08-03
+updated: 2026-09-07
 tags: [wechat, ai-coding, ai-native, toB, harness, multi-agent, skill, ddd]
 rating: v8c9
 confidence: 0.85
 provenance_state: extracted
 sources:
   - raw/articles/gaode-autosdk-ai-native-pipeline-2026-08-03
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 高德汽车工程 AI Native：AutoSDK 全链路 AI Native 开发（架构篇）

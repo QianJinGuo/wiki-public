@@ -1,11 +1,14 @@
 ---
 title: "Agent Plan x DeepSeek Harness 实践指南"
 created: 2026-09-04
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [agent, harness, deepseek, workflow]
 review_value: 7
 review_confidence: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Agent Plan x DeepSeek Harness 实践指南

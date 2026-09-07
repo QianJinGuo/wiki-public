@@ -7,6 +7,9 @@ tags: [ai, wechat, robotics, vla, affordance, visual-planning, embodied-ai]
 sources: [raw/articles/机器人端杯子之前在想什么-afford-vla-先找到杯子最趁手的那块区域]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 机器人端杯子之前在想什么？Afford-VLA：先找到杯子最趁手的那块区域

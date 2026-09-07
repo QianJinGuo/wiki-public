@@ -15,8 +15,11 @@ types: [skill-authoring, agent-engineering, prompt-engineering]
 review_value: 8
 review_confidence: 8
 created: 2026-05-25
-updated: 2026-08-29
+updated: 2026-09-07
 sources:
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Claude Code SKILL.md 写作指南

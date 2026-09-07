@@ -8,6 +8,9 @@ updated: 2026-08-01
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/ai-编程的下一场架构迁移从代码检索到上下文操作]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # AI 编程的下一场架构迁移：从代码检索，到上下文操作

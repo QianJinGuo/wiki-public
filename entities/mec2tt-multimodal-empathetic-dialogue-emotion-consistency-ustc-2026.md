@@ -2,11 +2,14 @@
 
 title: "MEC²-TT: 多模态共情对话中的情绪一致性校正与轨迹追踪"
 created: 2026-09-02
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [multimodal, empathy, dialogue, emotion, acm-mm, qwen, chain-of-thought]
 sources: [raw/articles/acm-mm-2026-mec2tt-multimodal-empathetic-dialogue-ustc]
 confidence: 0.75
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # MEC²-TT: 多模态共情对话中的情绪一致性校正与轨迹追踪

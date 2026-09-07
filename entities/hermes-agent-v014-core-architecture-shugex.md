@@ -8,7 +8,7 @@ platform: wechat
 author: 术哥
 publish_date: 2026-05-23
 created: 2026-05-23
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 8
 review_confidence: 9
 review_recommendation: strong
@@ -18,6 +18,9 @@ sources:
   - raw/articles/hermes-agent-soul-md-personality-shugex
 aliases: [Hermes Agent 架构, Hermes Agent v0.14, 术哥 Hermes, Hermes SOUL.md]
 provenance_state: inferred
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 核心定位

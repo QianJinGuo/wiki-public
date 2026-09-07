@@ -2,11 +2,14 @@
 
 title: "Learning to Replicate Expert Judgment in Financial Tasks - Thinking Machines Lab"
 created: 2026-07-03
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [ai, llm, fine-tuning, finance]
 sources: [raw/articles/learning-to-replicate-expert-judgment-in-financial-tasks]
 confidence: 0.75
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Learning to Replicate Expert Judgment in Financial Tasks - Thinking Machines Lab

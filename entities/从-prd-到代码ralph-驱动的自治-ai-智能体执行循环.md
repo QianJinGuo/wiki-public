@@ -8,6 +8,9 @@ tags: [wechat, ai]
 rating: v7c7
 sources:
   - raw/articles/从-prd-到代码ralph-驱动的自治-ai-智能体执行循环
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 从 PRD 到代码：Ralph 驱动的自治 AI 智能体执行循环

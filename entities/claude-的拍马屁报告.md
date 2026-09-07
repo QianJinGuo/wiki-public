@@ -8,6 +8,9 @@ tags: [wechat, ai]
 rating: v8c8
 sources:
   - raw/articles/claude-的拍马屁报告
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Claude 的拍马屁报告

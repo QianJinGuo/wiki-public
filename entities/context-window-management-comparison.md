@@ -2,7 +2,7 @@
 
 title: "Context Window Management Comparison"
 created: 2026-05-16
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [agent, architecture, context-window, context-management, compaction, subagent-isolation, pi-mono, openclaw, claude-code, letta, memory, harness, llm, token-budget, sliding-window, summarization]
 sources:
@@ -21,6 +21,9 @@ related_entities:
   - openclaw-完全指南这可能是全网最新最全的系统化教程了32w字建议收藏-v2
   - secure-ai-agents-with-policy-and-lambda-interceptors-in-amaz
   - cline-agent-runtime-sdk
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Context Window 管理框架深度对比：Pi、OpenClaw、Claude Code、Letta

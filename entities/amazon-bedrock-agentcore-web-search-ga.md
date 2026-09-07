@@ -3,12 +3,15 @@ title: "Amazon Bedrock AgentCore Web Search: 托管式网页搜索能力 GA"
 type: entity
 tags: [aws, bedrock, agentcore, web-search, mcp, agent, retrieval, ga]
 created: 2026-06-19
-updated: 2026-08-01
+updated: 2026-09-07
 review_value: 9
 review_confidence: 9
 review_recommendation: strong
 review_stars: 5
 sources: [raw/articles/introducing-web-search-on-amazon-bedrock-agentcore, raw/articles/amazon-bedrock-agentcore-gateway-内置-web-搜索工具实战]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Amazon Bedrock AgentCore Web Search: 托管式网页搜索能力 GA

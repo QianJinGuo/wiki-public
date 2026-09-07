@@ -1,7 +1,7 @@
 ---
 title: "JiuwenSwarm — Coordination Engineering 多智能体协作框架（含 SwarmFlow 可控编排 + Jiuwen Symphony 技能编排与分发）"
 created: 2026-05-18
-updated: 2026-08-24
+updated: 2026-09-07
 date: "2026-05-18"
 tags: [multi-agent, coordination-engineering, openjiuwen, jiuwenswarm, agent-swarm, harness-engineering, swarmflow, workflow-orchestration, operator-library, symphony, skill-orchestration, skill-retrieval, skill-graph, skill-tree, scale-challenge]
 review_value: 9
@@ -14,6 +14,9 @@ sources:
   - [[raw/articles/jiuwen-symphony-skill-orchestration-distribution-openjiuwen|CSDN: openJiuwen 开源 Jiuwen Symphony 技能编排与分发系统]]
   - [[raw/articles/sciencediscovery-biomnibench-ai-science-workstation-jiuwenswarm|ScienceDiscovery AI 科研工作台（BiomniBench-DA SOTA）]]
 type: entity
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 概述

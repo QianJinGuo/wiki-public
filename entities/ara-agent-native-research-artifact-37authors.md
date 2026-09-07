@@ -2,13 +2,16 @@
 
 title: "ARA — Agent-Native Research Artifact（37 作者，arXiv 2604.24658，PDF 范式终结提案）"
 created: 2026-06-04
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [ai4s, research-artifact, ara, agent-native, paper, narrative-tax, engineering-tax, mlsys, mit, cmu, michigan, stanford, jia-chen-liu, mosharaf-chowdhury, agent]
 confidence: 0.95
 provenance_state: merged
 sources: [raw/articles/ara-agent-native-research-artifact-37authors, raw/articles/ai-for-science-second-half-ara-amber-jiachen-liu-2026]
 review_value: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # ARA — Agent-Native Research Artifact

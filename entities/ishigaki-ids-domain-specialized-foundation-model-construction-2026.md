@@ -1,12 +1,15 @@
 ---
 title: Ishigaki-IDS — 建筑 BIM 领域专用基础模型（合成数据 + CPT/SFT/RLVR）
 created: 2026-08-12
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [llm, training, rlvr, synthetic-data, domain-adaptation, foundation-model, aws, construction]
 sources: [raw/articles/how-onestruction-built-the-ishigaki-ids-foundation-model-with-aws-genaiic]
 confidence: 0.8
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Ishigaki-IDS — 建筑 BIM 领域专用基础模型

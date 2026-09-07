@@ -3,11 +3,14 @@
 title: "Peter Steinberger / OpenClaw — 100个AI程序员案例"
 type: entity
 created: 2026-05-17
-updated: 2026-09-05
+updated: 2026-09-07
 tags: [openclaw, ai-agents, software-engineering, codex, peter-steinberger, token-economics]
 sources: [raw/articles/3-persons-100-ai-programmers-1-3-million-openai-pays]
 review_value: 8
 review_confidence: 8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 概述

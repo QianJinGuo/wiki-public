@@ -10,9 +10,12 @@ review_confidence: 7
 review_recommendation: worth-reading
 review_stars: 4
 ingested: 2026-05-13
-updated: 2026-08-29
+updated: 2026-09-07
 sources: [raw/articles/the-inference-shift]
 tags: [inference, architecture, gpu, agentic-ai]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > -> [[raw/articles/the-inference-shift|原文存档]] ^[raw/articles/the-inference-shift.md]

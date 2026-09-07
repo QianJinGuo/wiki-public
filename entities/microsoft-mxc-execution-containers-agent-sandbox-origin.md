@@ -2,7 +2,7 @@
 title: "Microsoft MXC — 跨 OS 代理代码执行容器：AppContainer/Sandbox/Hyperlight 三层隔离"
 description: "Microsoft Build 2026 开源的 Microsoft eXecution Container (MXC)：单一 dispatcher 跨 Windows/Linux/macOS 调度 10 种 OS-原生沙箱后端，AppContainer 三层 fallback、bubblewrap/seatbelt 稳定，Hyperlight/NanVix/WSLC 实验性。"
 created: 2026-06-09
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [sandbox, microsoft, agent-security, open-source, mxc, appcontainer, hyper-v, seatbelt, bubblewrap, os-containment, harness-engineering]
 sources: [raw/articles/microsoft-mxc-execution-containers-agent-sandbox-origin]
@@ -12,6 +12,9 @@ review_value: 9
 review_confidence: 9
 review_recommendation: strong
 review_stars: 5
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Microsoft MXC — 跨 OS 代理代码执行容器

@@ -3,14 +3,16 @@
 
 title: "Harness 到底是什么？看看 OpenClaw、Hermes、Claude Code 的演绎吧"
 created: 2026-05-16
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [claude-code, anthropic, agent, harness-engineering, openclaw]
 sources:
   - raw/articles/harness-engineering-7-layers-openclaw-hermes-claude-code-p1aNu
 review_value: 9
 review_confidence: 7
-
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Harness 到底是什么？看看 OpenClaw、Hermes、Claude Code 的演绎吧

@@ -4,10 +4,13 @@ title: "Karpathy × Boris 访谈：Software 3.0 时代编程完整地图"
 type: entity
 tags: [claude, llm]
 created: 2026-05-21
-updated: 2026-05-21
+updated: 2026-09-07
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/karpathy-boris-software3-llm-era-programming-2026]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Karpathy × Boris 访谈：Software 3.0 时代编程完整地图

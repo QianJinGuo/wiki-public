@@ -4,10 +4,13 @@ title: "花费 2 个星期写了 8 篇 OpenClaw 源码拆解文章，我发现90
 type: entity
 tags: [agent, architecture]
 created: 2026-05-21
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/openclaw-architecture-8-part-summary]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 花费 2 个星期写了 8 篇 OpenClaw 源码拆解文章，我发现90% 的人对龙虾的理解都太表面了，深层次的真相竟然是这个

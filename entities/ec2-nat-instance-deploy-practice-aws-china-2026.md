@@ -2,7 +2,7 @@
 title: "EC2 NAT 实例选型与部署实践（AWS 中国宁夏区域）"
 description: "AWS 中国宁夏区域（cn-northwest-1）所有当前代 EC2 实例类型的 NAT 可用带宽与成本对比，基于 ASG + CloudFormation 的高可用一键部署方案"
 created: 2026-06-15
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [aws, aws-china, networking, ec2, nat, infrastructure, cost-optimization]
 sources: [raw/articles/ec2-nat-instance-deploy-practice-aws-china]
@@ -12,6 +12,9 @@ review_recommendation: worth-reading
 review_stars: 4
 confidence: 0.85
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # EC2 NAT 实例选型与部署实践（AWS 中国宁夏区域）

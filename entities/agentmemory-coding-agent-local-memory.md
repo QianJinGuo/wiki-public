@@ -2,13 +2,15 @@
 
 title: "AgentMemory：Coding Agent 本地记忆系统"
 created: 2026-05-19
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [coding-agent, long-term-memory, local-runtime, bm25, vector-search, graph-search, hybrid-search, mcp, rest-api, hook, codex, claude-code, iii-engine, open-source, procedure-memory, memorax]
 sources: [raw/articles/agentmemory-source-analysis-coding-agent-local-memory, raw/articles/让-coding-agent-开始记住过去memorax-code-的长期记忆系统]
 review_value: 8
 review_confidence: 8
-
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 ## 概述
 AgentMemory（rohitg00/agentmemory，npm: @agentmemory/agentmemory@0.9.20）不是又一个向量数据库包装器，而是一个**本地 Agent 记忆运行时**：把 hook 捕获、隐私过滤、观察记录、压缩、索引、检索、上下文注入、MCP 工具、REST API、viewer、审计和多 Agent 协作都放进了一个可启动的本地服务里。   ^[raw/articles/agentmemory-source-analysis-coding-agent-local-memory.md]

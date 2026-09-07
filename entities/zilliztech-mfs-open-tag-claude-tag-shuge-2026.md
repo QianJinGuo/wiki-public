@@ -3,7 +3,7 @@ title: "MFS：zilliztech 的 Agent 统一上下文 harness，一套动词打通 
 authors:
   - 术哥
 created: 2026-06-29
-updated: 2026-08-01
+updated: 2026-09-07
 source: wechat
 url:
 type: entity
@@ -14,6 +14,9 @@ review_stars: 4
 provenance_state: extracted
 sources:
   - raw/articles/zilliztech-mfs-open-tag-claude-tag-shuge-2026
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 核心概述

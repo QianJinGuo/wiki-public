@@ -2,7 +2,7 @@
 
 title: "FinOps + DevOps 双Agent 协作：AI驱动的云成本优化实战"
 created: 2026-06-29
-updated: 2026-06-29
+updated: 2026-09-07
 type: entity
 tags: [agent, finops, devops, multi-agent, aws, cost-optimization, harness, cloud-operations]
 provenance_state: inferred
@@ -13,6 +13,9 @@ review_value: 9
 review_confidence: 9
 review_stars: 5
 review_recommendation: strong
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # FinOps + DevOps 双Agent 协作：AI驱动的云成本优化实战

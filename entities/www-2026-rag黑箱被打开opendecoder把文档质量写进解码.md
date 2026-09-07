@@ -7,6 +7,9 @@ tags: [rag, llm, retrieval, decoding, attention, www-2026]
 sources: [raw/articles/www-2026-rag黑箱被打开opendecoder把文档质量写进解码, raw/articles/www-2026-rag黑箱被打开opendecoder把文档质量写进解码-2026-07-08]
 confidence: 0.7
 provenance_state: merged
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # WWW 2026 | RAG黑箱被打开！OpenDecoder把文档质量写进解码

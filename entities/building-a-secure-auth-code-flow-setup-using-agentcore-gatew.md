@@ -2,7 +2,7 @@
 
 title: "Building a secure auth code flow setup using AgentCore Gateway with MCP clients"
 created: 2026-06-02
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [aws, bedrock, agentcore, mcp, oauth, security, agent]
 confidence: 0.8
@@ -11,6 +11,9 @@ source: [[raw/articles/building-a-secure-auth-code-flow-setup-using-agentcore-ga
 review_value: 7
 sources:
   - raw/articles/building-a-secure-auth-code-flow-setup-using-agentcore-gatew
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Building a secure auth code flow setup using AgentCore Gateway with MCP clients

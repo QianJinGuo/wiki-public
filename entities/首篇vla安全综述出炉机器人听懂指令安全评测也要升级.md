@@ -7,6 +7,9 @@ tags: [ai, agent, llm, security, robotics, vla]
 confidence: 0.7
 sources: [raw/articles/首篇vla安全综述出炉机器人听懂指令安全评测也要升级]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 首篇VLA安全综述出炉：机器人听懂指令，安全评测也要升级

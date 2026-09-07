@@ -3,7 +3,7 @@
 
 title: "Harness Engineering 系统性解读"
 created: 2026-04-30
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [harness, agent, context-management, prompt-engineering, llm, coding-agent, evaluation]
 sources:
@@ -13,6 +13,9 @@ review_confidence: 7
 review_recommendation: neutral
 
 score_validated: 2026-09-05
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 核心主线

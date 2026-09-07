@@ -1,11 +1,14 @@
 ---
 title: "具身原生：具身智能大模型迈入新阶段"
 created: 2026-07-10
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [embodied, llm, robot, vision, multimodal]
 sources: [raw/articles/embodied-native-llm-embodied-intelligence-new-stage-2026]
 confidence: 0.8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 具身原生：具身智能大模型迈入新阶段

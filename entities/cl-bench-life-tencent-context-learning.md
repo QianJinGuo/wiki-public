@@ -4,10 +4,13 @@ title: "腾讯混元 CL-Bench Life：让大模型读懂你的日常生活"
 type: entity
 tags: [context, model, research]
 created: 2026-05-21
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/cl-bench-life-tencent-context-learning]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 腾讯混元 CL-Bench Life：让大模型读懂你的日常生活

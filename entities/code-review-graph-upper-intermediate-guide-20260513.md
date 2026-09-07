@@ -4,10 +4,13 @@ title: "开源 Claude Code 本地代码知识图谱：code-review-graph 完整�
 type: entity
 tags: [claude]
 created: 2026-05-21
-updated: 2026-05-21
+updated: 2026-09-07
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/code-review-graph-upper-intermediate-guide-20260513]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 开源 Claude Code 本地代码知识图谱：code-review-graph 完整上手攻略

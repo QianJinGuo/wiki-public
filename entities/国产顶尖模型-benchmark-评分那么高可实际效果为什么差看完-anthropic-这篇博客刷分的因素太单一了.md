@@ -8,6 +8,9 @@ tags: [ai-agent, engineering, wechat]
 review_value: 7
 sources: [raw/articles/国产顶尖模型-benchmark-评分那么高可实际效果为什么差看完-anthropic-这篇博客刷分的因素太单一了]
 review_confidence: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > -> [[raw/articles/国产顶尖模型-benchmark-评分那么高可实际效果为什么差看完-anthropic-这篇博客刷分的因素太单一了.md|原文存档]]

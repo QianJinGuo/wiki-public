@@ -2,7 +2,7 @@
 
 title: "AWS 软件供应链安全 Well-Architected 最佳实践"
 created: 2026-06-03
-updated: 2026-06-19
+updated: 2026-09-07
 type: entity
 tags: [aws, security]
 source: "[[raw/articles/aws-software-supply-chain-security-well-architected]]"
@@ -12,6 +12,9 @@ review_value: 7
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # AWS 软件供应链安全 Well-Architected 最佳实践

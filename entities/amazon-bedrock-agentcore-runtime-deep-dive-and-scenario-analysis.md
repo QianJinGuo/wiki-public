@@ -2,7 +2,7 @@
 
 title: "快时尚电商行业智能体设计思路与应用实践（七）Amazon Bedrock AgentCore Runtime 深度解析和场景分析 | 亚马逊AWS官方博客"
 created: 2026-05-14
-updated: 2026-09-05
+updated: 2026-09-07
 tags: [aws-china-blog, bedrock-agentcore]
 sources: [raw/articles/amazon-bedrock-agentcore-runtime-deep-dive-and-scenario-analysis]
 review_value: 8
@@ -10,6 +10,9 @@ review_confidence: 8
 review_recommendation: strong
 publish_date: 2026-01-30
 type: entity
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 概述

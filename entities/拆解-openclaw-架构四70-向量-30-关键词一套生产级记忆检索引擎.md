@@ -8,6 +8,9 @@ tags: [wechat, ai]
 rating: v8c8
 sources:
   - raw/articles/拆解-openclaw-架构四70-向量-30-关键词一套生产级记忆检索引擎
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 拆解 OpenClaw 架构（四）：70% 向量 + 30% 关键词，一套生产级记忆检索引擎

@@ -1,12 +1,15 @@
 ---
 title: "刚刚DeepSeek开源推理神器DSpark，V4最高提速85%，连底层训练全家桶都开源了"
 created: 2026-07-05
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [deepseek, dspark, speculative-decoding, inference-optimization, llm-inference, deepspec]
 sources: [raw/articles/刚刚deepseek开源推理神器dsparkv4最高提速85连底层训练全家桶都开源了]
 confidence: 0.85
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 刚刚DeepSeek开源推理神器DSpark，V4最高提速85%，连底层训练全家桶都开源了

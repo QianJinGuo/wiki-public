@@ -8,6 +8,9 @@ tags: [wechat, ai]
 rating: v7c7
 sources:
   - raw/articles/知识基座让ai-越用越懂业务的团队经验实践天猫ai-coding实践系列
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 知识基座：让“AI 越用越懂业务”的团队经验实践【天猫AI Coding实践系列】

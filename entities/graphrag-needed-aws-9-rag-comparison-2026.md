@@ -1,13 +1,16 @@
 ---
 title: "GraphRAG 实测：朴素 RAG 调优可胜复杂图谱方案"
 created: 2026-06-29
-updated: 2026-06-29
+updated: 2026-09-07
 type: entity
 tags: [rag, graphrag, agentic-rag, context-engineering, retrieval-generation-gap, benchmark, lost-in-the-middle]
 sources:
   - raw/articles/graphrag-needed-aws-9-rag-comparison-2026
 confidence: 0.85
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # GraphRAG 实测：朴素 RAG 调优可胜复杂图谱方案

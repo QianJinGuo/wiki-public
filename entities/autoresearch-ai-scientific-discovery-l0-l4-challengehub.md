@@ -9,11 +9,14 @@ review_recommendation: strong
 review_stars: 4
 date: 2026-05-27
 created: 2026-05-28
-updated: 2026-08-29
+updated: 2026-09-07
 tags: [autoresearch, ai-for-science, research-agent, autonomy-level, l0-l4, the-ai-scientist, alphafold, multi-agent, benchmark]
 type: entity
 provenance_state: synthesized
 sources: [raw/articles/autoresearch-ai-scientific-discovery-l0-l4-challengehub]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > -> [[raw/articles/autoresearch-ai-scientific-discovery-l0-l4-challengehub|原文存档]]

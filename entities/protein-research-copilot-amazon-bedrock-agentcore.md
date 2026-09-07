@@ -3,7 +3,7 @@
 title: "Protein Research Copilot with Amazon Bedrock AgentCore"
 description: "基于 Strands Agents SDK + Bedrock AgentCore 构建蛋白质研究助手，集成 ESM-C 嵌入模型 + pgvector 向量搜索 + LLM 摘要生成"
 created: 2026-06-24
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [agent, aws, bedrock, agentcore, bioinformatics, protein, strands-agents, pgvector]
 source: [[raw/articles/build-a-protein-research-copilot-with-amazon-bedrock-agentcore]]
@@ -15,6 +15,9 @@ review_stars: 4
 review_recommendation: worth-reading
 confidence: 0.75
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Protein Research Copilot with Amazon Bedrock AgentCore

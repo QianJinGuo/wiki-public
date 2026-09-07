@@ -1,12 +1,16 @@
 ---
 title: "Agent Skill 编写指南"
 created: 2026-04-24
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [agent-skill, skill-format, progressive-disclosure, evaluation, evals, hermes-agent, prompt-engineering, skill-development]
 sources: [raw/articles/agent-skill-writing-guide, raw/articles/skill-complete-guide-alibaba, raw/articles/how-to-encode-experience-into-skills]
 review_value: 7
 review_confidence: 7
+reviewed: 2026-09-07
+review_verdict: hub-retained
+review_category: dup
+review_note: "judged dup-0.85: 与从0到1篇同文重复; retained as hub (in-links>=20); MOC rewrite candidate"
 ---
 ## Overview
 Agent Skill = **岗位职责说明书 + 操作SOP + 避坑指南**的合集。让通用大模型秒变领域专家，不改变模型本身，通过结构化上下文注入实现。   ^[raw/articles/agent-skill-writing-guide.md]

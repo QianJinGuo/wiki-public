@@ -1,12 +1,15 @@
 ---
 title: "LoongSuite GenAI 可观测语义规范"
 created: 2026-05-12
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [agent, observability, opentelemetry, alibaba, engineering, llm-wiki]
 sources: [raw/articles/loongsuite-genai-semconv-alibaba]
 review_value: 7
 review_confidence: 8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 ## 核心贡献
 ### Entry/Step Span 架构

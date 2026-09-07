@@ -2,7 +2,7 @@
 
 title: "Deep Agents + Bedrock AgentCore：多 Agent 编排 + 隔离基础设施的端到端研究 Agent 实战"
 created: 2026-06-15
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, aws, bedrock, agentcore, deepagents, langchain, multi-agent, browser-tool, subagent, orchestration, harness]
 sources: [raw/articles/build-context-rich-research-agents-with-deep-agents-and-bedr]
@@ -10,6 +10,9 @@ review_value: 8
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Deep Agents + Bedrock AgentCore：多 Agent 编排 + 隔离基础设施的端到端研究 Agent 实战

@@ -2,7 +2,7 @@
 
 title: "Kimi Work：通用 Agent 战场从云端迁移到本地"
 created: 2026-06-04
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, kimi, moonshot, k2.6, kimi-work, codex, chatgpt, openai, vibe-working, vibe-coding, desktop-agent, webbridge, harness, agent-cluster, local-agent, foundation-model-company, agi-hunt, yin-john, 300-agents, business-discovery]
 sources:
@@ -14,6 +14,9 @@ provenance_state: merged
 review_value: 9
 review_confidence: 9
 review_recommendation: strong
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Kimi Work：通用 Agent 战场从云端迁移到本地

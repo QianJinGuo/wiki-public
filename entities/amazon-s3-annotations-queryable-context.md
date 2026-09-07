@@ -2,7 +2,7 @@
 title: "Amazon S3 Annotations：对象级丰富可查询元数据"
 description: "S3 新特性 Annotations 支持为单个对象附加最多 1000 个命名注释（总计 1GB），支持 JSON/XML/YAML/纯文本，可通过 Athena 大规模查询，专为 AI Agent 数据发现场景设计"
 created: 2026-06-18
-updated: 2026-07-31
+updated: 2026-09-07
 type: entity
 tags: [aws, s3, metadata, ai-agent, data-infrastructure, object-storage]
 source: "[[raw/articles/amazon-s3-annotations-queryable-context]]"
@@ -17,6 +17,9 @@ related:
   - entities/amazon-iot-core-kiro-industrial-data-pipeline
 sources:
   - raw/articles/amazon-s3-annotations-queryable-context
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Amazon S3 Annotations：对象级丰富可查询元数据

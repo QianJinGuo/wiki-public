@@ -1,12 +1,15 @@
 ---
 title: "Agent Gym：人机协同的 LLM Agent 持续评估与演化框架（Google Cloud）"
 created: 2026-08-25
-updated: 2026-08-25
+updated: 2026-09-07
 type: entity
 tags: [agent-gym, llm-agent, continuous-evaluation, agent-evolution, human-in-the-loop, rule-engine, constitution, external-correction, domain-agnostic, google-cloud, adk, spec-to-note, first-party]
 rating: v7c8
 sources: [raw/articles/agent-gym-continuous-eval-evolution-google-paper-2026]
 confidence: 0.85
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Agent Gym：人机协同的 LLM Agent 持续评估与演化框架（Google Cloud）

@@ -2,7 +2,7 @@
 
 title: "Data Projects"
 created: 2026-07-10
-updated: 2026-08-24
+updated: 2026-09-07
 type: entity
 tags: [netflix, tool]
 sources: [raw/articles/data-projects-managing-data-assets-at-netflix-scale]
@@ -12,6 +12,9 @@ review_recommendation: strong
 review_stars: 4
 confidence: medium
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Data Projects: Managing Data Assets at Netflix Scale

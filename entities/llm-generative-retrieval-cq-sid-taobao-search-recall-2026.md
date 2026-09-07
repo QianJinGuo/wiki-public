@@ -1,12 +1,15 @@
 ---
 title: "CQ-SID：LLM 生成式检索在电商搜索召回中的落地（类目约束 + Query-Item 对比 + EG-GRPO）"
 created: 2026-09-04
-updated: 2026-09-04
+updated: 2026-09-07
 type: entity
 tags: [generative-retrieval, cq-sid, semantic-id, rq-vae, ecommerce-search, recall, grpo, expert-guided-rl, llm-generation, taobao, alibaba, category-constrained]
 sources: [raw/articles/cq-sid-generative-retrieval-taobao-search-recall-2026-09-04]
 confidence: 0.88
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # CQ-SID：LLM 生成式检索在电商搜索召回中的落地（类目约束 + Query-Item 对比 + EG-GRPO）

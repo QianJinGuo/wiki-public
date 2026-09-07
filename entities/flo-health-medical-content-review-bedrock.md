@@ -1,11 +1,14 @@
 ---
 title: Scaling medical content review at Flo Health with Amazon Bedrock
 created: 2026-07-24
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [ai, llm, aws, bedrock, health, content-review]
 sources: [raw/articles/flo-health-medical-content-review-bedrock]
 confidence: 0.65
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Scaling medical content review at Flo Health with Amazon Bedrock – Part 2

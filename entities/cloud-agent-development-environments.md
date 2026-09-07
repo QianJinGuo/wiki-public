@@ -4,7 +4,7 @@ title: "Development environments for your cloud agents"
 type: entity
 tags: [cursor, cloud-agents, dev-environment, infrastructure-as-code, multi-repo]
 created: 2026-05-15
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 8
 review_confidence: 7
 review_recommendation: strong
@@ -12,6 +12,9 @@ review_stars: 4
 sources:
   - raw/articles/cloud-agent-development-environments
   - raw/articles/how-we-set-up-our-cloud-agent-environment-cursor-2026-07-30
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > 来源：[[raw/articles/cloud-agent-development-environments|原文存档]] ^[raw/articles/cloud-agent-development-environments.md]

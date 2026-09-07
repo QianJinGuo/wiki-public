@@ -4,11 +4,14 @@ title: "DeepSeek V4 DS4C Antirez 本地推理实践"
 type: entity
 tags: [deepseek, deepseek, local-inference, apple-silicon, metal-gpu, moe, mixture-of-experts, quantization, asymmetric-quantization, kv-cache, disk-cache, apple-m3-max, apple-m3-ultra, openai-api, anthropic-api, coding-agent, claude-code, gguf, iq2-xxs, q2-k, redis, antirez, salvatore-sanfilippo, ds4c]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 8
 review_confidence: 8
 sources: [raw/articles/deepseek-v4-ds4c-antirez-local-inference-qbitai]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # DeepSeek V4 本地推理：antirez 的专属高速公路

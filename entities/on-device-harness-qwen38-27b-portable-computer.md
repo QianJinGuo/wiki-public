@@ -7,6 +7,9 @@ type: entity
 tags: [harness, on-device, local-inference, qwen, agent, privacy]
 sources: [raw/articles/on-device-harness-qwen38-27b-portable-computer]
 confidence: 0.75
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 端侧模型专用Harness：Qwen3.8-27B + Perplexity Portable Computer

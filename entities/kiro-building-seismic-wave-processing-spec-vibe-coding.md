@@ -1,7 +1,7 @@
 ---
 title: "用 Kiro 构建行业专业软件：Spec vs Vibe Coding 的分层结论"
 created: 2026-07-24
-updated: 2026-07-24
+updated: 2026-09-07
 type: entity
 tags: [kiro, vibe-coding, spec-driven-development, software-engineering, ai-coding, professional-software]
 sources: [raw/articles/kiro-building-seismic-wave-processing-spec-vibe-coding]
@@ -9,6 +9,9 @@ confidence: 0.75
 review_value: 8
 review_confidence: 8
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 用 Kiro 构建行业专业软件：Spec vs Vibe Coding 的分层结论

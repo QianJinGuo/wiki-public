@@ -9,6 +9,9 @@ provenance_state: extracted
 confidence: 0.65
 sources:
   - raw/articles/小米开源-xiaomi-robotics-u0让具身数据进入大规模生成时代-xiaomi
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 小米开源-xiaomi-robotics-u0让具身数据进入大规模生成时代

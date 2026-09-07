@@ -2,7 +2,7 @@
 
 title: "你写的 Skill，及格了吗？"
 created: 2026-05-10
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [skill, agent, evaluation-framework, multi-model-validation, baidu]
 sources: [raw/articles/ni-xie-de-skill-ji-ge-liao-ma]
@@ -11,6 +11,9 @@ review_confidence: 8
 review_stars: 5
 review_recommendation: strong
 heuristic_score: 64
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 核心概念

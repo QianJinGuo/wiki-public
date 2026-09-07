@@ -1,12 +1,15 @@
 ---
 title: "AI Agent 存储选型：Curvine 如何在 EKS 上支撑万级Agent运行"
 created: 2026-07-07
-updated: 2026-07-27
+updated: 2026-09-07
 type: entity
 tags: [aws, eks, storage, curvine, ai-agent, kubernetes, distributed-storage, agent-infrastructure]
 sources: [raw/articles/ai-agent-存储选型curvine-如何在-eks-上支撑万级agent运行]
 confidence: 0.8
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # AI Agent 存储选型：Curvine 如何在 EKS 上支撑万级Agent运行

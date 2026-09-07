@@ -4,13 +4,16 @@ title: Multilingual AI
 type: entity
 tags: [ai, llm, multilingual, localization, safety, red-teaming, rlhf, data-quality, evaluation, low-resource-languages, enterprise-ai]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 7
 review_confidence: 8
 review_stars: 4
 review_recommendation: worth-reading
 sources: [raw/articles/multilingual-ai]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 核心问题：Benchmark 与生产环境的语言鸿沟

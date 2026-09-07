@@ -6,8 +6,12 @@ sources: [raw/articles/claude-code-large-codebase-enterprise-deployment-anthropi
 review_confidence: 8
 tags: [anthropic, claude-code, enterprise-deployment, large-codebase, harness]
 created: "2026-05-18"
-updated: 2026-09-05
+updated: 2026-09-07
 provenance_state: inferred
+reviewed: 2026-09-07
+review_verdict: hub-retained
+review_category: dup
+review_note: "judged dup-0.8: 七层体系重复于17547全版; retained as hub (in-links>=20); MOC rewrite candidate"
 ---
 ## 核心判断
 **「模型能力是地板，配置质量才是天花板。」**^[raw/articles/claude-code-large-codebase-enterprise-deployment-anthropic-aihanshijì.md]

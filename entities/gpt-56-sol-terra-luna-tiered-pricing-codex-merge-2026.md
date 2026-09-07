@@ -1,11 +1,14 @@
 ---
 title: "GPT-5.6 Sol/Terra/Luna 分层定价，Codex 合并入 ChatGPT，ChatGPT Work 发布"
 created: 2026-07-10
-updated: 2026-07-27
+updated: 2026-09-07
 type: entity
 tags: [openai, gpt, gpt-5.6, bedrock, aws, coding-agent, codex, agent-pricing, benchmark]
 sources: [raw/articles/gpt-56-正式上线codex-和-chatgpt-合并顶级-agent-能力开始按任务定价, raw/articles/刚刚gpt-56全面上线codex被合并生产力工具chatgpt-work来了, raw/articles/openai-gpt-56-sol-terra-and-luna-are-now-generally-available]
 confidence: 0.85
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # GPT-5.6 Sol/Terra/Luna 分层定价，Codex 合并入 ChatGPT，ChatGPT Work 发布

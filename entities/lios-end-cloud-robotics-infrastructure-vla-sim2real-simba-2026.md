@@ -1,12 +1,15 @@
 ---
 title: "LiOS 端云协同基础设施：具身智能柔性操作与虚实迁移（招商局狮子山人工智能实验室）"
 created: 2026-08-20
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [embodied-ai, vla, sim2real, robotics, flexible-manipulation, end-cloud-infrastructure]
 sources: [raw/articles/lios-end-cloud-robotics-infrastructure-vla-sim2real-simba-2026]
 confidence: 0.7
 related: [concepts/embodied-intelligence-frontier, concepts/robotics-embodied-ai, entities/abot-agentos-robot-agent-os-amap-2026]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # LiOS 端云协同基础设施：具身智能柔性操作与虚实迁移

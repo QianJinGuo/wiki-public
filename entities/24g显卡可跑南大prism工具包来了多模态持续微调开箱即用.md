@@ -7,6 +7,9 @@ tags: [multimodal, fine-tuning, 持续微调, 开源, 南京大学, mllm, mcit, 
 sources: [raw/articles/24g显卡可跑南大prism工具包来了多模态持续微调开箱即用]
 confidence: 0.85
 provenance_state: merged
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 24G显卡可跑！南大PRISM工具包来了，多模态持续微调开箱即用

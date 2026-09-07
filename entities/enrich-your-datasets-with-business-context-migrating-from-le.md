@@ -2,7 +2,7 @@
 
 title: "Enrich your datasets with business context"
 created: 2026-07-10
-updated: 2026-08-24
+updated: 2026-09-07
 type: entity
 tags: [reasoning, aws]
 sources: [raw/articles/enrich-your-datasets-with-business-context-migrating-from-le]
@@ -12,6 +12,9 @@ review_recommendation: worth-reading
 review_stars: 3
 confidence: medium
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Enrich your datasets with business context: Migrating from legacy Topics to semantic datasets in Amazon Quick

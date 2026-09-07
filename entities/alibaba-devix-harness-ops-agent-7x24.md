@@ -1,12 +1,15 @@
 ---
 title: "阿里 Devix Harness 运维 Agent：7×24 自动化故障诊断-决策-处置闭环"
 created: 2026-06-23
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [harness-engineering, agent, ops, devix, alibaba, auto-remediation, decision-engine, confidence-based, self-evolution, dingtalk, dataworks]
 sources: [raw/articles/alibaba-devix-harness-ops-agent-7x24]
 confidence: 0.8
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 阿里 Devix Harness 运维 Agent：7×24 自动化运维闭环

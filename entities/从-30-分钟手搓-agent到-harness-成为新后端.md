@@ -8,6 +8,9 @@ updated: 2026-05-21
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/从-30-分钟手搓-agent到-harness-成为新后端]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 从 30 分钟手搓 Agent，到 Harness 成为"新后端"

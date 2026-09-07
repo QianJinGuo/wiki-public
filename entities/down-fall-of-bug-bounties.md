@@ -3,12 +3,15 @@ title: "The down fall of bug bounties"
 type: entity
 tags: [security, ai-agents, bug-bounty]
 created: 2026-05-20
-updated: 2026-06-17
+updated: 2026-09-07
 review_value: 7
 review_confidence: 8
 review_recommendation: strong
 review_stars: 3
 sources: [raw/articles/down-fall-of-bug-bounties]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 ## 核心要点
 - Published Time: 2026-05-18T12:32:41.000Z Markdown Content: May 18 2026 A few days ago, I was reading a post by Kabir Ach...

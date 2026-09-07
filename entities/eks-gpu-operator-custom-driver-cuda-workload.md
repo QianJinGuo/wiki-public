@@ -4,12 +4,15 @@ title: "在 Amazon EKS 上使用 NVIDIA GPU Operator 管理自定义 GPU 驱动�
 type: entity
 tags: [aws, eks, kubernetes, gpu, nvidia, gpu-operator, driver-management, cuda, mcp, kiro]
 created: 2026-06-03
-updated: 2026-08-29
+updated: 2026-09-07
 sources: [raw/articles/在-amazon-eks-上使用-nvidia-gpu-operator-管理自定义-gpu-驱动与-cuda-工作负载]
 review_value: 8
 review_confidence: 9
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 在 Amazon EKS 上使用 NVIDIA GPU Operator 管理自定义 GPU 驱动与 CUDA 工作负载

@@ -1,12 +1,15 @@
 ---
 title: "Thinking Machines Inkling — 975B MoE 开放权重模型"
 created: 2026-07-16
-updated: 2026-08-14
+updated: 2026-09-07
 type: entity
 tags: [thinking-machines, inkling, open-weights, moe, mira-murati, foundation-model]
 sources: [raw/articles/thinking-machines-inkling-975b-moe-open-weights-2026, raw/articles/thinking-machines-inkling-welcome-hf-blog]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Thinking Machines Inkling — 975B MoE 开放权重模型

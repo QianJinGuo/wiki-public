@@ -1,12 +1,15 @@
 ---
 title: "Loop Engineering 概念解析：Agent Loop vs Loop Engineering、六大框架与实践思考"
 created: 2026-06-28
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [loop-engineering, agent-loop, alibaba, feixue, automations, worktrees, skills, sub-agents, vibe-coding, human-in-the-loop]
 sources: [raw/articles/loop-engineering-concept-analysis-feixue-ali-2026, raw/articles/loop-engineering-实战实现从日志扫描到预发部署的全自主闭环]
 confidence: 0.75
 provenance_state: merged
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Loop Engineering 概念解析：Agent Loop vs Loop Engineering、六大框架与实践思考

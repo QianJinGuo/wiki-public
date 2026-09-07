@@ -1,7 +1,7 @@
 ---
 title: "Anthropic Claude Managed Agents 平台正式发布"
 created: 2026-05-08
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [company, product, agent, anthropic, claude, managed-agents, sandbox, vault, schedule, credential-management, session-factory]
 sources: [raw/articles/anthropic-claude-managed-agents-platform-launch, raw/articles/claude-managed-agents-sandbox-vault-schedule-vibecoder]
@@ -9,6 +9,9 @@ review_value: 8
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 ## 概述
 本文介绍 Anthropic 正式开放 Claude Managed Agents 平台，系统性拆解其四大新功能模块：Managed Agents（四核心抽象）、Multiagent Sessions（多 Agent 协作）、Outcomes Loop（结果驱动自我评估）、Webhooks（异步通知）、Dreams（记忆整理）。Anthropic 的战略意图是将 Claude 从"调用模型"转变为"能代你把事情做完的系统"。   ^[raw/articles/anthropic-claude-managed-agents-platform-launch.md]

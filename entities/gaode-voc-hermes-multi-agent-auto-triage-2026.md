@@ -2,7 +2,7 @@
 title: "高德交易 VOC 自动排查：基于 Hermes 的多 Agent 架构实践"
 type: entity
 created: 2026-07-09
-updated: 2026-07-09
+updated: 2026-09-07
 tags: [hermes, hermes-agent, gaode, amap, multi-agent, voc, auto-triage, production, zero-code, routing, self-evolution, memory-curator, hooks, hook-extension, skill, soul, master-slave, agent-orchestration, dynamic-addressing, async-tasks, graceful-degradation, slash-commands, case-library, mcp]
 sources:
   - raw/articles/gaode-voc-hermes-multi-agent-auto-triage-2026
@@ -10,6 +10,9 @@ review_value: 8
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 高德交易 VOC 自动排查：基于 Hermes 的多 Agent 架构实践

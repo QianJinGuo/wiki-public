@@ -1,7 +1,7 @@
 ---
 title: "Harness Engineering：让 Coding Agent 可靠完成长程任务"
 created: 2026-05-10
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, harness, orchestration, long-context, task-decomposition, cli, retry]
 sources: [raw/articles/harness-engineering-long-term-agent-tasks]
@@ -9,6 +9,9 @@ review_value: 9
 review_confidence: 7
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 ## 核心定义
 **Harness Engineering**：为 AI Coding Agent 构建「缰绳」，使其在安全边界内被稳定地约束、引导和复用。核心目标是让 Agent 能够可靠完成涉及成百上千文件、跨越多个会话、消耗数千万 Token 量级的**长程任务**。 ^[raw/articles/harness-engineering-long-term-agent-tasks.md]

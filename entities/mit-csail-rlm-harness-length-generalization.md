@@ -1,11 +1,14 @@
 ---
 title: "MIT CSAIL RLM: Harness-Driven Length Generalization — 64K to 2M Tokens"
 created: 2026-07-22
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [harness, generalization, length-extrapolation, RLM, transformer, MIT, agent-harness]
 sources: [raw/articles/mit团队把泛化写进harness短任务训练解锁32倍长度外推]
 confidence: 0.6
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # MIT CSAIL RLM: Harness-Driven Length Generalization

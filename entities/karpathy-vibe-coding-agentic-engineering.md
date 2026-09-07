@@ -1,13 +1,17 @@
 ---
 title: "从氛围编程到智能体工程"
 created: 2026-06-10
-updated: 2026-08-01
+updated: 2026-09-07
 tags: [agent, ai-coding, architecture, code, data, database, evaluation, fine-tuning, llm, memory, mlops, prompt, rl, security, tool-use]
 review_value: 7
 review_confidence: 7
 type: entity
 sources:
   - raw/articles/karpathy-vibe-coding-agentic-engineering
+reviewed: 2026-09-07
+review_verdict: hub-retained
+review_category: dup
+review_note: "judged dup-0.8: 8593字版，同族六胞胎; retained as hub (in-links>=20); MOC rewrite candidate"
 ---
 
 # 从氛围编程到智能体工程

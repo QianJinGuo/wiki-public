@@ -2,13 +2,16 @@
 
 title: "PhoneWorld (arxiv 2605.29486)：腾讯混元+港中深+人大+武大 规模化可训练 mock Android 环境基础设施（机器之心解读）"
 created: 2026-06-10
-updated: 2026-09-05
+updated: 2026-09-07
 tags: [agent, code, data, database, evaluation, fine-tuning, rl, search, vision]
 review_value: 7
 review_confidence: 7
 type: entity
 sources:
   - raw/articles/phoneworld-mobile-agent-scaling-mock-environments-tencent-hunyuan-arxiv-2605-29486
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # PhoneWorld (arxiv 2605.29486)：腾讯混元+港中深+人大+武大 规模化可训练 mock Android 环境基础设施（机器之心解读）

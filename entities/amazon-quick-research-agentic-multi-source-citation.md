@@ -1,7 +1,7 @@
 ---
 title: "Amazon Quick Research: Agentic Multi-Source Research Workflow with Citation Provenance and Versioned Revisions"
 created: 2026-06-09
-updated: 2026-08-30
+updated: 2026-09-07
 type: entity
 tags: [aws, amazon-quick, agentic-ai, research, citation, provenance, multi-source, version-control, biomedical]
 source: "[[raw/articles/transforming-rare-cancer-research-with-amazon-quick-integrat|原文存档]]"
@@ -11,6 +11,9 @@ review_confidence: 7
 review_recommendation: strong
 review_stars: 4
 confidence: 0.8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Amazon Quick Research: Agentic Multi-Source Research Workflow with Citation Provenance and Versioned Revisions

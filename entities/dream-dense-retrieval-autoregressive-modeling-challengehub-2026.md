@@ -1,7 +1,7 @@
 ---
 title: "DREAM：用冻结 LLM 的自回归预测训练稠密检索器，无需标注正负样本"
 created: 2026-06-29
-updated: 2026-09-05
+updated: 2026-09-07
 source: wechat
 url:
 paper_url:
@@ -14,6 +14,9 @@ review_stars: 4
 provenance_state: extracted
 sources:
   - raw/articles/dream-dense-retrieval-autoregressive-modeling-challengehub-2026
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 核心概述

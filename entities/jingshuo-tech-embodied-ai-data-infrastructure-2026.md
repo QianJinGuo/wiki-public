@@ -1,11 +1,14 @@
 ---
 title: "景烁科技 — 具身智能数据基础设施"
 created: 2026-07-15
-updated: 2026-07-27
+updated: 2026-09-07
 type: entity
 tags: [embodied-ai, data-infrastructure, world-model, simulation, autonomous-driving]
 sources: [raw/articles/jingshuo-tech-embodied-ai-data-infrastructure-2026-07-15]
 confidence: 0.65
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 景烁科技 — 具身智能数据基础设施

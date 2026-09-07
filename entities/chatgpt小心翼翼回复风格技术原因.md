@@ -10,6 +10,9 @@ sources: [raw/articles/chatgpt小心翼翼回复风格技术原因]
 review_confidence: 9
 review_recommendation: worth-reading
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 核心要点

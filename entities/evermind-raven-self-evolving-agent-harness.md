@@ -2,7 +2,7 @@
 title: "EverMind Raven：自进化 Agent Harness 与数字生命框架"
 slug: evermind-raven-self-evolving-agent-harness
 created: 2026-07-08
-updated: 2026-08-19
+updated: 2026-09-07
 type: entity
 tags:
   - evermind
@@ -19,6 +19,9 @@ review_value: 8
 review_confidence: 7
 sources:
   - raw/articles/evermind-raven-self-evolving-agent-harness
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # EverMind Raven：自进化 Agent Harness 与数字生命框架

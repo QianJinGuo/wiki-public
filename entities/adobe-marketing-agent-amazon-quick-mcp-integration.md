@@ -3,12 +3,15 @@ title: "Adobe Marketing Agent 与 Amazon Quick MCP 集成实战"
 type: entity
 tags: [aws, amazon-quick, mcp, marketing-agent, adobe, agent, integration]
 created: 2026-06-19
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 8
 review_confidence: 9
 review_recommendation: worth-reading
 review_stars: 4
 sources: [raw/articles/accelerate-campaign-workflow-with-insights-from-adobe-market]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Adobe Marketing Agent 与 Amazon Quick MCP 集成实战

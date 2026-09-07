@@ -1,7 +1,7 @@
 ---
 title: "应用宝活动平台 Harness 工程实践——从对话式 AI Coding 到工程化系统"
 created: 2026-07-03
-updated: 2026-07-03
+updated: 2026-09-07
 type: entity
 tags: [harness-engineering, tencent, production-practice, knowledge-engineering, state-driven, expert-agent, dag-fork-join, script-based-execution, conflict-governance, devops-integration, code-is-cheap, workflow-over-prompt]
 review_value: 9
@@ -9,6 +9,9 @@ review_confidence: 9
 provenance_state: extracted
 sources:
   - raw/articles/tencent-appstore-activity-platform-harness-2026-07-03
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 应用宝活动平台 Harness 工程实践——从对话式 AI Coding 到工程化系统

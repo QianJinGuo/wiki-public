@@ -2,7 +2,7 @@
 
 title: "Claude 4/5 Sonnet & Opus Release Notes"
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [claude, anthropic, model-release, sonnet, opus, release-notes, benchmark]
 sources:
@@ -14,6 +14,9 @@ sources:
 review_value: 9
 review_confidence: 8
 provenance_state: inferred
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 发布时间线

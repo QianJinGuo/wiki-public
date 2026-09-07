@@ -7,6 +7,9 @@ tags: [article, llm]
 sources: [raw/articles/openai塌房scaling-law原作曝bug万亿算力全白烧]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # OpenAI塌房！Scaling law原作曝bug，万亿算力全白烧

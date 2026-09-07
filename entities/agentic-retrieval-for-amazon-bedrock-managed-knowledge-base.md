@@ -1,12 +1,15 @@
 ---
 title: "Agentic Retrieval for Amazon Bedrock"
 created: 2026-07-24
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [ai, agent, aws, bedrock, retrieval, rag, agentic-rag, knowledge-base]
 sources: [raw/articles/agentic-retrieval-for-amazon-bedrock-managed-knowledge-base]
 confidence: 0.84
 score: 64
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Agentic Retrieval for Amazon Bedrock

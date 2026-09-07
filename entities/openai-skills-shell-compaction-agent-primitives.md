@@ -2,13 +2,16 @@
 
 title: "OpenAI Skills/Shell/Compaction：终结提示词工程的三位一体Agent原语"
 created: 2026-05-28
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [openai, skills, shell, compaction, agent-standards, glean, enterprise-agent, harness]
 sources:
   review_value: 8
 review_confidence: 8
 review_recommendation: strong
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > -> [[raw/articles/openai-skills-shell-compaction-agent-primitives|OpenAI Skills/Shell/Compaction：终结提示词工程的三位一体Agent原语]]

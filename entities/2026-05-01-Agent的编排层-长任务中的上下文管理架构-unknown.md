@@ -7,6 +7,9 @@ type: entity
 tags: [ai, agent]
 sources: [raw/articles/2026-05-01-Agent的编排层-长任务中的上下文管理架构-unknown]
 confidence: 0.8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Agent的编排层：长任务中的上下文管理架构

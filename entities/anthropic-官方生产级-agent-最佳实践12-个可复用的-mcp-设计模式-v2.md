@@ -8,6 +8,10 @@ sources: [raw/articles/anthropic-官方生产级-agent-最佳实践12-个可复�
 provenance_state: extracted
 confidence: 0.9
 review_value: 5
+reviewed: 2026-09-07
+review_verdict: hub-retained
+review_category: dup
+review_note: "judged dup-0.8: 12模式重复v2; retained as hub (in-links>=20); MOC rewrite candidate"
 ---
 
 # Anthropic 官方生产级 Agent 最佳实践：12 个可复用的 MCP 设计模式

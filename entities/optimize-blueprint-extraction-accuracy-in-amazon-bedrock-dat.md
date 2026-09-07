@@ -8,7 +8,7 @@ author:
   - "Wrick Talukdar (AWS)"
 publish_date: 2026-06-11
 created: 2026-06-11
-updated: 2026-08-24
+updated: 2026-09-07
 type: entity
 tags:
   - aws
@@ -25,6 +25,9 @@ review_recommendation: worth-reading
 review_stars: 4
 sources:
   - raw/articles/optimize-blueprint-extraction-accuracy-in-amazon-bedrock-dat
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Optimize blueprint extraction accuracy in Amazon Bedrock Data Automation

@@ -6,6 +6,9 @@ type: entity
 tags: ['raw', 'article']
 sources: [raw/articles/2026-06-24-别再手动复制-Skill-了-多-Agent-时代的-Skill-管理方案-阿里云云原生]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > -> [[raw/articles/2026-06-24-别再手动复制-Skill-了-多-Agent-时代的-Skill-管理方案-阿里云云原生.md|原文存档]]

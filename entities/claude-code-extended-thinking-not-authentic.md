@@ -2,7 +2,7 @@
 title: "The text in Claude Code’s “Extended Thinking” output is not authentic. – blog"
 description: "Claude Code extended thinking output analysis: thinking blocks contain signatures but no actual reasoning text"
 created: 2026-06-24
-updated: 2026-08-30
+updated: 2026-09-07
 type: entity
 tags: [claude-code, extended-thinking, llm-transparency, anthropic, agent]
 provenance_state: inferred
@@ -14,6 +14,9 @@ review_recommendation: worth-reading
 review_stars: 4
 sources:
   - raw/articles/claude-code-extended-thinking-not-authentic
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # The text in Claude Code’s “Extended Thinking” output is not authentic. – blog

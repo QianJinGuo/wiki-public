@@ -9,6 +9,9 @@ review_value: 5
 sources: [raw/articles/你写的-skill及格了吗]
 review_confidence: 6
 score_validated: 2026-09-05
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > -> [[raw/articles/你写的-skill及格了吗.md|原文存档]]

@@ -7,6 +7,9 @@ type: entity
 tags: ['safety', 'ai', 'training', 'coding', 'research']
 sources: [raw/articles/一块gpuclaude爆肝48小时自我对齐效率狂飙15000倍]
 confidence: 0.7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 一块GPU，Claude爆肝48小时自我对齐！效率狂飙15000倍

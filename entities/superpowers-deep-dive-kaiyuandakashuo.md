@@ -1,7 +1,7 @@
 ---
 title: "Superpowers 深度解读（2）：Rule/Gate/Hook 与 Iron Law 方法论"
 created: 2026-06-15
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [superpowers, claude-code, jesse-vincent, rule-gate-hook, iron-law, hard-gate, writing-skills, session-start-hook, sdlc, persuasion-aware-prompting]
 sources:
@@ -9,6 +9,9 @@ sources:
 review_value: 8
 review_confidence: 8
 provenance_state: merged
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > 原文归档：[[raw/articles/superpowers-deep-dive-kaiyuandakashuo|原文归档]] ^[raw/articles/superpowers-deep-dive-kaiyuandakashuo.md]

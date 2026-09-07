@@ -1,7 +1,7 @@
 ---
 title: "DDoSing Software Delivery Pipelines"
 created: 2026-06-17
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 sources: [raw/articles/varoa-ddosing-software-delivery-pipelines-2026]
 tags: [article, varoa, delivery, pipeline, bottleneck, ai-tooling, engineering-management]
@@ -10,6 +10,9 @@ review_value: 7
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # DDoSing Software Delivery Pipelines

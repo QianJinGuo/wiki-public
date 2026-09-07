@@ -6,6 +6,9 @@ type: entity
 tags: ['raw', 'article']
 sources: [raw/articles/2026-05-12-阿里巴巴-蚂蚁-LoongSuite-GenAI-可观测语义规范-从统一数据语言到规模化落地-阿里技术]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > -> [[raw/articles/2026-05-12-阿里巴巴-蚂蚁-LoongSuite-GenAI-可观测语义规范-从统一数据语言到规模化落地-阿里技术.md|原文存档]]

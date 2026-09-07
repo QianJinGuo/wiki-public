@@ -2,7 +2,7 @@
 
 title: "Codex 三件套：6 职位插件 + Sites + Annotations"
 created: 2026-06-04
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [codex, openai, role-plugin, sites, annotations, sales, analyst, design, investment-banking, equity-research, chatgpt, workbench, role-specific, cloudflare-worker, d1, r2, three-layer-rbac, codex-500w-wau]
 sources:
@@ -13,6 +13,9 @@ provenance_state: merged
 review_value: 8
 review_confidence: 8
 review_recommendation: strong
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Codex 三件套：6 职位插件 + Sites + Annotations

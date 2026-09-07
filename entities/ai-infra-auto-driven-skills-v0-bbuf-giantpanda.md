@@ -9,11 +9,14 @@ review_recommendation: strong
 review_stars: 4
 date: 2026-05-26
 created: 2026-05-28
-updated: 2026-08-29
+updated: 2026-09-07
 tags: [ai-infra, skill, claude-code, codex, sglang, vllm, inference-optimization, serving, benchmark, profiler, workflow, agentic, humanize-loop]
 type: entity
 provenance_state: synthesized
 sources: [raw/articles/ai-infra-auto-driven-skills-v0-bbuf-giantpanda]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > -> [[raw/articles/ai-infra-auto-driven-skills-v0-bbuf-giantpanda|原文存档]]

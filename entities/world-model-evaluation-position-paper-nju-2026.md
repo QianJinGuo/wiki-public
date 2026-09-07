@@ -1,12 +1,15 @@
 ---
 title: "世界模型评估立场论文 — 南京大学 (2026)"
 created: 2026-07-12
-updated: 2026-08-30
+updated: 2026-09-07
 type: entity
 tags: [world-model, evaluation, embodied, position-paper, nju, decision-making]
 confidence: 0.8
 provenance_state: merged
 sources: [raw/articles/world-model-evaluation-position-paper-nju-2026]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 世界模型评估立场论文 — 南京大学

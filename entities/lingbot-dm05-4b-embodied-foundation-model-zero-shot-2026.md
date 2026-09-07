@@ -1,12 +1,15 @@
 ---
 title: "原力灵机 DM0.5：4B 具身基础模型，Zero-Shot 提升 31%"
 created: 2026-07-09
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [embodied-ai, lingbot, ant-group, foundation-model, zero-shot, data-flywheel, robot, vla]
 sources: [raw/articles/zero-shot提升31原力灵机dm05登场15万小时数据喂出, raw/articles/zero-shot长记忆抗干扰dm05把vla带进真实世界]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 原力灵机 DM0.5：4B 具身基础模型，Zero-Shot 提升 31%

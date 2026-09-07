@@ -7,6 +7,9 @@ type: entity
 tags: ['harness', 'training', 'ai']
 sources: [raw/articles/解构scaling-law优化架构数据的三重奏]
 confidence: 0.7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 解构Scaling Law：优化、架构、数据的三重奏

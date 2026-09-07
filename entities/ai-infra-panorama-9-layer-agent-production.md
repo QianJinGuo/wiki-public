@@ -1,7 +1,7 @@
 ---
 title: "AI Infra 全景图：9 层 Agent 生产架构"
 created: 2026-07-02
-updated: 2026-07-02
+updated: 2026-09-07
 type: entity
 tags: [ai-infra, agent-framework, production, architecture, infrastructure, llm-serving, agent-orchestration, rag, evaluation, observability]
 sources:
@@ -11,6 +11,9 @@ provenance_state: extracted
 review_value: 8
 review_confidence: 9
 review_recommendation: strong
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # AI Infra 全景图：9 层 Agent 生产架构

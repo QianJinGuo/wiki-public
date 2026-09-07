@@ -5,12 +5,15 @@ description: "Ollama本地模型驱动Obsidian笔记自动概念提取与双向�
 source: "[[raw/articles/obsidian-llm-wiki-local-kytmanov-2026]]"
 tags: [obsidian, llm-wiki, local-ai, knowledge-management, ollama]
 created: 2026-05-25
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 confidence: 0.7
 provenance_state: extracted
 sources: [raw/articles/obsidian-llm-wiki-local-kytmanov-2026]
 review_value: 6
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 核心问题：笔记孤岛

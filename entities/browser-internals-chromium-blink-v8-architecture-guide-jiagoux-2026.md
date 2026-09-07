@@ -2,7 +2,7 @@
 title: "现代浏览器内部机制：Chromium/Blink/V8 架构（Agent Browser Use 向）"
 type: entity
 created: 2026-07-01
-updated: 2026-07-01
+updated: 2026-09-07
 tags: [browser, chromium, blink, v8, javascript, rendering, site-isolation, agent, browser-use, playwright, mcp, chrome-mcp, computer-use, sandbox, multi-process]
 sources:
   - raw/articles/browser-internals-chromium-blink-v8-complete-guide-jiagoux-2026
@@ -10,6 +10,9 @@ review_value: 7
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 现代浏览器内部机制：Chromium/Blink/V8 架构

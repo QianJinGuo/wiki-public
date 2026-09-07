@@ -4,10 +4,13 @@ title: "从 Chroma 换成 Qdrant，我踩了 100 万向量的坑"
 type: entity
 tags: [comparison, inference]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 7
 review_confidence: 8
 sources: [raw/articles/chroma-to-qdrant-1m-vector-migration]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 从 Chroma 换成 Qdrant，我踩了 100 万向量的坑

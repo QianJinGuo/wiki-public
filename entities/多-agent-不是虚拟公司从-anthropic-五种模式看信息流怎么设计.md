@@ -8,6 +8,9 @@ tags: [wechat, ai]
 rating: v8c8
 sources:
   - raw/articles/多-agent-不是虚拟公司从-anthropic-五种模式看信息流怎么设计
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 多 Agent 不是虚拟公司：从 Anthropic 五种模式看信息流怎么设计

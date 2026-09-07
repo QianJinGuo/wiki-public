@@ -4,10 +4,13 @@ title: "NVIDIA GPU Kernel 翻译：Cute / Python / Julia"
 type: entity
 tags: [agent, nvidia, tool, training]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 8
 review_confidence: 7
 sources: [raw/articles/nvidia-gpu-kernel-translation-cute-python-julia]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Automating GPU Kernel Translation with AI Agents: cuTile Python to cuTile.jl | NVIDIA Technical Blog

@@ -4,11 +4,14 @@ title: "Fine-tune LLM with Databricks Unity Catalog and Amazon SageMaker AI"
 type: entity
 tags: [aws, machine-learning, llm, document-processing]
 created: 2026-05-14
-updated: 2026-06-19
+updated: 2026-09-07
 review_value: 7
 review_confidence: 8
 review_recommendation: worth-reading
 sources: [raw/articles/fine-tune-llm-with-databricks-unity-catalog-and-amazon-sagemaker]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 ## 核心要点
 - Databricks Unity Catalog + Amazon SageMaker AI 微调方案

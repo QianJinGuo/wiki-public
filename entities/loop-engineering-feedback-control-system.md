@@ -1,7 +1,7 @@
 ---
 title: "Loop Engineering: 把反馈循环放进工程现场"
 created: 2026-06-15
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, harness, loop-engineering, feedback-control, claude-code, peter-steinberger, boris-cherny, engineering-paradigm, verifier, generator, closed-loop, open-loop, samuel-mcdonnell, bun-rust-translation, shensiquan, autoresearch, karpathy, five-decisions, three-traps, decision-table]
 sources:
@@ -18,6 +18,9 @@ source_urls:
 review_confidence: 9
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Loop Engineering: 把反馈循环放进工程现场

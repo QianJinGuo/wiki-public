@@ -2,7 +2,7 @@
 
 title: "SchemaFlow: OpenAI Cookbook Partner — Agentic Database Change Impact Analysis, SQL Generation, and Eval Guardrails"
 created: 2026-06-09
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [agent, harness, openai, sql, eval, pydantic, guardrails, cookbook, schemaflow]
 sources: [raw/articles/schemaflow-agentic-database-sql-generation-openai-cookbook]
@@ -13,6 +13,9 @@ review_recommendation: strong
 review_stars: 4
 confidence: 0.9
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # SchemaFlow: OpenAI Cookbook Partner — Agentic Database Change Impact Analysis, SQL Generation, and Eval Guardrails

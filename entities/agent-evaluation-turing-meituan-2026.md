@@ -1,12 +1,15 @@
 ---
 title: "Agent 评测漫谈 — 美团图灵 Agent 评测体系与长程框架影响"
 created: 2026-08-13
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, evaluation, meituan, long-horizon, framework, agent-eval, turing]
 sources: [raw/articles/agent评测漫谈-由浅入深讲解agent评测]
 confidence: 0.85
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Agent 评测漫谈 — 美团图灵 Agent 评测体系与长程框架影响

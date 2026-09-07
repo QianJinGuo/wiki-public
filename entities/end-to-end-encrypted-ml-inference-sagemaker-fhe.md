@@ -2,7 +2,7 @@
 
 title: "End-to-end encrypted ML inference with Amazon SageMaker AI and FHE"
 created: 2026-06-09
-updated: 2026-08-30
+updated: 2026-09-07
 type: entity
 tags: [aws, sagemaker, fhe, encryption, ml-inference, privacy]
 sources: [raw/articles/end-to-end-encrypted-ml-inference-with-amazon-sagemaker-ai-a]
@@ -10,6 +10,9 @@ review_value: 7
 review_confidence: 8
 review_stars: 4
 confidence: 0.75
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # End-to-end encrypted ML inference with Amazon SageMaker AI and FHE

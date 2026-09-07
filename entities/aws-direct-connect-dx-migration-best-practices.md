@@ -2,7 +2,7 @@
 
 title: "Direct Connect (DX) 迁移最佳实践"
 created: 2026-06-03
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [aws, networking, direct-connect, hybrid-cloud, migration, best-practice]
 source: "[[raw/articles/direct-connect-dx-迁移最佳实践]]"
@@ -13,6 +13,9 @@ review_confidence: 8
 review_recommendation: strong
 review_stars: 4
 sources: [raw/articles/direct-connect-dx-迁移最佳实践]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Direct Connect (DX) 迁移最佳实践

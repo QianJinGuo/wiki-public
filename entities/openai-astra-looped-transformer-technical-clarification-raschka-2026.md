@@ -1,13 +1,16 @@
 ---
 title: "OpenAI Astra 与循环 Transformer（looped transformer）技术辨析"
 created: 2026-09-05
-updated: 2026-09-06
+updated: 2026-09-07
 type: entity
 tags: [model-architecture, transformer, looped-transformer, recurrent-depth, nanbeige, compute-redundancy, mesh, spiralformer, memory-buffer, multi-scale]
 sources:
   - raw/articles/openai-astra-looped-transformer-debunk-raschka-2026
   - raw/articles/mesh-spiralformer-recurrent-transformer-ali-qbitai-2026-09-06
 confidence: 0.7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # OpenAI Astra 与循环 Transformer（looped transformer）技术辨析

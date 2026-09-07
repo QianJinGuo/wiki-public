@@ -2,13 +2,16 @@
 
 title: "百型智能 OntoZ：企业本体论 + 群智能体协同体系（出海企业数字大脑 / Palantir 中国类比）"
 created: 2026-06-05
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, ontology, b2b, enterprise-ai, multi-agent, ontology-engineering, palantir, mcp, skill, world-model, reinforcement-learning, markov-blanket, gnn, agent-resource, ar-vs-hr, foundation-model-company, baixing, xinzhiyuan]
 sources: [raw/articles/baixing-ontoz-enterprise-ontology-xinzhiyuan]
 review_value: 8
 review_confidence: 8
 summary: 百型智能 2026-06-05 发布 OntoZ 第三代企业级 AI 基础设施：企业本体论 + 群智能体协同体系（马尔可夫毯+RL 任务规划器 + 先验因果结构 GNN + 产业世界模型 + cognition infra）。上千家出海企业 / 近千智能体 / 160+ 国家 / 700万 KP / 数十亿成交潜力。AR 替代 HR + A2A 智能体自主经济长期布局
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 百型智能 OntoZ：企业本体论 + 群智能体协同体系

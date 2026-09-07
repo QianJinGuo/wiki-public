@@ -1,7 +1,7 @@
 ---
 title: "Netflix 可控 AI 视频编辑：Vera 与 VOID 模型"
 created: 2026-06-23
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [video-editing, diffusion, generative-ai, netflix, computer-vision, multimodal]
 source: [[raw/articles/toward-more-controllable-ai-video-editing-an-early-research-]]
@@ -12,6 +12,9 @@ review_confidence: 9
 review_recommendation: strong
 review_stars: 4
 sources: [raw/articles/toward-more-controllable-ai-video-editing-an-early-research-]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Netflix 可控 AI 视频编辑：Vera 与 VOID 模型

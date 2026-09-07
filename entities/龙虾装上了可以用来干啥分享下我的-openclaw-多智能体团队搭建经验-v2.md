@@ -9,6 +9,10 @@ review_confidence: 7
 type: entity
 sources:
   - raw/articles/龙虾装上了可以用来干啥分享下我的-openclaw-多智能体团队搭建经验-v2
+reviewed: 2026-09-07
+review_verdict: hub-retained
+review_category: dup
+review_note: "judged dup-0.8: 同文较短版本; retained as hub (in-links>=20); MOC rewrite candidate"
 ---
 
 # 龙虾装上了，可以用来干啥？分享下我的 OpenClaw 多智能体团队搭建经验！

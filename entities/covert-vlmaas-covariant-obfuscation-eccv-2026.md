@@ -1,12 +1,15 @@
 ---
 title: "COVERT — VLMaaS 协变混淆隐私保护推理框架（ECCV 2026）"
 created: 2026-08-13
-updated: 2026-08-14
+updated: 2026-09-07
 type: entity
 tags: [bytedance, nju, vlm, privacy, obfuscation, eccv-2026, inference, vlmaas]
 sources: [raw/articles/顶会入选-covert-面向视觉语言模型的隐私保护推理框架入选-eccv-2026]
 confidence: 0.85
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # COVERT — VLMaaS 协变混淆隐私保护推理框架（ECCV 2026）

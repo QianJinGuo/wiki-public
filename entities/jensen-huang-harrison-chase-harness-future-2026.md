@@ -1,13 +1,16 @@
 ---
 title: 黄仁勋 × Harrison Chase 对话：未来公司将建立在 Harness 之上
 created: 2026-07-16
-updated: 2026-07-16
+updated: 2026-09-07
 type: entity
 tags: [harness, agent, nvidia, langchain, jensen-huang, enterprise-ai, agentic-system, open-source]
 status: verified
 confidence: 0.9
 provenance_state: extracted
 sources: [raw/articles/jensen-huang-harrison-chase-harness-future-2026-07-16]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > NVIDIA CEO 黄仁勋与 LangChain CEO Harrison Chase 的 26 分钟深度对话（2026-07），阐述了未来企业将由 Harness 系统而非传统业务流程定义的愿景。对话涵盖开源 vs 前沿模型策略、企业智能内建、Agent 安全治理、以及从编程到构建 Agent 的范式转变。^[raw/articles/jensen-huang-harrison-chase-harness-future-2026-07-16.md]

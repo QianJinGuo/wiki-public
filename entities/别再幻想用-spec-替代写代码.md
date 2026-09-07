@@ -8,6 +8,9 @@ tags: [wechat, ai]
 rating: v7c7
 sources:
   - raw/articles/别再幻想用-spec-替代写代码
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 别再幻想用 Spec 替代写代码

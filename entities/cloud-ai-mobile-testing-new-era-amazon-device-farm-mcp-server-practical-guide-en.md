@@ -2,7 +2,7 @@
 
 title: "The New Era of Cloud AI Mobile Testing: Amazon Device Farm MCP Server Practical Guide | 亚马逊AWS官方博客"
 created: 2026-05-14
-updated: 2026-09-05
+updated: 2026-09-07
 tags: [aws-china-blog]
 sources: [raw/articles/cloud-ai-mobile-testing-new-era-amazon-device-farm-mcp-server-practical-guide-en]
 review_value: 8
@@ -10,6 +10,9 @@ review_confidence: 8
 review_recommendation: strong
 publish_date: 2026-02-02
 type: entity
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 概述

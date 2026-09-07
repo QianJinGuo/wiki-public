@@ -1,7 +1,7 @@
 ---
 title: "软件工程的 AI 转型"
 created: 2026-07-02
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [software-engineering, ai, transformation, ai-coding]
 review_value: 6
@@ -9,6 +9,9 @@ review_confidence: 4
 provenance_state: stub-upgraded
 confidence: 0.6
 score_validated: 2026-09-05
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 软件工程的 AI 转型

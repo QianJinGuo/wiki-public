@@ -2,7 +2,7 @@
 title: "20VC x SaaStr: The Most Aggressive Quarter in American Capitalism, Palantir's Ru"
 source_url:
 created: 2026-05-12
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [newsletter, venture-capital, ai, palantir]
 review_value: 8
@@ -10,6 +10,9 @@ review_confidence: 8
 review_recommendation: strong
 review_stars: 4
 sources: [raw/articles/saastr-20vc-most-aggressive-quarter-american-capitalism-palantir]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 ## 核心要点
 - 20VC x SaaStr 对话，关于美国资本主义的投资动态

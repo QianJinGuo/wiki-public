@@ -8,6 +8,9 @@ tags: [wechat, ai]
 rating: v8c8
 sources:
   - raw/articles/deepseek-v4-详解1m-上下文背后真正发生了什么
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # DeepSeek V4 详解：1M 上下文背后，真正发生了什么

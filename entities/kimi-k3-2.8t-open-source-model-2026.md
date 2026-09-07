@@ -1,13 +1,16 @@
 ---
 title: "Kimi K3：智能的新前沿 — 2.8T 参数开源模型"
 created: 2026-07-17
-updated: 2026-07-21
+updated: 2026-09-07
 type: entity
 tags: [kimi, moonshot-ai, open-source-model, llm, moe, kda, attention-residuals, gpu-compiler, chip-design, agentic-coding, trillion-parameter, open-source]
 sources:
   - raw/articles/kimi-k3-2.8t-open-source-model-2026
 confidence: 0.8
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Kimi K3：智能的新前沿 — 2.8T 参数开源模型

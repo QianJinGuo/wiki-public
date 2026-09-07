@@ -2,7 +2,7 @@
 title: "MiMo-V2.5 推理系统全链路优化：Hybrid SWA + MoE + 多模态生产级落地"
 type: entity
 created: 2026-07-02
-updated: 2026-08-14
+updated: 2026-09-07
 tags: [mimo, xiaomi, inference-optimization, hybrid-swa, kvcache, speculative-decoding, moe, multimodal, production-engineering, sglang]
 source:
 author: MiMo Team
@@ -10,6 +10,9 @@ vxc: 63
 sources:
   - raw/articles/mimo-v2-5-inference-system-optimization-hybrid-swa
   - raw/articles/mimo-v25-pro-ultraspeed-1000tps-xiaomi-2026
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # MiMo-V2.5 推理系统全链路优化

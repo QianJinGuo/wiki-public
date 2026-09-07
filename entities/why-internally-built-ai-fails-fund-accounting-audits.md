@@ -3,12 +3,15 @@ title: "Why Internally-Built AI Fails Fund Accounting Audits"
 type: entity
 tags: [newsletter, article]
 created: 2026-05-15
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 7
 sources: [raw/articles/why-internally-built-ai-fails-fund-accounting-audits]
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 # Why Internally-Built AI Fails Fund Accounting Audits
 

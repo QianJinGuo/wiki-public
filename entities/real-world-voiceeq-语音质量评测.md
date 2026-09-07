@@ -7,6 +7,9 @@ tags: [ai, voice-ai, tts, asr, benchmark, 评测]
 sources: [raw/articles/introducing-real-world-voiceeq-measuring-the-human-quality-o]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Real World VoiceEQ：衡量语音 AI 的人类质量

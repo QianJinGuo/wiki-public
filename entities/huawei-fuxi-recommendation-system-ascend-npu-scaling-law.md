@@ -4,11 +4,14 @@ title: "推荐系统进入大模型时刻：昇腾 NPU 如何支撑千亿级生�
 type: entity
 tags: [recommendation-system, fuxi, scaling-law, hstu, ascend-npu, generative-model, distributed-training, performance-law, huawei, model-architecture]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 8
 review_confidence: 9
 sources: [raw/articles/huawei-fuxi-recommendation-system-ascend-npu-scaling-law]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 概述

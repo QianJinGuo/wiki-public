@@ -1,7 +1,7 @@
 ---
 title: "基于 Application Inference Profile 为 Amazon Bedrock 构建分业务单元的近实时成本告警"
 created: 2026-06-30
-updated: 2026-07-27
+updated: 2026-09-07
 type: entity
 tags: [amazon-bedrock, cost-governance, finops, cloudwatch, inference-profile, aws, monitoring]
 sources: [raw/articles/基于-application-inference-profile-为-amazon-bedrock-构建分业务单元的近实]
@@ -10,6 +10,9 @@ review_value: 7
 review_confidence: 8
 review_stars: 4
 review_recommendation: worth-reading
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 基于 Application Inference Profile 为 Amazon Bedrock 构建分业务单元的近实时成本告警

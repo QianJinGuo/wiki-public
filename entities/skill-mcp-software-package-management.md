@@ -1,7 +1,7 @@
 ---
 title: "skill-mcp — 把 AI 技能当软件包管理（MCP 权限网关 + 只调度不执行的 Pipeline）"
 created: 2026-06-30
-updated: 2026-07-01
+updated: 2026-09-07
 type: entity
 tags:
   - skill-mcp
@@ -16,6 +16,9 @@ tags:
   - open-source
 sources:
   - raw/articles/skill-mcp-software-package-management-mcp-pipeline
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # skill-mcp — 把 AI 技能当软件包管理（MCP 权限网关 + 只调度不执行的 Pipeline）

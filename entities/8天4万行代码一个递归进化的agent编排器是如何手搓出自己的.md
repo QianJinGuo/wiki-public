@@ -8,6 +8,9 @@ tags: [wechat, ai]
 rating: v8c8
 sources:
   - raw/articles/8天4万行代码一个递归进化的agent编排器是如何手搓出自己的
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 8天，4万行代码：一个递归进化的agent编排器是如何“手搓”出自己的?

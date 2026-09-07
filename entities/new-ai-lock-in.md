@@ -5,14 +5,16 @@ title: "The new AI lock-in"
 type: entity
 tags: [ai-strategy, vendor-lock-in, orchestration, workflow, mcp]
 created: 2026-05-20
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 7
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4
 sources: [raw/articles/new-ai-lock-in]
 provenance_state: synthesized
-
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 核心要点

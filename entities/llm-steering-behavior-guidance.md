@@ -4,11 +4,14 @@ description: "通过推理阶段对模型内部激活进行即时调控以引导
 source: [[raw/articles/steering-mechanism-evaluation-easyedit2-zju-alibaba]]
 tags: [gui-agent, llm, steering, steering, llm-safety, model-editing, activation-manifold, interpretability]
 created: 2026-06-01
-updated: 2026-06-02
+updated: 2026-09-07
 type: entity
 provenance_state: inferred
 review_value: 7
 confidence: 0.6
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # LLM Steering 行为引导

@@ -2,14 +2,16 @@
 
 title: Automating Confidential Containers (CoCo) Infrastructure with Kyverno
 created: 2026-05-20
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [confidential-computing, kubernetes, security, policy-as-code, kyverno]
 review_value: 7
 sources: [raw/articles/automating-confidential-containers-coco-infrastructure-with-kyverno]
 confidence: high
 provenance_state: extracted
-
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 ## CoCo 工作负载的必备配置
 在 CoCo 环境中运行的 Pod 通常需要在清单中注入以下元素： ^[raw/articles/automating-confidential-containers-coco-infrastructure-with-kyverno.md]

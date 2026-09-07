@@ -1,7 +1,7 @@
 ---
 title: "HSCodeComp：阿里 ACL 2026 最佳资源论文——层级规则应用 Agent 基准"
 created: 2026-07-15
-updated: 2026-07-15
+updated: 2026-09-07
 type: entity
 tags: [acl-2026, best-resource-paper, agent-benchmark, hierarchical-rule-application, deep-search, hs-code, expert-benchmark, agent-evaluation, level-3-knowledge, reasoning-drift, harness-engineering, alibaba-tech, ath-maas]
 sources:
@@ -9,6 +9,9 @@ sources:
 review_value: 9
 review_confidence: 9
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # HSCodeComp：阿里 ACL 2026 最佳资源论文——层级规则应用 Agent 基准

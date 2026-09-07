@@ -1,12 +1,15 @@
 ---
 title: "数据级 Harness：架构师 JiaGouX 解读 Anthropic 95% 数据分析与 5 个反直觉边界"
 created: 2026-06-10
-updated: 2026-08-01
+updated: 2026-09-07
 tags: [agent, anthropic, architecture, code, data, database, evaluation, fine-tuning, harness-engineering, llm, memory, prompt, rag, search, security, tool-use, workflow]
 review_value: 8
 review_confidence: 8
 type: entity
 sources:
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 数据级 Harness：架构师 JiaGouX 解读 Anthropic 95% 数据分析与 5 个反直觉边界

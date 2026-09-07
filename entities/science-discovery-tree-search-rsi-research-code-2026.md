@@ -1,12 +1,15 @@
 ---
 title: "九问ScienceDiscovery：树搜索驱动科研代码 RSI，加速科学发现"
 created: 2026-09-05
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [ai4science, rsi, code-generation, tree-search, agent, open-source, sandbox]
 sources: [raw/articles/science-discovery-tree-search-rsi-research-code-2026]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 九问ScienceDiscovery：树搜索驱动科研代码 RSI，加速科学发现

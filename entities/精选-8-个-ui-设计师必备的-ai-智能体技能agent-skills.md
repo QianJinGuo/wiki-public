@@ -9,6 +9,9 @@ tags: [claude-code, agent, skill, architecture, ai]
 review_value: 9
 sources: [raw/articles/精选-8-个-ui-设计师必备的-ai-智能体技能agent-skills]
 review_confidence: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 [[raw/articles/精选-8-个-ui-设计师必备的-ai-智能体技能agent-skills]] ^[raw/articles/精选-8-个-ui-设计师必备的-ai-智能体技能agent-skills.md]

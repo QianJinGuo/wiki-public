@@ -1,11 +1,14 @@
 ---
 title: "别让Agent什么都记 上交×腾讯提出 AdaMem"
 created: 2026-07-31
-updated: 2026-09-04
+updated: 2026-09-07
 type: entity
 tags: ['llm-agent', 'memory', 'memory-policy', 'selective-memory', 'sjtu', 'tencent', 'rag']
 sources: [raw/articles/admem-memory-policy-selective-memory-sjtu-tencent-2026]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > -> [[raw/articles/admem-memory-policy-selective-memory-sjtu-tencent-2026.md|原文存档]]

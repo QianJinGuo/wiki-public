@@ -2,7 +2,7 @@
 
 title: "Claude Opus 4.8: The System Card"
 created: 2026-06-02
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [claude, anthropic, system-card, evaluation]
 source: [[raw/articles/claude-opus-4-8-system-card-zvi]]
@@ -10,6 +10,9 @@ confidence: 0.75
 review_value: 6
 sources:
   - raw/articles/claude-opus-4-8-system-card-zvi
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Claude Opus 4.8: The System Card

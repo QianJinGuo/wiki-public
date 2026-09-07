@@ -4,11 +4,14 @@ title: "Claude Code Routines：从工具到队友的主动 Agent 模式"
 type: entity
 subtype: agent-feature
 created: 2026-05-23
-updated: 2026-08-29
+updated: 2026-09-07
 tags: [claude-code, anthropic, proactive-agent, routine, event-driven, scheduled-task, harness]
 sources: [raw/articles/claude-code-routines-proactive-agent]
 review_value: 8
 review_confidence: 8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 背景案例：Sarah 的文档困境

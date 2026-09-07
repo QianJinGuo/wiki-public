@@ -7,6 +7,9 @@ tags: [ai, agent, ai-chip, t-head, sail, open-source, hardware, alibaba, ai-infr
 sources: [raw/articles/真武-ai-芯片-t-head-sail-软件栈正式开源开放]
 confidence: 0.92
 score: 72
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 真武 AI 芯片 T-Head Sail 软件栈开源

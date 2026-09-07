@@ -1,13 +1,16 @@
 ---
 title: "Codex /goal 源码深度解析：状态表 + 续跑条件 + 预算账本"
 created: 2026-06-10
-updated: 2026-08-01
+updated: 2026-09-07
 tags: [agent, code, data, database, prompt, security, tool-use]
 review_value: 9
 review_confidence: 9
 type: entity
 review_recommendation: strong
 sources:
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Codex /goal 源码深度解析：状态表 + 续跑条件 + 预算账本

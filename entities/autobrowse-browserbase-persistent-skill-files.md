@@ -1,7 +1,7 @@
 ---
 title: "浏览器 Agent 的失忆问题：Autobrowse 如何让每次探索变成永久技能"
 created: 2026-05-08
-updated: 2026-09-05
+updated: 2026-09-07
 source: "[[raw/articles/autobrowse-browserbase-persistent-skill-files|原文存档]]"
 type: entity
 value: 7
@@ -9,6 +9,9 @@ tags: [agent, skill, inference, engineering]
 review_value: 7
 sources: [raw/articles/autobrowse-browserbase-persistent-skill-files]
 review_confidence: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 背景：探索税（Discovery Tax）

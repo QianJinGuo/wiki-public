@@ -2,7 +2,7 @@
 
 title: "CHERIoT-Ibex: Closing the door on memory safety vulnerabilities with hardware-enforced protection"
 created: 2026-05-16
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [memory, open-source, architecture]
 sources:
@@ -11,6 +11,9 @@ review_value: 5
 review_confidence: 7
 
 score_validated: 2026-09-05
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 深度分析

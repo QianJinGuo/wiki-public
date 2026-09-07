@@ -8,6 +8,9 @@ tags: [wechat, ai]
 rating: v7c7
 sources:
   - raw/articles/超级计算机上的数学-ai现在能在你-mac-上跑了
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 超级计算机上的数学 AI，现在能在你 Mac 上跑了

@@ -1,7 +1,7 @@
 ---
 title: "AI 原生公司转型路径"
 created: 2026-07-02
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [ai-native, organization, transformation, strategy]
 review_value: 6
@@ -9,6 +9,9 @@ review_confidence: 5
 provenance_state: stub-upgraded
 confidence: 0.6
 score_validated: 2026-09-05
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # AI 原生公司转型路径

@@ -7,6 +7,9 @@ tags: [ai, agent, nvidia, omniverse, simulation, physical-ai, robotics, digital-
 sources: [raw/articles/nvidia-agent-toolkit-扩展全新-omniverse-库赋能-ai-智能体构建仿真就绪世界]
 confidence: 0.76
 score: 56
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # NVIDIA Agent Toolkit + Omniverse

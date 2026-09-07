@@ -8,6 +8,9 @@ tags: [wechat, ai]
 rating: v7c7
 sources:
   - raw/articles/从-hy3-preview-看-ai-下半场单位智能时代的一次工程答卷
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 从 Hy3 preview 看 AI 下半场：单位智能时代的一次工程答卷

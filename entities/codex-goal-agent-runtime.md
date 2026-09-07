@@ -8,13 +8,16 @@ platform: "wechat"
 author: "若飞"
 publish_date: "2026-05-14"
 created: "2026-05-14"
-updated: 2026-08-01
+updated: 2026-09-07
 review_value: 9
 review_confidence: 9
 review_recommendation: "strong"
 review_stars: 4
 tags: [agent, codex, openai, goal-system, long-horizon-agent, harness, state-machine, completion-audit, heartbeats, computer-use, local-memory]
 aliases: ["Codex /goal", "/goal", "goals.rs"]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 核心论点

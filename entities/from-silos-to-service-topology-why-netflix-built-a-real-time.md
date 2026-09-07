@@ -1,7 +1,7 @@
 ---
 title: "From Silos to Service Topology: Why Netflix Built a Real-Time Service Map"
 created: 2026-06-10
-updated: 2026-08-01
+updated: 2026-09-07
 tags: [architecture, observability, netflix, distributed-systems, graph-database, ebpf, microservices, service-topology]
 review_value: 7
 review_confidence: 7
@@ -10,6 +10,9 @@ sources:
   - raw/articles/from-silos-to-service-topology-why-netflix-built-a-real-time
 confidence: 0.9
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # From Silos to Service Topology: Why Netflix Built a Real-Time Service Map

@@ -2,7 +2,7 @@
 
 title: "OpenClaw 多租户系列 #7 — 基于 ECS Fargate + Graviton 的轻量级企业 AI Agent 平台 | 亚马逊AWS官方博客"
 created: 2026-06-05
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [aws-china-blog, openclaw, hermes-agent, ecs-fargate, graviton, multi-tenant, arm64, efs, terraform]
 sources: [raw/articles/openclaw-multi-7-ecs-fargate-graviton]
@@ -10,6 +10,9 @@ review_value: 7
 review_confidence: 7
 review_recommendation: worth-reading
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # OpenClaw 多租户系列 #7 — 基于 ECS Fargate + Graviton 的轻量级企业 AI Agent 平台

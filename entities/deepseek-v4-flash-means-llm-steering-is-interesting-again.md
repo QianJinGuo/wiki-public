@@ -3,11 +3,14 @@ title: "DeepSeek-V4-Flash means LLM steering is interesting again"
 type: entity
 tags: [seangoedecke]
 created: 2026-05-19
-updated: 2026-06-19
+updated: 2026-09-07
 review_value: 7
 review_confidence: 8
 review_recommendation: worth-reading
 sources: [raw/articles/deepseek-v4-flash-means-llm-steering-is-interesting-again]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 ## 核心要点
 - 评分：v=7 × c=8 = 56

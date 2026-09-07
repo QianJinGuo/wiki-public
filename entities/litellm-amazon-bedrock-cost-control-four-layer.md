@@ -3,13 +3,16 @@ title: "LiteLLM 驱动的 Amazon Bedrock 成本治理：四层防护体系"
 type: entity
 tags: [litellm, bedrock, cost-control, ai-gateway, aws, rate-limiting, monitoring, mfa, security, case-study]
 created: 2026-06-12
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 7
 review_confidence: 7
 review_recommendation: worth-reading
 review_stars: 4
 sources: [raw/articles/通过-litellm-实现-amazon-bedrock-成本管控实时限额多维监控与平台级兜底]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > [!abstract]

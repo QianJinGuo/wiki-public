@@ -2,7 +2,7 @@
 
 title: "Grafana 13.1 release: observability as code updates, extending Grafana Assistant across more data sources, and more"
 created: 2026-06-26
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [article]
 source: "[[raw/articles/blog-grafana-13-1-release-all-the-latest-features]]"
@@ -12,6 +12,9 @@ review_value: 7
 review_confidence: 8
 review_stars: 4
 review_recommendation: worth-reading
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Grafana 13.1 release: observability as code updates, extending Grafana Assistant across more data sources, and more

@@ -4,10 +4,13 @@ title: "Pytorch in Kernel Recsys Optimization"
 type: entity
 tags: [inference]
 created: 2026-05-21
-updated: 2026-07-27
+updated: 2026-09-07
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/pytorch-in-kernel-recsys-optimization]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 深度分析

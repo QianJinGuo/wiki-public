@@ -2,7 +2,7 @@
 
 title: "LBS-IntentBench — 首个真实出行隐式意图评测基准"
 created: 2026-05-07
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [lbs, intent-benchmark, agent, spatio-temporal, gaode, evaluation, implicit-intent]
 sources: [raw/articles/lbs-intent-bench-lbs-intentbench]
@@ -10,6 +10,9 @@ review_value: 8
 review_confidence: 7
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 核心定位

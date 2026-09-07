@@ -2,7 +2,7 @@
 
 title: "An agent capability library"
 created: 2026-06-23
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [agent, capability, architecture, engineering]
 source: "[[raw/articles/agent-capability-library]]"
@@ -12,6 +12,9 @@ review_value: 8
 review_confidence: 8
 review_stars: 4
 review_recommendation: strong
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # An agent capability library

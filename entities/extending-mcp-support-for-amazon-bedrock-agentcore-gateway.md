@@ -1,13 +1,16 @@
 ---
 title: "Extending MCP support for Amazon Bedrock AgentCore Gateway"
 created: 2026-06-10
-updated: 2026-08-01
+updated: 2026-09-07
 tags: [agent, architecture, aws, code, evaluation, mcp, memory, observability, open-source, security, tool-use]
 review_value: 7
 review_confidence: 7
 type: entity
 sources: [raw/articles/extending-mcp-support-for-amazon-bedrock-agentcore-gateway]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Extending MCP support for Amazon Bedrock AgentCore Gateway

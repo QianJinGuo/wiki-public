@@ -1,11 +1,14 @@
 ---
 title: "AutoHarness 走到哪了：学界业界的能力调研"
 created: 2026-07-28
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: ['auto-harvested']
 sources: [raw/articles/auto-harness-survey-vibecoder-2026]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > -> [[raw/articles/auto-harness-survey-vibecoder-2026.md|原文存档]]

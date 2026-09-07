@@ -3,11 +3,14 @@ title: "LLM 推理流水线完整解析：Prefill-Decode 双阶段模型"
 type: entity
 tags: [llm, inference, prefill, decode, kv-cache, quantization, vllm, paged-attention, speculative-decoding, continuous-batching, rope, bpe, deepseek-v4, transformer, gpu, serving]
 created: 2026-06-30
-updated: 2026-07-31
+updated: 2026-09-07
 review_value: 8
 review_confidence: 7
 sources: [raw/articles/llm-inference-pipeline-internals, raw/articles/kuaishou-wanqing-kllm-inference-cost-performance-optimization-2026]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > -> [[raw/articles/llm-inference-pipeline-internals|原文存档]]

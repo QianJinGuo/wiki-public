@@ -1,7 +1,7 @@
 ---
 title: "Claude Code 架构解析"
 created: 2026-04-24
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [claude-code, agent, architecture, runtime, multi-agent, tool-runtime, permission, context-isolation, orchestrator, subagent]
 sources:
@@ -9,6 +9,9 @@ sources:
   - raw/articles/claude-code-multi-agent-collaboration-allentang-2026-07-22
 review_value: 8
 review_confidence: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 ## Overview
 Claude Code 源码拆解（by 无岳，阿里云开发者，2026-04-15）。核心论点：**真正决定 Agent 能不能长期活下去的，不是模型，而是围着模型搭起来的运行时。**   ^[raw/articles/claude-code-architecture-analysis.md]

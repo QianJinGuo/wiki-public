@@ -1,12 +1,15 @@
 ---
 title: "OmniShow：极简干预统一多模态可控视频生成（ICML 2026）"
 created: 2026-08-21
-updated: 2026-08-21
+updated: 2026-09-07
 type: entity
 tags: [video-generation, multimodal, diffusion, paperweekly, icml-2026, architecture, generalist]
 sources: [raw/articles/omnishow-unified-multimodal-video-generation-icml-2026]
 confidence: 0.75
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # OmniShow：极简干预统一多模态可控视频生成（ICML 2026）

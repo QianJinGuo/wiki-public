@@ -1,12 +1,15 @@
 ---
 title: "京东 Oxygen AIIC：工业级百亿商品大模型商品中心"
 created: "2026-07-14"
-updated: "2026-07-16"
+updated: 2026-09-07
 type: "entity"
 tags: [jd, aiic, ecommerce, ontology, knowledge-graph, llm, s2d, item-center, multi-modal, self-evolving]
 confidence: 0.85
 provenance_state: "merged"
 sources: [raw/articles/jd-oxygen-aiic-industrial-item-center]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 京东 Oxygen AIIC：工业级百亿商品大模型商品中心

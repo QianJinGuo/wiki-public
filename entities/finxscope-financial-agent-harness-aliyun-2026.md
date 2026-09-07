@@ -2,13 +2,16 @@
 title: "FinXScope：基于 AgentScope Java 的金融级 AI 原生智能体底座"
 type: entity
 created: "2026-08-03"
-updated: 2026-08-03
+updated: 2026-09-07
 tags: [wechat, agentscope, harness, finance, ai-native, java, enterprise]
 rating: v8c9
 confidence: 0.85
 provenance_state: extracted
 sources:
   - raw/articles/finxscope-financial-agent-harness-aliyun-2026-08-03
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # FinXScope：基于 AgentScope Java 的金融级 AI 原生智能体底座

@@ -4,12 +4,15 @@ title: "Agentic Incident Triage Assistant with Amazon Quick, New Relic MCP Serve
 type: entity
 tags: [aws, amazon-quick, new-relic, mcp, mcp-server, asana, sre, incident-response, observability, agent, ai-agent, harness-engineering]
 created: 2026-06-10
-updated: 2026-08-01
+updated: 2026-09-07
 review_value: 8
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4
 sources: [raw/articles/build-an-agentic-incident-triage-assistant-with-amazon-quick-and-new-relic]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Agentic Incident Triage Assistant with Amazon Quick, New Relic MCP Server, and Asana

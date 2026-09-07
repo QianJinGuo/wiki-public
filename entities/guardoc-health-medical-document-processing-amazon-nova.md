@@ -1,11 +1,14 @@
 ---
 title: "Guardoc Health 医疗文档AI处理 — Amazon Nova 多模态 RAG 管线"
 created: 2026-07-28
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [ai, rag, amazon-nova, amazon-bedrock, document-processing, medical, multimodal, healthcare]
 sources: [raw/articles/how-guardoc-transforms-medical-document-processing-with-amazon-nova-models]
 confidence: 0.65
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Guardoc Health 医疗文档AI处理 — Amazon Nova 多模态 RAG 管线

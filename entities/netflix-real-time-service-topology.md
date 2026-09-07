@@ -2,7 +2,7 @@
 
 title: "From silos to service topology: why Netflix built a real-time architecture"
 created: 2026-06-01
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: ['aws', 'netflix', 'observability', 'architecture', 'real-time']
 source: [[raw/articles/netflix-real-time-service-topology]]
@@ -12,6 +12,9 @@ confidence: 0.7
 review_value: 8
 sources:
   - raw/articles/netflix-real-time-service-topology
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # From silos to service topology: why Netflix built a real-time architecture

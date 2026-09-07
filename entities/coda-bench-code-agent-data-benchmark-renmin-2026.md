@@ -1,12 +1,15 @@
 ---
 title: CoDA-Bench：Code Agent 数据智能基准
 created: 2026-07-07
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [agent, benchmark, data-intelligence, evaluation, coding-agent, data-discovery]
 sources: [raw/articles/raw-coda-bench-code-agent-data-benchmark-renmin-2026]
 confidence: 0.85
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # CoDA-Bench：Code Agent 数据智能基准

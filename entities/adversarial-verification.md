@@ -7,7 +7,10 @@ review_value: 8
 review_confidence: 7
 sources: [raw/articles/minimax-agent-team-mavis-owner-worker-verifier]
 created: 2026-05-20
-updated: 2026-09-05
+updated: 2026-09-07
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 核心原则

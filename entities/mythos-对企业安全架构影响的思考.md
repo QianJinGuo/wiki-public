@@ -7,6 +7,9 @@ tags: [ai, agent, llm, security, zero-trust, mythos, enterprise-architecture, ai
 confidence: 0.7
 sources: [raw/articles/mythos-对企业安全架构影响的思考]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Mythos 对企业安全架构影响的思考

@@ -8,6 +8,9 @@ tags: [wechat, ai]
 rating: v9c9
 sources:
   - raw/articles/向量检索知识图谱与-llm-wikirag-被嘲笑了三年但企业还是离不开它
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 向量检索、知识图谱与 LLM Wiki：RAG 被嘲笑了三年，但企业还是离不开它

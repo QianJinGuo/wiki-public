@@ -1,11 +1,14 @@
 ---
 title: "Deepgram SageMaker AI IAM Temporary Delegation"
 created: 2026-07-28
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [aws, sagemaker, deepgram, iam, security, speech-ai, infrastructure, cloud-security, devops]
 sources: [raw/articles/deepgram-enhances-amazon-sagemaker-ai-support-with-aws-iam-t]
 confidence: 0.7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Deepgram SageMaker AI IAM Temporary Delegation 集成

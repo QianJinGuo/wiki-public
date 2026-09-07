@@ -9,7 +9,10 @@ sources: [raw/articles/a-recent-experience-with-chatgpt-55-pro-gowerss-weblog]
 review_confidence: 7
 review_recommendation: strong
 created: 2026-05-12
-updated: 2026-09-05
+updated: 2026-09-07
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # A recent experience with ChatGPT 5.5 Pro | Gowers's Weblog

@@ -1,12 +1,15 @@
 ---
 title: "LLM + 语义聚类 VOC 四级标签体系 Pipeline"
 created: 2026-07-13
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [llm, nlp, semantic-clustering, voc, user-feedback, pipeline, tag-hierarchy]
 sources: [raw/articles/llm-semantic-clustering-voc-tag-hierarchy-pipeline]
 confidence: 0.80
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # LLM + 语义聚类 VOC 四级标签体系 Pipeline

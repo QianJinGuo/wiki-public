@@ -3,7 +3,7 @@
 title: "Agent 开发应小步快跑：第一个 Agent 只需做一件事（哪怕很烂）"
 description: "CrewAI 实战方法论：POC 墓地、爬行-走路-跑步迭代、高风险领域从单点切入、人在环是特性、故障要显而易见、按周而非按季度迭代、用证据而非直觉添加 Agent。15KB 深度总结。"
 created: 2026-06-09
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, agent-development, crewai, iterative-development, poc-graveyard, crawl-walk-run, human-in-the-loop, harness]
 source: "[[raw/articles/your-first-ai-agent-should-do-one-thing-badly]]"
@@ -13,6 +13,9 @@ related_urls:
 review_confidence: 7
 review_recommendation: worth-reading
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Agent 开发应小步快跑：第一个 Agent 只需做一件事（哪怕很烂）

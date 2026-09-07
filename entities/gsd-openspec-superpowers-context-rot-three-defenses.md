@@ -2,7 +2,7 @@
 
 title: "GSD 完胜 OpenSpec 和 Superpowers？源码拆完发现：三者防的是 context rot 的三道防线"
 created: 2026-07-06
-updated: 2026-08-06
+updated: 2026-09-07
 type: entity
 tags: [agent, coding, context-management, openspec, superpowers, gsd, harness-engineering, workflow, comparison]
 source: [[raw/articles/gsd-openspec-superpowers-context-rot-three-defenses-运维有术]]
@@ -10,6 +10,9 @@ confidence: 0.85
 review_value: 8
 review_confidence: 8
 sources: [raw/articles/gsd-openspec-superpowers-context-rot-three-defenses-运维有术]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # GSD 完胜 OpenSpec 和 Superpowers？源码拆完发现：三者防的是 context rot 的三道防线

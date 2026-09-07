@@ -15,6 +15,9 @@ tags:
   - multi-model
 sources:
   - raw/articles/claude-做方案codex-写代码多模型协作怎么交接才稳
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 摘要

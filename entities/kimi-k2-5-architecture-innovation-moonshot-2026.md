@@ -1,13 +1,16 @@
 ---
 title: "Kimi K2.5 架构创新 — 1T MoE 一层路由 + 三能力跃迁"
 created: 2026-06-12
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [kimi, k2.5, moe, moonshot, architecture, one-layer-routing, open-source, deep-research, multimodal]
 sources: [raw/articles/kimi-k2-5-architecture-innovation-moonshot-2026]
 provenance_state: extracted
 review_value: 9
 review_confidence: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 概述

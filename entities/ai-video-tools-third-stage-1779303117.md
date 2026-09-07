@@ -5,12 +5,15 @@ type: entity
 tags: [ai-video, generative-ai, video-ai, agent, canvas-native, workflow-automation, multimodal-generation, seedance]
 sources: [raw/articles/ai-video-tools-third-stage-1779303117]
 created: 2026-05-21
-updated: 2026-08-01
+updated: 2026-09-07
 review_value: 7
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 4
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 核心要点

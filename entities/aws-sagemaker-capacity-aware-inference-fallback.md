@@ -3,11 +3,14 @@ title: "AWS Sagemaker Capacity Aware Inference Fallback"
 type: entity
 tags: [architecture, aws, inference, llm, model, production]
 created: 2026-05-21
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 7
 review_confidence: 9
 sources:
   - raw/articles/aws-sagemaker-capacity-aware-inference-fallback
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 # SageMaker容量感知推理：实例池+优先级Fallback
 ## 三个关键洞察

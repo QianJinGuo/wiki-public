@@ -2,7 +2,7 @@
 title: "Unlocking the Cloudflare app ecosystem with OAuth for all"
 description: "Cloudflare 推出 OAuth for All：为第三方开发者提供标准化 OAuth 授权，解锁 Cloudflare 应用生态"
 created: 2026-06-26
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 source: [[raw/articles/cloudflare-oauth-for-all]]
 sources: [raw/articles/cloudflare-oauth-for-all]
@@ -11,6 +11,9 @@ review_value: 7
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Unlocking the Cloudflare app ecosystem with OAuth for all

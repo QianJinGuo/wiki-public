@@ -7,6 +7,9 @@ tags: [article, agent, cas]
 sources: [raw/articles/告别碎片化记忆中科院开源轻量级内存原生agent记忆系统mandol]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 告别「碎片化」记忆：中科院开源轻量级内存原生Agent记忆系统Mandol

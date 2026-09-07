@@ -2,11 +2,14 @@
 
 title: "Anthropic Claude Fable 5.1 / Mythos 5.1 发布"
 created: 2026-09-03
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [anthropic, claude, fable, mythos, model-release, benchmark, safety, protein-design, cybersecurity]
 sources: [raw/articles/anthropic-claude-fable-5-1-mythos-5-1-2026]
 confidence: 0.9
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Anthropic Claude Fable 5.1 / Mythos 5.1 发布

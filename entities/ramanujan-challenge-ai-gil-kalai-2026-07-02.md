@@ -3,8 +3,11 @@ title: "The Ramanujan Challenge for AI"
 type: entity
 tags: [ai-evaluation, benchmark, ai-mathematics, research, formal-verification, ai-reasoning]
 created: 2026-07-04
-updated: 2026-08-29
+updated: 2026-09-07
 sources: [raw/articles/ramanujan-challenge-ai-gil-kalai-2026-07-02]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # The Ramanujan Challenge for AI

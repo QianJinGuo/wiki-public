@@ -15,6 +15,9 @@ review_recommendation: worth-reading
 provenance_state: extracted
 sources:
   - raw/articles/anthropic-claude-fable-5-on-aws内置保护措施的-mythos-级功能现已推出
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Anthropic Claude Fable 5 on AWS：内置保护措施的 Mythos 级功能现已推出

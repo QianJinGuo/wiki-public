@@ -1,7 +1,7 @@
 ---
 title: "Agent 时代的生产力悖论：协作成为新瓶颈"
 created: 2026-07-01
-updated: 2026-08-24
+updated: 2026-09-07
 type: entity
 tags: [agent, productivity, organization, collaboration, software-engineering, ai-native]
 sources: [raw/articles/agent-productivity-paradox-collaboration-bottleneck-alibaba, raw/articles/yuanxiaohui-ai-super-individual-super-team-productivity-paradox, raw/articles/getdx-state-of-ai-impact-engineering-q2-2026-report, raw/articles/taobao-ai-coding-spec-to-environment-verification-2026-08-24]
@@ -9,6 +9,9 @@ confidence: 0.75
 review_value: 7
 review_confidence: 8
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Agent 时代的生产力悖论：协作成为新瓶颈

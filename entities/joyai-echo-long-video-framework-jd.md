@@ -1,7 +1,7 @@
 ---
 title: "JoyAI-Echo：京东开源长音视频生成框架（5 分钟一致性 + 7.5x DMD 加速 + Director Agent）"
 created: 2026-06-07
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [openai-competitors, jd, joyai, video-generation, long-video, multimodal, memory-bank, dmd-distillation, real-time-super-resolution, agent, director-agent, open-source, video-agent, agentic-ai]
 sources: [raw/articles/joyai-echo-long-video-jd-qbitai, raw/articles/joyai-echo-long-video-jd-director-agent-4-stage-2026]
@@ -9,6 +9,9 @@ review_value: 8
 review_confidence: 8
 review_stars: 4
 summary: 京东 2026-06-07 开源长音视频生成框架 JoyAI-Echo。三大技术创新：跨模态音视频记忆库（角色一致） + 记忆驱动后训练（DMD 7.5x 推理加速） + 轻量化实时超分（720P→1K/2K 一次推理）。Director Agent 三阶段（策划/生成/点评修改）实现局部重生成。用户盲测：音频偏好 81.7%、提示词遵循 80.6%、人像短视频美学 58.8% vs 26.5%；语音准确率 0.8646。
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # JoyAI-Echo：京东开源长音视频生成框架

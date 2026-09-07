@@ -5,12 +5,15 @@ description: "天津大学+上海交大 ICML 2026 提出的 GUI 智能体框架�
 source: [[raw/articles/se-ga-memory-augmented-self-evolution-gui-agents]]
 tags: [agent, gui-agent, memory, gui-agent, self-evolution, memory-augmented, ttme, mase, hindsight-goal-shifting, grpo, icml-2026]
 created: 2026-06-01
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 review_value: 7
 confidence: 0.6
 sources:
   - raw/articles/se-ga-memory-augmented-self-evolution-gui-agents
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # SE-GA GUI 智能体记忆增强自进化

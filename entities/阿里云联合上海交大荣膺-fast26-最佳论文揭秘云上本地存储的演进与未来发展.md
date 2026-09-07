@@ -8,6 +8,9 @@ tags: [wechat, ai]
 rating: v9c8
 sources:
   - raw/articles/阿里云联合上海交大荣膺-fast26-最佳论文揭秘云上本地存储的演进与未来发展
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 阿里云联合上海交大荣膺 FAST'26 最佳论文：揭秘云上本地存储的演进与未来发展

@@ -1,12 +1,15 @@
 ---
 title: "OpenAI 发布 GPT-Live：实时语音的前台/后台分解架构"
 created: 2026-07-10
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [openai, gpt-live, gpt-5.5, real-time-voice, voice-ai, architecture, delegate-pattern]
 confidence: 0.65
 provenance_state: extracted
 sources: [raw/articles/openai放出gpt-live背后是gpt55实时语音有点恐怖了]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # OpenAI 发布 GPT-Live：实时语音的前台/后台分解架构

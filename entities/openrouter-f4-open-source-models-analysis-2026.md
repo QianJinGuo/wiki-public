@@ -3,10 +3,13 @@ title: "OpenRouter 2026 开源 F4：DeepSeek V4 Flash、GLM 5.2、MiniMax M3、N
 type: entity
 tags: [openrouter, open-source, model-comparison, deepseek, glm, minimax, nemotron, nvidia, llm, inference]
 created: 2026-07-01
-updated: 2026-08-29
+updated: 2026-09-07
 sources: [raw/articles/openrouter-f4-open-source-models-analysis-2026]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # OpenRouter 2026 开源 F4：DeepSeek V4 Flash、GLM 5.2、MiniMax M3、Nemotron 3 Ultra 全景分析

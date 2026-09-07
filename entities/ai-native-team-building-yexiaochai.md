@@ -2,7 +2,7 @@
 
 title: "AI Native 团队搭建：七层模型与六步演进路线"
 created: 2026-05-18
-updated: 2026-05-19
+updated: 2026-09-07
 type: entity
 tags: [ai-native, organization, team-building, ai-transformation, management, skills, knowledge-management, digital-employee]
 sources: [raw/articles/ai-native-team-building-yexiaochai]
@@ -10,6 +10,9 @@ review_value: 8
 review_confidence: 7
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 相关实体

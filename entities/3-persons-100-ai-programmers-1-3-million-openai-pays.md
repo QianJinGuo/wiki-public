@@ -4,10 +4,13 @@ title: "3个人带100个AI程序员，一个月烧掉130万美元！OpenAI：钱
 type: entity
 tags: [agent, benchmark, openai]
 created: 2026-05-21
-updated: 2026-06-19
+updated: 2026-09-07
 review_value: 7
 review_confidence: 8
 sources: [raw/articles/3-persons-100-ai-programmers-1-3-million-openai-pays]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 3个人带100个AI程序员，一个月烧掉130万美元！OpenAI：钱我出

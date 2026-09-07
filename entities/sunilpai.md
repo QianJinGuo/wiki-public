@@ -3,12 +3,15 @@ title: "never waste a token"
 type: entity
 tags: [agent, ai, llm]
 created: 2026-06-18
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 8
 review_confidence: 7
 review_recommendation: worth-reading
 review_stars: 4
 sources: [raw/articles/sunilpai]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # never waste a token

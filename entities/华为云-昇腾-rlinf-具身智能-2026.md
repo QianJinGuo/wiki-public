@@ -7,6 +7,9 @@ tags: [huawei-cloud, ascend, embodied-ai, reinforcement-learning, rlinf, open-so
 sources: [raw/articles/华为云-昇腾-rlinf-具身智能-2026]
 confidence: 0.8
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 华为云、昇腾联合 RLinf 共筑基于昇腾算力的具身智能开发生态

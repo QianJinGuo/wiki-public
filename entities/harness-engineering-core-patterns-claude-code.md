@@ -2,13 +2,17 @@
 
 title: "深入浅出 Harness Engineering 之核心模式与理念"
 created: 2026-06-10
-updated: 2026-09-05
+updated: 2026-09-07
 tags: [agent, architecture, claude, code, data, evaluation, harness-engineering, k8s, llm, memory, mlops, prompt, rag, search, security, tool-use, workflow]
 review_value: 7
 review_confidence: 7
 type: entity
 sources:
   - raw/articles/harness-engineering-core-patterns-claude-code
+reviewed: 2026-09-07
+review_verdict: hub-retained
+review_category: dup
+review_note: "judged dup-0.85: 张碧泉1937字摘要版，留5369字全版; retained as hub (in-links>=20); MOC rewrite candidate"
 ---
 
 # 深入浅出 Harness Engineering 之核心模式与理念

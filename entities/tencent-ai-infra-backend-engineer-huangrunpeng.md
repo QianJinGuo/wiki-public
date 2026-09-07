@@ -1,13 +1,16 @@
 ---
 title: "Tencent AI Infra: Backend Engineer's Guide to AI System Hardware and Software"
 created: 2026-06-11
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [ai-infra, gpu, hardware, deep-learning-framework, backend-engineering, tencent, cuda, pytorch, kv-cache, model-parallelism, distributed-training]
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/tencent-ai-infra-backend-engineer-huangrunpeng.md]
 provenance_state: raw-linked
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > → [[raw/articles/tencent-ai-infra-backend-engineer-huangrunpeng.md|原文存档]]

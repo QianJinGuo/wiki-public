@@ -3,11 +3,14 @@ title: "Lighthouse Attention"
 type: entity
 tags: [newsletter, attention-mechanism, long-context, efficient-attention]
 created: 2026-05-18
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 8
 sources: [raw/articles/lighthouse_attention]
 review_confidence: 9
 review_recommendation: worth-reading
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 ## 核心要点
 - 选择性层级注意力（Selection-based Hierarchical Attention），通过对称 Q/K/V 池化在多分辨率金字塔中稀疏化注意力 

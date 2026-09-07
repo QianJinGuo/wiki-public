@@ -2,7 +2,7 @@
 
 title: "利用 AWS Budget 实现 Amazon Bedrock 用量监控、超预算告警与自动中断方案"
 created: 2026-06-01
-updated: 2026-07-31
+updated: 2026-09-07
 type: entity
 tags: [aws-budget, bedrock, cost-governance, finops, deny-policy, iam]
 source: "[[raw/articles/aws-budget-bedrock-cost-governance]]"
@@ -10,6 +10,9 @@ confidence: 0.82
 review_value: 7
 sources:
   - raw/articles/aws-budget-bedrock-cost-governance
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 利用 AWS Budget 实现 Amazon Bedrock 用量监控、超预算告警与自动中断方案

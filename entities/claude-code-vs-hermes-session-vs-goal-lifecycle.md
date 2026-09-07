@@ -4,10 +4,13 @@ title: "Claude Code vs Hermes — Session 工程师 vs Goal Runtime"
 type: entity
 tags: [claude-code, hermes, agent, lifecycle, runtime, harness, architecture, persistent-loop]
 created: 2026-06-10
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 8
 review_confidence: 9
 sources: [raw/articles/claude-code-vs-hermes-engineer-vs-runtime-lifecycle]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Claude Code vs Hermes — Session 工程师 vs Goal Runtime

@@ -2,13 +2,16 @@
 
 title: "Sovereign cloud is only possible if you're Chinese or American: Gartner"
 created: 2026-06-11
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [cloud-computing, data-sovereignty, government, vietnam, gartner, geopolitical-tech, multi-cloud, cloud-exit-strategy, hyperscaler, sovereign-cloud]
 sources: [raw/articles/5237660.md]
 provenance_state: raw-linked
 review_value: 7
 review_confidence: 8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > -> **5237660.md**

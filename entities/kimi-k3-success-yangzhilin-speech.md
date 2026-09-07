@@ -1,11 +1,14 @@
 ---
 title: "杨植麟GTC 2026演讲：Kimi K3成功的三个扩展维度"
 created: 2026-07-22
-updated: 2026-07-31
+updated: 2026-09-07
 type: entity
 tags: [model, architecture, kimi, moonshot, chinese-ai, scaling, muon-optimizer, attention]
 sources: [raw/articles/kimi-k3-success-yangzhilin-speech]
 confidence: 0.75
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 杨植麟GTC 2026演讲：Kimi K3成功的三个扩展维度

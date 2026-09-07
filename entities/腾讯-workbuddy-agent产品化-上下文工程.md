@@ -7,6 +7,9 @@ tags: [ai, agent, harness, context-engineering, memory, loop-engineering, mcp, s
 sources: [raw/articles/腾讯workbuddy实践如何把agent做成可用产品]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 腾讯 WorkBuddy 实践：如何把 Agent 做成可用产品

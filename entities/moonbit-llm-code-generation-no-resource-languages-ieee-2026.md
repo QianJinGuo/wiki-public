@@ -1,12 +1,15 @@
 ---
 title: "MoonBit与无资源语言代码生成：IEEE论文评估与改进"
 created: 2026-07-02
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [llm, code-generation, evaluation, moonbit, training, ieee, programming-language]
 sources: [raw/articles/moonbit-llm-code-generation-no-resource-languages-ieee-2026]
 confidence: 0.75
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # MoonBit与无资源语言代码生成：IEEE论文评估与改进

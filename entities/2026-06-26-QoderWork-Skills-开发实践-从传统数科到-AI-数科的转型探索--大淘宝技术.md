@@ -6,6 +6,9 @@ type: entity
 tags: ['raw', 'article']
 sources: [raw/articles/2026-06-26-QoderWork-Skills-开发实践-从传统数科到-AI-数科的转型探索--大淘宝技术]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > -> [[raw/articles/2026-06-26-QoderWork-Skills-开发实践-从传统数科到-AI-数科的转型探索--大淘宝技术.md|原文存档]]

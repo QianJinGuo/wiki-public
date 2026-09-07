@@ -3,14 +3,16 @@
 
 title: "Cat Wu: Anthropic Claude Code/Cowork 产品负责人访谈"
 created: 2026-04-30
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [claude-code, anthropic, openclaw]
 sources:
   - raw/articles/cat-wu-anthropic-pm-interview
 review_value: 8
 review_confidence: 7
-
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 核心洞察

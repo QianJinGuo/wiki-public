@@ -4,11 +4,14 @@ title: '长周期 Agent 详解：从 Ralph Loop 到可接管 Harness'
 type: entity
 tags: [agent, harness, long-running-agent, ralph-loop, agent-governance, subagent, multi-agent, spec-driven, drift-correction, memory-budget, five-cards, dont-automate-slop, five-layer-architecture, guides-sensors, deletable-constraint, worksite, task-card]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 10
 review_confidence: 8
 provenance_state: merged
 sources: [raw/articles/long-running-agent-ralph-loop-handover-harness-ruofei, raw/articles/hermes-agent-long-running-governance-five-cards-ruofei, raw/articles/harness-engineering-deletable-worksite-ruofei]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 5 张卡治理框架（若飞 2026-06 续篇）

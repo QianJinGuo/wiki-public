@@ -11,9 +11,12 @@ sources:
   - LLM Wiki 架构解析：Karpathy 的 Markdown 知识库模式 (2026-05-20)
   - Karpathy llm-wiki:
   - nashsu/llm_wiki:
-updated: 2026-08-01
+updated: 2026-09-07
 
 provenance_state: inferred
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 ## 核心定位
 **RAG vs LLM Wiki 区分：**   ^["LLM Wiki 架构解析：Karpathy 的 Markdown 知识库模式 (2026-05-20)"]

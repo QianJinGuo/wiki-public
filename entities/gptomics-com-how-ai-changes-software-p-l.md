@@ -4,11 +4,14 @@ title: "How AI changes software P&L"
 type: entity
 tags: [newsletter, ai-economics, software-business, p-l-analysis]
 created: 2026-05-14
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 7
 review_confidence: 7
 review_recommendation: worth-reading
 sources: [raw/articles/gptomics-com-how-ai-changes-software-p-l]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > 来源：[[raw/articles/gptomics-com-how-ai-changes-software-p-l|原文存档]] ^[raw/articles/gptomics-com-how-ai-changes-software-p-l.md]

@@ -1,7 +1,7 @@
 ---
 title: "Agent Harnesses Are Dead. Long Live Agent Harnesses."
 created: 2026-06-10
-updated: 2026-08-01
+updated: 2026-09-07
 tags: [agent, harness-engineering, multi-agent, orchestration, agent-platform]
 review_value: 7
 review_confidence: 7
@@ -9,6 +9,9 @@ type: entity
 provenance_state: inferred
 sources:
   - raw/articles/agent-harnesses-are-dead-long-live-agent-harnesses
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Agent Harnesses Are Dead. Long Live Agent Harnesses.

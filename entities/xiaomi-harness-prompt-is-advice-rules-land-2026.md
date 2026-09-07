@@ -1,12 +1,15 @@
 ---
 title: "小米 Harness 工程落地：提示词是建议，Harness 让规则落地"
 created: 2026-08-13
-updated: 2026-08-14
+updated: 2026-09-07
 type: entity
 tags: [xiaomi, harness-engineering, ai-coding, team-standard, superpowers, openspec, hook, gating]
 sources: [raw/articles/提示词是建议harness让规则落地ai-coding-从个人实践到团队标准]
 confidence: 0.8
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 小米 Harness 工程落地：提示词是建议，Harness 让规则落地

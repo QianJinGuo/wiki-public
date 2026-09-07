@@ -8,6 +8,9 @@ provenance_state: inferred
 rating: v10c9
 sources:
   - raw/articles/deepseek做大mega-moetri-dao团队加快sonicmoe
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # DeepSeek做大→Mega MoE，Tri Dao团队加快→SonicMoE

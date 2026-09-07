@@ -13,7 +13,9 @@ sources: [raw/articles/cvpr-2026-highlight-清华打破多模态音频生成的�
 review_confidence: 7
 review_recommendation: worth-reading
 review_stars: 3
-
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > -> [[raw/articles/cvpr-2026-highlight-清华打破多模态音频生成的通才困境omni2sound-音频基础模型开源.md|原文存档]] ^[raw/articles/cvpr-2026-highlight-清华打破多模态音频生成的通才困境omni2sound-音频基础模型开源.md]

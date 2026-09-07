@@ -1,12 +1,15 @@
 ---
 title: "4D-WAM — 面向世界动作模型的 3D 轨迹表征对齐（训练时辅助监督，推理零开销）"
 created: 2026-08-17
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [world-action-model, 4d, trajectory, robot, sim2real, alignment, vla, world-model, auxiliary-supervision, robotics]
 sources: [raw/articles/4d-wam-world-action-model-3d-trajectory-alignment-2026]
 confidence: 0.65
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 4D-WAM — 面向世界动作模型的 3D 轨迹表征对齐

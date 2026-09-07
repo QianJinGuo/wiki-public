@@ -3,12 +3,15 @@ title: "GLM-5.2: Built for Long-Horizon Tasks"
 type: entity
 tags: [agent, ai, llm]
 created: 2026-06-18
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 9
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 4
 sources: [raw/articles/z-glm-5.2, raw/articles/zai-org-GLM-5.2, raw/articles/glm-5.2-unsloth-local-guide, raw/articles/glm-52-step-change-open-agents-interconnects, raw/articles/智谱glm-52上线华为云可通过多款产品体验]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # GLM-5.2: Built for Long-Horizon Tasks

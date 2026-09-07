@@ -4,10 +4,13 @@ title: "Claude Code 官方插件系统 (claude-plugins-official)"
 type: entity
 tags: [claude, agent, plugin, claude-code, workflow]
 created: 2026-05-28
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 8
 review_confidence: 7
 sources: [raw/articles/claude-code-official-plugins-anthropic]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Claude Code 官方插件系统 (claude-plugins-official)

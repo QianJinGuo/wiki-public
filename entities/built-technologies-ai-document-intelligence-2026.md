@@ -1,12 +1,15 @@
 ---
 title: "Built Technologies AI Document Intelligence — 房地产金融 AI 文档处理引擎"
 created: 2026-07-24
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [document-processing, ai, bedrock, idp, real-estate, aws, agentic-ai, llm, document-intelligence, enterprise-ai]
 confidence: 0.75
 provenance_state: extracted
 sources: [raw/articles/built-technologies-ai-document-intelligence-bedrock-2026]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Built Technologies AI Document Intelligence — 房地产金融 AI 文档处理引擎

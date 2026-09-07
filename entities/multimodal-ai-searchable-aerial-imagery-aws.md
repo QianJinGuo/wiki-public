@@ -1,7 +1,7 @@
 ---
 title: "Multimodal AI for Searchable Aerial Imagery at Scale"
 created: 2026-06-23
-updated: 2026-08-30
+updated: 2026-09-07
 type: entity
 tags: [multimodal, embedding, geospatial, aerial-imagery, aws, sagemaker, search, computer-vision]
 source: [[raw/articles/embed-the-world-multimodal-ai-for-searchable-aerial-imagery]]
@@ -10,6 +10,9 @@ review_value: 9
 review_confidence: 9
 review_stars: 5
 sources:
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Multimodal AI for Searchable Aerial Imagery at Scale

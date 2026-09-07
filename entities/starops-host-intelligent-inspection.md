@@ -1,11 +1,14 @@
 ---
 title: "STAROps Host Intelligent Inspection — 24/7 AI Doctor for ECS"
 created: 2026-08-01
-updated: 2026-08-06
+updated: 2026-09-07
 type: entity
 tags: [STAROps, host-inspection, Alibaba-Cloud, SysOM, ECS, SRE, AIOps, kernel, observability]
 sources: [raw/articles/starops-host-intelligent-inspection-ecs-ai-doctor-2026, raw/articles/sysom-巡检-skill-一键锁定根因]
 confidence: 0.6
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # STAROps Host Intelligent Inspection

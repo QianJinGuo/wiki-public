@@ -4,10 +4,13 @@ title: "Amazon CloudFront部署小指南（二十四）：将CloudFront \"多域
 type: entity
 tags: [architecture, aws, cloud]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 8
 review_confidence: 8
 sources: [raw/articles/amazon-cloudfront-deploy-guide-cloudfront-domain-multi-tenant-architecture]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Amazon CloudFront部署小指南（二十四）：将CloudFront "多域名"改造为"多租户"架构 | 亚马逊AWS官方博客

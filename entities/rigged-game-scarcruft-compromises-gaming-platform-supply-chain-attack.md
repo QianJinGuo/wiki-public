@@ -1,7 +1,7 @@
 ---
 title: "ScarCruft 游戏平台供应链攻击分析"
 created: 2026-05-13
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 source: newsletter
 source_url:
@@ -11,6 +11,9 @@ review_confidence: 9
 review_recommendation: worth-reading
 date: 2026-05-13
 tags: [security, supply-chain, news]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 > -> [[raw/articles/rigged-game-scarcruft-compromises-gaming-platform-supply-chain-attack.md|原文存档]]
 

@@ -4,10 +4,13 @@ title: "Thin Harness, Fat Skills：AI工程架构的本质"
 type: entity
 tags: [harness, llm]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/thin-harness-fat-skills]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 核心理念：Latent vs Deterministic 空间分离

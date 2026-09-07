@@ -2,7 +2,7 @@
 
 title: "AgentCore Payments 与代理商务创新：技术深度解析"
 created: 2026-06-01
-updated: 2026-07-31
+updated: 2026-09-07
 type: entity
 tags: ['aws', 'bedrock', 'agentcore', 'payments', 'x402', 'agentic-commerce']
 source: [[raw/articles/agentcore-payments-x402-agentic-commerce]]
@@ -10,6 +10,9 @@ confidence: 0.7
 review_value: 7
 sources:
   - raw/articles/agentcore-payments-x402-agentic-commerce
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # AgentCore Payments 与代理商务创新：技术深度解析

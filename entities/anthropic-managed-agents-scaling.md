@@ -4,10 +4,13 @@ title: "Anthropic Managed Agents：用 K8s 思路虚拟化 Agent 组件"
 type: entity
 tags: [agent, anthropic, claude, harness, prompt, web]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/anthropic-managed-agents-scaling]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # anthropic-managed-agents-scaling

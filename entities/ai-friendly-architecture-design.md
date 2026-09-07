@@ -5,12 +5,15 @@ description: "传统工程架构向AI友好的架构演进的三范式框架（�
 source: [[raw/articles/ai-friendly-architecture-design-taobao]], [raw/articles/ai-friendly-backend-architecture-standard-pathway-alibaba-liu-ruizhou-2026]]
 tags: [architecture, design, ai-friendly-architecture, ai-engineering, context-engineering, multi-agent, agent-orchestration, llm-api-design, harness, sdd, skills, microservice, observability, access-control, alibaba, taobao]
 created: 2026-06-01
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 provenance_state: inferred
 review_value: 7
 confidence: 0.6
 sources: [raw/articles/ai-friendly-architecture-design-taobao]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # AI Friendly架构设计

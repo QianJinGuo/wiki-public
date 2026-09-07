@@ -1,12 +1,15 @@
 ---
 title: "Flow2Spec：开发过程自然长出知识图谱的 Agent 工程框架"
 created: 2026-07-01
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [flow2spec, ctrip, knowledge-graph, agent, structured-knowledge, routing-protocol, intent-recognition, open-source]
 sources: [raw/articles/flow2spec-structured-knowledge-routing-ctrip-2026]
 review_value: 9
 review_confidence: 9
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Flow2Spec：开发过程自然长出知识图谱的 Agent 工程框架

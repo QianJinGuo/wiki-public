@@ -2,7 +2,7 @@
 
 title: "It’s safe to close your laptop now: Hosting coding agents on Amazon Bedrock AgentCore"
 created: 2026-06-09
-updated: 2026-06-19
+updated: 2026-09-07
 type: entity
 tags: [aws, bedrock, agentcore, coding-agent, sandbox, harness]
 sources: [raw/articles/its-safe-to-close-your-laptop-now-hosting-coding-agents-on-a]
@@ -10,6 +10,9 @@ review_value: 7
 review_confidence: 8
 review_stars: 4
 confidence: 0.75
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # It’s safe to close your laptop now: Hosting coding agents on Amazon Bedrock AgentCore

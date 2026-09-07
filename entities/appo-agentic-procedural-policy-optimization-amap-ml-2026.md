@@ -4,11 +4,14 @@ description: "中科大+阿里高德 AMAP-ML 团队 arXiv 2606.12384 论文：�
 type: entity
 tags: [appo, arxiv-2606-12384, amap-ml, ustc, agentic-rl, branching-score, procedure-level, credit-assignment, fine-grained, decision-point, arpo, grpo, dapo, gigpo, llm-agent, verl, qwen3, llama3, math, gaia, hle, webwalkerqa, 2wiki, hyman, future-value, ppo, two-group-advantage, kl, reward-model, rlvr, token-entropy, amap, gaode, high德, token-in-token-out]
 created: 2026-06-16
-updated: 2026-08-01
+updated: 2026-09-07
 review_value: 8
 review_confidence: 8
 sources: [raw/articles/appo-agentic-procedural-policy-optimization-amap-ml-2026-06-16]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # APPO：阿里高德 AMAP-ML 把 Agent RL 信用分配细化到每个决策点

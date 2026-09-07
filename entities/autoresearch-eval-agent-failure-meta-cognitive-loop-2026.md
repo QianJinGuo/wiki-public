@@ -1,12 +1,15 @@
 ---
 title: "AutoResearchEval：AutoResearch 的元认知闭环缺口与过程级失败诊断"
 created: 2026-08-22
-updated: 2026-08-22
+updated: 2026-09-07
 type: entity
 tags: [autoresearch, ai-for-science, research-agent, evaluation, benchmark, metacognition, failure-mode, agent-diagnosis]
 sources: [raw/articles/autoresearch-eval-agent-failure-meta-cognitive-loop-2026]
 confidence: 0.8
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # AutoResearchEval：AutoResearch 的元认知闭环缺口与过程级失败诊断

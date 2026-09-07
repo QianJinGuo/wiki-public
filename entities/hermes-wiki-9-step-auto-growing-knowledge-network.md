@@ -1,7 +1,7 @@
 ---
 title: "Hermes-Wiki 实战 — Obsidian + Hermes Agent 自动生长知识网络的 9 步搭建法"
 created: 2026-06-11
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [hermes-agent, obsidian, llm-wiki, knowledge-network, wikilink, knowledge-base, knowledge-compilation, self-growing, schema-driven, hermes-wiki, moc, source-first, knowledge-flywheel, mcp, scratch-vault, super-meng, network-effect]
 sources: [raw/articles/obsidian-hermes-wiki-auto-growing-knowledge-network]
@@ -9,6 +9,9 @@ review_value: 7
 review_confidence: 7
 review_recommendation: worth-reading
 review_stars: 3
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 概述

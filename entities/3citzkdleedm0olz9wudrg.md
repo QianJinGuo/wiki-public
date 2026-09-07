@@ -1,12 +1,15 @@
 ---
 title: "ICLR 2026 Scenethesis：英伟达 & 普渡大学用 Agent 闭环实现文生 3D"
 created: 2026-06-10
-updated: 2026-08-01
+updated: 2026-09-07
 tags: [agent, data, llm, nvidia, rl, robotics, vision, 3d-scene-generation, embodied-ai, iclr-2026]
 review_value: 7
 review_confidence: 7
 type: entity
 sources: [raw/articles/3CITzkDLeeDM0Olz9wudrg]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # ICLR 2026 Scenethesis：英伟达 & 普渡大学用 Agent 闭环实现文生 3D

@@ -6,6 +6,9 @@ type: entity
 tags: [ai-infra, gpu, agent, benchmark, 运维, 智能运维, caict]
 sources: [raw/articles/直击gpu集群真实故障首个ai-infra运维智能体基准开源]
 confidence: 0.85
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 直击GPU集群真实故障，首个AI Infra运维智能体基准开源

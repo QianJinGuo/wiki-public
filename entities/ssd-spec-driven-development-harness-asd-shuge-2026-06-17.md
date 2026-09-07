@@ -1,7 +1,7 @@
 ---
 title: "SSD Spec 驱动开发实战：从四条约束到 ASD Harness 的工程落地"
 created: 2026-06-17
-updated: 2026-06-19
+updated: 2026-09-07
 type: entity
 tags:
   - spec-driven-development
@@ -16,6 +16,9 @@ sources:
 confidence: 0.90
 review_value: 9
 review_confidence: 8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # SSD Spec 驱动开发实战：从四条约束到 ASD Harness 的工程落地

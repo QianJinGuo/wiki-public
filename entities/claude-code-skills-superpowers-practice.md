@@ -4,10 +4,13 @@ title: "Claude Code Skills 与 Superpowers 实践"
 type: entity
 tags: [claude]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/claude-code-skills-superpowers-practice]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # claude-code-skills-superpowers-practice

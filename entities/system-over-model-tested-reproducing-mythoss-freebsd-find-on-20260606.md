@@ -2,7 +2,7 @@
 
 title: "System Over Model, Tested: Reproducing Mythos’s FreeBSD Find on Local Open-Weight Models"
 created: 2026-06-06
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [article, code, data, evaluation, llm, memory, open-source, prompt, security, source-archive, vision, workflow]
 sources: [raw/articles/system-over-model-tested-reproducing-mythoss-freebsd-find-on-20260606]
@@ -12,6 +12,9 @@ review_value: 7
 review_confidence: 7
 review_recommendation: moderate
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # System Over Model, Tested: Reproducing Mythos’s FreeBSD Find on Local Open-Weight Models

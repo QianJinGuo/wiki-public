@@ -6,6 +6,9 @@ type: entity
 tags: ['raw', 'article']
 sources: [raw/articles/2026-06-15-Superpowers-给-Claude-Code-装上-工程大脑--百度Geek说]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > -> [[raw/articles/2026-06-15-Superpowers-给-Claude-Code-装上-工程大脑--百度Geek说.md|原文存档]]

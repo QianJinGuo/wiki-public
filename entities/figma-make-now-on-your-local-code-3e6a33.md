@@ -1,12 +1,15 @@
 ---
 title: "Figma Make, Now on Your Local Code: Closing the Design-to-Code Loop"
 created: 2026-06-10
-updated: 2026-08-30
+updated: 2026-09-07
 type: entity
 tags: [agent, design-tool, code, figma, prototype, design-to-code, pr-workflow, git, visual-editing, canvas, collaboration]
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/figma-make-now-on-your-local-code-3e6a33]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Figma Make, Now on Your Local Code: Closing the Design-to-Code Loop

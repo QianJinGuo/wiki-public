@@ -1,7 +1,7 @@
 ---
 title: "Marc Andreessen on Builder Culture in the Age of AI | The a16z Show"
 created: 2026-05-14
-updated: 2026-06-23
+updated: 2026-09-07
 type: entity
 tags: [newsletter, a16z, podcast, ai-culture, builder, future-of-work]
 review_value: 7
@@ -9,6 +9,9 @@ review_confidence: 8
 review_recommendation: worth-reading
 sources: [raw/articles/marc-andreessen-on-builder-culture-in-the-age-of-ai-the-a16z-show]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Marc Andreessen on Builder Culture in the Age of AI

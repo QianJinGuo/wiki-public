@@ -2,7 +2,7 @@
 
 title: "SkillOpt-Lite：一行Vibe指令加速Agent技能自进化"
 created: 2026-07-09
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, skill-optimization, zero-order-optimization, harness-engineering, self-evolution, lmm-lab, skillopt, agent-framework]
 source: [[raw/articles/skillopt-lite-一行vibe指令进化agent技能]]
@@ -10,6 +10,9 @@ review_value: 8
 review_confidence: 7
 review_stars: 4
 sources: [raw/articles/skillopt-lite-一行vibe指令进化agent技能]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # SkillOpt-Lite：一行Vibe指令加速Agent技能自进化

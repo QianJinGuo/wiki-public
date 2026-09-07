@@ -7,6 +7,9 @@ tags: [ai, llm, auto-research, 论文复现, 同行评审, 科研诚信]
 sources: [raw/articles/大厂不再迷信顶会auto-research时代论文含金量正在缩水]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 大厂不再迷信顶会：Auto Research 时代论文含金量正在缩水

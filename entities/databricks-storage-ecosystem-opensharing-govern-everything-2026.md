@@ -12,13 +12,16 @@ tags:
   - enterprise-data
   - lakehouse
 created: 2026-06-15
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 review_value: 7
 review_confidence: 7
 review_recommendation: worth-reading
 review_stars: 3
 sources: [raw/articles/databricks-storage-ecosystem-opensharing-govern-everything-2026]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Databricks Storage Ecosystem & OpenSharing：企业数据治理从 Migrate Everything 到 Govern Everything 的范式转变

@@ -1,11 +1,14 @@
 ---
 title: "MiniMax-H3 on 8×H200: SGLang Diffusion 1.95× Lossless加速"
 created: 2026-08-30
-updated: 2026-08-30
+updated: 2026-09-07
 type: entity
 tags: [minimax, h200, sglang, diffusion, video-generation, benchmark, inference-optimization]
 sources: [raw/articles/minimax-h3-h200-sglang-benchmark-2026]
 confidence: 0.8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # MiniMax-H3 on 8×H200: SGLang Diffusion 1.95× Lossless加速

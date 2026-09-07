@@ -2,7 +2,7 @@
 
 title: "基于 MIG 技术在 Amazon SageMaker HyperPod 上实现 GPU 虚拟化的最佳实践 | 亚马逊AWS官方博客"
 created: 2026-05-14
-updated: 2026-09-05
+updated: 2026-09-07
 tags: [aws-china-blog, sagemaker]
 sources: [raw/articles/gpu-virtualization-using-mig-technology-on-amazon-sagemaker-hyperpod]
 review_value: 8
@@ -10,6 +10,9 @@ review_confidence: 8
 review_recommendation: strong
 publish_date: 2026-02-24
 type: entity
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 概述

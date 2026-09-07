@@ -7,6 +7,9 @@ tags: [claude-code, claude-tag, coding-agent]
 sources: [raw/articles/claude-code创始人最新揭秘claude-tag如何在团队内部大杀四方]
 confidence: 0.75
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Claude code创始人最新揭秘：Claude Tag如何在团队内部「大杀四方」

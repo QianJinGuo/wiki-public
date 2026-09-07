@@ -7,6 +7,9 @@ type: entity
 tags: ['harness', 'context', 'ai', 'coding', 'agent']
 sources: [raw/articles/任何错误只犯一次tencentdb-agent-memory-的团队记忆实践]
 confidence: 0.7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 任何错误只犯一次：TencentDB Agent Memory 的团队记忆实践

@@ -2,7 +2,7 @@
 
 title: Codex 上下文工程 — Prompt Layout + Append-only + Latent Space Moat（LastWhisper 解读）
 created: 2026-06-10
-updated: 2026-09-06
+updated: 2026-09-07
 type: entity
 tags: [codex, openai, context-engineering, prompt-caching, append-only, latent-space, moat, event-sourcing, agent, context-management, new-context, notes, history, state-ownership]
 confidence: 0.85
@@ -13,6 +13,9 @@ sources:
   - raw/articles/codex-context-engineering-lastwhisper-thinking-in-context
   - raw/articles/codex-context-management-cutover-ruofei-2026-09-05
 review_value: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Codex 上下文工程 — Prompt Layout + Append-only + Latent Space Moat（LastWhisper 解读）

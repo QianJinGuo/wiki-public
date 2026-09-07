@@ -1,12 +1,15 @@
 ---
 title: MemSlides — 层级记忆驱动的 AI Slide 生成 Agent
 created: 2026-07-05
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [agent, memory, skill, llm, multi-modal, model-architecture]
 sources: [raw/articles/huggingface热榜第一清华上交推出memslides精准锁定ppt局部修改]
 confidence: 0.75
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # MemSlides — 层级记忆驱动的 AI Slide 生成 Agent

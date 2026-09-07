@@ -1,11 +1,14 @@
 ---
 title: "How Yahoo enhances search retargeting using Amazon Bedrock"
 created: 2026-07-31
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [yahoo, amazon-bedrock, advertising, search-retargeting, ai-case-study, dsp, audience-targeting]
 sources: [raw/articles/how-yahoo-enhances-search-retargeting-using-amazon-bedrock]
 confidence: 0.67
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # How Yahoo enhances search retargeting using Amazon Bedrock

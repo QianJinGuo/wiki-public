@@ -3,13 +3,16 @@ title: "Token 撤销触发设备擦除的安全漏洞"
 type: entity
 tags: [newsletter, supply-chain, npm, malware, shai-hulud, github-actions, dead-mans-switch]
 created: 2026-05-14
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 8
 sources: [raw/articles/cybersecurityreach-revoke-token-wipe-computer]
 review_confidence: 7
 review_recommendation: worth-reading
 review_stars: 3
 source_url:
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 > → [[raw/articles/cybersecurityreach-revoke-token-wipe-computer|原文存档]]
 

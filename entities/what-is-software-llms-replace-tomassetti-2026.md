@@ -1,7 +1,7 @@
 ---
 title: "What Is Software, and Will LLMs Replace It?"
 created: 2026-06-25
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: ["llm", "software-engineering", "ai-future", "analysis"]
 provenance_state: inferred
@@ -12,6 +12,9 @@ review_value: 7
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # What Is Software, and Will LLMs Replace It?

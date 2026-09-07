@@ -12,7 +12,10 @@ review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 3
 created: 2026-05-16
-updated: 2026-09-05
+updated: 2026-09-07
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > -> [[raw/articles/automate-progressive-rollouts-with-vercel-flags-vercel.md|原文存档]]

@@ -9,7 +9,10 @@ review_value: 8
 sources: [raw/articles/amazon-quick-accelerating-the-path-from-enterprise-data-to-ai-powered-decisions]
 review_confidence: 7
 review_recommendation: strong
-updated: 2026-09-05
+updated: 2026-09-07
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 > -> [[raw/articles/amazon-quick-accelerating-the-path-from-enterprise-data-to-ai-powered-decisions|原文存档]]
 

@@ -14,9 +14,11 @@ review_recommendation: strong
 review_stars: 5
 tags: [skill-testing, qwen-code, 回归测试, dsl, 断言验证, code-agent]
 created: 2026-05-20
-updated: 2026-09-05
+updated: 2026-09-07
 summary: "QwenLM qwen-code 团队提出的 Skill/场景回归测试框架——录制回放、DSL 生成、确定性断言、多模型矩阵，架构完整可直接参考"
-
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 背景与动机

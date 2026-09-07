@@ -3,12 +3,15 @@ title: "Loop Engineering:不再写提示词,而是设计替你写提示词的循
 type: entity
 tags: [loop-engineering, harness, codex, claude-code, addy-osmani, sub-agent, skill, mcp, worktree, automation, comprehension-debt, boris-cherny, peter-steinberger, generator-evaluator-planner, token-cost, context-rot, routines, spec-file, open-vs-closed-loop, fleet-loop, six-building-blocks, cost-economics, 若飞, ruofei, jiagoux, 架构师, feedback-loop, worksite, four-tier-architecture, seven-day-pilot, five-conservative-principles, state-memory, plan-md, gated-verification, budget-aware, closed-loop-first, open-loop-defer, ramp-up-protocol, techferrari, 范式迁移, 责任批判, 数字主编, 跨域应用, 生命周期, brakes-first, evaluator, state-accounting, three-loop-types, reviewer-agent, budget-four-limits, brake-first, ci-loop-template, writing-verification-loop, brake-controls, 7-架构演进, router-skill, blackboard, graph-workflow, plan-execute, multi-agent-failure-rate, winty, chinese-mainstream, langgraph, temporal, airbnb-airflow, three-layer-structure, five-elements-model, six-anatomy-components, four-loop-patterns, token-cost-formula, claude-code-vs-codex-vs-opencode, ralph-loop, organization-readiness-table, cognitive-surrender, verification-gap, thrashing, retry-loop, plan-execute-verify-pattern, explore-narrow, human-in-the-loop, four-rounds-abstract-leaps, resource-vs-cognitive-guardrail, debate-fail-mode, prompt-to-context-to-harness-to-loop, product-management, pm, shubham-saboo, google-pm, taste-evidence, weekly-product-signal]
 created: 2026-06-10
-updated: 2026-07-31
+updated: 2026-09-07
 review_value: 10
 review_confidence: 9
 review_recommendation: strong
 provenance_state: merged
 sources: [raw/articles/loop-engineering-addy-osmani-challengehub, raw/articles/loop-engineering-infoq-boris-cherny-peter-steinberger, raw/articles/loop-engineering-peter-steinberger-boris-cherny, raw/articles/loop-engineering-工程现场-ruofei, raw/articles/loop-engineering-techferrari-prompt-is-dead-2026, raw/articles/loop-engineering-practical-guide-brakes-first-ruofei-2026-06-15, raw/articles/loop-engineering-14-step-roadmap-aitechliwen-2026-06-16, raw/articles/loop-engineering-ifanr-popular-science-critique-2026-06-16, raw/articles/loop-engineering-karpathy-autoresearch-eval-ruler-allentang-2026-06-16, raw/articles/7-agent-architectures-loop-engineering-winty-2026-06-18, raw/articles/loop-engineering-autoresearch-claude-code-five-decisions-2026-06-18, raw/articles/loop-engineering-three-layers-decision-framework-product-comparison-ralph-2026-06-18, raw/articles/loop-engineering-pm-shubham-saboo-2026, raw/articles/loop-engineering-5-loops-6-hard-boundaries-ruofei, raw/articles/loop-engineering-practical-loop-closed-loop-ruofei-2026, raw/articles/loop-engineering-14-step-codez-datathu-2026-06-30, raw/articles/andrew-ng-loop-engineering-three-loops-vibecoder-2026, raw/articles/loop-engineering-sre-state-machine-tiered-architecture-ruofei-2026, raw/articles/wu-enda-three-layer-loop-agent-faster-slow-feedback-ruofei]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > 原文存档：[[raw/articles/loop-engineering-addy-osmani-challengehub|原文存档]] ^[raw/articles/loop-engineering-addy-osmani-challengehub.md]

@@ -1,12 +1,15 @@
 ---
 title: "蚂蚁阿福医疗 Agent：从 0 到生产的工业级工程化落地"
 created: "2026-07-14"
-updated: 2026-07-21
+updated: 2026-09-07
 type: "entity"
 tags: [ant-group, medical-agent, healthcare, agent-engineering, evaluation, agentic-rag, memory, inference]
 confidence: 0.9
 provenance_state: "extracted"
 sources: [raw/articles/ant-group-medical-agent-afu-qcon-2026]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 蚂蚁阿福医疗 Agent：从 0 到生产的工业级工程化落地

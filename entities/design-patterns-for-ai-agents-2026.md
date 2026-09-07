@@ -1,13 +1,16 @@
 ---
 title: "Design Patterns for AI Agents 2026：4 大执行模式 + 5 步选型决策树 + Reflection 完整 Demo"
 created: 2026-05-20
-updated: 2026-06-19
+updated: 2026-09-07
 type: entity
 tags: [agent, design-pattern, architecture, llm, harness, 2026, react, plan-and-execute, reflection, multi-agent, agentscope, decision-tree, 5-step-selection, dialog-agent, self-critique, frontend-t]
 sources: [raw/articles/design-patterns-for-ai-agents-2026, raw/articles/react-plan-execute-reflection-multi-agent-selection-guide-frontend-t-2026]
 confidence: high
 provenance_state: inferred
 review_value: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 → （无原始来源） ^[raw/articles/design-patterns-for-ai-agents-2026]
 

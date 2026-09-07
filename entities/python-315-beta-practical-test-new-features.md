@@ -1,11 +1,14 @@
 ---
 title: "Python 3.15 Beta 实测：实战视角的技术特性评估"
 created: 2026-07-27
-updated: 2026-07-27
+updated: 2026-09-07
 type: entity
 tags: [python, programming-language, software-engineering, developer-tools, programming]
 sources: [raw/articles/python-315-beta-practical-test-new-features]
 confidence: 0.75
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Python 3.15 Beta 实测：实战视角的技术特性评估

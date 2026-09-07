@@ -1,11 +1,14 @@
 ---
 title: "Quantization Techniques"
 created: 2026-07-27
-updated: 2026-08-06
+updated: 2026-09-07
 type: entity
 tags: ["quantization", "model-compression", "inference", "optimization"]
 provenance_state: inferred
 confidence: 0.5
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Quantization Techniques

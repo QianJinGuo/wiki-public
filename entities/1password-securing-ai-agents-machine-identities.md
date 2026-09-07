@@ -4,7 +4,7 @@ title: Securing AI Agents and Machine Identities
 type: entity
 tags: [1password, ai-security, iam, authentication, non-human-identity, credential-management, visualization]
 created: 2026-05-20
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 7
 review_confidence: 8
 review_recommendation: worth-reading
@@ -12,6 +12,9 @@ review_stars: 4
 sources: [raw/articles/1password-securing-ai-agents-machine-identities]
 related_entities: [entities/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security, entities/securing-ai-agents-how-aws-and-cisco-ai-defense-scale-mcp-and-a2a, entities/ai-gateways-vs-mcp-gateways-what-security-teams-need-to-know, entities/aws-bedrock-agentcore-identity-security]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 可视化

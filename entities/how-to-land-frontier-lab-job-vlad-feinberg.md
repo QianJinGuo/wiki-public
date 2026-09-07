@@ -6,11 +6,14 @@ source: "[[raw/articles/how-to-land-frontier-lab-job-vlad-feinberg]]"
 tags: [career, frontier-lab, kernel, flash-attention, quantization, agentic-ai, scaling-laws, mathematical-maturity]
 type: entity
 created: 2026-05-26
-updated: 2026-07-31
+updated: 2026-09-07
 review_value: 7
 confidence: 0.6
 sources:
   - raw/articles/how-to-land-frontier-lab-job-vlad-feinberg
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # How to Land a Frontier Lab Job：如何拿到一份前沿实验室的工作

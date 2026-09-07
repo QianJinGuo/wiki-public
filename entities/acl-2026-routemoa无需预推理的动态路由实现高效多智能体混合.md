@@ -8,6 +8,9 @@ tags: [wechat, ai]
 rating: v8c8
 sources:
   - raw/articles/acl-2026-routemoa无需预推理的动态路由实现高效多智能体混合
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # ACL 2026 | RouteMoA：无需预推理的动态路由，实现高效多智能体混合

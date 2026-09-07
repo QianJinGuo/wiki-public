@@ -9,6 +9,9 @@ sources:
   - raw/articles/我用阿里-agentscope-复刻了一个-workbuddy-mcp-skills管理
 confidence: 0.75
 rating: v7c7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 我用阿里 AgentScope 复刻了一个 WorkBuddy — 从开源框架到可运行 Agent 的实践拆解

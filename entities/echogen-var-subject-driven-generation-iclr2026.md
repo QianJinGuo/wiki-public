@@ -1,13 +1,16 @@
 ---
 title: EchoGen — ICLR 2026 首个基于视觉自回归模型的前馈式主体驱动图像生成
 created: 2026-07-08
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [image-generation, subject-driven, var, visual-auto-regressive, iclr-2026, academic-paper, diffusion-alternative, feed-forward-generation, usto]
 provenance_state: extracted
 confidence: 0.8
 sources:
   - raw/articles/echogen-var-subject-driven-generation-iclr2026
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # EchoGen — ICLR 2026 首个基于视觉自回归(VAR)模型的前馈式主体驱动图像生成

@@ -1,11 +1,14 @@
 ---
 title: "LLaMA.cpp Deployment"
 created: 2026-07-27
-updated: 2026-08-06
+updated: 2026-09-07
 type: entity
 tags: ["llama-cpp", "deployment", "inference", "local-llm"]
 provenance_state: inferred
 confidence: 0.5
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # LLaMA.cpp Deployment

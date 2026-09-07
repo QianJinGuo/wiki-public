@@ -1,12 +1,15 @@
 ---
 title: "Graviton 优化 Agentic RL 沙箱层：架构与成本优势分析"
 created: 2026-07-03
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [aws, graviton, agentic-rl, training, infrastructure, cost-optimization, sandbox]
 sources: [raw/articles/graviton-optimize-agentic-rl-sandbox-architecture-cost]
 confidence: 0.85
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Graviton 优化 Agentic RL 沙箱层：架构与成本优势分析

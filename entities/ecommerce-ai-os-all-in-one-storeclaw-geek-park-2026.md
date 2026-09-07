@@ -2,13 +2,16 @@
 
 title: "电商 AI 操作系统崛起：从「工具人」到「All in One」+ 行业 KnowHow Skill 化 + 5 巨头 Headless 布局"
 created: 2026-06-16
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [ecommerce, ai-operating-system, ai-os, all-in-one, storeclaw, salesforce-headless, shopify-sidekick, amazon-seller-assistant, sap-joule, atlassian-rovo, google-workspace-gemini, e-commerce-ai, knowledge-skill, industry-knowhow, mcp, agent-platform, 2026, geek-park, doubao-token-cost, openclaw-token-bill, headless-architecture]
 sources: [raw/articles/ecommerce-ai-os-all-in-one-storeclaw-geek-park-2026]
 review_value: 7
 review_confidence: 7
 summary: 极客公园 Cynthia 2026-06-16 报道电商 AI 操作系统趋势：AI 工具密度超摩尔定律增长 + 豆包 Token 2 年 1000× / OpenClaw 30 天 130 万美元 + 5 巨头 (Salesforce/Amazon/Shopify/SAP/Atlassian/Google) Headless 化 + 两类解法 (平台内置 vs 第三方跨平台) + StoreClaw 案例 (INCENZO 85% 自动化 / Emiteve 转化率 10%→14%)
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 电商 AI 操作系统崛起：从「工具人」到「All in One」

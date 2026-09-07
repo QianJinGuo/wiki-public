@@ -4,10 +4,14 @@ title: "Hermes Agent /goal 长任务运行时架构拆解：状态持久化、Ju
 type: entity
 tags: [agent, architecture]
 created: 2026-05-21
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 8
 review_confidence: 7
 sources: [raw/articles/hermes-agent-goal-runtime-architecture-state-persistence-judge-closed-loop]
+reviewed: 2026-09-07
+review_verdict: hub-retained
+review_category: dup
+review_note: "judged dup-0.8: goal运行时3767字版，留5161字全版; retained as hub (in-links>=20); MOC rewrite candidate"
 ---
 
 # Hermes Agent /goal 长任务运行时架构拆解：状态持久化、Judge 闭环与自主续航

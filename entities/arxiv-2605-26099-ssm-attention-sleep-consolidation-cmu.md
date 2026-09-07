@@ -2,13 +2,16 @@
 
 title: "CMU Language Models Need Sleep (arxiv 2605.26099)：SSM-Attention 睡眠巩固机制"
 created: 2026-06-10
-updated: 2026-09-05
+updated: 2026-09-07
 tags: [agent, architecture, evaluation, fine-tuning, game, knowledge-mgmt, llm, memory, mlops, rag, search]
 review_value: 7
 review_confidence: 7
 type: entity
 sources:
   - raw/articles/arxiv-2605-26099-ssm-attention-sleep-consolidation-cmu
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # CMU Language Models Need Sleep (arxiv 2605.26099)：SSM-Attention 睡眠巩固机制

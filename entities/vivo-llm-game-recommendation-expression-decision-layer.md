@@ -1,12 +1,15 @@
 ---
 title: "vivo LLM 游戏推荐表达层：从\"推什么\"到\"怎么选\""
 created: 2026-07-08
-updated: 2026-08-24
+updated: 2026-09-07
 type: entity
 tags: [llm-application, recommendation-system, game-distribution, prompt-engineering, llm-harness, structured-output, vivo]
 sources: [raw/articles/vivo-llm-game-recommendation-expression-decision-layer]
 confidence: 0.8
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # vivo LLM 游戏推荐表达层：从"推什么"到"怎么选"

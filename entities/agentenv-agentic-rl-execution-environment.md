@@ -2,7 +2,7 @@
 title: "AgentENV：面向大规模 Agentic RL 的智能体执行环境"
 slug: agentenv-agentic-rl-execution-environment
 created: 2026-07-28
-updated: 2026-07-28
+updated: 2026-09-07
 type: entity
 tags:
   - agentenv
@@ -20,6 +20,9 @@ review_value: 9
 review_confidence: 9
 sources:
   - raw/articles/agentenv-agentic-rl-execution-environment-2026
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # AgentENV：面向大规模 Agentic RL 的智能体执行环境

@@ -2,13 +2,16 @@
 
 title: "Harness Engineering Deletable Worksite Ruofei"
 created: 2026-06-10
-updated: 2026-07-31
+updated: 2026-09-07
 tags: [agent, architecture, code, data, database, harness-engineering, llm, memory, mlops, observability, prompt, search, security, tool-use]
 review_value: 7
 review_confidence: 7
 type: entity
 sources:
   - raw/articles/harness-engineering-deletable-worksite-ruofei
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Harness Engineering Deletable Worksite Ruofei

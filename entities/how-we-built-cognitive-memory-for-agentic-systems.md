@@ -2,7 +2,7 @@
 
 title: "CrewAI Cognitive Memory: 5 认知操作的工程化设计"
 created: 2026-06-08
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, memory, ai, cognitive-architecture, crewai, lance-db, production]
 source: [[raw/articles/how-we-built-cognitive-memory-for-agentic-systems|原文存档]]
@@ -12,6 +12,9 @@ review_value: 7
 review_confidence: 7
 review_recommendation: worth-reading
 review_stars: 3
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # CrewAI Cognitive Memory: 5 认知操作的工程化设计

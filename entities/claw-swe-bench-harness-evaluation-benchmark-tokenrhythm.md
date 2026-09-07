@@ -1,13 +1,16 @@
 ---
 title: "Claw-SWE-Bench：首个独立测量Harness对编程Agent影响的基准"
 created: 2026-06-15
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [benchmark, harness-evaluation, coding-agent, swe-bench, openclaw, tokenrhythm, agent-evaluation, multi-language]
 review_value: 8
 review_confidence: 8
 sources: [raw/articles/claw-swe-bench-harness-evaluation-benchmark-tokenrhythm]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 核心贡献

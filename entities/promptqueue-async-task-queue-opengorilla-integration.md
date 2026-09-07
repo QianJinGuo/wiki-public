@@ -2,7 +2,7 @@
 
 title: PromptQueue + OpenGorilla 集成 — AI-Native 异步任务引擎与自进化认知层
 created: 2026-06-05
-updated: 2026-06-08
+updated: 2026-09-07
 type: entity
 tags: [promptqueue, open-gorilla, async-task-queue, harness, agent-infrastructure, self-evolving, tool-loop, human-in-the-loop, provider-plugin, hono, sqlite, nextjs, typescript, monorepo, turborepo, anthropic-sdk, openai, gemini, liteLLM, bullmq-equivalent, experience-capture, context-enrichment, result-verification, smart-routing, ljguo-project]
 confidence: 0.95
@@ -11,6 +11,9 @@ sources: [raw/articles/promptqueue-opengorilla-project-analysis-ljguo]
 review_value: 9
 review_confidence: 10
 review_recommendation: strong
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # PromptQueue + OpenGorilla 集成 — AI-Native 异步任务引擎与自进化认知层

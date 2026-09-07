@@ -1,12 +1,15 @@
 ---
 title: "AgentCore Managed Harness"
 created: 2026-04-24
-updated: 2026-07-02
+updated: 2026-09-07
 type: entity
 tags: [agentcore, harness, aws, agent, platform, bedrock, mcp, strans-agents]
 sources: [raw/articles/agentcore-harness]
 review_value: 7
 review_confidence: 8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 ## Overview
 亚马逊云科技 2026 年 4 月 24 日正式发布的托管 Harness 平台。核心理念：**你告诉 Agent 做什么，平台托管其余一切**。    ^[raw/articles/agentcore-harness]

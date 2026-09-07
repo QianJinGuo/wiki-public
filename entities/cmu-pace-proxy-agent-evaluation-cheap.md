@@ -1,7 +1,7 @@
 ---
 title: "CMU PACE — Proxy for Agentic Capability Evaluation"
 created: 2026-07-07
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, benchmark, evaluation, cmu, pace, proxy-evaluation, llm-evaluation, agent-benchmark, cost-optimization]
 sources: [raw/articles/cmu-pace-proxy-agent-evaluation-cheap]
@@ -9,6 +9,9 @@ review_value: 7
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # CMU PACE — Proxy for Agentic Capability Evaluation

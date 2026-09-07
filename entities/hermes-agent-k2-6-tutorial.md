@@ -1,12 +1,15 @@
 ---
 title: "Hermes+Kimi K2.6 多Agent军团实战教程"
 created: 2026-04-25
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [hermes-agent, kimi, k2.6, multi-agent, tutorial, feishu, nous-research, workflow, agent军团]
 sources: [raw/articles/hermes-agent-k2-6-multi-agent]
 confidence: medium
 review_value: 5
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 ## Overview
 苍何（微信公众号，521篇原创）的万字实战教程，手把手演示用 Hermes Agent + Kimi K2.6 搭建 7×24h 不间断运行的 AI 研发军团。从飞书下达需求到最终交付，市场调研、PRD、架构设计、开发、测试全部由不同 Agent 自主完成。  ^[raw/articles/hermes-agent-k2-6-multi-agent.md]

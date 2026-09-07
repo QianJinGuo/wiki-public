@@ -8,6 +8,9 @@ tags: [wechat, ai]
 rating: v8c8
 sources:
   - raw/articles/拒绝感觉有效用数据证明-ai-coding-的真实团队价值天猫ai-coding实践系列
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 拒绝“感觉有效”：用数据证明 AI Coding 的真实团队价值【天猫AI Coding实践系列】

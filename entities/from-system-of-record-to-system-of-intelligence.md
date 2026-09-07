@@ -5,12 +5,15 @@ title: 'From "System of Record" to "System of Intelligence"'
 type: entity
 tags: [a16z, system-of-record, ai, software-architecture, crm, gtm, agents, enterprise-software]
 created: 2026-05-16
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 8
 sources: [raw/articles/from-system-of-record-to-system-of-intelligence-1]
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 核心要点

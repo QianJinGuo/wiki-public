@@ -4,10 +4,13 @@ title: "10x Is a Lot"
 type: entity
 tags: [tutorial]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 8
 review_confidence: 7
 sources: [raw/articles/10x-is-a-lot]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 10x Is a Lot — Quarter Mile

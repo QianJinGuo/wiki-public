@@ -2,7 +2,7 @@
 title: Harness 工程 14 步路线图：从单 Agent 到自改进系统
 type: entity
 created: 2026-06-18
-updated: 2026-08-29
+updated: 2026-09-07
 tags: [harness-engineering, claude-code, agent, loop-engineering, self-improvement, hooks, memory, sub-agents]
 source: wechat
 source_url:
@@ -13,6 +13,9 @@ sources:
   - raw/articles/harness-engineering-14-step-roadmap
 provenance_state: extracted
 confidence: 0.75
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Harness 工程 14 步路线图

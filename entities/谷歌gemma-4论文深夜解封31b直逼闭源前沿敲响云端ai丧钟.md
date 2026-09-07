@@ -7,6 +7,9 @@ tags: [gemma, google, model, llm, open-source, paper]
 confidence: 0.65
 provenance_state: extracted
 sources: [raw/articles/谷歌gemma-4论文深夜解封31b直逼闭源前沿敲响云端ai丧钟]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 谷歌Gemma 4论文分析

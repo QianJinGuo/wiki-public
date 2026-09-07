@@ -13,7 +13,10 @@ review_value: 7
 sources: [raw/articles/stop-coding-architect-dennis-doomen-ai-era]
 review_confidence: 8
 review_stars: 4
-updated: 2026-09-05
+updated: 2026-09-07
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > -> [[raw/articles/stop-coding-architect-dennis-doomen-ai-era.md|原文存档]] ^[raw/articles/stop-coding-architect-dennis-doomen-ai-era.md]

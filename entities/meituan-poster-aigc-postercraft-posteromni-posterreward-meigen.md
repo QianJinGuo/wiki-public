@@ -1,7 +1,7 @@
 ---
 title: "美团海报生成 AIGC 技术体系：PosterCraft/PosterOmni/PosterReward（ICLR/CVPR 2026 三连发）"
 created: 2026-06-18
-updated: 2026-08-24
+updated: 2026-09-07
 description: "美团智能创作团队 2 年构建的生成-编辑-评判技术体系：PosterCraft（ICLR 2026 端到端高美感海报生成，文字渲染接近 SOTA 闭源）/PosterOmni（CVPR 2026 多任务统一，6 类 image-to-poster 任务）/PosterReward（CVPR 2026 海报质量奖励模型，PosterRewardBench-Advanced 86% 准确率 vs 基线 40-53%）；全部开源于 MeiGen-AI；真实业务落地（外卖套餐图/袋鼠团团 IP/点评信息流治理）"
 type: entity
 source: "[[raw/articles/meituan-poster-aigc-postercraft-posteromni-posterreward-meigen]]"
@@ -15,6 +15,9 @@ papers: [PosterCraft-ICLR-2026, PosterOmni-CVPR-2026, PosterReward-CVPR-2026]
 code_repo: ""
 business_landing: [外卖套餐图, 品牌IP袋鼠团团, 点评信息流治理]
 sources:
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 美团海报生成 AIGC 技术体系：PosterCraft/PosterOmni/PosterReward

@@ -8,6 +8,9 @@ tags: [ai, agent, harness, memory, mcp, multimodal]
 sources: [raw/articles/从-react-到-agent-teams一个工程师视角的-agent-协作机制思考]
 confidence: 0.75
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 从 ReAct 到 Agent Teams：一个工程师视角的 Agent 协作机制思考

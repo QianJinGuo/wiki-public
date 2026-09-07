@@ -4,7 +4,7 @@ title: "Hermes Agent 为什么火了？和 OpenClaw 龙虾比一比"
 type: entity
 tags: [agent, hermes, openclaw, comparison, self-growing, memory, architecture]
 created: 2026-05-11
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 8
 review_confidence: 8
 sources: [raw/articles/hermes-agent-vs-openclaw-comparison]
@@ -14,6 +14,9 @@ related:
   - entities/deerflow-hermes-openclaw-comparison
   - entities/hermes-agent-deep-dive
   - entities/openclaw-architecture-8-part-summary
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 一句话格局定位

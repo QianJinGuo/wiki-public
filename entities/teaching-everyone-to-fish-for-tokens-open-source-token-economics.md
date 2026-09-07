@@ -3,11 +3,14 @@
 title: "Teaching Everyone to Fish for Tokens：开源 AI 生态的 token 经济学"
 type: entity
 created: 2026-08-30
-updated: 2026-09-05
+updated: 2026-09-07
 tags: [open-source, llm, inference, economics, nvidia, meta, post-training, ecosystem]
 sources:
   - raw/articles/teaching-everyone-to-fish-for-tokens
 confidence: 0.8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Teaching Everyone to Fish for Tokens：开源 AI 生态的 token 经济学

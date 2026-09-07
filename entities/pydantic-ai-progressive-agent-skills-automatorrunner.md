@@ -1,13 +1,16 @@
 ---
 title: "Pydantic AI: Progressive Agent Skills without Claude Model Lock-in"
 created: 2026-06-11
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [pydantic-ai, agent-skills, multi-model, litellm, progressive-loading, design-philosophy, claude-sdk, type-safety, dependency-injection]
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/pydantic-ai-progressive-agent-skills-automatorrunner.md]
 provenance_state: raw-linked
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > → [[raw/articles/pydantic-ai-progressive-agent-skills-automatorrunner.md|原文存档]]

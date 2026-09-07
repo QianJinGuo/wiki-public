@@ -8,6 +8,9 @@ tags: [wechat, ai]
 rating: v8c8
 sources:
   - raw/articles/李飞飞署名具身新论文sim2real烧不起real2sim量大管饱
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 李飞飞署名具身新论文：Sim2Real烧不起，Real2Sim量大管饱

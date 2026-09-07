@@ -8,6 +8,9 @@ provenance_state: inferred
 rating: v9c9
 sources:
   - raw/articles/一文看懂-ai-编程智能体工程化新范式loop-engineering
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 一文看懂 AI 编程智能体工程化新范式：Loop Engineering

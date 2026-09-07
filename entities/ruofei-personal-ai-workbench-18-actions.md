@@ -2,7 +2,7 @@
 source_url:
 title: "Personal AI 工作台：Claude 18 动作框架"
 created: 2026-05-19
-updated: 2026-08-24
+updated: 2026-09-07
 type: entity
 tags: [harness, personal-harness, workflow, context-management, claude]
 review_value: 7
@@ -20,6 +20,9 @@ related:
   - [[entities/agent-harness-context-management-working-set|Context Management 与 Working Set]]
   - [[entities/anthropic-claude-managed-agents-platform-launch|Claude Managed Agents]]
 provenance_state: inferred
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 ## 核心立场
 > Claude 用得好不好，越来越像一个**环境工程问题**，而非提示词技巧问题。

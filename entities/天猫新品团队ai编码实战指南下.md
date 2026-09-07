@@ -10,7 +10,9 @@ sources:
   - raw/articles/天猫新品团队ai编码实战指南下
 review_value: 7
 review_confidence: 7
-
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 [[raw/articles/天猫新品团队ai编码实战指南下.md]] ^[raw/articles/天猫新品团队ai编码实战指南下.md]

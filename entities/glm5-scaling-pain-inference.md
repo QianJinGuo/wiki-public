@@ -3,14 +3,16 @@
 
 title: "GLM-5 Scaling 痛点与推理优化"
 created: 2026-05-16
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [agent, llm, inference, engineering, ai]
 sources:
   - raw/articles/glm5-scaling-pain-inference
 review_value: 8
 review_confidence: 9
-
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # glm5-scaling-pain-inference

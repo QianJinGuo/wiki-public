@@ -1,11 +1,14 @@
 ---
 title: "ACL 2026 | XG-Guard：用图异常检测抓出多智能体网络中的内鬼"
 created: 2026-07-10
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, multi-agent, security, anomaly-detection, academic]
 sources: [raw/articles/acl-2026-用图异常检测抓出多智能体网络中的内鬼xg-guard]
 confidence: 0.8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # ACL 2026 | XG-Guard：用图异常检测抓出多智能体网络中的内鬼

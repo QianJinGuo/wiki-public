@@ -1,11 +1,14 @@
 ---
 title: "京东 Oxygen xLLM 大模型推理引擎捐赠开源"
 created: 2026-07-04
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [llm, inference, open-source, jd, ai-infra, openatom]
 sources: [raw/articles/jd-oxygen-xllm-inference-engine-opensource-2026, raw/articles/京东-oxygen-xllm-大模型推理引擎正式捐赠开放原子开源基金会共建国产-ai-infra-生态]
 confidence: 0.75
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 京东 Oxygen xLLM 大模型推理引擎捐赠开源

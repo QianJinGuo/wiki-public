@@ -3,14 +3,16 @@
 
 title: "刚刚Opus 4.7发布，相比4.6核心变化，与Claude Code搭配最佳实践"
 created: 2026-05-16
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [claude-code, anthropic, aws, engineering, ai]
 sources:
   - raw/articles/opus-4-7-launch-claude-code-best-practices-wechat
 review_value: 9
 review_confidence: 7
-
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ###  Claude Opus 4.7 正式发布：

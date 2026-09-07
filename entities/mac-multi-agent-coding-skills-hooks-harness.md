@@ -2,7 +2,7 @@
 
 title: "MAC（multi-agent-coding）：Skills + Hooks 两层 Harness —— 完全委托 0-20% 的解法"
 created: 2026-06-04
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [harness, mac, multi-agent-coding, skills, hooks, pdca, probabilistic, deterministic, claude-context, agent-coding, anthropic, agentic-coding-trends]
 sources: [raw/articles/mac-multi-agent-coding-skills-hooks-harness]
@@ -11,6 +11,9 @@ provenance_state: extracted
 review_value: 9
 review_confidence: 9
 review_recommendation: strong
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # MAC（multi-agent-coding）：Skills + Hooks 两层 Harness

@@ -2,13 +2,16 @@
 
 title: "5 Years and $5M Later: Inventing a New Programming Language for Web Development Was a Mistake (Wasp 复盘)"
 created: 2026-06-11
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [wasp-lang, web-development, programming-languages, y-combinator, startup-lessons, dsl, typescript, ai-friendly-architecture, framework-design]
 sources: [raw/articles/5-years-and-5m-later-inventing-a-new]
 provenance_state: extracted
 review_value: 7
 review_confidence: 8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 5 Years and $5M Later: Inventing a New Programming Language for Web Development Was a Mistake

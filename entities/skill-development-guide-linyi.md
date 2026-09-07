@@ -6,8 +6,11 @@ review_value: 8
 review_confidence: 8
 tags: [skill, agent-skill, claude-code, skill-development, self-improving-loop, cross-platform]
 created: "2026-05-18"
-updated: 2026-08-29
+updated: 2026-09-07
 sources: [raw/articles/skill-development-guide-linyi]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > 来源：[[raw/articles/skill-development-guide-linyi|原文存档]]（凜一 / 阿里云开发者，2026-05-18）

@@ -1,7 +1,7 @@
 ---
 title: "Anthropic 实战分享：如何让 AI Agent 持续工作几天？"
 created: 2026-06-10
-updated: 2026-08-01
+updated: 2026-09-07
 tags: [agent, anthropic, architecture, code, evaluation, llm, memory, prompt, workflow, overnight, review-queue, rakuten]
 review_value: 7
 review_confidence: 7
@@ -10,6 +10,9 @@ sources:
   - raw/articles/anthropic-long-running-agent-architecture-6h-retroforge
   - raw/articles/agent-night-overnight-rakuten-vibecoder-2026-07-22
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Anthropic 实战分享：如何让 AI Agent 持续工作几天？

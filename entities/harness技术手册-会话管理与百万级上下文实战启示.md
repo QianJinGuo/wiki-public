@@ -8,6 +8,9 @@ tags: [wechat, ai]
 rating: v8c7
 sources:
   - raw/articles/harness技术手册-会话管理与百万级上下文实战启示
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # harness技术手册-会话管理与百万级上下文实战启示

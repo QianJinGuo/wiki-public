@@ -2,13 +2,16 @@
 
 title: "The 2026 State of AI Traffic & Cyberthreat Benchmark Report - HUMAN Security"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-07
 tags: [security, ai, cyberthreat, benchmark, bot-detection, credential-stuffing, ad-fraud, defense-automation, human-security, api-abuse, llm-evasion]
 review_value: 7
 review_confidence: 7
 type: entity
 provenance_state: deepened
 sources: [raw/articles/ai-traffic-cyberthreat-benchmark-2026]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # The 2026 State of AI Traffic & Cyberthreat Benchmark Report - HUMAN Security

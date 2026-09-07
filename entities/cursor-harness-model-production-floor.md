@@ -4,10 +4,14 @@ title: "Cursor Harness Model Production Floor"
 type: entity
 tags: [agent, anthropic, benchmark, harness, model, openai, production, tool]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 8
 review_confidence: 7
 sources: [raw/articles/cursor-harness-model-production-floor]
+reviewed: 2026-09-07
+review_verdict: hub-retained
+review_category: dup
+review_note: "judged dup-0.8: Cursor复盘重复版; retained as hub (in-links>=20); MOC rewrite candidate"
 ---
 
 # Cursor 复盘 Harness：模型决定能力上限，Harness 决定生产下限

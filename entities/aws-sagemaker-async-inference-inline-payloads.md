@@ -7,7 +7,10 @@ summary: "SageMaker AI Async Inference 新增 Body 参数支持内联请求 payl
 sources: [raw/articles/amazon-sagemaker-ai-async-inference-now-supports-inline-requ]
 review_value: 7
 review_confidence: 8
-updated: 2026-06-18
+updated: 2026-09-07
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # AWS SageMaker Async Inference 内联 Payload 支持

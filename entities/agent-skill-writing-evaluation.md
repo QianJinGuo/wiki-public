@@ -2,12 +2,15 @@
 
 title: "Agent Skill 评估与迭代"
 created: 2026-05-13
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [agent-skill, evaluation, testing, iteration]
 sources: [raw/articles/agent-skill-writing-guide]
 review_value: 7
 review_confidence: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 优化 description 的系统性方法

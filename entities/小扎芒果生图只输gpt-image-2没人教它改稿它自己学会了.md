@@ -9,6 +9,9 @@ sources:
   - raw/articles/小扎芒果生图只输gpt-image-2没人教它改稿它自己学会了-2026-07-08
 confidence: 0.64
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 小扎「芒果」生图只输GPT Image 2，没人教它改稿，它自己学会了

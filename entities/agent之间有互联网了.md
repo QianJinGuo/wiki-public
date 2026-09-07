@@ -9,6 +9,9 @@ rating: v8c7
 sources:
   - raw/articles/agent之间有互联网了
   - raw/articles/octo-agent-internet-collaboration-platform-minglue-2026-07-02
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Agent之间，有互联网了！

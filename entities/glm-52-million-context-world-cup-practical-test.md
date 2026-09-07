@@ -1,12 +1,15 @@
 ---
 title: "实测GLM-5.2百万上下文：85页世界杯前瞻"
 created: 2026-07-05
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [glm, glm-5, llm, context, long-context, evaluation, zhipu, 智谱]
 sources: [raw/articles/实测glm-52百万上下文我让他做了85页的世界杯前瞻]
 confidence: 0.65
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 实测GLM-5.2百万上下文：85页世界杯前瞻

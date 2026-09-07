@@ -2,13 +2,16 @@
 
 title: "Build an AI-Powered Equipment Repair Assistant Using Amazon Bedrock AgentCore"
 created: "2026-06-11"
-updated: 2026-08-29
+updated: 2026-09-07
 type: "entity"
 tags: "agent, ai, llm, aws, bedrock, agentcore, strands, rag, knowledge-base, field-service"
 review_value: "8"
 review_confidence: "8"
 review_stars: "4"
 sources: [raw/articles/build-an-ai-powered-equipment-repair-assistant-using-amazon-]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Build an AI-Powered Equipment Repair Assistant Using Amazon Bedrock AgentCore

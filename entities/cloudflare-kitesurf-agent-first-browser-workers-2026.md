@@ -1,7 +1,7 @@
 ---
 title: "Cloudflare Kitesurf：运行在 Workers V8 isolate 上的 agent-first 浏览器"
 created: 2026-08-08
-updated: 2026-08-08
+updated: 2026-09-07
 type: entity
 tags: [agent, browser, cloudflare, workers, wasm, rust, harness]
 confidence: 0.75
@@ -9,6 +9,9 @@ provenance_state: extracted
 sources: [raw/articles/cloudflare-kitesurf-agent-first-browser-workers-2026]
 review_value: 8
 review_confidence: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Cloudflare Kitesurf：运行在 Workers V8 isolate 上的 agent-first 浏览器

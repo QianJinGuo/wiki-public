@@ -2,13 +2,16 @@
 
 title: "A Missing Layer in Agentic Systems?"
 created: "2026-06-10"
-updated: 2026-08-29
+updated: 2026-09-07
 tags: "agent, ai, llm, crewai, hitl, human-in-the-loop, architecture, production, compliance"
 review_value: "7"
 review_confidence: "7"
 type: "entity"
 review_stars: "4"
 sources: [raw/articles/a-missing-layer-in-agentic-systems]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # A Missing Layer in Agentic Systems?

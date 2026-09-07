@@ -2,7 +2,7 @@
 
 title: Data modeling best practices for Amazon Quick Sight multi-dataset relationships
 created: 2026-07-10
-updated: 2026-07-27
+updated: 2026-09-07
 type: entity
 tags: [aws]
 sources: [raw/articles/data-modeling-best-practices-for-amazon-quick-sight-multi-da]
@@ -12,6 +12,9 @@ review_recommendation: worth-reading
 review_stars: 3
 confidence: medium
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Data modeling best practices for Amazon Quick Sight multi-dataset relationships

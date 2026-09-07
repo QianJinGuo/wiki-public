@@ -1,7 +1,7 @@
 ---
 title: "vLLM V0→V1 迁移中的 logprob 差异修复"
 created: 2026-05-08
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [vllm, rl, post-training, inference]
 review_value: 9
@@ -9,6 +9,9 @@ sources: [raw/articles/vllm-v0-to-v1-correctness-before-corrections]
 review_confidence: 9
 review_recommendation: strong
 review_stars: 5
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 > -> [[raw/articles/vllm-v0-to-v1-correctness-before-corrections|原文存档]]
 

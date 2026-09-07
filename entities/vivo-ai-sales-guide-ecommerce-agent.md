@@ -8,11 +8,14 @@ review_recommendation: moderate
 review_stars: 3
 date: 2026-05-27
 created: 2026-05-28
-updated: 2026-08-29
+updated: 2026-09-07
 tags: [ai-agent, ecommerce, rag, fasttext, intent-classification, product-recommendation, vivo, structured-output, knowledge-base, prompt-engineering]
 type: entity
 provenance_state: synthesized
 sources: [raw/articles/vivo-ai-sales-guide-ecommerce-agent]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > -> [[raw/articles/vivo-ai-sales-guide-ecommerce-agent|原文存档]]

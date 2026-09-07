@@ -1,7 +1,7 @@
 ---
 title: "The New Bottleneck: Theory of Constraints in the Age of AI Coding"
 created: 2026-06-19
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [agent, harness-engineering, ai-coding, theory-of-constraints, engineering-management, process-optimization]
 source: "[[raw/articles/the-new-bottleneck-theory-of-constraints-ai-coding-tools]]"
@@ -13,6 +13,9 @@ review_value: 7
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # The New Bottleneck: Theory of Constraints in the Age of AI Coding

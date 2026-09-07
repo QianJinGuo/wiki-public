@@ -1,13 +1,16 @@
 ---
 title: "Management as AI superpower"
 created: 2026-06-10
-updated: 2026-08-01
+updated: 2026-09-07
 tags: [agent, code, evaluation, llm, rag, rl, search, tool-use, trading, management, delegation, agentic-economics, gdpval]
 review_value: 7
 review_confidence: 7
 type: entity
 sources:
   - raw/articles/management-as-ai-superpower
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Management as AI superpower

@@ -1,12 +1,15 @@
 ---
 title: "AI 浏览器三条技术路线：侧栏 / Agent / AI 原生"
 created: 2026-07-12
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [ai, browser, agent, architecture, ai-native, tabbit, workflow]
 confidence: 0.75
 provenance_state: merged
 sources: [raw/articles/当-ai-浏览器走向原生ai-侧栏会被吞并还是与之共存]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # AI 浏览器三条技术路线：侧栏 / Agent / AI 原生

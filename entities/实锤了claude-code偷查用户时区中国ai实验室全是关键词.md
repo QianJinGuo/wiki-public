@@ -6,6 +6,9 @@ type: entity
 tags: [ai, llm]
 sources: [raw/articles/实锤了claude-code偷查用户时区中国ai实验室全是关键词]
 confidence: 0.8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 实锤了：Claude Code偷查用户，时区、中国AI实验室全是关键词

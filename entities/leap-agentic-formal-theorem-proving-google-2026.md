@@ -1,12 +1,15 @@
 ---
 title: "LEAP：Google Agentic Framework 攻克形式化数学证明"
 created: 2026-07-07
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, google, deepmind, mathematics, formal-proof, agentic-framework, lean]
 sources: [raw/articles/raw-leap-agentic-formal-theorem-proving-google-2026]
 confidence: 0.85
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > Google Cloud AI Research 与 DeepMind 联合提出的 LEAP（Language-model Agentic Proof-framing）框架，用 Agentic 方式攻克形式化数学证明。核心洞察：LLM 在形式化证明上的弱点不是数学能力不足，而是缺少与验证器的结构化交互。^[raw/articles/raw-leap-agentic-formal-theorem-proving-google-2026.md]

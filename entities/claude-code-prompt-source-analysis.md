@@ -1,7 +1,7 @@
 ---
 title: "Claude Code Prompt 提示词体系源码解析"
 created: 2026-05-08
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, prompt-engineering, claude-code, architecture, skill, memory]
 sources: [raw/articles/claude-code-prompt-source-analysis-fanone]
@@ -9,6 +9,9 @@ review_value: 8
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 ## 概述
 FanOne 从源码角度解析 Claude Code 的 Prompt 提示词模块六大分层体系：Core System（静态/动态分离 + 优先级策略树）、Tool（自然语言行为协议）、Skill（渐进式加载 + Reading Guide）、Agent（强角色边界 SOP）、Context Management、Memory（四类分级存储）。与 [[entities/claude-code-architecture|Claude Code 架构解析]] 构成完整源码解读系列。  ^[raw/articles/claude-code-prompt-source-analysis-fanone.md]

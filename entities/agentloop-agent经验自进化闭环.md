@@ -7,6 +7,9 @@ tags: [ai, agent, harness, agentloop, 经验自进化, 可观测性, eval, 阿�
 sources: [raw/articles/让-agent-越用越准成本越来越低agentloop-的-agent-经验自进化闭环, raw/articles/ctrip-agent-self-evolution-human-governed-2026]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 让 Agent 越用越准、成本越来越低：AgentLoop 的 Agent 经验自进化闭环

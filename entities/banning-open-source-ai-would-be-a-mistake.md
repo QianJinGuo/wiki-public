@@ -1,12 +1,15 @@
 ---
 title: "Banning Open Source AI Would Be A Mistake — Interconnects 开源 AI 政策评论"
 created: 2026-07-01
-updated: 2026-08-30
+updated: 2026-09-07
 type: entity
 tags: [ai, governance, open-source, policy, interconnects, regulation, ai-safety]
 sources: [raw/articles/banning-open-source-ai-would-be-a-mistake]
 confidence: 0.65
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Banning Open Source AI Would Be A Mistake — Interconnects 开源 AI 政策评论

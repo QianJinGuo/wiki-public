@@ -1,7 +1,7 @@
 ---
 title: "Claude Code KAIROS 范式深度解析"
 created: 2026-05-07
-updated: 2026-09-05
+updated: 2026-09-07
 source: "[[raw/articles/claude-code-kairos-paradigm-2026|原文存档]]"
 type: entity
 value: 7
@@ -9,6 +9,9 @@ tags: [claude-code, ai]
 review_value: 8
 sources: [raw/articles/claude-code-kairos-paradigm-2026]
 review_confidence: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 在 Claude Code 的代码中，如果只算 KAIROS 出现的次数，其出现了 154 次；如果算上以其为前缀的变量啥的，其出现了 365 次。KAIROS 是什么？简单来说，KAIROS 是 Claude Code 未来的 AI 形态，一个在恰当时机出现的，一直在线的协同工作伙伴。   ^[raw/articles/claude-code-kairos-paradigm-2026.md]

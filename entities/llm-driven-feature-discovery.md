@@ -2,7 +2,7 @@
 
 title: "LLM-Driven Feature Discovery"
 created: 2026-06-23
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [llm, feature-discovery, alignment, interpretability]
 provenance_state: inferred
@@ -13,6 +13,9 @@ review_value: 8
 review_confidence: 9
 review_stars: 4
 review_recommendation: strong
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # LLM-Driven Feature Discovery

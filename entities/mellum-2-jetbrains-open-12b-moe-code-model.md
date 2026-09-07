@@ -1,7 +1,7 @@
 ---
 title: "Mellum 2 (JetBrains open-weight 12B MoE code LLM)"
 created: 2026-06-03
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [llm, code-model, moe, open-weight, jetbrains, post-training, speculative-decoding, rlvr]
 source: [[raw/articles/mellum-2-jetbrains-open-12b-moe-code-model]]
@@ -12,6 +12,9 @@ review_stars: 4
 confidence: 0.9
 provenance_state: extracted
 sources:
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Mellum 2 (JetBrains open-weight 12B MoE code LLM)

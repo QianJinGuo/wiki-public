@@ -1,6 +1,6 @@
 ---
 title: "Agent Harness 解析：智能体架构深度拆解"
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 created: 2026-05-16
 tags: [agent, harness, claude, openai, langgraph, architecture]
@@ -8,6 +8,9 @@ review_value: 7
 review_confidence: 8
 sources: [raw/articles/agent-harness-architecture-deep-dive-aksahy]
 reference_backlink: "[[raw/articles/agent-harness-architecture-deep-dive-aksahy.md|原文存档]]"
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 ## 核心定义
 **Agent Harness** = 包裹 LLM 的完整软件基础设施：编排循环、工具、记忆、上下文管理、状态持久化、错误处理、安全护栏。   ^[raw/articles/agent-harness-architecture-deep-dive-aksahy.md]

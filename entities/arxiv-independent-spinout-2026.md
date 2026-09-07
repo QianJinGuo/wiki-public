@@ -1,12 +1,15 @@
 ---
 title: "arXiv 脱离康奈尔，正式独立为非营利组织"
 created: 2026-07-04
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [arxiv, open-access, academic-publishing, scholarly-communication, infrastructure]
 source: [[raw/articles/arxiv-independent-nonprofit-2026-07-02]]
 confidence: 0.9
 sources: [raw/articles/arxiv-independent-nonprofit-2026-07-02]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # arXiv 脱离康奈尔，独立为非营利组织

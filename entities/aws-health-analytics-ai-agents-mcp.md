@@ -1,7 +1,7 @@
 ---
 title: "Self-Service AWS Health Analytics with AI Agents"
 created: 2026-06-26
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 source: "[[raw/articles/build-self-service-aws-health-analytics-to-find-actionable-h]]"
 sources: [raw/articles/build-self-service-aws-health-analytics-to-find-actionable-h]
@@ -9,6 +9,9 @@ tags: [agent, aws-health, mcp, analytics, self-service, bedrock, strands-agents,
 review_value: 8
 review_confidence: 9
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Self-Service AWS Health Analytics with AI Agents

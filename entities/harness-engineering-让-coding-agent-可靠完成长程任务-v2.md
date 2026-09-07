@@ -10,6 +10,10 @@ review_value: 7
 review_confidence: 8.333333333333334
 review_recommendation: worth-reading
 review_stars: 3
+reviewed: 2026-09-07
+review_verdict: hub-retained
+review_category: dup
+review_note: "judged dup-0.75: 长程任务v2 10087字，batch-30已留rv9框架版; retained as hub (in-links>=20); MOC rewrite candidate"
 ---
 
 ## 相关实体

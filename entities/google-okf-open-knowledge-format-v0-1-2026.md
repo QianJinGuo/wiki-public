@@ -1,13 +1,16 @@
 ---
 title: "Google Open Knowledge Format (OKF) v0.1：AI 知识库通用格式标准 — 让 Markdown 知识库互通"
 created: 2026-06-16
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [okf, open-knowledge-format, google-cloud, knowledge-catalog, knowledge-format, knowledge-base, knowledge-management, markdown, frontmatter, agent-knowledge, llm-wiki, karpathy-wiki, agents-md, claude-md, format-standard, ai-cambrian, 2026, interoperability]
 sources: [raw/articles/google-okf-open-knowledge-format-v0-1-2026]
 review_value: 8
 review_confidence: 8
 summary: Google Cloud Platform 2026-06-16 发布的开放知识格式规范 v0.1：一个 OKF bundle = 一个 Markdown 文件目录 + YAML frontmatter (type 必填) + 自由 Markdown 正文 + Markdown 链接做关系图；3 个设计原则 (最小约束 / 生产者消费者独立 / 格式不是平台) + 3 个参考实现 (数据丰富 agent / 静态 HTML 可视化 / GA4/StackOverflow/比特币样例) + Google Cloud Knowledge Catalog 集成
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Google Open Knowledge Format (OKF) v0.1：AI 知识库通用格式标准

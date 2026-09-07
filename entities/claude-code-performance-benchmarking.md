@@ -2,7 +2,7 @@
 
 title: "Claude Code 性能基准评测"
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [claude-code, performance, benchmarking, agent, optimization, token-efficiency, context-management]
 sources:
@@ -11,6 +11,9 @@ sources:
 provenance_state: merged
 review_value: 9
 review_confidence: 9
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 概述

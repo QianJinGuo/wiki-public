@@ -1,13 +1,16 @@
 ---
 title: "Protecting against token theft"
 created: 2026-06-10
-updated: 2026-08-30
+updated: 2026-09-07
 tags: [agent, architecture, code, game, llm, mlops, prompt, rl, security, inference]
 review_value: 7
 review_confidence: 7
 type: entity
 sources:
   - raw/articles/vercel-com-blog-protecting-against-token-theft
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Protecting against token theft

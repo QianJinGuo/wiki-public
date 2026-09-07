@@ -1,7 +1,7 @@
 ---
 title: "蚂蚁灵波 LingBot-Vision — 空间原生视觉基础模型 & LingBot-Depth 2.0"
 created: 2026-07-07
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [lingbot, spatial-vision, robotics, embodied-ai, vision-foundation-model, boundary-centric-masked-modeling, depth-estimation, ant-robotics, dinov3, self-distillation]
 sources: [raw/articles/lingbot-vision-spatial-native-vision-foundation-model-ant]
@@ -9,6 +9,9 @@ review_value: 7
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 蚂蚁灵波 LingBot-Vision — 空间原生视觉基础模型 & LingBot-Depth 2.0

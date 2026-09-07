@@ -5,10 +5,13 @@ source: AliExpress技术 (2026-04-20)
 score: v=7, c=9, v×c=63
 type: entity
 created: 2026-07-24
-updated: 2026-07-31
+updated: 2026-09-07
 tags: [ali-express, agent-framework, multi-agent, single-agent, agent-evolution, AI-qa, production-agent, spring-ai-alibaba]
 sources:
   - raw/articles/global-product-center-qa-agent-aliexpress-2026
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 全球化商品中心智能答疑 Agent：从单 Agent 到多 Agent 协作

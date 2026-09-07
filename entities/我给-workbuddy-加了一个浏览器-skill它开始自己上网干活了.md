@@ -8,6 +8,9 @@ tags: [ai, agent, browser-automation, workbuddy, skill, mcp, web-automation, har
 sources: [raw/articles/我给-workbuddy-加了一个浏览器-skill它开始自己上网干活了]
 confidence: 0.69
 score: 49
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 我给 WorkBuddy 加浏览器 Skill

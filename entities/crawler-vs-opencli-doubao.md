@@ -4,11 +4,14 @@ title: "Crawler vs Opencli Doubao"
 type: entity
 tags: [api, tool, web]
 created: 2026-05-21
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 5
 review_confidence: 6
 sources: [raw/articles/crawler-vs-opencli-doubao]
 score_validated: 2026-09-05
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ### 1. 网络爬虫（Web Crawler/Spider）

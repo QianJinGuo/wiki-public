@@ -2,13 +2,16 @@
 
 title: "Agent Loop 工程手册 8 个未解问题 + SELF Protocol 治理薄壳：腾讯陈进的二手解读与单 Agent 实验"
 created: 2026-06-16
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, agent-loop, harness-engineering, multi-agent, multi-agent-topology, memory, guardrails, stopping-condition, self-evolution, self-protocol, tencent-cloud, chen-jin, 2026, second-hand-interpretation, single-agent, open-question, open-questions, anti-hallucination, cost-control, skill-failure, maker-checker]
 sources: [raw/articles/agent-loop-engineering-handbook-8-questions-chen-jin-tencent-self-2026]
 review_value: 8
 review_confidence: 8
 summary: 腾讯云陈进 8 个未解问题 + 30 天 SELF Protocol 治理薄壳实验：Agent Loop 7 件套（Automations/Worktrees/Skills/Plugins/Sub-agents/Memory/Guardrails）+ 4 设计法（Stopping Condition/Context 组装/失败即输入/6 种拓扑）+ 8 痛点（软目标/同模型盲区/护栏位置/记忆大小/理解力腐蚀/拓扑选型/防胡说/成本）+ SELF 三模块（白盒记忆/pre-publish 审查/失败转技能）+ 268/20/314 实测数据 + 4 档 Safe-Launch
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Agent Loop 工程手册 8 个未解问题 + SELF Protocol 治理薄壳

@@ -2,7 +2,7 @@
 
 title: "The annotated PyTorch training loop"
 created: 2026-06-26
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [article]
 source: "[[raw/articles/essays-pytorch-training-loop]]"
@@ -12,6 +12,9 @@ review_value: 7
 review_confidence: 8
 review_stars: 4
 review_recommendation: worth-reading
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # The annotated PyTorch training loop

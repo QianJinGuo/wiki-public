@@ -3,12 +3,16 @@
 title: "AgentRun"
 type: entity
 created: 2026-05-11
-updated: 2026-09-05
+updated: 2026-09-07
 tags: [agent, aliyun, serverless, platform, tool]
 sources: [raw/articles/aliyun-agentrun-5min-quickstart, raw/articles/aliyun-agentrun-2line-integration]
 review_value: 6
 review_confidence: 8
 score_validated: 2026-09-05
+reviewed: 2026-09-07
+review_verdict: borderline-retained
+review_category: dup
+review_note: "archive verdict at 0.7 below 0.75 execution threshold; retained"
 ---
 
 ## 核心能力

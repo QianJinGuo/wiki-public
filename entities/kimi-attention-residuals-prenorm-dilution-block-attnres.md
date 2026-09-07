@@ -2,12 +2,15 @@
 
 title: "Kimi Attention Residuals（AttnRes）— PreNorm 稀释问题与 Block 折中方案"
 created: 2026-04-30
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [attention, training-efficiency, prenorm, kimi]
 sources: [raw/articles/kimi-attention-residuals-preNorm-dilution-block-attnres]
 confidence: medium
 review_value: 5
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 一句话总结

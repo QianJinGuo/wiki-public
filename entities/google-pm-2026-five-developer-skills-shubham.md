@@ -2,13 +2,16 @@
 
 title: "谷歌PM公开：2026开发者五大新技能——问题塑形/上下文设计/审美/编排/判断力"
 created: 2026-05-28
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [problem-shaping, context-curation, taste, agent-orchestration, judgment, developer-skills, google, shubham-saboo, 93k-stars]
 sources:
   review_value: 7
 review_confidence: 7
 review_recommendation: worth-reading
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > -> [[raw/articles/google-pm-2026-five-developer-skills-shubham|谷歌PM公开：2026开发者五大新技能——问题塑形/上下文设计/审美/编排/判断力]]

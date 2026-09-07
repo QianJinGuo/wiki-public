@@ -3,7 +3,7 @@ title: "Skill自进化三路线：Trace2Skill归纳法 / EvoSkill验证闭环 / 
 type: entity
 tags: [skill, self-evolution, trace2skill, evoskill, skillopt, agent, overfitting, verification, training-paradigm, qwen, microsoft, frontier-set, learning-rate, minibatch, hold-out-gating]
 created: 2026-06-10
-updated: 2026-08-21
+updated: 2026-09-07
 review_value: 9
 review_confidence: 8
 provenance_state: extracted
@@ -12,6 +12,9 @@ related:
   - entities/hermes-agent-self-evolving
   - entities/agent-self-improvement-six-mechanisms
   - entities/gepa-optimize-anything
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Skill自进化三路线：Trace2Skill归纳法 / EvoSkill验证闭环 / SkillOpt训练范式

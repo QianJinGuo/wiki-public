@@ -8,6 +8,9 @@ tags: [wechat, ai]
 rating: v8c8
 sources:
   - raw/articles/harness技术手册-ai-记忆的两种范式从向量检索到上下文积累
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # harness技术手册-AI 记忆的两种范式：从向量检索到上下文积累

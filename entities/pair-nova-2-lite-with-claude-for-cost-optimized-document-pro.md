@@ -1,11 +1,14 @@
 ---
 title: "Pair Nova 2 Lite with Claude for cost-optimized document processing"
 created: 2026-08-01
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: ['raw', 'article']
 sources: [raw/articles/pair-nova-2-lite-with-claude-for-cost-optimized-document-pro]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > -> [[raw/articles/pair-nova-2-lite-with-claude-for-cost-optimized-document-pro.md|原文存档]]

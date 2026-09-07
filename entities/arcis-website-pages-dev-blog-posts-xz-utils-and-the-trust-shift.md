@@ -2,13 +2,16 @@
 
 title: "xz 后门两周年：扫描器仍然检测不到什么"
 created: 2026-06-10
-updated: 2026-07-31
+updated: 2026-09-07
 tags: [security, supply-chain, open-source, cve, vulnerability, devsecops]
 review_value: 7
 review_confidence: 7
 type: entity
 sources:
   - raw/articles/arcis-website-pages-dev-blog-posts-xz-utils-and-the-trust-shift
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # xz 后门两周年：扫描器仍然检测不到什么

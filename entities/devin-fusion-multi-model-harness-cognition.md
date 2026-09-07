@@ -1,11 +1,14 @@
 ---
 title: "Devin Fusion: 多模型路由 Harness 实现 35% 成本降低"
 created: 2026-06-30
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [agent, coding-agent, model-routing, cognition, devin, cost-optimization, harness, multi-model, sidekick]
 sources: [raw/articles/devin-fusion]
 confidence: 0.8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Devin Fusion: 多模型路由 Harness 实现 35% 成本降低

@@ -1,12 +1,15 @@
 ---
 title: "CMAP：基于一致性模型的对抗净化（隐空间流形优化，TPAMI'26）"
 created: 2026-09-04
-updated: 2026-09-04
+updated: 2026-09-07
 type: entity
 tags: [adversarial-robustness, adversarial-purification, diffusion, consistency-model, latent-space, manifold, image-classification, tpami, defensive-machine-learning, security]
 sources: [raw/articles/adversarial-purification-cmap-consistency-latent-optimization-tpami-2026]
 confidence: 0.72
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # CMAP：基于一致性模型的对抗净化（隐空间流形优化，TPAMI'26）

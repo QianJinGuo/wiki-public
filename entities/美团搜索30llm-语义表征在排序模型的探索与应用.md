@@ -7,6 +7,9 @@ type: entity
 tags: ['llm', 'ai']
 sources: [raw/articles/美团搜索30llm-语义表征在排序模型的探索与应用]
 confidence: 0.7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 美团搜索3.0：LLM 语义表征在排序模型的探索与应用

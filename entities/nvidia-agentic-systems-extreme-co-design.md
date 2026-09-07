@@ -4,11 +4,14 @@ title: "Building for the Rising Complexity of Agentic Systems with Extreme Co-De
 type: entity
 tags: [agent, nvidia, agent-architecture, inference, harness-engineering, token-economics, prompt-caching, context-management, latency, throughput, hardware, vera, rubin, gb200]
 created: 2026-05-21
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 8
 review_confidence: 7
 provenance_state: extracted
 sources: [raw/articles/nvidia-agentic-systems-extreme-co-design]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 概述

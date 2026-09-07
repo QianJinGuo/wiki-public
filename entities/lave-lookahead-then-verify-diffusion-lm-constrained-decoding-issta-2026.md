@@ -1,12 +1,15 @@
 ---
 title: "LAVE：面向扩散语言模型的约束解码"
 created: "2026-07-17"
-updated: 2026-08-29
+updated: 2026-09-07
 type: "entity"
 tags: [diffusion-lm, constrained-decoding, syntax-verification, issta-2026, tsinghua, ai-agent, llm-inference, code-generation]
 confidence: 0.7
 provenance_state: "extracted"
 sources: [raw/articles/issta-2026lave面向扩散语言模型的约束解码]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # LAVE：基于前瞻验证的扩散语言模型约束解码

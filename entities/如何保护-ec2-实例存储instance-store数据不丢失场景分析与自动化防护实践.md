@@ -12,6 +12,9 @@ review_recommendation: strong
 review_stars: 4
 confidence: medium
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 如何保护 EC2 实例存储（Instance Store）数据不丢失：场景分析与自动化防护实践

@@ -9,6 +9,9 @@ review_value: 8
 review_confidence: 7
 sources: [raw/articles/估值3000亿63家新实验室杀疯了murati贝佐斯集体押注下一代ai]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # AI Neolab 生态：63家新实验室与3000亿美元赌注

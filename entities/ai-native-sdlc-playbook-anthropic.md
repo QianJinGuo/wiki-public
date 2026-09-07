@@ -1,7 +1,7 @@
 ---
 title: "AI Native SDLC Playbook：Anthropic 应用 AI 团队的软件开发生命周期重构方法论"
 created: 2026-08-26
-updated: 2026-08-28
+updated: 2026-09-07
 type: entity
 tags: [ai-native, sdlc, software-development, agent, harness, engineering, anthropic, lifecycle]
 provenance_state: extracted
@@ -10,6 +10,9 @@ sources:
   - raw/articles/ai-native-sdlc-playbook-lugong-aicodinglab-2026-08-24
   - raw/articles/ruofei-ai-native-sdlc-full-chain-2026
 confidence: 0.8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # AI Native SDLC Playbook：Anthropic 应用 AI 团队的软件开发生命周期重构方法论

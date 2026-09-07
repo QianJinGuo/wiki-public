@@ -4,10 +4,13 @@ title: "清华系团队出手！一张4090即可「爆改」，1.3B小钢炮震�
 type: entity
 tags: [llm]
 created: 2026-05-21
-updated: 2026-05-21
+updated: 2026-09-07
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/minicpm-v-46-13b-xinazhiyuan]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 清华系团队出手！一张4090即可「爆改」，1.3B小钢炮震撼开源

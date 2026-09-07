@@ -1,12 +1,15 @@
 ---
 title: "GenCeption — 视频生成模型作为通用视觉学习器"
 created: 2026-07-14
-updated: 2026-07-14
+updated: 2026-09-07
 type: entity
 tags: [vision, multimodal, video-generation, foundation-model, diffusion, generalist, arxiv]
 confidence: 0.7
 provenance_state: extracted
 sources: [raw/articles/genception-video-gen-models-general-purpose-vision-learners-arxiv-2607]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # GenCeption — 视频生成模型作为通用视觉学习器

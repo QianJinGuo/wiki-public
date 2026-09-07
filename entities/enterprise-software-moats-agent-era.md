@@ -1,12 +1,15 @@
 ---
 title: "Enterprise Software Moats in the Agent Era — 系统性护城河分析框架"
 created: 2026-05-15
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [enterprise-software, moats, agent-era, system-of-record, headless, data-exhaust, action-layer, network-effects, a16z, salesforce]
 sources: [raw/articles/salesforce-headless-software-losing-head-a16z]
 review_value: 8
 review_confidence: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 ## 核心问题
 当软件去掉界面，剩下的是什么？和 PostgreSQL + API 本质区别是什么？SaaS 时代让软件"难以被替换"的东西，在 Agent 时代还成立吗？ ^[raw/articles/salesforce-headless-software-losing-head-a16z.md]

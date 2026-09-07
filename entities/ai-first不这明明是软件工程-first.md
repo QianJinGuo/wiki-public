@@ -8,6 +8,9 @@ tags: [wechat, ai]
 rating: v7c7
 sources:
   - raw/articles/ai-first不这明明是软件工程-first
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # AI First？不，这明明是软件工程 First！

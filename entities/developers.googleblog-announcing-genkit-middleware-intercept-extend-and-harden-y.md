@@ -5,11 +5,14 @@ title: "Announcing Genkit Middleware"
 type: entity
 tags: [genkit, middleware, agent-framework, reliability, go, typescript, dart, python]
 created: 2026-05-16
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 9
 review_confidence: 8
 review_recommendation: worth-reading
 sources: [raw/articles/developers.googleblog-announcing-genkit-middleware-intercept-extend-and-harden-y]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 核心架构：三层拦截体系

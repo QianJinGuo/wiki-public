@@ -7,9 +7,12 @@ review_value: 7
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 3
-updated: 2026-08-30
+updated: 2026-09-07
 sources:
   tags: [agent, skills, workflow, coze, n8n, low-code]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Agent Skills vs Workflow低代码平台：选型分析

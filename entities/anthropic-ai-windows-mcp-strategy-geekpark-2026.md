@@ -8,11 +8,14 @@ review_recommendation: worth-reading
 review_stars: 4
 date: 2026-01-27
 created: 2026-01-27
-updated: 2026-08-29
+updated: 2026-09-07
 tags: [anthropic, mcp, claude, ai-operating-system, strategic-analysis]
 type: entity
 provenance_state: synthesized
 sources: [raw/articles/anthropic-ai-windows-mcp-strategy-geekpark-2026]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > -> [[raw/articles/anthropic-ai-windows-mcp-strategy-geekpark-2026|原文存档]]

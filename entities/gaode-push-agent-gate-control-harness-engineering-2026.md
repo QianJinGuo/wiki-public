@@ -1,12 +1,15 @@
 ---
 title: "高德 Push 发送门控 Agent 感知投放：三代架构与约束工程（Harness Engineering）"
 created: 2026-08-26
-updated: 2026-08-26
+updated: 2026-09-07
 type: entity
 tags: [agent, gate-control, harness-engineering, constraint-engineering, decision-transformer, gaode, sending-gate, progressive-disclosure, online-control]
 sources: [raw/articles/gaode-push-agent-gate-control-harness-engineering-2026]
 confidence: 0.86
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 高德 Push 发送门控 Agent 感知投放：三代架构与约束工程（Harness Engineering）

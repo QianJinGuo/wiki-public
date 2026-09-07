@@ -7,6 +7,9 @@ tags: [ai, 语音大模型, 全双工, slm, acl-2026, 端到端]
 sources: [raw/articles/腾讯pcg联合深圳河套学院在全双工语音大模型领域取得重要突破获-acl-2026-杰出论文奖]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 腾讯 PCG 联合深圳河套学院：Lychee-FD 全双工语音大模型获 ACL 2026 杰出论文奖

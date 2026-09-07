@@ -1,7 +1,7 @@
 ---
 title: "Disgruntled researcher releases two more Microsoft zero-days"
 created: 2026-05-18
-updated: 2026-09-05
+updated: 2026-09-07
 date: 2026-05-18
 source: "[[raw/articles/microsoft-zero-days-researcher-disgruntled-theregister|原文存档]]"
 type: entity
@@ -11,6 +11,9 @@ sources: [raw/articles/microsoft-zero-days-researcher-disgruntled-theregister]
 review_confidence: 9
 review_recommendation: strong
 review_stars: 5
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 深度分析

@@ -1,12 +1,15 @@
 ---
 title: 小米多篇论文入选 ECCV 2026 — 人脸修复、视频大模型推理加速
 created: 2026-07-05
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [vision, multi-modal, model-architecture, inference, eccv, face-restoration, video-llm, gui-agent, autonomous-driving]
 sources: [raw/articles/一步修复严重退化人脸视频边看边想让视频大模型响应速度提升157倍小米多篇论文入选-eccv-2026]
 confidence: 0.8
 provenance_state: expanded
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 小米多篇论文入选 ECCV 2026 — 人脸修复、视频大模型推理加速

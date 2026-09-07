@@ -8,6 +8,9 @@ tags: [wechat, ai]
 rating: v9c8
 sources:
   - raw/articles/33万个skills为什么大多数都死在安装这一步
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 3.3万个Skills，为什么大多数都死在“安装”这一步？

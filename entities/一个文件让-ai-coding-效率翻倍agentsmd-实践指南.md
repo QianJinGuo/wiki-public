@@ -8,6 +8,9 @@ updated: 2026-08-27
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/一个文件让-ai-coding-效率翻倍agentsmd-实践指南, raw/articles/shopify-ceo考虑禁用claude-code因其不兼容agentsmd]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## AGENTS.md 是什么

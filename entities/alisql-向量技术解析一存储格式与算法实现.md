@@ -8,6 +8,9 @@ tags: [wechat, ai]
 rating: v8c8
 sources:
   - raw/articles/alisql-向量技术解析一存储格式与算法实现
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # AliSQL 向量技术解析（一）：存储格式与算法实现

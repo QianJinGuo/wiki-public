@@ -8,7 +8,7 @@ author:
 publish_date: 2026-06-12
 ingested: 2026-06-13
 created: 2026-06-13
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags:
   - aws
@@ -27,6 +27,9 @@ review_recommendation: worth-reading
 review_stars: 4
 sources:
   - raw/articles/building-supercharger-how-rocket-close-optimized-title-opera
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Building Supercharger: How Rocket Close optimized title operations with agentic AI

@@ -10,6 +10,9 @@ review_value: 7
 review_confidence: 8
 review_stars: 4
 sha256: 32ff3a7a9504b2aeb251aed4240aa1541d9bcea0de50c83e877fc998d389ef7d
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 世界模型的DeepSeek时刻！魔芯Flash World Model降本70%，跑出50FPS实时交互

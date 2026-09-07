@@ -1,7 +1,7 @@
 ---
 title: "Knowledge Agents: Beat Frontier Models with Better Structure"
 created: 2026-06-23
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [agent, knowledge-agent, llm, rag, bm25, retrieval]
 source: [[raw/articles/knowledge-agents-beat-frontier-models]]
@@ -12,6 +12,9 @@ review_confidence: 7
 review_stars: 4
 provenance_state: extracted
 confidence: 0.85
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Knowledge Agents: Beat Frontier Models with Better Structure

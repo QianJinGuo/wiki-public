@@ -3,13 +3,16 @@
 title: "AI Native 时代研发组织何去何从"
 type: entity
 created: 2026-05-14
-updated: 2026-08-29
+updated: 2026-09-07
 tags: [ai-native, organization, execution-graph, harness, hive-mind, 管理, 研发组织, 阿里巴巴]
 sources: [raw/articles/ai-native-rd-org-design-xiaobin]
 review_value: 8
 review_confidence: 7
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 核心洞察

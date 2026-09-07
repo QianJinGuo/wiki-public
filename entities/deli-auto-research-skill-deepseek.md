@@ -5,12 +5,15 @@ description: "陈德里（DeepSeek）搭建的自主科研智能体框架，通�
 source: "[[raw/articles/deli-auto-research-skill-v2-continual-learning-self-improvement]]"
 tags: [deepseek, agent, autonomous-research, continual-learning, self-improvement, ai-research]
 created: 2026-05-30
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 confidence: 0.85
 provenance_state: extracted
 sources: [raw/articles/deli-auto-research-skill-v2-continual-learning-self-improvement]
 review_value: 6
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 核心价值

@@ -3,11 +3,14 @@ title: Back up and restore your Amazon EKS cluster resources using Velero | Amaz
 type: entity
 tags: [article,newsletter]
 created: 2026-05-20
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 8
 sources: [raw/articles/back-up-and-restore-your-amazon-eks-cluster-resources-using-velero-amazon-web-se]
 review_confidence: 8
 review_recommendation: strong
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 ## 核心要点
 - ...

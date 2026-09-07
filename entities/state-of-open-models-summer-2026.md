@@ -1,12 +1,15 @@
 ---
 title: "State of Open Models: Summer 2026 Observations"
 created: 2026-08-15
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [ai, llm, open-models, huggingface, open-source-ecosystem]
 sources: [raw/articles/state-of-open-models-summer-2026-observations]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # State of Open Models：2026 夏季观察

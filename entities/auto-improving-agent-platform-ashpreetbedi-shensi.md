@@ -3,14 +3,16 @@
 
 title: "你还在手动调代码，这个工程师的平台已经在自动进化了"
 created: 2026-05-13
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, engineering, ai]
 sources:
   - raw/articles/auto-improving-agent-platform-ashpreetbedi-shensi
 review_value: 9
 review_confidence: 7
-
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 [[raw/articles/auto-improving-agent-platform-ashpreetbedi-shensi.md]] ^[raw/articles/auto-improving-agent-platform-ashpreetbedi-shensi.md]

@@ -1,12 +1,15 @@
 ---
 title: "为什么 2026 年真正重要的是 Harness Engineering？"
 created: 2026-07-05
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [harness-engineering, agent-reliability, ai-engineering, production-ai, verifier-driven-development]
 sources: [raw/articles/为什么-2026-年真正重要的是-harness-engineering]
 confidence: 0.9
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 为什么 2026 年真正重要的是 Harness Engineering？

@@ -8,6 +8,9 @@ tags: [wechat, ai]
 rating: v8c8
 sources:
   - raw/articles/百度沧海存储-mantle-系统架构演进之路sosp25-论文背后的故事
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 百度沧海·存储 Mantle 系统架构演进之路，SOSP'25 论文背后的故事

@@ -6,6 +6,9 @@ type: entity
 tags: [vision, llm, research, video-generation, 4d, virtual-try-on, dit, e-commerce]
 sources: [raw/articles/eccv26-为视频虚拟试衣解锁自由视角tryoncrafter玩转4d试衣代理]
 confidence: 0.7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # ECCV'26 | 为视频虚拟试衣解锁自由视角，TryOnCrafter玩转4D试衣代理

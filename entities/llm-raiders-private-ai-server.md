@@ -4,11 +4,14 @@ title: "LLMjacking: what these attacks are, and how to protect AI servers"
 type: entity
 tags: [agent, api, llm, security]
 created: 2026-05-21
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 6
 review_confidence: 7
 sources: [raw/articles/llm-raiders-private-ai-server]
 score_validated: 2026-09-05
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # LLMjacking: what these attacks are, and how to protect AI servers

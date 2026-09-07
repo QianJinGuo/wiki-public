@@ -2,7 +2,7 @@
 
 title: "17种Agent架构演进：控制流设计的完整演化史"
 created: 2026-05-18
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, architecture, control-flow, reflection, react, planning, pev, multi-agent, blackboard, ensemble, memory, tot, dry-run, metacognitive, self-improve, cellular-automata, agno]
 sources: [raw/articles/17-agent-architectures-evolution]
@@ -10,6 +10,9 @@ review_value: 9
 review_confidence: 8
 review_recommendation: strong
 review_stars: 5
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 → [[raw/articles/17-agent-architectures-evolution|原文存档]] ^[raw/articles/17-agent-architectures-evolution.md]

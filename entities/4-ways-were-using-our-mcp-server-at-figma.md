@@ -2,7 +2,7 @@
 
 title: "4 ways we’re using our MCP server at Figma"
 created: 2026-06-19
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [agent, ai, mcp, figma]
 source: "[[raw/articles/4-ways-were-using-our-mcp-server-at-figma]]"
@@ -10,6 +10,9 @@ review_value: 8
 review_confidence: 8
 review_stars: 6
 sources:
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 4 ways we’re using our MCP server at Figma

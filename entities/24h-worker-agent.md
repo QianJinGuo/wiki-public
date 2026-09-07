@@ -1,7 +1,7 @@
 ---
 title: "24h打工人"
 created: 2026-05-09
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [agent, tool, scheduler, sdd, autonomous]
 summary: 24 小时无人值守的 AI Agent 代码开发系统，基于文件队列调度、CLI 工具集成、SDD 流程和失败自动切换实现。
@@ -9,6 +9,9 @@ review_value: 7
 sources: [raw/articles/ai-agent-exploration-path-legacy-tech]
 review_confidence: 8
 provenance_state: inferred
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 ## 核心架构
 **文件 + 轮询调度**：

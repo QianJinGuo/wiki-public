@@ -4,11 +4,14 @@ title: "Prompting Amazon Nova 2 for content moderation"
 type: entity
 tags: [aws, engineering, ai]
 created: 2026-05-19
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 8
 sources: [raw/articles/prompting-amazon-nova-2-for-content-moderation]
 review_confidence: 9
 review_recommendation: strong
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 核心要点

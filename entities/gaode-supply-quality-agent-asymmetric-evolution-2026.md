@@ -1,12 +1,15 @@
 ---
 title: "高德供给质量 Agent：业务 Skills 外化 + 非对称进化（稳定执行/旁路进化）"
 created: 2026-08-26
-updated: 2026-08-26
+updated: 2026-09-07
 type: entity
 tags: [agent, supply-quality, asymmetric-evolution, skill, skills, human-in-the-loop, gaode, quality-governance, bad-case, gray-release]
 sources: [raw/articles/gaode-supply-quality-agent-asymmetric-evolution-2026]
 confidence: 0.86
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 高德供给质量 Agent：业务 Skills 外化 + 非对称进化（稳定执行/旁路进化）

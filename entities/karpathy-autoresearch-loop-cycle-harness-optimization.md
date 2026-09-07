@@ -1,7 +1,7 @@
 ---
 title: "Karpathy AutoResearch Loop Cycle & Harness Optimization"
 created: 2026-07-07
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [agent, harness, loop-engineering, karpathy, auto-research, llm-optimization, agent-framework]
 sources: [raw/articles/karpathy-autoresearch-loop-harness-76pct-agent-misconception]
@@ -9,6 +9,9 @@ review_value: 8
 review_confidence: 7
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Karpathy AutoResearch Loop Cycle & Harness Optimization

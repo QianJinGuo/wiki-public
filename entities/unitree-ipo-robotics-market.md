@@ -3,11 +3,14 @@ title: "Unitree's IPO Filing: The State of the Robotics Market"
 type: entity
 tags: [robotics, ai]
 created: 2026-05-19
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 8
 sources: [raw/articles/unitree-ipo-robotics-market]
 review_confidence: 8
 review_recommendation: strong
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 ## 核心要点
 - 来源：Tanay Jaipuria (Wing VC) Newsletter，2026-05-18

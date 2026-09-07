@@ -1,7 +1,7 @@
 ---
 title: "企业 AI 的非技术困境：本体驱动 Agent 与知识治理"
 created: 2026-07-04
-updated: 2026-07-04
+updated: 2026-09-07
 type: entity
 tags: [enterprise-ai, ontology, agent, knowledge-governance, ai-adoption, data-management]
 sources: [raw/articles/enterprise-ai-ontology-agent-knowledge-governance]
@@ -15,6 +15,9 @@ related:
   - concepts/ai-cost-optimization-framework
   - concepts/harness-engineering-framework
   - entities/ai-native-company-transformation
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 企业 AI 的非技术困境：本体驱动 Agent 与知识治理

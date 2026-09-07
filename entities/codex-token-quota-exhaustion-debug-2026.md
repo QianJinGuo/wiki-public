@@ -2,12 +2,15 @@
 
 title: "Codex 48小时两次被迫重置Token额度——消耗太快的真相来了"
 created: 2026-07-03
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [codex, token, coding-agent, optimization, llm-cost, openai, quota-management]
 sources: [raw/articles/codex-token-quota-exhaustion-debug-2026]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Codex 48小时两次被迫重置Token额度——消耗太快的真相来了

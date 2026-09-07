@@ -1,7 +1,7 @@
 ---
 title: "AWS WAF AI Traffic Monetization — 内容所有者向 AI 收费的网络层基础设施"
 created: 2026-06-17
-updated: 2026-06-17
+updated: 2026-09-07
 type: entity
 tags: [aws, waf, bot-control, ai-monetization, content, agent, web, x402, stripe, mpp]
 sources: [raw/articles/aws-waf-ai-traffic-monetization-bot-content-access]
@@ -9,6 +9,9 @@ review_value: 7
 review_confidence: 7
 review_recommendation: worth-reading
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # AWS WAF AI Traffic Monetization — 内容所有者向 AI 收费的网络层基础设施

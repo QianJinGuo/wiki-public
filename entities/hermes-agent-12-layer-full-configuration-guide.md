@@ -2,7 +2,7 @@
 
 title: Hermes Agent 满配 12 层配置完整指南（从裸装到 24h Agent 团队）
 created: 2026-06-04
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [hermes-agent, 12-layer, full-configuration, soul-md, user-md, memory-md, agents-md, skill-md, mcp, gateway, cron, profiles, token-optimization, observability, multi-agent, 24h-agent-team, input-protocol-stack, work-protocol]
 confidence: 0.92
@@ -11,6 +11,9 @@ sources: [raw/articles/hermes-agent-12-layer-full-configuration-guide]
 review_value: 9
 review_confidence: 9
 review_recommendation: strong
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Hermes Agent 满配 12 层配置完整指南

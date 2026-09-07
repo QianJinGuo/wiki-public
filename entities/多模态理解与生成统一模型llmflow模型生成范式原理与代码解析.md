@@ -8,6 +8,9 @@ tags: [wechat, ai]
 rating: v8c8
 sources:
   - raw/articles/多模态理解与生成统一模型llmflow模型生成范式原理与代码解析
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 【多模态理解与生成统一模型】LLM+flow模型生成范式原理与代码解析

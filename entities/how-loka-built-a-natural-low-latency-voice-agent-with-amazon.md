@@ -1,7 +1,7 @@
 ---
 title: "How Loka Built a Natural, Low-Latency Voice Agent with Amazon Nova 2 Sonic"
 created: 2026-06-25
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [aws, nova-sonic, voice-agent, low-latency, loka, bedrock, agent, speech-to-speech, architecture]
 source: "[[raw/articles/how-loka-built-a-natural-low-latency-voice-agent-with-amazon]]"
@@ -13,6 +13,9 @@ review_recommendation: strong
 review_stars: 4
 confidence: 0.85
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # How Loka Built a Natural, Low-Latency Voice Agent with Amazon Nova 2 Sonic

@@ -4,7 +4,7 @@ title: "钉钉 Stream + CLI 代理双引擎 AI 助手架构"
 description: "闪购搜索团队在钉钉群里跑通企业级 AI 助手的完整工程方案：WebSocket Stream 避公网回调、ProcessBuilder 双引擎调用、五级知识沉淀模型、stdbuf 行缓冲+AI 卡片流式更新、MCP 静态 Token 跳过 OAuth"
 source: "[[raw/articles/dingtalk-qoder-claudecode-dual-engine-ai-assistant]]"
 created: 2026-06-02
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, ai-assistant, dingtalk, mcp, cli-agent, claude-code, qoder, knowledge-evolution, devops, harness]
 confidence: 0.78
@@ -15,6 +15,9 @@ review_recommendation: strong
 review_stars: 4
 sources:
   - raw/articles/dingtalk-qoder-claudecode-dual-engine-ai-assistant
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 钉钉 Stream + CLI 代理双引擎 AI 助手架构

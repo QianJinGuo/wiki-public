@@ -3,7 +3,7 @@ title: "GitHub + AWS 多云转折：AI 编码激增 14B commits 压垮 GitHub，
 description: "2026-06-16 报道：Satya Nadella 主导的 Microsoft 在 2018 年 75 亿美元收购 GitHub 时承诺 Azure 主导，2027 完成迁移；但 2025 末以来 agentic coding 激增让 GitHub 2026 commits 飙至 14B（vs 2025 年 1B），超出原计划 10X 容量上限、需重设计 30X 容量。Microsoft 不得不加购 AWS 容量应对，本质是 AI 编码代理对开发者平台的压力测试。"
 source: "[[raw/articles/microsoft-github-aws-ai-capacity-crunch]]"
 created: 2026-06-18
-updated: 2026-07-27
+updated: 2026-09-07
 type: entity
 tags: [github, microsoft, aws, multi-cloud, azure, infrastructure, agentic-coding, capacity-planning, dev-platforms, scaling]
 review_value: 7
@@ -14,6 +14,9 @@ sources:
   - raw/articles/microsoft-github-aws-ai-capacity-crunch
 confidence: high
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # GitHub + AWS 多云转折：AI 编码激增 14B commits 压垮 GitHub，Microsoft 跨云买 AWS 容量

@@ -1,11 +1,14 @@
 ---
 title: "Agent 的六个自主性等级：从 L0 辅助到 L5 例外管理"
 created: 2026-07-22
-updated: 2026-09-04
+updated: 2026-09-07
 type: entity
 tags: ['agent-autonomy', 'l0-l5', 'addy-osmani', 'orchestration', 'agency']
 sources: [raw/articles/agent-autonomy-levels-l0-l5-addy-osmani-2026]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > -> [[raw/articles/agent-autonomy-levels-l0-l5-addy-osmani-2026.md|原文存档]]

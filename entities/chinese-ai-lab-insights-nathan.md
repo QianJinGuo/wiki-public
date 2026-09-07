@@ -4,12 +4,15 @@ title: "所有实验室都怕字节，所有人都在夸DeepSeek！美国研究�
 type: entity
 tags: [china-ai, deepseek, bytedance, open-source, culture, nathan-lambert]
 created: 2026-05-12
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 7
 review_confidence: 7
 review_recommendation: worth-reading
 aliases: [Chinese AI Lab Insights, Nathan China AI Trip Report]
 sources: [raw/articles/chinese-ai-lab-insights-nathan, raw/articles/chinese-ai-lab-insights-nathan]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 ## 核心要点
 - Nathan Lambert（Allen Institute for AI）36小时密集访问中国AI实验室：月之暗面、智谱、清华、美团、小米、零一万物

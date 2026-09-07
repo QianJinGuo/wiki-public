@@ -11,6 +11,9 @@ sources: [raw/articles/claude-code-之父最新访谈编程已经结束harness-�
 review_confidence: 7
 review_recommendation: worth-reading
 created: 2026-05-15
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 核心要点

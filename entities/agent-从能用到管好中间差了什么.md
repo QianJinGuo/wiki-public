@@ -8,6 +8,9 @@ updated: 2026-05-21
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/agent-从能用到管好中间差了什么]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Agent 从"能用"到"管好"，中间差了什么？

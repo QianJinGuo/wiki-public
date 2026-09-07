@@ -3,11 +3,14 @@ title: "Zenjoy 基于 Amazon Bedrock 和 EKS 构建 AIOps Agent：打通 Prometh
 type: entity
 tags: [aws, bedrock, eks, aiops, monitoring, prometheus]
 created: 2026-05-19
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 7
 review_confidence: 8
 review_recommendation: worth-reading
 sources: [raw/articles/zenjoy-aiops-agent-bedrock-eks-prometheus]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 ## 核心要点
 - 基于 Amazon Bedrock + EKS 构建 AIOps Agent，整合 Prometheus、ElasticSearch、夜莺监控数据

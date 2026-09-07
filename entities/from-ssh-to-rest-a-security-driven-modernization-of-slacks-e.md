@@ -4,12 +4,15 @@ title: "From SSH to REST: A Security-Driven Modernization of Slack's EMR Data Pi
 type: entity
 tags: [newsletter, data-platform, security, migration, yarm, quarry]
 created: 2026-05-19
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 7
 review_confidence: 9
 review_recommendation: strong
 review_stars: 4
 sources: [raw/articles/from-ssh-to-rest-a-security-driven-modernization-of-slacks-e]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 深度分析

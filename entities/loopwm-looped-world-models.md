@@ -3,13 +3,16 @@ title: LoopWM (Looped World Models)
 type: entity
 tags: [world-model, looped-transformer, latent-dynamics, reinforcement-learning, parameter-sharing, test-time-compute]
 created: 2026-06-25
-updated: 2026-08-01
+updated: 2026-09-07
 confidence: 0.8
 provenance_state: merged
 sources:
   - raw/articles/loopwm-looped-world-models
   - raw/articles/2026-06-30-AI圈刚开始谈Loop-Engineering-两位95后博士已经盯上了人类闭环-机器之心
   - raw/articles/loopwm-loop-world-models-2026-07-01
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # LoopWM (Looped World Models)

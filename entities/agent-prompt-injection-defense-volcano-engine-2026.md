@@ -1,11 +1,14 @@
 ---
 title: "Agent 提示词注入攻击防护实践（字节/火山引擎）"
 created: 2026-08-27
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [agent-security, prompt-injection, defense, security, bytedance, volcano-engine]
 sources: [raw/articles/字节实践-agent-提示词注入攻击一场需要长期应对的安全挑战]
 confidence: 0.72
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Agent 提示词注入攻击防护实践（字节/火山引擎）

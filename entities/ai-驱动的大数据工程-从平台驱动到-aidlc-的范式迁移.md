@@ -8,6 +8,9 @@ updated: 2026-05-21
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/ai-驱动的大数据工程-从平台驱动到-aidlc-的范式迁移]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # ai 驱动的大数据工程 从平台驱动到 aidlc 的范式迁移

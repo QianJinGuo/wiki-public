@@ -4,7 +4,7 @@ title: "中国用户安全高性能访问海外 Bedrock"
 description: "AWS China Blog 原创：中国用户通过专线/VPN/代理三条路径安全访问海外 Amazon Bedrock 的端到端私有化接入参考架构"
 type: entity
 created: 2026-06-26
-updated: 2026-08-01
+updated: 2026-09-07
 source: [[raw/articles/user-security-high-performance-bedrock-aws-china]]
 sources:
   - raw/articles/user-security-high-performance-bedrock-aws-china
@@ -21,6 +21,9 @@ review_value: 8
 review_confidence: 9
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 中国用户安全高性能访问海外 Bedrock

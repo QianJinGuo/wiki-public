@@ -7,6 +7,9 @@ tags: [ai, research, agent, ai-agent, multi-agent, evaluation, benchmark, agent-
 sources: [raw/articles/让生成式模型画出空间智能而非强迫llm输出坐标-浙大提出agentic空间认知评估框架.md]
 confidence: 0.6
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 让生成式模型「画」出空间智能，而非强迫LLM输出「坐标」! 浙大提出Agentic空间认知评估框架

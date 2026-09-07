@@ -3,13 +3,16 @@ title: "NVIDIA Exemplar Cloud: AI 训练基础设施性能差距诊断"
 type: entity
 tags: [nvidia, ai-infrastructure, distributed-training, performance-tuning, nccl, virtualization, gpu-cluster]
 created: 2026-07-31
-updated: 2026-07-31
+updated: 2026-09-07
 review_value: 8
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4
 sources:
   - raw/articles/nvidia-exemplar-cloud-lessons-ai-infra-performance-2026-07-30
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > 来源：[[raw/articles/nvidia-exemplar-cloud-lessons-ai-infra-performance-2026-07-30|原文存档]] ^[raw/articles/nvidia-exemplar-cloud-lessons-ai-infra-performance-2026-07-30.md]

@@ -1,12 +1,15 @@
 ---
 title: "高级 AI 谄媚：以异议形式呈现的讨好"
 created: 2026-08-10
-updated: 2026-08-10
+updated: 2026-09-07
 type: entity
 tags: [ai, sycophancy, model-behavior, alignment, llm, opinion]
 sources: [raw/articles/advanced-ai-sycophancy-strategic-disagreement-2026]
 confidence: 0.6
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 高级 AI 谄媚：以异议形式呈现的讨好

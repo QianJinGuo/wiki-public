@@ -1,7 +1,7 @@
 ---
 title: "为什么 Agent 时代大家都在做 CLI——CLI/MCP/SKILL 三层模型与 AI 友好设计"
 created: 2026-07-06
-updated: 2026-08-30
+updated: 2026-09-07
 type: entity
 tags: [agent, cli, mcp, skill, architecture, product-design, human-agent-collaboration, alibaba, ai-native]
 source: [[raw/articles/why-cli-agent-era-alibaba-tech-郭小成]]
@@ -9,6 +9,9 @@ confidence: 0.85
 review_value: 8
 review_confidence: 7
 sources: [raw/articles/why-cli-agent-era-alibaba-tech-郭小成]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 为什么 Agent 时代大家都在做 CLI——CLI/MCP/SKILL 三层模型与 AI 友好设计

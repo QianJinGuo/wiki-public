@@ -1,11 +1,14 @@
 ---
 title: "Multi-Vector (Late Interaction) Embedding Models with Sentence Transformers"
 created: 2026-08-19
-updated: 2026-08-19
+updated: 2026-09-07
 type: entity
 tags: [embedding, retrieval, colbert, late-interaction, sentence-transformers, rag, multimodal]
 sources: [raw/articles/multi-vector-late-interaction-embedding-models-with-sentence]
 confidence: 0.7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Multi-Vector (Late Interaction) Embedding Models with Sentence Transformers

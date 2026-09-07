@@ -1,12 +1,15 @@
 ---
 title: "LingBot-VA 2.0 — 蚂蚁灵波具身原生预训练视频-动作基座模型"
 created: 2026-07-11
-updated: 2026-08-30
+updated: 2026-09-07
 type: entity
 tags: [embodied-ai, video-action-model, pretraining, robot, ant-group, lingbo]
 confidence: 0.65
 provenance_state: extracted
 sources: [raw/articles/lingbot-va-20-embodied-video-action-pretrain-ant-lingbo-2026]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # LingBot-VA 2.0 — 蚂蚁灵波具身原生预训练视频-动作基座模型

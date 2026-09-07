@@ -1,12 +1,15 @@
 ---
 title: "BEACON：里程碑引导的 Long-Horizon 语言智能体策略学习（ICML 2026）"
 created: 2026-08-22
-updated: 2026-08-22
+updated: 2026-09-07
 type: entity
 tags: [agentic-rl, reinforcement-learning, long-horizon, credit-assignment, grpo, milestone, llm-agent, training, icml]
 sources: [raw/articles/beacon-milestone-guided-policy-learning-long-horizon-agent-zju-2026]
 confidence: 0.82
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # BEACON：里程碑引导的 Long-Horizon 语言智能体策略学习（ICML 2026）

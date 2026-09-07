@@ -3,7 +3,7 @@ title: "AI Agent Hype Meets Reality"
 type: entity
 tags: [agent, ai-agent, churn, product-reality, market-analysis, startup]
 created: 2026-06-24
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 6
 review_confidence: 7
 review_recommendation: worth-reading
@@ -12,6 +12,9 @@ sources: [raw/articles/ai-agent-hype-reality-churn]
 confidence: 0.8
 provenance_state: extracted
 score_validated: 2026-09-05
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # AI Agent Hype Meets Reality

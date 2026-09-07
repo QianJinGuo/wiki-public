@@ -5,7 +5,7 @@ slug: hermes-agent-memory-system-openclaw-comparison
 type: entity
 tags: [hermes-agent, memory, openclaw, cache-aware, runtime, context-management]
 created: 2026-05-10
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 10
 review_confidence: 10
 sources: [raw/articles/hermes-agent-memory-system-openclaw-comparison]
@@ -20,6 +20,9 @@ related:
   - entities/claude-code-subagents-context-hygiene
   - entities/harness-engineering-systematic-framework
   - concepts/openclaw-architecture
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 → [[raw/articles/hermes-agent-memory-system-openclaw-comparison|原文存档]]^[raw/articles/hermes-agent-memory-system-openclaw-comparison.md]

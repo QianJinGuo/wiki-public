@@ -1,11 +1,14 @@
 ---
 title: "美团搜索3.0：LLM 语义表征在排序模型的应用"
 created: 2026-08-20
-updated: 2026-08-20
+updated: 2026-09-07
 type: entity
 tags: [meituan, search-ranking, llm-embedding, semantic-representation, cosine-similarity, infonce, triplet-loss, lora, mrle, pepnet, hard-negative, retrieval]
 sources: [raw/articles/meituan-search-3-llm-semantic-embedding-ranking-2026]
 confidence: 0.9
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 美团搜索3.0：LLM 语义表征在排序模型的应用

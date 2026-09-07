@@ -1,12 +1,15 @@
 ---
 title: "Native-speed vLLM transformers modeling backend"
 created: 2026-08-14
-updated: 2026-08-14
+updated: 2026-09-07
 type: entity
 tags: [vllm, transformers, inference, optimization, huggingface, model-integration]
 sources: [raw/articles/native-speed-vllm-transformers-modeling-backend]
 confidence: 0.8
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Native-speed vLLM transformers modeling backend

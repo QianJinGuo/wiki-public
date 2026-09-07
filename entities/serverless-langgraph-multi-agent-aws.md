@@ -2,7 +2,7 @@
 
 title: "Build a highly scalable serverless LangGraph multi-agent system"
 created: 2026-06-01
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: ['aws', 'langgraph', 'serverless', 'multi-agent', 'architecture']
 source: [[raw/articles/serverless-langgraph-multi-agent-aws]]
@@ -10,6 +10,9 @@ confidence: 0.7
 review_value: 7
 sources:
   - raw/articles/serverless-langgraph-multi-agent-aws
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Build a highly scalable serverless LangGraph multi-agent system

@@ -7,6 +7,9 @@ tags: [ai, video-editing, streaming, realtime, diffusion, jd, open-source, embod
 sources: [raw/articles/实时视频版nano-banana来了160亿参数重磅开源]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # JoyAI-Video-Edit：160 亿参数的实时流式视频编辑模型

@@ -4,11 +4,14 @@ title: "Designers are a rare breed"
 type: entity
 tags: [design, creative, designers, rare-skills]
 created: 2026-05-14
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 7
 sources: [raw/articles/designers-are-a-rare-breed]
 review_confidence: 8
 review_recommendation: worth-reading
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Designers are a rare breed

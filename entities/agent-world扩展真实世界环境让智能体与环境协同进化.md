@@ -8,6 +8,9 @@ provenance_state: inferred
 rating: v9c9
 sources:
   - raw/articles/agent-world扩展真实世界环境让智能体与环境协同进化
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Agent-World：扩展真实世界环境，让智能体与环境协同进化！

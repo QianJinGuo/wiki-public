@@ -11,6 +11,9 @@ review_confidence: 7
 updated: 2026-08-01
 sources:
   - raw/articles/十年老技术开发的-ai-agent-探索之路
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 [[raw/articles/十年老技术开发的-ai-agent-探索之路]] ^[raw/articles/十年老技术开发的-ai-agent-探索之路.md]

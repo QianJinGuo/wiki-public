@@ -3,13 +3,16 @@ title: "Waylens OpenClaw 多智能体平台 EKS+Operator 改造案例"
 type: entity
 tags: [multi-agent, eks, kubernetes, operator, openclaw, aws, case-study, waylens, agent-platform, infrastructure]
 created: 2026-06-12
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 7
 review_confidence: 7
 review_recommendation: worth-reading
 review_stars: 4
 sources: [raw/articles/从-n-台-ec2-到-amazon-eks-amazon-s3-fileswaylens-的-openclaw-多智能]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 深度分析

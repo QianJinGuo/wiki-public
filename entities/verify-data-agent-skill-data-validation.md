@@ -2,7 +2,7 @@
 title: "verify-data：一个端到端的数据验数 Agent Skill"
 description: "10类标准化SQL模板、基准表自动发现与降级策略、17步条件触发流程、5大场景识别。效率提升2-4小时→30分钟，评审级报告自动产出"
 created: 2026-06-10
-updated: 2026-08-01
+updated: 2026-09-07
 tags: [agent, architecture, code, data, database, observability, skill, data-validation, data-engineering, alibaba]
 review_value: 7
 review_confidence: 7
@@ -10,6 +10,9 @@ type: entity
 sources: [raw/articles/verify-data-agent-skill-data-validation]
 confidence: 0.85
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # verify-data：一个端到端的数据验数 Agent Skill

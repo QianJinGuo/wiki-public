@@ -10,6 +10,9 @@ review_confidence: 9
 review_recommendation: worth-reading
 review_stars: 4
 sources: [raw/articles/aws-一周综述amazon-bedrock-agentcore-付款适用于-aws-的-agent-工具套件等2026-年-5月-11-日]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 核心要点

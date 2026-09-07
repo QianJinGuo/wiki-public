@@ -1,12 +1,15 @@
 ---
 title: "WorkBuddy Bench：从「修 Bug」到「完成工作」的 Agent 交付验收基准"
 created: 2026-08-05
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [workbuddy-bench, agent-evaluation, benchmark, tencent, delivery-validation, artifacts, acceptance]
 sources: [raw/articles/workbuddy-bench-delivery-validation-tencent-ruofei-2026-08-05]
 confidence: 0.9
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # WorkBuddy Bench：从「修 Bug」到「完成工作」的 Agent 交付验收基准

@@ -8,6 +8,9 @@ tags: [ai]
 sources: [raw/articles/icml-2026-从提取漂移到聚合漂移南大area重做clip增量学习, raw/articles/icml-2026-从提取漂移到聚合漂移南大area重做clip增量学习-2026-07-08]
 confidence: 0.72
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # ICML 2026 | 从提取漂移到聚合漂移，南大AREA重做CLIP增量学习

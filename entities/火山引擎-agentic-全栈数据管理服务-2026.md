@@ -7,6 +7,9 @@ tags: [volcengine, agentic-data, database, data-infrastructure, ai-agent, byteda
 sources: [raw/articles/火山引擎-agentic-全栈数据管理服务-2026]
 confidence: 0.75
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 火山引擎发布 Agentic 全栈数据管理服务

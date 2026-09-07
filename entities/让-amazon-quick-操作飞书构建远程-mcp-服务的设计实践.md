@@ -9,6 +9,9 @@ review_confidence: 7
 type: entity
 sources:
   - raw/articles/让-amazon-quick-操作飞书构建远程-mcp-服务的设计实践
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 让 Amazon Quick 操作飞书：构建远程 MCP 服务的设计实践

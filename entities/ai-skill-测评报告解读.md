@@ -13,6 +13,9 @@ target_audience: 需要根据报告做发布决策的产品/研发负责人
 summary: 测评报告顶部的绿/橙/红色横幅决定能不能发布，本文手把手教你读懂每个数字和每种状态的含义，以及发现问题后的修复路径
 review_value: 9
 review_confidence: 9
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 报告是写给谁看的

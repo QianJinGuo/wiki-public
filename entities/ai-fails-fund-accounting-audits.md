@@ -1,7 +1,7 @@
 ---
 title: "Why Internally-Built AI Fails Fund Accounting Audits"
 created: 2026-06-10
-updated: 2026-08-01
+updated: 2026-09-07
 tags: [agent, architecture, code, llm, observability, tool-use, vision, workflow, audit, compliance, fund-accounting, determinism]
 review_value: 7
 review_confidence: 7
@@ -9,6 +9,9 @@ type: entity
 sources: [raw/articles/ai-fails-fund-accounting-audits]
 provenance_state: extracted
 confidence: 0.85
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Why Internally-Built AI Fails Fund Accounting Audits

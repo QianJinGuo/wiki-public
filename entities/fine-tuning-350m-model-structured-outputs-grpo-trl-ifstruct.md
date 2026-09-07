@@ -1,12 +1,15 @@
 ---
 title: "用 100 GRPO 步微调 350M 模型：结构化输出合规（IFStruct）"
 created: 2026-09-04
-updated: 2026-09-04
+updated: 2026-09-07
 type: entity
 tags: [llm, post-training, grpo, rl, trl, structured-output, fine-tuning]
 sources: [raw/articles/fine-tuning-350m-model-structured-outputs-grpo-trl-ifstruct]
 confidence: 0.75
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 用 100 GRPO 步微调 350M 模型：结构化输出合规（IFStruct）

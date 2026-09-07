@@ -1,13 +1,16 @@
 ---
 title: "Three Years from GPT-3 to Gemini 3"
 created: 2026-06-10
-updated: 2026-09-05
+updated: 2026-09-07
 tags: [agent, code, evaluation, game, llm, mlops, observability, openai, prompt, rag, rl, search, tool-use, gemini-3, antigravity, phd-intelligence, ethan-mollick]
 review_value: 7
 review_confidence: 7
 type: entity
 sources:
   - raw/articles/three-years-from-gpt-3-to-gemini-3
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Three Years from GPT-3 to Gemini 3

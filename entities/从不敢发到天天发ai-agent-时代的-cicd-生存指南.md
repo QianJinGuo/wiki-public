@@ -8,6 +8,9 @@ tags: [ai-agent, cicd, engineering]
 confidence: 0.75
 provenance_state: extracted
 sources: [raw/articles/从不敢发到天天发ai-agent-时代的-cicd-生存指南]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 从「不敢发」到「天天发」：AI Agent 时代的 CI/CD 生存指南

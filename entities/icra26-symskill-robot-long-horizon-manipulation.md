@@ -1,12 +1,15 @@
 ---
 title: "ICRA'26双奖加冕！华人博士生重新定义机器人长时程操控"
 created: 2026-07-05
-updated: 2026-07-07
+updated: 2026-09-07
 type: entity
 tags: [icra, robot-manipulation, imitation-learning, planning, long-horizon, symskill]
 sources: [raw/articles/icra26双奖加冕华人博士生重新定义机器人长时程操控]
 confidence: 0.85
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # ICRA'26双奖加冕！华人博士生重新定义机器人长时程操控

@@ -3,11 +3,14 @@ title: "Microsoft is quietly shopping for an OpenAI replacement"
 type: entity
 tags: [newsletter, ai, startup, microsoft, openai, llm, cursor, inception, mustafa-suleyman]
 created: 2026-05-16
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 8
 review_confidence: 7
 review_recommendation: strong
 sources: [raw/articles/microsoft-is-quietly-shopping-for-an-openai-replac]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 ## 核心要点
 - 来源：https://thenextweb.com/news/microsoft-startup-deals-life-after-openai

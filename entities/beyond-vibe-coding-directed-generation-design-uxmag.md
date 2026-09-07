@@ -2,7 +2,7 @@
 
 title: "Beyond Vibe Coding — Directed Generation as Design Methodology"
 created: 2026-06-27
-updated: 2026-07-27
+updated: 2026-09-07
 type: entity
 tags: [vibe-coding, directed-generation, design, ai-assisted-design, harness, human-ai-collaboration]
 source: [[raw/articles/beyond-vibe-coding-a-designer-s-case-for-directed-generation]]
@@ -12,6 +12,9 @@ review_value: 7
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Beyond Vibe Coding — Directed Generation as Design Methodology

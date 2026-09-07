@@ -1,13 +1,16 @@
 ---
 title: "Tarot Pixel 视觉稿还原：上下文工程降噪 + 循环工程收敛"
 created: 2026-08-28
-updated: 2026-08-28
+updated: 2026-09-07
 type: entity
 tags: [ai, visual-reduction, design-to-code, tarot-pixel, context-engineering, loop-engineering, noise-reduction, verifier, pixel-feedback, ai-native, qoder, d2c]
 sources:
   - raw/articles/tarot-pixel-context-loop-engineering-visual-reduction-aliyun-2026
 confidence: 0.75
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Tarot Pixel 视觉稿还原：上下文工程降噪 + 循环工程收敛

@@ -2,13 +2,16 @@
 description: Auto-generated placeholder
 title: "Doris MCP on AgentCore Runtime: VPC原生MCP部署模式"
 created: 2026-05-08
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [aws, bedrock, mcp, agent, data-infrastructure]
 summary: "Doris MCP on AgentCore Runtime / VPC native + Cognito OAuth / $0.3/日按需付费"
 sources: [raw/articles/aws-bedrock-agentcore-doris-mcp-server]
 review_value: 7
 review_confidence: 9
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 ## 核心内容
 Apache Doris通过MCP协议部署在Amazon Bedrock AgentCore Runtime上，实现VPC内原生运行、Cognito OAuth认证、按需付费（$0.3/天）。Agent可直接通过MCP调用Doris执行SQL分析，无需数据迁移。 ^[raw/articles/aws-bedrock-agentcore-doris-mcp-server.md]

@@ -4,10 +4,13 @@ title: "Claude Code 核心开发者经验：Action Space 设计"
 type: entity
 tags: [agent, claude]
 created: 2026-05-21
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 8
 review_confidence: 8
 sources: [raw/articles/claude-code-core-developer-lessons-action-space-design]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Lessons from Building Claude Code: Seeing like an Agent

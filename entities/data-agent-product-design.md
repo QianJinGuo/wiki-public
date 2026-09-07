@@ -2,13 +2,16 @@
 
 title: Data Agent 产品设计文档
 created: 2026-05-25
-updated: 2026-06-15
+updated: 2026-09-07
 type: entity
 tags: [data-agent, nl2sql, enterprise-ai, product-design, volcengine]
 sources: [raw/articles/volcengine-data-agent-product-overview, raw/articles/volcengine-data-agent-intelligent-query-agent, raw/articles/volcengine-data-agent-marketing-strategy-agent]
 confidence: high
 provenance_state: merged
 review_value: 8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Data Agent 产品设计文档

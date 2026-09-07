@@ -2,7 +2,7 @@
 
 title: "The State of the AI Economy — $110B Revenue, Bottom-Up Deduplicated Model"
 created: 2026-06-27
-updated: 2026-06-27
+updated: 2026-09-07
 type: entity
 tags: [ai-economy, market-analysis, data-driven, exponential-view, azeem-azhar]
 source: [[raw/articles/the-state-of-the-ai-economy]]
@@ -12,6 +12,9 @@ review_value: 9
 review_confidence: 10
 review_recommendation: strong
 review_stars: 5
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # The State of the AI Economy — $110B Revenue, Bottom-Up Deduplicated Model

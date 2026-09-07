@@ -1,13 +1,16 @@
 ---
 title: "Giving your AI a Job Interview"
 created: 2026-06-10
-updated: 2026-08-01
+updated: 2026-09-07
 tags: [agent, aws, code, data, evaluation, fine-tuning, game, llm, observability, rag, rl, vision]
 review_value: 7
 review_confidence: 7
 type: entity
 sources:
   - raw/articles/giving-your-ai-a-job-interview
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Giving your AI a Job Interview

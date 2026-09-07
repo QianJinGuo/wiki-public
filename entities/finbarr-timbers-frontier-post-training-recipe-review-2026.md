@@ -1,7 +1,7 @@
 ---
 title: "Frontier post-training recipe review with Finbarr Timbers"
 created: 2026-06-17
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [post-training, rlhf, recipe, frontier, ai, podcast, interconnects, ai2, finbarr-timbers]
 sources: [raw/articles/finbarr-timbers-frontier-post-training-recipe-review-2026]
@@ -10,6 +10,9 @@ review_confidence: 6
 review_recommendation: worth-reading
 review_stars: 4
 score_validated: 2026-09-05
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Frontier post-training recipe review with Finbarr Timbers

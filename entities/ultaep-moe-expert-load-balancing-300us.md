@@ -3,10 +3,13 @@ title: "UltraEP：300微秒实时 MoE 专家负载均衡"
 type: entity
 tags: [moe, ultraep, load-balancing, xiaohongshu, dots-infra, distributed-training, inference, gpu]
 created: 2026-07-29
-updated: 2026-08-01
+updated: 2026-09-07
 rating: v8c7
 sources:
   - raw/articles/ultaep-moe-expert-load-balancing-300us
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # UltraEP：实时 MoE 专家负载均衡

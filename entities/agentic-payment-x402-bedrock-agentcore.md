@@ -2,7 +2,7 @@
 
 title: "让 AI 代理自己付钱：基于 Amazon Bedrock AgentCore 与 x402 的 Agentic Payment"
 created: 2026-06-01
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [agentic-payment, x402, bedrock, aws, protocol, micropayments]
 source: "[[raw/articles/agentic-payment-x402-bedrock-agentcore]]"
@@ -10,6 +10,9 @@ confidence: 0.82
 review_value: 7
 sources:
   - raw/articles/agentic-payment-x402-bedrock-agentcore
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 让 AI 代理自己付钱：基于 Amazon Bedrock AgentCore 与 x402 的 Agentic Payment

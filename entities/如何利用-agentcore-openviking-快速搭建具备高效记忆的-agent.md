@@ -8,6 +8,9 @@ rating: v6c4
 sources:
   - raw/articles/如何利用-agentcore-openviking-快速搭建具备高效记忆的-agent
 confidence: 0.6
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 如何利用 AgentCore + OpenViking 快速搭建具备高效记忆的 Agent

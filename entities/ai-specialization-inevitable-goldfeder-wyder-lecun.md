@@ -1,12 +1,15 @@
 ---
 title: "AI 专业化不可避免：Goldfeder/Wyder/LeCun 多学科论据"
 created: 2026-07-02
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [specialization, model-architecture, post-training, optimization, agent-architecture, theory]
 sources: [raw/articles/ai-specialization-inevitable-goldfeder-wyder-lecun-dharma]
 confidence: 0.8
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # AI 专业化不可避免：Goldfeder/Wyder/LeCun 多学科论据

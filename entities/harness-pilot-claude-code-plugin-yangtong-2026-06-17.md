@@ -1,7 +1,7 @@
 ---
 title: "Harness Pilot：Claude Code 插件的项目规范预验证与 Agent 协作框架"
 created: 2026-06-17
-updated: 2026-06-19
+updated: 2026-09-07
 type: entity
 tags:
   - harness
@@ -16,6 +16,9 @@ sources:
 confidence: 0.85
 review_value: 8
 review_confidence: 8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Harness Pilot：Claude Code 插件的项目规范预验证与 Agent 协作框架

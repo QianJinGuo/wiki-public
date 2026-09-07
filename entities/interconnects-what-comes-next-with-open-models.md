@@ -3,13 +3,16 @@
 title: "What comes next with open models"
 type: entity
 created: '2026-06-07'
-updated: 2026-08-28
+updated: 2026-09-07
 review_confidence: 8
 review_recommendation: strong
 review_value: 8
 tags: [interconnects-what-comes-next-with-open-models]
 provenance_state: inferred
 sources: [raw/articles/what-comes-next-with-open-models]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # What comes next with open models

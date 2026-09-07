@@ -2,12 +2,15 @@
 
 title: "How Amazon Bedrock catches AI-generated phishing"
 created: 2026-07-03
-updated: 2026-07-27
+updated: 2026-09-07
 type: entity
 tags: [aws, bedrock, security, ai-security, phishing, llm-security, guardrails, email-security]
 sources: [raw/articles/how-amazon-bedrock-catches-ai-generated-phishing]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # How Amazon Bedrock catches AI-generated phishing

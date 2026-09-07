@@ -7,7 +7,7 @@ sources:
 type: entity
 tags: [qwen, agent, world-model, language-model, arxiv, alibaba, planning, decision-making, reinforcement-learning, environment-simulation]
 created: 2026-06-25
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 7
 review_confidence: 6
 review_recommendation: worth-reading
@@ -15,6 +15,9 @@ review_stars: 4
 confidence: 0.7
 provenance_state: extracted
 score_validated: 2026-09-05
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Qwen-AgentWorld: Language World Models for General Agents

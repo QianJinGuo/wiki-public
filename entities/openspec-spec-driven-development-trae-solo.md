@@ -2,7 +2,7 @@
 
 title: OpenSpec 规范驱动开发（SDD）框架 — proposal/design/tasks/specs 四类文档意图锁定
 created: 2026-06-04
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [openspec, spec-driven-development, sdd, trae-ide, solo-mode, proposal-design-tasks-specs, change-management, add-modify-removed, intent-locking, slash-commands, opsx, archive-baseline]
 confidence: 0.85
@@ -11,6 +11,9 @@ sources: [raw/articles/openspec-spec-driven-development-trae-solo, raw/articles/
 review_value: 8
 review_confidence: 8
 review_recommendation: strong
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # OpenSpec 规范驱动开发（SDD）框架

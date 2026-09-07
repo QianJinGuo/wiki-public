@@ -6,6 +6,9 @@ type: entity
 tags: ['raw', 'article']
 sources: [raw/articles/2026-06-29-FastAPI-之父的-PydanticAI-是真的夯--数据STUDIO]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > -> [[raw/articles/2026-06-29-FastAPI-之父的-PydanticAI-是真的夯--数据STUDIO.md|原文存档]]

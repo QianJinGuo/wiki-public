@@ -7,6 +7,9 @@ tags: [aws, devops-agent, gaming, ai-ops, case-study, xinghe-huyu]
 sources: [raw/articles/星合互娱借助-aws-devops-agent-构建多游戏智能运维体系]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 星合互娱借助 AWS DevOps Agent 构建多游戏智能运维体系

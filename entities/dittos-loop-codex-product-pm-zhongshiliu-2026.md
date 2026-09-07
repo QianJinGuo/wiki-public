@@ -3,13 +3,16 @@ title: "Loop 的产品视角——项目中心从人挪到 Agent 系统"
 type: entity
 tags: [loop-engineering, product-management, pm, codex, dittos-loop, project-os, founder-park, zhongshiliu, agent-product]
 created: 2026-07-03
-updated: 2026-08-01
+updated: 2026-09-07
 review_value: 8
 review_confidence: 8
 review_recommendation: strong
 provenance_state: extracted
 related: [loop-engineering-addy-osmani-challengehub, loop-engineering-feedback-control-system, loop-engineering-concept-analysis-feixue-ali-2026]
 sources: [raw/articles/dittos-loop-codex-product-pm-zhongshiliu-2026]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Loop 的产品视角——项目中心从人挪到 Agent 系统

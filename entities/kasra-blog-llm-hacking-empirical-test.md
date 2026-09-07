@@ -3,7 +3,7 @@
 title: "kasra.blog LLM Agent 黑客能力实测: USD 1500 投石问路 14 模型"
 description: "安全研究员 Kasra 自建含 Firebase 配置泄露漏洞的 RN 应用, 对 14 款 LLM agent 做渗透测试:GPT 5.5 7/10 解决率独占鳌头, DeepSeek V4 Pro 与 Claude Sonnet 4.6/Opus 4.8 2-3/10, 多数模型在 Firebase 路径放弃/转向 API 攻击。 揭示 LLM agent 安全攻防真实能力分布与中文/英文模型行为差异"
 created: 2026-06-05
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, llm, llm-security, agent-security, offensive-security, penetration-testing, firebase, empirical-evaluation, model-benchmark, security-research]
 sources:
@@ -15,6 +15,9 @@ review_stars: 4
 related:
   - entities/tsinghua-agent-security-fangcun
   - entities/mythos-for-offensive-security-xbows-evaluation
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # kasra.blog LLM Agent 黑客能力实测: 1500 投石问路 14 模型

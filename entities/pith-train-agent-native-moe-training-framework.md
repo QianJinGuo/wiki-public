@@ -3,7 +3,7 @@ title: "PithTrain：陈天奇 + CMU Flame Center 推出的 agent-native MoE 训�
 type: entity
 tags: [pith-train, moe, training-framework, agent-native, agent-task-efficiency, tianqi-chen, cmu, flame-center, megatron-lm, deepspeed, dual-pipev, fsdp, dual-efficiency, minimal-python, no-implicit-indirection, mlc-ai, xiong-chenyan, qwen3-moe, gpt-oss, fp8, hopper, blackwell, context-window, simplicity-as-feature, agent-skill, play-book]
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 9
 review_confidence: 9
 provenance_state: extracted
@@ -14,6 +14,9 @@ related:
   - entities/saas-bench-gui-agent-eval-unipat
   - entities/matt-van-horn-claude-code-workflow-philosophy
   - entities/hermes-agent-self-evolving
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 摘要

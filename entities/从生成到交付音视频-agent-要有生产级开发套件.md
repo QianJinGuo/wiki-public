@@ -7,6 +7,9 @@ tags: [ai, agent, audio-video, media-processing, volcano-engine, ai-mediakit, pr
 sources: [raw/articles/从生成到交付音视频-agent-要有生产级开发套件, raw/articles/why-ai-video-needs-generation-aware-enhancement-bytedance-2026]
 confidence: 0.69
 score: 49
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 音视频 Agent 生产级开发套件

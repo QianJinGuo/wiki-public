@@ -6,7 +6,7 @@ author:
   - "AWS Machine Learning Blog"
 publish_date: 2026-06-12
 created: 2026-06-13
-updated: 2026-08-24
+updated: 2026-09-07
 ingested: 2026-06-13
 type: entity
 tags:
@@ -27,6 +27,9 @@ review_recommendation: worth-reading
 review_stars: 4
 sources:
   - raw/articles/from-pdfs-to-insights-architecting-an-intelligent-document-p
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # From PDFs to insights: Architecting an intelligent document processing pipeline with AWS generative AI services

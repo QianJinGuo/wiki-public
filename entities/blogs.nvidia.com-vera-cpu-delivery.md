@@ -4,14 +4,16 @@ title: "Vera Arrives: NVIDIA's First CPU Built for Agents Lands at Top AI Labs"
 type: entity
 tags: [nvidia, cpu, agentic-ai, hardware, vera]
 created: 2026-05-20
-updated: 2026-08-01
+updated: 2026-09-07
 review_value: 8
 review_confidence: 8
 review_recommendation: strong
 source_url:
 sources: [raw/articles/blogs.nvidia.com-vera-cpu-delivery, raw/articles/nvidia-vera-rubin-performance-per-watt-token-cost-2026]
 provenance_state: extracted
-
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 ## 核心要点
 - **发布背景**：NVIDIA 创始人兼 CEO Jensen Huang 在 2026 年 3 月 GTC San Jose 上正式发布 Vera CPU，这是 NVIDIA 首个独立 CPU 产品线，被定位为下一个数十亿美元业务

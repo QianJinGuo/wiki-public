@@ -1,7 +1,7 @@
 ---
 title: "BrowserBC：人类轨迹蒸馏为可复用技能，让小模型获得大模型的网页操作能力"
 created: 2026-06-29
-updated: 2026-08-01
+updated: 2026-09-07
 source: wechat
 url:
 type: entity
@@ -12,6 +12,9 @@ review_stars: 4
 provenance_state: extracted
 sources:
   - raw/articles/browserbc-human-trajectory-skill-distillation-quantumbit-2026
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 核心概述

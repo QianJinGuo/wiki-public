@@ -2,7 +2,7 @@
 title: "On Working with Wizards: AI 从协作到召唤的范式转变"
 description: "Ethan Mollick 提出 AI 使用范式从「co-intelligence」向「wizard」转变：AI 输出惊艳但过程不透明，人类角色从共同塑造者变为接收者，需要新的「巫师素养」。"
 created: 2026-06-07
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [ai-literacy, oneusefulthing, ethan-mollick, human-ai-collaboration, agentic-ai, wizard-model]
 source: [[raw/articles/on-working-with-wizards]]
@@ -12,6 +12,9 @@ review_value: 8
 review_confidence: 9
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # On Working with Wizards: AI 从协作到召唤的范式转变

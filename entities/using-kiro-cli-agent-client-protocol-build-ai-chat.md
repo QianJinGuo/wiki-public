@@ -1,7 +1,7 @@
 ---
 title: "使用 Kiro CLI 和 Agent Client Protocol 构建飞书 AI 聊天机器人 | 亚马逊AWS官方博客"
 created: 2026-05-14
-updated: 2026-09-05
+updated: 2026-09-07
 tags: [aws-china-blog, kiro, agent-sdk]
 sources: [raw/articles/using-kiro-cli-agent-client-protocol-build-ai-chat]
 review_value: 8
@@ -9,6 +9,9 @@ review_confidence: 8
 review_recommendation: strong
 publish_date: 2026-03-27
 type: entity
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 ## 概述
 使用 Kiro CLI 和 Agent Client Protocol 构建飞书 AI 聊天机器人 by awschina on 24 3月 2026 in Artificial Intelligence Permalink Share 摘要：如何将 Kiro CLI 变成通用 Agent 后端，并用不到 1000 行 Rust 代码构建一个飞书聊天机器人。 目录 01 一、引言：每个团队都想要 AI Agent，但从零构建太难了 02 二、什么是 Agent Client Protocol (ACP)？ 03 三、为什么用 Kiro CLI 做 Agent 后端 04 四、深入解析：acp-link 如何桥接飞书与 Kiro CLI 05 五、实际演示 06 六、结语 一、引言：每个团队都想要 AI Agent，但从零构建太难了 你大概见过这样的场景：团队想在即时通讯平台上搭建一个 AI   ^[raw/articles/using-kiro-cli-agent-client-protocol-build-ai-chat.md]

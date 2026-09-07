@@ -7,6 +7,9 @@ type: entity
 tags: ['ai', 'training', 'inference', 'research', 'coding']
 sources: [raw/articles/吴恩达参与斯坦福新作丢掉中间推理token长思考最高提速3倍]
 confidence: 0.7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 吴恩达参与斯坦福新作：丢掉中间推理Token，长思考最高提速3倍

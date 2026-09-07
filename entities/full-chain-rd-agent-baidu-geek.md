@@ -1,13 +1,16 @@
 ---
 title: "全链路研发智能体——从「体感能用」到「实际可用」的工程实践"
 created: 2026-07-11
-updated: 2026-09-06
+updated: 2026-09-07
 type: entity
 tags: [harness-engineering, agent, ai-coding, baidu]
 source_url: ""
 sources: [raw/articles/全链路研发智能体-从体感能用到实际可用的工程实践, raw/articles/builderagent-ai-native-organization-baidu-2026-08-05]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 全链路研发智能体——从「体感能用」到「实际可用」的工程实践

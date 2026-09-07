@@ -1,13 +1,16 @@
 ---
 title: "PagePilot — PC端AI测试Skill设计与实战"
 created: 2026-07-17
-updated: 2026-07-27
+updated: 2026-09-07
 type: entity
 tags: [ai-testing, browser-automation, cdp, skill-system, testing-framework, alipay, ant-group, component-knowledge-base, agentic-testing]
 sources:
   - raw/articles/pagepilot-pc-ai-test-skill-design-practice
 confidence: 0.8
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # PagePilot — PC端AI测试Skill设计与实战

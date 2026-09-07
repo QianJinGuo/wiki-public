@@ -3,7 +3,7 @@ title: "How LLMs Actually Work: 0xkato Transformer Walkthrough"
 description: "0xkato 2026-06 长文：从 tokenization 到 next-token prediction 完整 walkthrough，9 节覆盖 transformer 全栈机制，含 BPE/SentencePiece、embeddings、sinusoidal vs RoPE、multi-head attention、FFN、residual stream、layer norm 等"
 type: entity
 created: 2026-06-09
-updated: 2026-08-29
+updated: 2026-09-07
 tags: [llm, transformer, attention, tokenizer, embeddings, rope, positional-encoding, education, architecture, neural-network, internals]
 source: [[raw/articles/how-llms-actually-work-0xkato]]
 confidence: 0.85
@@ -12,6 +12,9 @@ review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 4
 sources: [raw/articles/how-llms-actually-work-0xkato]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # How LLMs Actually Work: 0xkato Transformer Walkthrough

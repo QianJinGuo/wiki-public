@@ -1,7 +1,7 @@
 ---
 title: "古法程序员复杂任务 Spec 写作：多 Agent 编排 + Skill 三层架构 + Gate 四态"
 created: 2026-06-18
-updated: 2026-08-01
+updated: 2026-09-07
 description: "古法程序员 Harness 系列中篇：复杂任务 spec 写作方法论——多 Agent 编排者+7 角色矩阵（5 并行）/CLAUDE.md 薄入口+模板投影/rules-docs-skills 三类目录/skill 三层架构（编排-阶段-原子）+gate 四态（pass/blocked/not_required/risk_accepted）+edge 三种（handoff/dynamic_load/semantic）+ 测试三件套（对照/存档/不 AI 评分）"
 type: entity
 source: "[[raw/articles/gufabiancheng-spec-for-complex-tasks-cc-codex]]"
@@ -15,6 +15,9 @@ series_parts:
   prev: "Harness 到底指什么"
   next: "Harness 怎么扩展：skill、配置目录与 hook"
 sources:
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 古法程序员复杂任务 Spec 写作：多 Agent 编排 + Skill 三层架构 + Gate 四态

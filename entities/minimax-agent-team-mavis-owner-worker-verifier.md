@@ -2,14 +2,16 @@
 
 title: "一个 AI 还是不够的：MiniMax Agent Team（Mavis）"
 created: 2026-05-13
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, llm, ai]
 sources:
   - raw/articles/minimax-agent-team-mavis-owner-worker-verifier
 review_value: 9
 review_confidence: 7
-
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 [[raw/articles/minimax-agent-team-mavis-owner-worker-verifier.md]] ^[raw/articles/minimax-agent-team-mavis-owner-worker-verifier.md]
 

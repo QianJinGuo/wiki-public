@@ -4,10 +4,13 @@ title: "Nvidia Edge First Llms Av Robotics"
 type: entity
 tags: [llm, nvidia, tool, training]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 8
 review_confidence: 7
 sources: [raw/articles/nvidia-edge-first-llms-av-robotics]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Build Next&#x2d;Gen Physical AI with Edge‑First LLMs for Autonomous Vehicles and Robotics | NVIDIA Technical Blog

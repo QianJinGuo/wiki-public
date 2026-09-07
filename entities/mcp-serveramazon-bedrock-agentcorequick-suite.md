@@ -1,12 +1,16 @@
 ---
 title: "自己的工具自己控：MCP Server、Amazon Bedrock AgentCore、Quick Suite集成指南"
 created: 2026-05-11
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, mcp, aws, bedrock]
 sources: [raw/articles/mcp-serveramazon-bedrock-agentcorequick-suite]
 review_value: 5
 confidence: 0.8
+reviewed: 2026-09-07
+review_verdict: hub-retained
+review_category: thin
+review_note: "judged thin-0.8: 正文空洞来源卡; retained as hub (in-links>=20); MOC rewrite candidate"
 ---
 ## 摘要
 （见原文）   ^[raw/articles/mcp-serveramazon-bedrock-agentcorequick-suite.md]

@@ -3,11 +3,14 @@ title: "How Claude Code works in large codebases: Best practices and where to st
 type: entity
 tags: [claude]
 created: 2026-05-19
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 7
 review_confidence: 8
 review_recommendation: worth-reading
 sources: [raw/articles/how-claude-code-works-in-large-codebases-best-practices-and-where-to-start]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 ## 核心要点
 - 评分：v=7 × c=8 = 56

@@ -7,6 +7,9 @@ tags: [ai, agent, multimodal, benchmark, minecraft, open-world, meituan, evaluat
 sources: [raw/articles/让ai离开温室走向动态世界mineexplorer揭示顶级多模态大模型被忽视的能力断层]
 confidence: 0.84
 score: 64
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # MineExplorer: 多模态能力断层

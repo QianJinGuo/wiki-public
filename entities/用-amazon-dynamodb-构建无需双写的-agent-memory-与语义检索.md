@@ -8,6 +8,9 @@ tags: [ai, agent, harness, evaluation, memory, mcp]
 sources: [raw/articles/用-amazon-dynamodb-构建无需双写的-agent-memory-与语义检索]
 confidence: 0.75
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 用 Amazon DynamoDB 构建无需双写的 Agent Memory 与语义检索

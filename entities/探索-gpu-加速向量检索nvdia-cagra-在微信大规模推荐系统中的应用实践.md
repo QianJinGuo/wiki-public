@@ -8,6 +8,9 @@ tags: [wechat, ai]
 rating: v8c8
 sources:
   - raw/articles/探索-gpu-加速向量检索nvdia-cagra-在微信大规模推荐系统中的应用实践
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 探索 GPU 加速向量检索：NVDIA Cagra 在微信大规模推荐系统中的应用实践

@@ -3,7 +3,7 @@
 description: Auto-generated placeholder
 title: "Harness不是目的，知识才是护城河 —— 一个AI工程交付团队的知识沉淀实践"
 created: 2026-05-16
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [harness-engineering, engineering, ai, team-knowledge, knowledge-base, knowledge-flywheel]
 sources:
@@ -11,7 +11,9 @@ sources:
   - raw/articles/agent的上限可能不在模型而在团队知识
 review_value: 7
 review_confidence: 7
-
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 [[raw/articles/tencent-knowledge-harness-practice]] ^[raw/articles/tencent-knowledge-harness-practice.md]
 

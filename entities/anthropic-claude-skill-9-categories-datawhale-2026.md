@@ -1,12 +1,15 @@
 ---
 title: "Anthropic Claude Skill 9 类任务分类法"
 created: 2026-07-01
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [anthropic, skill, agent, skill-taxonomy, best-practices]
 sources: [raw/articles/anthropic-claude-skill-9-categories-datawhale-2026]
 review_value: 7
 review_confidence: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Anthropic Claude Skill 9 类任务分类法

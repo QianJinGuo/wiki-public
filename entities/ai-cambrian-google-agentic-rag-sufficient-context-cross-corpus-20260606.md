@@ -1,7 +1,7 @@
 ---
 title: "Google Agentic RAG 跨语料库框架：充分上下文智能体 + 5 阶段管线"
 created: 2026-06-06
-updated: 2026-07-31
+updated: 2026-09-07
 type: entity
 tags: [agent, data, database, evaluation, google, llm, memory, mlops, observability, prompt, rag, rl, search, agentic-rag, cross-corpus, framesqa, multi-hop-reasoning]
 review_value: 7
@@ -11,6 +11,9 @@ review_stars: 4
 provenance_state: extracted
 sources:
   - raw/articles/ai-cambrian-google-agentic-rag-sufficient-context-cross-corpus-20260606
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Google Agentic RAG 跨语料库框架：充分上下文智能体 + 5 阶段管线

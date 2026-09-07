@@ -1,12 +1,16 @@
 ---
 title: "Anthropic 14 个 Agent Skills 设计模式"
 created: 2026-05-10
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [anthropic, skill, agent, design-patterns, best-practices]
 sources: [raw/articles/anthropic-agent-skills-design-patterns-14]
 review_value: 7
 review_confidence: 7
+reviewed: 2026-09-07
+review_verdict: hub-retained
+review_category: dup
+review_note: "judged dup-0.8: 与18k版skill模式重复; retained as hub (in-links>=20); MOC rewrite candidate"
 ---
 ## 核心洞察
 Anthropic官方14个Agent Skills设计模式；最佳实践官方指南。本文来自 WeChat data-flow 频道。   ^[raw/articles/anthropic-agent-skills-design-patterns-14.md]

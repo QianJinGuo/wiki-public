@@ -9,7 +9,7 @@ author: AWS China Blog 编辑部
 publish_date: 2026-06-05
 ingested: 2026-06-05
 created: 2026-06-05
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 8
 review_confidence: 7
 review_recommendation: strong
@@ -26,6 +26,9 @@ related:
   - entities/hermes-agent-memory-system
 tags: [agent, memory, agent-engineering, prompt-cache, embedding-migration, procedural-memory, aws, agentcore, s3-vectors, harness-engineering, engineering-tax]
 provenance_state: inferred
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Agent 记忆系统工程税：写入纪律·Prompt Cache 冲突·跨模型容量·Embedding 迁移·自产 Skill 治理

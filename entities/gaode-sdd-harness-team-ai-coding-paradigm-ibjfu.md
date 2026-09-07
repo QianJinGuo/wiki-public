@@ -4,10 +4,13 @@ title: "高德广告工程 Harness/SDD 体系演进：从\"氛围编程\"治理�
 type: entity
 tags: [coding, harness, prompt, sdd, atdd, skills, knowledge-base, ad-engineering, agent-team]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 8
 review_confidence: 8
 sources: [raw/articles/gaode-sdd-harness-team-ai-coding-paradigm-IBJFu, raw/articles/gaode-ads-ai-native-end-to-end-pipeline-sdd-atdd-skills]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 告别"氛围编程"：基于 Harness 治理和 SDD 的团队级 AI 研发范式演进与实践

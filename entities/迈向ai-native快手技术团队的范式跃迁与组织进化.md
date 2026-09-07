@@ -6,6 +6,9 @@ type: entity
 tags: [applied-ai, agent]
 sources: [raw/articles/迈向ai-native快手技术团队的范式跃迁与组织进化]
 confidence: 0.7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 迈向AI Native：快手技术团队的范式跃迁与组织进化

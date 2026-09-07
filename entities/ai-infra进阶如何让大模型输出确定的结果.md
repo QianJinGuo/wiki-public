@@ -7,6 +7,9 @@ tags: [ai, research, rl, reinforcement-learning, post-training, inference, llm-i
 sources: [raw/articles/ai-infra进阶如何让大模型输出确定的结果.md]
 confidence: 0.6
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # AI Infra进阶：如何让大模型输出确定的结果

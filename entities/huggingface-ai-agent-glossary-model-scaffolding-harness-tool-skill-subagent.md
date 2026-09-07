@@ -2,7 +2,7 @@
 
 title: Hugging Face AI Agent 术语表：Model / Agent / Scaffolding / Harness / Context Engineering / Policy / Tool / Skill / Sub-agent 完整区分
 created: 2026-06-04
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [huggingface, ai-agent, glossary, terminology, model, agent, scaffolding, harness, context-engineering, policy, tool, skill, sub-agent, environment, rollout, reward, trainer, conceptual-model]
 confidence: 0.96
@@ -11,6 +11,9 @@ sources: [raw/articles/huggingface-ai-agent-glossary-model-scaffolding-harness-t
 review_value: 9
 review_confidence: 10
 review_recommendation: strong
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Hugging Face AI Agent 术语表

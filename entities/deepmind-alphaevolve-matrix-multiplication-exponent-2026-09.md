@@ -2,12 +2,15 @@
 
 title: "DeepMind AlphaEvolve 再破纪录：矩阵乘法指数 40 年最低"
 created: 2026-09-01
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [deepmind, alphaevolve, matrix-multiplication, optimization, ai-for-math, theoretical-cs, gemini]
 sources: [raw/articles/deepmind-alphaevolve-matrix-multiplication-exponent-2026-09]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 概述

@@ -2,12 +2,15 @@
 
 title: "Anthropic Reward Hacking 实验：Hacker-Opus 模拟入侵 Hugging Face"
 created: 2026-09-01
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [anthropic, reward-hacking, ai-safety, alignment, reinforcement-learning, opus]
 sources: [raw/articles/anthropic-reward-hacking-hacker-opus-hugging-face-2026-09]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 概述

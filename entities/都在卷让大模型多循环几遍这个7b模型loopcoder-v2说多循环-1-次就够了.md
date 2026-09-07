@@ -6,6 +6,9 @@ type: entity
 tags: [ai, llm]
 sources: [raw/articles/都在卷让大模型多循环几遍这个7b模型loopcoder-v2说多循环-1-次就够了]
 confidence: 0.9
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 都在卷「让大模型多循环几遍」，这个7B模型LoopCoder v2说：多循环 1 次就够了

@@ -11,6 +11,9 @@ review_recommendation: worth-reading
 created: 2026-05-15
 updated: 2026-06-15
 sources: [raw/articles/claude-发布官方报告承认存在-3-处质量退化问题]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 ## 核心要点
 Claude 官方发布事后分析报告，承认过去一个月 Claude Code 存在 3 处独立变更导致的质控问题： ^[raw/articles/claude-发布官方报告承认存在-3-处质量退化问题.md]

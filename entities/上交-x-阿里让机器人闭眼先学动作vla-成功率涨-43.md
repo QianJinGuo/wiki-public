@@ -7,6 +7,9 @@ tags: [ai, agent, vla, robotics, language-action, pretraining, sjtu, alibaba, em
 sources: [raw/articles/上交-x-阿里让机器人闭眼先学动作vla-成功率涨-43]
 confidence: 0.84
 score: 64
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 上交 x 阿里：闭眼先学动作 VLA

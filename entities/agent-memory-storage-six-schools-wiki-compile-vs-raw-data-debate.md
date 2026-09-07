@@ -3,7 +3,7 @@
 title: "Agent 记忆存储方案深度洞察：6 大流派分歧、Wiki 编译 vs 原始数据之争、Hermes Agent 启示"
 slug: agent-memory-storage-six-schools-wiki-compile-vs-raw-data-debate
 created: 2026-06-02
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent-memory, memory-architecture, six-schools, wiki-compile, raw-data, mnemon, letta, memgpt, mem0, ai-memory, hermes-agent, mcp, rrf-fusion, m8-decay, quantum-transf, knowledge-graph-memory, flockmem, zero-llm-mode]
 review_value: 9
@@ -11,6 +11,9 @@ review_confidence: 9
 sources: [raw/articles/agent-memory-storage-six-schools-quantumtransf-debate-frank]
 related: [entities/ai-memory-architecture-deep-dive, entities/ai-coding-agent-memory-system, entities/agent-memory-architecture, entities/hermes-agent-memory-system-openclaw-comparison, entities/agent-memory-architecture-past-influence-future-ruofei, entities/memory-in-the-llm-era-iclr2026, entities/memory-vs-rag-agent-memory-systematic-framework]
 strategic_context: "[[queries/research-frontier-map|Frontier 1 — Harness/Skill 从个人能力到组织资产]]"
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Agent 记忆存储方案深度洞察：6 大流派分歧与 Hermes 启示

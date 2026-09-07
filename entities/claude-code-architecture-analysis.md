@@ -1,12 +1,15 @@
 ---
 title: "Claude Code 设计原则与对照分析"
 created: 2026-05-13
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [claude-code, architecture, design-principles, harness, comparison]
 sources: [raw/articles/claude-code-architecture-analysis]
 review_value: 8
 review_confidence: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 ## 五条系统设计原则
 ### 1. 先定边界，再开始执行

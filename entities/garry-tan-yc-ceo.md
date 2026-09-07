@@ -3,12 +3,15 @@
 title: "Garry Tan"
 type: entity
 created: 2026-05-11
-updated: 2026-09-05
+updated: 2026-09-07
 tags: [yc, agent, startup, workflow, token-maxxing]
 sources: [raw/articles/yc-ceo-garry-tan-200-dollar-vs-4-million]
 review_value: 6
 review_confidence: 8
 score_validated: 2026-09-05
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 核心经历

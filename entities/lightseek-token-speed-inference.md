@@ -11,10 +11,13 @@ stars: 4
 source: newsletter
 source_url: ""
 ingested: 2026-05-08
-updated: 2026-08-24
+updated: 2026-09-07
 created: 2026-05-10
 tags: [llm, inference, engineering, mla, blackwell, agentic, open-source, kv-cache, scheduler, tokenspeed]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # TokenSpeed: A Speed-of-Light LLM Inference Engine for AI Agents

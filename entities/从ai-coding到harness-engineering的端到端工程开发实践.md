@@ -7,6 +7,9 @@ tags: [harness-engineering, ai-coding, engineering, alibaba, state-machine, agen
 sources: [raw/articles/从ai-coding到harness-engineering的端到端工程开发实践]
 confidence: 0.78
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 从AI Coding到Harness Engineering的端到端工程开发实践

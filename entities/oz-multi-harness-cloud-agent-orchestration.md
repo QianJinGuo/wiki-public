@@ -1,13 +1,16 @@
 ---
 title: "Oz Multi-Harness Cloud Agent Orchestration (Warp)"
 created: 2026-06-11
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [oz, warp, multi-harness, cloud-agents, orchestration, enterprise, agent-management, agent-memory, kubernetes, agent-infrastructure, claude-code, codex]
 sources: [raw/articles/oz-multi-harness-cloud-agent-orchestration]
 provenance_state: extracted
 review_value: 8
 review_confidence: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Oz Multi-Harness Cloud Agent Orchestration

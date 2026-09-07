@@ -1,13 +1,16 @@
 ---
 title: "Skills：让 Claude 记住「怎么做」，告别重复教学"
 created: 2026-06-10
-updated: 2026-09-05
+updated: 2026-09-07
 tags: [agent, claude, code, finops, llm, memory, prompt, skill, workflow, claude-code]
 review_value: 7
 review_confidence: 7
 type: entity
 sources:
   - raw/articles/claude-code-skills-workflow-encapsulation-costa-long
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Skills：让 Claude 记住「怎么做」，告别重复教学

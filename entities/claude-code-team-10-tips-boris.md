@@ -2,7 +2,7 @@
 
 title: "Claude Code团队10个使用技巧（Boris二刷）"
 created: 2026-05-28
-updated: 2026-05-28
+updated: 2026-09-07
 type: entity
 tags: [claude-code, boris, worktree, plan-mode, claude-md, skills, subagents, terminal, bq-sql, learning]
 sources:
@@ -11,6 +11,9 @@ review_value: 7
 review_confidence: 7
 review_recommendation: worth-reading
 provenance_state: inferred
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 核心命题

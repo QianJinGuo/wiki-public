@@ -4,13 +4,16 @@ title: "Reinforcing Recursive Language Models | alphaXiv"
 type: entity
 tags: [reinforcement-learning, recursive-language-models, llm]
 created: 2026-05-13
-updated: 2026-09-05
+updated: 2026-09-07
 source: newsletter
 source_url:
 review_value: 7
 sources: [raw/articles/alphaxiv-reinforcement-learning-for-rlms]
 review_confidence: 8
 review_recommendation: strong
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > → [[raw/articles/alphaxiv-reinforcement-learning-for-rlms.md|原文存档]]

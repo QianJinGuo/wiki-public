@@ -13,7 +13,10 @@ review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 4
 created: 2026-06-26
-updated: 2026-09-05
+updated: 2026-09-07
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # SeedVR2 on Amazon SageMaker: 视频超分辨率部署实践

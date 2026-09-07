@@ -1,12 +1,15 @@
 ---
 title: "Goodfire Predictive Data Debugging：可解释性指导 Post-Training 数据塑形"
 created: 2026-06-13
-updated: 2026-06-19
+updated: 2026-09-07
 type: entity
 tags: [llm, post-training, interpretability, dpo, preference-learning, goodfire, data-engineering, sparse-autoencoder, model-debugging]
 sources: [raw/articles/goodfire-predictive-data-debugging-post-training-anatomy-2026]
 review_value: 8
 review_confidence: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > **Background**：本文档基于 Goodfire 2026-06-12 发布的论文 *Anatomy of Post-Training: Using Interpretability to Characterize Data and Shape the Learning Signal* (arXiv 2606.12360) 与同篇博文整理。Goodfire 是 mechanistic interpretability 公司，主打"用 SAE（稀疏自动编码器）让模型决策可读"。本文关注一个工程痛点：**post-training 数据集没法 debug**——260K preference pairs 中哪几条让 DPO 学坏了？他们的解法是 **R²=0.9 的训练前预测**。

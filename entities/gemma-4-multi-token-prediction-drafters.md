@@ -4,7 +4,7 @@ title: "Gemma 4 Multi Token Prediction Drafters"
 type: entity
 tags: [google, gemma, inference-optimization, speculative-decoding, multi-token-prediction, llm, moe, apple-silicon, edge-ai, kv-cache, transformers, huggingface, vllm, mlx]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 7
 review_confidence: 8
 review_recommendation: recommended
@@ -13,6 +13,9 @@ provenance:
   original_url:
   published: 2026-05-05
   license: apache-2.0
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 概述

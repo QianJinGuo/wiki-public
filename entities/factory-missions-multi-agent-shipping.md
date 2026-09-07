@@ -2,13 +2,15 @@
 
 title: "Factory Missions"
 created: 2026-05-19
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [factory, multi-agent, orchestrator, worker, validator, validation-contract, structured-handoff, droid-whispering, mission-control]
 sources: [raw/articles/factory-missions-multi-agent-shipping-for-days-luke]
 review_value: 9
 review_confidence: 9
-
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 ## 核心架构
 **三角色**：Orchestrator（规划/拆解/调度）+ Worker（单个 feature 实现）+ Validator（Scrutiny + User-Testing 两类）。   ^[raw/articles/factory-missions-multi-agent-shipping-for-days-luke.md]

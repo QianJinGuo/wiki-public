@@ -2,7 +2,7 @@
 
 title: Harness 模式 6-SubAgent 实战 — 17哥 versus 大模型评测平台（Git Submodule + Agent Handoff + Chrome DevTools MCP）
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [harness-engineering, vibe-coding, multi-agent, sub-agent, agent-handoff, git-submodule, claude-code, codex, mcp, chrome-devtools, case-study, 17ge, geekhome, versus]
 confidence: 0.85
@@ -11,6 +11,9 @@ stars: 4
 value: 8
 sources: [raw/articles/harness-engineering-practical-17ge-versus-6-subagent]
 review_value: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Harness 模式 6-SubAgent 实战 — 17哥 versus 大模型评测平台

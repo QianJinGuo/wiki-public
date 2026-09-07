@@ -12,6 +12,9 @@ created: 2026-06-01
 updated: 2026-08-01
 sources:
   - raw/articles/飞来汇借助-aws-security-agent-构建跨境支付应用的智能安全防线
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 飞来汇借助 AWS Security Agent 构建跨境支付应用的智能安全防线

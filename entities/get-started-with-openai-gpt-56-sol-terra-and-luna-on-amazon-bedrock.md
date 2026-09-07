@@ -1,12 +1,15 @@
 ---
 title: "OpenAI GPT-5.6 Sol/Terra/Luna on Amazon Bedrock 部署指南"
 created: 2026-07-26
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [openai, gpt-5.6, amazon-bedrock, aws, model-deployment, agentic-coding, llm-inference, prompt-caching, codex]
 sources: [raw/articles/get-started-with-openai-gpt-56-sol-terra-and-luna-on-amazon-bedrock]
 confidence: 0.78
 score: 72
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # OpenAI GPT-5.6 Sol/Terra/Luna on Amazon Bedrock 部署指南

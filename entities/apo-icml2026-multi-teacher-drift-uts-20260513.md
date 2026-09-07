@@ -4,11 +4,14 @@ type: entity
 title: "ICML 2026 | APO：将多教师冲突转化为动态约束，破解多模态大模型推理对齐难题"
 tags: [icml2026, apo, multi-teacher-distillation, concept-drift, multimodal-llm, uts, aaii]
 created: 2026-05-13
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/apo-icml2026-multi-teacher-drift-uts-20260513]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 基本信息

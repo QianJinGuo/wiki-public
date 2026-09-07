@@ -1,7 +1,7 @@
 ---
 title: "How my non-engineering team at Sentry learned to ship"
 created: 2026-06-06
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, article, aws, code, game, llm, observability, open-source, prompt, rl, source-archive, tool-use, vision, workflow, cms-migration, astro, gatsby, vercel, sentry]
 sources: [raw/articles/how-my-non-engineering-team-at-sentry-learned-to-ship-20260606]
@@ -11,6 +11,9 @@ review_value: 7
 review_confidence: 7
 review_recommendation: moderate
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # How my non-engineering team at Sentry learned to ship

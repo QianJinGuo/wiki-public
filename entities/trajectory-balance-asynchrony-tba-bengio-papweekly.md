@@ -9,11 +9,14 @@ review_recommendation: strong
 review_stars: 4
 date: 2026-05-27
 created: 2026-05-28
-updated: 2026-08-29
+updated: 2026-09-07
 tags: [reinforcement-learning, llm-post-training, off-policy, trajectory-balance, bengio, asynchronous, neurips-2025, rollout, replay-buffer]
 type: entity
 provenance_state: synthesized
 sources: [raw/articles/trajectory-balance-asynchrony-tba-bengio-papweekly]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > -> [[raw/articles/trajectory-balance-asynchrony-tba-bengio-papweekly|原文存档]]

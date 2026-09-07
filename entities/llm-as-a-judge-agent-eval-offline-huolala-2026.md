@@ -1,12 +1,15 @@
 ---
 title: "LLM-as-a-Judge 离线评估引擎：货拉拉 AI 外呼 Agent 实践"
 created: 2026-08-26
-updated: 2026-08-26
+updated: 2026-09-07
 type: entity
 tags: [agent, evaluation, llm-as-a-judge, harness, huolala, ai-outbound, bias, gsb, reference-based]
 sources: [raw/articles/llm-as-a-judge-agent-eval-offline-huolala-2026]
 confidence: 0.85
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # LLM-as-a-Judge 离线评估引擎：货拉拉 AI 外呼 Agent 实践

@@ -7,6 +7,9 @@ tags: [ai, research, agent, ai-agent, multi-agent, evaluation, benchmark, agent-
 sources: [raw/articles/阿里荣膺-acl-2026-最佳资源论文-hscodecomp-揭开智能体分层规则应用的能力鸿沟.md]
 confidence: 0.6
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 阿里荣膺 ACL 2026 最佳资源论文 | HSCodeComp 揭开智能体「分层规则应用」的能力鸿沟

@@ -4,11 +4,14 @@ title: "Grafana GitHub Token Breach Led to Codebase Download and Extortion Attem
 type: entity
 tags: [security]
 created: 2026-05-19
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 8
 review_confidence: 9
 review_recommendation: worth-reading
 sources: [raw/articles/grafana-github-token-breach-led-to-codebase-download-and-extortion-attempt-2]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 事件概要

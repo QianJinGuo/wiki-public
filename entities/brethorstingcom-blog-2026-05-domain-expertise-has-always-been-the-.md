@@ -10,7 +10,10 @@ review_confidence: 7
 review_stars: 4
 review_recommendation: strong
 created: 2026-06-01
-updated: 2026-07-19
+updated: 2026-09-07
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Domain Expertise Has Always Been the Real Moat

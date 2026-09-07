@@ -3,11 +3,14 @@ title: "Create Custom MCP Catalogs and Profiles"
 type: entity
 tags: [newsletter, mcp, docker, tool-management]
 created: 2026-05-18
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 7
 sources: [raw/articles/create-custom-mcp-catalogs-and-profiles]
 review_confidence: 8
 review_recommendation: worth-reading
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Create Custom MCP Catalogs and Profiles

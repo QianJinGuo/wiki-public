@@ -4,10 +4,13 @@ title: "Claude Opus 4.7 并不是一次全面升级，甚至部分能力大幅�
 type: entity
 tags: [agent, anthropic, api, claude, prompt, research]
 created: 2026-05-21
-updated: 2026-06-26
+updated: 2026-09-07
 sources: [raw/articles/claude-opus-47]
 review_value: 7
 review_confidence: 9
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Claude Opus 4.7 并不是一次全面升级，甚至部分能力大幅衰退

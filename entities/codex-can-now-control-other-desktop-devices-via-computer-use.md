@@ -3,11 +3,14 @@ title: "Codex can now control other desktop devices via Computer Use"
 type: entity
 tags: [testingcatalog]
 created: 2026-05-19
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 7
 review_confidence: 7
 review_recommendation: worth-reading
 sources: [raw/articles/codex-can-now-control-other-desktop-devices-via-computer-use]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 ## 核心要点
 - 评分：v=7 × c=7 = 49

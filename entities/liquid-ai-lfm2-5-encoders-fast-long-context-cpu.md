@@ -1,7 +1,7 @@
 ---
 title: "LFM2.5-Encoders: Fast Long-Context Inference on CPU"
 created: 2026-07-31
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [liquid-ai, encoder, inference-optimization, long-context, cpu, open-weights]
 sources: [raw/articles/liquid-ai-lfm2-5-encoders-fast-long-context-cpu]
@@ -11,6 +11,9 @@ review_value: 7
 review_confidence: 8
 review_stars: 3
 review_recommendation: strong
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # LFM2.5-Encoders: Fast Long-Context Inference on CPU

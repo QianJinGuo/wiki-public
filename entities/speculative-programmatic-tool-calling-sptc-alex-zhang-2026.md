@@ -1,13 +1,16 @@
 ---
 title: "Speculative Programmatic Tool Calling (sPTC) — Alex Zhang 2026"
 created: 2026-08-26
-updated: 2026-08-26
+updated: 2026-09-07
 type: entity
 tags: [harness, inference-optimization, rlm, tool-calling, speculative-execution, code-execution, latency]
 sources:
   - raw/articles/speculative-programmatic-tool-calling-sptc-alex-zhang-2026
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Speculative Programmatic Tool Calling (sPTC) — Alex Zhang 2026

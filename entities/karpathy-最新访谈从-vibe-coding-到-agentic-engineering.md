@@ -7,6 +7,10 @@ review_value: 8
 review_confidence: 8
 type: entity
 sources: [raw/articles/karpathy-最新访谈从-vibe-coding-到-agentic-engineering]
+reviewed: 2026-09-07
+review_verdict: hub-retained
+review_category: dup
+review_note: "judged dup-0.8: 7297字版，同族六胞胎; retained as hub (in-links>=20); MOC rewrite candidate"
 ---
 
 # Karpathy 最新访谈：从 Vibe Coding 到 Agentic Engineering

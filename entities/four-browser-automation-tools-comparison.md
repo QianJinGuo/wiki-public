@@ -4,11 +4,14 @@ title: "五款浏览器自动化工具横向对比：browser-use / Playwright / 
 type: entity
 tags: [agent, browser, tool, anti-bot, remote-assist, multi-session, browseract]
 created: 2026-05-21
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/four-browser-automation-tools-comparison]
 supplementary_sources: [raw/articles/browseract-agent-browser-execution-layer-rejected]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > 来源：[行小招 - 科技充电站](https://mp.weixin.qq.com/s/2aqrTvswa6FtqI-GK-EmvQ)，2026-05-19

@@ -3,7 +3,7 @@
 title: "Against \"Brain Damage\""
 description: "AI 对认知的影响取决于使用方式——作为捷径（shortcut）会损害学习和创造力，作为脚手架（scaffold）则能显著提升。核心原则：先思考、先写作、先开会，让 AI 作为推动力而非替代品。"
 created: 2026-06-07
-updated: 2026-06-08
+updated: 2026-09-07
 type: entity
 tags: [ai-cognition, learning, creativity, productivity, scaffolding]
 source: [[raw/articles/against-brain-damage]]
@@ -13,6 +13,9 @@ review_value: 9
 review_confidence: 9
 review_recommendation: strong
 review_stars: 5
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Against "Brain Damage"

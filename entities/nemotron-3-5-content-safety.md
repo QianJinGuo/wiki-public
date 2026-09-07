@@ -2,7 +2,7 @@
 
 title: "Nemotron 3.5 Content Safety"
 created: 2026-06-07
-updated: 2026-08-12
+updated: 2026-09-07
 type: entity
 tags: [nvidia, nemotron, content-safety, multimodal, enterprise-ai, ai-safety, yuvion-vl, c2ft, aliyun]
 source: "[[raw/articles/nemotron-3-5-content-safety-multimodal]]"
@@ -12,6 +12,9 @@ review_recommendation: strong
 review_stars: 4
 provenance_state: inferred
 sources: [raw/articles/nemotron-3-5-content-safety-multimodal, raw/articles/yuvion-vl-multimodal-safety-c2ft-aliyun-2026-08-12]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Nemotron 3.5 Content Safety

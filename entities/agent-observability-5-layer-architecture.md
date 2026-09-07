@@ -2,7 +2,7 @@
 
 title: "Agent 可观测体系五层架构"
 created: 2026-07-02
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, observability, llmops, evaluation, trace, monitoring, clickhouse, llm-as-judge, otel, oneagent, volcano-engine, sli]
 sources: [raw/articles/agent-observability-5-layer-architecture, raw/articles/volcano-agent-observability-ct-qcon-2026]
@@ -11,6 +11,9 @@ review_confidence: 8
 confidence: 0.8
 provenance_state: extracted
 related: []
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Agent 可观测体系五层架构

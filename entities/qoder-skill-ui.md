@@ -2,12 +2,15 @@
 
 title: "Qoder Skill UI — Agent 与人类的协作界面层"
 created: 2026-04-27
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent-tool, skill-format, skill-development, qoder, ux-design, agentic-ui, frontend-design]
 sources: [raw/articles/qoder-skill-ui-agent-human-collaboration]
 review_value: 8
 review_confidence: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## Overview

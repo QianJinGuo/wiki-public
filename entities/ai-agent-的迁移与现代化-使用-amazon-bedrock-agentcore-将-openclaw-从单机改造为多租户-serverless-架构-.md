@@ -8,6 +8,9 @@ updated: 2026-05-21
 review_value: 7
 review_confidence: 9
 sources: [raw/articles/ai-agent-的迁移与现代化-使用-amazon-bedrock-agentcore-将-openclaw-从单机改造为多租户-serverless-架构-]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # ai agent 的迁移与现代化 使用 amazon bedrock agentcore 将 openclaw 从单机改造为多租户 serverless 架构

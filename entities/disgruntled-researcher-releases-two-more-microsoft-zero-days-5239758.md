@@ -1,13 +1,16 @@
 ---
 title: "Disgruntled researcher releases two more Microsoft zero-days"
 created: 2026-06-11
-updated: 2026-08-30
+updated: 2026-09-07
 type: entity
 tags: [microsoft, zero-day, security, vulnerability, cloud-security, agent-security, bitlocker, privilege-escalation, insider-threat]
 sources: [raw/articles/13-disgruntled-researcher-releases-two-more-microsoft-zero-days-5239758]
 provenance_state: raw-linked
 review_value: 7
 confidence: 0.8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Disgruntled researcher releases two more Microsoft zero-days

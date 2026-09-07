@@ -1,12 +1,15 @@
 ---
 title: "全网骂Claude变笨，Anthropic下场揭秘：坑你的不是模型"
 created: 2026-07-12
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [claude, anthropic, llm, prompt, agent, claude-code]
 sources: [raw/articles/claude-perceived-degradation-anthropic-effort-model-explanation-2026]
 confidence: 0.7
 provenance_state: merged
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 全网骂Claude变笨，Anthropic下场揭秘：坑你的不是模型

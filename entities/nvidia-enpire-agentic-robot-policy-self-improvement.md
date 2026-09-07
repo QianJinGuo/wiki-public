@@ -11,7 +11,7 @@ tags:
   - real-world-robotics
   - policy-learning
 created: 2026-06-22
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 review_value: 9
 review_confidence: 9
@@ -19,6 +19,9 @@ review_recommendation: strong
 review_stars: 5
 sources:
   - raw/articles/nvidia-enpire-agentic-robot-policy-self-improvement
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Agentic Robot Policy Self-Improvement in the Real World

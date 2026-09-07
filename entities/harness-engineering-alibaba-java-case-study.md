@@ -3,7 +3,7 @@
 
 title: "阿里工程师 Harness 工程化实践 (双案例合并)"
 created: 2026-05-16
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, harness-engineering, engineering, ai, alibaba, case-study, multi-agent, evaluation, claude-code]
 sources:
@@ -11,7 +11,9 @@ sources:
   - raw/articles/harness-engineering-alibaba-6-layer-architecture-duxueyou
 review_value: 8
 review_confidence: 8
-
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 文章概要

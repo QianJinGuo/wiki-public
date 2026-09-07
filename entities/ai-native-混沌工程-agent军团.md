@@ -7,6 +7,9 @@ tags: [ai, chaos-engineering, resilience, multi-agent, qwen, aliyun, sre, platfo
 sources: [raw/articles/ai-native-下的混沌工程agent-军团如何重新定义系统韧性验证]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # AI Native 混沌工程：Agent 军团 + 共享黑板重定义系统韧性验证

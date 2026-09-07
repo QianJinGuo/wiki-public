@@ -5,13 +5,16 @@ evaluators: MLLM-as-a-judge for image-to-text tasks in Strands Evals
 type: entity
 tags: [llm, evaluation, multimodal, mllm, aws, strands, amazon-bedrock, claude, image-to-text, visual-ai, evaluation-framework, llm-as-judge]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 8
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4
 sources: [raw/articles/multimodal-evaluators-mllm-as-judge-image-to-text]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Multimodal evaluators: MLLM-as-a-judge for image-to-text tasks in Strands Evals

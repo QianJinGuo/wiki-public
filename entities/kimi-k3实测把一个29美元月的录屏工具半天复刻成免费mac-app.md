@@ -7,6 +7,9 @@ tags: [ai, agent, kimi, coding-agent, llm, ai-coding, native-app, macos, moonsho
 sources: [raw/articles/kimi-k3实测把一个29美元月的录屏工具半天复刻成免费mac-app]
 confidence: 0.76
 score: 56
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Kimi K3 实测：半天复刻录屏工具

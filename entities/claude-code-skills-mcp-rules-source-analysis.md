@@ -4,13 +4,16 @@ title: "Claude Code Skills / MCP / Rules 源码分析"
 type: entity
 tags: [claude-code, anthropic, mcp, skills, rules, tool-use, harness-engineering, coding-agent, context-engineering]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 8
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4
 sources: [raw/articles/claude-code-skills-mcp-rules-source-analysis]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 核心命题

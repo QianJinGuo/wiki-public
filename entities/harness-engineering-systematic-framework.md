@@ -2,7 +2,7 @@
 
 title: "Harness Engineering 系统梳理"
 created: 2026-04-30
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [harness-engineering, agent, control-loop, context-engineering, generator-evaluator]
 sources:
@@ -18,6 +18,10 @@ related:
   - entities/agent-engineering-principles-architecture-practice
   - concepts/openclaw-architecture
 provenance_state: inferred
+reviewed: 2026-09-07
+review_verdict: hub-retained
+review_category: dup
+review_note: "judged dup-0.75: 同源课程解读5341字版，留7933字版; retained as hub (in-links>=20); MOC rewrite candidate"
 ---
 
 ## 概述

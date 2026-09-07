@@ -5,7 +5,7 @@ Code: The unreasonable effectiveness of HTML
 type: entity
 tags: [claude-code, html, agent, engineering, artifact, prompt-engineering]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 7
 review_confidence: 8
 review_recommendation: worth-reading
@@ -15,6 +15,9 @@ sources:
   - raw/articles/claude-code-html-artifact-workflow-ifanr
   - raw/articles/claude-code-的工程师thariq-放弃使用-markdown-作为-ai-的文档载体替代的竟然是
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Using Claude Code: The unreasonable effectiveness of HTML

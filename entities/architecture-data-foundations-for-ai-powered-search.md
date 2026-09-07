@@ -3,11 +3,14 @@ title: "Architecture & data foundations for AI-powered Search"
 type: entity
 tags: [search, ai, rag, architecture]
 created: 2026-05-20
-updated: 2026-08-30
+updated: 2026-09-07
 review_value: 7
 sources: [raw/articles/architecture-data-foundations-for-ai-powered-search]
 review_confidence: 8
 review_recommendation: worth-reading
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 # Architecture & data foundations for AI-powered Search
 ## 摘要

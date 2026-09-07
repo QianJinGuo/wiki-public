@@ -1,11 +1,14 @@
 ---
 title: "Model Routing Is Simple. Until It Isn't — IBM Research 多目标优化路由"
 created: 2026-07-17
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [ai, llm, model-routing, ibm-research, inference, production, optimization]
 sources: [raw/articles/ibm-research-model-routing-optimization-2026]
 confidence: 0.8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Model Routing Is Simple. Until It Isn't — IBM Research 多目标优化路由

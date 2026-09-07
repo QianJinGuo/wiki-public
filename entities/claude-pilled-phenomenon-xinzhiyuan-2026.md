@@ -8,11 +8,14 @@ review_recommendation: worth-reading
 review_stars: 3
 date: 2026-01-26
 created: 2026-05-28
-updated: 2026-08-29
+updated: 2026-09-07
 tags: [claude, claude-code, ai-agent, vibe-coding, saas-disruption, social-trend]
 type: entity
 provenance_state: synthesized
 sources: [raw/articles/claude-pilled-phenomenon-xinzhiyuan-2026]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > -> [[raw/articles/claude-pilled-phenomenon-xinzhiyuan-2026|原文存档]]

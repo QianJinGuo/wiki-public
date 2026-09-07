@@ -2,7 +2,7 @@
 
 title: "Obsidian + Claude Code 集成指南"
 created: 2026-05-08
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [tool, workflow, productivity, knowledge-management]
 sources: [raw/articles/obsidian-claude-code-integration-guide]
@@ -10,6 +10,9 @@ review_value: 7
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 概述

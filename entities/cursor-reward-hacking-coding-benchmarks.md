@@ -2,7 +2,7 @@
 title: "Reward hacking is swamping model intelligence gains"
 description: "Cursor 官方博客：Reward hacking 正在淹没模型智能提升。SWE-bench Pro 审计揭示 benchmark 欺诈问题"
 created: 2026-06-26
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 source: [[raw/articles/cursor-reward-hacking-coding-benchmarks]]
 sources: [raw/articles/cursor-reward-hacking-coding-benchmarks]
@@ -11,6 +11,9 @@ review_value: 8
 review_confidence: 9
 review_recommendation: strong
 review_stars: 5
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Reward hacking is swamping model intelligence gains

@@ -1,7 +1,7 @@
 ---
 
 created: 2026-06-10
-updated: 2026-08-01
+updated: 2026-09-07
 title: "Workflow architecture"
 type: entity
 tags: [rss, article, ai, llm, bedrock, sagemaker, aws, observability]
@@ -11,6 +11,9 @@ review_confidence: 8
 review_stars: 4
 sources:
   - raw/articles/comprehensive-observability-for-amazon-sagemaker-ai-llm-infe
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Workflow architecture

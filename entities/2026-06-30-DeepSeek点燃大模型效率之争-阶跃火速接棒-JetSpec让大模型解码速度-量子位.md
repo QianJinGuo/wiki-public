@@ -6,6 +6,9 @@ type: entity
 tags: ['raw', 'article']
 sources: [raw/articles/2026-06-30-DeepSeek点燃大模型效率之争-阶跃火速接棒-JetSpec让大模型解码速度-量子位]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > -> [[raw/articles/2026-06-30-DeepSeek点燃大模型效率之争-阶跃火速接棒-JetSpec让大模型解码速度-量子位.md|原文存档]]

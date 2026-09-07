@@ -2,7 +2,7 @@
 
 title: "CUGA: IBM Research Enterprise Agent Harness"
 created: 2026-06-25
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, harness, ibm, enterprise, cuga, configurable-agent]
 provenance_state: inferred
@@ -13,6 +13,9 @@ review_value: 8
 review_confidence: 8
 review_stars: 4
 review_recommendation: strong
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # CUGA: IBM Research Enterprise Agent Harness

@@ -3,7 +3,7 @@
 type: entity
 title: "小米AI — ICML 2026 论文矩阵（11篇）"
 created: 2026-05-15
-updated: 2026-09-05
+updated: 2026-09-07
 tags: [icml-2026, xiaomi, gui-agent, video2gui, wildgui, guievalkit, come, led, veritime, visual-para-thinker, video-opd, mec, gad, r3, spark, mixture-of-experts, latent-exploration-decoding, neural-architecture-search, multimodal, audio-understanding, llm-reasoning, distillation, autonomous-agent]
 review_value: 7
 review_confidence: 7
@@ -12,6 +12,9 @@ sources:
 related_pages:
   - "[[raw/articles/xiaomi-icml-2026-11papers-da769794d77c]]"
 provenance_state: inferred
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 概述

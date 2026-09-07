@@ -1,7 +1,7 @@
 ---
 title: "阿里云 Kafka × Iceberg 零 ETL 实时入湖：ApsaraMQ for Kafka × OSS Tables 架构减法"
 created: 2026-06-18
-updated: 2026-07-31
+updated: 2026-09-07
 description: "阿里云官方对流数据入湖零 ETL 趋势的系统阐述：Kafka/Iceberg/对象存储组合，3 大阵营对比（Confluent Tableflow 原生集成 vs MSK Connect vs Databricks/Snowflake 生态平台），Kafka × Table Bucket 3 层架构，4 阶段端到端数据流（RecordProcessor→Schema 感知→Iceberg 写入），Schema 4 种自动演进，多层小文件治理（32MB/64MB），CDC Upsert 完整支持，4 类优先受益场景（实时日志/DB 变更/IoT/AI 多模态训练）；实现：ApsaraMQ for Kafka × OSS Tables 已开启邀测"
 type: entity
 source: "[[raw/articles/aliyun-kafka-iceberg-zero-etl-architecture-subtraction-2026-06-18]]"
@@ -15,6 +15,9 @@ product: "ApsaraMQ for Kafka × OSS Tables（邀测中）"
 venue_topics: [lakehouse, zero-etl, kafka, iceberg, cdc, schema-evolution, real-time-data-warehouse, ai-data-pipeline]
 sources:
   - raw/articles/aliyun-kafka-iceberg-zero-etl-architecture-subtraction-2026-06-18
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 阿里云 Kafka × Iceberg 零 ETL 实时入湖：ApsaraMQ for Kafka × OSS Tables 架构减法

@@ -3,7 +3,7 @@
 title: "Bitter Lesson vs Garbage Can：组织理论视角下的 AI 采用"
 description: "Ethan Mollick（One Useful Thing，2025-07-28）用 Bitter Lesson（计算力 > 人类编码知识）和 Garbage Can 组织理论（混乱组织）对比 AI 在企业落地：传统路线需梳理流程（Bottleneck），Bitter Lesson 路线只需定义好结果让 AI 自己找路。"
 created: 2026-06-07
-updated: 2026-06-09
+updated: 2026-09-07
 type: entity
 tags: [bitter-lesson, garbage-can-model, organizational-theory, ai-adoption, agentic-ai, chatgpt-agent, manus, openai-agent, ethan-mollick, one-useful-thing]
 source: [[raw/articles/the-bitter-lesson-versus-the-garbage-can]]
@@ -14,6 +14,9 @@ review_value: 8
 review_confidence: 8
 review_recommendation: strong
 review_stars: 5
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Bitter Lesson vs Garbage Can：组织理论视角下的 AI 采用

@@ -1,7 +1,7 @@
 ---
 title: "Cloud Use 框架：Agent 作为云上受治理主体的四层模型"
 created: 2026-07-09
-updated: 2026-07-09
+updated: 2026-09-07
 type: entity
 tags: [cloud-use, agent-cloud-workload, identity, credential, tool-governance, runtime, qoder, alibaba-cloud, agent-governance, cloud-native, harness-engineering]
 sources: [raw/articles/cloud-use-agent-cloud-native-execution-alibaba-2026]
@@ -9,6 +9,9 @@ confidence: 0.9
 provenance_state: extracted
 review_value: 8
 review_confidence: 9
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Cloud Use 框架：Agent 作为云上受治理主体的四层模型

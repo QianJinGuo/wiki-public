@@ -1,11 +1,14 @@
 ---
 title: "Alaya-EVOKE：小时级视频世界模型（外部世界状态银行）"
 created: 2026-08-19
-updated: 2026-08-19
+updated: 2026-09-07
 type: entity
 tags: [world-model, video-generation, diffusion, memory, langevin, agent]
 sources: [raw/articles/alaya-evoke-hour-level-video-world-model]
 confidence: 0.75
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Alaya-EVOKE：小时级视频世界模型

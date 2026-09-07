@@ -1,11 +1,14 @@
 ---
 title: "Introducing TabFM: A zero-shot foundation model for tabular data"
 created: 2026-07-02
-updated: 2026-07-27
+updated: 2026-09-07
 type: entity
 tags: [ai, newsletter, foundation-model, tabular-data, machine-learning, zero-shot, google-research, icl]
 sources: [raw/articles/introducing-tabfm-a-zero-shot-foundation-model-for-tabular-d]
 confidence: 0.7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Introducing TabFM: A zero-shot foundation model for tabular data

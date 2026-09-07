@@ -3,9 +3,12 @@ title: "Couchbase Capella iQ — 多模型 AI 推理架构的 Bedrock 实践"
 type: entity
 tags: [aws, bedrock, inference, architecture, couchbase, case-study, llm]
 created: 2026-07-24
-updated: 2026-08-29
+updated: 2026-09-07
 sources: [raw/articles/couchbase-capella-iq-multi-model-ai-architecture-bedrock-case-study]
 confidence: 0.70
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Couchbase Capella iQ — 多模型 AI 推理架构的 Bedrock 实践

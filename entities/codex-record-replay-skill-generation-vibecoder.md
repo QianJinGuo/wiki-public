@@ -1,12 +1,15 @@
 ---
 title: "Codex Record & Replay：GUI 演示到可复用 Skill 的工作流捕获"
 created: 2026-06-28
-updated: 2026-07-27
+updated: 2026-09-07
 type: entity
 tags: [codex, skill, computer-use, workflow-capture, openai, agent-automation]
 sources: [raw/articles/codex-record-replay-skill-generation-vibecoder]
 confidence: 0.8
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Codex Record & Replay：GUI 演示到可复用 Skill 的工作流捕获

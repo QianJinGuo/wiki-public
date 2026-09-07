@@ -4,11 +4,14 @@ title: "商汤SenseNova U1深度拆解，原生统一架构终结缝合时代"
 type: entity
 tags: [sensnova-u1, neo-unify, multimodal, unified-architecture, image-generation, text-generation, mixture-of-transformers, encoder-free, dynamic-resolution, flow-matching, 3d-rope, vision-language, 商汤, model-architecture]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 8
 review_confidence: 9
 sources: [raw/articles/sensnova-u1-deep-dive-jiqizhixin-d8602ded5c51]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 概述

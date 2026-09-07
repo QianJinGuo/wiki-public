@@ -4,7 +4,7 @@ description: "Matthew Green 2026-06-09 批判性分析 Apple Siri AI + Private C
 source: "[[raw/articles/apple-siri-private-inference-cryptography-green]]"
 sources: [raw/articles/apple-siri-private-inference-cryptography-green]
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [apple, siri, private-inference, private-cloud-compute, pcc, google-confidential-inference, agent-security, lethal-trifecta, prompt-injection, matthew-green, cryptography-engineering, data-monetization, government-surveillance]
 review_value: 8
@@ -13,6 +13,9 @@ review_recommendation: strong
 review_stars: 4
 confidence: 0.85
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Apple Siri 私有推理（Private Inference）不私有：三个对抗者都不受加密学保护

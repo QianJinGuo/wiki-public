@@ -2,11 +2,14 @@
 
 title: "Meta Muse Voice Transcribe 实时语音感知模型"
 created: 2026-09-03
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [meta, muse, asr, speech-recognition, streaming, multimodal, real-time, diarization, reinforcement-learning]
 sources: [raw/articles/meta-muse-voice-transcribe-streaming-asr-2026]
 confidence: 0.8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Meta Muse Voice Transcribe 实时语音感知模型

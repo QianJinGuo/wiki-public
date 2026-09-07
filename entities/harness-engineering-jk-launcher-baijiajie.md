@@ -1,7 +1,7 @@
 ---
 
 title: "万字干货！Harness Engineering如何工程化落地？"
-updated: 2026-08-29
+updated: 2026-09-07
 description: "Harness Engineering 工程化落地：Rule/Skill/Sub Agent/Workflow/Scripts/MCP 六层串联，JK Launcher 真实工程案例"
 type: entity
 source: "[[raw/articles/harness-engineering-jk-launcher-baijiajie]]"
@@ -11,6 +11,9 @@ review_value: 7
 confidence: 0.6
 sources:
   - raw/articles/harness-engineering-jk-launcher-baijiajie
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 万字干货！Harness Engineering如何工程化落地？

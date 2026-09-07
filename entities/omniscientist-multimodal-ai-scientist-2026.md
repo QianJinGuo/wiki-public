@@ -1,12 +1,15 @@
 ---
 title: "OmniScientist：全模态全学科 AI Scientist（直接感知原始证据）"
 created: 2026-08-25
-updated: 2026-08-25
+updated: 2026-09-07
 type: entity
 tags: [ai-scientist, omniscientist, multimodal, ai-for-science, scientific-discovery, research-agent, raw-data, evidence, perception, idea-check, rigour-check, claim-check, nus, oxford, first-party]
 rating: v7c8
 sources: [raw/articles/omniscientist-multimodal-ai-scientist-paper-2026]
 confidence: 0.85
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # OmniScientist：全模态全学科 AI Scientist（直接感知原始证据）

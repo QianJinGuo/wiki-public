@@ -7,7 +7,7 @@ platform: wechat
 author: 夕小瑶科技说
 publish_date: 2026-08-12
 created: 2026-08-13
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 7
 review_confidence: 8
 review_recommendation: ingest
@@ -17,6 +17,9 @@ sources:
   - raw/articles/agent-memory-leaderboard-aml-jiqizhixin-first-round-2026-08-14
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # AML（Agent Memory Leaderboard）：机制级 Agent 记忆评测榜单

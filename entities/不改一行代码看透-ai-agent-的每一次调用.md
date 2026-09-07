@@ -7,6 +7,9 @@ tags: [wechat, ai, observability, opentelemetry, ebpf, agent-monitoring, tracing
 rating: v9c9
 sources:
   - raw/articles/不改一行代码看透-ai-agent-的每一次调用
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 不改一行代码，看透 AI Agent 的每一次调用

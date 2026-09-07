@@ -1,12 +1,15 @@
 ---
 title: "Loop Engineering 系统框架：四次跃迁、五要素模型、成本公式与三大风险"
 created: 2026-06-28
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [loop-engineering, harness-engineering, agent-loop, context-engineering, prompt-engineering, cost-optimization, risk-management, organizational-readiness]
 sources: [raw/articles/loop-engineering-deep-dive-mengzhaoSixi-2026]
 confidence: 0.85
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Loop Engineering 系统框架：四次跃迁、五要素模型、成本公式与三大风险

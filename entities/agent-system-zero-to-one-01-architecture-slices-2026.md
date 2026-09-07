@@ -4,11 +4,14 @@ title: "《从零实现 Agent 系统》连载 01｜Agent 系统是什么：问�
 type: entity
 tags: [agent, architecture, prompt]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 8
 review_confidence: 8
 sources: [raw/articles/agent-system-zero-to-one-01-architecture-slices-2026]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 《从零实现 Agent 系统》连载 01｜Agent 系统是什么：问题空间与架构切片

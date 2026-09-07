@@ -7,6 +7,9 @@ tags: [claude-science, open-science, ai-research-assistant, open-source, yc]
 sources: [raw/articles/claude-science-开源平替-deepseek-glm-2026]
 confidence: 0.75
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Claude Science 开源平替 OpenScience

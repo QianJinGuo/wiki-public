@@ -1,12 +1,15 @@
 ---
 title: "xOPD 全景梳理：16 篇论文拆解 On-Policy Distillation 的六个维度与教师角色演化主线"
 created: 2026-06-23
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [opd, distillation, rlhf, grpo, post-training, self-distillation, teacher-student, rlvr, survey, taxonomy]
 sources: [raw/articles/xopd-on-policy-distillation-landscape-banana-2026]
 confidence: 0.85
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # xOPD 全景梳理：On-Policy Distillation 六维分类与演化主线

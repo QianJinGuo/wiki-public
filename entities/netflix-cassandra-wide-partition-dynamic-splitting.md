@@ -1,7 +1,7 @@
 ---
 title: "Dynamically Splitting Wide Partitions in Cassandra for Time Series Workloads"
 created: 2026-06-03
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [cassandra, netflix, time-series, wide-partition, dynamic-partitioning, ops]
 source: "[[raw/articles/dynamically-splitting-wide-partitions-in-cassandra-for-time-.md]]"
@@ -12,6 +12,9 @@ review_confidence: 8
 review_recommendation: strong
 review_stars: 4
 sources: [raw/articles/dynamically-splitting-wide-partitions-in-cassandra-for-time-]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Dynamically Splitting Wide Partitions in Cassandra for Time Series Workloads

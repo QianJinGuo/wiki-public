@@ -4,10 +4,13 @@ title: "AI Coding Guide Tmall Deep Dive"
 type: entity
 tags: [coding, ai-coding, best-practices, tmall]
 created: 2026-05-21
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/ai-coding-guide-tmall-deep-dive]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 天猫新品营销技术团队AI编码实战指南

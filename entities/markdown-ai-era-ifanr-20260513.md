@@ -4,10 +4,13 @@ title: "Markdown 不会过时"
 type: entity
 tags: [claude]
 created: 2026-05-21
-updated: 2026-05-21
+updated: 2026-09-07
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/markdown-ai-era-ifanr-20260513]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## Thariq 的 HTML 主张 vs Markdown

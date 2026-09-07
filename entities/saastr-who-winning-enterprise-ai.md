@@ -4,13 +4,16 @@ title: "Who Winning Enterprise AI Now"
 type: entity
 tags: [enterprise-ai, saas, competition, strategy]
 created: 2026-05-14
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 7
 sources: [raw/articles/saastr-who-winning-enterprise-ai]
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 3
 source_url:
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Who Winning Enterprise AI Now

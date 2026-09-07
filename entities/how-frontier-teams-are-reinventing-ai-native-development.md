@@ -12,7 +12,7 @@ tags:
   - pathfinder
   - frontier-team
 created: 2026-06-11
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 confidence: 0.85
 review_value: 6
@@ -22,6 +22,9 @@ review_stars: 4
 sources:
   - raw/articles/how-frontier-teams-are-reinventing-ai-native-development
 score_validated: 2026-09-05
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # How Frontier Teams Are Reinventing AI-Native Development

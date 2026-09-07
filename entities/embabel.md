@@ -2,7 +2,7 @@
 
 title: "Embabel"
 created: 2026-06-04
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [embabel, rod-johnson, spring, agent-framework, java, kotlin, goap, planning, deterministic, langgraph, semantic-kernel, codex, claude-code, framework-era, alien-stack, mcp, type-system, a-star]
 sources: [raw/articles/embabel-rod-johnson-framework-era-interview]
@@ -11,6 +11,9 @@ provenance_state: extracted
 review_value: 9
 review_confidence: 9
 review_recommendation: strong
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Embabel

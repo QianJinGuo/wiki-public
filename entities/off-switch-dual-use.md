@@ -10,9 +10,12 @@ score_stars: 5
 ingested_at: 2026-07-09T18:59:45Z
 type: entity
 created: 2026-07-09
-updated: 2026-08-30
+updated: 2026-09-07
 sources:
   - raw/articles/off-switch-dual-use
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # An off switch for dual use knowledge in AI models

@@ -1,12 +1,15 @@
 ---
 title: "Grok Bot 0.18 运行时重建：Agent 的五层运行时与可靠性协议"
 created: 2026-08-26
-updated: 2026-08-26
+updated: 2026-09-07
 type: entity
 tags: [agent, runtime, harness, anysphere, grok-bot, architecture, reliability, context, approval, reply-delivery]
 sources: [raw/articles/grok-bot-agent-runtime-five-layer-vibecoder-2026]
 confidence: 0.85
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Grok Bot 0.18 运行时重建：Agent 的五层运行时与可靠性协议

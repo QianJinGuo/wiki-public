@@ -8,6 +8,10 @@ sources: [raw/articles/你不知道的-agent原理架构与工程实践]
 review_confidence: 8
 created: 2026-05-16
 updated: 2026-05-16
+reviewed: 2026-09-07
+review_verdict: hub-retained
+review_category: thin
+review_note: "judged thin-0.78: AI臆测摘要非原文内容; retained as hub (in-links>=20); MOC rewrite candidate"
 ---
 
 ## 核心要点

@@ -3,12 +3,15 @@ title: "How to Detect AI Agents on Your Website | Full Guide"
 type: entity
 tags: [ai-agents, detection, web, security, bot-detection, browser-security, fraud]
 created: 2026-05-15
-updated: 2026-06-18
+updated: 2026-09-07
 review_value: 7
 sources: [raw/articles/detect-ai-agents-website]
 review_confidence: 8
 review_recommendation: strong
 review_stars: 5
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # How to Detect AI Agents on Your Website

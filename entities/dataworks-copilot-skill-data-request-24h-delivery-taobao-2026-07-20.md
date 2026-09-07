@@ -1,13 +1,16 @@
 ---
 title: "DataWorks Copilot 需求交付 Skill — 数据需求 24h 交付的 Spec Coding 实践"
 created: 2026-07-22
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [agent, skill, data-engineering, spec-coding, progressive-disclosure, taobao, alibaba, harness-engineering]
 source_url:
 confidence: 0.7
 provenance_state: extracted
 sources: [raw/articles/dataworks-copilot-skill-data-request-24h-delivery-taobao-2026-07-20]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # DataWorks Copilot 需求交付 Skill — 数据需求 24h 交付的 Spec Coding 实践

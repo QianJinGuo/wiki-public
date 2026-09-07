@@ -8,6 +8,9 @@ tags: [agent, coding-agent]
 sources: [raw/articles/竞赛编程agent进入全球前十南大清华新模型cf-rating超3500, raw/articles/竞赛编程agent进入全球前十南大清华新模型cf-rating超3500-2026-07-08]
 confidence: 0.64
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 竞赛编程Agent进入全球前十！南大、清华新模型CF rating超3500

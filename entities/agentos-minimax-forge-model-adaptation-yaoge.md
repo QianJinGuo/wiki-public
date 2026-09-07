@@ -2,13 +2,16 @@
 
 title: "MiniMax Token调用第一后：AgentOS现实与模型厂商的系统适配挑战"
 created: 2026-05-28
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [agentos, minimax, forge, model-training, context-management, prefix-tree-merging, windowed-fifo, composite-reward, openrouter]
 sources:
   review_value: 8
 review_confidence: 8
 review_recommendation: strong
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > -> [[raw/articles/agentos-minimax-forge-model-adaptation-yaoge|MiniMax Token调用第一后：AgentOS现实与模型厂商的系统适配挑战]]

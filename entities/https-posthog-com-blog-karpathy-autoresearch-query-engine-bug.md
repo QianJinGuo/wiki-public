@@ -2,7 +2,7 @@
 
 title: "Karpathy's Autoresearch found a 3-year-old bug in our query engine (and improved performance by 11%) - PostHog"
 created: 2026-06-03
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [newsletter, ai]
 source: "[[raw/articles/https-posthog-com-blog-karpathy-autoresearch-query-engine-bug.md|Karpathy's Autoresearch found a 3-year-old bug in our query engine (and improved performance by 11%) - PostHog]]"
@@ -12,6 +12,9 @@ review_confidence: 9
 review_recommendation: strong
 review_stars: 4
 sources:
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Karpathy's Autoresearch found a 3-year-old bug in our query engine (and improved performance by 11%) - PostHog

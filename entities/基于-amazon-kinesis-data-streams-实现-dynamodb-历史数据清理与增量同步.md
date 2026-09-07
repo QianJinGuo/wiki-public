@@ -14,6 +14,9 @@ review_confidence: 8
   - AWS China Blog
   - AWS, DynamoDB, Kinesis, Data Engineering, Incremental Sync
 score_validated: 2026-09-05
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 > -> [[raw/articles/基于-amazon-kinesis-data-streams-实现-dynamodb-历史数据清理与增量同步.md|原文存档]]
 

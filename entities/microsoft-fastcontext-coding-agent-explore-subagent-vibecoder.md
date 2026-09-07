@@ -1,7 +1,7 @@
 ---
 title: "FastContext（微软开源 Coding Agent 仓库探索子代理）"
 created: 2026-06-18
-updated: 2026-07-31
+updated: 2026-09-07
 description: "微软开源的 Explore 子 Agent：Read/Glob/Grep 只读工具 + SFT/RL 训练，文件+行号 citation bundle，resolution +5.5/token -60.3%；开源 CLI 工程不成熟（串行 await、rg 硬编码、6/1 测试失败）"
 type: entity
 source: "[[raw/articles/microsoft-fastcontext-coding-agent-explore-subagent-vibecoder]]"
@@ -12,6 +12,9 @@ provenance_state: extracted
 confidence: 0.85
 sources:
   - raw/articles/microsoft-fastcontext-coding-agent-explore-subagent-vibecoder
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # FastContext（微软开源 Coding Agent 仓库探索子代理）

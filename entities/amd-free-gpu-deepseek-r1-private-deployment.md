@@ -1,7 +1,7 @@
 ---
 title: "AMD 免费云 GPU 私有化部署 DeepSeek-R1"
 created: 2026-07-02
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [deepseek, r1, amd, gpu, vllm, rocm, deployment, local-llm]
 source: "[[raw/articles/amd-free-gpu-deepseek-r1-private-deployment-csdn-2026]]"
@@ -10,6 +10,9 @@ provenance_state: extracted
 review_value: 7
 review_confidence: 9
 sources: [raw/articles/amd-free-gpu-deepseek-r1-private-deployment-csdn-2026]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # AMD 免费云 GPU 私有化部署 DeepSeek-R1

@@ -7,6 +7,9 @@ type: entity
 tags: [ai, llm]
 sources: [raw/articles/2026-05-06-阿里开源PromptEcho-用冻结多模态大模型为文生图训练提供高质量Rewar-机器之心]
 confidence: 0.8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 阿里开源PromptEcho：用冻结多模态大模型为文生图训练提供高质量Reward

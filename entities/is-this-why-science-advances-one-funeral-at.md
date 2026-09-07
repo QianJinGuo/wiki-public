@@ -3,11 +3,14 @@ title: "Is This Why Science Advances One Funeral at a Time?"
 type: entity
 tags: [article, newsletter]
 created: 2026-05-14
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 7
 sources: [raw/articles/is-this-why-science-advances-one-funeral-at]
 review_confidence: 8
 review_recommendation: worth-reading
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Is This Why Science Advances One Funeral at a Time?

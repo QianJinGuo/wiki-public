@@ -6,13 +6,17 @@ type: entity
 tags: [agent, architecture, aws, code, data, fine-tuning, humanoid, isaac-lab, k8s, memory, mlops, nvidia, open-source, physical-ai, rag, reinforcement-learning, rl, robotics, sagemaker, vision]
 source: "[[raw/articles/scale-robot-reinforcement-learning-with-nvidia-isaac-lab-on-]]"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 7
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4
 provenance_state: inferred
 sources: [raw/articles/scale-robot-reinforcement-learning-with-nvidia-isaac-lab-on-]
+reviewed: 2026-09-07
+review_verdict: hub-retained
+review_category: thin
+review_note: "judged thin-0.78: 2141字摘抄，机器人RL基建; retained as hub (in-links>=20); MOC rewrite candidate"
 ---
 
 # NVIDIA Isaac Lab + Amazon SageMaker AI：机器人强化学习训练基础设施（Humanoid RL Scale-up）

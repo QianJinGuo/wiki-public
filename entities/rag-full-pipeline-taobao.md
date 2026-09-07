@@ -1,7 +1,7 @@
 ---
 title: "RAG 全链路技术详解：从文档加载到 Ragas 评估"
 created: 2026-05-18
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [rag, pipeline, embedding, chunking, retrieval, rerank, graph-rag, ragas, evaluation, meta-chunking, hyde, agent]
 sources: [raw/articles/rag-full-pipeline-taobao]
@@ -9,6 +9,9 @@ review_value: 8
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 → [[raw/articles/rag-full-pipeline-taobao|原文存档]] ^[raw/articles/rag-full-pipeline-taobao.md]
 

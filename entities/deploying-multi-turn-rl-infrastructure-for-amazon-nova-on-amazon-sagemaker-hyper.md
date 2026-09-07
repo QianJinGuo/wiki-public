@@ -1,13 +1,16 @@
 ---
 title: "Deploying Multi-Turn RL Infrastructure for Amazon Nova on Amazon SageMaker HyperPod"
 created: 2026-07-07
-updated: 2026-08-30
+updated: 2026-09-07
 type: entity
 tags: [ai, agent, rl, reinforcement-learning, aws, sagemaker, hyperpod, nova, multi-turn, grpo]
 sources: [raw/articles/deploying-multi-turn-rl-infrastructure-for-amazon-nova-on-amazon-sagemaker-hyper]
 confidence: 0.85
 provenance_state: merged
 vxc: 56
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Deploying Multi-Turn RL Infrastructure for Amazon Nova on Amazon SageMaker HyperPod

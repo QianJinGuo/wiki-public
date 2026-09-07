@@ -3,11 +3,14 @@ title: "Notes on pretraining parallelisms and failed training runs."
 type: entity
 tags: [dwarkesh]
 created: 2026-05-19
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 7
 review_confidence: 9
 review_recommendation: worth-reading
 sources: [raw/articles/notes-on-pretraining-parallelisms-and-failed-training-runs]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 ## 核心要点
 - 评分：v=7 × c=9 = 63

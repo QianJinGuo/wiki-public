@@ -12,7 +12,10 @@ review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 3
 created: 2026-05-12
-updated: 2026-09-05
+updated: 2026-09-07
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > -> [[raw/articles/building-web-search-enabled-agents-with-strands-and-exa|原文存档]]

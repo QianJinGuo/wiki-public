@@ -8,6 +8,9 @@ review_value: 8
 sources: [raw/articles/CVPR-2026-Highlight-让AI像电影人一样-看-视频-8B小模型反超GPT-5与Gemini-3-1-Pro]
 review_confidence: 7
 review_recommendation: worth-reading
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 ## 核心要点
 - 文章评分：value=8, confidence=7（56 ≥ 49 ✓）

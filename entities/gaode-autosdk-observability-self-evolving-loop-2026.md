@@ -1,12 +1,15 @@
 ---
 title: "AutoSDK AI Coding 可观测与自进化闭环（高德汽车工程 进化篇）"
 created: 2026-08-26
-updated: 2026-08-26
+updated: 2026-09-07
 type: entity
 tags: [ai-coding, observability, self-evolving, loop-engineering, gaode, autosdk, metrics-trace-logs, performance-optimization, ai-native]
 sources: [raw/articles/gaode-autosdk-observability-self-evolving-loop-2026]
 confidence: 0.85
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # AutoSDK AI Coding 可观测与自进化闭环（高德汽车工程 进化篇）

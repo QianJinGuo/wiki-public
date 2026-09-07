@@ -3,12 +3,15 @@ title: "Hunk - Review-first Terminal Diff Viewer"
 type: entity
 tags: [tools, diff, terminal, agentic, code-review, developer-tools, opentui, modem-dev]
 created: 2026-06-24
-updated: 2026-08-01
+updated: 2026-09-07
 review_value: 7
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 4
 sources: [raw/articles/hunk-diff-viewer]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Hunk - Review-first Terminal Diff Viewer

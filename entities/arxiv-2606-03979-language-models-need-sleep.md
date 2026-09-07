@@ -3,7 +3,7 @@
 title: "Language Models Need Sleep: arxiv 2606.03979 持续学习 2 阶段范式"
 description: "Ali Behrouz et al. 提出 LLM 持续学习 Sleep 范式: 两阶段 (1) Memory Consolidation via Knowledge Seeding (upward distillation) + (2) Dreaming via RL 自改进 (synthetic curriculum)。arxiv 2606.03979, 2026-06-02, OpenReview 2025-09 已公开。 与 Mind Lab LoRA 在线路径 (delta-mem) 互补, 离线 consolidation 是 parameter-layer memory 的另一面"
 created: 2026-06-05
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [arxiv, neuroscience, continual-learning, 持续学习, memory-consolidation, sleep-paradigm, knowledge-seeding, dreaming, reinforcement-learning, llm-training, arxiv]
 sources:
@@ -17,6 +17,9 @@ related:
   - entities/mind-lab-lora-continual-learning-system
   - entities/agent-memory-architecture
 score_validated: 2026-09-05
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Language Models Need Sleep: arxiv 2606.03979 持续学习 2 阶段范式

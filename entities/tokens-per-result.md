@@ -2,7 +2,7 @@
 
 title: "Intelligence Per Dollar"
 created: 2026-06-05
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [article, newsletter]
 source: [[raw/articles/tokens-per-result]]
@@ -10,6 +10,9 @@ review_value: 8
 review_confidence: 9
 review_stars: 4
 sources:
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Intelligence Per Dollar

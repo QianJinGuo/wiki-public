@@ -1,7 +1,7 @@
 ---
 title: "Agentic Code Review"
 created: 2026-06-16
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [article, newsletter]
 source_url: "https://addyosmani.com/blog/agentic-code-review/"
@@ -10,6 +10,9 @@ review_value: 7
 review_confidence: 7
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Agentic Code Review

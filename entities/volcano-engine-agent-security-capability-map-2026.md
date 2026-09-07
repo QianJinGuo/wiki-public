@@ -1,12 +1,15 @@
 ---
 title: "火山引擎《智能体安全能力图谱》——企业智能体安全治理框架"
 created: 2026-08-26
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, security, governance, harness, ai-safety, enterprise, bytedance, 智能体安全]
 sources: [raw/articles/volcano-engine-agent-security-capability-map-2026]
 confidence: 0.75
 related: [agent-security-three-step-sequence-harness-governance-identity-crewai, ai-gateways-vs-mcp-gateways-what-security-teams-need-to-know, ant-singguard-nsfa-agent-security-2026, tsinghua-agent-security-fangcun]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 火山引擎《智能体安全能力图谱》——企业智能体安全治理框架

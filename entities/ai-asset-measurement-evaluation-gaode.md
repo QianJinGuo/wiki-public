@@ -1,7 +1,7 @@
 ---
 title: "高德 AI 资产度量与评价体系：三层评估模型 + 离线采集 + 人工反馈闭环"
 created: 2026-07-15
-updated: 2026-07-31
+updated: 2026-09-07
 type: entity
 tags: [ai-metrics, asset-measurement, evaluation-framework, skill-metric, mcp-metric, knowledge-base-metric, three-layer-model, gaode-tech, outcome-process-evidence, human-intervention]
 sources:
@@ -9,6 +9,9 @@ sources:
 review_value: 8
 review_confidence: 8
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 高德 AI 资产度量与评价体系

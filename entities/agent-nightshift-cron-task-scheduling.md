@@ -1,11 +1,14 @@
 ---
 title: "想让 Agent 在你睡觉时继续干活？先给它排好夜班"
 created: 2026-07-02
-updated: 2026-09-01
+updated: 2026-09-07
 type: entity
 tags: [agent, cron, task-scheduling, automation, agent-lifecycle]
 sources: [agent-nightshift-cron-task-scheduling]
 confidence: 0.8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 摘要

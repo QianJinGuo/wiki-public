@@ -4,10 +4,13 @@ title: "两篇Harness论文：微软M⋆记忆进化 + 谷歌AutoHarness动作�
 type: entity
 tags: [agent, google, harness, llm, microsoft, paper]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/two-harness-papers-microsoft-google]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 两篇Harness论文：微软M⋆记忆进化 + 谷歌AutoHarness动作约束

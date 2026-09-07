@@ -2,7 +2,7 @@
 
 title: "Claude Code 黑客松：技艺数字化六项目"
 created: 2026-04-30
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [claude-code, opus-4.7, agent, knowledge-digitization, expert-knowledge, hackathon]
 review_value: 9
@@ -15,6 +15,9 @@ related:
   - entities/autoresearch-multi-agent-software
   - entities/agent-memory-modular-framework
 provenance_state: inferred
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 概述

@@ -1,12 +1,15 @@
 ---
 title: "LingBot-Video：全球首个具身专属MoE视频模型"
 created: 2026-07-09
-updated: 2026-07-27
+updated: 2026-09-07
 type: entity
 tags: [ai, video-generation, embodied-ai, moe, open-source, model, ant-group, lingbot]
 sources: [raw/articles/lingbot-video-moe-embodied-video-2026, raw/articles/刚刚全球首个具身专属的moe视频模型开源了]
 confidence: 0.75
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # LingBot-Video：全球首个具身专属MoE视频模型

@@ -1,7 +1,7 @@
 ---
 title: "LLM 缓存原理与实践：从 KV Cache 到 Prefix Caching，Agent 命中率常挂 90% 的机制与工程含义"
 created: 2026-07-03
-updated: 2026-07-03
+updated: 2026-09-07
 type: entity
 tags: [llm-inference, kv-cache, prefix-caching, pagedattention, vllm, sglang, prompt-caching, deepseek, anthropic, openai, gemini, inference-optimization, cost-optimization, latency, agent-workload, radixattention, position-independent-caching]
 review_value: 8
@@ -9,6 +9,9 @@ review_confidence: 8
 provenance_state: extracted
 sources:
   - raw/articles/llm-prefix-caching-comprehensive-guide-2026-07-03
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # LLM 缓存原理与实践

@@ -11,7 +11,7 @@ tags:
   - google
   - model-audit
 created: 2026-06-22
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 review_value: 9
 review_confidence: 9
@@ -21,6 +21,9 @@ sources:
   - raw/articles/diffusiongemma-transparency-audit-lesswrong
 related:
   - entities/diffusiongemma-4x-faster-text-generation-google-2026-06
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # How transparent is DiffusionGemma (and why it matters)

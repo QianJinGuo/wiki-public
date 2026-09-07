@@ -1,12 +1,15 @@
 ---
 title: "How I Cut an AI Agent's Token Use by 94% — 将 Skill 从自然语言编译为确定性代码"
 created: 2026-07-16
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [agent-skill, token-optimization, harness, compiling-skills, vivek-haldar, natlang-code, agent-efficiency, crystallization]
 sources: [raw/articles/vivekhaldar-compiling-ai-agent-skill-token-cut-94pct-2026]
 confidence: 0.9
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # How I Cut an AI Agent's Token Use by 94% — 将 Skill 从自然语言编译为确定性代码

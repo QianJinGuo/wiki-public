@@ -6,6 +6,9 @@ type: entity
 tags: ['raw', 'article']
 sources: [raw/articles/2026-06-20-打造真实项目的-AI-编程环境-Matt-Pocock-的-Skill-工作流完-技术极简主义]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > -> [[raw/articles/2026-06-20-打造真实项目的-AI-编程环境-Matt-Pocock-的-Skill-工作流完-技术极简主义.md|原文存档]]

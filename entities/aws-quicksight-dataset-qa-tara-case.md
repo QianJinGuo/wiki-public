@@ -4,10 +4,13 @@ title: "AWS Quicksight Dataset QA Tara Case"
 type: entity
 tags: [aws]
 created: 2026-05-21
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 6
 review_confidence: 9
 sources: [raw/articles/aws-quicksight-dataset-qa-tara-case]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Beyond BI: How the Dataset Q&A feature of Amazon Quick powers the next generation of data decisions

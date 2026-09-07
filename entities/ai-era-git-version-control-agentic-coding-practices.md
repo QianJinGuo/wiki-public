@@ -4,10 +4,13 @@ title: "AI 时代的 Git 版本管理最佳实践"
 type: entity
 tags: [agent, coding, llm, git, version-control, agentic-coding]
 created: 2026-05-21
-updated: 2026-06-19
+updated: 2026-09-07
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/ai-era-git-version-control-agentic-coding-practices]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 核心信息

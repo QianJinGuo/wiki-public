@@ -2,11 +2,14 @@
 title: "Claude Code 自动反馈报告功能：AI Agent 的自我诊断与改进机制"
 type: entity
 created: 2026-08-30
-updated: 2026-08-30
+updated: 2026-09-07
 tags: [claude-code, agent, feedback, self-diagnosis, anthropic, coding-agent]
 sources:
   - raw/articles/刚刚claude-code又进化了替用户起草反馈报告
 confidence: 0.8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Claude Code 自动反馈报告功能：AI Agent 的自我诊断与改进机制

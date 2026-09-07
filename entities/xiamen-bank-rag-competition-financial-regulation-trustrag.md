@@ -3,7 +3,7 @@ title: "怎么短平快地把RAG做好：厦门国际银行数创金融杯RAG初
 authors:
   - 致Great
 created: 2026-07-05
-updated: 2026-08-19
+updated: 2026-09-07
 source: wechat
 url:
 type: entity
@@ -14,6 +14,9 @@ review_stars: 4
 provenance_state: extracted
 sources:
   - raw/articles/xiamen-bank-rag-competition-financial-regulation-trustrag
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 摘要

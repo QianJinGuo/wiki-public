@@ -9,7 +9,9 @@ sources:
   - raw/articles/harness-engineeringai-能在真正出事会炸的后端系统里写代码吗
 review_value: 9
 review_confidence: 7
-
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 [[raw/articles/harness-engineeringai-能在真正出事会炸的后端系统里写代码吗]] ^[raw/articles/harness-engineeringai-能在真正出事会炸的后端系统里写代码吗.md]
 

@@ -9,10 +9,13 @@ review_confidence: 9
 review_recommendation: strong
 date: 2026-05-13
 created: 2026-05-13
-updated: 2026-08-29
+updated: 2026-09-07
 tags: [ai-gateway, mcp-gateway, ai-security, agentic-ai, tool-governance, model-routing]
 provenance_state: synthesized
 sources: [raw/articles/ai-gateways-vs-mcp-gateways-what-security-teams-need-to-know]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 > -> [[raw/articles/ai-gateways-vs-mcp-gateways-what-security-teams-need-to-know|原文存档]] ^[raw/articles/ai-gateways-vs-mcp-gateways-what-security-teams-need-to-know.md]
 

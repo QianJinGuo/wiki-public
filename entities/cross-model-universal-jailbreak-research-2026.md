@@ -1,11 +1,14 @@
 ---
 title: "跨模型通用越狱（cross-model universal jailbreak）研究"
 created: 2026-09-05
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [ai-safety, jailbreak, red-team, security, chain-of-thought, model-safety]
 sources: [raw/articles/cross-model-universal-jailbreak-research-2026]
 confidence: 0.75
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 跨模型通用越狱（cross-model universal jailbreak）研究

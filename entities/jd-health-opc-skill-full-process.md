@@ -1,7 +1,7 @@
 ---
 title: "京东健康 OPC 团队产品全流程 Skill 探索"
 created: 2026-07-04
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [jd, health, opc, skill, agent, product-flow, engineering-practice, product-management, ai-coding]
 sources: [raw/articles/jd-health-opc-skill-full-process]
@@ -10,6 +10,9 @@ review_confidence: 8
 confidence: 0.8
 provenance_state: extracted
 related: []
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 京东健康 OPC 团队产品全流程 Skill 探索

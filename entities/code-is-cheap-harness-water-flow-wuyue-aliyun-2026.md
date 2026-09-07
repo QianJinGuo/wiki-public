@@ -3,13 +3,16 @@ title: "Code is cheap: Harness 方法论——水流理论、最小混沌单元�
 type: entity
 tags: [harness-engineering, ai-native, aliyun, prompt, context-management, spec-driven, slop, best-practice-slop, anti-slop, water-flow-theory, minimal-chaos-unit, new-chat, context-rot, token-economy]
 created: 2026-07-03
-updated: 2026-07-03
+updated: 2026-09-07
 review_value: 9
 review_confidence: 8
 review_recommendation: strong
 provenance_state: extracted
 related: [harness-engineering, harness-engineering-alibaba-java-case-study, agent-harness-architecture-design-production-guide, harness-engineering-paradigm-comprehensive-2026]
 sources: [raw/articles/code-is-cheap-ai-native-harness-wuyue-aliyun-2026]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Code is cheap: Harness 方法论——水流理论、最小混沌单元与反 slop

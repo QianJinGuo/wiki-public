@@ -4,7 +4,7 @@ description: "Bedrock IDP architecture combining on-demand SQS+Lambda inference 
 source: "[[raw/articles/extract-data-with-on-demand-and-batch-pipelines-dynamically]]"
 sources: [raw/articles/extract-data-with-on-demand-and-batch-pipelines-dynamically]
 created: 2026-06-12
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [aws, bedrock, document-processing, agent, prompt-management, serverless, idp, intelligent-document-processing]
 confidence: 0.78
@@ -14,6 +14,9 @@ review_confidence: 6
 review_recommendation: worth-reading
 review_stars: 4
 score_validated: 2026-09-05
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # AWS Bedrock Dynamic Document Extraction Pipeline

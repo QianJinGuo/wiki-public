@@ -8,6 +8,9 @@ rating: v8c8
 sources:
   - raw/articles/gpt-56-的推理强度怎么选从4家国产模型的训练路线到一套agent调度方法
 confidence: 0.75
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # GPT-5.6 的推理强度怎么选：从4家国产模型的训练路线到一套Agent调度方法

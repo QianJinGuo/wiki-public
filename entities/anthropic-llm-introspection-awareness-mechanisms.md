@@ -10,8 +10,11 @@ url:
 review_value: 9
 review_confidence: 9
 review_stars: 5
-updated: 2026-09-05
+updated: 2026-09-07
 sources: [raw/articles/anthropic-llm-introspection-awareness-mechanisms]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 ## 核心摘要
 Anthropic + MIT 联合研究，首次从机械可解释性角度系统揭示 LLM「内省意识」的运作机制：通过 steering vector 注入实验发现，LLM 能检测到自己被操控，这并非预训练产物，而是 DPO 后训练阶段涌现的能力。   ^[raw/articles/anthropic-llm-introspection-awareness-mechanisms.md]

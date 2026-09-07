@@ -4,11 +4,14 @@ title: "Openclaw Multi Agent Team Practice V2"
 type: entity
 tags: [openclaw, multi-agent, agent-harness, workflow, agent-architecture]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 8
 review_confidence: 8
 sources: [raw/articles/龙虾装上了可以用来干啥分享下我的-openclaw-多智能体团队搭建经验-v2]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 核心观点

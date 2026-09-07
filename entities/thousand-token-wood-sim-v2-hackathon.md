@@ -4,7 +4,7 @@ title: "Thousand Token Wood v2: Multi-Model Heterogeneous Agent Council"
 description: "Lester Leong Build Small Hackathon v2: 4 labs' 小模型 (gpt-oss-20b + MiniCPM3-4B + Nemotron-Mini-4B + Qwen 0.5B fine-tune) 组成 council 共启金融市场游戏，Patron 玩家操作内幕信息 / 借贷 / 联盟，含 heterogeneity-as-product / info firewall / bounded memory 三大工程原则"
 type: entity
 created: 2026-06-09
-updated: 2026-09-05
+updated: 2026-09-07
 tags: [multi-agent, small-models, hackathon, heterogeneous-models, agent-economy, simulation, vllm, gpt-oss, minicpm, nemotron, qwen, multi-lab]
 source: [[raw/articles/thousand-token-wood-sim-v2-hackathon]]
 confidence: 0.82
@@ -13,6 +13,9 @@ review_confidence: 7
 review_recommendation: worth-reading
 review_stars: 3
 sources: [raw/articles/thousand-token-wood-sim-v2-hackathon]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Thousand Token Wood v2: Multi-Model Heterogeneous Agent Council

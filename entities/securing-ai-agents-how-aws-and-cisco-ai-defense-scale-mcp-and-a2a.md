@@ -1,13 +1,16 @@
 ---
 title: "Securing AI Agents: AWS × Cisco AI Defense 给 MCP / A2A 加上企业级护栏"
 created: 2026-06-11
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [mcp, a2a, aws, cisco, agent-security, enterprise-infrastructure, protocol, ai-registry, supply-chain, compliance]
 sources: [raw/articles/securing-ai-agents-how-aws-and-cisco-ai-defense-scale-mcp-and-a2a]
 provenance_state: raw-linked
 review_value: 7
 confidence: 0.8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Securing AI Agents: AWS × Cisco AI Defense 给 MCP / A2A 加上企业级护栏

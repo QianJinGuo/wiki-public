@@ -1,11 +1,14 @@
 ---
 title: "TrAct：视觉轨迹作为机器人控制与世界模型之间的共同语言（李飞飞团队）"
 created: 2026-08-28
-updated: 2026-08-28
+updated: 2026-09-07
 type: entity
 tags: [world-model, robotics, embodied-ai, visual-tracks, fei-fei-li, stanford, video-model]
 sources: [raw/articles/feifei-li-tract-visual-tracks-robot-world-model]
 confidence: 0.72
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # TrAct：视觉轨迹作为机器人控制与世界模型之间的共同语言（李飞飞团队）

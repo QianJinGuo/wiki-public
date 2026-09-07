@@ -2,7 +2,7 @@
 
 title: "不用人类手写训练框架了！AI自己写代码，训出1B端侧「小钢炮」"
 created: 2026-05-26
-updated: 2026-07-31
+updated: 2026-09-07
 type: entity
 tags: [minicpm, forgetrain, edge-agent, openbmb, 面壁, 端侧模型, ai-train]
 source: [[raw/articles/minicpm5-1b-forgetrain-machine-heart]]
@@ -12,6 +12,9 @@ review_confidence: 8
 review_recommendation: strong
 sources:
   - raw/articles/minicpm5-1b-forgetrain-machine-heart
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 不用人类手写训练框架了！AI自己写代码，训出1B端侧「小钢炮」

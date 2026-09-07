@@ -2,7 +2,7 @@
 title: "How Semgrep Cut Taint Analysis Time by 75%"
 description: "How Semgrep Cut Taint Analysis Time by 75% — technical deep-dive"
 created: 2026-06-18
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [security, static-analysis, semgrep, engineering, ai]
 source: [[raw/articles/how-semgrep-cut-taint-analysis-time-by-75]]
@@ -13,6 +13,9 @@ review_confidence: 9
 review_recommendation: strong
 review_stars: 4
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # How Semgrep Cut Taint Analysis Time by 75%

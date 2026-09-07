@@ -4,11 +4,14 @@ title: "Claude Code Openclaw Memory Comparison"
 type: entity
 tags: [agent, anthropic, claude-code, openclaw, memory-system, llm-routing, vector-search, sqlite-vec, context-management, autonomous-agent, local-first, enterprise-agent]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 sources: [raw/articles/claude-code-openclaw-memory-comparison]
 provenance_state: extracted
 review_value: 9
 review_confidence: 9
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 概述

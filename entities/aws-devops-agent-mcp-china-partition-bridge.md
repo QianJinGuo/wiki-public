@@ -4,7 +4,7 @@ title: AWS DevOps Agent 接入 AWS 中国区系列：Partition 隔离、多账�
 type: entity
 tags: [aws, devops, mcp, china, aws-cn, partition]
 created: 2026-05-21
-updated: 2026-06-23
+updated: 2026-09-07
 review_value: 8
 sources:
   - raw/articles/aws-devops-agent-mcp-china-partition-bridge
@@ -12,6 +12,9 @@ sources:
 review_confidence: 9
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 核心要点

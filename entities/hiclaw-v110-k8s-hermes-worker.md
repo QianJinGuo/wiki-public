@@ -3,13 +3,16 @@
 title: "HiClaw v1.1.0 — Kubernetes 集群部署与 Hermes Worker 运行时"
 type: entity
 created: 2026-05-09
-updated: 2026-08-29
+updated: 2026-09-07
 tags: [hiclaw, openclaw, kubernetes, k8s, hermes-worker, agent-harness, helm, crd, multi-agent, controller-reconciler, matrix, higress]
 review_value: 8
 review_confidence: 7
 sources:
   - raw/articles/hiclaw-v110-k8s-hermes-worker
 source_url:
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 核心变化

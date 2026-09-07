@@ -1,7 +1,7 @@
 ---
 title: "给野马套上缰绳：Agent Harness 工程实践 — 从范式理论到钉钉AI招聘的真实落地"
 created: 2026-07-01
-updated: 2026-07-29
+updated: 2026-09-07
 type: entity
 tags: [agent-harness, dingtalk, recruitment, alicloud, production, engineering-paradigm]
 sources:
@@ -9,6 +9,9 @@ sources:
 review_value: 8
 review_confidence: 8
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > 原文归档：[[raw/articles/agent-harness-dingtalk-recruitment-alicloud-2026-06-30|原文归档]] ^[raw/articles/agent-harness-dingtalk-recruitment-alicloud-2026-06-30.md]

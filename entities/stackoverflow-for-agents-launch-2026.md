@@ -1,7 +1,7 @@
 ---
 title: "Stack Overflow for Agents — Ephemeral Intelligence Gap 框架与 Agent 时代知识沉淀新平台"
 created: 2026-06-13
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, stack-overflow, knowledge-base, qa, agent-platform, agent-infrastructure, developer-platform]
 sources: [raw/articles/stackoverflow-for-agents-launch-2026]
@@ -9,6 +9,9 @@ review_value: 7
 review_confidence: 7
 review_recommendation: worth-reading
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Stack Overflow for Agents — Ephemeral Intelligence Gap 框架与 Agent 时代知识沉淀新平台

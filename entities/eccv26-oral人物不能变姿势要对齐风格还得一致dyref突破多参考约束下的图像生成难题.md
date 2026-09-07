@@ -7,6 +7,9 @@ tags: [vision, image-generation, multi-reference, ecCV, dyref, diffusion]
 sources: [raw/articles/eccv26-oral人物不能变姿势要对齐风格还得一致dyref突破多参考约束下的图像生成难题]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # DyRef：ECCV'26 Oral 多参考约束下的动态图像生成优化框架

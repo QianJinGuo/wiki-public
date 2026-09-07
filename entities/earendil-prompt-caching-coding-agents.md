@@ -1,11 +1,14 @@
 ---
 title: "Prompt Caching Engineering — Earendil Coding Agent Architecture"
 created: 2026-07-28
-updated: 2026-07-28
+updated: 2026-09-07
 type: entity
 tags: [agent, llm, prompt-caching, kv-cache, inference-optimization, coding-agent, earendil, pi, agent-architecture]
 sources: [raw/articles/earendil-prompt-caching-coding-agents]
 confidence: 0.75
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Prompt Caching Engineering — Coding Agent System Architecture

@@ -3,7 +3,7 @@ title: "Claude Managed Agents 新更新\"专属云\"模式：把Agent的手放�
 type: entity
 tags: [agent, anthropic, claude, enterprise, self-hosted-sandbox, mcp-tunnels, hybrid-control-plane, agent-architecture, mcp, sandbox, enterprise-integration]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 8
 review_confidence: 9
 sources:
@@ -11,6 +11,9 @@ sources:
 wikilinks: []
 provenance:
   - source: mp.weixin.qq.com
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
     author: VibeCoder
     date: 2026-05-19

@@ -8,13 +8,16 @@ platform: wechat
 author: 阿元
 publish_date: 2026-06-03
 created: 2026-06-03
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 9
 review_confidence: 8
 review_recommendation: strong
 tags: [agent-memory, memory-evaluation, benchmark, MUSE, LOCOMO, MemoryAgentBench, LONGMEMEVAL, MemBench, THEANINE, RMM, M3-Agent, Mem0, taobao, survey, long-term-memory, multi-modal, graph-memory]
 sources:
   - raw/articles/agent-memory-evaluation-landscape-taobao-survey
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 核心定位

@@ -6,6 +6,9 @@ type: entity
 tags: [vision, multimodal, inference, research, llm]
 sources: [raw/articles/如何判断ai视频真假综述动态可溯源可解释的检测体系-acl26]
 confidence: 0.7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 如何判断AI视频真假？综述动态、可溯源、可解释的检测体系 | ACL26

@@ -4,10 +4,13 @@ title: "Explicit vs. Implicit in the Age of Intelligences — Le secrétaire de 
 type: entity
 tags: [agent, architecture, rag]
 created: 2026-05-21
-updated: 2026-05-21
+updated: 2026-09-07
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/lesecretairedefernand-co-en-tech-explicit-vs-implicit-in-the-age-of-intelligence]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Explicit vs. Implicit in the Age of Intelligences — Le secretary de Fernand

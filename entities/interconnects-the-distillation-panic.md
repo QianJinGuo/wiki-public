@@ -2,13 +2,16 @@
 title: "The distillation panic"
 type: entity
 created: '2026-06-07'
-updated: 2026-08-28
+updated: 2026-09-07
 review_confidence: 8
 review_recommendation: strong
 review_value: 8
 tags: [interconnects-the-distillation-panic]
 provenance_state: inferred
 sources: [raw/articles/the-distillation-panic]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # The distillation panic

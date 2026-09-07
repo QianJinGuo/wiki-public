@@ -1,13 +1,16 @@
 ---
 title: DECO — 腾讯数据工程 Agent Hook 护栏层实践
 created: 2026-07-16
-updated: 2026-07-16
+updated: 2026-09-07
 type: entity
 tags: [agent, hook, governance, harness, tencent, data-engineering, hitl, guardrail]
 status: verified
 confidence: 0.95
 provenance_state: extracted
 sources: [raw/articles/deco-agent-hook-governance-tencent-2026-07-16]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > 腾讯 DECO（Data Engineering Agent 引擎）的护栏层实践，用 Agent 框架的 Hook 切面在代码层确定性兜底三类问题：长文本偷懒、越权操作、上下文失忆。^[raw/articles/deco-agent-hook-governance-tencent-2026-07-16.md]

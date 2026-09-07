@@ -2,7 +2,7 @@
 
 title: "AI and Liability"
 created: 2026-06-26
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [article]
 source: "[[raw/articles/06-ai-and-liability-html]]"
@@ -12,6 +12,9 @@ review_value: 8
 review_confidence: 9
 review_stars: 4
 review_recommendation: strong
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # AI and Liability

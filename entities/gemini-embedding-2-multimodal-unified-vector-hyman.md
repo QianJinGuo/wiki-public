@@ -8,11 +8,14 @@ review_recommendation: strong
 review_stars: 4
 date: 2026-05-28
 created: 2026-05-28
-updated: 2026-08-29
+updated: 2026-09-07
 tags: [gemini, embedding, multimodal, vector-search, rag, text-image-audio-video, google, deepmind, model-soup]
 type: entity
 provenance_state: synthesized
 sources: [raw/articles/gemini-embedding-2-multimodal-unified-vector-hyman]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > -> [[raw/articles/gemini-embedding-2-multimodal-unified-vector-hyman|原文存档]]

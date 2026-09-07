@@ -1,7 +1,7 @@
 ---
 title: "Codex 五层架构：记忆/知识/护栏/委派/分发"
 created: 2026-07-02
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [codex, architecture, agents-md, skills, hooks, subagents, plugins, team-config]
 sources: [raw/articles/codex-5-layer-architecture-xiaohongshu]
@@ -12,6 +12,9 @@ provenance_state: extracted
 related:
   - entities/codex-agentsmd-project-instructions-rookie
   - entities/gufabiancheng-spec-for-complex-tasks-cc-codex
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Codex 五层架构：记忆/知识/护栏/委派/分发

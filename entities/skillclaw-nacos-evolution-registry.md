@@ -1,13 +1,16 @@
 ---
 title: "SkillClaw × Nacos：从一次 Agent 会话到可治理 Skill Registry 的自动演化闭环"
 created: 2026-06-10
-updated: 2026-08-01
+updated: 2026-09-07
 tags: [agent, llm, memory, mlops, prompt, security, skill, tool-use, workflow]
 review_value: 7
 review_confidence: 7
 type: entity
 sources: [raw/articles/skillclaw-nacos-evolution-registry]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # SkillClaw × Nacos：从一次 Agent 会话到可治理 Skill Registry 的自动演化闭环

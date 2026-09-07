@@ -1,12 +1,15 @@
 ---
 title: Skill Hell：Agent Skill 工程方法论
 created: 2026-07-07
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, skill, engineering, harness, loop, methodology]
 sources: [raw/articles/raw-skill-hell-agent-skill-writing-ruofei]
 confidence: 0.85
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > 本文基于 Matt Pocock 的 "writing-great-skills" 与 AI Engineer World's Fair 2026 Keynote，由公众号"架构师"（若飞）深度解读，系统梳理了 Agent Skill 从设计、触发、执行、维护到安全审计的工程方法论。^[raw/articles/raw-skill-hell-agent-skill-writing-ruofei.md]

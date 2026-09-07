@@ -3,14 +3,16 @@
 
 title: "CLAUDE.md"
 created: 2026-05-07
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [claude-code, anthropic, agent, harness-engineering, llm]
 sources:
   - raw/articles/claude-code-source-leak-lifecycle-analysis
 review_value: 9
 review_confidence: 7
-
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 [[raw/articles/claude-code-source-leak-lifecycle-analysis]] ^[raw/articles/claude-code-source-leak-lifecycle-analysis.md]

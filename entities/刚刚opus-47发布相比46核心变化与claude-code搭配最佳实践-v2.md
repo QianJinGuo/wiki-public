@@ -8,6 +8,10 @@ sources: [raw/articles/刚刚opus-47发布相比46核心变化与claude-code搭�
 provenance_state: raw-linked
 review_value: 7
 confidence: 0.8
+reviewed: 2026-09-07
+review_verdict: hub-retained
+review_category: dup
+review_note: "judged dup-0.8: Opus4.7较短版本; retained as hub (in-links>=20); MOC rewrite candidate"
 ---
 
 # Opus 4.7 发布：相比 4.6 核心变化与 Claude Code 搭配最佳实践

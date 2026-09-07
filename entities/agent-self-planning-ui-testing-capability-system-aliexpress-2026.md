@@ -5,10 +5,13 @@ source: AliExpress技术 (2026-08-10)
 score: v=8, c=9, v×c=72
 type: entity
 created: 2026-08-10
-updated: 2026-08-10
+updated: 2026-09-07
 tags: [agent-testing, ui-testing, ai-false-pass, test-automation, environment-orchestration, capability-probe, workflow-vs-agent]
 sources:
   - raw/articles/agent-self-planning-ui-testing-aliexpress-2026
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Agent 自规划执行能力体系（AliExpress UI 测试）

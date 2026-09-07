@@ -1,7 +1,7 @@
 ---
 title: "Higress Qwen3Guard Wasm 插件：把 AI 内容安全做进网关数据面"
 created: 2026-08-22
-updated: 2026-08-22
+updated: 2026-09-07
 type: entity
 tags: [higress, qwen3guard, ai-gateway, content-safety, wasm, envoy, model-safety, aliyun, guardrails, streaming, fail-open, qwen]
 sources: [raw/articles/higress-qwen3guard-wasm-plugin-gateway-content-safety-aliyun-2026]
@@ -9,6 +9,9 @@ review_value: 8
 review_confidence: 9
 review_recommendation: strong
 review_stars: 5
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 概述

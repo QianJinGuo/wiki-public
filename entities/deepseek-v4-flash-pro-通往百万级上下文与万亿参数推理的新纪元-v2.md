@@ -9,6 +9,9 @@ sources: [raw/articles/deepseek-v4-flash-pro-通往百万级上下文与万亿�
 provenance_state: raw-linked
 review_value: 7
 confidence: 0.8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # DeepSeek V4 Flash & Pro: Million-Token Context and Trillion-Parameter Inference

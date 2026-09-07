@@ -1,11 +1,14 @@
 ---
 title: "DataFlow-Harness — 北大 Code Agent 数据处理管线 Harness"
 created: 2026-07-27
-updated: 2026-07-27
+updated: 2026-09-07
 type: entity
 tags: [harness, data-pipeline, code-agent, skill, evaluation, open-source, pku]
 sources: [raw/articles/dataflow-harness-pku-code-agent-data-pipeline-arxiv-2607-16617]
 confidence: 0.75
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # DataFlow-Harness — 北大 Code Agent 数据处理管线 Harness

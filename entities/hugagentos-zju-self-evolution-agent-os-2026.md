@@ -1,12 +1,15 @@
 ---
 title: "HugAgentOS — 浙大三引擎一体自进化 Agent 操作系统"
 created: 2026-08-13
-updated: 2026-08-14
+updated: 2026-09-07
 type: entity
 tags: [zhejiang-university, agent-os, self-evolution, open-source, attribution, replay, rollback]
 sources: [raw/articles/浙大开源hugagentos三引擎一体自进化每步可归因回放回滚]
 confidence: 0.8
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # HugAgentOS — 浙大三引擎一体自进化 Agent 操作系统

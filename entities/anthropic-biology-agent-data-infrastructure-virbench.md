@@ -4,7 +4,7 @@ title: "Anthropic：生物学Agent的瓶颈不在模型，而在数据基础设�
 type: entity
 tags: [agent, biology, anthropic, virbench, gget-virus, data-infrastructure, ncbi, benchmark, determinism, karpathy, context-engine, viral-sequence-retrieval, scientific-agent]
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 9
 review_confidence: 9
 provenance_state: deepened
@@ -13,6 +13,9 @@ related:
   - entities/harness-engineering
   - entities/agent-harness-context-management-working-set
   - entities/kimi-work-beta-foundation-model-company-advantage
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Anthropic：生物学Agent的瓶颈不在模型，而在数据基础设施

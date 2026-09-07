@@ -11,6 +11,9 @@ review_recommendation: worth-reading
 created: 2026-05-15
 updated: 2026-06-15
 sources: [raw/articles/ralph-loop-不够用长时间-agent-还缺这-3-件事]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 ## 核心要点
 - **Ralph Loop本质**：Codex /goal底层采用重复提示循环+SQLite跟踪，通过"Continue working toward the active thread goal"反复提示同一目标 

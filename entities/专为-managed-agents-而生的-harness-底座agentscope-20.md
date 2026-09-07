@@ -7,6 +7,9 @@ tags: [agent, harness, agentscope, managed-agents, brain-hands, control-plane, d
 sources: [raw/articles/专为-managed-agents-而生的-harness-底座agentscope-20]
 confidence: 0.72
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 专为 Managed Agents 而生的 Harness 底座：AgentScope 2.0

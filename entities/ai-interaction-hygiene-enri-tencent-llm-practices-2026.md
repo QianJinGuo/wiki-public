@@ -1,13 +1,16 @@
 ---
 title: "你讲卫生吗？— AI 交互卫生的七条实战经验"
 created: 2026-07-06
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, ai, llm, prompt-engineering, llm-interaction, cost-optimization]
 source_url: "https://mp.weixin.qq.com/s/1dUfjAM1sr-Ja_Ad3LPT9g"
 confidence: 0.75
 provenance_state: extracted
 sources: [raw/articles/ai-interaction-hygiene-enri-tencent-llm-practices-2026]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 你讲卫生吗？— AI 交互卫生的七条实战经验

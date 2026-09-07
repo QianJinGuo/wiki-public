@@ -2,7 +2,7 @@
 title: "Netflix Druid 区间感知缓存：指数 TTL + 分桶查询去重"
 description: "Netflix 通过拦截 Druid Router 请求，将滚动窗口查询结果按时间粒度分桶存储，以指数递增 TTL（5s~1h）换取约 5 秒最终一致性的同时削减 33% Druid 查询量"
 created: 2026-06-07
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [netflix, druid, caching, real-time-analytics, infrastructure, distributed-systems]
 source: [[raw/articles/netflix-druid-interval-aware-caching]]
@@ -12,6 +12,9 @@ review_value: 8
 review_confidence: 9
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Netflix Druid 区间感知缓存：指数 TTL + 分桶查询去重

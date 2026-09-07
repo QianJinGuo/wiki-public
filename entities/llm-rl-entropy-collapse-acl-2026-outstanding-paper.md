@@ -2,12 +2,15 @@
 
 title: "大模型RL为何越训越窄？ACL 2026杰出论文揭秘熵坍缩真相"
 created: 2026-07-24
-updated: 2026-07-25
+updated: 2026-09-07
 type: entity
 tags: [reinforcement-learning, llm, entropy, collapse, acl-2026, training-dynamics, rlvr]
 confidence: 0.7
 provenance_state: extracted
 sources: [raw/articles/llm-rl-entropy-collapse-acl-2026-outstanding-paper]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 大模型RL为何越训越窄？ACL 2026杰出论文揭秘熵坍缩真相

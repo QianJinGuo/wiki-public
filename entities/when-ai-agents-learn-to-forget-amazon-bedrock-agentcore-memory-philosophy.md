@@ -2,7 +2,7 @@
 
 title: '当 AI Agent 学会"忘记"：Amazon Bedrock AgentCore Memory 的记忆哲学" | 亚马逊AWS官方博客'
 created: 2026-05-14
-updated: 2026-09-05
+updated: 2026-09-07
 tags: [aws-china-blog, bedrock-agentcore]
 sources: [raw/articles/when-ai-agents-learn-to-forget-amazon-bedrock-agentcore-memory-philosophy]
 review_value: 8
@@ -10,6 +10,9 @@ review_confidence: 8
 review_recommendation: strong
 publish_date: 2026-03-04
 type: entity
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 概述

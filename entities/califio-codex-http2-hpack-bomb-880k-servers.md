@@ -1,13 +1,16 @@
 ---
 title: "Codex Discovered a Hidden HTTP/2 Bomb"
 created: 2026-06-10
-updated: 2026-07-31
+updated: 2026-09-07
 tags: [code, data, game, memory, observability, open-source, rl, search, security]
 review_value: 7
 review_confidence: 7
 type: entity
 sources:
   - raw/articles/califio-codex-http2-hpack-bomb-880k-servers
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Codex Discovered a Hidden HTTP/2 Bomb

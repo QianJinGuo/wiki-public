@@ -3,11 +3,14 @@ title: "RubyGems 暂停新用户注册：DDoS + 恶意包供应链攻击事件"
 type: entity
 tags: [rubygems, security, open-source, supply-chain, ddos]
 created: 2026-05-15
-updated: 2026-07-27
+updated: 2026-09-07
 review_value: 7
 review_confidence: 8
 review_recommendation: strong
 sources: [raw/articles/rubygems-temp-disable-registrations]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # RubyGems 暂停新用户注册：DDoS + 恶意包供应链攻击事件

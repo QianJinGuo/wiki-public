@@ -1,11 +1,14 @@
 ---
 title: "Macaron-V1：基于 GLM-5.2 的混合 LoRA 个人智能体模型"
 created: 2026-07-22
-updated: 2026-07-22
+updated: 2026-09-07
 type: entity
 tags: [model, open-source, llm, chinese-ai, lora, agent, mind-lab, glm-5.2]
 sources: [raw/articles/glm-5-2-mixed-lora-200m-context]
 confidence: 0.75
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Macaron-V1：基于 GLM-5.2 的混合 LoRA 个人智能体模型

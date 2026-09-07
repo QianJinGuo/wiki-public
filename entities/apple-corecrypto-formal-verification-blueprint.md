@@ -1,7 +1,7 @@
 ---
 title: "Apple corecrypto formal verification blueprint — post-quantum ML-KEM/ML-DSA in iMessage"
 created: 2026-06-08
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [security, cryptography, formal-verification, post-quantum, apple, ml-kem, ml-dsa, side-channel, corecrypto, sear]
 sources: [raw/articles/apple-corecrypto-formal-verification-blueprint]
@@ -11,6 +11,9 @@ review_confidence: 8
 review_stars: 4
 review_recommendation: strong
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Apple corecrypto formal verification blueprint — post-quantum ML-KEM/ML-DSA in iMessage

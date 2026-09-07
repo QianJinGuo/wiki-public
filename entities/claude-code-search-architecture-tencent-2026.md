@@ -4,10 +4,13 @@ title: "原始文章存档"
 type: entity
 tags: [agent, architecture, claude, llm, prompt, rag, tool]
 created: 2026-05-21
-updated: 2026-06-19
+updated: 2026-09-07
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/claude-code-search-architecture-tencent-2026]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 原始文章存档

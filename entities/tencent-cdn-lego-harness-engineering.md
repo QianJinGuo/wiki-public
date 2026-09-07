@@ -4,10 +4,13 @@ title: "Harness Engineering：AI 能在真正\"出事会炸\"的后端系统里�
 type: entity
 tags: [coding, harness]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/tencent-cdn-lego-harness-engineering]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Harness Engineering：AI 能在真正"出事会炸"的后端系统里写代码吗？

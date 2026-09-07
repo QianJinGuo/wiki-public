@@ -2,7 +2,7 @@
 
 title: "Build a Healthcare Appointment Agent with Amazon Nova 2 Sonic"
 created: 2026-06-25
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [aws, nova-sonic, voice-agent, healthcare, bedrock-agentcore, strands-sdk, agent, speech-to-speech]
 source: "[[raw/articles/build-a-healthcare-appointment-agent-with-amazon-nova-2-soni]]"
@@ -12,6 +12,9 @@ review_value: 9
 review_confidence: 9
 review_recommendation: strong
 review_stars: 5
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Build a Healthcare Appointment Agent with Amazon Nova 2 Sonic

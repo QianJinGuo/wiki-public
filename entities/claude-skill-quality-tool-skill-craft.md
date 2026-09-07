@@ -2,13 +2,16 @@
 
 title: "Skill Craft：Claude Skill 质量工程工具"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-07
 tags: [agent, claude, skill, quality-engineering, evaluation, prompt-engineering, tool-use]
 review_value: 7
 review_confidence: 7
 type: entity
 sources:
   - raw/articles/claude-skill-quality-tool-skill-craft
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Skill Craft：Claude Skill 质量工程工具

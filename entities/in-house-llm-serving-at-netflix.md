@@ -1,12 +1,15 @@
 ---
 title: "Netflix In-House LLM Serving Platform"
 created: 2026-07-18
-updated: 2026-07-18
+updated: 2026-09-07
 type: entity
 tags: [netflix, llm, inference, serving, vllm, triton, production, gpu, deployment, constrained-decoding]
 sources: [raw/articles/in-house-llm-serving-at-netflix]
 provenance_state: extracted
 confidence: 0.85
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > → [[raw/articles/in-house-llm-serving-at-netflix|原文存档]]

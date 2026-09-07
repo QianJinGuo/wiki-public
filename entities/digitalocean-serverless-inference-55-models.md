@@ -3,12 +3,15 @@ title: "55+ models, every modality. One API key, one bill."
 type: entity
 tags: [digitalocean,serverless,inference,ai-cloud]
 created: 2026-05-16
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 7
 sources: [raw/articles/digitalocean-serverless-inference-55-models]
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 3
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 ## 核心要点
 - Newsletter 技术洞察

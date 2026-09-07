@@ -2,7 +2,7 @@
 title: "SQL NOT IN 与 NULL 的经典陷阱：De Morgan 定律到解析器行为"
 description: "深入剖析 NOT IN 与 NULL 交互导致空结果集的陷阱，从 SQL 标准定义、De Morgan 定律到 Postgres 解析器行为的层层递进分析"
 created: 2026-06-18
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [sql, database, postgresql, null-handling, debugging, technical-deep-dive]
 source: "[[raw/articles/sql-not-in-null-trap-demorgan-parser]]"
@@ -13,6 +13,9 @@ review_confidence: 9
 review_stars: 4
 review_recommendation: strong
 sources:
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # SQL NOT IN 与 NULL 的经典陷阱：De Morgan 定律到解析器行为

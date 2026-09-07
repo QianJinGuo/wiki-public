@@ -8,6 +8,9 @@ tags: [wechat, ai]
 rating: v8c8
 sources:
   - raw/articles/长链路手机ai训练总崩盘vivo全新半在线rl仅15k轨迹稳定收敛
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 长链路手机AI训练总崩盘？vivo全新半在线RL，仅15k轨迹稳定收敛

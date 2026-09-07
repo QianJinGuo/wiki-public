@@ -5,12 +5,15 @@ source: AliExpress技术 (2026-08-21)
 score: v=8, c=7, v×c=56
 type: entity
 created: 2026-08-21
-updated: 2026-08-21
+updated: 2026-09-07
 tags: [agent-skills, continuous-learning, instinct, homunculus, tool-call-observation, self-evolution, hook, muscle-memory, ecc, memory, context-injection]
 sources:
   - raw/articles/ecc-continuous-learning-homunculus-observation-instinct-aliexpress-2026-08-21
 confidence: high
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # ECC Continuous Learning：从工具调用轨迹到本能沉淀的持续学习闭环

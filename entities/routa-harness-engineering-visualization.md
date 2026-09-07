@@ -3,14 +3,16 @@
 
 title: "Harness 工程可视化：Vibe Coding 中重建工程可控性"
 created: 2026-05-07
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [harness-engineering, engineering, ai]
 sources:
   - raw/articles/routa-harness-engineering-visualization
 review_value: 8
 review_confidence: 7
-
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Harness 工程可视化：Vibe Coding 中重建工程可控性

@@ -4,10 +4,14 @@ title: "Harness工程火遍硅谷，AgentCore今天交卷!"
 type: entity
 tags: [agent, api, browser, context, harness, openai, prompt]
 created: 2026-05-21
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/agentcore-managed-harness]
+reviewed: 2026-09-07
+review_verdict: hub-retained
+review_category: dup
+review_note: "judged dup-0.8: 与AgentCore条重复; retained as hub (in-links>=20); MOC rewrite candidate"
 ---
 
 # Harness工程火遍硅谷，AgentCore今天交卷!

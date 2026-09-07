@@ -2,7 +2,7 @@
 title: "OpenTelemetry eBPF Instrumentation (OBI) — 零代码全栈可观测性的内核级实现"
 description: "OpenTelemetry 官方维护的 OBI 项目（基于 eBPF）通过在内核和库函数层面零侵入拦截网络流量与 GPU 操作，自动识别 15+ 协议（含 OpenAI/Anthropic/Gemini/Qwen 四大 GenAI Provider），跨语言/跨运行时重建上下文传播（Go goroutine 父子链、Python asyncio Context 复用），通过 swarm 编排的 DAG + 带死锁探测的扇出队列 + 双 goroutine 对象池 ringbuf 转发器，把内核字节流变成符合 OpenTelemetry 标准的 trace 和 metrics。阿里云云监控 2.0 是其在生产落地的接入路径之一。"
 created: 2026-06-17
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [ebpf, observability, opentelemetry, aliyun, open-source, kernel-tracing, zero-code-instrumentation, go-runtime, python-asyncio, otel, gpu, cuda, distributed-tracing]
 sources: [raw/articles/open-telemetry-ebpf-instrumentation-obi-zero-code-observability-aliyun-2026]
@@ -11,6 +11,9 @@ review_confidence: 8
 review_recommendation: strong
 review_stars: 4
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # OpenTelemetry eBPF Instrumentation (OBI) — 零代码全栈可观测性的内核级实现

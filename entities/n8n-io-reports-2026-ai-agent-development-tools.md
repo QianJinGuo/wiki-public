@@ -1,7 +1,7 @@
 ---
 title: "Enterprise AI Agent Development Tools (n8n Report 2026)"
 created: 2026-06-25
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [n8n, agent, enterprise, tools, report, low-code, orchestration, ai-agent, security, mcp, a2a]
 source: "[[raw/articles/n8n-io-reports-2026-ai-agent-development-tools]]"
@@ -11,6 +11,9 @@ review_value: 7
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Enterprise AI Agent Development Tools (n8n Report 2026)

@@ -1,12 +1,15 @@
 ---
 title: "How we built an MCP bridge: AgentCore-hosted AI agent 访问本地 MCP 工具"
 created: 2026-08-06
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [mcp, mcp-bridge, websocket, native-messaging, agentcore, agent-architecture, remote-local]
 sources: [raw/articles/how-we-built-an-mcp-bridge-to-give-our-agentcore-hosted-ai-agent-access-to-local-mcp-tools]
 confidence: 0.8
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # How we built an MCP bridge: 云上 Agent 访问本地 MCP 工具的桥接架构

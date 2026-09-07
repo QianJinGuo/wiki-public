@@ -1,11 +1,14 @@
 ---
 title: "How we keep GPUs reliable across Databricks AI"
 created: 2026-07-02
-updated: 2026-07-04
+updated: 2026-09-07
 type: entity
 tags: [ai, newsletter, gpu, reliability, databricks, training, infrastructure, distributed-systems]
 sources: [raw/articles/how-we-keep-gpus-reliable-across-databricks-ai]
 confidence: 0.9
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # How we keep GPUs reliable across Databricks AI

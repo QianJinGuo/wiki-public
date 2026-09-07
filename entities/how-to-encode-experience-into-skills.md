@@ -4,13 +4,16 @@ type: entity
 title: "如何把经验装到Skills"
 tags: [agent-skill, skill-writing, case-study, saas, product-management]
 created: 2026-05-10
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 7
 review_confidence: 6
 review_recommendation: worth-reading
 review_stars: 3
 sources: [raw/articles/how-to-encode-experience-into-skills]
 score_validated: 2026-09-05
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 核心内容

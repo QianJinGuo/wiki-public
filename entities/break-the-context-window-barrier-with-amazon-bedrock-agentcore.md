@@ -4,10 +4,13 @@ title: Bedrock AgentCore RLM：突破上下文窗口限制
 type: entity
 tags: [bedrock, aws, agent, llm, context-window, rlm]
 created: 2026-05-22
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 9
 sources: [raw/articles/break-the-context-window-barrier-with-amazon-bedrock-agentcore]
 review_confidence: 9
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 核心要点

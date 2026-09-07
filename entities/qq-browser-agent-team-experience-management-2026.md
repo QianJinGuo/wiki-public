@@ -1,12 +1,15 @@
 ---
 title: "QQ 浏览器团队 Agent 经验管理 — 从个人记忆到团队语境"
 created: 2026-08-13
-updated: 2026-08-14
+updated: 2026-09-07
 type: entity
 tags: [tencent, agent, experience-management, team-context, memory, codebuddy, review, dedup]
 sources: [raw/articles/ai-coding的下一站不是更会写代码而是更懂团队]
 confidence: 0.85
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # QQ 浏览器团队 Agent 经验管理 — 从个人记忆到团队语境

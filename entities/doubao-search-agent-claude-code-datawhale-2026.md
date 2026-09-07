@@ -1,12 +1,15 @@
 ---
 title: "豆包搜索走出豆包：面向 Agent 的可信搜索与权威分级"
 created: 2026-07-28
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, search, doubao, tool-use, rag, information-retrieval]
 sources: [raw/articles/doubao-search-agent-claude-code-datawhale-2026, raw/articles/豆包搜索走出了豆包]
 provenance_state: extracted
 confidence: 0.75
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 豆包搜索走出豆包：面向 Agent 的可信搜索与权威分级

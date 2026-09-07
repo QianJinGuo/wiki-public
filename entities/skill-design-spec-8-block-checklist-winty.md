@@ -3,7 +3,7 @@
 title: "企业级 Skill 8 块最小骨架 + 8 条 checklist 设计规范"
 description: "winty 前端Q 企业级 Skill 设计规范：8 块最小骨架（frontmatter/When to use/Do not use when/Inputs/Steps/Verification/Failure handling/Pitfalls&Examples）+ 8 条 checklist 评判标准 + 完整 frontend-release-check 模板"
 created: 2026-06-02
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [design, skill, skill-design, skill-specification, skill-template, skill-hub, 8-块骨架, 8条checklist, hermes-agent, winty, enterprise-skill, agent-skill, when-to-use, verification, failure-handling, pitfalls]
 sources:
@@ -19,6 +19,9 @@ related:
   - entities/agent-skill-writing-guide
   - entities/agent-skill-writing-advanced
   - entities/agent-reliability-engineering-skillify-continuous-improvement
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 企业级 Skill 8 块最小骨架 + 8 条 checklist 设计规范

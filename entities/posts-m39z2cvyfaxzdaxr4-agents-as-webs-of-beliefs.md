@@ -2,7 +2,7 @@
 
 title: "Agents as Webs of Beliefs"
 created: 2026-06-29
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [agent, mlops, research]
 provenance_state: inferred
@@ -15,6 +15,9 @@ review_stars: 4
 review_recommendation: worth-reading
 confidence: 0.6
 score_validated: 2026-09-05
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Agents as Webs of Beliefs

@@ -4,11 +4,14 @@ title: "AWS Mlflow V310 Generative AI Development"
 type: entity
 tags: [aws, workflow]
 created: 2026-05-21
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 6
 review_confidence: 8
 sources: [raw/articles/aws-mlflow-v310-generative-ai-development]
 score_validated: 2026-09-05
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Streamlining generative AI development with MLflow v3.10 on Amazon SageMaker AI

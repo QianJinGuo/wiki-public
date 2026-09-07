@@ -8,11 +8,14 @@ review_recommendation: strong
 review_stars: 4
 date: 2026-06-09
 created: 2026-06-09
-updated: 2026-08-29
+updated: 2026-09-07
 tags: [slim, skill-lifecycle, agentic-rl, cuhk, arxiv-2605-10923, retain-retire-expand, leave-one-skill-out, alfworld, searchqa, qwen3-4b, dynamic-skill-management, external-vs-internal-skill, skill-rl, skill0, skillrl]
 type: entity
 provenance_state: synthesized
 sources: [raw/articles/cuhk-slim-skill-lifecycle-agentic-rl-arxiv-2605-10923]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > -> [[raw/articles/cuhk-slim-skill-lifecycle-agentic-rl-arxiv-2605-10923|原文存档]]

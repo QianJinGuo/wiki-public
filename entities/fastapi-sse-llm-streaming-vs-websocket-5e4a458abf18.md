@@ -4,11 +4,14 @@ title: "还在用WebSocket做LLM流式传输？FastAPI + SSE让你少踩一半�
 type: entity
 tags: [fastapi, sse, server-sent-events, websocket, llm-streaming, python, async, real-time-communication, redis-pubsub, production-best-practices]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 9
 review_confidence: 9
 sources: [raw/articles/fastapi-sse-llm-streaming-vs-websocket-5e4a458abf18]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 核心结论

@@ -1,12 +1,15 @@
 ---
 title: "工具型 Agent 分层评测：Outcome/Decision/Action/Reliability 四层 + 过程归因与发布门禁"
 created: 2026-09-04
-updated: 2026-09-04
+updated: 2026-09-07
 type: entity
 tags: [agent-evaluation, layered-evaluation, process-evaluation, trajectory-evaluation, hard-gate, root-cause-attribution, release-gating, tool-use-agent, aliexpress, validators]
 sources: [raw/articles/agent-evaluation-four-layer-process-gating-aliexpress-2026-09-04]
 confidence: 0.85
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 工具型 Agent 分层评测：Outcome/Decision/Action/Reliability 四层 + 过程归因与发布门禁

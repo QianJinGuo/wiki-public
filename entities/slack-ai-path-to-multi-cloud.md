@@ -1,11 +1,14 @@
 ---
 title: "Slack AI: The Path to Multi-Cloud"
 created: 2026-07-03
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [newsletter, ai, infrastructure, multi-cloud, llm, inference]
 sources: [raw/articles/slack-ai-path-to-multi-cloud]
 confidence: 0.7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Slack AI: The Path to Multi-Cloud

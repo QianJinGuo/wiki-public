@@ -4,10 +4,13 @@ title: "复旦北大 AHE：Agentic Harness Engineering 瓶颈分析"
 type: entity
 tags: [agent, coding, harness, memory, model, prompt, tool]
 created: 2026-05-21
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/fudan-peking-ahe-agentic-harness-engineering]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 1. 被忽视的「Harness Engineering」瓶颈

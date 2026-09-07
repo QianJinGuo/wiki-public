@@ -7,6 +7,9 @@ type: entity
 tags: ['harness', 'context', 'ai', 'inference', 'coding', 'agent']
 sources: [raw/articles/ai-创新实践架构师-agent系统化落地]
 confidence: 0.7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # AI 创新实践｜「架构师 Agent」系统化落地

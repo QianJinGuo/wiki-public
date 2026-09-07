@@ -2,7 +2,7 @@
 
 title: "The Unbearable Cheapness of Open Weight Models – James O'Claire"
 created: 2026-06-26
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [article]
 source: "[[raw/articles/25-the-unbearable-cheapness-of-open-weight-models]]"
@@ -12,6 +12,9 @@ review_value: 8
 review_confidence: 8
 review_stars: 4
 review_recommendation: worth-reading
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # The Unbearable Cheapness of Open Weight Models – James O'Claire

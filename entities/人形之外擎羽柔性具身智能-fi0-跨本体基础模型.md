@@ -7,6 +7,9 @@ tags: [具身智能, 机器人, embodiment, 柔性机器人, 跨本体泛化, wo
 sources: [raw/articles/人形之外擎羽把身体变成具身智能的新变量]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 人形之外：擎羽把“身体”变成具身智能的新变量

@@ -5,12 +5,15 @@ description: "Verizon Connect 如何在 AWS 上构建和扩展 Fleet Management 
 source: [[raw/articles/verizon-connect-agentic-ai-100k-users]]
 tags: [agent, ai-agent, aws, bedrock, multi-agent, production, scaling, case-study]
 created: 2026-06-01
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 confidence: 0.85
 review_value: 7
 sources:
   - raw/articles/verizon-connect-agentic-ai-100k-users
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Verizon Connect Agentic AI: 10万用户规模的工程实践

@@ -1,7 +1,7 @@
 ---
 title: "eBay 生成式检索（GR）工业实践：RQ-VAE 语义 ID + 20 亿商品全量训练"
 created: 2026-06-30
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [generative-retrieval, ebay, rq-vae, semantic-id, recommendation-system, ads-retrieval, cold-start, long-tail, transformer, encoder-decoder, beam-search, contrastive-learning]
 sources:
@@ -9,6 +9,9 @@ sources:
 source_urls:
   confidence: 0.85
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # eBay 生成式检索（GR）工业实践：RQ-VAE 语义 ID + 20 亿商品全量训练

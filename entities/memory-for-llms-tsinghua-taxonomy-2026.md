@@ -1,7 +1,7 @@
 ---
 title: "LLM 记忆架构三维分类体系（清华《Memory for Large Language Models》综述）"
 created: 2026-08-13
-updated: 2026-08-13
+updated: 2026-09-07
 type: entity
 tags: [llm, memory, architecture, taxonomy, kv-cache, ssm, ttt, moe, survey]
 sources:
@@ -9,6 +9,9 @@ sources:
   - raw/articles/tsinghua-memory-for-llms-3d-taxonomy-mozhi-2026
 confidence: 0.8
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # LLM 记忆架构三维分类体系

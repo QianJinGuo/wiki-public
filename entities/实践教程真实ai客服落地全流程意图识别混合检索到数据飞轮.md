@@ -8,6 +8,9 @@ updated: 2026-05-21
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/实践教程真实ai客服落地全流程意图识别混合检索到数据飞轮]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 【实践教程】真实AI客服落地全流程：意图识别、混合检索到数据飞轮

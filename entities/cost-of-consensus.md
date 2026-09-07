@@ -2,13 +2,16 @@
 type: entity
 title: "Cost of Consensus"
 created: 2026-05-13
-updated: 2026-09-05
+updated: 2026-09-07
 tags: [multi-agent, consensus, research]
 provenance_state: inferred
 sources: [raw/minimax-agent-team-mavis-owner-worker-verifier]
 
 review_value: 7
 review_confidence: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 ## 摘要
 Cost of Consensus 是 MiniMax Agent Team（Mavis）在其架构分享中引用的研究：在特定模型与同质 debate 设置下，多 Agent 达成共识的 token 消耗可达单 Agent 自我修正的 **2.1–3.4 倍**，且准确率并未提升甚至更差。这一结论指向一个反直觉的设计原则：多 Agent 不是默认选项，共识是系统的主要成本驱动，必须用架构手段（而非 prompt 堆砌）来约束它。^[raw/articles/minimax-agent-team-mavis-owner-worker-verifier.md]

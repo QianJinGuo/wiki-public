@@ -1,11 +1,14 @@
 ---
 title: "AI 2040 Plan A：人类在AI时代的「最不坏」结局"
 created: 2026-07-10
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [ai, safety, governance, future, strategy]
 sources: [raw/articles/ai-2040-plan-a-humanity-ai-future-strategy-2026]
 confidence: 0.8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # AI 2040 Plan A：人类在AI时代的「最不坏」结局

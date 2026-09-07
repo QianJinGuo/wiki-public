@@ -2,7 +2,7 @@
 
 title: "云端 Agent 基础设施两条硬经验：CreaoAI 联合创始人的状态/代码解耦 + 凭据隔离"
 created: "2026-06-06"
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [cloud-agent, sandbox, creaoai, infrastructure, snapshot, hot-swap, jwt, api-bridge, credential-isolation, execution-boundary, zero-trust, runner-code, multi-tenant, security, first-hand, hard-won-lesson, ownership-boundary, hot-swap-runner, os-analogy]
 sources: [raw/articles/ai-techliwen-creaoai-cloud-agent-infrastructure-two-lessons-20260606]
@@ -10,6 +10,9 @@ review_value: 8
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 概述

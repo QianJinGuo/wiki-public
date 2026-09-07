@@ -7,6 +7,9 @@ tags: [meta, ai-safety, red-teaming, ethics, llm, competitive-intelligence]
 sources: [raw/articles/投毒meta竟雇外包大规模给chatgpt和gemini下套]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 投毒！Meta竟雇外包，大规模给ChatGPT和Gemini下套

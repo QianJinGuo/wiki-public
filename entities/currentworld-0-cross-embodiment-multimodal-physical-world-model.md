@@ -1,12 +1,15 @@
 ---
 title: "CurrentWorld-0 — 跨本体多视角多模态物理世界模型"
 created: 2026-08-19
-updated: 2026-08-19
+updated: 2026-09-07
 type: entity
 tags: [world-model, robotics, physical-world-model, multimodal, embodiment, tactile, current-robotics, simulation, robot-learning]
 sources: [raw/articles/currentworld-0-cross-embodiment-multimodal-physical-world-model]
 confidence: 0.78
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # CurrentWorld-0 — 跨本体多视角多模态物理世界模型

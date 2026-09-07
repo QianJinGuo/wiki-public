@@ -2,7 +2,7 @@
 title: "Greptile TREX：AI 代码审查的执行引擎与 Agent 嵌套架构"
 description: "Greptile 构建 TREX 代码执行引擎用于 AI 代码审查，发现 tests≠bug-finding、Agent 内嵌 Agent 模式、上下文共享等工程洞察"
 created: 2026-06-18
-updated: 2026-07-31
+updated: 2026-09-07
 type: entity
 tags: [code-review, ai-agent, code-execution, agent-architecture, engineering-practice]
 source: "[[raw/articles/greptile-trex-code-execution-artifact-generation]]"
@@ -14,6 +14,9 @@ review_stars: 3
 review_recommendation: worth-reading
 sources:
   - raw/articles/greptile-trex-code-execution-artifact-generation
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Greptile TREX：AI 代码审查的执行引擎与 Agent 嵌套架构

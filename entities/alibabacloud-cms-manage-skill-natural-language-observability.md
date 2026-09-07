@@ -1,7 +1,7 @@
 ---
 title: "alibabacloud-cms-manage Skill：阿里云 CMS 2.0 可观测接入的 AI Agent Skill 化（CLI 6 步 + K8s ack-onepilot 自动注入 + 两阶段确认 + 5 大实战场景）"
 created: 2026-06-07
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [aliyun, alibabacloud, cms, cloud-monitor, cms2, observability, apm, otel, ack-onepilot, kubernetes, langchain, ai-agent, ai-agent-skill, natural-language-interface, two-phase-confirmation, cli-wrapper, daemonset, sidecar-injection, k8s-integration, agent-tooling, skill-ecosystem, prometheus, alerting, apm-integration, recording-rule, promql, integrations-pipeline, scenario-driven, controlled-automation]
 sources: [raw/articles/aliyun-cms2-cli-skill-natural-language-observability, raw/articles/aliyun-cms2-cli-skill-5-scenarios-chenyanbing-2026]
@@ -9,6 +9,9 @@ review_value: 8
 review_confidence: 9
 review_stars: 4
 summary: 阿里云云原生 2026-06-07 发布 alibabacloud-cms-manage Skill（基于 Claude Code 的 AI Agent Skill 化方案）。将 6 步 CLI 接入流程（账号 ID → APM 基础设施 → 凭证 → 服务注册 → 配置模板 → 验证）封装为 Skill，用户用一句自然语言即可让 AI Agent 自动编排 CLI 命令完成 K8s 中 AI 应用的 CMS 监控接入。K8s 场景通过 ack-onepilot DaemonSet 自动注入探针，无需修改应用代码；两阶段确认协议确保集群变更安全（只读命令 + CMS 后端资源创建直接执行；Patch Deployment 等集群变更需用户明确 yes/no 确认）。2026-06-14 续篇扩展为 5 大实战场景（接入中心/告警中心/Prometheus 服务/APM/数据查询）+ 完整 CLI 命令树 + "可控自动化" 设计原则。
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # alibabacloud-cms-manage Skill：阿里云 CMS 2.0 可观测接入的 AI Agent Skill 化

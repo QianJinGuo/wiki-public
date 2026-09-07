@@ -2,7 +2,7 @@
 
 title: "Lean Software Scaling Laws"
 created: 2026-06-29
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [llm, security, mlops, research]
 provenance_state: inferred
@@ -14,6 +14,9 @@ review_confidence: 7
 review_stars: 4
 review_recommendation: worth-reading
 confidence: 0.7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Lean Software Scaling Laws

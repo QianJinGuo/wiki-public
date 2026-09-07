@@ -3,7 +3,7 @@
 title: "FrontierCode — Cognition AI 的 PR Mergeability 编码基准"
 description: "首个衡量 PR mergeability 而非单纯 correctness 的编码基准。20+ 旗舰开源项目维护者共建, 40+ 小时/任务, 6 维度评分, 3 种新评分方法 (reverse-classical / scope / mutagent adaptive classical), 比 SWE-Bench Pro 误判率低 81%。"
 created: 2026-06-09
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [benchmark, code-generation, agent-evaluation, cognition, devin, swe-bench, mergeability, open-source, maintainer-rubric, llm-grading]
 sources: [raw/articles/frontier-code-cognition-mergeability-benchmark]
@@ -13,6 +13,9 @@ review_value: 7
 review_confidence: 7
 review_recommendation: worth-reading
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # FrontierCode — Cognition AI 的 PR Mergeability 编码基准

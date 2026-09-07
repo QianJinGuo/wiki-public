@@ -2,7 +2,7 @@
 
 title: "OpenAI models and Codex on Amazon Bedrock are now generally available"
 created: 2026-06-02
-updated: 2026-08-06
+updated: 2026-09-07
 type: entity
 tags: [openai, codex, aws, bedrock, ga]
 source: [[raw/articles/openai-models-and-codex-on-amazon-bedrock-are-now-generally-]]
@@ -10,6 +10,9 @@ confidence: 0.75
 provenance_state: inferred
 review_value: 7
 sources: [raw/articles/openai-models-and-codex-on-amazon-bedrock-are-now-generally-]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # OpenAI models and Codex on Amazon Bedrock are now generally available

@@ -12,6 +12,9 @@ review_recommendation: worth-reading
 review_stars: 3
 confidence: medium
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 全网最全的Claude Fable 5 省钱攻略都在这了

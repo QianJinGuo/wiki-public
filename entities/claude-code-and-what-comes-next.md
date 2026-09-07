@@ -1,13 +1,16 @@
 ---
 title: "Claude Code and What Comes Next"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-07
 tags: [agent, claude, code, llm, memory, mlops, prompt, rl, search, tool-use, vision, workflow, agentic-harness, claude-code, skills, subagents, mcp, context-compaction]
 review_value: 7
 review_confidence: 7
 type: entity
 sources:
   - raw/articles/claude-code-and-what-comes-next
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Claude Code and What Comes Next

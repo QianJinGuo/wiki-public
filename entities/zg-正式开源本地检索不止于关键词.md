@@ -8,6 +8,9 @@ tags: [ai, agent, harness, evaluation, mcp, multimodal]
 sources: [raw/articles/zg-正式开源本地检索不止于关键词]
 confidence: 0.75
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # zg 正式开源：本地检索，不止于关键词

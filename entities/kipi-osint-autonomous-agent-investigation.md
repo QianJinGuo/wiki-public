@@ -1,7 +1,7 @@
 ---
 title: "Kipi: Open-source OSINT Investigation Platform with Autonomous Agent"
 created: 2026-06-25
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: ["agent", "osint", "graph-analytics", "open-source", "autonomous-agent"]
 provenance_state: inferred
@@ -12,6 +12,9 @@ review_value: 8
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Kipi: Open-source OSINT Investigation Platform with Autonomous Agent

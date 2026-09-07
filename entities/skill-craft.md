@@ -2,7 +2,7 @@
 
 title: "Skill Craft — Claude Skill 质量工程框架"
 created: 2026-04-30
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [claude-code, skill, quality-engineering, agent-governance]
 review_value: 7
@@ -12,6 +12,9 @@ sources:
 related:
   - concepts/harness-engineering-framework
 provenance_state: inferred
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 7 类系统性失效模式

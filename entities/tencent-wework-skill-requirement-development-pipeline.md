@@ -1,7 +1,7 @@
 ---
 title: "腾讯企业微信团队 Skill 流水线：AI代码生成率94%的需求开发全流程"
 created: 2026-07-22
-updated: 2026-07-27
+updated: 2026-09-07
 type: entity
 tags: [tencent, wework, skill, pipeline, requirement-development, enterprise-ai-coding, verification, localization, knowledge-transfer, code-generation-rate]
 review_value: 8
@@ -10,6 +10,9 @@ review_stars: 4
 provenance_state: extracted
 sources:
   - raw/articles/tencent-wework-skill-pipeline-94pct-code-gen-2026-07-20
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 腾讯企业微信团队 Skill 流水线：AI代码生成率94%的需求开发全流程

@@ -2,12 +2,15 @@
 
 title: "Agent Memory 架构解析"
 created: 2026-05-12
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, memory, architecture, harness, engineering, llm-wiki]
 sources: [raw/articles/agent-memory-architecture-past-influence-future-ruofei]
 review_value: 7
 review_confidence: 8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 核心论点

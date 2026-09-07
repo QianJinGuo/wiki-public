@@ -1,11 +1,14 @@
 ---
 title: "灵骏真武M890超节点 Kimi K3 推理优化"
 created: 2026-07-28
-updated: 2026-07-29
+updated: 2026-09-07
 type: entity
 tags: [ai, inference, optimization, alibaba, kimi, moe, hardware, t-head, zhenwu, m890, supernode]
 sources: [raw/articles/lingjun-zhenwu-m890-supernode-kimi-k3-day0-adaptation]
 confidence: 0.68
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 灵骏真武M890超节点 Kimi K3 推理优化

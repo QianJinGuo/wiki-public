@@ -4,12 +4,15 @@ title: "We Tested DeepSeek V4 Pro and Flash Against Claude Opus 4.7 and Kimi K2.
 type: entity
 tags: [deepseek, llm, benchmark, comparison]
 created: 2026-05-15
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 8
 sources: [raw/articles/deepseek-v4-pro-vs-claude]
 review_confidence: 9
 review_recommendation: strong
 review_stars: 5
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > -> [[raw/articles/deepseek-v4-pro-vs-claude|原文存档]]

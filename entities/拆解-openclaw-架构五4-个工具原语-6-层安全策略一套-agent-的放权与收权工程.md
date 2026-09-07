@@ -8,6 +8,9 @@ tags: [wechat, ai]
 rating: v8c8
 sources:
   - raw/articles/拆解-openclaw-架构五4-个工具原语-6-层安全策略一套-agent-的放权与收权工程
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 拆解 OpenClaw 架构（五）：4 个工具原语 + 6 层安全策略，一套 Agent 的放权与收权工程

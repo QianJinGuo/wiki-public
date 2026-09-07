@@ -4,9 +4,12 @@ type: entity
 tags: [rag, sag, sql-rag, vector-rag, graphrag, knowledge-graph, multi-hop-qa, mcp, agent-knowledge]
 sources: [raw/articles/rag-vector-knowledge-graph-ontology, raw/articles/sag-sql-retrieval-augmented-generation-zleap-ai-2026-06-16, raw/articles/sag-knowledge-engine-sql-rag-vibecoder-vibe-2026-06-17, raw/articles/hipporag-neurobiologically-inspired-rag-using-amazon-bedrock]
 created: 2026-05-21
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 7
 review_confidence: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # rag-vector-knowledge-graph-ontology

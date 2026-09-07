@@ -8,6 +8,9 @@ tags: [wechat, ai]
 rating: v8c7
 sources:
   - raw/articles/claude-最歧视的是印度三哥
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Claude 最歧视的，是印度三哥

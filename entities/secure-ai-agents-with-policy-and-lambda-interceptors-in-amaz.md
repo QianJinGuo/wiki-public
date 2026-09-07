@@ -2,13 +2,16 @@
 
 title: "Secure AI agents with Policy and Lambda interceptors in Amazon Bedrock AgentCore gateway"
 created: 2026-06-10
-updated: 2026-09-05
+updated: 2026-09-07
 tags: [agent, architecture, aws, code, data, database, evaluation, llm, memory, mlops, observability, open-source, rl, security, tool-use, workflow]
 review_value: 7
 review_confidence: 7
 type: entity
 sources:
   - raw/articles/secure-ai-agents-with-policy-and-lambda-interceptors-in-amaz
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Secure AI agents with Policy and Lambda interceptors in Amazon Bedrock AgentCore gateway

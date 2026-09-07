@@ -2,13 +2,16 @@
 
 title: "港中文 SLIM：动态技能生命周期管理，arXiv 2605.10923"
 created: 2026-06-10
-updated: 2026-09-05
+updated: 2026-09-07
 tags: [agent, data, fine-tuning, llm, memory, mlops, prompt, rag, rl, search, skill]
 review_value: 7
 review_confidence: 7
 type: entity
 sources:
   - raw/articles/cuhk-slim-skill-lifecycle-agentic-rl-arxiv-2605-10923
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 港中文 SLIM：动态技能生命周期管理，arXiv 2605.10923

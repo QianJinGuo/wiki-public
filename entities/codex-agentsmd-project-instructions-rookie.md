@@ -2,13 +2,16 @@
 title: "Codex AGENTS.md 项目说明书完整指南"
 type: entity
 created: 2026-07-02
-updated: 2026-08-01
+updated: 2026-09-07
 tags: [codex, agents.md, claude.md, context-engineering, project-config, agent-harness]
 source:
 author: Rookie小强
 vxc: 56
 sources:
   - raw/articles/codex-agentsmd-project-instructions-rookie
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Codex AGENTS.md 项目说明书完整指南

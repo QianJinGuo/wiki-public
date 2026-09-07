@@ -8,7 +8,7 @@ source_url:
 arxiv_url:
 tags: [agent, perplexity, perplexity-computer, empirical-study, hbs, productivity, autonomy, knowledge-work, harness, evaluation, multi-domain, harvard]
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 9
 review_confidence: 8
 review_recommendation: strong
@@ -19,6 +19,9 @@ confidence: 0.85
 related:
   - entities/perplexity-search-as-code-generation
   - entities/agent-harness-engineering-survey
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Perplexity Computer Empirical Study: How AI Agents Reshape Knowledge Work

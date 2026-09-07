@@ -1,12 +1,15 @@
 ---
 title: "中金 Loop Engineering 自动化因子发现引擎"
 created: 2026-08-06
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [loop-engineering, quantitative-finance, factor-discovery, agent, evolutionary-search, llm, alpha-generation]
 sources: [raw/articles/cicc-loop-engineering-factor-discovery-engine-2026-08-06]
 confidence: 0.85
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 中金 Loop Engineering 自动化因子发现引擎

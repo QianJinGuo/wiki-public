@@ -2,12 +2,15 @@
 title: "高德内容数字员工：从基础问答到事实核查的证据化 Agent（业务地图 + LLM Wiki + 证据信封）"
 description: "高德信息业务中心研发全生命周期证据化 Agent 实践：数字员工入职四要素（岗位边界/地图知识/工位权限/带教评测）、业务地图五类信息（可导航第一跳）、LLM Wiki 企业四阶段、五层工作台、告警 RCA 五步+五类闸、证据信封四件套（摘要/结构预览/证据指针/回读提示）、业务排查三轴（事实/规则/差异）+ 可证伪关卡、评测双层+风险分级权限"
 created: 2026-08-11
-updated: 2026-08-11
+updated: 2026-09-07
 type: entity
 tags: [digital-employee, business-map, llm-wiki, evidence-chain, evidence-envelope, rca, gaode, amap, agent-workbench, knowledge-engineering, voice-of-customer, agent-loop]
 sources: [raw/articles/gaode-content-digital-employee-evidence-agent-2026-08-11]
 confidence: 0.8
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 高德内容数字员工：从基础问答到事实核查的证据化 Agent

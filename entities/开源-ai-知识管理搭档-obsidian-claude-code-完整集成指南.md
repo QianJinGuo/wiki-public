@@ -9,6 +9,9 @@ tags: [claude-code, open-source, ai]
 review_value: 9
 sources: [raw/articles/开源-ai-知识管理搭档-obsidian-claude-code-完整集成指南]
 review_confidence: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 [[raw/articles/开源-ai-知识管理搭档-obsidian-claude-code-完整集成指南.md]] ^[raw/articles/开源-ai-知识管理搭档-obsidian-claude-code-完整集成指南.md]
 

@@ -8,6 +8,9 @@ tags: [multimodal, video, vision, model, open-source, video-understanding, nju, 
 sources:
   - raw/articles/打通感知-理解-交互链路全栈视频理解大模型videochat3开源了
 confidence: 0.9
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 打通感知-理解-交互链路，全栈视频理解大模型VideoChat3开源了

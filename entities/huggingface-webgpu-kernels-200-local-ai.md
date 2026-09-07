@@ -1,11 +1,14 @@
 ---
 title: "HuggingFace @huggingface/kernels — 200+ WebGPU Kernels for Local AI"
 created: 2026-09-02
-updated: 2026-09-02
+updated: 2026-09-07
 type: entity
 tags: [huggingface, webgpu, webai, browser-inference, local-inference, onnx, gpu-kernels, wasm]
 sources: [raw/articles/huggingface-webgpu-kernels-200-local-ai]
 confidence: 0.8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # HuggingFace @huggingface/kernels — 200+ WebGPU Kernels for Local AI

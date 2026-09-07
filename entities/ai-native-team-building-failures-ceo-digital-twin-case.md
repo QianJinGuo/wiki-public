@@ -2,7 +2,7 @@
 
 title: "AI 原生团队的脏乱差：CEO 数字分身失败案例与 AI 销售线索分配的兴衰"
 created: 2026-06-01
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [ai-native, organization, team-building, ceo-digital-twin, sales-lead-distribution, failure-postmortem, management, evaluation-rights, l1-l2-l3, opc]
 sources: [raw/articles/ai-native-team-building-failures-ceo-digital-twin-case]
@@ -10,6 +10,9 @@ review_value: 7
 review_confidence: 7
 review_recommendation: worth-reading
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # AI 原生团队的脏乱差：CEO 数字分身失败案例与 AI 销售线索分配的兴衰

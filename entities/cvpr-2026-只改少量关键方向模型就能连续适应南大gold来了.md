@@ -8,6 +8,9 @@ tags: [ai, agent, llm]
 sources: [raw/articles/cvpr-2026-只改少量关键方向模型就能连续适应南大gold来了]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # CVPR 2026 | 只改少量关键方向，模型就能连续适应？南大GOLD来了

@@ -2,7 +2,7 @@
 title: "AWS China 企业级智能体评估方法论 ADLC 系列"
 description: "AWS China Blog 三篇系列：ADLC 开发生命周期、评估方法论框架（两根支柱八个维度）、AgentCore 评估工具链"
 created: 2026-06-22
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, evaluation, aws, enterprise, adlc, harness, agent-evaluation]
 provenance_state: inferred
@@ -15,6 +15,9 @@ review_value: 8
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # AWS China 企业级智能体评估方法论 ADLC 系列

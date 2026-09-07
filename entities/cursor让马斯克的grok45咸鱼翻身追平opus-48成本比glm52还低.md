@@ -8,6 +8,9 @@ source_url:
 sources: [raw/articles/cursor让马斯克的grok45咸鱼翻身追平opus-48成本比glm52还低]
 confidence: 0.85
 vxc: 56
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Cursor让马斯克的Grok4.5咸鱼翻身，追平Opus 4.8，成本比GLM5.2还低

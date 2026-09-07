@@ -1,11 +1,14 @@
 ---
 title: "Graph Engineering 来了：Claude Code 让 Agent 从一条直线变成一张图"
 created: 2026-07-22
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: ['graph-engineering', 'claude-code', 'dynamic-workflows', 'agent-orchestration', 'parallel']
 sources: [raw/articles/graph-engineering-claude-code-seebin-2026]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > -> [[raw/articles/graph-engineering-claude-code-seebin-2026.md|原文存档]]

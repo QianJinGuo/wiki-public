@@ -4,10 +4,13 @@ title: "基于 Harness + SDD + 多仓管理模式的 AI 全栈开发实践｜得
 type: entity
 tags: [harness, agent, pdca, cdd, three-layer-knowledge, highway, atv, story, skill, hybrid-agent, duwu, ai-full-chain, tprd, contract]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/harness-sdd-duiwu-ai-fullstack-dewux, raw/articles/agent-enterprise-rd-full-chain-duwu-harness-infoq-2026]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 基于 Harness + SDD + 多仓管理模式的 AI 全栈开发实践｜得物技术

@@ -8,11 +8,14 @@ review_recommendation: strong
 review_stars: 4
 date: 2026-05-28
 created: 2026-05-28
-updated: 2026-08-29
+updated: 2026-09-07
 tags: [darwin-skill, skill-evolution, self-improvement, skillopt, skilllens, microsoft-research, rubric-driven, validation-gated, agent, huashu]
 type: entity
 provenance_state: synthesized
 sources: [raw/articles/darwin-skill-2-huashu]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > -> [[raw/articles/darwin-skill-2-huashu|原文存档]]

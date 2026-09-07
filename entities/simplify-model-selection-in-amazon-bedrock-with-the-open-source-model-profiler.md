@@ -1,12 +1,15 @@
 ---
 title: "Simplify model selection in Amazon Bedrock with the open source Model Profiler"
 created: 2026-07-05
-updated: 2026-08-30
+updated: 2026-09-07
 type: entity
 tags: [ai, agent, llm, aws, bedrock, model-selection, open-source, devops, cloud-infrastructure]
 sources: [raw/articles/simplify-model-selection-in-amazon-bedrock-with-the-open-source-model-profiler]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Simplify model selection in Amazon Bedrock with the open source Model Profiler

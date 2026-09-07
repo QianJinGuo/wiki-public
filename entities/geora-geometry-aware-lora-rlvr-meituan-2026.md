@@ -1,10 +1,13 @@
 ---
 title: "GeoRA — 面向 RLVR 优化几何的低秩适配方法（ACL 2026 杰出论文）"
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-07
 type: entity
 tags: [geora, lora, rlvr, peft, low-rank-adaptation, reinforcement-learning, acl-2026, meituan, geometry, agentic-rl]
 sources: [raw/articles/geora-geometry-aware-lora-rlvr-meituan-2026]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # GeoRA — 面向 RLVR 优化几何的低秩适配方法（ACL 2026 杰出论文）

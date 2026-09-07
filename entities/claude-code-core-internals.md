@@ -4,12 +4,15 @@ title: "Claude Code 源码核心机制详解"
 type: entity
 tags: [agent, harness, claude-code, architecture, tool-system, context-management, sub-agent, mcp]
 created: 2026-05-09
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 9
 review_confidence: 8
 review_recommendation: strong
 review_stars: 5
 sources: [raw/articles/claude-code-source-deep-dive-warrior]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 核心设计亮点

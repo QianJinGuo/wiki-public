@@ -10,6 +10,9 @@ review_confidence: 8
 review_stars: 4
 sources:
   - raw/articles/滴滴国际化客服质检智能化之路基于-amazon-bedrock-的多语种多业务线质检实践
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # [亚马逊AWS官方博客](https://aws.amazon.com/cn/blogs/china/)

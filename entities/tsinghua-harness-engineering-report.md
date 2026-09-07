@@ -4,10 +4,13 @@ title: "清华大学：驾驭工程 (Harness Engineering) 研究报告"
 type: entity
 tags: [harness]
 created: 2026-05-21
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/tsinghua-harness-engineering-report]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 清华大学：驾驭工程 (Harness Engineering) 研究报告

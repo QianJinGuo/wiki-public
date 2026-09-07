@@ -1,10 +1,13 @@
 ---
 title: "TVIR：面向图文交错报告生成的统一基准与智能体框架 — 南大 × 阿里"
 created: 2026-07-24
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [tvir, deep-research-agent, multimodal, text-visual-interleaved, report-generation, benchmark, multi-agent, nju, alibaba]
 sources: [raw/articles/南大-阿里提出tvir深度研究agent迈入图文交错时代]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # TVIR：面向图文交错报告生成的统一基准与智能体框架 — 南大 × 阿里

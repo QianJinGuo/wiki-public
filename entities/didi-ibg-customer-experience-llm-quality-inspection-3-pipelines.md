@@ -2,7 +2,7 @@
 
 title: 滴滴 IBG 智能客服质检系统：3 管线（意图 86% / 合规 90%+ / VOC）+ 企业 LLM 落地方法论
 created: 2026-06-04
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [didi, ibg, customer-experience, llm-quality-inspection, multilingual, spanish, portuguese, contact-reason, intent-pipeline, compliance-pipeline, voc-pipeline, enterprise-llm, architecture-over-prompt, data-quality, config-externalization, traceability, semantic-clustering, embedding, tool-use, json-schema, three-stage-pipeline, prompt-engineering, label-definition-quality]
 confidence: 0.95
@@ -11,6 +11,9 @@ sources: [raw/articles/didi-ibg-customer-experience-llm-quality-inspection-3-pip
 review_value: 10
 review_confidence: 9
 review_recommendation: strong
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 滴滴 IBG 智能客服质检系统

@@ -2,7 +2,7 @@
 
 title: "Amazon Nova Forge 域定制超参调优：艺术与科学"
 created: 2026-06-03
-updated: 2026-06-04
+updated: 2026-09-07
 type: entity
 tags: [aws]
 source: "[[raw/articles/the-art-and-science-of-hyperparameter-optimization-on-amazon-nova-forge]]"
@@ -12,6 +12,9 @@ review_value: 7
 review_confidence: 7
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Amazon Nova Forge 域定制超参调优：艺术与科学

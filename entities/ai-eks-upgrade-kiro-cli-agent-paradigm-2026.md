@@ -1,12 +1,15 @@
 ---
 title: "AI 时代的 EKS 升级范式：Kiro-cli Agent 接管识别、升级与排障"
 created: 2026-07-03
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [ai, aws, eks, kiro, agent, devops, skill, infrastructure, ops]
 sources: [raw/articles/ai-eks-upgrade-kiro-cli-agent-paradigm-2026]
 confidence: 0.8
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # AI 时代的 EKS 升级范式：Kiro-cli Agent 接管识别、升级与排障

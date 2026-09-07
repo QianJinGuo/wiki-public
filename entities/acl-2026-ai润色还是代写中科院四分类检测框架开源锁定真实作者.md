@@ -7,6 +7,9 @@ tags: [ai, research]
 sources: [raw/articles/acl-2026-ai润色还是代写中科院四分类检测框架开源锁定真实作者.md]
 confidence: 0.6
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # ACL 2026 | AI润色还是代写？中科院四分类检测框架开源，锁定真实作者

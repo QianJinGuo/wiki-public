@@ -1,7 +1,7 @@
 ---
 title: "CyberSecQwen-4B"
 created: "2026-05-12"
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [cybersecurity, small-language-model, specialized-model, threat-intelligence, lora-finetuning]
 related_topics: [cybersecqwen-4b, cti-bench, foundation-sec-instruct-8b, qwen3-4b-instruct]
@@ -9,6 +9,9 @@ related_methods: [lora-finetuning, flash-attention-2]
 sources: [raw/articles/cybersecqwen-4b]
 review_value: 8
 review_confidence: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 ## Key Capabilities
 - **CWE Classification**: Maps vulnerability descriptions (CVEs, advisories) to MITRE CWE categories

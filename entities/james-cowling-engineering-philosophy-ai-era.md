@@ -1,7 +1,7 @@
 ---
 title: James Cowling AI 时代工程哲学访谈（Dropbox 前首席工程师 / Convex CTO）
 created: 2026-06-04
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [james-cowling, dropbox, convex, engineering-philosophy, ai-era, coding-vs-engineering, wisdom, system-bias, simple-systems, career-advice, technology-gossip, aws-migration]
 confidence: 0.88
@@ -10,6 +10,9 @@ sources: [raw/articles/james-cowling-engineering-philosophy-ai-era]
 review_value: 8
 review_confidence: 8
 review_recommendation: strong
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # James Cowling AI 时代工程哲学访谈

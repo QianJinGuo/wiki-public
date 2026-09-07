@@ -1,12 +1,15 @@
 ---
 title: "LMSYS 在 H20 上服务 DeepSeek-V4-Pro 的场景化 Serving 优化"
 created: 2026-08-20
-updated: 2026-08-20
+updated: 2026-09-07
 type: entity
 tags: [ml, inference, serving, moe, lmsys, speculative-decoding, optimization]
 sources: [raw/articles/lmsys-deepseek-v4-pro-serving-h20-engine-optimization-2026-08]
 confidence: 0.8
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # LMSYS 在 H20 上服务 DeepSeek-V4-Pro 的场景化 Serving 优化

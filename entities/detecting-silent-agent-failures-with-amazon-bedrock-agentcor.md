@@ -1,12 +1,15 @@
 ---
 title: "Detecting Silent Agent Failures with Bedrock AgentCore"
 created: 2026-07-24
-updated: 2026-08-30
+updated: 2026-09-07
 type: entity
 tags: [ai, agent, aws, bedrock, agentcore, observability, monitoring, failure-detection, agent-reliability]
 sources: [raw/articles/detecting-silent-agent-failures-with-amazon-bedrock-agentcor]
 confidence: 0.84
 score: 64
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Detecting Silent Agent Failures with Bedrock AgentCore

@@ -1,12 +1,15 @@
 ---
 title: "Agent Protocol 不变层：跨框架的 6 个稳定 Runtime 对象"
 created: 2026-07-02
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, protocol, runtime, framework, architecture, langgraph, a2a, ag-ui]
 sources: [raw/articles/agent-protocol-unchanged-across-frameworks-aliyun-2026-07-02]
 confidence: 0.75
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Agent Protocol 不变层：跨框架的 6 个稳定 Runtime 对象

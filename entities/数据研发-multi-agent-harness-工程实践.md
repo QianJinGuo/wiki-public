@@ -7,6 +7,9 @@ tags: [ai, agent, harness, multi-agent, 数据研发, 阿里云, identity, gate,
 sources: [raw/articles/数据研发multi-agent架构的harness工程实践]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 数据研发 Multi-Agent 架构的 Harness 工程实践

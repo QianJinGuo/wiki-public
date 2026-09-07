@@ -1,7 +1,7 @@
 ---
 title: "An Opinionated Guide to Using AI Right Now"
 created: 2026-06-10
-updated: 2026-08-01
+updated: 2026-09-07
 tags: [agent, code, llm, search, tool-use, vision, deep-research, multimodal, ai-guide]
 review_value: 7
 review_confidence: 7
@@ -9,6 +9,9 @@ type: entity
 sources: [raw/articles/an-opinionated-guide-to-using-ai-right-now]
 confidence: 0.9
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # An Opinionated Guide to Using AI Right Now

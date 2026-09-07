@@ -1,12 +1,15 @@
 ---
 title: "Agent Harness 开始自动修复：系统级 Debug 最高提升 18.4 点"
 created: 2026-08-15
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [ai, agent, harness, debug, self-repair, 可观测性, 论文解读]
 sources: [raw/articles/agent-harness开始自动修复系统级debug最高提升184点]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Agent Harness 开始自动修复：系统级 Debug 最高提升 18.4 点

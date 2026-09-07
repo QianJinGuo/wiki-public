@@ -11,6 +11,9 @@ review_stars: 4
 created: 2026-06-01
 updated: 2026-06-02
 sources:
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Data for AI：明其所耗，知其所因！让每一分 Token 消耗都可量化的全栈实践

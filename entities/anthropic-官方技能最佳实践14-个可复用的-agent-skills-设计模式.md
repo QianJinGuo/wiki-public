@@ -10,6 +10,10 @@ review_value: 5
 review_confidence: 10
 review_recommendation: worth-reading
 review_stars: 3
+reviewed: 2026-09-07
+review_verdict: hub-retained
+review_category: dup
+review_note: "judged dup-0.8: 14模式第二份重复; retained as hub (in-links>=20); MOC rewrite candidate"
 ---
 
 ## 相关实体

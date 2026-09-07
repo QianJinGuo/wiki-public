@@ -3,7 +3,7 @@ title: "Claude Code 为什么会忽略指令：四类失效原因 + 五层规则
 authors:
   - 架构师
 created: 2026-06-29
-updated: 2026-08-01
+updated: 2026-09-07
 source: wechat
 url:
 type: entity
@@ -14,6 +14,9 @@ review_stars: 4
 provenance_state: extracted
 sources:
   - raw/articles/claude-code-why-instructions-ignored-jia-gou-x-2026
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 核心概述

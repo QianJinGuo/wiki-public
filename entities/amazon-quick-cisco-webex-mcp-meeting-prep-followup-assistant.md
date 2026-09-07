@@ -1,7 +1,7 @@
 ---
 title: "Amazon Quick + Cisco Webex MCP 会议准备与跟进助手：meeting-lifecycle MCP 编排实战"
 created: 2026-06-13
-updated: 2026-06-19
+updated: 2026-09-07
 type: entity
 tags: [aws, amazon-quick, cisco-webex, mcp, mcp-server, meeting-prep, vidcast, agent, ai-agent, productivity, tool-use, harness-engineering]
 review_value: 7
@@ -9,6 +9,9 @@ review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 4
 sources: [raw/articles/build-a-meeting-prep-and-follow-up-assistant-with-amazon-quick-and-cisco-webex-mcp-servers]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Amazon Quick + Cisco Webex MCP 会议准备与跟进助手

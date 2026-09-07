@@ -9,6 +9,9 @@ rating: v7c7
 sources:
   - raw/articles/百度百舸-ai-infra-助力具身智能模型加速迭代
   - raw/articles/baidu-cosmos3-training-optimization-domestic-gpu
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 百度百舸 AI Infra 助力具身智能模型加速迭代

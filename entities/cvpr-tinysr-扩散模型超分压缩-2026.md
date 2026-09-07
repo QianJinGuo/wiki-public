@@ -8,6 +8,9 @@ sources: [raw/articles/cvpr-tinysr-扩散模型超分压缩-2026]
 confidence: 0.72
 provenance_state: extracted
 score: 56
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # CVPR 2026 TinySR：扩散模型超分加速 5.68 倍

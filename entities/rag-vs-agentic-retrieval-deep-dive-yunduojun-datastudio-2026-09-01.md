@@ -1,11 +1,14 @@
 ---
 title: "向量数据库已死，Claude Code、Cursor 为什么集体抛弃 RAG？"
 created: 2026-09-04
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [rag, retrieval, agent, llm]
 review_value: 8
 review_confidence: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 向量数据库已死，Claude Code、Cursor 为什么集体抛弃 RAG？

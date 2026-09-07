@@ -7,8 +7,11 @@ review_value: 8
 review_confidence: 8
 review_recommendation: strong
 publish_date: 2026-03-27
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 ## 概述
 AI 驱动的 Graviton 迁移评估：Kiro Power 实战指南 by awschina on 25 3月 2026 in Business Productivity Permalink Share 摘要：本文将深入探讨如何利用 Kiro Power 加速 Graviton 迁移，从代码分析、依赖检查、容器适配的完整流程。 目录 01 1. 引言 02 2. Graviton 迁移的核心挑战 03 3. Kiro Graviton Migration Power：AI 驱动的解决方案 04 4. 准备 Kiro Powers 环境 05 5. 演示一：将基于 Java 语言开发的 Chatbot 应用迁移到 Graviton 06 6. 演示二：评估 Portry 管理的 Python 应用的依赖包 07 7. 其他使用说明 08 8. 结语 1. 引言 在云计算成本优化的浪潮中， ^[raw/articles/ai-graviton-migration-kiro-power-guide.md]

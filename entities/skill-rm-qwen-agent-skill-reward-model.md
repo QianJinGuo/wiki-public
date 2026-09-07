@@ -3,13 +3,16 @@ title: "阿里Qwen提出Skill-RM：把奖励模型做成可复用Agent Skill"
 type: entity
 tags: [skill-rm, qwen, reward-model, agent-skill, rewardbench, rm-bench, judgebench, alibaba, agentic-judge, skill-md, llm-as-judge, grpo, verinstruct, rubric, verifier, evidence-trace, progressive-disclosure, best-of-n, if-rewardbench, hyman]
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 8
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4
 provenance_state: extracted
 sources: [raw/articles/skill-rm-qwen-agent-skill-reward-model-hyman]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 >原文存档：[[raw/articles/skill-rm-qwen-agent-skill-reward-model-hyman|原文存档]] ^[raw/articles/skill-rm-qwen-agent-skill-reward-model-hyman.md]

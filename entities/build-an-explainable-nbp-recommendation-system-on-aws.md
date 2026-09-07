@@ -1,11 +1,14 @@
 ---
 title: "Build an explainable next-best-product recommendation system for banking on AWS"
 created: 2026-07-25
-updated: 2026-07-27
+updated: 2026-09-07
 type: entity
 tags: [aws, machine-learning, recommendation-system, deep-learning, pytorch, sagemaker]
 sources: [raw/articles/build-an-explainable-next-best-product-recommendation-system-for-banking-on-aws]
 confidence: 0.7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Build an explainable next-best-product recommendation system for banking on AWS

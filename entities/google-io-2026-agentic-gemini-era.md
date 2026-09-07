@@ -4,13 +4,16 @@ title: "I/O 2026: Welcome to the agentic Gemini era"
 type: entity
 tags: [google, io-2026, gemini, agentic, sundar-pichai, llm, tpu, antigravity, gemini-spark, gemini-3-5-flash, gemini-omni, synthid, google-flow, android-halo, ai-infra, multimodal]
 created: 2026-05-21
-updated: 2026-08-01
+updated: 2026-09-07
 review_value: 7
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 3
 sources: [google-io-2026-agentic-gemini-era]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 概述

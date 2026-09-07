@@ -2,13 +2,16 @@
 title: "从 Architect 视角看 AI-Native 落地：AliExpress Harness 生成能力建设"
 type: entity
 created: "2026-08-03"
-updated: 2026-08-03
+updated: 2026-09-07
 tags: [wechat, harness, ai-native, code-generation, d2c, spec-driven, evaluation, self-evolution]
 rating: v8c9
 confidence: 0.85
 provenance_state: extracted
 sources:
   - raw/articles/aliexpress-harness-ai-native-architect-2026-08-03
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 从 Architect 视角看 AI-Native 落地：AliExpress Harness 生成能力建设

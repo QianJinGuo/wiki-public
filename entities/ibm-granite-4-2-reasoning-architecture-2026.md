@@ -1,11 +1,14 @@
 ---
 title: "IBM Granite 4.2：首个稠密推理 LLM 家族（3B/8B/30B）"
 created: 2026-08-27
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [llm, reasoning, ibm, granite, open-source, rl, agentic-rl, apache]
 sources: [raw/articles/ibm-granite-4-2-reasoning-model-2026]
 confidence: 0.78
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # IBM Granite 4.2：首个稠密推理 LLM 家族（3B/8B/30B）

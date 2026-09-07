@@ -1,7 +1,7 @@
 ---
 title: "MoonBit：面向 Agent 协作的编程语言（语言即工具链 + 形式化验证 + Wasm 沙箱）"
 created: 2026-07-09
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [programming-language, moonbit, formal-verification, wasm, sandbox, agent-toolchain, chinese-innovation, harness-engineering]
 source: [[raw/articles/ai-时代的编程语言这次是来自中国的底层创新]]
@@ -9,6 +9,9 @@ review_value: 7
 review_confidence: 8
 review_stars: 4
 sources: [raw/articles/ai-时代的编程语言这次是来自中国的底层创新]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # MoonBit：面向 Agent 协作的编程语言

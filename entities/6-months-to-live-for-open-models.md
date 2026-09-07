@@ -1,12 +1,15 @@
 ---
 title: "6 Months to Live for Open Models"
 created: 2026-07-24
-updated: 2026-07-27
+updated: 2026-09-07
 type: entity
 tags: [ai, open-source, open-models, regulation, ai-policy, frontier-models, distillation, china-ai]
 sources: [raw/articles/6-months-to-live-for-open-models]
 confidence: 0.69
 score: 49
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 6 Months to Live for Open Models

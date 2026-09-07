@@ -3,12 +3,15 @@ title: "蔚蓝BabyAlpha A3消费级机器狗"
 type: entity
 tags: [蔚蓝科技, babyalpha, 机器狗, 具身智能, 异构计算, 国产芯片, 端侧推理]
 created: 2026-05-17
-updated: 2026-06-15
+updated: 2026-09-07
 sources: [raw/articles/weilan-babyalpha-a3-machine-dog]
 review_value: 7
 review_confidence: 7
 review_recommendation: worth-reading
 sha256: b9e739cf286a0b2a0e67c692ff88449f5b1d46508b0fb5a14404e45112b6a7cc
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 ## 核心技术突破
 ### 异构计算架构

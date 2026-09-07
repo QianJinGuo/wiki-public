@@ -1,11 +1,14 @@
 ---
 title: "RocketMQ-A2A：会话级可重放事件流驱动的多智能体可靠协作"
 created: 2026-07-30
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, multi-agent, rocketmq, a2a, message-queue, fse-2026, alibaba-cloud, litetopic, communication-paradigm, asynchronous, fault-tolerance]
 sources:
   - raw/articles/rocketmq-a2a-session-level-replayable-event-streams-fse-2026
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 # RocketMQ-A2A：会话级可重放事件流驱动的多智能体可靠协作
 

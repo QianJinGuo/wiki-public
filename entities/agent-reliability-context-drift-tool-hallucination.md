@@ -2,12 +2,15 @@
 
 title: "Agent Reliability: Context Drift & Tool Calling Hallucination"
 created: 2026-05-15
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [agent, reliability, context-drift, tool-hallucination, attention, transformer, long-running-agents, harness]
 sources: [raw/articles/kamacoder-agent-context-drift-tool-hallucination]
 review_value: 7
 review_confidence: 8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 核心问题

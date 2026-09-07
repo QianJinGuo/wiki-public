@@ -1,11 +1,14 @@
 ---
 title: "Light Interaction：无需重训、不改参数的交互式视频世界模型推理加速"
 created: 2026-07-23
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [world-model, inference-optimization, video-generation, diffusion-model, gpu-optimization, sparse-attention]
 sources: [raw/articles/视频世界模型推理最高提速259浙大新作无需重训不改参数.md]
 confidence: 0.8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Light Interaction：无需重训、不改参数的交互式视频世界模型推理加速

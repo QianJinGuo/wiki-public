@@ -1,13 +1,16 @@
 ---
 title: "异步调用模式：Serverless 流水线中调用 Agent（避免空闲计算成本）"
 created: 2026-08-20
-updated: 2026-08-20
+updated: 2026-09-07
 type: entity
 tags: [agent, serverless, async, orchestration, aws, agentcore, harness, cost, step-functions]
 sources: [raw/articles/asynchronous-patterns-for-calling-amazon-bedrock-agentcore]
 confidence: 0.7
 review_value: 7
 review_confidence: 8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 异步调用模式：Serverless 流水线中调用 Agent（避免空闲计算成本）

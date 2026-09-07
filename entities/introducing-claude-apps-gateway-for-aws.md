@@ -1,7 +1,7 @@
 ---
 title: Introducing Claude apps gateway for AWS
 created: 2026-07-10
-updated: 2026-08-12
+updated: 2026-09-07
 type: entity
 tags: [tool, vision, claude, coding, aws, governance, gateway, enterprise]
 sources: [raw/articles/introducing-claude-apps-gateway-for-aws, raw/articles/deploying-anthropic-claude-apps-gateway-for-aws-for-enterprise-workloads]
@@ -11,6 +11,9 @@ review_recommendation: strong
 review_stars: 4
 confidence: medium
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Introducing Claude apps gateway for AWS

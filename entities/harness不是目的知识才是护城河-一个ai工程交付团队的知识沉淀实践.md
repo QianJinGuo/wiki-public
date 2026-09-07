@@ -8,6 +8,9 @@ review_confidence: 7
 created: 2026-05-16
 updated: 2026-05-20
 sources: [raw/articles/harness不是目的知识才是护城河-一个ai工程交付团队的知识沉淀实践]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 核心论点

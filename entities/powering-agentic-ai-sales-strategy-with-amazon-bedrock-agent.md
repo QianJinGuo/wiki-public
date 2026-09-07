@@ -9,9 +9,12 @@ review_value: 7
 review_confidence: 7
 review_stars: 3
 created: 2026-06-01
-updated: 2026-08-24
+updated: 2026-09-07
 sources:
   - raw/articles/powering-agentic-ai-sales-strategy-with-amazon-bedrock-agent
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Powering agentic AI sales strategy with Amazon Bedrock AgentCore

@@ -2,7 +2,7 @@
 
 title: "How far behind are open models? (LessWrong 2026-05)"
 created: 2026-06-01
-updated: 2026-07-31
+updated: 2026-09-07
 type: entity
 tags: [open-models, benchmark, evaluation, lesswrong, ai-frontier, analysis]
 source: "[[raw/articles/how-far-behind-are-open-models-2026]]"
@@ -10,6 +10,9 @@ confidence: 0.85
 review_value: 7
 sources:
   - raw/articles/how-far-behind-are-open-models-2026
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # How far behind are open models? (LessWrong 2026-05)

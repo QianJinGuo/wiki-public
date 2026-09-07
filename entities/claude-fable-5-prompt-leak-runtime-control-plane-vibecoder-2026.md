@@ -1,13 +1,16 @@
 ---
 title: "Claude Fable 5 提示词泄漏 — 1585 行 120K 字符的产品运行时控制平面与安全工程启示"
 created: 2026-06-12
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [claude-fable-5, mythos-5, prompt-leak, cl4r1t4s, runtime-control-plane, attack-surface, mcp, agent-security, harness-security, prompt-engineering, system-prompt, workflow-audit, classifier, combination-risk]
 sources: [raw/articles/claude-fable-5-prompt-leak-runtime-control-plane-vibecoder-2026]
 provenance_state: extracted
 review_value: 9
 review_confidence: 9
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 概述

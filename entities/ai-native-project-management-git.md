@@ -5,7 +5,7 @@ source_url:
 author: 周志伟
 source: [[raw/articles/ai-native-project-management-git]]
 created: 2026-05-28
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [project-management, ai-native, git, skill, ai-agent, harness-engineering, alibaba]
 review_value: 8
@@ -13,6 +13,9 @@ review_confidence: 8
 review_recommendation: strong
 review_stars: 5
 sources:
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 让项目管理也AI Native —— 两个Git仓库干掉了周报、洞察和效能报表

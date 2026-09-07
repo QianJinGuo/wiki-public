@@ -3,7 +3,7 @@ title: "Gemma 4 QAT Models: Quantization-Aware Training for Mobile and Edge"
 description: "Gemma 4 量化感知训练（QAT）发布，1GB E2B 文本模型 + 移动端特殊 schema + Q4_0 标准 + MTP 兼容，含具体压缩策略和技术细节"
 type: entity
 created: 2026-06-09
-updated: 2026-06-17
+updated: 2026-09-07
 tags: [gemma, google, qat, quantization, mobile, edge, model-compression, on-device, llm]
 source: [[raw/articles/gemma-4-qat-models-optimizing-compression]]
 confidence: 0.82
@@ -12,6 +12,9 @@ review_confidence: 7
 review_recommendation: worth-reading
 review_stars: 3
 sources: [raw/articles/gemma-4-qat-models-optimizing-compression]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Gemma 4 QAT Models: Quantization-Aware Training for Mobile and Edge

@@ -7,6 +7,9 @@ tags: [ai, research, evaluation, benchmark, agent-eval, search, agent-search]
 sources: [raw/articles/icml-2026-免训练跑赢14b模型sonar-ts补上时序问答规模空白.md]
 confidence: 0.6
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # ICML 2026 | 免训练跑赢14B模型，Sonar-TS补上时序问答规模空白

@@ -1,12 +1,15 @@
 ---
 title: ElementsClaw：AI驱动超导材料发现
 created: 2026-07-04
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [ai, superconductivity, materials-discovery, damo-academy, renmin-university, cas, agent, science]
 sources: [raw/articles/ai-superconductor-discovery-elementsclaw-2026]
 confidence: 0.85
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > 阿里达摩院联合中国人民大学高瓴人工智能学院、中国科学院大学发布首个专攻超导材料发现的AI智能体 ElementsClaw（元素虾），仅用 28 GPU 小时即从 240 万种已知稳定晶体中预测出 6.8 万种潜在超导体，实验验证发现 4 种全新超导体，所有预测数据已开源。^[raw/articles/ai-superconductor-discovery-elementsclaw-2026.md]

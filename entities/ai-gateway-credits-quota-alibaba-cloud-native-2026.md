@@ -1,12 +1,15 @@
 ---
 title: "AI 网关 Credits 配额计量体系"
 created: 2026-07-11
-updated: 2026-07-27
+updated: 2026-09-07
 type: entity
 tags: [ai-gateway, credits, quota, alibaba-cloud, cloud-native, api-gateway]
 confidence: 0.6
 provenance_state: extracted
 sources: [raw/articles/ai-gateway-credits-quota-alibaba-cloud-native-2026]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # AI 网关 Credits 配额计量体系

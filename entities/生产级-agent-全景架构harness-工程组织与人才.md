@@ -7,6 +7,9 @@ tags: [agent, harness-engineering, architecture, ai-native-organization, product
 sources: [raw/articles/生产级-agent-全景架构harness-工程组织与人才, raw/articles/拆完-workbuddy我看到了生产级-agent-的完整形态]
 confidence: 0.7
 provenance_state: merged
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 生产级 Agent 全景：架构、Harness 工程、组织与人才

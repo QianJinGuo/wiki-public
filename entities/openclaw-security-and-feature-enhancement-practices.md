@@ -1,13 +1,16 @@
 ---
 title: "OpenClaw 安全和功能增强实践"
 created: 2026-06-11
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [openclaw, security, deployment, self-hosted, telegram, discord, agent, aws, prompt-injection, agentic-security, gateway, ec2]
 sources: [raw/articles/openclaw-security-and-feature-enhancement-practices]
 provenance_state: raw-linked
 review_value: 7
 confidence: 0.8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # OpenClaw 安全和功能增强实践

@@ -5,11 +5,14 @@ tags: [newsletter, lovable, ai-agent, skills, productivity]
 source: newsletter
 source_url:
 created: 2026-05-20
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 7
 sources: [raw/articles/turn-repeated-instructions-into-reusable-skills-in-lovable-l]
 review_confidence: 8
 review_recommendation: worth-reading
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 ## 核心要点
 - **AI agent 的记忆缺失问题**：当前 AI agents 都是通才（generalists），每次打开 Lovable 都不记得用户的工作方式、 conventions 和风格，需要反复解释相同内容

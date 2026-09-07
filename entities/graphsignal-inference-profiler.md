@@ -1,7 +1,7 @@
 ---
 title: "Graphsignal: LLM Inference Profiler"
 created: 2026-06-25
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: ["mlops", "profiling", "llm", "observability", "inference"]
 provenance_state: inferred
@@ -12,6 +12,9 @@ review_value: 7
 review_confidence: 7
 review_recommendation: worth-reading
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Graphsignal: LLM Inference Profiler

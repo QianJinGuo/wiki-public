@@ -2,7 +2,7 @@
 title: "Choosing to Stay Human"
 description: "AI 写作的陷阱：'认知投降'（cognitive surrender）让人类停止思考问题任由 AI 解决。关键区分是 AI 作为 scaffold（推动思考）vs shortcut（替代思考），0.15 SD 效果量（= 6-9 个月学业进步）证明差异显著。"
 created: 2026-06-07
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [ai-writing, cognition, cognitive-surrender, productivity, scaffolding]
 source: [[raw/articles/choosing-to-stay-human]]
@@ -12,6 +12,9 @@ review_value: 9
 review_confidence: 9
 review_recommendation: strong
 review_stars: 5
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Choosing to Stay Human

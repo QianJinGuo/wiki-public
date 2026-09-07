@@ -1,12 +1,15 @@
 ---
 title: "Anthropic 模型性格研究 — 四条价值轴与语言差异"
 created: 2026-07-14
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [anthropic, model, llm, research, alignment]
 sources: [raw/articles/anthropic-model-personality-four-axes-2026]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Anthropic 模型性格研究 — 四条价值轴与语言差异

@@ -2,11 +2,14 @@
 title: "扩散模型视觉生成一致性框架（2026 综述）"
 type: entity
 created: 2026-07-02
-updated: 2026-08-01
+updated: 2026-09-07
 tags: [diffusion, visual-generation, consistency, survey, cv, multimodal, generative-ai]
 rating: v7c8
 sources:
   - raw/articles/diffusion-model-consistency-survey-ustc-2026
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 扩散模型视觉生成一致性框架（2026 综述）

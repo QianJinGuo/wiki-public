@@ -1,7 +1,7 @@
 ---
 
 title: "我用Claude搭了个自动新闻简报，30天后比我刷了一年的信息还有用"
-updated: 2026-08-29
+updated: 2026-09-07
 description: "Claude研究Agent自动新闻简报：MCP工具链+N8N工作流+CLAUDE.md上下文+反馈循环，45分钟→5分钟复利效应"
 source: "[[raw/articles/claude-research-agent-auto-newsletter-cyrilxbt]]"
 tags: [claude-agent, research-agent, mcp, n8n, obsidian, automation, workflow, information-management]
@@ -11,6 +11,9 @@ review_value: 6
 confidence: 0.6
 sources:
   - raw/articles/claude-research-agent-auto-newsletter-cyrilxbt
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 我用Claude搭了个自动新闻简报，30天后比我刷了一年的信息还有用

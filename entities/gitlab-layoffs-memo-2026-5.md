@@ -6,7 +6,7 @@ source_url:
 sha256: ae49b70275db0f95cb9f014775b24bed1b733d6d5128aedbc20de012595bd230
 title: "GitLab employees are the latest to face layoffs limbo. Read the CEO's memo about restructuring 'openly.'"
 created: 2026-05-12
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 8
 sources: [raw/articles/gitlab-layoffs-memo-2026-5]
 review_confidence: 9
@@ -14,6 +14,9 @@ review_recommendation: strong
 review_stars: 5
 ingested: 2026-05-14
 tags: [gitlab, layoffs, devops, 2026, company]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > -> [[raw/articles/gitlab-layoffs-memo-2026-5|GitLab employees are the latest to face layoffs limbo. Read the CEO's memo about restructuring 'openly.']]

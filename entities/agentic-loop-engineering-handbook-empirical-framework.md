@@ -1,7 +1,7 @@
 ---
 title: "Agentic Loop Engineering 工程手册：17 种 Loop 工程化技术的可复现实证框架"
 created: 2026-07-09
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, loop-engineering, harness-engineering, empirical, measurement, feedback, maker-checker, rag, worktree, orchestration]
 confidence: 0.85
@@ -10,6 +10,9 @@ sources: [raw/articles/agentic-loop-engineering-工程手册]
 review_value: 9
 review_confidence: 8
 review_stars: 5
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Agentic Loop Engineering 工程手册：17 种 Loop 工程化技术的可复现实证框架

@@ -1,12 +1,15 @@
 ---
 title: "Kimi K3: The Open-Weights Escalation"
 created: 2026-07-24
-updated: 2026-08-12
+updated: 2026-09-07
 type: entity
 tags: [ai, agent, open-weights, kimi, moonshot-ai, frontier-models, china-ai, open-source, model-competition]
 sources: [raw/articles/kimi-k3-the-open-weights-escalation, raw/articles/kimi-k3开源模型不开源价格]
 confidence: 0.92
 score: 72
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Kimi K3: The Open-Weights Escalation

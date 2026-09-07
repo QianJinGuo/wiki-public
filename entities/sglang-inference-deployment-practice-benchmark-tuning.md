@@ -1,12 +1,15 @@
 ---
 title: "基于SGLang的大模型推理部署实践——Benchmark方法论、方案选型与调优"
 created: 2026-07-21
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [sglang, inference, llm-serving, benchmark, deployment, aws, performance-tuning]
 sources: [raw/articles/aws-sglang-inference-practice-benchmark-deployment-tuning]
 confidence: 0.8
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 基于SGLang的大模型推理部署实践——Benchmark方法论、方案选型与调优

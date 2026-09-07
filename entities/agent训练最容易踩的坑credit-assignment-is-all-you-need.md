@@ -7,6 +7,9 @@ tags: [ai, research, agent, ai-agent, multi-agent, rl, reinforcement-learning, p
 sources: [raw/articles/agent训练最容易踩的坑credit-assignment-is-all-you-need.md]
 confidence: 0.6
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Agent训练最容易踩的坑：Credit Assignment Is All You Need

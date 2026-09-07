@@ -7,6 +7,9 @@ type: entity
 tags: [ai, llm, benchmark]
 sources: [raw/articles/2026-05-06-刷榜AI全挂了-Meta斯坦福地狱级测试-GPT-Claude-Gemini交出-新智元]
 confidence: 0.8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 刷榜AI全挂了！Meta斯坦福地狱级测试，GPT/Claude/Gemini交出0分

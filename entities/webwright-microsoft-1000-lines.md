@@ -2,7 +2,7 @@
 
 title: "微软 1000 行代码，把 Claude Opus 干翻了 15 分"
 created: 2026-05-26
-updated: 2026-07-31
+updated: 2026-09-07
 type: entity
 tags: [agent, harness, web-agent, microsoft]
 source: [[raw/articles/webwright-microsoft-1000-lines]]
@@ -12,6 +12,9 @@ review_confidence: 7
 review_recommendation: strong
 sources:
   - raw/articles/webwright-microsoft-1000-lines
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 微软 1000 行代码，把 Claude Opus 干翻了 15 分

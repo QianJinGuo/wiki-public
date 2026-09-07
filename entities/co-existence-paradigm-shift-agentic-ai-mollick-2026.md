@@ -2,7 +2,7 @@
 title: "Co-Existence vs Co-Intelligence: Mollick's Paradigm Shift on AI Autonomy"
 description: "Ethan Mollick (One Useful Thing, 2026-06-04) reframes the AI collaboration model — from chatbot-assistant ('Co-Intelligence', 2024) to autonomous agent with humans as occasional gatekeeper ('Co-Existence', 2026). Frames the Anthropic 80%/8x coding milestone, the AI-as-reader/gatekeeper problem, and the emerging 'for-AI' website pattern."
 created: 2026-06-05
-updated: 2026-06-05
+updated: 2026-09-07
 type: entity
 tags: [agent, ai-agent, autonomous-agent, ethan-mollick, one-useful-thing, paradigm-shift, co-intelligence, co-existence, ai-economics, ai-recommendation, prompt-injection]
 source: [[raw/articles/co-existence-and-the-end-of-co-intelligence]]
@@ -12,6 +12,9 @@ review_recommendation: strong
 review_stars: 4
 confidence: 0.85
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Co-Existence vs Co-Intelligence: Mollick's Paradigm Shift on AI Autonomy

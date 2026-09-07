@@ -10,12 +10,15 @@ sources:
   - raw/articles/gpt-5-6-偷偷灰度-codex提前用上-夕小瑶-2026-07-04
   - raw/articles/gpt-56-发布需要了解的-10-个重点
   - raw/articles/实测gpt-56跑分赢了却输给了fable-5
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 9
 review_confidence: 9
 review_stars: 5
 review_recommendation: strong
 confidence: 0.9
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # GPT-5.6 Preview System Card - OpenAI Deployment Safety Hub

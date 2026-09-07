@@ -7,6 +7,9 @@ type: entity
 tags: [harness, observability, deepseek, agent, monitoring, tracing]
 sources: [raw/articles/deepseek-harness-observability-tencent-agent可观测]
 confidence: 0.8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # DeepSeek Harness 规模化踩坑实录：Agent 可观测方案

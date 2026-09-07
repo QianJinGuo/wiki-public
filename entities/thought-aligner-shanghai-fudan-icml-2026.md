@@ -2,7 +2,7 @@
 
 title: "Thought-Aligner：智能体行为安全新范式——可插拔思维校正层（ICML 2026）"
 created: 2026-06-01
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [thought-aligner, agent-safety, behavioral-safety, thought-correction, pluggable, icml-2026, fudan, shanghai-innovation-institute, openclaw, arxiv-2505.11063, whitzard, react]
 sources: [raw/articles/thought-aligner-shanghai-fudan-icml-2026]
@@ -10,6 +10,9 @@ review_value: 9
 review_confidence: 9
 review_recommendation: strong
 review_stars: 5
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Thought-Aligner：智能体行为安全新范式——可插拔思维校正层

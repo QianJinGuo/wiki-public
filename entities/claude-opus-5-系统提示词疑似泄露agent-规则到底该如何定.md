@@ -7,6 +7,9 @@ tags: [agent, system-prompt, prompt-engineering, rule-placement, harness, claude
 sources: [raw/articles/claude-opus-5-系统提示词疑似泄露agent-规则到底该如何定]
 confidence: 0.75
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Claude Opus 5 系统提示词疑似泄露：Agent 规则到底该如何定？

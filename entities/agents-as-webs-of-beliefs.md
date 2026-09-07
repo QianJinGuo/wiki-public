@@ -1,11 +1,14 @@
 ---
 title: "Agents as Webs of Beliefs"
 created: 2026-08-01
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: ['raw', 'article']
 sources: [raw/articles/agents-as-webs-of-beliefs]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > -> [[raw/articles/agents-as-webs-of-beliefs.md|原文存档]]

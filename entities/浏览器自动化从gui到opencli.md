@@ -8,6 +8,9 @@ tags: [wechat, ai]
 rating: v8c8
 sources:
   - raw/articles/浏览器自动化从gui到opencli
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 浏览器自动化：从GUI到OpenCLI

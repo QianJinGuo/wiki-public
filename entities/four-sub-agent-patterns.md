@@ -1,12 +1,15 @@
 ---
 title: "Agent 如何管理其他 Agent：四种 Sub Agent 模式"
 created: 2026-06-15
-updated: 2026-08-01
+updated: 2026-09-07
 tags: [agent, multi-agent, sub-agent, workflow, orchestration, pattern]
 review_value: 8
 review_confidence: 8
 type: entity
 sources:
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Agent 如何管理其他 Agent：四种 Sub Agent 模式

@@ -7,6 +7,9 @@ tags: [ai, llm, rate-limiting, rocketmq, litetopic, aliyun, gateway, qwen, gpu]
 sources: [raw/articles/限流比降-10-倍百炼网关如何用-rocketmq-litetopic-重构大模型限流]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 百炼网关限流重构：RocketMQ LiteTopic 把漏桶变成分布式基础设施

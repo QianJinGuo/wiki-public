@@ -8,6 +8,9 @@ tags: [wechat, ai]
 rating: v8c7
 sources:
   - raw/articles/ai-答疑助手优化实践从-rag-到-lightrag-的全链路升级
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # AI 答疑助手优化实践：从 RAG 到 LightRAG 的全链路升级

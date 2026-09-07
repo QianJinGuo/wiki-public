@@ -2,7 +2,7 @@
 title: "Claude Fable 5 — Ethan Mollick hands-on qualitative evaluation"
 description: "Ethan Mollick's first-hand evaluation of Mythos-class Claude 5 Fable across 4 use cases (games, isochrone map, Concord research tool, plus token economics), and the novel 'patron vs wizard' framework for understanding the human-AI relationship shift"
 created: 2026-06-11
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [claude, anthropic, fable-5, mythos, mollick, one-useful-thing, hands-on-evaluation, long-horizon-tasks, agentic-workflow, patron-vs-wizard, concord, isochrone-map, token-economics]
 sources: [raw/articles/oneusefulthing-mythos-fable-mollick-feels-like]
@@ -14,6 +14,9 @@ related:
   - entities/claude-fable-5-and-new-ai-safety-fables
   - entities/anthropic-claude-fable-5-on-aws内置保护措施的-mythos-级功能现已推出
 score_validated: 2026-09-05
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Claude Fable 5 — Ethan Mollick hands-on qualitative evaluation

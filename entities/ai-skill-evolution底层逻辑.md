@@ -10,7 +10,9 @@ sources:
   - raw/articles/ai-skill-evolution底层逻辑
 review_value: 7
 review_confidence: 8
-
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 [[raw/articles/ai-skill-evolution底层逻辑.md]] ^[raw/articles/ai-skill-evolution底层逻辑.md]

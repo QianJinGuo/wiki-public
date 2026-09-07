@@ -8,11 +8,14 @@ type: entity
 tags: [3d, gaussian-splatting, triangle-splatting, video-diffusion, scene-reconstruction, google-research, computer-vision]
 provenance_state: inferred
 created: 2026-06-25
-updated: 2026-08-01
+updated: 2026-09-07
 review_value: 8
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # FLAT: Feedforward Latent Triangle Splatting

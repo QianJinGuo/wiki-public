@@ -1,7 +1,7 @@
 ---
 title: "Dockerless: 免环境补丁验证器"
 created: 2026-07-02
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [dockerless, verifier, coding-agent, swe-bench, agent-training, post-training, sft, grpo]
 source: "[[raw/articles/dockerless-environment-free-verifier-coding-agent-arxiv-2606-28436]]"
@@ -10,6 +10,9 @@ provenance_state: extracted
 review_value: 8
 review_confidence: 8
 sources: [raw/articles/dockerless-environment-free-verifier-coding-agent-arxiv-2606-28436]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Dockerless: 免环境补丁验证器

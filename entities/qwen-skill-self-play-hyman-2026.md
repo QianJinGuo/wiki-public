@@ -1,7 +1,7 @@
 ---
 title: "阿里Qwen开源 Skill-SP：自博弈实现模型和Skill协同进化新范式"
 created: 2026-07-28
-updated: 2026-08-06
+updated: 2026-09-07
 type: entity
 tags: ['auto-harvested', 'self-play', 'skill-evolution', 'search-agent', 'curriculum-learning']
 sources:
@@ -9,6 +9,9 @@ sources:
   - raw/articles/sesa-self-evolving-search-agents-xhs-2026-08-03
   - raw/articles/qwen-skill-self-play-paper-arxiv-2026-08-06
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > -> [[raw/articles/qwen-skill-self-play-hyman-2026.md|原文存档]]

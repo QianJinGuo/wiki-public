@@ -10,7 +10,7 @@ tags:
   - indie-dev
   - ai-native
 created: 2026-06-22
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 review_value: 8
 review_confidence: 8
@@ -18,6 +18,9 @@ review_recommendation: worth-reading
 review_stars: 4
 sources:
   - raw/articles/minimum-viable-unit-saleable-software-brandur
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # The Minimum Viable Unit of Saleable Software

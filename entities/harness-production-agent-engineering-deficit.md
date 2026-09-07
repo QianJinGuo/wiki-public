@@ -1,7 +1,7 @@
 ---
 
 title: "Harness如何支撑Agent在生产环境稳定运行？"
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 created: 2026-05-16
 tags: [harness, agent, production, engineering-deficit, four-pillars, claude-code, agentleak]
@@ -9,6 +9,9 @@ sources: [raw/articles/harness-production-agent-engineering-deficit]
 reference_backlink: "[[raw/articles/harness-production-agent-engineering-deficit.md|原文存档]]"
 review_value: 8
 review_confidence: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 核心概念：工程赤字（Engineering Deficit）

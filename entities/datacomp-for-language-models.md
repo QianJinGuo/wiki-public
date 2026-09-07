@@ -1,13 +1,16 @@
 ---
 title: "DataComp for Language Models"
 created: 2026-05-20
-updated: 2026-07-02
+updated: 2026-09-07
 type: entity
 tags: [datacomp, dataset, training, benchmark, data-quality, filtering]
 sources: [raw/articles/datacomp-for-language-models]
 confidence: high
 provenance_state: inferred
 review_value: 5
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 → （无原始来源） ^[raw/articles/datacomp-for-language-models]
 

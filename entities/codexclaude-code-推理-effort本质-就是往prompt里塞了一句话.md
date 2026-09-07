@@ -8,6 +8,9 @@ sources:
   - raw/articles/codexclaude-code-的推理-effort-本质就是往-prompt-里塞了一句话
 confidence: 0.75
 rating: v7c8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Codex、Claude Code 的推理 effort 本质就是往 prompt 里塞了一句话

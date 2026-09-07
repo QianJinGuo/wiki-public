@@ -1,13 +1,16 @@
 ---
 title: "Loop Engineering 会是 AI 的下个关键词吗？"
 created: 2026-07-06
-updated: 2026-08-24
+updated: 2026-09-07
 type: entity
 tags: [agent, ai, llm, loop-engineering, harness-engineering]
 source_url: "https://mp.weixin.qq.com/s/727vxP13zdmq7QBjU1l1QA"
 confidence: 0.75
 provenance_state: extracted
 sources: [raw/articles/loop-engineering-next-keyword-for-ai-2026, raw/articles/graph-engineering-jiagoux-ruofei-2026]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Loop Engineering 会是 AI 的下个关键词吗？

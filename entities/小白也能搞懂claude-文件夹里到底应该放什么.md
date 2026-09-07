@@ -8,6 +8,9 @@ tags: [wechat, ai]
 rating: v8c7
 sources:
   - raw/articles/小白也能搞懂claude-文件夹里到底应该放什么
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 小白也能搞懂：.claude/ 文件夹里到底应该放什么

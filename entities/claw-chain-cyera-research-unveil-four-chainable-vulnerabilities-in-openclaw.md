@@ -4,13 +4,15 @@ title: "Claw Chain: Cyera Research Unveil Four Chainable Vulnerabilities in Open
 type: entity
 tags: [security, vulnerability, cve, ai-agents, openclaw, sandbox-escape]
 created: 2026-05-19
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 8
 review_confidence: 7
 review_recommendation: strong
 review_stars: 4
 sources: [raw/articles/claw-chain-cyera-research-unveil-four-chainable-vulnerabilities-in-openclaw]
-
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 ## 核心要点
 - Claw Chain: Cyera Research Unveil Four Chainable Vulnerabilities in OpenClaw

@@ -5,12 +5,15 @@ Mac: understanding an ExifTool vulnerability (CVE-2026-3102)
 type: entity
 tags: [security, agent, ai]
 created: 2026-05-21
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 9
 sources: [raw/articles/exiftool-compromise-mac-592994]
 review_confidence: 9
 review_recommendation: worth-reading
 review_stars: 5
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 核心要点

@@ -4,10 +4,13 @@ title: "你的AI代码越写越乱，他72小时合了14个PR——差距只在�
 type: entity
 tags: [agent, claude]
 created: 2026-05-21
-updated: 2026-05-21
+updated: 2026-09-07
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/garry-tan-complexity-ratchet-90percent-testing-20260513]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 你的AI代码越写越乱，他72小时合了14个PR——差距只在一个机制

@@ -8,6 +8,9 @@ provenance_state: inferred
 rating: v8c7
 sources:
   - raw/articles/harness-实践将任何文字编辑成精美的文章
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Harness 实践：将任何文字编辑成精美的文章

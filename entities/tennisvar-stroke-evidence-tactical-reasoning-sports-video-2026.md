@@ -1,12 +1,15 @@
 ---
 title: "TennisVAR：基于击球证据的体育视频战术推理（Event→Relation→Evidence→Tactic）"
 created: 2026-08-20
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [multimodal, video-understanding, tactical-reasoning, benchmark, sports-ai, llm, evidence-grounded]
 sources: [raw/articles/tennisvar-stroke-evidence-tactical-reasoning-sports-video-2026]
 confidence: 0.7
 related: [concepts/llm-benchmark-landscape, concepts/reasoning-models, concepts/video-generation-models]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # TennisVAR：基于击球证据的体育视频战术推理

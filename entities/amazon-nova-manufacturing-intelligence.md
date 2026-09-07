@@ -4,11 +4,14 @@ title: "Manufacturing Intelligence with Amazon Nova Multimodal Embeddings"
 type: entity
 tags: [amazon-nova, multimodal-embeddings, manufacturing, aerospace, retrieval, bedrock, s3-vectors, ocr, llm-judge, recall-metrics]
 created: 2026-05-12
-updated: 2026-08-01
+updated: 2026-09-07
 sources: [raw/articles/amazon-nova-manufacturing-intelligence]
 provenance_state: extracted
 review_value: 9
 review_confidence: 9
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 为什么制造业需要多模态检索

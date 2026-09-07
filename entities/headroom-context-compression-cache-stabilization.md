@@ -1,7 +1,7 @@
 ---
 title: "Headroom：上下文压缩与缓存稳定化框架（live zone + CCR + RawValue 字节级 patch）"
 created: 2026-06-07
-updated: 2026-06-07
+updated: 2026-09-07
 type: entity
 tags: [context-engineering, context-compression, agent-infrastructure, prompt-cache, anthropic-cache-control, openai-prompt-cache-key, rust, byte-level-patch, ccr-store, mcp, live-zone, agent-tooling, cache-stabilization, smartcrusher, log-compressor, search-compressor, diff-compressor, vibecoder]
 sources: [raw/articles/headroom-context-compression-agent-vibecoder]
@@ -9,6 +9,9 @@ review_value: 8
 review_confidence: 8
 review_stars: 4
 summary: Headroom 是 Rust 写的 Agent 上下文压缩 + 缓存稳定化代理层。核心创新：live zone（哪里能压由 prompt cache 决定而非 token 数）+ RawValue 字节级 patch（保持 provider cache key 稳定）+ CCR（Compress-Cache-Retrieve，压缩视图 + `<<ccr:HASH>>` marker 可取回）+ 4 类内容压缩器（SmartCrusher JSON / LogCompressor / SearchCompressor / DiffCompressor）+ 缓存稳定化（tools 排序、Schema key 排序、Anthropic cache_control、OpenAI prompt_cache_key）。CodeCompressor 默认 no-op。
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Headroom：上下文压缩与缓存稳定化框架

@@ -3,7 +3,7 @@
 title: "DESIGN.md：AI 设计 Agent 的视觉约束对齐文件（Google Stitch × VoltAgent）"
 description: "Google Stitch 2026-05 推出 DESIGN.md 概念（AGENTS.md 兄弟文件），VoltAgent 开源 awesome-design-md 集合 73 个主流网站 DESIGN.md；学术pro 2026-05-11 续篇把 71 套规范做成 Skill 化整合工具"
 created: 2026-06-02
-updated: 2026-08-29
+updated: 2026-09-07
 academic_pro_continuation: 2026-05-11
 type: entity
 tags: [agent, design, google, design-md, google-stitch, voltagent, awesome-design-md, getdesign-md, design-agent, ai-design, ui-generation, design-constraints, agents-md, claude-code, cursor, codex, ai-coding, 前端-ai]
@@ -21,6 +21,9 @@ related:
   - entities/anthropic-google-agent-skills-design-patterns
   - entities/agent-skill-writing-guide
   - entities/claude-code-skill-writing-guide
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # DESIGN.md：AI 设计 Agent 的视觉约束对齐文件（Google Stitch × VoltAgent）

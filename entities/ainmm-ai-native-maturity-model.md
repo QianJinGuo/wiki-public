@@ -1,7 +1,7 @@
 ---
 title: "AINMM：存量生产级工程向 AI Native 演进的五级成熟度模型"
 created: 2026-07-15
-updated: 2026-07-31
+updated: 2026-09-07
 type: entity
 tags: [ainmm, ai-native, maturity-model, harness-engineering, capability-maturity, cmmi, context-engineering, skill-encapsulation, verification-loop, collaboration-contract, self-evolution, taobao-tech, evolution-kit]
 sources:
@@ -9,6 +9,9 @@ sources:
 review_value: 8
 review_confidence: 8
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # AINMM：存量生产级工程向 AI Native 演进的五级成熟度模型

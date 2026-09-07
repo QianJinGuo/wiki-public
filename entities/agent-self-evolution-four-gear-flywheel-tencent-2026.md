@@ -1,12 +1,15 @@
 ---
 title: "Agent 自进化四齿飞轮：评测→记忆→落地→控制（腾讯技术工程）"
 created: 2026-08-26
-updated: 2026-08-26
+updated: 2026-09-07
 type: entity
 tags: [self-evolution, flywheel, evaluation, memory, skill, harness, tencent, human-in-the-loop, agent-engineering]
 sources: [raw/articles/agent-self-evolution-four-gear-flywheel-tencent-2026]
 confidence: 0.85
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Agent 自进化四齿飞轮：评测→记忆→落地→控制（腾讯技术工程）

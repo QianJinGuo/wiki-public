@@ -8,6 +8,9 @@ tags: [wechat, ai]
 rating: v7c7
 sources:
   - raw/articles/智能体架构-反思性元认知智能体让ai学会三省吾身
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 智能体架构 -- 反思性元认知智能体，让AI学会“三省吾身”

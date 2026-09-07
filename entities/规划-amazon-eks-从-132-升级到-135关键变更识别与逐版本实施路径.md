@@ -13,6 +13,9 @@ review_value: 8
 review_confidence: 9
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 规划 Amazon EKS 从 1.32 升级到 1.35：关键变更识别与逐版本实施路径

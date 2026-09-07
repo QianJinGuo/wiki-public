@@ -6,6 +6,9 @@ type: entity
 tags: ['raw', 'article']
 sources: [raw/articles/2026-06-23-我把Seed-2-1-Pro塞进Claude-Code-让它修我自己产品的bug-花叔]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > -> [[raw/articles/2026-06-23-我把Seed-2-1-Pro塞进Claude-Code-让它修我自己产品的bug-花叔.md|原文存档]]

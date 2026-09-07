@@ -1,13 +1,16 @@
 ---
 title: "Cola DLM：字节跳动连续潜空间扩散语言模型"
 created: 2026-06-11
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [diffusion-model, llm, byte-dance, representation-learning, latent-space, cola-dlm, text-vae, flow-matching, dit, architecture, scaling]
 sources: [raw/articles/cola-dlm-byte-dance-continuous-latent-diffusion-language-model]
 provenance_state: raw-linked
 review_value: 7
 confidence: 0.8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Cola DLM：字节跳动连续潜空间扩散语言模型

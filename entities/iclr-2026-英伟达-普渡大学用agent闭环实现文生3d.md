@@ -9,6 +9,9 @@ review_confidence: 7
 provenance_state: extracted
 sources:
   - raw/articles/iclr-2026-英伟达-普渡大学用agent闭环实现文生3d
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Scenethesis（ICLR 2026）英伟达 & 普渡大学用 Agent 闭环实现文生 3D

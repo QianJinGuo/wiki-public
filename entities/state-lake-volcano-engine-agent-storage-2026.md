@@ -1,13 +1,16 @@
 ---
 title: "State Lake：火山引擎面向 Agent 时代的存储基础设施重构"
 created: 2026-07-16
-updated: 2026-07-16
+updated: 2026-09-07
 type: entity
 tags: [storage, agent-infra, state-lake, sandbox, artifact, byte-dance, volcano-engine, agent-platform]
 status: verified
 confidence: 0.9
 provenance_state: extracted
 sources: [raw/articles/byte-dance-volcano-state-lake-agent-storage-infra-2026-07-16]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > 火山引擎存储团队提出"从 Data Lake 到 State Lake"的范式转变，围绕 Sandbox Store、Artifact Store、Agent 观测&评测三大方向重新组织存储能力，支撑 Agent 时代的真实业务。^[raw/articles/byte-dance-volcano-state-lake-agent-storage-infra-2026-07-16.md]

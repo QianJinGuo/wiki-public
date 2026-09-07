@@ -7,6 +7,9 @@ tags: [ai, image-editing, 3d-editing, diffusion, dit, acm-mm26, zju-reler, qwen,
 sources: [raw/articles/3d指标超过nano-banana-pro浙大开源方案让ai在平面图像里进行立体编辑-acm-mm26]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 浙大 PhyEdit：用显式 3D 几何约束让 AI 在平面图像里做立体编辑

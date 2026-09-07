@@ -1,7 +1,7 @@
 ---
 title: "ComfyUI Workflows on Amazon SageMaker Processing Jobs"
 created: 2026-06-23
-updated: 2026-08-30
+updated: 2026-09-07
 type: entity
 tags: [comfyui, sagemaker, content-generation, ai-processing, aws, workflow-automation, image-generation]
 provenance_state: inferred
@@ -11,6 +11,9 @@ review_value: 8
 review_confidence: 9
 review_stars: 4
 sources:
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # ComfyUI Workflows on Amazon SageMaker Processing Jobs

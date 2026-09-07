@@ -1,12 +1,15 @@
 ---
 title: "在 SageMaker AI 上使用 BoltzGen 加速蛋白质设计"
 created: 2026-07-02
-updated: 2026-07-04
+updated: 2026-09-07
 type: entity
 tags: [aws, sagemaker, ai-ml, protein-design, scientific-computing, gpu]
 sources: [raw/articles/accelerate-protein-design-with-boltzgen-on-amazon-sagemaker-]
 confidence: 0.80
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 在 SageMaker AI 上使用 BoltzGen 加速蛋白质设计

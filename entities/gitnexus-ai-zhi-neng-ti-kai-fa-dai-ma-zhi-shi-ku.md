@@ -2,14 +2,16 @@
 
 title: "打造 AI 智能体专属的代码知识库：GitNexus 完整上手攻略"
 created: 2026-05-16
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [claude-code, ai]
 sources:
   - raw/articles/gitnexus-ai-zhi-neng-ti-kai-fa-dai-ma-zhi-shi-ku
 review_value: 9
 review_confidence: 7
-
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 [[raw/articles/gitnexus-ai-zhi-neng-ti-kai-fa-dai-ma-zhi-shi-ku]] ^[raw/articles/gitnexus-ai-zhi-neng-ti-kai-fa-dai-ma-zhi-shi-ku.md]
 

@@ -2,12 +2,15 @@
 
 title: "AI Agent工具数量陷阱——5个边界清楚的工具胜过20个模糊工具"
 created: 2026-05-17
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent-architecture, tool-management, token-efficiency, anthropic, claude-code, openclaw, hermes-agent]
 sources: [raw/articles/ai-agent-tool-count-trap]
 review_value: 7
 review_confidence: 8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # AI Agent工具数量陷阱

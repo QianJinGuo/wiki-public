@@ -1,7 +1,7 @@
 ---
 
 created: 2026-06-10
-updated: 2026-08-01
+updated: 2026-09-07
 title: "Business intelligence at scale: Key obstacles"
 type: entity
 tags: [rss, article, agent, ai, llm, bedrock, aws, observability]
@@ -11,6 +11,9 @@ review_confidence: 8
 review_stars: 4
 sources:
   - raw/articles/how-aws-smgs-uses-an-ai-powered-conversational-assistant-to-
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Business intelligence at scale: Key obstacles

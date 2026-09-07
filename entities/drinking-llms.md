@@ -6,10 +6,13 @@ tags: [security, llm, vulnerability, kernel, linux]
 source: newsletter
 source_url:
 created: 2026-05-12
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 7
 sources: [raw/articles/drinking-llms]
 review_confidence: 8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > -> [[raw/articles/drinking-llms|原文存档]]

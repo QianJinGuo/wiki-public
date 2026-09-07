@@ -1,11 +1,14 @@
 ---
 title: "CaRE: Bi-Level Routing MoE — 港大ICML 2026持续学习架构"
 created: 2026-07-13
-updated: 2026-07-27
+updated: 2026-09-07
 type: entity
 tags: [continual-learning, moe, icml, hku, class-incremental-learning, catastrophic-forgetting]
 confidence: 0.75
 sources: [care-scaling-continual-learning-bi-level-routing-moe-hku-icml-2026]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # CaRE: Bi-Level Routing MoE — 港大ICML 2026持续学习架构

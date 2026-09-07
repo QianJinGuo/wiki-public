@@ -2,7 +2,7 @@
 title: "Decisions and Dollars"
 description: "AI应用公司必须转型为数据公司或金融科技公司——Agent经济下per-seat定价崩溃、Cursor $60B收购案的数据护城河分析"
 created: 2026-06-20
-updated: 2026-07-27
+updated: 2026-09-07
 type: entity
 tags: [agent-economics, business-model, data-moat, fintech, ai-pricing, cursor, anthropic, context-harness-judgment]
 source: [[raw/articles/decisions-and-dollars-agent-economics-data-fintech]]
@@ -16,6 +16,9 @@ related:
   - entities/stripe-agent-economic-infrastructure-5-products
   - entities/token-economics-ai-efficiency
   - entities/every-ai-subscription-is-a-ticking-time-bomb-for-enterprise
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Decisions and Dollars

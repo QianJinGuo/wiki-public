@@ -1,13 +1,16 @@
 ---
 title: "Martin Fowler AI 研发提醒：Harness 承重层"
 created: "2026-05-10"
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [martin-fowler, harness-engineering, agentic-engineering, vibe-coding, llm, software-engineering, nondeterminism]
 sources: [martin-fowler-的-ai-研发提醒非确定性进了研发链路harness-才真正开始承重]
 review_value: 9
 review_confidence: 7
 provenance_state: inferred
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 ## 核心洞察
 Martin Fowler 在 Pragmatic Engineer 播客访谈中指出：**软件工程过去几十年都建立在一台确定性机器上，现在我们把一个非确定性的协作者接进了研发链路。** 这个视角将 AI 研发的各种新概念（Vibe Coding、Agentic Engineering、Harness Engineering 等）统一到了一个核心问题下：当 AI 开始读仓库、改文件、调工具、跑测试、开 PR、查日志、修 CI 时，整个研发系统怎么消化这种非确定性。 ^[raw/articles/martin-fowler-的-ai-研发提醒非确定性进了研发链路harness-才真正开始承重.md]

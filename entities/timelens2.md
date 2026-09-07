@@ -3,13 +3,16 @@ title: "TimeLens2: Generalist Video Temporal Grounding with Multimodal LLMs"
 type: entity
 tags: [video-understanding, temporal-grounding, multimodal-llm, nju, shanghai-ai-lab]
 created: 2026-07-23
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 7
 review_confidence: 6
 sources: [raw/articles/timelens2-generalist-video-temporal-grounding]
 confidence: 0.6
 provenance_state: inferred
 score_validated: 2026-09-05
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # TimeLens2: Generalist Video Temporal Grounding

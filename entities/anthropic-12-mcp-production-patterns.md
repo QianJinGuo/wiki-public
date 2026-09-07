@@ -3,7 +3,7 @@
 
 title: "Anthropic 官方生产级 Agent 最佳实践：12 个可复用的 MCP 设计模式"
 created: 2026-05-16
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [claude-code, anthropic, agent, harness-engineering, mcp]
 sources:
@@ -11,7 +11,9 @@ sources:
   - raw/articles/mcp-enterprise-managed-auth-zero-touch-oauth
 review_value: 7
 review_confidence: 8
-
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Anthropic 官方生产级 Agent 最佳实践：12 个可复用的 MCP 设计模式

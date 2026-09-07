@@ -1,12 +1,15 @@
 ---
 title: "CADDesigner: 浙大ECIP范式驱动的多模态CAD建模智能体"
 created: 2026-07-12
-updated: 2026-07-12
+updated: 2026-09-07
 type: entity
 tags: [agent, cad, design, multimodal, zheda, academic-paper, llm, open-source]
 confidence: 0.7
 provenance_state: extracted
 sources: [raw/articles/caddesigner-ecip-cad-agent-zheda-2026]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # CADDesigner: 浙大ECIP范式驱动的多模态CAD建模智能体

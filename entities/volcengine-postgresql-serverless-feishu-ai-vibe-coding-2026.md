@@ -1,12 +1,15 @@
 ---
 title: "火山引擎 PostgreSQL Serverless 为 AI Vibe Coding 重塑数据库底座"
 created: 2026-07-24
-updated: 2026-07-24
+updated: 2026-09-07
 type: entity
 tags: [database, serverless, ai, vibe-coding, postgresql, volcengine, feishu]
 confidence: 0.75
 provenance_state: extracted
 sources: [raw/articles/volcengine-postgresql-serverless-feishu-ai-vibe-coding-2026]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 火山引擎 PostgreSQL Serverless 为 AI Vibe Coding 重塑数据库底座

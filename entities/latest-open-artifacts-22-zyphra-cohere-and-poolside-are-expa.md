@@ -2,7 +2,7 @@
 title: "开放模型生态快报 #22：Zyphra、Cohere、Poolside 扩张开放模型版图"
 description: "Interconnects 第 22 期开放模型生态分析：Zyphra 新架构、Cohere North Mini 代码模型、Poolside 代码模型进展。"
 created: 2026-07-01
-updated: 2026-08-30
+updated: 2026-09-07
 type: entity
 tags: [open-model, ai-research, zyphra, cohere, poolside, interconnects]
 sources: [raw/articles/latest-open-artifacts-22-zyphra-cohere-and-poolside-are-expa]
@@ -11,6 +11,9 @@ review_value: 8
 review_confidence: 9
 review_stars: 4
 review_recommendation: strong
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 开放模型生态快报 #22：Zyphra、Cohere、Poolside 扩张开放模型版图

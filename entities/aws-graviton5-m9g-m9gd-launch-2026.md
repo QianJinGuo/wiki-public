@@ -2,7 +2,7 @@
 title: "AWS Graviton5 M9g/M9gd 实例 GA 公告"
 description: "AWS Graviton5 处理器的 EC2 M9g/M9gd 实例正式发布 — 192 核、DDR5-8800、PCIe Gen6、25% 计算性能提升、35% Web/ML 性能提升，Meta 数千万核部署代理 AI 工作负载"
 created: 2026-06-15
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [aws, graviton, ec2, m9g, m9gd, graviton5, nitro, pcie-gen6, ddr5-8800, agentic-ai-workload, infrastructure]
 source: "[[raw/articles/现已推出由新的-aws-graviton5-处理器提供支持的-amazon-ec2-m9g-和-m9gd-实例]]"
@@ -11,6 +11,9 @@ review_value: 7
 review_confidence: 7
 review_recommendation: worth-reading
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # AWS Graviton5 M9g/M9gd 实例 GA 公告

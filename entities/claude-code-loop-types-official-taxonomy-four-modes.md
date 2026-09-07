@@ -1,7 +1,7 @@
 ---
 title: "Claude Code Loop Types — 官方四种循环模式分类法"
 created: 2026-07-07
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [claude-code, loop-engineering, goal, schedule, auto-mode, dynamic-workflows, agent-framework]
 sources:
@@ -13,6 +13,9 @@ review_value: 7
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Claude Code Loop Types — 官方四种循环模式分类法

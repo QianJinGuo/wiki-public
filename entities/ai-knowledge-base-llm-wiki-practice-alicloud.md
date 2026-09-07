@@ -1,7 +1,7 @@
 ---
 title: "构建 AI 时代的知识底座：直播数据 LLM Wiki 实践"
 created: 2026-07-01
-updated: 2026-07-29
+updated: 2026-09-07
 type: entity
 tags: [llm-wiki, knowledge-base, alicloud, live-streaming, data, ai-infrastructure]
 sources:
@@ -9,6 +9,9 @@ sources:
 review_value: 7
 review_confidence: 7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > 原文归档：[[raw/articles/ai-knowledge-base-llm-wiki-practice-alicloud-2026-06-26|原文归档]] ^[raw/articles/ai-knowledge-base-llm-wiki-practice-alicloud-2026-06-26.md]

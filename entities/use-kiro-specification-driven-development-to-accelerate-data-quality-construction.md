@@ -1,7 +1,7 @@
 ---
 title: "使用 Kiro 规范驱动开发加速数据质量建设 | 亚马逊AWS官方博客"
 created: 2026-05-14
-updated: 2026-09-05
+updated: 2026-09-07
 tags: [aws-china-blog, kiro]
 sources: [raw/articles/use-kiro-specification-driven-development-to-accelerate-data-quality-construction]
 review_value: 8
@@ -9,6 +9,9 @@ review_confidence: 8
 review_recommendation: strong
 publish_date: 2025-12-09
 type: entity
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 ## 概述
 使用 Kiro 规范驱动开发加速数据质量建设 by awschina on 09 12月 2025 in AWS re:Invent Permalink Share 业务背景 无论是传统行业企业的数据运营分析，互联网企业的数据行为分析，再到 AI 时代的领域数据上下文知识传递，精确的参数知识微调，数据质量一直都是极为重要的一环。在与企业客户的交流中逐渐发现，数据质量已从“技术小问题”升级为业务危机。近年来，即便企业在大数据和工具上投入巨大，脏数据、重复数据和过期数据仍广泛存在，直接威胁到 AI 项目、客户运营和报表的可靠性。 数据管道的质量受数据本身、基础设施、生命周期管理、开发部署和处理流程等多维因素影响，其中错误数据类型、清洗阶段问题和兼容性问题尤为常见，导致管道不稳定、数据不可用。数据从需求到落地阶段的语义表达不一致，实际数据管道中的重复和不一致记录、缺乏前瞻性的清洗与治理、依赖人工   ^[raw/articles/use-kiro-specification-driven-development-to-accelerate-data-quality-construction.md]

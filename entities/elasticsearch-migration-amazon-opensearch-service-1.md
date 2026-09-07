@@ -1,12 +1,15 @@
 ---
 title: "从自建 Elasticsearch 迁移到 Amazon OpenSearch Service 实践（一）：数据迁移与同步"
 created: 2026-07-15
-updated: 2026-07-15
+updated: 2026-09-07
 type: entity
 tags: [aws, opensearch, elasticsearch, migration, vector-search, bedrock]
 sources: [raw/articles/elasticsearch-migration-amazon-opensearch-service-1]
 confidence: 0.75
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 从自建 Elasticsearch 迁移到 Amazon OpenSearch Service 实践（一）：数据迁移与同步

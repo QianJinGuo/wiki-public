@@ -8,6 +8,9 @@ tags: [wechat, ai, agent, architecture, agent-framework, mcp]
 rating: v9c9
 sources:
   - raw/articles/4000行代码撑起一个agent框架nanobot架构深度解析
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 4000行代码撑起一个Agent框架？nanobot架构深度解析

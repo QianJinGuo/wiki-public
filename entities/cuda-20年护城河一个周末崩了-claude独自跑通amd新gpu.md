@@ -8,6 +8,9 @@ rating: v7c7
 sources:
   - raw/articles/cuda-20年护城河一个周末崩了-claude独自跑通amd新gpu
 confidence: 0.7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # CUDA 20年护城河一个周末崩了：Claude独自跑通AMD新GPU

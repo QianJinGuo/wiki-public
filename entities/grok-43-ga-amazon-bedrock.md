@@ -1,12 +1,15 @@
 ---
 title: "Introducing Grok on Amazon Bedrock — Grok 4.3 GA with Mantle Inference Engine"
 created: 2026-07-24
-updated: 2026-07-24
+updated: 2026-09-07
 type: entity
 tags: [xai, grok, grok-4.3, bedrock, aws, mantle, inference-engine, reasoning, agentic]
 sources: [raw/articles/introducing-grok-on-amazon-bedrock]
 confidence: 0.75
 vxc: 49
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Introducing Grok on Amazon Bedrock — Grok 4.3 GA with Mantle Inference Engine

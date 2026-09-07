@@ -1,12 +1,15 @@
 ---
 title: "Xiaomi-TabLDM：通用表格数据基础模型与表格数据 Scaling Law"
 created: 2026-09-06
-updated: 2026-09-06
+updated: 2026-09-07
 type: entity
 tags: [tabular-data, foundation-model, scaling-law, model-architecture, moe, test-time-scaling]
 sources: [raw/articles/xiaomi-tabldm-tabular-foundation-model-scaling-law-2026]
 confidence: 0.8
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Xiaomi-TabLDM：通用表格数据基础模型

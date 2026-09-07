@@ -3,11 +3,14 @@ title: "Reimagining the mouse pointer for the AI era"
 type: entity
 tags: [rss, deepmind, ux-design, ai-interaction]
 created: 2026-05-14
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 7
 sources: [raw/articles/deepmind-ai-pointer]
 review_confidence: 8
 review_recommendation: worth-reading
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 摘要

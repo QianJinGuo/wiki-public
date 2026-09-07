@@ -7,6 +7,9 @@ tags: [ai, robotics, embodied-ai, foundation-model, scaling-law, xiaomi, vla]
 sources: [raw/articles/10万小时训出开箱即用机器人基座模型xiaomi-robotics-1-探索具身智能-scaling-效应]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Xiaomi-Robotics-1：10 万小时数据训练的具身智能基座模型

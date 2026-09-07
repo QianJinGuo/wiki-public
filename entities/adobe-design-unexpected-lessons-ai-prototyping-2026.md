@@ -1,7 +1,7 @@
 ---
 title: "Unexpected lessons from an AI-assisted prototyping experiment"
 created: 2026-06-17
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 sources: [raw/articles/adobe-design-unexpected-lessons-ai-prototyping-2026]
 tags: [article, adobe-design, adobe-firefly, vibe-coding, ai-prototyping, design-engineering, cross-functional, collaboration]
@@ -10,6 +10,9 @@ review_value: 7
 review_confidence: 7
 review_recommendation: worth-reading
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Unexpected lessons from an AI-assisted prototyping experiment

@@ -3,14 +3,16 @@
 
 title: "Memory 不是 RAG：Agent 记忆的系统性框架"
 created: 2026-05-07
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, rag, memory]
 sources:
   - raw/articles/memory-vs-rag-agent-memory-systematic-framework
 review_value: 9
 review_confidence: 7
-
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 [[raw/articles/memory-vs-rag-agent-memory-systematic-framework.md]] ^[raw/articles/memory-vs-rag-agent-memory-systematic-framework.md]

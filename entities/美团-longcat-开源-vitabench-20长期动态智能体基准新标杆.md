@@ -7,6 +7,9 @@ tags: [wechat, ai, benchmark, agent, evaluation, memory]
 rating: v8c8
 sources:
   - raw/articles/美团-longcat-开源-vitabench-20长期动态智能体基准新标杆
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 美团 LongCat 开源 VitaBench 2.0：长期动态智能体基准新标杆

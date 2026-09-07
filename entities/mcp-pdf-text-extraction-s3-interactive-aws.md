@@ -1,7 +1,7 @@
 ---
 title: "MCP-based Interactive PDF Text Extraction from Amazon S3"
 created: 2026-07-01
-updated: 2026-08-30
+updated: 2026-09-07
 type: entity
 tags: [mcp, aws, s3, pdf, document-processing, ai-agent]
 sources: [raw/articles/build-interactive-pdf-text-extraction-from-amazon-s3]
@@ -9,6 +9,9 @@ confidence: 0.8
 provenance_state: extracted
 review_value: 7
 review_confidence: 8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # MCP-based Interactive PDF Text Extraction from Amazon S3

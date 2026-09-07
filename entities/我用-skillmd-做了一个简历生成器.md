@@ -8,6 +8,9 @@ updated: 2026-05-21
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/我用-skillmd-做了一个简历生成器]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 我用 SKILL.md 做了一个简历生成器

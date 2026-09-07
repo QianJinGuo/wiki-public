@@ -8,6 +8,9 @@ tags: [wechat, ai]
 rating: v7c8
 sources:
   - raw/articles/如何为-agent-设计产品
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 如何为 Agent 设计产品？

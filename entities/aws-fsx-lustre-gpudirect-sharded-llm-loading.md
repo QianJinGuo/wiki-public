@@ -3,7 +3,7 @@
 title: "AWS FSx for Lustre + GPUDirect Storage + TurboQuant: Sharded LLM Model Loading"
 description: "AWS 2026 推出的 LLM 冷启动优化方案 — GPUDirect Storage 旁路 CPU 加载模型权重，TurboQuant 压缩 KV cache 扩展上下文窗口。"
 created: 2026-06-07
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [aws, llm-infrastructure, gpudirect-storage, fsx-lustre, turboquant, kv-cache, model-loading, inference-optimization]
 source: "[[raw/articles/accelerate-llm-model-loading-and-increase-context-windows-wi]]"
@@ -13,6 +13,9 @@ review_value: 7
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # AWS FSx for Lustre + GPUDirect Storage + TurboQuant: Sharded LLM Model Loading

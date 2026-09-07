@@ -6,6 +6,9 @@ type: entity
 tags: ['raw', 'article']
 sources: [raw/articles/2026-06-30-AI-Kuikly-7-5小时落地三端-多模态聊天-App-实战-腾讯技术工程]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > -> [[raw/articles/2026-06-30-AI-Kuikly-7-5小时落地三端-多模态聊天-App-实战-腾讯技术工程.md|原文存档]]

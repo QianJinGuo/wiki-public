@@ -4,10 +4,14 @@ title: "Claude Code Harness 深度分析"
 type: entity
 tags: [agent, claude, context, harness, llm, prompt]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/claude-code-harness-deep-dive-founder-park]
+reviewed: 2026-09-07
+review_verdict: hub-retained
+review_category: dup
+review_note: "judged dup-0.75: harness分析重复版; retained as hub (in-links>=20); MOC rewrite candidate"
 ---
 
 ## TAOR Loop：Orchestrator 越笨越稳定

@@ -1,7 +1,7 @@
 ---
 title: "Skill 版本对比五大原则：从'两个数字比大小'到工程化质量门禁"
 created: 2026-06-15
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [skill, version-comparison, evaluation, regression, statistics, quality-gate, ci-cd, token-economics, hermes-agent, winty]
 sources:
@@ -9,6 +9,9 @@ sources:
 review_value: 8
 review_confidence: 8
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > 原文归档：[[raw/articles/skill-version-comparison-five-principles-winty|原文归档]] ^[raw/articles/skill-version-comparison-five-principles-winty.md]

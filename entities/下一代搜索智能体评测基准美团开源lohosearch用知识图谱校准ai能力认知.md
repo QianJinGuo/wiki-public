@@ -7,6 +7,9 @@ tags: [ai, research, agent, ai-agent, multi-agent, evaluation, benchmark, agent-
 sources: [raw/articles/下一代搜索智能体评测基准美团开源lohosearch用知识图谱校准ai能力认知.md]
 confidence: 0.6
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 下一代搜索智能体评测基准！美团开源LoHoSearch，用知识图谱校准AI能力认知

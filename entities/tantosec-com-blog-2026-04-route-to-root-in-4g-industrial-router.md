@@ -3,14 +3,16 @@
 
 title: "A Route to Root in a 4G Industrial Router"
 created: 2026-05-16
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [security, ai]
 sources:
   - raw/articles/tantosec-com-blog-2026-04-route-to-root-in-4g-industrial-router
 review_value: 7
 review_confidence: 7
-
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 深度分析

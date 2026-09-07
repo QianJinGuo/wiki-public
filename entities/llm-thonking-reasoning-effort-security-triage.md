@@ -2,7 +2,7 @@
 title: "LLM Thonking：推理努力与安全分诊效果的实证研究"
 description: "26 种 LLM 组合测试安全分诊任务，发现更高推理努力不一定更好，LLM 委员会达 86.2% 一致投票，文件级 vs 函数级性能差异显著"
 created: 2026-06-18
-updated: 2026-07-31
+updated: 2026-09-07
 type: entity
 tags: [llm-reasoning, security-triage, cost-optimization, empirical-study, llm-council]
 source: "[[raw/articles/llm-thonking-reasoning-effort-security-triage]]"
@@ -14,6 +14,9 @@ review_stars: 3
 review_recommendation: worth-reading
 sources:
   - raw/articles/llm-thonking-reasoning-effort-security-triage
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # LLM Thonking：推理努力与安全分诊效果的实证研究

@@ -4,10 +4,13 @@ title: "Temporarily disabling new user registrations"
 type: entity
 tags: [ruby, rubygems, security, registrations]
 created: 2026-05-15
-updated: 2026-08-04
+updated: 2026-09-07
 review_value: 7
 review_confidence: 9
 review_recommendation: worth-reading
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 摘要

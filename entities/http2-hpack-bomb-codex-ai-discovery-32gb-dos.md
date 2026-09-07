@@ -3,7 +3,7 @@
 title: "HTTP/2 HPACK Bomb — Codex Discovered AI-Discovered DoS"
 description: "OpenAI Codex chained two decade-old techniques (HPACK indexed reference + window stall) into a new remote DoS affecting 880,000+ websites. 32GB server memory consumption in 20 seconds from a single client. CVE-2026-49975 + 4 other servers vulnerable. First major AI-discovered security vulnerability."
 created: 2026-06-04
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [security, http2, hpack, codex, ai-security, vulnerability, dos, cve]
 source: "[[raw/articles/califio-codex-http2-hpack-bomb-880k-servers]]"
@@ -13,6 +13,9 @@ review_value: 9
 review_confidence: 8
 review_recommendation: strong
 review_stars: 5
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # HTTP/2 HPACK Bomb — Codex Discovered AI-Discovered DoS

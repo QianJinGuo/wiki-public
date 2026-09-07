@@ -1,12 +1,15 @@
 ---
 title: "Graph Engineering in the Era of LLM Agents：从个体智能到系统智能（综述）"
 created: 2026-08-26
-updated: 2026-08-26
+updated: 2026-09-07
 type: entity
 tags: [graph-engineering, ontology-engineering, system-intelligence, survey, multi-agent, harness, loop-engineering, arxiv]
 sources: [raw/articles/graph-engineering-survey-system-intelligence-paper-2026]
 confidence: 0.88
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Graph Engineering in the Era of LLM Agents：从个体智能到系统智能（综述）

@@ -1,12 +1,15 @@
 ---
 title: "TACO：Terminal Agent 自进化观测压缩框架——让 CLI Agent 学会丢掉无用上下文"
 created: 2026-07-01
-updated: 2026-07-23
+updated: 2026-09-07
 type: entity
 tags: [cli-agent, context-compression, agent-architecture, terminal-bench, research-paper]
 sources: [raw/articles/taco-cli-agent-context-compression-terminalbench]
 confidence: 0.85
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 TACO (Terminal Agent Compression) 是一个无需训练、即插即用的终端智能体自进化观测压缩框架，由曼彻斯特大学、北京航空航天大学、香港科技大学以及 Multimodal Art Projection (MAP) 研究团队联合提出。^[raw/articles/taco-cli-agent-context-compression-terminalbench.md]

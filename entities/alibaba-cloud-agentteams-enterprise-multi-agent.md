@@ -1,12 +1,15 @@
 ---
 title: "阿里云 AgentTeams 企业级多 Agent 平台"
 created: "2026-07-14"
-updated: 2026-08-29
+updated: 2026-09-07
 type: "entity"
 tags: [agent, multi-agent, enterprise, alibaba-cloud, agent-teams, sandbox, security]
 confidence: 0.8
 provenance_state: "extracted"
 sources: [raw/articles/alibaba-cloud-agentteams-enterprise-multi-agent]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 阿里云 AgentTeams 企业级多 Agent 平台

@@ -1,7 +1,7 @@
 ---
 title: "腾讯混元 HiLS-Attention：可学习层级稀疏注意力实现无限上下文建模"
 created: 2026-07-09
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [attention-mechanism, sparse-attention, long-context, tencent, hunyuan, open-source, inference-acceleration, hierarchical-routing]
 source: [[raw/articles/腾讯混元开源hils注意力]]
@@ -9,6 +9,9 @@ review_value: 8
 review_confidence: 8
 review_stars: 4
 sources: [raw/articles/tencent-hunyuan-hy3-preview-open-source]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 腾讯混元 HiLS-Attention：可学习层级稀疏注意力实现无限上下文建模

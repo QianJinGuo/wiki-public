@@ -6,6 +6,9 @@ type: entity
 tags: [ai, rss, mcp, agent, eks, kubernetes, aws, diagnosis, saas, ops, cloud-native]
 sources: [raw/articles/构建-ai-驱动的-eks-集群健康诊断-saas-平台-从静态规则到-mcp-agent-自主分析]
 confidence: 0.65
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 构建 AI 驱动的 EKS 集群健康诊断 SaaS 平台 — 从静态规则到 MCP Agent 自主分析

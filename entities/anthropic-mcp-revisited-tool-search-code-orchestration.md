@@ -10,7 +10,10 @@ tags: [claude-code, anthropic, agent, mcp, skill]
 review_value: 8
 sources: [raw/articles/anthropic-mcp-revisited-tool-search-code-orchestration]
 review_confidence: 9
-updated: 2026-09-05
+updated: 2026-09-07
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 [[raw/articles/anthropic-mcp-revisited-tool-search-code-orchestration]] ^[raw/articles/anthropic-mcp-revisited-tool-search-code-orchestration.md]^[raw/articles/anthropic-mcp-revisited-tool-search-code-orchestration.md]

@@ -3,7 +3,7 @@ title: "CLAUDE.md 规则从 Karpathy 的 4 条增加到 12 条"
 authors:
   - Cf2019
 created: 2026-05-18
-updated: 2026-09-05
+updated: 2026-09-07
 source: wechat
 url:
 type: entity
@@ -13,6 +13,9 @@ sources: [raw/articles/claude-md-12-rules-mnilax-cf2019]
 review_confidence: 8
 review_stars: 5
 provenance_state: inferred
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 ## 评分
 | 维度 | 分数 | 

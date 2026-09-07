@@ -8,6 +8,9 @@ rating: v8c7
 sources:
   - raw/articles/claude-sonnet-5-发布性能接近-opus-48价格只有60
   - raw/articles/claude-sonnet-5-liangziwei-2026
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Claude Sonnet 5 发布，性能接近 Opus 4.8，价格只有60%

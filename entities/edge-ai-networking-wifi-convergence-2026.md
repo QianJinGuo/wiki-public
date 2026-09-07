@@ -1,7 +1,7 @@
 ---
 title: "Edge AI Networking — Wi-Fi 7/8 Convergence Analysis"
 created: 2026-06-17
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [wifi, edge-ai, networking, semiconductor, deterministic-networking, wi-fi-7, wi-fi-8, industrial-iot]
 sources: [raw/articles/wi-fi-flies-higher-as-edge-ai-build-out-takes-root-semiengineering-2026]
@@ -9,6 +9,9 @@ review_value: 7
 review_confidence: 7
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Edge AI Networking — Wi-Fi 7/8 Convergence Analysis

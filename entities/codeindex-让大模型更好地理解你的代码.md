@@ -8,6 +8,9 @@ review_value: 8
 review_confidence: 7
 review_recommendation: worth-reading
 sources: [raw/articles/codeindex-让大模型更好地理解你的代码]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 ## 核心要点
 - **Codeindex定位**：代码语义化索引、检索和函数依赖图生成工具，帮助大模型理解大型代码仓库的上下文 

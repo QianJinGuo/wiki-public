@@ -12,6 +12,9 @@ review_recommendation: worth-reading
 review_stars: 3
 confidence: medium
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 从 Claude Code 记忆系统看四层 Agent 记忆方案，一个比一个夯

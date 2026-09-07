@@ -2,7 +2,7 @@
 
 title: "记忆体系工程实战：从设计选型到生产落地 — 存储分层、诊断框架与架构模式"
 created: 2026-07-07
-updated: 2026-07-07
+updated: 2026-09-07
 type: entity
 tags: [agent-memory, memory-storage, sqlite, redis, pgvector, qdrant, weaviate, vector-database, memory-engineering, hermes-agent, pinecone, hybrid-retrieval, fts5, file-tree, markdown]
 sources:
@@ -12,6 +12,9 @@ review_confidence: 8
 review_recommendation: strong
 review_stars: 4
 sha256: 83a4f58cde370e1c03512530c76ce29ec3b1ac3da06691ae070f151ef73cc947
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 记忆体系工程实战：从设计选型到生产落地 — 存储分层、诊断框架与架构模式

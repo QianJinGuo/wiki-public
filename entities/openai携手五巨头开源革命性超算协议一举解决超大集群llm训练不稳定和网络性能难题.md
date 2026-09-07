@@ -9,6 +9,9 @@ review_value: 7
 review_confidence: 8
 sources: [raw/articles/openai携手五巨头开源革命性超算协议一举解决超大集群llm训练不稳定和网络性能难题]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 背景：为什么需要MRC

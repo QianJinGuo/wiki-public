@@ -9,8 +9,11 @@ review_confidence: 8
 sources:
   - Evals到底在评什么？一文拆解AI评估的三种方法 (Lotte Verheyden, Langfuse, 2026-05-20)
   - AI Agent & Skill 测评方案及落地实践 — 腾讯 TEG 网关测试团队 (martinskxu, 2026-06-16)
-updated: 2026-08-01
+updated: 2026-09-07
 provenance_state: inferred
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 ## 三种评估方法
 ### 1. 人工评估

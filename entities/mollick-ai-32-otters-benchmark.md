@@ -2,7 +2,7 @@
 title: "Mollick AI 进展的 32 只水獭基准"
 description: "Ethan Mollick 用「水獭坐飞机用 WiFi」这一 viral prompt 作为意外基准，4 年视觉对比跟踪 AI 在图像生成、视频生成、LLM、本地/开源模型上的整体跃迁。"
 created: 2026-06-07
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [ai, mollick, one-useful-thing, diffusion-models, multimodal, llm, open-models, benchmark, video-generation]
 source: "[[raw/articles/the-recent-history-of-ai-in-32-otters|原文存档]]"
@@ -18,6 +18,9 @@ related:
   - entities/jagged-ai-frontier-mollick
   - entities/mass-intelligence
 sources: [raw/articles/the-recent-history-of-ai-in-32-otters]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Mollick AI 进展的 32 只水獭基准

@@ -2,13 +2,16 @@
 
 title: "Device Code Phishing Forensics: What We Learned from BEC Investigations in the Wild"
 created: 2026-06-10
-updated: 2026-09-05
+updated: 2026-09-07
 tags: [agent, code, data, evaluation, memory, observability, rl, security, trading, vision, workflow]
 review_value: 7
 review_confidence: 7
 type: entity
 sources:
   - raw/articles/device-code-phishing-forensics-what-we-learned-from-bec-investigations-in-the-wi
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Device Code Phishing Forensics: What We Learned from BEC Investigations in the Wild

@@ -1,12 +1,15 @@
 ---
 title: Claude Science — Anthropic 推出面向科研的 AI 工作台
 created: 2026-07-05
-updated: 2026-07-05
+updated: 2026-09-07
 type: entity
 tags: [agent, tool, llm, anthropic, research, science]
 sources: [raw/articles/anthropic推出claude-science科研界的claude-code来了附实测]
 confidence: 0.70
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Claude Science — Anthropic 推出面向科研的 AI 工作台

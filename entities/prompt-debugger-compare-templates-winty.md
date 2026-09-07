@@ -4,10 +4,13 @@ title: "Prompt 调试器：A/B 测试模板对比"
 type: entity
 tags: [anthropic, api, gpt, openai, prompt, sdk]
 created: 2026-05-21
-updated: 2026-06-30
+updated: 2026-09-07
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/prompt-debugger-compare-templates-winty]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # prompt-debugger-compare-templates-winty

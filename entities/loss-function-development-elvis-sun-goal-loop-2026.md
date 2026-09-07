@@ -1,7 +1,7 @@
 ---
 title: "Loss Function Development (LFD) — 损失函数开发与 /goal 循环（Elvis Sun）"
 created: "2026-06-12"
-updated: 2026-08-01
+updated: 2026-09-07
 date: "2026-06-12"
 tags: [loss-function-development, lfd, goal-loop, harness-engineering, spec-driven-development, elvis-sun, peter-steinberger, distillation, information-asymmetry, forced-entropy, cal-com, loss-function, loop-design, goal-design]
 review_value: 10
@@ -11,6 +11,9 @@ review_stars: 5
 sources:
   - [[raw/articles/loss-function-development-elvis-sun-goal-loop-2026|从 Spec 到损失函数 — 真正会用 AI Agent 的人已经在设计循环]]
 type: entity
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 概述

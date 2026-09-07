@@ -1,13 +1,16 @@
 ---
 title: "Harness 工程搭建式业务 Agent 评测方案：Claude Code 作 Harness 搭建者"
 created: 2026-06-05
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, harness, evaluation, claude-code, llm-as-judge, prompt-engineering, aliyun, alibaba]
 sources: [raw/articles/harness-engineered-business-agent-evaluation-aliyun-boyu]
 review_value: 8
 review_confidence: 8
 summary: 阿里云泊予 6 个 Agent 实战：用 Claude Code 搭建评测 Harness，把 test_runner.py 替换为评测 Agent 提示词，三层指标框架 L1/L2/L3 + system.question 数据列 + 可复用资产，单 Agent 评测全流程 1.5 周压缩到 1-2 天（5x 加速）
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Harness 工程搭建式业务 Agent 评测方案：Claude Code 作 Harness 搭建者

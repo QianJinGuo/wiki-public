@@ -4,11 +4,14 @@ title: "LiveKit Agents：给大模型接上麦克风，没你想的那么简单"
 type: entity
 tags: [voice-ai, livekit, streaming, real-time-agent, vad, stt, tts, interruption-detection, mcp, sip]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 7
 review_confidence: 8
 sources: [raw/articles/livekit-agents-voice-ai-streaming-cascade-interruption-detection]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 延迟：语音 AI 的第一个杀手

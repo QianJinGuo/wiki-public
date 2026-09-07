@@ -2,13 +2,16 @@
 
 title: "小刘商业 Agent 增强层通用基座"
 created: 2026-06-10
-updated: 2026-09-05
+updated: 2026-09-07
 tags: [agent, architecture, code, data, evaluation, llm, memory, mlops, observability, prompt, rag, robotics, search, security, tool-use]
 review_value: 7
 review_confidence: 7
 type: entity
 sources:
   - raw/articles/ai-xiaolaoliu-business-agent-augmentation-layer-general-base-20260606
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Ai Xiaolaoliu Business Agent Augmentation Layer General Base 20260606

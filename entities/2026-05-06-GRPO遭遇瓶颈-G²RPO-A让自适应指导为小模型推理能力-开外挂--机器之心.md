@@ -7,6 +7,9 @@ type: entity
 tags: [ai, training]
 sources: [raw/articles/2026-05-06-GRPO遭遇瓶颈-G²RPO-A让自适应指导为小模型推理能力-开外挂--机器之心]
 confidence: 0.8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # GRPO遭遇瓶颈？G²RPO-A让自适应指导为小模型推理能力「开外挂」

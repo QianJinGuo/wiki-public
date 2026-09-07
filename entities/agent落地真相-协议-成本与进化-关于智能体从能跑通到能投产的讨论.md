@@ -9,6 +9,10 @@ sources: [raw/articles/agent落地真相-协议-成本与进化-关于智能体�
 publish_date: 2026-07-05
 vxc: 64
 confidence: 0.8
+reviewed: 2026-09-07
+review_verdict: hub-retained
+review_category: dup
+review_note: "judged dup-0.8: 与圆桌条重复且带直播引流; retained as hub (in-links>=20); MOC rewrite candidate"
 ---
 
 # Agent落地真相：协议、成本与进化——关于智能体从能跑通到能投产的讨论

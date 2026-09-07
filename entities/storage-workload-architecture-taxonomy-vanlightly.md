@@ -1,7 +1,7 @@
 ---
 title: "Can We Agree on a Storage/Workload Architecture Taxonomy? — Jack Vanlightly"
 created: 2026-06-25
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: ["storage", "architecture", "taxonomy", "distributed-systems", "database"]
 provenance_state: inferred
@@ -13,6 +13,9 @@ review_recommendation: strong
 review_stars: 4
 sources:
   - raw/articles/storage-workload-architecture-taxonomy-vanlightly
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Can We Agree on a Storage/Workload Architecture Taxonomy? — Jack Vanlightly

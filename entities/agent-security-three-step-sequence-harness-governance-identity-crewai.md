@@ -3,7 +3,7 @@
 title: "Agent 安全三步法：先 Harness、再 Governance、最后 Identity（顺序反了一切白做）"
 description: "CrewAI 2B+ executions 提炼的安全落地序列：Harness → Governance → Identity。错把 Identity/Auth 当第一步是 Fortune 500 反复踩的坑——花 3 个月建 IAM，发现要 secure 的东西根本不可靠。"
 created: 2026-06-09
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [agent, security, crewai, sequencing, harness-first, governance, identity, iam, deployment]
 source: "[[raw/articles/youre-building-agent-security-in-the-wrong-order]]"
@@ -13,6 +13,9 @@ related_urls:
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Agent 安全三步法：先 Harness、再 Governance、最后 Identity

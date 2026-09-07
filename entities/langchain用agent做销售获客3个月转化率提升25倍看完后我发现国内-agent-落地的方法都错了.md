@@ -14,6 +14,9 @@ sources:
   - raw/articles/langchain用agent做销售获客3个月转化率提升25倍看完后我发现国内-agent-落地的方法都错了
 confidence: 0.85
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # LangChain 用 Agent 做销售获客，3个月转化率提升2.5倍

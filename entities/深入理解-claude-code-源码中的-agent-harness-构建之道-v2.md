@@ -8,6 +8,10 @@ sources: [raw/articles/深入理解-claude-code-源码中的-agent-harness-构�
 provenance_state: raw-linked
 review_value: 8
 confidence: 0.8
+reviewed: 2026-09-07
+review_verdict: hub-retained
+review_category: dup
+review_note: "judged dup-0.8: 同文较短版留16095字; retained as hub (in-links>=20); MOC rewrite candidate"
 ---
 
 # 深入理解 Claude Code 源码中的 Agent Harness 构建之道

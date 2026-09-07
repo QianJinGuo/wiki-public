@@ -1,13 +1,16 @@
 ---
 title: "Automatically redact PII in images with Amazon Nova"
 created: 2026-07-07
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [ai, agent, ingest, aws, amazon-nova, pii, security, computer-vision]
 sources: [raw/articles/automatically-redact-pii-in-images-with-amazon-nova]
 confidence: 0.75
 provenance_state: merged
 vxc: 64
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Automatically redact PII in images with Amazon Nova

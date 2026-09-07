@@ -3,12 +3,15 @@ title: "循环工程 (Loop Engineering) — 清华 2026 框架"
 type: entity
 tags: [loop-engineering, agent-harness, tsinghua, governance, observability, subagents, worktree]
 created: 2026-06-12
-updated: 2026-08-01
+updated: 2026-09-07
 review_value: 9
 review_confidence: 8
 sources: [raw/articles/tsinghua-loop-engineering-report]
 provenance_state: extracted
 related_reports: [entities/tsinghua-harness-engineering-report]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 循环工程 (Loop Engineering) — 清华 2026 框架

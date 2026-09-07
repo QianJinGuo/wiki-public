@@ -8,6 +8,9 @@ provenance_state: inferred
 rating: v9c8
 sources:
   - raw/articles/国产双开源让mac成为你的私人ai工作站
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 国产双开源：让Mac成为你的私人AI工作站

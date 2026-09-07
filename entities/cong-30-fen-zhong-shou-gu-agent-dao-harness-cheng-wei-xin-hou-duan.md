@@ -4,10 +4,13 @@ title: "从 30 分钟手搓 Agent，到 Harness 成为\"新后端"
 type: entity
 tags: [agent, harness, llm, memory, tool]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/cong-30-fen-zhong-shou-gu-agent-dao-harness-cheng-wei-xin-hou-duan]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 从 30 分钟手搓 Agent，到 Harness 成为"新后端"

@@ -6,13 +6,16 @@ author: AgentBuff
 publish_date: 2026-05-12
 tags: [wechat, agent, coding, engineering]
 created: 2026-05-19
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 8
 sources: [raw/articles/three-tools-in-one-gstack-superpowers-openspec-engineering-ai-coding]
 review_stars: 4
 sha256: 428505c6293403e9fa418e30814baedf0962f70d2ae1eef0a107522edbbb9e07
 type: entity
 confidence: 0.8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 元信息

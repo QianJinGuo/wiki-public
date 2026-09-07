@@ -4,10 +4,13 @@ title: "AWS Bedrock Agentcore Quality Optimization Flywheel"
 type: entity
 tags: [agent, aws, context, evaluation, model, production, prompt]
 created: 2026-05-21
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 7
 review_confidence: 9
 sources: [raw/articles/aws-bedrock-agentcore-quality-optimization-flywheel]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Introducing agent quality optimization in AgentCore, now in preview

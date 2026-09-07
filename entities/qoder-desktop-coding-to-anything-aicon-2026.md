@@ -1,12 +1,15 @@
 ---
 title: "从 Coding 到 Anything：Qoder 多 Agent 协作与托管运行时"
 created: 2026-07-07
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, qoder, harness, runtime, multi-agent, desktop-agent, hosted-runtime]
 sources: [raw/articles/raw-qoder-desktop-coding-to-anything-aicon-2026]
 confidence: 0.85
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > 2026 AICon 上海站专题分享，阿里巴巴 Qoder 与慧博科技四位实践者完整呈现了 AI 工作流重构路径：从 Coding 出发，通过多 Agent 协作、桌面 Agent、托管运行时，走向更广泛的 Anything 场景。^[raw/articles/raw-qoder-desktop-coding-to-anything-aicon-2026.md]

@@ -7,6 +7,9 @@ type: entity
 tags: [deepseek, agi, llm, ai]
 sources: [raw/articles/梁文锋花4小时讲透了通往agi的常识]
 confidence: 0.65
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 梁文锋花 4 小时讲透了通往 AGI 的常识

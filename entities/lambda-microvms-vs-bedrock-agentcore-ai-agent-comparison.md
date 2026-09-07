@@ -2,10 +2,13 @@
 title: "Lambda MicroVMs vs Bedrock AgentCore：AI Agent 开发者该怎么选？"
 type: entity
 created: 2026-07-02
-updated: 2026-08-29
+updated: 2026-09-07
 tags: [rss, agent, aws, serverless, bedrock-agentcore]
 sources: [raw/articles/lambda-microvms-vs-bedrock-agentcore-ai-agent-comparison]
 description: "AWS Lambda MicroVMs 与 Bedrock AgentCore Runtime 深度对比 — AI Agent 计算原语 vs Agent 框架选择指南"
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Lambda MicroVMs vs Bedrock AgentCore：AI Agent 开发者该怎么选？

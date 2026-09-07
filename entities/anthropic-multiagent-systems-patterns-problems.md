@@ -1,11 +1,14 @@
 ---
 title: "Anthropic Multiagent Systems: Patterns and Problems"
 created: 2026-08-15
-updated: 2026-08-15
+updated: 2026-09-07
 type: entity
 tags: [agent, anthropic, multi-agent, coordination, swarm, research, collusion, deception]
 sources: [raw/articles/anthropic-multiagent-systems-patterns-problems, raw/articles/anthropic曝光多agent隐患放一起乱成一锅粥了]
 confidence: 0.75
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Anthropic Multiagent Systems: Patterns and Problems

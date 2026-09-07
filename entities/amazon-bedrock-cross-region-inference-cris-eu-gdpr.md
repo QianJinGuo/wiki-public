@@ -1,7 +1,7 @@
 ---
 title: "Amazon Bedrock Cross-Region Inference (CRIS): EU Data Residency and GDPR Compliance"
 created: 2026-06-09
-updated: 2026-08-30
+updated: 2026-09-07
 type: entity
 tags: [aws, bedrock, cross-region-inference, cris, gdpr, eu, data-residency, compliance, inference-profile]
 source: "[[raw/articles/unlocking-ai-flexibility-in-europe-a-guide-to-cross-region-i|原文存档]]"
@@ -11,6 +11,9 @@ review_confidence: 8
 review_recommendation: strong
 review_stars: 4
 confidence: 0.85
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Amazon Bedrock Cross-Region Inference (CRIS): EU Data Residency and GDPR Compliance

@@ -3,7 +3,7 @@
 title: "Databricks 收购 Panther：AI 驱动的 Agentic SOC 安全运营"
 description: "Databricks 收购 Panther 构建 AI-native 安全运营中心，用 Agentic 工作流自动化威胁检测、调查和响应，替代传统 SIEM"
 created: 2026-06-22
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [security, ai-agent, agentic-soc, databricks, siem, threat-detection, security-lakehouse]
 source: "[[raw/articles/databricks-panther-ai-threat-detection]]"
@@ -14,6 +14,9 @@ review_confidence: 8
 review_recommendation: strong
 review_stars: 4
 sources:
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Databricks 收购 Panther：AI 驱动的 Agentic SOC 安全运营

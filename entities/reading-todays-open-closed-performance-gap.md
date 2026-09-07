@@ -2,7 +2,7 @@
 title: "Reading today's open-closed performance gap"
 description: "开放-闭源模型性能差距不是单一数字，而是动态的 benchmark 演化、RLVR 训练 regimes 和前沿实验室经济压力的复合函数。中国实验室通过蒸馏追赶，但在 RL 环境私有化趋势下将面临瓶颈。"
 created: 2026-06-07
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [open-model, benchmarking, rlvr, frontier-ai, economics]
 source: [[raw/articles/reading-todays-open-closed-performance-gap]]
@@ -12,6 +12,9 @@ review_value: 8
 review_confidence: 9
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Reading today's open-closed performance gap

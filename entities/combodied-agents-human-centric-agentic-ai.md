@@ -1,13 +1,16 @@
 ---
 title: "ComBodied Agents：以人为中心的 Agentic AI 新范式（伴身智能体）"
 created: 2026-08-26
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agentic-ai, embodied, human-centric, companion, agent, paradigm, robotics]
 provenance_state: extracted
 sources:
   - raw/articles/combodied-agents-human-centric-agentic-ai-2026
 confidence: 0.7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # ComBodied Agents：以人为中心的 Agentic AI 新范式（伴身智能体）

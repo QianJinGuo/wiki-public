@@ -1,12 +1,15 @@
 ---
 title: "ICML 2026: GPS — 小模型「指挥」大模型RL后训练，最高减少69% Rollout成本"
 created: 2026-07-11
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [llm, rl, post-training, prompt-selection, icml, tsinghua, tencent, gps, reinforcement-learning]
 sources: [raw/articles/icml-2026-gps-prompt-predictive-model-rl-post-training-tsinghua-tencent]
 confidence: 0.85
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # ICML 2026: GPS — 小模型「指挥」大模型RL后训练，最高减少69% Rollout成本

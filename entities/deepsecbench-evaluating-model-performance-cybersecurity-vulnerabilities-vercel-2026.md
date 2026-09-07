@@ -1,11 +1,14 @@
 ---
 title: "DeepSecBench：评估 AI 模型在网络安全漏洞发现中的性能"
 created: 2026-07-29
-updated: 2026-07-29
+updated: 2026-09-07
 type: entity
 tags: [ai, security, benchmark, vulnerability, deepsec, vercel, llm-evaluation]
 sources: [raw/articles/deepsecbench-evaluating-model-performance-cybersecurity-vulnerabilities-vercel-2026]
 confidence: 0.72
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # DeepSecBench：评估 AI 模型在网络安全漏洞发现中的性能

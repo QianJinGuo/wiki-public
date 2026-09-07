@@ -8,11 +8,14 @@ type: entity
 tags: [security, web-security, vulnerability, penetration-testing, enterprise, idor, authentication-bypass]
 provenance_state: inferred
 created: 2026-06-26
-updated: 2026-08-01
+updated: 2026-09-07
 review_value: 8
 review_confidence: 9
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Exploiting vulnerabilities in Johnson & Johnson web apps

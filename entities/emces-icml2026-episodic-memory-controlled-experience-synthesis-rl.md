@@ -1,12 +1,15 @@
 ---
 title: "EMCES (ICML 2026) — Episodic Memory-Guided Controllable Experience Synthesis for Reinforcement Learning"
 created: 2026-07-02
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [icml-2026, reinforcement-learning, episodic-memory, diffusion-model, sample-efficiency, experience-synthesis, zhejiang-scitech-university, nanjing-university]
 sources: [raw/articles/emces-icml2026-episodic-memory-controlled-experience-synthesis-rl]
 confidence: 0.8
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # EMCES (ICML 2026) — Episodic Memory-Guided Controllable Experience Synthesis for RL

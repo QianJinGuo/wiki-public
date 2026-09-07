@@ -8,6 +8,9 @@ tags: [harness, vibe-coding, engineering]
 confidence: 0.75
 provenance_state: extracted
 sources: [raw/articles/从vibe-coding到harness-一套大仓ai工程化实战]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 从Vibe Coding到Harness—— 一套大仓AI工程化实战

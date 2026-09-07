@@ -3,11 +3,15 @@ title: "From siloed data to unified insights: Cross-account Athena Access for Am
 type: entity
 tags: [aws, machine-learning, ai-agents, bedrock]
 created: 2026-05-15
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 7
 sources: [raw/articles/from-siloed-data-to-unified-insights-cross-account-athena-access-for-amazon-quic]
 review_confidence: 8
 review_recommendation: strong
+reviewed: 2026-09-07
+review_verdict: hub-retained
+review_category: thin
+review_note: "judged thin-0.78: 正文空洞来源卡，无实质内容; retained as hub (in-links>=20); MOC rewrite candidate"
 ---
 > -> [[raw/articles/from-siloed-data-to-unified-insights-cross-account-athena-access-for-amazon-quic.md|原文存档]]
 

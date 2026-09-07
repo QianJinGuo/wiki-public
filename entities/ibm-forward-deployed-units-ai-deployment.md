@@ -3,12 +3,15 @@ title: "IBM Forward Deployed Units (FDU) AI 部署模型"
 type: entity
 tags: [ibm, enterprise-ai, deployment-model, consulting, agentic-ai, fdu]
 created: 2026-05-20
-updated: 2026-08-29
+updated: 2026-09-07
 sources: [raw/articles/ibm-forward-deployed-units-ai-deployment]
 provenance_state: extracted
 review_value: 7
 review_confidence: 8
 review_recommendation: worth-reading
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 ## 背景：企业 AI 交付的痛点
 IBM 在公告中指出，传统的 enterprise delivery model 依赖于劳动密集型（labor-intensive）的人力扩张模式——项目规模扩大意味着需要投入更多人力的线性增长。然而，随着 AI  adoption 加速，IBM 认为成功的关键已转向如何组织团队、协调 AI agents（[[entities/agent-engineering-principles-architecture-practice|Agent]]）、强化 governance（治理），以及将 AI 能力 operationalize（可操作化）为可量化的业务成果。 ^[raw/articles/ibm-forward-deployed-units-ai-deployment.md]

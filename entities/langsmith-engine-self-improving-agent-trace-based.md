@@ -1,13 +1,16 @@
 ---
 title: "LangSmith Engine: Trace-Based Self-Improving Agent"
 created: 2026-06-11
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [langsmith, langchain, self-improving-agent, agent-observability, trace, failure-learning]
 sources: [raw/articles/langsmith-engine-self-improving-agent-trace-based.md]
 provenance_state: raw-linked
 review_value: 8
 confidence: 0.8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # LangSmith Engine: Trace-Based Self-Improving Agent

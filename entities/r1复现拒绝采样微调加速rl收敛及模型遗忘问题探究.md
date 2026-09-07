@@ -7,6 +7,9 @@ tags: [article, wechat]
 sources: [raw/articles/r1复现拒绝采样微调加速rl收敛及模型遗忘问题探究]
 review_value: 7
 review_confidence: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 ## 摘要
 本文档从微信平台抓取，原始URL: https://mp.weixin.qq.com/s/Qk4bN6yFkI39Ye9fsS4NXA ^[raw/articles/r1复现拒绝采样微调加速rl收敛及模型遗忘问题探究.md]

@@ -4,13 +4,16 @@ title: "AI 生产开发工作流：OpenSpec 规范驱动 + Superpowers 工具链
 type: entity
 tags: [harness, production, workflow, agent, multi-agent, coding, interview, vibe-coding, ai-engineering, specification-driven, tdd, browser-qa, spec-driven, claude-code, codex, deliverable-closure]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 7
 review_confidence: 7
 sources:
   - raw/articles/ai-production-development-workflow-openspec-superpowers-gstack
   - raw/articles/openspec-superpowers-gstack-vibe-coding-interview-carl-2026-06-12
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 三大痛点

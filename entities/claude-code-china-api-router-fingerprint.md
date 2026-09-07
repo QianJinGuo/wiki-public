@@ -1,12 +1,15 @@
 ---
 title: "Claude Code 静默识别中国 API 路由"
 created: 2026-07-02
-updated: 2026-07-02
+updated: 2026-09-07
 type: entity
 tags: [anthropic, claude-code, security, fingerprinting, api-routing, china, privacy]
 sources: [raw/articles/claude-code-china-api-router-fingerprint-vincentschmalbach]
 confidence: 0.8
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Claude Code 静默识别中国 API 路由

@@ -3,10 +3,13 @@ title: "京东海博 AI-Native 研发工程体系：Harness+双Loop+知识库+�
 type: entity
 tags: [jd, haibo, ai-native, harness-engineering, tdd, skill, agent, knowledge-base, enterprise-practice]
 created: 2026-07-29
-updated: 2026-07-31
+updated: 2026-09-07
 rating: v9c9
 sources:
   - raw/articles/jd-haibo-ai-native-harness-dual-loop-knowledge
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 京东海博 AI-Native 研发工程体系

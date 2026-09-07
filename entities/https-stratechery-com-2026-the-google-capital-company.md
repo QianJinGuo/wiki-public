@@ -2,7 +2,7 @@
 
 title: "The Google Capital Company"
 created: 2026-06-03
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [newsletter, ai]
 source: "[[raw/articles/https-stratechery-com-2026-the-google-capital-company.md|The Google Capital Company]]"
@@ -13,6 +13,9 @@ review_recommendation: worth-reading
 review_stars: 4
 sources:
   - raw/articles/https-stratechery-com-2026-the-google-capital-company
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # The Google Capital Company

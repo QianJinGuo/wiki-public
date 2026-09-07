@@ -2,7 +2,7 @@
 title: "MSA 稀疏注意力三国杀：NSA / DSA / MoBA / MSA 四方案深度对比"
 description: "花叔 2026-06-12 MSA 论文全文解读: 1M 上下文下稀疏注意力四方案 (NSA/DSA/MoBA/MSA) 在 3 个核心分歧轴 (颗粒度/KV压缩/辅助分支) 上的取舍对比 + KL 对齐训练配方 + Outer Gather Q kernel 设计 + head 涌现模式 (attention sink/对角线/斜条纹) + 1M 上下文成本才是真问题"
 created: 2026-06-12
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [sparse-attention, msa, dsa, moba, nsa, MiniMax, deepseek, kimi, mla, attention-mechanism, long-context, kl-divergence, attention-sink, kernel-design, outer-gather, 1m-context, head-emergence, huashu]
 source: "[[raw/articles/msa-sparse-attention-three-kingdoms-huashu-2026-06-12]]"
@@ -14,6 +14,9 @@ review_recommendation: strong
 provenance_state: extracted
 confidence: 0.9
 strategic_context: "[[queries/research-frontier-map|Frontier 1 — 模型架构与训练]]"
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # MSA 稀疏注意力三国杀：NSA / DSA / MoBA / MSA 四方案深度对比

@@ -1,13 +1,16 @@
 ---
 title: "OneReason：快手将推理注入推荐基模的系统性尝试"
 created: 2026-06-09
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [onereason, kuaishou, recommendation-system, reasoning, cot, generative-recommendation, itemic-token, pretraining, sft, rl, fast-slow-thinking, agentic-recsys]
 sources:
   - raw/articles/onereason-kuaishou-reasoning-recommender-system
 review_value: 9
 review_confidence: 9
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > 原文归档：[[raw/articles/onereason-kuaishou-reasoning-recommender-system|原文归档]] ^[raw/articles/onereason-kuaishou-reasoning-recommender-system.md]

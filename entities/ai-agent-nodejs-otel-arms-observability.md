@@ -1,12 +1,15 @@
 ---
 title: AI Agent Node.js ARM 探针 — 通过 OpenTelemetry 实现模型/工具/服务链路统一追踪
 created: 2026-07-05
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, observability, opentelemetry, monitoring, arms, nodejs, alibaba, ai-observability, tracing, apm]
 sources: [raw/articles/ai-agent-nodejs-otel-arms-observability]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # AI Agent Node.js ARM 探针 — 通过 OpenTelemetry 实现模型/工具/服务链路统一追踪

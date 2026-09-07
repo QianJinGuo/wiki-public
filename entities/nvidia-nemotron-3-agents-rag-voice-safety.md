@@ -4,10 +4,13 @@ title: "NVIDIA Nemotron 3：Agent / RAG / 语音安全"
 type: entity
 tags: [agent, nvidia, rag, training]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 8
 review_confidence: 7
 sources: [raw/articles/nvidia-nemotron-3-agents-rag-voice-safety]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Building NVIDIA Nemotron 3 Agents for Reasoning, Multimodal RAG, Voice, and Safety | NVIDIA Technical Blog

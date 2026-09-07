@@ -4,11 +4,14 @@ title: "Computer Use 45x More Expensive Than Structured APIs"
 type: entity
 tags: [agent, api, benchmark, computer-use, cost-analysis, vision-agent, reflex]
 created: 2026-05-21
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 8
 review_confidence: 9
 sources: [raw/articles/computer-use-45x-more-expensive-than-structured-apis]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 核心要点

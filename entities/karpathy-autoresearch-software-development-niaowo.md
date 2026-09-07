@@ -2,13 +2,16 @@
 
 title: "我把 Karpathy 的 AutoResearch 搬到了软件开发领域，效果炸了"
 created: 2026-06-10
-updated: 2026-09-05
+updated: 2026-09-07
 tags: [agent, architecture, code, fine-tuning, llm, memory, mlops, nvidia, open-source, prompt, search, security, tool-use, workflow]
 review_value: 7
 review_confidence: 7
 type: entity
 sources:
   - raw/articles/karpathy-autoresearch-software-development-niaowo
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 我把 Karpathy 的 AutoResearch 搬到了软件开发领域，效果炸了

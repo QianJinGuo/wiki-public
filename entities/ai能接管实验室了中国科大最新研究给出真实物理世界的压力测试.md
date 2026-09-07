@@ -7,6 +7,9 @@ tags: [ai, research, agent, ai-agent, multi-agent, skill, agent-skill, evaluatio
 sources: [raw/articles/ai能接管实验室了中国科大最新研究给出真实物理世界的压力测试.md]
 confidence: 0.6
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # AI能接管实验室了？中国科大最新研究给出真实物理世界的压力测试

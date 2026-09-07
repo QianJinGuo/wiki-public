@@ -1,7 +1,7 @@
 ---
 title: "做Agent评测的几个反直觉感悟"
 created: 2026-07-02
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, eval, tracing, langfuse, cost, observation, product-scalability]
 sources: [raw/articles/langfuse-agent-eval-tracing-cost-structure]
@@ -9,6 +9,9 @@ review_value: 7
 review_confidence: 8
 confidence: 0.75
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 做Agent评测的几个反直觉感悟

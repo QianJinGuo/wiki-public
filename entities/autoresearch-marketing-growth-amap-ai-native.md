@@ -4,7 +4,7 @@ title: "高德 Marketing AutoResearch：AI Native 营销增长经营托管框架
 type: entity
 tags: [a-b-testing, agent, agent-team, amap, architecture, autoresearch, business-protocol, code, data, decision-intelligence, evaluation, feedback-loop, fine-tuning, five-layer-architecture, governance, llm, marginal-optimization, marketing, memory, mlops, prompt, safety-gate, search, security, tool-use, trading, workflow]
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 8
 review_confidence: 7
 provenance_state: extracted
@@ -13,6 +13,9 @@ related:
   - entities/amap-proactive-agent-lbs-spacetime
   - entities/autoresearch-ai-scientific-discovery-l0-l4-challengehub
   - entities/agent-harness-context-management-working-set
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 高德 Marketing AutoResearch：AI Native 营销增长经营托管框架

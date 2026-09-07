@@ -2,13 +2,16 @@
 title: "Better decisions at scale: How mathematical optimization delivers where intuition fails"
 type: entity
 created: 2026-06-10
-updated: 2026-08-01
+updated: 2026-09-07
 tags: [aws, code, data, fine-tuning, observability, rag, rl, robotics, trading, workflow, mathematical-optimization]
 provenance_state: inferred
 review_value: 7
 review_confidence: 7
 sources:
   - raw/articles/better-decisions-at-scale-how-mathematical-optimization-deli
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 数学优化：在直觉失效的复杂决策中寻找确定性最优解

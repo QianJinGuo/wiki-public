@@ -8,6 +8,9 @@ rating: v6c4
 sources:
   - raw/articles/claudeglmgpt谁才是真正的ai软件工程师首个持续更新visual-spec-to-app-benchmark发布
 confidence: 0.7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Claude、GLM、GPT谁才是真正的AI软件工程师？首个持续更新Visual Spec-to-App Benchmark发布

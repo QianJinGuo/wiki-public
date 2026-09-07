@@ -8,6 +8,9 @@ provenance_state: inferred
 rating: v9c9
 sources:
   - raw/articles/不只deepseek阶跃等开源jetspec大模型解码提速近10倍
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 不只DeepSeek，阶跃等开源JetSpec：大模型解码提速近10倍

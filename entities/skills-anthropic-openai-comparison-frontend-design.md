@@ -4,10 +4,13 @@ title: "Skills Anthropic Openai Comparison Frontend Design"
 type: entity
 tags: [anthropic, openai]
 created: 2026-05-21
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/skills-anthropic-openai-comparison-frontend-design]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Skills 详解：拆一个技能，看 Anthropic 和 OpenAI 的思路差异

@@ -8,6 +8,9 @@ sources: [raw/articles/xiaomi-retail-ai-qshu-问数实践-2026]
 confidence: 0.72
 provenance_state: extracted
 score: 72
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 小米零售 AI 问数实践：从 Text-to-SQL 到 Text-to-Metrics

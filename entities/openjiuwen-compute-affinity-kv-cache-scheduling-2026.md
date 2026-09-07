@@ -1,12 +1,15 @@
 ---
 title: "openJiuwen 算力亲和 — Agent 任务状态与推理引擎的语义通道"
 created: 2026-08-13
-updated: 2026-08-14
+updated: 2026-09-07
 type: entity
 tags: [huawei, openjiuwen, agent, kv-cache, inference, scheduling, compute-affinity, jiuwen]
 sources: [raw/articles/openjiuwen协同昇腾打造智能体算力亲和技术首token时延砍半推理存储占用下降25]
 confidence: 0.85
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # openJiuwen 算力亲和 — Agent 任务状态与推理引擎的语义通道

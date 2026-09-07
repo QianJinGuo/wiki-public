@@ -1,12 +1,15 @@
 ---
 title: "Agent Harness 6 种运行模式与 SDB 方法论"
 created: "2026-07-14"
-updated: 2026-08-29
+updated: 2026-09-07
 type: "entity"
 tags: [agent, harness, architecture, runtime-patterns, sdb, reliability]
 confidence: 0.8
 provenance_state: "extracted"
 sources: [raw/articles/agent-harness-6-runtime-patterns-pikachu]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Agent Harness 6 种运行模式与 SDB 方法论

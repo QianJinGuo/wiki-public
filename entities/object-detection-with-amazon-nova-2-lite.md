@@ -2,7 +2,7 @@
 
 title: "Amazon Nova 2 Lite 视觉对象检测（自然语言驱动）"
 created: 2026-06-03
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [aws]
 source: "[[raw/articles/object-detection-with-amazon-nova-2-lite]]"
@@ -12,6 +12,9 @@ review_value: 7
 review_confidence: 7
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Amazon Nova 2 Lite 视觉对象检测（自然语言驱动）

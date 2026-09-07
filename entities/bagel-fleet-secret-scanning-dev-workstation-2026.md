@@ -3,7 +3,7 @@ title: "bagel — Fleet 级 Secret Scanning 守护开发工作站"
 source: recyclebin-zip
 type: entity
 created: 2026-06-16
-updated: 2026-08-01
+updated: 2026-09-07
 tags: [security, secret-scanning, fleet-management, dev-workstation, bagel, devsecops, agent-coding, ide-plugin, rust]
 provenance_state: inferred
 confidence: 0.85
@@ -12,6 +12,9 @@ review_confidence: 7
 review_recommendation: worth-reading
 review_stars: 4
 sources: [raw/articles/recyclebin-zip-secret-scanning-fleet-bagel-2026]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # bagel — Fleet 级 Secret Scanning 守护开发工作站

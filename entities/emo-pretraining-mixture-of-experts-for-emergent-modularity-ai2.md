@@ -4,10 +4,13 @@ title: "EMO: Pretraining mixture of experts for emergent modularity | Ai2"
 type: entity
 tags: [model, training]
 created: 2026-05-21
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 7
 review_confidence: 8
 sources: [raw/articles/emo-pretraining-mixture-of-experts-for-emergent-modularity-ai2]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # EMO: Pretraining mixture of experts for emergent modularity | Ai2

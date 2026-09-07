@@ -12,6 +12,9 @@ review_recommendation: strong
 review_stars: 4
 confidence: medium
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Amazon VPC Regional NAT Gateway 与 AZ NAT Gateway 全面对比

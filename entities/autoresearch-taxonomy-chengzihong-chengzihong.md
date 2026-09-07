@@ -1,12 +1,15 @@
 ---
 title: "AutoResearch 分类法：四种 Agent 循环设计与四维分析框架"
 created: 2026-06-10
-updated: 2026-08-30
+updated: 2026-09-07
 tags: [agent, architecture, llm, rl, code, evaluation, workflow, harness-engineering]
 review_value: 8
 review_confidence: 8
 type: entity
 sources:
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # AutoResearch 分类法：四种 Agent 循环设计与四维分析框架

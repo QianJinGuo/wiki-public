@@ -3,7 +3,7 @@
 title: "Building effective human-agent teams"
 description: "Anthropic 官方博客：从单人单 Agent 到多人多 Agent 团队协作的范式转变，涵盖通信架构、信任机制、冲突解决"
 created: 2026-06-26
-updated: 2026-06-26
+updated: 2026-09-07
 type: entity
 source: [[raw/articles/anthropic-building-effective-human-agent-teams]]
 sources: [raw/articles/anthropic-building-effective-human-agent-teams]
@@ -12,6 +12,9 @@ review_value: 9
 review_confidence: 9
 review_recommendation: strong
 review_stars: 5
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Building effective human-agent teams

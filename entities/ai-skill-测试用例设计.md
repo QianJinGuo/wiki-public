@@ -8,6 +8,9 @@ updated: 2026-05-21
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/ai-skill-测试用例设计]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 03—AI Skill 测试用例设计完整指南：8 种类型 + 断言自检，覆盖率从 40% 到 90%

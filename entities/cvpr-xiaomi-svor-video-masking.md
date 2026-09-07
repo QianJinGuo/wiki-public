@@ -3,7 +3,7 @@
 type: entity
 title: "CVPR冠军代码开源：小米SVOR破解视频消除三大顽疾，连人带影一键抹除"
 created: 2026-05-12
-updated: 2026-09-05
+updated: 2026-09-07
 source: wechat
 source_url:
 ingested: 2026-05-12
@@ -12,6 +12,9 @@ sources: [raw/articles/cvpr-xiaomi-svor-video-masking]
 review_confidence: 8
 review_recommendation: worth-reading
 tags: [video, open-source, computer-vision, ai]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > -> [[raw/articles/cvpr-xiaomi-svor-video-masking.md|原文存档]]

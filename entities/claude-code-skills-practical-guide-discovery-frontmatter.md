@@ -1,7 +1,7 @@
 ---
 title: "Claude Code Skills 实战指南 — 发现机制、编写与安全"
 created: 2026-07-07
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [claude-code, skills, skilmd, frontmatter, agent-framework, prompt-engineering, context-engineering, java-guide, plugin, mcp]
 sources: [raw/articles/claude-code-skills-practical-guide-discovery-frontmatter]
@@ -11,6 +11,9 @@ review_recommendation: strong
 review_stars: 4
 provenance_state: expanded
 confidence: 0.85
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Claude Code Skills 实战指南 — 发现机制、编写与安全

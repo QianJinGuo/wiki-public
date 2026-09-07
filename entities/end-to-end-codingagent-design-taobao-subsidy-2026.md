@@ -2,13 +2,16 @@
 title: "端到端 CodingAgent 设计：百亿补贴 C 端 AI Coding 实战"
 type: entity
 created: "2026-08-03"
-updated: 2026-08-03
+updated: 2026-09-07
 tags: [wechat, ai-coding, agent, knowledge-base, d2c]
 rating: v8c9
 confidence: 0.85
 provenance_state: extracted
 sources:
   - raw/articles/end-to-end-codingagent-design-taobao-subsidy-2026-08-03
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 端到端 CodingAgent 设计：百亿补贴 C 端 AI Coding 实战

@@ -2,12 +2,15 @@
 title: "CTGAN+LLM 组合拳：携程测试数据生成工程方案"
 description: "携程测试团队提出的CTGAN与LLM协同的工程化测试数据生成方案，让CTGAN负责高丰富度独立字段、LLM负责关联关系字段，实现字段间关系大幅提升、覆盖率接近100%。"
 created: 2026-07-23
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [ctgan, llm, test-data, synthetic-data, testing, ctrip, data-generation, tabular-data, gan, deepseek]
 sources: [raw/articles/ctgan-llm-test-data-generation-ctrip]
 review_value: 8
 review_confidence: 9
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # CTGAN+LLM 组合拳：携程测试数据生成工程方案

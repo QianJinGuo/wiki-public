@@ -1,7 +1,7 @@
 ---
 title: "Karpathy 最新访谈：从 Vibe Coding 到 Agentic Engineering"
 created: 2026-05-09
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, vibe-coding, agentic-engineering, karpathy, software-engineering, ai-coding]
 summary: "Karpathy 2026 Red Hat AI Ascent 访谈核心观点：Vibe Coding→Agentic Engineering 范式迁移，上下文即架构，可验证性决定自动化上限"
@@ -10,6 +10,9 @@ review_value: 8
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 ## 核心论点
 Karpathy 在 2026 年红杉 AI Ascent 访谈中提出 Agent 时代的关键转变：   ^[raw/articles/karpathy-vibe-coding-to-agentic-engineering.md]

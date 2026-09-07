@@ -1,12 +1,15 @@
 ---
 title: "dig.bench — 文本游戏科学发现智能体基准"
 created: 2026-08-19
-updated: 2026-08-19
+updated: 2026-09-07
 type: entity
 tags: [agent-benchmark, scientific-discovery, text-games, agent-evaluation, experimentation, rule-discovery, harness]
 sources: [raw/articles/digbench-scientific-discovery-text-games-agent-benchmark]
 confidence: 0.78
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # dig.bench — 文本游戏科学发现智能体基准

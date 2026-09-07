@@ -1,7 +1,7 @@
 ---
 title: "OpenClaw 多智能体团队搭建实战经验"
 created: 2026-05-09
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [openclaw, multi-agent, agent-team, practice, tutorial]
 summary: "ConardLi 分享 OpenClaw 7个Agent多智能体团队经验：生图/资讯/开发/投资/社区/写作/智能专家，全流程零人工干预"
@@ -10,6 +10,10 @@ review_value: 7
 review_confidence: 7
 review_recommendation: worth-reading
 review_stars: 3
+reviewed: 2026-09-07
+review_verdict: hub-retained
+review_category: dup
+review_note: "judged dup-0.8: 同团队2857字版，留12180字版; retained as hub (in-links>=20); MOC rewrite candidate"
 ---
 ## 花园多智能体团队（7个Agent）
 1. **花园生图助手** — Nanobana + Seedream 模型，定义审美偏好   ^[raw/articles/openclaw-multi-agent-team-practice.md]

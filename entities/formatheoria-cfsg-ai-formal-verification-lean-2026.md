@@ -2,11 +2,14 @@
 title: "FormaTheoria：AI 辅助有限单群分类的形式化验证"
 type: entity
 created: 2026-08-30
-updated: 2026-08-30
+updated: 2026-09-07
 tags: [ai4math, formal-verification, lean, cfsg, proof-assistant, tsinghua, quantum位]
 sources:
   - raw/articles/7个月超15数学家6年工作量ai写下百万行代码挑战核验超大数学证明工程
 confidence: 0.8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # FormaTheoria：AI 辅助有限单群分类的形式化验证

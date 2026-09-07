@@ -3,14 +3,16 @@
 
 title: "10篇论文看懂AI Agent Skill：表示、执行、评估与进化"
 created: 2026-05-08
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, skill, evaluation, engineering, ai]
 sources:
   - raw/articles/skill-formal-theory-survey-10papers
 review_value: 9
 review_confidence: 7
-
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 [[raw/articles/skill-formal-theory-survey-10papers.md]] ^[raw/articles/skill-formal-theory-survey-10papers.md]

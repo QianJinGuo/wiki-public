@@ -3,14 +3,16 @@
 
 title: "Anthropic 最新博客：Prompt Caching 是构建 Claude Code 的一切"
 created: 2026-05-07
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [claude-code, anthropic, engineering, ai]
 sources:
   - raw/articles/anthropic-prompt-caching-claude-code-agihunt
 review_value: 7
 review_confidence: 8
-
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Anthropic 最新博客：Prompt Caching 是构建 Claude Code 的一切

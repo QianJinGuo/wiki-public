@@ -1,12 +1,15 @@
 ---
 title: "Claude Code 前 1% 用户指南：系统级架构与全栈工程化实践"
 created: 2026-07-01
-updated: 2026-07-18
+updated: 2026-09-07
 type: entity
 tags: [claude-code, agent-engineering, hook-system, subagent, mcp, claude-md]
 sources: [raw/articles/claude-code-top-1-guide-datapai-2026]
 confidence: 0.85
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 Claude Code Top 1% 用户指南：从"自动补全助手"升级为一支可编程的工程团队。^[raw/articles/claude-code-top-1-guide-datapai-2026.md]

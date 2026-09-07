@@ -4,11 +4,14 @@ title: "Your AI Agents Are Already Inside the Perimeter. Do You Know What They'r
 type: entity
 tags: [agent, security, identity-management, iam, zero-trust, orchid-security, gartner, guardian-agents, identity-dark-matter]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 8
 review_confidence: 8
 provenance_state: extracted
 sources: [raw/articles/ai-agents-inside-perimeter-hackernews]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 背景：AI 代理部署速度超过治理成熟度

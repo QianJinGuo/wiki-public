@@ -2,7 +2,7 @@
 title: "Autodata: An Agentic Data Scientist for High-Quality Synthetic Data"
 description: "Autodata：一个 Agent 化的数据科学家，自动创建高质量合成数据集。arxiv 2606.25996"
 created: 2026-06-26
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 source: [[raw/articles/arxiv-2606.25996]]
 sources: [raw/articles/arxiv-2606.25996]
@@ -13,6 +13,9 @@ review_recommendation: strong
 review_stars: 5
 confidence: 0.85
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Autodata: An Agentic Data Scientist for High-Quality Synthetic Data

@@ -9,10 +9,12 @@ review_value: 9
 review_confidence: 8
 review_recommendation: strong
 review_stars: 5
-updated: 2026-08-30
+updated: 2026-09-07
 sources:
   - raw/articles/opd-revisiting-failure-modes-simple-fixes-storm
-
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 核心定义

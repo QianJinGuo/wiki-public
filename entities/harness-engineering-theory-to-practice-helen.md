@@ -3,7 +3,7 @@
 title: "Harness Engineering 从理论到实战：行为正确性死结 + 上下文腐烂 + 可驾驭性 + Ashby 定律"
 description: "张海云Helen AI原生探索者 2026-06-02 Harness Engineering 第 4 篇：Böckeler 理论 + Karpathy 六行工作模式 + 行为正确性自我指涉死结（Anthropic 独立评估官/变异测试/OpenAI 人类不可省）+ 上下文腐烂 + Anthropic 两段式架构 + 可驾驭性架构判决 + Ashby 必要多样性定律"
 created: 2026-06-02
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [harness-engineering, harness-engineering, beckeler, karpathy, agentic-engineering, software-3-0, 行为正确性, 上下文腐烂, context-rot, 可驾驭性, harnessability, ashby-law, 必要多样性, requisite-variety, 自我指涉验证, two-phase-architecture, 两段式架构, long-running-agent, 长时运行-agent, anthropic-cwc, 张海云, ai原生探索者, 缰绳时代]
 sources:
@@ -24,6 +24,9 @@ related:
   - entities/harness-engineering-jk-launcher-baijiajie
   - entities/agent架构关键变化harness正在成为新后端
   - entities/agent-harness-engineering-survey-2026
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Harness Engineering 从理论到实战：行为正确性死结 + 上下文腐烂 + 可驾驭性 + Ashby 定律

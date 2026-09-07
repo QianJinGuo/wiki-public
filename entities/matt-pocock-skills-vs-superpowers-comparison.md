@@ -2,7 +2,7 @@
 title: "Matt Pocock Skills vs Superpowers：Agent 技能工程的两条路线"
 slug: matt-pocock-skills-vs-superpowers-comparison
 created: 2026-07-08
-updated: 2026-07-09
+updated: 2026-09-07
 type: entity
 tags:
   - matt-pocock
@@ -18,6 +18,9 @@ review_confidence: 9
 sources:
   - raw/articles/matt-pocock-skills-vs-superpowers
   - raw/articles/12-行-vs-689-行-mattpocock-skills-与-superpowers-的路线之争
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Matt Pocock Skills vs Superpowers：Agent 技能工程的两条路线

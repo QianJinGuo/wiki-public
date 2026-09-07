@@ -4,13 +4,16 @@ title: "在 Amazon Bedrock 上为 Claude 应用设计稳健的 Prompt Cache 策�
 type: entity
 tags: [aws, bedrock, claude, prompt-cache, llm-inference]
 created: 2026-05-19
-updated: 2026-09-05
+updated: 2026-09-07
 source: rss
 source_url:
 sha256: 4d36728ed65b00da7651198f45d5a19c757903753bd7b717632f34795bc13b53
 review_value: 5
 sources: [raw/articles/amazon-bedrock-claude-prompt-cache-strategy]
 confidence: 0.8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 核心要点

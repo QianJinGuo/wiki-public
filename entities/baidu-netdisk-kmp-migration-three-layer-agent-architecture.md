@@ -5,12 +5,15 @@ description: "百度网盘 Android→KMP 迁移实践中，沉淀 Skill/SubAgent
 type: entity
 tags: [agent-engineering, skill, subagent, agent-team, kmp, code-migration, android, baidu-netdisk, context-window, memory-management]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 8
 review_confidence: 8
 sources:
   - raw/articles/baidu-netdisk-kmp-migration-three-layer-agent-architecture
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 背景与动机

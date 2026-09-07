@@ -1,11 +1,14 @@
 ---
 title: "在 Amazon EKS 上构建安全的 AI Agent 沙箱"
 created: 2026-07-15
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [aws, eks, agent, sandbox, security, kubernetes, agent-sandbox, ai-agent]
 sources: [raw/articles/amazon-eks-ai-agent-sandbox-2026]
 confidence: 0.7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 在 Amazon EKS 上构建安全的 AI Agent 沙箱

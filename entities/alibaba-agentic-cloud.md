@@ -3,7 +3,7 @@
 type: entity
 id: 17356434
 title: 阿里云 Agentic Cloud
-updated: 2026-08-29
+updated: 2026-09-07
 slug: alibaba-agentic-cloud
 tags: [cloud, agent, alibaba, qwen, maas, bailian, skill]
 source: 极客公园
@@ -17,6 +17,9 @@ review_value: 8
 review_confidence: 8
 created: 2026-05-25
 sources:
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 阿里云 Agentic Cloud

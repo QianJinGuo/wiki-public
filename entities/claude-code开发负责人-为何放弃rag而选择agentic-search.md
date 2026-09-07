@@ -9,6 +9,9 @@ provenance_state: extracted
 review_value: 8
 review_confidence: 8
 confidence: 0.75
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Claude Code 开发负责人：为何放弃 RAG 而选择 Agentic Search

@@ -6,6 +6,9 @@ type: entity
 tags: [vision, multimodal, skill, agent, skill-omni, openjiuwen, jiuwenswarm]
 sources: [raw/articles/让skill有图可依openjiuwen首发多模态skill范式skill-omni]
 confidence: 0.7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 让Skill"有图可依"：openJiuwen首发多模态Skill范式Skill-Omni

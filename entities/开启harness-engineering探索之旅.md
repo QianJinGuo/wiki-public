@@ -8,6 +8,9 @@ provenance_state: inferred
 rating: v9c9
 sources:
   - raw/articles/开启harness-engineering探索之旅
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 开启Harness Engineering探索之旅

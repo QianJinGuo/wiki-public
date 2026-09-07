@@ -7,6 +7,9 @@ tags: [ai, inference, model, speculative-decoding, llm, training]
 sources: [raw/articles/大三本科生一作-交出7-92倍加速的投机解码新答卷-deepseek和阶跃星辰双双引用]
 confidence: 0.72
 provenance_state: merged
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 大三本科生一作，交出7.92倍加速的投机解码新答卷！DeepSeek和阶跃星辰双双引用

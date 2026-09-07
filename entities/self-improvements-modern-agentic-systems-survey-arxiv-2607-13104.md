@@ -1,11 +1,14 @@
 ---
 title: "Self-Improvements in Modern Agentic Systems: A Survey — Agent 自我改进综述"
 created: 2026-07-27
-updated: 2026-07-27
+updated: 2026-09-07
 type: entity
 tags: [survey, self-improvement, agent, harness, scaffolding, foundation-model, memory, tool, evaluation, schmidhuber]
 sources: [raw/articles/self-improvements-modern-agentic-systems-survey-arxiv-2607-13104]
 confidence: 0.85
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Self-Improvements in Modern Agentic Systems: A Survey — Agent 自我改进综述

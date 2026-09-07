@@ -1,13 +1,16 @@
 ---
 title: "Hermes Agent SOUL.md：3 层提示词、14 个内置人格，从源码看身份定制的完整设计"
 created: 2026-06-10
-updated: 2026-08-01
+updated: 2026-09-07
 tags: [agent, architecture, code, llm, memory, open-source, prompt, security, tool-use]
 review_value: 7
 review_confidence: 7
 type: entity
 sources: [raw/articles/hermes-agent-soul-md-personality-shugex]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Hermes Agent SOUL.md：3 层提示词、14 个内置人格，从源码看身份定制的完整设计

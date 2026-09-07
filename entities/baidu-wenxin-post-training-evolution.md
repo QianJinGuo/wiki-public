@@ -1,12 +1,15 @@
 ---
 title: "百度文心大模型后训练进化（ERNIE 3.0→5.0）"
 created: 2026-05-01
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [llm-training, post-training, rlhf, baidu, engineering, agent-training]
 sources: [raw/articles/baidu-wenxin-post-training-evolution]
 review_value: 7
 review_confidence: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 ## 核心架构
 - **TransNets（Transformer 中的 Transformer）**：Intra-FFN 改造，多个头共享 FFN，每个头以不同精度（FP8/FP16/BF16）计算，打破 KV-Normality 问题 

@@ -3,14 +3,16 @@
 
 title: "给 Hermes 装上显微镜：Agent 执行全知道"
 created: 2026-04-30
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [hermes, observability, opentelemetry, aliyun, agent, arms, react]
 sources:
   - raw/articles/hermes-observability-aliyun
 review_value: 9
 review_confidence: 7
-
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 [[raw/articles/hermes-observability-aliyun|原文存档]] ^[raw/articles/hermes-observability-aliyun.md]

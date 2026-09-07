@@ -19,6 +19,9 @@ related_entities:
   - entropy-regularization
   - self-reflection
   - curiosity-driven-learning
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 背景：为什么要在训练中调控熵？

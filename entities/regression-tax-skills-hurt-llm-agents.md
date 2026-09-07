@@ -1,7 +1,7 @@
 ---
 title: "Regression Tax: 技能包导致 Agent 性能退化的系统性分析"
 created: 2026-07-28
-updated: 2026-07-28
+updated: 2026-09-07
 type: entity
 tags: [regression-tax, skill, agent, llm, evaluation, grounding, verification, osmosis, skill-engineering]
 sources:
@@ -11,6 +11,9 @@ review_value: 8
 review_confidence: 8
 review_recommendation: accept
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Regression Tax: 技能包导致 Agent 性能退化的系统性分析

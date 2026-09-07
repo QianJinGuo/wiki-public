@@ -1,12 +1,15 @@
 ---
 title: "用云新范式：Qoder Cloud Agents × Alibaba Cloud Skills"
 created: 2026-07-05
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [qoder, cloud-agents, alibaba-cloud, skills, cloud-engineering, agent-platform, cloud-native, devops, infrastructure-as-code, ai-ops]
 sources: [raw/articles/用云新范式qoder-cloud-agents-alibaba-cloud-skills]
 confidence: 0.85
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 用云新范式：Qoder Cloud Agents × Alibaba Cloud Skills

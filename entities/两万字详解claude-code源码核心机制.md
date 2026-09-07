@@ -9,6 +9,10 @@ review_confidence: 7
 type: entity
 sources:
   - raw/articles/两万字详解claude-code源码核心机制
+reviewed: 2026-09-07
+review_verdict: hub-retained
+review_category: thin
+review_note: "judged thin-0.78: 两万字文章破碎残片; retained as hub (in-links>=20); MOC rewrite candidate"
 ---
 
 # 两万字详解Claude Code源码核心机制

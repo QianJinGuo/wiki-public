@@ -1,7 +1,7 @@
 ---
 title: "LLM 自我提升系统综述 — Yang 等 113 页四阶段闭环框架（Zesearch NLP Lab）"
 created: 2026-06-11
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [self-improvement, recursive-self-improvement, survey, zesearch, stony-brook, llm-agent, closed-loop, data-acquisition, data-selection, model-optimization, inference-refinement, gro-framework, autonomous-evaluation, data-autophagy, anthropic, claude, harness-engineering]
 sources: [raw/articles/llm-self-improvement-system-survey-zesearch-nlp]
@@ -9,6 +9,9 @@ review_value: 8
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 概述

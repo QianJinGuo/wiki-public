@@ -20,6 +20,9 @@ review_confidence: 9
 sources:
   - raw/articles/gpu-cluster-ai-native-stability-wind-tunnel
   - raw/articles/从日志学习到风洞验证构建-gpu-集群的-ai-native-稳定性闭环
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 算力风洞：GPU 集群的 AI Native 稳定性验证系统

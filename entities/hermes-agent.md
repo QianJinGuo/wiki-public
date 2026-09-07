@@ -2,12 +2,16 @@
 
 title: "Hermes Agent"
 created: 2026-04-24
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [hermes-agent, nous-research, agent, self-evolving, open-source, skill]
 sources: [raw/articles/agent-tools-research]
 review_value: 7
 review_confidence: 8
+reviewed: 2026-09-07
+review_verdict: hub-retained
+review_category: thin
+review_note: "judged thin-0.75: 泛介绍卡2918字，同族已有深度解析; retained as hub (in-links>=20); MOC rewrite candidate"
 ---
 
 ## Overview

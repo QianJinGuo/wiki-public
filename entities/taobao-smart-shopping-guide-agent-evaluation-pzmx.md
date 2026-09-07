@@ -4,10 +4,13 @@ title: "多轮 Agent 场景下，滴滴的 EAGLE-3 训推加速实践"
 type: entity
 tags: [agent, evaluation, llm]
 created: 2026-05-21
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/taobao-smart-shopping-guide-agent-evaluation-pzmx]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 多轮 Agent 场景下，滴滴的 EAGLE-3 训推加速实践

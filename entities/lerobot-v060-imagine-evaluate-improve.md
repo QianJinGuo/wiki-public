@@ -1,12 +1,15 @@
 ---
 title: "LeRobot v0.6.0 — Imagine, Evaluate, Improve"
 created: 2026-08-14
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [lerobot, robotics, embodied-ai, world-model, vla, reward-model, huggingface, open-source]
 sources: [raw/articles/lerobot-v060-imagine-evaluate-improve]
 confidence: 0.75
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # LeRobot v0.6.0 — Imagine, Evaluate, Improve

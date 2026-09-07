@@ -1,11 +1,14 @@
 ---
 title: "ScarfBench: Benchmarking AI Agents for Enterprise Java Framework Migration"
 created: 2026-07-03
-updated: 2026-07-04
+updated: 2026-09-07
 type: entity
 tags: [newsletter, ai, benchmark, agent, enterprise, java, migration, software-engineering, ibm]
 sources: [raw/articles/scarfbench-ai-agents-enterprise-java-framework-migration-ibm]
 confidence: 0.7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # ScarfBench: Benchmarking AI Agents for Enterprise Java Framework Migration

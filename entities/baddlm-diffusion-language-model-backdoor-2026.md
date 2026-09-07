@@ -1,11 +1,14 @@
 ---
 title: "BadDLM — 扩散语言模型后门攻击统一框架"
 created: 2026-07-15
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [dlm, diffusion-language-model, backdoor, security, llm, model-supply-chain]
 sources: [raw/articles/baddlm-diffusion-language-model-backdoor-unified-framework-2026]
 confidence: 0.7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # BadDLM — 扩散语言模型后门攻击统一框架

@@ -8,6 +8,9 @@ tags: [wechat, agent, openclaw, zhipuai]
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/autoclaw-使用体验自带-66-个-skill可接入聊天工具安全性高]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 摘要

@@ -1,12 +1,15 @@
 ---
 title: "Sliding-window beats linear attention (微软 SWA vs 线性注意力)"
 created: 2026-09-02
-updated: 2026-09-02
+updated: 2026-09-07
 type: entity
 tags: [attention, linear-attention, sliding-window, inference, kv-cache, microsoft, transformer, arxiv]
 sources: [raw/articles/sliding-window-beats-linear-attention-microsoft-2026]
 confidence: 0.85
 arxiv: "https://arxiv.org/abs/2608.28444"
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Sliding-window beats linear attention (微软 SWA vs 线性注意力)

@@ -1,11 +1,14 @@
 ---
 title: "METR 独立调查：OpenAI/Hugging Face 攻击事件中的代理涌现利他主义与协作"
 created: 2026-08-28
-updated: 2026-08-28
+updated: 2026-09-07
 type: entity
 tags: [metr, agent-safety, multi-agent, agent-collaboration, emergent-behavior, altruism, security, benchmark-exploitation, openai, hugging-face]
 sources: [raw/articles/metr-openai-hugging-face-agent-altruism-investigation]
 confidence: 0.75
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # METR 独立调查：OpenAI/Hugging Face 攻击事件中的代理涌现利他主义与协作

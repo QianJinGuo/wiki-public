@@ -4,10 +4,13 @@ title: "Agent Principle Architecture Engineering Practice"
 type: entity
 tags: [agent, architecture, harness]
 created: 2026-05-21
-updated: 2026-06-30
+updated: 2026-09-07
 review_value: 8
 review_confidence: 7
 sources: [raw/articles/agent-principle-architecture-engineering-practice]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 你不知道的 Agent：原理、架构与工程实践

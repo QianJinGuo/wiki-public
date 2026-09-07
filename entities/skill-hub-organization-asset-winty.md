@@ -2,7 +2,7 @@
 title: "Skill Hub：企业级 AI 经验资产化的关键（组织能力视角）— winty 前端Q 3 篇合集：组织资产 + 质量门禁 4 关 + 生命周期 6 阶段治理"
 description: "winty 前端Q 关于 Skill Hub 系列 3 篇合集：(1) 企业 AI 落地隐形 Tax + Skill 的组织资产定位 + 治理五件事（写得好/测得准/管得住/放得开/收得回）+ 发版 Skill 三个阶段真实案例；(2) Skill 质量门禁 4 关（入 Hub 门禁/版本升级门禁/生产发布门禁/全生命周期预告）+ 90% 自动 + 10% 人工 + 6 状态状态机 + patch/minor/major 分级 + incident-triage v1.4.0 真实拦截案例；(3) Skill 生命周期 6 阶段治理（创建/审核/发布/灰度/运行/废弃）+ 数据化迁移规则（internal→preview≥50 次+L3≥75%/canary→stable≥7 天+1000 次+无 P0P1）+ 4 类审核维度 + Lifecycle Dashboard + 真实遗忘事故复盘（db-migrate-advisor 1 月→4 月）+ 30 天迁移期 + retired=考古档案"
 created: 2026-06-02
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [skill, skill-hub, skill-governance, skill-治理, skill-lifecycle, skill-生命周期, organization-asset, 组织资产, hermes-agent, winty, ai-tax, 隐形-ai-tax, ai-platform, ai-rollout-pattern, knowledge-asset, agent-architecture, quality-gate, 质量门禁, 生产发布, version-management, state-machine, devops-gate, 6-stages, creation-review-release-canary-live-deprecation, data-driven-migration, abort-trigger, lifecycle-dashboard, retired-archaeology]
 provenance_state: inferred
@@ -24,6 +24,9 @@ related:
   - entities/agent-reliability-engineering-skillify-continuous-improvement
   - entities/agent-skill-writing-guide
   - entities/tencent-knowledge-harness-practice
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Skill Hub：企业级 AI 经验资产化的关键（组织能力视角）

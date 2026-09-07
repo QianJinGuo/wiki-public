@@ -7,8 +7,11 @@ review_value: 8
 review_confidence: 8
 review_recommendation: strong
 publish_date: 2026-01-30
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 ## 概述
 快时尚电商行业智能体设计思路与应用实践（八）基于 WebSocket 的语音系统：Nova 2 Sonic, AgentCore, Strands Agents 企业级架构实践 by awschina on 04 1月 2026 in Artificial Intelligence Permalink Share 序言 在快时尚跨境电商行业，客服体验直接影响转化率、复购率与品牌口碑。随着业务全球化、SKU 爆炸式增长以及促销活动高频化（如黑五、圣诞、季中大促），传统人工客服与 基于 HTTP 的单向语音或文本机器人 已难以满足" 低延迟、可打断、强交互 "的实时服务需求。 本文以 快时尚电商实时语音智能客服 为背景，系统介绍一种基于 WebSocket 实时双向通信 的云原生语音 Agent 架构。该架构以 Amazon Bedrock Nova 2 Sonic 提供底层双向流式语音能力，以 Strands Agents（BidiAgent） 负责编排对话与中断逻辑，并运行在 AgentCore Runtime 提供的生产级托管与安全隔离环境之上。 ^[raw/articles/fast-fashion-ecommerce-agent-design-8-websocket-voice-system.md]

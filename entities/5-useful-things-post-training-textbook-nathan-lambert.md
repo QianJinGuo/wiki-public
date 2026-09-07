@@ -1,11 +1,14 @@
 ---
 title: "Nathan Lambert RLHF 教科书：后训练五大核心知识点"
 created: 2026-08-30
-updated: 2026-08-30
+updated: 2026-09-07
 type: entity
 tags: [rlhf, post-training, reinforcement-learning, alignment, llm, nathan-lambert, textbook]
 sources: [raw/articles/5-useful-things-youll-learn-in-my-new-post-training-textbook]
 confidence: 0.75
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Nathan Lambert RLHF 教科书：后训练五大核心知识点

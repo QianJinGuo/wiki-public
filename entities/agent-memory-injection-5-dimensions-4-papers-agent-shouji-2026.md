@@ -2,13 +2,16 @@
 
 title: "Agent 记忆注入实战：5 维框架（选什么/放哪里/怎么放/放多少/何时放）+ 4 前沿论文（MemGuide/STITCH/ACE/Lost in the Middle）"
 created: 2026-06-16
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent-memory, memory-injection, context-engineering, memguide, stitch, ace-framework, lost-in-the-middle, context-burst, intent-driven, slot-driven, context-filter, section-qa, rag, dynamic-context, google-deepmind, microsoft-research, anthropic, stanford, uc-berkeley, agent-shouji, 2026, qa-format, position-effect, helpful-score]
 sources: [raw/articles/agent-memory-injection-5-dimensions-4-papers-agent-shouji-2026]
 review_value: 9
 review_confidence: 8
 summary: "Agent技术笔记第9篇 4 维记忆注入框架：选什么(MemGuide意图+STITCH上下文三元组)/ 放哪里(Lost-in-the-Middle U 形分布)/ 怎么放(Section+QA)/ 放多少(5条<20条)/ 何时放(Context Burst 1-2k→3-5k tokens); 4 篇前沿论文(Google DeepMind / Microsoft Research / Anthropic / Stanford+UCB); 关键数据: MemGuide 任务成功率 88%→99% / Lost-in-the-Middle 中间准确率 -30% / 10→20 条检索性能提升 <5% 噪声增 2× / ACE 通用 Agent +10.6% 金融分析 +8.6%"
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Agent 记忆注入实战：5 维框架 + 4 前沿论文

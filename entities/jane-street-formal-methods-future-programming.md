@@ -1,7 +1,7 @@
 ---
 title: "Jane Street — 形式化方法与编程的未来"
 created: 2026-06-16
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [formal-methods, agentic-coding, jane-street, verification, ai, programming]
 sources: [raw/articles/jane-street-formal-methods-future-programming]
@@ -9,6 +9,9 @@ review_value: 7
 review_confidence: 7
 review_recommendation: worth-reading
 review_stars: 3
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Jane Street — 形式化方法与编程的未来

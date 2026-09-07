@@ -11,6 +11,9 @@ review_value: 8
 review_confidence: 8
 review_recommendation: strong
 sources: [raw/articles/基于-prowler-与-genai-构建金融行业智能合规中枢]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > -> [[raw/articles/基于-prowler-与-genai-构建金融行业智能合规中枢|原文存档]] ^[raw/articles/基于-prowler-与-genai-构建金融行业智能合规中枢.md]

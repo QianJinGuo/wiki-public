@@ -7,8 +7,11 @@ created: 2026-05-21
 review_value: 8
 review_confidence: 8
 sources: [raw/articles/alibaba-eventhouse-enterprise-agent-context, raw/articles/aliyun-eventhouse-ai-agent实时事件-2026, raw/articles/eventhouse-architecture-message-base-semantic-layer-shenlin-aliyun-2026]
-updated: 2026-09-05
+updated: 2026-09-07
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 为什么 AI Coding 先跑通，行业 Agent 落地难

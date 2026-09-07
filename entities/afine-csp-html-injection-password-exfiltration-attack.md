@@ -2,7 +2,7 @@
 
 title: "严格 CSP 下的密码窃取：HTML 注入 + Chrome 自动填充攻击"
 created: 2026-06-03
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [ai, content, security]
 source: "[[raw/articles/afine-csp-html-injection-password-exfiltration]]"
@@ -12,6 +12,9 @@ review_value: 8
 review_confidence: 7
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 严格 CSP 下的密码窃取：HTML 注入 + Chrome 自动填充攻击

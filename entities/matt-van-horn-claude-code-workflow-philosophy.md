@@ -4,7 +4,7 @@ title: "Matt Van Horn 的 22 个 Claude Code 黑客技巧：让 AI 写 plan.md �
 type: entity
 tags: [claude-code, agent-workflow, compound-engineering, ce-plan, ce-work, ce-brainstorm, voice-input, monologue, cmux, ghostty, codex, last30days, granola, printing-press, agent-cookie, supermemory, gbrain, hermes, openclaw, matt-van-horn, everyinc, harness-engineering, agent-native-cli, plan-driven, voice-as-input, parallel-sessions]
 created: 2026-06-10
-updated: 2026-08-01
+updated: 2026-09-07
 review_value: 8
 review_confidence: 8
 provenance_state: extracted
@@ -15,6 +15,9 @@ related:
   - entities/claude-code-first-year-retrospective-boris-cat-2026
   - entities/harness-engineering-core-patterns-claude-code
   - entities/skill-writing-patterns-best-practices
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 摘要

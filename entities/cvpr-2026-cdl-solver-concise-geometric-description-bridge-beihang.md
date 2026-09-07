@@ -1,12 +1,15 @@
 ---
 title: "CDL Solver：用简洁几何描述语言桥接视觉与推理（CVPR 2026，北航）"
 created: 2026-08-14
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [geometry-reasoning, multimodal, grpo, rl, mllm, cvpr, beihang, math-reasoning]
 sources: [raw/articles/cvpr-2026-cdl-solver-concise-geometric-description-bridge-beihang]
 confidence: 0.8
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # CDL Solver：用简洁几何描述语言桥接视觉与推理（CVPR 2026，北航）

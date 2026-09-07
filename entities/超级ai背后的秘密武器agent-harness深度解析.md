@@ -8,6 +8,9 @@ tags: [wechat, ai]
 rating: v7c8
 sources:
   - raw/articles/超级ai背后的秘密武器agent-harness深度解析
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 超级AI背后的秘密武器：Agent Harness深度解析

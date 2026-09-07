@@ -1,11 +1,14 @@
 ---
 title: "从 Spec 驱动转向环境与验证驱动：AI Coding 提效的投资账"
 created: 2026-08-14
-updated: 2026-08-14
+updated: 2026-09-07
 type: entity
 tags: [ai-coding, harness-engineering, verification, environment, agentic, spec-driven, amdahl]
 sources: [raw/articles/from-spec-driven-to-environment-verification-driven-ai-coding-wu-zuoyan-2026]
 confidence: 0.7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 从 Spec 驱动转向环境与验证驱动：AI Coding 提效的投资账

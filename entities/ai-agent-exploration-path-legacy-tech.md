@@ -1,7 +1,7 @@
 ---
 title: "十年老技术开发的 AI Agent 探索之路"
 created: 2026-05-16
-updated: 2026-09-05
+updated: 2026-09-07
 description: Auto-generated placeholder
 review_value: 5
 sources: [raw/articles/ai-agent-exploration-path-legacy-tech]
@@ -10,6 +10,9 @@ source: "[[raw/articles/ai-agent-exploration-path-legacy-tech|原文存档]]"
 type: entity
 value: 7
 tags: [agent, ai]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 十年老技术开发的 AI Agent 探索之路

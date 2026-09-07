@@ -1,12 +1,15 @@
 ---
 title: "Zero-Mem — LLM Agent 的零 Token 记忆操作"
 created: 2026-08-06
-updated: 2026-08-06
+updated: 2026-09-07
 type: entity
 tags: [agent-memory, llm-agent, context-engineering, token-efficiency, memory-architecture, arxiv]
 sources: [raw/articles/zero-mem-zero-token-memory-operations]
 confidence: 0.8
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Zero-Mem — LLM Agent 的零 Token 记忆操作

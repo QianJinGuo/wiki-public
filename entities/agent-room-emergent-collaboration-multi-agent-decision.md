@@ -7,11 +7,14 @@ tags: [agent-room, emergent-collaboration, multi-agent, decision-making, emergen
 author: ["吕若凡", "阿里技术"]
 published: 2026-05-27
 created: 2026-05-27
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 confidence: 0.82
 sources: [raw/articles/emergent-collaboration-ai-high-quality-decision-agent-room]
 review_value: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 协作涌现：Agent Room 的多智能体决策框架

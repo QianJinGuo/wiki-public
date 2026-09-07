@@ -4,14 +4,16 @@
 description: Auto-generated placeholder
 title: "LangGraph 底层原理：它是怎么把 LLM 变成一台状态机的"
 created: 2026-05-16
-updated: 2026-07-31
+updated: 2026-09-07
 type: entity
 tags: [llm, architecture, ai]
 sources:
   - raw/articles/langgraph-state-machine-under-the-hood
 review_value: 9
 review_confidence: 7
-
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 [[raw/articles/langgraph-state-machine-under-the-hood]] ^[raw/articles/langgraph-state-machine-under-the-hood.md]

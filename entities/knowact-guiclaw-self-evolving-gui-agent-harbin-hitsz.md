@@ -1,12 +1,15 @@
 ---
 title: "KnowAct-GUIClaw — 哈工大「Know Deeply, Act Perfectly」自进化 GUI Agent"
 created: 2026-08-19
-updated: 2026-08-19
+updated: 2026-09-07
 type: entity
 tags: [gui-agent, openclaw, self-evolution, agent-memory, long-horizon, mobileworld, hitsz, task-orchestration, tool-use]
 sources: [raw/articles/knowact-guiclaw-self-evolving-gui-agent-harbin-hitsz]
 confidence: 0.75
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # KnowAct-GUIClaw — 哈工大「Know Deeply, Act Perfectly」自进化 GUI Agent

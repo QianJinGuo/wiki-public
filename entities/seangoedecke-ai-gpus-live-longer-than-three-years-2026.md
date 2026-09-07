@@ -1,7 +1,7 @@
 ---
 title: "AI GPUs probably live longer than three years"
 created: 2026-06-17
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 sources: [raw/articles/seangoedecke-ai-gpus-live-longer-than-three-years-2026]
 tags: [article, sean-goedecke, gpu, infrastructure, ai-economics, datacenter, hardware-lifecycle]
@@ -10,6 +10,9 @@ review_value: 8
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # AI GPUs probably live longer than three years

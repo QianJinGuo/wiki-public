@@ -1,11 +1,14 @@
 ---
 title: "AWS BMad + AIDLC：用 BMAD Method 在 Serverless 上跑通可复制的 AI 驱动开发流程"
 created: 2026-07-14
-updated: 2026-07-14
+updated: 2026-09-07
 type: entity
 tags: [aws, aidlc, bmad, sdd, harness-engineering, ai-native-team, agent-orchestration, serverless]
 sources: [raw/articles/aws-bmad-aidlc-spec-ship-reproducible-engineering]
 confidence: 0.75
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # AWS BMad + AIDLC：用 BMAD Method 在 Serverless 上跑通可复制的 AI 驱动开发流程

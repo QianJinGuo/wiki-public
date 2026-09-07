@@ -3,7 +3,7 @@ title: "OpenAI buys AI consultancy to sell enterprises on its models"
 type: entity
 tags: [news, ai, enterprise]
 created: 2026-05-13
-updated: 2026-08-29
+updated: 2026-09-07
 source: newsletter
 sources:
   - raw/articles/openai-buys-ai-consultancy-to-sell-enterprises-on-its-models
@@ -11,6 +11,9 @@ review_value: 7
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 3
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 ## Summary
 → [[raw/articles/openai-buys-ai-consultancy-to-sell-enterprises-on-its-models.md|原文存档]] ^[raw/articles/openai-buys-ai-consultancy-to-sell-enterprises-on-its-models.md]

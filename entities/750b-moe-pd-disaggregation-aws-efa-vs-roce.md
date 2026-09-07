@@ -2,7 +2,7 @@
 title: "750B MoE PD 分离推理：AWS EFA vs 自建 RoCE 通信架构实战对比"
 description: "AWS China Blog 2026-06 实战案例：750B GLM-5.1-FP8 MoE 模型在 2P2D 分离推理下，从自建 ConnectX+RoCE 集群迁移到 AWS P5en+EFA 的完整通信架构验证与端到端性能对比"
 created: 2026-06-18
-updated: 2026-06-19
+updated: 2026-09-07
 type: entity
 tags:
   - aws
@@ -22,6 +22,9 @@ review_value: 8
 review_confidence: 7
 review_recommendation: worth-reading
 review_stars: 3
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 750B MoE PD 分离推理：AWS EFA vs 自建 RoCE 通信架构实战对比

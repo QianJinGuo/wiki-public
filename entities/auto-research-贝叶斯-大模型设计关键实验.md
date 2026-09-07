@@ -7,6 +7,9 @@ tags: [ai, llm, auto-research, 贝叶斯推断, 实验设计, 科学发现]
 sources: [raw/articles/auto-research又进化了贝叶斯联手大模型ai自己设计关键实验]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Auto Research 又进化了：贝叶斯联手大模型，AI 自己设计关键实验

@@ -1,12 +1,15 @@
 ---
 title: "Claude Code 源码拆解：从启动到多 Agent 扩展层"
 created: 2026-04-25
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, architecture, claude-code, source-analysis, yc]
 sources: [raw/articles/claude-code-source-architecture]
 review_value: 8
 review_confidence: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 ## 八大模块
 1. **入口三段式**：分流→进程初始化→会话准备，进程/交互状态分离 ^[raw/articles/claude-code-source-architecture.md]^[raw/articles/claude-code-source-architecture.md]

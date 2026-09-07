@@ -1,12 +1,15 @@
 ---
 title: "iii.dev"
 created: 2026-04-30
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [company, open-source, agent-infrastructure]
 sources: [raw/articles/iii-dev-worker-trigger-function]
 review_value: 8
 review_confidence: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 ## 概述
 AI 基础设施创业公司，构建用 **Worker / Trigger / Function** 三个原语统一 Agent 与传统后端架构的开源框架。核心主张：Harness 不是后端之上的一层，而是后端本身的一部分。当 Agent 也是 Worker 时，harness 与后端的边界消解为同一套 primitives。  ^[raw/articles/iii-dev-worker-trigger-function.md]

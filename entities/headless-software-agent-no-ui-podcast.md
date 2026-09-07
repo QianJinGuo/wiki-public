@@ -2,7 +2,7 @@
 title: "Headless Software：Agent 时代软件界面何去何从"
 slug: headless-software-agent-no-ui-podcast
 created: 2026-07-08
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags:
   - headless-software
@@ -16,6 +16,9 @@ review_value: 8
 review_confidence: 8
 sources:
   - raw/articles/a16z-headless-software-agent-no-ui-podcast
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Headless Software：Agent 时代软件界面何去何从

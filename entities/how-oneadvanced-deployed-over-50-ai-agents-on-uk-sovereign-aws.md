@@ -1,12 +1,15 @@
 ---
 title: "How OneAdvanced deployed over 50 AI agents on UK-sovereign AWS"
 created: 2026-08-13
-updated: 2026-08-13
+updated: 2026-09-07
 type: entity
 tags: [agent, multi-agent, sovereign-ai, aws, sagemaker, strands, llm, rag, security]
 sources: [raw/articles/how-oneadvanced-deployed-over-50-ai-agents-on-uk-sovereign-aws]
 confidence: 0.75
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # How OneAdvanced deployed over 50 AI agents on UK-sovereign AWS

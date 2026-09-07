@@ -5,10 +5,13 @@ review_value: 7
 review_confidence: 7
 review_recommendation: neutral
 created: 2026-04-30
-updated: 2026-08-29
+updated: 2026-09-07
 sources:
   - raw/articles/anthropic-pm-jess-yan-managed-agents
 tags: [anthropic, managed-agents, claude, agent]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 核心观点

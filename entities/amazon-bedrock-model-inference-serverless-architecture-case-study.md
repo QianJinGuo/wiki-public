@@ -4,10 +4,14 @@ title: "Amazon Bedrock 模型推理 Serverless 架构案例"
 type: entity
 tags: [agent, api, architecture, aws, inference, model]
 created: 2026-05-21
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 7
 review_confidence: 9
 sources: [raw/articles/amazon-bedrock-model-inference-serverless-architecture-case-study]
+reviewed: 2026-09-07
+review_verdict: hub-retained
+review_category: dup
+review_note: "judged dup-0.8: dup-correction: 同主题保留更全版本; retained as hub (in-links>=20); MOC rewrite candidate"
 ---
 
 Amazon Bedrock模型推理的Serverless 异步架构 – 处理在线多模态高负载案例 | 亚马逊AWS官方博客 ^[raw/articles/amazon-bedrock-model-inference-serverless-architecture-case-study.md]

@@ -8,6 +8,9 @@ tags: [ai, agent, llm]
 sources: [raw/articles/icml-2026-南大same稳住moe缓解多模态持续微调双重遗忘]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # ICML 2026 | 南大SAME稳住MoE，缓解多模态持续微调双重遗忘

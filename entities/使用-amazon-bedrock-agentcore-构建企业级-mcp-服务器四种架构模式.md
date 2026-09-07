@@ -6,6 +6,9 @@ type: entity
 tags: [aws, bedrock, agentcore, mcp, architecture, enterprise, serverless]
 sources: [raw/articles/使用-amazon-bedrock-agentcore-构建企业级-mcp-服务器四种架构模式]
 confidence: 0.7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 使用 Amazon Bedrock AgentCore 构建企业级 MCP 服务器：四种架构模式的实践指南

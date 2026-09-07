@@ -2,7 +2,7 @@
 
 title: "Perplexity 内部 Skill 设计指南：四维体系与维护方法论"
 created: 2026-05-20
-updated: 2026-09-05
+updated: 2026-09-07
 tags: [agent, skill, perplexity, evaluation, hub-and-spoke, 路由触发器]
 rating: 8.5
 confidence: 8.5
@@ -16,6 +16,9 @@ abstract: Perplexity 首次公开内部 Skill 设计指南——Skill 是目录/
 type: entity
 
 provenance_state: inferred
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 ## 核心框架：Skill 的四个维度
 ### 1. Skill 是目录（hub-and-spoke）

@@ -1,12 +1,15 @@
 ---
 title: "Model Genome: LLM 血统指纹识别方法论"
 created: 2026-08-10
-updated: 2026-08-10
+updated: 2026-09-07
 type: entity
 tags: [llm, model-lineage, fingerprinting, tokenizer, cka, open-weights, verification]
 sources: [raw/articles/model-genome-llm-lineage-fingerprinting-2026]
 confidence: 0.75
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Model Genome: LLM 血统指纹识别方法论

@@ -1,7 +1,7 @@
 ---
 title: "SearchMaster：接地的受调节自博弈搜索 Agent 训练"
 created: 2026-08-07
-updated: 2026-08-07
+updated: 2026-09-07
 type: entity
 tags: [self-play, search-agent, agent-training, grpo, evidence-chain, reward-design, jd]
 sources: [raw/articles/searchmaster-grounded-regulated-self-play-jd-2026]
@@ -10,6 +10,9 @@ related:
   - entities/qwen-skill-self-play-hyman-2026
   - entities/llm-self-improvement-system-survey-zesearch-nlp-2026
   - entities/native-parallel-reasoner-icml2026
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # SearchMaster：接地的受调节自博弈搜索 Agent 训练

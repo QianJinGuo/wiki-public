@@ -1,11 +1,14 @@
 ---
 title: "Autoresearch: The feedback loop behind self-improving agents"
 created: 2026-07-03
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [newsletter, agent, autonomous, introspection]
 sources: [raw/articles/autoresearch-feedback-loop-self-improving-agents-introspection]
 confidence: 0.7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Autoresearch: The feedback loop behind self-improving agents

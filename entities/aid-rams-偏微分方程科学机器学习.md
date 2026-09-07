@@ -7,6 +7,9 @@ tags: [ai, pinn, 神经算子, 偏微分方程, 科学机器学习, 自适应采
 sources: [raw/articles/aid-让样本主动找难点rams提升偏微分方程科学机器学习的精度与效率]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # RAMS：让样本主动"找难点"，提升偏微分方程科学机器学习的精度与效率

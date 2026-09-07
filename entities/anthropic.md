@@ -1,13 +1,17 @@
 ---
 title: "Anthropic"
 created: 2026-04-23
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [company, lab, anthropic]
 review_value: 6
 sources: [raw/articles/anthropic-最新论文阻止-ai-叛变的方法]
 review_confidence: 9
 provenance_state: inferred
+reviewed: 2026-09-07
+review_verdict: hub-retained
+review_category: dup
+review_note: "judged dup-0.75: 公司条错位以MSM为主; retained as hub (in-links>=20); MOC rewrite candidate"
 ---
 # Anthropic
 

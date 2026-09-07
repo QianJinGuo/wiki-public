@@ -1,10 +1,13 @@
 ---
 title: "EDV：Execute-Distill-Verify 框架 — 浙大大模型智能体进化新路径"
 created: 2026-07-24
-updated: 2026-07-27
+updated: 2026-09-07
 type: entity
 tags: [edv, execute-distill-verify, agent-self-evolution, self-confirmation-trap, multi-agent, experience-learning, zhejiang-university, llm-agent]
 sources: [raw/articles/跳出自我确认陷阱浙大发布edv框架开启大模型智能体进化新路径]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # EDV：Execute-Distill-Verify 框架 — 浙大大模型智能体进化新路径

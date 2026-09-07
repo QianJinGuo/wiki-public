@@ -8,6 +8,9 @@ review_confidence: 7
 type: entity
 sources:
   - raw/articles/深入理解-claude-code-源码中的-agent-harness-构建之道
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 深入理解 Claude Code 源码中的 Agent Harness 构建之道

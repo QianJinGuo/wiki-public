@@ -1,11 +1,14 @@
 ---
 title: "Build an agentic AI healthcare claims pipeline with Amazon Bedrock and AWS HealthLake"
 created: 2026-08-01
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: ['raw', 'article']
 sources: [raw/articles/build-an-agentic-ai-healthcare-claims-pipeline-with-amazon-b]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > -> [[raw/articles/build-an-agentic-ai-healthcare-claims-pipeline-with-amazon-b.md|原文存档]]

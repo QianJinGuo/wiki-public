@@ -1,12 +1,15 @@
 ---
 title: "Claude Code 七大模块详解"
 created: 2026-05-13
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [claude-code, architecture, runtime, modules]
 sources: [raw/articles/claude-code-architecture-analysis]
 review_value: 8
 review_confidence: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 ### 1. 入口与启动链路
 **问题**：多启动模式各自长出运行语义，系统裂成多套。   ^[raw/articles/claude-code-architecture-analysis.md]

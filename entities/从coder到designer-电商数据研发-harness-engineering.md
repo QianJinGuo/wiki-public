@@ -7,6 +7,9 @@ tags: [ai, agent, harness, multi-agent, 数据研发, 电商, nl2sql, 知识工�
 sources: [raw/articles/从-coder-到-designer-电商团队数据研发的-harness-engineering-实践]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 从 Coder 到 Designer：电商团队数据研发的 Harness Engineering 实践

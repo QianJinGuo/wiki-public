@@ -4,13 +4,16 @@ title: How Developers Can Build Agentic Agreement Workflows on Docusign IAM
 type: entity
 tags: [agent, workflow, api, docusign]
 created: 2026-05-22
-updated: 2026-08-29
+updated: 2026-09-07
 sources: [raw/articles/how-developers-can-build-agentic-agreement-workflows-on-docu]
 provenance_state: merged
 review_value: 8
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 核心要点

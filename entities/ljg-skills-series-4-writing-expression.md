@@ -2,7 +2,7 @@
 
 title: "李继刚 ljg Skills 系列（四）：表达写作类 Skill"
 created: 2026-07-02
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [ljg, skill, writing, expression, plain-language, agent, codex, prompt-engineering, communication]
 sources: [raw/articles/ljg-skills-series-4-writing-expression]
@@ -11,6 +11,9 @@ review_confidence: 7
 confidence: 0.7
 provenance_state: extracted
 related: []
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 李继刚 ljg Skills 系列（四）：表达写作类 Skill

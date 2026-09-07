@@ -7,6 +7,9 @@ tags: [entity, codex, openai, claude-code, reverse-proxy, gpt-5-6, tibo, cli-pro
 source_url:
 sources: [raw/articles/逆了个大天负责人亲自下场教大家反代codex]
 vxc: 72
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 逆了个大天！负责人亲自下场，教大家反代Codex

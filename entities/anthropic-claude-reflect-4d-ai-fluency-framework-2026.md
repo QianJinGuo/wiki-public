@@ -1,12 +1,15 @@
 ---
 title: "Claude Reflect：Anthropic 的 AI 使用反思框架与 4D AI Fluency"
 created: 2026-07-12
-updated: 2026-07-12
+updated: 2026-09-07
 type: entity
 tags: [anthropic, claude, ai-safety, ux, digital-wellness, ai-fluency]
 confidence: 0.70
 provenance_state: extracted
 sources: [raw/articles/anthropic-claude-reflect-4d-ai-fluency-framework-2026]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Claude Reflect：Anthropic 的 AI 使用反思框架与 4D AI Fluency

@@ -3,7 +3,7 @@ title: "Loop Engineering 半年实战拆解：claude-ship 开源自进化开发�
 authors:
   - Peakstone Labs
 created: 2026-07-05
-updated: 2026-08-01
+updated: 2026-09-07
 source: wechat
 url:
 type: entity
@@ -14,6 +14,9 @@ review_stars: 4
 provenance_state: extracted
 sources:
   - raw/articles/loop-engineering-6-month-practice-claude-ship-peakstone
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 核心概述

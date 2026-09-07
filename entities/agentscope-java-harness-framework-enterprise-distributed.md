@@ -4,7 +4,7 @@ title: "AgentScope Java Harness Framework 2.0 — 企业级 Agent 分布式场�
 type: entity
 tags: [agent, claude, framework, harness, multi-agent, tool, java, enterprise, distributed, agent, openclaw, agentscope-java-2, harness-agent, abstract-filesystem, workspace, context-management, middleware, permission-system, model-fallback, event-stream, builder-pattern, contentblock, sealed-class, multi-tenant]
 created: 2026-05-15
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 10
 review_confidence: 9
 score: 90
@@ -17,6 +17,9 @@ related:
   - entities/agent-harness-architecture
   - entities/openclaw-prompt-context-harness
   - concepts/harness-engineering-framework
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 背景：个人助手型 Agent 与企业级 Agent 是两种工程形态

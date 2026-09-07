@@ -3,12 +3,15 @@
 description: Auto-generated placeholder
 title: "MemOS Hermes 记忆插件"
 created: 2026-04-24
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [memos, memos-local-plugin, hermes-agent, memory, memtensor, memos, nous-research, openclaw, agent, local, vector-search, hybrid-search]
 sources: [raw/articles/memos-hermes-plugin]
 review_value: 8
 review_confidence: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## Overview

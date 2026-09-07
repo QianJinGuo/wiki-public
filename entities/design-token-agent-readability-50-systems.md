@@ -2,7 +2,7 @@
 
 title: "50 design token files, one problem: your agents can't read the meaning"
 created: 2026-06-27
-updated: 2026-06-27
+updated: 2026-09-07
 type: entity
 tags: [design-token, design-system, agent, ai-agent, interoperability, design-engineering]
 source: "[[raw/articles/design-token-agent-readability-50-systems]]"
@@ -12,6 +12,9 @@ review_value: 7
 review_confidence: 7
 review_stars: 4
 review_recommendation: worth-reading
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 50 design token files, one problem: your agents can't read the meaning

@@ -2,13 +2,16 @@
 
 title: "LangChain创始人解读：AI智能体两种沙盒架构"
 created: 2026-05-28
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [sandbox, langchain, harrison-chase, e2b, modal, daytona, deepagents, security, agent-architecture]
 sources:
   review_value: 8
 review_confidence: 8
 review_recommendation: strong
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 核心命题

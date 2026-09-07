@@ -19,7 +19,7 @@ tags:
   - knowledge-base
   - sdkf
 created: 2026-06-17
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 review_value: 10
 review_confidence: 9
@@ -27,6 +27,9 @@ review_recommendation: strong
 review_stars: 5
 sources:
   - raw/articles/skills-driven-programming-taobao-enterprise-5-phase-evolution-2026-06-17
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 面向 Skills 编程：大淘宝企业购 5 阶段演进与 Anthropic Agent Skills 标准实战

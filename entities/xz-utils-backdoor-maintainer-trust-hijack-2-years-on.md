@@ -3,7 +3,7 @@ uid: xz-utils-backdoor-maintainer-trust-hijack-2-years-on
 title: "xz-utils Backdoor 2 Years On — Maintainer Trust Hijack Pattern Beyond CVE Scanners"
 description: "CVE-2024-3094 两年后的供应链安全复盘：维持者信任劫持模式（maintainer-trust hijack）— Jia Tan 用 2 年建立 commit 信任 + 改 autotools m4 在 tarball 注入恶意 object。揭示 CVE-driven scanner 的根本盲区：攻击发生到 CVE 出现之间存在时间差。给出 3 个 practical moves：pin direct deps + review lockfile diff + subscribe OSV real-time feed。"
 created: 2026-06-04
-updated: 2026-08-30
+updated: 2026-09-07
 type: entity
 tags: [security, supply-chain, xz-utils, cve-2024-3094, maintainer-trust, osv, real-time-feed, postinstall-script, lockfile-scanning]
 related:
@@ -18,6 +18,9 @@ review_recommendation: strong
 review_stars: 4
 year: 2026
 provenance_state: inferred
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # xz-utils Backdoor 2 Years On — Maintainer Trust Hijack Pattern Beyond CVE Scanners

@@ -4,11 +4,14 @@ title: "A Framework for AI Threat Readiness"
 type: entity
 tags: [newsletter, security, ai-threat, framework]
 created: 2026-05-18
-updated: 2026-08-01
+updated: 2026-09-07
 review_value: 8
 review_confidence: 9
 review_recommendation: worth-reading
 sources: [raw/articles/ai_threat_readiness_framework]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 核心要点

@@ -1,13 +1,16 @@
 ---
 title: AIDE² — 递归自我改进首获实验证据（Weco AI）
 created: 2026-07-16
-updated: 2026-07-31
+updated: 2026-09-07
 type: entity
 tags: [recursive-self-improvement, harness-engineering, agent, autoresearch, rsi, weco, benchmark, self-training]
 aliases: [AIDE², AIDE Squared, Recursive Self-Improvement Level 1]
 confidence: 0.85
 provenance_state: extracted
 sources: [raw/articles/aide-squared-recursive-self-improvement-weco-2026-07-16, raw/articles/rsibench-agent-self-improvement-benchmark-arxiv-2026]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # AIDE² — 递归自我改进首获实验证据（Weco AI）

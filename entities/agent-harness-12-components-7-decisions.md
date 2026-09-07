@@ -4,10 +4,13 @@ title: "一篇看懂 Agent Harness 的结构！ — 12组件+7决策完整框架
 type: entity
 tags: [agent, anthropic, context, harness, model, prompt]
 created: 2026-05-21
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 8
 review_confidence: 7
 sources: [raw/articles/agent-harness-12-components-7-decisions, raw/articles/elvis-saravia-autonomous-coding-7-elements-control-system]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 一篇看懂 Agent Harness 的结构！ — 12组件+7决策完整框架

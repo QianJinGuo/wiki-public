@@ -9,6 +9,9 @@ sources: [raw/articles/300万人在存的claude提示词]
 provenance_state: raw-linked
 review_value: 7
 confidence: 0.8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 300万人在存的Claude提示词

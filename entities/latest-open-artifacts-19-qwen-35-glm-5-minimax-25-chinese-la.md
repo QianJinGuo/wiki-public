@@ -2,13 +2,16 @@
 
 title: "Latest open artifacts (#19)：Qwen 3.5、GLM 5、MiniMax 2.5 — 中国实验室的前沿推进"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-07
 tags: [agent, llm, open-source, qwen, glm, fine-tuning, moe, evaluation, tool-use, prompt]
 review_value: 7
 review_confidence: 7
 type: entity
 sources:
   - raw/articles/latest-open-artifacts-19-qwen-35-glm-5-minimax-25-chinese-la
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Latest open artifacts (#19)：Qwen 3.5、GLM 5、MiniMax 2.5 — 中国实验室的前沿推进

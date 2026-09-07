@@ -2,14 +2,17 @@
 
 title: "How to Detect AI Agents on Your Website"
 created: 2026-05-16
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [agent, ai]
 sources:
   - raw/articles/detect-ai-agent-traffic
 review_value: 9
 review_confidence: 7
-
+reviewed: 2026-09-07
+review_verdict: borderline-retained
+review_category: dup
+review_note: "archive verdict at 0.7 below 0.75 execution threshold; retained"
 ---
 [[raw/articles/detect-ai-agent-traffic.md]] ^[raw/articles/detect-ai-agent-traffic.md]
 

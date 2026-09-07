@@ -1,13 +1,16 @@
 ---
 title: "Knowledge Base Layer Architecture: From RAG to Agent-native Knowledge Context Layer"
 created: 2026-06-11
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [knowledge-base, rag, graphrag, pyramid-kb, knowledge-context-layer, context-engineering, llm-wiki]
 sources: [raw/articles/pyramid-kb-knowledge-context-layer-banya.md]
 provenance_state: raw-linked
 review_value: 7
 confidence: 0.8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Knowledge Base Layer Architecture: From RAG to Agent-native Knowledge Context Layer

@@ -3,7 +3,7 @@
 source_url:
 title: "Karpathy CLAUDE.md — 四条行为准则让 AI 编程 Agent 减少结构性失败"
 created: 2026-05-20
-updated: 2026-08-29
+updated: 2026-09-07
 author: ChallengeHub小编
 platform: WeChat
 published: 2026-05-20
@@ -17,6 +17,9 @@ tags: [claude-code, ai-coding, best-practices, karpathy, prompt-engineering]
 type: entity
 
 provenance_state: inferred
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 背景与传播轨迹

@@ -6,6 +6,9 @@ type: entity
 tags: ['raw', 'article']
 sources: [raw/articles/2026-05-23-万字详解-codex-全链路架构-Codex-不是一个-App-而是一套-Age-科技充电站]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > -> [[raw/articles/2026-05-23-万字详解-codex-全链路架构-Codex-不是一个-App-而是一套-Age-科技充电站.md|原文存档]]

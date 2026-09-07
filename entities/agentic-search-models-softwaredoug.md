@@ -3,13 +3,16 @@ title: "Agentic search models"
 type: entity
 tags: [agentic-search, search-models, llm]
 created: 2026-05-13
-updated: 2026-09-05
+updated: 2026-09-07
 source: newsletter
 source_url:
 review_value: 7
 sources: [raw/articles/agentic-search-models-softwaredoug]
 review_confidence: 7
 review_recommendation: marginal
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 > -> [[raw/articles/agentic-search-models-softwaredoug.md|原文存档]]
 

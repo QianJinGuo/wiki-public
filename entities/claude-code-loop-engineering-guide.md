@@ -1,12 +1,15 @@
 ---
 title: "Claude Code Loop Engineering 完整攻略"
 created: 2026-07-01
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [claude-code, loop-engineering, agent-workflow, boris-cherny, best-practices]
 sources: [raw/articles/claude-code-loop-engineering-guide-tutuangi-2026]
 confidence: 0.92
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Claude Code Loop Engineering 完整攻略

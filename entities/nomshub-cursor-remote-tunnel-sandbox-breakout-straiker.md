@@ -2,7 +2,7 @@
 title: "NomShub — Cursor 远程隧道利用链：Shell Builtin 沙箱逃逸 + Dev Tunnels 武器化"
 description: "Straiker 2026-01 发现、4 月披露、Cursor 3.0 修复的供应链攻击链：单行 prompt injection 触发 7 步自动攻击（sandbox escape + .zshenv 持久化 + cursor-tunnel 武器化 + GitHub 设备码外泄 + 攻击者 C2 入驻），整个链由 AI agent 自主执行。"
 created: 2026-06-09
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [agent-security, cursor, prompt-injection, sandbox-escape, lotl, dev-tunnels, vulnerability, supply-chain, apt, microsoft]
 sources: [raw/articles/nomshub-cursor-remote-tunnel-sandbox-breakout-straiker]
@@ -12,6 +12,9 @@ review_value: 8
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # NomShub — Cursor 远程隧道利用链

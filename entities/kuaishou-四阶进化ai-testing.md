@@ -8,6 +8,9 @@ sources:
   - raw/articles/智能ui用例生成与执行的四阶进化实践
 confidence: 0.8
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 快手AI测试四阶进化实践 — Prompt→Multi-Agent→知识工程→Agentic自进化

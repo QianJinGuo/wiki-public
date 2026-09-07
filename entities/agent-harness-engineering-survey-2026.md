@@ -2,14 +2,16 @@
 
 title: "Agent Harness Engineering: A Survey"
 created: 2026-05-16
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [agent, harness-engineering, aws, engineering]
 sources:
   - raw/articles/agent-harness-engineering-survey-2026
 review_value: 9
 review_confidence: 9
-
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 Agent Harness Engineering: A Survey   ^[raw/articles/agent-harness-engineering-survey-2026.md]

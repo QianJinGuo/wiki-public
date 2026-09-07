@@ -8,6 +8,9 @@ sources: []
 provenance_state: inferred
 review_value: 9
 review_confidence: 9
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 概述

@@ -1,13 +1,16 @@
 ---
 title: "TLiveOmni vLLM 适配与量化方案"
 created: 2026-05-13
-updated: 2026-08-07
+updated: 2026-09-07
 type: entity
 tags: [vllm, quantization, multimodal, inference-optimization]
 review_value: 9
 sources: []
 review_confidence: 7
 provenance_state: inferred
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 → [[entities/面向电商直播场景的全模态大模型推理加速方案.md|返回总览]]
 

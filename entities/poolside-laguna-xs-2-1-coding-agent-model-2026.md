@@ -1,12 +1,15 @@
 ---
 title: "Poolside Laguna XS 2.1: 33B MoE Coding Agent Model"
 created: 2026-07-04
-updated: 2026-07-04
+updated: 2026-09-07
 type: entity
 tags: [agent, coding-agent, model, moe, poolside, open-source-model]
 sources: [raw/articles/poolside-laguna-xs-2-1-2026]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Poolside Laguna XS 2.1: 33B MoE Coding Agent Model

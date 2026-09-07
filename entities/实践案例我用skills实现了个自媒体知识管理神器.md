@@ -8,6 +8,9 @@ provenance_state: inferred
 rating: v8c7
 sources:
   - raw/articles/实践案例我用skills实现了个自媒体知识管理神器
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 【实践案例】我用Skills实现了个自媒体知识管理神器！

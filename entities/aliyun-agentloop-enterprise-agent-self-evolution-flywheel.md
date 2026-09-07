@@ -16,10 +16,13 @@ sources:
   - raw/articles/agentloop-experiment-offline-platform-rubric-mayunlei-aliyun-2026-09-02
   - raw/articles/agentloop-data-flywheel-overview-aliyun-2026
    - raw/articles/agentloop-data-flywheel-experience-library-ablation-mayunlei-aliyun-2026-09-03
-updated: 2026-09-03
+updated: 2026-09-07
 related: [entities/alibaba-agent-observability-audit-loongsuite-pilot-coding-agent-blackbox-to-transparent, entities/harness-engineering实践做了一个平台让ai一晚上自动评测和优化你的系统, entities/agent-evolution-four-stages-six-dimensions-aliyun, entities/loongsuite-genai-semconv-alibaba, entities/agentops-operationalize-agentic-ai-amazon-bedrock, entities/aliyun-cms2-cli-skill-natural-language-observability, entities/aliyun-agentrun, entities/better-harness-eval-trace-harness-hill-climbing, entities/agent-memory-evaluation-landscape-taobao-survey, entities/skills-registry-公测开启为企业打造私有的-skill-管理中心]
 strategic_context: "[[queries/research-frontier-map|Frontier 1 — Harness/Skill 从个人能力到组织资产]]"
 provenance_state: inferred
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 阿里云 AgentLoop：企业级智能体自进化飞轮

@@ -1,12 +1,15 @@
 ---
 title: "Harness Handbook — 行为级 Agent Harness 手册：可理解、可审计、可编辑"
 created: 2026-07-18
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [agent, harness, harness-engineering, behavior, manual, tencent, research]
 sources: [raw/articles/harness-handbook-tencent-ruhan-wang-2026]
 confidence: 0.9
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Harness Handbook — 行为级 Agent Harness 手册：可理解、可审计、可编辑

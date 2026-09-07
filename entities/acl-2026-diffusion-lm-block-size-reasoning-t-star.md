@@ -1,12 +1,15 @@
 ---
 title: "ACL 2026｜块越大，推理越差？扩散语言模型的新难题被T*破解了"
 created: 2026-07-05
-updated: 2026-07-09
+updated: 2026-09-07
 type: entity
 tags: [diffusion-language-model, acl, llm-reasoning, block-wise-llm, reasoning-scaling, reinforcement-learning, masked-diffusion]
 sources: [raw/articles/acl-2026块越大推理越差扩散语言模型的新难题被t破解了]
 confidence: 0.85
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # ACL 2026｜块越大，推理越差？扩散语言模型的新难题被T*破解了

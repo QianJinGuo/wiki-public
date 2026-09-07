@@ -2,7 +2,7 @@
 title: "AI Agent 时代选型指南：模型·应用· Harness（Mollick）"
 description: "Ethan Mollick（One Useful Thing，2026-02-18）系统性梳理 Agent 时代 AI 选型框架：Models（底层模型）、Apps（对话界面）、Harnesses（工具系统）三层架构，以及 GPT-5.2/Claude Opus 4.6/Gemini 3 的实际应用场景对比。核心洞见：同模型在不同 harness 中表现差异巨大；$20 付费版选对模型比选公司更重要；Claude Cowork 是非技术用户的第一个 agentic 工作站。"
 created: 2026-06-07
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [ai-agent, model-selection, harness, ethan-mollick, one-useful-thing, gpt-5, claude-opus, gemini, claude-code, claude-cowork, agentic-ai, ai-tool]
 source: [[raw/articles/a-guide-to-which-ai-to-use-in-the-agentic-era]]
@@ -13,6 +13,9 @@ review_stars: 5
 confidence: 0.92
 provenance_state: extracted
 sources:
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # AI Agent 时代选型指南：模型·应用· Harness（Mollick）

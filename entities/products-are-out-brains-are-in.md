@@ -3,12 +3,15 @@ title: "Products are out, brains are in"
 type: entity
 tags: [newsletter, article]
 created: 2026-05-19
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 7
 sources: [raw/articles/products-are-out-brains-are-in]
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 3
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 # Products are out, brains are in
 

@@ -1,11 +1,14 @@
 ---
 title: "阿里云 Agent Native Cloud — Infra-Platform-Desktop Three-Layer Architecture"
 created: 2026-07-22
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [Alibaba-Cloud, agent-native, agent-platform, agent-infrastructure, enterprise-agents, AIOps]
 sources: [raw/articles/阿里云-agent-native-cloud让智能体成为企业原生的能力]
 confidence: 0.6
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 阿里云 Agent Native Cloud

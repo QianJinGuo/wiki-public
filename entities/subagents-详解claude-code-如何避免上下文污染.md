@@ -9,6 +9,9 @@ tags: [claude-code, agent, harness-engineering, architecture]
 review_value: 9
 sources: [raw/articles/subagents-详解claude-code-如何避免上下文污染]
 review_confidence: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 [[raw/articles/subagents-详解claude-code-如何避免上下文污染]] ^[raw/articles/subagents-详解claude-code-如何避免上下文污染.md]

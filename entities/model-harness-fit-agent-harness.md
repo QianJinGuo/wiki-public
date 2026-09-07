@@ -3,14 +3,16 @@
 
 title: "Model-Harness Fit：Agent 脚手架适配模型"
 created: 2026-05-20
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: ['model', 'harness', 'agent', 'llm', 'coding-agent', 'model-harness-fit']
 sources:
   - raw/articles/model-harness-fit-agent-harness
 review_value: 7
 review_confidence: 8
-
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Model-Harness-Fit：模型与壳的适配性

@@ -8,6 +8,9 @@ sources: [raw/articles/本体这件事-技术早就不是问题-企业ai非技�
 publish_date: 2026-07-05
 vxc: 64
 confidence: 0.8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 本体这件事，技术早就不是问题——企业AI非技术困境的对话

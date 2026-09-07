@@ -1,10 +1,13 @@
 ---
 title: "去哪儿 AI Coding 驱动大型核心系统重构 — Harness+Loop+Task 工程化方法论"
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-07
 type: entity
 tags: [qunar, ai-coding, refactor, harness, loop, task, large-scale-refactor, engineering, ai-engineering]
 sources: [raw/articles/qunar-ai-coding-large-core-system-refactor-2026]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 去哪儿 AI Coding 驱动大型核心系统重构 — Harness+Loop+Task 工程化方法论

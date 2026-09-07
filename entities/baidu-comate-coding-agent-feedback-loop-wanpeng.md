@@ -1,7 +1,7 @@
 ---
 
 title: "Coding Agent在百度的落地实践：从反馈闭环到工程范式重构"
-updated: 2026-08-01
+updated: 2026-09-07
 description: "百度文心快码Coding Agent实践：双层Loop架构/Feedback Loop四层数据/Skill vs MCP渐进式优化98%Token/Benchmark异常值方法论"
 type: entity
 source: "[[raw/articles/baidu-comate-coding-agent-feedback-loop-wanpeng]]"
@@ -11,6 +11,9 @@ review_value: 7
 confidence: 0.6
 sources:
   - raw/articles/baidu-comate-coding-agent-feedback-loop-wanpeng
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Coding Agent在百度的落地实践：从反馈闭环到工程范式重构

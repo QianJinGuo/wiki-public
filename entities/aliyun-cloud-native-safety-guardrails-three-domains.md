@@ -1,7 +1,7 @@
 ---
 title: "安全护栏的三域演进 — 阿里云云原生从 Claude Fable 5 提炼的护栏设计原则"
 created: 2026-06-11
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [safety, guardrails, anthropic, claude, fable-5, mythos, aliyun, qwen3-guard, ai-gateway, content-safety, model-routing, side-channel-execution, declarative-policy, gradient-response, observability, layered-inheritance, scp, ram, qwen3, design-principles, three-domains]
 sources: [raw/articles/aliyun-cloud-native-fable-5-safety-guardrails-evolution]
@@ -9,6 +9,9 @@ review_value: 8
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 概述

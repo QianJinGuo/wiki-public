@@ -4,13 +4,16 @@ type: entity
 tags: [ai, llm, productivity, robotics, security, human-ai-collaboration, real-time, multimodal]
 provenance_state: inferred
 created: 2026-05-13
-updated: 2026-08-01
+updated: 2026-09-07
 review_value: 7
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4
 sources:
   - raw/articles/interaction-models
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Interaction Models: 从回合制到实时协作的人机交互范式转变

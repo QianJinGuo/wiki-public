@@ -1,13 +1,16 @@
 ---
 title: "Rubrics 综述：LLM 训练与评测的显式质量接口"
 created: 2026-06-29
-updated: 2026-06-29
+updated: 2026-09-07
 type: entity
 tags: [rubrics, evaluation, reward-model, training, alignment, agent, survey]
 sources:
   - raw/articles/rubrics-survey-llm-evaluation-ruc-nlpir-2026
 confidence: 0.85
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Rubrics 综述：LLM 训练与评测的显式质量接口

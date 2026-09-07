@@ -4,10 +4,13 @@ slug: ai-coding-agent-memory-system
 type: entity
 tags: [ai-coding, agent, memory, context-management, harness]
 created: 2026-05-19
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 8
 review_confidence: 7
 sources: [raw/articles/hermes-agent-memory-system-openclaw-comparison]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 ## 相关实体
 - [[entities/hermes-agent-memory-system-openclaw-comparison|Hermes Agent 记忆系统 vs OpenClaw 记忆观]]

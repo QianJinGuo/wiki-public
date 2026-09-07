@@ -2,7 +2,7 @@
 title: "DeepSeek V4 训练方法论深度解读"
 type: entity
 created: 2026-05-09
-updated: 2026-08-29
+updated: 2026-09-07
 sources:
   - raw/articles/deepseek-v4-training-58-page-paper-deep-dive
 source_url:
@@ -10,6 +10,9 @@ review_value: 7
 review_confidence: 7
 tags: [deepseek, deepseek-v4, training, moe, post-training, scaling]
 provenance_state: inferred
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # DeepSeek V4 训练方法论深度解读

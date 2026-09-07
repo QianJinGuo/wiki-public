@@ -1,12 +1,15 @@
 ---
 title: "Claude Code 多 Agent Harness 源码拆解：留纸条、抠上下文、抠缓存、捆手脚"
 created: 2026-06-23
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [claude-code, multi-agent, harness, source-code, prompt-caching, coordinator, context-isolation, agent-communication, engineering]
 sources: [raw/articles/claude-code-multi-agent-harness-source-analysis]
 confidence: 0.8
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Claude Code 多 Agent Harness 源码拆解

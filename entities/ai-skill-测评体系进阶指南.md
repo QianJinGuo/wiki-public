@@ -8,6 +8,9 @@ updated: 2026-05-21
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/ai-skill-测评体系进阶指南]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 测评体系的当前能力边界

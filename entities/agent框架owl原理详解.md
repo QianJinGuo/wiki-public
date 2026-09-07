@@ -10,7 +10,9 @@ sources:
   - raw/articles/agent框架owl原理详解
 review_value: 7
 review_confidence: 8
-
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 [[raw/articles/agent框架owl原理详解.md]] ^[raw/articles/agent框架owl原理详解.md]

@@ -9,7 +9,10 @@ sources: [raw/articles/useful-memories-become-faulty-when-continuously-updated-b
 review_confidence: 7
 review_recommendation: strong
 created: 2026-05-12
-updated: 2026-09-05
+updated: 2026-09-07
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Useful Memories Become Faulty When Continuously Updated by LLMs

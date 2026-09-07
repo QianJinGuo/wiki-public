@@ -2,7 +2,7 @@
 title: "Harness Engineering 综合论述：为什么 2026 年真正重要的是它（含 ECC 开源实现案例）"
 description: "2026 Harness Engineering 从 Claude Code 内部实践到全行业共识。综合 Rahul Patil (Google) + AI 技术立文两文 + ECC 开源实现案例（affaan-m/everything-claude-code）：(1) Harness = LLM 时代的操作系统；(2) 4 大区别 (概率性/上下文爆炸/责任转移/标准化)；(3) ECC 三层安装结构 + 8 大主题 (安装面/Token 路由/记忆边界/后台进化/验证分层/并行隔离/Subagent 上下文/渐进升级)；(4) pass@k vs pass^k；(5) iterative-retrieval 检索循环"
 created: 2026-06-15
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [harness, agent, engineering-paradigm, 2026, comprehensive, claude-code, openai, hermes-agent, ecc, everything-claude-code, affaan-m, harness-os, agent-os, continuous-learning, instinct, eval-harness, pass-at-k, iterative-retrieval, wukong, dingtalk, recruitment-agent, specialist-agent, linter, backpressure]
 sources:
@@ -14,6 +14,9 @@ review_value: 9
 review_confidence: 9
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Harness Engineering 综合论述：为什么 2026 年真正重要的是它

@@ -11,7 +11,10 @@ review_confidence: 8
 review_stars: 4
 review_recommendation: strong
 created: 2026-06-01
-updated: 2026-07-18
+updated: 2026-09-07
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # What happens in the log when an app crashes as it starts up?

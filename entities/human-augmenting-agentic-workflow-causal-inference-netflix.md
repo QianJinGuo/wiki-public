@@ -2,10 +2,13 @@
 title: "A Human-Augmenting Agentic Workflow for Causal Inference"
 type: entity
 created: 2026-07-02
-updated: 2026-07-04
+updated: 2026-09-07
 tags: [rss, agent, causal-inference]
 sources: [raw/articles/human-augmenting-agentic-workflow-causal-inference-netflix]
 description: "Netflix 开源 OCI-Agent：人类增强型因果推断 Agent 工作流"
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # A Human-Augmenting Agentic Workflow for Causal Inference

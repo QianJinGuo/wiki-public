@@ -3,13 +3,16 @@
 title: "Consistency, But in Excellence Not Appearance"
 description: "Jim Nielsen 的设计哲学：追求卓越的一致性而非外观的一致性——从 Apple 图标演变看系统化设计对个体表达的压制。"
 created: 2026-06-26
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: ["design", "engineering-culture", "quality", "design-systems", "visual-design", "apple", "icons"]
 sources:
   - raw/articles/consistency-excellence-jim-nielsen
 confidence: 0.9
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Consistency, But in Excellence Not Appearance

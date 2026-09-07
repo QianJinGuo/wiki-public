@@ -1,7 +1,7 @@
 ---
 title: "淘宝主播 Agent Harness 工程：六元组框架与直播场景八项实战"
 created: 2026-08-07
-updated: 2026-08-07
+updated: 2026-09-07
 type: entity
 tags: [agent-harness, live-streaming, e-commerce, context-engineering, memory, safety, dag-planning, taobao, tool-calling]
 sources: [raw/articles/taobao-live-anchor-agent-harness-engineering-chengfen-2026]
@@ -11,6 +11,9 @@ related:
   - entities/agent-harness-6-runtime-patterns-sdb
   - entities/tencentdb-agent-memory-hierarchical
   - entities/aws-china-enterprise-agent-evaluation-adlc
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 淘宝主播 Agent Harness 工程：六元组框架与直播场景八项实战

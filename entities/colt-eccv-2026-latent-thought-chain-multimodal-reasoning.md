@@ -1,11 +1,14 @@
 ---
 title: "CoLT (Chain of Latent Thoughts): ECCV 2026 — 3步潜思维链加速多模态推理20+倍"
 created: 2026-07-15
-updated: 2026-07-15
+updated: 2026-09-07
 type: entity
 tags: [eccv-2026, latent-reasoning, multimodal, chain-of-thought, efficiency, mllm]
 sources: [raw/articles/colt-eccv-2026-latent-thought-chain-multimodal-reasoning]
 confidence: 0.75
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # CoLT (Chain of Latent Thoughts): ECCV 2026 — 3步潜思维链加速多模态推理20+倍

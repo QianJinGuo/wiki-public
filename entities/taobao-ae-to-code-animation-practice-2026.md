@@ -3,7 +3,7 @@ title: "AE 到可运行代码：大淘宝 AI 动画全链路方案（实践篇�
 authors:
   - 香芋
 created: 2026-06-29
-updated: 2026-08-01
+updated: 2026-09-07
 source: wechat
 url:
 type: entity
@@ -14,6 +14,9 @@ review_stars: 4
 provenance_state: extracted
 sources:
   - raw/articles/taobao-ae-to-code-animation-practice-2026
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 核心概述

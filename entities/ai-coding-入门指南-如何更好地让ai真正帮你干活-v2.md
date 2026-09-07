@@ -10,6 +10,9 @@ review_confidence: 10
 review_recommendation: worth-reading
 review_stars: 3
 provenance_state: inferred
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 ## 核心摘要
 本文来自百度Geek说，作者网盘主端团队，从认知层、工具层、实战层三个层面系统讲解如何有效使用AI Coding。核心理念：**上下文是AI Coding的核心竞争力**——模型只是原材料，工具决定上下文质量，Harness Engineering决定团队规模化复用的能力。 ^[raw/articles/ai-coding-入门指南-如何更好地让ai真正帮你干活.md]

@@ -2,13 +2,16 @@
 
 title: "Stripe Agent 经济基础设施 5 套图谱：MPP + Link + Projects + Metronome/Tempo + Radar"
 created: 2026-06-05
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [stripe, agent-economy, machine-payment-protocol, agent-wallet, vibe-deploying, token-billing, usage-based-billing, streaming-payments, token-theft, stablecoin, tempo, metronome, radar, fintech, emily-sands, shensiq, foundation-infrastructure]
 sources: [raw/articles/stripe-agent-economic-infrastructure-emily-sands]
 review_value: 9
 review_confidence: 8
 summary: Emily Sands（Stripe 高管）2026-06-04 提出 agent 是新经济主体框架：5 套基础设施全面上线（MPP 机器支付协议 + Link Agent 钱包 2.5 亿用户 + Stripe Projects vibe-deploying + Metronome+Tempo 流式支付 + Radar 防 token 盗窃）。战略目标：把 agent 经济基础设施层锁定
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Stripe Agent 经济基础设施 5 套图谱

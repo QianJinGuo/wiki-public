@@ -7,6 +7,9 @@ tags: [rl, llm, news]
 review_value: 7
 sources: [raw/articles/llm-rl中的熵-part-1-熵的调控]
 review_confidence: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 > -> [[raw/articles/llm-rl中的熵-part-1-熵的调控.md|原文存档]]
 

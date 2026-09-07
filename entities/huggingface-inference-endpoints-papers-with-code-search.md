@@ -2,11 +2,14 @@
 
 title: "Hugging Face Inference Endpoints 驱动 Papers with Code 搜索架构"
 created: 2026-08-31
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [search, retrieval, embeddings, hybrid-search, huggingface, inference-endpoints, pgvector, rrf]
 sources: [raw/articles/huggingface-inference-endpoints-papers-with-code-search]
 confidence: 0.8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Hugging Face Inference Endpoints 驱动 Papers with Code 搜索架构

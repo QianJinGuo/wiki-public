@@ -4,11 +4,14 @@ title: "How AI Agent Memory Works"
 type: entity
 tags: [agent, llm, memory, architecture, vector-store, knowledge-graph, context-window, rag, memgpt]
 created: 2026-05-21
-updated: 2026-06-30
+updated: 2026-09-07
 review_value: 8
 review_confidence: 8
 sources: [raw/articles/how-ai-agent-memory-works]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 记忆的类型

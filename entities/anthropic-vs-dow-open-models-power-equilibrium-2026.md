@@ -2,7 +2,7 @@
 title: "Anthropic vs DoW (Department of War) 与开源模型的 5-10 年权力均衡"
 description: "Nathan Lambert × Dean Ball 2026-03-06 访谈：Anthropic 被 DoW 指定为供应链风险事件、开源模型作为权力结构稳定均衡、商业模式困境与全球主权 AI 需求"
 created: 2026-06-15
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [ai-policy, anthropic, open-models, interconnects, us-government, sovereign-ai]
 sources: [raw/articles/how-anthropic-vs-dow-impacts-open-interconnects]
@@ -12,6 +12,9 @@ review_recommendation: worth-reading
 review_stars: 4
 confidence: 0.8
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Anthropic vs DoW 与开源模型的 5-10 年权力均衡

@@ -1,11 +1,14 @@
 ---
 title: "Deploying Kimi K3 on AWS"
 created: 2026-07-31
-updated: 2026-08-04
+updated: 2026-09-07
 type: entity
 tags: [aws, kimi, moonshot-ai, sagemaker, model-deployment, open-weights, moe, infrastructure, hyperpod, eks, vllm, b300, amd, mi355x]
 sources: [raw/articles/deploying-kimi-k3-on-aws, raw/articles/kimi-k3-mi355x-amd-deployment-wafer]
 confidence: 0.72
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Deploying Kimi K3 on AWS

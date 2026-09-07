@@ -4,12 +4,15 @@ tags: [aws-china-blog, openclaw]
 sources:
   - raw/articles/openclaw-from-personal-assistant-to-customer-service-a-trust-model-flip
 created: 2026-05-16
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 8
 review_confidence: 8
 review_recommendation: strong
 publish_date: 2026-04-17
 type: entity
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 ## 概述
 把 OpenClaw 从个人助手变成客服：一次信任模型的翻转 by awschina on 17 4月 2026 in Artificial Intelligence Permalink Share 摘要：本文探讨如何将 OpenClaw 从个人 AI 助手转型为面向客户的服务Agent。围绕五个核心问题展开：会话隔离（dmScope 配置实现多客户 session 独立）、多渠道接入（Web Widget 与消息平台的身份关联）、安全模型（tools.deny 硬约束 + Bedrock Guardrails 内容过滤的双层防护）、知识库注入（Bootstrap 文件 + Amazon Bedrock Knowledge Bases 的 RAG 检索）、以及客户记忆的局限与演进方向。部署架构基于 AWS，采用 ALB + ECS 认证中间层 + 私有子网 Gateway 的分层设计，通过   ^[raw/articles/openclaw-from-personal-assistant-to-customer-service-a-trust-model-flip.md]

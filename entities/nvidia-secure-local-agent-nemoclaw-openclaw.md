@@ -4,10 +4,13 @@ title: "Nvidia Secure Local Agent Nemoclaw Openclaw"
 type: entity
 tags: [agent, nvidia, training]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/nvidia-secure-local-agent-nemoclaw-openclaw]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Build a More Secure, Always&#x2d;On Local AI Agent with OpenClaw and NVIDIA NemoClaw | NVIDIA Technical Blog

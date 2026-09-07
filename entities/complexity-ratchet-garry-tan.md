@@ -1,7 +1,7 @@
 ---
 title: "你的AI代码越写越乱，他72小时合了14个PR每个都更好——差距只在一个机制"
 created: 2026-05-14
-updated: 2026-09-05
+updated: 2026-09-07
 source: "[[raw/articles/complexity-ratchet-garry-tan|原文存档]]"
 type: entity
 value: 7
@@ -9,6 +9,9 @@ tags: [engineering, ai]
 review_value: 9
 sources: [raw/articles/complexity-ratchet-garry-tan]
 review_confidence: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 [[raw/articles/complexity-ratchet-garry-tan]] ^[raw/articles/complexity-ratchet-garry-tan.md]

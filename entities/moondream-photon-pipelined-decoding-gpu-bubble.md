@@ -1,7 +1,7 @@
 ---
 title: "Moondream Photon: Pipelined Decoding for VLM Inference Optimization"
 created: 2026-07-01
-updated: 2026-07-01
+updated: 2026-09-07
 type: entity
 tags: [moondream, photon, inference-optimization, pipelined-decoding, gpu, vlm, llm-engineering, cuda]
 sources: [raw/articles/moondream-popping-gpu-bubble-photon-engine]
@@ -9,6 +9,9 @@ review_value: 9
 review_confidence: 9
 review_recommendation: strong
 review_stars: 5
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Moondream Photon: Pipelined Decoding for VLM Inference Optimization

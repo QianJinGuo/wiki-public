@@ -1,7 +1,7 @@
 ---
 title: "Moebius: 0.2B Lightweight Image Inpainting with 10B-Level Performance"
 created: 2026-06-23
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [computer-vision, inpainting, diffusion, distillation, efficiency, model-compression]
 source: [[raw/articles/moebius]]
@@ -12,6 +12,9 @@ review_confidence: 9
 review_stars: 5
 provenance_state: extracted
 confidence: 0.9
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Moebius: 0.2B Lightweight Image Inpainting with 10B-Level Performance

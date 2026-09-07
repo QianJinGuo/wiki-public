@@ -1,7 +1,7 @@
 ---
 title: "Agent 的骨架:Agent Runtime 7 大职责 + 3 主流框架对比 (LangGraph / OpenAI Agents SDK / 自研)"
 created: 2026-06-15
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [agent-runtime, runtime-architecture, tool-registry, state-management, context-engineering, guardrail, trace, observability, langgraph, openai-agents-sdk, multi-agent, agent-framework, hitl, agent-engineering, second-curve, 二曲线工程师]
 sources: [raw/articles/agent-runtime-7-responsibilities-secondcurve-2026, raw/articles/ai-infra-task-infrastructure-ruofei-2026-08-12]
@@ -10,6 +10,9 @@ review_value: 7
 review_confidence: 7
 review_recommendation: worth-reading
 review_stars: 3
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Agent 的骨架：Agent Runtime 7 大职责 + 3 主流框架对比

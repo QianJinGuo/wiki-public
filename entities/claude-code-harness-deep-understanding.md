@@ -4,10 +4,14 @@ title: "Claude Code Harness Deep Understanding"
 type: entity
 tags: [agent, anthropic, claude, harness, llm]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/claude-code-harness-deep-understanding]
+reviewed: 2026-09-07
+review_verdict: hub-retained
+review_category: dup
+review_note: "judged dup-0.8: dup-correction: 同主题保留更全版本; retained as hub (in-links>=20); MOC rewrite candidate"
 ---
 
 # 深入理解 Claude Code 源码中的 Agent Harness 构建之道

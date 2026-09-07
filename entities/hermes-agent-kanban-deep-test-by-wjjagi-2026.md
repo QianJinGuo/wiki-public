@@ -4,11 +4,14 @@ title: "Hermes-Agent 官方 Kanban 深度实测：让商业 CLI 工具当 Orches
 type: entity
 tags: [agent, kanban, gateway, orchestrator, architecture, api, claude, mcp, sqlite]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 9
 review_confidence: 10
 sources: [raw/articles/hermes-agent-kanban-deep-test-by-wjjagi-2026]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 核心结论

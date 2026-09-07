@@ -1,11 +1,14 @@
 ---
 title: "Microsoft Foundry 生产级 Agent 工程：Harness 与模型的等价重要性"
 created: 2026-07-15
-updated: 2026-07-15
+updated: 2026-09-07
 type: entity
 tags: [microsoft, foundry, ai-agent, production, harness, enterprise, agent-platform, eval]
 sources: [raw/articles/bytebytego-microsoft-ships-ai-agents-enterprise-scale-foundry-2026]
 confidence: 0.8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Microsoft Foundry 生产级 Agent 工程：Harness 与模型的等价重要性

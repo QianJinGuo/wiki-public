@@ -1,12 +1,15 @@
 ---
 title: "LittleLearner：课程受控预训练——预训练过滤设定能力上限的实验证据"
 created: 2026-08-17
-updated: 2026-08-17
+updated: 2026-09-07
 type: entity
 tags: [pretraining, curriculum, data-centric, knowledge-acquisition, elicitation, arxiv, mpi]
 sources: [raw/articles/littlelearner-pedagogical-curriculum-llm-arxiv-2608-13545]
 confidence: 0.8
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # LittleLearner：课程受控预训练——预训练过滤设定能力上限的实验证据

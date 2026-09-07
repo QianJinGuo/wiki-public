@@ -7,6 +7,9 @@ tags: [wechat, loop-engineering, andrew-ng, ai-product-development, coding-agent
 rating: v8c8
 sources:
   - raw/articles/吴恩达最新思考从分钟到天ai产品如何靠三层loop迭代
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 吴恩达最新思考：从分钟到天，AI产品如何靠三层Loop迭代

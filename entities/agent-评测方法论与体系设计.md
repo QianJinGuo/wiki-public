@@ -8,6 +8,9 @@ rating: v9c9
 sources:
   - raw/articles/agent-评测方法论与体系设计
   - raw/articles/ai-agent-应用精细化评测评测体系设计与工程实践
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Agent 评测：方法论与体系设计

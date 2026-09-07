@@ -1,7 +1,7 @@
 ---
 title: "Gene/GEP — EvoMap×清华 提出的「策略基因」经验对象框架（arXiv 2604.15097）"
 created: 2026-06-13
-updated: 2026-09-05
+updated: 2026-09-07
 type: "entity"
 tags: [agent-skill, gene, gep, evomap, evolver, openclaw, critpt, agent-evolution, test-time-evolution, experience-reuse, strategy-gene, arxiv-2604-15097, qinghua, junjie-wang, haoyang-zhang, control-density, protocol-layer, rsi, recursive-self-improvement]
 sources:
@@ -31,6 +31,9 @@ affiliation: "Infinite Evolution Lab (EvoMap) × 清华大学"
 repos:
   - "
   - "
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 核心定位

@@ -7,6 +7,9 @@ tags: [wechat, ai, agent, rl, self-evolution, areal, online-rl, agentic-rl, harn
 rating: v8c8
 sources:
   - raw/articles/agent的自演进被刚刚开源的areal-20按下了加速键
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Agent的自演进，被刚刚开源的AReaL 2.0按下了加速键

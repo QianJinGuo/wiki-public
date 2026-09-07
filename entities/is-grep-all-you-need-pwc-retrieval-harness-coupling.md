@@ -2,7 +2,7 @@
 
 title: Is Grep All You Need? — 检索 × Harness × 交付方式耦合三元组（PwC 论文 arXiv 2605.15184 解读）
 created: 2026-06-04
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [grep-vs-vector, retrieval, agentic-rag, harness, inline-delivery, longmemeval, context-engineering, pwc, arxiv-2605-15184, harness-engineering, harness-coupling, file-read-vs-inline, ablate]
 confidence: 0.94
@@ -11,6 +11,9 @@ sources: [raw/articles/is-grep-all-you-need-pwc-retrieval-harness-coupling]
 review_value: 9
 review_confidence: 9
 review_recommendation: strong
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Is Grep All You Need? — 检索 × Harness × 交付方式耦合三元组

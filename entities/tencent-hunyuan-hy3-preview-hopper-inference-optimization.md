@@ -1,13 +1,16 @@
 ---
 title: "腾讯混元 Hy3 preview 在 Hopper 卡上的推理优化实践"
 created: 2026-06-30
-updated: 2026-06-30
+updated: 2026-09-07
 type: entity
 tags: [hunyuan, hy3, inference-optimization, hopper, moe, attention, quantization, sparse-attention, mtp, tpsp, fused-moe]
 sources:
   - raw/articles/tencent-hunyuan-hy3-preview-hopper-inference-optimization
 confidence: 0.9
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 腾讯混元 Hy3 preview 在 Hopper 卡上的推理优化实践

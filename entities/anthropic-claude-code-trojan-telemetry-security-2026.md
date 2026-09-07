@@ -1,12 +1,15 @@
 ---
 title: "Anthropic Claude Code 木马门：隐私遥测争议"
 created: 2026-07-02
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [claude-code, anthropic, ai-security, telemetry, privacy, controversy, agent-security, supply-chain]
 sources: [raw/articles/anthropic-claude-code-trojan-telemetry-security-2026]
 confidence: 0.74
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Anthropic Claude Code 木马门：隐私遥测争议

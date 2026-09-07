@@ -1,7 +1,7 @@
 ---
 title: "AI + Skills 打通中间件迁移：Android 到鸿蒙定位服务实践"
 created: "2026-06-15"
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags:
   - skill
@@ -19,6 +19,9 @@ sources:
 confidence: 0.85
 provenance_state: extracted
 review_value: 6
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # AI + Skills 打通中间件迁移：Android 到鸿蒙定位服务实践

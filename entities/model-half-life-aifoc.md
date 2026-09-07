@@ -3,10 +3,13 @@ title: model half-life
 type: entity
 tags: [llm, ai-research]
 created: 2026-05-21
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 8
 sources: [raw/articles/model-half-life-aifoc]
 review_confidence: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 摘要

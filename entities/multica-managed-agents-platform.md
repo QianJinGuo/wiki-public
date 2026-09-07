@@ -2,7 +2,7 @@
 title: "Multica — 开源 Managed Agents 平台"
 type: entity
 created: 2026-05-07
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 7
 sources: [raw/articles/multica-managed-agents-platform]
 review_confidence: 7
@@ -14,7 +14,9 @@ stars: 25584
 license: Apache 2.0
 published: 2026-01-13
 tags: [managed-agents, platform, multi-agent, orchestration, skill, go, agent-management]
-
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 > -> [[raw/articles/multica-managed-agents-platform.md|原文存档]]
 

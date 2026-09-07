@@ -5,12 +5,15 @@ description: "Chromium 仓库中构建的 AI Agent 基础设施——四层 Prom
 source: [[raw/articles/chromium-ai-coding-development-system]]
 tags: [ai-coding, browser, chromium, ai-coding, prompt-engineering, agentic-rag, ai-policy, skill-system, model-context-protocol]
 created: 2026-06-01
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 review_value: 7
 confidence: 0.6
 sources:
   - raw/articles/chromium-ai-coding-development-system
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Chromium AI Coding 开发体系

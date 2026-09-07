@@ -8,6 +8,9 @@ tags: [wechat, ai]
 rating: v8c8
 sources:
   - raw/articles/openclaw长期记忆优秀管线与玄学效果
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # OpenClaw长期记忆：优秀管线与玄学效果

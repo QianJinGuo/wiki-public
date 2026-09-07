@@ -3,11 +3,14 @@ title: "How Superset built the IDE for AI agents on Vercel"
 type: entity
 tags: [newsletter, article]
 created: 2026-05-14
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 7
 sources: [raw/articles/vercel-com-how-superset-built-the-ide-for-ai-agents-on-vercel]
 review_confidence: 8
 review_recommendation: worth-reading
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 > → [[raw/articles/vercel-com-how-superset-built-the-ide-for-ai-agents-on-vercel.md|原文存档]]
 

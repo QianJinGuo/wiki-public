@@ -2,7 +2,7 @@
 
 title: "Building Jaeger’s ClickHouse backend: 8.6× compression on 10 million spans"
 created: 2026-06-26
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [article]
 source: "[[raw/articles/23-building-jaegers-clickhouse-backend-8-6x-compression-on-10-million-spans]]"
@@ -12,6 +12,9 @@ review_value: 8
 review_confidence: 9
 review_stars: 4
 review_recommendation: strong
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Building Jaeger’s ClickHouse backend: 8.6× compression on 10 million spans

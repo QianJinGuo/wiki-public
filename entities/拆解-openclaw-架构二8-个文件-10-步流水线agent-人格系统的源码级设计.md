@@ -8,6 +8,9 @@ tags: [wechat, ai]
 rating: v7c7
 sources:
   - raw/articles/拆解-openclaw-架构二8-个文件-10-步流水线agent-人格系统的源码级设计
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 拆解 OpenClaw 架构（二）：8 个文件 + 10 步流水线，Agent 人格系统的源码级设计

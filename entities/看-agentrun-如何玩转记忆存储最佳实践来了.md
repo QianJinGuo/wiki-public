@@ -9,6 +9,10 @@ review_value: 6
 review_confidence: 8
 sources: [raw/articles/看-agentrun-如何玩转记忆存储最佳实践来了]
 score_validated: 2026-09-05
+reviewed: 2026-09-07
+review_verdict: hub-retained
+review_category: pr
+review_note: "judged pr-0.75: 产品文档; retained as hub (in-links>=20); MOC rewrite candidate"
 ---
 
 # 看 AgentRun 如何玩转记忆存储，最佳实践来了！

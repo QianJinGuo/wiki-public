@@ -3,7 +3,7 @@
 source_url:
 title: "Agentium — 从零实现 Agent 系统的开源框架"
 created: 2026-05-20
-updated: 2026-09-05
+updated: 2026-09-07
 author: 贵慜 (IchbinDerek)
 platform: WeChat
 published: 2026-05-17
@@ -15,6 +15,9 @@ review_stars: 4
 aliases: [Agentium Framework, Agentium]
 tags: [agent-framework, open-source, architecture, multi-agent]
 type: entity
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 - [[raw/articles/agentium-agent-framework|原文存档]]

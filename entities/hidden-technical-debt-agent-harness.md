@@ -4,12 +4,15 @@ title: "Hidden Technical Debt of AI Systems: Agent Harness"
 type: entity
 tags: [agent, harness, technical-debt, ai-systems, context-engineering]
 created: 2026-06-24
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 9
 review_confidence: 8
 review_recommendation: strong
 review_stars: 5
 sources: [raw/articles/hidden-technical-debt-agent-harness]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Hidden Technical Debt of AI Systems: Agent Harness

@@ -6,6 +6,9 @@ type: entity
 tags: [vlm, multimodal, vision, om-ai, streaming-video, video-understanding, edge-ai, model-architecture]
 sources: [raw/articles/om-ai-vlx-flow-streaming-video-vlm-vlx系列开篇-2026]
 confidence: 0.75
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Om AI VLX-Flow: 流式视频理解 VLM — VLX 系列开篇

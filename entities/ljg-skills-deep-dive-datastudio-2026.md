@@ -3,12 +3,15 @@ title: "李继刚 23 个 Skills 深度拆解——认知工序流水线"
 type: entity
 tags: [ljg, lijigang, skill, cognitive-tool, read-think-write-publish, prompt-engineering, claude-code, thinking-framework, cognition, markdown-prompts]
 created: 2026-07-03
-updated: 2026-08-01
+updated: 2026-09-07
 review_value: 8
 review_confidence: 8
 review_recommendation: strong
 provenance_state: extracted
 sources: [raw/articles/ljg-skills-deep-dive-datastudio-2026]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 李继刚 23 个 Skills 深度拆解——认知工序流水线

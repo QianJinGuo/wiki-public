@@ -8,6 +8,9 @@ tags: [wechat, ai]
 rating: v8c8
 sources:
   - raw/articles/技术教科书顶级开发团队设计的harness工程项目源码什么样
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 技术教科书：顶级开发团队设计的Harness工程项目源码什么样

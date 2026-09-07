@@ -1,7 +1,7 @@
 ---
 title: "The recent history of AI in 32 otters"
 created: 2026-06-10
-updated: 2026-09-05
+updated: 2026-09-07
 tags: [ai, diffusion-models, multimodal, llm, open-models, benchmark, image-generation, video-generation]
 review_value: 7
 review_confidence: 7
@@ -12,6 +12,9 @@ provenance_state: extracted
 author: Ethan Mollick
 sources:
   - raw/articles/the-recent-history-of-ai-in-32-otters
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # The Recent History of AI in 32 Otters

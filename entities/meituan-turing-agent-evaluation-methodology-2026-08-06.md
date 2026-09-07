@@ -2,12 +2,15 @@
 title: "Agent 评测方法论——美团图灵两年 BP 实践（人人一致/人机一致 + 桥梁指标 + 长程范式）"
 description: "美团图灵评测团队两年 BP 经验：评测体系核心不是堆指标而是搭桥（业务指标↔模型指标桥梁层）、人人一致（独裁者）/人机一致（Rubric 二元化）对齐方法论、数据飞轮五环节、长程 Agent 评测范式（prompt-expected_behavior-trace 三元组 + 人评主导→机评主导）、评测基建七能力"
 created: 2026-08-06
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 8
 review_confidence: 9
 type: entity
 tags: [agent-evaluation, meituan, observability, long-horizon-agent, skill-evaluation, skill-marketplace, trace]
 sources: [raw/articles/meituan-turing-agent-evaluation-methodology-2026-08-06, raw/articles/tencent-skillhub-trace-skill-eval-discovery-2026-08-11]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Agent 评测方法论——美团图灵两年 BP 实践

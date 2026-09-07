@@ -7,7 +7,10 @@ summary: "6步LLM迁移框架：跨代际自动化评估 / 方案选择与路由
 sources: [raw/articles/aws-generative-ai-model-agility-framework]
 review_value: 6
 review_confidence: 9
-updated: 2026-09-05
+updated: 2026-09-07
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 # AWS Model Agility: 6步LLM跨代际迁移框架
 ## 核心内容

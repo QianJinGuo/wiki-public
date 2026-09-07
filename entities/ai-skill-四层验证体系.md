@@ -14,6 +14,9 @@ related:
   - entities/harness-engineering
   - entities/adversarial-verification
   - entities/ai-skill-测评体系进阶指南
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 问题：为什么不能让模型自己评审自己

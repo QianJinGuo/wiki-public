@@ -2,12 +2,15 @@
 title: "Harness 减法工程——删掉 61% 之后什么该留（L0-L3 四层归属）"
 description: "腾讯 tdsql-harness 团队瘦身实录：规则→判据、五道关卡、back pressure 自主度上界、L0-L3 四层归属（什么会被模型内化，什么永远不会）"
 created: 2026-08-06
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 8
 review_confidence: 9
 type: entity
 tags: [agent, harness-engineering, prompt-engineering, skill, context-engineering, tencent]
 sources: [raw/articles/tdsql-harness-subtraction-61pct-l0-l3-tencent-2026-08-06]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Harness 减法工程——删掉 61% 之后什么该留

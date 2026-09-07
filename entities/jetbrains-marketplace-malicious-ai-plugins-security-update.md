@@ -3,7 +3,7 @@
 title: "JetBrains Marketplace Ecosystem Security Update: Malicious AI Plugins"
 description: "JetBrains Marketplace security incident: 15 malicious third-party AI plugins stealing developer API Keys. 7 publisher accounts terminated. Remote kill-switch mechanism disables installed malicious plugins."
 created: 2026-06-19
-updated: 2026-08-30
+updated: 2026-09-07
 type: entity
 tags: [security, supply-chain, jetbrains, marketplace, ai-plugins, api-key-theft, developer-security]
 source: "[[raw/articles/jetbrains-marketplace-malicious-ai-plugins-security-update]]"
@@ -14,6 +14,9 @@ review_confidence: 10
 review_recommendation: strong
 review_stars: 4
 sources:
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # JetBrains Marketplace Ecosystem Security Update: Malicious AI Plugins

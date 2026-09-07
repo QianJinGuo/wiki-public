@@ -1,7 +1,7 @@
 ---
 title: "多模态智能体框架综述：感知融合策略×四模块×四赛道"
 created: "2026-08-31"
-updated: 2026-08-31
+updated: 2026-09-07
 type: entity
 tags: [agent, multimodal, perception, fusion, robotics, gui, survey]
 sources:
@@ -9,6 +9,9 @@ sources:
   - raw/articles/multimodal-agentic-frameworks-survey-mozhi-space-2026
 confidence: 0.8
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 多模态智能体框架综述：感知融合策略×四模块×四赛道

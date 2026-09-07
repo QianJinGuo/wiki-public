@@ -2,13 +2,16 @@
 
 title: "阿里云 MSE AI 任务调度 + Agent Sandbox：动态休眠/唤醒 OpenClaw Agent 成本下降 90%+"
 created: 2026-06-10
-updated: 2026-09-05
+updated: 2026-09-07
 tags: [agent, architecture, code, data, evaluation, finops, k8s, knowledge-mgmt, memory, mlops, observability, open-source, openclaw, prompt, sandbox, security, tool-use, workflow]
 review_value: 7
 review_confidence: 7
 type: entity
 sources:
   - raw/articles/aliyun-mse-ai-task-scheduling-agent-sandbox-cost-90-percent
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 阿里云 MSE AI 任务调度 + Agent Sandbox：动态休眠/唤醒 OpenClaw Agent 成本下降 90%+

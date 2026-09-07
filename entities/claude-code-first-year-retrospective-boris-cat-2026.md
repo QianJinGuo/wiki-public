@@ -4,13 +4,16 @@ title: "Claude Code 一周年回顾：Boris Cherny + Cat Wu 的完整时间线"
 type: entity
 tags: [claude-code, boris-cherny, cat-wu, anthropic, anniversary, retrospective, routines, auto-mode, agent-view, dynamic-workflows, kairos, undercover-mode, source-leak, voice-mode, remote-control, claude-opus, context-minimalism, worktree, mobile-coding, agi-hunt, self-verification, loop, skill]
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 9
 review_confidence: 9
 review_recommendation: worth-reading
 review_stars: 5
 provenance_state: deepened
 sources: [raw/articles/claude-code-first-year-retrospective-agi-hunt, raw/articles/claude-code-background-sub-agents-boris-cherny-2026]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Claude Code 一周年回顾：Boris Cherny + Cat Wu 的完整时间线

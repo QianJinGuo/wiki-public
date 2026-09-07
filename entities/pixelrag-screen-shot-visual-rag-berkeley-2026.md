@@ -2,7 +2,7 @@
 title: "PixelRAG：用截图替代文本解析的视觉 RAG 范式"
 type: entity
 created: 2026-07-01
-updated: 2026-07-27
+updated: 2026-09-07
 tags: [rag, visual-rag, pixelrag, berkeley, screenshot, embedding, qwen, qwen3-vl, faiss, vlm, retrieval, pageretrieval]
 sources:
   - raw/articles/pixelrag-screen-shot-visual-rag-berkeley-2026
@@ -10,6 +10,9 @@ review_value: 7
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # PixelRAG：用截图替代文本解析的视觉 RAG 范式

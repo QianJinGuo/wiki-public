@@ -4,14 +4,16 @@
 description: Auto-generated placeholder
 title: "淘天营销中后台生码工作流最佳实践"
 created: 2026-05-16
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, skill, architecture, ai]
 sources:
   - raw/articles/tmall-marketing-ai-workflow-best-practices
 review_value: 9
 review_confidence: 7
-
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 淘天营销中后台生码工作流最佳实践

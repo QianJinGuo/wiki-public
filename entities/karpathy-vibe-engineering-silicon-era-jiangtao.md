@@ -6,11 +6,14 @@ source: "[[raw/articles/karpathy-vibe-engineering-silicon-era-jiangtao]]"
 tags: [vibe-engineering, agentic-ai, programmer-生存, cognitive-offloading, karpathy, silicon-era, proof-of-correctness]
 type: entity
 created: 2026-05-26
-updated: 2026-08-01
+updated: 2026-09-07
 review_value: 7
 confidence: 0.6
 sources:
   - raw/articles/karpathy-vibe-engineering-silicon-era-jiangtao
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 连Karpathy都开始恐慌：AI正在重新定义「程序员」｜硅基时间

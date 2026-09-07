@@ -8,6 +8,9 @@ updated: 2026-06-17
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/从提需求到部署发布全ai全自动化后研发效能全面跃升]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 从提需求到部署发布，全AI全自动化后，研发效能全面跃升

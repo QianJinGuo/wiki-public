@@ -2,7 +2,7 @@
 
 title: "下一代企业数字化架构：系统CLI化、流程Skill化、员工Agent化"
 created: 2026-05-17
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [enterprise-digital, skill-architecture, employee-agent, cli-layer, ai-flow-architect, enterprise-ai, workflow-automation]
 sources:
@@ -12,6 +12,9 @@ review_confidence: 7
 review_recommendation: strong
 review_stars: 4
 provenance_state: inferred
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 核心洞察

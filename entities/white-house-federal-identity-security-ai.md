@@ -3,11 +3,14 @@ title: "White House cyber official: identity security matters more"
 type: entity
 tags: [newsletter, article]
 created: 2026-05-18
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 7
 sources: [raw/articles/white-house-federal-identity-security-ai]
 review_confidence: 8
 review_recommendation: worth-reading
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 ## 核心要点
 - AI 攻击工具花样翻新，但突破口仍是薄弱的身份认证与凭证管理

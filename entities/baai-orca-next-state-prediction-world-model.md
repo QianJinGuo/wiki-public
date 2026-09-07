@@ -1,13 +1,16 @@
 ---
 title: "BAAI Orca — 智源悟界 RoboBrain Next-State Prediction 世界模型"
 created: 2026-07-08
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [world-model, baai, orca, next-state-prediction, robobrain, state-representation, foundation-model, flagscale]
 provenance_state: extracted
 confidence: 0.8
 sources:
   - raw/articles/baai-orca-next-state-prediction-world-model
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # BAAI Orca — 智源悟界 RoboBrain Next-State Prediction 世界模型

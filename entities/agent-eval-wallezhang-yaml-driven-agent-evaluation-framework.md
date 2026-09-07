@@ -1,13 +1,16 @@
 ---
 title: "AgentEval：YAML驱动的Agent评测框架"
 created: 2026-05-19
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, evaluation, testing, benchmark, pass@k, golang, yaml, ci-cd]
 sources: [raw/articles/agent-eval-wallezhang-yaml-driven-agent-evaluation]
 review_value: 7.5
 review_confidence: 8.5
 summary: Go语言实现的YAML配置驱动Agent评测框架，支持多Agent适配器和多种评分策略（exact_match/contains/regex/command/llm/constraint），pass@k+pass^k双指标体系，SQLite存储，CI/CD集成，缓存，A/B对比，扩展接口清晰。
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 ## 核心问题
 传统测试金字塔（单元测试 → 集成测试 → E2E 测试）覆盖不了 Agent 的核心质量问题：   ^[raw/articles/agent-eval-wallezhang-yaml-driven-agent-evaluation.md]

@@ -3,7 +3,7 @@
 title: "ICML 2026 | PRISM: Parallel Residual Iterative Sequence Model"
 description: "腾讯广告+北大提出 PRISM：在线性 O(n) 下实现 TTT 级别多步 rank-L 深度写入，吞吐量比 TTT 快 174 倍，匹配 TTT 质量且超越 GDN/Transformer"
 created: 2026-06-11
-updated: 2026-08-30
+updated: 2026-09-07
 type: entity
 tags: [icml-2026, linear-attention, gdn, ttt, parallel-scan, sequence-model, memory-writing, mixed-architecture, recommendation, tencent-ad-tech, peka, residual-iteration, rank-l]
 sources: [raw/articles/icml-2026-prism-parallel-residual-iterative-sequence-model]
@@ -11,6 +11,9 @@ review_value: 9
 review_confidence: 9
 review_recommendation: strong
 review_stars: 5
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # ICML 2026 | PRISM: Parallel Residual Iterative Sequence Model

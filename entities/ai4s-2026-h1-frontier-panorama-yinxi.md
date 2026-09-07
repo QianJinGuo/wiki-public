@@ -1,13 +1,16 @@
 ---
 title: AI4S 2026 H1 跨学科前沿全景（弦论泰斗、AI 提速百倍、与"该谁负责"之问）
 created: 2026-06-04
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [ai4s, science, foundation-model, autonomous-lab, brain, quantum, climate, life-science, material-science, yinxi, deepmind, harvard, agent, agentic-science]
 confidence: 0.92
 provenance_state: merged
 sources: [raw/articles/ai4s-2026-h1-frontier-panorama-yinxi]
 review_value: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # AI4S 2026 H1 跨学科前沿全景

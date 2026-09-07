@@ -15,6 +15,9 @@ sources: [raw/articles/将-aws-devops-agent-智能运维能力延伸到中国区
 review_confidence: 9
   - AWS China Blog
   - AWS, DevOps Agent, China Region, MCP
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > -> [[raw/articles/将-aws-devops-agent-智能运维能力延伸到中国区|原文存档]]

@@ -3,13 +3,16 @@
 title: "Solution overview"
 type: entity
 created: 2026-06-10
-updated: 2026-08-01
+updated: 2026-09-07
 tags: [rss, article, agent, ai, llm, bedrock, sagemaker, aws, financial]
 source: [[raw/articles/automate-aml-alert-triage-with-amazon-quick-and-snowflake-co]]
 review_value: 8
 review_confidence: 8
 review_stars: 4
 sources:
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Solution overview

@@ -3,11 +3,14 @@ title: "Amazon Turns Alexa Into Its Next Storefront"
 type: entity
 tags: [newsletter, startup, ai, aws, voice-commerce, agentic-commerce]
 created: 2026-05-19
-updated: 2026-05-19
+updated: 2026-09-07
 review_value: 8
 review_confidence: 7
 review_recommendation: worth-reading
 sources: [raw/articles/Amazon-Turns-Alexa-Into-Its-Next-Storefront]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 ## 核心要点
 - 来源：https://www.pymnts.com/news/retail/2026/amazon-bets-on-voice-as-agentic-commerces-winning-ai-interface/

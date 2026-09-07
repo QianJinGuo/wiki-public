@@ -4,13 +4,16 @@ title: "Self-Taught RLVR 综述"
 type: entity
 tags: [rlvr, self-training, post-training, distillation, multi-expert, jd, cii]
 created: "2026-05-20"
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 8
 review_confidence: 7
 review_recommendation: strong
 review_stars: 4
 provenance_state: extracted
 sources: [raw/articles/self-taught-rlvr-jd-cii-2026]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 三种 Self 框架

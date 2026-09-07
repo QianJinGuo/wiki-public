@@ -6,6 +6,9 @@ type: entity
 tags: [vision, gui-agent, multimodal, inference, research, agent, training, llm, applied-ai, memory-management, context-management]
 sources: [raw/articles/让gui-agent不再边做边忘快手浙大提出memgui-agent攻克长程gui任务]
 confidence: 0.7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 让GUI Agent不再「边做边忘」：快手、浙大提出MemGUI-Agent，攻克长程GUI任务

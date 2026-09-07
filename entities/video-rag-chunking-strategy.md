@@ -8,11 +8,14 @@ review_recommendation: worth-reading
 review_stars: 4
 date: 2026-06-09
 created: 2026-06-09
-updated: 2026-08-29
+updated: 2026-09-07
 tags: [video-rag, multimodal-rag, chunking-strategy, pause-based-chunking, sliding-window, llm-topic-chunking, multi-granularity-pipeline, rag-pipeline, video-understanding, temporal-segmentation]
 type: entity
 provenance_state: synthesized
 sources: [raw/articles/video-rag-chunking-strategy-deephub-imba]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > -> [[raw/articles/video-rag-chunking-strategy-deephub-imba|原文存档]]

@@ -1,7 +1,7 @@
 ---
 title: "Agent Loop 架构三层模型：Loop + Skill + Orchestrator"
 created: 2026-06-27
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [agent-loop, durable-execution, orchestration, skill, checkpoint, self-building-agent, architecture]
 review_value: 8
@@ -17,6 +17,9 @@ related:
   - entities/harness-engineering-framework
   - entities/self-harness-shanghai-ai-lab-agent-improves-harness
   - entities/agentic-environment-engineering-jiagoux-2026-06-27
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > → [[raw/articles/inngest-cto-agent-loop-architecture-three-layers-2026-06-27|原文存档]]

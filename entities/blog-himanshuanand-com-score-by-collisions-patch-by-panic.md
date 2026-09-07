@@ -3,11 +3,14 @@ title: score by collisions, patch by panic
 type: entity
 tags: [security, browser, ai-agent]
 created: 2026-05-21
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 8
 sources: [raw/articles/blog-himanshuanand-com-score-by-collisions-patch-by-panic]
 review_confidence: 9
 review_recommendation: strong
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # score by collisions, patch by panic

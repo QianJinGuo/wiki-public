@@ -1,12 +1,15 @@
 ---
 title: "Claude Cowork 大更新：彻夜自动编程的新时代"
 created: 2026-07-08
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [claude, coding-agent, anthropic, cowork, cloud-persistence, mcp]
 confidence: 0.6
 provenance_state: extracted
 sources: [raw/articles/claude-cowork-2026-big-update]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Claude Cowork 大更新

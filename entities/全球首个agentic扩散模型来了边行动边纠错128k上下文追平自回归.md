@@ -7,6 +7,9 @@ tags: [diffusion-model, agentic, llm-architecture, moe, ant-group, llada]
 sources: [raw/articles/全球首个agentic扩散模型来了边行动边纠错128k上下文追平自回归]
 confidence: 0.8
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # LLaDA2.2：全球首个大规模 Agentic 扩散模型（边行动边纠错，128K 上下文）

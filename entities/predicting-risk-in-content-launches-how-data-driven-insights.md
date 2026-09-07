@@ -2,7 +2,7 @@
 
 title: "Predicting Risk in Content Launches"
 created: 2026-07-10
-updated: 2026-08-24
+updated: 2026-09-07
 type: entity
 tags: [netflix, reinforcement-learning]
 sources: [raw/articles/predicting-risk-in-content-launches-how-data-driven-insights]
@@ -12,6 +12,9 @@ review_recommendation: worth-reading
 review_stars: 3
 confidence: medium
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Predicting Risk in Content Launches: How Data-Driven Insights can Transform Launch Planning

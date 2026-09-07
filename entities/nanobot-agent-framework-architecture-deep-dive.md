@@ -3,7 +3,7 @@ title: "nanobot：4000行极简 Agent 框架架构解析"
 type: entity
 tags: [agent, architecture, open-source, harness-engineering, mcp, react-loop, memory, subagent]
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 8
 review_confidence: 8
 provenance_state: extracted
@@ -12,6 +12,9 @@ related:
   - entities/agent-harness-architecture
   - entities/agent-harness-context-management-working-set
   - entities/loop-engineering-addy-osmani-challengehub
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # nanobot：4000行极简 Agent 框架架构解析

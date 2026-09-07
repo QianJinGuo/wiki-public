@@ -3,11 +3,14 @@
 title: "从 Vibe Coding 到 Harness Engineering：小米 JDK21 升级中可控演进的 AI 工程实践"
 type: entity
 created: 2026-07-10
-updated: 2026-07-31
+updated: 2026-09-07
 tags: [agent, harness-engineering, skill, jdk, xiaomi, enterprise-practice, feedback-loop]
 rating: v9c8
 sources:
   - raw/articles/vibe-coding-to-harness-engineering-jdk-upgrade-xiaomi
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 从 Vibe Coding 到 Harness Engineering：小米 JDK21 升级中可控演进的 AI 工程实践

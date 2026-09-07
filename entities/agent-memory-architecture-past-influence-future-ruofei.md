@@ -3,14 +3,16 @@
 
 title: "Agent 记忆架构：先别急着把 Memory 当数据库"
 created: 2026-05-16
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [claude-code, agent, harness-engineering, memory, evaluation]
 review_value: 8
 review_confidence: 9
 sources:
   - raw/articles/agent-memory-architecture-past-influence-future-ruofei
-
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > 原创 若飞 架构师（JiaGouX）2026年5月12日

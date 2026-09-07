@@ -8,6 +8,9 @@ tags: [wechat, ai]
 rating: v8c8
 sources:
   - raw/articles/智能体架构-思维树架构让ai学会多路探索
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 智能体架构 -- 思维树架构，让AI学会多路探索

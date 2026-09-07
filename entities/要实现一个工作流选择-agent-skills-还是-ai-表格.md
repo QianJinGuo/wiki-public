@@ -11,6 +11,9 @@ review_confidence: 8
 review_stars: 4
 review_recommendation: worth-reading
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 核心要点

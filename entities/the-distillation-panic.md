@@ -1,13 +1,16 @@
 ---
 title: "The distillation panic"
 created: 2026-06-10
-updated: 2026-08-01
+updated: 2026-09-07
 tags: [code, data, fine-tuning, game, llm, nvidia, observability, open-source, prompt, rag, rl, search]
 review_value: 7
 review_confidence: 7
 type: entity
 sources:
   - raw/articles/the-distillation-panic
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # The distillation panic

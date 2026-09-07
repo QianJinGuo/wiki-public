@@ -1,12 +1,15 @@
 ---
 title: "LLM 记忆容量：ICML 2026 获奖论文揭示每个参数约 3.6 bit"
 created: 2026-07-08
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [llm, memorization, scaling-law, icml-2026, capacity, generalization, double-descent, membership-inference, data-privacy]
 sources: [raw/articles/llm-memorization-capacity-36-bit-per-parameter-icml2026]
 confidence: 0.85
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # LLM 记忆容量：ICML 2026 获奖论文揭示每个参数约 3.6 bit

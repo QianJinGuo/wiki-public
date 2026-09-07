@@ -1,13 +1,16 @@
 ---
 title: "Introducing 1-bit and Ternary Bonsai Image 4B: Image Generation for Local Devices"
 created: 2026-06-10
-updated: 2026-08-01
+updated: 2026-09-07
 tags: [architecture, code, data, evaluation, fine-tuning, memory, mlops, nvidia, prompt, rl, vision, workflow]
 review_value: 7
 review_confidence: 7
 type: entity
 sources:
   - raw/articles/news-bonsai-image-4b
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Introducing 1-bit and Ternary Bonsai Image 4B: Image Generation for Local Devices

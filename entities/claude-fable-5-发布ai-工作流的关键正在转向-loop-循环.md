@@ -8,6 +8,9 @@ provenance_state: inferred
 rating: v9c8
 sources:
   - raw/articles/claude-fable-5-发布ai-工作流的关键正在转向-loop-循环
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Claude Fable 5 发布：AI 工作流的关键正在转向 Loop 循环

@@ -1,13 +1,16 @@
 ---
 title: "Agentic AI Infrastructure Practice Series 9: Context Engineering"
 created: 2026-06-11
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [context-engineering, aws, bedrock, agentic-ai, llm, architecture, context-window, strands-agents]
 sources: [raw/articles/agentic-ai-infrastructure-practice-series-nine-context-engineering]
 provenance_state: extracted
 review_value: 5
 confidence: 0.7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Agentic AI Infrastructure Practice Series 9: Context Engineering

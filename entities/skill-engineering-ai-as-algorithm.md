@@ -4,10 +4,13 @@ title: "当我把AI变成一个\"算法\"：Skill工程化设计的心路历程"
 type: entity
 tags: [agent, api, llm]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 8
 review_confidence: 7
 sources: [raw/articles/skill-engineering-ai-as-algorithm]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 当我把AI变成一个\"算法\"：Skill工程化设计的心路历程

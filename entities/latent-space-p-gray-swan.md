@@ -1,7 +1,7 @@
 ---
 title: "Red-Teaming after Mythos — Zico Kolter & Matt Fredrikson, Gray Swan"
 created: 2026-06-25
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [red-teaming, ai-safety, adversarial, gray-swan, kolter, fredrikson, llm, jailbreak, latent-space]
 provenance_state: inferred
@@ -12,6 +12,9 @@ review_value: 9
 review_confidence: 9
 review_recommendation: strong
 review_stars: 5
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Red-Teaming after Mythos — Gray Swan

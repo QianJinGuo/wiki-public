@@ -1,7 +1,7 @@
 ---
 title: "为了让agent更安全的工作，有多少人操碎了心"
 created: 2026-05-25
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [agent, security, protocol, mcp, a2a, authorization, trust-handshake, oauth, did, pki]
 source: [[raw/articles/ath-agent-trust-handshake-protocol]]
@@ -10,6 +10,9 @@ provenance_state: extracted
 review_value: 5
 sources:
   - raw/articles/ath-agent-trust-handshake-protocol
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 为了让agent更安全的工作，有多少人操碎了心

@@ -1,12 +1,15 @@
 ---
 title: "FDE（Field Deployment Engineer）非共识与落地指南 — 硅谷一线实践者圆桌"
 created: 2026-07-08
-updated: 2026-09-04
+updated: 2026-09-07
 type: entity
 tags: [fde, field-deployment-engineer, ai-deployment, enterprise-ai, ai-engineering, tencent-research, harness-engineering, distillation, forward-deployed-engineer, fdx, forward-deployed-executive, determinism-uncertainty, product-boundary]
 sources: [raw/articles/fde-field-deployment-engineer-tencent-roundtable-2026-07-08, raw/articles/fde-forward-deployed-executive-fdx-infoq-2026-08-04, raw/articles/fde-industry-report-tencent-research-2026-08-05, raw/articles/fde-product-boundary-uncertainty-ye-xiaochai-2026-09-04]
 confidence: 0.9
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # FDE（Field Deployment Engineer）非共识与落地指南

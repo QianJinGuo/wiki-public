@@ -10,6 +10,9 @@ review_confidence: 9
 review_recommendation: strong
 review_stars: 5
 source: "[[raw/articles/基于-amazon-ecs-fargate-自建-keycloak-作为-aws-iam-identity-center|原文存档]]"
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 概述

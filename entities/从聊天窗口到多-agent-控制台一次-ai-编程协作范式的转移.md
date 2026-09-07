@@ -8,6 +8,9 @@ tags: [wechat, ai]
 rating: v7c7
 sources:
   - raw/articles/从聊天窗口到多-agent-控制台一次-ai-编程协作范式的转移
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 从聊天窗口到多 Agent 控制台：一次 AI 编程协作范式的转移

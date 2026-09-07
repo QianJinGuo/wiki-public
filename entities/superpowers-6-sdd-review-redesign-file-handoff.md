@@ -1,7 +1,7 @@
 ---
 title: "Superpowers 6.0 SDD 评审重写：文件交接 + 多平台支持"
 created: 2026-06-26
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [superpowers, sdd, subagent-driven-development, reviewer, file-based-handoff, multi-platform, context-economics, visual-brainstorming, harness]
 sources: [raw/articles/superpowers-6-sdd-review-redesign-file-handoff]
@@ -9,6 +9,9 @@ confidence: 0.85
 provenance_state: extracted
 review_value: 7
 review_confidence: 8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Superpowers 6.0 SDD 评审重写

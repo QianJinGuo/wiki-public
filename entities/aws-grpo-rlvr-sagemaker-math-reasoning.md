@@ -4,10 +4,13 @@ title: "AWS GRPO RLVR Sagemaker Math Reasoning"
 type: entity
 tags: [aws, model, training]
 created: 2026-05-21
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 7
 review_confidence: 9
 sources: [raw/articles/aws-grpo-rlvr-sagemaker-math-reasoning]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Overcoming reward signal challenges: Verifiable rewards-based reinforcement learning with GRPO on SageMaker AI

@@ -6,6 +6,9 @@ type: entity
 tags: [agent, token-efficiency, token-cost, context-management, agent-usage, tencent, cost-optimization, anti-patterns]
 sources: [raw/articles/tencent-token-刺客-token浪费反模式-2026-07-23]
 confidence: 0.72
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 鹅厂 Token 刺客：AI Agent 使用中的 Token 浪费反模式与实践教训

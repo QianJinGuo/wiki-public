@@ -4,13 +4,16 @@ description: "PyTorch nn.Linear + MLP stacking performance profiling and torch.c
 source: [[raw/articles/huggingface-torch-mlp-fusion-profiling-2026]]
 tags: [pytorch, profiling, ml-engineering, model-architecture, optimization, kernel-fusion]
 created: 2026-06-12
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 review_value: 7
 review_confidence: 7
 review_recommendation: strong
 review_stars: 4
 sources: [raw/articles/huggingface-torch-mlp-fusion-profiling-2026]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Profiling in PyTorch (Part 2): From nn.Linear to a Fused MLP

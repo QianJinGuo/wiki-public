@@ -9,11 +9,14 @@ review_recommendation: strong
 review_stars: 4
 date: 2026-05-28
 created: 2026-05-28
-updated: 2026-08-29
+updated: 2026-09-07
 tags: [pilotdeck, agent-os, openbmb, thunlp, tsinghua, workspace, memory-management, token-routing, cost-optimization, agent-architecture, open-source, voxcpm, edge-model-auto-deploy, multi-public-account]
 type: entity
 provenance_state: synthesized
 sources: [raw/articles/pilotdeck-agent-os-openbmb-tsinghua, raw/articles/pilotdeck-data派thu-2026]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > -> [[raw/articles/pilotdeck-agent-os-openbmb-tsinghua|第 1 原文存档 (新智元 ASI启示录)]]

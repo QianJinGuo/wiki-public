@@ -1,11 +1,14 @@
 ---
 title: "Natera 语音 Agent 架构：双 WebSocket 桥接 + 延迟掩蔽 + 渐进信任"
 created: 2026-08-27
-updated: 2026-08-27
+updated: 2026-09-07
 type: entity
 tags: [voice-agent, websocket, architecture, latency, trust, telephony, aws, agentcore]
 sources: [raw/articles/nateras-intelligent-appointment-scheduling-with-amazon-bedro]
 confidence: 0.72
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Natera 语音 Agent 架构：双 WebSocket 桥接 + 延迟掩蔽 + 渐进信任

@@ -1,11 +1,14 @@
 ---
 title: "【揭秘】如何打造一支凌晨3点还在交付的AI军团——腾讯Multica Agent协作实践"
 created: 2026-07-10
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent-orchestration, multica, loop-engineering, ai-agent, multi-agent, harness-engineering, tencent]
 sources: [raw/articles/揭秘如何打造一支凌晨3点还在交付的ai军团]
 confidence: 0.85
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 【揭秘】如何打造一支凌晨3点还在交付的AI军团——腾讯Multica Agent协作实践

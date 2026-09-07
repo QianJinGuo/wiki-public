@@ -1,7 +1,7 @@
 ---
 title: "Building Agentic AI Applications with Data Mesh on AWS"
 created: 2026-06-26
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 source: "[[raw/articles/building-agentic-ai-applications-with-a-modern-data-mesh-str]]"
 tags: [agent, data-mesh, aws, mcp, sagemaker, lake-formation, s3-vectors, agentcore, iceberg, security]
@@ -9,6 +9,9 @@ review_value: 9
 review_confidence: 9
 provenance_state: extracted
 sources: [raw/articles/building-agentic-ai-applications-with-a-modern-data-mesh-str]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Building Agentic AI Applications with Data Mesh on AWS

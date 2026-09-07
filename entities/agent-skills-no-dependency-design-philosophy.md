@@ -2,11 +2,14 @@
 title: "Agent Skills 无依赖设计：Skill 之间不传数据的哲学与实践"
 type: entity
 created: 2026-07-10
-updated: 2026-07-10
+updated: 2026-09-07
 tags: [agent, skill, specification, architecture, design-philosophy, orchestrator]
 rating: v9c8
 sources:
   - raw/articles/agent-skills-spec-no-dependency-design
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Agent Skills 无依赖设计：Skill 之间不传数据的哲学与实践

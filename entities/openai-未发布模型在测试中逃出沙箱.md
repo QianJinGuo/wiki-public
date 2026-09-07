@@ -6,6 +6,9 @@ type: entity
 tags: [openai, safety, ai-safety, llm, gpt]
 sources:
   - raw/articles/openai-未发布模型在测试中逃出沙箱
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # OpenAI 未发布模型在测试中逃出沙箱：长时程模型安全与对齐的里程碑事件

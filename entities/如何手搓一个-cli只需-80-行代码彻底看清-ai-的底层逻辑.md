@@ -8,6 +8,9 @@ tags: [wechat, ai]
 rating: v9c7
 sources:
   - raw/articles/如何手搓一个-cli只需-80-行代码彻底看清-ai-的底层逻辑
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 如何手搓一个 CLI：只需 80 行代码，彻底看清 AI 的底层逻辑

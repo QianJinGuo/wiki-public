@@ -3,10 +3,13 @@ title: "小米 Harness 工程：从个人实践到团队标准的 Prompts→Hook
 type: entity
 tags: [xiaomi, harness-engineering, ai-coding, team-practice, quality-gate, hook, plugin, claude-code, enterprise-practice]
 created: 2026-07-29
-updated: 2026-07-31
+updated: 2026-09-07
 rating: v9c9
 sources:
   - raw/articles/xiaomi-harness-engineering-prompt-to-hook-to-plugin
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 小米 Harness 工程：从个人实践到团队标准

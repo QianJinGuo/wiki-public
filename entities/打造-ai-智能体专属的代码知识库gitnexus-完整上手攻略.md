@@ -11,6 +11,9 @@ review_value: 9
 review_confidence: 7
 
 provenance_state: inferred
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 # 打造 AI 智能体专属的代码知识库：GitNexus 完整上手攻略
 AI 编码工具发展到今天，已经不只是帮你补全几行代码了。像 Claude Code、Cursor、 Codex 这类工具，正在慢慢变成真正能参与开发流程的「搭档」。但在真实项目里，一个问题会越来越明显：  ** AI 不是不会写代码，而是经常看不全代码。  ** ^[raw/articles/打造-ai-智能体专属的代码知识库gitnexus-完整上手攻略]

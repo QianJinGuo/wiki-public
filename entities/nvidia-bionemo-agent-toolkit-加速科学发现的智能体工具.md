@@ -8,6 +8,9 @@ sources: [raw/articles/nvidia-bionemo-agent-toolkit-加速科学发现的智能�
 publish_date: 2026-07-05
 vxc: 56
 confidence: 0.8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # NVIDIA BioNeMo Agent Toolkit——加速科学发现的智能体工具

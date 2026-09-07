@@ -2,7 +2,7 @@
 title: "LFM2.5-230M: Built to Run Anywhere"
 description: "Liquid AI 发布 LFM2.5-230M：230M 参数小模型，213 tok/s 推理速度，支持边缘设备部署和 Agent 工作流"
 created: 2026-06-26
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 source: [[raw/articles/liquid-ai-lfm2-5-230m]]
 sources: [raw/articles/liquid-ai-lfm2-5-230m]
@@ -11,6 +11,9 @@ review_value: 8
 review_confidence: 9
 review_recommendation: strong
 review_stars: 5
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # LFM2.5-230M: Built to Run Anywhere

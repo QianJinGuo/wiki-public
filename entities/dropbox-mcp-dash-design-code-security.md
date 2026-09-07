@@ -1,7 +1,7 @@
 ---
 title: "How Dropbox uses MCP and Dash to close the design-to-code security gap"
 created: 2026-06-16
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [article, newsletter]
 source_url: "https://dropbox.tech/security/dropbox-mcp-dash-design-code-security"
@@ -11,6 +11,9 @@ review_confidence: 6
 review_recommendation: strong
 review_stars: 4
 score_validated: 2026-09-05
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # How Dropbox uses MCP and Dash to close the design-to-code security gap

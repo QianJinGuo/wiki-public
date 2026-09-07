@@ -10,9 +10,12 @@ score_stars: 4
 ingested_at: 2026-07-09T18:59:40Z
 type: entity
 created: 2026-07-09
-updated: 2026-08-30
+updated: 2026-09-07
 sources:
   - raw/articles/antidoom
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Reducing Doom Loops with Final Token Preference Optimization

@@ -6,12 +6,15 @@ source: wechat
 type: entity
 tags: [wechat, article]
 created: 2026-05-11
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 7
 sources: [raw/articles/hermes-four-agents-setup]
 review_confidence: 7
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > -> [[raw/articles/hermes-four-agents-setup.md|原文存档]]

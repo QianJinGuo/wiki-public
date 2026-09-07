@@ -4,10 +4,14 @@ title: "Claude Code Prompt 与上下文 Harness 设计"
 type: entity
 tags: [agent, claude, coding, context, harness, prompt]
 created: 2026-05-21
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/claude-code-prompt-context-harness]
+reviewed: 2026-09-07
+review_verdict: hub-retained
+review_category: dup
+review_note: "judged dup-0.8: prompt模块重复版; retained as hub (in-links>=20); MOC rewrite candidate"
 ---
 
 # fb134668f09a3b45c1813781f912ae4e7e26294d3b60332606983b946944c328

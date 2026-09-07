@@ -9,6 +9,9 @@ provenance_state: inferred
 rating: v9c8
 sources:
   - raw/articles/清华发布智能体社会agentsociety第二代让社会科学研究真正跑起来
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 清华发布智能体社会AgentSociety第二代：让社会科学研究真正「跑起来」

@@ -10,8 +10,11 @@ sources: [raw/articles/bleeding-llama-critical-unauthenticated-memory-leak-in-ol
 review_confidence: 9
 review_recommendation: strong
 date: 2026-05-13
-updated: 2026-09-05
+updated: 2026-09-07
 tags: [vulnerability, cve, memory-leak, ollama, gguf, heap-overflow, ai-security]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > -> [[raw/articles/bleeding-llama-critical-unauthenticated-memory-leak-in-ollama|原文存档]] ^[raw/articles/bleeding-llama-critical-unauthenticated-memory-leak-in-ollama.md]

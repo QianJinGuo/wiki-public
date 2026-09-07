@@ -4,10 +4,13 @@ title: "我用 Claude Code 做需求调研，像多了一个产品经理"
 type: entity
 tags: [claude, research]
 created: 2026-05-21
-updated: 2026-05-21
+updated: 2026-09-07
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/claude-code-demand-research-taosecho]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 我用 Claude Code 做需求调研，像多了一个产品经理

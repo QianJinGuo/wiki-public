@@ -1,12 +1,15 @@
 ---
 title: "Disaggregated Prefill and Decode for LLM Inference on SageMaker HyperPod"
 created: 2026-07-11
-updated: 2026-08-30
+updated: 2026-09-07
 type: entity
 tags: [aws, sagemaker, llm-inference, disaggregated-inference, vllm, hyperpod, inference-optimization]
 sources: [raw/articles/disaggregated-prefill-and-decode-for-llm-inference-on-sagema]
 confidence: 0.75
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Disaggregated Prefill and Decode for LLM Inference on SageMaker HyperPod

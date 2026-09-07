@@ -2,7 +2,7 @@
 title: "Spec-Driven Development (SDD) 全面总结：从5人7天案例到方法论全集"
 type: entity
 created: 2026-07-02
-updated: 2026-09-05
+updated: 2026-09-07
 tags: [sdd, spec-driven-development, ai-coding, methodology, qoder, alibaba, harness, spec-kit, engineering-paradigm]
 rating: v9c9
 sources:
@@ -10,6 +10,9 @@ sources:
   - raw/articles/sdd-qoderwork-spec-driven-development-5-people-7-days-ali-2026
 provenance_state: expanded
 confidence: 0.85
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Spec-Driven Development (SDD) 全面总结：从5人7天案例到方法论全集

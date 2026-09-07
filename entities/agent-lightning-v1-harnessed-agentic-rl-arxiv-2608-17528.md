@@ -1,12 +1,15 @@
 ---
 title: "Agent Lightning v1.0：面向 Harnessed Agentic RL 的轻量框架"
 created: 2026-08-20
-updated: 2026-08-20
+updated: 2026-09-07
 type: entity
 tags: [agent, harness, agentic-rl, post-training, arxiv, framework]
 sources: [raw/articles/agent-lightning-v1-harnessed-agentic-rl-arxiv-2608-17528]
 confidence: 0.8
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Agent Lightning v1.0：面向 Harnessed Agentic RL 的轻量框架

@@ -1,12 +1,15 @@
 ---
 title: "北航、北大和美团联合提出策略提升强化学习（PIRL/PIPO）"
 created: 2026-07-12
-updated: 2026-07-22
+updated: 2026-09-07
 type: entity
 tags: [rl, post-training, ppo, grpo, dap0, llm-training, research, algorithm, policy-improvement]
 sources: [raw/articles/pirl-pipo-policy-improvement-rl-buaa-pku-meituan-2026]
 confidence: 0.8
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 北航、北大和美团联合提出策略提升强化学习（PIRL/PIPO）

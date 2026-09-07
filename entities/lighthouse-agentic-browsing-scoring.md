@@ -3,12 +3,15 @@ title: "Lighthouse Agentic Browsing Scoring — Chrome DevTools 为 AI Agent 交
 type: entity
 tags: [agent, web-standards, evaluation, lighthouse, webmcp, accessibility, chrome]
 created: 2026-06-23
-updated: 2026-08-01
+updated: 2026-09-07
 sources: [raw/articles/lighthouse-agentic-browsing-scoring]
 review_value: 8
 review_confidence: 9
 review_recommendation: strong
 review_stars: 5
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Lighthouse Agentic Browsing Scoring

@@ -7,6 +7,9 @@ tags: [ai, agent, harness, skill, cli, 音视频, 字节跳动, 火山引擎]
 sources: [raw/articles/让-agent-成为音视频工作台ai-mediakit-cli-skill-发布]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 让 Agent 成为音视频工作台：AI MediaKit CLI + Skill 发布

@@ -1,12 +1,15 @@
 ---
 title: "Claude 黎曼 zeta 零点比例下限突破（41.6% → 67.2%）"
 created: 2026-08-11
-updated: 2026-08-11
+updated: 2026-09-07
 type: entity
 tags: [anthropic, claude, mathematics, multi-agent, formal-verification, lean, ai-capability]
 sources: [raw/articles/anthropic-claude-riemann-zeta-lower-bound-416-to-672]
 confidence: 0.8
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Claude 黎曼 zeta 零点比例下限突破（41.6% → 67.2%）

@@ -5,10 +5,13 @@ source: 阿里技术 (2026-07-24)
 score: v=9, c=9, v×c=81
 type: entity
 created: 2026-07-24
-updated: 2026-07-31
+updated: 2026-09-07
 tags: [knowledge-base, AI-Friendly, backend-system, architecture, ontology, DDD, AI-Coding, agentic-operator]
 sources:
   - raw/articles/ai-knowledge-base-system-backend-practice-alibaba-2026
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # AI 知识库体系：后端系统 AI Friendly 化实践

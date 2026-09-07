@@ -1,7 +1,7 @@
 ---
 title: "Graph Engineering：从单循环到多节点编排"
 created: 2026-07-28
-updated: 2026-08-06
+updated: 2026-09-07
 type: entity
 tags: [graph-engineering, loop-engineering, multi-agent, workflow, orchestration, harness, verifier, tencent, architect, knowledge-graph, fact-management, ruofei]
 sources:
@@ -12,6 +12,9 @@ review_value: 9
 review_confidence: 9
 review_recommendation: strong
 review_stars: 5
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Graph Engineering：从单循环到多节点编排

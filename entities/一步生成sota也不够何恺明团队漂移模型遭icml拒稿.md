@@ -7,6 +7,9 @@ tags: [multimodal, diffusion, generation, image-generation, icml, paper-review]
 sources: [raw/articles/一步生成sota也不够何恺明团队漂移模型遭icml拒稿, raw/articles/一步生成sota也不够何恺明团队漂移模型遭icml拒稿-2026-07-08]
 confidence: 0.56
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 一步生成SOTA也不够，何恺明团队「漂移模型」遭ICML拒稿

@@ -1,13 +1,16 @@
 ---
 title: "Agent-EvalKit：AWS 开源 CLI Agent 评测工具包"
 created: 2026-06-12
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, evaluation, aws, opensource, cli, claude-code, opentelemetry, agentcore, bedrock, observability, testing, faithfulness]
 sources: [raw/articles/evaluate-ai-agents-systematically-with-agent-evalkit]
 review_value: 7
 review_confidence: 8
 summary: AWS 开源 (Apache 2.0) Agent 评测 CLI 工具包，通过 AI 编码助手（Claude Code/Kiro CLI/Kilo Code）作为评测引擎，整合 6 阶段流水线（Plan/Data/Trace/Run/Eval/Report），用 OpenTelemetry 追踪执行路径，LLM-as-judge + 第三方库（DeepEval/Strands Evals）评估，输出代码级修复建议。旅行研究案例暴露 32.3% Faithfulness 虚假率。
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Agent-EvalKit：AWS 开源 CLI Agent 评测工具包

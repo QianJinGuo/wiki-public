@@ -3,14 +3,16 @@
 
 title: "AI Agent 架构设计（七）：Skills 系统设计（OpenClaw、Claude Code、Hermes Agent 对比）"
 created: 2026-04-30
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [claude-code, agent, skill, openclaw, architecture]
 sources:
   - raw/articles/skill-system-design-three-way-comparison
 review_value: 9
 review_confidence: 7
-
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## Skills 的本质：Agent 的专业经验

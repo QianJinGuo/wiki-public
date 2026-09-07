@@ -1,11 +1,14 @@
 ---
 title: "AI 编程进团队：高手经验沉淀为可复用工序"
 created: 2026-07-10
-updated: 2026-07-31
+updated: 2026-09-07
 type: entity
 tags: [agent, engineering, team-knowledge, workflow, expert-knowledge, process, harness-engineering]
 sources:
   - raw/articles/ai-编程进团队怎么把高手经验留下来
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # AI 编程进团队：高手经验沉淀为可复用工序

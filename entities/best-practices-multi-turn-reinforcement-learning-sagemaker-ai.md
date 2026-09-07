@@ -1,12 +1,15 @@
 ---
 title: "Best Practices for Multi-Turn Reinforcement Learning in Amazon SageMaker AI"
 created: 2026-07-03
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [aws, sagemaker, reinforcement-learning, agent, training, fine-tuning, reward-function, grpo]
 sources: [raw/articles/best-practices-multi-turn-reinforcement-learning-sagemaker-ai, raw/articles/custom-reward-functions-multi-turn-rl-nova-forge-2026-08-14]
 confidence: 0.8
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Best Practices for Multi-Turn Reinforcement Learning in Amazon SageMaker AI

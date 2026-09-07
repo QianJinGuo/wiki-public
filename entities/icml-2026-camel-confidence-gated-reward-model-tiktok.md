@@ -1,12 +1,15 @@
 ---
 title: "CAMEL: 置信度门控反思机制用于奖励建模 — TikTok/NUS (ICML 2026)"
 created: 2026-07-12
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [reward-model, rlhf, post-training, icml-2026, confidence-gating, llm, alignment]
 confidence: 0.8
 provenance_state: extracted
 sources: [raw/articles/icml-2026-camel-confidence-gated-reward-model-tiktok]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # CAMEL: 置信度门控反思机制用于奖励建模 — TikTok/NUS (ICML 2026)

@@ -4,12 +4,15 @@ title: "Unlocking asynchronicity in continuous batching"
 type: entity
 tags: [huggingface, ml-serving, batching, continuous-training, cuda, gpu-optimization]
 created: 2026-05-15
-updated: 2026-06-19
+updated: 2026-09-07
 review_value: 8
 review_confidence: 7
 review_recommendation: strong
 review_stars: 4
 sources: [raw/articles/continuous-async, raw/articles/continuousasync]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 核心要点

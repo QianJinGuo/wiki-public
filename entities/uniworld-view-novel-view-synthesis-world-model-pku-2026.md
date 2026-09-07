@@ -1,11 +1,14 @@
 ---
 title: "UniWorld-View：登顶 WorldScore 的世界模型（单图/视频新视角合成）"
 created: 2026-08-27
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [ai, world-model, vision, novel-view-synthesis, 3d, video-generation, pku, open-source]
 sources: [raw/articles/uniworld-view-novel-view-synthesis-world-model-pku-2026]
 confidence: 0.68
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # UniWorld-View：登顶 WorldScore 的世界模型（单图/视频新视角合成）

@@ -7,6 +7,9 @@ tags: [multimodal, ai, nature, data-generation, agent, reasoning, fintech, healt
 sources: [raw/articles/维纳智能登上nature通讯ai不只会回答问题开始生成高精度行业数据, raw/articles/维纳智能登上nature通讯ai不只会回答问题开始生成高精度行业数据-2026-07-08]
 confidence: 0.64
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 维纳智能登上Nature通讯：AI不只会回答问题，开始生成高精度行业数据

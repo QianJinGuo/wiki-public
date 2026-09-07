@@ -1,13 +1,16 @@
 ---
 title: "Language Model Harnesses as Compositional Generalizers (Alex Zhang, 2026)"
 created: 2026-07-21
-updated: 2026-07-21
+updated: 2026-09-07
 type: entity
 tags: [harness, rlm, compositional-generalization, language-models, reinforcement-learning, mit]
 sources:
   - raw/articles/language-model-harnesses-compositional-generalizers-alex-zhang-2026
 confidence: 0.8
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Language Model Harnesses as Compositional Generalizers (Alex Zhang, 2026)

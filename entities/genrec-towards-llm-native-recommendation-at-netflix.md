@@ -1,7 +1,7 @@
 ---
 title: "GenRec: Netflix LLM 原生推荐排序器"
 created: 2026-07-31
-updated: 2026-07-31
+updated: 2026-09-07
 type: entity
 tags: [recommendation-system, llm, context-engineering, post-training, netflix, ranker, vllm, production-system, scaling-laws]
 sources: [raw/articles/genrec-towards-llm-native-recommendation-at-netflix]
@@ -10,6 +10,9 @@ review_value: 8
 review_confidence: 7
 review_stars: 4
 review_recommendation: strong
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # GenRec: Netflix LLM 原生推荐排序器

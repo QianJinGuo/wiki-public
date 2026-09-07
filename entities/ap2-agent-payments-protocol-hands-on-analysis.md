@@ -2,7 +2,7 @@
 
 title: "AP2 协议实测：Mandate 机制、Task 状态机与多 Agent 支付"
 created: 2026-06-26
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [ap2, agent-payments, agentic-commerce, mandate, sd-jwt, a2a-protocol, task-state-machine, google, ecdsa, multi-agent]
 sources: [raw/articles/ap2-agent-payments-protocol-hands-on-analysis]
@@ -10,6 +10,9 @@ confidence: 0.85
 provenance_state: extracted
 review_value: 8
 review_confidence: 8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # AP2 协议实测：Mandate 机制、Task 状态机与多 Agent 支付

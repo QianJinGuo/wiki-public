@@ -1,12 +1,15 @@
 ---
 title: "ASD：近似投机解码（Approximate Speculative Decoding）— 预算化最长前缀验证"
 created: 2026-09-06
-updated: 2026-09-06
+updated: 2026-09-07
 type: entity
 tags: [inference-optimization, speculative-decoding, llm-engineering, decoding, throughput]
 sources: [raw/articles/approximate-speculative-decoding-asd-relaxed-validation-2026]
 confidence: 0.8
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # ASD：近似投机解码（Approximate Speculative Decoding）

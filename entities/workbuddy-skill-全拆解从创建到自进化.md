@@ -7,6 +7,9 @@ tags: [ai, agent, skill, workbuddy, skill-system, agent-engineering, workflow]
 sources: [raw/articles/workbuddy-skill-全拆解从创建到自进化]
 confidence: 0.69
 score: 49
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # WorkBuddy Skill 全拆解

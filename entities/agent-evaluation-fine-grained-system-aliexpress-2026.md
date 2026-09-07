@@ -5,10 +5,13 @@ source: AliExpress技术 (2026-07-21)
 score: v=9, c=9, v×c=81
 type: entity
 created: 2026-07-24
-updated: 2026-07-31
+updated: 2026-09-07
 tags: [agent-evaluation, LLM-as-Judge, benchmark, agent-testing, evaluation-metrics, fine-grained-evaluation, production-agent, quality-cost-performance]
 sources:
   - raw/articles/agent-evaluation-fine-grained-system-aliexpress-2026
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # AI Agent 精细化评测体系

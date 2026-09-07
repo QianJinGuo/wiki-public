@@ -1,7 +1,7 @@
 ---
 title: "Snowflake Agentic Enterprise — 迈向可信的 Agent 平台"
 created: 2026-06-12
-updated: 2026-09-05
+updated: 2026-09-07
 date: "2026-06-12"
 tags: [snowflake, agentic-enterprise, agent-identity, data-movement-policy, cowork, cortex-code, agentic-search, datastream, agent-governance, summit-2026, trust, intent-driven-governance, cortex-sense]
 provenance_state: inferred
@@ -12,6 +12,9 @@ review_stars: 5
 sources:
   - [[raw/articles/snowflake-agentic-enterprise-summit-2026-infoq|InfoQ 奇遇旧金山: Snowflake 迈向 Agentic Enterprise 的关键一跃]]
 type: entity
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 概述

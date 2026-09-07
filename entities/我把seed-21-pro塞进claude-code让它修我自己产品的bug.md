@@ -7,6 +7,9 @@ tags: [claude-code, coding-agent, ai-coding, practical-experience, bug-fixing, m
 sources: [raw/articles/我把seed-21-pro塞进claude-code让它修我自己产品的bug]
 confidence: 0.75
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 我把Seed 2.1 Pro塞进Claude Code，让它修我自己产品的bug

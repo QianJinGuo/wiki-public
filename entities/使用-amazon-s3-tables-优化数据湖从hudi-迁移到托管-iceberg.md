@@ -12,6 +12,9 @@ review_recommendation: strong
 review_stars: 4
 confidence: medium
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 使用 Amazon S3 Tables 优化数据湖：从Hudi 迁移到托管 Iceberg

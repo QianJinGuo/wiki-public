@@ -8,6 +8,9 @@ tags: [wechat, ai]
 rating: v7c7
 sources:
   - raw/articles/dwarkesh-patel下一代ai可能是干活干出来的
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Dwarkesh Patel：下一代AI，可能是干活干出来的

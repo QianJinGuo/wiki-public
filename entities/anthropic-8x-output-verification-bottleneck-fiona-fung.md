@@ -1,12 +1,15 @@
 ---
 title: "Anthropic 8x 产出复盘：从代码吞吐到验证协作接口"
 created: 2026-07-06
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [claude-code, anthropic, engineering-practices, collaboration, routines, spec-driven, code-review, verification-bottleneck]
 sources: [raw/articles/claude-code-head-ruofei-interview-fiona-fung-8x-2026]
 confidence: 0.90
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Anthropic 8x 产出复盘：从代码吞吐到验证协作接口

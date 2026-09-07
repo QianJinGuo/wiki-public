@@ -2,13 +2,17 @@
 
 title: "Ethan He：Cosmos Grok Imagine 潜空间视频 Agent"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-07
 tags: [agent, architecture, code, data, fine-tuning, llm, memory, mlops, nvidia, prompt, rag, robotics, tool-use, video, vision]
 review_value: 7
 review_confidence: 7
 type: entity
 sources:
   - raw/articles/ethan-he-cosmos-grok-imagine-latent-space-video-agent-20260606
+reviewed: 2026-09-07
+review_verdict: hub-retained
+review_category: gossip
+review_note: "judged gossip-0.75: 研究员跳槽算力八卦，2019字无机制; retained as hub (in-links>=20); MOC rewrite candidate"
 ---
 
 # Ethan He Cosmos Grok Imagine Latent Space Video Agent 20260606

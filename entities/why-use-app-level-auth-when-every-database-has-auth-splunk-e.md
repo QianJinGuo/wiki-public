@@ -1,7 +1,7 @@
 ---
 title: "Why Use App-Level Auth When Every Database Has Auth? (Splunk CVE-2026-20253)"
 created: '2026-06-15'
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [newsletter, ai, llm, source-archive]
 source: "[[raw/articles/why-use-app-level-auth-when-every-database-has-auth-splunk-e|原文存档]]"
@@ -10,6 +10,9 @@ review_value: 7
 review_confidence: 7
 review_recommendation: worth-reading
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Why Use App-Level Auth When Every Database Has Auth? (Splunk CVE-2026-20253)

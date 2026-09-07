@@ -3,11 +3,14 @@ title: "Claude 代码能力的系统工程解析：Constitutional AI + 可验证
 type: entity
 tags: [anthropic, claude, constitutional-ai, rlhf, rlaif, reinforcement-learning, verifiable-rewards, code-generation, swe-bench, sleeper-agents, reward-shaping, data-flywheel, product-engineering, sft, training-methodology]
 created: 2026-06-30
-updated: 2026-07-02
+updated: 2026-09-07
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/claude-code-capability-systems-engineering-anthropic]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > -> [[raw/articles/claude-code-capability-systems-engineering-anthropic|原文存档]] ^[raw/articles/claude-code-capability-systems-engineering-anthropic.md]

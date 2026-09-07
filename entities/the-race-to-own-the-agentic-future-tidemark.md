@@ -3,11 +3,14 @@ title: "The Race to Own the Agentic Future | Tidemark"
 type: entity
 tags: [vc]
 created: 2026-05-19
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 8
 review_confidence: 9
 review_recommendation: worth-reading
 sources: [raw/articles/the-race-to-own-the-agentic-future-tidemark]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 ## 深度分析
 Tidemark 这篇文章的核心命题是：**AI 不会杀死垂直 SaaS，恰恰相反，垂直 SaaS 的 Control Point 有机会成为 Agentic Future 的 System of Action**。这个结论挑战了 2024-2025 年公开市场的主流叙事——后者普遍认为 AI 将对垂直 SaaS 造成毁灭性打击，并将相关股票估值压低 40%。 ^[raw/articles/the-race-to-own-the-agentic-future-tidemark.md]

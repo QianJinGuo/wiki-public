@@ -10,7 +10,10 @@ review_confidence: 7
 review_recommendation: strong
 review_stars: 4
 created: 2026-05-11
-updated: 2026-09-05
+updated: 2026-09-07
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > -> [[raw/articles/introducing-os-level-actions-in-amazon-bedrock-agentcore-browser.md|原文存档]]

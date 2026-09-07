@@ -2,7 +2,7 @@
 title: "Netflix Nebula ArchRules: 跨越数千个 Java 仓库的 ArchUnit 规模化实践"
 description: "Netflix JVM Platform 团队通过 Nebula ArchRules 插件在 5000+ 仓库运行 358 条规则，检测近百万问题，用 Gradle Module Metadata 实现规则跨仓库共享与自动执行。"
 created: 2026-06-07
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [netflix, archunit, java, static-analysis, gradle, nebula, developer-tooling, quality-assurance]
 source: [[raw/articles/scaling-archunit-with-nebula-archrules]]
@@ -12,6 +12,9 @@ review_value: 8
 review_confidence: 9
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Netflix Nebula ArchRules: 跨越数千个 Java 仓库的 ArchUnit 规模化实践

@@ -1,12 +1,15 @@
 ---
 title: "OMEGA: 面向多机器人协作的具身Agent Harness"
 created: 2026-07-12
-updated: 2026-07-22
+updated: 2026-09-07
 type: entity
 tags: [embodied, robot, multi-agent, orchestration, harness, collaboration, embodied-ai]
 confidence: 0.7
 provenance_state: extracted
 sources: [raw/articles/omega-orchestration-multiple-embodied-generalist-agents-ustc-2026, raw/articles/harness-vla-tsinghua-embodied-intelligence-2026]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # OMEGA: 面向多机器人协作的具身Agent Harness

@@ -7,6 +7,9 @@ tags: [agent, cloud, alicloud, agent-observability, evaluation, mvp, harness-eng
 sources: [raw/articles/阿里云刚发布的-agentloop-是什么]
 confidence: 0.7
 provenance_state: merged
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 阿里云刚发布的 AgentLoop 是什么？

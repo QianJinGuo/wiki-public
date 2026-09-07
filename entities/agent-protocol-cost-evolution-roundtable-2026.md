@@ -1,12 +1,15 @@
 ---
 title: "Agent落地真相：协议、成本与进化——一场关于智能体从能跑通到能投产的讨论"
 created: 2026-07-03
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [agent, ai-agent, mcp, a2a, protocol, production, agent-engineering]
 sources: [raw/articles/agent-protocol-cost-evolution-roundtable-2026]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Agent落地真相：协议、成本与进化——一场关于智能体从能跑通到能投产的讨论

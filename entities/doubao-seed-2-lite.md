@@ -2,7 +2,7 @@
 
 title: "豆包 Seed 2.0 Lite — Agent 前置多模态感官层"
 created: 2026-05-06
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [model, multimodal, audio-understanding, video-understanding, agent-tool, doubao, volcano-engine]
 sources: [raw/articles/doubao-seed-2-lite-agent-multimodal]
@@ -10,6 +10,9 @@ review_value: 8
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 核心定位

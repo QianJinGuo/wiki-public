@@ -4,12 +4,15 @@ title: "Real-time voice agents with Stream Vision Agents and Amazon Nova 2 Sonic
 type: entity
 tags: [aws, machine-learning, ai-agents, bedrock, nova, speech-to-speech, vision-agents, getstream]
 created: 2026-05-15
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 8
 review_confidence: 9
 review_recommendation: strong
 sources: [raw/articles/real-time-voice-agents-with-stream-vision-agents-and-amazon-nova-2-sonic]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > -> [[raw/articles/real-time-voice-agents-with-stream-vision-agents-and-amazon-nova-2-sonic.md|原文存档]] ^[raw/articles/real-time-voice-agents-with-stream-vision-agents-and-amazon-nova-2-sonic.md]

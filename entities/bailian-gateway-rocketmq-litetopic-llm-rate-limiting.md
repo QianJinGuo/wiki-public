@@ -1,11 +1,14 @@
 ---
 title: "百炼网关：用RocketMQ LiteTopic重构大模型限流架构"
 created: 2026-07-10
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [llm, infrastructure, rate-limiting, rocketmq, alibaba]
 sources: [raw/articles/bailian-gateway-rocketmq-litetopic-llm-rate-limiting-2026]
 confidence: 0.8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 百炼网关：用RocketMQ LiteTopic重构大模型限流架构

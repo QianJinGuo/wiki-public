@@ -1,13 +1,16 @@
 ---
 title: "一文看懂 AI 编程智能体工程化新范式：Loop Engineering"
 created: 2026-07-11
-updated: 2026-08-24
+updated: 2026-09-07
 type: entity
 tags: [loop-engineering, agent, ai-coding, engineering, automation, workflow, sub-agent]
 source_url: ""
 sources: [raw/articles/一文看懂-ai-编程智能体工程化新范式loop-engineering]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 一文看懂 AI 编程智能体工程化新范式：Loop Engineering

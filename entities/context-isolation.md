@@ -2,13 +2,16 @@
 type: entity
 title: "多智能体上下文隔离机制"
 created: 2026-05-13
-updated: 2026-09-05
+updated: 2026-09-07
 tags: [architecture, multi-agent, context, isolation]
 provenance_state: inferred
 sources: [raw/articles/agent-context-management-architecture-patterns]
 
 review_value: 7
 review_confidence: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 ## 核心问题
 - Agent 在长程任务中容易混淆来自不同任务/角色的上下文，导致推理质量下降甚至产生不可预测的错误行为

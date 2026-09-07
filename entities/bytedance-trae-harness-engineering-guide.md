@@ -4,10 +4,13 @@ title: "来自字节跳动TRAE的Harness Engineering指南"
 type: entity
 tags: [harness, llm, openai]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/bytedance-trae-harness-engineering-guide, raw/articles/我们实测trae-work的这份攻略被官方收进知识库了]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 来自字节跳动TRAE的Harness Engineering指南

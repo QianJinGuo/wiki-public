@@ -8,6 +8,9 @@ tags: [wechat, ai]
 rating: v7c8
 sources:
   - raw/articles/刚刚姚班传奇陈立杰苦思7年的计算几何核心难题被chatgpt推翻了
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 刚刚，姚班传奇陈立杰苦思7年的计算几何核心难题，被ChatGPT推翻了

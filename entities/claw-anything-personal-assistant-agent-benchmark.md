@@ -2,7 +2,7 @@
 
 title: "Claw-Anything：首个面向个人助理 Agent 的三维上下文扩展评测基准"
 created: 2026-06-26
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [agent-benchmark, personal-assistant, context-scaling, multi-device, proactive-agent, gui-agent, long-context, claw-anything, liber-coders]
 sources: [raw/articles/claw-anything-personal-assistant-agent-benchmark-three-dimensional-context]
@@ -10,6 +10,9 @@ confidence: 0.9
 provenance_state: extracted
 review_value: 8
 review_confidence: 8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Claw-Anything：See Anything, then Do Anything

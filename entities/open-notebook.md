@@ -1,7 +1,7 @@
 ---
 title: "Open Notebook"
 created: 2026-06-26
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [ai, rag, notebook, knowledge-management, open-source, mcp, podcast, self-hosted]
 sources: [raw/articles/open-notebook-open-source-notebook-lm-alternative]
@@ -9,6 +9,9 @@ confidence: 0.85
 provenance_state: extracted
 review_value: 7
 review_confidence: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Open Notebook

@@ -1,11 +1,14 @@
 ---
 title: "Perplexity Numbat: Agent Security Suite"
 created: 2026-07-31
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [ai, agent, security, perplexity, open-source]
 sources: [raw/articles/perplexity-numbat-agent-security-2026-07-29]
 confidence: 0.75
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Perplexity Numbat: Agent Security Suite

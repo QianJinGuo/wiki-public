@@ -10,7 +10,9 @@ sources:
 review_value: 7
 review_confidence: 7
 review_recommendation: neutral
-
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 ## 文章概要
 "L2缓存命中优化矩阵乘法"是Triton官方提供的第三个教程，本文将结合硬件特性对此部分内容进行详解。同时笔者也简单的做了下int8 matul的魔改，并进行了量化/非量化性能测试及分析。  ^[raw/articles/triton-l2缓存命中优化矩阵乘法fp16int8详解及性能测试.md]

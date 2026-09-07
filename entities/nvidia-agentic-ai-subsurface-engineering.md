@@ -6,10 +6,13 @@ review_value: 8
 review_confidence: 7
 review_recommendation: strong
 review_stars: "5"
-updated: 2026-07-31
+updated: 2026-09-07
 created: 2026-05-10
 sources:
   - raw/articles/nvidia-agentic-ai-subsurface-engineering
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 > -> [[raw/articles/nvidia-agentic-ai-subsurface-engineering.md|原文存档]]
 # Agentic AI for Subsurface Engineering Simulation (NVIDIA)

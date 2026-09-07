@@ -4,12 +4,15 @@ title: "Generalization Dynamics of LM Pre-training — Jiaxin Wen"
 type: entity
 tags: [ai-strategy, lm-pretraining, generalization, mode-hopping]
 created: 2026-05-20
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 9
 review_confidence: 8
 review_recommendation: strong
 review_stars: 5
 sources: [raw/articles/generalization-dynamics-lm-pretraining]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 核心要点

@@ -35,6 +35,9 @@ related:
   - entities/agent-engineering-principles-architecture-practice
 sources:
   - raw/articles/当-agentic-ai-重塑生产关系-智能体浪潮下的企业战略与行动框架
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 当 Agentic AI 重塑生产关系：智能体浪潮下的企业战略与行动框架

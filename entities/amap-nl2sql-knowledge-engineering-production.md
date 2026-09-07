@@ -1,12 +1,15 @@
 ---
 title: "高德 NL2SQL 知识工程：确定性路由 + 6 节知识卡片 + 352 表生产实践"
 created: 2026-07-22
-updated: 2026-07-31
+updated: 2026-09-07
 type: entity
 tags: [nl2sql, knowledge-engineering, amap, alibaba, data-warehouse, deterministic-routing, agent-skill, qoderwork, semantic-layer, smq]
 confidence: 0.85
 provenance_state: extracted
 sources: [raw/articles/amap-nl2sql-knowledge-engineering-2026-07-22, raw/articles/semantic-layer-smq-data-agent-sql-compiler-datafun-2026]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 高德 NL2SQL 知识工程：确定性路由 + 6 节知识卡片 + 352 表生产实践

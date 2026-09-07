@@ -4,10 +4,13 @@ title: "OpenChronicle：把AI记忆变成可复用的基础设施"
 type: entity
 tags: [agent, gpt, memory, openai]
 created: 2026-05-21
-updated: 2026-05-21
+updated: 2026-09-07
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/openchronicle-opensource-memory-layer]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # OpenChronicle：把AI记忆变成可复用的基础设施

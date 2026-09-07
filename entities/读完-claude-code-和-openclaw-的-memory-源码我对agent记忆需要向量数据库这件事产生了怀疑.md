@@ -8,6 +8,9 @@ updated: 2026-06-30
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/读完-claude-code-和-openclaw-的-memory-源码我对agent记忆需要向量数据库这件事产生了怀疑]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 读完 Claude Code 和 OpenClaw 的 memory 源码，我对"Agent记忆需要向量数据库"这件事产生了怀疑……

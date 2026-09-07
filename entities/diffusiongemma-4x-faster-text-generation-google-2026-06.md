@@ -12,7 +12,7 @@ tags:
   - google
   - inference-optimization
 created: 2026-06-11
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 review_value: 7
 review_confidence: 8
@@ -22,6 +22,9 @@ sources:
   - raw/articles/diffusiongemma-4x-faster-text-generation-google-2026-06
   - raw/articles/diffusiongemma-4x-faster-text-generation-deepmind-2026-06
   - raw/articles/diffusiongemma-technical-report-arxiv-2608-00146
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # DiffusionGemma：扩散式文本生成模型（Google 26B MoE，4× 推理加速）

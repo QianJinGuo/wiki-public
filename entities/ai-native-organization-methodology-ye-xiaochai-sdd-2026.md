@@ -1,12 +1,15 @@
 ---
 title: "AI 原生组织方法论：叶小钗的完整框架与实战"
 created: 2026-07-07
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [ai-native, organization, sdd, harness, management, methodology, ye-xiaochai, ai-adoption]
 sources: [raw/articles/ai-原生组织我总结了一套完整的方法论]
 confidence: 0.65
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # AI 原生组织方法论：叶小钗的完整框架与实战

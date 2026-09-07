@@ -2,11 +2,14 @@
 title: "AI Agent Token Consumption：智能体 token 用量超越人类 5.2 倍的趋势分析"
 type: entity
 created: 2026-08-30
-updated: 2026-08-30
+updated: 2026-09-07
 tags: [agent, token, inference, openrouter, usage-trend, ai-agent, scaling]
 sources:
   - raw/articles/ai开始替人类调用aitoken用量已是人类52倍
 confidence: 0.8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # AI Agent Token Consumption：智能体 token 用量超越人类 5.2 倍的趋势分析

@@ -1,7 +1,7 @@
 ---
 title: "A backdoor in a LinkedIn job offer"
 created: 2026-06-16
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [article, newsletter]
 source_url: "https://roman.pt/posts/linkedin-backdoor/"
@@ -10,6 +10,9 @@ review_value: 8
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # A backdoor in a LinkedIn job offer

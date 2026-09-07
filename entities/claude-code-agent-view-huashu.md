@@ -2,7 +2,7 @@
 
 title: "花叔的 Claude Code 多 Agent 用量画像"
 created: 2026-05-13
-updated: 2026-06-30
+updated: 2026-09-07
 type: entity
 tags: [claude, agent-view, multi-agent, claude-code, workflow, productivity]
 sources:
@@ -11,6 +11,9 @@ provenance_state: extracted
 review_value: 9
 review_confidence: 8
 summary: 花叔实测 Claude Code Agent View — 多 Agent 工作流的终端 Dashboard，解决人类注意力调度问题，而非让 AI 本身变强。
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > 花叔：AI 编程进入多 Agent 阶段后，真正稀缺的不是执行力，而是人类的注意力、判断力和调度力。

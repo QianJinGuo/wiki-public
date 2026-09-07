@@ -3,14 +3,16 @@
 
 title: "Agent架构关键变化：Harness正在成为新后端"
 created: 2026-05-16
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [agent, harness, architecture, backend, worker, iii]
 sources:
   - raw/articles/agent-architecture-harness-new-backend
 review_value: 7
 review_confidence: 7
-
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 本文讨论 AI 基础设施的核心问题：智能体 harness 与传统后端分离导致的复杂性，强调当前架构难以处理随机性强的 agent 系统。   ^[raw/articles/agent-architecture-harness-new-backend.md]

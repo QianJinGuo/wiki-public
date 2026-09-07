@@ -2,7 +2,7 @@
 
 title: "Agent Harness Skill 系统实战指南 — Reference/Action 类型、动态注入与 frontmatter 全解"
 created: 2026-07-07
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [agent-harness, skills, skilmd, frontmatter, reference-skill, action-skill, dynamic-context, anthropic, agent-teams, context-engineering, harness-engineering]
 sources:
@@ -12,6 +12,9 @@ review_confidence: 8
 review_recommendation: strong
 review_stars: 4
 sha256: b05ca9b984d12a1c79f63474e8d7519cf08d0a0e89a8189a5138f9f248bf532f
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Agent Harness Skill 系统实战指南 — Reference/Action 类型、动态注入与 frontmatter 全解

@@ -1,12 +1,15 @@
 ---
 title: "GraphPlanner — 图记忆网络驱动多智能体 LLM 工作流路由"
 created: 2026-07-12
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [ai, multi-agent, routing, graph, llm, workflow, planning, research]
 confidence: 0.8
 provenance_state: extracted
 sources: [raw/articles/给多智能体llm装上图记忆工作流路由器搞定调用协作规划]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # GraphPlanner — 图记忆网络驱动多智能体 LLM 工作流路由

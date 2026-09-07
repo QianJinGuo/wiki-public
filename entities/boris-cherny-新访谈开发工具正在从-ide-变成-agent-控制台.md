@@ -9,6 +9,9 @@ review_value: 10
 review_confidence: 10.0
 review_recommendation: worth-reading
 review_stars: 5
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 # Boris Cherny 新访谈：IDE → Agent 控制台
 ## 核心观点

@@ -1,12 +1,15 @@
 ---
 title: Fable 5 使用硬核指南：搞定未知盲区
 created: 2026-07-04
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [fable, claude, agent, coding, methodology, unknowns, map-territory]
 sources: [raw/articles/fable-5-field-guide-unknowns-ai-coding]
 confidence: 0.85
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > Anthropic Claude Code 团队成员 Thariq 撰写的 Fable 5 使用指南，核心观点是「地图不等于疆域」，提出四类未知数框架和一套在实施前、中、后不断发现未知数的迭代工作流。^[raw/articles/fable-5-field-guide-unknowns-ai-coding.md]

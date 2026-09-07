@@ -9,6 +9,9 @@ review_value: 8
 review_confidence: 7
 provenance_state: extracted
 sources: [raw/articles/harness-之后-状态边界与失败闭环-若飞]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 摘要

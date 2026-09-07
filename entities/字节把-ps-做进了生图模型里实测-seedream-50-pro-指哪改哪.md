@@ -6,6 +6,9 @@ type: entity
 tags: [bytedance, seedream, image-generation, image-editing, multimodal, diffusion, interactive-editing, aigc, evaluation]
 sources: [raw/articles/字节把-ps-做进了生图模型里实测-seedream-50-pro-指哪改哪]
 confidence: 0.7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Seedream 5.0 Pro 交互式精准编辑实测

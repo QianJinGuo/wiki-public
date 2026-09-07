@@ -2,7 +2,7 @@
 title: "Amazon Bedrock AgentCore AG-UI 协议：为 AI Agent 构建生成式 UI"
 description: "AWS 推出 AG-UI 协议，让 Agent 在 AgentCore Runtime 上动态生成交互式 UI，实现从纯文本对话到富交互界面的 Agent 体验升级。"
 created: 2026-07-01
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [aws, bedrock, agentcore, agent, generative-ui, mcp]
 sources: [raw/articles/build-generative-ui-for-ai-agents-on-amazon-bedrock-agentcor]
@@ -11,6 +11,9 @@ review_value: 8
 review_confidence: 9
 review_stars: 4
 review_recommendation: strong
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Amazon Bedrock AgentCore AG-UI 协议：为 AI Agent 构建生成式 UI

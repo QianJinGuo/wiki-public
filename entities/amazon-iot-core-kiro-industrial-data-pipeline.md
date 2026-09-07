@@ -2,7 +2,7 @@
 
 title: "基于 Amazon IoT Core 与 Kiro 构建可迁移的工业 IoT 数据管道"
 created: 2026-06-01
-updated: 2026-07-31
+updated: 2026-09-07
 type: entity
 tags: [iot, aws, kiro, industrial, data-pipeline, migration, mqtt]
 source: "[[raw/articles/amazon-iot-core-kiro-industrial-data-pipeline]]"
@@ -10,6 +10,9 @@ confidence: 0.78
 review_value: 7
 sources:
   - raw/articles/amazon-iot-core-kiro-industrial-data-pipeline
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 基于 Amazon IoT Core 与 Kiro 构建可迁移的工业 IoT 数据管道

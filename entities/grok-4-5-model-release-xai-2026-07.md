@@ -1,12 +1,15 @@
 ---
 title: "Grok 4.5：Opus 4.8 级能力，四分之一价格"
 created: 2026-07-10
-updated: 2026-07-11
+updated: 2026-09-07
 type: entity
 tags: [xai, grok, model-release, llm, agent]
 sources: [raw/articles/grok-45-上线opus-48-级能力四分之一价格]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Grok 4.5：Opus 4.8 级能力，四分之一价格

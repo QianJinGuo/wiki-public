@@ -7,6 +7,9 @@ tags: [reinforcement-learning, world-model, npu, domestic-chip, spatial-intellig
 sources: [raw/articles/50fps成本打掉70魔芯moworld把世界模型带进产业时代]
 confidence: 0.56
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 50FPS、成本打掉70%，魔芯MoWorld把世界模型带进产业时代

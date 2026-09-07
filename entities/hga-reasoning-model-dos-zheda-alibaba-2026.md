@@ -1,12 +1,15 @@
 ---
 title: "大模型推理模型DoS攻击——浙大阿里HGA方法"
 created: 2026-07-12
-updated: 2026-07-22
+updated: 2026-09-07
 type: entity
 tags: [llm, security, reasoning, dos-attack, adversarial, research, model-safety, icml-2026]
 sources: [raw/articles/hga-reasoning-model-dos-zheda-alibaba-2026]
 confidence: 0.85
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 大模型推理模型DoS攻击——浙大阿里HGA方法

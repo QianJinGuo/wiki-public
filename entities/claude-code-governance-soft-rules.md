@@ -3,7 +3,7 @@ description: Auto-generated placeholder
 title: "Claude Code 可控性：软规则无法变成硬约束"
 type: entity
 created: 2026-05-12
-updated: 2026-08-29
+updated: 2026-09-07
 tags: [claude-code, governance, soft-rules, hard-constraints, harness, context-rot, 200k-ghost]
 sources:
   - raw/articles/claude-code-governance-soft-rules-hard-constraints
@@ -13,6 +13,9 @@ review_recommendation: strong
 review_stars: 5
 source_url:
 provenance_state: inferred
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 ## 核心洞察
 ### 软规则陷阱

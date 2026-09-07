@@ -3,7 +3,7 @@
 title: "SFT+DPO 双阶段微调：Qwen3-1.7B Tool Calling 精度提升方案"
 description: "AWS SageMaker 原生教程，通过 Spectrum SFT + DPO 双阶段微调将 Qwen3-1.7B 的 tool calling 精度从 41.57% 提升至 71.06%"
 created: 2026-06-07
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [aws, sagemaker, mlops, fine-tuning, agent, tool-calling]
 source: [[raw/articles/aws-sagemaker-sft-dpo-tool-calling]]
@@ -13,6 +13,9 @@ review_value: 8
 review_confidence: 9
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # SFT+DPO 双阶段微调：Qwen3-1.7B Tool Calling 精度提升方案

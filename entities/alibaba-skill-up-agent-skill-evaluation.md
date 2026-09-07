@@ -1,7 +1,7 @@
 ---
 title: "skill-up: 阿里开源 Agent Skill 评测框架"
 created: 2026-07-23
-updated: 2026-07-23
+updated: 2026-09-07
 type: entity
 tags: [skill, evaluation, cli, testing, alibaba, harness, agent-skill]
 sources: [raw/articles/alibaba-skill-up-agent-skill-evaluation-cli-2026]
@@ -9,6 +9,9 @@ review_value: 8
 review_confidence: 9
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # skill-up：阿里开源 Agent Skill 评测框架

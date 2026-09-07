@@ -2,12 +2,15 @@
 
 title: "Google DeepMind Co-Scientist 升级：AI 首次在真实实验室制造半导体"
 created: 2026-09-01
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [deepmind, co-scientist, ai-for-science, multi-agent, semiconductor, materials-science, gemini]
 sources: [raw/articles/google-deepmind-co-scientist-upgrade-physical-lab-semiconductor-2026-08]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 概述

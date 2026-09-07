@@ -1,12 +1,15 @@
 ---
 title: "Claude Opus 5 on AWS：Anthropic 最强 Opus 模型发布"
 created: 2026-07-26
-updated: 2026-08-09
+updated: 2026-09-07
 type: entity
 tags: [anthropic, claude-opus-5, aws, amazon-bedrock, model-launch, agentic-coding]
 sources: [raw/articles/introducing-claude-opus-5-on-aws-anthropics-most-capable-opus-model, raw/articles/shenhua-xiafang-claude-opus-5-fabu-2026-07-26, raw/articles/claude-opus-5-aihanwuji-发布详情与提示词指南-2026-07-25]
 confidence: 0.80
 score: 64
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Claude Opus 5 on AWS：Anthropic 最强 Opus 模型发布

@@ -3,7 +3,7 @@
 title: "AI 编程智能体的质量防线：5 个代码质量控制机制（反馈传感器 / 语义评估 / 重构边界 / 来源追溯 / 智能体攻击面清单）"
 slug: ai-coding-agent-quality-defense-five-control-mechanisms
 created: 2026-06-02
-updated: 2026-06-23
+updated: 2026-09-07
 type: entity
 tags: [ai-coding, code-quality, harness-engineering, feedback-sensors, semantic-evals, refactor-boundaries, provenance-trails, agent-surface-inventory, llm-as-judge, mcp-supply-chain, ai-coding-guardrails, code-review, deepeval, semantic-entropy, claude-code, cursor, codex]
 review_value: 9
@@ -11,6 +11,9 @@ review_confidence: 9
 sources: [raw/articles/ai-coding-agent-quality-defense-five-control-mechanisms-tutu-agi]
 related: [entities/harness-engineering-90-percent-pillars, entities/harness-engineering, entities/harness-engineering-long-term-agent-tasks, entities/ai-coding-agent-memory-system, entities/openclaw-security-and-feature-enhancement-practices, entities/harness-generator-evaluator-anthropic, entities/claude-code-governance-soft-rules, entities/qoder-skills-完全指南从零开始让-ai-按你的标准执行-v2, entities/spotify-llm-evals-funnel-not-fork]
 strategic_context: "[[queries/research-frontier-map|Frontier 1 — Harness/Skill 从个人能力到组织资产]]"
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # AI 编程智能体的质量防线：5 个代码质量控制机制

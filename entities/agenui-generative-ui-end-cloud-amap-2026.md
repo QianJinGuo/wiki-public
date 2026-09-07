@@ -1,12 +1,15 @@
 ---
 title: "AGenUI：高德端云一体生成式 UI（A2UI 三端原生渲染引擎）"
 created: 2026-08-25
-updated: 2026-08-25
+updated: 2026-09-07
 type: entity
 tags: [generative-ui, agenui, a2ui, agentic-ui, end-cloud, card-generation, content-contract, data-binding, operator, cpp-renderer, streaming-first, harmonyos, ios, android, amap, first-party]
 rating: v7c9
 sources: [raw/articles/agenui-generative-ui-end-cloud-amap-2026]
 confidence: 0.85
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # AGenUI：高德端云一体生成式 UI（A2UI 三端原生渲染引擎）

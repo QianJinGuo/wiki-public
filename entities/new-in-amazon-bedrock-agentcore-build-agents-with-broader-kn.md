@@ -3,12 +3,15 @@ title: "Amazon Bedrock AgentCore: 知识扩展与持续学习新能力"
 type: entity
 tags: [agent, aws, bedrock, agentcore, harness, knowledge-base, rag, continuous-learning]
 created: 2026-06-18
-updated: 2026-06-18
+updated: 2026-09-07
 review_value: 7
 review_confidence: 7
 review_recommendation: worth-reading
 review_stars: 3
 sources: [raw/articles/new-in-amazon-bedrock-agentcore-build-agents-with-broader-kn]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Amazon Bedrock AgentCore: 知识扩展与持续学习新能力

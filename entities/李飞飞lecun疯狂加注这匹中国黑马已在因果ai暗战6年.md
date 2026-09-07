@@ -7,6 +7,9 @@ tags: [inference, llm, world-model, training, causal-ai, zero-xi, judea-pearl, a
 sources: [raw/articles/李飞飞lecun疯狂加注这匹中国黑马已在因果ai暗战6年]
 confidence: 0.85
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 李飞飞LeCun疯狂加注！这匹中国黑马，已在因果AI暗战6年

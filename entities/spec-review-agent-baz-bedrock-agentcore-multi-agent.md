@@ -1,7 +1,7 @@
 ---
 title: "Spec Review Agent: Multi-Agent Code-to-Product Validation with MCP + Browser Tool"
 created: 2026-06-09
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [aws, bedrock, agentcore, mcp, code-review, multi-agent, browser-tool, ai-agent, dev-tools]
 source: "[[raw/articles/how-baz-improved-its-ai-agent-code-review-accuracy-using-ama|原文存档]]"
@@ -11,6 +11,9 @@ review_confidence: 8
 review_recommendation: strong
 review_stars: 4
 confidence: 0.82
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Spec Review Agent: Multi-Agent Code-to-Product Validation with MCP + Browser Tool

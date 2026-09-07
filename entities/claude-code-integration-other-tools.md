@@ -2,7 +2,7 @@
 
 title: "Claude Code 集成其他工具指南"
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [claude-code, integration, tool-ecosystem, mcp, im, openclaw, kiro]
 sources: [entities/obsidian-claude-code-integration, entities/claude-code-mcp-server, entities/imclaw通过微信飞书操控claude-code-coodex-gemini-clipi-agent蜂群, entities/openclaw-security-and-feature-enhancement-practices]
@@ -11,6 +11,9 @@ review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 4
 provenance_state: inferred
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 概述

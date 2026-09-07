@@ -1,7 +1,7 @@
 ---
 
 created: 2026-06-10
-updated: 2026-09-05
+updated: 2026-09-07
 title: "How to Get a 100% Conference Acceptance Rate, The Novee Way: A High-Severity CVE in Leading Call-for-Papers Software"
 type: entity
 tags: [article, agent, ai, llm, model, security, xss, vulnerability]
@@ -11,6 +11,9 @@ review_confidence: 7
 review_stars: 4
 sources:
   - raw/articles/novee-security-how-to-get-a-100-conference-acceptance-rate-the-no
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # How to Get a 100% Conference Acceptance Rate, The Novee Way: A High-Severity CVE in Leading Call-for-Papers Software

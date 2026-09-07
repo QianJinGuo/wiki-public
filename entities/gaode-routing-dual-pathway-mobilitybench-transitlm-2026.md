@@ -2,7 +2,7 @@
 title: "高德路线规划双路线：MobilityBench（Agent 基准）+ TransitLM（端到端 RLLM）"
 description: "高德 AMAP-ML 团队路线规划双路线战略：(1) MobilityBench - 首个面向真实世界出行场景的路线规划 Agent 基准 (KDD 2026 Oral, arxiv 2602.22638)，3 大创新 (真实数据/确定性 API 回放沙箱/多维评测)，最强模型 FPR 仅 ~69%，Qwen3-4B LoRA SFT 17K 数据 53.5%→69.8% (+16pp) 追平 235B；(2) TransitLM - 业界首个 RLLM (Route LLM, arxiv 2605.22355)，1300万+ 记录/12万+ 站点，map-free + 隐式空间定位能力涌现 + 任务无关泛化；(3) 两条路线辩证 (Agent 快稳但依赖引擎 vs 端到端架构极简但天花板高)；(4) 时空基座模型愿景"
 created: 2026-06-16
-updated: 2026-07-31
+updated: 2026-09-07
 type: entity
 tags: [mobilitybench, transitlm, rllm, route-llm, gaode, amap, amap-ml, route-planning, agent-benchmark, kdd-2026, agent-evaluation, map-free, end-to-end, route-agent, transit, gps, continual-pre-training, sft, route-generation, spatial-foundation-model, 阿里高德, llm-agent, harness-engineering]
 sources:
@@ -20,6 +20,9 @@ related:
   - entities/spec-as-aios-anti-entropy-architecture-gaode-ai-native-series-2
   - entities/gaode-sdd-harness-team-ai-coding-paradigm-ibjfu
   - entities/autoresearch-marketing-growth-amap-ai-native
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 高德路线规划双路线：MobilityBench（Agent 基准）+ TransitLM（端到端 RLLM）

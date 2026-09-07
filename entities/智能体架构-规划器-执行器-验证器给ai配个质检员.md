@@ -8,6 +8,9 @@ tags: [wechat, ai]
 rating: v7c7
 sources:
   - raw/articles/智能体架构-规划器-执行器-验证器给ai配个质检员
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 智能体架构 -- 规划器 → 执行器 → 验证器，给AI配个“质检员”

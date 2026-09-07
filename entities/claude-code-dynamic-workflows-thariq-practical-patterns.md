@@ -1,7 +1,7 @@
 ---
 title: "Claude Code Dynamic Workflows 实战模式与构建技巧"
 created: 2026-06-10
-updated: 2026-09-05
+updated: 2026-09-07
 tags: [agent, claude, code, workflow, subagent, multi-agent, evaluation, prompt-engineering, claude-code]
 review_value: 7
 review_confidence: 7
@@ -10,6 +10,9 @@ sources:
   - raw/articles/claude-code-dynamic-workflows-thariq-practical-patterns
 confidence: 0.9
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Claude Code Dynamic Workflows 实战模式与构建技巧

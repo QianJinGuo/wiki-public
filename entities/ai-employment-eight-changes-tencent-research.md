@@ -2,7 +2,7 @@
 
 title: "我们刚过了人类最后一个劳动节？AI新职业的八个变化"
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [ai-employment, labor-market, tencent-research, fde, deployment-army, governance, ecpgs-framework, anthropic, openai, deepmind, zhipu, kimi, deepseek, tongyi, agentic-ai, api-economy, enterprise-deployment, customer-success, ai-compliance]
 sources: [raw/articles/ai-employment-eight-changes-tencent-research]
@@ -10,6 +10,9 @@ review_value: 8
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 → [[raw/articles/ai-employment-eight-changes-tencent-research|原文存档]]^[raw/articles/ai-employment-eight-changes-tencent-research.md]

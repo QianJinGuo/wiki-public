@@ -1,12 +1,15 @@
 ---
 title: "构建 Serverless A2A 网关：Agent 发现、路由与访问控制"
 created: 2026-07-02
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [agent, a2a, gateway, agent-communication, aws, serverless, architecture]
 sources: [raw/articles/building-serverless-a2a-gateway-agent-discovery-routing-access-control]
 confidence: 0.85
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 构建 Serverless A2A 网关：Agent 发现、路由与访问控制

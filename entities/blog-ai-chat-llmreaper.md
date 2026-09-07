@@ -2,13 +2,16 @@
 
 title: "LLMReaper - DOM Based AI Conversation Exfiltration via Browser Extensions"
 created: 2026-06-10
-updated: 2026-07-31
+updated: 2026-09-07
 tags: [security, browser-extension, llm, exfiltration, mutation-observer, mitre-attack, supply-chain]
 review_value: 7
 review_confidence: 7
 type: entity
 sources:
   - raw/articles/blog-ai-chat-llmreaper
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # LLMReaper - DOM Based AI Conversation Exfiltration via Browser Extensions

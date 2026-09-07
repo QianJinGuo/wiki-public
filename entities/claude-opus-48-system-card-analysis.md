@@ -1,7 +1,7 @@
 ---
 title: "Claude Opus 4.8 系统卡片深度分析"
 created: 2026-06-01
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [claude, anthropic, ai-safety, system-card, alignment]
 source: [[raw/articles/claude-opus-48-the-system-card-b8460f.md]]
@@ -11,6 +11,9 @@ review_confidence: 9
 review_stars: 5
 provenance_state: inferred
 sources:
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Claude Opus 4.8 系统卡片深度分析

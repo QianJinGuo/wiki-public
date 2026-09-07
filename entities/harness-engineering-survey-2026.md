@@ -2,7 +2,7 @@
 
 title: "Harness 工程 2026 年度调研"
 created: 2026-07-02
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [harness-engineering, survey, trends, agent]
 review_value: 6
@@ -11,6 +11,9 @@ provenance_state: stub-upgraded
 confidence: 0.6
 sources: [raw/articles/harness-engineering-第三代工程范式]
 score_validated: 2026-09-05
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Harness 工程 2026 年度调研

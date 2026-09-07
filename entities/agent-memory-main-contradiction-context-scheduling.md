@@ -2,11 +2,14 @@
 title: "Agent 记忆系统的主矛盾：历史增长 vs 临场上下文调度"
 type: entity
 created: 2026-07-10
-updated: 2026-07-10
+updated: 2026-09-07
 tags: [agent, memory, context-management, architecture, survey, framework]
 rating: v9c8
 sources:
   - raw/articles/agent-memory-system-main-contradiction-context-scheduling
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Agent 记忆系统的主矛盾：历史增长 vs 临场上下文调度

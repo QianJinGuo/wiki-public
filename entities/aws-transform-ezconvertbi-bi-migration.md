@@ -4,10 +4,13 @@ title: "AWS Transform Ezconvertbi BI Migration"
 type: entity
 tags: [aws, security]
 created: 2026-05-21
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 6
 review_confidence: 9
 sources: [raw/articles/aws-transform-ezconvertbi-bi-migration]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # AWS Transform now automates BI migration to Amazon Quick in days

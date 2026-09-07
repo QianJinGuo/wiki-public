@@ -10,7 +10,9 @@ sources:
   - raw/articles/llm-agent脚手架如何具备自进化能力以hermes-agent为例
 review_value: 9
 review_confidence: 7
-
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 [[raw/articles/llm-agent脚手架如何具备自进化能力以hermes-agent为例]] ^[raw/articles/llm-agent脚手架如何具备自进化能力以hermes-agent为例.md]

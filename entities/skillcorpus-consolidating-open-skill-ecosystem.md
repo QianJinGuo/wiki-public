@@ -2,12 +2,15 @@
 title: "SkillCorpus: 大规模社区 Skill 生态的筛选、评测与边界分析"
 description: "SkillCorpus 从 82 万社区 SKILL.md 经 6 阶段流水线提纯为 96,401 标准化技能，配套三级检索系统。三基准两框架评测：SkillsBench +7.5%，提升由覆盖度边界和 Harness 边界共同决定。"
 created: 2026-07-24
-updated: 2026-07-24
+updated: 2026-09-07
 type: entity
 tags: [skill-corpus, skill-curation, agent-skill, open-source, evaluation, retrieval, skillecosystem, skillbench]
 sources: [raw/articles/skillcorpus-arxiv-2607-15557, raw/articles/skillcorpus-skill-screening-framework-mozhi-2026]
 review_value: 8
 review_confidence: 8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # SkillCorpus: 大规模社区 Skill 生态的筛选、评测与边界分析

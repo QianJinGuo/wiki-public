@@ -1,12 +1,15 @@
 ---
 title: "Full-Bandwidth Transformer：Latent Feedback 拓宽解码垂直反馈通道"
 created: 2026-08-17
-updated: 2026-08-17
+updated: 2026-09-07
 type: entity
 tags: [transformer, architecture, latent-feedback, arxiv, autoregressive, efficiency]
 sources: [raw/articles/full-bandwidth-transformer-latent-feedback-arxiv-2608-08888]
 confidence: 0.75
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Full-Bandwidth Transformer：Latent Feedback 拓宽解码垂直反馈通道

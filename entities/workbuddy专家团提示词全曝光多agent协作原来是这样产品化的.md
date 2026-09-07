@@ -8,6 +8,9 @@ provenance_state: inferred
 rating: v9c8
 sources:
   - raw/articles/workbuddy专家团提示词全曝光多agent协作原来是这样产品化的
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # WorkBuddy专家团提示词全曝光：多Agent协作原来是这样产品化的

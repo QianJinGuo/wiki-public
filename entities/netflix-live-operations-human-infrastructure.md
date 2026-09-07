@@ -2,7 +2,7 @@
 title: "Netflix Live 运营体系：TOC Fleet Model 与 LCC 分层指挥架构"
 description: "Netflix 从工程师值守到专职运营团队，构建 BOC/TOC/LCC 三级广播运营体系，实现日均 70 场直播、17.9M 并发峰值的规模化运营"
 created: 2026-06-07
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [netflix, live-streaming, operations, sre, infrastructure, broadcast]
 source: [[raw/articles/netflix-live-operations-human-infrastructure]]
@@ -12,6 +12,9 @@ review_value: 8
 review_confidence: 9
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Netflix Live 运营体系：TOC Fleet Model 与 LCC 分层指挥架构

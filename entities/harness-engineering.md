@@ -4,7 +4,7 @@
 description: "Harness Engineering：5种制品 + 三大阵营 + 5条共识原则 + Harness衰减与Build to Delete + Context-vs-Harness 分层诊断与四类能力组合 + Can.ac/LangChain/OpenAI 实证"
 title: 'Harness Engineering：AI 从"聪明"到"可靠"的第三代工程范式'
 created: 2026-05-14
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [ai-agent, harness-engineering, reliability, llm, context-engineering, guardrails, evaluation, software-engineering, five-artifacts, three-camps, five-principles, build-to-delete, harness-decay, guides-sensors, context-vs-harness, feedback-loop, coding-agent]
 sources:
@@ -19,7 +19,9 @@ sources:
 review_value: 9
 review_confidence: 8
 provenance_state: merged
-
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 核心命题

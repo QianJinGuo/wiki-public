@@ -4,12 +4,15 @@ title: AI can write code, but the CIOs still owns the operating model
 type: entity
 tags: [ai,coding,enterprise,governance]
 created: 2026-05-22
-updated: 2026-08-01
+updated: 2026-09-07
 review_value: 8
 review_confidence: 8
 review_recommendation: worth-reading
 sources: [raw/articles/ai-can-write-code-cios-operating-model]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 核心要点

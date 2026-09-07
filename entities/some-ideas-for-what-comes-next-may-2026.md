@@ -2,7 +2,7 @@
 
 title: "Some ideas for what comes next, May 2026 (Interconnects)"
 created: 2026-06-01
-updated: 2026-07-31
+updated: 2026-09-07
 type: entity
 tags: [agi, forecasting, future-of-ai, interconnects, open-models, analysis]
 source: "[[raw/articles/some-ideas-for-what-comes-next-may-2026]]"
@@ -10,6 +10,9 @@ confidence: 0.75
 review_value: 7
 sources:
   - raw/articles/some-ideas-for-what-comes-next-may-2026
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Some ideas for what comes next, May 2026 (Interconnects)

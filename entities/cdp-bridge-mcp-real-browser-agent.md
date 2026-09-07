@@ -4,10 +4,13 @@ title: "CDP Bridge MCP：让 LLM 操作真实浏览器"
 type: entity
 tags: [agent, browser, llm, tool]
 created: 2026-05-21
-updated: 2026-05-21
+updated: 2026-09-07
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/cdp-bridge-mcp-real-browser-agent]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # CDP Bridge MCP：让 LLM 操作真实浏览器

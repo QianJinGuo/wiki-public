@@ -9,6 +9,9 @@ sources: [raw/articles/在-amazon-ec2-gpu-实例上部署-nvidia-nemoclaw-以-am
 review_value: 7
 review_confidence: 7
 review_recommendation: worth-reading
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 核心要点

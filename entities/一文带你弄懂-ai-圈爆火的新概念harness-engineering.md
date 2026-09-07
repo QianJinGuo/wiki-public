@@ -8,6 +8,9 @@ review_confidence: 7
 type: entity
 sources:
   - raw/articles/一文带你弄懂-ai-圈爆火的新概念harness-engineering
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 一文带你弄懂 AI 圈爆火的新概念：Harness Engineering

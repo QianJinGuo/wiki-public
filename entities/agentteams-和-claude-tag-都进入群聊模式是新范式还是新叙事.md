@@ -8,6 +8,9 @@ provenance_state: inferred
 rating: v9c8
 sources:
   - raw/articles/agentteams-和-claude-tag-都进入群聊模式是新范式还是新叙事
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # AgentTeams 和 Claude Tag 都进入群聊模式，是新范式还是新叙事？

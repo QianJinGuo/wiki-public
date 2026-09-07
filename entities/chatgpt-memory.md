@@ -1,12 +1,15 @@
 ---
 title: "ChatGPT Memory"
 created: 2026-04-24
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [openai, gpt, memory, custom-gpt, project, ai]
 sources: [raw/articles/ai-knowledge-tools-comparison]
 review_value: 8
 review_confidence: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 # ChatGPT Memory & Knowledge Features
 ## Overview

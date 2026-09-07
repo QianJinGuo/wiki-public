@@ -9,6 +9,9 @@ tags: [agent, open-source, inference, evaluation]
 review_value: 7
 sources: [raw/articles/腾讯混元新里程碑hy3-preview-发布开源agent-表现全面提升]
 review_confidence: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 [[raw/articles/腾讯混元新里程碑hy3-preview-发布开源agent-表现全面提升]] ^[raw/articles/腾讯混元新里程碑hy3-preview-发布开源agent-表现全面提升.md]

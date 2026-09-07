@@ -9,6 +9,10 @@ review_value: 7
 review_confidence: 10
 review_recommendation: worth-reading
 review_stars: 3
+reviewed: 2026-09-07
+review_verdict: hub-retained
+review_category: dup
+review_note: "judged dup-0.8: 同文较短版留37229字; retained as hub (in-links>=20); MOC rewrite candidate"
 ---
 ## 深度分析
 ### 确定性执行：Hooks 的核心价值定位

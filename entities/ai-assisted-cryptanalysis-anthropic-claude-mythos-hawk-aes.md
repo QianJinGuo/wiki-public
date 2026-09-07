@@ -1,12 +1,15 @@
 ---
 title: "AI Assisted Cryptanalysis: Anthropic Claude Mythos 破解 HAWK 和 AES"
 created: 2026-07-31
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [anthropic, cryptanalysis, claude, artificial-intelligence, cryptography, ai-security, post-quantum]
 sources: [raw/articles/anthropic-claude-mythos-cryptanalysis-hawk-aes-matthew-green]
 confidence: 0.70
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # AI Assisted Cryptanalysis: Anthropic Claude Mythos 破解 HAWK 和 AES

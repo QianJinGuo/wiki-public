@@ -3,13 +3,16 @@
 title: "The inevitable need for an open model consortium"
 type: entity
 created: '2026-06-07'
-updated: 2026-08-28
+updated: 2026-09-07
 review_confidence: 8
 review_recommendation: worth-reading
 review_value: 7
 tags: [interconnects-the-inevitable-need-for-an-open-model-consortium]
 provenance_state: inferred
 sources: [raw/articles/the-inevitable-need-for-an-open-model-consortium]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # The inevitable need for an open model consortium

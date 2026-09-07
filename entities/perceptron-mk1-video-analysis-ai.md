@@ -4,13 +4,16 @@ title: "Perceptron Mk1 shocks with highly performant video analysis AI model 80-
 type: entity
 tags: [video-analysis, ai-model, computer-vision, physical-ai, startup]
 created: 2026-05-13
-updated: 2026-08-29
+updated: 2026-09-07
 source: newsletter
 source_url:
 review_value: 7
 review_confidence: 8
 review_recommendation: strong
 sources: [raw/articles/perceptron-mk1-video-analysis-ai]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > 来源：[[raw/articles/perceptron-mk1-video-analysis-ai|原文存档]] ^[raw/articles/perceptron-mk1-video-analysis-ai.md]

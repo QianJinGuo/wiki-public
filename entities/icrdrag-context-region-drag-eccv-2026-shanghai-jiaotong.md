@@ -3,11 +3,14 @@ title: "ICRDrag：ECCV 2026 首个上下文区域拖拽图像编辑模型"
 type: entity
 tags: [computer-vision, image-editing, diffusion, eccv-2026, shanghai-jiaotong, drag-editing, dit, attention-mechanism]
 created: 2026-07-04
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 7
 review_confidence: 8
 provenance_state: extracted
 sources: [raw/articles/icrdrag-context-region-drag-eccv-2026]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # ICRDrag：ECCV 2026 首个上下文区域拖拽图像编辑模型

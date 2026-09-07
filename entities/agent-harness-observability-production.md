@@ -2,7 +2,7 @@
 
 title: "Agent Harness 可观测性：生产级 AI 项目必须补上的一课"
 created: 2026-05-25
-updated: 2026-07-31
+updated: 2026-09-07
 type: entity
 tags: [agent, harness, observability, tracing, evaluation, monitoring]
 source: [[raw/articles/agent-harness-observability-production]]
@@ -10,6 +10,9 @@ confidence: 0.8
 review_value: 5
 sources:
   - raw/articles/agent-harness-observability-production
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Agent Harness 可观测性：生产级 AI 项目必须补上的一课

@@ -1,13 +1,16 @@
 ---
 title: "The Shape of the Thing"
 created: 2026-06-10
-updated: 2026-08-30
+updated: 2026-09-07
 tags: [agent, aws, code, evaluation, llm, prompt, rl, security, vision, exponential, organization, disruption]
 review_value: 7
 review_confidence: 7
 type: entity
 sources:
   - raw/articles/the-shape-of-the-thing
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # The Shape of the Thing

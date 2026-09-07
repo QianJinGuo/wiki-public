@@ -2,13 +2,16 @@
 
 title: "Git仓库 + AI 编码助手做项目管理"
 created: 2026-05-28
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [pm, ai-agent, git, workflow, automation, skill]
 confidence: 0.8
 provenance_state: extracted
 sources: [raw/articles/git-repo-based-pm-automation]
 review_value: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Git仓库 + AI 编码助手做项目管理

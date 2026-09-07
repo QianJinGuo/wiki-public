@@ -15,6 +15,9 @@ tags:
   - moonshot
 sources:
   - raw/articles/kimi-k3这是-deepseek-20-时刻
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 摘要

@@ -3,11 +3,14 @@ title: "Claude's next enterprise battle is not models: it's the agent control pl
 type: entity
 tags: [newsletter, agent-orchestration, enterprise-ai, anthropic, microsoft, openai]
 created: 2026-05-18
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 8
 sources: [raw/articles/claudes_next_enterprise_battle_is_not_mo]
 review_confidence: 9
 review_recommendation: worth-reading
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 ## 核心要点
 - 模型竞争已不再是企业 AI 的唯一焦点；**agent 控制平面**正成为新的战略高地 

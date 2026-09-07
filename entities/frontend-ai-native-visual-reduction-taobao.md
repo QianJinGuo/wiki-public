@@ -1,7 +1,7 @@
 ---
 title: "场景营销前端 AI Coding — AI Native 的视觉稿还原"
 created: 2026-07-01
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [frontend, ai-coding, visual-reduction, taobao, alibaba, ai-native, design-to-code]
 sources:
@@ -9,6 +9,9 @@ sources:
 review_value: 7
 review_confidence: 7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > 原文归档：[[raw/articles/frontend-ai-native-visual-reduction-taobao-2026-06-24|原文归档]] ^[raw/articles/frontend-ai-native-visual-reduction-taobao-2026-06-24.md]

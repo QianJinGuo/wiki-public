@@ -6,6 +6,9 @@ type: entity
 tags: [deepseek, ai-chip, inference, hardware, semiconductor, ai-infrastructure]
 sources: [raw/articles/deepseek-自研ai推理芯片-路透社-2026-07-08]
 confidence: 0.75
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # DeepSeek被曝自研AI推理芯片

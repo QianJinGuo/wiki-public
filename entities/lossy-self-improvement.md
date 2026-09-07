@@ -2,7 +2,7 @@
 title: "Lossy self-improvement"
 description: "RSI（递归自我改进）的三大假设（闭环、自放大、效率不减）在现实中被复杂性刹车、资源瓶颈和并行化递减回报逐一击破，AI 进步更可能是'有损自我改进'而非指数爆炸。"
 created: 2026-06-07
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [ai-theory, rsi, self-improvement, complexity-brake, forecasting]
 source: [[raw/articles/lossy-self-improvement]]
@@ -12,6 +12,9 @@ review_value: 9
 review_confidence: 9
 review_recommendation: strong
 review_stars: 5
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Lossy self-improvement

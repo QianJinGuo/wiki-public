@@ -4,11 +4,14 @@ title: "Build financial document processing with Pulse AI and Amazon Bedrock"
 type: entity
 tags: [aws, machine-learning, llm, document-processing]
 created: 2026-05-14
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 7
 review_confidence: 8
 review_recommendation: worth-reading
 sources: [raw/articles/build-financial-document-processing-with-pulse-ai-and-amazon-bedrock]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 核心要点

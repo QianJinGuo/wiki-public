@@ -2,7 +2,7 @@
 
 title: "How to Write an Effective Software Design Document"
 created: 2026-06-26
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [article]
 source: "[[raw/articles/excerpts-write-an-effective-design-doc]]"
@@ -12,6 +12,9 @@ review_value: 8
 review_confidence: 9
 review_stars: 4
 review_recommendation: strong
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # How to Write an Effective Software Design Document

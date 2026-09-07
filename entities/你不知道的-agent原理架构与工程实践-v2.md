@@ -9,6 +9,9 @@ review_confidence: 7
 type: entity
 sources:
   - raw/articles/你不知道的-agent原理架构与工程实践-v2
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 你不知道的 Agent：原理、架构与工程实践

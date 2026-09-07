@@ -1,13 +1,16 @@
 ---
 title: "knowledge-work-plugins拆解：Anthropic官方开源，4 种组件、3 级加载、2 层记忆，纯文件的 AI岗位插件集"
 created: 2026-06-11
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [agent, anthropic, architecture, claude, code, knowledge-work-plugins, plugin, marketplace, claude-code, mcp, skills, progressive-disclosure, two-tier-memory, metaprogramming, security-review, role-based]
 sources: [raw/articles/knowledge-work-plugins-shuge-anthropic-deep-source.md]
 provenance_state: raw-linked
 review_value: 8
 review_confidence: 8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > -> **knowledge-work-plugins拆解：Anthropic官方开源，4 种组件、3 级加载、2 层记忆，纯文件的 AI岗位插件集**

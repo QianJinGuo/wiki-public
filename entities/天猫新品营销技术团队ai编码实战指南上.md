@@ -8,6 +8,9 @@ review_confidence: 8
 type: entity
 sources:
   - raw/articles/天猫新品营销技术团队ai编码实战指南上
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 天猫新品营销技术团队AI编码实战指南（上）

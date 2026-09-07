@@ -1,10 +1,13 @@
 ---
 title: "AI Teammates: How monday.com Runs Production AI Agents on Amazon Bedrock"
 created: 2026-07-24
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [aws, bedrock, monday-com, production-agents, ai-engineering, eks, sns, sqs, agent-architecture, morphex, sphera]
 sources: [raw/articles/ai-teammates-how-mondaycom-runs-production-ai-agents-on-amaz]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # AI Teammates: How monday.com Runs Production AI Agents on Amazon Bedrock

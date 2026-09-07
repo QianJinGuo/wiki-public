@@ -7,6 +7,9 @@ tags: [ai, rss, inference, llm, evaluation, bedrock, humaneval, prompt-caching, 
 sources: [raw/articles/使用-lm-evaluation-harness-评估-amazon-bedrock-模型以-humaneval-为例]
 confidence: 0.65
 score: 64
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 使用 lm evaluation harness 评估 amazon bedrock 模型以 humaneval 为例

@@ -4,11 +4,14 @@ title: "Build with Notion's Developer Platform – Notion"
 type: entity
 tags: [agent, api, tool, web]
 created: 2026-05-21
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 6
 review_confidence: 6
 sources: [raw/articles/notion-dev-platform]
 score_validated: 2026-09-05
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 深度分析

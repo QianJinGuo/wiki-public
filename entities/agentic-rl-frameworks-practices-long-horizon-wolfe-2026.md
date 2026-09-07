@@ -3,7 +3,7 @@ title: "Agentic RL 六框架实践地图：从算法到系统的长程智能体�
 authors:
   - Cameron R. Wolfe
 created: 2026-06-29
-updated: 2026-08-01
+updated: 2026-09-07
 source: wechat
 url:
 original_url:
@@ -18,6 +18,9 @@ sources:
   - raw/articles/long-horizon-agent-training-practice-jiagoux-2026-07-20
   - raw/articles/agentic-rollout-training-framework-shumu-2026
   - raw/articles/agentomnia-scaling-agentic-models-full-scenario-huawei-2026
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 核心概述

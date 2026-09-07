@@ -3,13 +3,16 @@ title: "Code as Agent Harness 综述"
 type: entity
 tags: [agent, harness, coding-agent, survey, llm, multi-agent, architecture]
 created: "2026-05-20"
-updated: 2026-08-30
+updated: 2026-09-07
 review_value: 8
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4
 provenance_state: extracted
 sources: [raw/articles/code-as-agent-harness-survey-2026]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 ## 核心框架
 论文（102页，UIUC+Meta+斯坦福）提出三层结构： ^[raw/articles/code-as-agent-harness-survey-2026.md]

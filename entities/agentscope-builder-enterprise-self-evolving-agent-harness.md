@@ -8,11 +8,14 @@ review_recommendation: strong
 review_stars: 4
 date: 2026-05-27
 created: 2026-05-28
-updated: 2026-08-29
+updated: 2026-09-07
 tags: [agent, harness, agentscope, java, enterprise, multi-tenant, workspace, builder, composite-filesystem]
 type: entity
 provenance_state: synthesized
 sources: [raw/articles/agentscope-builder-enterprise-self-evolving-agent-harness]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > -> [[raw/articles/agentscope-builder-enterprise-self-evolving-agent-harness|原文存档]]

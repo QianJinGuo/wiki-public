@@ -4,10 +4,13 @@ title: "AWS SageMaker AI Agent 引导式工作流微调"
 type: entity
 tags: [agent, aws, fine-tuning, model, rag, workflow]
 created: 2026-05-21
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 6
 review_confidence: 9
 sources: [raw/articles/aws-sagemaker-ai-agent-guided-workflows-finetuning]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Agent-guided workflows to accelerate model customization in Amazon SageMaker AI

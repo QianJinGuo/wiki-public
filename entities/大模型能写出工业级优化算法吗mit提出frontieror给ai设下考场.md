@@ -8,6 +8,9 @@ source_url:
 sources: [raw/articles/大模型能写出工业级优化算法吗mit提出frontieror给ai设下考场]
 confidence: 0.85
 vxc: 72
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 大模型能写出工业级优化算法吗？MIT提出FrontierOR给AI设下考场

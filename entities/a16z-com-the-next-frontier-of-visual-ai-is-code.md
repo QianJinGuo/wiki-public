@@ -2,13 +2,16 @@
 
 title: "视觉 AI 的下一前沿是代码：a16z 关于视觉生成范式转移的论述"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-07
 tags: [agent, visual-ai, code-native-generation, lottie, svg, 3d, test-time-compute, mlops, prompt]
 review_value: 7
 review_confidence: 7
 type: entity
 sources:
   - raw/articles/a16z-com-the-next-frontier-of-visual-ai-is-code
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 视觉 AI 的下一前沿是代码：a16z 关于视觉生成范式转移的论述

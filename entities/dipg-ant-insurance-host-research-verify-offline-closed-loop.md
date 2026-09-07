@@ -2,7 +2,7 @@
 
 title: "DIPG 蚂蚁保 Host-Research-Verify 三 Agent 离线 verify 闭环：C 端 AIGC 工程化范式"
 created: 2026-06-01
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [harness-engineering, multi-agent, host-research-verify, offline-verify, aigc, c-end, langgraph, deepagents, audit, prompt-backflow, ant-group, dipg, three-level-harness]
 sources: [raw/articles/dipg-ant-insurance-host-research-verify-offline-closed-loop]
@@ -10,6 +10,9 @@ review_value: 9
 review_confidence: 9
 review_recommendation: strong
 review_stars: 5
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # DIPG 蚂蚁保 Host-Research-Verify 三 Agent 离线 verify 闭环

@@ -2,7 +2,7 @@
 title: "蚂蚁灵波 LingBot-VLA 2.0：60,000 小时开源通用 VLA 模型"
 slug: lingbot-vla-2-60000h-open-source-vla
 created: 2026-07-08
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags:
   - vla
@@ -20,6 +20,9 @@ review_confidence: 8
 sources:
   - raw/articles/lingbot-vla-2-60000h-open-source-vla
   - raw/articles/lingbot-vla-2-xinzhiyuan-report
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 蚂蚁灵波 LingBot-VLA 2.0

@@ -3,14 +3,16 @@
 
 title: "Anthropic 最新论文：阻止 AI 叛变的方法（Model Spec Midtraining）"
 created: 2026-05-07
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [anthropic, ai]
 sources:
   - raw/articles/anthropic-msm-anti-defection-paper
 review_value: 7
 review_confidence: 8
-
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 文章核心

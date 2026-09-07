@@ -2,12 +2,15 @@
 
 title: "GBrain — YC CEO Garry Tan 的 Postgres-native AI 第二大脑：5 大设计决策 + 零 LLM 知识图谱 + 8 阶段检索 + Brain⊥Source 正交维度"
 created: 2026-04-27
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [open-source, agent, memory, tool, person, gbrain, garry-tan, knowledge-brain, knowledge-graph, agent-memory, rag, hybrid-search, zero-llm-graph, regex-extraction, postgres, pglite, type-safe-engine, four-pass-extraction, brain-source-orthogonal, engineering-reliability, source-analysis, shugex, shugex, 2026]
 sources: [raw/articles/gbrain-garry-tan-yanfa-zhili, raw/articles/gbrain-8layer-51cto, raw/articles/gbrain-v042-source-deep-dive-5-design-decisions-shugex-2026]
 review_value: 9
 review_confidence: 9
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 概述

@@ -1,7 +1,7 @@
 ---
 title: "Thinking Machines 交互模型（Interaction Models）"
 created: 2026-05-13
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [thinking-machines, interaction-model, multimodal, real-time, mira-murati, lilian-weng, agent]
 sources: [raw/articles/thinking-machines-interaction-models-ai-cold, raw/articles/bytebytego-inside-thinking-machines-interaction-models]
@@ -9,6 +9,9 @@ review_value: 8
 review_confidence: 7
 review_recommendation: strong
 review_stars: 5
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 ## 核心定位
 Thinking Machines Lab（OpenAI 前 CTO Mira Murati 创办）发布的交互模型，旨在解决假实时问题——当前 AI 模型以轮次为单位工作，人必须等模型说完才能接话。   ^[raw/articles/thinking-machines-interaction-models-ai-cold.md]

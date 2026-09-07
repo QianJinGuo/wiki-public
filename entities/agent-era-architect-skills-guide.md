@@ -4,10 +4,13 @@ title: "Agent 时代，我们架构师应该学什么？"
 type: entity
 tags: [agent, harness, sdk]
 created: 2026-05-21
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/agent-era-architect-skills-guide]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Agent 时代，我们架构师应该学什么？

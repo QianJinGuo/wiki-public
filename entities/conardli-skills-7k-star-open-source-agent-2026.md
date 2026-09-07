@@ -1,12 +1,15 @@
 ---
 title: "啊？我刚开源的 Skills 已经 7K Star 了？！"
 created: 2026-07-10
-updated: 2026-07-11
+updated: 2026-09-07
 type: entity
 tags: [skill, open-source, agent, community, developer]
 sources: [raw/articles/啊我刚开源的-skills-已经-7k-star-了]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 啊？我刚开源的 Skills 已经 7K Star 了？！

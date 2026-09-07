@@ -1,11 +1,14 @@
 ---
 title: "NVIDIA MPS + Triton 降低 ASR 推理成本 75%"
 created: 2026-08-30
-updated: 2026-08-30
+updated: 2026-09-07
 type: entity
 tags: [nvidia, mps, triton, asr, inference, gpu-optimization, cost-reduction, speech-recognition]
 sources: [raw/articles/reduce-asr-inference-costs-by-75-with-nvidia-mps-on-amazon-e]
 confidence: 0.8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # NVIDIA MPS + Triton 降低 ASR 推理成本 75%

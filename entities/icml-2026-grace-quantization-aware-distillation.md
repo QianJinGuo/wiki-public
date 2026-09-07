@@ -1,11 +1,14 @@
 ---
 title: "GRACE：量化感知训练与知识蒸馏联合优化（ICML 2026）"
 created: 2026-08-28
-updated: 2026-08-28
+updated: 2026-09-07
 type: entity
 tags: [icml-2026, quantization, knowledge-distillation, qat, post-training, efficiency, vlm, eth-zurich]
 sources: [raw/articles/icml-2026-grace-quantization-aware-distillation]
 confidence: 0.72
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # GRACE：量化感知训练与知识蒸馏联合优化（ICML 2026）

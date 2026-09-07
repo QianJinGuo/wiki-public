@@ -1,7 +1,7 @@
 ---
 title: "Agent评测的反直觉感悟：质量优化与可规模化性的取舍"
 created: 2026-06-27
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, eval, langfuse, tracing, cost-optimization, product-thinking, observability]
 source: "[[raw/articles/agent-eval-counterintuitive-insights-langfuse]]"
@@ -11,6 +11,9 @@ review_value: 7
 review_confidence: 65
 sources:
   - raw/articles/agent-eval-counterintuitive-insights-langfuse
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Agent评测的反直觉感悟：质量优化与可规模化性的取舍

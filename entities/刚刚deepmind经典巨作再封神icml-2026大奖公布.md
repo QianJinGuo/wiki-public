@@ -8,6 +8,9 @@ rating: v5c6
 sources:
   - raw/articles/刚刚deepmind经典巨作再封神icml-2026大奖公布
 confidence: 0.5
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 刚刚，DeepMind经典巨作再封神！ICML 2026大奖公布

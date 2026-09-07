@@ -11,10 +11,13 @@ source:
 review_value: 7
 sources: []
 created: 2026-05-20
-updated: 2026-08-29
+updated: 2026-09-07
 tags: [betterharness, harness-engineering, evals, trace, automatic-optimization]
 provenance_state: inferred
 confidence: 0.7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Better-Harness：Agent Harness 自动优化方法论

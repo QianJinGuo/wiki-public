@@ -2,7 +2,7 @@
 title: "CPU 缓存类比下的 Agent 上下文管理：L1/L2/L3 层级架构与 execute_code 单工具设计"
 description: "AI技术立文 2026-06-12: 把 CPU 缓存的 L1/L2/L3 层级结构迁移到 Agent 上下文管理 — L1 常驻 (80% 覆盖, 几百行系统提示) / L2 按需规格文档 (15% 覆盖, 50 行白名单+getXInfo按需加载) / L3 原始 API + 技能文件 (5%+ 兜底, 5 行引用+7万行磁盘文档) + execute_code 单工具原则 (1 个工具=0 工具税+编程语言表达力) + 读取三重压缩 (公式别名化/行列语义/样式压缩) + 写入 diff 分组采样+问题分类 (内置 linter) + 延迟工具 (Claude 思路的可移植实现)"
 created: 2026-06-12
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [context-management, l1-l2-l3, cache-hierarchy, execute-code, single-tool, context-hierarchy, liwen, agent-architecture, l3-fallback, deferred-tools, spec-on-demand, prompt-budget, code-as-tool, anti-multi-tool]
 source: "[[raw/articles/cpu-cache-analogy-agent-context-management-liwen-2026-06-12]]"
@@ -14,6 +14,9 @@ review_recommendation: strong
 provenance_state: extracted
 confidence: 0.9
 strategic_context: "[[queries/research-frontier-map|Frontier 3 — Agent 训练/评测基础设施与对齐]]"
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # CPU 缓存类比下的 Agent 上下文管理：L1/L2/L3 层级架构与 execute_code 单工具设计

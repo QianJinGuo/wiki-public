@@ -4,10 +4,13 @@ title: "Shannon & Epiplexity: Finite Compute Information Theory"
 type: entity
 tags: [gpt, llm]
 created: 2026-05-21
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/shannon-epiplexity-finite-compute-information-theory]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Shannon 没有想到的事——当信息论遇上有限算力

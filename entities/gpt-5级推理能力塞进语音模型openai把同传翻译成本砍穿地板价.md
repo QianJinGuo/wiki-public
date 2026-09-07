@@ -8,6 +8,9 @@ updated: 2026-05-21
 review_value: 7
 review_confidence: 8
 sources: [raw/articles/gpt-5级推理能力塞进语音模型openai把同传翻译成本砍穿地板价]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # GPT-5级推理能力塞进语音模型，OpenAI把同传翻译成本砍穿地板价

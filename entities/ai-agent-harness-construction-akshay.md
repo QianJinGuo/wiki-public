@@ -7,7 +7,7 @@ title: "深度拆解：AI 智能体 Harness 的构造（译）"
 author: "宝玉AI（编译自 Akshay Pachaar）"
 published: 2026-01-01
 created: 2026-05-19
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 entities:
   - anthropic-claude-code
@@ -29,6 +29,9 @@ review_value: 7
 review_confidence: 9
 tags: [ai-agent, harness, langchain, claude-code, openai, anthropic]
 provenance_state: inferred
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 深度拆解：AI 智能体 Harness 的构造（译）

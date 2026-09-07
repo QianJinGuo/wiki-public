@@ -9,6 +9,9 @@ rating: v9c8
 sources:
   - raw/articles/token不经济
   - raw/articles/pointfive-token-reduction-not-cost-reduction
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Token不经济

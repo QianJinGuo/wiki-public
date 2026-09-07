@@ -1,10 +1,13 @@
 ---
 title: "Agentic Vision: Building Visual Intelligence with Amazon Bedrock and MCP Servers"
 created: 2026-07-24
-updated: 2026-07-27
+updated: 2026-09-07
 type: entity
 tags: [aws, bedrock, computer-vision, mcp, strands-agents, ai-agents, s3, opensearch, rekognition]
 sources: [raw/articles/agentic-vision-building-visual-intelligence-with-amazon-bedr]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Agentic Vision: Building Visual Intelligence with Amazon Bedrock and MCP Servers

@@ -1,12 +1,15 @@
 ---
 title: "抖音 DME — Douyin Multimodal Embedding 多模态表征模型"
 created: 2026-08-19
-updated: 2026-08-19
+updated: 2026-09-07
 type: entity
 tags: [douyin, multimodal, embedding, retrieval, representation-learning, mme-b, vector-search, contrastive-learning, generation, ai-search]
 sources: [raw/articles/douyin-dme-multimodal-embedding-multimodal-retrieval]
 confidence: 0.8
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 抖音 DME — Douyin Multimodal Embedding 多模态表征模型

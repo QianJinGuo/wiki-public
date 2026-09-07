@@ -1,13 +1,16 @@
 ---
 title: "启发学习（Inspirational Learning）：让大模型认知从外化到内生"
 created: 2026-08-26
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [llm, reasoning, learning, analogy, inference, agent, cognitive]
 provenance_state: extracted
 sources:
   - raw/articles/inspirational-learning-isaac-llm-2026
 confidence: 0.7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 启发学习（Inspirational Learning）：让大模型认知从外化到内生

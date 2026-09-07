@@ -7,6 +7,9 @@ tags: [ai, agent, aws, bedrock, seatunnel, etl, data-integration, model-evaluati
 sources: [raw/articles/基于-amazon-bedrock-的-apache-seatunnel-ai-cli-模型评测从配置生成到真实执行]
 confidence: 0.84
 score: 64
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Apache SeaTunnel AI CLI 模型评测

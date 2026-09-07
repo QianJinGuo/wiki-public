@@ -1,12 +1,15 @@
 ---
 title: "GLM-5.3 后训练技术博客解析：SAO、环境合成与涌现的网络能力"
 created: 2026-08-18
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [glm, glm-5, llm, zhipu, 智谱, rl, post-training, agent, long-context, sparse-attention]
 sources: [raw/articles/glm-53-post-training-technical-blog-zhipu-xhs-2026]
 confidence: 0.8
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # GLM-5.3 后训练技术博客解析：SAO、环境合成与涌现的网络能力

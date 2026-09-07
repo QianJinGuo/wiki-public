@@ -7,6 +7,9 @@ tags: [wechat, ai, ollama, local-ai, gguf, mlx, agent-tools]
 rating: v8c7
 sources:
   - raw/articles/ollama-已经不是-2024-年那个了一键配齐-claude-codecodexopenclaw
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Ollama 已经不是 2024 年那个了！一键配齐 Claude Code/Codex/OpenClaw

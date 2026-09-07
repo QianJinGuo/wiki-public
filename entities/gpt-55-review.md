@@ -3,12 +3,15 @@ title: "GPT-5.5 实测：翻车的学霸"
 type: entity
 tags: [openai, gpt, coding, review, hallucination, reward-hacking]
 created: 2026-05-16
-updated: 2026-08-01
+updated: 2026-09-07
 sources: [raw/articles/gpt-55实测有点翻车nn写完文章后我已经拿codex中的gpt-55测了不少长步骤的复杂任务做动画做ppt做网站nn我的感受是这是个非常无聊的学霸会做题会尽]
 confidence: 0.8
 provenance_state: extracted
 review_value: 7
 review_confidence: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # GPT-5.5 实测：翻车的学霸

@@ -1,7 +1,7 @@
 ---
 title: "EnvHarness: Awakening Static Worlds for Agent Learning"
 created: 2026-08-24
-updated: 2026-08-25
+updated: 2026-09-07
 type: entity
 tags: [envharness, agent-environment, environment-generation, agent-learning, google, harness, curriculum, co-evolution, envrigger]
 confidence: 0.85
@@ -9,6 +9,9 @@ provenance_state: extracted
 sources: [envharness-awakening-static-worlds-google-mozhi-2026-08-24]
 review_value: 8
 review_confidence: 8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # EnvHarness: Awakening Static Worlds for Agent Learning

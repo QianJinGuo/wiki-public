@@ -2,7 +2,7 @@
 
 title: "The Data Canary"
 created: 2026-07-10
-updated: 2026-08-24
+updated: 2026-09-07
 type: entity
 tags: [netflix, coding, meta]
 sources: [raw/articles/the-data-canary-how-netflix-validates-catalog-metadata]
@@ -12,6 +12,9 @@ review_recommendation: strong
 review_stars: 4
 confidence: medium
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # The Data Canary: How Netflix Validates Catalog Metadata

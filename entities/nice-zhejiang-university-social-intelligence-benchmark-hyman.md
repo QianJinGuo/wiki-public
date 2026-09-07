@@ -2,7 +2,7 @@
 title: "NICE：浙大提出的理论驱动型 LLM 社会智能诊断基准"
 description: "浙江大学心理与行为科学系与人工智能学院联合团队提出 NICE 评测基准：4 大类（Cognition/Interaction/Experience/Norm）11 维度 34 能力内涵 + 137 道中国情境排序题 + 5 LLM 评测 + 沟通(D3)是集体短板 + 心理测量学全程方法"
 created: 2026-06-12
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [benchmark, social-intelligence, evaluation, theory-grounded, llm-evaluation, zhejiang-university, hyman, communication, psychometrics, diagnosis, alignment, agent-evaluation]
 source: "[[raw/articles/nice-zhejiang-university-social-intelligence-benchmark-hyman-2026-06-12]]"
@@ -13,6 +13,9 @@ review_confidence: 8
 review_recommendation: strong
 provenance_state: extracted
 confidence: 0.8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # NICE：浙大提出的理论驱动型 LLM 社会智能诊断基准

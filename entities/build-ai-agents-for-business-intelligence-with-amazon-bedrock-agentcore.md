@@ -4,10 +4,13 @@ title: Bedrock AgentCore 构建 BI 智能体
 type: entity
 tags: [bedrock, aws, agent, llm]
 created: 2026-05-22
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 9
 sources: [raw/articles/build-ai-agents-for-business-intelligence-with-amazon-bedrock-agentcore]
 review_confidence: 9
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 核心要点

@@ -1,7 +1,7 @@
 ---
 title: "AI Native 团队协同：知识底座＋Agent＋人三层闭环"
 created: 2026-08-14
-updated: 2026-08-14
+updated: 2026-09-07
 type: entity
 tags: [ai-native, collaboration, knowledge-base, agent, organization, ontology, taobao, production-side]
 sources: [raw/articles/ai-native-team-collaboration-knowledge-base-agent-human-taobao-2026]
@@ -9,6 +9,9 @@ review_value: 7
 review_confidence: 8
 confidence: 0.8
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # AI Native 团队协同：知识底座＋Agent＋人三层闭环

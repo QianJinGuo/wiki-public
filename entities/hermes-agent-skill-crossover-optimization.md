@@ -2,7 +2,7 @@
 
 title: Hermes Agent Skill 互优化：SkillEvolver × Darwin × EmbodiSkill 4 轮闭环
 created: 2026-06-04
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [hermes-agent, skill-self-evolution, darwin-skill, skill-evolver, embodiskill, crossover-optimization, closed-loop, self-evolving, microsoft-research, tsinghua, nanjing-university, skilllens, mutation-selection-inheritance, kk-da-shu]
 confidence: 0.93
@@ -11,6 +11,9 @@ sources: [raw/articles/hermes-agent-skill-crossover-optimization-skillevolver-da
 review_value: 10
 review_confidence: 9
 review_recommendation: strong
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Hermes Agent Skill 互优化：SkillEvolver × Darwin × EmbodiSkill 4 轮闭环

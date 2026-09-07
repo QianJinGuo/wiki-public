@@ -7,12 +7,15 @@ platform: wechat
 original_platform: InfoQ
 published: 2026-05-13
 created: 2026-05-13
-updated: 2026-08-29
+updated: 2026-09-07
 tags: [database, tidb, agent-infra, serverless, multi-tenant, kimi]
 type: entity
 sources: [raw/articles/kimi-k2-tidb-agent-database-huangdongxu-20260513, raw/articles/tidb-agent-stack-infra-kimi-k3-founder-park-2026-08-18]
 review_value: 8
 review_confidence: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 核心概念

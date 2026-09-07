@@ -2,7 +2,7 @@
 title: "三器合一（Comet + OpenSpec + Superpowers）：用文件系统给 AI 编程上工程纪律 — 术哥源码级深度分析（WHAT/HOW/WHEN-NEXT 分工 + 9 平台 Hook + 上下文压缩 + 多 Agent 协作 + Shell+YAML 工程取舍）"
 description: "Comet + OpenSpec + Superpowers 三器流水线：Comet 是 YAML 状态机编排层（管 WHEN/NEXT），OpenSpec 是规格驱动开发层（管 WHAT，26 平台适配器 + Delta Spec + Artifact Graph），Superpowers 是方法论技能库层（管 HOW，57 行 Shell 脚本 + 12+ SKILL.md 文件）。三者通过文件系统（Markdown + YAML + Shell）而非数据库实现工程纪律，9 平台支持 PreToolUse Hook 写保护，Context 压缩模式可省 25-30% token。术哥 2026-06-17 源码级分析。"
 created: 2026-06-17
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [comet, openspec, superpowers, ai-coding, three-tools-pipeline, engineering-discipline, filesystem-driven, yaml-state-machine, shell-script, multi-platform-adapter, multi-agent, subagent-driven-development, context-compression, sha256-tracking, pre-tool-use-hook, brownfield-spec, delta-spec, artifact-graph, ai-coding-workflow, spec-driven-development, shuge, wechat]
 sources: [raw/articles/three-tools-comet-openspec-superpowers-ai-coding-shuge-2026-06-17]
@@ -11,6 +11,9 @@ review_confidence: 8
 review_recommendation: strong
 review_stars: 4
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 三器合一（Comet + OpenSpec + Superpowers）：用文件系统给 AI 编程上工程纪律

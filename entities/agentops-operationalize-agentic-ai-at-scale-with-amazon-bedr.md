@@ -1,13 +1,16 @@
 ---
 title: "AgentOps: Operationalize agentic AI at scale with Amazon Bedrock AgentCore"
 created: 2026-06-10
-updated: 2026-07-31
+updated: 2026-09-07
 tags: [agent, architecture, aws, data, evaluation, llm, memory, mlops, open-source, prompt, rag, rl, security, tool-use]
 review_value: 7
 review_confidence: 7
 type: entity
 sources:
   - raw/articles/agentops-operationalize-agentic-ai-at-scale-with-amazon-bedr
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # AgentOps: Operationalize agentic AI at scale with Amazon Bedrock AgentCore

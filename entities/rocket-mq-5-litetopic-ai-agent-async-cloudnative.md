@@ -2,13 +2,16 @@
 
 title: Apache RocketMQ 5.5.0 LiteTopic：AI Agent 异步通信消息模型
 created: 2026-05-26
-updated: 2026-05-26
+updated: 2026-09-07
 type: entity
 tags: [messaging, rocketmq, agent, async, infrastructure, rocksdb, event-driven]
 confidence: 0.8
 provenance_state: extracted
 sources: [raw/articles/rocket-mq-5-litetopic-ai-agent-async-cloudnative]
 review_value: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 背景：Agent 异步通信成为行业共识

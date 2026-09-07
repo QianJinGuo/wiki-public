@@ -2,7 +2,7 @@
 description: Auto-generated placeholder
 title: "Natural Language Autoencoders — Anthropic 激活→文字可解释性方法"
 created: 2026-05-09
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [interpretability, anthropic, mech-interp]
 source_url:
@@ -12,6 +12,9 @@ review_confidence: 9
 review_recommendation: strong
 review_stars: 5
 provenance_state: inferred
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 > -> [[raw/articles/anthropic-nla-natural-language-autoencoders-interpretability|原文存档]]
 

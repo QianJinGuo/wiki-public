@@ -1,12 +1,15 @@
 ---
 title: "设计系统的新作者：从 Agent 读到 Agent 写"
 created: 2026-07-02
-updated: 2026-07-02
+updated: 2026-09-07
 type: entity
 tags: [design-systems, agent, mcp, figma, storybook, design-md, skill-md, ai-agent, tooling]
 sources: [raw/articles/design-systems-agent-author-evolution-murphytrueman]
 confidence: 0.8
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 设计系统的新作者：从 Agent 读到 Agent 写

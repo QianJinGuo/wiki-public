@@ -7,6 +7,9 @@ tags: [deepseek, ai, agent, reasoning-data, harness-engineering]
 sources: [raw/articles/deepseek之后中国ai自己出题杀进nature通讯全球仅4家]
 confidence: 0.55
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # DeepSeek之后，中国AI「自己出题」杀进Nature通讯！全球仅4家

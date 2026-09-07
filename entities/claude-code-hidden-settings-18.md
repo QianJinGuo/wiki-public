@@ -15,9 +15,12 @@ types: [claude-code-config, agent-engineering]
 review_value: 7
 review_confidence: 7
 created: 2026-05-25
-updated: 2026-08-29
+updated: 2026-09-07
 sources:
   - raw/articles/claude-code-hidden-settings-18
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Claude Code 18个隐藏设置

@@ -2,12 +2,15 @@
 title: "AI Native 混沌工程——Agent 军团 + 共享黑板的韧性验证平台"
 description: "千问AI平台混沌工程实践：9 层 Agent 军团 + Redis 共享黑板 + 三道安全闸门 + 双进化回路（经验反馈+AI 飞轮）+ A2A 标准化接入，单次验证闭环数天→40 分钟、SRE 专职→0.1 人执行"
 created: 2026-08-06
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 8
 review_confidence: 9
 type: entity
 tags: [chaos-engineering, ai-native, multi-agent, blackboard, alibaba, resilience, a2a, fault-injection]
 sources: [raw/articles/qwen-ai-native-chaos-engineering-agent-corps-2026-08-06]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # AI Native 混沌工程——Agent 军团 + 共享黑板的韧性验证平台

@@ -8,6 +8,9 @@ sources: [raw/articles/民生银行基于规格驱动开发sdd的-codeagent-私�
 confidence: high
 provenance_state: extracted
 review_value: 5
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 ## 背景与挑战
 银行私域研发环境中，AI 赋能研发在面向端到端交付任务时面临多重挑战：  ^[raw/articles/民生银行基于规格驱动开发sdd的-codeagent-私域研发探索与实践.md]

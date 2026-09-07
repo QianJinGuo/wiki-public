@@ -1,12 +1,15 @@
 ---
 title: "Handroid：同一套硬件在人形机器人与灵巧手之间重构（UNC+Stanford）"
 created: 2026-08-14
-updated: 2026-08-14
+updated: 2026-09-07
 type: entity
 tags: [robotics, embodied-ai, reconfigurable-robot, dexterous-manipulation, diffusion-policy, reinforcement-learning]
 sources: [raw/articles/handroid-reconfigurable-robot-dexterous-hand-humanoid-unc-stanford-2026]
 confidence: 0.75
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Handroid：同一套硬件在人形机器人与灵巧手之间重构

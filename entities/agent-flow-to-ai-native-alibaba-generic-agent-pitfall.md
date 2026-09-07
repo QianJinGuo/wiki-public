@@ -7,6 +7,9 @@ type: entity
 tags: [agent, architecture, flow, ai-native, skill, orchestration]
 sources: [raw/articles/agent-flow-to-ai-native-alibaba-generic-agent-pitfall]
 confidence: 0.75
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 从 Agent Flow 到 AI Native：通用 Agent 的架构反思

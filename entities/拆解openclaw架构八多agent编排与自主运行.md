@@ -8,6 +8,9 @@ tags: [wechat, ai]
 rating: v8c8
 sources:
   - raw/articles/拆解openclaw架构八多agent编排与自主运行
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 拆解OpenClaw架构（八）：多Agent编排与自主运行

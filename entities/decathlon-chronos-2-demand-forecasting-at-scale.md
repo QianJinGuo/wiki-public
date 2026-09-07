@@ -2,11 +2,14 @@
 
 title: "Decathlon Chronos-2 需求预测规模化部署"
 created: 2026-08-31
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [time-series, forecasting, foundation-model, chronos, retail, supply-chain, lora, autogluon]
 sources: [raw/articles/decathlon-chronos-2-demand-forecasting-at-scale]
 confidence: 0.8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Decathlon Chronos-2 需求预测规模化部署

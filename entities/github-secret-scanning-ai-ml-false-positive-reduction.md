@@ -4,13 +4,16 @@ type: entity
 tags: [security, secret-scanning, ai-ml, github, devsecops, false-positive-reduction]
 provenance_state: inferred
 created: 2026-06-23
-updated: 2026-08-01
+updated: 2026-09-07
 sources:
   - raw/articles/github-secret-scanning-ai-ml-false-positive-reduction
 review_value: 8
 review_confidence: 9
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # GitHub Secret Scanning: AI/ML 驱动的大规模误报降低

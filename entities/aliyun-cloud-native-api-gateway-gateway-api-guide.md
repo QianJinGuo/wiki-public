@@ -1,7 +1,7 @@
 ---
 title: "告别 Ingress Nginx：云原生 API 网关 Gateway API 使用指引"
 created: 2026-05-23
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [k8s, gateway-api, ingress, higress, cloud-native, api-gateway, architecture]
 source: [[raw/articles/aliyun-cloud-native-api-gateway-gateway-api-guide]]
@@ -9,6 +9,9 @@ confidence: 0.85
 review_value: 7
 sources:
   - raw/articles/aliyun-cloud-native-api-gateway-gateway-api-guide
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 告别 Ingress Nginx：云原生 API 网关 Gateway API 使用指引

@@ -1,10 +1,13 @@
 ---
 title: "Evaluating AI Agents: A Production Blueprint with Strands and AgentCore"
 created: 2026-07-24
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [aws, bedrock, agent-evaluation, strands-agents, agentcore, ai-agents, llm-as-judge, production, motorway, eval-framework]
 sources: [raw/articles/evaluating-ai-agents-a-production-blueprint-with-strands-and]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Evaluating AI Agents: A Production Blueprint with Strands and AgentCore

@@ -3,7 +3,7 @@
 title: "MobileGym：中科院开源浏览器内安卓仿真平台，Mobile Agent 训练与评测基础设施"
 description: "中科院自动化所模式识别实验室开源 MobileGym：28 App 仿真（微信/小红书/支付宝/B站）+ JSON 结构化状态（可读/可写/可复制/零后果）+ 416 任务模板/27000+ 实例 + 9 Agent 评测 + 真机迁移 95.1% + USE 副作用指标"
 created: 2026-06-02
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [agent, evaluation, mobile-agent, mobilegym, mobile-agent, agent-benchmark, sim2real, gui-agent, browser-simulation, 浏览器仿真, cas-institute, 中科院, 自动化所, mode-recognition, rl-training, grpo, qwen3-vl, use-metric, 副作用检测, agent-safety, agent-eval, 交互保真, interaction-fidelity, vlm-as-judge, 答题卡]
 sources:
@@ -17,6 +17,9 @@ related:
   - entities/agent-reliability-engineering-skillify-continuous-improvement
   - entities/agent-harness-architecture-design-production-guide
   - entities/agent-engineering-principles-architecture-practice
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # MobileGym：中科院开源浏览器内安卓仿真平台，Mobile Agent 训练与评测基础设施

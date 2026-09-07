@@ -3,12 +3,15 @@ title: "peerd: 浏览器原生的 AI Agent Harness"
 type: entity
 tags: [agent-harness, browser, security, sandboxing, peer-to-peer, chrome-extension]
 created: 2026-06-25
-updated: 2026-08-29
+updated: 2026-09-07
 sources: [raw/articles/peerd-browser-native-agent-harness]
 review_value: 9
 review_confidence: 8
 review_stars: 5
 related: [entities/gemini-35-flash-computer-use-agent-harness]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # peerd: 浏览器原生的 AI Agent Harness

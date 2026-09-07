@@ -1,7 +1,7 @@
 ---
 title: "AI Infra 入门：RMSNorm、Softmax、Causal Mask、Sampling 的数学与底层优化"
 created: 2026-06-17
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags:
   - ai-infra
@@ -18,6 +18,9 @@ sources:
 confidence: 0.90
 review_value: 9
 review_confidence: 8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # AI Infra 入门：RMSNorm、Softmax、Causal Mask、Sampling 的数学与底层优化

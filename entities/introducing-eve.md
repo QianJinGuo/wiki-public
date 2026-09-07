@@ -2,7 +2,7 @@
 
 title: "Introducing eve"
 created: 2026-06-19
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [agent, ai, vercel]
 source: "[[raw/articles/introducing-eve]]"
@@ -11,6 +11,9 @@ review_confidence: 8
 review_stars: 6
 sources:
   - raw/articles/introducing-eve
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Introducing eve

@@ -10,7 +10,10 @@ publish_date: 2026-05-19
 type: entity
 tags: [testing, automation, e2e, ai-coding, aliyun, dataworks]
 created: 2026-05-19
-updated: 2026-08-29
+updated: 2026-09-07
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 概述

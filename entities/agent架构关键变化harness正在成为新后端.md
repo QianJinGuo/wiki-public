@@ -10,6 +10,10 @@ review_confidence: 7
 sources:
   - raw/articles/agent架构关键变化harness正在成为新后端
 score_validated: 2026-09-05
+reviewed: 2026-09-07
+review_verdict: hub-retained
+review_category: dup
+review_note: "judged dup-0.85: 与17k全版条重复; retained as hub (in-links>=20); MOC rewrite candidate"
 ---
 
 > -> [[raw/articles/agent架构关键变化harness正在成为新后端.md|原文存档]]

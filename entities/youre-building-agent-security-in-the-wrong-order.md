@@ -1,13 +1,16 @@
 ---
 title: "You're building agent security in the wrong order"
 created: 2026-06-10
-updated: 2026-07-31
+updated: 2026-09-07
 tags: [agent, architecture, code, data, memory, mlops, observability, security, tool-use, workflow]
 review_value: 7
 review_confidence: 7
 type: entity
 sources:
   - raw/articles/youre-building-agent-security-in-the-wrong-order
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # You're building agent security in the wrong order

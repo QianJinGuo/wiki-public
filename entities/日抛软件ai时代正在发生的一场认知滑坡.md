@@ -9,6 +9,9 @@ tags: [wechat, ai]
 rating: v7c7
 sources:
   - raw/articles/日抛软件ai时代正在发生的一场认知滑坡
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # “日抛软件”：AI时代正在发生的一场认知滑坡

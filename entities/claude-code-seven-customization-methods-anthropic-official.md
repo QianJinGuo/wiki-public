@@ -2,7 +2,7 @@
 
 title: "Claude Code 七种自定义方法：官方全景指南"
 created: 2026-06-26
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [claude-code, customization, claude-md, rules, skills, subagents, hooks, output-styles, system-prompt, anthropic, harness]
 sources: [raw/articles/claude-code-seven-customization-methods-anthropic-official]
@@ -10,6 +10,9 @@ confidence: 0.9
 provenance_state: extracted
 review_value: 7
 review_confidence: 8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Claude Code 七种自定义方法：官方全景指南

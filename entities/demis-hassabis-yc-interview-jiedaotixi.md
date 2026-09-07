@@ -2,13 +2,16 @@
 
 title: "Demis Hassabis YC Interview: AGI 时间线、记忆机制、Agent 未来"
 created: 2026-06-10
-updated: 2026-08-01
+updated: 2026-09-07
 tags: [agent, agi, memory, multimodal, mcts, model-distillation, alphafold, virtual-cell, scientific-discovery]
 review_value: 7
 review_confidence: 7
 type: entity
 sources:
   - raw/articles/demis-hassabis-yc-interview-jiedaotixi
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Demis Hassabis YC Interview: AGI 时间线、记忆机制、Agent 未来

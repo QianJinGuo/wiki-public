@@ -2,7 +2,7 @@
 title: "Prompt Injection 的机制解释：基于角色感知的 LLM 安全分析"
 description: "从机制可解释性角度解释 prompt injection 的工作原理，揭示 chat template role tags 如何影响 LLM 行为，提出'角色科学'研究方向"
 created: 2026-06-25
-updated: 2026-08-30
+updated: 2026-09-07
 type: entity
 tags: [prompt-injection, mechanistic-interpretability, llm-safety, role-tags, agent-security, icml]
 provenance_state: inferred
@@ -13,6 +13,9 @@ review_recommendation: strong
 review_stars: 5
 sources:
   - raw/articles/mechanistic-explanation-prompt-injection-roles
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Prompt Injection 的机制解释：基于角色感知的 LLM 安全分析

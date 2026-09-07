@@ -11,6 +11,9 @@ review_value: 7
 review_confidence: 7
 review_recommendation: worth-reading
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # AWS Bedrock AgentCore 多账户对话式运维助手：基于 Strands Agents + DevOps Agent 的生产案例

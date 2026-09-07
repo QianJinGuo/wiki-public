@@ -1,13 +1,16 @@
 ---
 title: "面向复杂业务场景的智能分析 Skills 架构设计与演进实践"
 created: 2026-07-17
-updated: 2026-07-27
+updated: 2026-09-07
 type: entity
 tags: [skills-architecture, knowledge-management, skill-design, knowledge-layering, routing-layer, token-economy, knowledge-decay, eval-driven-update, alibaba, local-life, analysis-skills]
 sources:
   - raw/articles/alibaba-complex-business-skills-architecture-evolution
 confidence: 0.85
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 面向复杂业务场景的智能分析 Skills 架构设计与演进实践

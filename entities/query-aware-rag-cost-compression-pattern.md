@@ -1,11 +1,14 @@
 ---
 title: "Query-Aware Compression: RAG 成本优化的后检索过滤模式"
 created: 2026-08-22
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [rag, llm, cost-optimization, retrieval, prompt-engineering, aws]
 sources: [raw/articles/reduce-rag-costs-on-amazon-bedrock-with-query-aware-compress]
 confidence: 0.7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Query-Aware Compression: RAG 成本优化的后检索过滤模式

@@ -10,7 +10,9 @@ sources:
   - raw/articles/打造可靠的-ai-编程环境claude-code-hooks-完整开发者指南
 review_value: 9
 review_confidence: 7
-
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 [[raw/articles/打造可靠的-ai-编程环境claude-code-hooks-完整开发者指南.md]] ^[raw/articles/打造可靠的-ai-编程环境claude-code-hooks-完整开发者指南.md]

@@ -1,11 +1,14 @@
 ---
 title: "MirrorCode: AI 从行为重建完整程序的长时程基准（Epoch AI × METR）"
 created: 2026-08-05
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [benchmark, long-horizon, coding-agent, evaluation, agent]
 sources: [raw/articles/mirrorcode-long-horizon-benchmark-epoch-ai-metr]
 confidence: 0.75
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # MirrorCode: AI 从行为重建完整程序的长时程基准（Epoch AI × METR）

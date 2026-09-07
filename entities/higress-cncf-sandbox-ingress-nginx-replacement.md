@@ -3,11 +3,14 @@
 title: "ingress-nginx已退役higress如何平滑替代"
 type: entity
 created: 2026-05-18
-updated: 2026-08-29
+updated: 2026-09-07
 tags: [ai-gateway, higress, ingress, cncf]
 sources: [raw/articles/higress-cncf-sandbox-ingress-nginx-replacement, raw/articles/aliyun-cloud-native-api-gateway-gateway-api-guide]
 review_value: 7
 review_confidence: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 事件概述

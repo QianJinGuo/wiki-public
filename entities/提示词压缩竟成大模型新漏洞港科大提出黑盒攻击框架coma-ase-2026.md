@@ -7,6 +7,9 @@ tags: [llm, prompt-engineering, security, agent, inference-attack, prompt-compre
 sources: [raw/articles/提示词压缩竟成大模型新漏洞港科大提出黑盒攻击框架coma-ase-2026, raw/articles/提示词压缩竟成大模型新漏洞港科大提出黑盒攻击框架coma-ase-2026-2026-07-08]
 confidence: 0.64
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 提示词压缩竟成大模型新漏洞？港科大提出黑盒攻击框架COMA | ASE 2026

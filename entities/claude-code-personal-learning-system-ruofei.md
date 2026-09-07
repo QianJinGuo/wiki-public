@@ -1,12 +1,15 @@
 ---
 title: "Claude Code 个人学习系统：从答案机到学习工作台的 5 步法"
 created: 2026-06-23
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [claude-code, learning-system, self-harness, retrieval-practice, education, knowledge-management, claude, 若飞]
 sources: [raw/articles/claude-code-personal-learning-system-ruofei]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Claude Code 个人学习系统：从答案机到学习工作台

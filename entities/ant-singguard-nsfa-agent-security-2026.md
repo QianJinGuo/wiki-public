@@ -1,12 +1,15 @@
 ---
 title: "Ant SingGuard-NSFA: 蚂蚁开源AI Agent安全双模推理护栏框架"
 created: 2026-07-12
-updated: 2026-07-12
+updated: 2026-09-07
 type: entity
 tags: [agent, security, safety, ant, singguard, nsfa, open-source, claude-code, openclaw]
 confidence: 0.7
 provenance_state: extracted
 sources: [raw/articles/claude-code-security-ant-singguard-nsfa-2026]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Ant SingGuard-NSFA: 蚂蚁开源AI Agent安全双模推理护栏框架

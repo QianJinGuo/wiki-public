@@ -1,12 +1,15 @@
 ---
 title: "Scaling Domain Data Repetition in LLM Pretraining — 域数据重复率随规模扩展"
 created: 2026-08-19
-updated: 2026-08-19
+updated: 2026-09-07
 type: entity
 tags: [llm, pretraining, data-repetition, data-scaling, tokens-per-parameter, training, ai2, domain-data]
 sources: [raw/articles/arxiv-2608-14071-scaling-domain-data-repetition-llm-pretraining]
 confidence: 0.8
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Scaling Domain Data Repetition in LLM Pretraining — 域数据重复率随规模扩展

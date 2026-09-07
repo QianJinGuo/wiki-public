@@ -1,7 +1,7 @@
 ---
 title: "业务 Agent 增强层架构：复用通用 Agent 基座，把业务能力做成可验证增强层"
 created: "2026-06-06"
-updated: 2026-08-30
+updated: 2026-09-07
 type: entity
 tags: [business-agent, augmentation-layer, general-agent-base, codex, claude-code, mvp, evaluation, observability, oncall, knowledge-base, enterprise-agent, agent-harness, mvp-protocol, baseline, knowledge-graph, tool-design]
 sources: [raw/articles/ai-xiaolaoliu-business-agent-augmentation-layer-general-base-20260606]
@@ -9,6 +9,9 @@ review_value: 7
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 概述

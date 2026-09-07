@@ -7,6 +7,9 @@ tags: [distillation, online-policy-distillation, llm, vlm, privileged-informatio
 confidence: 0.7
 provenance_state: extracted
 sources: [raw/articles/蒸馏效果起飞-dopd破解-特权幻觉-让在线策略蒸馏更有效]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # DOPD: 双在线策略蒸馏 — 破解特权幻觉，让蒸馏更有效

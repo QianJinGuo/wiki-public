@@ -3,7 +3,7 @@ title: "Multi-Agent AI Safety Research Funding Call（DeepMind 主导，1000 万
 description: "Google DeepMind 联合 Schmidt Sciences、Cooperative AI Foundation、ARIA、获得 Google.org 支持，2026-06-11 发布的最多 1000 万美元多 Agent 安全研究资助公告。四大优先方向：Sandboxes/testbeds、agent networks 性质、agent infrastructure 协议（身份/声誉/承诺）、deployed population 监督。申请截止 2026-08-08。"
 source: "[[raw/articles/investing-in-multi-agent-ai-safety-research]]"
 created: 2026-06-18
-updated: 2026-07-27
+updated: 2026-09-07
 type: entity
 tags: [ai-safety, multi-agent, research-funding, deepmind, schmidt-sciences, cooperative-ai, aria, agent-protocols, agent-oversight, sandboxes, google-deepmind]
 review_value: 8
@@ -14,6 +14,9 @@ sources:
   - raw/articles/investing-in-multi-agent-ai-safety-research
 confidence: high
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Multi-Agent AI Safety Research Funding Call（DeepMind 主导，1000 万美元，四大方向）

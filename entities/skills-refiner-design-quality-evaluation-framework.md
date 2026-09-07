@@ -2,13 +2,16 @@
 
 title: "Skills赏析：使用skills-refiner提升skill质量"
 created: 2026-05-20
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [skills, skill-design, evaluation, agent, skill-refiner, context-engineering, skill-creator]
 confidence: 0.8
 provenance_state: extracted
 sources: [raw/articles/skills-refiner-design-quality-evaluation-framework]
 review_value: 5
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 断言测试的结构性盲区

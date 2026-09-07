@@ -1,12 +1,15 @@
 ---
 title: "Agent 记忆生命周期管理：TTL / 相关度衰减 / 合并（AgentCore Memory 架构）"
 created: 2026-09-06
-updated: 2026-09-06
+updated: 2026-09-07
 type: entity
 tags: [agent-memory, memory-lifecycle, episodic-memory, semantic-memory, procedural-memory, agentcore, memory-management]
 sources: [raw/articles/designing-lifecycle-policies-for-agentcore-memory]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Agent 记忆生命周期管理：TTL / 相关度衰减 / 合并（AgentCore Memory 架构）

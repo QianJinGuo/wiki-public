@@ -2,11 +2,14 @@
 title: "LocalDPO — 面向视频扩散模型的局部细节偏好优化方法 (CVPR 2026)"
 type: entity
 created: 2026-07-05
-updated: 2026-09-05
+updated: 2026-09-07
 tags: [diffusion, video-generation, dpo, preference-optimization, cvpr2026, multimodal, generative-ai, fine-tuning]
 rating: v8c8
 sources:
   - raw/articles/localdpo-cvpr2026-video-diffusion-local-preference-taobao
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # LocalDPO — 面向视频扩散模型的局部细节偏好优化方法 (CVPR 2026)

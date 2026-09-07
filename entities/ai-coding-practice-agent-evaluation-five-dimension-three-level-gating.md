@@ -8,10 +8,13 @@ review_value: 8
 review_confidence: 7
 sources:
   - raw/articles/ai-coding-practice-agent-eval-framework-five-dimensions-three-level-gating
-updated: 2026-06-19
+updated: 2026-09-07
 related: [entities/ai-evals-methodology, entities/agent-eval-wallezhang-yaml-driven-agent-evaluation-framework, entities/agent-evalkit-aws-opensource-cli-agent-eval-toolkit, entities/aws-reinforcement-fine-tuning-llm-as-judge, entities/spotify-llm-evals-funnel-not-fork, entities/langsmith-trajectory-evals, entities/saas-bench-gui-agent-eval-unipat, entities/taobao-smart-shopping-guide-agent-evaluation-pzmx, entities/aliyun-agentloop-enterprise-agent-self-evolution-flywheel, entities/harness-engineered-business-agent-evaluation-aliyun-boyu, entities/better-harness-eval-trace-harness-hill-climbing, entities/claw-swe-bench-harness-evaluation-benchmark-tokenrhythm, entities/anthropic-demystifying-evals-for-ai-agents]
 strategic_context: "[[queries/research-frontier-map|Frontier 1 — Harness/Skill 从个人能力到组织资产]]"
 provenance_state: inferred
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # AI Agent 评测实战：5 维指标体系 + L1/L2/L3 准出分级

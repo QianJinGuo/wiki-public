@@ -7,7 +7,10 @@ summary: "Capacity Blocks vs SageMaker Training Plans决策树 / 40-50%/70-75%�
 sources: [raw/articles/aws-ec2-capacity-blocks-gpu-ml]
 review_value: 6
 review_confidence: 9
-updated: 2026-09-05
+updated: 2026-09-07
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 # EC2 Capacity Blocks：GPU短期容量决策指南
 ## 三个关键洞察

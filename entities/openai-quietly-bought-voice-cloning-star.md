@@ -3,11 +3,14 @@ title: "OpenAI Quietly Bought Voice-Cloning Startup Weights.gg"
 type: entity
 tags: [openai, voice-cloning, weigths-gg, ip, acquisition, ai-industry]
 created: 2026-05-18
-updated: 2026-07-31
+updated: 2026-09-07
 review_value: 7.5
 review_confidence: 8
 review_recommendation: worth-reading
 sources: [raw/articles/openai-quietly-bought-voice-cloning-star]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 ## 核心要点
 - OpenAI 收购了语音克隆初创 Weights.gg（6人团队 + 全部知识产权），交易金额未披露 

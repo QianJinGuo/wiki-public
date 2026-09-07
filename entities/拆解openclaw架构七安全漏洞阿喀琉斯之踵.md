@@ -8,6 +8,9 @@ tags: [wechat, ai]
 rating: v9c8
 sources:
   - raw/articles/拆解openclaw架构七安全漏洞阿喀琉斯之踵
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 拆解OpenClaw架构（七）：安全漏洞，阿喀琉斯之踵

@@ -4,11 +4,14 @@ title: "Claude Code Openclaw Usage Ettin"
 type: entity
 tags: [agent, claude-code, openclaw, ettin-reranker, reranker, memory-system, retrieve-then-rerank, modernbert, cross-encoder, information-retrieval, agent-architecture, huggingface]
 created: 2026-05-21
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 8
 review_confidence: 8
 sources: [raw/articles/ettin-reranker-family, raw/articles/claude-code-openclaw-memory-comparison]
 provenance_state: synthesized
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 概述

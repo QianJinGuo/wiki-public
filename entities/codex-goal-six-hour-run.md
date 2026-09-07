@@ -8,12 +8,15 @@ feature: /goal
 version: "v0.128.0"
 release_date: 2026-04-30
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 8
 review_confidence: 8
 sources: [raw/articles/codex-goal-six-hour-run]
 tags: [agent, codex, openai, long-horizon, goal-persistence, runtime-continuation, context-management, autonomous-agent, session-resilience, task-contract]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 概述

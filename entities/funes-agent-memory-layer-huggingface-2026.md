@@ -1,12 +1,15 @@
 ---
 title: "funes：Hugging Face 持久化 Agent 记忆层（traces 变可用记忆）"
 created: 2026-09-05
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [agent-memory, funes, hugging-face, coding-agent, lance, retrieval, bm25, cross-encoder, vector-search, session, provenance, context-engineering]
 sources: [raw/articles/give-your-coding-agents-a-memory-you-own]
 confidence: 0.72
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # funes：Hugging Face 持久化 Agent 记忆层（traces 变可用记忆）

@@ -1,13 +1,16 @@
 ---
 title: "GPT 5.4 是 Codex 的一次大跨越：四维评估视角与 Agent 战争回归"
 created: 2026-06-10
-updated: 2026-08-30
+updated: 2026-09-07
 tags: [agent, code, llm, evaluation, harness-engineering, openai, anthropic, claude-code]
 review_value: 7
 review_confidence: 7
 type: entity
 sources:
   - raw/articles/gpt-54-is-a-big-step-for-codex
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # GPT 5.4 是 Codex 的一次大跨越：四维评估视角与 Agent 战争回归

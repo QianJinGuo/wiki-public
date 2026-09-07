@@ -5,11 +5,14 @@ title: "Build real-time voice streaming applications with Amazon Nova Sonic and 
 type: entity
 tags: [aws, machine-learning, llm, document-processing]
 created: 2026-05-14
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 7
 review_confidence: 8
 review_recommendation: worth-reading
 sources: [raw/articles/build-real-time-voice-streaming-with-amazon-nova-sonic-and-webrtc]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 核心要点

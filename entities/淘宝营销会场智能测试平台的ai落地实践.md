@@ -8,6 +8,9 @@ tags: [wechat, ai]
 rating: v7c7
 sources:
   - raw/articles/淘宝营销会场智能测试平台的ai落地实践
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 淘宝营销会场智能测试平台的AI落地实践

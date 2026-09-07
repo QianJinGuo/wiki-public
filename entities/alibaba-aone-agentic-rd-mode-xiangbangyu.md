@@ -4,10 +4,13 @@ title: "阿里巴巴 Aone Agentic 研发模式变革"
 type: entity
 tags: [agent, coding]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/alibaba-aone-agentic-rd-mode-xiangbangyu]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 一、在 Agent 时代，传统的"协作"和"分工"是效率的阻碍

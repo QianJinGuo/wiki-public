@@ -8,6 +8,9 @@ tags: [wechat, ai]
 rating: v7c8
 sources:
   - raw/articles/979采纳率胶水编程业务需求出码最佳实践天猫ai-coding实践系列
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 97.9%采纳率，胶水编程：业务需求出码最佳实践【天猫AI Coding实践系列】

@@ -1,11 +1,14 @@
 ---
 title: "CFT：一致特征传输的人像重打光（美图影像研究院 ECCV 2026）"
 created: 2026-08-22
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [vision, diffusion, image-relighting, eccv, rectified-flow, image-generation, multimodal, portrait]
 sources: [raw/articles/cft-consistent-feature-transport-image-relighting-eccv-2026-meitu]
 confidence: 0.75
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # CFT：一致特征传输的人像重打光（美图影像研究院 ECCV 2026）

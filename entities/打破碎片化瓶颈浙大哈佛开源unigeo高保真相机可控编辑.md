@@ -8,6 +8,9 @@ tags: [wechat, ai]
 rating: v8c8
 sources:
   - raw/articles/打破碎片化瓶颈浙大哈佛开源unigeo高保真相机可控编辑
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 打破碎片化瓶颈！浙大&哈佛开源UniGeo，高保真相机可控编辑

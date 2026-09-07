@@ -4,10 +4,13 @@ title: "Good QC for RL Data"
 type: entity
 tags: [data-quality, post-training, rl-data, evaluation, alignment, benchmark]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 9
 review_confidence: 8
 sources: [raw/articles/good-qc-for-rl-data]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > → [[raw/articles/good-qc-for-rl-data|原文存档]]

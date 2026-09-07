@@ -4,10 +4,13 @@ title: "Agent Harness 架构设计与实现：生产级 Agent 系统落地指南
 type: entity
 tags: [agent, architecture, harness, production, rag, context-engineering, memory-system, tool-system, multi-agent, etclovg, testing, cost-engineering, failure-recovery, security]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 9
 review_confidence: 8
 sources: [raw/articles/agent-harness-architecture-design-production-guide, raw/articles/harness-engineering-comprehensive-guide-conardli, raw/articles/claude-code-agentic-harness-design-patterns, raw/articles/agent-harness-engineering-survey-2026]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 1. 核心定义与演进脉络

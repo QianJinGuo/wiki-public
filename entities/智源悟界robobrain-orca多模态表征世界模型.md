@@ -7,6 +7,9 @@ tags: [multimodal, world-model, next-state-prediction, embodied-ai, robobrain, b
 sources: [raw/articles/智源悟界robobrain-orca多模态表征世界模型, raw/articles/智源悟界robobrain-orca多模态表征世界模型-2026-07-08]
 confidence: 0.82
 provenance_state: merged
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 智源悟界·RoboBrain Orca：多模态表征世界模型

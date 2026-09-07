@@ -9,6 +9,9 @@ provenance_state: extracted
 confidence: 0.65
 sources:
   - raw/articles/ai-黑客真的来了hugging-face-遭遇-agent-自主攻击靠自建glm-52反击成功-xixiaoyao
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # AI 黑客真的来了：Hugging Face 遭遇自主 AI Agent 攻击事件分析

@@ -9,6 +9,10 @@ review_confidence: 7
 type: entity
 sources:
   - raw/articles/openclaw-完全指南这可能是全网最新最全的系统化教程了32w字建议收藏-v2
+reviewed: 2026-09-07
+review_verdict: hub-retained
+review_category: dup
+review_note: "judged dup-0.8: 指南v2 1619字版，batch-44已留5760字版; retained as hub (in-links>=20); MOC rewrite candidate"
 ---
 
 # OpenClaw 完全指南：这可能是全网最新最全的系统化教程了！（3.2W字，建议收藏）

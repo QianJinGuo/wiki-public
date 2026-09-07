@@ -3,7 +3,7 @@
 title: "MUSE-Autoskill：字节 ByteBrain 自进化 Agent 五阶段技能生命周期，arXiv 2605.27366"
 description: "字节跳动 ByteBrain 2026-05-26 arXiv 论文：MUSE-Autoskill 自进化 Agent 完整五阶段技能生命周期（创建/记忆/管理/评估/改进）。技能级记忆 .memory.md / DAG 上下文管理 / 两级自适应压缩。SkillsBench 51 任务：自生成技能 87.94% 超越人类技能 68.40%，跨 Agent 转移关闭 79% 差距"
 created: 2026-06-02
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, arxiv, skill, muse-autoskill, bytebrain, bytedance, 字节跳动, self-evolving-agent, 自进化-agent, skill-lifecycle, 技能生命周期, anthropic-agent-skills, skillsbench, skill-memory, 技能级记忆, dag-context, 两级自适应压缩, gpt-5, codex, hermes, agent-skills, arxiv-2605-27366, 智数云川]
 sources:
@@ -25,6 +25,9 @@ related:
   - entities/agent-self-improvement-six-mechanisms
   - entities/ai-recursive-self-improvement-nanogpt-prime-intellect
   - entities/mira-mpa-deep-principle-ai4s-40-sota
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # MUSE-Autoskill：字节 ByteBrain 自进化 Agent 五阶段技能生命周期，arXiv 2605.27366

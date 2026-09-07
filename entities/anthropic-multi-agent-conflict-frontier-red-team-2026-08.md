@@ -1,12 +1,15 @@
 ---
 title: "Anthropic 前沿红队多智能体冲突实验 — 安全是整体属性而非个体属性"
 created: 2026-08-17
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [anthropic, multi-agent, safety, red-team, conflict, emergent, coordination, frontier-safety, claude]
 sources: [raw/articles/anthropic-multi-agent-conflict-frontier-red-team-2026-08]
 confidence: 0.6
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Anthropic 前沿红队多智能体冲突实验

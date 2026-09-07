@@ -1,7 +1,7 @@
 ---
 title: "GitLab CI/CD Kill Chain Audit — Black Hills InfoSec 2026 大规模审计研究"
 created: 2026-06-09
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [security, gitlab, ci-cd, supply-chain, audit, kill-chain, devsecops, black-hills]
 sources: [raw/articles/auditing-gitlab-cicd-kill-chain-black-hills-2026]
@@ -12,6 +12,9 @@ review_recommendation: strong
 review_stars: 4
 confidence: 0.9
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # GitLab CI/CD Kill Chain Audit — Black Hills InfoSec 2026 大规模审计研究

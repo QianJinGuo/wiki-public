@@ -1,11 +1,14 @@
 ---
 title: "Netflix MAPS: Multimodal Asset Personalization at Scale"
 created: 2026-08-29
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [multimodal, embedding, cold-start, personalization, recommendation, clp, mediafm, netflix, ml-systems]
 sources: [raw/articles/maps-netflix-multimodal-asset-personalization-2026]
 confidence: 0.85
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Netflix MAPS: Multimodal Asset Personalization at Scale

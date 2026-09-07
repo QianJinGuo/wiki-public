@@ -1,12 +1,15 @@
 ---
 title: "阿里数据研发 Harness Engineering：NL2SQL × Multi-Agent × 知识工程"
 created: "2026-07-14"
-updated: "2026-07-17"
+updated: 2026-09-07
 type: "entity"
 tags: [alibaba, harness-engineering, nl2sql, multi-agent, knowledge-engineering, data-rd, agent-workflow, hallucination]
 confidence: 0.7
 provenance_state: "extracted"
 sources: [raw/articles/alibaba-harness-engineering-nl2sql-data-rd, raw/articles/从超级个体到超级组织1688-数据中心-multi-agent-研发小队实录]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 阿里数据研发 Harness Engineering 实践

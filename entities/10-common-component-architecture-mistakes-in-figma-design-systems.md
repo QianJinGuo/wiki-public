@@ -4,11 +4,14 @@ title: "10 Common Component Architecture Mistakes in Figma Design Systems"
 type: entity
 tags: [figma, design-system, architecture, design-system, design-system]
 created: 2026-05-15
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 8
 sources: [raw/articles/10-common-component-architecture-mistakes-in-figma-design-systems]
 review_confidence: 8
 review_recommendation: strong
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 核心要点

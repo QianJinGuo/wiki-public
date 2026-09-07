@@ -1,13 +1,16 @@
 ---
 title: "3小时蒸发200万：一个AI客服引发的灾难"
 created: 2026-07-01
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [yexiaochai, ai-customer-service, project-case, ai-adoption, content-generation, ocr, lead-distribution, production-reliability, ai-risk]
 sources: [raw/articles/ai-customer-service-disaster-case-study-yexiaochai]
 review_value: 7
 review_confidence: 7
 vxc: 49
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 3小时蒸发200万：一个AI客服引发的灾难

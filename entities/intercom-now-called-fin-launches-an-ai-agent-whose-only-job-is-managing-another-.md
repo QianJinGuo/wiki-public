@@ -3,11 +3,14 @@ title: "Intercom, now called Fin, launches an AI agent whose only job is managin
 type: entity
 tags: [venturebeat]
 created: 2026-05-19
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 7
 review_confidence: 9
 review_recommendation: worth-reading
 sources: [raw/articles/intercom-now-called-fin-launches-an-ai-agent-whose-only-job-is-managing-another-]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 ## 核心要点
 - 评分：v=7 × c=9 = 63

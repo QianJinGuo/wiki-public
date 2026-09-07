@@ -1,13 +1,16 @@
 ---
 title: "GenAI消息防御：100%检测混淆联系人信息"
 created: 2026-05-08
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [rss, aws]
 summary: "GenAI检测混淆联系人信息（emoji/leetspeak）/ regex无法处理的变形/100%准确率"
 sources: [raw/articles/aws-bedrock-intelligence-message-defense]
 review_value: 6
 review_confidence: 9
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 ## 三个关键洞察
 ### 1. 混淆方式的无限性

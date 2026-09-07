@@ -4,10 +4,13 @@ title: "Skill Factory：三天手搓面向Harness设计的技能工厂"
 type: entity
 tags: [claude, harness, prompt]
 created: 2026-05-21
-updated: 2026-05-21
+updated: 2026-09-07
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/skill-factory-yueheng]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 背景：三种 Skill 创建方式对比

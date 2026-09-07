@@ -7,6 +7,9 @@ tags: [aws, devops-agent, fault-drill, chaos-engineering, kiro, on-call, ai-ops]
 sources: [raw/articles/aws-devops-agent-实战如何使用生成式-ai-加速故障演练]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # AWS DevOps Agent 实战：如何使用生成式 AI 加速故障演练

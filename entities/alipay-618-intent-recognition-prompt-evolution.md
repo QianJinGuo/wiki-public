@@ -3,9 +3,12 @@ title: 支付宝618 意图识别小模型进化实录 (阿里技术)
 type: entity
 tags: [alibaba, alipay, intent-recognition, qwen, prompt-optimization, engineering-practice, llm-evaluation, small-model, agent-engineering]
 created: 2026-07-13
-updated: 2026-07-27
+updated: 2026-09-07
 sources: [raw/articles/alipay-618-intent-recognition-small-model-evolution]
 confidence: 0.9
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 支付宝618 意图识别小模型进化实录

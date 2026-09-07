@@ -4,11 +4,14 @@ title: Tracking TamperedChef Clusters via Certificate and Code Reuse
 type: entity
 tags: [apple, llm, malware, optimization, security, vision, malvertising, code-signing, tamperedchef]
 created: 2026-05-22
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 8
 sources: [raw/articles/trackingtamperedchefclustersviacertificateandcodereuse]
 review_confidence: 9
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 核心要点

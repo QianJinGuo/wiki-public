@@ -1,7 +1,7 @@
 ---
 title: "How to Build an AI-Native Startup"
 created: 2026-06-10
-updated: 2026-08-01
+updated: 2026-09-07
 tags: [agent, ai-native, startup, harness, context-engineering, eval, cyber-fund, workflow, memory]
 review_value: 7
 review_confidence: 7
@@ -9,6 +9,9 @@ type: entity
 sources: [raw/articles/ai-native-startup-cyberfund-2026]
 confidence: 0.9
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # How to Build an AI-Native Startup

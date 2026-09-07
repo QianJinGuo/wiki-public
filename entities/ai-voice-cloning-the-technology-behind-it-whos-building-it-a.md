@@ -4,12 +4,15 @@ title: "AI Voice Cloning: The Technology Behind It, Who's Building It, and Where
 type: entity
 tags: [security, phishing, voice-cloning, tts, generative-ai]
 created: 2026-05-20
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 7
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 3
 sources: [raw/articles/AI-Voice-Cloning-The-Technology-Behind-It-Whos-Building-It-a]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 核心要点

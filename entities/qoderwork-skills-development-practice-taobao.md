@@ -1,13 +1,16 @@
 ---
 title: "QoderWork Skills 开发实践：从传统数科到 AI 数科的转型探索"
 created: 2026-07-11
-updated: 2026-08-24
+updated: 2026-09-07
 type: entity
 tags: [skills, skill-engineering, ai-coding, taobao, ai-data-scientist, prompt-engineering, knowledge-engineering]
 source_url: ""
 sources: [raw/articles/qoderwork-skills-开发实践]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # QoderWork Skills 开发实践：从传统数科到 AI 数科的转型探索

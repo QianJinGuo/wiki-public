@@ -9,11 +9,14 @@ ingested: 2026-05-08
 review_product: 72
 sha256: 1bc5d6494fec5481af00a2c1b6c4c12d1d4082cb0fd470209ab293aea54020de
 created: 2026-05-10
-updated: 2026-09-05
+updated: 2026-09-07
 tags: [inference, ai]
 review_value: 8
 sources: [raw/articles/laser-acl2026-latent-superposition-visual-reasoning]
 review_confidence: 8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > -> [[raw/articles/laser-acl2026-latent-superposition-visual-reasoning|原文存档]]
@@ -78,7 +81,7 @@ Laser 用"概率叠加"在隐空间实现多模态推理，Token 消耗降低 97
 3. **多语义叠加用熵正则化稳定训练**：当模型需要同时维持多个语义分支时，加入熵正则化项可防止语义坍缩。具体做法：计算隐状态概率分布的熵，在高熵时施加额外正则化惩罚，引导模型在不确定度降低时自动收缩到关键语义 ^[raw/articles/laser-acl2026-latent-superposition-visual-reasoning.md]
 4. **动态窗口设计实现无监督课程学习**：在训练多模态模型时，不必显式实现课程调度。只需让窗口大小随训练步数自适应收缩（宽→窄），模型会自动在早期学习全局特征、后期聚焦局部细节。DWAL 的窗口收缩策略可直接迁移 ^[raw/articles/laser-acl2026-latent-superposition-visual-reasoning.md]
 5. **97% Token 降低的实际工程价值**：Laser 的 97% token 降低意味着可以大幅减少推理时的 KV-cache 占用和通信带宽。在边缘部署或长上下文视觉推理场景中，隐式推理的效率优势显著。但需要注意：隐式推理的精度上限依赖隐空间表示的完整性，需在具体任务上验证 ^[raw/articles/laser-acl2026-latent-superposition-visual-reasoning.md]
-updated: 2026-09-05
+updated: 2026-09-07
 
 ## 相关实体
 - [[entities/pytorch-in-kernel-recsys-optimization]]

@@ -8,6 +8,9 @@ updated: 2026-08-01
 review_value: 8
 review_confidence: 7
 sources: [raw/articles/深度拆解-hermes-agent-记忆系统它修正了-openclaw-的哪层误区]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 深度拆解 Hermes Agent 记忆系统：它修正了 OpenClaw 的哪层误区？

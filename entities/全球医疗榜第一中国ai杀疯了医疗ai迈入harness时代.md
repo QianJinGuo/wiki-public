@@ -8,6 +8,9 @@ provenance_state: inferred
 rating: v8c7
 sources:
   - raw/articles/全球医疗榜第一中国ai杀疯了医疗ai迈入harness时代
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 全球医疗榜第一，中国AI杀疯了！医疗AI迈入Harness时代

@@ -7,6 +7,9 @@ tags: [ssl, self-supervised-learning, representation-collapse, jepa, world-model
 sources: [raw/articles/lecun连续转发新作visreg攻克jepa世界模型表征坍塌核心难题]
 confidence: 0.8
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # VISReg：Variance-Invariance-Sketching Regularization 攻克表征坍塌

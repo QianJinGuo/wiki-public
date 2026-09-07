@@ -1,12 +1,15 @@
 ---
 title: "具身数据产业格局：97家玩家与447亿融资"
 created: 2026-07-12
-updated: 2026-08-30
+updated: 2026-09-07
 type: entity
 tags: [embodied, data, industry-analysis, robotics, market, investment]
 confidence: 0.75
 provenance_state: merged
 sources: [raw/articles/embodied-ai-data-market-landscape-97-players-44-billion-2026]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 具身数据产业格局：97家玩家与447亿融资

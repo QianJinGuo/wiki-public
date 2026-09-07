@@ -4,12 +4,15 @@ title: "Skill Issues: Compromising Claude Code with malicious skills & agents �
 type: entity
 tags: [security, ai-agents, bug-bounty, claude-code, supply-chain, skill-injection]
 created: 2026-05-20
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 8
 review_confidence: 9
 review_recommendation: strong
 review_stars: 4
 sources: [raw/articles/skill-issues-compromising-claude-code-with-malicious-skills-agents]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 核心要点

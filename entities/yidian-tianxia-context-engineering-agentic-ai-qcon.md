@@ -2,13 +2,16 @@
 
 title: "一点天下：Context Engineering 与 Agentic AI (QCon)"
 created: 2026-05-08
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 value: 8
 tags: [agent, llm, aws, architecture, engineering]
 review_value: 9
 sources: [raw/articles/yidian-tianxia-context-engineering-agentic-ai-qcon]
 review_confidence: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # "yidian tianxia context engineering agentic ai qcon"

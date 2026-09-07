@@ -1,12 +1,15 @@
 ---
 title: "Palantir Foundry 闭环操作范式：Ontology 三层 + 开源 Foundry MVP"
 created: 2026-08-26
-updated: 2026-09-04
+updated: 2026-09-07
 type: entity
 tags: [palantir, foundry, ontology, closed-loop, operational-intelligence, semantic-layer, digital-operational-twin, duckdb, agent, decision-orchestration, adoption, legacy-interop]
 sources: [raw/articles/palantir-foundry-closed-loop-ontology-open-source-mvp-reboot2026, raw/articles/palantir-foundry-open-source-replica-kggpt-2026, raw/articles/palantir-ontology-adoption-decision-orchestration-xiaoyi-2026-09-04]
 confidence: 0.85
 provenance_state: merged
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Palantir Foundry 闭环操作范式：Ontology 三层 + 开源 Foundry MVP

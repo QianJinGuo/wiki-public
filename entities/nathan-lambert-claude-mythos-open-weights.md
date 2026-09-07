@@ -2,7 +2,7 @@
 title: "Nathan Lambert：开源权重安全论的三个认知陷阱"
 description: "Nathan Lambert 分析 Claude Mythos 发布后的反开源叙事，指出将'能力差距静态化'和'将网络攻防特殊问题上升为通用政策'是两个核心错误，呼吁对开源模型政策保持领域特异性"
 created: 2026-06-07
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [open-source, llm, safety, cybersecurity, policy, nathan-lambert]
 source: [[raw/articles/nathan-lambert-claude-mythos-open-weights]]
@@ -12,6 +12,9 @@ review_value: 8
 review_confidence: 9
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Nathan Lambert：开源权重安全论的三个认知陷阱

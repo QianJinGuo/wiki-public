@@ -4,10 +4,13 @@ title: "Anthropic Demystifying Evals for AI Agents"
 type: entity
 tags: [agent, anthropic, evaluation, harness]
 created: 2026-05-21
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 8
 review_confidence: 9
 sources: [raw/articles/anthropic-demystifying-evals-for-ai-agents]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Anthropic Demystifying Evals for AI Agents

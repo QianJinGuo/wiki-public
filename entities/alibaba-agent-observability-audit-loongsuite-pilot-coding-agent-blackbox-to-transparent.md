@@ -10,10 +10,13 @@ review_confidence: 9
 sources:
   - raw/articles/alibaba-agent-observability-audit-loongsuite-pilot-coding-agent-blackbox-transparent
   - raw/articles/loongsuite-pilot-sls-ai-coding-metrics-practice
-updated: 2026-08-29
+updated: 2026-09-07
 related: [entities/阿里巴巴蚂蚁-loongsuite-genai-可观测语义规范从统一数据语言到规模化落地, entities/agentops-operationalize-agentic-ai-amazon-bedrock, entities/将-aws-devops-agent-智能运维能力延伸到中国区, entities/aliyun-agentrun, entities/aliyun-agentrun-5min-quickstart, entities/agent-evolution-four-stages-six-dimensions-aliyun, entities/baidu-confidential-computing-cpu-gpu-full-chain, entities/spotify-llm-evals-funnel-not-fork, entities/ai-coding-agent-quality-defense-five-control-mechanisms]
 strategic_context: "[[queries/research-frontier-map|Frontier 1 — Harness/Skill 从个人能力到组织资产]]"
 provenance_state: inferred
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 让 Coding Agent 从黑盒到透明：阿里云 Agent 观测审计数据采集实践

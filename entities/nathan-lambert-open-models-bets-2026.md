@@ -3,7 +3,7 @@
 title: "Nathan Lambert's Mid-2026 Open Models Bets"
 description: "Nathan Lambert 2026 春季对开放权重模型生态的 13 个可证伪预测：能力差距未扩大、RL 时代闭源主导、Chinese labs 资金压力 2026 下半年显现。"
 created: 2026-06-07
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [open-models, nathan-lambert, interconnects, prediction, open-vs-closed, chinese-ai-labs, ai-economics, rl-training]
 source: "[[raw/articles/my-bets-on-open-models-mid-2026]]"
@@ -13,6 +13,9 @@ review_value: 7
 review_confidence: 7
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Nathan Lambert's Mid-2026 Open Models Bets

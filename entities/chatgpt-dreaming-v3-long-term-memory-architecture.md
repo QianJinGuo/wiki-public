@@ -2,13 +2,16 @@
 
 title: "ChatGPT Dreaming V3：长期记忆架构级重构（时效 75.1% / 偏好 71.3% / 算力 -80%）"
 created: 2026-06-05
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [openai, chatgpt, dreaming-v3, long-term-memory, memory-architecture, async-process, vector-clustering, time-correction, preference-tracking, stateful-ai, personal-assistant, agent-memory]
 sources: [raw/articles/chatgpt-dreaming-v3-long-term-memory-openai, raw/articles/chatgpt-dreaming-v3-long-term-memory-xinzhiyuan]
 review_value: 8
 review_confidence: 8
 summary: OpenAI 2026-06-05 推出 Dreaming V3 长期记忆架构
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # ChatGPT Dreaming V3：长期记忆架构级重构

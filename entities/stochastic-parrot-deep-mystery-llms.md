@@ -4,11 +4,14 @@ title: "Stochastic Parrot Deep Mystery Llms"
 type: entity
 tags: [aws, llm, model]
 created: 2026-05-21
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 6
 review_confidence: 6
 sources: [raw/articles/stochastic-parrot-deep-mystery-llms]
 score_validated: 2026-09-05
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # On the deep mystery of language models

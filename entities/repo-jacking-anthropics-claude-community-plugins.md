@@ -2,7 +2,7 @@
 title: "Anthropic Claude Community 插件仓库劫持事件：SHA 校验如何避免供应链攻击"
 description: "多个 Claude Community 插件存在 repo-jacking 漏洞，直接代码安装路径被 SHA 校验阻断，但 Claude Code 的插件 UI 浏览功能仍会重定向用户到被劫持仓库，形成社交工程攻击面。"
 created: 2026-07-01
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [security, supply-chain, claude, claude-code, plugin, repo-jacking]
 sources: [raw/articles/repo-jacking-anthropics-claude-community-plugins]
@@ -11,6 +11,9 @@ review_value: 9
 review_confidence: 9
 review_stars: 4
 review_recommendation: strong
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Anthropic Claude Community 插件仓库劫持事件：SHA 校验如何避免供应链攻击

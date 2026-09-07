@@ -1,11 +1,14 @@
 ---
 title: "GPT-5.6 Sol：Workhorse vs Architect — Zvi 深度对比分析"
 created: 2026-07-15
-updated: 2026-07-28
+updated: 2026-09-07
 type: entity
 tags: [openai, gpt-5.6, sol, fable, coding-agent, benchmark, agent-comparison, model-analysis]
 sources: [raw/articles/better-call-sol-the-workhorse-openai-gpt-56-sol-vs-fable-zvi-2026]
 confidence: 0.8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # GPT-5.6 Sol：Workhorse vs Architect — Zvi 深度对比分析

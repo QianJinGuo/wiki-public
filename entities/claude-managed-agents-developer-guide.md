@@ -2,7 +2,7 @@
 
 title: "Claude Managed Agents 开发者指南"
 created: 2026-05-01
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [anthropic, managed-agents, harness, cloud-agent, api]
 sources:
@@ -10,6 +10,10 @@ sources:
   - raw/articles/anthropic-pm-jess-yan-managed-agents
 review_value: 8
 review_confidence: 7
+reviewed: 2026-09-07
+review_verdict: hub-retained
+review_category: dup
+review_note: "judged dup-0.8: 开发者指南与平台主版重复; retained as hub (in-links>=20); MOC rewrite candidate"
 ---
 
 ## Overview

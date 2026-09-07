@@ -4,10 +4,13 @@ title: "World Knowledge：Agent推理前先探索环境生成可迁移知识"
 type: entity
 tags: [agent, self-improvement, world-knowledge, reward-free, native-evolution, web-agent, tencent]
 created: 2026-05-28
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 8
 review_confidence: 8
 sources: [raw/articles/world-knowledge-agent-self-evolution-tencent-hkustgz]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # World Knowledge：Agent推理前先探索环境生成可迁移知识

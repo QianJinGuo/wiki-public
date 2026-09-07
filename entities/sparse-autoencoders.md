@@ -1,7 +1,7 @@
 ---
 title: "Sparse Autoencoders"
 created: 2026-04-23
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [interpretability, anthropic, mech-interp]
 provenance_state: inferred
@@ -9,6 +9,9 @@ sources: [raw/anthropic-nla-natural-language-autoencoders-interpretability]
 
 review_value: 7
 review_confidence: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 ## 关联
 - [[entities/natural-language-autoencoders|Natural Language Autoencoders]] — NLA 在 SAE 基础上增加文字输出能力

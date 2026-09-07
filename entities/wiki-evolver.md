@@ -2,12 +2,15 @@
 
 title: "Wiki Evolver"
 created: 2026-05-01
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [skill, knowledge-system, research, open-source]
 sources: [raw/articles/wiki-evolver-skill-system-design-gpt55-copilot-session]
 review_value: 9
 review_confidence: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 相关查询

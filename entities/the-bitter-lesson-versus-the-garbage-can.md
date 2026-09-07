@@ -1,13 +1,16 @@
 ---
 title: "The Bitter Lesson versus The Garbage Can"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-07
 tags: [agent, code, data, database, evaluation, fine-tuning, game, observability, rl, search, tool-use, workflow, bitter-lesson, garbage-can-model, organizational-ai]
 review_value: 7
 review_confidence: 7
 type: entity
 sources:
   - raw/articles/the-bitter-lesson-versus-the-garbage-can
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # The Bitter Lesson versus The Garbage Can

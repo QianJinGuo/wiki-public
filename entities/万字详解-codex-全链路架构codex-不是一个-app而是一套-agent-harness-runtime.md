@@ -8,6 +8,9 @@ provenance_state: inferred
 rating: v9c9
 sources:
   - raw/articles/万字详解-codex-全链路架构codex-不是一个-app而是一套-agent-harness-runtime
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 万字详解 codex 全链路架构：Codex 不是一个 App，而是一套 Agent Harness Runtime

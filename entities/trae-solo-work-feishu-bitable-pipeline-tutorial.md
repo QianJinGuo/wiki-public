@@ -1,7 +1,7 @@
 ---
 title: TRAE SOLO Work 模式 + 飞书多维表格：5 步搭建全自动作品采集系统（3400+ 帖子稳定运行）
 created: 2026-06-04
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [trae, solo, solo-work, work-mode, code-mode, feishu, bitable, agent-tutorial, practical-pipeline, incremental-sync, md5-fingerprint, content-hash, retry-backoff, discourse-api]
 confidence: 0.78
@@ -10,6 +10,9 @@ sources: [raw/articles/trae-solo-work-feishu-bitable-tutorial]
 review_value: 7
 review_confidence: 8
 review_recommendation: edge
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # TRAE SOLO Work 模式 + 飞书多维表格：5 步搭建全自动作品采集系统

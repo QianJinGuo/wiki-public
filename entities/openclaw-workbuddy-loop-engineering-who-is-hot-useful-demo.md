@@ -1,7 +1,7 @@
 ---
 title: "OpenClaw、WorkBuddy、Loop 工程：谁在火，谁有用，谁还在 Demo"
 created: 2026-07-01
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [agent, classification, loop-engineering, digital-employee, market-analysis]
 source: "[[raw/articles/openclaw-workbuddy-loop-engineering-who-is-hot-useful-demo]]"
@@ -11,6 +11,9 @@ review_value: 8
 review_confidence: 9.5
 sources:
   - raw/articles/openclaw-workbuddy-loop-engineering-who-is-hot-useful-demo
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # OpenClaw、WorkBuddy、Loop 工程：谁在火，谁有用，谁还在 Demo

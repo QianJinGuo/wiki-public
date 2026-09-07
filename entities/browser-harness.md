@@ -2,12 +2,15 @@
 
 title: "Browser Harness — 自愈型浏览器 Agent 框架"
 created: 2026-05-01
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [open-source, agent, browser-automation, self-healing, cdp]
 sources: [raw/articles/browser-harness-github]
 review_value: 8
 review_confidence: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## Overview

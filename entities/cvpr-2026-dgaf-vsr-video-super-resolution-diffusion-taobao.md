@@ -1,12 +1,15 @@
 ---
 title: "CVPR 2026 | DGAF-VSR: 重思基于扩散模型的视频超分辨率"
 created: 2026-07-10
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [cvpr, video-super-resolution, diffusion, computer-vision, gan, sr, taobao, multimedia]
 confidence: 0.85
 provenance_state: extracted
 sources: [raw/articles/cvpr-2026-重思基于扩散模型的视频超分辨率利用对齐特征的稠密引导-dgaf-vsr]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # CVPR 2026 | DGAF-VSR: 重思基于扩散模型的视频超分辨率 — 利用对齐特征的稠密引导

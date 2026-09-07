@@ -1,11 +1,14 @@
 ---
 title: "SemaPLC：验证门控的 PLC 代码生成 Agent Harness"
 created: 2026-08-26
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [harness, verification, agent, code-generation, plc, industrial, engineering]
 sources: [raw/articles/semaplc-verification-gated-agent-harness-plc-codegen-2026-08-26]
 confidence: 0.75
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # SemaPLC：验证门控的 PLC 代码生成 Agent Harness

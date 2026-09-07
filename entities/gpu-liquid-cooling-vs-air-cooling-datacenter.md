@@ -2,7 +2,7 @@
 title: "数据中心 GPU 液冷 vs 风冷：FLOPs 可用率与工程权衡"
 description: "GPU 液冷与风冷的技术对比，引用 SuperMicro 白皮书和 Introl 研究，讨论 DVFS 缩频、HGX mezzanine、集群级时钟管理等工程细节"
 created: 2026-06-18
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [gpu, cooling, datacenter, infrastructure, hardware-engineering, hpc]
 source: "[[raw/articles/gpu-liquid-cooling-vs-air-cooling-datacenter]]"
@@ -14,6 +14,9 @@ review_stars: 4
 review_recommendation: worth-reading
 sources:
   - raw/articles/gpu-liquid-cooling-vs-air-cooling-datacenter
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 数据中心 GPU 液冷 vs 风冷：FLOPs 可用率与工程权衡

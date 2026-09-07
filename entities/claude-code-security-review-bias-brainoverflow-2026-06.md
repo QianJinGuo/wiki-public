@@ -11,7 +11,7 @@ tags:
   - harness-engineering
   - ai-security-tools
 created: 2026-06-11
-updated: 2026-08-30
+updated: 2026-09-07
 type: entity
 review_value: 8
 review_confidence: 8
@@ -19,6 +19,9 @@ review_recommendation: strong
 review_stars: 5
 sources:
   - raw/articles/claude-code-security-review-bias-brainoverflow-2026-06
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Claude Code 安全审查的隐性盲点：Model Anchoring Bias 实证分析

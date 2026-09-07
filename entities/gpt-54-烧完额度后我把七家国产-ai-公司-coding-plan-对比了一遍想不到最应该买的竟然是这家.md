@@ -9,6 +9,9 @@ review_value: 7
 review_confidence: 8
 sources: [raw/articles/gpt-54-烧完额度后我把七家国产-ai-公司-coding-plan-对比了一遍想不到最应该买的竟然是这家]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # GPT-5.4 烧完额度后，我把七家国产 AI 公司 Coding Plan 对比了一遍，想不到最应该买的竟然是这家！

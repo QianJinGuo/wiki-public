@@ -2,7 +2,7 @@
 
 title: GLM-5.2 is the step change for open agents
 created: 2026-07-10
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [claude, coding, reinforcement-learning, agent, anthropic]
 sources: [raw/articles/glm-52-is-the-step-change-for-open-agents]
@@ -12,6 +12,9 @@ review_recommendation: worth-reading
 review_stars: 3
 confidence: medium
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # GLM-5.2 is the step change for open agents

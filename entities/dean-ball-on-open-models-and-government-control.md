@@ -2,13 +2,16 @@
 source: [[raw/articles/that-untravelld-world-dean-ball-joins-openai-strategic-futures]]
 title: "Dean Ball on open models and government control"
 created: 2026-06-10
-updated: 2026-08-01
+updated: 2026-09-07
 tags: [llm, open-source, policy, ai-governance, openai, frontier-ai]
 review_value: 7
 review_confidence: 7
 type: entity
 provenance_state: extracted
 sources: [raw/articles/that-untravelld-world-dean-ball-joins-openai-strategic-futures]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Dean Ball on open models and government control

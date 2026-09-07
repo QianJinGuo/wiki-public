@@ -8,6 +8,9 @@ tags: [wechat, ai]
 rating: v8c7
 sources:
   - raw/articles/acl-2026ai-for聋哑群体港理工开源思考型手语翻译模型
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # ACL 2026｜AI for聋哑群体，港理工开源思考型手语翻译模型

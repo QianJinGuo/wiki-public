@@ -2,13 +2,16 @@
 title: "小米零售研发团队 AI 工程化三层实践：VAF + VKF + eight-claw"
 type: entity
 created: 2026-07-02
-updated: 2026-08-01
+updated: 2026-09-07
 tags: [ai-engineering, organizational-ai, team-workflow, knowledge-indexing, collaborative-ai, feishu, codex, claude-code, opencode, xiaomi]
 source:
 author: 小米零售研发团队
 vxc: 49
 sources:
   - raw/articles/xiaomi-retail-ai-engineering-three-layer-practice
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 小米零售研发团队 AI 工程化三层实践

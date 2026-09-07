@@ -10,9 +10,12 @@ score_stars: 4
 ingested_at: 2026-07-09T18:59:54Z
 type: entity
 created: 2026-07-09
-updated: 2026-08-29
+updated: 2026-09-07
 sources:
   - raw/articles/robostral-navigate
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Robostral Navigate: single-camera AI navigation | Mistral AI

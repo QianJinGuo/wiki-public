@@ -2,7 +2,7 @@
 title: "State of Routing in Model Serving"
 description: "Netflix ML 模型服务路由架构演进：从 Switchboard 到 Lightbulb 的架构演进之路"
 created: 2026-06-10
-updated: 2026-08-01
+updated: 2026-09-07
 tags: [architecture, mlops, model-serving, routing, netflix, grpc, envoy, infrastructure, a-b-testing]
 review_value: 7
 review_confidence: 7
@@ -10,6 +10,9 @@ type: entity
 sources: [raw/articles/state-of-routing-in-model-serving]
 confidence: 0.9
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # State of Routing in Model Serving

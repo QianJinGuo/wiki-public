@@ -1,7 +1,7 @@
 ---
 title: "Harness 工程之道：Skill 原理与最佳实践"
 created: 2026-07-01
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [harness-engineering, skill-engineering, agent-skill, progressive-disclosure, alibaba, claude-code, skill-specification, system-prompt]
 sources: [raw/articles/harness-skill-engineering-alibaba-practice]
@@ -9,6 +9,9 @@ confidence: 0.9
 review_value: 8
 review_confidence: 9
 review_stars: 5
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Harness 工程之道：Skill 原理与最佳实践

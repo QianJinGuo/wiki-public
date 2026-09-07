@@ -3,11 +3,14 @@ title: "How Claude Code works in large codebases: Best practices and where to st
 type: entity
 tags: [claude-code, best-practices, enterprise, large-codebase, monorepo]
 created: 2026-05-18
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 7
 review_confidence: 9
 review_recommendation: worth-reading
 sources: [raw/articles/how_claude_code_works_in_large_codebases]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 ## 核心要点
 - Claude Code 采用**主动搜索（agentic search）**而非 RAG，在本地运行，直接读取实时代码库，无集中式索引延迟

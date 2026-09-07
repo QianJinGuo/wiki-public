@@ -1,12 +1,15 @@
 ---
 title: "Agentic App Deployer — 规划/供给双 Agent 分离模式（PDI Brew）"
 created: 2026-08-07
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, multi-agent, agentic-provisioning, manifest, lambda, serverless, amazon-bedrock, architecture, governance, security]
 sources: [raw/articles/building-an-agentic-app-deployer-with-amazon-bedrock-and-aws-lambda]
 confidence: 0.75
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Agentic App Deployer — 规划/供给双 Agent 分离模式（PDI Brew）

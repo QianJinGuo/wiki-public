@@ -4,12 +4,15 @@ title: "Google's Gemini Omni video model surfaces ahead of I/O debut"
 type: entity
 tags: [google, gemini, video-model, ai, i/o-2026]
 created: 2026-05-16
-updated: 2026-07-27
+updated: 2026-09-07
 review_value: 7
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 4
 sources: [raw/articles/googles-gemini-omini-video-model-surfaces-ahead-of-i-o-debut]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 ## 核心要点
 - Google Gemini Omni 视频模型在 2026 年 5 月 I/O 大会前夕意外泄露，Reddit 用户截获了更新后的 Gemini 界面中的模型卡片

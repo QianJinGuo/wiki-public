@@ -1,12 +1,15 @@
 ---
 title: "Fable 5 两年后笔记本运行？端侧模型将爆发"
 created: 2026-07-12
-updated: 2026-08-30
+updated: 2026-09-07
 type: entity
 tags: [llm, ai, edge-computing, on-device, agent]
 sources: [raw/articles/fable5-on-device-timeline-two-years-2026]
 confidence: 0.7
 provenance_state: merged
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Fable 5 两年后笔记本运行？端侧模型将爆发

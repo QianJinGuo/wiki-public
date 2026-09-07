@@ -7,7 +7,7 @@ platform: wechat
 author: 若飞
 publish_date: 2026-05-23
 created: 2026-05-23
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 8
 review_confidence: 8
 review_recommendation: strong
@@ -16,6 +16,9 @@ tags: [claude-code, codex, context-window, compression-pipeline, architecture, c
 sources:
   - raw/articles/claude-code-vs-codex-context-architecture-02
 aliases: [Claude Code vs Codex 上下文架构, 五层压缩管道, Codex 容器文件系统, Budget Reduction, Snip, Microcompact, Context Collapse, Auto-compact]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 核心命题

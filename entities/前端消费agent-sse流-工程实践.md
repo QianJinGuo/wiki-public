@@ -7,6 +7,9 @@ tags: [agent, sse, frontend, streaming, vue, agent-loop, event-driven]
 confidence: 0.8
 provenance_state: extracted
 sources: [raw/articles/前端如何消费agent-sse流]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 前端如何消费 Agent 的 SSE 流 — Agent 前端工程实践

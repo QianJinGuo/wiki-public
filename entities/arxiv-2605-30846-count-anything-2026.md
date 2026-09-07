@@ -1,7 +1,7 @@
 ---
 title: "Count Anything - 文本引导的通用目标计数框架"
 created: 2026-06-16
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [arxiv, paper, vision, counting, object-detection, multimodal, foundation-model]
 sources: [raw/articles/arxiv-2605-30846-count-anything-2026]
@@ -11,6 +11,9 @@ review_value: 7
 review_confidence: 7
 review_recommendation: worth-reading
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Count Anything - 文本引导的通用目标计数框架

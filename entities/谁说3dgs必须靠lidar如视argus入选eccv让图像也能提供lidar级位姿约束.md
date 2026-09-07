@@ -8,6 +8,9 @@ rating: v6c4
 sources:
   - raw/articles/谁说3dgs必须靠lidar如视argus入选eccv让图像也能提供lidar级位姿约束
 confidence: 0.6
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 谁说3DGS必须靠LiDAR？如视Argus入选ECCV，让图像也能提供LiDAR级位姿约束

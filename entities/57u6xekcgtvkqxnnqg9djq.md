@@ -2,13 +2,16 @@
 
 title: "Obsidian + Claude Code 完整集成指南：五种知识管理策略"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-07
 tags: [obsidian, claude-code, knowledge-management, second-brain, mcp, harness-engineering, pkm, workflow]
 type: entity
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/57U6XeKCGtVkQXnNqg9DJQ]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Obsidian + Claude Code 完整集成指南

@@ -1,7 +1,7 @@
 ---
 title: "Cordon：Agent 工具调用的语义事务安全边界"
 created: 2026-06-17
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags:
   - agent-safety
@@ -16,6 +16,9 @@ confidence: 0.85
 review_value: 8
 review_confidence: 8
 arxiv:
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Cordon：Agent 工具调用的语义事务安全边界

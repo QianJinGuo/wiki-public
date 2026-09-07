@@ -2,13 +2,16 @@
 
 title: "Hands-free first notice of loss: Using Strands Agents and Amazon Bedrock AgentCore Browser Tool for intelligent claims intake"
 created: "2026-06-11"
-updated: 2026-08-29
+updated: 2026-09-07
 type: "entity"
 tags: "agent, ai, llm, aws, agentcore, strands, nova-act, browser-automation, insurance, fnol, multimodal"
 review_value: "7"
 review_confidence: "8"
 review_stars: "4"
 sources: [raw/articles/hands-free-first-notice-of-loss-using-strands-agents-and-ama]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Hands-free first notice of loss: Using Strands Agents and Amazon Bedrock AgentCore Browser Tool for intelligent claims intake

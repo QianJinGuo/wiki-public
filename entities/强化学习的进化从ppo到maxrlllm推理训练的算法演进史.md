@@ -9,6 +9,9 @@ provenance_state: inferred
 rating: v9c9
 sources:
   - raw/articles/强化学习的进化从ppo到maxrlllm推理训练的算法演进史
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 强化学习的进化：从PPO到MaxRL，LLM推理训练的算法演进史

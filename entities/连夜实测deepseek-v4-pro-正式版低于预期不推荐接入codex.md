@@ -7,6 +7,9 @@ type: entity
 tags: ['context', 'coding', 'ai']
 sources: [raw/articles/连夜实测deepseek-v4-pro-正式版低于预期不推荐接入codex]
 confidence: 0.7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 连夜实测DeepSeek V4 Pro 正式版，低于预期，不推荐接入Codex

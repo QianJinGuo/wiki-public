@@ -4,10 +4,13 @@ title: "Anthropic 发布 Computer Use 最佳实践"
 type: entity
 tags: [agent, anthropic, api, browser, claude]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 7
 review_confidence: 8
 sources: [raw/articles/anthropic-computer-use-best-practices]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Anthropic 发布 Computer Use 最佳实践

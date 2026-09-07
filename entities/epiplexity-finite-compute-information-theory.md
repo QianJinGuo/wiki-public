@@ -4,12 +4,15 @@ description: "Shannon 1948信息论的缺失——观察者算力决定了能从
 source: ""
 tags: [信息论, 计算理论, 涌现, llm训练, 认知科学, 数据选择]
 created: 2026-05-20
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 review_value: 5
 sources: [raw/articles/shannon-epiplexity-finite-compute-information-theory]
 provenance_state: inferred
 confidence: 0.8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 核心定义

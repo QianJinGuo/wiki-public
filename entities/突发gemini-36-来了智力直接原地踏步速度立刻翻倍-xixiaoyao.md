@@ -9,6 +9,9 @@ provenance_state: extracted
 confidence: 0.65
 sources:
   - raw/articles/突发gemini-36-来了智力直接原地踏步速度立刻翻倍-xixiaoyao
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 突发gemini-36-来了智力直接原地踏步速度立刻翻倍

@@ -2,7 +2,7 @@
 
 title: "Claude Code on AWS Bedrock 配置指南"
 created: 2026-06-01
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: ['aws', 'bedrock', 'claude-code', 'tutorial']
 source: [[raw/articles/claude-code-aws-bedrock-guide]]
@@ -10,6 +10,9 @@ confidence: 0.7
 review_value: 7
 sources:
   - raw/articles/claude-code-aws-bedrock-guide
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Claude Code on AWS Bedrock 配置指南

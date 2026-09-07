@@ -1,11 +1,14 @@
 ---
 title: "ReViSQL: Task Expertise into RL Achieves Human-Level Text-to-SQL"
 created: 2026-08-30
-updated: 2026-08-30
+updated: 2026-09-07
 type: entity
 tags: [text-to-sql, reinforcement-learning, fine-tuning, rlvr, database, benchmark]
 sources: [raw/articles/revsql-task-expertise-rl-text-to-sql]
 confidence: 0.8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # ReViSQL: Task Expertise into RL Achieves Human-Level Text-to-SQL

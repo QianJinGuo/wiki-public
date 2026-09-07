@@ -1,11 +1,14 @@
 ---
 title: "当理解成为瓶颈：AI 编程时代的认知债与意图债"
 created: 2026-07-29
-updated: 2026-07-29
+updated: 2026-09-07
 type: entity
 tags: [ai, cognitive-debt, intent-debt, triple-debt-model, ai-programming, alibaba, agentic-engineering, vibe-coding, software-engineering]
 sources: [raw/articles/cognitive-debt-intent-debt-ai-programming-alibaba-2026]
 confidence: 0.80
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 当理解成为瓶颈：AI 编程时代的认知债与意图债

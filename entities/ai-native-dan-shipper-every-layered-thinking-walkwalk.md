@@ -3,7 +3,7 @@
 title: "AI Native 公司 Dan Shipper 30 人做出 100 人产出：层次化思维 + SaaS 6 维能力框架"
 description: "WalkerYu 深度解读 Dan Shipper（Every 公司）AI Native 实践：30 人=100 人产出 + Automation is a lie + 把浏览器嵌入 AI + 三道墙 + SaaS 不会死四层推理 + 6 维 Agent 友好能力 + 层次化思维解开矛盾三句话"
 created: 2026-06-02
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, ai, code, crypto, data, knowledge-mgmt, llm, productivity, security, ai-native, every, dan-shipper, lennys-newsletter, agent-first-saas, saas-survival, 六维-saas-能力, 三道墙, layered-thinking, 层次化思维, cognitive-frame, 认知翻转, automation-is-lie, fde, forward-deployed-engineer, 异质行动者, walker-yu, walkwalk]
 sources:
@@ -22,6 +22,9 @@ related:
   - entities/saastr-who-winning-enterprise-ai
   - entities/范凌当公司变成agent关于-ai-时代组织的-5-个反思
   - entities/agent-时代的生产力悖论当协作本身成为最大的瓶颈
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # AI Native 公司 Dan Shipper 30 人做出 100 人产出：层次化思维 + SaaS 6 维能力框架

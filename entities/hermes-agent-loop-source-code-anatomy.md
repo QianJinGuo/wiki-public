@@ -4,7 +4,7 @@ title: "Agent Loop 源码导读：一次 Hermes 任务的完整生命周期"
 type: entity
 tags: [hermes, agent-loop, agent-architecture, source-code, self-evolution, loop-orchestrator, prompt-builder, tool-runner, trajectory-recorder, llm-adapter]
 created: 2026-05-20
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 8
 review_confidence: 9
 review_recommendation: pass
@@ -17,6 +17,9 @@ related_entities:
   - hermes-agent-skill-system
   - hermes-self-evolution
   - agent-loop-pattern
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 核心发现

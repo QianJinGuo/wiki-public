@@ -4,10 +4,13 @@ slug: anthropic-google-agent-skills-design-patterns
 type: entity
 tags: [anthropic, google, agent, skills, design-patterns]
 created: 2026-05-10
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 9
 review_confidence: 9
 sources: [raw/articles/anthropic-google-agent-skills-design-patterns]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 ## 相关实体
 - [[entities/anthropic-agent-skills-design-patterns-14|Anthropic 14 个 Agent Skills 设计模式]]

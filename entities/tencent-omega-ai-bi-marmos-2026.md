@@ -2,13 +2,16 @@
 title: "腾讯 Omega：AI BI 生成式 Dashboard 产品（QueryRegistry + DTBridge）"
 type: entity
 created: "2026-08-03"
-updated: 2026-08-03
+updated: 2026-09-07
 tags: [wechat, ai-bi, bi, dashboard, harness, query-registry, tencent, data-product]
 rating: v8c9
 confidence: 0.85
 provenance_state: extracted
 sources:
   - raw/articles/tencent-omega-ai-bi-marmos-2026-08-03
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 腾讯 Omega：AI BI 生成式 Dashboard 产品（QueryRegistry + DTBridge）

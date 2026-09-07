@@ -6,7 +6,7 @@ type: entity
 tags: [skill-security, skill-scanner, supply-chain, agent, security, scanner, marketplace, bypass, claude, openai, cisco, openclaw, trail-of-bits, empirical-study]
 sources: [raw/articles/trail-of-bits-skill-scanner-bypass-distribution, raw/articles/skilltrustbench-agent-skill-security-benchmark-cuhk-zhuque-2026-06-16]
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 8
 review_confidence: 9
 review_recommendation: strong
@@ -18,6 +18,9 @@ related:
   - "[[entities/agent-security-three-step-sequence-harness-governance-identity-crewai]]"
 year: 2026
 authors: "Trail of Bits"
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > → [[raw/articles/trail-of-bits-skill-scanner-bypass-distribution|原文存档]]

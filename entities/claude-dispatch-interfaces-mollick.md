@@ -3,7 +3,7 @@
 title: "Claude Dispatch + 接口力量：AI 从 Chatbot 到 Agent Interface 的转变"
 description: "Ethan Mollick（One Useful Thing，2026-03-31）分析 AI 接口演变：chatbot 认知税问题 → 专业化工具（Codex/NotebookLM）→ 个人 Agent（OpenClaw/Claude Cowork Dispatch）→ 按需生成界面；模型能力远超大众使用，接口是真正瓶颈。"
 created: 2026-06-07
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [ai-interface, chatbot-cognitive-tax, claude-dispatch, openclaw, claude-cowork, agent-interface, one-useful-thing, ethan-mollick, specialized-ai-tools]
 source: [[raw/articles/claude-dispatch-and-the-power-of-interfaces]]
@@ -14,6 +14,9 @@ review_value: 8
 review_confidence: 8
 review_recommendation: strong
 review_stars: 5
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Claude Dispatch + 接口力量：AI 从 Chatbot 到 Agent Interface 的转变

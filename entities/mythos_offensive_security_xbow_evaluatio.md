@@ -4,11 +4,14 @@ title: "Mythos for Offensive Security: XBOW's Evaluation"
 type: entity
 tags: [anthropic, mythos, offensive-security, xbow, vulnerability-discovery, red-team, benchmarking, agent, model-evaluation]
 created: 2026-05-18
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 9
 review_confidence: 9
 review_recommendation: worth-reading
 sources: [raw/articles/mythos_offensive_security_xbow_evaluatio]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 核心要点

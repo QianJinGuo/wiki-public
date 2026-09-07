@@ -1,12 +1,15 @@
 ---
 title: "rd-signal-2：生产规模下的 Agent 行为二元分类（Frontier Classification at Production Scale）"
 created: 2026-08-12
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, evaluation, classification, trace, observability, raindrop, llm-judge, cost, production]
 sources: [raw/articles/rd-signal-2-frontier-classification]
 confidence: 0.8
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # rd-signal-2：生产规模下的 Agent 行为二元分类

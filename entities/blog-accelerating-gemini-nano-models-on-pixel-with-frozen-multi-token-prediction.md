@@ -2,7 +2,7 @@
 
 title: "Accelerating Gemini Nano models on Pixel with frozen Multi-Token Prediction"
 created: 2026-06-29
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [llm, mlops, research, google]
 source: "[[raw/articles/blog-accelerating-gemini-nano-models-on-pixel-with-frozen-multi-token-prediction]]"
@@ -13,6 +13,9 @@ review_confidence: 8
 review_stars: 4
 review_recommendation: strong
 confidence: 0.8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Accelerating Gemini Nano models on Pixel with frozen Multi-Token Prediction

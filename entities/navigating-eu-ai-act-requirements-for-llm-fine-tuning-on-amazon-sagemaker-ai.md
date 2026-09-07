@@ -2,7 +2,7 @@
 
 title: "Navigating EU AI Act Requirements for LLM Fine-Tuning"
 created: 2026-05-13
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 source: rss
 source_url:
@@ -12,6 +12,9 @@ review_confidence: 9
 review_recommendation: strong
 date: 2026-05-13
 tags: [eu-ai-act, llm, fine-tuning, aws]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > -> [[raw/articles/navigating-eu-ai-act-requirements-for-llm-fine-tuning-on-amazon-sagemaker-ai.md|原文存档]]

@@ -2,7 +2,7 @@
 title: "微调 Amazon Nova 模型实现精准邮件数据提取"
 description: "使用 Amazon Nova 模型微调实现从非结构化邮件中提取结构化数据，涵盖数据准备、微调策略和评估方法。"
 created: 2026-07-01
-updated: 2026-08-30
+updated: 2026-09-07
 type: entity
 tags: [aws, nova, fine-tuning, nlp, data-extraction]
 sources: [raw/articles/fine-tune-amazon-nova-models-for-accurate-email-data-extract]
@@ -11,6 +11,9 @@ review_value: 7
 review_confidence: 8
 review_stars: 3
 review_recommendation: strong
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 微调 Amazon Nova 模型实现精准邮件数据提取

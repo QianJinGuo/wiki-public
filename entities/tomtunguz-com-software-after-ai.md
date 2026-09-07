@@ -1,7 +1,7 @@
 ---
 
 created: 2026-06-10
-updated: 2026-09-05
+updated: 2026-09-07
 title: "Software After AI"
 type: entity
 tags: [article, agent, ai, llm, model]
@@ -11,6 +11,9 @@ review_confidence: 8
 review_stars: 4
 sources:
   - raw/articles/tomtunguz-com-software-after-ai
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Software After AI

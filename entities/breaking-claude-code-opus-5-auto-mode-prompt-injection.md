@@ -1,11 +1,14 @@
 ---
 title: "Breaking Claude Code Opus 5 Auto Mode — Prompt Injection攻击"
 created: 2026-08-30
-updated: 2026-08-30
+updated: 2026-09-07
 type: entity
 tags: [claude-code, prompt-injection, security, agent-safety, anthropropic, opus]
 sources: [raw/articles/breaking-claude-code-opus-5-auto-mode-prompt-injection]
 confidence: 0.8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Breaking Claude Code Opus 5 Auto Mode — Prompt Injection攻击

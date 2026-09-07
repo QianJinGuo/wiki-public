@@ -2,7 +2,7 @@
 title: "万字长文拆解 Agent 架构设计（二）：工具系统设计"
 slug: claude-code-tool-system-architecture-deep-dive
 created: 2026-07-08
-updated: 2026-08-19
+updated: 2026-09-07
 type: entity
 tags:
   - claude-code
@@ -17,6 +17,9 @@ review_value: 9
 review_confidence: 8
 sources:
   - raw/articles/claude-code-tool-system-architecture-source-code
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Claude Code 工具系统架构深度拆解

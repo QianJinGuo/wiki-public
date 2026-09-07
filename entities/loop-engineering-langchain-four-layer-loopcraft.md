@@ -1,12 +1,15 @@
 ---
 title: "Loop Engineering 四层循环栈：从 Agent 循环到爬坡循环 — LangChain 官方框架"
 created: 2026-06-18
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [loop-engineering, agent, architecture, harness, langchain, loopcraft]
 sources: [raw/articles/loop-engineering-langchain-four-layer-loopcraft]
 confidence: 0.8
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 LangChain 团队（2026）提出的 Agent 循环工程 4 层栈框架，将「loopcraft」（循环工艺）从概念推向可落地的分层架构。文章以 LangChain 内部文档 Agent 为贯穿示例，每层对应一个 LangChain 产品原语。^[raw/articles/loop-engineering-langchain-four-layer-loopcraft.md]

@@ -2,13 +2,16 @@
 
 title: "Claude Code 27 条技巧：从工具清单到工程升级路径"
 created: 2026-06-29
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [claude-code, harness, loop-engineering, engineering-workflow, agent, skills, subagents, context-management]
 sources:
   - raw/articles/claude-code-27-tips-engineering-upgrade-jiagoux-2026
 confidence: 0.85
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Claude Code 27 条技巧：从工具清单到工程升级路径

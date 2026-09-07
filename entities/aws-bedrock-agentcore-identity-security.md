@@ -1,13 +1,16 @@
 ---
 title: "AgentCore Identity: 3-legged OAuth+Session Binding的安全架构"
 created: 2026-05-08
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [security, aws, bedrock, agent, iam, oauth]
 summary: "3-legged OAuth + session binding / ECS AI Agent安全架构 / AgentCore Identity"
 sources: [raw/articles/aws-bedrock-agentcore-identity-security]
 review_value: 7
 review_confidence: 9
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 ## 核心内容
 Amazon Bedrock AgentCore Identity通过3-legged OAuth + session binding模式为ECS上的AI Agent提供企业级安全身份认证。Agent访问云资源时通过OAuth获取临时凭证并绑定到特定session，防止token泄露和权限滥用。   ^[raw/articles/aws-bedrock-agentcore-identity-security.md]

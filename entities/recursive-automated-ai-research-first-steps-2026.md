@@ -1,12 +1,15 @@
 ---
 title: "Recursive First Steps Toward Automated AI Research：SOTA 三基准自动化研究系统"
 created: 2026-06-13
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [ai-research, automation, recursive-self-improvement, alphaevolve, nanogpt, nanochat, kernel-optimization, sota, recursive, agent, eval-loop, ai4ai-bench, algorithmic-design]
 sources: [raw/articles/recursive-automated-ai-research-first-steps-2026, raw/articles/ai4ai-bench-agent-algorithmic-design-rsi-einsia-2026]
 review_value: 8
 review_confidence: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > **Background**：本文档基于 Recursive 团队 2026-06-11 发布的工程报告 *First Steps Toward Automated AI Research* 整理。Recursive 团队（与 [AlphaEvolve](entities/alphaevolve-impact-deepmind.md) 同生态但不同公司）开发了一套自动化研究循环系统，瞄准三大 AI 进步杠杆：**训练算法 / 训练速度 / 硬件利用**。他们在三个 SOTA benchmark 上同时取得突破并开源 artifacts。

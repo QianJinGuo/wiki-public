@@ -3,14 +3,16 @@
 
 title: "长时间运行应用的 Harness 设计"
 created: 2026-05-16
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [claude-code, anthropic, agent, harness-engineering, skill]
 sources:
   - raw/articles/harness-design-long-running-apps
 review_value: 8
 review_confidence: 8
-
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 正文

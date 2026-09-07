@@ -4,10 +4,13 @@ title: "Nvidia Multimodal RAG Knowledge Systems"
 type: entity
 tags: [agent, nvidia, rag, training]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 8
 review_confidence: 7
 sources: [raw/articles/nvidia-multimodal-rag-knowledge-systems]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Build AI&#x2d;Ready Knowledge Systems Using 5 Essential Multimodal RAG Capabilities | NVIDIA Technical Blog

@@ -8,6 +8,9 @@ tags: [anthropic, alignment, ai-safety]
 confidence: 0.75
 provenance_state: extracted
 sources: [raw/articles/王阳明心学被anthropic用来教claude做人了]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 王阳明心学，被Anthropic用来教Claude做人了

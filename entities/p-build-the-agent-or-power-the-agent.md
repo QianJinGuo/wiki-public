@@ -2,7 +2,7 @@
 
 title: "Build the Agent or Power the Agent?"
 created: 2026-06-26
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [article]
 provenance_state: inferred
@@ -13,6 +13,9 @@ review_value: 8
 review_confidence: 8
 review_stars: 4
 review_recommendation: worth-reading
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Build the Agent or Power the Agent?

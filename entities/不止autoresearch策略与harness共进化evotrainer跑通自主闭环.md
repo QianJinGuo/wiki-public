@@ -8,6 +8,9 @@ tags: [ai, agent, harness, memory, mcp, multimodal]
 sources: [raw/articles/不止autoresearch策略与harness共进化evotrainer跑通自主闭环, raw/articles/evotrainer-co-evolving-llm-policies-training-harness-agentic-rl-2026]
 confidence: 0.75
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 不止AutoResearch！策略与Harness共进化，EvoTrainer跑通自主闭环

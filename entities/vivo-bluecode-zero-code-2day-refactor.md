@@ -1,7 +1,7 @@
 ---
 title: "BlueCode 0 行手写代码重构 2 万行 Vue：约束体系驱动 AI 大规模重构"
 created: 2026-08-19
-updated: 2026-08-20
+updated: 2026-09-07
 type: entity
 tags: [ai-coding, refactoring, agents-md, skills, constraint-system, bluecode, vue, vivo, zero-code]
 sources: [raw/articles/vivo-bluecode-zero-code-2day-refactor-2w-lines-vue-2026-08-19]
@@ -9,6 +9,9 @@ confidence: 0.8
 provenance_state: extracted
 review_value: 7
 review_confidence: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # BlueCode 0 行手写代码重构 2 万行 Vue：约束体系驱动 AI 大规模重构

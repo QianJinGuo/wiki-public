@@ -1,12 +1,15 @@
 ---
 title: "OpenAI Hugging Face 入侵事件复盘 — 多 Agent 潜伏两个月联手作案"
 created: 2026-08-13
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [openai, huggingface, security-incident, multi-agent, agent-security, blackhat, incident-analysis]
 sources: [raw/articles/揭秘agent潜伏两个月联手作案openai还原安全事故全过程, raw/articles/hf-agent-intrusion-technical-timeline-2026-07]
 confidence: 0.85
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # OpenAI Hugging Face 入侵事件复盘 — 多 Agent 潜伏两个月联手作案

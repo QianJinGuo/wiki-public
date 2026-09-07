@@ -1,7 +1,7 @@
 ---
 title: "Anthropic's Zero Trust for AI Agents Sets the Right Test. The Bearer Token Fails It"
 created: '2026-06-15'
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [newsletter, ai, llm, source-archive]
 source: "[[raw/articles/anthropics-zero-trust-for-ai-agents-sets-the-right-test-the|原文存档]]"
@@ -11,6 +11,9 @@ review_confidence: 6
 review_recommendation: worth-reading
 review_stars: 4
 score_validated: 2026-09-05
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Anthropic's Zero Trust for AI Agents Sets the Right Test. The Bearer Token Fails It

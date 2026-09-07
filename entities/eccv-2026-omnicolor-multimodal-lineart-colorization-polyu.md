@@ -1,11 +1,14 @@
 ---
 title: "ECCV 2026｜OmniColor：统一多模态线稿上色框架"
 created: 2026-08-28
-updated: 2026-08-28
+updated: 2026-09-07
 type: entity
 tags: [eccv-2026, omnicolor, image-generation, video-generation, lineart-colorization, computer-vision, multimodal, hk-polyu]
 sources: [raw/articles/eccv-2026-omnicolor-multimodal-lineart-colorization-polyu]
 confidence: 0.7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # ECCV 2026｜OmniColor：统一多模态线稿上色框架

@@ -3,11 +3,14 @@ title: Dumb Ways for an Open Source Project to Die
 type: entity
 tags: [article,newsletter]
 created: 2026-05-20
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 8
 sources: [raw/articles/dumb-ways-for-an-open-source-project-to-die]
 review_confidence: 8
 review_recommendation: strong
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 ## 核心要点
 - ...

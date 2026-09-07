@@ -2,7 +2,7 @@
 
 title: "Claude Code MCP Server"
 created: 2026-05-19
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [claude-code, mcp, model-context-protocol, agent, tool-integration]
 sources: [raw/articles/claude-code-skills-mcp-rules-source-analysis]
@@ -10,6 +10,9 @@ review_value: 8
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 核心洞察

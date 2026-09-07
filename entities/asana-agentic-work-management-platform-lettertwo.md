@@ -5,7 +5,7 @@ description: "Asana 2026-06-04 推出 'Agentic Work Management Platform',以 Wor
 source: "[[raw/articles/asana-agentic-work-management-platform-lettertwo|原文存档]]"
 tags: [ai, agentic, agentic-work, asana, project-management, saas, work-graph, work-management, ai-teammate, multi-agent, human-agent-collaboration, saaspocalypse]
 created: 2026-06-06
-updated: 2026-08-30
+updated: 2026-09-07
 type: entity
 review_value: 7
 review_confidence: 8
@@ -15,6 +15,9 @@ confidence: 0.85
 provenance_state: extracted
 sources:
   - raw/articles/asana-agentic-work-management-platform-lettertwo
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Asana Agentic Work Management Platform — Work Graph as Agentic OS

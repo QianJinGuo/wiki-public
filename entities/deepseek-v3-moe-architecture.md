@@ -1,11 +1,14 @@
 ---
 title: "DeepSeek V3 MoE 架构"
 created: 2026-06-30
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [entity, model, deepseek, moe, llm, open-source, reasoning]
 provenance_state: inferred
 sources: []
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 定义

@@ -4,12 +4,15 @@ title: "How Grab is Using AI Agents to Boost Team Productivity"
 type: entity
 tags: [multi-agent, data-engineering, grab, enterprise-ai, langgraph, fastapi]
 created: 2026-05-19
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 8
 sources: [raw/articles/how-grab-is-using-ai-agents-to-boost-team-productivity]
 review_confidence: 9
 review_recommendation: strong
 review_stars: 5
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > 来源：[[raw/articles/how-grab-is-using-ai-agents-to-boost-team-productivity|原文存档]]（ByteByteGo, 2026-05-18） ^[raw/articles/how-grab-is-using-ai-agents-to-boost-team-productivity.md]

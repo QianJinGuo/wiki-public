@@ -2,7 +2,7 @@
 title: "Self-Harness：上海AI Lab 提出的 Agent 自我改进 Harness 范式"
 description: "Shanghai AI Lab Self-Harness 论文:固定权重LLM Agent根据执行轨迹挖掘弱点、提出并回归验证Harness修改。Weakness Mining → Harness Proposal → Proposal Validation 三阶段闭环 + Terminal-Bench-2.0 + 三模型(M2.5/Qwen3.5/GLM-5) held-in/held-out 双重门控 + Qwen3.5 held-in +138% + 三个case study"
 created: 2026-06-12
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [self-harness, harness, self-improvement, agent-architecture, shanghai-ai-lab, terminal-bench, deepagent, meta-harness, reflexion, ace, sglang, hyman, harness-evolution, verifier-grounded, benchmark, closed-loop, evolution-search, model-x-harness]
 source: "[[raw/articles/self-harness-shanghai-ai-lab-agent-improves-harness-hyman-2026-06-12]]"
@@ -14,6 +14,9 @@ review_recommendation: strong
 provenance_state: extracted
 confidence: 0.9
 strategic_context: "[[queries/research-frontier-map|Frontier 3 — Agent 训练/评测基础设施与对齐]]"
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Self-Harness：上海AI Lab 提出的 Agent 自我改进 Harness 范式

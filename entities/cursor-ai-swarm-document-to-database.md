@@ -1,11 +1,14 @@
 ---
 title: "Cursor AI 蜂群：规划器+Worker 架构与多模型经济学的突破"
 created: 2026-07-22
-updated: 2026-07-22
+updated: 2026-09-07
 type: entity
 tags: [cursor, agent-swarm, multi-agent, ai-economics, planning, coding, sqlite]
 sources: [raw/articles/cursor-ai-swarm-document-to-database]
 confidence: 0.75
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Cursor AI 蜂群：规划器+Worker 架构与多模型经济学的突破

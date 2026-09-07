@@ -2,7 +2,7 @@
 
 title: "Prompt Caching 工程实践 — Anthropic Claude Code 经验总结"
 created: 2026-05-06
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [claude-code, prompt-caching, anthropic, agent-architecture, context-management, engineering]
 sources: [raw/articles/anthropic-prompt-caching-claude-code-agihunt]
@@ -10,6 +10,10 @@ review_value: 8
 review_confidence: 8
 review_recommendation: strong
 review_stars: 5
+reviewed: 2026-09-07
+review_verdict: hub-retained
+review_category: dup
+review_note: "judged dup-0.8: 缓存经验重复版; retained as hub (in-links>=20); MOC rewrite candidate"
 ---
 
 ## 核心约束：Prompt Caching = 前缀匹配

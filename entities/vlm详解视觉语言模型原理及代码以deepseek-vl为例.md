@@ -8,6 +8,9 @@ tags: [wechat, ai]
 rating: v7c7
 sources:
   - raw/articles/vlm详解视觉语言模型原理及代码以deepseek-vl为例
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 【VLM】详解视觉语言模型原理及代码，以DeepSeek-VL为例

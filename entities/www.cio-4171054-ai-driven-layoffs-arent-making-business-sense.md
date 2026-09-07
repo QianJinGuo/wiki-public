@@ -1,13 +1,16 @@
 ---
 title: "AI 驱动的裁员没有商业意义 — Gartner 研究"
 created: 2026-06-10
-updated: 2026-07-31
+updated: 2026-09-07
 tags: [ai, enterprise, governance, workforce, roi, cio, gartner]
 review_value: 7
 review_confidence: 7
 type: entity
 sources:
   - raw/articles/www.cio-4171054-ai-driven-layoffs-arent-making-business-sense
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # AI 驱动的裁员没有商业意义 — Gartner 研究

@@ -8,9 +8,12 @@ review_value: 8
 review_confidence: 9
 review_recommendation: strong
 review_stars: 4
-updated: 2026-08-30
+updated: 2026-09-07
 sources:
   
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 ## 核心数据
 - **推理成本**：每年降40倍，自GPT-4已压缩300-600倍

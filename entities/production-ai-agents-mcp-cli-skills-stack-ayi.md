@@ -2,7 +2,7 @@
 
 title: "如何构建生产准备的AI代理：MCP、CLI与技能——适合合适的工作的工具"
 created: 2026-05-26
-updated: 2026-07-31
+updated: 2026-09-07
 type: entity
 tags: [mcp, cli, skill, agent, production, connection-stack, tool-calling]
 source: [[raw/articles/production-ai-agents-mcp-cli-skills-stack-ayi]]
@@ -12,6 +12,9 @@ review_confidence: 7
 review_recommendation: strong
 sources:
   - raw/articles/production-ai-agents-mcp-cli-skills-stack-ayi
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 如何构建生产准备的AI代理：MCP、CLI与技能——适合合适的工作的工具

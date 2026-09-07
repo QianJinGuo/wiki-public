@@ -7,8 +7,11 @@ review_value: 8
 review_confidence: 8
 review_recommendation: strong
 publish_date: 2026-04-02
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 ## 概述
 Claude Code 接入自建开源模型：企业私有化与降本实践 by awschina on 02 4月 2026 in Artificial Intelligence Permalink Share 摘要：企业使用 Claude Code 面临代码安全和成本压力双重挑战。本文介绍一套完整的解决方案：通过在 AWS SageMaker 上部署 Kimi/GLM 等开源模型，结合 LiteLLM Proxy实现智能路由，将支线任务分流到私有化模型处理。实测数据显示，单台 H200 部署成本约 $1000/天，相比等效 Claude API 调用成本降低约 70%，性价比提升 3.2倍。文章详细讲解架构设计、部署流程、动态路由策略及流式响应适配，提供可落地的企业级私有化方案 目录 01 一、问题背景 02 二、技术趋势观察 03 三、本文的解决方案 04 四、总结与展望 05 五、附录 一、问 ^[raw/articles/claude-code-open-source-model-enterprise-practice.md]

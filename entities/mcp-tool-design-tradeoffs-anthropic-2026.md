@@ -1,11 +1,14 @@
 ---
 title: "MCP tool design: Practical approaches and tradeoffs"
 created: 2026-07-10
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [mcp, tool-design, agent, claude, harness]
 sources: [raw/articles/mcp-tool-design-practical-approaches-and-tradeoffs]
 confidence: 0.75
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # MCP tool design: Practical approaches and tradeoffs

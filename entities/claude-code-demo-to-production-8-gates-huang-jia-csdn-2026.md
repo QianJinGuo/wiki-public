@@ -1,7 +1,7 @@
 ---
 title: "Claude Code 从 Demo 到产线 · 企业 Harness 工程化的 8 道关卡（黄佳/咖哥 CSDN）"
 created: 2026-06-13
-updated: 2026-08-29
+updated: 2026-09-07
 type: "entity"
 tags: [agent-harness, claude-code, production, context-management, token-routing, skill, hook, hitl, talker-reasoner, adps, csdn, huang-jia, eight-gates]
 sources:
@@ -20,6 +20,9 @@ review_recommendation: "strong"
 review_stars: 3
 provenance_state: extracted
 summary: "黄佳（咖哥）CSDN AI 进化论分享的 Harness 工业化 8 道关卡：记忆分层+P0-P3 分诊/Stop Hook 质量门禁/渐进式披露 Skill/三层模型路由+Talker-Reasoner/动作爆炸半径 HITL/Skill-SubAgent-Workflow-Agent Team 四方图/三平面分立+草稿纸看板/Provenance+Pre-task gating。ADPS 共同体。"
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 核心定位

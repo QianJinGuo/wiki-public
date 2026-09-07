@@ -4,10 +4,13 @@ title: "Hacker News 热帖：AI 会写代码了，为啥还要用 Python？"
 type: entity
 tags: [coding]
 created: 2026-05-21
-updated: 2026-05-21
+updated: 2026-09-07
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/hackernews-ai-coding-why-python-20260513]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Hacker News 热帖：AI 会写代码了，为啥还要用 Python？

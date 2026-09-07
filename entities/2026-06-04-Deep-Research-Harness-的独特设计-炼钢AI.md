@@ -6,6 +6,9 @@ type: entity
 tags: ['raw', 'article']
 sources: [raw/articles/2026-06-04-Deep-Research-Harness-的独特设计-炼钢AI]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > -> [[raw/articles/2026-06-04-Deep-Research-Harness-的独特设计-炼钢AI.md|原文存档]]

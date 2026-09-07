@@ -8,6 +8,9 @@ sources: [raw/articles/我给hermes配了4个agent真正有用的是这些事]
 review_value: 6
 review_confidence: 6
 score_validated: 2026-09-05
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 ## 摘要
 本文档从微信平台抓取，原始URL: https://mp.weixin.qq.com/s/LLVZts-SRNo-Jh1GpV2BRA ^[raw/articles/我给hermes配了4个agent真正有用的是这些事.md]

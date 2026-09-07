@@ -8,6 +8,9 @@ updated: 2026-05-20
 review_value: 8
 sources: [raw/articles/cursor-复盘-harness模型决定能力上限harness-决定生产下限]
 review_confidence: 8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > 来源：[[raw/articles/cursor-复盘-harness模型决定能力上限harness-决定生产下限.md|原文存档]]

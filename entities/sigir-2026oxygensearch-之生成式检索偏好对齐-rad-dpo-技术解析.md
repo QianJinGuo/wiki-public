@@ -7,6 +7,9 @@ tags: [ai, agent, sigir, retrieval, generative-retrieval, dpo, preference-optimi
 sources: [raw/articles/sigir-2026oxygensearch-之生成式检索偏好对齐-rad-dpo-技术解析]
 confidence: 0.92
 score: 72
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # SIGIR 2026: RAD-DPO 生成式检索偏好对齐

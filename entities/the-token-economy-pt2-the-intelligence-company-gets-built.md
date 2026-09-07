@@ -4,12 +4,15 @@ title: "🧠 The Token Economy pt2: The Intelligence Company Gets Built"
 type: entity
 tags: [newsletter, ai-operating-model, fintech, anthropic, ramp, allica-bank, fis]
 created: 2026-05-18
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 7
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 3
 sources: [raw/articles/the-token-economy-pt2-the-intelligence-company-gets-built]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 核心要点

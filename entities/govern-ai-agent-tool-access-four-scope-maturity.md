@@ -1,11 +1,14 @@
 ---
 title: "Govern AI Agent Tool Access: 四阶段治理成熟度框架"
 created: 2026-08-22
-updated: 2026-08-22
+updated: 2026-09-07
 type: entity
 tags: [agent, security, governance, mcp, access-control, aws, agentcore]
 sources: [raw/articles/govern-ai-agent-tool-access-with-amazon-bedrock-agentcore-ga]
 confidence: 0.7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Govern AI Agent Tool Access: 四阶段治理成熟度框架

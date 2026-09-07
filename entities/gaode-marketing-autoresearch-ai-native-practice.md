@@ -9,11 +9,14 @@ review_recommendation: strong
 review_stars: 4
 date: 2026-06-09
 created: 2026-06-09
-updated: 2026-08-29
+updated: 2026-09-07
 tags: [autoresearch, marketing-agent, gaode, amap, ai-native, growth-marketing, business-protocol, agent-team, real-feedback-loop, human-on-the-loop, decision-intelligence, long-term-operation, multi-decision-arbitration, pre-holiday-layout, recovery-from-failure, prod-decision-agent, case-study]
 type: entity
 provenance_state: synthesized
 sources: [raw/articles/gaode-marketing-autoresearch-ai-native-practice]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > -> [[raw/articles/gaode-marketing-autoresearch-ai-native-practice|原文存档]]

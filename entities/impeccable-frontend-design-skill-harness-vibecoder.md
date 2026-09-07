@@ -1,13 +1,16 @@
 ---
 title: "Impeccable：把 AI 前端设计变成可检查的工作流 — 33.4k Star 开源项目深度分析"
 created: 2026-06-10
-updated: 2026-08-01
+updated: 2026-09-07
 tags: [agent, architecture, code, data, evaluation, harness-engineering, llm, memory, open-source, security, skill, tool-use, vision, workflow]
 review_value: 9
 review_confidence: 9
 type: entity
 review_recommendation: strong
 sources:
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Impeccable：把 AI 前端设计变成可检查的工作流 — 33.4k Star 开源项目深度分析

@@ -1,7 +1,7 @@
 ---
 title: "How to build Agents Where Data Already Lives"
 created: 2026-06-10
-updated: 2026-09-05
+updated: 2026-09-07
 tags: [agent, data-infrastructure, architecture, deployment, data-locality]
 review_value: 7
 review_confidence: 7
@@ -9,6 +9,9 @@ type: entity
 provenance_state: inferred
 sources:
   - raw/articles/how-to-build-agents-where-data-already-lives
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # How to build Agents Where Data Already Lives

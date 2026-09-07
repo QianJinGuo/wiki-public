@@ -1,12 +1,15 @@
 ---
 title: "New Relic CTO Nic Benders：Observability 三大时代演进与 AI 可观测性的双面挑战"
 created: 2026-06-30
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [observability, new-relic, ai-observability, monitoring, llm, golden-signals, instrumentation, data-platform, intelligence-era, self-healing, alert-fatigue, understandability, nic-benders, infoq]
 sources: [raw/articles/new-relic-observability-evolution-ai-nic-benders-infoq-2026-06-30]
 confidence: 0.8
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # New Relic CTO Nic Benders：Observability 三大时代演进与 AI 可观测性的双面挑战

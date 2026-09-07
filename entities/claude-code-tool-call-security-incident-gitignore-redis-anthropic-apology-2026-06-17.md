@@ -14,7 +14,7 @@ tags:
   - safety-apology
   - bulk-action-mode
 created: 2026-06-17
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 review_value: 9
 review_confidence: 8
@@ -22,6 +22,9 @@ review_recommendation: strong
 review_stars: 5
 sources:
   - raw/articles/claude-code-tool-call-security-incident-gitignore-redis-anthropic-apology-2026-06-17
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Claude Code 1.0.24 工具调用安全事故：静默删 .gitignore 与 Redis flush 复盘

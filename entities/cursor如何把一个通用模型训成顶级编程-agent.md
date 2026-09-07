@@ -8,6 +8,9 @@ tags: [wechat, ai]
 rating: v8c8
 sources:
   - raw/articles/cursor如何把一个通用模型训成顶级编程-agent
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Cursor如何把一个通用模型，训成顶级编程 Agent

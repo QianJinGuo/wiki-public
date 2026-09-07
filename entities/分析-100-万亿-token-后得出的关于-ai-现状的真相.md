@@ -8,6 +8,9 @@ tags: [wechat, ai]
 rating: v8c7
 sources:
   - raw/articles/分析-100-万亿-token-后得出的关于-ai-现状的真相
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 分析 100 万亿 Token 后得出的关于 AI 现状的真相！

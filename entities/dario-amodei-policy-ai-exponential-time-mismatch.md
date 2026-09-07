@@ -1,7 +1,7 @@
 ---
 title: "Dario Amodei: AI 指数发展与政策制定的时序鸿沟"
 created: 2026-06-15
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [ai-policy, dario-amodei, anthropic, exponential, regulation, time-mismatch, safety, ai-governance]
 sources: [raw/articles/dario-amodei-policy-on-the-ai-exponential]
@@ -9,6 +9,10 @@ review_value: 9
 review_confidence: 9
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: borderline-retained
+review_category: dup
+review_note: "archive verdict at 0.7 below 0.75 execution threshold; retained"
 ---
 
 # Dario Amodei: AI 指数发展与政策制定的时序鸿沟

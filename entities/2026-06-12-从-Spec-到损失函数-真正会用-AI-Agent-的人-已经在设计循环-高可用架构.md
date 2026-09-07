@@ -6,6 +6,9 @@ type: entity
 tags: ['raw', 'article']
 sources: [raw/articles/2026-06-12-从-Spec-到损失函数-真正会用-AI-Agent-的人-已经在设计循环-高可用架构]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > -> [[raw/articles/2026-06-12-从-Spec-到损失函数-真正会用-AI-Agent-的人-已经在设计循环-高可用架构.md|原文存档]]

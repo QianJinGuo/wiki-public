@@ -2,11 +2,14 @@
 type: entity
 title: d-OPSD —— 扩散语言模型的在线自蒸馏框架
 created: 2026-07-09
-updated: 2026-07-27
+updated: 2026-09-07
 tags: [diffusion-llm, self-distillation, on-policy, post-training, knowledge-distillation]
 sources: [raw/articles/d-opsd-第一个针对扩散语言模型的在线自蒸馏学习]
 confidence: 0.8
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # d-OPSD —— 扩散语言模型的在线自蒸馏框架

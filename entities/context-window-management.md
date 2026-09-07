@@ -2,7 +2,7 @@
 
 title: "Agent 上下文窗口管理对比"
 created: 2026-04-27
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, context-window, openclaw, claude-code, memory, pi-mono, memory-management, compaction]
 sources:
@@ -17,6 +17,10 @@ related:
 review_value: 9
 review_confidence: 9
 provenance_state: inferred
+reviewed: 2026-09-07
+review_verdict: hub-retained
+review_category: dup
+review_note: "judged dup-0.8: 四框架对比重复版; retained as hub (in-links>=20); MOC rewrite candidate"
 ---
 
 ## Overview

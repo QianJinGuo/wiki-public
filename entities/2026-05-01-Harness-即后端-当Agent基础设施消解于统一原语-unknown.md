@@ -6,6 +6,9 @@ type: entity
 tags: ['raw', 'article']
 sources: [raw/articles/2026-05-01-Harness-即后端-当Agent基础设施消解于统一原语-unknown]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > -> [[raw/articles/2026-05-01-Harness-即后端-当Agent基础设施消解于统一原语-unknown.md|原文存档]]

@@ -1,13 +1,16 @@
 ---
 title: "PyTorch Monarch: AMD GPU Distributed Training on ROCm"
 created: 2026-07-08
-updated: 2026-07-31
+updated: 2026-09-07
 type: entity
 tags: [pytorch, amd, rocm, distributed-training, ai-infrastructure, llm]
 confidence: 0.75
 provenance_state: extracted
 sources:
   - raw/articles/pytorch-monarch-amd-gpus-rocm-distributed-training
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > **Background**: 本文基于 PyTorch 官方博客分析 PyTorch Monarch 在 AMD Instinct GPU 上通过 ROCm 实现的单控制器分布式训练框架，涵盖容错、弹性扩展和多 GPU 通信。

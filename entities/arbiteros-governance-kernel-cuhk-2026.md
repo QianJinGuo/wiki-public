@@ -1,12 +1,15 @@
 ---
 title: "ArbiterOS — 港中文 CURE Lab 开源 Agent 运行时治理内核"
 created: 2026-08-03
-updated: 2026-08-03
+updated: 2026-09-07
 type: entity
 tags: ['agent-governance', 'runtime-governance', 'execution-control', 'instruction', 'data-flow', 'agent-safety', 'harness-engineering', 'arbiteros', 'cuhk']
 sources: [raw/articles/arbiteros-governance-kernel-cuhk-ruofei-2026-08-03]
 provenance_state: extracted
 confidence: 0.85
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > → [[raw/articles/arbiteros-governance-kernel-cuhk-ruofei-2026-08-03.md|原文存档]]

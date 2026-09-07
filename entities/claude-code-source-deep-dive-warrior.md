@@ -2,7 +2,7 @@
 title: "Claude Code 源码深度解析（13 核心机制）"
 type: entity
 created: 2026-05-07
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 10
 sources: [raw/articles/claude-code-source-deep-dive-warrior]
 review_confidence: 8
@@ -12,6 +12,9 @@ source_url:
 author: 战士金 (炼钢AI)
 published: 2026-04-01
 tags: [claude-code, source-code, architecture, system-prompt, context-management, sub-agent, mcp]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > -> [[raw/articles/claude-code-source-deep-dive-warrior|原文存档]]

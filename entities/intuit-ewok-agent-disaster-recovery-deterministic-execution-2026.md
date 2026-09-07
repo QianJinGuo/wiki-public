@@ -1,12 +1,15 @@
 ---
 title: "Intuit EWOK Agent：模型决策/确定性执行分离的灾害恢复 Agent 架构（typed skills + 有界循环）"
 created: 2026-09-05
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [agent-architecture, disaster-recovery, decision-execution-separation, typed-skills, mcp, guardrails, bounded-agentic-loop, deterministic-execution, aws, bedrock]
 sources: [raw/articles/intuit-ewok-agent-disaster-recovery-deterministic-execution-2026]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Intuit EWOK Agent：模型决策/确定性执行分离的灾害恢复 Agent 架构（typed skills + 有界循环）

@@ -1,7 +1,7 @@
 ---
 title: "Enable safe agentic payments with built-in guardrails using Amazon Bedrock"
 created: 2026-06-02
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [agent, aws, bedrock, payments, guardrails, security]
 source: [[raw/articles/enable-safe-agentic-payments-with-built-in-guardrails-using-]]
@@ -9,6 +9,9 @@ confidence: 0.75
 provenance_state: inferred
 review_value: 8
 sources: [raw/articles/amazon-bedrock-api-security-guide]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Enable safe agentic payments with built-in guardrails using Amazon Bedrock

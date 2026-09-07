@@ -6,6 +6,9 @@ type: entity
 tags: [ai, rss, inference, llm, sagemaker, ml, time-series, forecasting, aws]
 sources: [raw/articles/基于-amazon-sagemaker-ai-部署-chronos-bolt-实现零样本时序预测]
 confidence: 0.65
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 基于 Amazon SageMaker AI 部署 Chronos-Bolt 实现零样本时序预测

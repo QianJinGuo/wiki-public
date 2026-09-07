@@ -2,7 +2,7 @@
 
 title: Cheap code means formal verification is reasonable now — Antfly Blog
 created: 2026-05-22
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [formal-verification, ai, code, tla+, coq, software-engineering]
 sources: [raw/articles/agent-formal-verification-ai-code]
@@ -11,6 +11,9 @@ review_value: 8
 review_confidence: 9
 review_stars: 4
 review_recommendation: strong
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Cheap code means formal verification is reasonable now — Antfly Blog

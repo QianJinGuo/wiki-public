@@ -2,13 +2,16 @@
 
 title: Harness Engineering 综合性指南（ConardLi 系列 · 含 Beautiful Article 实证 + Reacticle 协议）
 created: 2026-05-10
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [harness, prompt-engineering, context-engineering, agent, agent-architecture, context-management, state-machine, tool-design, evaluation, error-recovery, codex, anthropic-claude, langchain, beautiful-article, reacticle, conardli, code-秘密花园]
 sources: [raw/articles/harness-engineering-comprehensive-guide-conardli, raw/articles/conardli-harness-practice-beautiful-article-reacticle-2026-06-18]
 provenance_state: merged
 review_value: 9
 review_confidence: 9
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 核心定义

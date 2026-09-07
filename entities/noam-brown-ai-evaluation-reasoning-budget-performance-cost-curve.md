@@ -1,7 +1,7 @@
 ---
 title: "Noam Brown：推理预算应成为AI评估的基础变量"
 created: 2026-06-09
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [noam-brown, openai, ai-evaluation, reasoning-budget, performance-cost-curve, test-time-compute, ai-safety, benchmark, gpt55, scaling-law, reasoning-effort, rlvr]
 sources:
@@ -9,6 +9,9 @@ sources:
   - raw/articles/reasoning-tier-mechanism-sebastian-raschka-datawhale-2026-07-22
 review_value: 8
 review_confidence: 9
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > 原文归档：[[raw/articles/noam-brown-ai-evaluation-reasoning-budget-performance-cost-curve|原文归档]] ^[raw/articles/noam-brown-ai-evaluation-reasoning-budget-performance-cost-curve.md]

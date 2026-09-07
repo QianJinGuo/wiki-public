@@ -2,7 +2,7 @@
 title: "Introducing the MDN MCP server"
 description: "MDN (Mozilla Developer Network) 推出官方 MCP server，让 AI agent 直接访问 MDN 完整文档（HTML/CSS/JS/Web API），这是首批主流 Web 标准权威机构采纳 MCP 协议。"
 created: 2026-06-17
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [mcp, agent, ai-agent, web, documentation, mozilla, mdn, protocol, web-standards]
 sources: [raw/articles/introducing-mdn-mcp-server-2026]
@@ -11,6 +11,9 @@ review_value: 7
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Introducing the MDN MCP server

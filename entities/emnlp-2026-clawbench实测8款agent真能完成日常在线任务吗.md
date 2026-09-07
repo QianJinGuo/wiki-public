@@ -8,6 +8,9 @@ tags: [ai, agent, harness, multimodal]
 sources: [raw/articles/emnlp-2026-clawbench实测8款agent真能完成日常在线任务吗]
 confidence: 0.75
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # EMNLP 2026 | ClawBench实测8款Agent：真能完成日常在线任务吗？

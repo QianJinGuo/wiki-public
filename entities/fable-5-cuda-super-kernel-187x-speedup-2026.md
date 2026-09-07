@@ -1,12 +1,15 @@
 ---
 title: "Fable 5 手搓 CUDA 超级内核 18.7 倍加速"
 created: 2026-07-08
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [fable-5, cuda, gpu, performance, kernel, anthropic]
 confidence: 0.75
 provenance_state: extracted
 sources: [raw/articles/fable-5-cuda-super-kernel-187x-speedup-2026]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Fable 5 手搓 CUDA 超级内核 2.5 小时狂飙 18.7 倍

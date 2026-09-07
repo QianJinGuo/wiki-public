@@ -6,6 +6,9 @@ type: entity
 tags: [aws, lambda, microvm, serverless, ai-agent, security, firecracker, comparison, sandbox, multi-tenant]
 sources: [raw/articles/lambda-microvms-vs-lambda-functions全方位深度对比]
 confidence: 0.9
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Lambda MicroVMs vs Lambda Functions：全方位深度对比

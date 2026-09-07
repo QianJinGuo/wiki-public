@@ -1,7 +1,7 @@
 ---
 title: "鹅厂 Skill 写作完整 Playbook：14 章节 end-to-end 实战 + 工程化评估（腾讯一线踩坑 + Anthropic 官方做法整合）"
 created: 2026-06-05
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, skill, skill-writing, anthropic, claude-code, codebuddy, mcp, prompt-engineering, engineering-evaluation, tencent, jackjchou, level-1-2-3, few-shot, before-after, checkpoint, skill-creator]
 sources:
@@ -10,6 +10,9 @@ sources:
 review_value: 8
 review_confidence: 8
 summary: 鹅厂 jackjchou 14 章节完整 Skill 写作 Playbook：渐进式加载 3 层 (50-150/2K-5K Token) + Description 触发精准 + 5 大评估指标 (90%/5%/85%/30%/80%) + Skill Creator 工程化评估 3 阶段 + 反模式/安全/团队管理 3 清单
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 鹅厂 Skill 写作完整 Playbook：14 章节 end-to-end 实战 + 工程化评估

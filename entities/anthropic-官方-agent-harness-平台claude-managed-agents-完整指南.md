@@ -9,6 +9,10 @@ sources:
   - raw/articles/anthropic-官方-agent-harness-平台claude-managed-agents-完整指南
   - raw/articles/claude-managed-agents-evolution-of-agentic-surfaces-2026-06
 review_confidence: 8
+reviewed: 2026-09-07
+review_verdict: hub-retained
+review_category: dup
+review_note: "judged dup-0.8: Managed Agents第四份; retained as hub (in-links>=20); MOC rewrite candidate"
 ---
 
 > -> [[raw/articles/anthropic-官方-agent-harness-平台claude-managed-agents-完整指南.md|原文存档]]

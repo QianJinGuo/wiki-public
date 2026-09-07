@@ -1,13 +1,16 @@
 ---
 title: "FAST：清华&滴滴自动驾驶强化学习并行训练框架"
 created: 2026-07-16
-updated: 2026-07-22
+updated: 2026-09-07
 type: entity
 tags: [reinforcement-learning, autonomous-driving, parallel-training, distributed-computing, tsinghua, didi, rl-training, closed-loop-simulation, dppo, ppo]
 status: verified
 confidence: 0.9
 provenance_state: extracted
 sources: [raw/articles/tsinghua-didi-fast-parallel-rl-training-2026-07-16]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > 清华大学李升波课题组与滴滴深穹远航实验室联合提出的 FAST 框架，通过解耦"个体终止"与"全局重置"解决自动驾驶 RL 闭环训练的效率瓶颈，有效采样吞吐最高提升 9.08 倍。^[raw/articles/tsinghua-didi-fast-parallel-rl-training-2026-07-16.md]

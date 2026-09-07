@@ -4,11 +4,15 @@ title: "Anthropic 博客：Claude Code 大型代码库最佳实践"
 type: entity
 tags: [agent, anthropic, claude, rag, claude-code, large-codebase, harness, hook, skills, plugins, lsp, mcp, sub-agents, configuration, enterprise-deployment, 治理]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 9
 review_confidence: 9
 sources: [raw/articles/anthropic-claude-code-large-codebase-best-practices-50002a089323]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: hub-retained
+review_category: dup
+review_note: "judged dup-0.8: dup-correction: 同主题保留更全版本; retained as hub (in-links>=20); MOC rewrite candidate"
 ---
 
 ## 核心结论

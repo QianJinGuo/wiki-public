@@ -4,10 +4,13 @@ title: "Nvidia Extreme Co Design Agentic Systems"
 type: entity
 tags: [agent, nvidia, training]
 created: 2026-05-21
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 8
 review_confidence: 7
 sources: [raw/articles/nvidia-extreme-co-design-agentic-systems]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Building for the Rising Complexity of Agentic Systems with Extreme Co&#x2d;Design | NVIDIA Technical Blog

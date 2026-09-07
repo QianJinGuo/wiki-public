@@ -2,7 +2,7 @@
 
 title: "Making Claude a chemist"
 created: 2026-06-09
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [claude, anthropic, chemistry]
 sources: [raw/articles/anthropic-com-research-making-claude-a-chemist]
@@ -12,6 +12,9 @@ review_recommendation: worth-reading
 review_stars: 3
 confidence: medium
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Making Claude a chemist

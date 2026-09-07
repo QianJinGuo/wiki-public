@@ -3,7 +3,7 @@ title: "高德 ABot-Earth 0.5：全球首个 3D 原生城市世界模型（1% �
 type: entity
 tags: [world-model, 3d-generation, 3dgs, gaussian-splatting, abot-earth, amap, alibaba, embodied-ai, low-altitude-economy, digital-twin, urban-3d, spatial-intelligence, lod, mesh-vs-3dgs, vlm-adapter, seamless-inference, conditional-robustness, world-simulator, simulator-for-embodied-ai]
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 8
 review_confidence: 8
 provenance_state: extracted
@@ -12,6 +12,9 @@ related:
   - entities/saas-bench-gui-agent-eval-unipat
   - entities/agent-self-improvement-six-mechanisms
   - entities/anthropic-biology-agent-data-infrastructure-virbench
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 摘要

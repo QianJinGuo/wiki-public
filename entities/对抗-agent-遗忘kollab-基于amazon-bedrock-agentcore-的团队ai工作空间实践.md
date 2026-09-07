@@ -11,6 +11,9 @@ review_confidence: 7
 review_stars: 3
 sources:
   - raw/articles/对抗-agent-遗忘kollab-基于amazon-bedrock-agentcore-的团队ai工作空间实践
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # **一、关于 Kollab**

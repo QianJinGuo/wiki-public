@@ -4,10 +4,13 @@ title: "Huashu-Design 2.0 — Agent Skill 反收敛三套逻辑"
 type: entity
 tags: [agent, skill-design, design, multimodal, fact-verification, harness, open-source]
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/huashu-design-2-0-flower-uncle-3-pitfalls]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Huashu-Design 2.0 — Agent Skill 反收敛三套逻辑

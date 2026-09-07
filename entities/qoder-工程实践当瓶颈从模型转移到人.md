@@ -8,6 +8,9 @@ tags: [ai, agent, llm]
 sources: [raw/articles/qoder-工程实践当瓶颈从模型转移到人]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Qoder 工程实践：当瓶颈从模型转移到人

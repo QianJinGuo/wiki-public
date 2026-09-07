@@ -8,6 +8,9 @@ tags: [wechat, ai]
 rating: v7c8
 sources:
   - raw/articles/告别伪智能代码用-spec-rag-打造真正懂你的ai程序员
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 告别“伪智能”代码：用 Spec + RAG 打造真正懂你的AI程序员

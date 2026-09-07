@@ -8,6 +8,9 @@ review_value: 8
 review_confidence: 8
 review_recommendation: strong
 sources: [raw/articles/从多智能体编排到ai自主决策资损防控体系的架构演进]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 ## 核心要点
 - **V1多智能体架构**：5个专业化Agent（知识抽取、资损分析、核对布防、产出监控、指标监控）协同编排，准确率42.9%、召回率63% 

@@ -3,13 +3,16 @@ title: "Agentic Abstention—Agent 能及时停止吗？华盛顿大学/Allen AI
 type: entity
 tags: [agent, abstention, stop-condition, loop-engineering, evaluation, benchmark, webshop, convulve, re-act, agent-failure, token-waste]
 created: 2026-07-03
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 8
 review_confidence: 8
 review_recommendation: strong
 provenance_state: extracted
 related: [loop-engineering-feedback-control-system, loop-engineering-addy-osmani-challengehub, harness-之后-状态边界与失败闭环-ruofei]
 sources: [raw/articles/agentic-abstention-washington-allen-2026]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Agentic Abstention—Agent 能及时停止吗？

@@ -5,13 +5,16 @@ source: 架构师 JiaGouX (2026-08-21)
 score: v=8, c=6, v×c=48
 type: entity
 created: 2026-08-21
-updated: 2026-08-22
+updated: 2026-09-07
 tags: [agent-runtime, harness, codex, app-server, dsh, deepseek-harness, subagent, agent-as-runtime, orchestration, claude-code, agent-execution-unit, agent-composition, control-split]
 sources:
   - raw/articles/codex-harness-platform-dsh-subagent-agent-as-execution-unit-ruofei-2026-08-21
   - raw/articles/deepseek-harness-v012-runtime-chain-cordis-graph-goal-ruofei-2026
 confidence: high
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Agent 作为软件架构的新一层：Codex Harness 平台化 + DSH Subagent

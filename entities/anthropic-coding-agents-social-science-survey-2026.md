@@ -5,13 +5,16 @@ source: "[[raw/articles/anthropic-coding-agents-social-science-survey-2026]]"
 source_url: "https://mp.weixin.qq.com/s/AHCXofxR_eGrdGvZQahvqg"
 tags: [agent, coding-agent, adoption-gap, social-science, anthropic, survey]
 created: 2026-05-29
-updated: 2026-08-24
+updated: 2026-09-07
 type: entity
 confidence: 0.85
 provenance_state: expanded
 review_value: 7
 sources:
   - raw/articles/anthropic-coding-agents-social-science-survey-2026
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 背景与方法

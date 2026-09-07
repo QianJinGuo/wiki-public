@@ -1,13 +1,16 @@
 ---
 title: "高德工业级能力底座：AI-Native 的端云一体基建"
 created: 2026-06-10
-updated: 2026-08-30
+updated: 2026-09-07
 tags: [agent, architecture, code, data, knowledge-mgmt, search, workflow]
 review_value: 7
 review_confidence: 7
 type: entity
 sources:
   - raw/articles/amap-ai-native-end-to-end-infrastructure
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 高德工业级能力底座：AI-Native 的端云一体基建

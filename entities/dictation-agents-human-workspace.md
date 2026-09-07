@@ -2,7 +2,7 @@
 
 title: It's Time to Walk
 created: 2026-05-22
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [dictation, voice, productivity, ai-agents, workspace]
 sources: [raw/articles/dictation-agents-human-workspace]
@@ -12,6 +12,9 @@ review_confidence: 6
 review_stars: 3
 review_recommendation: worth-reading
 score_validated: 2026-09-05
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ### The main points

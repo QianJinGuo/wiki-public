@@ -7,6 +7,9 @@ tags: [agent, memory, rag, harness-engineering]
 sources: [raw/articles/mem0-vs-workbuddyagent-记忆层的两条路线谁才是终极答案]
 confidence: 0.7
 provenance_state: merged
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Mem0 vs WorkBuddy：Agent 记忆层的两条路线，谁才是终极答案？

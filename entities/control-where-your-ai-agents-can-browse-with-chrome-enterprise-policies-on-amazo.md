@@ -4,11 +4,14 @@ title: "Control where your AI agents can browse with Chrome enterprise policies 
 type: entity
 tags: [aws, machine-learning, ai-agents, bedrock]
 created: 2026-05-15
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 7
 sources: [raw/articles/control-where-your-ai-agents-can-browse-with-chrome-enterprise-policies-on-amazo]
 review_confidence: 8
 review_recommendation: strong
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > 来源：[[raw/articles/control-where-your-ai-agents-can-browse-with-chrome-enterprise-policies-on-amazo.md|原文存档]]

@@ -4,10 +4,13 @@ title: "Fragnesia: Linux Kernel Local Privilege Escalation via ESP-in-TCP"
 type: entity
 tags: [rag, research, security]
 created: 2026-05-21
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 7
 review_confidence: 8
 sources: [raw/articles/fragnesia-linux-kernel-local-privilege-escalation-via-esp-in-tcp]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 漏洞概述

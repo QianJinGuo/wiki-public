@@ -3,11 +3,14 @@ title: "Routa 多智能体协同交付平台"
 type: entity
 tags: [routa, multi-agent, agent-coordination, software-delivery, kanban, phodal]
 created: 2026-05-17
-updated: 2026-08-29
+updated: 2026-09-07
 sources: [raw/articles/routa-multi-agent-coordination-platform]
 review_value: 7
 review_confidence: 7
 review_recommendation: worth-reading
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 ## 核心理念
 "单一 Agent 聊天适合处理孤立任务，但一旦同一条线程同时承担拆解、实现、评审、证据收集和发布决策，语义边界就会迅速混乱。"   ^[raw/articles/routa-multi-agent-coordination-platform.md]

@@ -3,14 +3,16 @@
 
 title: "天猫 AI 编程实践：团队知识库 + NPM"
 created: 2026-05-08
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [engineering, ai]
 sources:
   - raw/articles/tmall-ai-coding-practice-team-knowledge-base-npm
 review_value: 8
 review_confidence: 7
-
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # "tmall ai coding practice team knowledge base npm"

@@ -2,7 +2,7 @@
 title: "Okta AI Agent Governance - FedRAMP/HIPAA Compliance Boundary Agent Lifecycle Management"
 type: entity
 created: 2026-06-30
-updated: 2026-09-05
+updated: 2026-09-07
 source: "[[raw/articles/okta-ai-agents-fedramp]]"
 tags: [agent, governance, identity, NHI, fedramp, compliance, security, okta]
 confidence: 0.80
@@ -13,6 +13,9 @@ review_recommendation: strong
 review_stars: 4
 sources:
   - raw/articles/okta-ai-agents-fedramp
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Okta AI Agent Governance - FedRAMP/HIPAA Compliance Boundary Agent Lifecycle Management

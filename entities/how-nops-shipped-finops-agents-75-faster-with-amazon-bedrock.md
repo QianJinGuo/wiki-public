@@ -1,7 +1,7 @@
 ---
 title: "nOps FinOps Agent 架构：语义层驱动的数据分析 Agent 设计"
 created: 2026-08-11
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, finops, aws, agentcore, semantic-layer, data-analysis, single-agent, streaming]
 sources: [raw/articles/how-nops-shipped-finops-agents-75-faster-with-amazon-bedrock]
@@ -11,6 +11,9 @@ review_value: 7
 review_confidence: 8
 review_stars: 4
 review_recommendation: ingest
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # nOps FinOps Agent 架构：语义层驱动的数据分析 Agent 设计

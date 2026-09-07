@@ -2,7 +2,7 @@
 title: "高德扫街榜 HermesAgent 配图系统：VLM + Skill + 语言驱动的生产级 Agent 架构"
 type: entity
 created: 2026-07-01
-updated: 2026-07-31
+updated: 2026-09-07
 tags: [hermes, hermes-agent, gaode, amap, agent-orchestration, vlm, skill, mcp, rag, multi-modal, image-selection, production, language-driven, hybrid-architecture, fallback, quality-check, monitoring]
 sources:
   - raw/articles/gaode-saojie-image-selection-hermesagent-vlm-production-2026
@@ -10,6 +10,9 @@ review_value: 9
 review_confidence: 9
 review_recommendation: strong
 review_stars: 5
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 高德扫街榜 HermesAgent 配图系统：VLM + Skill + 语言驱动的生产级 Agent 架构

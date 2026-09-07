@@ -9,6 +9,9 @@ review_confidence: 7
 type: entity
 sources:
   - raw/articles/在-amazon-eks-上使用-nvidia-gpu-operator-管理自定义-gpu-驱动与-cuda-工作负载
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 在 Amazon EKS 上使用 NVIDIA GPU Operator 管理自定义 GPU 驱动与 CUDA 工作负载

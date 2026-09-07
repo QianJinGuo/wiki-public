@@ -1,12 +1,15 @@
 ---
 title: "ICML 2026 获奖论文：黄高团队杰出论文，A3C 时间检验奖"
 created: 2026-07-08
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [icml, conference, awards, paper, machine-learning, a3c, reinforcement-learning, diffusion-model, llm-reasoning]
 confidence: 0.65
 provenance_state: extracted
 sources: [raw/articles/icml-2026-award-papers-huanggao-a3c-time-test-2026]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # ICML 2026 获奖论文揭晓：黄高团队获杰出论文，A3C 算法获时间检验奖

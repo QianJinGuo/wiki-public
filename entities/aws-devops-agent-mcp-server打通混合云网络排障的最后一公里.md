@@ -9,6 +9,9 @@ sources: [raw/articles/aws-devops-agent-mcp-server打通混合云网络排障的
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 ## 核心要点
 - AWS 技术实践

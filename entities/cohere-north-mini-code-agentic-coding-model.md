@@ -2,7 +2,7 @@
 
 title: "Cohere North Mini Code -30B MoE Agentic Coding Model"
 created: 2026-06-11
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [cohere, north-mini-code, agentic-coding, open-source, moe, sovereign-ai, code-model, llm]
 source: "[[raw/articles/cohere-north-mini-code-agentic-coding-model]]"
@@ -12,6 +12,9 @@ review_confidence: 7
 review_recommendation: strong
 review_stars: 4
 description: "Cohere's first open-source agentic coding model —30B MoE with3B active, Apache2.0,33.4 Artificial Analysis Coding Index,2.8x throughput vs Devstral Small2"
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Cohere North Mini Code —30B MoE Agentic Coding Model

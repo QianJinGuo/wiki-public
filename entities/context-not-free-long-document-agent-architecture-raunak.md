@@ -2,13 +2,16 @@
 
 title: "Context不是免费的：长文档Agent性能天花板与架构优化"
 created: 2026-05-28
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [document-parsing, context-window, agent-architecture, sandbox, metadata-split, reducto, prompting]
 sources:
   review_value: 8
 review_confidence: 8
 review_recommendation: strong
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > -> [[raw/articles/context-not-free-long-document-agent-architecture-raunak|Context不是免费的：长文档Agent性能天花板与架构优化]]

@@ -5,12 +5,15 @@ type: entity
 source: newsletter
 source_url:
 created: 2026-05-13
-updated: 2026-08-29
+updated: 2026-09-07
 tags: [reverse-engineering, devirtualization, themida, software-protection, binary-analysis]
 review_value: 9
 review_confidence: 9
 review_recommendation: strong
 sources: [raw/articles/back-engineering-static-devirtualization-themida]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > -> [[raw/articles/back-engineering-static-devirtualization-themida|原文存档]]

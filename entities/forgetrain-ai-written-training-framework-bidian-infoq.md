@@ -8,11 +8,14 @@ review_recommendation: strong
 review_stars: 4
 date: 2026-05-28
 created: 2026-05-28
-updated: 2026-08-29
+updated: 2026-09-07
 tags: [forge-train, ai-coding, training-framework, llm-infra, 国产算力, megatron, minimax, harness, ai研发ai, human-on-the-loop, moe]
 type: entity
 provenance_state: synthesized
 sources: [raw/articles/forgetrain-ai-written-training-framework-bidian-infoq]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > -> [[raw/articles/forgetrain-ai-written-training-framework-bidian-infoq|原文存档]]

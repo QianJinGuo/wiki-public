@@ -1,11 +1,14 @@
 ---
 title: "高德AI Native数据Agent：LLM + 知识工程 + 规约约束的NL2SQL生产实践"
 created: 2026-07-30
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [agent, data-agent, nl2sql, knowledge-engineering, gaode, amap, llm, text-to-sql, evaluation, anomaly-detection, intent-routing, session-replay, halluzination]
 sources:
   - raw/articles/gaode-ai-native-data-agent-engineering-practice
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 高德AI Native数据Agent：LLM + 知识工程 + 规约约束的NL2SQL生产实践

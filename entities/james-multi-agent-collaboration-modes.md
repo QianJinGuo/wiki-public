@@ -4,10 +4,13 @@ title: "Multi-Agent 的四种协作模式：Supervisor、Swarm、网状、流水
 type: entity
 tags: [agent, memory, multi-agent, prompt, rag]
 created: 2026-05-21
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/james-multi-agent-collaboration-modes]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Multi-Agent 的四种协作模式：Supervisor、Swarm、网状、流水线，怎么选？

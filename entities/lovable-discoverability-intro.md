@@ -5,12 +5,15 @@ title: "Building is just the beginning: Introducing Discoverability"
 type: entity
 tags: [lovable, developer-experience, code-reuse, discoverability, knowledge-management]
 created: 2026-05-15
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 7
 sources: [raw/articles/lovable-discoverability-intro]
 review_confidence: 8
 review_recommendation: strong
 review_stars: 3
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 核心要点

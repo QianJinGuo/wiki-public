@@ -2,7 +2,7 @@
 
 title: "Powering scientific discovery"
 created: 2026-07-10
-updated: 2026-08-24
+updated: 2026-09-07
 type: entity
 tags: [reinforcement-learning, rag, memory]
 sources: [raw/articles/powering-scientific-discovery-byokg-and-graphrag-for-intelli]
@@ -12,6 +12,9 @@ review_recommendation: worth-reading
 review_stars: 3
 confidence: medium
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Powering scientific discovery: BYOKG and GraphRAG for intelligent pharmaceutical research

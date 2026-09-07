@@ -2,7 +2,7 @@
 title: "Dario Amodei 2026 Policy on the AI Exponential"
 description: "Anthropic CEO Dario Amodei 2026年6月政策长文。Treebeard 隐喻开场,五大政策领域(监管/宏观经济/科学创新/国家权力/地缘政治)的系统化建议。"
 created: 2026-06-12
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 source: "[[raw/articles/dario-amodei-policy-on-the-ai-exponential|原文存档]]"
 sources: [raw/articles/dario-amodei-policy-on-the-ai-exponential]
@@ -13,6 +13,9 @@ review_recommendation: strong
 review_stars: 4
 confidence: 0.85
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Dario Amodei 2026 Policy on the AI Exponential

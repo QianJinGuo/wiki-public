@@ -1,11 +1,14 @@
 ---
 title: "What happened after 2,000 people tried to hack my AI assistant"
 created: 2026-08-01
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: ['raw', 'article']
 sources: [raw/articles/what-happened-after-2-000-people-tried-to-hack-my-ai-assistant]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > -> [[raw/articles/what-happened-after-2-000-people-tried-to-hack-my-ai-assistant.md|原文存档]]

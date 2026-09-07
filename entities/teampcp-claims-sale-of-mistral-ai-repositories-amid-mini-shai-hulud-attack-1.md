@@ -3,12 +3,15 @@ title: "TeamPCP Claims Sale of Mistral AI Repositories Amid Mini Shai-Hulud Atta
 type: entity
 tags: [hackread,mistral-ai,security,vulnerability,repository-attack]
 created: 2026-05-16
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 8
 sources: [raw/articles/teampcp-claims-sale-of-mistral-ai-repositories-amid-mini-shai-hulud-attack-1]
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 ## 核心要点
 - TeamPCP 在黑客论坛上声称出售约 5GB 的 Mistral AI 内部代码库存档，标价 $25,000，威胁一周内公开泄露 

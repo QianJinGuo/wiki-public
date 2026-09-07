@@ -6,6 +6,9 @@ type: entity
 tags: ['raw', 'article']
 sources: [raw/articles/2026-05-01-强化学习的进化-从PPO到MaxRL-LLM推理训练的算法演进史-机器之心]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > -> [[raw/articles/2026-05-01-强化学习的进化-从PPO到MaxRL-LLM推理训练的算法演进史-机器之心.md|原文存档]]

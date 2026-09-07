@@ -1,12 +1,15 @@
 ---
 title: "Anthropic Agent Platform 进化：三位高管深度对谈"
 created: 2026-07-13
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [anthropic, agent, platform, claude-platform, agent-identity, agent-collaboration, scaffolding, managed-agent]
 sources: [raw/articles/anthropic-agent-platform-evolution-three-executives]
 confidence: 0.6
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Anthropic Agent Platform 进化：三位高管深度对谈

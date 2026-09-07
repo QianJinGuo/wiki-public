@@ -3,11 +3,14 @@ title: "Inngest - AI in Production: The 2026 Benchmark Report"
 type: entity
 tags: [inngest, ai-infrastructure, orchestration, observability, reliability]
 created: 2026-05-19
-updated: 2026-05-19
+updated: 2026-09-07
 review_value: 7
 review_confidence: 9
 review_recommendation: worth-reading
 sources: [raw/articles/inngest-ai-in-production-the-2026-benchmark-report-2]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 ## 核心要点
 - 评分：v=7 × c=9 = 63

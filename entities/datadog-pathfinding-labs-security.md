@@ -5,14 +5,16 @@ title: "Pathfinding Labs: Deploy, test, and learn from 100+ intentional security
 type: entity
 tags: [datadog, security-labs, aws, iam, privilege-escalation, terraform, cloud-security, red-team, blue-team, cspm, devsecops]
 created: 2026-05-20
-updated: 2026-05-21
+updated: 2026-09-07
 review_value: 7
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 4
 sources: [raw/articles/datadog-pathfinding-labs-security]
 provenance_state: extracted
-
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Pathfinding Labs

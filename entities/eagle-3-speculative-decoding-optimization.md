@@ -2,12 +2,15 @@
 
 title: "EAGLE-3 投机解码与 USP 长序列训练优化"
 created: 2026-05-15
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [speculative-decoding, eagle-3, llm-inference, sequence-parallelism, training-optimization, agent, didi, specforge]
 sources: [raw/articles/didi-eagle-3-speculative-decoding-agents]
 review_value: 8
 review_confidence: 8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 核心问题：为什么 Agent 场景需要 EAGLE-3

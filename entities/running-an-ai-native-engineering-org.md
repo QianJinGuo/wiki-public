@@ -3,7 +3,7 @@
 title: "Running an AI-native engineering org"
 type: entity
 created: 2026-06-05
-updated: 2026-09-05
+updated: 2026-09-07
 tags: [article, newsletter, ai, agent]
 sources:
   - raw/articles/running-an-ai-native-engineering-org
@@ -11,6 +11,9 @@ review_value: 7
 review_confidence: 7
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Running an AI-native engineering org

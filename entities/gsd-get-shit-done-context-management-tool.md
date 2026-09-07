@@ -3,14 +3,16 @@
 
 title: "GSD 上下文管理工具：用 Plan 约束 Agent 行为边界"
 created: 2026-05-10
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [claude, agent, context-management, llm, workflow]
 sources:
   - raw/articles/gsd-get-shit-done-context-management-tool
 review_value: 7
 review_confidence: 7
-
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 [[raw/articles/gsd-get-shit-done-context-management-tool.md|原文存档]] ^[raw/articles/gsd-get-shit-done-context-management-tool.md]

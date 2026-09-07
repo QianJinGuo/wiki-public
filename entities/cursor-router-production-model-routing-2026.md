@@ -1,12 +1,15 @@
 ---
 title: "Cursor Router: 生产流量驱动的模型路由系统"
 created: 2026-08-10
-updated: 2026-08-10
+updated: 2026-09-07
 type: entity
 tags: [cursor, model-routing, inference-cost, llm, production, routing]
 sources: [raw/articles/cursor-router-how-cursor-chooses-model-2026]
 confidence: 0.8
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Cursor Router: 生产流量驱动的模型路由系统

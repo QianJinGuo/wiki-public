@@ -1,12 +1,15 @@
 ---
 title: "LEAP：基于似然抽取与聚合的 LLM 概率预测（EMNLP 2026）"
 created: 2026-09-06
-updated: 2026-09-06
+updated: 2026-09-07
 type: entity
 tags: [llm, probabilistic-forecasting, evidence-aggregation, emnlp, agent-evaluation, uncertainty]
 sources: [raw/articles/leap-likelihood-elicitation-aggregation-probabilistic-forecasting-2026]
 confidence: 0.75
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # LEAP：基于似然抽取与聚合的 LLM 概率预测（EMNLP 2026）

@@ -2,7 +2,7 @@
 title: "Agent vs Workflow：控制权连续谱与生产级选型框架"
 slug: agent-vs-workflow-control-continuum-framework
 created: 2026-07-08
-updated: 2026-07-08
+updated: 2026-09-07
 type: entity
 tags:
   - agent
@@ -17,6 +17,9 @@ review_value: 9
 review_confidence: 9
 sources:
   - raw/articles/agent-vs-workflow-control-continuum
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Agent vs Workflow：控制权连续谱与生产级选型框架

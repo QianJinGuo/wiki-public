@@ -10,8 +10,11 @@ review_value: 6
 sources: [raw/articles/incendium-fuzzing-ms-rpc]
 review_confidence: 8
 created: 2026-05-10
-updated: 2026-09-05
+updated: 2026-09-07
 score_validated: 2026-09-05
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > -> [[raw/articles/incendium-fuzzing-ms-rpc.md|原文存档]]

@@ -3,14 +3,16 @@
 
 title: "Kimi K2.6背后的Agent Database：Agent-native 时代的数据Infra竞争，跟过去30年有何不同"
 created: 2026-05-13
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, ai]
 sources:
   - raw/articles/kimi-k2-tidb-agent-database-huangdongxu-20260513
 review_value: 8
 review_confidence: 7
-
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 背景

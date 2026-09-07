@@ -6,13 +6,16 @@ sources:
   - raw/articles/aws-devops-agent-autonomous-incident-resolution-datadog
 tags: ["aws", "agent", "incident-management", "devops", "mcp", "observability", "agent-infra", "production"]
 created: "2026-06-22"
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 review_value: 8
 review_confidence: 9
 review_stars: 5
 confidence: high
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # AWS DevOps Agent × Datadog MCP Server: 生产级自主事件解决

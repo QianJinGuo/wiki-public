@@ -9,7 +9,10 @@ publish_date: 2026-02-02
 type: entity
 tags: [aws-china-blog, agent, testing, web-bot-auth, automation]
 created: 2026-05-15
-updated: 2026-09-05
+updated: 2026-09-07
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 概述

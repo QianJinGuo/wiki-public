@@ -1,7 +1,7 @@
 ---
 title: "12 个 Agent 工程设计底层逻辑：脚手架 vs 承重墙"
 created: 2026-06-15
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent-design-patterns, harness, claude-code, memory, context, workflow, permission, hooks, bilgin-ibryam, yunduojun]
 sources:
@@ -9,6 +9,9 @@ sources:
 review_value: 7
 review_confidence: 7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > 原文归档：[[raw/articles/twelve-agent-design-patterns-yunduojun-datastudio|原文归档]] ^[raw/articles/twelve-agent-design-patterns-yunduojun-datastudio.md]

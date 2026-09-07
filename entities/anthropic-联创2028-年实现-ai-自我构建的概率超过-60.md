@@ -8,6 +8,9 @@ updated: 2026-08-01
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/anthropic-联创2028-年实现-ai-自我构建的概率超过-60]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Anthropic 联创：2028 年实现 AI 自我构建的概率超过 60%

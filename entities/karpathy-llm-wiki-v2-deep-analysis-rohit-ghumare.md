@@ -1,7 +1,7 @@
 ---
 title: "Karpathy LLM Wiki V2：记忆生命周期 + 知识图谱 + 混合检索 + 落地路线图"
 created: 2026-06-26
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [llm-wiki, knowledge-management, memory-lifecycle, knowledge-graph, hybrid-retrieval, agent-memory, evaluation, rrf, karpathy]
 sources: [raw/articles/karpathy-llm-wiki-v2-deep-analysis-rohit-ghumare]
@@ -9,6 +9,9 @@ confidence: 0.85
 provenance_state: extracted
 review_value: 8
 review_confidence: 8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Karpathy LLM Wiki V2：从复利启动到复利防烂

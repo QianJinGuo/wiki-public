@@ -7,6 +7,9 @@ tags: [wechat, ai]
 rating: v8c7
 sources:
   - raw/articles/阿里重磅开源opensandbox专为-ai-agent-打造的下一代沙箱
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 阿里重磅开源！OpenSandbox：专为 AI Agent 打造的下一代沙箱

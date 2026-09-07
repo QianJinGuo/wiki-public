@@ -7,6 +7,9 @@ tags: [ai, wechat, agent, model, rag, security, search-manipulation, GEO]
 sources: [raw/articles/现代ai之父新作-13个大模型实测-检索agent真的可信吗]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 现代AI之父新作：13个大模型实测，检索agent真的可信吗？

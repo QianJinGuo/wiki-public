@@ -1,12 +1,15 @@
 ---
 title: "Attention-Only Transformers 受控研究（SANs vs 标准 Transformer）"
 created: 2026-08-11
-updated: 2026-08-11
+updated: 2026-09-07
 type: entity
 tags: [transformer, attention, architecture, arxiv, ml-research, feed-forward]
 sources: [raw/articles/controlled-study-attention-only-transformers-arxiv-2607-18363]
 confidence: 0.8
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Attention-Only Transformers 受控研究（SANs vs 标准 Transformer）

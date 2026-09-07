@@ -2,7 +2,7 @@
 title: "AWS SageMaker 阿塞拜疆语 LLM 训练：BBPE 分词 + FSDP + Liger 三阶段方案"
 description: "Azercell 与 AWS GAIC 合作，在 6 周内通过自定义 BBPE 分词器（2× 编码效率）、FSDP 分布式训练和 Liger Kernel 优化，在 ml.p5.48xlarge 上实现 23% 吞吐量提升和 58% 内存降低"
 created: 2026-06-07
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [aws, sagemaker, llm, low-resource-language, distributed-training, tokenizer]
 source: [[raw/articles/aws-sagemaker-azerbaijani-lm]]
@@ -12,6 +12,9 @@ review_value: 8
 review_confidence: 9
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # AWS SageMaker 阿塞拜疆语 LLM 训练：BBPE 分词 + FSDP + Liger 三阶段方案

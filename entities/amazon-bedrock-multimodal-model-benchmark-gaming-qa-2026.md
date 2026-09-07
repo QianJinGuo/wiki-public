@@ -1,11 +1,14 @@
 ---
 title: "Bedrock 多模态模型对比测试平台：基于 Converse API 的统一游戏 AI UI 定位评估"
 created: 2026-07-29
-updated: 2026-07-29
+updated: 2026-09-07
 type: entity
 tags: [aws, bedrock, multimodal, gaming, benchmark, ai-testing, open-source]
 sources: [raw/articles/amazon-bedrock-multimodal-model-benchmark-gaming-qa-2026]
 confidence: 0.75
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Bedrock 多模态模型对比测试平台：基于 Converse API 的统一游戏 AI UI 定位评估

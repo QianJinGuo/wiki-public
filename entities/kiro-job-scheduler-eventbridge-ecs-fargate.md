@@ -3,7 +3,7 @@
 title: "构建无服务器Kiro调度平台：用Kiro CLI + EventBridge + ECS Fargate实现定时AI任务"
 description: "基于 AWS EventBridge Scheduler + Lambda + ECS Fargate 的无服务器架构，将 Kiro CLI 从交互式工具转变为可定时调度的 autonomous agent 平台，支持 MCP Server、Skills 组合和 SNS 通知。"
 created: 2026-06-07
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [aws, kiro, eventbridge, ecs-fargate, serverless, agentic-ai]
 source: [[raw/articles/构建无服务器kiro调度平台用kiro-cli-eventbridge-ecs-fargate实现定时ai任务]]
@@ -13,6 +13,9 @@ review_value: 9
 review_confidence: 9
 review_recommendation: strong
 review_stars: 5
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 构建无服务器Kiro调度平台：用Kiro CLI + EventBridge + ECS Fargate实现定时AI任务

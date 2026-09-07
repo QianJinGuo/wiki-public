@@ -6,6 +6,9 @@ type: entity
 tags: [vision, agent, training, world-model, embodied-ai, llm]
 sources: [raw/articles/世界模型太慢西交大提出fast-leworldmodel用动作前缀并行预测让动态估计加速4倍]
 confidence: 0.7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 世界模型太慢？西交大提出Fast LeWorldModel：用「动作前缀并行预测」让动态估计加速4倍

@@ -9,6 +9,9 @@ value: 7
 review_value: 9
 sources: [raw/articles/ai-skill-测评指标体系]
 review_confidence: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 [[raw/articles/ai-skill-测评指标体系]] ^[raw/articles/ai-skill-测评指标体系.md]

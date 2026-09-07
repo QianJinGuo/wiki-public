@@ -9,6 +9,9 @@ provenance_state: extracted
 sources:
   - raw/articles/一年吃掉一块固态硬盘codex日志bug被骂劣质软件
 rating: v7c8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 一年吃掉一块固态硬盘，Codex日志bug被骂「劣质软件

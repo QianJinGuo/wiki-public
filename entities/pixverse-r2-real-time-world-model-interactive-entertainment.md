@@ -3,11 +3,14 @@
 title: "PixVerse R2：实时世界模型在互动娱乐场景的落地实践"
 type: entity
 created: 2026-08-30
-updated: 2026-09-05
+updated: 2026-09-07
 tags: [world-model, video-generation, interactive-entertainment, pixverse, real-time, gaming]
 sources:
   - raw/articles/都在问世界模型怎么落地pixverse把答案做成了好玩
 confidence: 0.8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # PixVerse R2：实时世界模型在互动娱乐场景的落地实践

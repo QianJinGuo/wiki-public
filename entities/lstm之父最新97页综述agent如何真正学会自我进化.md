@@ -7,6 +7,9 @@ tags: [ai, research, agent, ai-agent, multi-agent, skill, agent-skill, memory, a
 sources: [raw/articles/lstm之父最新97页综述agent如何真正学会自我进化.md]
 confidence: 0.6
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # LSTM之父最新97页综述：Agent如何真正学会「自我进化」？

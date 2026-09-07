@@ -4,11 +4,14 @@ title: "上下文漂移与工具调用幻觉：Agent 长对话可靠性两大核
 type: entity
 tags: [agent, reliability, context-drift, tool-hallucination, attention-mechanism, transformer, tool-calling, planning, interview]
 created: 2026-05-21
-updated: 2026-08-01
+updated: 2026-09-07
 review_value: 8
 review_confidence: 8
 sources: [raw/articles/kamacoder-agent-context-drift-tool-hallucination]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 概述

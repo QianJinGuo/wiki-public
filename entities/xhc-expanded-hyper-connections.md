@@ -1,11 +1,14 @@
 ---
 title: "xHC: Expanded Hyper-Connections — 16-Way Residual Stream Architecture"
 created: 2026-07-22
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [hyper-connections, residual-stream, architecture, transformer, deepseek, moe]
 sources: [raw/articles/deepseek-mhc之后xhc重新设计16路残差流架构]
 confidence: 0.6
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # xHC: Expanded Hyper-Connections

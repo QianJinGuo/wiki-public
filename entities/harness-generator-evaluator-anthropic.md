@@ -3,7 +3,7 @@
 description: Auto-generated placeholder
 title: "Claude Harness 设计：Generator-Evaluator 架构与 Context Reset 演进"
 created: 2026-05-03
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [harness-engineering, agent, generator-evaluator, context-management, anthropic]
 sources:
@@ -15,6 +15,9 @@ review_recommendation: strong
 review_stars: 5
 strategic_context: [[entities/harness-engineering-systematic-framework|Harness Engineering 系统梳理 — Generator/Evaluator 模式补充]]
 provenance_state: inferred
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 概述

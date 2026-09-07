@@ -3,14 +3,16 @@
 
 title: "Sub-Agent vs Agent Team 选型指南"
 created: 2026-05-16
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [agent, architecture]
 sources:
   - raw/articles/sub-agent-vs-agent-team-selection-guide
 review_value: 7
 review_confidence: 7
-
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 核心判断准则

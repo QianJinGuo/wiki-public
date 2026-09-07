@@ -8,6 +8,9 @@ sources: [raw/articles/nvidia-推理软件栈-如何助力实现更低-token-成
 publish_date: 2026-07-05
 vxc: 56
 confidence: 0.7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # NVIDIA 推理软件栈：如何助力实现更低 Token 成本

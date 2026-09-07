@@ -1,7 +1,7 @@
 ---
 title: "腾讯混元 Hy3 正式版：Agent 能力跃升与多产品落地"
 created: 2026-07-06
-updated: 2026-08-30
+updated: 2026-09-07
 type: entity
 tags: [agent, llm, tencent, hunyuan, moe, open-source, enterprise]
 source: [[raw/articles/tencent-hunyuan-hy3-full-release-agent-product-腾讯技术工程]]
@@ -9,6 +9,9 @@ confidence: 0.85
 review_value: 7
 review_confidence: 8
 sources: [raw/articles/tencent-hunyuan-hy3-preview-open-source]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 腾讯混元 Hy3 正式版：Agent 能力跃升与多产品落地

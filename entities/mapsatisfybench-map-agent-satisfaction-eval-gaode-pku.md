@@ -1,12 +1,15 @@
 ---
 title: "MapSatisfyBench：首个以满意度为核心目标的地图智能体评测基准"
 created: 2026-06-18
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [agent-eval, benchmark, map-agent, satisfaction, implicit-decision, gaode, pku, user-experience, evaluation-metrics, agent-reliability, multi-turn, tool-use]
 sources: [raw/articles/mapsatisfybench-map-agent-satisfaction-eval-gaode-pku-2026-06-18]
 review_value: 9
 review_confidence: 8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > 原文存档：[[raw/articles/mapsatisfybench-map-agent-satisfaction-eval-gaode-pku-2026-06-18|原文存档]] ^[raw/articles/mapsatisfybench-map-agent-satisfaction-eval-gaode-pku-2026-06-18.md]

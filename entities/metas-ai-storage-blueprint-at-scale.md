@@ -1,11 +1,14 @@
 ---
 title: "Meta’s AI Storage Blueprint at Scale"
 created: 2026-07-02
-updated: 2026-07-04
+updated: 2026-09-07
 type: entity
 tags: [ai, newsletter, storage, infrastructure, gpu, training, meta]
 sources: [raw/articles/metas-ai-storage-blueprint-at-scale]
 confidence: 0.7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Meta’s AI Storage Blueprint at Scale

@@ -2,7 +2,7 @@
 
 title: Build a serverless image editing agent with Amazon Bedrock AgentCore harness
 created: 2026-07-10
-updated: 2026-07-27
+updated: 2026-09-07
 type: entity
 tags: [rag, tool, claude, coding, harness]
 sources: [raw/articles/build-a-serverless-image-editing-agent-with-amazon-bedrock-a]
@@ -12,6 +12,9 @@ review_recommendation: strong
 review_stars: 4
 confidence: medium
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Build a serverless image editing agent with Amazon Bedrock AgentCore harness

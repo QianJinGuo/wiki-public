@@ -4,11 +4,14 @@ title: "Recent Developments in LLM Architectures: KV Sharing, mHC, and Compresse
 type: entity
 tags: [llm]
 created: 2026-05-19
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 8
 review_confidence: 8
 review_recommendation: worth-reading
 sources: [raw/articles/recent-developments-in-llm-architectures-kv-sharing-mhc-and-compressed-attention]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 核心主题

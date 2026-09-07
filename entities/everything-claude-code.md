@@ -1,13 +1,16 @@
 ---
 title: "Everything Claude Code（ECC）——社区 Harness 蒸馏集"
 created: 2026-09-05
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [claude-code, harness-engineering, community, agents, skills, hooks, probe]
 source_url: https://github.com/affaan-m/everything-claude-code
 confidence: 0.6
 provenance_state: extracted
 status: probe-archive
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Everything Claude Code（ECC）——社区 Harness 蒸馏集

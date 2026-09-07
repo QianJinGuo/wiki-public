@@ -7,6 +7,9 @@ tags: [ai, research, rl, reinforcement-learning, post-training, evaluation, benc
 sources: [raw/articles/bengio团队新作强化学习重做符号回归后验采样提速10倍.md]
 confidence: 0.6
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Bengio团队新作：强化学习重做符号回归，后验采样提速10倍

@@ -2,12 +2,15 @@
 
 title: "CLI-Anything"
 created: 2026-04-24
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [open-source, agent, tool, python]
 sources: [raw/articles/agent-tools-research, raw/articles/cli-anything-wechat-demo]
 review_value: 8
 review_confidence: 8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## Overview

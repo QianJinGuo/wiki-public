@@ -2,7 +2,7 @@
 
 title: "Gemma 4 12B：Google 多模态本地模型 —— 扔掉编码器"
 created: 2026-06-04
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [gemma, gemma-4, multimodal, local-model, encoder-free, mtp, google, deepmind, edge-ai, native-audio, apache-2.0, mlx, llamacpp]
 sources: [raw/articles/gemma-4-12b-google-multimodal-local, raw/articles/gemma-4-12b-deepmind-multimodal-2026-06]
@@ -11,6 +11,9 @@ provenance_state: extracted
 review_value: 8
 review_confidence: 7
 review_recommendation: moderate
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Gemma 4 12B：Google 多模态本地模型 —— 扔掉编码器

@@ -6,6 +6,9 @@ type: entity
 tags: ['raw', 'article']
 sources: [raw/articles/2026-05-05-Agent-World-扩展真实世界环境-让智能体与环境协同进化--机器之心]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > -> [[raw/articles/2026-05-05-Agent-World-扩展真实世界环境-让智能体与环境协同进化--机器之心.md|原文存档]]

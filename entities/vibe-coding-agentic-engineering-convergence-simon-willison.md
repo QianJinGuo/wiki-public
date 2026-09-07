@@ -1,13 +1,16 @@
 ---
 title: "Vibe Coding and Agentic Engineering Convergence: Simon Willison Interview"
 created: 2026-06-11
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [vibe-coding, agentic-engineering, simon-willison, django, ai-coding, llm, software-engineering, claude-code, codex, code-rl, open-models, pricing]
 sources: [raw/articles/vibe-coding-agentic-engineering-convergence-simon-willison]
 provenance_state: raw-linked
 review_value: 7
 confidence: 0.8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > Source: Heavybit High Leverage Podcast Ep. 9, "The AI Coding Paradigm Shift with Simon Willison". Compiled by InfoQ 宇琪/Tina, 2026-05-19. Original: https://www.heavybit.com/library/podcasts/high-leverage/ep-9-the-ai-coding-paradigm-shift-with-simon-willison

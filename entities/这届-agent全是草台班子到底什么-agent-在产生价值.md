@@ -9,6 +9,9 @@ provenance_state: inferred
 rating: v9c9
 sources:
   - raw/articles/这届-agent全是草台班子到底什么-agent-在产生价值
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 这届 Agent，全是草台班子：到底什么 Agent 在产生价值？

@@ -1,7 +1,7 @@
 ---
 title: "AI 原生搭建指南：都在用AI，公司为什么更慢了？"
 created: 2026-05-18
-updated: 2026-09-05
+updated: 2026-09-07
 date: "2026-05-18"
 source_url: "https://mp.weixin.qq.com/s/MFmOciB003eKLeZim3mp1w"
 type: entity
@@ -12,6 +12,9 @@ review_recommendation: strong
 review_stars: 4
 tags: [ai-organization, ai-native, management, workflow-ai]
 related_articles: [ai-native-org-guide-slowdown]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 核心论点

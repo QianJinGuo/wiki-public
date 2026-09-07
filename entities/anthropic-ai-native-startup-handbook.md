@@ -3,7 +3,7 @@
 
 title: "Anthropic发布「AI原生创业公司」手册：涵盖全流程四大核心阶段，一人公司法典来了"
 created: 2026-05-18
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [anthropic, startup, ai-native, handbook, claude-code, entrepreneurship, workflow]
 sources:
@@ -12,7 +12,9 @@ review_value: 9
 review_confidence: 9
 review_recommendation: strong
 review_stars: 5
-
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 → [[raw/articles/anthropic-ai-native-startup-handbook|原文存档]] ^[raw/articles/anthropic-ai-native-startup-handbook.md]

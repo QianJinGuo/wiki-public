@@ -4,11 +4,14 @@ title: "Agent Skills 系统性综述：表示→获取→检索→进化"
 type: entity
 subtype: agent-architecture
 created: 2026-05-23
-updated: 2026-08-29
+updated: 2026-09-07
 tags: [agent, skill, skill-learning, retrieval, self-evolution, survey, llm]
 sources: [raw/articles/agent-skills-comprehensive-survey]
 review_value: 9
 review_confidence: 9
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 核心问题

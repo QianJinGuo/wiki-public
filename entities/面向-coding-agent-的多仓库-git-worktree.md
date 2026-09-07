@@ -7,6 +7,9 @@ tags: [ai-coding, coding-agent, git, worktree, parallel-development, harness, mu
 sources: [raw/articles/面向-coding-agent-的多仓库-git-worktree]
 confidence: 0.75
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 面向 Coding Agent 的多仓库 Git Worktree

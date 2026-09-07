@@ -7,6 +7,9 @@ tags: [entity, qoder, ai-coding, credits, cost-optimization, harness-engineering
 source_url:
 sources: [raw/articles/用好-qoder-credits优化的不是花费多少而是单位-credits-的产出]
 vxc: 56
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 用好 Qoder Credits：优化的不是花费多少，而是单位 Credits 的产出

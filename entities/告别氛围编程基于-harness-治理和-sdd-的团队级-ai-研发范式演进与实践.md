@@ -8,6 +8,9 @@ tags: [ai-agent, engineering, llm, wechat]
 review_value: 7
 sources: [raw/articles/告别氛围编程基于-harness-治理和-sdd-的团队级-ai-研发范式演进与实践]
 review_confidence: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > -> [[raw/articles/告别氛围编程基于-harness-治理和-sdd-的团队级-ai-研发范式演进与实践.md|原文存档]]

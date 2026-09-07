@@ -3,11 +3,14 @@ title: "AI Context Layer 框架"
 type: entity
 tags: [ai, agent, context-management, enterprise-ai, framework]
 created: 2026-05-17
-updated: 2026-08-29
+updated: 2026-09-07
 sources: [raw/articles/ai-context-layer-kgc-2026]
 review_value: 8
 review_confidence: 8
 review_recommendation: strong
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 ## 核心论点
 AI投资回报率为零的根本原因不是模型不够聪明，而是**Context（上下文）缺失**。即使Intelligence（智力）提升了多个数量级，Context为零导致乘积为零。   ^[raw/articles/ai-context-layer-kgc-2026.md]

@@ -4,12 +4,15 @@ title: "Apple Silicon costs more than OpenRouter"
 type: entity
 tags: [apple, apple-silicon, local-inference, openrouter, inference-cost, tokenomics, llm, cost-analysis, Gemma]
 created: 2026-05-19
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 8
 review_confidence: 8
 review_recommendation: worth-reading
 sources: [raw/articles/apple-silicon-costs-more-than-openrouter]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 核心发现：本地推理成本是云端的 3~10 倍

@@ -2,7 +2,7 @@
 title: "Multi-tenant LLM Analytics 三层安全架构"
 description: "PAR Technology 多租户 Text-to-SQL Agent 三层确定性安全架构：SigV4 签名 + 语义验证 + Split-Plane SQL，50K+ 查询零跨租户泄露"
 created: 2026-06-30
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags:
   - agent
@@ -24,6 +24,9 @@ review_stars: 4
 related:
   - concepts/agent-security
   - concepts/harness-engineering-framework
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Multi-tenant LLM Analytics 三层安全架构

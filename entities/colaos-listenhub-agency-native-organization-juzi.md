@@ -4,12 +4,15 @@ description: "ColaOS 创始人橘子讲述从 ListenHub 到 ColaOS 的三次重�
 source: [[raw/articles/colaos-listenhub-agency-native-organization-juzi]]
 tags: [agent, colaos, listenhub, agent-native-organization, one-person-company, soul-system, ai-coding, agentic-product]
 created: 2026-06-01
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 review_value: 7
 confidence: 0.6
 sources:
   - raw/articles/colaos-listenhub-agency-native-organization-juzi
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # ColaOS 与 AI 原生组织

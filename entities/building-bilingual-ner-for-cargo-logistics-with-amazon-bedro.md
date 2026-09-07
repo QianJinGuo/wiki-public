@@ -2,7 +2,7 @@
 title: "Amazon Bedrock 构建货运物流双语命名实体识别系统"
 description: "利用 Amazon Bedrock + Nova 模型通过知识蒸馏构建中英双语 NER 系统，解决货运物流领域的实体识别挑战。"
 created: 2026-07-01
-updated: 2026-08-30
+updated: 2026-09-07
 type: entity
 tags: [aws, bedrock, ner, nlp, knowledge-distillation, nova]
 sources: [raw/articles/building-bilingual-ner-for-cargo-logistics-with-amazon-bedro]
@@ -11,6 +11,9 @@ review_value: 8
 review_confidence: 9
 review_stars: 4
 review_recommendation: strong
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Amazon Bedrock 构建货运物流双语命名实体识别系统

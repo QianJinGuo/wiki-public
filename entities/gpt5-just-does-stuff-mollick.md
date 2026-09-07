@@ -2,7 +2,7 @@
 title: "GPT-5：It Just Does Stuff — Mollick 的主动式 AI 原语"
 description: "Ethan Mollick（One Useful Thing，2025-08-07）早期体验 GPT-5 的核心印象：GPT-5 是自动模型路由器（自动选哪个子模型+思考时长）；proactive（主动建议下一步）；能自主完成复杂任务（startup planning + landing pages + 财务 + 网站）；vibecoding 不再陷入 doom loop；GPT-5 Thinking 是主力模型；主动式 AI 预示人机关系新范式。"
 created: 2026-06-07
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [gpt-5, agentic-ai, proactive-ai, vibecoding, model-router, ethan-mollick, one-useful-thing, startup-ideation, openai]
 source: [[raw/articles/gpt-5-it-just-does-stuff]]
@@ -13,6 +13,9 @@ review_stars: 5
 confidence: 0.88
 provenance_state: extracted
 sources:
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # GPT-5：It Just Does Stuff — Mollick 的主动式 AI 原语

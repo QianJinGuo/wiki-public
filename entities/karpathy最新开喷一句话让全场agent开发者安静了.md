@@ -6,6 +6,9 @@ type: entity
 tags: [vision, anthropic, research, agent, training, llm, ai-research, karpathy, ai-philosophy]
 sources: [raw/articles/karpathy最新开喷一句话让全场agent开发者安静了]
 confidence: 0.7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Karpathy最新开喷：一句话让全场Agent开发者安静了

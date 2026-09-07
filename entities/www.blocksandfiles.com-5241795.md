@@ -4,12 +4,15 @@ title: "Redis agentic AI flowers with Iris"
 type: entity
 tags: [model, inference, architecture]
 created: 2026-05-20
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 8
 sources: [raw/articles/www.blocksandfiles.com-5241795]
 review_confidence: 8
 review_recommendation: strong
 source_url:
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 # Redis agentic AI flowers with Iris
 

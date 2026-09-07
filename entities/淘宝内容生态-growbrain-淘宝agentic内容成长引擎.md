@@ -7,6 +7,9 @@ tags: [ai, wechat, agent, agent-architecture, recommendation, content-growth, pe
 sources: [raw/articles/淘宝内容生态-growbrain-淘宝agentic内容成长引擎]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 淘宝内容生态：GrowBrain - 淘宝Agentic内容成长引擎

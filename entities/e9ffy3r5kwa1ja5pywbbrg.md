@@ -1,12 +1,15 @@
 ---
 title: "AWS re:Invent 2026 Agent 技术要点"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-07
 tags: [apple, architecture, code, data, llm, open-source, rag, tool-use]
 review_value: 7
 review_confidence: 7
 type: entity
 sources: [raw/articles/E9FFy3r5KWA1Ja5pyWBBrg]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # E9Ffy3R5Kwa1Ja5Pywbbrg

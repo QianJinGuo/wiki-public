@@ -8,6 +8,9 @@ provenance_state: extracted
 rating: v9c8
 sources:
   - raw/articles/阿里开源-open-code-review一周揽下-5k-star更专业的代码评审-cli
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 阿里开源 Open Code Review：一周揽下 5k star，更专业的代码评审 CLI

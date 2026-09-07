@@ -1,13 +1,16 @@
 ---
 title: "Gemini 深度导读生成器 Prompt：让 AI 重写而非摘要"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-07
 tags: [prompt, prompt-engineering, llm, gemini, reading-comprehension, framework-extraction, working-with-ai]
 review_value: 7
 review_confidence: 7
 type: entity
 sources:
   - raw/articles/gemini-deep-guide-prompt
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Gemini 深度导读生成器 Prompt：让 AI 重写而非摘要

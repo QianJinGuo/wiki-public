@@ -1,12 +1,15 @@
 ---
 title: "ICML 2026 Open Reproductions — 大规模 Agent 驱动的论文复现审计"
 created: 2026-08-16
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, evaluation, reproducibility, icml, coding-agent, scientific-research, harness]
 sources: [raw/articles/what-we-learned-by-reproducing-2200-papers-from-icml]
 confidence: 0.8
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # ICML 2026 Open Reproductions — 大规模 Agent 驱动的论文复现审计

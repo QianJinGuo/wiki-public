@@ -8,6 +8,9 @@ sources: [raw/articles/读完这篇你就搞懂-deepseek-v4-了-v2]
 provenance_state: raw-linked
 review_value: 7
 confidence: 0.8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 读完这篇你就搞懂 DeepSeek v4 了

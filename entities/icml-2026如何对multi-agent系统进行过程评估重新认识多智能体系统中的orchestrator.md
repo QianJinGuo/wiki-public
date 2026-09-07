@@ -8,6 +8,9 @@ rating: v8c1
 sources:
   - raw/articles/icml-2026如何对multi-agent系统进行过程评估重新认识多智能体系统中的orchestrator
 confidence: 0.85
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # ICML 2026｜如何对Multi-Agent系统进行过程评估？重新认识多智能体系统中的Orchestrator

@@ -1,12 +1,15 @@
 ---
 title: "Miles: PyTorch-Native LLM RL Post-Training Framework"
 created: 2026-07-01
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [llm, training, post-training, reinforcement-learning, pytorch, sglang, megatron, ray, open-source, radixark, distributed-systems]
 sources: [raw/articles/pytorch-miles-llm-rl-post-training-2026]
 confidence: 0.90
 provenance_state: expanded
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Miles: PyTorch-Native LLM RL Post-Training Framework

@@ -2,7 +2,7 @@
 title: "NVIDIA Blackwell MLPerf Training 6.0 基准测试结果（2026-06）"
 description: "NVIDIA 2026-06-18 博客：Blackwell NVL72 + MoE 负载（DeepSeek-V3, GPT-OSS-20B, Llama 4 Behemoth）在 MLPerf Training 6.0 基准上的实测性能数据与 NVLink 架构分析"
 created: 2026-06-18
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags:
   - nvidia
@@ -20,6 +20,9 @@ review_value: 7
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # NVIDIA Blackwell MLPerf Training 6.0 基准测试结果（2026-06）

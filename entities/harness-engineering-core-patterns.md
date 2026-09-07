@@ -5,12 +5,15 @@ description: "从 Claude Code、Claude Managed Agents、Hermes 三个系统提�
 source: [[raw/articles/harness-engineering-core-patterns-claude-code]]
 tags: [harness-engineering, harness-engineering, claude-code, claude-managed-agents, hermes-agent, session-management, sandbox-isolation, multi-agent, context-engineering, credential-security]
 created: 2026-06-01
-updated: 2026-08-06
+updated: 2026-09-07
 type: entity
 provenance_state: inferred
 review_value: 7
 confidence: 0.6
 sources: [raw/articles/harness-engineering-第三代工程范式]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Harness Engineering 核心模式

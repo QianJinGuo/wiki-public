@@ -1,7 +1,7 @@
 ---
 title: "GitHub Multilingual Repositories Dataset — 4000 万仓库多语言元数据"
 created: 2026-06-17
-updated: 2026-06-17
+updated: 2026-09-07
 type: entity
 tags: [github, dataset, multilingual, open-data, cc0, fasttext, gcld3, lingua-py, ai-research]
 sources: [raw/articles/github-blog-multilingual-ai-open-dataset]
@@ -9,6 +9,9 @@ review_value: 7
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # GitHub Multilingual Repositories Dataset — 4000 万仓库多语言元数据

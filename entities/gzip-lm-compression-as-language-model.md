@@ -2,7 +2,7 @@
 title: "gzip 作为语言模型：压缩-预测等价性的信息论探索"
 description: "用 DEFLATE/gzip 验证压缩算法与概率语言模型的等价性，在 tiny Shakespeare 上做实验，从信息论角度解释为什么 LLM 能工作"
 created: 2026-06-18
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [information-theory, compression, language-model, llm-theory, fundamentals]
 source: "[[raw/articles/gzip-lm-compression-as-language-model]]"
@@ -13,6 +13,9 @@ review_confidence: 8
 review_stars: 4
 review_recommendation: strong
 sources:
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # gzip 作为语言模型：压缩-预测等价性的信息论探索

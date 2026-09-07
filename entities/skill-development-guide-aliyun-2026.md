@@ -3,7 +3,7 @@
 
 title: "重新定义Skill开发：保姆级教程&一站式开发助手发布"
 created: 2026-05-18
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [skill, agent, aone, aliyun, tutorial, workflow]
 sources:
@@ -12,7 +12,10 @@ review_value: 8
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4
-
+reviewed: 2026-09-07
+review_verdict: hub-retained
+review_category: dup
+review_note: "judged dup-0.8: 同一保姆级教程较短版; retained as hub (in-links>=20); MOC rewrite candidate"
 ---
 
 → [[raw/articles/skill-development-guide-aliyun-2026|原文存档]] ^[raw/articles/skill-development-guide-aliyun-2026.md]

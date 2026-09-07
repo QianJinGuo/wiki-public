@@ -7,13 +7,16 @@ sources:
 type: entity
 tags: [agent, agentic-browsing, legal, open-web, web-scraping, ai-regulation]
 created: 2026-06-25
-updated: 2026-08-01
+updated: 2026-09-07
 review_value: 8
 review_confidence: 9
 review_recommendation: strong
 review_stars: 5
 confidence: 0.9
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Notes on Amazon v. Perplexity

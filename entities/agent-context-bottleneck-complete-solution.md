@@ -1,11 +1,14 @@
 ---
 title: "AI Agent 上下文瓶颈：从原理到实战的完整解决方案"
 created: "2026-07-14"
-updated: 2026-09-04
+updated: 2026-09-07
 type: entity
 tags: ['context-engineering', 'context-window', 'agent-architecture', 'memory']
 sources: [raw/articles/agent-context-bottleneck-complete-solution]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # AI Agent 上下文瓶颈：从原理到实战的完整解决方案

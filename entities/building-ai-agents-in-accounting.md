@@ -4,11 +4,14 @@ title: "Building AI Agents in Accounting"
 type: entity
 tags: [newsletter, ai-agent, accounting, automation, mcp, skill-config-separation]
 created: 2026-05-18
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 8
 review_confidence: 9
 review_recommendation: worth-reading
 sources: [raw/articles/building-ai-agents-in-accounting]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 ## 核心要点
 - Skill 与 Config 分离：Skill 是可复用的工作流定义，Config 是业务参数配置，两者分离使系统易于维护和跨场景复用 

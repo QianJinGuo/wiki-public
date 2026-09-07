@@ -8,6 +8,9 @@ tags: [wechat, ai]
 rating: v7c7
 sources:
   - raw/articles/从零训练steel-llm模型设计
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 【从零训练Steel-LLM】模型设计

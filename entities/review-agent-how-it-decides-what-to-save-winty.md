@@ -4,10 +4,13 @@ title: "Review Agent：后台复盘 Agent 如何判断什么值得保存"
 type: entity
 tags: [agent, prompt]
 created: 2026-05-21
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 8
 review_confidence: 7
 sources: [raw/articles/review-agent-how-it-decides-what-to-save-winty]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Review Agent：后台复盘 Agent 如何判断什么值得保存

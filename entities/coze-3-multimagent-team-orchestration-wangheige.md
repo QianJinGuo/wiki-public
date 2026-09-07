@@ -3,7 +3,7 @@
 title: "扣子 3.0 多 Agent 协同实战：指挥所有 Agent 的 Agent + 5 人团队 6 步流水线"
 description: "网黑哥 2026-06-02 扣子 3.0 实战：把 Claude Code/Codex/OpenClaw 一键收拢，跨设备远程调度。3 个实战案例（开发小队 3 Agent / 品牌设计 4 风格 / 公众号 5 人 6 步流水线），核心定位：指挥所有 Agent 的 Agent"
 created: 2026-06-02
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, coze, orchestration, coze-3, kouzi, 扣子, multi-agent-orchestration, 多agent协同, claude-code, codex, openclaw, agent-team, agent-orchestration, 网黑哥, wangheige, 公众号自动化, 品牌设计, 移动办公, wechat-official-account-automation, brand-design]
 sources:
@@ -21,6 +21,9 @@ related:
   - entities/claude-code-agent-teams-architecture
   - entities/minimax-agent-team-mavis
   - entities/agent-skills-vs-coze-dify-n8n-lowcode-yexiaocha
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 扣子 3.0 多 Agent 协同实战：指挥所有 Agent 的 Agent + 5 人团队 6 步流水线

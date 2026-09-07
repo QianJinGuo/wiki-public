@@ -3,7 +3,7 @@
 title: "1-Click GitHub Token Stealing via a VSCode Bug — ammaraskar 2026"
 description: "VSCode webview + postMessage cross-origin flaw enables 1-click GitHub token theft via crafted github.dev URL. Original security research disclosure with full PoC + responsible disclosure timeline."
 created: 2026-06-04
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [security, vscode, github, vulnerability, postmessage, webview, token-theft, supply-chain, devsecops]
 source: "[[raw/articles/vscode-github-token-stealing-1-click-pwn-ammaraskar-2026]]"
@@ -19,6 +19,9 @@ related:
   - entities/bleeding-llama-critical-unauthenticated-memory-leak-in-ollama
   - entities/claw-chain-cyera-research-unveil-four-chainable-vulnerabilities-in-openclaw
   - entities/autonomous-vulnerability-hunting-with-mcp
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 1-Click GitHub Token Stealing via a VSCode Bug

@@ -2,7 +2,7 @@
 title: "Heidi Health 临床 AI 微调：小模型通过偏好信号达前沿水平"
 description: "用临床医生偏好信号微调小模型，通过 SBS 评测和安全质量门槛达到前沿大模型水平的临床 AI 实践"
 created: 2026-06-18
-updated: 2026-07-31
+updated: 2026-09-07
 type: entity
 tags: [fine-tuning, clinical-ai, preference-learning, model-optimization, healthcare-ai]
 source: "[[raw/articles/heidi-health-clinical-ai-model-fine-tuning-frontier-parity]]"
@@ -14,6 +14,9 @@ review_stars: 3
 review_recommendation: worth-reading
 sources:
   - raw/articles/heidi-health-clinical-ai-model-fine-tuning-frontier-parity
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Heidi Health 临床 AI 微调：小模型通过偏好信号达前沿水平

@@ -8,9 +8,12 @@ review_confidence: 9
 review_recommendation: strong
 review_stars: 4
 created: 2026-05-19
-updated: 2026-08-30
+updated: 2026-09-07
 sources:
   
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 微信读书官方skill（weread skill）

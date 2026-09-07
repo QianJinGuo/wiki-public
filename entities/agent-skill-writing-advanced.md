@@ -2,12 +2,15 @@
 
 title: "Agent Skill 进阶模式与治理"
 created: 2026-05-13
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent-skill, advanced-patterns, governance, anthropic, yaml-spec]
 sources: [raw/articles/skill-complete-guide-alibaba, raw/articles/how-to-encode-experience-into-skills]
 review_value: 7
 review_confidence: 8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 五种进阶模式（Anthropic 官方实践经验）

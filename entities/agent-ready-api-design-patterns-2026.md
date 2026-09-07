@@ -1,11 +1,14 @@
 ---
 title: "面向 Agent 的 API 设计（Agent-Ready API）"
 created: 2026-09-05
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [api-design, agent, mcp, agent-integration, tool-selection]
 sources: [raw/articles/agent-ready-api-design-restless-2026]
 confidence: 0.7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 面向 Agent 的 API 设计（Agent-Ready API）

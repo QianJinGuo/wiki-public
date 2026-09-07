@@ -9,6 +9,9 @@ sources:
   - raw/articles/刚刚翁荔博客又上新通过harness工程实现ai自我提升-2026-07-08
 confidence: 0.81
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 刚刚，翁荔博客又上新：通过Harness工程实现AI自我提升

@@ -1,12 +1,15 @@
 ---
 title: "ShotStream: Streaming Multi-Shot Video Generation (ECCV 2026, 港中文&快手可灵)"
 created: 2026-07-11
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [video-generation, multimodal, eccv, cuhk, kling, kuaishou, diffusion, streaming, multi-shot]
 sources: [raw/articles/eccv-2026-shotstream-streaming-multi-shot-video-cuhk-kling]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # ShotStream: Streaming Multi-Shot Video Generation (ECCV 2026, 港中文&快手可灵)

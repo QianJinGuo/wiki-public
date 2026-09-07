@@ -1,7 +1,7 @@
 ---
 title: "NVIDIA Nemotron 3 Ultra: Hybrid Transformer-Mamba MoE for Agentic AI on SageMaker JumpStart"
 created: 2026-06-09
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [nvidia, nemotron, sagemaker, jumpstart, moe, mamba, transformer, agentic-ai, nvfp4, open-model]
 source: "[[raw/articles/nvidia-nemotron-3-ultra-now-available-on-amazon-sagemaker-ju|原文存档]]"
@@ -11,6 +11,9 @@ review_confidence: 8
 review_recommendation: strong
 review_stars: 4
 confidence: 0.85
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # NVIDIA Nemotron 3 Ultra: Hybrid Transformer-Mamba MoE for Agentic AI on SageMaker JumpStart

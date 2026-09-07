@@ -2,7 +2,7 @@
 title: "LFM2.5-2.6B: Deploy Agents Everywhere"
 description: "Liquid AI 发布 LFM2.5-2.6B：2.6B 端侧 Agentic 模型，四阶段后训练（SFT → Teacher Specialization → MOPD → Agentic RL），~34T tokens 预训练，128K 上下文，支持手机/CPU 端侧运行"
 created: 2026-08-05
-updated: 2026-08-05
+updated: 2026-09-07
 type: entity
 sources: [raw/articles/liquid-ai-lfm2-5-2-6b-agentic-on-device]
 tags: [small-model, edge-deployment, agentic, liquid-ai, post-training, rl, on-device]
@@ -10,6 +10,9 @@ review_value: 8
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # LFM2.5-2.6B: Deploy Agents Everywhere

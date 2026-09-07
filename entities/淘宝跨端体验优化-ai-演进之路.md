@@ -8,6 +8,9 @@ tags: [wechat, ai]
 rating: v8c8
 sources:
   - raw/articles/淘宝跨端体验优化-ai-演进之路
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 淘宝跨端体验优化 AI 演进之路

@@ -2,7 +2,7 @@
 
 title: "对图像内容进行精确分析 — Bedrock 多模态案例实践（汽车油表识别）"
 created: 2026-06-01
-updated: 2026-07-31
+updated: 2026-09-07
 type: entity
 tags: [bedrock, multimodal, vision, rekognition, image-analysis, case-study]
 source: "[[raw/articles/bedrock-image-content-precise-analysis]]"
@@ -10,6 +10,9 @@ confidence: 0.72
 review_value: 7
 sources:
   - raw/articles/bedrock-image-content-precise-analysis
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 对图像内容进行精确分析 — Bedrock 多模态案例实践（汽车油表识别）

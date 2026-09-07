@@ -3,13 +3,16 @@
 title: "Your documentation is still in your Mum's filing cabinet"
 description: "Gerí Reid 论文档组织的根本问题：文件夹层级结构是存储机制而非知识架构，AI 暴露了人类多年来的信息发现问题。"
 created: 2026-06-26
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: ["documentation", "knowledge-management", "ai-engineering", "information-architecture", "design-systems", "semantic-web"]
 sources:
   - raw/articles/documentation-organisation-humans-ai
 confidence: 0.85
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Your documentation is still in your Mum's filing cabinet

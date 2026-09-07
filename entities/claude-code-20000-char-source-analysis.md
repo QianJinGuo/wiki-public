@@ -2,7 +2,7 @@
 
 title: "两万字详解Claude Code源码核心机制"
 created: 2026-05-09
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [claude-code, source-analysis, agent, harness]
 review_value: 8
@@ -10,6 +10,9 @@ review_confidence: 7
 review_recommendation: strong
 review_stars: 4
 sources: [raw/articles/claude-code-deep-architecture-analysis, raw/articles/两万字详解claude-code源码核心机制, raw/articles/claude-code-20000-char-source-analysis]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 关键洞察

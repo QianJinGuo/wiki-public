@@ -2,11 +2,14 @@
 title: "Skill Hub MVP：可评估、可回滚、可发布的 Agent Skill 治理平台"
 type: entity
 created: 2026-07-10
-updated: 2026-08-01
+updated: 2026-09-07
 tags: [agent, skill, skill-hub, evaluation, governance, ci-cd, deployment, mvp, devops-for-ai]
 rating: v8c7
 sources:
   - raw/articles/skill-hub-mvp-evaluation-rollback-release
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Skill Hub MVP：可评估、可回滚、可发布的 Agent Skill 治理平台

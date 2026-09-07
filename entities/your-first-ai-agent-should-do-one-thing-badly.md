@@ -1,13 +1,16 @@
 ---
 title: "Your First AI Agent Should Do One Thing Badly"
 created: 2026-06-10
-updated: 2026-07-31
+updated: 2026-09-07
 tags: [agent, architecture, code, data, prompt, rag, rl, search, tool-use, workflow, iterative-development, crawl-walk-run, agentic-systems]
 review_value: 7
 review_confidence: 7
 type: entity
 sources:
   - raw/articles/your-first-ai-agent-should-do-one-thing-badly
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Your First AI Agent Should Do One Thing Badly

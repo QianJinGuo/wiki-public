@@ -1,11 +1,14 @@
 ---
 title: "Agentic Data Operations Platform (ADOP): 数据工程压缩到小时级"
 created: 2026-08-22
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, data-engineering, agentic, aws, harness, etl, automation]
 sources: [raw/articles/agentic-data-operations-platform-adop-data-engineering-into-]
 confidence: 0.7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Agentic Data Operations Platform (ADOP): 数据工程压缩到小时级

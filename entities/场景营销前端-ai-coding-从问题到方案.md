@@ -8,6 +8,9 @@ provenance_state: inferred
 rating: v8c8
 sources:
   - raw/articles/场景营销前端-ai-coding-从问题到方案
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 场景营销前端 AI Coding — 从问题到方案

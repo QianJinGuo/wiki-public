@@ -5,10 +5,13 @@ type: entity
 tags: [security, supply-chain, ai, cloud, npm, shai-hulud]
 source: "[[raw/articles/www-wiz-io-mini-shai-hulud-strikes-again-tanstack-more-npm-packages-compromised|原文存档]]"
 created: 2026-05-20
-updated: 2026-08-29
+updated: 2026-09-07
 sources: [raw/articles/www-wiz-io-mini-shai-hulud-strikes-again-tanstack-more-npm-packages-compromised]
 review_value: 8
 review_confidence: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 核心要点

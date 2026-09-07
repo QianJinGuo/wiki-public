@@ -2,7 +2,7 @@
 title: "Amazon Cognito 多区域复制：跨区域用户认证韧性方案"
 description: "AWS Cognito 多区域复制功能实现主区域到辅助区域的单向用户数据和配置同步，支持失效转移时不中断现有会话，覆盖所有联合认证方法。"
 created: 2026-06-07
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [aws, cognito, multi-region, disaster-recovery, iam, kms, failover, security]
 source: [[raw/articles/使用-amazon-cognito-多区域复制提高应用程序韧性]]
@@ -12,6 +12,9 @@ review_value: 8
 review_confidence: 9
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Amazon Cognito 多区域复制：跨区域用户认证韧性方案

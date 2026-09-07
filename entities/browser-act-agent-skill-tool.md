@@ -1,13 +1,16 @@
 ---
 title: "Product Hunt 日榜第一！把任何网站变成可被 Agent 复用的技能"
 created: 2026-07-11
-updated: 2026-08-24
+updated: 2026-09-07
 type: entity
 tags: [agent, skill, browser-automation, tool, mcp, agent-workflow, browser-act]
 source_url: ""
 sources: [raw/articles/product-hunt-把任何网站变成被-agent-复用的技能]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Product Hunt 日榜第一！把任何网站变成可被 Agent 复用的技能

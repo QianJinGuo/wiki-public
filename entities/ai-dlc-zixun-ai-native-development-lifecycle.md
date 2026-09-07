@@ -2,7 +2,7 @@
 
 title: "AI-DLC：紫讯落地 AI 原生研发新范式的实践"
 created: 2026-06-29
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [ai-dlc, ai-native-development, agent, harness, engineering, software-development, aws]
 provenance_state: inferred
@@ -14,6 +14,9 @@ review_value: 8
 review_confidence: 8
 review_stars: 4
 review_recommendation: strong
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # AI-DLC：紫讯落地 AI 原生研发新范式的实践

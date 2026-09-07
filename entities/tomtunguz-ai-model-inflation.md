@@ -4,12 +4,15 @@ title: "The Unsustainable Subsidy"
 type: entity
 tags: [ai, economics, pricing, llm]
 created: 2026-05-22
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 7
 review_confidence: 8
 review_stars: 4
 review_recommendation: strong
 sources: [raw/articles/tomtunguz-ai-model-inflation]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 核心要点

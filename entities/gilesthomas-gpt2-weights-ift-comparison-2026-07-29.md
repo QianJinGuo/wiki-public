@@ -1,11 +1,14 @@
 ---
 title: "GPT-2 权重之谜：为什么 OpenAI 的原始权重比自训练模型更擅长指令跟随"
 created: 2026-07-31
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [ai, llm, training, evaluation, gpt-2, instruction-following, loss-landscape, weight-tying, overtraining]
 sources: [raw/articles/gilesthomas-gpt2-weights-ift-comparison-2026-07-29]
 confidence: 0.7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # GPT-2 权重之谜：为什么 OpenAI 的原始权重比自训练模型更擅长指令跟随

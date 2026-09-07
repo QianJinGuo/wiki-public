@@ -1,12 +1,15 @@
 ---
 title: "ML Agent Predict-Before-Execute — ACL 2026 SAC Highlight (浙大×蚂蚁)"
 created: 2026-07-14
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [agent, llm, ml-agent, mle-bench, loop-engineering, acl-2026, paper, agent-evaluation]
 sources: [raw/articles/acl-2026-predict-before-executing-ml-agents-zju-ant-group]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # ML Agent Predict-Before-Execute — ACL 2026 SAC Highlight (浙大×蚂蚁)

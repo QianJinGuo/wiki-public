@@ -4,10 +4,13 @@ title: "MCP · Skill · Agent · LLM · Harness — 一张图讲清：Agentic AI
 type: entity
 tags: [agent, architecture, harness, llm, memory]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/agentic-ai-system-architecture-harness-skill-mcp]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # MCP · Skill · Agent · LLM · Harness — 一张图讲清：Agentic AI 系统如何真正落地

@@ -3,7 +3,7 @@
 title: "Metric Semantic Layer: How Lyft Governs and Scales Key Data Definitions"
 description: "Strong technical depth on building a metric semantic layer with YAML/Jinja templates, governance, and change management. Unique insight into Lyft's internal solution."
 created: 2026-06-22
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [agent, llm, data-engineering, analytics, architecture]
 provenance_state: inferred
@@ -14,6 +14,9 @@ review_value: 7
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Metric Semantic Layer: How Lyft Governs and Scales Key Data Definitions

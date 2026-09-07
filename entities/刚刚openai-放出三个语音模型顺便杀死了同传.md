@@ -9,6 +9,9 @@ review_confidence: 8
 review_recommendation: strong
 review_stars: 4
 sources: [raw/articles/刚刚openai-放出三个语音模型顺便杀死了同传]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 ## 核心要点
 - **GPT-Realtime-2**：OpenAI最强语音模型，具备GPT-5级推理能力，支持128K上下文窗口，可边听边想边调用工具，能完成日历查找、CRM更新等复杂任务 

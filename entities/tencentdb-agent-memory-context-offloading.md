@@ -1,13 +1,16 @@
 ---
 title: "腾讯云Agent Memory：Mermaid无限画布×上下文卸载"
 created: 2026-06-10
-updated: 2026-07-31
+updated: 2026-09-07
 tags: [agent, architecture, code, data, database, evaluation, llm, memory, mlops, open-source, search, tool-use]
 review_value: 7
 review_confidence: 7
 type: entity
 sources:
   - raw/articles/tencentdb-agent-memory-context-offloading
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 腾讯云Agent Memory：Mermaid无限画布×上下文卸载

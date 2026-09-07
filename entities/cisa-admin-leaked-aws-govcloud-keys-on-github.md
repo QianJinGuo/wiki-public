@@ -4,12 +4,15 @@ title: CISA Admin Leaked AWS GovCloud Keys on Github
 type: entity
 tags: [security-breach, github, aws, govcloud, cisa, credentials-leak]
 created: 2026-05-20
-updated: 2026-08-01
+updated: 2026-09-07
 review_value: 8
 review_confidence: 8
 review_recommendation: strong
 sources: [raw/articles/cisa-admin-leaked-aws-govcloud-keys-on-github]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 事件概述

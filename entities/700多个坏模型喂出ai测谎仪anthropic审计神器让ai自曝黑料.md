@@ -8,6 +8,9 @@ tags: [wechat, ai]
 rating: v8c8
 sources:
   - raw/articles/700多个坏模型喂出ai测谎仪anthropic审计神器让ai自曝黑料
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 700多个「坏模型」喂出AI测谎仪？Anthropic审计神器让AI自曝黑料

@@ -2,7 +2,7 @@
 
 title: "多 Agent 编排系统"
 created: 2026-07-02
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [agent, multi-agent, orchestration, architecture]
 review_value: 7
@@ -10,6 +10,9 @@ review_confidence: 8
 provenance_state: stub-upgraded
 confidence: 0.6
 sources: [raw/articles/agent-orchestration]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 多 Agent 编排系统

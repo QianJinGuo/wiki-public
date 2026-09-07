@@ -4,10 +4,13 @@ title: "Cognitive Alpha Mining via LLM-Driven Code-Based Evolution"
 type: entity
 tags: [llm]
 created: 2026-05-21
-updated: 2026-05-21
+updated: 2026-09-07
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/cogalpha-acl2026-alpha-mining]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Cognitive Alpha Mining via LLM-Driven Code-Based Evolution

@@ -13,7 +13,10 @@ review_stars: 4
 topics: [ollama, flowise, n8n, openui, ai-infrastructure, api-security, vulnerability, docker-security, zero-trust, certificate-transparency]
 related: [bleeding-llama-critical-unauthenticated-memory-leak-in-ollama, ai-agents-inside-perimeter-hackernews, enterprise-openclaw-security-deploy-architecture-guide]
 created: 2026-05-12
-updated: 2026-09-05
+updated: 2026-09-07
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > -> [[raw/articles/1-million-exposed-ai-services-hackernews|原文存档]]

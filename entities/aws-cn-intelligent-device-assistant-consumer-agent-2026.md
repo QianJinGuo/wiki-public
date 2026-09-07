@@ -1,7 +1,7 @@
 ---
 title: "基于 AWS 智能设备助手行业资产，构建社交渠道触达的消费级 Agent 交互应用"
 created: 2026-06-17
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [aws, agent, consumer, iot, social-channel, conversational-ai, aws-china]
 sources: [raw/articles/aws-cn-intelligent-device-assistant-consumer-agent-2026]
@@ -9,6 +9,9 @@ review_value: 7
 review_confidence: 7
 review_recommendation: worth-reading
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 基于 AWS 智能设备助手行业资产，构建社交渠道触达的消费级 Agent 交互应用

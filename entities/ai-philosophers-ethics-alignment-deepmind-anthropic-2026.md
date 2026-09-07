@@ -1,12 +1,15 @@
 ---
 title: "AI 公司为何把哲学家请进实验室？——AI 对齐的哲学与伦理挑战"
 created: 2026-07-10
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [ai-ethics, ai-alignment, philosophy, deepmind, anthropic, openai, ai-safety, governance, papacy, constitutional-ai, value-alignment]
 sources: [raw/articles/ai-公司为何把哲学家请进实验室]
 confidence: 0.85
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # AI 公司为何把哲学家请进实验室？——AI 对齐的哲学与伦理挑战

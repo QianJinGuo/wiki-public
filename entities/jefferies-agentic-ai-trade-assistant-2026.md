@@ -1,12 +1,15 @@
 ---
 title: "Jefferies 构建 Agentic AI Trade Assistant — 投行交易桌面 AI 优化实践"
 created: 2026-07-24
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agentic-ai, jefferies, trading, investment-banking, aws, bedrock, strands-agents, mcp, finance, llm, agent-harness]
 confidence: 0.75
 provenance_state: extracted
 sources: [raw/articles/jefferies-agentic-ai-trade-assistant-bedrock-2026]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Jefferies 构建 Agentic AI Trade Assistant — 投行交易桌面 AI 优化实践

@@ -8,6 +8,9 @@ sources: [raw/articles/如视借助-nvidia-jetson-将毫米级三维重建带到
 publish_date: 2026-07-05
 vxc: 56
 confidence: 0.7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 如视借助 NVIDIA Jetson 将毫米级三维重建带到边缘端

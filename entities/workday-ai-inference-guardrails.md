@@ -3,7 +3,7 @@
 title: "Workday Inference Engine Built-in Guardrails - Enterprise AI Safety Infrastructure Path"
 type: entity
 created: 2026-06-30
-updated: 2026-09-05
+updated: 2026-09-07
 source: "[[raw/articles/workday-ai-inference-guardrails]]"
 tags: [agent, guardrails, inference, enterprise-ai, MCP, safety, workday, infrastructure]
 confidence: 0.80
@@ -14,6 +14,9 @@ review_recommendation: strong
 review_stars: 4
 sources:
   - raw/articles/workday-ai-inference-guardrails
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Workday Inference Engine Built-in Guardrails - Enterprise AI Safety Infrastructure Path

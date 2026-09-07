@@ -1,12 +1,15 @@
 ---
 title: "ICML 2026 HOI-Edit & SCPE — 图像编辑的认知评测基准与智能体自纠错框架"
 created: 2026-07-11
-updated: 2026-08-30
+updated: 2026-09-07
 type: entity
 tags: [icml, computer-vision, image-editing, human-object-interaction, benchmark, self-correcting, multi-agent, pku]
 sources: [raw/articles/icml-2026-hoi-edit-scpe-self-correcting-pku]
 confidence: 0.80
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # ICML 2026 HOI-Edit & SCPE — 图像编辑的认知评测基准与智能体自纠错框架

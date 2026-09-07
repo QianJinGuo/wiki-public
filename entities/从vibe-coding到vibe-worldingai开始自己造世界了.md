@@ -8,6 +8,9 @@ tags: [ai, agent, harness, evaluation, mcp, multimodal]
 sources: [raw/articles/从vibe-coding到vibe-worldingai开始自己造世界了]
 confidence: 0.75
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 从Vibe Coding到Vibe Worlding：AI开始自己“造世界”了

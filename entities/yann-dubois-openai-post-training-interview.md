@@ -7,7 +7,7 @@ platform: wechat
 author: AI寒武纪
 publish_date: 2026-05-23
 created: 2026-05-23
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 9
 review_confidence: 9
 review_recommendation: strong
@@ -17,6 +17,9 @@ sources:
   - raw/articles/yann-dubois-openai-post-training-matt-turck-interview
 aliases: [Yann Dubois访谈, OpenAI后训练, GPT-5.5发布内幕, 可靠性临界点, RL突破, 图书馆到专家, 纵向横向团队]
 provenance_state: inferred
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 核心人物

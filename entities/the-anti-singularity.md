@@ -5,8 +5,11 @@ type: entity
 tags: [ai-safety, news]
 review_value: 7
 review_confidence: 7
-updated: 2026-09-05
+updated: 2026-09-07
 provenance_state: inferred
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 # the anti singularity
 

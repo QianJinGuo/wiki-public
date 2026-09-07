@@ -9,6 +9,9 @@ review_confidence: 7
 type: entity
 sources:
   - raw/articles/autoresearch-next-phase-async-multi-agent-ai寒武纪
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Autoresearch Next Phase Async Multi Agent Ai寒武纪

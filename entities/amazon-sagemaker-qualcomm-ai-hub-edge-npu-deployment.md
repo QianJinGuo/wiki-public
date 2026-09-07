@@ -2,7 +2,7 @@
 
 title: "用 Amazon SageMaker AI 与 Qualcomm AI Hub 打通从云端训练到端侧 NPU 的交付闭环"
 created: 2026-06-01
-updated: 2026-07-31
+updated: 2026-09-07
 type: entity
 tags: [sagemaker, qualcomm, edge-ai, npu, mlops, model-deployment]
 source: "[[raw/articles/amazon-sagemaker-qualcomm-ai-hub-edge-npu-deployment]]"
@@ -10,6 +10,9 @@ confidence: 0.80
 review_value: 7
 sources:
   - raw/articles/amazon-sagemaker-qualcomm-ai-hub-edge-npu-deployment
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 用 Amazon SageMaker AI 与 Qualcomm AI Hub 打通从云端训练到端侧 NPU 的交付闭环

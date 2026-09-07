@@ -2,7 +2,7 @@
 title: "Canvas Hackers ShinyHunters Say Their Official Domain Was Suspended"
 description: "ShinyHunters 在 Canvas LMS 攻击事件后官方域名 shinyhunte.rs 被塞尔维亚 RNIDS 暂停，迁移至仅 onion 服务的事件分析"
 created: 2026-06-10
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags:
   - security
@@ -18,6 +18,9 @@ sources:
 review_value: 7
 review_confidence: 7
 review_recommendation: strong
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Canvas Hackers ShinyHunters Say Their Official Domain Was Suspended

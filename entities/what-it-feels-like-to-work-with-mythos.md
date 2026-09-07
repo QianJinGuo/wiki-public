@@ -1,12 +1,15 @@
 ---
 title: "What it feels like to work with Mythos"
 created: 2026-07-02
-updated: 2026-07-05
+updated: 2026-09-07
 type: entity
 tags: [mythos, anthropic, ai-security, agent, evaluation, red-teaming]
 sources: [raw/articles/what-it-feels-like-to-work-with-mythos]
 confidence: 0.85
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # What it feels like to work with Mythos

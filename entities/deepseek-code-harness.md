@@ -2,12 +2,15 @@
 
 title: "DeepSeek Code Harness"
 created: 2026-05-23
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [deepseek, harness, claude-code, agent, coding-agent, china-ai, evaluation, terminal-bench, three-dimension, agent-plan, cordis, spatiotemporal-composability, post-training, self-evolution]
 sources: [raw/articles/deepseek-code-harness-competitor-tina, raw/articles/deepseek-harness-v01-open-source-everything-plugin-infoq-2026, raw/articles/deepseek-harness-orange-book-shuhua-2026, raw/articles/deepseek-harness-agent-engineering-new-paradigm-aliyun-2026, raw/articles/deepseek-harness-cordis-runtime-mechanics-tencent-chino-2026, raw/articles/deepseek-harness-拆解一套能拼装的-agent-架构, raw/articles/deepseek-harness是今年最有野心的一次agent开源, raw/articles/deepseek-harness-实测模型之外的那一半到底带来了什么, raw/articles/deepseek-harness-agentloop-three-dimension-eval-qianwen-2026-08-19, raw/articles/dsh-observability-tencentcloud-agent-obs-2026-08-24, raw/articles/deepseek-harness-ptc-creation-cordis-baidu-geek-2026, raw/articles/deepseek-harness-cordis-spatiotemporal-composability-paper-lss233-2026-09-04, raw/articles/deepseek-harness-post-training-enterprise-evolution-aliyun-2026-09-05]
 review_value: 8
 review_confidence: 8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## Overview

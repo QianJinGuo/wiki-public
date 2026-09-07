@@ -2,7 +2,7 @@
 
 title: "墙比模型更重要：Stripe Minions + 字节 DeerFlow 2.0 + 蚂蚁支小助 的同结论"
 created: 2026-06-01
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [harness-engineering, agent-failure-modes, stripe, deerflow, ant-group, zhixiaozhu, multi-agent, long-running-agent, case-study]
 sources: [raw/articles/wall-not-model-harness-three-case-studies-stripe-deerflow-ant]
@@ -10,6 +10,9 @@ review_value: 8
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 墙比模型更重要：三家公司独立得出同一结论

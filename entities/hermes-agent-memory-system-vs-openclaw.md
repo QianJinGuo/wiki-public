@@ -2,7 +2,7 @@
 
 title: "Hermes Agent 记忆系统深度拆解"
 created: 2026-05-18
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [hermes, openclaw, agent, memory, architecture, cache-aware]
 provenance_state: extracted
@@ -10,6 +10,10 @@ source_url:
 review_value: 9
 sources: [raw/articles/hermes-agent-memory-system-vs-openclaw]
 review_confidence: 8
+reviewed: 2026-09-07
+review_verdict: hub-retained
+review_category: dup
+review_note: "judged dup-0.8: 记忆拆解10142字版，留15260字版; retained as hub (in-links>=20); MOC rewrite candidate"
 ---
 
 [[raw/articles/hermes-agent-memory-system-vs-openclaw.md|原文存档]] ^[raw/articles/hermes-agent-memory-system-vs-openclaw.md]

@@ -8,6 +8,9 @@ tags: [ai, agent, llm]
 sources: [raw/articles/京东健康opc团队的产品全流程skill探索]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 京东健康OPC团队的产品全流程Skill探索

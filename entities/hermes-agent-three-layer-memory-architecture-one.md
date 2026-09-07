@@ -2,7 +2,7 @@
 
 title: "Hermes Agent 爱马仕的三级 memory，到底在记什么？"
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [hermes-agent, memory, architecture, sqlite-fts5, semantic-memory, cache-aware, autonomous-curation]
 review_value: 7
@@ -14,6 +14,9 @@ related_entities:
   - entities/hermes-agent-three-layer-memory-one
   - entities/how-ai-agent-memory-works
   - concepts/agent-memory-system-design
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 [[raw/articles/hermes-agent-three-layer-memory-architecture-one|原文存档]]^[raw/articles/hermes-agent-three-layer-memory-architecture-one.md]

@@ -1,7 +1,7 @@
 ---
 title: "LLM 主题 = 生成变量 — 别把 LLM 提取的主题当成真实变量（William Gieng 因果推断方法论）"
 created: "2026-06-12"
-updated: 2026-08-01
+updated: 2026-09-07
 date: "2026-06-12"
 tags: [llm-themes, causal-inference, generated-variables, selection-bias, measurement-error, post-treatment-bias, dag, ipw, text-as-covariate, william-gieng, datapi-thu, null-intervention, differential-measurement-error]
 provenance_state: inferred
@@ -12,6 +12,9 @@ review_stars: 5
 sources:
   - [[raw/articles/llm-themes-not-observations-william-gieng-causal-inference-2026|别把 LLM 提取的主题当成真实变量 — 数据派 THU 翻译]]
 type: entity
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 概述

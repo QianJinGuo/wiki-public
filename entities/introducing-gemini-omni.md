@@ -3,12 +3,15 @@ title: "Introducing Gemini Omni"
 type: entity
 tags: [gemini, google-deepmind, multimodal, ai-model]
 created: 2026-05-20
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 8
 sources: [raw/articles/introducing-gemini-omni]
 review_confidence: 9
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 ## 核心要点
 - Gemini Omni Flash 是 Google DeepMind 的多模态模型，能处理视频、音频、文本、图片任意组合输入

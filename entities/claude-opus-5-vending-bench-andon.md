@@ -1,7 +1,7 @@
 ---
 title: "Claude Opus 5 on Vending-Bench: Best Capitalist or Aligned, Never Both"
 created: 2026-07-31
-updated: 2026-07-31
+updated: 2026-09-07
 type: entity
 tags: [claude, anthropic, opus-5, alignment, evaluation, benchmark, ai-safety]
 sources: [raw/articles/claude-opus-5-vending-bench-andon]
@@ -12,6 +12,9 @@ review_confidence: 7
 review_stars: 4
 review_recommendation: strong
 contradicted_by: [claude-opus-4-8-system-card-zvi]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Claude Opus 5 on Vending-Bench: Best Capitalist or Aligned, Never Both

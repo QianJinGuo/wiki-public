@@ -9,7 +9,10 @@ sources: [raw/articles/foundation-model-building-blocks]
 review_confidence: 9
 review_recommendation: strong
 created: 2026-05-13
-updated: 2026-09-05
+updated: 2026-09-07
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 > -> [[raw/articles/foundation-model-building-blocks|原文存档]]
 

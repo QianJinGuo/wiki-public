@@ -6,11 +6,14 @@ type: entity
 tags: [wechat, article, kuaishou, krowork, desktop-agent, agent-application, local-deployment, data-sovereignty, prompt-fatigue]
 created: 2026-05-11
 review_value: 7
-updated: 2026-09-05
+updated: 2026-09-07
 sources: [raw/articles/krowork-application-solidification-jinguo-tech]
 review_confidence: 7
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 快手首个打工人Agent

@@ -1,11 +1,14 @@
 ---
 title: "ACM MM 2026｜高德2篇论文被收录，覆盖自回归图像生成、强化学习、视频美学评估方向"
 created: 2026-07-16
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: ['auto-harvested']
 sources: [raw/articles/gaode-acm-mm-2026-mar-grpo-peak-end-net]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > -> [[raw/articles/gaode-acm-mm-2026-mar-grpo-peak-end-net.md|原文存档]]

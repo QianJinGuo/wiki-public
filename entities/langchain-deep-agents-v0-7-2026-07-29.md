@@ -1,11 +1,14 @@
 ---
 title: "LangChain Deep Agents v0.7: 精简 Agent Harness"
 created: 2026-07-31
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [ai, agent, harness, langchain, context-engineering, middleware]
 sources: [raw/articles/langchain-deep-agents-v0-7-2026-07-29]
 confidence: 0.7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # LangChain Deep Agents v0.7: 精简 Agent Harness

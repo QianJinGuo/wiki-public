@@ -2,7 +2,7 @@
 
 title: "SFT, RL, and On-Policy Distillation Through a Distributional Lens"
 created: 2026-06-10
-updated: 2026-08-01
+updated: 2026-09-07
 tags: [code, data, fine-tuning, observability, open-source, rl, vision, sft, rlhf, on-policy-distillation, opd, opsd, normalizing-flows, reinforcement-learning, post-training, distribution, kl-divergence, skill-evolution, skill-rm, self-distillation]
 review_value: 8
 review_confidence: 8
@@ -13,6 +13,9 @@ published_time: 2026-05-10
 provenance_state: extracted
 sources:
   - raw/articles/untitled-v2
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # SFT, RL, and On-Policy Distillation Through a Distributional Lens

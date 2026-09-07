@@ -3,7 +3,7 @@
 title: "The analytics engineer in 2026: system designer, governance owner, AI context provider"
 description: "Unique technical insight into evolving analytics engineer role with AI context provision, governance ownership, and system design. High practical value for data practitioners."
 created: 2026-06-22
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [agent, analytics, security, architecture]
 provenance_state: inferred
@@ -14,6 +14,9 @@ review_value: 8
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # The analytics engineer in 2026: system designer, governance owner, AI context provider

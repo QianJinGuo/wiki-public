@@ -4,13 +4,16 @@ title: Ettin Reranker Family
 type: entity
 tags: [reranker, cross-encoder, sentence-transformers, huggingface, modernbert, distillation, ml, nlp, information-retrieval]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 8
 review_confidence: 9
 review_recommendation: strong
 review_stars: 4
 sources: [raw/articles/ettin-reranker-family]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 模型概览

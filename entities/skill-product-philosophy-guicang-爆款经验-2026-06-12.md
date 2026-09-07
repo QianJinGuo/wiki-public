@@ -14,6 +14,9 @@ related:
   - entities/agent-skill-writing-practices
   - entities/skill-writing-patterns-best-practices
   - entities/skill-design-spec-8-block-checklist-winty
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Skill 产品哲学：歸藏做了爆款 Skill 后的产品反思

@@ -1,11 +1,14 @@
 ---
 title: "The next big breakthrough will be AIs learning on the job"
 created: 2026-08-01
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: ['raw', 'article']
 sources: [raw/articles/the-next-big-breakthrough-will-be-ais-learning-on-the-job]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > -> [[raw/articles/the-next-big-breakthrough-will-be-ais-learning-on-the-job.md|原文存档]]

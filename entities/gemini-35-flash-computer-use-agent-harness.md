@@ -3,13 +3,16 @@ title: "Gemini 3.5 Flash 内置 Computer Use 能力"
 type: entity
 tags: [gemini, computer-use, agent-harness, google, safety]
 created: 2026-06-25
-updated: 2026-08-01
+updated: 2026-09-07
 sources: [raw/articles/gemini-35-flash-computer-use-agent-harness]
 review_value: 7
 review_confidence: 8
 review_stars: 4
 confidence: 0.85
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Gemini 3.5 Flash 内置 Computer Use 能力

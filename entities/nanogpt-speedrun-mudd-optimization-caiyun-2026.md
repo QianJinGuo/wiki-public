@@ -1,11 +1,14 @@
 ---
 title: "NanoGPT Speedrun MUDD 优化：彩云科技连续两次刷新训练速度世界纪录"
 created: 2026-09-02
-updated: 2026-09-02
+updated: 2026-09-07
 type: entity
 tags: [training-optimization, gpu-kernel, nanoGPT, speedrun, architecture, skip-connections, MUDD, muon, pretraining]
 sources: [raw/articles/一个国产ai小透明连续两次刷新nanogpt-speedrun世界纪录]
 confidence: 0.7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # NanoGPT Speedrun MUDD 优化：彩云科技连续两次刷新训练速度世界纪录

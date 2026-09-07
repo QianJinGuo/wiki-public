@@ -2,7 +2,7 @@
 title: "Latest open artifacts (#21): Open model bonanza! Gemma 4, DeepSeek V4, Kimi K2.6, MiMo 2.5, GLM-5.1 & others. On CAISI's V4 assessment."
 description: "CAISI V4 IRT基准评估方法论批判：harness选择如何扭曲能力对比，开放模型与闭源模型差距的真实面貌。"
 created: 2026-06-07
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [open-model, benchmarking, ai-research, caisi, irt]
 source: [[raw/articles/latest-open-artifacts-21-open-model-bonanza-gemma-4-deepseek]]
@@ -12,6 +12,9 @@ review_value: 8
 review_confidence: 9
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Latest open artifacts (#21): Open model bonanza! Gemma 4, DeepSeek V4, Kimi K2.6, MiMo 2.5, GLM-5.1 & others. On CAISI's V4 assessment.

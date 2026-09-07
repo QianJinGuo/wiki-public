@@ -1,7 +1,7 @@
 ---
 title: "Open Code Review：阿里开源的 AI 代码评审 CLI 工具"
 created: 2026-07-01
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [code-review, ali, open-source, cli, ai-assisted]
 source: "[[raw/articles/ali-open-code-review-cli-tool]]"
@@ -12,6 +12,9 @@ review_confidence: 9.0
 sources:
   - raw/articles/ali-open-code-review-cli-tool
   - raw/articles/open-code-review-github-trending-5-days-retrospective-2026-08-11
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Open Code Review：阿里开源的 AI 代码评审 CLI 工具

@@ -8,6 +8,9 @@ updated: 2026-05-21
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/不改模型不降质量谷歌让gemma-4快了3倍本地跑大模型彻底变天]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 不改模型、不降质量，谷歌让Gemma 4快了3倍：本地跑大模型彻底变天

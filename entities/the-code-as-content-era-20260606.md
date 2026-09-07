@@ -1,7 +1,7 @@
 ---
 title: "The Code-as-Content Era"
 created: 2026-06-06
-updated: 2026-06-15
+updated: 2026-09-07
 type: entity
 tags: [article, aws, code, llm, observability, prompt, rl, source-archive, tool-use, vision, vibe-coding, meta, content, culture]
 sources: [raw/articles/the-code-as-content-era-20260606]
@@ -11,6 +11,9 @@ review_value: 7
 review_confidence: 7
 review_recommendation: moderate
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # The Code-as-Content Era

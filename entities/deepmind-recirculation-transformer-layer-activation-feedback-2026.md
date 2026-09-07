@@ -1,12 +1,15 @@
 ---
 title: "DeepMind Recirculation：冻结权重、深层激活回流释放性能"
 created: 2026-08-21
-updated: 2026-08-21
+updated: 2026-09-07
 type: entity
 tags: [transformer, architecture, inference, activation-feedback, deepmind, paperweekly, arxiv]
 sources: [raw/articles/deepmind-recirculation-transformer-layer-activation-feedback-2026]
 confidence: 0.75
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # DeepMind Recirculation：冻结权重、深层激活回流释放性能

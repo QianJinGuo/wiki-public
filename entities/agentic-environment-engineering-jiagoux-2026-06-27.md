@@ -1,7 +1,7 @@
 ---
 title: "Agentic Environment Engineering：Harness 之上下一层门槛"
 created: 2026-06-27
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [agent, environment-engineering, harness, loop-engineering, self-harness, feedback-loop, pomdp, architecture]
 review_value: 8
@@ -17,6 +17,9 @@ related:
   - entities/self-harness-shanghai-ai-lab-agent-improves-harness
   - entities/agent-开发范式演进从环境工程出发简化多源实时上下文
   - entities/tsinghua-harness-engineering-report
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > → [[raw/articles/agentic-environment-engineering-jiagoux-2026-06-27|原文存档]]

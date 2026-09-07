@@ -8,6 +8,9 @@ tags: [ai, agent, cloud-storage, agent-harness, human-computer-interaction, byte
 sources: [raw/articles/storage-agent-family-agent-时代重构云存储的人机交互]
 confidence: 0.69
 score: 49
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Storage Agent Family: 云存储人机交互重构

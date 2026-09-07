@@ -8,6 +8,9 @@ sources: [raw/articles/mineexplorer-开放世界多模态评测基准-longcat-20
 confidence: 0.75
 provenance_state: extracted
 score: 72
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # MineExplorer：开放世界多模态评测基准

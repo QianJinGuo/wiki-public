@@ -1,12 +1,15 @@
 ---
 title: "Scaling UX Testing with Amazon Nova Act"
 created: 2026-07-24
-updated: 2026-08-30
+updated: 2026-09-07
 type: entity
 tags: [ai, agent, aws, nova-act, ux-testing, browser-automation, testing, automation]
 sources: [raw/articles/scaling-ux-testing-with-amazon-nova-act-a-new-approach-to-us]
 confidence: 0.69
 score: 49
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Scaling UX Testing with Amazon Nova Act

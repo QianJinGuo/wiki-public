@@ -4,13 +4,16 @@ title: "Versa takes aim at fragmented enterprise security with CSPM, orchestrati
 type: entity
 tags: [newsletter, security, sase, cspm, ai-agent]
 created: 2026-05-14
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 8
 sources: [raw/articles/www-networkworld-com-versa-takes-aim-at-fragmented-enterprise-security]
 review_confidence: 8
 review_recommendation: worth-reading
 source_url:
-
+reviewed: 2026-09-07
+review_verdict: hub-retained
+review_category: pr
+review_note: "judged pr-0.78: 厂商产品更新通稿; retained as hub (in-links>=20); MOC rewrite candidate"
 ---
 > -> [[raw/articles/www-networkworld-com-versa-takes-aim-at-fragmented-enterprise-security|原文存档]]
 

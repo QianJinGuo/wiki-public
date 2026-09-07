@@ -1,7 +1,7 @@
 ---
 title: "olmo-eval: An evaluation workbench for the model development"
 created: '2026-06-15'
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [newsletter, ai, llm, evaluation, benchmark, open-source, allenai]
 source: "[[raw/articles/olmo-eval|原文存档]]"
@@ -12,6 +12,9 @@ review_recommendation: worth-reading
 review_stars: 4
 confidence: 0.85
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # olmo-eval: An evaluation workbench for the model development

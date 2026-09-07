@@ -8,6 +8,9 @@ tags: [wechat, ai]
 rating: v8c7
 sources:
   - raw/articles/ai工作流在淘宝交易舆情巡检上的探索与实践
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # AI工作流在淘宝交易舆情巡检上的探索与实践

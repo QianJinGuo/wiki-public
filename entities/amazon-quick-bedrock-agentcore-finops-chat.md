@@ -2,7 +2,7 @@
 
 title: "用 Amazon Quick + Bedrock AgentCore 打造对话式 FinOps 助手"
 created: 2026-06-01
-updated: 2026-07-31
+updated: 2026-09-07
 type: entity
 tags: [finops, aws, bedrock, agentcore, mcp, cloud-cost]
 source: "[[raw/articles/amazon-quick-bedrock-agentcore-finops-chat]]"
@@ -10,6 +10,9 @@ confidence: 0.80
 review_value: 7
 sources:
   - raw/articles/amazon-quick-bedrock-agentcore-finops-chat
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 用 Amazon Quick + Bedrock AgentCore 打造对话式 FinOps 助手

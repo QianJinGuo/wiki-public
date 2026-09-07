@@ -1,11 +1,14 @@
 ---
 title: 云原生 AI 图像视频素材设计平台架构
 created: 2026-09-01
-updated: 2026-09-01
+updated: 2026-09-07
 type: entity
 tags: [ai, cloud-native, architecture, creative, video, pipeline]
 sources: [raw/articles/构建云原生-ai-图像视频素材设计平台从零到生产的架构实践]
 confidence: 0.8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 云原生 AI 图像视频素材设计平台架构

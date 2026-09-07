@@ -4,12 +4,15 @@ title: Build real-time voice applications with Amazon SageMaker AI and vLLM
 type: entity
 tags: [aws, sagemaker, vllm, voice-ai, real-time-inference, mlops, websocket, http2, asr]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 8
 review_confidence: 9
 review_stars: 4
 source: rss
 sources: [raw/articles/build-real-time-voice-applications-with-amazon-sagemaker-ai]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 核心要点

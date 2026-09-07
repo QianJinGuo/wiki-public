@@ -2,12 +2,15 @@
 
 title: "深度解析 OpenClaw 在 Prompt / Context / Harness 三个维度中的设计哲学与实践"
 created: 2026-04-25
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, architecture, openclaw, prompt, context, harness, skill, memory]
 sources: [raw/articles/openclaw-prompt-context-harness]
 review_value: 8
 review_confidence: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## Prompt Engineering：动态组装与文件驱动

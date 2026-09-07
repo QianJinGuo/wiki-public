@@ -9,6 +9,9 @@ review_confidence: 7
 type: entity
 sources:
   - raw/articles/构建无服务器kiro调度平台用kiro-cli-eventbridge-ecs-fargate实现定时ai任务
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 构建无服务器Kiro调度平台：用Kiro CLI + EventBridge + ECS Fargate实现定时AI任务

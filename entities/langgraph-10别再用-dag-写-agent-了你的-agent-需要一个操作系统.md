@@ -7,6 +7,9 @@ tags: [langgraph, agent-framework, state-machine, durable-execution, agent-orche
 rating: v9c9
 sources:
   - raw/articles/langgraph-10别再用-dag-写-agent-了你的-agent-需要一个操作系统
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # LangGraph 1.0：别再用 DAG 写 Agent 了，你的 Agent 需要一个操作系统

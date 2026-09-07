@@ -1,12 +1,15 @@
 ---
 title: "Agent Skills 开发指南：6 字段规范、3 级加载、5 步评估闭环"
 created: 2026-07-01
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent-skills, skill-development, anthropic, best-practices, progressive-disclosure]
 sources: [raw/articles/agent-skills-development-guide-shugex-2026]
 confidence: 0.95
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Agent Skills 开发指南：6 字段规范、3 级加载、5 步评估闭环

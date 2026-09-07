@@ -2,7 +2,7 @@
 title: "Cilium Tetragon — Kubernetes Runtime Security with eBPF"
 description: "Cilium Tetragon 是基于 eBPF 的 Kubernetes 运行时安全/可观测性方案，通过在内核边界拦截 syscalls、文件访问、进程执行与网络行为，并以 Kubernetes 身份（Pod/Namespace/Deployment/Label）映射原始内核事件，实现可执行的实时拦截与回滚。"
 created: 2026-06-11
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [kubernetes, security, cilium, ebpf, runtime-security, k8s, tetragon, observability, cloud-native]
 source: "[[raw/articles/cilium-kubernetes-runtime-security-guide-2026-06-07|原文存档]]"
@@ -12,6 +12,9 @@ review_recommendation: strong
 review_stars: 4
 provenance_state: inferred
 sources: [raw/articles/cilium-kubernetes-runtime-security-guide-2026-06-07]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Cilium Tetragon — Kubernetes Runtime Security with eBPF

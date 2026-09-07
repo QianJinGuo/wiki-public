@@ -2,7 +2,7 @@
 
 title: "基于 Firecracker microVM 与 Bedrock AgentCore 的生产级多租户 AI Agent"
 created: 2026-06-01
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: ['aws', 'bedrock', 'firecracker', 'agentcore', 'multi-tenant', 'security']
 source: [[raw/articles/firecracker-bedrock-agentcore-multi-tenant]]
@@ -10,6 +10,9 @@ confidence: 0.7
 review_value: 8
 sources:
   - raw/articles/firecracker-bedrock-agentcore-multi-tenant
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 基于 Firecracker microVM 与 Bedrock AgentCore 的生产级多租户 AI Agent

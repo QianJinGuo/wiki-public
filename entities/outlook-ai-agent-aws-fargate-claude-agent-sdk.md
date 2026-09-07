@@ -2,7 +2,7 @@
 
 title: "用 AI Agent 自动化日常办公工作流 — 在 AWS 上构建 Outlook 邮件助手"
 created: 2026-06-01
-updated: 2026-07-31
+updated: 2026-09-07
 type: entity
 tags: [office-automation, aws, fargate, claude-agent-sdk, mcp, skill, china]
 source: "[[raw/articles/outlook-ai-agent-aws-fargate-claude-agent-sdk]]"
@@ -10,6 +10,9 @@ confidence: 0.78
 review_value: 7
 sources:
   - raw/articles/outlook-ai-agent-aws-fargate-claude-agent-sdk
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 用 AI Agent 自动化日常办公工作流 — 在 AWS 上构建 Outlook 邮件助手

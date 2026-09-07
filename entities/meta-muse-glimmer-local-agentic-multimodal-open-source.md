@@ -1,12 +1,15 @@
 ---
 title: "Meta Muse Glimmer — 本地级 Agentic 多模态开源模型"
 created: 2026-08-14
-updated: 2026-08-14
+updated: 2026-09-07
 type: entity
 tags: [meta, muse, glimmer, open-weights, multimodal, agentic, local-model, huggingface]
 sources: [raw/articles/meta-muse-glimmer-local-agentic-multimodal-open-source]
 confidence: 0.75
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Meta Muse Glimmer — 本地级 Agentic 多模态开源模型

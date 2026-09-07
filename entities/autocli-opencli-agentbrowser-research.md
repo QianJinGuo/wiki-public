@@ -1,11 +1,14 @@
 ---
 title: "AutoCLI / OpenCLI / AgentBrowser / CLI-Anything 调研"
 created: 2026-04-24
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [cli, agent-tools, open-source, cli-anything, opencli, autocli, agentbrowser, tooling]
 summary: "CLI-Anything(32.4k★)、OpenCLI(17.1k★)、AutoCLI、AgentBrowser 四项目横向调研——将软件/网站/浏览器 CLI 化供 Agent 调用。"
 provenance_state: inferred
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # AutoCLI / OpenCLI / AgentBrowser / CLI-Anything 调研

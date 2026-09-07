@@ -2,7 +2,7 @@
 
 title: "pi-mono — 模块化 AI Agent 构建平台（OpenClaw 执行引擎核心）"
 created: 2026-05-01
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [agent-framework, agent-engine, agent-toolkit, openclaw, typescript, monorepo, llm-api]
 review_value: 8
@@ -10,6 +10,9 @@ review_confidence: 7
 sources:
   - raw/articles/pi-mono-github
 provenance_state: inferred
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 项目信息

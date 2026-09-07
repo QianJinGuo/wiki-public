@@ -2,13 +2,16 @@
 
 title: "Extending MCP support for Amazon Bedrock AgentCore Gateway"
 created: 2026-06-02
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [agent, aws, bedrock, mcp, agentcore, tool-schema]
 sources: [raw/articles/extending-mcp-support-for-amazon-bedrock-agentcore-gateway, raw/articles/how-agentcore-gateway-supports-the-mcp-2026-07-28-spec]
 confidence: 0.75
 provenance_state: inferred
 review_value: 8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Extending MCP support for Amazon Bedrock AgentCore Gateway

@@ -1,7 +1,7 @@
 ---
 title: "Fable 5 的信号:Agent 开始拼 Runtime — 架构师若飞的 Runtime Contract 工程化拆解"
 created: 2026-06-15
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [claude-fable-5, mythos-5, agent-runtime, runtime-contract, task-brief, capability-routing, execution-state, governance-layer, fall-back, contract-not-prompt, harness, state-handover, evidence-ledger, agent-architecture, long-horizon, ruofei]
 sources: [raw/articles/claude-fable-5-agent-runtime-contract-ruofei-2026]
@@ -10,6 +10,9 @@ review_value: 8
 review_confidence: 7
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Fable 5 的信号：Agent 开始拼 Runtime — 架构师若飞的 Runtime Contract 工程化拆解

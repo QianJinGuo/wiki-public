@@ -1,7 +1,7 @@
 ---
 title: "Client-Side Load Balancing at a Million Requests Per Second"
 created: 2026-06-25
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: ["load-balancing", "distributed-systems", "performance", "engineering", "infrastructure"]
 provenance_state: inferred
@@ -13,6 +13,9 @@ review_recommendation: strong
 review_stars: 4
 sources:
   - raw/articles/zalando-client-side-load-balancing-million-rps
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Client-Side Load Balancing at a Million Requests Per Second

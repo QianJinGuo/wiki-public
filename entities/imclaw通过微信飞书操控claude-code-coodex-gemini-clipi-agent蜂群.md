@@ -9,6 +9,9 @@ sources: [raw/articles/imclaw通过微信飞书操控claudecodecodexgeminiclipi-
 review_value: 7
 review_confidence: 7
 review_recommendation: worth-reading
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > → [[raw/articles/imclaw通过微信飞书操控claude-code-coodex-gemini-clipi-agent蜂群.md|原文存档]] ^[raw/articles/imclaw通过微信飞书操控claudecodecodexgeminiclipi-agent蜂群.md]

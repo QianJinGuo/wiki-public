@@ -2,7 +2,7 @@
 title: "Amazon Bedrock Ops Alert 三层监控架构"
 description: "AWS 原生无服务器方案，通过三层监控（错误检测/用量监控/异常识别）实现 Bedrock 全自动告警与支持工单创建"
 created: 2026-06-07
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [aws, bedrock, mlops, automation, monitoring, sre]
 source: [[raw/articles/aws-bedrock-ops-alert]]
@@ -12,6 +12,9 @@ review_value: 8
 review_confidence: 9
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Amazon Bedrock Ops Alert 三层监控架构

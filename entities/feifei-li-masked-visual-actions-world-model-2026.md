@@ -1,11 +1,14 @@
 ---
 title: "掩码视觉动作（Masked Visual Actions）——李飞飞团队世界模型"
 created: 2026-07-23
-updated: 2026-07-23
+updated: 2026-09-07
 type: entity
 tags: [world-model, robotics, video-model, stanford, fei-fei-li, vision, embodiment, mask]
 sources: [raw/articles/feifei-li-masked-visual-actions-world-model-2026]
 confidence: 0.75
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 掩码视觉动作（Masked Visual Actions）——李飞飞团队世界模型

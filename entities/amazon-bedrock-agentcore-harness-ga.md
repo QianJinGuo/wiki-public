@@ -2,7 +2,7 @@
 title: "Amazon Bedrock AgentCore Harness GA：两 API 调用生产级 Agent 基础设施"
 description: "AgentCore harness 正式发布，CreateHarness + InvokeHarness 两个 API 调用覆盖 sandbox 运行时、Memory、Gateway、Browser、Identity、Observability 六大原语"
 created: 2026-06-19
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [aws, bedrock, agent, harness, agent-infrastructure, mcp, production-agent]
 source: "[[raw/articles/amazon-bedrock-agentcore-harness-is-now-generally-available-]]"
@@ -13,6 +13,9 @@ provenance_state: extracted
 review_value: 7
 review_confidence: 9
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Amazon Bedrock AgentCore Harness GA

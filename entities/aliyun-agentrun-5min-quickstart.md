@@ -2,12 +2,15 @@
 
 title: "5 分钟上手 AgentRun：从注册到第一个 Agent 运行"
 created: 2026-05-11
-updated: 2026-06-17
+updated: 2026-09-07
 type: entity
 tags: [agent, aliyun, agentrun, serverless, tutorial]
 review_value: 8
 review_confidence: 7
 sources: [raw/articles/aliyun-agentrun-5min-quickstart]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 核心定位

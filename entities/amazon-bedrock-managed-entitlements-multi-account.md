@@ -1,13 +1,16 @@
 ---
 title: "Amazon Bedrock Managed Entitlements — 多账号模型访问治理"
 created: 2026-07-01
-updated: 2026-07-01
+updated: 2026-09-07
 type: entity
 tags: [aws, bedrock, multi-account, governance, license-manager, aws-marketplace, finops]
 sources:
   - raw/articles/simplify-multi-account-access-to-amazon-bedrock-models-with-managed-entitlements
 confidence: 0.80
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Amazon Bedrock Managed Entitlements — 多账号模型访问治理

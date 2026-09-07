@@ -3,7 +3,7 @@
 title: "QQ音乐 Harness Engineering 实践（大仓多服务场景）"
 description: "QQ音乐商业化团队在 Monorepo Microservices 50+ 服务场景下的 Harness Engineering 框架实现：核心公式（代码产出 = AI 能力 × 上下文质量）+ 五阶段四门禁 + 三层知识 + 三仓联动 + Self-Refinement 闭环"
 created: 2026-06-02
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [harness-engineering, music, tencent, harness-engineering, qq-music, tencent, monorepo, microservices, monorepo-microservices, context-engineering, context-gaps, three-warehouse-linkage, service-matrix, self-refinement, agent-engineering, multi-runtime-rendering]
 sources:
@@ -19,6 +19,9 @@ related:
   - entities/tencent-knowledge-harness-practice
   - entities/agent-harness-context-management-working-set
   - entities/harness-engineering-让-coding-agent-可靠完成长程任务
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # QQ音乐 Harness Engineering 实践（大仓多服务场景）

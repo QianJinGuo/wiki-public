@@ -2,12 +2,15 @@
 
 title: "Hermes Agent 深度解析（阿里云/飞樰）"
 created: 2026-04-24
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [hermes-agent, self-evolving, skill-generation, reinforcement-learning, rl, grpo, prompt-engineering, context-engineering, harness-engineering, nous-research, openclaw, claude-code]
 sources: [raw/articles/hermes-agent-deep-dive-alibaba]
 review_value: 9
 review_confidence: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## Overview

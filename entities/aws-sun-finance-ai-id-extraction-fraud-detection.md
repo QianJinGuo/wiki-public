@@ -1,13 +1,16 @@
 ---
 title: "SunFinance: Textract+Claude准确率90.8%的ID提取方案"
 created: 2026-05-08
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [aws, vision, claude, fraud-detection, computer-vision, production]
 summary: "Textract+Claude混合方案：79.7%→90.8%准确率 / 91%成本降低 / 每月330万次评估"
 sources: [raw/articles/aws-sun-finance-ai-id-extraction-fraud-detection]
 review_value: 8
 review_confidence: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 ## 核心内容
 SunFinance将AWS Textract（文档 OCR）+ Claude（智能理解）结合，ID提取准确率从79.7%提升至90.8%，成本降低91%。系统每月处理330万次ID验证，支撑信贷审批全流程。 ^[raw/articles/aws-sun-finance-ai-id-extraction-fraud-detection.md]

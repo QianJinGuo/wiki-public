@@ -4,7 +4,7 @@ title: "AGI 之路，可能从一开始就走错了"
 type: entity
 tags: [openai, gpt, agent, gemini, deepmind, alphafold, altman, hassabis, 腾讯研究院, 大模型批判, 政治经济学, 能源约束, UBI, 教育]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/agi-road-may-be-wrong-from-the-start-wang-peng-tencent]
@@ -14,6 +14,9 @@ related:
   - entities/glm5-scaling-pain
   - entities/kimi-attention-residuals-prenorm-dilution-block-attnres
   - entities/doubao-seed-2-lite
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 一、AGI 叙事是怎么被制造出来的

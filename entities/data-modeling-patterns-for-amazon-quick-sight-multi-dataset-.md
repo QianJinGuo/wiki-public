@@ -2,7 +2,7 @@
 
 title: Data modeling patterns for Amazon Quick Sight multi-dataset relationships
 created: 2026-07-10
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [aws]
 sources: [raw/articles/data-modeling-patterns-for-amazon-quick-sight-multi-dataset-]
@@ -12,6 +12,9 @@ review_recommendation: worth-reading
 review_stars: 3
 confidence: medium
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Data modeling patterns for Amazon Quick Sight multi-dataset relationships

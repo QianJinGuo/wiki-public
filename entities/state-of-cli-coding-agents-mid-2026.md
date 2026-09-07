@@ -1,13 +1,16 @@
 ---
 title: "State of CLI Coding Agents, Mid-2026"
 created: 2026-07-08
-updated: 2026-07-31
+updated: 2026-09-07
 type: entity
 tags: [cli, coding-agent, agent, survey, ecosystem, tooling]
 confidence: 0.8
 provenance_state: extracted
 sources:
   - raw/articles/state-of-cli-coding-agents-mid-2026
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > **Background**: 本文基于社区博客对 2026 年中 CLI 编码代理生态系统的全面调查，涵盖 35 个活跃维护的 CLI 编码代理以及市场格局分析。

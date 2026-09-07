@@ -19,7 +19,7 @@ tags:
   - react
   - self-reflection
 created: 2026-06-17
-updated: 2026-06-17
+updated: 2026-09-07
 type: entity
 review_value: 10
 review_confidence: 9
@@ -27,6 +27,9 @@ review_recommendation: strong
 review_stars: 5
 sources:
   - raw/articles/thinkingagent-from-scratch-reliability-context-recovery-2026-06-02
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 从零设计准生产级 LLM Agent：ThinkingAgent 完整架构与可靠性体系

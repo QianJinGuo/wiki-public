@@ -1,7 +1,7 @@
 ---
 title: "GitHub's plan for Agents — Kyle Daigle, GitHub"
 created: 2026-06-10
-updated: 2026-08-01
+updated: 2026-09-07
 tags: [agent, code, k8s, memory, observability, open-source, rl, tool-use, vision, workflow, github, copilot, mcp, infra]
 review_value: 7
 review_confidence: 7
@@ -10,6 +10,9 @@ sources:
   - raw/articles/www-latent-space-p-github
 confidence: 0.80
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # GitHub's plan for Agents — Kyle Daigle, GitHub

@@ -2,7 +2,7 @@
 title: "AI 生产力悖论：你变快了，公司没有"
 description: "AI 工具提升个体效率但将认知成本转嫁给后续环节（文档/PR/测试），形成组织级'庞氏骗局'——对 AI 工具使用的深刻反思"
 created: 2026-06-18
-updated: 2026-07-31
+updated: 2026-09-07
 type: entity
 tags: [ai-productivity, organizational-design, engineering-culture, ai-tools, meta-analysis]
 source: "[[raw/articles/ai-productivity-paradox-cost-shifting-poischeme]]"
@@ -14,6 +14,9 @@ review_stars: 5
 review_recommendation: strong
 sources:
   - raw/articles/ai-productivity-paradox-cost-shifting-poischeme
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # AI 生产力悖论：你变快了，公司没有

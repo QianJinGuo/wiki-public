@@ -4,10 +4,14 @@ title: "LLM Wiki / Obsidian Wiki / GBrain 自组织与自进化"
 type: entity
 tags: [agent, benchmark, claude, context, harness, llm, prompt]
 created: 2026-05-21
-updated: 2026-06-30
+updated: 2026-09-07
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/llm-wiki-obsidian-wiki-gbrain-self-organization-self-evolution]
+reviewed: 2026-09-07
+review_verdict: hub-retained
+review_category: dup
+review_note: "judged dup-0.75: 三系统对比，与second-brain拆解重叠; retained as hub (in-links>=20); MOC rewrite candidate"
 ---
 
 # llm-wiki-obsidian-wiki-gbrain-self-organization-self-evolution

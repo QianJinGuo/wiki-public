@@ -1,7 +1,7 @@
 ---
 title: "AWS Network Firewall 规则冲突 AI 实时检测方案（部署小指南六）"
 created: 2026-06-09
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [aws, network-firewall, bedrock, ai, security, devops, serverless, cloudformation, suricata]
 source: [[raw/articles/network-firewall-deploy-guide-6-bedrock-ai-conflict-detection]]
@@ -12,6 +12,9 @@ review_recommendation: worth-reading
 review_stars: 4
 provenance_state: inferred
 sources: [raw/articles/network-firewall-deploy-guide-6-bedrock-ai-conflict-detection]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # AWS Network Firewall 规则冲突 AI 实时检测方案（部署小指南六）

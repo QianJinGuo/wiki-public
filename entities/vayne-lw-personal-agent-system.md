@@ -4,11 +4,14 @@ title: "你缺的不是更好的 AI，而是一个\"装自己\"的系统"
 type: entity
 tags: [agent, gpt, memory]
 created: 2026-05-21
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 6
 review_confidence: 6
 sources: [raw/articles/vayne-lw-personal-agent-system]
 score_validated: 2026-09-05
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 你缺的不是更好的 AI，而是一个"装自己"的系统

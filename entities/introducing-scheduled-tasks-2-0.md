@@ -4,12 +4,15 @@ title: "Introducing Scheduled Tasks 2.0"
 type: entity
 tags: [ai, automation, manus]
 created: 2026-05-20
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 8
 sources: [raw/articles/introducing-scheduled-tasks-2-0]
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 核心要点

@@ -2,7 +2,7 @@
 
 title: "Vibe Design ≠ Vibe Coding —— 资深设计师对 AI 前端工作流的哲学批判"
 created: 2026-06-04
-updated: 2026-07-31
+updated: 2026-09-07
 type: entity
 tags: [agent-skill, frontend, design, philosophy, vibe-coding, ai-frontend, antipattern, design-system]
 sources: [raw/articles/impeccable-anomaly-vibe-design-vs-vibe-coding]
@@ -11,6 +11,9 @@ provenance_state: extracted
 review_value: 8
 review_confidence: 7
 review_recommendation: moderate
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Vibe Design ≠ Vibe Coding —— 资深设计师对 AI 前端工作流的哲学批判

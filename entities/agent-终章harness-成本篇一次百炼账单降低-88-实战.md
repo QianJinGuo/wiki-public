@@ -8,6 +8,9 @@ provenance_state: extracted
 confidence: 0.85
 sources:
   - raw/articles/agent-终章harness-成本篇一次百炼账单降低-88-实战
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Agent 终章（Harness 成本篇）：一次百炼账单降低 88% 实战

@@ -7,6 +7,9 @@ tags: [harness, agent, autonomous-iteration, alibaba, engineering-practice, prom
 sources: [raw/articles/harness-工程实践如何让-agent-完成自主迭代]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Harness 工程实践：如何让 Agent 完成自主迭代

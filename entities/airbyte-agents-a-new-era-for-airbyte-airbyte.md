@@ -4,11 +4,14 @@ title: "Airbyte Agents: A New Era for Airbyte"
 type: entity
 tags: [airbyte, agent, context-store, mcp, ai-infra]
 created: 2026-05-21
-updated: 2026-06-19
+updated: 2026-09-07
 review_value: 8
 review_confidence: 7
 sources: [raw/articles/airbyte-agents-a-new-era-for-airbyte-airbyte]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 核心定位

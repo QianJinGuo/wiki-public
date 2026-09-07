@@ -1,12 +1,15 @@
 ---
 title: "Claude 隐形水印 — GenAI 时代信息隐藏与可证安全隐写"
 created: 2026-08-19
-updated: 2026-08-19
+updated: 2026-09-07
 type: entity
 tags: [anthropic, watermark, steganography, information-hiding, ai-safety, c2pa, genai, provenance, model-copyright]
 sources: [raw/articles/claude-invisible-watermark-genai-steganography-xinzhiyuan]
 confidence: 0.75
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Claude 隐形水印 — GenAI 时代信息隐藏与可证安全隐写

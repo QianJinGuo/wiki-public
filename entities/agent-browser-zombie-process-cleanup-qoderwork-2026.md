@@ -1,12 +1,15 @@
 ---
 title: "Agent Browser 僵尸进程排查与定时清理（Claude Code + QoderWork 实战）"
 created: 2026-07-04
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [agent, coding-agent, claude-code, debugging, agent-browser, process-management, qoderwork, operation]
 sources: [raw/articles/agent-browser-zombie-process-cleanup-mac-tool-2026]
 confidence: 0.85
 provenance_state: expanded
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Agent Browser 僵尸进程排查与定时清理

@@ -1,12 +1,15 @@
 ---
 title: "腾讯 K8s + Ray 超大规模 AI Workload 调度实践"
 created: "2026-07-14"
-updated: 2026-08-01
+updated: 2026-09-07
 type: "entity"
 tags: [ray, k8s, kubernetes, ai-infra, rlhf, scheduling, tencent, distributed-computing, kubeflow]
 confidence: 0.8
 provenance_state: "extracted"
 sources: [raw/articles/tencent-ray-k8s-ai-workload-scheduling]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 腾讯 K8s + Ray 超大规模 AI Workload 调度实践

@@ -1,7 +1,7 @@
 ---
 title: "TencentDB Agent Memory：符号化短期记忆+分层式长期记忆"
 created: 2026-07-02
-updated: 2026-08-18
+updated: 2026-09-07
 type: entity
 tags: [tencent, agent, memory, short-term, long-term, hierarchical, persona, semantic-pyramid, memory-management, context-optimization]
 sources: [raw/articles/tencentdb-agent-memory-hierarchical, raw/articles/tencentdb-agent-memory-governance-ruofei-2026, raw/articles/tencentdb-agent-memory-team-memory-practice-2026-08-18]
@@ -15,6 +15,9 @@ related:
   - entities/attention-collapse-context-management
   - entities/langgraph-persistent-memory
   - entities/mem0-agent-memory-layer
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # TencentDB Agent Memory：符号化短期记忆+分层式长期记忆

@@ -7,6 +7,9 @@ tags: [ai, agent, harness, hook, governance, hitl, 数据工程, 腾讯]
 sources: [raw/articles/agent-治理用-hook-堵住-llm-的偷懒越权与失忆]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Agent 治理：用 Hook 堵住 LLM 的偷懒、越权与失忆

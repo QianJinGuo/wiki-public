@@ -1,7 +1,7 @@
 ---
 
 title: "卡帕西\"LLM Wiki\"，到底是什么？——用 Claude + Obsidian 给自己造一个第二大脑的完整拆解"
-updated: 2026-08-29
+updated: 2026-09-07
 description: "Karpathy LLM Wiki 完整拆解：Claude + Obsidian + Markdown 第二大脑协议栈，200K上下文暴力上下文优于RAG切片。含WorkBuddy低门槛实践+企业场景局限性分析"
 type: entity
 source: "[[raw/articles/karpathy-llm-wiki-second-brain-awkthole]]"
@@ -11,6 +11,9 @@ review_value: 7
 confidence: 0.6
 sources:
   - raw/articles/karpathy-llm-wiki-second-brain-awkthole
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 卡帕西"LLM Wiki"，到底是什么？——用 Claude + Obsidian 给自己造一个第二大脑的完整拆解

@@ -3,12 +3,15 @@ title: "AI phishing attacks are on the rise — Are you prepared? | Bitwarden"
 type: entity
 tags: [phishing, security, ai]
 created: 2026-05-20
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 7
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 3
 sources: [raw/articles/AI-phishing-attacks-are-on-the-rise-Are-you-prepared-Bitward]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 ## 核心要点
 - 2024 年 FBI 数据：钓鱼诈骗为 top cybercrime，且随 AI 上升趋势加剧

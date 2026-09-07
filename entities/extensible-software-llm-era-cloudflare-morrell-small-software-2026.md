@@ -1,11 +1,14 @@
 ---
 title: "可扩展软件（Extensible Software）：LLM 时代的软件形态——Cloudflare Morrell 与 YC Small Software"
 created: 2026-08-28
-updated: 2026-08-28
+updated: 2026-09-07
 type: entity
 tags: [extensible-software, small-software, llm, agent, platform, cloudflare, vibe-coding, capability-security, webassembly, sandbox]
 sources: [raw/articles/extensible-software-llm-era-cloudflare-morrell-small-software-2026]
 confidence: 0.75
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 可扩展软件（Extensible Software）：LLM 时代的软件形态——Cloudflare Morrell 与 YC Small Software

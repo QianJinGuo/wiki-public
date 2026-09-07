@@ -9,6 +9,9 @@ review_confidence: 7
 type: entity
 sources:
   - raw/articles/存之有序治之有矩agent-记忆系统的工程实践与演进
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 存之有序，治之有矩——Agent 记忆系统的工程实践与演进

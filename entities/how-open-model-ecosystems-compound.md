@@ -1,7 +1,7 @@
 ---
 title: "How Open Model Ecosystems Compound"
 created: 2026-05-13
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 source: rss
 source_url:
@@ -11,6 +11,9 @@ review_confidence: 7
 review_recommendation: strong
 date: 2026-05-13
 tags: [llm, open-source, ai, architecture]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 > -> [[raw/articles/how-open-model-ecosystems-compound.md|原文存档]]
 

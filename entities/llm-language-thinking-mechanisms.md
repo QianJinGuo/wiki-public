@@ -4,11 +4,14 @@ title: "LLM 工作机制与可解释性"
 type: entity
 tags: [llm, interpretability, feature-superposition, sae, circuit-analysis, function-token]
 created: 2026-05-17
-updated: 2026-08-29
+updated: 2026-09-07
 sources: [raw/articles/llm-language-thinking-mechanisms]
 review_value: 8
 review_confidence: 8
 review_recommendation: strong
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 核心观点（李航等，2026）

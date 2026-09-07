@@ -2,12 +2,15 @@
 
 title: "Claude Code 上下文工程 —— Anthropic 团队的工程实践"
 created: 2026-06-10
-updated: 2026-09-05
+updated: 2026-09-07
 tags: [agent, anthropic, claude, code, llm, memory, prompt, tool-use, context-engineering]
 review_value: 7
 review_confidence: 7
 type: entity
 sources: [raw/articles/claude-code-context-engineering-anthropic-thariq, raw/articles/claude-code-80-prompt-trim-thariq-context-engineering-2026, raw/articles/claude-5-context-engineering-80pct-trim-aihanwuji-2026]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Claude Code 上下文工程 —— Anthropic 团队的工程实践

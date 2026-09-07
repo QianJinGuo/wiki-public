@@ -1,7 +1,7 @@
 ---
 title: "Agent Harness 实现对比 A3：SubAgent（7 框架 Prompt 双语对照）"
 created: 2026-06-17
-updated: 2026-06-19
+updated: 2026-09-07
 type: entity
 tags:
   - agent-harness
@@ -19,6 +19,9 @@ sources:
 confidence: 0.90
 review_value: 9
 review_confidence: 8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Agent Harness 实现对比 A3：SubAgent（7 框架 Prompt 双语对照）

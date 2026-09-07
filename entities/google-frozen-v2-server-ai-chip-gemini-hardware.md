@@ -1,7 +1,7 @@
 ---
 title: Google被曝正在研发一颗新的服务器AI芯片，把Gemini固化到硬件里
 created: 2026-07-24
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags:
   - ai
@@ -17,6 +17,9 @@ tags:
 sources:
   - raw/articles/google-frozen-v2-server-ai-chip-gemini-hardware
 confidence: 0.7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Google被曝正在研发一颗新的服务器AI芯片，把Gemini固化到硬件里

@@ -15,6 +15,9 @@ tags:
   - harness
 sources:
   - raw/articles/loop-engineering应该赞成还是反对
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 摘要

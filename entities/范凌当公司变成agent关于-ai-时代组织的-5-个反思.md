@@ -9,6 +9,9 @@ review_value: 6
 review_confidence: 7
 sources: [raw/articles/范凌当公司变成agent关于-ai-时代组织的-5-个反思]
 score_validated: 2026-09-05
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 范凌：当公司变成Agent，关于 AI 时代组织的 5 个反思

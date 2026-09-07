@@ -8,6 +8,9 @@ rating: v6c4
 sources:
   - raw/articles/amd跑glm-52成本只要英伟达一半
 confidence: 0.6
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # AMD跑GLM 5.2，成本只要英伟达一半

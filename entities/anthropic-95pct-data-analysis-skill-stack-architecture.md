@@ -2,7 +2,7 @@
 
 title: Anthropic 内部 95% 数据分析自动化：分析 Agent 技术栈 + Skill 框架（21%→95% 准确率）
 created: 2026-06-04
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [anthropic, data-analysis-agent, 95-accuracy, self-service-data, semantic-layer, trusted-data-source, unbook-skill, code-agent-vs-analysis-agent, 3-failure-modes, 4-trusted-sources, online-validation, offline-evaluation, ablation-experiment, silent-failure, business-context, data-lineage, query-corpus, semantic-layer, adversarial-review, claude-code, data-level-harness, jiagoux, 5-boundaries, context-layer]
 confidence: 0.97
@@ -14,6 +14,9 @@ sources:
 review_value: 9
 review_confidence: 9
 review_recommendation: strong
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Anthropic 内部 95% 数据分析自动化

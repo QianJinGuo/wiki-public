@@ -1,11 +1,14 @@
 ---
 title: "Mattel163 MARP：多智能体报告自动生成平台（异步长任务 × 证据链 × Agent-as-Code × 项目级凭证）"
 created: 2026-08-17
-updated: 2026-08-30
+updated: 2026-09-07
 type: entity
 tags: [multi-agent, aws, bedrock, agentcore, strands, agent-as-code, production, harness, async, security, anti-hallucination]
 sources: [raw/articles/mattel163-marp-multi-agent-report-platform-aws-2026-08-17]
 confidence: 0.75
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Mattel163 MARP：多智能体报告自动生成平台

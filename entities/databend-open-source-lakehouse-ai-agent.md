@@ -1,7 +1,7 @@
 ---
 title: "Databend — 开源云原生湖仓（Snowflake-like），面向 AI 的多模态一体化数仓"
 created: 2026-06-30
-updated: 2026-07-01
+updated: 2026-09-07
 type: entity
 tags:
   - databend
@@ -18,6 +18,9 @@ tags:
   - real-time-analytics
 sources:
   - raw/articles/databend-on-aws-ai-multimodal-lakehouse-2026
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Databend — 开源云原生湖仓（Snowflake-like），面向 AI 的多模态一体化数仓

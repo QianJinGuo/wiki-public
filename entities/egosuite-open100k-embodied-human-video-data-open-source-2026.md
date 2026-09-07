@@ -1,12 +1,15 @@
 ---
 title: "EgoSuite-Open100K：10万小时全模态人类行为数据开源与具身智能数据 Scaling"
 created: 2026-08-25
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [embodied-ai, robotics, dataset, human-video-data, scaling-law, world-model, multimodal, data]
 sources: [raw/articles/egosuite-open100k-embodied-human-video-data-open-source-2026]
 confidence: 0.7
 related: [embodied-ai-data-market-landscape-97-players-44-billion-2026, jingshuo-tech-embodied-ai-data-infrastructure-2026, lerobot-v060-imagine-evaluate-improve, xiaomi-robotics-1-embodied-base-model-scaling-2026]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # EgoSuite-Open100K：10万小时全模态人类行为数据开源与具身智能数据 Scaling

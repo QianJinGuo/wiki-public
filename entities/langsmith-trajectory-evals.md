@@ -4,10 +4,13 @@ title: "Langsmith Trajectory Evals"
 type: entity
 tags: [agent, evaluation, llm, rag]
 created: 2026-05-21
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 7
 review_confidence: 8
 sources: [raw/articles/langsmith-trajectory-evals]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # LangSmith Trajectory Evaluations

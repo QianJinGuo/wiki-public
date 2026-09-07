@@ -6,6 +6,9 @@ type: entity
 tags: [inference, llm, anthropic, training, interpretability, consciousness, mechanistic-interpretability]
 sources: [raw/articles/刚刚anthropic切开claude大脑ai自发长出类人意识器官]
 confidence: 0.7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 刚刚，Anthropic切开Claude大脑！AI自发长出类人「意识器官」**

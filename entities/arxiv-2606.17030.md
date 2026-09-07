@@ -4,13 +4,16 @@ title: "Qwen-RobotWorld Technical Report: Unifying Embodied World Modeling throu
 type: entity
 tags: [agent, ai, llm]
 created: 2026-06-18
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 6
 review_confidence: 4
 review_recommendation: worth-reading
 review_stars: 4
 sources: [raw/articles/arxiv-2606.17030]
 score_validated: 2026-09-05
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Qwen-RobotWorld Technical Report: Unifying Embodied World Modeling through Language-Conditioned Video Generation

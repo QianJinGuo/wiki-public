@@ -2,13 +2,16 @@
 title: "What I’ve been building: ATOM Report, post-training course, finishing my book, and ongoing research"
 type: entity
 created: '2026-06-07'
-updated: 2026-08-28
+updated: 2026-09-07
 review_confidence: 8
 review_recommendation: strong
 review_value: 9
 tags: [interconnects-what-ive-been-building-atom-report-post-training-course-finishing-my-book-and-on]
 provenance_state: inferred
 sources:
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # What I’ve been building: ATOM Report, post-training course, finishing my book, and ongoing research

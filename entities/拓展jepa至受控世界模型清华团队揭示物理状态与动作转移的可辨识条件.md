@@ -7,6 +7,9 @@ tags: [ai, research, rl, reinforcement-learning, post-training, world-model, mul
 sources: [raw/articles/拓展jepa至受控世界模型清华团队揭示物理状态与动作转移的可辨识条件.md]
 confidence: 0.6
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 拓展JEPA至受控世界模型，清华团队揭示物理状态与动作转移的可辨识条件

@@ -3,7 +3,7 @@ description: Auto-generated placeholder
 title: "AI Agent Gateway 架构设计 — OpenClaw/Claude Code/Hermes 三框架对比"
 type: entity
 created: 2026-05-07
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 8
 review_confidence: 8
 review_recommendation: strong
@@ -21,6 +21,9 @@ related:
   - entities/hermes-agent-deep-dive
   - entities/claude-code-prompt-context-harness
   - entities/agent-engineering-principles-architecture-practice
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 ## 评分
 - **价值**：8/10 — 三框架 Gateway 设计哲学横向对比，视角独特，技术细节准确（端口号/bindings 配置/适配器数量）

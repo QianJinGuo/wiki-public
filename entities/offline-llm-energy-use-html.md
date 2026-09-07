@@ -3,12 +3,15 @@ title: "Apple Silicon costs more than OpenRouter"
 type: entity
 tags: [newsletter, article, inference, cost-analysis, apple, hardware]
 created: 2026-05-18
-updated: 2026-08-01
+updated: 2026-09-07
 review_value: 7
 review_confidence: 7
 review_recommendation: worth-reading
 sources: [raw/articles/offline-llm-energy-use-html]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Apple Silicon costs more than OpenRouter

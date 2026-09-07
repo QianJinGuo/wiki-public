@@ -1,7 +1,7 @@
 ---
 title: "AI Infra 入门干货总结：大模型是如何高效推理的"
 created: 2026-05-25
-updated: 2026-08-30
+updated: 2026-09-07
 type: entity
 tags: [ai-infra, llm, inference, vllm, continuous-batching, paged-attention, flash-attention, gpu]
 source: [[raw/articles/ai-infra-llm-efficient-inference-vllm]]
@@ -10,6 +10,9 @@ review_value: 8
 review_confidence: 8
 sources:
   - raw/articles/vllm-server-hf-jobs-one-command
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # AI Infra 入门干货总结：大模型是如何高效推理的

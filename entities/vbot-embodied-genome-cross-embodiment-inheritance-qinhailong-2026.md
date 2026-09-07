@@ -1,11 +1,14 @@
 ---
 title: "Vbot 具身基因组：跨本体智能继承（维他动力 秦海龙）"
 created: 2026-08-22
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [embodied-ai, robot, cross-embodiment, world-model, multi-embodiment, vla, reinforcement-learning]
 sources: [raw/articles/vbot-embodied-genome-cross-embodiment-inheritance-qinhailong-2026]
 confidence: 0.7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Vbot 具身基因组：跨本体智能继承（维他动力 秦海龙）

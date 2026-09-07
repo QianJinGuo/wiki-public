@@ -4,12 +4,15 @@ title: "AgentMemory 源码分析：给 Coding Agent 装上本地长期记忆"
 type: entity
 tags: [agent, coding, memory, source-analysis, bm25, vector-search, graph-search, hook, mcp, rest-api, iii-engine, codex, claude-code]
 created: 2026-05-21
-updated: 2026-08-01
+updated: 2026-09-07
 review_value: 8
 confidence: 0.6
 
 sources:
   - raw/articles/agentmemory-source-analysis-coding-agent-local-memory
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # AgentMemory 源码分析：给 Coding Agent 装上本地长期记忆

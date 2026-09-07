@@ -6,13 +6,16 @@ sources:
   - raw/articles/building-reliable-agentic-ai-systems-martinfowler
 tags: ["ai", "agent", "harness", "llm", "reliability-engineering", "evaluation", "rag", "architecture", "context-engineering"]
 created: "2026-06-22"
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 review_value: 9
 review_confidence: 9
 review_stars: 5
 confidence: high
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Building Reliable Agentic AI Systems

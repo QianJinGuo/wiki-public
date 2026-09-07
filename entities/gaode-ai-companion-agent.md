@@ -7,7 +7,7 @@ platform: "wechat"
 author: "高德技术"
 publish_date: "2026-05-14"
 created: "2026-05-14"
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 7
 sources: [raw/articles/gaode-ai-companion-agent-architecture]
 review_confidence: 8
@@ -16,6 +16,9 @@ review_stars: 4
 tags: [agent, spatial-intelligence, gaode, react, skill-system, spatiotemporal-context, supervisor-agent, dual-kernel]
 aliases: ["伴行Agent", "高德Agent"]
 provenance_state: inferred
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 > -> [[raw/articles/gaode-ai-companion-agent-architecture.md|原文存档]]
 

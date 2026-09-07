@@ -8,6 +8,10 @@ sources: [raw/articles/harness-engineering耗时一周我是如何将应用的ai
 provenance_state: raw-linked
 review_value: 8
 confidence: 0.8
+reviewed: 2026-09-07
+review_verdict: hub-retained
+review_category: dup
+review_note: "judged dup-0.75: 阿里90%案例16644字，batch-30已留双案例合并版; retained as hub (in-links>=20); MOC rewrite candidate"
 ---
 
 > -> [[raw/articles/harness-engineering耗时一周我是如何将应用的ai-coding率提升至90的.md|harness-engineering耗时一周我是如何将应用的ai-coding率提升至90的.md]]

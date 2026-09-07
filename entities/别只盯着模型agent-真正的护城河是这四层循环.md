@@ -8,6 +8,9 @@ provenance_state: inferred
 rating: v8c8
 sources:
   - raw/articles/别只盯着模型agent-真正的护城河是这四层循环
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 别只盯着模型：Agent 真正的护城河，是这四层循环

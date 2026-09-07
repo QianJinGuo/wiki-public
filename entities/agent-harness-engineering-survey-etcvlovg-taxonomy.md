@@ -19,11 +19,14 @@ review_stars: 5
 year: 2026
 authors: "Junjie Li, Xi Xiao, Yunbei Zhang, Chen Liu, Lin Zhao, Xiaoyying Liao, Yingrui Ji, Janet Wang, Jianyang Gu, Yingqiang Ge, Weijie Xu, Xi Fang, Xiang Xu, Tianchen Zhao, Youngeun Kim, Tianyang Wang, Jihun Hamm, Smita Krishnaswamy, Jun Huan, Chandan K. Reddy"
 institutions: "CMU, Yale, Johns Hopkins, Northeastern, Tulane, UAB, Ohio State, Virginia Tech, Amazon"
-updated: 2026-08-30
+updated: 2026-09-07
 
 review_value: 9
 review_confidence: 9
 provenance_state: inferred
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 ## Overview
 Academic survey (2026, preprint) proposing **agent harness engineering as an independent system layer**, not merely a wrapper around a model. Authors from 9 institutions (CMU, Yale, Johns Hopkins, etc.) with Amazon affiliation. ^[agent-harness-engineering-survey-2026.md] ^[raw/articles/agent-harness-engineering-survey-2026.md]

@@ -4,10 +4,13 @@ title: "Hermes新顶流Agent Skills闭环系统深度解析"
 type: entity
 tags: [agent, prompt]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 7
 review_confidence: 8
 sources: [raw/articles/hermes-skill-system-deep-dive]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Hermes新顶流Agent Skills闭环系统深度解析

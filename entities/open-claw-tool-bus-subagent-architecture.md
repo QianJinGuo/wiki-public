@@ -3,14 +3,16 @@
 
 title: "800行代码实现 Open Claw 的 Tool、消息总线、子Agent管理架构"
 created: 2026-05-16
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [claude-code, anthropic, agent, memory, architecture]
 sources:
   - raw/articles/open-claw-tool-bus-subagent-architecture
 review_value: 9
 review_confidence: 7
-
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 这篇文章记录对 Open Claw 中 Tool、消息总线和子 Agent 管理架构的研究学习，以及一个最小可运行实现。   ^[raw/articles/open-claw-tool-bus-subagent-architecture.md]

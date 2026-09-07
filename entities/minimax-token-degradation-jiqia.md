@@ -4,7 +4,7 @@ title: "Token 退化问题：分词器与后训练数据分布失配"
 author: MiniMax 稀宇科技
 published: 2026-05-09
 created: 2026-05-09
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 review_value: 9
 review_confidence: 9
@@ -12,6 +12,9 @@ review_recommendation: strong
 review_stars: 5
 tags: [llm, post-training, tokenizer, sft, catastrophic-forgetting, lm_head, vector-space]
 sources: [raw/articles/minimax-token-degradation-jiqia]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > -> [[raw/articles/minimax-token-degradation-jiqia|原文存档]]

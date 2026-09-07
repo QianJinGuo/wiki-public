@@ -1,12 +1,15 @@
 ---
 title: "UniGOOD：统一图分布外泛化与检测框架（南开×北航，WWW 2026）"
 created: 2026-08-25
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [graph-learning, out-of-distribution, generalization, detection, www-2026, invariant-learning]
 sources: [raw/articles/www-2026-unigood-unified-graph-ood-generalization-detection]
 confidence: 0.75
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # UniGOOD：统一图分布外泛化与检测框架（南开×北航，WWW 2026）

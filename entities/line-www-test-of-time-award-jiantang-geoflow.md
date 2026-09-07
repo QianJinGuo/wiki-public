@@ -1,7 +1,7 @@
 ---
 title: "LINE 论文 WWW 2026 时间检验奖与 GeoFlow：图神经网络十年远征"
 created: 2026-07-06
-updated: 2026-08-30
+updated: 2026-09-07
 type: entity
 tags: [agent, graph-neural-network, ai4s, drug-discovery, protein-design, geoflow, line, graph-embedding, mila, biogometry]
 source: [[raw/articles/line-www-test-of-time-award-jiantang-geoflow-机器之心]]
@@ -9,6 +9,9 @@ confidence: 0.85
 review_value: 8
 review_confidence: 8
 sources: [raw/articles/line-www-test-of-time-award-jiantang-geoflow-机器之心]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # LINE 论文 WWW 2026 时间检验奖与 GeoFlow：图神经网络十年远征

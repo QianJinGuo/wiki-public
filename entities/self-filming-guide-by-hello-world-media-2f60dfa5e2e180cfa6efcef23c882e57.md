@@ -3,11 +3,14 @@ title: "Self-Filming Guide by Hello World Media"
 type: entity
 tags: [newsletter, video-production, self-filming, content-creation]
 created: 2026-05-15
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 8
 sources: [raw/articles/Self-Filming-Guide-by-Hello-World-Media-2f60dfa5e2e180cfa6efcef23c882e57]
 review_confidence: 8
 review_recommendation: strong
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Self-Filming Guide by Hello World Media

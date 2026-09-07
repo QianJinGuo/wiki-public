@@ -1,12 +1,15 @@
 ---
 title: "Claude Code 身世：从安全对齐到开发工具的革命"
 created: 2026-07-08
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [claude-code, coding-agent, safety-alignment, anthropic]
 confidence: 0.6
 provenance_state: extracted
 sources: [raw/articles/claude-code-惊人身世曝光安全对齐起源]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > **Background**: 本文基于量子位公众号对 Claude Code 起源的报道，综合现有 coding agent 发展脉络整理。

@@ -1,13 +1,16 @@
 ---
 title: "第 09 篇 · Agent 配置：模型、工具、技能、MCP 与提示词的组合"
 created: 2026-07-12
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [agent, harness, configuration, skill, mcp, tool, prompt, harness-engineering]
 confidence: 0.75
 provenance_state: extracted
 sources:
   - raw/articles/agent-config-model-tool-skill-mcp-prompt-combination-yexiaochai-09
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 第 09 篇 · Agent 配置：模型、工具、技能、MCP 与提示词的组合

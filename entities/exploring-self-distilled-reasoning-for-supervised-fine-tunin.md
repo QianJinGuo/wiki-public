@@ -1,12 +1,15 @@
 ---
 title: "Exploring Self-Distilled Reasoning for SFT"
 created: 2026-07-24
-updated: 2026-08-30
+updated: 2026-09-07
 type: entity
 tags: [ai, agent, sft, self-distillation, reasoning, amazon-nova, fine-tuning, catastrophic-forgetting]
 sources: [raw/articles/exploring-self-distilled-reasoning-for-supervised-fine-tunin]
 confidence: 0.95
 score: 81
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Exploring Self-Distilled Reasoning for SFT

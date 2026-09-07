@@ -1,11 +1,14 @@
 ---
 title: "Amazon Bedrock Mantle 推理引擎 + LiteLLM 网关统一收敛"
 created: 2026-08-19
-updated: 2026-08-19
+updated: 2026-09-07
 type: entity
 tags: [bedrock, inference, litellm, gateway, agent, sigv4, api]
 sources: [raw/articles/amazon-bedrock-mantle-litellm-gateway-2026]
 confidence: 0.72
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Amazon Bedrock Mantle 推理引擎 + LiteLLM 网关统一收敛

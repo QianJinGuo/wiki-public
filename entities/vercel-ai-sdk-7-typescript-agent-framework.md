@@ -2,7 +2,7 @@
 
 title: "Vercel AI SDK 7 — TypeScript Agent 开发框架全面升级"
 created: 2026-06-27
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [ai-sdk, vercel, typescript, agent, llm, sdk, agent-harness, mcp, voice]
 provenance_state: inferred
@@ -13,6 +13,9 @@ review_value: 9
 review_confidence: 9
 review_stars: 5
 review_recommendation: strong
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Vercel AI SDK 7 — TypeScript Agent 开发框架全面升级

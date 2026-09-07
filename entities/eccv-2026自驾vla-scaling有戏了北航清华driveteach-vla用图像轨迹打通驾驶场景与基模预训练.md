@@ -7,6 +7,9 @@ tags: [ai, research, evaluation, benchmark, agent-eval, multimodal, vlm, vision,
 sources: [raw/articles/eccv-2026自驾vla-scaling有戏了北航清华driveteach-vla用图像轨迹打通驾驶场景与基模预训练.md]
 confidence: 0.6
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # ECCV 2026｜自驾VLA Scaling有戏了，北航清华DriveTeach-VLA：用图像轨迹打通驾驶场景与基模预训练

@@ -2,7 +2,7 @@
 
 title: "晓斌：从 People-Oriented 到 Agent-Oriented Infra —— 意图驱动 + 代码沉淀的进化体"
 created: 2026-06-04
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, infra, agent-oriented, harness, people-oriented, intent-driven, code-sedimentation, jit, dry-run, credential-brokering, alibaba, claude, anthropic, agent-dx, observability, aliyun]
 sources: [raw/articles/agent-oriented-infra-intent-driven-code-sedimentation]
@@ -11,6 +11,9 @@ provenance_state: extracted
 review_value: 10
 review_confidence: 9
 review_recommendation: strong
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 晓斌：从 People-Oriented 到 Agent-Oriented Infra

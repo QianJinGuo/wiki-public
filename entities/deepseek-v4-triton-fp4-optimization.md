@@ -2,7 +2,7 @@
 title: "DeepSeek V4 Triton FP4 优化实战"
 type: entity
 created: 2026-05-07
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 9
 sources: [raw/articles/deepseek-v4-triton-fp4-optimization]
 review_confidence: 8
@@ -12,7 +12,9 @@ source_url:
 author: 靳岩岩
 published: 2026-05-07
 tags: [deepseek, fp4, triton, cuda, kernel-optimization, moe, gemm, sm121]
-
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 > -> [[raw/articles/deepseek-v4-triton-fp4-optimization|原文存档]]
 

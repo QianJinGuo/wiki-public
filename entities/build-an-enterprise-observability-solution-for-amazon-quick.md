@@ -2,7 +2,7 @@
 
 title: "Build an enterprise observability solution for Amazon Quick"
 created: 2026-06-01
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [aws, amazon-quick, observability, bedrock, agent]
 source: [[raw/articles/build-an-enterprise-observability-solution-for-amazon-quick]]
@@ -10,6 +10,9 @@ confidence: 0.75
 review_value: 8
 sources:
   - raw/articles/build-an-enterprise-observability-solution-for-amazon-quick
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Build an enterprise observability solution for Amazon Quick

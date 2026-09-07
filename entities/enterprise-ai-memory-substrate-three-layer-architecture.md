@@ -2,13 +2,16 @@
 
 title: "企业级AI记忆基质三层架构：事实/交互/行动记忆"
 created: 2026-05-19
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, enterprise-ai, memory, knowledge-management, rag, knowledge-graph, organizational-memory, context-graph]
 sources: [raw/articles/enterprise-ai-memory-substrate-three-layer-architecture]
 review_value: 7.5
 review_confidence: 7
 summary: 企业级AI记忆基质三层架构——事实记忆（Semantic File System+Context Graph溯源）、交互记忆（Ontology抽取Commitment/Risk/Assumption/Objection）、行动记忆（Agent执行边界定义）；Claim vs Truth区分；双擎检索（Embedding+Graph Traversal）；MVP五原则。
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 企业级AI记忆基质三层架构

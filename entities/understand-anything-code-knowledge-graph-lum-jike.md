@@ -8,13 +8,16 @@ review_recommendation: moderate
 review_stars: 3
 date: 2026-05-28
 created: 2026-05-28
-updated: 2026-08-29
+updated: 2026-09-07
 tags: [understand-anything, claude-code-plugin, code-understanding, knowledge-graph, semantic-search, diff-analysis, cursor, vscode-copilot, codex, persona-adaptive-ui, tree-sitter, monorepo]
 type: entity
 provenance_state: synthesized
 sources:
   - raw/articles/understand-anything-code-knowledge-graph-lum-jike
   - raw/articles/understand-anything-code-knowledge-graph-matu-2026-06-11
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > -> [[raw/articles/understand-anything-code-knowledge-graph-lum-jike|原文存档]]

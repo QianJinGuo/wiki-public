@@ -4,11 +4,14 @@ title: "王云鹤眼中的Harness：复杂优化问题，AGI灵魂争夺之战"
 type: entity
 tags: [agent, harness-engineering, multi-model, optimization, agent-architecture, base-model, rag, skills, prompt-engineering, claude-code, anthropic, intelligence-per-token]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 9
 review_confidence: 8
 provenance_state: extracted
 sources: [raw/articles/wangyunhe-harness-optimization-agentsoul]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 核心命题：Agent = Models + Harness

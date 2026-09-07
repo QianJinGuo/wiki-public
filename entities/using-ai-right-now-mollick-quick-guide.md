@@ -3,7 +3,7 @@
 title: "Mollick 实用 AI 选型指南：模型选择·Deep Research·Voice Mode·Agent 工作流"
 description: "Ethan Mollick（One Useful Thing，2025-06-23）实用指南：三大系统（ChatGPT/Claude/Gemini）+ 三档模型（快速/强力/超强力）；Deep Research 是被低估的核心功能；Voice Mode  killer feature 是共享屏幕/相机；$20 付费选 Agent 模型做真实工作；prompt engineering 已死。"
 created: 2026-06-07
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [ai-selection, model-tier, deep-research, voice-mode, agentic-ai, chatgpt, claude, gemini, ethan-mollick, one-useful-thing, prompting, canvas]
 source: [[raw/articles/using-ai-right-now-a-quick-guide]]
@@ -14,6 +14,9 @@ review_value: 9
 review_confidence: 9
 review_recommendation: strong
 review_stars: 5
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Mollick 实用 AI 选型指南：模型选择·Deep Research·Voice Mode·Agent 工作流

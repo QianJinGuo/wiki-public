@@ -3,7 +3,7 @@
 
 title: "Claude Code 架构深度解析"
 created: 2026-05-07
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [claude, agent, architecture, claude-code, tool-system, plan-mode, context-management]
 sources:
@@ -11,7 +11,9 @@ sources:
 provenance_state: extracted
 review_value: 9
 review_confidence: 8
-
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Claude Code 架构深度解析

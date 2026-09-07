@@ -2,12 +2,15 @@
 title: "Agent Skill 规范、构建与设计模式"
 type: entity
 created: 2026-07-02
-updated: 2026-08-29
+updated: 2026-09-07
 tags: [agent, skill, specification, design-patterns, anthropic, google-adk, skill-creator]
 rating: v7c7
 sources:
   - raw/articles/agent-skill-spec-building-design-patterns
   - raw/articles/vercel-agent-plugins-skill-mcp-packaging-2026
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Agent Skill 规范、构建与设计模式

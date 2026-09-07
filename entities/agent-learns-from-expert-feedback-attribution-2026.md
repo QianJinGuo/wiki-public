@@ -1,11 +1,14 @@
 ---
 title: "组织级第二大脑：构建从专家处学习的 AI（agent 反馈归因）"
 created: 2026-09-05
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [agent, feedback, learning, expert-knowledge, attribution, meta]
 sources: [raw/articles/facebook-org-second-brain-agent-learns-from-experts-2026]
 confidence: 0.65
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 组织级第二大脑：构建从专家处学习的 AI（agent 反馈归因）

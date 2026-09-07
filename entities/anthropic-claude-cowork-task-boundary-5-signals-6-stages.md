@@ -2,7 +2,7 @@
 
 title: Anthropic Claude Cowork 知识工作 Agent 任务边界 — 5 筛选信号 + 6 阶段工作流 + 6 企业控制点
 created: 2026-06-04
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [anthropic, claude-cowork, knowledge-work-agent, task-selection, 5-signals, 6-stages, 6-controls, skill-precipitation, plugin-supply-chain, control-plane, claude-code, vibe-working, 任务筛选, 上下文给对, 审批门, 插件供应链]
 confidence: 0.93
@@ -11,6 +11,9 @@ sources: [raw/articles/anthropic-claude-cowork-task-boundary-5-signals-6-stages]
 review_value: 9
 review_confidence: 9
 review_recommendation: strong
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Anthropic Claude Cowork 知识工作 Agent 任务边界

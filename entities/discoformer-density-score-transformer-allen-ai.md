@@ -1,12 +1,15 @@
 ---
 title: DiScoFormer — 跨分布密度和分数估计的统一 Transformer
 created: 2026-07-05
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [model-architecture, training, transformer, diffusion, representation-learning]
 sources: [raw/articles/discoformer-one-transformer-for-density-and-score]
 confidence: 0.75
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # DiScoFormer — 跨分布密度和分数估计的统一 Transformer

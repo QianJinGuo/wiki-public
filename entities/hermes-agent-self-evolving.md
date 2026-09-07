@@ -3,7 +3,7 @@
 description: Auto-generated placeholder
 title: "Hermes Agent 自进化机制源码解析"
 created: 2026-05-08
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [llm-agent, hermes-agent, self-evolving, skill-system, memory-management, prompt-engineering]
 review_value: 9
@@ -12,6 +12,10 @@ sources:
   - raw/articles/hermes-agent-self-evolving-source-analysis
 summary: Hermes Agent 基于 Memory + Skills + Session Search 的自进化机制设计，不依赖模型权重更新，通过 skill 沉淀操作流程、memory 记住偏好、session search 找回历史经验
 provenance_state: inferred
+reviewed: 2026-09-07
+review_verdict: hub-retained
+review_category: dup
+review_note: "judged dup-0.75: 自进化机制9319字rv9版，留14550字版; retained as hub (in-links>=20); MOC rewrite candidate"
 ---
 
 ## 核心定位

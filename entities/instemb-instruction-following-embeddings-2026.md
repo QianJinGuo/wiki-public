@@ -1,13 +1,16 @@
 ---
 title: "InstEmb：未来感知指令嵌入（ICML 2026）"
 created: 2026-08-13
-updated: 2026-08-13
+updated: 2026-09-07
 type: entity
 tags: [embedding, instruction-following, retrieval, icml, jd, look-ahead, representation-learning]
 sources:
   - raw/articles/instemb-instruction-following-embeddings-jd-2026
 confidence: 0.8
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # InstEmb：未来感知指令嵌入

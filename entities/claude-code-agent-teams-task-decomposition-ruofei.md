@@ -9,11 +9,14 @@ review_recommendation: strong
 review_stars: 5
 date: 2026-05-27
 created: 2026-05-28
-updated: 2026-08-29
+updated: 2026-09-07
 tags: [claude, claude-code, agent, multi-agent, agent-teams, task-decomposition, permissions, workflow, architecture]
 type: entity
 provenance_state: synthesized
 sources: [raw/articles/claude-code-agent-teams-task-decomposition-ruofei]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > -> [[raw/articles/claude-code-agent-teams-task-decomposition-ruofei|原文存档]]

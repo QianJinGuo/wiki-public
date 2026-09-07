@@ -1,13 +1,16 @@
 ---
 title: "Codex 重磅升级：Appshots / Goal 毕业 / 锁屏远程操控"
 created: 2026-06-10
-updated: 2026-08-01
+updated: 2026-09-07
 tags: [agent, code, llm, openai, codex, computer-use, ai-coding, workflow, autonomous-agent]
 review_value: 8
 review_confidence: 7
 type: entity
 sources:
   - raw/articles/codex-major-update-appshots-goal-xinzhiyuan
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Codex 重磅升级：Appshots / Goal 毕业 / 锁屏远程操控

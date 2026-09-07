@@ -2,13 +2,16 @@
 
 title: "Token 经济学与 AI 效率"
 created: 2026-04-30
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [token-economics, ai-productivity, model-routing, enterprise-ai, ai-pricing, harness, inference-optimization]
 sources:
   - raw/articles/armin-ronacher-ben-vinegar-token-blackbox-harness-lockin-infoq-2026-08-24
 review_value: 8
 review_confidence: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 核心命题

@@ -1,11 +1,14 @@
 ---
 title: "在数据所在处构建 Agent: CrewAI + Snowflake 企业级 Agent 部署"
 created: 2026-06-30
-updated: 2026-06-30
+updated: 2026-09-07
 type: entity
 tags: [agent, crewai, snowflake, enterprise, data-governance, agent-deployment]
 sources: [raw/articles/how-to-build-agents-where-data-already-lives]
 confidence: 0.75
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 在数据所在处构建 Agent: CrewAI + Snowflake 企业级 Agent 部署

@@ -2,13 +2,16 @@
 
 title: "How Smartsheet built a remote MCP server on AWS"
 created: 2026-07-24
-updated: 2026-07-25
+updated: 2026-09-07
 type: entity
 tags: [mcp, aws, agent, server-architecture, enterprise, smartsheet]
 sources:
   - raw/articles/how-smartsheet-built-a-remote-mcp-server-on-aws
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # How Smartsheet built a remote MCP server on AWS

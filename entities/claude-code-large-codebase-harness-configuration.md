@@ -5,7 +5,7 @@ type: entity
 source: wechat
 source_url:
 created: 2026-05-20
-updated: 2026-09-05
+updated: 2026-09-07
 tags: [claude-code, agent, harness, enterprise, large-codebase, monorepo]
 review_value: 8
 review_confidence: 8.5
@@ -13,6 +13,9 @@ sources:
   - raw/articles/how-claude-code-works-in-large-codebases-best-practices-and-where-to-start
   - raw/articles/qq-music-harness-engineering-monorepo-microservices
   
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Claude Code 大型代码库套具配置

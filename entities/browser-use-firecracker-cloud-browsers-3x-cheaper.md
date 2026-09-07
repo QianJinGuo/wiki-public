@@ -2,7 +2,7 @@
 title: "Browser Use Firecracker：云端浏览器成本降 3 倍的 microVM 架构"
 description: "browser-use 团队用 Firecracker microVM 替代传统容器方案，实现云端浏览器隔离成本从 $0.06 降至 $0.02/hr，冷启动 <400ms"
 created: 2026-06-18
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [browser-automation, firecracker, microvm, agent-infra, cost-optimization, aws]
 source: "[[raw/articles/browser-use-firecracker-cloud-browsers-3x-cheaper]]"
@@ -17,6 +17,9 @@ related:
   - entities/firecracker-bedrock-agentcore-multi-tenant
 sources:
   - raw/articles/browser-use-firecracker-cloud-browsers-3x-cheaper
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Browser Use Firecracker：云端浏览器成本降 3 倍的 microVM 架构

@@ -1,11 +1,14 @@
 ---
 title: "PhyEdit：显式 3D 几何 Preview 指导 DiT 图像编辑（浙大 ReLER，ACM MM 2026）"
 created: 2026-08-13
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [3d-editing, image-editing, diffusion, dit, geometry, acm-mm26, zju-reler, world-model, multimodal]
 sources: [raw/articles/phyedit-explicit-3d-geometry-preview-image-editing-acm-mm26-2026]
 confidence: 0.65
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # PhyEdit：显式 3D 几何 Preview 指导 DiT 图像编辑

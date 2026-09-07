@@ -1,12 +1,15 @@
 ---
 title: "AnySearch — Agent专用搜索引擎，登顶Product Hunt"
 created: 2026-07-14
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [agent, ai-search, tool, product, llm]
 sources: [raw/articles/anysearch-agent-search-product-hunt-2026]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # AnySearch — Agent专用搜索引擎，登顶Product Hunt

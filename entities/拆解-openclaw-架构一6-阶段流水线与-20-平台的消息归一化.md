@@ -8,6 +8,9 @@ tags: [wechat, ai]
 rating: v8c8
 sources:
   - raw/articles/拆解-openclaw-架构一6-阶段流水线与-20-平台的消息归一化
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 拆解 OpenClaw 架构（一）：6 阶段流水线与 20+ 平台的消息归一化

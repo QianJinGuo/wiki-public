@@ -2,12 +2,15 @@
 title: "Harness Engineering 的未来——什么会消失，什么不会"
 description: "Harness Engineering 能力分层分析：主权线划分可自动化与不可自动化的工作边界"
 created: 2026-06-10
-updated: 2026-08-01
+updated: 2026-09-07
 tags: [agent, architecture, harness-engineering, tool-use]
 review_value: 7
 review_confidence: 7
 type: entity
 sources: [raw/articles/harness-engineering-future-persistence-vs-erosion]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Harness Engineering 的未来——什么会消失，什么不会

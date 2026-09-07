@@ -4,12 +4,15 @@ title: "OpenSquilla launches open-source AI agent to cut token costs"
 type: entity
 tags: [newsletter, ml-serving, open-source, ai-agents, cost-optimization]
 created: 2026-05-15
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 8
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4
 sources: [raw/articles/opensquilla-launches-open-source-ai-agent-to-cut-token-costs]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 核心要点

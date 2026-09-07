@@ -9,6 +9,9 @@ tags: [claude-code, anthropic, aws, engineering, ai]
 review_value: 9
 sources: [raw/articles/刚刚opus-47发布相比46核心变化与claude-code搭配最佳实践]
 review_confidence: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 [[raw/articles/刚刚opus-47发布相比46核心变化与claude-code搭配最佳实践]] ^[raw/articles/刚刚opus-47发布相比46核心变化与claude-code搭配最佳实践.md]

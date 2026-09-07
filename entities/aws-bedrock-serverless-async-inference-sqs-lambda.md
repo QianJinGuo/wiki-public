@@ -7,7 +7,11 @@ summary: "SQS+Lambda异步管道：2000并发0%限流/三层timeout配置/mc=RPM
 sources: [raw/articles/aws-bedrock-serverless-async-inference-sqs-lambda]
 review_value: 7
 review_confidence: 9
-updated: 2026-09-05
+updated: 2026-09-07
+reviewed: 2026-09-07
+review_verdict: hub-retained
+review_category: dup
+review_note: "judged dup-0.75: 异步管道第三份; retained as hub (in-links>=20); MOC rewrite candidate"
 ---
 # SQS+Lambda异步管道：2000并发0%限流的工程细节
 ## 三个关键洞察

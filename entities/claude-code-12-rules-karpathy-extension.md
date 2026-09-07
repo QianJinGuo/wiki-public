@@ -2,7 +2,7 @@
 type: entity
 title: "CLAUDE.md 12 条规则：Karpathy 扩展模板"
 created: 2026-05-12
-updated: 2026-08-01
+updated: 2026-09-07
 sources:
   - [[raw/articles/claude-code-12-rules-karpathy-extension|Claude写代码错误率从41%降到11%]]
 tags: [agent-prompting, claude-code, coding-agent, prompt-engineering, best-practice]
@@ -11,6 +11,10 @@ review_value: 9
 review_confidence: 8
 review_recommendation: strong
 review_stars: 5
+reviewed: 2026-09-07
+review_verdict: hub-retained
+review_category: dup
+review_note: "judged dup-0.8: dup-correction: 同主题保留更全版本; retained as hub (in-links>=20); MOC rewrite candidate"
 ---
 ## 概述
 基于 Forrest Chang 整理的 Karpathy 4 条 CLAUDE.md 规则，扩展 8 条覆盖 2026 年 5 月 agent 驱动场景的新规则。6 周 30 个代码库实测，错误率从 41% 降至 3%，遵循率保持 76-78%。 ^[raw/articles/claude-code-12-rules-karpathy-extension.md]

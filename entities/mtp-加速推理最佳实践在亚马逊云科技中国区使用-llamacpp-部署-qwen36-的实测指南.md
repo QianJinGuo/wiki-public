@@ -6,6 +6,9 @@ type: entity
 tags: [ai, rss, inference, llm, aws, graviton, llama-cpp, moe, mpt]
 sources: [raw/articles/mtp-加速推理最佳实践在亚马逊云科技中国区使用-llamacpp-部署-qwen36-的实测指南]
 confidence: 0.65
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # MTP 加速推理最佳实践：在亚马逊云科技中国区使用 llama.cpp 部署 Qwen3.6 的实测指南

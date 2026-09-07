@@ -2,7 +2,7 @@
 
 title: "Agent生产级Harness工程指南"
 created: 2026-05-14
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [harness, llm-agent, production, engineering, four-pillars, demo-type, production-type, claude-code]
 review_value: 8
@@ -11,6 +11,9 @@ sources:
   - raw/articles/harness-production-agent-engineering-deficit
 summary: "工程赤字：Agent生产失败的本质不是模型不行，而是Harness不够。Demo型vs生产型代码库四维判别法、Claude Code退化事故复盘（73%思考长度下降/80x重试率）、四支柱框架（构建/记忆/运行框架/编排）、AgentLeak benchmark（多智能体暴露面68.9%）、推荐阅读体系。"
 provenance_state: inferred
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 核心定位

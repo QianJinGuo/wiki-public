@@ -2,7 +2,7 @@
 
 title: The Interface Is No Longer the Product
 created: 2026-05-22
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [ai, product, strategy, interface, mozill]
 sources: [raw/articles/interface-commoditization-ai-era]
@@ -11,6 +11,9 @@ review_value: 7
 review_confidence: 8
 review_stars: 4
 review_recommendation: strong
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ### From Agents That Use Apps to Apps Built for Agents

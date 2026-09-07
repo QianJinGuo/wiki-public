@@ -1,11 +1,14 @@
 ---
 title: "Graviton Inference"
 created: 2026-07-27
-updated: 2026-08-06
+updated: 2026-09-07
 type: entity
 tags: ["aws", "graviton", "arm", "inference", "cost-optimization"]
 provenance_state: inferred
 confidence: 0.5
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Graviton Inference

@@ -1,7 +1,7 @@
 ---
 title: "The Oracle and the Firm"
 created: 2026-06-16
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [article, newsletter]
 source_url: "https://calv.info/the-oracle-and-the-firm"
@@ -11,6 +11,9 @@ review_confidence: 5
 review_recommendation: strong
 review_stars: 4
 score_validated: 2026-09-05
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # The Oracle and the Firm

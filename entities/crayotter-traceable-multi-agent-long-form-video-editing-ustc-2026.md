@@ -1,11 +1,14 @@
 ---
 title: "Crayotter: Traceable Multi-Agent Workflows for Long-Form Video Editing"
 created: 2026-07-21
-updated: 2026-07-21
+updated: 2026-09-07
 type: entity
 tags: [crayotter, video-editing, multi-agent, agentic-workflow, long-video, rlvr, grpo, artifact, ustc, multi-modal]
 sources: [raw/articles/crayotter-traceable-multi-agent-long-form-video-editing-ustc-2026]
 confidence: 0.7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Crayotter: Traceable Multi-Agent Workflows for Long-Form Video Editing

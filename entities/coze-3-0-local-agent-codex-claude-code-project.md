@@ -2,13 +2,16 @@
 
 title: "扣子 3.0 离谱更新：把 Codex、Claude Code 拉进一个项目工作？"
 created: 2026-06-10
-updated: 2026-07-31
+updated: 2026-09-07
 tags: [agent, claude, code, knowledge-mgmt, llm, memory, prompt, security, vision, workflow]
 review_value: 7
 review_confidence: 7
 type: entity
 sources:
   - raw/articles/coze-3-0-local-agent-codex-claude-code-project
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 扣子 3.0 离谱更新：把 Codex、Claude Code 拉进一个项目工作？

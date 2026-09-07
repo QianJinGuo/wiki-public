@@ -3,7 +3,7 @@
 title: "OpenAI GDPval and the Real AI Agents Threshold (Mollick View)"
 description: "OpenAI GDPval 2025-09 新基准 + Mollick 解读：AI 在 14 年经验专家设计的 4-7 小时真实任务上接近人类；学术 replication 危机可被 AI agent 自动化解决。"
 created: 2026-06-07
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [gdpval, openai, oneusefulthing, ethan-mollick, ai-agents, real-work, replication-crisis, benchmark, jobs-vs-tasks]
 source: "[[raw/articles/real-ai-agents-and-real-work]]"
@@ -14,6 +14,9 @@ review_confidence: 6
 review_recommendation: strong
 review_stars: 4
 score_validated: 2026-09-05
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # OpenAI GDPval and the Real AI Agents Threshold (Mollick View)

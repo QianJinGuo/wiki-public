@@ -9,6 +9,9 @@ provenance_state: inferred
 rating: v9c8
 sources:
   - raw/articles/万帧照片级仿真打通视觉机器人学习的感知与物理鸿沟国产仿真器gs-playground入选rss-2026
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 万帧照片级仿真，打通视觉机器人学习的感知与物理鸿沟：国产仿真器GS-Playground入选RSS 2026

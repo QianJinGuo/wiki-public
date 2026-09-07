@@ -1,12 +1,15 @@
 ---
 title: "OpenWorker — 吴恩达开源桌面 Agent：Local-First 运行时与四层控制架构"
 created: 2026-08-02
-updated: 2026-08-07
+updated: 2026-09-07
 type: entity
 tags: ['desktop-agent', 'agent-runtime', 'local-first', 'permission-engine', 'audit', 'openworker', 'agent-infra', 'ai-infra', 'workbuddy']
 sources: [raw/articles/openworker-desktop-agent-local-first-architecture-ruofei-2026]
 provenance_state: extracted
 confidence: 0.85
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > -> [[raw/articles/openworker-desktop-agent-local-first-architecture-ruofei-2026.md|原文存档]]

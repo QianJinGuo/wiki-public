@@ -4,12 +4,15 @@ title: "2028: Two scenarios for global AI leadership"
 type: entity
 tags: [newsletter, anthropic, ai-policy, us-china]
 created: 2026-05-16
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 6
 review_confidence: 10
 review_recommendation: strong
 review_stars: 4
 sources: [raw/articles/2028-two-scenarios-for-global-ai-leadership]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 核心观点

@@ -4,10 +4,13 @@ title: "Hermes Agent 九模块架构解析"
 type: entity
 tags: [agent, architecture, memory, prompt, tool]
 created: 2026-05-21
-updated: 2026-08-01
+updated: 2026-09-07
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/hermes-9-module-architecture-winty]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 9 大模块

@@ -7,6 +7,9 @@ tags: [ai, research, agent, ai-agent, multi-agent, rl, reinforcement-learning, p
 sources: [raw/articles/agentic-rl-后训练资源怎么分港中文恒生大学提出-libra吞吐最高提升-3-倍.md, raw/articles/吞吐最高提升300港中文开源librarl训练提速25倍.md]
 confidence: 0.6
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Agentic RL 后训练资源怎么分？港中文、恒生大学提出 Libra，吞吐最高提升 3 倍

@@ -1,11 +1,14 @@
 ---
 title: "Cursor Origin：面向智能体时代的 Git Forge（并购 Graphite 后落地）"
 created: 2026-08-19
-updated: 2026-08-19
+updated: 2026-09-07
 type: entity
 tags: [cursor, git-forge, agent, code-review, github, swarming, collaboration]
 sources: [raw/articles/cursor-origin-agent-github-2026]
 confidence: 0.8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Cursor Origin：面向智能体时代的 Git Forge

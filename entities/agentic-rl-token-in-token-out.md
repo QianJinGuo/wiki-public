@@ -2,7 +2,7 @@
 
 title: "Agentic RL: Token-In, Token-Out Done Right"
 created: 2026-06-02
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [rl, agent, reinforcement-learning]
 source: [[raw/articles/agentic-rl-token-in-token-out]]
@@ -10,6 +10,9 @@ confidence: 0.75
 review_value: 6
 sources:
   - raw/articles/agentic-rl-token-in-token-out
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Agentic RL: Token-In, Token-Out Done Right

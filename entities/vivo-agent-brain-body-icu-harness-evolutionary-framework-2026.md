@@ -2,7 +2,7 @@
 title: "vivo Agent 系统分析：大模型是大脑不是马，Harness 是 ICU 不是马鞍"
 type: entity
 created: 2026-07-01
-updated: 2026-08-01
+updated: 2026-09-07
 tags: [vivo, agent, harness, llm, brain-body, icu, metaphor, engineering, ppt-generation, dsl, convergence, best-practice]
 sources:
   - raw/articles/vivo-agent-brain-body-icu-harness-evolutionary-framework-2026
@@ -10,6 +10,9 @@ review_value: 8
 review_confidence: 9
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # vivo Agent 系统分析：大模型是大脑不是马，Harness 是 ICU 不是马鞍

@@ -3,7 +3,7 @@ title: "Anthropic's bug-hunting Mythos was greatest marketing stunt ever says cu
 type: entity
 tags: [news, ai, enterprise]
 created: 2026-05-13
-updated: 2026-05-18
+updated: 2026-09-07
 source: newsletter
 sources:
   - raw/articles/anthropic-s-bug-hunting-mythos-was-greatest-marketing-stunt-ever-says-curl-creat
@@ -11,6 +11,9 @@ review_value: 8
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 3
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 ## Summary
 → [[raw/articles/anthropic-s-bug-hunting-mythos-was-greatest-marketing-stunt-ever-says-curl-creat|原文存档]] ^[raw/articles/anthropic-s-bug-hunting-mythos-was-greatest-marketing-stunt-ever-says-curl-creat.md]

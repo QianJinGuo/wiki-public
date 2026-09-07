@@ -6,10 +6,13 @@ tags: [security, deepsec, vulnerability, code, devsecops]
 source: newsletter
 source_url:
 created: 2026-05-12
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 7
 sources: [raw/articles/introducing-deepsec-find-and-fix-vulnerabilities-in-your-code-base]
 review_confidence: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > -> [[raw/articles/introducing-deepsec-find-and-fix-vulnerabilities-in-your-code-base|Introducing deepsec: The security harness for finding vulnerabilities in your codebase]]

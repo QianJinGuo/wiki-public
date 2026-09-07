@@ -10,12 +10,15 @@ stars: 4
 source: newsletter
 source_url: ""
 ingested: 2026-05-08
-updated: 2026-08-29
+updated: 2026-09-07
 created: 2026-05-10
 tags: [agent-memory, vector-databases, rag, knowledge-graph, multi-agent, production-systems]
 sources:
   - raw/articles/memory-agent-systems-cobanov
 provenance_state: inferred
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > 来源：[[raw/articles/memory-agent-systems-cobanov|原文存档]] ^[raw/articles/memory-agent-systems-cobanov.md]

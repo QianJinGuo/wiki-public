@@ -2,7 +2,7 @@
 
 title: "High-Throughput Graph Abstraction at Netflix: Part I"
 created: 2026-06-01
-updated: 2026-07-31
+updated: 2026-09-07
 type: entity
 tags: [graph, infrastructure, netflix, data-engineering, distributed-systems]
 source: "[[raw/articles/high-throughput-graph-abstraction-at-netflix]]"
@@ -10,6 +10,9 @@ confidence: 0.85
 review_value: 7
 sources:
   - raw/articles/high-throughput-graph-abstraction-at-netflix
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # High-Throughput Graph Abstraction at Netflix: Part I

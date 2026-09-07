@@ -2,12 +2,15 @@
 
 title: "Anthropic 大规模代码迁移方法论 — Claude Code 多 Agent Loop 的工程实践"
 created: 2026-07-18
-updated: 2026-07-22
+updated: 2026-09-07
 type: entity
 tags: [agent, claude-code, code-migration, loop-engineering, anthropic, agent-loop, engineering-practice]
 sources: [raw/articles/anthropic-claude-code-large-scale-code-migration-2026]
 confidence: 0.85
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Anthropic 大规模代码迁移方法论 — Claude Code 多 Agent Loop 的工程实践

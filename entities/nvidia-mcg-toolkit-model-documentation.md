@@ -2,7 +2,7 @@
 
 title: "How to Automate AI Model Documentation with NVIDIA MCG Toolkit"
 created: 2026-06-02
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [nvidia, documentation, tool]
 source: [[raw/articles/nvidia-mcg-toolkit-model-documentation]]
@@ -10,6 +10,9 @@ confidence: 0.75
 review_value: 6
 sources:
   - raw/articles/nvidia-mcg-toolkit-model-documentation
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # How to Automate AI Model Documentation with NVIDIA MCG Toolkit

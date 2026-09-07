@@ -11,7 +11,7 @@ tags:
   - agent-architecture
   - internal-tools
 created: 2026-06-22
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 review_value: 8
 review_confidence: 8
@@ -19,6 +19,9 @@ review_recommendation: worth-reading
 review_stars: 4
 sources:
   - raw/articles/github-internal-data-analytics-agent-copilot
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # How we built an internal data analytics agent

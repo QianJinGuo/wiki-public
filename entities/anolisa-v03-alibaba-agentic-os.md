@@ -2,7 +2,7 @@
 
 title: "ANOLISA v0.3：阿里 Agentic OS —— Agent 系统管家（4 层安全 + Token 节省 + 毫秒级快照）"
 created: 2026-06-04
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [anolisa, agentic-os, agentsec-core, tokenless, ws-ckpt, workspace-snapshot, copilot-shell, agentsight, alibaba, aliyun, prompt-injection, skill-supply-chain, btrfs-cow, openclaw, qwen]
 sources: [raw/articles/anolisa-v03-alibaba-agentic-os]
@@ -11,6 +11,9 @@ provenance_state: extracted
 review_value: 9
 review_confidence: 8
 review_recommendation: strong
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # ANOLISA v0.3：阿里 Agentic OS —— Agent 系统管家

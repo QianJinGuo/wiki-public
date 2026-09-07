@@ -3,14 +3,16 @@
 
 title: "DeepSeek Thinking with Visual Primitives 深度解读"
 created: 2026-05-16
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [anthropic, agent, llm, ai]
 sources:
   - raw/articles/deepseek-visual-primitives-thinking
 review_value: 9
 review_confidence: 7
-
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # "DeepSeek Thinking with Visual Primitives 深度解读"

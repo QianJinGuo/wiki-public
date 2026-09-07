@@ -1,12 +1,15 @@
 ---
 title: "Amazon Bedrock AgentCore 数据持久化文件系统：Session Storage、EFS、S3 Files"
 created: 2026-07-07
-updated: 2026-07-07
+updated: 2026-09-07
 type: entity
 tags: [agent, aws, bedrock, agentcore, harness, storage, data-persistence, filesystem]
 confidence: 0.8
 provenance_state: extracted
 sources: [raw/articles/amazon-bedrock-agentcore-数据持久化文件系统session-storage-和-amazon-e]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Amazon Bedrock AgentCore 数据持久化文件系统：Session Storage、EFS、S3 Files

@@ -8,6 +8,9 @@ tags: [wechat, ai]
 rating: v8c8
 sources:
   - raw/articles/昆仑芯大规模-llm-推理优化实现秒级扩缩容
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 昆仑芯大规模 LLM 推理优化，实现秒级扩缩容

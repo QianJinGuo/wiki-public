@@ -11,7 +11,10 @@ review_confidence: 9
 review_recommendation: strong
 tags: [agent, security, tool-registry, supply-chain, mcp]
 created: 2026-05-16
-updated: 2026-09-05
+updated: 2026-09-07
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > -> [[raw/articles/ai-tool-poisoning-exposes-a-major-flaw-in-enterprise-agent-security-v2.md|原文存档]]

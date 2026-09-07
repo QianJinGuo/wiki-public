@@ -8,6 +8,9 @@ tags: [wechat, ai]
 rating: v9c9
 sources:
   - raw/articles/异构token工厂不再踩坑多机构联合发布工业级设计实践拆解跨硬件推理服务的核心边界-1
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 异构Token工厂不再踩坑！多机构联合发布工业级设计实践，拆解跨硬件推理服务的核心边界

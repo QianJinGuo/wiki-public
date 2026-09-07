@@ -10,7 +10,9 @@ sources:
   - raw/articles/使用claude-codesession管理与1m上下文
 review_value: 9
 review_confidence: 7
-
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 [[raw/articles/使用claude-codesession管理与1m上下文.md]] ^[raw/articles/使用claude-codesession管理与1m上下文.md]

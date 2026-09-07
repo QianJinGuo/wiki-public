@@ -2,12 +2,15 @@
 
 title: "Skill 设计模式"
 created: 2026-04-27
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent-skill, skill-format, workflow-pattern, progressive-disclosure, skill-development]
 sources: [raw/articles/skill-writing-patterns-best-practices, raw/articles/anthropic-14-skill-patterns-best-practices]
 review_value: 9
 review_confidence: 8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## Overview

@@ -2,7 +2,7 @@
 
 title: "Claude Code 命令完全指南"
 created: 2026-04-30
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [claude-code, commands, workflow, productivity]
 review_value: 9
@@ -14,6 +14,9 @@ related:
   - entities/claude-code-prompt-context-harness
   - entities/cat-wu-claude-code-pm
 provenance_state: inferred
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 概述

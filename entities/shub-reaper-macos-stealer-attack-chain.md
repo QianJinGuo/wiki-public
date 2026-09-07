@@ -9,7 +9,7 @@ tags: [macos, malware, stealer, apple, security]
 
 created: 2026-05-20
 
-updated: 2026-08-29
+updated: 2026-09-07
 
 review_value: 9
 
@@ -20,6 +20,9 @@ review_recommendation: worth-reading
 review_stars: 5
 
 sources: [raw/articles/shub-reaper-macos-stealer-attack-chain]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 核心要点

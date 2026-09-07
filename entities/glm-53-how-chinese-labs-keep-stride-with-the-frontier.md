@@ -1,7 +1,7 @@
 ---
 title: "GLM-5.3: How Chinese labs keep stride with the frontier"
 created: 2026-08-15
-updated: 2026-08-30
+updated: 2026-09-07
 type: entity
 tags: [glm, zhipu, open-model, post-training, chinese-ai-lab, frontier-model, model-release]
 sources: [raw/articles/glm-53-how-chinese-labs-keep-stride-with-the-frontier]
@@ -11,6 +11,9 @@ review_value: 7
 review_confidence: 8
 review_stars: 4
 review_recommendation: worth-reading
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # GLM-5.3: How Chinese labs keep stride with the frontier

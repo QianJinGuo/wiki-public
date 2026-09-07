@@ -2,7 +2,7 @@
 
 title: "Anthropic Dynamic Workflows 深度实战：JavaScript 编排脚本 + ultracode 模式 + /deep-research + 保存复用"
 created: 2026-06-10
-updated: 2026-09-05
+updated: 2026-09-07
 sources:
   - raw/articles/anthropic-dynamic-workflows-ultracode-deep-research-lyuyuebannzi
   - raw/articles/anthropic-dynamic-workflows-six-patterns-agent-parallel-pipeline
@@ -10,6 +10,9 @@ review_value: 7
 review_confidence: 7
 type: entity
 tags: [anthropic, dynamic-workflows, ultracode, deep-research, javascript-orchestration, agent-orchestration]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Anthropic Dynamic Workflows 深度实战：JavaScript 编排脚本 + ultracode 模式 + /deep-research + 保存复用

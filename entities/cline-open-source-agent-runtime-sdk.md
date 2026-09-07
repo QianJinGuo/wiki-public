@@ -4,13 +4,16 @@ title: "Cline releases open-source agent runtime SDK"
 type: entity
 tags: [coding-agents, open-source, sdk, cline, agent-runtime]
 created: 2026-05-15
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 8
 review_confidence: 9
 review_recommendation: strong
 review_stars: 5
 sources: [raw/articles/cline-open-source-agent-runtime-sdk]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > [!abstract]

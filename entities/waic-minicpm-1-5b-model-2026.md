@@ -1,11 +1,14 @@
 ---
 title: "MiniCPM-Robot：面壁智能开源具身智能 VLA 模型系列"
 created: 2026-07-22
-updated: 2026-07-27
+updated: 2026-09-07
 type: entity
 tags: [model, open-source, robot, vla, embodied-ai, chinese-ai, minicpm]
 sources: [raw/articles/waic-minicpm-1-5b-model-2026]
 confidence: 0.75
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # MiniCPM-Robot：面壁智能开源具身智能 VLA 模型系列

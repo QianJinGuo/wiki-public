@@ -5,7 +5,7 @@ description: "Claude Code Dynamic Workflows：workflow脚本(调度器)+subagent
 source: "[[raw/articles/claude-code-dynamic-workflows-multi-agent-orchestration]]"
 tags: [claude-code, dynamic-workflows, multi-agent, orchestration, subagent, workflow-runtime, thariq, patterns, failure-modes]
 created: 2026-05-29
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 confidence: 0.95
 provenance_state: merged
@@ -22,6 +22,9 @@ review_value: 9
 review_confidence: 10
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 核心价值

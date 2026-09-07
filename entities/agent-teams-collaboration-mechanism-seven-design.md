@@ -1,13 +1,16 @@
 ---
 title: "Agent Teams 协作机制：从 ReAct 到七机制团队设计"
 created: "2026-08-31"
-updated: 2026-08-31
+updated: 2026-09-07
 type: entity
 tags: [agent, multi-agent, collaboration, teams, orchestration, harness-engineering, organization]
 sources:
   - raw/articles/agent-teams-collaboration-mechanism-jiangzelin-qianwen-2026
 confidence: 0.75
 provenance_state: inferred
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Agent Teams 协作机制：从 ReAct 到七机制团队设计

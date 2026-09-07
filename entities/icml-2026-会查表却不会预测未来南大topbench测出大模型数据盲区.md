@@ -7,6 +7,9 @@ tags: [ai, research, evaluation, benchmark, agent-eval, nl2sql, data, text2sql]
 sources: [raw/articles/icml-2026-会查表却不会预测未来南大topbench测出大模型数据盲区.md]
 confidence: 0.6
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # ICML 2026 | 会查表却不会预测未来：南大TopBench测出大模型数据盲区

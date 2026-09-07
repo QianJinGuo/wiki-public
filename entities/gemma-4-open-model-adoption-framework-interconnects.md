@@ -1,7 +1,7 @@
 ---
 title: "Gemma 4 与开源模型成功标准 —— Interconnects 五维评估框架"
 created: 2026-06-08
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [gemma, gemma-4, interconnects, open-models, open-weights, apache-2.0, atom-project, adoption-framework, fine-tunability, model-licensing]
 sources: [raw/articles/gemma-4-and-what-makes-an-open-model-succeed]
@@ -11,6 +11,9 @@ review_value: 7
 review_confidence: 7
 review_recommendation: moderate
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Gemma 4 与开源模型成功标准 —— Interconnects 五维评估框架

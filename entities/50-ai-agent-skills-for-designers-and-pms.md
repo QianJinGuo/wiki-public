@@ -1,11 +1,14 @@
 ---
 title: "从需求到原型：50 个设计师与产品经理值得掌握的 AI 智能体技能"
 created: 2026-07-01
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [agent-skill, skill-collection, design, product-management, workflow, claude-code, skill-marketplace]
 sources: [raw/articles/50-ai-agent-skills-for-designers-and-pms]
 confidence: 0.75
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 从需求到原型：50 个设计师与产品经理值得掌握的 AI 智能体技能

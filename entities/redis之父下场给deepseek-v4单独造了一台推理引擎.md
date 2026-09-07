@@ -7,6 +7,9 @@ tags: [mlops, deepseek, wechat]
 review_value: 7
 sources: [raw/articles/redis之父下场给deepseek-v4单独造了一台推理引擎]
 review_confidence: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 > → [[raw/articles/redis之父下场给deepseek-v4单独造了一台推理引擎.md|原文存档]]
 从微信文章 [[raw/articles/redis之父下场给deepseek-v4单独造了一台推理引擎.md|Redis之父下场，给DeepSeek V4单独造了一台推理引擎]] 提取。  ^[raw/articles/redis之父下场给deepseek-v4单独造了一台推理引擎.md]

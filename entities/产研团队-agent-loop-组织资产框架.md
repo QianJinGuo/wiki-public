@@ -10,6 +10,9 @@ review_confidence: 8
 review_stars: 4
 tags: [agent-loop, team-engineering, org-assets, ai-adoption, role-based-agent]
 sources: [raw/articles/ai-编程火了但产研团队真正缺的是-agent-loop]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 产研团队 Agent Loop 组织资产框架

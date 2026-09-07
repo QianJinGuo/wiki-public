@@ -1,7 +1,7 @@
 ---
 title: "Anthropic Global Workspace (J-Space) — Claude 的内部心理工作区"
 created: 2026-07-07
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [anthropic, llm, interpretability, transformer-circuits, mechanistic-interpretability]
 sources:
@@ -11,6 +11,9 @@ sources:
   - raw/articles/anthropic最新研究claude存在神秘j空间与人类心智高度相似
 confidence: 0.7
 provenance_state: merged
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Anthropic Global Workspace (J-Space) — Claude 的内部心理工作区

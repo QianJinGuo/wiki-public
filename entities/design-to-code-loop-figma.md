@@ -4,12 +4,15 @@ title: "What the design-to-code loop unlocks"
 type: entity
 tags: [figma, design-system, design-to-code, developer-experience, product-development]
 created: 2026-05-15
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 8
 sources: [raw/articles/design-to-code-loop-figma]
 review_confidence: 7
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 核心要点

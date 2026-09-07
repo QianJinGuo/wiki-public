@@ -4,11 +4,14 @@ title: "Memory in the LLM Era: Modular Architectures and Strategies in a Unified
 type: entity
 tags: [agent-memory, architecture, retrieval-augmented-generation, memory-management, llm-agent, iclr2026, long-context, tree-structure, hierarchical-memory, memtree, memoryos]
 created: 2026-05-21
-updated: 2026-08-01
+updated: 2026-09-07
 review_value: 8
 review_confidence: 7
 sources: [raw/articles/memory-in-the-llm-era-iclr2026, raw/articles/agent-memory-12-system-benchmark-hyman-2026]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 概述

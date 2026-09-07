@@ -6,6 +6,9 @@ type: entity
 tags: ['raw', 'article']
 sources: [raw/articles/2026-06-12-一文看懂-AI-编程智能体工程化新范式-Loop-Engineering-技术极简主义]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 > -> [[raw/articles/2026-06-12-一文看懂-AI-编程智能体工程化新范式-Loop-Engineering-技术极简主义.md|原文存档]]

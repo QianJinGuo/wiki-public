@@ -1,12 +1,15 @@
 ---
 title: "Price360-KB：AI 驱动研发体系的项目 Harness 实践（大淘宝技术）"
 created: 2026-09-02
-updated: 2026-09-02
+updated: 2026-09-07
 type: entity
 tags: [project-harness, ai-driven-rdd, llm-wiki, context-engineering, knowledge-management, karpathy, fde, taobao, price360]
 sources: [raw/articles/price360-kb-project-harness-ai-driven-rdd-taobao-2026]
 confidence: 0.9
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Price360-KB：AI 驱动研发体系的项目 Harness 实践

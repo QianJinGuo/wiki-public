@@ -8,6 +8,9 @@ rating: v5c6
 sources:
   - raw/articles/fable-5被网友薅出省钱神招最高减70
 confidence: 0.5
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Fable 5被网友薅出省钱神招！最高减70%！

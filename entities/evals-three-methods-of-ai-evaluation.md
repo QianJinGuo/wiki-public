@@ -4,10 +4,13 @@ title: "Evals 到底在评什么？一文拆解 AI 评估的三种方法"
 type: entity
 tags: [evaluation, llm, prompt]
 created: 2026-05-21
-updated: 2026-06-19
+updated: 2026-09-07
 review_value: 7
 review_confidence: 8
 sources: [raw/articles/evals-three-methods-of-ai-evaluation]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Evals 到底在评什么？一文拆解 AI 评估的三种方法

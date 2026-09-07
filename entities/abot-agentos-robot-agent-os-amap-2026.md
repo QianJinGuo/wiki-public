@@ -5,10 +5,13 @@ source: 高德技术 (2026-07-24)
 score: v=8, c=9, v×c=72
 type: entity
 created: 2026-07-24
-updated: 2026-07-31
+updated: 2026-09-07
 tags: [embodied-AI, robot-agent, agent-OS, agent-harness, multi-modal-memory, self-evolution, benchmark, embodied-world-bench, VLM, VLA]
 sources:
   - raw/articles/abot-agentos-robot-agent-os-amap-2026
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # ABot-AgentOS：面向通用机器人智能体的 Agent OS

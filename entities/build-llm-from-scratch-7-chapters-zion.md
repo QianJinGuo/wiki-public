@@ -1,13 +1,16 @@
 ---
 title: "从零构建大语言模型 —— 读完这篇你就懂了"
 created: 2026-06-10
-updated: 2026-08-19
+updated: 2026-09-07
 tags: [architecture, code, data, evaluation, fine-tuning, knowledge-mgmt, llm, memory, mlops, prompt, rag, robotics, search, security]
 review_value: 7
 review_confidence: 7
 type: entity
 sources:
   - raw/articles/build-llm-from-scratch-7-chapters-zion
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 从零构建大语言模型 —— 读完这篇你就懂了

@@ -1,7 +1,7 @@
 ---
 title: "Orchestrating Self-Evolving Agents with CrewAI and NVIDIA NemoClaw"
 created: 2026-06-10
-updated: 2026-08-30
+updated: 2026-09-07
 tags: [agent, nvidia, open-source, orchestration, multi-agent, security, harness]
 review_value: 7
 review_confidence: 7
@@ -9,6 +9,9 @@ type: entity
 provenance_state: inferred
 sources:
   - raw/articles/orchestrating-self-evolving-agents-with-crewai-and-nvidia-ne
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Orchestrating Self-Evolving Agents with CrewAI and NVIDIA NemoClaw

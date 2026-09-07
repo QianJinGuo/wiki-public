@@ -4,11 +4,14 @@ title: "Microsoft Agent Framework 结构化输出：response_format 与 response
 type: entity
 subtype: agent-framework
 created: 2026-05-23
-updated: 2026-08-29
+updated: 2026-09-07
 tags: [agent-framework, microsoft, structured-output, pydantic, json-schema, python, azure-openai]
 sources: [raw/articles/microsoft-agent-framework-structured-output]
 review_value: 7
 review_confidence: 8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 核心问题

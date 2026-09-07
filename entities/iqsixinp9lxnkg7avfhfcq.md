@@ -1,12 +1,15 @@
 ---
 title: "Boris Cherny 新访谈：开发工具正在从 IDE 变成 Agent 控制台"
 created: 2026-06-10
-updated: 2026-08-30
+updated: 2026-09-07
 tags: [agent, claude, code, harness-engineering, llm, workflow, subagents, skills, harness, boris-cherny, sequoia-ascent-2026]
 review_value: 7
 review_confidence: 7
 type: entity
 sources: [raw/articles/iqSixiNP9lxNKg7aVfHFCQ]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Boris Cherny 新访谈：开发工具正在从 IDE 变成 Agent 控制台

@@ -1,12 +1,15 @@
 ---
 title: "姚顺雨评测腾讯混元 Hy3 Agent 能力"
 created: 2026-07-08
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [tencent, hunyuan, hy3, agent, benchmark, yaoshunyu, llm-evaluation, moe, agent-benchmark]
 confidence: 0.7
 provenance_state: extracted
 sources: [raw/articles/hunyuan-hy3-agent-benchmark-yaoshunyu-2026]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # 姚顺雨 Agent 能力交卷：腾讯混元 Hy3 把元宝练成了打工人

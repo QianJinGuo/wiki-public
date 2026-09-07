@@ -7,7 +7,10 @@ sources: [raw/articles/hermes-skill-system-winty, raw/articles/hermes-self-impro
 review_confidence: 7
 tags: [hermes, skill, agent, memory, expertise-reuse]
 created: "2026-05-18"
-updated: 2026-09-05
+updated: 2026-09-07
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # "Skill 系统：Agent 如何把经验沉淀成可复用能力"

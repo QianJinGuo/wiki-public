@@ -7,6 +7,9 @@ tags: [agent, loop-engineering, harness-engineering, memory, self-evolution, age
 rating: v9c8
 sources:
   - raw/articles/意识-loop跨session自进化最佳实践
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 意识×Loop：AGENTS.md/MEMORY.md/USER.md 三层文件驱动的跨 Session Loop 自进化

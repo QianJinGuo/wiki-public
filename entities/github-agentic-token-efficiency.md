@@ -3,7 +3,7 @@
 description: Auto-generated placeholder
 title: "Improving Token Efficiency in GitHub Agentic Workflows — GitHub 内部 Agent 工作流 Token 优化实践"
 created: 2026-05-09
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [github-copilot, agent-engineering, token-efficiency, agentic-workflows]
 sources: [raw/articles/github-agentic-token-efficiency]
@@ -12,6 +12,9 @@ review_value: 7
 review_confidence: 8
 review_recommendation: strong
 review_stars: 3
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 概述

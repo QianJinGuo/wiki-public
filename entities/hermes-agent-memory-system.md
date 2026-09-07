@@ -2,7 +2,7 @@
 
 title: "Hermes Agent 记忆系统 vs OpenClaw 记忆观"
 created: 2026-04-30
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [hermes-agent, memory, openclaw, agent-harness, context-management]
 review_value: 8
@@ -16,6 +16,10 @@ related:
   - entities/agent-harness-context-management-working-set
   - entities/claude-code-subagent-context-hygiene
 provenance_state: inferred
+reviewed: 2026-09-07
+review_verdict: hub-retained
+review_category: dup
+review_note: "judged dup-0.8: 记忆vs OpenClaw 4573字版，同族五胞胎; retained as hub (in-links>=20); MOC rewrite candidate"
 ---
 
 ## 四层分框架

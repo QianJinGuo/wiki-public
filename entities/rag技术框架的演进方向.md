@@ -9,6 +9,9 @@ confidence: 0.8
 provenance_state: extracted
 sources: [raw/articles/three-rag-architectures-classic-graph-agentic, raw/articles/rag-full-pipeline-taobao, raw/articles/skill-rag-tsinghua-sra, raw/articles/ai-cambrian-google-agentic-rag-sufficient-context-cross-corpus-20260606]
 review_value: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 核心演进路径

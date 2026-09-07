@@ -4,7 +4,7 @@ title: "Gemini 3.5: frontier intelligence with action"
 type: entity
 tags: [gemini, google, llm, agentic, multimodal, flash-series, frontier-model, coding, antigravity]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 7
 review_confidence: 8
 review_recommendation: worth-reading
@@ -18,6 +18,9 @@ related_entities:
   - gemini-spark
   - terminal-bench
   - agentic-ai
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 发布概览

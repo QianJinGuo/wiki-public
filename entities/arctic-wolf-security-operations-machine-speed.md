@@ -3,11 +3,14 @@ title: "Guide to Security Operations at Machine Speed"
 type: entity
 tags: [security, soc, ai-security, arctic-wolf]
 created: 2026-05-20
-updated: 2026-08-30
+updated: 2026-09-07
 review_value: 7
 review_confidence: 8
 review_recommendation: worth-reading
 sources: [arctic-wolf-security-operations-machine-speed]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 ## 核心要点
 - AI/机器学习正在变革安全运营（SOC），实现机器级速度的威胁检测与响应

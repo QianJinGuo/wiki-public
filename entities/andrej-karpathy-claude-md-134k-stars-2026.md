@@ -4,10 +4,13 @@ title: "最佳 Claude Code 配置：Andrej Karpathy 的 CLAUDE.md，134+k star�
 type: entity
 tags: [agent, claude, openai, ai-programming, productivity, github, llm]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 9
 review_confidence: 10
 sources: [raw/articles/andrej-karpathy-claude-md-134k-stars-2026]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 深度分析

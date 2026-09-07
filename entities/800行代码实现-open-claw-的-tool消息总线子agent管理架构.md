@@ -10,7 +10,9 @@ sources:
   - raw/articles/800行代码实现-open-claw-的-tool消息总线子agent管理架构
 review_value: 7
 review_confidence: 8
-
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 这篇文章记录对 Open Claw 中 Tool、消息总线和子 Agent 管理架构的研究学习，以及一个最小可运行实现。  ^[raw/articles/800行代码实现-open-claw-的-tool消息总线子agent管理架构.md]

@@ -7,6 +7,9 @@ tags: [claude-code, loop-engineering, agent, coding-agent, skill, goal, schedule
 sources: [raw/articles/claude官方教你用-loop如何让claude-code上夜班的四个交接点]
 confidence: 0.80
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Claude官方教你用 Loop：如何让Claude Code上夜班的四个交接点

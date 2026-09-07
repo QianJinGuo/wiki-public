@@ -2,13 +2,16 @@
 
 title: "Democratizing Machine Learning at Netflix: Building the Model Lifecycle Graph"
 created: 2026-06-10
-updated: 2026-09-05
+updated: 2026-09-07
 tags: [code, data, evaluation, fine-tuning, game, memory, mlops, netflix, observability, rag, rl, tool-use, trading, workflow]
 review_value: 7
 review_confidence: 7
 type: entity
 sources:
   - raw/articles/democratizing-machine-learning-at-netflix-building-the-model
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Democratizing Machine Learning at Netflix: Building the Model Lifecycle Graph

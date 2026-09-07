@@ -7,6 +7,9 @@ type: entity
 tags: ['context', 'agent', 'ai']
 sources: [raw/articles/claude-opus-5-发布比-fable-5-强仅一半价格]
 confidence: 0.7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Claude Opus 5 发布，比 Fable 5 强，仅一半价格

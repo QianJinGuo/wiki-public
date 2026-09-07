@@ -4,10 +4,13 @@ title: "Nvidia Cut Checkpoint Costs Nvcomp"
 type: entity
 tags: [nvidia, tool, training]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 8
 review_confidence: 7
 sources: [raw/articles/nvidia-cut-checkpoint-costs-nvcomp]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Cut Checkpoint Costs with About 30 Lines of Python and NVIDIA nvCOMP | NVIDIA Technical Blog

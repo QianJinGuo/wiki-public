@@ -9,6 +9,9 @@ rating: v8c8
 sources:
   - raw/articles/agent-harness-综述同一个模型为什么做出来的-agent-差这么远
   - raw/articles/harness-what-is-model-outside-execution-system-ruofei
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Agent Harness 综述：同一个模型，为什么做出来的 Agent 差这么远

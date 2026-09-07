@@ -4,13 +4,16 @@ title: "AWS Network Firewall 审查 IDC-VPC 流量：VGW 架构 + BGP 路由传�
 type: entity
 tags: [aws, network-firewall, vgw, bgp, direct-connect, transit-gateway, vpc, traffic-inspection, security, idc]
 created: 2026-06-15
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 7
 review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 4
 sources: [raw/articles/使用-aws-network-firewall-服务审查-idc-和云上-vpc-间的流量-vgw-架构的设计和实验]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > [!abstract]

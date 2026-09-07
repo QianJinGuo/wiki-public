@@ -6,6 +6,9 @@ type: entity
 tags: ['raw', 'article']
 sources: [raw/articles/2026-05-02-语音操控-记忆觉醒-Hermes-高级功能完整指南-unknown]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > -> [[raw/articles/2026-05-02-语音操控-记忆觉醒-Hermes-高级功能完整指南-unknown.md|原文存档]]

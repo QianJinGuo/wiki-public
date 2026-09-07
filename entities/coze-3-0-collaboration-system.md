@@ -2,7 +2,7 @@
 
 title: "扣子 3.0 协作系统：项目化 + Agent 编排 + 工具链打通"
 created: 2026-06-04
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [coze, kouzi, coze-3, agent-team, multi-agent, project-orchestration, video-generation, industry-skill, cross-device, bytedance, seedance, collaboration-system]
 sources: [raw/articles/coze-3-release-official-quantum-bit]
@@ -11,6 +11,9 @@ provenance_state: extracted
 review_value: 8
 review_confidence: 8
 review_recommendation: strong
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 扣子 3.0 协作系统：项目化 + Agent 编排 + 工具链打通

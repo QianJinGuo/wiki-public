@@ -12,6 +12,9 @@ review_value: 9
 review_confidence: 10
 review_recommendation: strong
 review_stars: 5
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 核心概念

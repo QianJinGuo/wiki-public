@@ -3,14 +3,16 @@
 
 title: "Claude思考黑箱终结了！Anthropic 祭出AI读心术：揭秘Claude的隐藏想法！"
 created: 2026-05-08
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [claude-code, anthropic, llm, ai]
 sources:
   - raw/articles/anthropic-nla-natural-language-autoencoders-interpretability
 review_value: 7
 review_confidence: 8
-
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 背景：为什么需要 NLAs

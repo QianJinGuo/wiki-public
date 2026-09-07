@@ -8,6 +8,9 @@ updated: 2026-05-21
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/龙虾装上了可以用来干啥分享下我的-openclaw-多智能体团队搭建经验]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 龙虾装上了，可以用来干啥？分享下我的 OpenClaw 多智能体团队搭建经验！

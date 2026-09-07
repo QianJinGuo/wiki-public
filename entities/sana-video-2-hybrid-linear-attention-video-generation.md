@@ -1,11 +1,14 @@
 ---
 title: "SANA-Video 2.0: Hybrid Linear Attention with Attention Residuals for Efficient Video Generation"
 created: 2026-07-28
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [ai, multimodal, video-generation, diffusion, nvidia, research, vision, efficient-attention, hybrid-linear-attention]
 sources: [raw/articles/sana-video-2-hybrid-linear-attention-video-generation]
 confidence: 0.7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # SANA-Video 2.0: Hybrid Linear Attention with Attention Residuals for Efficient Video Generation

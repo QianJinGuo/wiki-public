@@ -4,7 +4,7 @@ description: "LiteLLM 1.84.0+ WebSearch Interception 功能，让不原生支持
 type: entity
 tags: [litellm, aws, bedrock, web-search, agent-search, searxng, ai-gateway, interception, cost-control]
 created: 2026-06-17
-updated: 2026-06-17
+updated: 2026-09-07
 source: [[raw/articles/bedrock-claude-litellm-websearch-interception-配置指南]]
 sources: [raw/articles/bedrock-claude-litellm-websearch-interception-配置指南]
 related:
@@ -17,6 +17,9 @@ review_confidence: 7
 review_recommendation: worth-reading
 review_stars: 4
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > [!abstract] **WebSearch Interception 是 LiteLLM 在 1.84.0+ 引入的"代理自动加 web search"能力**：当上游 provider（Bedrock/Vertex/Azure）本身不暴露原生 web search 工具时，LiteLLM 中间层会拦截 LLM 的 tool call 调用，自动改走本地 SearXNG 实例执行搜索，把结果以 Anthropic `web_search_20250305` 工具的格式回传给模型。整篇文章是 AWS China Blog 2026-06-12 发布的一份"踩坑 + 配置 + 调用 + 引用实现"实操手册，价值在于把 LiteLLM 官方文档没写清楚的版本要求、env 变量命名、agentic loop 限制全部用实跑案例补齐。 ^[raw/articles/bedrock-claude-litellm-websearch-interception-配置指南.md]

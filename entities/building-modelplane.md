@@ -2,7 +2,7 @@
 
 title: "Building Modelplane on Crossplane"
 created: 2026-06-26
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [article]
 source: "[[raw/articles/building-modelplane]]"
@@ -12,6 +12,9 @@ review_value: 9
 review_confidence: 9
 review_stars: 5
 review_recommendation: strong
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Building Modelplane on Crossplane

@@ -2,7 +2,7 @@
 title: "Amazon Bedrock + LLM Gateway 实现生产级推理弹性模式"
 description: "在 Amazon Bedrock 上实现 LLM 推理的弹性模式：重试、回退、限流、断路器、多模型路由等生产级可靠性策略。"
 created: 2026-07-01
-updated: 2026-08-30
+updated: 2026-09-07
 type: entity
 tags: [aws, bedrock, llm, resilience, production, inference]
 sources: [raw/articles/implementing-resilience-patterns-with-amazon-bedrock-and-llm]
@@ -11,6 +11,9 @@ review_value: 7
 review_confidence: 8
 review_stars: 3
 review_recommendation: strong
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Amazon Bedrock + LLM Gateway 实现生产级推理弹性模式

@@ -1,13 +1,16 @@
 ---
 title: "ICML 2026 Position Paper — Transformer 图灵完备性高度依赖上下文管理 (RUC 魏哲巍团队)"
 created: 2026-06-13
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [icml-2026, transformer, turing-completeness, context-management, formal-language, complexity-theory, scaling-family, fixed-system, context-manager, harness-theory, position-paper]
 sources: [raw/articles/icml-2026-position-turing-completeness-context-management-ruc-wei-2026]
 provenance_state: extracted
 review_value: 9
 review_confidence: 9
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 概述

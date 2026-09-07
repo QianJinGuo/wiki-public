@@ -11,7 +11,9 @@ sources:
   - raw/articles/向量库是rag的前菜知识图谱是答案本体论是灵魂-v2
 review_value: 7
 review_confidence: 7
-
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 [[raw/articles/向量库是rag的前菜知识图谱是答案本体论是灵魂.md]] ^[raw/articles/向量库是rag的前菜知识图谱是答案本体论是灵魂.md]

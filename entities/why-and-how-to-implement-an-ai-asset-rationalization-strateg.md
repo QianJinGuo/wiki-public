@@ -4,11 +4,14 @@ title: "Why and how to implement an AI asset rationalization strategy"
 type: entity
 tags: [ai-asset-rationalization, strategy]
 created: 2026-05-15
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 8
 sources: [raw/articles/why-and-how-to-implement-an-ai-asset-rationalization-strateg]
 review_confidence: 7
 review_recommendation: worth-reading
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > -> [[raw/articles/why-and-how-to-implement-an-ai-asset-rationalization-strateg|原文存档]] ^[raw/articles/why-and-how-to-implement-an-ai-asset-rationalization-strateg.md]

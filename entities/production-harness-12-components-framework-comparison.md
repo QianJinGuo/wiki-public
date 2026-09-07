@@ -2,14 +2,16 @@
 
 title: "生产级 Harness 的 12 大组件以及主流框架对比"
 created: 2026-05-12
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [agent, harness-engineering, memory, ai]
 sources:
   - raw/articles/production-harness-12-components-framework-comparison
 review_value: 9
 review_confidence: 7
-
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 [[raw/articles/production-harness-12-components-framework-comparison.md]] ^[raw/articles/production-harness-12-components-framework-comparison.md]
 

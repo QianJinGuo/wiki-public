@@ -1,12 +1,15 @@
 ---
 title: "OpenAgents Workspace：多 Agent 协作平台"
 created: 2026-06-28
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [multi-agent, collaboration, workspace, open-source, mcp, a2a, openclaw, developer-tools]
 sources: [raw/articles/openagents-workspace-multi-agent-collaboration-itech]
 confidence: 0.8
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # OpenAgents Workspace：多 Agent 协作平台

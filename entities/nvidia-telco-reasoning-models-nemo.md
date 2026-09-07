@@ -4,10 +4,13 @@ title: "Nvidia Telco Reasoning Models Nemo"
 type: entity
 tags: [agent, model, nvidia, training]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 8
 review_confidence: 7
 sources: [raw/articles/nvidia-telco-reasoning-models-nemo]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Building Telco Reasoning Models for Autonomous Networks with NVIDIA NeMo | NVIDIA Technical Blog

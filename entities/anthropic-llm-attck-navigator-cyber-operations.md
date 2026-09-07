@@ -3,7 +3,7 @@ title: "Anthropic LLM ATT&CK Navigator: AI-Enabled Cyber Operations"
 description: |
   Anthropic 红队 2026-06-03 报告，将 832 个被禁恶意账户的 13,873 次 AI 协助攻击行为映射到 MITRE ATT&CK 框架（V18），覆盖全部 14 个战术和 482 个独立子技术。提出 ARiES（AI Risk Enablement Score，0-100 加性风险评分）— 三个维度：威胁 0-35 / 漏洞 0-35 / 影响 0-30。核心发现：中-高风险威胁者占比半年内从 33% 升至 56%；agentic scaffolding 将取代技术复杂度成为新风险指标；ATT&CK 框架尚未覆盖'自主 killchain 编排'等关键行为。
 created: 2026-06-12
-updated: 2026-08-30
+updated: 2026-09-07
 type: entity
 tags: [anthropic, red-team, security, agent, attack-mitre, attck, cyber, agentic-scaffolding, threat-intelligence, risk-scoring, autonomous, killchain, claude, claude-code]
 source: "[[raw/articles/anthropic-llm-attck-navigator-cyber-operations|原文存档]]"
@@ -16,6 +16,9 @@ review_recommendation: strong
 review_stars: 4
 sources:
   - raw/articles/anthropic-llm-attck-navigator-cyber-operations
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Anthropic LLM ATT&CK Navigator: AI-Enabled Cyber Operations

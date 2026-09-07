@@ -1,13 +1,16 @@
 ---
 title: "While Breathless in Stodgy Viridian"
 created: 2026-05-08
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [rss, lm-theory, training-data, stochastic-parrot]
 summary: "语言模型理论：训练语料决定模型行为，垃圾进垃圾出的思想实验"
 sources: [raw/articles/while-breathless-in-stodgy-viridian]
 review_value: 6
 confidence: 0.7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 ## 核心洞察
 

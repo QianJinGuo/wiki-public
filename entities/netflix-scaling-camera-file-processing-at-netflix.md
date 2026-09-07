@@ -3,13 +3,16 @@
 title: "Scaling Camera File Processing at Netflix"
 type: entity
 created: '2026-06-07'
-updated: 2026-08-28
+updated: 2026-09-07
 review_confidence: 8
 review_recommendation: strong
 review_value: 8
 tags: [netflix-scaling-camera-file-processing-at-netflix]
 provenance_state: inferred
 sources: [raw/articles/scaling-camera-file-processing-at-netflix]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Scaling Camera File Processing at Netflix

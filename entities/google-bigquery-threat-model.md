@@ -4,10 +4,13 @@ title: "BigQuery Threat Model Report"
 type: entity
 tags: [cloud, google, model, paper, security, tool]
 created: 2026-05-21
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 6
 review_confidence: 9
 sources: [raw/articles/google-bigquery-threat-model]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 ## 深度分析

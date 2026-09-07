@@ -2,7 +2,7 @@
 
 title: "Microsoft Build 2026：微软 AI 独立日 —— 7 款 MAI 模型 + Scout 智能体"
 created: 2026-06-04
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 tags: [microsoft, build-2026, mai, mai-thinking, mai-code, mai-image, mai-voice, mai-transcribe, scout, openclaw, agent, microsoft-365, reasoning-model, ai-stack, full-stack-ai, enterprise-ai]
 sources: [raw/articles/microsoft-build-2026-mai-models-scout-agent, raw/articles/microsoft-build-2026-qbitai-full-scope]
@@ -11,6 +11,9 @@ provenance_state: extracted
 review_value: 9
 review_confidence: 9
 review_recommendation: strong
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Microsoft Build 2026：微软 AI 独立日

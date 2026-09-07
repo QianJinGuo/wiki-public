@@ -10,7 +10,7 @@ tags:
   - complexity
   - model-architecture
 created: 2026-06-22
-updated: 2026-09-05
+updated: 2026-09-07
 type: entity
 review_value: 7
 review_confidence: 7
@@ -18,6 +18,9 @@ review_recommendation: worth-reading
 review_stars: 4
 sources:
   - raw/articles/llms-are-complicated-now-ianbarber
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # LLMs are complicated now

@@ -4,12 +4,15 @@ title: "Introducing Claude for Small Business"
 type: entity
 tags: [anthropic, claude, smb, product, agentic-ai, workflow-automation]
 created: 2026-05-15
-updated: 2026-09-05
+updated: 2026-09-07
 review_value: 8
 sources: [raw/articles/claude-for-small-business]
 review_confidence: 9
 review_recommendation: strong
 review_stars: 5
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > -> [[raw/articles/claude-for-small-business|原文存档]] ^[raw/articles/claude-for-small-business.md]

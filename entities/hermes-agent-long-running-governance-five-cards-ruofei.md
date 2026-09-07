@@ -2,13 +2,16 @@
 
 title: "长期运行的 Agent 怎么管：Hermes 治理分层与 5 张卡"
 created: 2026-06-10
-updated: 2026-09-05
+updated: 2026-09-07
 tags: [agent, architecture, code, database, evaluation, llm, memory, mlops, open-source, prompt, search, security, tool-use, workflow]
 review_value: 7
 review_confidence: 7
 type: entity
 sources:
   - raw/articles/hermes-agent-long-running-governance-five-cards-ruofei
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 长期运行的 Agent 怎么管：Hermes 治理分层与 5 张卡

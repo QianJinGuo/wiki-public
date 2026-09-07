@@ -1,7 +1,7 @@
 ---
 title: "Model Size Scaling in 2023-2031"
 created: 2026-06-23
-updated: 2026-06-24
+updated: 2026-09-07
 type: entity
 tags: [llm, scaling, hardware, ai-infrastructure, hbm, inference]
 source: [[raw/articles/model-size-scaling-in-2023-2031]]
@@ -12,6 +12,9 @@ review_confidence: 8
 review_stars: 4
 provenance_state: extracted
 confidence: 0.85
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Model Size Scaling in 2023-2031

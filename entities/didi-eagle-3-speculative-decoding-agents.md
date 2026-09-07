@@ -4,12 +4,15 @@ title: "多轮 Agent 场景下，滴滴的 EAGLE-3 训推加速实践"
 type: entity
 tags: [speculative-decoding, eagle-3, agent, inference-optimization, didi, specforge, sequence-parallelism, llm-inference, draft-model, ttt-training]
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-07
 review_value: 8
 review_confidence: 8
 score: 64
 sources: [raw/articles/didi-eagle-3-speculative-decoding-agents]
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 ## 背景：为什么 Agent 场景对推理速度要求更高

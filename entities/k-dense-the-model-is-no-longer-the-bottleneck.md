@@ -3,7 +3,7 @@
 title: "K-Dense — The Model Is No Longer the Bottleneck"
 description: "K-Dense AI 2026-06 文章主张：在科学 AI 领域，瓶颈已从模型能力转移到 agentic workflow 与 harness 设计。给出 4 个 case（材料科学 / 药物发现 / 气候模拟 / 蛋白质设计）说明：当 LLM 足够强时，价值上限取决于上下文工程与多步编排质量。"
 created: 2026-06-10
-updated: 2026-07-31
+updated: 2026-09-07
 type: entity
 tags: [agent, harness, workflow, scientific-ai, k-dense, bottleneck, agentic, context-engineering, sgr]
 source: "[[raw/articles/k-dense-the-model-is-no-longer-the-bottleneck]]"
@@ -13,6 +13,9 @@ review_confidence: 8
 review_stars: 4
 sources:
   - raw/articles/k-dense-the-model-is-no-longer-the-bottleneck
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # K-Dense — The Model Is No Longer the Bottleneck

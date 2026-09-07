@@ -1,7 +1,7 @@
 ---
 title: "AI Skill 测评指标体系"
 created: 2026-05-14
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [ai-skill, evaluation, metrics, testing, agent, llm, quality-assurance]
 sources: [raw/articles/ai-skill-测评指标体系]
@@ -9,6 +9,10 @@ review_value: 8
 review_confidence: 8
 review_recommendation: strong
 review_stars: 4
+reviewed: 2026-09-07
+review_verdict: hub-retained
+review_category: dup
+review_note: "judged dup-0.8: 指标体系与02章重复; retained as hub (in-links>=20); MOC rewrite candidate"
 ---
 ## 八个核心指标
 | 指标 | 公式/定义 | 核心阈值（S级） |

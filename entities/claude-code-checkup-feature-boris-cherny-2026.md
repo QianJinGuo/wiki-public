@@ -1,12 +1,15 @@
 ---
 title: "Claude Code /checkup 功能：清理 Skills/MCP 提升性能"
 created: 2026-07-10
-updated: 2026-07-11
+updated: 2026-09-07
 type: entity
 tags: [claude-code, anthropic, agent-tooling, coding-agent, agent]
 sources: [raw/articles/claude-code-推出-checkup-功能能给爹省钱]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Claude Code /checkup 功能：清理 Skills/MCP 提升性能

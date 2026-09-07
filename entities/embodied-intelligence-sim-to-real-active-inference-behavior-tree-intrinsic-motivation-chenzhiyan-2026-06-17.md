@@ -1,7 +1,7 @@
 ---
 title: "具身智能 Sim-to-Real 迁移：主动推理、行为树与内在动机引擎的工程化方案"
 created: 2026-06-17
-updated: 2026-07-27
+updated: 2026-09-07
 type: entity
 tags:
   - embodied-intelligence
@@ -16,6 +16,9 @@ sources:
 confidence: 0.80
 review_value: 7
 review_confidence: 7
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 具身智能 Sim-to-Real 迁移：主动推理、行为树与内在动机引擎的工程化方案

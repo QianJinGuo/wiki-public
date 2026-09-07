@@ -3,9 +3,12 @@ title: CoAgent
 type: entity
 tags: [multi-agent, concurrency-control, distributed-systems, research]
 created: 2026-07-13
-updated: 2026-08-01
+updated: 2026-09-07
 sources: [raw/articles/coagent-concurrency-control-multi-agent]
 confidence: 0.8
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # CoAgent

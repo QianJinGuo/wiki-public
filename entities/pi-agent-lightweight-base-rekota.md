@@ -1,7 +1,7 @@
 ---
 title: "Pi：轻量级开源 Agent 底座"
 created: 2026-07-02
-updated: 2026-08-29
+updated: 2026-09-07
 type: entity
 tags: [pi, agent, open-source, gondolin, security, sandbox, framework]
 sources: [raw/articles/pi-agent-lightweight-base-rekota]
@@ -12,6 +12,9 @@ provenance_state: extracted
 related:
   - entities/context-window-management-comparison
   - entities/imclaw通过微信飞书操控claude-code-coodex-gemini-clipi-agent蜂群
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Pi：轻量级开源 Agent 底座

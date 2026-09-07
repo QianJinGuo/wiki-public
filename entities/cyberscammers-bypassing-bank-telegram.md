@@ -2,7 +2,7 @@
 
 title: "Cyberscammers are bypassing banks' security with illicit tools sold on Telegram"
 created: 2026-06-02
-updated: 2026-08-01
+updated: 2026-09-07
 type: entity
 tags: [security, ai-threat, browser-security]
 source: [[raw/articles/cyberscammers-bypassing-bank-telegram]]
@@ -11,6 +11,9 @@ review_value: 9
 review_confidence: 9
 review_stars: 5
 sources: [raw/articles/cyberscammers-bypassing-bank-telegram]
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: tech
 ---
 
 # Cyberscammers are bypassing banks' security with illicit tools sold on Telegram

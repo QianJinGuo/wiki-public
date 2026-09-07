@@ -2,7 +2,7 @@
 title: "Harness Engineering - 让 Coding Agent 可靠完成长程任务"
 type: entity
 created: 2026-05-10
-updated: 2026-08-29
+updated: 2026-09-07
 tags: [harness, engineering, coding-agent, long-term, reliability]
 sources:
   - raw/articles/harness-engineering-让-coding-agent-可靠完成长程任务
@@ -11,6 +11,10 @@ review_confidence: 7
 review_recommendation: strong
 review_stars: 4
 provenance_state: inferred
+reviewed: 2026-09-07
+review_verdict: hub-retained
+review_category: dup
+review_note: "judged dup-0.85: 长程任务同题3741字版，留6698字rv9; retained as hub (in-links>=20); MOC rewrite candidate"
 ---
 ## 核心主题
 Harness Engineering 方法论，让 Coding Agent 能够可靠地完成长程任务。 ^[raw/articles/harness-engineering-让-coding-agent-可靠完成长程任务.md]

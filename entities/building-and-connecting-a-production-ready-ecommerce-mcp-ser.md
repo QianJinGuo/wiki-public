@@ -2,7 +2,7 @@
 
 title: Building and connecting a production-ready ecommerce MCP server using Amazon Bedrock AgentCore and Mistral AI Studio
 created: 2026-07-10
-updated: 2026-07-27
+updated: 2026-09-07
 type: entity
 tags: [tool, mcp, coding, aws, bedrock]
 sources: [raw/articles/building-and-connecting-a-production-ready-ecommerce-mcp-ser]
@@ -12,6 +12,9 @@ review_recommendation: strong
 review_stars: 4
 confidence: medium
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Building and connecting a production-ready ecommerce MCP server using Amazon Bedrock AgentCore and Mistral AI Studio

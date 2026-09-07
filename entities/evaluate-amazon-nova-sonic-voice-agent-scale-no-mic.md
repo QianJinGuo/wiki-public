@@ -2,7 +2,7 @@
 
 title: "Evaluate your Amazon Nova Sonic voice agent at scale, no microphone required"
 created: 2026-06-09
-updated: 2026-08-30
+updated: 2026-09-07
 type: entity
 tags: [aws, nova-sonic, voice-agent, evaluation, speech-to-speech]
 sources: [raw/articles/evaluate-your-amazon-nova-sonic-voice-agent-at-scale-no-micr]
@@ -10,6 +10,9 @@ review_value: 7
 review_confidence: 7
 review_stars: 4
 confidence: 0.75
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Evaluate your Amazon Nova Sonic voice agent at scale, no microphone required

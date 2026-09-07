@@ -1,7 +1,7 @@
 ---
 title: "场景营销前端 AI Coding — 从问题到方案"
 created: 2026-07-01
-updated: 2026-07-01
+updated: 2026-09-07
 type: entity
 tags: [ai-coding, frontend, harness, context-management, attention-collapse, spec-driven, taobao, alibaba]
 sources:
@@ -9,6 +9,9 @@ sources:
 review_value: 7
 review_confidence: 8
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 > 原文归档：[[raw/articles/frontend-ai-coding-problem-to-solution-taobao-2026-06-22|原文归档]] ^[raw/articles/frontend-ai-coding-problem-to-solution-taobao-2026-06-22.md]

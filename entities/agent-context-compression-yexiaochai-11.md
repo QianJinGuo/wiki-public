@@ -1,13 +1,16 @@
 ---
 title: "第 11 篇 · 上下文压缩：让 Agent 在长会话中持续工作"
 created: 2026-07-27
-updated: 2026-07-27
+updated: 2026-09-07
 type: entity
 tags: [agent, context, memory, compression, harness-engineering]
 sources:
   - raw/articles/agent-context-compression-yexiaochai-11
 confidence: 0.65
 provenance_state: extracted
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # 第 11 篇 · 上下文压缩：让 Agent 在长会话中持续工作

@@ -8,6 +8,9 @@ provenance_state: inferred
 rating: v9c8
 sources:
   - raw/articles/claude-code-vs-kimi-vs-minimaxagent-teams-到底拼的是什么
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Claude Code vs Kimi vs MiniMax：Agent Teams 到底拼的是什么？

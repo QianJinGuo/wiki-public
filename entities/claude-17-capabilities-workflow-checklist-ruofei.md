@@ -2,7 +2,7 @@
 type: entity
 title: "Claude的17个能力背后：Agent正在从聊天框搬进工作流"
 created: 2026-05-27
-updated: 2026-06-10
+updated: 2026-09-07
 authors:
   - 若飞
 platform: 架构师
@@ -20,6 +20,9 @@ c: 7
 provenance_state: inferred
 review_value: 6
 confidence: 0.6
+reviewed: 2026-09-07
+review_verdict: keep
+review_category: practice
 ---
 
 # Claude的17个能力背后：Agent正在从聊天框搬进工作流
