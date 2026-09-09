@@ -1,11 +1,14 @@
 ---
 title: "Agent Plan x DeepSeek Harness 实践指南"
 created: 2026-09-04
-updated: 2026-09-07
+updated: 2026-09-09
 type: entity
-tags: [agent, harness, deepseek, workflow]
+tags: [agent, harness, deepseek, workflow, session, event-sourcing]
 review_value: 7
 review_confidence: 7
+sources:
+  - raw/articles/agent-plan-x-deepseek-harness-dsh-practice-guide
+  - raw/articles/deepseek-harness-session-event-sourcing-shuge-2026-09-09
 reviewed: 2026-09-07
 review_verdict: keep
 review_category: practice
@@ -58,6 +61,16 @@ DSH 反复强调"退到最薄"——留给自己的职责只有三条：**调度
 4. **把长期任务导向"可沉淀的资产"，而非一次性答案**：多次强调"先把研究结果真正留下来"、"做成可持续更新的页面"——agent 的长期价值来自把每次产出落成可追加的结构化状态。^[raw/articles/agent-plan-x-deepseek-harness-dsh-practice-guide.md]
 5. **利用"进化"机制把人工修正固化为规则**：跑几次真实任务后让 agent 执行 "Learn from my recent sessions"，它会把你反复纠正的内容生成带 diff、证据、风险值与置信度的优化建议，确认后才写入长期指令。^[raw/articles/agent-plan-x-deepseek-harness-dsh-practice-guide.md]
 6. **信任但审批**：务实的高危操作审批让 agent 与用户保持"越权前请示"的安全边界，适合从实验走向日常生产。^[raw/articles/agent-plan-x-deepseek-harness-dsh-practice-guide.md]
+
+## 会话实现：事件是事实，消息是派生物（术哥源码级拆解，SUPP 2026-09-09）
+DSH 的 session 不把会话实现成 messages[] 数组，而是一份**只追加的、类型化的 SessionEvent 日志**：`deriveMessages()` 负责把日志投影成模型历史——日志是唯一真源，LLM 消息历史是派生物。^[raw/articles/deepseek-harness-session-event-sourcing-shuge-2026-09-09.md]
+
+- **append 顺序与两层结构**：`Session.append()` 先分配连续序号（seq = log.length），JSON 快照 + surface 元数据校验后 log.push，再发布 session/event。原始日志层（turn/step/流分片/工具调用）不直接投影为 transcript message，但 tool/result 是例外（SurfaceEventType，直接投影为 tool message）；surface 层通过 surfaceOp/sourceEventSeqs 标记位置与派生关系。^[raw/articles/deepseek-harness-session-event-sourcing-shuge-2026-09-09.md]
+- **同步提交 + 异步持久化**：内存日志提交同步（post-commit 观察通知，失败不撤销），JSONL 持久化插件订阅 session/event 进 writer buffer，session/flush 才 drain；轮次边界 checkpoint 负责观察耐久性失败——"内存事实先提交；持久化是可替换插件；检查点负责耐久性"。^[raw/articles/deepseek-harness-session-event-sourcing-shuge-2026-09-09.md]
+- **fork/恢复/压缩都是追加而非改写**：fork 取连续事件 seed（不含未闭合 turn），inheritedEventCount 划边界；恢复从 JSONL 重放事件、补齐中断轮次；压缩追加 compaction 事件（开始/摘要/剪枝/结束），旧节点变 shadowed 而非删除，SessionEventTrace 用 replacedBy/replacedEventSeqs/sourceEventSeqs/derivedEventSeqs 记录变换关系，replaceGeneration 作压缩成功进展证明。^[raw/articles/deepseek-harness-session-event-sourcing-shuge-2026-09-09.md]
+- **查询与血缘**：session-query-sqlite 用 FTS5 且默认关闭，索引文本有筛选（reasoning block/被阻止提示词不入索引）；traceEvent 区分四类关系（被谁替换/替换了谁/引用谁/被谁当来源）；projection/stats/telemetry/title 都订阅同一 session/event 流做旁路折叠，不另造状态机。^[raw/articles/deepseek-harness-session-event-sourcing-shuge-2026-09-09.md]
+
+这个维度回答了一个核心架构问题：**当模型看到的状态、磁盘保存的状态、UI 展示的状态发生分歧时，谁拥有最终解释权**——DSH 的答案是事件日志，其他一切都从它重新算。^[raw/articles/deepseek-harness-session-event-sourcing-shuge-2026-09-09.md]
 
 ## 相关实体
 - [[entities/agent-harness-architecture|Agent Harness 架构]]
