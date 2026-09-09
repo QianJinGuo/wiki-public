@@ -1,3 +1,20 @@
+---
+
+title: "Versa takes aim at fragmented enterprise security with CSPM, orchestration update, and AI agent controls"
+type: entity
+tags: [newsletter, security, sase, cspm, ai-agent]
+created: 2026-05-14
+updated: 2026-09-10
+review_value: 8
+sources: [raw/articles/www-networkworld-com-versa-takes-aim-at-fragmented-enterprise-security]
+review_confidence: 8
+review_recommendation: worth-reading
+source_url:
+reviewed: 2026-09-07
+review_verdict: hub-retained
+review_category: pr
+review_note: "judged pr-0.78: 厂商产品更新通稿; retained as hub (in-links>=20); MOC rewrite candidate"
+---
 # Versa takes aim at fragmented enterprise security with CSPM, orchestration update, and AI agent controls
 
 > 本页原内容在 2026-09-07 质量闭环中判定为 **pr-0.78**，已按导航页（MOC）重建；

@@ -1,7 +1,7 @@
 ---
 title: 预测对账台账
 created: 2026-09-05
-updated: 2026-09-05
+updated: 2026-09-10
 type: query
 tags: [meta, prediction, temporal, ledger, dashboard]
 confidence: high
@@ -41,7 +41,8 @@ confidence: high
 2. **到期提示**：`daily-checkup` 或季度回访时检查到期行；到期项进入当日涌现/评审动作。
 3. **判定词汇**：`fulfilled` / `partially-fulfilled` / `falsified` / `partially-falsified` / `unfalsifiable`（到期时无法客观判定则如实标注，不硬判）。
 4. **判定要求**：引用库内交付侧证据页（如实测页、后续系统卡）；判定日写实际回访日。
-5. **产出回流**：批量判定完成后写进当期涌现稿（[[drafts/wiki-emergent-viewpoints-2026-09-time-slice|范例]]），并在 [[queries/vault-evolution-dashboard|进化仪表板]] 记一笔。
+5. **判定回传**：终局判定（falsified / partially-falsified）当轮运行 `python3 scripts/ledger-backpropagate.py`——沿 supersedes 权威链与引用边列出波及页，逐页判断是否需要加注（判定影响的是"断言真值"，不自动改写页面）；fulfilled 不回传。半衰期观测随之收割，n≥5 后触发 [[concepts/claim-half-life|半衰期]] 后验重算（Arbor BACKPROPAGATE 的 wiki 常量化，2026-09-10 首跑：#1 partially-falsified 波及 17 页、首条观测 115 天）。
+6. **产出回流**：批量判定完成后写进当期涌现稿（[[drafts/wiki-emergent-viewpoints-2026-09-time-slice|范例]]），并在 [[queries/vault-evolution-dashboard|进化仪表板]] 记一笔。
 
 ## 关联
 

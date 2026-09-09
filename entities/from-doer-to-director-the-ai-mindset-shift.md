@@ -1,3 +1,20 @@
+---
+title: "From Doer To Director: The AI Mindset Shift"
+type: entity
+tags: [newsletter, article]
+created: 2026-05-13
+updated: 2026-09-10
+source: newsletter
+source_url:
+review_value: 8
+sources: [raw/articles/from-doer-to-director-the-ai-mindset-shift]
+review_confidence: 9
+review_recommendation: strong
+reviewed: 2026-09-07
+review_verdict: hub-retained
+review_category: thin
+review_note: "judged thin-0.75: 执行者转指挥者泛论，无操作机制; retained as hub (in-links>=20); MOC rewrite candidate"
+---
 # From Doer To Director: The AI Mindset Shift
 
 > 本页原内容在 2026-09-07 质量闭环中判定为 **thin-0.75**，已按导航页（MOC）重建；

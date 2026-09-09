@@ -1,7 +1,7 @@
 ---
 title: 涌现透镜轮换
 created: 2026-09-05
-updated: 2026-09-05
+updated: 2026-09-10
 type: query
 tags: [meta, emergence, synthesis, dashboard]
 confidence: high
@@ -11,13 +11,15 @@ confidence: high
 
 > 目的：把"透镜撞库"从偶发事件变成周期仪式。全库最深的两个产物——[[drafts/wiki-emergent-viewpoints-2026-07|2026-07 结构信号透镜]]与[[drafts/wiki-emergent-viewpoints-2026-08-phd-lens|2026-08 phd 七系统透镜]]——都是同一方法的产物：**拿一个透镜去撞存量，记录哪里撞出火花、哪里撞出矛盾、哪里两边都是空的**。本页是透镜清单与轮换状态，供 [[queries/vault-evolution-dashboard|进化仪表板]] 的 L4 原理层调度。
 
-## 方法合约（每轮固定）
+## 方法合约（每轮固定）— v3（2026-09-10 起）
 
 1. **选一个透镜**（不混用，一轮只透一个）
 2. **撞库**：透镜 × 相关知识簇，重点记录三类发现——火花（新连接）、矛盾（页面间未对话的对立立场）、空白（两边都没有）
-3. **定额产出**：1 篇 `drafts/wiki-emergent-viewpoints-YYYY-MM-<透镜名>` + 2~3 个 concept/comparison 补页
-4. **验收**：涌现稿必须至少包含一条"本 wiki 此前不存在 X 页面/X 一等轴"的陈述并补齐；lint 0 error
+3. **定额产出**：1 篇 `drafts/wiki-emergent-viewpoints-YYYY-MM-<透镜名>`；补页候选**先落 [[queries/lens-proposals|提案队列]]为提案卡，人审 approve 后再落地**（v3：特稿照出，补页走 EvoScientist 闭环）
+4. **验收**：涌现稿必须至少包含一条"本 wiki 此前不存在 X 页面/X 一等轴"的陈述并补齐；**`node scripts/emergence-gate.mjs --strict` 通过**（v3：ZG 门硬约束，协议见 [[queries/emergence-acceptance-gate|验收门]]）；lint 0 error
 5. **登记**：在下方轮换状态表记录日期与产量，log.md 留痕
+
+> 合约版本：v1（2026-09-05 定型五条）→ v2（度量轮免定额、节奏分化）→ v3（补页走提案卡闭环 + ZG 验收门，2026-09-10）。
 
 ## 透镜目录（7 个，按启动成本排序）
 
@@ -48,4 +50,5 @@ confidence: high
 
 - **矛盾升级线**（[[queries/vault-evolution-dashboard|见仪表板]]）是 L3 张力层的常驻管道；透镜轮是 L4 原理层的周期脉冲。四裁判为 `debate` 的对子可以直接成为透镜轮的素材。
 - 透镜轮属于 WORKFLOW Phase 3 Evolve 的 **Frontier Track** 实例："vault 缺的不是更多笔记而是更好的研究议程"。
+- **v3 仪器化**（2026-09-10）：补页消费走 [[queries/lens-proposals|提案队列]]，产出质检走 [[queries/emergence-acceptance-gate|验收门]]，时间断言回访走 [[queries/prediction-ledger|台账]] + `ledger-backpropagate.py` 判定回传——透镜回答"哪里有火花"，仪器回答"火花是不是真的"。
 - L5 输出取材：月报/周报选题优先从最近的涌现稿与 debate 页取，形成"摄入→张力→原理→叙事"的完整梯度。
