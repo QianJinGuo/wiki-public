@@ -65,7 +65,6 @@ OpenAI的语音模型发布与[[concepts/openai-realtime-voice-architecture]]构
 GPT-Realtime系列模型打开了多个应用场景的可能性。**客服系统**：德国电信已经在基于GPT-Realtime-Translate打造客服系统，让客户用自己最舒服的语言沟通 ；**旅行助手**：Priceline在做旅行语音助手，旅客落地后可直接语音管理行程，语言不通也没关系 ；**视频会议**：实时字幕和翻译将大幅降低跨语言会议障碍；**直播场景**：实时转写和翻译为海外内容消费提供便利；**个人助手**：语音Agent真正能干活而不只是聊天。 ^[raw/articles/刚刚openai-放出三个语音模型顺便杀死了同传.md]
 
 ## 相关链接
--  — OpenAI Realtime语音架构深度分析
 - [[raw/articles/刚刚openai-放出三个语音模型顺便杀死了同传|原文存档]]
 - [OpenAI博客](https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/)
 - [Realtime API文档](https://developers.openai.com/api/docs/guides/realtime)

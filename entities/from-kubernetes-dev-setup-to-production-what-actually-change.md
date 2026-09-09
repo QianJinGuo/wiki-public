@@ -99,4 +99,3 @@ GitOps 让你能更安全地加快变更速度，但需要显式工程优化才�
 
 → [[raw/articles/from-kubernetes-dev-setup-to-production-what-actually-change|原文存档]] ^[raw/articles/from-kubernetes-dev-setup-to-production-what-actually-change.md]
 
-## 相关实体

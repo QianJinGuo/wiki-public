@@ -120,8 +120,3 @@ Bill Staples 提供了一个独特的市场视角：去年开发者平台市场�
 - [GitLab 官网](https://gitlab.com)
 - [GitLab Duo Agent Platform](https://about.gitlab.com/blog/2026/01/gitlab-duo-agent-platform)
 - [GitLab Transcend 2026（6 月 10 日）](https://about.gitlab.com/events/gitlab-transcend)
-## 相关实体
-- [[entities/gitlab-14pct-layoff-agent-platform-ai-2026q1]]
-- [[entities/ai-phishing-attacks-are-on-the-rise-are-you-prepared-bitward]]
-- [[entities/ai-agents-inside-perimeter-hackernews]]
-- [[entities/principals-ai-education]]

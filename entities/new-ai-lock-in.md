@@ -95,9 +95,6 @@ MIT NANDA 报告显示 95% 企业 genAI pilot 未能交付可衡量的业务影�
 文章强调 MCP 无法解决运营信任问题。这意味着能够提供透明、可审计、可控的 agent 行为的平台将获得竞争优势。 ^[raw/articles/new-ai-lock-in.md]
 
 ## 相关主题
--  — LangGraph 状态机模型与编排层锁定分析
--  — MCP 协议的真正地盘与 Skills 的分工
--  — 管理平面与控制平面作为产品
 - [[raw/articles/new-ai-lock-in.md|原文存档]]
 
 ## 相关实体

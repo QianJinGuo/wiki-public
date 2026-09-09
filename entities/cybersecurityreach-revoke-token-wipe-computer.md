@@ -93,7 +93,3 @@ Shai-Hulud 蠕虫已从"一次性 npm 包投毒"演进为具备自传播能力�
 
 → [[raw/articles/cybersecurityreach-revoke-token-wipe-computer|原文存档]] ^[raw/articles/cybersecurityreach-revoke-token-wipe-computer.md]
 
-## 相关实体
-
-→ [[raw/articles/2026.md|原文存档]]
-> [[moc/cybersecurity-privacy|主题导航]] ^[raw/articles/cybersecurityreach-revoke-token-wipe-computer.md]

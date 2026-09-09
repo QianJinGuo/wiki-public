@@ -23,15 +23,7 @@ review_category: practice
 
 ## 一份可信来源，终结 Skill 管理混乱：Skill 治理最佳实践
 
----
-source: wechat
-source_url: https://mp.weixin.qq.com/s/b88VRdAQ2u7IhQBqvNcnVg^[raw/articles/一份可信来源终结-skill-管理混乱skill-治理最佳实践.md]
-
-ingested: 2026-07-06^[raw/articles/一份可信来源终结-skill-管理混乱skill-治理最佳实践.md]
-
-source_published: 2026年7月6日 18:30^[raw/articles/一份可信来源终结-skill-管理混乱skill-治理最佳实践.md]
-
---- ^[raw/articles/一份可信来源终结-skill-管理混乱skill-治理最佳实践.md]
+^[raw/articles/一份可信来源终结-skill-管理混乱skill-治理最佳实践.md]
 
 ## 一份可信来源，终结 Skill 管理混乱：Skill 治理最佳实践
 

@@ -17,15 +17,7 @@ review_category: practice
 
 ## Qoder 工程实践：当瓶颈从模型转移到人
 
----
-source: wechat
-source_url: https://mp.weixin.qq.com/s/eqXwBatW2CzcAPXO9m3T3w^[raw/articles/qoder-工程实践当瓶颈从模型转移到人.md]
-
-ingested: 2026-07-05^[raw/articles/qoder-工程实践当瓶颈从模型转移到人.md]
-
-source_published: 2026年6月12日 17:55^[raw/articles/qoder-工程实践当瓶颈从模型转移到人.md]
-
---- ^[raw/articles/qoder-工程实践当瓶颈从模型转移到人.md]
+^[raw/articles/qoder-工程实践当瓶颈从模型转移到人.md]
 
 ## Qoder 工程实践：当瓶颈从模型转移到人
 

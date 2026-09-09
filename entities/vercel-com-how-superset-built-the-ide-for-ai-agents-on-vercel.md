@@ -69,7 +69,6 @@ Hacker News "Show HN" 发布期间，用户数一夜间翻了三倍，Superset �
 - **Fluid Compute** 提供了无需重构即可吸收突发并发的Serverless形式，对 Agent 扇出场景天然适配。 
 - **预览部署 + 实时 URL** 的组合是隔离开发环境的最简方案，无需为每个分支单独配置 CI。 
 
-## 相关概念
 ## 相关实体
 - [[entities/why-internally-built-ai-fails-fund-accounting-audits.md|Why Internally-Built AI Fails Fund Accounting Audits]]
 - [[entities/ai-fails-fund-accounting-audits.md|Why Internally-Built AI Fails Fund Accounting Audits]]

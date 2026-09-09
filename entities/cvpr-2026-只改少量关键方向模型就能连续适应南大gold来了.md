@@ -17,15 +17,6 @@ review_category: tech
 
 ## CVPR 2026 | 只改少量关键方向，模型就能连续适应？南大GOLD来了
 
----
-source: wechat
-source_url: https://mp.weixin.qq.com/s/WhrwcGyzcyh554KZAJQFKA ^[raw/articles/cvpr-2026-只改少量关键方向模型就能连续适应南大gold来了.md]
-ingested: 2026-07-05^[raw/articles/cvpr-2026-只改少量关键方向模型就能连续适应南大gold来了.md]
-
-source_published: 2026年7月2日 22:04^[raw/articles/cvpr-2026-只改少量关键方向模型就能连续适应南大gold来了.md]
-
----
-
 ## CVPR 2026 | 只改少量关键方向，模型就能连续适应？南大GOLD来了
 
 上线后的视觉模型，面对的从来不是一个静态测试集，而是一条持续变化的数据流。^[raw/articles/cvpr-2026-只改少量关键方向模型就能连续适应南大gold来了.md]

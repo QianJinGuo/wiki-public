@@ -144,7 +144,6 @@ Aparna 提出的"Agent as new hire"管理框架的真正价值在于：它把一
 - [[entities/factory-mission-multi-agent-architecture|Factory Mission]] — 多 Agent 协作框架 vs. Foundation Capital 的 Agent 主用户原则相互印证
 - [[entities/autobrowse-browserbase-persistent-skill|Autobrowse]] — 同样的"反馈循环=产品"洞察，Autobrowse 通过技能文件实现自我改进闭环
 - [[entities/anthropic-claude-managed-agents-platform-2026|Anthropic Claude Managed Agents]] — Claude Managed Agents 的 Outcomes Loop 自我评估是"反馈闭环=产品"的具体工程实现
--  — Jonathan Siddharth 是 Turing CEO，其 Agent 优先实践是本篇发言的背景注脚；三角 Orchestrator+Worker+Validator 架构与本文洞察相互印证
 ---
 *Last updated: 2026-05-08*^[raw/articles/foundation-capital-agent-era-six-insights.md]
 

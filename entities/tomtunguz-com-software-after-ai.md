@@ -81,5 +81,3 @@ GP at Theory Ventures. Former Google PM. Sharing data-driven insights on AI, web
 
 → [[raw/articles/tomtunguz-com-software-after-ai|原文存档]] ^[raw/articles/tomtunguz-com-software-after-ai.md]
 
-## 相关主题
-

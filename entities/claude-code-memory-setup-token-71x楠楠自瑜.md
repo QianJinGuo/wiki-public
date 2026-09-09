@@ -123,7 +123,3 @@ CLAUDE.md 文件在此方案中承担双重角色： ^[raw/articles/claude-code-
 
 → [[raw/articles/claude-code-memory-setup-token-71x楠楠自瑜|原文存档]] ^[raw/articles/claude-code-memory-setup-token-71x楠楠自瑜.md]
 
-## 相关实体
-- [[claude-code-memory-setup-obsidian-graphify|官方Memory Setup]] — 同一工作流的官方版本
-- [[hermes-agent-self-evolving|Hermes自我进化]] — AI记忆系统的架构设计
-- [[moc/memory-context-systems|MOC]]

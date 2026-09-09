@@ -18,18 +18,6 @@ review_category: practice
 
 # Business intelligence at scale: Key obstacles
 
-## 深度分析
-
----
-source: rss
-source_url: https://aws.amazon.com/blogs/machine-learning/how-aws-smgs-uses-an-ai-powered-conversational-assistant-to-transform-business-management-with-amazon-bedrock-agentcore/ ^[raw/articles/how-aws-smgs-uses-an-ai-powered-conversational-assistant-to-.md]
-ingested: 2026-05-28^[raw/articles/how-aws-smgs-uses-an-ai-powered-conversational-assistant-to-.md]
-
-feed_name: AWS China ML^[raw/articles/how-aws-smgs-uses-an-ai-powered-conversational-assistant-to-.md]
-
-source_published: 2026-05-27T18:51:45Z^[raw/articles/how-aws-smgs-uses-an-ai-powered-conversational-assistant-to-.md]
-
----
 
 ## How AWS SMGS uses an AI-powered conversational assistant to transform business management with Amazon Bedrock AgentCore
 
@@ -80,6 +68,4 @@ NarrateAI batch-generates comprehensive persona-based narratives for each user t
 - [[entities/process-financial-documents-using-amazon-bedrock-data-automa]]
 
 → [[raw/articles/how-aws-smgs-uses-an-ai-powered-conversational-assistant-to-|原文存档]] ^[raw/articles/how-aws-smgs-uses-an-ai-powered-conversational-assistant-to-.md]
-
-## 相关主题
 

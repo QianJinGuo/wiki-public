@@ -206,7 +206,6 @@ review_category: tech
 | VoltAgent/awesome-agent-skills | github.com/VoltAgent/awesome-agent-skills | 500+ Skill 索引 |
 
 ## 子页面
--  — 5 大类 14 种模式详解与写作技巧
 
 ## 深度分析
 ### 模式演进的内在逻辑

@@ -188,7 +188,6 @@ Allica Bank 的 Squad 规模从 ~10 缩小到 ~6 是运营模型升级的结果�
 Anthropic-Blackstone $1.5B JV 模式展示 PE 作为 AI 转型加速器的潜力，但也揭示了结构性风险：FDE 交付的成果可能「教会」实验室太多关于该行业的知识，而这些知识最终可能通过模型改进或竞争对手的合作反哺整个行业。投资者需要评估每一次「FDE 转型」的知识泄漏风险，以及这种风险在多大程度上抵消短期的运营效率提升。 ^[raw/articles/the-token-economy-pt2-the-intelligence-company-gets-built.md]
 
 ## 相关概念
--  — Part 1：Tokens don't create productivity, the operating model does
 - [Ramp cracked enterprise AI adoption](https://www.fintechbrainfood.com/p/ramp-cracked-ai)（Fintech Brain Food）
 - [Anthropic × FIS Partnership](https://www.fintechbrainfood.com/p/intelligence-company)（Fintech Brain Food）
 - AI Agent Taxonomy — Level 0-5 AI adoption 框架（见本文 AI Adoption 分层理论章节）

@@ -103,6 +103,3 @@ Here are a few examples of what things would look like if they were 10x faster/b
 
 → [[raw/articles/10x-is-a-lot|原文存档]] ^[raw/articles/10x-is-a-lot.md]
 
-## 相关实体
-- [[claude-code-memory-setup-obsidian-graphify|AI辅助开发]] — AI作为陌生领域的知识倍增器
-- [[auto-improving-agent-platform-ashpreetbedi|自动化改进]] — 量化改进的系统化实践

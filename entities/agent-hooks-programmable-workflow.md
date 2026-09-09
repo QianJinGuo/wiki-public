@@ -102,6 +102,5 @@ event → optional matcher/filter → handler → outcome
    当前很多 Agent 框架没有原生的 Hook 支持，开发者倾向于把检查逻辑写在提示词里。从 Claude Code 的实践来看，生命周期管理（确定性钩子）应该是框架的一等公民，开发者只需要声明式地注册 handler，而不是自己发明事件分发机制。 ^[raw/articles/agent-hooks-programmable-workflow.md]
 
 ## 关联阅读
--  — 模式 12「确定性生命周期钩子」与本文核心完全对应，提供了更完整的 12 模式全景图
 - [[harness-engineering-long-term-agent-tasks|Harness Engineering: Reliable Long-Term Agent]] — Harness 工程化框架的系统性阐述
 - [[agentmemory-coding-agent-local-memory|AgentMemory: Coding Agent Local Memory]] — AgentMemory 在 hook 捕获链上有完整实现，可作为 Hook 系统的参考实现

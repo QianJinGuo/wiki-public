@@ -105,7 +105,6 @@ nanoGPT速通的约束条件（固定架构、固定数据）限制了递归的�
 - [GitHub](https://github.com/PrimeIntellect-ai/experiments-autonomous-speedrunning)
 
 ## See Also
--  — ETCLOVG taxonomy中的验证与评估层（V层）如何评测此类自主科研能力
 
 → [[raw/articles/prime-intellect-auto-nanogpt-opus-2930|原文存档]] ^[raw/articles/prime-intellect-auto-nanogpt-opus-2930.md]]"] ^[raw/articles/prime-intellect-auto-nanogpt-opus-2930.md]
 

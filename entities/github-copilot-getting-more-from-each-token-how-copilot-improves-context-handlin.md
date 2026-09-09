@@ -34,9 +34,6 @@ June 17, 2026 | Updated June 18, 2026^[raw/articles/github-copilot-getting-more-
 8 minutes
 
 *    Share: 
-*   [](https://x.com/share?text=Getting%20more%20from%20each%20token%3A%20How%20Copilot%20improves%20context%20handling%20and%20model%20routing&url=https%3A%2F%2Fgithub.blog%2Fai-and-ml%2Fgithub-copilot%2Fgetting-more-from-each-token-how-copilot-improves-context-handling-and-model-routing%2F)
-*   [](https://www.facebook.com/sharer/sharer.php?t=Getting%20more%20from%20each%20token%3A%20How%20Copilot%20improves%20context%20handling%20and%20model%20routing&u=https%3A%2F%2Fgithub.blog%2Fai-and-ml%2Fgithub-copilot%2Fgetting-more-from-each-token-how-copilot-improves-context-handling-and-model-routing%2F)
-*   [](https://www.linkedin.com/shareArticle?title=Getting%20more%20from%20each%20token%3A%20How%20Copilot%20improves%20context%20handling%20and%20model%20routing&url=https%3A%2F%2Fgithub.blog%2Fai-and-ml%2Fgithub-copilot%2Fgetting-more-from-each-token-how-copilot-improves-context-handling-and-model-routing%2F)
 
 As Copilot takes on more agentic work, from planning and editing to debugging, reviewing, and calling tools across longer sessions, efficiency means more than using fewer tokens. It means being smarter about how you use them. ^[raw/articles/github-copilot-getting-more-from-each-token-how-copilot-improves-context-handlin.md]
 

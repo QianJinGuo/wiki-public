@@ -62,6 +62,3 @@ Claude 主动承认"浏览器自动读取偶尔会因为 SSO 多域 cookie 处�
 
 → [[raw/articles/2-小时0-行手写代码我用-claude-做了一个生产级-vscode-插件|原文存档]] ^[raw/articles/2-小时0-行手写代码我用-claude-做了一个生产级-vscode-插件.md]
 
-## 相关实体
-- [[claude-code-memory-setup-obsidian-graphify|Claude Code记忆]] — AI辅助长程项目的上下文管理
-- [[openclaw-multi-agent-team-practice|OpenClaw团队]] — AI辅助编码的工程实践

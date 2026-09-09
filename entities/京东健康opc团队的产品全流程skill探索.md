@@ -17,15 +17,7 @@ review_category: practice
 
 ## 京东健康OPC团队的产品全流程Skill探索
 
----
-source: wechat
-source_url: https://mp.weixin.qq.com/s/k9adgO1QynvscitSSVA6pg^[raw/articles/京东健康opc团队的产品全流程skill探索.md]
-
-ingested: 2026-07-05^[raw/articles/京东健康opc团队的产品全流程skill探索.md]
-
-source_published: 2026年6月26日 17:26^[raw/articles/京东健康opc团队的产品全流程skill探索.md]
-
---- ^[raw/articles/京东健康opc团队的产品全流程skill探索.md]
+^[raw/articles/京东健康opc团队的产品全流程skill探索.md]
 
 ## 京东健康OPC团队的产品全流程Skill探索
 

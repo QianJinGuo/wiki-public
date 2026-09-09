@@ -174,7 +174,6 @@ Claude Code 善于跨多个数据源综合信息并转换为可读报告。可�
 
 ## 相关概念
 
--  — 本文讨论的主要工具
 - [[entities/claude-code-best-practices|Claude Code 最佳实践]] — 相关实践指南
 - [[raw/articles/claude-code-html-artifacts|原文存档]] — 原始来源
 

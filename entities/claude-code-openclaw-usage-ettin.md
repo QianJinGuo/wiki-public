@@ -237,10 +237,3 @@ Claude Code 是延迟敏感型场景——每次对话都需要检索，32M 的 
 
 生产环境应同时追踪两个指标：(1) 检索延迟 P99，确保在预算内；(2) MTEB Benchmark 上的 NDCG@10，定期用黄金数据集做回归测试。当模型更新或数据分布变化时，这两个指标的联合监控能第一时间发现精度退化。 ^[raw/articles/ettin-reranker-family.md]
 
-## 相关实体
-
-- [[ettin-reranker-family|Ettin Reranker Family]] — 模型详情
-- [[claude-code-openclaw-memory-comparison|Claude Code vs OpenClaw 记忆系统对比]] — 两者检索机制原状
-- [[claude-code-openclaw-memory-vector-db-doubt|向量数据库必要性反思]] — LLM 路由 vs 向量检索哲学讨论
-- [[entities/agent-memory-architecture|Agent Memory 架构本质]] — 记忆系统设计模式
-- [[concepts/openclaw-architecture|OpenClaw 架构解析]] — OpenClaw 整体架构

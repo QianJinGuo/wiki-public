@@ -18,18 +18,6 @@ review_category: practice
 
 # Workflow architecture
 
-## 深度分析
-
----
-source: rss
-source_url: https://aws.amazon.com/blogs/machine-learning/comprehensive-observability-for-amazon-sagemaker-ai-llm-inference-from-gpu-utilization-to-llm-quality/ ^[raw/articles/comprehensive-observability-for-amazon-sagemaker-ai-llm-infe.md]
-ingested: 2026-05-30^[raw/articles/comprehensive-observability-for-amazon-sagemaker-ai-llm-infe.md]
-
-feed_name: AWS China ML^[raw/articles/comprehensive-observability-for-amazon-sagemaker-ai-llm-infe.md]
-
-source_published: 2026-05-29T23:36:58Z^[raw/articles/comprehensive-observability-for-amazon-sagemaker-ai-llm-infe.md]
-
----
 
 ## Comprehensive observability for Amazon SageMaker AI LLM inference: From GPU utilization to LLM quality
 
@@ -64,5 +52,3 @@ Custom quality metrics c^[raw/articles/comprehensive-observability-for-amazon-sa
 → [[raw/articles/comprehensive-observability-for-amazon-sagemaker-ai-llm-infe|原文存档]] ^[raw/articles/comprehensive-observability-for-amazon-sagemaker-ai-llm-infe.md]
 
 - [[moc/observability-monitoring|MOC]]
-## 相关主题
-

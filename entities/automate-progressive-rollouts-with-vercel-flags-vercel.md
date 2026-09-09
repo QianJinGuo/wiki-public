@@ -20,9 +20,6 @@ review_category: practice
 
 > -> [[raw/articles/automate-progressive-rollouts-with-vercel-flags-vercel.md|原文存档]]
 
-## 相关实体
-> [[moc/cloud-infrastructure|主题导航]]
-
 ## 深度分析
 Vercel Flags 是 Vercel 平台推出的 Feature Flag 解决方案，本次更新新增 **渐进式发布（Progressive Rollouts）** 功能，属于 Feature Flag 策略中的「时间基权重」类型。 ^[raw/articles/automate-progressive-rollouts-with-vercel-flags-vercel.md]
 

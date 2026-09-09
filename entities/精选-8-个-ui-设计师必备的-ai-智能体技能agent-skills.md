@@ -118,4 +118,4 @@ review_category: practice
 当你在看 Claude 写的代码，觉得布局有点不对、响应式不太稳，或者只是想确认写法是不是主流做法的时候，用这个基本不会错。它和  ` ui-ux-pro-max  ` 是一前一后配合用的。 ^[raw/articles/精选-8-个-ui-设计师必备的-ai-智能体技能agent-skills.md]
 
 ##  3\. shadcn-ui — 现代组件库
-如果你最近用过 Linear、Vercel、Cal.com 这类产品，其实已经见过  ` shadcn/ui  ` 的风格了。它是目前很受欢迎的一套  ` React  ` 组件库，基于  ` Radix UI ^[raw/articles/精选-8-个-ui-设计师必备的-ai-智能体技能agent-skills.md]
+如果你最近用过 Linear、Vercel、Cal.com 这类产品，其实已经见过  ` shadcn/ui  ` 的风格了。它是目前很受欢迎的一套  ` React  ` 组件库，基于  ` Radix UI  ` 和  ` Tailwind CSS  ` 。这个技能主要就是教 Claude 怎么把它用对：主题、表单、数据表、命令面板这些都能直接上手。 ^[raw/articles/精选-8-个-ui-设计师必备的-ai-智能体技能agent-skills.md]

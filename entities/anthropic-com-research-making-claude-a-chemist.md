@@ -74,4 +74,4 @@ Ultimately, our claim is a modest one: Claude is starting to meaningfully assist
 
 Nearly every small molecule—drug, pesticide, dye, fragrance, polymer, DNA or protein subunit, and functional inorganic or solid-state material—exists because a chemist determined its structure. Given that these molecules cannot be seen with microscopes, chemists must rely on spectral analysis, probing a molecule with light, radio waves, or magnetic fields. The way a given molecule absorbs, emits, or deflects this energy gives chemists a pattern, or spectrum, with which they can elucidate its structure. ^[raw/articles/anthropic-com-research-making-claude-a-chemist.md]
 
-NMR spectroscopy—one of the canonical techniques chemists rely on for this—is one of the most time-consuming ste ^[raw/articles/anthropic-com-research-making-claude-a-chemist.md]
+NMR spectroscopy—one of the canonical techniques chemists rely on for this—is one of the most time-consuming steps in synthetic chemistry; for every compound, a chemist has to match each peak in the spectrum to an atom in the proposed structure by hand. ^[raw/articles/anthropic-com-research-making-claude-a-chemist.md]

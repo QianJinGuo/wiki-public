@@ -171,10 +171,6 @@ NVIDIA 的 Extreme Co-Design 强调 Vera CPU 承担「长上下文检索操作�
 
 ## 关键概念关联
 
--  — 上下文管理层硬件支持，延迟优化策略
--  — 真实 trace 数据对齐，sub-agent 调用模式
--  — Primary/Sub-Agent 上下文独立性设计
--  — NVIDIA 推理优化技术栈，MoE 专家并行
 - [[concepts/agent-memory-system-design|Agent Memory System Design]] — 记忆系统与上下文压缩机制
 
 ## 相关实体

@@ -16,14 +16,6 @@ review_category: tech
 # ICML 2026 | 从提取漂移到聚合漂移，南大AREA重做CLIP增量学习
 
 ## ICML 2026 | 从提取漂移到聚合漂移，南大AREA重做CLIP增量学习
----
-source: wechat
-source_url: https://mp.weixin.qq.com/s/TkoSd7Kg9eh_L3J5XNkkhg ^[raw/articles/icml-2026-从提取漂移到聚合漂移南大area重做clip增量学习.md]
-ingested: 2026-07-08^[raw/articles/icml-2026-从提取漂移到聚合漂移南大area重做clip增量学习.md]
-
-source_published: 2026年7月7日 18:43^[raw/articles/icml-2026-从提取漂移到聚合漂移南大area重做clip增量学习-2026-07-08.md]
-
----
 ## ICML 2026 | 从提取漂移到聚合漂移，南大AREA重做CLIP增量学习
 类别增量学习要求模型不断学习新类别，同时保持旧类别的识别能力。^[raw/articles/icml-2026-从提取漂移到聚合漂移南大area重做clip增量学习.md]
 

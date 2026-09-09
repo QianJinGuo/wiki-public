@@ -82,9 +82,6 @@ The survey organizes the harness into **7 independent layers**: ^[raw/articles/a
 - [GitHub / Awesome-Agent-Harness](https://github.com/picrew/awesome-agent-harness)
 
 ## See Also
--  — general harness architecture patterns
--  — academic papers on harness evolution
--  — long-running agent engineering
 - [[raw/articles/agent-harness-engineering-survey-2026.md]] — raw source
 
 ## 深度分析

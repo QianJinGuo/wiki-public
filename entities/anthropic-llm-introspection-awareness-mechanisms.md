@@ -94,8 +94,6 @@ Lindsey（2025）首次在 Claude 模型中观察到内省现象，但对其机�
 - Gemma Scope — 用于 transcoder 分析的模型架构
 
 ## 相关实体
-
-## 相关实体
 - [[entities/wow-harness-v3-governance-protocol]]
 - [[entities/hermes-agent-goal-runtime-architecture-state-persistence-judge-closed-loop]]
 - [[entities/ath-agent-trust-handshake-protocol]]

@@ -85,5 +85,3 @@ Nathan 反复追问为什么中国公司愿意开源好容易训练出来的模�
 **5. "地平线上的起重机"作为中国 AI 发展速度的隐喻，对技术路线图规划有参考价值** ^[raw/articles/chinese-ai-lab-insights-nathan.md]
 Nathan 的这句话  描绘了一个持续建设、永不停歇的图景。对于制定技术路线图的公司，这意味着需要预留足够的缓冲时间——当你的团队在规划某个技术方向 6 个月后的目标时，中国团队可能已经在同一方向推进了 3 个迭代。 ^[raw/articles/chinese-ai-lab-insights-nathan.md]
 
-## 相关实体
-> [[queries/chinese-ai-ecosystem-silicon-valley-differences-agent-development-impact|主题导航]]

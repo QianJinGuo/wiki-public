@@ -170,6 +170,3 @@ Protocol-H 的核心贡献在于揭示了**企业级 RAG 的主要瓶颈不是 L
 
 → [[raw/articles/protocol-h-hierarchical-agentic-rag-enterprise.md|原文存档]] ^[raw/articles/protocol-h-hierarchical-agentic-rag-enterprise.md]
 
-## 相关实体
-- [[agent-harness-architecture-deep-dive-aksahy|Harness架构]] — 分层Agent拓扑的编排设计
-- Bedrock多Agent — 企业RAG的Agentic实践对比

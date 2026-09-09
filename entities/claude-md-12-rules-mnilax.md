@@ -163,8 +163,6 @@ CLAUDE.md 本质上是 **Agent 的架构约束层（Architecture Constraints）*
 ## 相关链接
 - [[raw/articles/claude-md-12-rules-mnilax-cf2019|原文存档]]
 - [[entities/claude-code-founder-harness-100-lines|CLAUDE Code 创始人 100 条 Harness 规则]] — 另一位实践者的规则集合，可对比参考
--  — working set 机制与 CLAUDE.md 的互补关系
--  — 本文的 Token 预算和检查点机制在此框架中的定位
 
 ## 相关实体
 

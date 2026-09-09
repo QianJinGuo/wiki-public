@@ -115,7 +115,6 @@ Claude Code 采用的 agentic search 路径，本质上是将代码库导航问�
 Claude Code 围绕传统软件工程环境设计：工程师是主要的代码库贡献者，repo 使用 Git，代码遵循标准目录结构。大多数大型代码库符合这个模式，但游戏引擎与大型二进制资产、版本控制非常规的环境或非工程师贡献代码库等非传统设置需要额外的配置工作。 ^[raw/articles/how_claude_code_works_in_large_codebases.md]
 边缘情况：即使分层 CLAUDE.md 方法在某些情况下也会失效，例如拥有数十万文件夹和数百万文件的代码库，或使用非 git 版本控制的遗留系统。该系列的后续文章将解决这些挑战。 ^[raw/articles/how_claude_code_works_in_large_codebases.md]
 
-## 相关概念
 ## 相关实体
 - [[entities/how-claude-code-works-in-large-codebases-best-practices-and-where-to-start]]
 - [[entities/claude-code-large-codebase-harness-configuration]]

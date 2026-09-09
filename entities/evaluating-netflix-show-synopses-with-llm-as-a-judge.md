@@ -21,18 +21,6 @@ review_category: tech
 
 > **Source**: [[raw/articles/evaluating-netflix-show-synopses-with-llm-as-a-judge|原文存档]] ^[raw/articles/evaluating-netflix-show-synopses-with-llm-as-a-judge.md]
 
-## 核心内容
-
----
-source: rss
-source_url: https://netflixtechblog.com/evaluating-netflix-show-synopses-with-llm-as-a-judge-6269251e6f28?source=rss----2615bd06b42e---4 ^[raw/articles/evaluating-netflix-show-synopses-with-llm-as-a-judge.md]
-ingested: 2026-06-07^[raw/articles/evaluating-netflix-show-synopses-with-llm-as-a-judge.md]
-
-feed_name: Netflix Tech Blog^[raw/articles/evaluating-netflix-show-synopses-with-llm-as-a-judge.md]
-
-source_published: 2026-04-10^[raw/articles/evaluating-netflix-show-synopses-with-llm-as-a-judge.md]
-
----
 
 ## Evaluating Netflix Show Synopses with LLM-as-a-Judge
 
@@ -102,7 +90,6 @@ Solid industry application of LLM-as-a-Judge methodology with meaningful technic
 → [[raw/articles/evaluating-netflix-show-synopses-with-llm-as-a-judge|原文存档]] ^[raw/articles/evaluating-netflix-show-synopses-with-llm-as-a-judge.md]
 
 - [[moc/evaluation-benchmarks-extended|MOC]]
-## 深度分析
 
 ### 1. 专用判官架构优于单提示词过载
 文章明确指出"When using a single prompt to evaluate all quality criteria is found to overload the LLM and yields poor performance — dedicated judges for each criteria perform better"^[raw/articles/evaluating-netflix-show-synopses-with-llm-as-a-judge.md:76-77]。这一发现揭示了 LLM-as-a-Judge 的一个核心scalability原则：每条质量标准本质上是独立的评估任务，单一提示词无论工程化程度多高，都难以同时捕捉 Clarity、Precision、Tone、Factuality 等维度各自的细微差别。Per-criteria dedicated judge 模式将问题空间解耦，使每个 LLM 判官只需处理单一目标函数，从而显著提升评分准确率。这一结论对其他领域的 LLM 评估设计具有普遍参考价值。

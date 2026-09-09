@@ -42,12 +42,6 @@ review_category: tech
 | 方法 | Python程序进化 | Thompson采样树搜索 |
 | 核心发现 | 记忆结构任务特异性 | 小模型+Harness>大模型 |
 
-## 与本文相关
--  — Self-Evolution机制对照
--  — 模型自我进化实践对照
--  — OpenClaw的Harness设计
--  — 详细论文内容（raw）
-
 ## 深度分析
 ### 记忆Harness的任务特异性：为何跨任务迁移失败
 M⋆的核心发现在于其t-SNE可视化揭示的**结构收敛现象**：不同任务在进化后并非趋同，而是收敛于截然不同的记忆结构聚类。这与传统的"通用记忆模块"假设直接矛盾。 ^[raw/articles/two-harness-papers-microsoft-google.md]

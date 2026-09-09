@@ -17,15 +17,6 @@ review_category: practice
 
 # Solution overview
 
-## 深度分析
-
----
-source: rss
-source_url: https://aws.amazon.com/blogs/machine-learning/automate-aml-alert-triage-with-amazon-quick-and-snowflake-cortex-ai/ ^[raw/articles/automate-aml-alert-triage-with-amazon-quick-and-snowflake-co.md]
-ingested: 2026-05-29
-feed_name: AWS China ML
-source_published: 2026-05-28T16:41:07Z
----
 
 ## Automate AML alert triage with Amazon Quick and Snowflake Cortex AI
 
@@ -59,5 +50,3 @@ The solution uses Amazon Quick Flows as the orchestration layer, with a connecti
 → [[raw/articles/automate-aml-alert-triage-with-amazon-quick-and-snowflake-co|原文存档]] ^[raw/articles/automate-aml-alert-triage-with-amazon-quick-and-snowflake-co.md]
 
 - [[entities/gemini-3-5-frontier-intelligence-with-action]]
-## 相关主题
-

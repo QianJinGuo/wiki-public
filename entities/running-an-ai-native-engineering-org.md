@@ -99,4 +99,4 @@ Claude and AI have reshaped roles across the team. Our PMs code a lot now, which
 
 On the Claude Code engineering team, I’ve indexed heavily on two profiles. One is creative builders with product sense: the dreamers who are deeply curious and passionate about shipping products that solve problems. The other one is engineers with deep systems expertise. For example, when I joined the team, I noticed we were missing experts with systems backgrounds and we needed that when building [Claude Code on the Web](https://www.anthropic.com/news/claude-code-on-the-web), to ensure we can run Claude everywhere. ^[raw/articles/running-an-ai-native-engineering-org.md]
 
-What I index on less, on the other hand, is raw thr ^[raw/articles/running-an-ai-native-engineering-org.md]
+What I index on less, on the other hand, is raw throughput; the models handle that. The more important question is where you still need human expertise, and that's where I'd focus. ^[raw/articles/running-an-ai-native-engineering-org.md]

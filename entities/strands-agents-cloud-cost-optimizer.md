@@ -19,18 +19,6 @@ review_category: practice
 
 > 使用 Strands Agents 构建云成本分析与优化 AI 助手的实战教程，包含成本监控、自动化优化建议。
 
-## 核心内容
-
----
-source: rss
-source_url: https://aws.amazon.com/cn/blogs/china/based-on-strands-agents-build-cost-analytics-optimize-ai-assistant/ ^[raw/articles/strands-agents-cloud-cost-optimizer.md]
-ingested: 2026-06-01^[raw/articles/strands-agents-cloud-cost-optimizer.md]
-
-sha256: 70061409c093a01f^[raw/articles/strands-agents-cloud-cost-optimizer.md]
-
----
-
-
 
 ## 基于 Strands Agents 构建亚马逊云科技云成本分析与优化 AI 助手
 
@@ -134,7 +122,6 @@ sha256: 70061409c093a01f^[raw/articles/strands-agents-cloud-cost-optimizer.md]
 *   部署：ECS Fargate + ALB + CloudFormation，一键部署
 *   LLM：兼容 OpenAI API 
 
-## 深度分析
 
 ### 技术架构：从聊天机器人到 FinOps 智能助手的演进
 

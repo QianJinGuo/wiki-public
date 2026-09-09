@@ -153,6 +153,3 @@ Biology/Humanities 提升最明显（可抽象程度高）。 ^[raw/articles/mem
 
 **补充阅读**： ^[raw/articles/memento-skills-let-agents-design-agents.md]
 
--  — Agent 自改进六条路全景图
--  — 三种记忆范式量化对比
--  — Hermes Agent 的自进化机制

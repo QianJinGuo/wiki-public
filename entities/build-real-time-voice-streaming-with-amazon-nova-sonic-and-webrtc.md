@@ -66,4 +66,3 @@ review_category: practice
 5. **在 production 环境中监控 WebRTC 的 RTT 和 packet loss 指标而非仅依赖音频质量评分** ^[raw/articles/build-real-time-voice-streaming-with-amazon-nova-sonic-and-webrtc.md]
    WebRTC 连接状态会通过 RTCPeerConnection 的 stats API 暴露 jitter、packet loss rate 和 round-trip time。建议在语音应用 dashboard 中实时展示这些指标，当 RTT > 300ms 或 packet loss > 5% 时自动降级为文本交互，保证服务可用性。 ^[raw/articles/build-real-time-voice-streaming-with-amazon-nova-sonic-and-webrtc.md]
 
-## 相关实体

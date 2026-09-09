@@ -18,18 +18,6 @@ review_category: practice
 
 # **一、关于 Kollab**
 
-## 深度分析
-
----
-source: rss
-source_url: https://aws.amazon.com/cn/blogs/china/on-amazon-bedrock-agentcore-ai-practice/ ^[raw/articles/对抗-agent-遗忘kollab-基于amazon-bedrock-agentcore-的团队ai工作空间实践.md]
-ingested: 2026-05-29^[raw/articles/对抗-agent-遗忘kollab-基于amazon-bedrock-agentcore-的团队ai工作空间实践.md]
-
-feed_name: AWS China Blog^[raw/articles/对抗-agent-遗忘kollab-基于amazon-bedrock-agentcore-的团队ai工作空间实践.md]
-
-source_published: 2026-05-29T10:05:24Z^[raw/articles/对抗-agent-遗忘kollab-基于amazon-bedrock-agentcore-的团队ai工作空间实践.md]
-
----
 
 ## 对抗 Agent 遗忘：Kollab 基于Amazon Bedrock AgentCore 的团队AI工作空间实践
 
@@ -137,6 +125,4 @@ S3 作为真值源，Runtime 与 S3 之间的同步是由两个动作构成：hy
 → [[raw/articles/对抗-agent-遗忘kollab-基于amazon-bedrock-agentcore-的团队ai工作空间实践|原文存档]] ^[raw/articles/对抗-agent-遗忘kollab-基于amazon-bedrock-agentcore-的团队ai工作空间实践.md]
 
 - [[entities/stop-hand-tuning-kernels-how-neuron-agentic-development-acce|stop hand-tuning kernels: how neuron agentic development acc]]
-
-## 相关主题
 

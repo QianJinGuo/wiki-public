@@ -169,6 +169,3 @@ Self-CFG 的成功表明，CFG 不仅仅适用于图像生成。它本质上是�
 
 → [[raw/articles/elf-embedded-language-flows-hekaiming-105m.md|原文存档]] ^[raw/articles/elf-embedded-language-flows-hekaiming-105m.md]
 
-## 相关实体
-- [[karpathy-ai-agent-7-bits-value-decline|AI模型效率曲线]] — 小模型高效化的宏观趋势
-- [[ai-chip-architecture-first-principles|AI芯片架构]] — 端侧推理的硬件基础

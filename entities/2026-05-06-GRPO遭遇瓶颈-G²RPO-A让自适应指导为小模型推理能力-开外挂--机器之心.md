@@ -14,16 +14,6 @@ review_category: tech
 
 # GRPO遭遇瓶颈？G²RPO-A让自适应指导为小模型推理能力「开外挂」
 
----
-title: GRPO遭遇瓶颈？G²RPO-A让自适应指导为小模型推理能力「开外挂」^[raw/articles/2026-05-06-GRPO遭遇瓶颈-G²RPO-A让自适应指导为小模型推理能力-开外挂--机器之心.md]
-
-source: wechat
-url: https://mp.weixin.qq.com/s/AZ2uV91D4bfKQGNpu9VfVg ^[raw/articles/2026-05-06-GRPO遭遇瓶颈-G²RPO-A让自适应指导为小模型推理能力-开外挂--机器之心.md]
-mp_name: 机器之心
-publish_date: 2026-05-06^[raw/articles/2026-05-06-GRPO遭遇瓶颈-G²RPO-A让自适应指导为小模型推理能力-开外挂--机器之心.md]
-
----
-
 ## GRPO遭遇瓶颈？G²RPO-A让自适应指导为小模型推理能力「开外挂」
 
 **来源**: 机器之心

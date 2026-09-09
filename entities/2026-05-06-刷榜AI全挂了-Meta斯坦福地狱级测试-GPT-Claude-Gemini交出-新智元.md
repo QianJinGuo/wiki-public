@@ -14,16 +14,6 @@ review_category: tech
 
 # 刷榜AI全挂了！Meta斯坦福地狱级测试，GPT/Claude/Gemini交出0分
 
----
-title: 刷榜AI全挂了！Meta斯坦福地狱级测试，GPT/Claude/Gemini交出0分^[raw/articles/2026-05-06-刷榜AI全挂了-Meta斯坦福地狱级测试-GPT-Claude-Gemini交出-新智元.md]
-
-source: wechat
-url: https://mp.weixin.qq.com/s/yTW-EcMGlrzjKp3PFRYTbA ^[raw/articles/2026-05-06-刷榜AI全挂了-Meta斯坦福地狱级测试-GPT-Claude-Gemini交出-新智元.md]
-mp_name: 新智元
-publish_date: 2026-05-06^[raw/articles/2026-05-06-刷榜AI全挂了-Meta斯坦福地狱级测试-GPT-Claude-Gemini交出-新智元.md]
-
----
-
 ## 刷榜AI全挂了！Meta斯坦福地狱级测试，GPT/Claude/Gemini交出0分
 
 **来源**: 新智元

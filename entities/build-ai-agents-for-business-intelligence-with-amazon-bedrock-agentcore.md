@@ -155,6 +155,3 @@ OPLOG 强调的"仅为实际执行付费"模式，结合 Serverless 自动扩缩
 
 → [[raw/articles/build-ai-agents-for-business-intelligence-with-amazon-bedrock-agentcore|原文存档]] ^[raw/articles/build-ai-agents-for-business-intelligence-with-amazon-bedrock-agentcore.md]
 
-## 相关实体
-- Bedrock多Agent协作 — AWS上的多Agent架构实践
-- [[agent-harness-architecture-deep-dive-aksahy|Harness架构]] — Agent运行时抽象的核心设计

@@ -23,15 +23,7 @@ review_category: practice
 
 ## 全网最全的Claude Fable 5 省钱攻略都在这了
 
----
-source: wechat
-source_url: https://mp.weixin.qq.com/s/YirJ8-6_TZuFe9cLepFNSg^[raw/articles/全网最全的claude-fable-5-省钱攻略都在这了.md]
-
-ingested: 2026-07-09^[raw/articles/全网最全的claude-fable-5-省钱攻略都在这了.md]
-
-source_published: 2026年7月8日 09:31^[raw/articles/全网最全的claude-fable-5-省钱攻略都在这了.md]
-
---- ^[raw/articles/全网最全的claude-fable-5-省钱攻略都在这了.md]
+^[raw/articles/全网最全的claude-fable-5-省钱攻略都在这了.md]
 
 ## 全网最全的Claude Fable 5 省钱攻略都在这了
 

@@ -150,7 +150,6 @@ API 不稳定时的指数退避+随机抖动（最大 60 秒、最多 10 次重�
 
 ## 相关主题
 - [[concepts/hermes-agent]] — 自进化机制与 AutoResearch 的"只保留改进"思想同源
--  — Harness Engineering 让 Agent 产出可预期、可衡量、可持续
 - [[entities/thin-harness-fat-skills]] — Fat Skills + Thin Harness 架构与 program.md 宪法约束异曲同工
 - [[raw/articles/autoresearch-software-development.md|原文存档]]
 

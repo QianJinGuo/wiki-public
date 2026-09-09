@@ -76,4 +76,3 @@ review_category: tech
 这样既能保持敏捷交付的节奏，又能维护产品的整体体验连贯性，避免迭代过程中逐渐偏离初始愿景。^[raw/articles/designing-small-is-harder-than-designing-big-ux-magazine.md]
 
 
-## 相关实体

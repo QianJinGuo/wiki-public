@@ -91,7 +91,6 @@ Garry Tan 2026年5月发表的新机制，核心是**让AI写出的代码只进�
 - GBrain：25名贡献者，v0.31.1.1单次PR落22个社区修复
 
 ## 与本文相关
--  — OpenClaw架构分析
 - [[entities/claude-code-agent-engineering]] — Claude Code工程设计
 - [[comparisons/ai-knowledge-tools-comparison]] — AI工具横向对比
 - [[raw/articles/gstack-garry-tan-600k-lines-60-days.md|原始存档]]
