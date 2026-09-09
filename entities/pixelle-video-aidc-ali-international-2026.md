@@ -1,7 +1,7 @@
 ---
 title: Pixelle-Video — 阿里国际 AIDC 开源的全自动视频生成 pipeline 装配工
 created: 2026-06-15
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [ai-video, video-generation, pipeline-orchestration, open-source, alibaba, aidc, apache, comfyui, tts, agent, agentic-ai, multimodal, ecommerce, video-pipeline, model-agnostic]
 sources: [raw/articles/pixelle-video-aidc-ali-international-2026]

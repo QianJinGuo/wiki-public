@@ -1,7 +1,7 @@
 ---
 title: "腾讯研究院 2026 AI 十大趋势——协同进化"
 created: 2026-07-24
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [tencent-research, 2026, ai-trends, model-evolution, multimodal, context-learning, reinforcement-learning, engineering-infrastructure, memory-consolidation, ai-for-science, agent, waic]
 confidence: 0.7

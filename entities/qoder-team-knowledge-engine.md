@@ -5,7 +5,7 @@ description: "Qoder 编译式知识架构——Knowledge Card（Agent用）+ Rep
 source: [[raw/articles/qoder-team-knowledge-engine-compiled-knowledge]]
 tags: [knowledge-engine, qoder, knowledge-engine, compiled-knowledge, knowledge-card, repo-wiki, memory-agent, team-knowledge, ai-ide]
 created: 2026-06-01
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 provenance_state: inferred
 review_value: 7

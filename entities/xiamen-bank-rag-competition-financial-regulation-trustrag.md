@@ -3,7 +3,7 @@ title: "怎么短平快地把RAG做好：厦门国际银行数创金融杯RAG初
 authors:
   - 致Great
 created: 2026-07-05
-updated: 2026-09-07
+updated: 2026-09-10
 source: wechat
 url:
 type: entity

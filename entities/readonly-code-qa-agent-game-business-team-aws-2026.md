@@ -1,7 +1,7 @@
 ---
 title: "为游戏业务团队构建只读代码问答 Agent：架构、性能与安全实践"
 created: 2026-08-26
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [agent, code-agent, code-qa, mcp, security, rag, architecture, aws, harness]
 sources: [raw/articles/readonly-code-qa-agent-game-business-team-aws-2026]

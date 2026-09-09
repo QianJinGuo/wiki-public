@@ -1,7 +1,7 @@
 ---
 title: "What Figma Made Visible: Component Model Bridging Design and Engineering"
 created: 2026-06-19
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [figma, design-system, component-model, design-to-code, developer-experience, craft, ai-design]
 source: "[[raw/articles/what-figma-made-visible]]"

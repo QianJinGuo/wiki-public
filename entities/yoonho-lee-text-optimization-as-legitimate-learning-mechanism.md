@@ -6,7 +6,7 @@ type: entity
 tags: [text-optimization, prompt-optimization, agent, llm, ml-theory, prompt-engineering, memory, retrieval, harness, learning, scaling]
 sources: [raw/articles/yoonholee-text-optimization-as-legitimate-learning-mechanism]
 created: 2026-06-10
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 8
 review_confidence: 9
 review_recommendation: strong

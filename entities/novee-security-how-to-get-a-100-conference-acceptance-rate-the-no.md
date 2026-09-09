@@ -1,7 +1,7 @@
 ---
 
 created: 2026-06-10
-updated: 2026-09-07
+updated: 2026-09-10
 title: "How to Get a 100% Conference Acceptance Rate, The Novee Way: A High-Severity CVE in Leading Call-for-Papers Software"
 type: entity
 tags: [article, agent, ai, llm, model, security, xss, vulnerability]

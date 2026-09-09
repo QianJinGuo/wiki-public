@@ -1,7 +1,7 @@
 ---
 title: "MRAgent：记忆是重建的，不是检索的"
 created: 2026-06-26
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [agent-memory, retrieval, graph-memory, multi-hop-reasoning, icml-2026, nus, cue-tag-content, active-reconstruction, token-efficiency]
 sources: [raw/articles/mragent-memory-reconstructed-not-retrieved-nus-icml2026]

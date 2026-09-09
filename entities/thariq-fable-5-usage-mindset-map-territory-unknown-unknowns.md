@@ -1,7 +1,7 @@
 ---
 title: "Thariq（Claude Code工程师）的Fable 5使用心法：地图≠领土，用未知消除法突破模型瓶颈"
 created: 2026-07-06
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [claude-code, fable-5, prompt-engineering, anthropic, coding-agent, skill, agentic-coding, mindset]
 confidence: 0.7

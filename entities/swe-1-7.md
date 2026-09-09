@@ -10,7 +10,7 @@ score_stars: 4
 ingested_at: 2026-07-09T18:59:50Z
 type: entity
 created: 2026-07-09
-updated: 2026-09-07
+updated: 2026-09-10
 sources:
   - raw/articles/swe-1-7
 reviewed: 2026-09-07

@@ -8,7 +8,7 @@ review_value: 7
 review_confidence: 8
 sources:
   - 从 Chroma 换成 Qdrant，我踩了 100 万向量的坑 (云朵君, 数据STUDIO, 2026-05-20)
-updated: 2026-09-07
+updated: 2026-09-10
 provenance_state: inferred
 reviewed: 2026-09-07
 review_verdict: keep

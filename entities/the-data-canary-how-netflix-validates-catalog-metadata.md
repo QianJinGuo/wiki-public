@@ -2,7 +2,7 @@
 
 title: "The Data Canary"
 created: 2026-07-10
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [netflix, coding, meta]
 sources: [raw/articles/the-data-canary-how-netflix-validates-catalog-metadata]

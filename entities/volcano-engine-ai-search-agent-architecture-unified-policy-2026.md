@@ -1,7 +1,7 @@
 ---
 title: "火山引擎 AI 搜索千万级 Agent 架构演进与实践：从 ReAct 三节点到 Unified Policy"
 created: 2026-07-06
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [agent, ai, llm, architecture, react, unified-policy, context-management, tool-use]
 source_url: "https://mp.weixin.qq.com/s/hol76ebv7-OB5TNUIWVVYA"

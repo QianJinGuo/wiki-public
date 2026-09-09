@@ -1,7 +1,7 @@
 ---
 title: "Pod 组织结构"
 created: 2026-07-02
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [organization, agile, team, ai-native]
 review_value: 6

@@ -2,7 +2,7 @@
 title: "Stripe Financial Compliance AI Agent: Production Lessons"
 description: "Stripe 如何在 AWS Bedrock 上构建生产级 ReAct 合规审查 Agent，实现 26% 审查提速 + 96%+ 帮助率，关键架构决策与经验总结"
 created: 2026-06-27
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [agent, harness, compliance, react, aws, bedrock, production, financial, stripe]
 provenance_state: inferred

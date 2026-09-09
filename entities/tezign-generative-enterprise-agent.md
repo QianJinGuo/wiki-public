@@ -1,7 +1,7 @@
 ---
 title: "特赞企业级生成式 Agent"
 created: 2026-07-02
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [tezign, enterprise, agent, generative]
 review_value: 6

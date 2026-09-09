@@ -1,7 +1,7 @@
 ---
 title: "Tiered KV Cache for Large LLMs on SageMaker HyperPod with Curvine"
 created: 2026-08-13
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [llm, inference, kv-cache, optimization, vllm, aws, sagemaker, hyperpod]
 sources: [raw/articles/tiered-kv-cache-for-large-llms-on-amazon-sagemaker-hyperpod-with-curvine]

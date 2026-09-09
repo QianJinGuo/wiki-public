@@ -2,7 +2,7 @@
 
 title: "Build high-performance generative AI systems with Strands Agents + NVIDIA NIM + Bedrock AgentCore"
 created: 2026-06-01
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [strands-agents, nvidia-nim, bedrock, agentcore, multi-agent, observability]
 source: "[[raw/articles/strands-agents-high-performance-genai-systems]]"

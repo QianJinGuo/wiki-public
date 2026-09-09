@@ -10,7 +10,7 @@ tags:
   - indie-dev
   - ai-native
 created: 2026-06-22
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 review_value: 8
 review_confidence: 8

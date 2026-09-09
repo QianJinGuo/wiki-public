@@ -2,7 +2,7 @@
 title: "Is One Layer Enough? 单层 RL 训练可超越全参数训练"
 slug: rl-single-layer-training-full-parameter
 created: 2026-07-08
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags:
   - rl

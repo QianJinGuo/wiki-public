@@ -1,7 +1,7 @@
 ---
 title: "快手 RCA Agent：复杂业务场景下排障 Agent 的探索实践"
 created: 2026-06-15
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [rca, agent, kuaishou, root-cause-analysis, multi-agent, evaluation, benchmark, hallucination, alert-noise, evidence-pyramid, qcon-2026, guo-yongliang]
 sources:

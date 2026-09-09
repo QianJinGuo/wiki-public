@@ -2,7 +2,7 @@
 title: "Mass Intelligence: AI 普及的拐点"
 description: "Ethan Mollick 分析 AI 进入「Mass Intelligence」时代：强大模型成本从 $50/M tokens 降至 $0.14/GPT-5 nano，GPQA 非专家 34% → PhD 74-81%，免费用户也能用顶级模型。"
 created: 2026-06-07
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [ai-adoption, llm-economics, oneusefulthing, ethan-mollick, ai-efficiency, mass-intelligence]
 source: [[raw/articles/mass-intelligence]]

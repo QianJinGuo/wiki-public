@@ -5,7 +5,7 @@ description: "天猫新品AI问答系统从定制化workflow→DeepAgent模式�
 source: "[[raw/articles/tmic-ai-xiaoxin-deepagent-architecture-evolution]]"
 tags: [agent, deepagent, workflow, tmic, e-commerce, planning, context-engineering, architecture]
 created: 2026-05-29
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 confidence: 0.9
 provenance_state: extracted

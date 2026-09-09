@@ -3,7 +3,7 @@
 title: "The inevitable need for an open model consortium"
 type: entity
 created: '2026-06-07'
-updated: 2026-09-07
+updated: 2026-09-10
 review_confidence: 8
 review_recommendation: worth-reading
 review_value: 7

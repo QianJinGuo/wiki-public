@@ -3,7 +3,7 @@ title: "科大讯飞星火Token Factory：企业AI模型路由与成本管理统
 type: entity
 tags: [iFLYTEK, model-routing, token-factory, cost-management, ai-gateway, semantic-caching, prompt-compression, inference-optimization, ascend, enterprise-ai, finops, model-governance]
 created: 2026-07-23
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 8
 review_confidence: 8
 sources:

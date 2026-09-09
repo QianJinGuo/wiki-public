@@ -1,7 +1,7 @@
 ---
 title: "Meta 首个 Agent 生图模型：LLM controlled generation 新范式"
 created: 2026-07-08
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [meta, image-generation, agent, multimodal, llm]
 confidence: 0.55

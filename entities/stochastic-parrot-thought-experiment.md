@@ -4,7 +4,7 @@ title: "Stochastic Parrot Thought Experiment"
 type: entity
 tags: [aws, claude, gpt, model, training]
 created: 2026-05-21
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 7
 review_confidence: 8
 sources: [raw/articles/stochastic-parrot-thought-experiment]

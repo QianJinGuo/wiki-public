@@ -1,7 +1,7 @@
 ---
 title: "U of T AI Worm：CleverHans Lab 展示可自适应的 AI 蠕虫威胁"
 created: 2026-06-10
-updated: 2026-09-07
+updated: 2026-09-10
 tags: [security, ai-threat, llm-security, cleverhans, u-of-t, papernot, agent-security, malware, worm]
 review_value: 7
 review_confidence: 7

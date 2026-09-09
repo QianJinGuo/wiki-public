@@ -1,7 +1,7 @@
 ---
 title: "欢迎来到 AGI 时代的 AI 治理 — Nathan Lambert 论美国政府强制 Anthropic 限制 Fable/Mythos 访问"
 created: 2026-07-01
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [ai-governance, anthropic, fable, mythos, interconnects, nathan-lambert, export-control, open-models, ai-safety, us-government]
 sources: [raw/articles/welcome-to-the-agi-era-of-ai-governance]

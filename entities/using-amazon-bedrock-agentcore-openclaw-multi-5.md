@@ -3,7 +3,7 @@
 
 title: "基于 AWS 示例项目，展示如何将 OpenClaw 迁移为基于 Amazon Bedrock AgentCore 的多租户 Serverless 架构"
 created: 2026-05-16
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [agent, openclaw, aws, architecture, ai]
 sources:

@@ -1,7 +1,7 @@
 ---
 title: "VoxCPM2：OpenBMB 开源 Tokenizer-free TTS，Voice Design 文字描述生成声音"
 created: 2026-06-30
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [tts, voice-synthesis, openbmb, voxcpm, tokenizer-free, voice-design, voice-cloning, diffusion, autoregressive, audio-vae, minicpm, open-source, apache-2.0, multi-language, chinese-dialects]
 sources: [raw/articles/voxcpm2-openbmb-tts-voice-design-jikezhijia-2026-06-30]

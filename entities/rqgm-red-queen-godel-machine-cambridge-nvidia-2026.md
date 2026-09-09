@@ -1,7 +1,7 @@
 ---
 title: "Red Queen Gödel Machine (RQGM)：共进化 Agent 与评估器的递归自改进框架"
 created: 2026-06-28
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [self-improvement, godel-machine, co-evolution, red-queen, evaluator, agent-as-judge, recursive-self-improvement, cambridge, nvidia, arxiv-2606.26294]
 sources: [raw/articles/rqgm-red-queen-godel-machine-cambridge-nvidia-2026]

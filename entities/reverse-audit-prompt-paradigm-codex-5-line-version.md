@@ -1,7 +1,7 @@
 ---
 title: "反向审计 Prompt 范式 — 从 VB 50 行 Codex 自我蒸馏到 5 行核心"
 created: 2026-06-11
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [prompt-engineering, reverse-audit, codex, vaibhav-srivastav, openai, codex-skills, codex-subagent, codex-chronicle, codex-memories, agents.md, skill-description, trigger-words, producer-receipts, worker-boundary, paradigm-shift, agent-self-evaluation, xiaohei, ai-native-software-engineering]
 sources: [raw/articles/ai-native-software-engineering-codex-reverse-audit-5-line-prompt]

@@ -2,7 +2,7 @@
 title: "Sakana Fugu 发布：Claude 禁令后的多 Agent 编排 API，LiveCodeBench 93.2"
 description: "Sakana AI 在 Anthropic 暂停 Fable 5/Mythos 5 后发布 Fugu，Fugu Ultra 在 LiveCodeBench 上超越 Fable，但黑盒路由器的可信问题引发关注。"
 created: 2026-07-01
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [sakana, ai-agent, multi-agent, coding-agent, benchmark, livecodebench]
 sources: [raw/articles/sakana-fugu-livecodebench-93-2]

@@ -1,7 +1,7 @@
 ---
 title: "What it feels like to work with Mythos"
 created: 2026-07-02
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [mythos, anthropic, ai-security, agent, evaluation, red-teaming]
 sources: [raw/articles/what-it-feels-like-to-work-with-mythos]

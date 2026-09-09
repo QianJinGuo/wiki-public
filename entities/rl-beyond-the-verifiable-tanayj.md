@@ -1,7 +1,7 @@
 ---
 title: "RL Beyond the Verifiable: 当奖励信号无法自动验证时"
 created: 2026-06-30
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [rl, rlvr, reinforcement-learning, training, alignment, reward-model]
 sources: [raw/articles/rl-beyond-the-verifiable]

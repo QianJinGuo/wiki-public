@@ -1,7 +1,7 @@
 ---
 title: "火山引擎《智能体安全能力图谱》——企业智能体安全治理框架"
 created: 2026-08-26
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [agent, security, governance, harness, ai-safety, enterprise, bytedance, 智能体安全]
 sources: [raw/articles/volcano-engine-agent-security-capability-map-2026]

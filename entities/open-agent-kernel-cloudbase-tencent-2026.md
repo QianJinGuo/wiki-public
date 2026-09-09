@@ -2,7 +2,7 @@
 title: "OpenAgentKernel：腾讯云 CloudBase 的 Agent 开发框架层"
 type: entity
 created: "2026-08-03"
-updated: 2026-09-07
+updated: 2026-09-10
 tags: [wechat, agent, framework, cloudbase, mcp, hitl, sandbox]
 rating: v7c8
 confidence: 0.8

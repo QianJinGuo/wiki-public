@@ -2,7 +2,7 @@
 
 tags: [workflow, tool, open-source, quality, testing, ratchet]
 title: "gstack — AI协作开发工作流 & 复杂度棘轮"
-updated: 2026-09-07
+updated: 2026-09-10
 created: 2026-04-30
 type: entity
 sources: [raw/articles/gstack-garry-tan-600k-lines-60-days, raw/articles/garry-tan-complexity-ratchet-90percent-testing-20260513]

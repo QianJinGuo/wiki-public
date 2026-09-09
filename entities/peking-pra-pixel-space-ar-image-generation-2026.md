@@ -1,7 +1,7 @@
 ---
 title: "Parallel Rollout Approximation (PRA) — 像素空间自回归图像生成"
 created: 2026-07-14
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [vision, image-generation, autoregressive, research, pku, deep-learning]
 sources: [raw/articles/peking-pra-pixel-space-ar-image-2026]

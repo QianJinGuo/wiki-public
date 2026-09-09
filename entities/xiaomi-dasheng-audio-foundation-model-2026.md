@@ -1,7 +1,7 @@
 ---
 title: "Xiaomi Dasheng — 通用声音基座模型 5 阶段工程实践"
 created: 2026-06-12
-updated: 2026-09-07
+updated: 2026-09-10
 date: "2026-06-12"
 tags: [xiaomi-dasheng, audio-foundation, mae-audio, audio-pretrain, universal-audio, midashenglm, dashengtokenizer, audio-caption, acavcaps, mecat, ced-distillation, self-supervised, audio-tokenizer, webassembly, knowledge-distillation, 6d-caption]
 provenance_state: inferred

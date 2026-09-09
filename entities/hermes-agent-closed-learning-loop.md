@@ -3,7 +3,7 @@
 
 title: "Hermes Agent 闭环学习机制"
 created: 2026-05-07
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [agent, openclaw, open-source, architecture]
 sources:

@@ -2,7 +2,7 @@
 
 title: "Navigating EU AI Act Requirements for LLM Fine-Tuning"
 created: 2026-05-13
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 source: rss
 source_url:

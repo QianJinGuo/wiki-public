@@ -1,7 +1,7 @@
 ---
 title: "淘宝直播数字人 Agentic 架构升级：AgentTuning + RLVR + Multi-Agent RL"
 created: "2026-07-14"
-updated: 2026-09-07
+updated: 2026-09-10
 type: "entity"
 tags: [taobao, digital-human, agentic-rl, multi-agent-rl, rlvr, agent-tuning, live-streaming, alibaba, reinforcement-learning, llm-agent]
 confidence: 0.8

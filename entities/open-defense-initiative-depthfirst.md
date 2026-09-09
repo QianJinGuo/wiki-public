@@ -3,7 +3,7 @@ title: "Open Defense Initiative | depthfirst"
 type: entity
 tags: [open-defense-initiative, depthfirst, ai-security, vulnerability-discovery, open-source, ffmpeg, mythos, gpt-5-5-cyber]
 created: 2026-05-15
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 7
 review_confidence: 8
 review_recommendation: strong

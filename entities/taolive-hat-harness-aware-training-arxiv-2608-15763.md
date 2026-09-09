@@ -1,7 +1,7 @@
 ---
 title: "TaoLive HAT：让 Agent 与 Harness 共同演化（Harness-Aware Training）"
 created: 2026-08-22
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [agent, harness, post-training, skill, arxiv, agentic-rl, digital-avatar]
 sources: [raw/articles/taolive-digital-avatar-agent-harness-aware-training-arxiv-2608-15763]

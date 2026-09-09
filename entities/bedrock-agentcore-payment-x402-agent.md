@@ -2,7 +2,7 @@
 
 title: "用 Amazon Bedrock AgentCore Payment 构建自主支付 AI Agent：x402 协议实战"
 created: 2026-06-01
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: ['aws', 'bedrock', 'agentcore', 'payment', 'x402', 'tutorial']
 source: [[raw/articles/bedrock-agentcore-payment-x402-agent]]

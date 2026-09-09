@@ -3,7 +3,7 @@ title: "Notes on pretraining parallelisms and failed training runs."
 type: entity
 tags: [dwarkesh]
 created: 2026-05-19
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 7
 review_confidence: 9
 review_recommendation: worth-reading

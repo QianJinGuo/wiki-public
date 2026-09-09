@@ -1,7 +1,7 @@
 ---
 title: "How OpenAI Delivers Low-Latency Voice AI for 900M Users"
 created: 2026-07-03
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [newsletter, ai, voice, inference, latency]
 sources: [raw/articles/openai-low-latency-voice-ai-900m-users-bytebytego]

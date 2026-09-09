@@ -4,7 +4,7 @@ slug: yumanju-ai-full-flow-efficiency
 type: entity
 tags: [ai, video, workflow, efficiency, rules, mcp, skills, harness, f2c, aiqa, agent]
 created: 2026-05-10
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 10
 review_confidence: 10
 sources: [raw/articles/yumanju-ai-full-flow-efficiency]

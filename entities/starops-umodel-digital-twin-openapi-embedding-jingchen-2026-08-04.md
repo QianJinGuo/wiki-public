@@ -1,7 +1,7 @@
 ---
 title: "STAROps UModel 运维数字孪生 + OpenAPI 嵌入：精臣智能运维底座实践"
 created: 2026-08-04
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [STAROps, UModel, UnifiedModel, semantic-layer, digital-twin, observability, Alibaba-Cloud, SRE, AIOps, openapi, topology, root-cause, ontology, mcp]
 sources: [raw/articles/starops-umodel-digital-twin-openapi-embedding-jingchen-2026-08-04, raw/articles/starops-generalizable-rca-umodel-rcabench-aliyun-2026-08-18, raw/articles/unifiedmodel-agent-semantic-layer-object-graph-aliyun-2026-09-06]

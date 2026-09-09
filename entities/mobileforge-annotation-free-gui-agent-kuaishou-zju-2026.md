@@ -1,7 +1,7 @@
 ---
 title: "MobileForge：无标注手机 GUI Agent 适配系统（快手、浙大）"
 created: 2026-07-09
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [gui-agent, mobile-agent, annotation-free, reinforcement-learning, grpo, kuaishou, zhejiang-university]
 sources: [raw/articles/不用人工标注gui-agent跑起数据飞轮快手浙大开源mobileforge]

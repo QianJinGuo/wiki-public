@@ -3,7 +3,7 @@
 title: "Cisco Preps For A World Of AI Agent Coworkers, Frontier Model Threats"
 type: entity
 created: 2026-06-05
-updated: 2026-09-07
+updated: 2026-09-10
 tags: [article, newsletter, ai, agent]
 sources:
   - raw/articles/cisco-preps-for-a-world-of-ai-agent-coworkers-frontier-model-threats

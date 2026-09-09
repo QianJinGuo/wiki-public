@@ -3,7 +3,7 @@ title: "How Claude Code works in large codebases: Best practices and where to st
 type: entity
 tags: [claude-code, best-practices, enterprise, large-codebase, monorepo]
 created: 2026-05-18
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 7
 review_confidence: 9
 review_recommendation: worth-reading

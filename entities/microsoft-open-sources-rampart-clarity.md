@@ -4,7 +4,7 @@ title: Microsoft Open-Sources RAMPART and Clarity to Secure AI Agents During Dev
 type: entity
 tags: [security,microsoft,ai,red-team]
 created: 2026-05-22
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 8
 review_confidence: 8
 review_recommendation: strong

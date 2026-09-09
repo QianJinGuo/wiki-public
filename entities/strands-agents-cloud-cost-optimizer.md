@@ -2,7 +2,7 @@
 
 title: "基于 Strands Agents 构建亚马逊云科技云成本分析与优化 AI 助手"
 created: 2026-06-01
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [aws, strands, cost-optimization, agent, tutorial]
 source: [[raw/articles/strands-agents-cloud-cost-optimizer]]

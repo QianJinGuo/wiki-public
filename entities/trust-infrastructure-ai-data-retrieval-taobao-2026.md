@@ -1,7 +1,7 @@
 ---
 title: "AI 取数信任基础设施：代号层 + 确定性 SQL 引擎 + Skill 门禁"
 created: 2026-08-28
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [ai, data-retrieval, trust-infrastructure, semantic-layer, codename-layer, deterministic-sql, nl2sql, skill-gate, auditability, taobao, data-warehouse, text-to-sql, data-agent]
 sources:

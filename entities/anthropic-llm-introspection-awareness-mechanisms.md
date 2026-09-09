@@ -10,7 +10,7 @@ url:
 review_value: 9
 review_confidence: 9
 review_stars: 5
-updated: 2026-09-07
+updated: 2026-09-10
 sources: [raw/articles/anthropic-llm-introspection-awareness-mechanisms]
 reviewed: 2026-09-07
 review_verdict: keep

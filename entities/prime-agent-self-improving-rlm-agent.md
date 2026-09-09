@@ -1,7 +1,7 @@
 ---
 title: "Prime Agent — 以 RLM + Continual Harness 双抽象为核心的自改进编码 Harness"
 created: 2026-08-06
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [harness, self-improving-agent, rlm, agent-architecture, coding-agent, open-source, prime-intellect]
 sources: [raw/articles/prime-agent-self-improving-rlm-agent]

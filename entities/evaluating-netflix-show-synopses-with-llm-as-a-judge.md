@@ -5,7 +5,7 @@ description: "Solid industry application of LLM-as-a-Judge methodology with mean
 source: "[[raw/articles/evaluating-netflix-show-synopses-with-llm-as-a-judge]]"
 tags: [evaluation, llm, netflix]
 created: 2026-06-07
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 review_value: 7
 review_confidence: 7

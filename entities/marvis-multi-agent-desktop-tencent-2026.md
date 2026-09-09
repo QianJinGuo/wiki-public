@@ -1,7 +1,7 @@
 ---
 title: "Marvis — 腾讯多智能体桌面助手"
 created: 2026-07-15
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [agent, multi-agent, tencent, desktop, edge-cloud, product, ai-assistant, gui-agent, tool-use]
 sources: [raw/articles/marvis-multi-agent-desktop-tool-tencent-2026-07-15]

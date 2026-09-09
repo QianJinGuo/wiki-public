@@ -1,7 +1,7 @@
 ---
 title: "OpenART Arena：长程 Agent 红队评测的环境演化"
 created: 2026-09-05
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [agent, security, eval, red-team, harness-engineering, safety, benchmark]
 sources: [raw/articles/openart-agent-red-team-evolving-environment-2026]

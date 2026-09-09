@@ -3,7 +3,7 @@
 title: "Memory Prices - Stanford DAM Interactive Dataset"
 type: entity
 created: 2026-06-30
-updated: 2026-09-07
+updated: 2026-09-10
 source: "[[raw/articles/memory-prices-stanford]]"
 tags: [hardware, memory, data-visualization, economics, DRAM, supply-chain, HBM]
 confidence: 0.85

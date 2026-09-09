@@ -1,7 +1,7 @@
 ---
 title: "The Primitive is the Product — AI 时代的产品哲学：从功能到原语"
 created: 2026-07-02
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [ai, product, agent, software-engineering, philosophy, api-design]
 sources: [raw/articles/primitive-is-the-product-amplify-partners]

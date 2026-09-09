@@ -4,7 +4,7 @@ title: "你的 AI Agent 真的在受控运行吗？"
 type: entity
 tags: [agent, openclaw, observability]
 created: 2026-05-21
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/openclaw-agent-observability-session-logs-otel-sls]

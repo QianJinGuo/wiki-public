@@ -1,7 +1,7 @@
 ---
 title: "The Shape of AI: Jaggedness, Bottlenecks and Salients"
 created: 2026-06-10
-updated: 2026-09-07
+updated: 2026-09-10
 tags: [code, data, fine-tuning, llm, memory, observability, prompt, rl, search, vision, jagged-frontier, bottleneck]
 review_value: 7
 review_confidence: 7

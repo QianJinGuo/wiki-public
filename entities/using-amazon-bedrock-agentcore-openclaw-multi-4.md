@@ -2,7 +2,7 @@
 
 title: "AI Agent 的迁移与现代化 — 使用 Amazon Bedrock AgentCore 将 OpenClaw 从单机改造为多租户 Serverless 架构 第四篇 | 亚马逊AWS官方博客"
 created: 2026-05-14
-updated: 2026-09-07
+updated: 2026-09-10
 tags: [aws-china-blog, bedrock-agentcore, openclaw]
 sources: [raw/articles/using-amazon-bedrock-agentcore-openclaw-multi-4]
 review_value: 8

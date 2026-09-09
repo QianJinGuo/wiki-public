@@ -2,7 +2,7 @@
 
 title: "Intelligence Per Dollar"
 created: 2026-06-05
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [article, newsletter]
 source: [[raw/articles/tokens-per-result]]

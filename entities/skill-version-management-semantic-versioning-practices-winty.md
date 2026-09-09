@@ -1,7 +1,7 @@
 ---
 title: "Skill 版本管理五大原则：从越改越差到持续演进"
 created: 2026-06-09
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [skill, version-management, semantic-versioning, hermes-agent, agent-system, prompt-engineering, evaluation, regression-testing, enterprise-ai]
 sources:

@@ -5,7 +5,7 @@ description: "MiniMax M3 — 国内首个开源 Frontier 三件套模型：Codin
 source: [[raw/articles/minimax-m3-frontier-three-set-open-source]]
 tags: [minimax, minimax, minimax-m3, frontier-model, sparse-attention, msa, native-multimodal, coding-agent, interactive-simulator, posttrainbench, open-source]
 created: 2026-06-01
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 provenance_state: inferred
 review_value: 7

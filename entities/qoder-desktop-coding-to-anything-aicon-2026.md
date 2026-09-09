@@ -1,7 +1,7 @@
 ---
 title: "从 Coding 到 Anything：Qoder 多 Agent 协作与托管运行时"
 created: 2026-07-07
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [agent, qoder, harness, runtime, multi-agent, desktop-agent, hosted-runtime]
 sources: [raw/articles/raw-qoder-desktop-coding-to-anything-aicon-2026]

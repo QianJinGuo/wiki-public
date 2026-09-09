@@ -1,7 +1,7 @@
 ---
 title: "ScienceClaw AutoProject：紫东太初把 AI4S 从 Task 推向 Project（项目级自主科研引擎）"
 created: 2026-08-25
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [ai4s, scienceclaw, autoproject, project2task, taskexecutor, evigraph, zhongke-zidong-taichu, autonomous-research, scientific-agent, multi-agent, project-level-ai, arcbench]
 confidence: 0.7

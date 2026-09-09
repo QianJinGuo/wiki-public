@@ -1,7 +1,7 @@
 ---
 title: "Video Agent 范式迁移与算力-人才飞轮：Ethan He 从 Cosmos 到 Grok Imagine 的第一手洞见"
 created: "2026-06-06"
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [video-agent, video-generation, video-model, cosmos, grok-imagine, xai, nvidia, scaling-law, talent-acquisition, compute-moat, research-organization, latent-space, diffusion-transformer, world-model, frontier-model, paradigm-shift]
 sources: [raw/articles/ethan-he-cosmos-grok-imagine-latent-space-video-agent-20260606]

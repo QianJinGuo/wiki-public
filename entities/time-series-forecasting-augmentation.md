@@ -1,7 +1,7 @@
 ---
 title: "时间序列预测数据增强方法"
 created: 2026-04-30
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [time-series, data-augmentation, forecasting, frequency-domain, wavelet, patch-based]
 sources: [raw/articles/time-series-forecasting-augmentation-methods]

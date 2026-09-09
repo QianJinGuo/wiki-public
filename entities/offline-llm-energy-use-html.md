@@ -3,7 +3,7 @@ title: "Apple Silicon costs more than OpenRouter"
 type: entity
 tags: [newsletter, article, inference, cost-analysis, apple, hardware]
 created: 2026-05-18
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 7
 review_confidence: 7
 review_recommendation: worth-reading

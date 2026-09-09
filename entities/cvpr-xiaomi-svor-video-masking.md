@@ -3,7 +3,7 @@
 type: entity
 title: "CVPR冠军代码开源：小米SVOR破解视频消除三大顽疾，连人带影一键抹除"
 created: 2026-05-12
-updated: 2026-09-07
+updated: 2026-09-10
 source: wechat
 source_url:
 ingested: 2026-05-12

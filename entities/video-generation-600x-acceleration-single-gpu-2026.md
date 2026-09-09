@@ -1,7 +1,7 @@
 ---
 title: "600 倍加速 720p 视频实时生成 — 单卡 14B 模型推理优化"
 created: 2026-08-13
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [video-generation, inference-optimization, acceleration, 14b, consumer-gpu, attention]
 sources: [raw/articles/600倍加速720p视频实时生成单卡也能带的动14b模型]

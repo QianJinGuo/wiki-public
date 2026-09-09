@@ -1,7 +1,7 @@
 ---
 title: "OpenSandbox：阿里开源的云端 Agent 安全沙箱（凭据 Vault + egress sidecar）"
 created: 2026-06-28
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [sandbox, security, credential-vault, egress-sidecar, cloud-agent, aliyun, opensandbox, kubernetes, docker]
 sources: [raw/articles/opensandbox-aliyun-cloud-agent-sandbox-vibecoder, raw/articles/opensandbox-credential-vault-vibecoder-2026-06-30]

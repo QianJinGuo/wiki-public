@@ -2,7 +2,7 @@
 
 title: "γ-World: 多 Agent 世界建模（NVIDIA Research）"
 created: 2026-06-01
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [world-model, multi-agent, nvidia, generative-ai, attention-mechanism, research]
 source: "[[raw/articles/nvidia-gamma-world-multi-agent-world-model]]"

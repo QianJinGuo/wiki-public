@@ -3,7 +3,7 @@
 
 title: "Model-Harness Fit：Agent 脚手架适配模型"
 created: 2026-05-20
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: ['model', 'harness', 'agent', 'llm', 'coding-agent', 'model-harness-fit']
 sources:

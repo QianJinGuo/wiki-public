@@ -2,7 +2,7 @@
 
 title: "Martin Fowler AI 研发 Harness：非确定性承重层"
 created: 2026-05-10
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [agent, harness, martin-fowler, software-engineering, nondeterminism]
 sources: [raw/articles/martin-fowler-ai-rd-harness-nondeterminism]

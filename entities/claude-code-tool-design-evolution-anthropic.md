@@ -8,7 +8,7 @@ review_value: 6
 sources: [raw/articles/claude-code-tool-design-evolution-anthropic]
 review_confidence: 10
 description: Anthropic 官方复盘 Claude Code 工具设计演进，揭示"能力适配"核心原则
-updated: 2026-09-07
+updated: 2026-09-10
 reviewed: 2026-09-07
 review_verdict: keep
 review_category: practice

@@ -3,7 +3,7 @@
 title: "Ethan Mollick: Claude Code and What Comes Next (Practitioner View)"
 description: "One Useful Thing 2026-01 对 Claude Code 的现象级用户视角实测 — 1小时14分自动建站部署、compaction / Skills / subagents / MCP 四大魔法的端到端演示，及对非程序员的入门指南。"
 created: 2026-06-07
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [claude-code, oneusefulthing, ethan-mollick, practitioner, autonomous-coding, skills, subagents, mcp, compaction]
 source: "[[raw/articles/claude-code-and-what-comes-next]]"

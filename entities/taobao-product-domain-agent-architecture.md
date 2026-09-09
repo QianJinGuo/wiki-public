@@ -2,7 +2,7 @@
 
 title: "万级实时推理的商品领域Agent实践思考和总结"
 created: 2026-05-25
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [agent, ai-agent, e-commerce, taobao, function-calling, real-time-inference]
 source: [[raw/articles/taobao-product-domain-agent-architecture]]

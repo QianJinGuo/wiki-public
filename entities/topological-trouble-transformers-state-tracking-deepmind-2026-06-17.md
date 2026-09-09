@@ -1,7 +1,7 @@
 ---
 title: "Transformer 的拓扑麻烦：DeepMind 论证状态追踪是架构性缺陷，CoT 只是补丁"
 created: 2026-06-17
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags:
   - transformer

@@ -1,7 +1,7 @@
 ---
 title: "Ornith-1.5：模型自出题、自搭脚手架、自跑轨迹的编码 RL 闭环"
 created: 2026-08-27
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [rl, self-play, post-training, coding-agent, grpo, curriculum-learning, synthetic-data, open-weights]
 sources: [raw/articles/ornith-15-self-play-self-generated-tasks-coding-rl-2026]

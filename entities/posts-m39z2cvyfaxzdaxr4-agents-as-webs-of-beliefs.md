@@ -2,7 +2,7 @@
 
 title: "Agents as Webs of Beliefs"
 created: 2026-06-29
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [agent, mlops, research]
 provenance_state: inferred

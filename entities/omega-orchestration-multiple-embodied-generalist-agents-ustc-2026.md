@@ -1,7 +1,7 @@
 ---
 title: "OMEGA: 面向多机器人协作的具身Agent Harness"
 created: 2026-07-12
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [embodied, robot, multi-agent, orchestration, harness, collaboration, embodied-ai]
 confidence: 0.7

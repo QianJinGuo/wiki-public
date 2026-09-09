@@ -2,7 +2,7 @@
 description: Auto-generated placeholder
 title: "Hermes Agent 自我改进机制概述"
 created: 2026-05-12
-updated: 2026-09-07
+updated: 2026-09-10
 source: "[[raw/articles/hermes-self-improving-overview-winty|原文存档]]"
 type: entity
 value: 7

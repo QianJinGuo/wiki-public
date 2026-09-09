@@ -6,7 +6,7 @@ title: "Offensive Security Blog"
 source_url:
 source: newsletter
 date: 2026-05-14
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 8
 sources: [raw/articles/offensive-security-blog]
 review_confidence: 7

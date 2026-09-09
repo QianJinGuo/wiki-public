@@ -1,7 +1,7 @@
 ---
 title: "独家对话罗福莉：AI范式已然巨变！"
 created: 2026-05-02
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 status: published
 source: "[[raw/articles/luo-fuli-ai-paradigm-shift|原文存档]]"

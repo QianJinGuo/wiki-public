@@ -1,7 +1,7 @@
 ---
 title: "Open ASR Leaderboard × VoiceArena Monsoon: 9轴变体评估框架与公平性分析"
 created: 2026-09-01
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [asr, speech-recognition, evaluation, benchmark, fairness, multilingual, huggingface, voicearena]
 sources: [raw/articles/the-open-asr-leaderboard-adds-its-first-global-south-languages-voicearena-monsoon]

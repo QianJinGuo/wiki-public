@@ -8,7 +8,7 @@ author:
   - "Wrick Talukdar (AWS)"
 publish_date: 2026-06-11
 created: 2026-06-11
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags:
   - aws

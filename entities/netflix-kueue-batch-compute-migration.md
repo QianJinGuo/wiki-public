@@ -1,7 +1,7 @@
 ---
 title: "Netflix Kueue 迁移：百万级 Batch Job 从 CMB 到 Kubernetes 原生调度"
 created: 2026-06-23
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [kueue, kubernetes, batch-compute, netflix, titus, job-scheduling, fair-sharing, preemption, infrastructure-migration, platform-engineering]
 sources:

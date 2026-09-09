@@ -1,7 +1,7 @@
 ---
 title: "Martin Fowler AI 研发提醒：Harness 承重层"
 created: "2026-05-10"
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [martin-fowler, harness-engineering, agentic-engineering, vibe-coding, llm, software-engineering, nondeterminism]
 sources: [martin-fowler-的-ai-研发提醒非确定性进了研发链路harness-才真正开始承重]

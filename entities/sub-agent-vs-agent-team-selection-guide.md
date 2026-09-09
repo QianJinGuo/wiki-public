@@ -3,7 +3,7 @@
 
 title: "Sub-Agent vs Agent Team 选型指南"
 created: 2026-05-16
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [agent, architecture]
 sources:

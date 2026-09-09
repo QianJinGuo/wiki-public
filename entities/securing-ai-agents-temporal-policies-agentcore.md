@@ -1,7 +1,7 @@
 ---
 title: "Agent 时间性策略（Temporal Policies）：基于轨迹的有状态授权架构"
 created: 2026-08-07
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [agent, security, authorization, temporal-policy, stateful, trajectory, agentcore, governance, cedar, dogwood]
 sources: [raw/articles/securing-ai-agents-with-temporal-policies-in-amazon-bedrock-agentcore, raw/articles/authoring-dogwood-policies-from-natural-language-in-amazon-bedrock-agentcore]

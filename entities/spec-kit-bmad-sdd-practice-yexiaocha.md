@@ -2,7 +2,7 @@
 
 title: "Spec-Kit vs BMAD：AI 原生 SDD 双框架实战对比（叶小钗重构迁移案例）"
 created: 2026-06-05
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [agent, sdd, spec-driven-development, spec-kit, bmad, ai-native-team, multi-agent, roundtable, refactor-migration, yexiaocha]
 sources: [raw/articles/spec-kit-bmad-sdd-practice-yexiaocha]

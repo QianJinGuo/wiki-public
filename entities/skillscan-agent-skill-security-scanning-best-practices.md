@@ -1,7 +1,7 @@
 ---
 title: SkillScan — 智能体技能安全扫描最佳实践
 created: 2026-07-05
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [agent, skill, security, harness, mcp, llm-engineering]
 sources: [raw/articles/一文了解skillscan-智能体技能安全扫描最佳实践]

@@ -2,7 +2,7 @@
 
 title: "Linux Foundation and Industry Leaders Launch Akrites to Defend Critical Open Source Software Against AI-Enabled Cyber Threats"
 created: 2026-06-26
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [article]
 provenance_state: inferred

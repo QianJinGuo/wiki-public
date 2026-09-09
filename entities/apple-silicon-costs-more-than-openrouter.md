@@ -4,7 +4,7 @@ title: "Apple Silicon costs more than OpenRouter"
 type: entity
 tags: [apple, apple-silicon, local-inference, openrouter, inference-cost, tokenomics, llm, cost-analysis, Gemma]
 created: 2026-05-19
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 8
 review_confidence: 8
 review_recommendation: worth-reading

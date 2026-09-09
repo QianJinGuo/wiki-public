@@ -1,7 +1,7 @@
 ---
 title: "Trellis vs Superpowers 源码对比：不同抽象层的工程框架"
 created: 2026-07-07
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [agent, coding, trellis, superpowers, harness-engineering, workflow, comparison, skills, source-analysis]
 confidence: 0.85

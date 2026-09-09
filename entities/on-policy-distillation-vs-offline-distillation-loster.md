@@ -9,7 +9,7 @@ review_value: 9
 review_confidence: 8
 review_recommendation: strong
 review_stars: 5
-updated: 2026-09-07
+updated: 2026-09-10
 sources:
   - raw/articles/opd-revisiting-failure-modes-simple-fixes-storm
 reviewed: 2026-09-07

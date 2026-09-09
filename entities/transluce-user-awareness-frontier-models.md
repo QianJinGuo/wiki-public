@@ -1,7 +1,7 @@
 ---
 title: "面对对齐研究者，Claude会心虚"
 created: 2026-08-15
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [ai, llm, 用户意识, 对齐, 情境意识, frontier-models]
 sources: [raw/articles/面对对齐研究者claude会心虚]

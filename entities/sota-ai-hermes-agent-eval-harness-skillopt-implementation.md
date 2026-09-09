@@ -8,7 +8,7 @@ review_value: 9
 review_confidence: 10
 sources:
   - raw/articles/sota-ai-hermes-agent-eval-harness-skillopt-implementation-2026-06-18
-updated: 2026-09-07
+updated: 2026-09-10
 related: [entities/skillopt, entities/skillopt-microsoft-train-skill-like-neural-network, entities/skillopt-microsoft-train-skill-hyman's-blog, entities/hermes-agent-skill-crossover-optimization, entities/skill-self-evolution-three-approaches, entities/agent-self-improvement-six-mechanisms, entities/ai-recursive-self-improvement-nanogpt-prime-intellect, entities/darwin-skill-2-huashu, entities/embabel, entities/pith-train-agent-native-moe-training-framework, entities/hermes-agent-12-layer-full-configuration-guide, entities/hermes-9-module-architecture, entities/harness-engineering-7-layers-openclaw-hermes-claude-code-p1aNu, entities/slim-cuhk-skill-lifecycle-agentic-rl, entities/deli-auto-research-skill-v2-continual-learning-self-improvement, entities/claude-code-vs-hermes-session-vs-goal-lifecycle]
 strategic_context: "[[queries/research-frontier-map|Frontier 1 — Harness/Skill 从个人能力到组织资产]]"
 provenance_state: inferred

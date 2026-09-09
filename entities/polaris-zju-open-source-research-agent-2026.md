@@ -1,7 +1,7 @@
 ---
 title: "Polaris — 浙大 ZJU-REAL 开源端到端科研智能体"
 created: 2026-08-15
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [agent, research-agent, ai-scientist, llm-wiki, open-source, zju, arxiv, skill-system, mcp]
 sources: [raw/articles/浙大团队开源ai科研智能体polaris让ai与你一起做研究]

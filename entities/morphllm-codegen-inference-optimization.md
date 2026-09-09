@@ -2,7 +2,7 @@
 title: "Optimizing Models to Be Fast at Codegen"
 description: "Morphllm codegen inference optimization: exploiting edit locality and KV cache reuse"
 created: 2026-06-24
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [codegen, inference-optimization, llm, agent, morphllm, kv-cache]
 source: [[raw/articles/morphllm-codegen-inference-optimization]]

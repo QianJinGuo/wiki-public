@@ -8,7 +8,7 @@ date: 2026-05-08
 source: newsletter
 tags: [security, architecture, ai]
 created: 2026-05-10
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 6
 sources: [raw/articles/semgrep-intercom-php-security]
 review_confidence: 8

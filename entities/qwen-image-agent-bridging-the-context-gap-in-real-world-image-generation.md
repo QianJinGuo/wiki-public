@@ -1,7 +1,7 @@
 ---
 title: "Qwen-Image-Agent: Bridging the Context Gap in Real-World Image Generation"
 created: 2026-08-01
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: ['raw', 'article']
 sources: [raw/articles/qwen-image-agent-bridging-the-context-gap-in-real-world-image-generation]

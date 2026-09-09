@@ -2,7 +2,7 @@
 
 title: "深度解析 OpenClaw 在 Prompt / Context / Harness 三个维度中的设计哲学与实践"
 created: 2026-04-25
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [agent, architecture, openclaw, prompt, context, harness, skill, memory]
 sources: [raw/articles/openclaw-prompt-context-harness]

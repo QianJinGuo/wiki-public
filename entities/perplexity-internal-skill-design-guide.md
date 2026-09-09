@@ -2,7 +2,7 @@
 
 title: "Perplexity 内部 Skill 设计指南：四维体系与维护方法论"
 created: 2026-05-20
-updated: 2026-09-07
+updated: 2026-09-10
 tags: [agent, skill, perplexity, evaluation, hub-and-spoke, 路由触发器]
 rating: 8.5
 confidence: 8.5

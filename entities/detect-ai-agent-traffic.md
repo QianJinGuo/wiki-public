@@ -2,7 +2,7 @@
 
 title: "How to Detect AI Agents on Your Website"
 created: 2026-05-16
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [agent, ai]
 sources:

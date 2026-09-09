@@ -1,7 +1,7 @@
 ---
 title: "使用 Kiro CLI 和 Agent Client Protocol 构建飞书 AI 聊天机器人 | 亚马逊AWS官方博客"
 created: 2026-05-14
-updated: 2026-09-07
+updated: 2026-09-10
 tags: [aws-china-blog, kiro, agent-sdk]
 sources: [raw/articles/using-kiro-cli-agent-client-protocol-build-ai-chat]
 review_value: 8

@@ -1,7 +1,7 @@
 ---
 title: "自己的工具自己控：MCP Server、Amazon Bedrock AgentCore、Quick Suite集成指南"
 created: 2026-05-11
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [agent, mcp, aws, bedrock]
 sources: [raw/articles/mcp-serveramazon-bedrock-agentcorequick-suite]

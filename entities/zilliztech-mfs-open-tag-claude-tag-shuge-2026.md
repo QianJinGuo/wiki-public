@@ -3,7 +3,7 @@ title: "MFS：zilliztech 的 Agent 统一上下文 harness，一套动词打通 
 authors:
   - 术哥
 created: 2026-06-29
-updated: 2026-09-07
+updated: 2026-09-10
 source: wechat
 url:
 type: entity

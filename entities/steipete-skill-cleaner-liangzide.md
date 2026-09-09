@@ -2,7 +2,7 @@
 
 title: "龙虾之父教你省钱：开源Skill给你的Skill减肥"
 created: 2026-05-26
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [skill, agent, openclaw, steipete, token-optimization, skill-cleaner]
 source: [[raw/articles/steipete-skill-cleaner-liangzide]]

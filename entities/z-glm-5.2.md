@@ -3,7 +3,7 @@ title: "GLM-5.2: Built for Long-Horizon Tasks"
 type: entity
 tags: [agent, ai, llm]
 created: 2026-06-18
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 9
 review_confidence: 8
 review_recommendation: worth-reading

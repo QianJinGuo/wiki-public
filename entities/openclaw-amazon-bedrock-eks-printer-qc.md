@@ -2,7 +2,7 @@
 
 title: "OpenClaw + Amazon Bedrock + Amazon EKS 联动实践：打印机包装质检助手实战"
 created: 2026-06-01
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: ['aws', 'bedrock', 'openclaw', 'eks', 'quality-control', 'manufacturing']
 source: [[raw/articles/openclaw-amazon-bedrock-eks-printer-qc]]

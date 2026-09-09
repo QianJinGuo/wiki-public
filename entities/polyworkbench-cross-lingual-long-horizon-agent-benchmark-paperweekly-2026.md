@@ -2,7 +2,7 @@
 
 title: "PolyWorkBench：跨语言长程工作流 Agent 评测基准"
 created: 2026-09-09
-updated: 2026-09-09
+updated: 2026-09-10
 type: entity
 tags: [benchmark, long-horizon, cross-lingual, agent-eval, workflow]
 sources: [raw/articles/polyworkbench-cross-lingual-long-horizon-agent-benchmark-paperweekly-2026]

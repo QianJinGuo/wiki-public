@@ -1,7 +1,7 @@
 ---
 title: "NVIDIA ASPIRE：机器人技能库与持续学习新范式"
 created: 2026-07-02
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [nvidia, robot, skill-library, embodied-ai, code-as-policy, continual-learning, jim-fan]
 sources: [nvidia-aspire-robot-skill-library-code-as-policy]

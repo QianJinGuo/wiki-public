@@ -3,7 +3,7 @@ title: "The Coming Loop"
 type: entity
 tags: [agent, loop, harness, ai-systems, architecture, context-engineering, software-engineering]
 created: 2026-06-24
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 9
 review_confidence: 8
 review_recommendation: strong

@@ -1,7 +1,7 @@
 ---
 title: "Noam Brown：推理预算应成为AI评估的基础变量"
 created: 2026-06-09
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [noam-brown, openai, ai-evaluation, reasoning-budget, performance-cost-curve, test-time-compute, ai-safety, benchmark, gpt55, scaling-law, reasoning-effort, rlvr]
 sources:

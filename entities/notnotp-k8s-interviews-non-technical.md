@@ -1,7 +1,7 @@
 ---
 title: "What Job Interviews Taught Me About Kubernetes"
 created: 2026-06-16
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [article, newsletter]
 source_url: "https://notnotp.com/notes/what-job-interviews-taught-me-about-kubernetes/"

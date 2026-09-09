@@ -1,7 +1,7 @@
 ---
 title: "高价率运营 AI 工作台：约定驱动与 AI 编排的评测优化实践"
 created: 2026-07-17
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [ai-testing, evaluation-framework, llm-judge, agent-evaluation, skill-system, convention-over-configuration, gold-standard, rubrics, test-automation, taobao, alibaba, production-practice]
 sources:

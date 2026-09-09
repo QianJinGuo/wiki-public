@@ -2,7 +2,7 @@
 
 title: "在企业环境中为 AI 编程工具构建内容审查层"
 created: 2026-08-30
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: ['harness', 'ai', 'inference', 'mcp', 'llm', 'coding']
 sources: [raw/articles/enterprise-environment-ai-tool-build-layer]

@@ -1,7 +1,7 @@
 ---
 title: "Yann LeCun 谈 LLM 不是智能与世界模型 JEPA"
 created: 2026-06-10
-updated: 2026-09-07
+updated: 2026-09-10
 tags: [agent, architecture, code, data, fine-tuning, llm, mlops, nvidia, observability, prompt, rag, rl, robotics, trading, vision, workflow]
 review_value: 7
 review_confidence: 7

@@ -9,7 +9,7 @@ review_recommendation: strong
 review_stars: 4
 date: 2026-06-09
 created: 2026-06-09
-updated: 2026-09-07
+updated: 2026-09-10
 tags: [autoresearch, marketing-agent, gaode, amap, ai-native, growth-marketing, business-protocol, agent-team, real-feedback-loop, human-on-the-loop, decision-intelligence, long-term-operation, multi-decision-arbitration, pre-holiday-layout, recovery-from-failure, prod-decision-agent, case-study]
 type: entity
 provenance_state: synthesized

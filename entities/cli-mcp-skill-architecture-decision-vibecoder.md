@@ -9,7 +9,7 @@ review_recommendation: strong
 review_stars: 4
 date: 2026-05-27
 created: 2026-05-28
-updated: 2026-09-07
+updated: 2026-09-10
 tags: [mcp, cli, skill, agent, tool, enterprise, architecture, governance, context-management]
 type: entity
 provenance_state: synthesized

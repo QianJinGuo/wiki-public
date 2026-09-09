@@ -1,7 +1,7 @@
 ---
 title: "OpenClaw 多智能体团队搭建实战经验"
 created: 2026-05-09
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [openclaw, multi-agent, agent-team, practice, tutorial]
 summary: "ConardLi 分享 OpenClaw 7个Agent多智能体团队经验：生图/资讯/开发/投资/社区/写作/智能专家，全流程零人工干预"

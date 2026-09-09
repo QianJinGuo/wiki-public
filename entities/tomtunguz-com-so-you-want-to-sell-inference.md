@@ -1,7 +1,7 @@
 ---
 title: "So You Want to Sell Inference"
 created: 2026-06-25
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [inference, business, ai-infrastructure, tom-tunguz, economics, llm, cloud, pricing, value-based-pricing]
 source: "[[raw/articles/tomtunguz-com-so-you-want-to-sell-inference]]"

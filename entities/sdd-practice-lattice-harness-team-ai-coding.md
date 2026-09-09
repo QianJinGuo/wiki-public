@@ -3,7 +3,7 @@ title: "从渐进式 SDD 到 Lattice Harness：AI Coding 团队级闭环实践"
 authors:
   - PrismSpec / Lattice 作者
 created: 2026-07-05
-updated: 2026-09-07
+updated: 2026-09-10
 source: wechat
 url:
 type: entity

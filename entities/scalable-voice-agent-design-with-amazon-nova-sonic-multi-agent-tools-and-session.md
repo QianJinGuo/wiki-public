@@ -4,7 +4,7 @@ title: "Scalable voice agent design with Amazon Nova Sonic: multi-agent, tools, 
 type: entity
 tags: [voice-ai, amazon-nova-sonic, multi-agent, aws, architecture]
 created: 2026-05-20
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 7
 review_confidence: 9
 review_recommendation: worth-reading

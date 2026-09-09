@@ -3,7 +3,7 @@
 title: "MIRA + MPA：深度原理 AI Scientist 递归自训练打造材料基座模型，40 项实验全面 SOTA"
 description: "深度原理 MIRA 平台递归自训练产出 MPA 材料基座模型，40 项实验性质预测全面 SOTA（平均 MAE 降 10%，最高 51%），击败 Suiren-1.0（35/40 端点胜）。AutoResearch 架构 + 自主代码重构 + 数据物理直觉 + 三阶段训练 + 物理先验架构"
 created: 2026-06-02
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [agent, ai, architecture, data, fine-tuning, knowledge-mgmt, llm, security, skill, ai4s, 深度原理, deep-principle, mira, mpa, materials-property-axiom, recursive-self-improvement, 递归自进化, autonomous-research, 自主科研, suiren, unimol, 分子基座, molecular-foundation-model, scientific-agent, self-improving-agent, ai-scientist, 三阶段训练, 物理先验, jack-clark, agi, ai-for-ai]
 sources:

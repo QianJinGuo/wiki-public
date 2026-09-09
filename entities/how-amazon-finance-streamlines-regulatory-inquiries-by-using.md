@@ -3,7 +3,7 @@
 
 title: "How Amazon Finance streamlines regulatory inquiries by using generative AI on AWS"
 created: 2026-05-16
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [aws, ai]
 sources:

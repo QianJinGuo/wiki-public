@@ -1,7 +1,7 @@
 ---
 title: "Market surveillance agent with LangGraph and Strands on AgentCore"
 created: 2026-07-29
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [agent, multi-agent, langgraph, strands, agentcore, aws, bedrock, market-surveillance, financial-services]
 sources: [raw/articles/market-surveillance-agent-with-langgraph-and-strands-on-agen]

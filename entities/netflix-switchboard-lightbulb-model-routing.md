@@ -2,7 +2,7 @@
 title: "Netflix Switchboard → Lightbulb: 百万请求/秒 ML 模型路由架构演进"
 description: "Netflix ML serving 平台从 Switchboard（集中式代理层）演进到 Lightbulb（解耦式路由元数据服务），在保持 A/B 实验透明度的同时消除单点故障和额外延迟。"
 created: 2026-06-07
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [netflix, ml-serve, model-routing, switchboard, lightbulb, ml-infrastructure, envoy, ab-testing]
 source: [[raw/articles/state-of-routing-in-model-serving]]

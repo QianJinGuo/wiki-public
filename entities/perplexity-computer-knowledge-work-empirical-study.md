@@ -8,7 +8,7 @@ source_url:
 arxiv_url:
 tags: [agent, perplexity, perplexity-computer, empirical-study, hbs, productivity, autonomy, knowledge-work, harness, evaluation, multi-domain, harvard]
 created: 2026-06-10
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 9
 review_confidence: 8
 review_recommendation: strong

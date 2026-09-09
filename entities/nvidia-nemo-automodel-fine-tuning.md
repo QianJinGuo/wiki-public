@@ -3,7 +3,7 @@
 title: "Accelerating Transformers Fine-Tuning with NVIDIA NeMo AutoModel"
 description: "NVIDIA NeMo AutoModel 在 HuggingFace Transformers v5 之上实现 MoE 微调 3.4-3.7x 加速，通过 Expert Parallelism、DeepEP 融合调度和 TransformerEngine 内核，以零代码改动升级训练性能。"
 created: 2026-06-26
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: ["mlops", "fine-tuning", "nvidia", "transformer", "training", "moe", "expert-parallelism", "deepep", "transformer-engine", "huggingface"]
 sources:

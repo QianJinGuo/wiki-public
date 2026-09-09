@@ -1,7 +1,7 @@
 ---
 title: "SGLang"
 created: 2026-04-30
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [open-source, inference, llm-serving, framework, sglang]
 sources: [raw/articles/glm5-scaling-pain-inference]

@@ -1,7 +1,7 @@
 ---
 title: "协同文档下的 Agent 透明化编辑：可回滚、可对比的协作闭环"
 created: 2026-08-19
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [agent, collaborative-editing, transparency, prosemirror, yjs, undo, rollback, doc-editor, identity-boundary]
 sources: [raw/articles/vivo-agent-transparent-collaborative-editing-rollback-2026-08-19]

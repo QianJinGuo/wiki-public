@@ -2,7 +2,7 @@
 title: "Agent 评测方法论——美团图灵两年 BP 实践（人人一致/人机一致 + 桥梁指标 + 长程范式）"
 description: "美团图灵评测团队两年 BP 经验：评测体系核心不是堆指标而是搭桥（业务指标↔模型指标桥梁层）、人人一致（独裁者）/人机一致（Rubric 二元化）对齐方法论、数据飞轮五环节、长程 Agent 评测范式（prompt-expected_behavior-trace 三元组 + 人评主导→机评主导）、评测基建七能力"
 created: 2026-08-06
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 8
 review_confidence: 9
 type: entity

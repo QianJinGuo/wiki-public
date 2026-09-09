@@ -3,7 +3,7 @@ title: "The best argument I’ve heard for why AI won't take your job"
 type: entity
 tags: [ai, jobs, future-of-work, levie]
 created: 2026-05-15
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 7
 sources: [raw/articles/platformer-ai-job-loss-levie]
 review_confidence: 8

@@ -3,7 +3,7 @@ title: "CLAUDE.md 规则从 Karpathy 的 4 条增加到 12 条"
 authors:
   - Cf2019
 created: 2026-05-18
-updated: 2026-09-07
+updated: 2026-09-10
 source: wechat
 url:
 type: entity

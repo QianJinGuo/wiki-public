@@ -1,7 +1,7 @@
 ---
 title: "TriWorldBench：首个三视角具身世界模型榜单（北大/清华/北航/上交/中科大）"
 created: 2026-08-27
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [ai, world-model, benchmark, embodied-ai, evaluation, multi-view, robotics]
 sources: [raw/articles/triworldbench-three-view-embodied-world-model-benchmark-2026]

@@ -2,7 +2,7 @@
 
 title: "一个 AI 还是不够的：MiniMax Agent Team（Mavis）"
 created: 2026-05-13
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [agent, llm, ai]
 sources:

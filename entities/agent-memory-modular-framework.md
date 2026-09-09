@@ -2,7 +2,7 @@
 
 title: "Agent Memory 模块化框架与评测：Memory in the LLM Era 4 模块 + 10 方案对比 + 新方法 F1 38.79 + 4 条工程原则"
 created: 2026-04-30
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [agent-memory, architecture, retrieval-augmented-generation, memory-management, llm-agent, iclr2026, long-context, benchmark, arxiv-2604-01707, four-module-framework, locomo, longmemeval, mem0, memos, memoryos, memtree, modular-architecture, distillery-xiaoyu, 2026, engineering-principles, position-bias, token-cost, memory-governance]
 sources: [raw/articles/memory-in-the-llm-era-iclr2026, raw/articles/agent-memory-architecture-essence, raw/articles/agent-memory-4-module-framework-10-methods-comparison-distillery-xiaoyu-2026]

@@ -1,7 +1,7 @@
 ---
 title: "Thinking Machines 交互模型（Interaction Models）"
 created: 2026-05-13
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [thinking-machines, interaction-model, multimodal, real-time, mira-murati, lilian-weng, agent]
 sources: [raw/articles/thinking-machines-interaction-models-ai-cold, raw/articles/bytebytego-inside-thinking-machines-interaction-models]

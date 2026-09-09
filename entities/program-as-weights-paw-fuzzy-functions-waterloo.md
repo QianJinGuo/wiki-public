@@ -1,7 +1,7 @@
 ---
 title: "Program-as-Weights (PAW) — 神经编译模糊函数为 LoRA 权重"
 created: 2026-07-07
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [program-as-weights, paw, fuzzy-functions, lora, neural-compilation, llm-optimization, edge-ai, waterloo, model-compression]
 sources: [raw/articles/program-as-weights-paw-fuzzy-functions-waterloo]

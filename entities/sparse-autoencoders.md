@@ -1,7 +1,7 @@
 ---
 title: "Sparse Autoencoders"
 created: 2026-04-23
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [interpretability, anthropic, mech-interp]
 provenance_state: inferred

@@ -5,7 +5,7 @@ source: "[[raw/articles/openclaw-hermes-source-code-agent-architecture-review]]"
 sources: [raw/articles/openclaw-hermes-source-code-agent-architecture-review]
 tags: [agent, openclaw, hermes, architecture, source-code, local-first, channel, gateway, memory, sandbox]
 created: 2026-05-29
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 confidence: 0.9
 provenance_state: extracted

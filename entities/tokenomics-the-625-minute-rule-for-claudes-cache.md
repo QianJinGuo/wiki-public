@@ -4,7 +4,7 @@ title: "Tokenomics: the 62.5-minute rule for Claude's cache"
 type: entity
 tags: [claude]
 created: 2026-05-19
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 8
 review_confidence: 8
 review_recommendation: worth-reading

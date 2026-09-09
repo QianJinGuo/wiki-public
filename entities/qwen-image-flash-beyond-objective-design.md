@@ -1,7 +1,7 @@
 ---
 title: "Qwen-Image-Flash: Beyond Objective Design — Few-step Distillation Training Recipe"
 created: 2026-06-05
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [vision, image-generation, distillation, few-step, qwen, training-recipe, arxiv]
 source: [[raw/articles/qwen-image-flash-beyond-objective-design]]

@@ -9,7 +9,7 @@ review_value: 7
 review_confidence: 7
 review_stars: 3
 created: 2026-06-01
-updated: 2026-09-07
+updated: 2026-09-10
 sources:
   - raw/articles/powering-agentic-ai-sales-strategy-with-amazon-bedrock-agent
 reviewed: 2026-09-07

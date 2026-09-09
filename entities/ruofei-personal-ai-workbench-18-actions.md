@@ -2,7 +2,7 @@
 source_url:
 title: "Personal AI 工作台：Claude 18 动作框架"
 created: 2026-05-19
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [harness, personal-harness, workflow, context-management, claude]
 review_value: 7

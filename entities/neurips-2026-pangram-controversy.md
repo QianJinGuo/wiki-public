@@ -2,7 +2,7 @@
 
 title: "NeurIPS 2026 Pangram 事件：闭源 AI 检测器用于学术 desk-reject 的方法论争议"
 created: 2026-06-04
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [neurips, peer-review, ai-detection, pangram, desk-reject, calibration, distribution-shift, methodology, fairness, academic-integrity, black-box, reddithread, conference-policy]
 sources: [raw/articles/neurips-2026-pangram-desk-reject-controversy]

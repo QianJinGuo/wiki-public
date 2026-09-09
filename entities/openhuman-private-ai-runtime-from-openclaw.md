@@ -4,7 +4,7 @@ title: "从 OpenClaw 到 OpenHuman：私人 AI Runtime 的雏形"
 type: entity
 tags: [openhuman, ai-runtime, local-first, private-ai, agent, memory-tree, tool-governance, security, rust, composio, tauri]
 created: 2026-05-21
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 8
 review_confidence: 9
 provenance_state: extracted

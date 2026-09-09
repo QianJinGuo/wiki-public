@@ -1,7 +1,7 @@
 ---
 title: "Agents as Webs of Beliefs"
 created: 2026-08-01
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: ['raw', 'article']
 sources: [raw/articles/agents-as-webs-of-beliefs]

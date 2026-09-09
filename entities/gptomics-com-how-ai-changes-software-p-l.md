@@ -4,7 +4,7 @@ title: "How AI changes software P&L"
 type: entity
 tags: [newsletter, ai-economics, software-business, p-l-analysis]
 created: 2026-05-14
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 7
 review_confidence: 7
 review_recommendation: worth-reading

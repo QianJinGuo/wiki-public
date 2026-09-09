@@ -3,7 +3,7 @@
 title: "Spec as AIOS：AI-Native 全栈交付的抗熵架构（高德技术系列第二期）"
 slug: spec-as-aios-anti-entropy-architecture-gaode-ai-native-series-2
 created: 2026-06-02
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [spec-as-aios, anti-entropy, sdh-spec-driven, harness-engineering, three-tier-specification, repository-single-source-of-truth, ai-execution-consistency, gaode, alibaba, ai-native-architecture, agentic-coding, code-entropy, multi-agent-collaboration, automated-gate, knowledge-graph, ai-friendly-framework, qoder, claude-code, codex]
 review_value: 9

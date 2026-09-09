@@ -4,7 +4,7 @@ title: "7个月，234次提交，1690行代码：AI编程大型翻车现场：�
 type: entity
 tags: [coding]
 created: 2026-05-21
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/vibe-coding-god-object-7months-failure]

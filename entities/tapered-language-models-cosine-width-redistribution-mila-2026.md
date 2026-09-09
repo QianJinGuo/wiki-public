@@ -1,7 +1,7 @@
 ---
 title: "Tapered Language Models：锥形参数分配的免费午餐"
 created: 2026-06-29
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [architecture, parameter-efficiency, transformer, tapering, zero-cost-improvement, moe]
 sources:

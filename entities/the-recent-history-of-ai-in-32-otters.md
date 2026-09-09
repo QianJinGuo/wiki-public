@@ -1,7 +1,7 @@
 ---
 title: "The recent history of AI in 32 otters"
 created: 2026-06-10
-updated: 2026-09-07
+updated: 2026-09-10
 tags: [ai, diffusion-models, multimodal, llm, open-models, benchmark, image-generation, video-generation]
 review_value: 7
 review_confidence: 7

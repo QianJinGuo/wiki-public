@@ -3,7 +3,7 @@
 title: "Olmo Hybrid and the Hybrid Architecture Wave (2026)"
 description: "Hybrid Transformer+RNN/GDN 架构 2026 集体爆发：Olmo Hybrid 7B pretraining 2x 训练效率提升，理论证明 hybrid > transformer，Gated DeltaNet 成为主流选择。"
 created: 2026-06-07
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [hybrid-architecture, gdn, mamba, transformer, olmo, allen-ai, nathan-lambert, interconnects, model-architecture, post-training]
 source: "[[raw/articles/olmo-hybrid-and-future-llm-architectures]]"

@@ -1,7 +1,7 @@
 ---
 title: "清华 AI 自进化组织研究报告：AI 业务资产化与公司形态重构"
 created: 2026-06-10
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [ai-native-organization, agent-runtime, capital-markets, valuation-metrics, governance, algorithmic-jurisdiction, intent-compiler, rebuttal-asset, memory-solvency, machine-market, machine-economy, tsinghua, ai-native-company, self-evolving-organization, smart-process-coverage, revenue-per-agent, proprietary-context-index, inference-gross-margin, ai-risk-reserve]
 sources: [raw/articles/tsinghua-ai-self-evolving-organization-report]

@@ -2,7 +2,7 @@
 
 title: "Skills赏析：使用skills-refiner提升skill质量"
 created: 2026-05-20
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [skills, skill-design, evaluation, agent, skill-refiner, context-engineering, skill-creator]
 confidence: 0.8

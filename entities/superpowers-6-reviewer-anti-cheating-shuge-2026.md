@@ -3,7 +3,7 @@ title: "Superpowers 6.0 反作弊重写：reviewer 只读怀疑论者 + 上下�
 type: entity
 tags: [superpowers, reviewer, anti-cheating, multi-agent, context-economics, progress-ledger, model-discipline, sdd, subagent-driven-development, source-code-analysis, shuge, principal-agent-problem, file-based-state-machine, compaction-resilience, vendor-neutral-skills]
 created: 2026-06-25
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 9
 review_confidence: 8
 review_recommendation: strong

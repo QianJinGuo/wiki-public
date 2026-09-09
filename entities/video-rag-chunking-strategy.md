@@ -8,7 +8,7 @@ review_recommendation: worth-reading
 review_stars: 4
 date: 2026-06-09
 created: 2026-06-09
-updated: 2026-09-07
+updated: 2026-09-10
 tags: [video-rag, multimodal-rag, chunking-strategy, pause-based-chunking, sliding-window, llm-topic-chunking, multi-granularity-pipeline, rag-pipeline, video-understanding, temporal-segmentation]
 type: entity
 provenance_state: synthesized

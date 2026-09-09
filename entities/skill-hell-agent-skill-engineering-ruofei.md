@@ -1,7 +1,7 @@
 ---
 title: Skill Hell：Agent Skill 工程方法论
 created: 2026-07-07
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [agent, skill, engineering, harness, loop, methodology]
 sources: [raw/articles/raw-skill-hell-agent-skill-writing-ruofei]

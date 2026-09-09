@@ -2,7 +2,7 @@
 title: "vLLM"
 description: "高性能 LLM 推理引擎，支持 PagedAttention、连续批处理、张量并行等优化技术"
 created: 2026-06-29
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [llm, inference, optimization, open-source, gpu]
 confidence: 0.75

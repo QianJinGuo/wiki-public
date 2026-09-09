@@ -2,7 +2,7 @@
 
 title: "AI Agents Security Survey: Attack and Defense"
 created: 2026-05-21
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [ai-security, agent-security, survey, attack, defense, threat-models, red-teaming, tool-poisoning, prompt-injection, mcp]
 summary: "Comprehensive survey covering AI Agent security threats, attack vectors, and defense mechanisms. Synthesizes findings from Tsinghua's Fangcun system, VentureBeat's tool poisoning analysis, Bishop Fox's AIMap, and industry threat models."

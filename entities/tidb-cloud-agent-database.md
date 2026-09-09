@@ -7,7 +7,7 @@ platform: wechat
 original_platform: InfoQ
 published: 2026-05-13
 created: 2026-05-13
-updated: 2026-09-07
+updated: 2026-09-10
 tags: [database, tidb, agent-infra, serverless, multi-tenant, kimi]
 type: entity
 sources: [raw/articles/kimi-k2-tidb-agent-database-huangdongxu-20260513, raw/articles/tidb-agent-stack-infra-kimi-k3-founder-park-2026-08-18]

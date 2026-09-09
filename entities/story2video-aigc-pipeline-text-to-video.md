@@ -1,7 +1,7 @@
 ---
 title: "Story2Video: 从故事文本到可发布短视频的 AIGC Pipeline"
 created: 2026-09-01
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [aigc, video-generation, pipeline, ai]
 sources: [raw/articles/story2video-技术实践从故事文本到可发布短视频的-aigc-pipeline]

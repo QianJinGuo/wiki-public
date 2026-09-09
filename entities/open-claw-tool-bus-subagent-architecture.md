@@ -3,7 +3,7 @@
 
 title: "800行代码实现 Open Claw 的 Tool、消息总线、子Agent管理架构"
 created: 2026-05-16
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [claude-code, anthropic, agent, memory, architecture]
 sources:

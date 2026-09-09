@@ -1,7 +1,7 @@
 ---
 title: "Client-Side Load Balancing at a Million Requests Per Second"
 created: 2026-06-25
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: ["load-balancing", "distributed-systems", "performance", "engineering", "infrastructure"]
 provenance_state: inferred

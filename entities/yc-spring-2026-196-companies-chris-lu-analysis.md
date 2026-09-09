@@ -1,7 +1,7 @@
 ---
 title: "YC Spring 2026 全批 196 家公司分析：AI 不再是差异点"
 created: 2026-06-15
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [yc, startup, ai-agent, b2b, market-analysis, agent-as-a-service, defense, founder-demographics, chris-lu]
 sources:

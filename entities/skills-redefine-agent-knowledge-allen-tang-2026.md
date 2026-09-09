@@ -3,7 +3,7 @@ title: "Skills 重新定义 Agent 喂知识：从'提前给'到'按需取'的范
 authors:
   - AllenTang
 created: 2026-06-29
-updated: 2026-09-07
+updated: 2026-09-10
 source: wechat
 url:
 type: entity

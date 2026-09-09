@@ -2,7 +2,7 @@
 
 title: "超级个体到超级组织：李志飞 CodeBanana 组织转型实践"
 created: 2026-07-01
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [organization, ai-native, transformation, harness-engineering, agent, super-individual, tencent-research, codebanana, baidu, management, communication]
 provenance_state: inferred

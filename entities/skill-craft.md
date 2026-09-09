@@ -2,7 +2,7 @@
 
 title: "Skill Craft — Claude Skill 质量工程框架"
 created: 2026-04-30
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [claude-code, skill, quality-engineering, agent-governance]
 review_value: 7

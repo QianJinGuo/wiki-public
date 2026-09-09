@@ -2,7 +2,7 @@
 
 title: "Miro + Amazon Bedrock 路由 Bug 排查"
 created: 2026-05-16
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [aws]
 sources:

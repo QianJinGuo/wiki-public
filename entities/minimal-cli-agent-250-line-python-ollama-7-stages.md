@@ -2,7 +2,7 @@
 
 title: "AI Agent 的内核是 250 行 while 循环：用 Python + Ollama 从零搭建 CLI Agent 的 7 阶段教程"
 created: 2026-06-01
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [agent, cli, tutorial, python, ollama, qwen, while-loop, from-scratch, tool-calling, context-compaction, skills, slash-command, session-persistence, background-loop]
 sources: [raw/articles/minimal-cli-agent-250-line-python-ollama-7-stages]

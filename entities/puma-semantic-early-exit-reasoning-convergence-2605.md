@@ -1,7 +1,7 @@
 ---
 title: "PUMA — 语义保持的推理模型早停（Semantic-Preserving Early Exit for Reasoning Models）"
 created: 2026-07-16
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [reasoning, early-exit, inference-optimization, lrm, puma, semantic-convergence]
 sources: [raw/articles/puma-semantic-early-exit-reasoning-convergence-2605]

@@ -4,7 +4,7 @@ title: "New and improved Agent governance intelligent workflows"
 type: entity
 tags: [microsoft, copilot, agent, governance, compliance]
 created: 2026-05-14
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 7
 review_confidence: 8
 review_recommendation: worth-reading

@@ -3,7 +3,7 @@ title: "Microsoft is quietly shopping for an OpenAI replacement"
 type: entity
 tags: [newsletter, ai, startup, microsoft, openai, llm, cursor, inception, mustafa-suleyman]
 created: 2026-05-16
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 8
 review_confidence: 7
 review_recommendation: strong

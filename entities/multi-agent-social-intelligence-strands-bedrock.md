@@ -1,7 +1,7 @@
 ---
 title: "Multi-agent social intelligence with Strands Agents and Amazon Bedrock AgentCore"
 created: 2026-07-24
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [strands-agents, bedrock, agentcore, multi-agent, swarm, graph, orchestration, social-intelligence, thradai, aws]
 sources: [raw/articles/multi-agent-social-intelligence-with-strands-agents-and-amaz]

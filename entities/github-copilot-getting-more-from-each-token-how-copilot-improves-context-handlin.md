@@ -2,7 +2,7 @@
 
 title: "Getting more from each token: How Copilot improves context handling and model routing"
 created: 2026-06-26
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [article]
 source: "[[raw/articles/github-copilot-getting-more-from-each-token-how-copilot-improves-context-handlin]]"

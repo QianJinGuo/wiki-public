@@ -4,7 +4,7 @@ title: "Matt Pocock Skills — AI编程技能集合"
 type: entity
 tags: [ai-programming, skills, mattpocock, grill-me, grill-with-docs, caveman, prompting]
 created: 2026-05-19
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 7
 sources: [raw/articles/mattpocock-skills-grill-me-grill-with-docs-caveman, raw/articles/mattpocock-skills-complete-workflow, raw/articles/guoxudong-skills-for-real-engineers-analysis]
 review_confidence: 7

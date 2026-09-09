@@ -1,7 +1,7 @@
 ---
 title: "ModelExpress: Distributing Model Artifacts at the Speed of Light"
 created: 2026-07-28
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [ai, mlops, model-distribution, nvidia, inference, infrastructure, llm-serving, dynamo, gpu-optimization]
 sources: [raw/articles/modelexpress-distributing-model-artifacts-nvidia-2026]

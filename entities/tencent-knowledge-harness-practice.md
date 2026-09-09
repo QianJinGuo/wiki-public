@@ -3,7 +3,7 @@
 description: Auto-generated placeholder
 title: "Harness不是目的，知识才是护城河 —— 一个AI工程交付团队的知识沉淀实践"
 created: 2026-05-16
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [harness-engineering, engineering, ai, team-knowledge, knowledge-base, knowledge-flywheel]
 sources:

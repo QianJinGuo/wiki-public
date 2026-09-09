@@ -3,7 +3,7 @@
 
 title: "天猫 AI 编程实践：团队知识库 + NPM"
 created: 2026-05-08
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [engineering, ai]
 sources:

@@ -3,7 +3,7 @@ title: "AE 到可运行代码：大淘宝 AI 动画全链路方案（实践篇�
 authors:
   - 香芋
 created: 2026-06-29
-updated: 2026-09-07
+updated: 2026-09-10
 source: wechat
 url:
 type: entity

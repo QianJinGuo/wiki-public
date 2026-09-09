@@ -2,7 +2,7 @@
 
 title: "MiniCPM5-2B 端侧多 Agent 杀进 4B 档"
 created: 2026-09-09
-updated: 2026-09-09
+updated: 2026-09-10
 type: entity
 tags: [minicpm, edge, multi-agent, llm, open-source, training, rl, post-training]
 sources: [raw/articles/minicpm5-2b-multi-agent-edge-4b-tier-training-open-source-paperweekly-2026]

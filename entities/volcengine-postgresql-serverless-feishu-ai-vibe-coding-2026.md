@@ -1,7 +1,7 @@
 ---
 title: "火山引擎 PostgreSQL Serverless 为 AI Vibe Coding 重塑数据库底座"
 created: 2026-07-24
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [database, serverless, ai, vibe-coding, postgresql, volcengine, feishu]
 confidence: 0.75

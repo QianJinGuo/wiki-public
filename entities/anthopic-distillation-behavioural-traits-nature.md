@@ -4,7 +4,7 @@ title: "Nature | Anthropic：蒸馏过程潜意识传递行为偏好"
 type: entity
 tags: [anthropic, cloud]
 created: 2026-05-21
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/anthopic-distillation-behavioural-traits-nature]

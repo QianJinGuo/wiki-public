@@ -2,7 +2,7 @@
 title: "MolmoMotion：语言引导的 3D 运动预测模型"
 description: "Allen AI 推出 MolmoMotion，基于语言指令预测 3D 物体运动轨迹，结合视觉语言模型与运动生成，应用于机器人规划和视频生成"
 created: 2026-06-19
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [ai, 3d-motion, language-guided, multimodal, allen-ai, computer-vision, robotics, video-generation]
 source: "[[raw/articles/molmomotion-language-guided-3d-motion-forecasting]]"

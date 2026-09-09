@@ -1,7 +1,7 @@
 ---
 title: "Nunchaku — 4-bit Diffusion 推理加速"
 created: 2026-08-14
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [nunchaku, quantization, 4-bit, diffusion, inference, svdquant, mit-han-lab]
 sources: [raw/articles/nunchaku-4bit-diffusion-inference-diffusers]

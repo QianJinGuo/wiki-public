@@ -1,7 +1,7 @@
 ---
 title: "What I've been building: ATOM Report, post-training course, finishing my book, and ongoing research"
 created: 2026-06-10
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [rlhf, post-training, open-models, research, agent, multi-turn, meta-learning]
 sources: [raw/articles/what-ive-been-building-atom-report-post-training-course-fini]

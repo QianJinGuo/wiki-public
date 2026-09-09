@@ -2,7 +2,7 @@
 
 title: Streaming benchmark and recommendation results to MLflow with Amazon SageMaker AI
 created: 2026-07-10
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [sagemaker, inference, gpu, benchmark, aws]
 sources: [raw/articles/streaming-benchmark-and-recommendation-results-to-mlflow-wit]

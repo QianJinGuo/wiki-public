@@ -1,7 +1,7 @@
 ---
 title: "腾讯 AI 编码实践"
 created: 2026-07-02
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [tencent, ai-coding, practice, enterprise]
 review_value: 7

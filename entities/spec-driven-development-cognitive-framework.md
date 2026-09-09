@@ -2,7 +2,7 @@
 
 title: "Spec-Driven AI 编程半年实战 — 有损管道、三工具比较与三大认知陷阱"
 created: 2026-07-07
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [sdd, spec-driven-development, lossy-pipeline, spec-kit, openspec, kiro, cognitive-traps, intent-holder, verification, ai-coding, prompt-vs-spec]
 sources:

@@ -1,7 +1,7 @@
 ---
 title: "Inference cost at scale with napkin math"
 created: '2026-06-15'
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [newsletter, ai, llm, inference, cost-analysis, gpu, infrastructure, vllm]
 source: "[[raw/articles/napkin-inference-cost-injuly-2026|原文存档]]"

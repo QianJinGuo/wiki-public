@@ -2,7 +2,7 @@
 
 title: "OPD 重新审视失败模式与简单修复"
 created: 2026-06-10
-updated: 2026-09-07
+updated: 2026-09-10
 tags: [agent, code, fine-tuning, llm, memory, mlops, observability, open-source, prompt, rl]
 review_value: 7
 review_confidence: 7

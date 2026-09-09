@@ -2,7 +2,7 @@
 title: "Moneyball for Physical AI"
 description: "Moneyball for Physical AI — 用数据分析方法论重新审视 Physical AI 领域的数据定价与价值发现，类比棒球 Moneyball 革命"
 created: 2026-06-30
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [physical-ai, robotics, data, data-valuation, ai-strategy, scaling-laws, data-efficiency]
 provenance_state: inferred

@@ -4,7 +4,7 @@ title: "Harness 工程实践复盘：100% Cache 命中的 Agent 怎么设计？"
 type: entity
 tags: [harness-engineering, openclacky, prompt-cache, context-management, cache-strategy, claude-code, multi-agent, skill-architecture]
 created: 2026-05-21
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 8
 review_confidence: 9
 sources: [raw/articles/openclacky-harness-engineering-100-percent-cache-hit]

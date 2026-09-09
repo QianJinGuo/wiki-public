@@ -1,7 +1,7 @@
 ---
 title: "Protecting against token theft"
 created: 2026-06-10
-updated: 2026-09-07
+updated: 2026-09-10
 tags: [agent, architecture, code, game, llm, mlops, prompt, rl, security, inference]
 review_value: 7
 review_confidence: 7

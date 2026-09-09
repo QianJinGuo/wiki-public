@@ -1,7 +1,7 @@
 ---
 title: "Quantization Techniques"
 created: 2026-07-27
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: ["quantization", "model-compression", "inference", "optimization"]
 provenance_state: inferred

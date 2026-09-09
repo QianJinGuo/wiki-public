@@ -8,7 +8,7 @@ review_recommendation: moderate
 review_stars: 3
 date: 2026-05-28
 created: 2026-05-28
-updated: 2026-09-07
+updated: 2026-09-10
 tags: [understand-anything, claude-code-plugin, code-understanding, knowledge-graph, semantic-search, diff-analysis, cursor, vscode-copilot, codex, persona-adaptive-ui, tree-sitter, monorepo]
 type: entity
 provenance_state: synthesized

@@ -1,7 +1,7 @@
 ---
 title: "LangChain × Fireworks 100x Cheaper Trace Judge — 通用 trace 评估器"
 created: 2026-06-17
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [langchain, langsmith, trace, evaluator, fireworks, fine-tuning, qwen, agent, observability]
 sources: [raw/articles/langchain-100x-cheaper-trace-judge-fireworks]

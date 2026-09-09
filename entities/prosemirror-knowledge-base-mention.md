@@ -2,7 +2,7 @@
 
 title: "ProseMirror @文档 mention：知识库 Agent 输入框的工程化实现"
 created: 2026-06-04
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [prosemirror, rich-text-editor, agent, knowledge-base, mention, schema, plugin, decoration, suggestion, dom, contenteditable, vivo, atomic-node, ime]
 sources: [raw/articles/prosemirror-knowledge-base-mention-vivo]

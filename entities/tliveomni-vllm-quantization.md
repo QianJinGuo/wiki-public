@@ -1,7 +1,7 @@
 ---
 title: "TLiveOmni vLLM 适配与量化方案"
 created: 2026-05-13
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [vllm, quantization, multimodal, inference-optimization]
 review_value: 9

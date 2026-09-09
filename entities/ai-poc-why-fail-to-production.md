@@ -1,7 +1,7 @@
 ---
 title: "很多企业做完 AI PoC，为什么还是上不了生产"
 created: 2026-05-13
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 source: wechat
 source_url:

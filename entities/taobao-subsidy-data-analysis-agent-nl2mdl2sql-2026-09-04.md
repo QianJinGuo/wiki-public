@@ -1,7 +1,7 @@
 ---
 title: "淘宝百亿补贴数据分析助手 Agent：NL2MDL2SQL + 多Agent协同 + 六层知识体系"
 created: 2026-09-04
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [agent, data-agent, nl2sql, nl2mdl2sql, wrenai, semantic-layer, multi-agent, intent-routing, react, lineage, sql-lineage, metric-registry, attribution, evaluation, hologres, taobao, tmall, alibaba]
 sources:

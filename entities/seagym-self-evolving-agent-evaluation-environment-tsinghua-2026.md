@@ -1,7 +1,7 @@
 ---
 title: "SEAGym: 自进化Agent评测环境 — 清华大学"
 created: 2026-07-15
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [harness, self-improving-agent, evaluation, benchmark, tsinghua, agent-evaluation, self-evolving]
 sources: [raw/articles/seagym-self-evolving-agent-evaluation-environment-tsinghua-2026]

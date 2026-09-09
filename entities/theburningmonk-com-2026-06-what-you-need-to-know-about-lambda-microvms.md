@@ -1,7 +1,7 @@
 ---
 title: "What You Need to Know About Lambda MicroVMs"
 created: 2026-06-25
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [aws, lambda, microvm, serverless, infrastructure, firecracker, cold-start, sandbox, agent-runtime]
 source: "[[raw/articles/theburningmonk-com-2026-06-what-you-need-to-know-about-lambda-microvms]]"

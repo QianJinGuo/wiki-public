@@ -4,7 +4,7 @@ title: "From Kubernetes Dev Setup to Production: What Actually Changes"
 type: entity
 tags: [kubernetes, devops, gitops, platform-engineering, production-readiness]
 created: 2026-05-19
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 9
 sources: [raw/articles/from-kubernetes-dev-setup-to-production-what-actually-change]
 review_confidence: 9

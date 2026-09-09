@@ -4,7 +4,7 @@ title: "The New Phishing Click: How OAuth Consent Bypasses MFA"
 type: entity
 tags: [google]
 created: 2026-05-21
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 6
 review_confidence: 7
 sources: [raw/articles/thehackernews-com-the-new-phishing-click-how-oauth]

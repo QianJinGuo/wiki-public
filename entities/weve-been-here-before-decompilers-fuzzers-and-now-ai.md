@@ -12,7 +12,7 @@ review_confidence: 8
 review_recommendation: strong
 review_stars: 4
 ingested: 2026-05-13
-updated: 2026-09-07
+updated: 2026-09-10
 reviewed: 2026-09-07
 review_verdict: keep
 review_category: tech

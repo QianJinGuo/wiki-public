@@ -2,7 +2,7 @@
 
 title: "Build Enterprise Search for Agents with Amazon Bedrock Managed Ingestion"
 created: 2026-07-24
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [aws, bedrock, agent, search, rag]
 sources: [raw/articles/build-enterprise-search-for-agents-with-amazon-bedrock-manag]

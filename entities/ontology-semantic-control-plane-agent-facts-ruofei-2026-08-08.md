@@ -1,7 +1,7 @@
 ---
 title: "本体论（Ontology）：Agent 事实系统的语义控制面"
 created: 2026-09-04
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [agent, ontology, semantic, architecture]
 review_value: 8

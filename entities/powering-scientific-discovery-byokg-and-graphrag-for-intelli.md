@@ -2,7 +2,7 @@
 
 title: "Powering scientific discovery"
 created: 2026-07-10
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [reinforcement-learning, rag, memory]
 sources: [raw/articles/powering-scientific-discovery-byokg-and-graphrag-for-intelli]

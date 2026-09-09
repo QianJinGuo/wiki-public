@@ -2,7 +2,7 @@
 
 title: "StarAgent/Drogo WebTerminal CLI：阿里基础设施把 WebTerminal 变成 Agent 手脚（CLI 才是 Skill 的执行面）"
 created: 2026-06-01
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [staragent, drogo, webterminal, cli, wt, alibaba, aliyun, infra, agent-hands, skill, gpu-hang, coredump, gdb, emacs, eshell, terminal-protocol, file-api, http-control-surface]
 sources: [raw/articles/staragent-webterminal-cli-ali-infra-cli-as-agent-hands]

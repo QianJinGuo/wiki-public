@@ -2,7 +2,7 @@
 
 title: "Stop hand-tuning kernels: How Neuron Agentic Development accelerates AWS Trainium optimizations"
 created: "2026-06-11"
-updated: 2026-09-07
+updated: 2026-09-10
 type: "entity"
 tags: "agent, ai, llm, aws, trainium, neuron, nki, kernel-optimization, agentic-development, hardware-acceleration"
 review_value: "7"

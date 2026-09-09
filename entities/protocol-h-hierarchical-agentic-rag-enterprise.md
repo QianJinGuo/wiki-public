@@ -3,7 +3,7 @@
 
 title: "Protocol H：分层 Agentic RAG 企业架构"
 created: 2026-05-16
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [agent, rag, architecture]
 sources:

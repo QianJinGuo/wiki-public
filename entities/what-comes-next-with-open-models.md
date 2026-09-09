@@ -1,7 +1,7 @@
 ---
 title: "开源模型的下一阶段：三类模型分类与生态化路径"
 created: 2026-06-10
-updated: 2026-09-07
+updated: 2026-09-10
 tags: [agent, open-source, llm, evaluation, fine-tuning, distill, business-model]
 review_value: 8
 review_confidence: 8

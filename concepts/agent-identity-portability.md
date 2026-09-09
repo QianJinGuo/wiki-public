@@ -1,7 +1,7 @@
 ---
 title: Agent 身份可移植性
 created: 2026-09-05
-updated: 2026-09-06
+updated: 2026-09-10
 type: concept
 tags: [agent-identity, portability, harness, persona, governance, soul]
 confidence: 0.65

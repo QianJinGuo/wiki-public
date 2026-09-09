@@ -2,7 +2,7 @@
 title: "Tsinghua AIR AIM：AI 数学家从解题到参与前沿研究的协同工作流"
 type: entity
 created: 2026-07-10
-updated: 2026-09-07
+updated: 2026-09-10
 tags: [agent, ai-scientist, ai4math, research-agent, human-ai-collaboration, tsinghua, quantum]
 rating: v8c7
 sources:

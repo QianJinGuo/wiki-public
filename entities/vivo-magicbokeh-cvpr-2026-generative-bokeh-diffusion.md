@@ -1,7 +1,7 @@
 ---
 title: "vivo MagicBokeh — CVPR 2026 Best Paper Finalist，统一扩散框架长焦虚化"
 created: 2026-07-12
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [cvpr-2026, computer-vision, generative-ai, diffusion, photography, mobile-ai, image-processing]
 sources: [raw/articles/vivo-magicbokeh-cvpr-2026-generative-bokeh-diffusion]

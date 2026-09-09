@@ -3,7 +3,7 @@
 
 title: "Harness 工程可视化：Vibe Coding 中重建工程可控性"
 created: 2026-05-07
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [harness-engineering, engineering, ai]
 sources:

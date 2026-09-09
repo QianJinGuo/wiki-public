@@ -1,7 +1,7 @@
 ---
 title: "Debugging production agents with Amazon Bedrock AgentCore Observability"
 created: 2026-08-01
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: ['raw', 'article']
 sources: [raw/articles/debugging-production-agents-with-amazon-bedrock-agentcore-ob]

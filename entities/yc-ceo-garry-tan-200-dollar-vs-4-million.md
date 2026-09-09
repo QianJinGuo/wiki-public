@@ -4,7 +4,7 @@ title: "YC CEO Garry Tan：200美元重构400万美元项目，AI Agent协作开
 type: entity
 tags: [agent, yc, garry-tan, claude-code, codex, token-maxxing, workflow, parallel-agents, productivity]
 created: 2026-05-11
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 9
 review_confidence: 8
 sources: [raw/articles/yc-ceo-garry-tan-200-dollar-vs-4-million]

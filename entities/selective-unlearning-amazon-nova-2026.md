@@ -1,7 +1,7 @@
 ---
 title: "Teaching models to forget: Selective unlearning with Amazon Nova"
 created: 2026-07-10
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [unlearning, ai-safety, amazon, nova, model-edit, model-alignment, responsible-ai]
 sources: [raw/articles/teaching-models-to-forget-selective-unlearning-with-amazon-nova]

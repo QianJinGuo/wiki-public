@@ -3,7 +3,7 @@
 title: "The Data Operating System for the Foundation Model Era — Data Juicer"
 description: "Comprehensive open-source data processing framework with 200+ operators, modular architecture, and clear technical documentation. Strong practical value for AI data pipelines."
 created: 2026-06-22
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [agent, llm, analytics, mlops, architecture]
 provenance_state: inferred

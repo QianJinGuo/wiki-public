@@ -2,7 +2,7 @@
 
 title: "Claude Code Subagents 深度指南：上下文卫生实战"
 created: 2026-04-30
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [claude-code, agent]
 sources:

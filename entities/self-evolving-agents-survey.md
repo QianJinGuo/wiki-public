@@ -2,7 +2,7 @@
 
 title: "Self-Evolving Agents 系统性综述"
 created: 2026-05-07
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [self-evolving-agents, survey, model-centric, environment-centric, co-evolution, agent, multi-agent, memory, tool, topology, xmu, uiuc, hku, umd, smu, paper]
 sources: [raw/articles/self-evolving-agents-survey-papersagent]

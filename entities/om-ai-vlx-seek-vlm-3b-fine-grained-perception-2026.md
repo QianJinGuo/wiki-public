@@ -1,7 +1,7 @@
 ---
 title: "Om AI VLX-Seek: 3B 细粒度感知 VLM 架构"
 created: 2026-07-03
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [vlm, multimodal, vision, detection, om-ai, region-token, fine-grained-perception, model-architecture]
 sources: [raw/articles/om-ai-vlx-seek-vlm-3b-fine-grained-perception-2026]

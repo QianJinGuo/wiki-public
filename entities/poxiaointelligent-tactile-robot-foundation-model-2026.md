@@ -1,7 +1,7 @@
 ---
 title: "TouchWorld: 触觉基础模型与灵巧操作 — 破晓智能/哈工大"
 created: 2026-07-12
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [embodied, robot, tactile, foundation-model, manipulation, icml-2026]
 confidence: 0.75

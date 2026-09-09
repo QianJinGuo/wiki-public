@@ -7,7 +7,7 @@ source: "[[raw/articles/perplexity-search-as-code-generation|原文存档]]"
 source_url:
 tags: [agent, agentic-search, search, perplexity, code-generation, harness, llm, rag]
 created: 2026-06-03
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 9
 review_confidence: 8
 review_recommendation: strong

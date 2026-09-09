@@ -1,7 +1,7 @@
 ---
 title: "北大PCM忆阻器NDS芯片：sub-10ms神经动力学系统"
 created: 2026-07-15
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [hardware, chip, neuromorphic, inference-acceleration, pcm, memristor, compute-in-memory, ai-hardware, science, machine-learning]
 sources: [raw/articles/pku-neural-dynamical-system-pcm-memristor-chip-science-2026]

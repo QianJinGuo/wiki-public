@@ -1,7 +1,7 @@
 ---
 title: "SFT 数据准备进阶策略：学习曲线 / 子集筛选 / 增强 / 混合"
 created: 2026-08-27
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [sft, fine-tuning, data-preparation, data-strategy, machine-learning, aws]
 sources: [raw/articles/preparing-data-for-supervised-fine-tuning-part-2-advanced-da]

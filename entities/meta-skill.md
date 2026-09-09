@@ -2,7 +2,7 @@
 
 title: "Meta Skill"
 created: 2026-06-04
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [agent-skill, skill-orchestration, meta-skill, long-horizon, project-manager, abstraction, opensquilla, routing, agent-team, skill-2.0]
 sources: [raw/articles/meta-skill-skill-orchestration-opensquilla-jay]

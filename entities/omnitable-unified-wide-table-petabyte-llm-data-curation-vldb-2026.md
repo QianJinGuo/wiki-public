@@ -1,7 +1,7 @@
 ---
 title: "OmniTable：PB 级 LLM 训练数据治理与探索的统一宽表系统"
 created: 2026-09-04
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [llm-training, data-curation, data-engineering, data-preparation, wide-table, feature-lineage, fault-tolerance, vldb, ant-group, sft, metadata, catalog]
 sources: [raw/articles/omnitable-unified-wide-table-petabyte-llm-data-curation-vldb-2026]

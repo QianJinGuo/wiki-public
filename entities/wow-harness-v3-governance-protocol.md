@@ -2,7 +2,7 @@
 
 title: "wow-harness v3：AI 开发的治理协议"
 created: 2026-06-04
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [agent, harness, governance, event-sourcing, cross-session, multi-agent, organization, protocol, state-machine, schema-enforcement, ai-engineering]
 sources: [raw/articles/wow-harness-v3-governance-protocol]

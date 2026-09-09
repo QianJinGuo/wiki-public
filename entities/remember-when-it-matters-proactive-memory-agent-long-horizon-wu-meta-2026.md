@@ -1,7 +1,7 @@
 ---
 title: "Proactive Memory Agent — Meta AI (Wu et al. 2026)"
 created: 2026-07-14
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [paper, memory, agent, proactive-memory, long-horizon, meta-ai, arxiv]
 sources: [raw/articles/remember-when-it-matters-proactive-memory-agent-long-horizon-wu-meta-2026]

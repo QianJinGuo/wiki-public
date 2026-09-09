@@ -3,7 +3,7 @@ title: "Structured Memory Filtering with Metadata in AgentCore Memory"
 type: entity
 tags: [agent, memory, agentcore, aws, bedrock, retrieval, metadata-filtering]
 created: 2026-07-02
-updated: 2026-09-07
+updated: 2026-09-10
 confidence: 0.8
 provenance_state: extracted
 sources:

@@ -3,7 +3,7 @@ title: "POPO (Group Prioritized Off-Policy Optimization)：清华 RLVR 训练高
 authors:
   - 清华大学自动化系
 created: 2026-07-05
-updated: 2026-09-07
+updated: 2026-09-10
 source: wechat
 url:
 type: entity

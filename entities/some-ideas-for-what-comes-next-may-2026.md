@@ -2,7 +2,7 @@
 
 title: "Some ideas for what comes next, May 2026 (Interconnects)"
 created: 2026-06-01
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [agi, forecasting, future-of-ai, interconnects, open-models, analysis]
 source: "[[raw/articles/some-ideas-for-what-comes-next-may-2026]]"

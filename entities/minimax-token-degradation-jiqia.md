@@ -4,7 +4,7 @@ title: "Token 退化问题：分词器与后训练数据分布失配"
 author: MiniMax 稀宇科技
 published: 2026-05-09
 created: 2026-05-09
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 review_value: 9
 review_confidence: 9

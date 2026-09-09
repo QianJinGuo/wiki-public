@@ -1,7 +1,7 @@
 ---
 title: "Coding Harness 工程本质：从 Pi 到 OpenClaw"
 created: 2026-05-07
-updated: 2026-09-07
+updated: 2026-09-10
 source: "[[raw/articles/pi-openclaw-coding-harness|原文存档]]"
 type: entity
 tags: [agent, harness, coding, pi, openclaw, architecture]

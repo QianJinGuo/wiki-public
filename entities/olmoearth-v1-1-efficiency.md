@@ -4,7 +4,7 @@ title: "OlmoEarth v1.1: A more efficient family of Earth observation models"
 type: entity
 tags: [earth-observation, satellite-imagery, efficient-llm, allenai, transformer, remote-sensing, model-efficiency]
 created: 2026-05-21
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 8
 review_confidence: 9
 review_recommendation: strong

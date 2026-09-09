@@ -1,7 +1,7 @@
 ---
 title: "小米 MiMo Code — 长程编程 Agent 三大主线（计算/记忆/进化）+ 与 Claude Code 工程分化"
 created: 2026-06-12
-updated: 2026-09-07
+updated: 2026-09-10
 date: "2026-06-12"
 tags: [mimo-code, claude-code, opencode, coding-harness, max-mode, dynamic-workflow, long-horizon, xiaomi, open-source, cycle-rebuild, dream-distill, 4-layer-memory, oss-business-model]
 review_value: 9

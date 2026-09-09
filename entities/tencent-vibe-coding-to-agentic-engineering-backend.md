@@ -4,7 +4,7 @@ title: "Tencent Vibe Coding to Agentic Engineering Backend"
 type: entity
 tags: [agent, coding, devops, prompt]
 created: 2026-05-21
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 8
 review_confidence: 8
 sources: [raw/articles/tencent-vibe-coding-to-agentic-engineering-backend]

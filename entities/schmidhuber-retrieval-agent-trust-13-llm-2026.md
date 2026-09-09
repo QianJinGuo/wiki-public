@@ -1,7 +1,7 @@
 ---
 title: "SearchGEO：13个大模型检索Agent可信度评测"
 created: 2026-07-09
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [ai, retrieval-agent, evaluation, llm, safety, research, searchgeo, schmidhuber]
 sources: [raw/articles/schmidhuber-retrieval-agent-trust-13-llm-2026]

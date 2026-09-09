@@ -2,7 +2,7 @@
 title: "MedGuard：基于 LLM 的医疗事实核查与诊疗风险识别系统"
 type: entity
 created: 2026-08-30
-updated: 2026-09-07
+updated: 2026-09-10
 tags: [medical-ai, fact-checking, safety, llm, telemedicine, risk-detection]
 sources:
   - raw/articles/把事实核查嵌入诊疗流程medguard给诊疗安全当守门人

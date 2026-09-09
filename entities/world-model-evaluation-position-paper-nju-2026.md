@@ -1,7 +1,7 @@
 ---
 title: "世界模型评估立场论文 — 南京大学 (2026)"
 created: 2026-07-12
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [world-model, evaluation, embodied, position-paper, nju, decision-making]
 confidence: 0.8

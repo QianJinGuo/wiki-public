@@ -4,7 +4,7 @@ title: "Markdown 不会过时"
 type: entity
 tags: [claude]
 created: 2026-05-21
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/markdown-ai-era-ifanr-20260513]

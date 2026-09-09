@@ -2,7 +2,7 @@
 
 title: "三剑合璧Quick Suite + Agent Core + Kiro联动实践：海外物流报价助手实战 | 亚马逊AWS官方博客"
 created: 2026-01-12
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [aws-china-blog, kiro, quick-suite, bedrock-agentcore, serverless, mcp,跨境物流]
 sources: [raw/articles/quick-suite-agent-core-kiro-logistics-quote-assistant]

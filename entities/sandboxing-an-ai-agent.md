@@ -1,7 +1,7 @@
 ---
 title: "Sandboxing an AI Agent"
 created: 2026-07-02
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [ai, agent, security, sandbox, infrastructure, agent-engineering]
 sources: [raw/articles/sandboxing-an-ai-agent]

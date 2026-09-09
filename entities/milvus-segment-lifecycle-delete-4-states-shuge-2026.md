@@ -3,7 +3,7 @@ title: "拆解 Milvus Segment 生命周期：L0/L1/L2 三级分层与删除机�
 authors:
   - 术哥
 created: 2026-07-05
-updated: 2026-09-07
+updated: 2026-09-10
 source: wechat
 url:
 type: entity

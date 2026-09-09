@@ -1,7 +1,7 @@
 ---
 title: "鹅厂 Skill 写作完整 Playbook：14 章节 end-to-end 实战 + 工程化评估（腾讯一线踩坑 + Anthropic 官方做法整合）"
 created: 2026-06-05
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [agent, skill, skill-writing, anthropic, claude-code, codebuddy, mcp, prompt-engineering, engineering-evaluation, tencent, jackjchou, level-1-2-3, few-shot, before-after, checkpoint, skill-creator]
 sources:

@@ -2,7 +2,7 @@
 
 title: "如何用AI打造一家自我进化的公司"
 created: 2026-05-26
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [ai-agent, company-design, self-improving, yc, organizational]
 source: [[raw/articles/yc-ryo-self-improving-company-ai]]

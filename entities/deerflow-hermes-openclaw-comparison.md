@@ -4,7 +4,7 @@ title: "DeerFlow · Hermes · OpenClaw 架构区别深度对比"
 type: entity
 tags: [agent, harness, research]
 created: 2026-05-21
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/deerflow-hermes-openclaw-comparison]

@@ -2,7 +2,7 @@
 
 title: "Obsidian + Claude Code 集成指南"
 created: 2026-05-08
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [tool, workflow, productivity, knowledge-management]
 sources: [raw/articles/obsidian-claude-code-integration-guide]

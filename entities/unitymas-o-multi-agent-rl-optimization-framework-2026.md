@@ -1,7 +1,7 @@
 ---
 title: UnityMAS-O
 created: 2026-07-15
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [multi-agent, rl, reinforcement-learning, open-source, paper]
 sources: [raw/articles/unitymas-o-multi-agent-rl-optimization-framework-2026]

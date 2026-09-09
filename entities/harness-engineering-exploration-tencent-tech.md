@@ -1,7 +1,7 @@
 ---
 title: "开启Harness Engineering探索之旅"
 created: 2026-07-11
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [harness-engineering, agent, ai-coding, tencent]
 source_url: ""

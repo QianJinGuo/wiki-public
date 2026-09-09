@@ -3,7 +3,7 @@ title: "OpenAI Quietly Bought Voice-Cloning Startup Weights.gg"
 type: entity
 tags: [openai, voice-cloning, weigths-gg, ip, acquisition, ai-industry]
 created: 2026-05-18
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 7.5
 review_confidence: 8
 review_recommendation: worth-reading

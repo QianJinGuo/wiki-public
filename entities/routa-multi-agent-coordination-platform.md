@@ -3,7 +3,7 @@ title: "Routa 多智能体协同交付平台"
 type: entity
 tags: [routa, multi-agent, agent-coordination, software-delivery, kanban, phodal]
 created: 2026-05-17
-updated: 2026-09-07
+updated: 2026-09-10
 sources: [raw/articles/routa-multi-agent-coordination-platform]
 review_value: 7
 review_confidence: 7

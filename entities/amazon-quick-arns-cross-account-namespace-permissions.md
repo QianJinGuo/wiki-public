@@ -2,7 +2,7 @@
 
 title: "Amazon Quick ARNs: Cross-account migration and namespace permissions"
 created: 2026-06-09
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [aws, quicksight, bi, iam, permissions, multi-tenant]
 sources: [raw/articles/amazon-quick-arns-cross-account-migration-and-namespace-perm]

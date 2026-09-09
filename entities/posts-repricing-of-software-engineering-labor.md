@@ -2,7 +2,7 @@
 
 title: "Repricing of Software Engineering Labor"
 created: 2026-06-26
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [article]
 provenance_state: inferred

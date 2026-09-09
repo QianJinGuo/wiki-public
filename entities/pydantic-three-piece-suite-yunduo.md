@@ -2,7 +2,7 @@
 title: "Pydantic 早就不只是校验了——Rust 引擎 + 可观测 + Agent 类型约束（含 agentcanvas 可视化补充）"
 description: "Pydantic 三件套生态 + agentcanvas 工具可视化补充：(1) pydantic-core Rust 引擎 (5-17x 加速/30-40% 内存节省)；(2) Logfire OTel 可观测 + agentcanvas 把追踪 span 树渲染为可交互 HTML 流程图（含 genai-prices 精确计费 + 递归嵌套 + 导览模式 + 单 HTML 输出）；(3) Pydantic AI 类型即约束"
 created: 2026-06-11
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [agent, llm, observability, tool-use, pydantic, pydantic-core, logfire, pydantic-ai, rust, opentelemetry, otel, type-safety, agentcanvas, trace-visualization, genai-prices, vstorm, debug, demo-delivery]
 sources:

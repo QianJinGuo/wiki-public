@@ -3,7 +3,7 @@
 
 title: "深度拆解 Claude Code：12 个可复用的 Agentic Harness 设计模式"
 created: 2026-05-09
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [claude-code, agent, harness-engineering, ai]
 sources:

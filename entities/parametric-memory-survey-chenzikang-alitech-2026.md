@@ -1,7 +1,7 @@
 ---
 title: "参数化 Memory 漫谈：从 MAML 到测试时学习的完整谱系"
 created: 2026-08-07
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [parametric-memory, memory, meta-learning, maml, knowledge-editing, rome, memit, lora, icl, memory-layer, test-time-learning, ttt, titans, rag, agent-memory]
 sources: [raw/articles/parametric-memory-survey-chenzikang-alitech-2026]

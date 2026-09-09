@@ -3,7 +3,7 @@
 
 title: "Postmortem: TanStack npm supply-chain compromise | TanStack Blog"
 created: 2026-05-16
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [security, memory, ai]
 sources:

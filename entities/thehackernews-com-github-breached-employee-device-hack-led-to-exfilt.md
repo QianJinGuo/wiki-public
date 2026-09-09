@@ -4,7 +4,7 @@ title: GitHub Breached — Employee Device Hack Led to Exfiltration
 type: entity
 tags: [security, browser, ai-agent]
 created: 2026-05-21
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 8
 sources: [raw/articles/thehackernews-com-github-breached-employee-device-hack-led-to-exfilt]
 review_confidence: 9

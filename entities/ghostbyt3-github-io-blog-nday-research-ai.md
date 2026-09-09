@@ -1,7 +1,7 @@
 ---
 title: "N-Day Research with AI: Using Ollama and n8n | Nikhil&#x27;s Cybersec Blog"
 created: 2026-05-16
-updated: 2026-09-07
+updated: 2026-09-10
 source: "[[raw/articles/ghostbyt3-github-io-blog-nday-research-ai|原文存档]]"
 type: entity
 value: 7

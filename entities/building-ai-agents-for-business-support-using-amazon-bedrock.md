@@ -2,7 +2,7 @@
 
 title: "Building AI agents for business support using Amazon Bedrock"
 created: 2026-06-01
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [aws, bedrock, agent, business-support, enterprise]
 source: [[raw/articles/building-ai-agents-for-business-support-using-amazon-bedrock]]

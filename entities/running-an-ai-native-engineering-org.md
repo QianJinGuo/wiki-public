@@ -3,7 +3,7 @@
 title: "Running an AI-native engineering org"
 type: entity
 created: 2026-06-05
-updated: 2026-09-07
+updated: 2026-09-10
 tags: [article, newsletter, ai, agent]
 sources:
   - raw/articles/running-an-ai-native-engineering-org

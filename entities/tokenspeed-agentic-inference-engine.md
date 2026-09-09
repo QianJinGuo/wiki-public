@@ -4,7 +4,7 @@ title: "Tokenspeed Agentic Inference Engine"
 type: entity
 tags: [inference, llm, agentic, nvidia, tensorrt, vllm, parallelism, kernel, compiler, lightseek]
 created: 2026-05-21
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 9
 review_confidence: 8
 sources: [raw/articles/tokenspeed-agentic-inference-engine]

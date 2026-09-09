@@ -4,7 +4,7 @@ title: "Visual Para-Thinker: 视觉并行思考框架 (arxiv 2602.13310)"
 type: entity
 tags: [model, vlm, visual-reasoning, parallel-thinking, arxiv, attention-mechanism, position-encoding, hallucination, divide-and-conquer, multimodal, attention-mechanism, test-time-scaling]
 created: 2026-06-10
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 8
 review_confidence: 8
 sources: [raw/articles/visual-para-thinker-vlm-parallel-reasoning-xuhaoran]

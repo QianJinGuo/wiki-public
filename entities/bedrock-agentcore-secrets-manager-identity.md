@@ -2,7 +2,7 @@
 
 title: "Reference your own AWS Secrets Manager secrets in Amazon Bedrock AgentCore Identity"
 created: 2026-06-10
-updated: 2026-09-07
+updated: 2026-09-10
 tags: [agent, aws, code, data, open-source, prompt, rl, security, tool-use]
 review_value: 7
 review_confidence: 7

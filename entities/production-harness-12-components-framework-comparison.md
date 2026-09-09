@@ -2,7 +2,7 @@
 
 title: "生产级 Harness 的 12 大组件以及主流框架对比"
 created: 2026-05-12
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [agent, harness-engineering, memory, ai]
 sources:

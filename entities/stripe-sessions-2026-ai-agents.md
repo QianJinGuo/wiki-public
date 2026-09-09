@@ -8,7 +8,7 @@ date: 2026-05-08
 source: newsletter
 tags: [claude-code, agent, memory, architecture, ai]
 created: 2026-05-10
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 7
 sources: [raw/articles/stripe-sessions-2026-ai-agents]
 review_confidence: 8

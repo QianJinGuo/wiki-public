@@ -9,7 +9,7 @@ review_recommendation: strong
 review_stars: 4
 date: 2026-05-28
 created: 2026-05-28
-updated: 2026-09-07
+updated: 2026-09-10
 tags: [wall-oss, vla-model, embodied-ai, robotics, x-square-robot, pretraining, zero-shot, gradient-bridging, action-tokenizer, dmuon, open-source]
 type: entity
 provenance_state: synthesized

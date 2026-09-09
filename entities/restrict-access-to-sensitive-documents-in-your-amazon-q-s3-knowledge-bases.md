@@ -4,7 +4,7 @@ title: "Restrict Access to Sensitive Documents in Your Amazon Q S3 Knowledge Bas
 type: entity
 tags: [aws, amazon-q, s3, knowledge-bases, document-access, acl, security, iam]
 created: 2026-05-21
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 9
 review_confidence: 9
 review_recommendation: must-read

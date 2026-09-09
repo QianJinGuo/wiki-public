@@ -4,7 +4,7 @@ title: "ICML 2026｜告别「单线程」思维，智能体进化出了原生的
 type: entity
 tags: [model, training]
 created: 2026-05-21
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 7
 review_confidence: 8
 sources: [raw/articles/native-parallel-reasoner-icml2026]

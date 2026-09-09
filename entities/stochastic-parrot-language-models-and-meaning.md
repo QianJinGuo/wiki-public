@@ -2,7 +2,7 @@
 description: Auto-generated placeholder
 title: "Language Models and Meaning"
 created: 2026-05-09
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [llm-theory, stochastic-parrot]
 review_value: 9

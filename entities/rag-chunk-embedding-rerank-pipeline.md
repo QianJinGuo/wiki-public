@@ -4,7 +4,7 @@ title: "RAG Chunk Embedding Rerank Pipeline"
 type: entity
 tags: [rag, embedding, chunking, rerank, agent, knowledge-base, llm, workflow, vector-search, full-text-search, hybrid-search, parent-child-chunking]
 created: 2026-05-21
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 8
 review_confidence: 7
 sources: [raw/articles/rag-chunk-embedding-rerank-pipeline]

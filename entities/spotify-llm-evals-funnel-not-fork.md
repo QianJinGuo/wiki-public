@@ -4,7 +4,7 @@ title: Better Experiments with LLM Evals — A funnel, not a fork | Spotify Engi
 type: entity
 tags: [llm,evaluation,spotify]
 created: 2026-05-22
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 8
 review_confidence: 8
 review_recommendation: strong

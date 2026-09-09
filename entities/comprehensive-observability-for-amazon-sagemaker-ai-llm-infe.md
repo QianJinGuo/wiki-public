@@ -1,7 +1,7 @@
 ---
 
 created: 2026-06-10
-updated: 2026-09-07
+updated: 2026-09-10
 title: "Workflow architecture"
 type: entity
 tags: [rss, article, ai, llm, bedrock, sagemaker, aws, observability]

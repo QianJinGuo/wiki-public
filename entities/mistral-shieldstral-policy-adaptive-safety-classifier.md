@@ -2,7 +2,7 @@
 title: "Mistral Shieldstral — Policy-Adaptive Multimodal Safety Classifier"
 description: "Mistral AI 发布 Shieldstral：3B open-weights 多模态安全分类器，把内容审核重构为 policy-adaptive QA 任务——推理时接受自然语言策略，无需重训即可适配任意部署上下文，文本+图像统一接口，单张 16GB GPU 可跑"
 created: 2026-08-05
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 sources: [raw/articles/mistral-shieldstral-policy-adaptive-safety-classifier]
 tags: [safety, guardrail, content-moderation, multimodal, mistral, open-weights, llm-security]

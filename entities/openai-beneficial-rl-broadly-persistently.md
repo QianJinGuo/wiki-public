@@ -1,7 +1,7 @@
 ---
 title: "Reinforcement learning towards broadly and persistently beneficial models"
 created: 2026-06-19
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [rl, alignment, openai, ai-safety, reinforcement-learning]
 source: [[raw/articles/openai-beneficial-rl-broadly-persistently]]

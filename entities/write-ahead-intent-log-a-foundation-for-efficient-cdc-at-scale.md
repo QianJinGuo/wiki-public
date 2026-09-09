@@ -3,7 +3,7 @@
 title: "Write-Ahead Intent Log: a Foundation for Efficient CDC at Scale"
 description: "Excellent technical depth on building WAIL for CDC at DoorDash, addressing Debezium limitations with a novel producer/consumer pattern. Highly original and practical."
 created: 2026-06-22
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [agent, cdc, analytics, architecture]
 provenance_state: inferred

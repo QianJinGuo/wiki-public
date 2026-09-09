@@ -4,7 +4,7 @@ title: "清华自进化Skill双星：EmbodiSkill + SkillEvolver"
 type: entity
 subtype: agent-architecture
 created: 2026-05-23
-updated: 2026-09-07
+updated: 2026-09-10
 tags: [agent, self-evolution, skill-learning, llm, tsinghua, embodied-ai, meta-skill]
 sources: [raw/articles/tsinghua-self-evolving-skill-agent]
 review_value: 8

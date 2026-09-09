@@ -2,7 +2,7 @@
 title: "Perplexity Brain: Self-improving Agent Memory Architecture"
 description: "Perplexity's Brain system implements work-memory (not user-memory) with recursive self-improvement via context graphs and overnight learning cycles."
 created: 2026-06-20
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [agent, memory, self-improvement, perplexity, context-graph, agent-memory]
 provenance_state: inferred

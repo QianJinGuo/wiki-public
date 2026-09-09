@@ -1,7 +1,7 @@
 ---
 title: "Video World Model Hand Tracking — 视频生成模型实现手部动捕"
 created: 2026-07-14
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [vision, robot, video-generation, world-model, tracking]
 sources: [raw/articles/video-world-model-hand-tracking-2026]

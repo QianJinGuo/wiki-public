@@ -1,7 +1,7 @@
 ---
 title: "Vibe Coding and Agentic Engineering Convergence: Simon Willison Interview"
 created: 2026-06-11
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [vibe-coding, agentic-engineering, simon-willison, django, ai-coding, llm, software-engineering, claude-code, codex, code-rl, open-models, pricing]
 sources: [raw/articles/vibe-coding-agentic-engineering-convergence-simon-willison]

@@ -2,7 +2,7 @@
 title: "OpenClaw 深度架构分析：Agent 引擎、多源 Skill 系统、子 Agent steer 重定向、五层容错"
 type: entity
 created: 2026-07-01
-updated: 2026-09-07
+updated: 2026-09-10
 tags: [openclaw, agent-engine, skill, subagent, steering, fault-tolerance, re-act, circuit-breaker, model-fallback, tool-policy, pi-mono, jd]
 sources:
   - raw/articles/openclaw-agent-engine-skill-subagent-architecture-jd-2026

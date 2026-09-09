@@ -1,7 +1,7 @@
 ---
 title: "OpenClaw 与 Claude Code 的 Agent Loop 设计范式"
 created: 2026-06-09
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [agent, loop, openclaw, claude-code, boris-cherny, peter-steinberger, orchestration, workflow, skill]
 sources:

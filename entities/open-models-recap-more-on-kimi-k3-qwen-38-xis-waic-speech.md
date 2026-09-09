@@ -1,7 +1,7 @@
 ---
 title: "开源模型回顾：Kimi K3、Qwen 3.8、WAIC 演讲、蒸馏与中美竞争"
 created: 2026-07-26
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [open-models, kimi-k3, qwen-3.8, waic, distillation, china-ai, interconnects, open-source, ai-competition]
 sources: [raw/articles/open-models-recap-more-on-kimi-k3-qwen-38-xis-waic-speech]

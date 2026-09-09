@@ -11,7 +11,7 @@ review_confidence: 8
 review_recommendation: strong
 tags: [normalizing-flows, diffusion-models, generative-ai, text-to-image]
 created: 2026-05-13
-updated: 2026-09-07
+updated: 2026-09-10
 reviewed: 2026-09-07
 review_verdict: keep
 review_category: tech

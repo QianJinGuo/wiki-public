@@ -1,7 +1,7 @@
 ---
 title: "TACO：Terminal Agent 自进化观测压缩框架——让 CLI Agent 学会丢掉无用上下文"
 created: 2026-07-01
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [cli-agent, context-compression, agent-architecture, terminal-bench, research-paper]
 sources: [raw/articles/taco-cli-agent-context-compression-terminalbench]

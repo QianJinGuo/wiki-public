@@ -2,7 +2,7 @@
 
 title: "规格驱动开发与 Harness"
 created: 2026-07-02
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [spec-driven, harness-engineering, ai-coding, methodology]
 review_value: 7

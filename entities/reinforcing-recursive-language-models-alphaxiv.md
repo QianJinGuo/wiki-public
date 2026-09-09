@@ -2,7 +2,7 @@
 description: Auto-generated placeholder
 title: "Reinforcing Recursive Language Models | alphaXiv"
 created: 2026-05-14
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [rlm, reinforcement-learning, language-models]
 review_value: 7

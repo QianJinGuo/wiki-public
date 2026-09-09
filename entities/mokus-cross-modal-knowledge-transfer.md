@@ -1,7 +1,7 @@
 ---
 title: "MoKus: Cross-Modal Knowledge Transfer for Knowledge-Aware Concept Customization"
 created: 2026-07-22
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [multimodal, knowledge-transfer, text-to-image, ECCV-2026, diffusion, concept-customization]
 sources: [raw/articles/eccv-2026-mokus打通跨模态迁移文本一改生成图像也跟着变]

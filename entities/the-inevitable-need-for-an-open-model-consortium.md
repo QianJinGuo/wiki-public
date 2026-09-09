@@ -2,7 +2,7 @@
 
 title: "The inevitable need for an open model consortium"
 created: 2026-06-10
-updated: 2026-09-07
+updated: 2026-09-10
 tags: [agent, data, fine-tuning, game, nvidia, observability, rl, search, trading, workflow]
 review_value: 7
 review_confidence: 7

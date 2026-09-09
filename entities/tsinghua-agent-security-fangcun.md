@@ -4,7 +4,7 @@ title: "细思极恐！Agent暗藏风险，清华团队打出组合拳，全链�
 type: entity
 tags: [agent, sdk, security]
 created: 2026-05-21
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/tsinghua-agent-security-fangcun]

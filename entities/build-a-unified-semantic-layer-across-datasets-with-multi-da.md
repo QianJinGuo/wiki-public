@@ -2,7 +2,7 @@
 
 title: Build a unified semantic layer across datasets with multi-dataset Topics in Amazon Quick
 created: 2026-07-10
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [enterprise, reinforcement-learning, agent, aws]
 sources: [raw/articles/build-a-unified-semantic-layer-across-datasets-with-multi-da]

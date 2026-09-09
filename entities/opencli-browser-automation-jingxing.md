@@ -1,7 +1,7 @@
 ---
 title: "浏览器自动化：从 GUI 到 OpenCLI — Agent 时代的可调用性竞争"
 created: 2026-06-10
-updated: 2026-09-07
+updated: 2026-09-10
 tags: [agent, code, data, evaluation, rl, tool-use, workflow]
 review_value: 8
 review_confidence: 8

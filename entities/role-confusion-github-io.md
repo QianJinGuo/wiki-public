@@ -1,7 +1,7 @@
 ---
 title: "Prompt Injection as Role Confusion"
 created: 2026-06-25
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [security, prompt-injection, role-confusion, ai-safety, llm, adversarial, research]
 source: "[[raw/articles/role-confusion-github-io]]"

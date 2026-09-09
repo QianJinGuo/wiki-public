@@ -2,7 +2,7 @@
 
 title: "LBS-IntentBench — 首个真实出行隐式意图评测基准"
 created: 2026-05-07
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [lbs, intent-benchmark, agent, spatio-temporal, gaode, evaluation, implicit-intent]
 sources: [raw/articles/lbs-intent-bench-lbs-intentbench]

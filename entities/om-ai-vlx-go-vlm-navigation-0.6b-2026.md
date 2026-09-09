@@ -1,7 +1,7 @@
 ---
 title: "Om AI VLX-Go: 0.6B 导航 VLM — VLX 系列收官"
 created: 2026-07-06
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [vlm, multimodal, vision, navigation, om-ai, model-architecture, embodied-ai]
 sources: [raw/articles/om-ai-vlx-go-vlm-navigation-0.6b-2026, raw/articles/om-ai-vlx-go-paperweekly-2026]

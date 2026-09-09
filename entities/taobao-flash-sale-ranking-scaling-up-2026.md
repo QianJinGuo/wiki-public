@@ -1,7 +1,7 @@
 ---
 title: 淘宝闪购爆品团精排 Scaling Up 迭代实践
 created: 2026-07-16
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [recommendation, ranking, scaling-law, rankmixer, deep-learning, ctr, moe, alibaba]
 status: verified

@@ -7,7 +7,7 @@ sources:
 type: entity
 tags: [qwen, agent, world-model, language-model, arxiv, alibaba, planning, decision-making, reinforcement-learning, environment-simulation]
 created: 2026-06-25
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 7
 review_confidence: 6
 review_recommendation: worth-reading

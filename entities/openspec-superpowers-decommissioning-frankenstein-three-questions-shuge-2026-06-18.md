@@ -8,7 +8,7 @@ review_value: 9
 review_confidence: 9
 sources:
   - raw/articles/openspec-superpowers-decommissioning-frankenstein-test-three-questions-shuge-2026-06-18
-updated: 2026-09-07
+updated: 2026-09-10
 related: [entities/ssd-spec-driven-development-harness-asd-shuge-2026-06-17, entities/openspec-四步法深度复盘-流程完整不等于代码正确, entities/three-tools-comet-openspec-superpowers-ai-coding-shuge-2026-06-17, entities/three-tools-in-one-gstack-superpowers-openspec-engineering-ai-coding, entities/ai-production-development-workflow-openspec-superpowers-gstack, entities/claude-code-superpowers-workflow-by-xinlingyuanyuanyuan, entities/claude-code-skills-superpowers-practice, entities/spec-kit-bmad-sdd-practice-yexiaocha, entities/spec-as-aios-anti-entropy-architecture-gaode-ai-native-series-2, entities/openspec-spec-driven-development-trae-solo, entities/harness-engineering-alibaba-java-case-study, entities/harness-pilot-claude-code-plugin-yangtong-2026-06-17]
 strategic_context: "[[queries/research-frontier-map|Frontier 1 — Harness/Skill 从个人能力到组织资产]]"
 provenance_state: inferred

@@ -1,7 +1,7 @@
 ---
 title: "Your First AI Agent Should Do One Thing Badly"
 created: 2026-06-10
-updated: 2026-09-07
+updated: 2026-09-10
 tags: [agent, architecture, code, data, prompt, rag, rl, search, tool-use, workflow, iterative-development, crawl-walk-run, agentic-systems]
 review_value: 7
 review_confidence: 7

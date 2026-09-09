@@ -4,7 +4,7 @@ title: "Real-time voice agents with Stream Vision Agents and Amazon Nova 2 Sonic
 type: entity
 tags: [aws, machine-learning, ai-agents, bedrock, nova, speech-to-speech, vision-agents, getstream]
 created: 2026-05-15
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 8
 review_confidence: 9
 review_recommendation: strong

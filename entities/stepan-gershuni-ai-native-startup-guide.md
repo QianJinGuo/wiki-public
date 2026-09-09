@@ -2,7 +2,7 @@
 
 title: "他的 Agent 昨晚替他把公司运转了一遍，你的早会才刚开始"
 created: 2026-05-26
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [ai-agent, startup, context, eval, skills, harness, operations]
 source: [[raw/articles/stepan-gershuni-ai-native-startup-guide]]

@@ -2,7 +2,7 @@
 
 title: "SkillsUI"
 created: 2026-05-23
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [enterprise, agent, middleware, skills, ui, rabbitpre]
 sources: [raw/articles/skillsui-enterprise-agent-middle-layer]

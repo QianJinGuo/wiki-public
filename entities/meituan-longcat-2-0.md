@@ -1,7 +1,7 @@
 ---
 title: "美团 LongCat-2.0"
 created: 2026-07-01
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [llm, meituan, moe, chinese-hardware, trillion-parameter, long-context, open-source]
 sources: [raw/articles/meituan-longcat-2-0-trillion-parameter-moe-2026]

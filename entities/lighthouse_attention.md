@@ -3,7 +3,7 @@ title: "Lighthouse Attention"
 type: entity
 tags: [newsletter, attention-mechanism, long-context, efficient-attention]
 created: 2026-05-18
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 8
 sources: [raw/articles/lighthouse_attention]
 review_confidence: 9

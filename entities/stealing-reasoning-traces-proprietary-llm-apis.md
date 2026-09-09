@@ -1,7 +1,7 @@
 ---
 title: "Stealing Reasoning Traces from Proprietary LLM APIs（加密推理块跨模型解码攻击）"
 created: 2026-08-13
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [llm, security, chain-of-thought, reasoning, jailbreak, prompt-injection, distillation, encryption]
 sources:

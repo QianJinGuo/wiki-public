@@ -1,7 +1,7 @@
 ---
 title: "Agentic时代用户主导个性化推荐范式"
 created: 2026-07-12
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [recommendation-system, agent, llm, personalization, paradigm-shift, user-privacy]
 confidence: 0.8

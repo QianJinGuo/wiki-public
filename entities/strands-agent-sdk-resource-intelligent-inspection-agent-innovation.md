@@ -2,7 +2,7 @@
 
 title: "从0到1:联想基于Strands Agent SDK的资源智能巡检Agent创新 | 亚马逊AWS官方博客"
 created: 2026-05-14
-updated: 2026-09-07
+updated: 2026-09-10
 tags: [aws-china-blog, strands-sdk, amazon-nova]
 sources: [raw/articles/strands-agent-sdk-resource-intelligent-inspection-agent-innovation]
 review_value: 8

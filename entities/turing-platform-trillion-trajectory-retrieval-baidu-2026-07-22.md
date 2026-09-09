@@ -1,7 +1,7 @@
 ---
 title: "图灵平台：万亿级轨迹数据的秒级检索实战"
 created: 2026-07-22
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: ['trajectory-data', 'clickhouse', 's2-geocoding', 'big-data', 'retrieval', 'baidu', 'trillion-level']
 sources: [raw/articles/turing-platform-trillion-trajectory-retrieval-baidu-2026-07-22]

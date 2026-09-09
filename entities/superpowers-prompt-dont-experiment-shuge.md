@@ -1,7 +1,7 @@
 ---
 title: "Superpowers 6.0 跑了 25 个实验才发现：prompt 里写的每一条\"不要\"，可能都在帮倒忙"
 created: 2026-07-01
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [prompt, superpowers, shuge, experiment, prompt-engineering]
 source: "[[raw/articles/superpowers-prompt-dont-experiment-shuge]]"

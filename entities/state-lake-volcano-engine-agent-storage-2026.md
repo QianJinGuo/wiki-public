@@ -1,7 +1,7 @@
 ---
 title: "State Lake：火山引擎面向 Agent 时代的存储基础设施重构"
 created: 2026-07-16
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [storage, agent-infra, state-lake, sandbox, artifact, byte-dance, volcano-engine, agent-platform]
 status: verified

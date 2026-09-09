@@ -1,7 +1,7 @@
 ---
 title: "腾讯 AI Coding 深水区 — 事实vs判断尺子与提示词→框架→runtime 下沉方法论"
 created: 2026-08-27
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [tencent, ai-coding, harness, runtime, evaluation, prompt-engineering, agent-teams, sovereignty, fact-vs-judgment, production]
 sources: [raw/articles/tencent-ai-coding-deep-water-fact-vs-judgment-2026]

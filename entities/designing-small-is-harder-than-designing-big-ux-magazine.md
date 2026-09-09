@@ -4,7 +4,7 @@ title: "Designing Small Is Harder than Designing Big - UX Magazine"
 type: entity
 tags: [design, ux-design, agile]
 created: 2026-05-13
-updated: 2026-09-07
+updated: 2026-09-10
 source: newsletter
 sources:
   - raw/articles/designing-small-is-harder-than-designing-big-ux-magazine

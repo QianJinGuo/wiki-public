@@ -1,7 +1,7 @@
 ---
 title: "向量存储支撑 Agent 检索链路：三种索引取舍与 Serverless 化（千问AI平台）"
 created: 2026-08-25
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [vector-storage, vector-database, ann, hnsw, diskann, ivf, hybrid-search, rag, agent-memory, serverless, aliyun, tablestore, oss-vectors, retrieval, first-party]
 rating: v7c9

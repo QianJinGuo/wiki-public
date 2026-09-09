@@ -1,7 +1,7 @@
 ---
 title: "Qwen-Audio-3.0-TTS 发布：多语种实时语音合成模型"
 created: 2026-08-31
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [qwen, audio, tts, speech-synthesis, multimodal, model, alibaba]
 sources: [raw/articles/qwen-audio-30-tts-release-2026]

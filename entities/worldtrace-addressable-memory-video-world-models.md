@@ -1,7 +1,7 @@
 ---
 title: "WorldTrace：视频世界模型的可寻址记忆（Addressable Memory for Video World Models）"
 created: 2026-08-12
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [world-model, video-model, memory, kv-cache, rope, icml-2026, nvidia, long-horizon, video-generation]
 sources: [raw/articles/worldtrace-addressable-memory-video-world-models]

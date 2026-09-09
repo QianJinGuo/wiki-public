@@ -1,7 +1,7 @@
 ---
 title: "RoadmapBench: Long-Horizon Agentic Software Development 基准评估"
 created: 2026-06-30
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [benchmark, agent, coding-agent, evaluation, software-engineering, long-horizon]
 sources: [raw/articles/arxiv-2605-15846-roadmapbench]

@@ -1,7 +1,7 @@
 ---
 title: "SAME：稳定MoE持续微调"
 created: 2026-07-04
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [moe, continual-learning, mcit, icml-2026, nju, multimodal, llm, training]
 sources: [raw/articles/icml-2026-nju-same-stabilized-moe-mcit]

@@ -2,7 +2,7 @@
 
 title: "Stripe Agent 经济基础设施 5 套图谱：MPP + Link + Projects + Metronome/Tempo + Radar"
 created: 2026-06-05
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [stripe, agent-economy, machine-payment-protocol, agent-wallet, vibe-deploying, token-billing, usage-based-billing, streaming-payments, token-theft, stablecoin, tempo, metronome, radar, fintech, emily-sands, shensiq, foundation-infrastructure]
 sources: [raw/articles/stripe-agent-economic-infrastructure-emily-sands]

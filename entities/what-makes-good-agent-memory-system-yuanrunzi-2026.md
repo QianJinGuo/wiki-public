@@ -1,7 +1,7 @@
 ---
 title: "怎样才算是好的Agent记忆系统？"
 created: 2026-07-31
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: ['agent-memory', 'memory-system', 'architecture', 'retrieval', 'cost-latency', 'mem0', 'zep', 'letta', 'memos']
 sources: [raw/articles/what-makes-good-agent-memory-system-yuanrunzi-2026]

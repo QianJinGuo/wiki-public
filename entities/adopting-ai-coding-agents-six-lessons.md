@@ -2,7 +2,7 @@
 
 title: "采用 AI 编码智能体的六条经验"
 created: 2026-05-21
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [ai-coding, agent-adoption, engineering, harness-engineering, lessons]
 sources:

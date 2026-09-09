@@ -2,7 +2,7 @@
 type: entity
 title: NOVELQR — Token-Level Novelty Estimation for Quote Recommendation
 created: 2026-07-09
-updated: 2026-09-07
+updated: 2026-09-10
 tags: [novelty-estimation, auto-regressive-bias, semantic-labeling, agent, quote-recommendation, acl-2026]
 sources: [raw/articles/novelqr-用agent做深度语义标签-token级新颖性破解自回归偏差]
 confidence: 0.85

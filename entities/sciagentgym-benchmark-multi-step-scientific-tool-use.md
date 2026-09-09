@@ -1,7 +1,7 @@
 ---
 title: "SciAgentGym：多步科学工具使用的 LLM Agent 评测基准"
 created: 2026-07-02
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [agent, benchmark, scientific-computing, llm-agent, tool-use, evaluation]
 sources: [sciagentgym-benchmark-multi-step-scientific-tool-use]

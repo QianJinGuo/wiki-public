@@ -2,7 +2,7 @@
 
 title: "Everything a Senior Engineer Needs to Know About What's Inside an LLM"
 created: 2026-06-23
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [llm, transformer, architecture, engineering]
 provenance_state: inferred

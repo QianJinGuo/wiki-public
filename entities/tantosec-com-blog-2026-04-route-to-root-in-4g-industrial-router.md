@@ -3,7 +3,7 @@
 
 title: "A Route to Root in a 4G Industrial Router"
 created: 2026-05-16
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [security, ai]
 sources:

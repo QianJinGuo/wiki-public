@@ -1,7 +1,7 @@
 ---
 title: "Residual Context Diffusion (RCD)：Apple 残差上下文扩散语言模型"
 created: 2026-07-03
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [diffusion, llm, apple, inference, model-architecture, language-model]
 sources: [raw/articles/residual-context-diffusion-apple-ml-2026-07]

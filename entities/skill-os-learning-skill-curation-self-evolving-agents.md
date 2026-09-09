@@ -4,7 +4,7 @@ title: "SkillOS: Learning Skill Curation for Self-Evolving Agents"
 type: entity
 tags: [arxiv, agent, skill-curation, self-evolving, rl]
 created: 2026-05-12
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 10
 sources: [raw/articles/skill-os-learning-skill-curation-self-evolving-agents]
 review_confidence: 7

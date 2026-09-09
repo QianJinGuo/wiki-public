@@ -2,7 +2,7 @@
 
 title: "当 OpenClaw 学会”团队记忆”：一个面向多客户服务的企业级共享记忆系统设计 | 亚马逊AWS官方博客"
 created: 2026-05-14
-updated: 2026-09-07
+updated: 2026-09-10
 tags: [aws-china-blog, openclaw]
 sources: [raw/articles/openclaw-service-enterprise-share-system-design]
 review_value: 8

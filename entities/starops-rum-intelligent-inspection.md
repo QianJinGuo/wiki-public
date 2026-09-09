@@ -1,7 +1,7 @@
 ---
 title: "STAROps RUM Intelligent Inspection — Detecting Experience Degradation Early"
 created: 2026-07-22
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [STAROps, RUM, observability, intelligent-inspection, Alibaba-Cloud, SRE, AIOps]
 sources: [raw/articles/starops-rum-智能巡检实践把体验退化提前看清楚]

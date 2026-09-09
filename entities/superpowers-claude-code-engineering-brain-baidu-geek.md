@@ -1,7 +1,7 @@
 ---
 title: "Superpowers 深度解析：给 Claude Code 装上工程大脑"
 created: 2026-06-15
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [superpowers, claude-code, skill, brainstorming, tdd, harness, jesse-vincent, obra, probability-control, engineering-discipline]
 sources:

@@ -1,7 +1,7 @@
 ---
 title: "NVIDIA-ZPPO: Zone of Proximal Policy Optimization"
 created: 2026-06-19
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [rl, nvidia, policy-optimization, llm-training, grpo, reinforcement-learning, knowledge-distillation]
 source: [[raw/articles/nvidia-zppo-zone-proximal-policy-optimization]]

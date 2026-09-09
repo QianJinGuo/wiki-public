@@ -1,7 +1,7 @@
 ---
 title: "多模态预训练物理：知识流、模态协同、早期统一与高效配方（arXiv 2608.05000）"
 created: 2026-08-08
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [model, training, multimodal, pretraining, moe, research]
 confidence: 0.75

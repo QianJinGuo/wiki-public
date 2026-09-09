@@ -1,7 +1,7 @@
 ---
 title: "Mistral OCR 4: SOTA OCR for Document Intelligence"
 created: 2026-06-25
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [mistral, ocr, document-intelligence, llm, multimodal, pdf, vision, rag, self-hosted]
 source: "[[raw/articles/mistral-ai-news-ocr-4]]"

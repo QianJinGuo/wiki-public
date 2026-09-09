@@ -1,7 +1,7 @@
 ---
 title: "驾驭AI Coding：面向团队的Harness Engineering落地规范"
 created: 2026-07-17
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [harness-engineering, tencent, ai-coding, team-specification, multi-agent, mcp, skills, knowledge-base, guardrails, evaluation, tool-system, context-management, execution-orchestration]
 sources:

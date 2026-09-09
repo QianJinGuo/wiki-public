@@ -2,7 +2,7 @@
 title: "WikiSkill：将 Agent 经验编译为持久知识以驱动技能进化（Google Research）"
 slug: wikiskill-persistent-knowledge-skill-evolution-google-2026
 created: 2026-09-03
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [agent, skill, skill-evolution, persistent-knowledge, wiki, google-research, self-evolution, harness, agent-experience, skill-transfer]
 review_value: 7

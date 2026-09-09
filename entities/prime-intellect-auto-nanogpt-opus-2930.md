@@ -1,7 +1,7 @@
 ---
 title: "AI第一次科研竞赛中击败人类！Opus 4.7狂飙2930步创世界纪录"
 created: 2026-06-10
-updated: 2026-09-07
+updated: 2026-09-10
 tags: [agent, architecture, code, data, fine-tuning, llm, open-source, openai, prompt, search, recursive-self-improvement, autonomous-research]
 review_value: 7
 review_confidence: 7

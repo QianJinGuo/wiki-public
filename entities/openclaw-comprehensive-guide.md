@@ -3,7 +3,7 @@
 title: "OpenCLAW 完全指南"
 type: entity
 created: 2026-05-10
-updated: 2026-09-07
+updated: 2026-09-10
 tags: [openclaw, agent, framework, tutorial, multi-agent]
 sources: [raw/articles/openclaw-comprehensive-guide-32k-chars]
 review_value: 8

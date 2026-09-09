@@ -3,7 +3,7 @@
 
 title: "重新定义Skill开发：保姆级教程&一站式开发助手发布"
 created: 2026-05-18
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [skill, agent, aone, aliyun, tutorial, workflow]
 sources:

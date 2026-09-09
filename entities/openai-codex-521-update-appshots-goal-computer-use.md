@@ -1,7 +1,7 @@
 ---
 title: "Codex 5.21 更新：AI 编程助手开始变成电脑工作代理"
 created: 2026-05-23
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [openai, codex, ai-programming, agent, computer-use, tools]
 source: [[raw/articles/openai-codex-521-update-appshots-goal-computer-use]]

@@ -8,7 +8,7 @@ review_recommendation: moderate
 review_stars: 3
 date: 2026-05-27
 created: 2026-05-28
-updated: 2026-09-07
+updated: 2026-09-10
 tags: [ai-agent, ecommerce, rag, fasttext, intent-classification, product-recommendation, vivo, structured-output, knowledge-base, prompt-engineering]
 type: entity
 provenance_state: synthesized

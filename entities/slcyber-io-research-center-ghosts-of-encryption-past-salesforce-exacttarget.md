@@ -2,7 +2,7 @@
 
 title: "Ghosts of Encryption Past – How we Read All Your Emails in Salesforce Marketing Cloud › Searchlight Cyber"
 created: 2026-05-16
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [architecture, ai]
 sources:

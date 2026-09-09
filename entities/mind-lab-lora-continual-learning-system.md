@@ -3,7 +3,7 @@
 title: "Mind Lab LoRA 持续学习体系：δ-mem + MinT + LoRA Scaling Law + Macaron-A2UI"
 description: "Mindverse 心洲科技 Mind Lab 提出的 LoRA/PEFT 持续学习全栈：δ-mem 在线记忆机制（0.12%参数增量）+ MinT 百万 LoRA 训推基础设施（18.3x 提速）+ LoRA Scaling Law 三大扩展轴（up/down/out）+ Macaron-A2UI 生成式 UI（75.6 分 A2UI-Bench）"
 created: 2026-06-02
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [continual-learning, fine-tuning, mind-lab, mindverse, 心洲科技, lora, peft, continual-learning, 持续学习, delta-mem, δ-mem, mint, olora, lora-as-memory, scaling-of-peft, macaron-a2ui, a2ui, agent-memory, online-learning, parameter-efficient-fine-tuning]
 sources:

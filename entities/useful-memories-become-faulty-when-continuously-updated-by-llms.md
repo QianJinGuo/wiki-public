@@ -9,7 +9,7 @@ sources: [raw/articles/useful-memories-become-faulty-when-continuously-updated-b
 review_confidence: 7
 review_recommendation: strong
 created: 2026-05-12
-updated: 2026-09-07
+updated: 2026-09-10
 reviewed: 2026-09-07
 review_verdict: keep
 review_category: tech

@@ -1,7 +1,7 @@
 ---
 title: "OpenRath：以 Session 为核心的多 Agent 运行时状态系统（清华）"
 created: 2026-06-28
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [agent-runtime, session, state-management, multi-agent, tsinghua, fork-merge, provenance, evidence-protocol, pytorch-analogy]
 sources: [raw/articles/openrath-session-centered-agent-runtime-tsinghua-2026]

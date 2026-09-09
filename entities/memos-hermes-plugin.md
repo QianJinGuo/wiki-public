@@ -3,7 +3,7 @@
 description: Auto-generated placeholder
 title: "MemOS Hermes 记忆插件"
 created: 2026-04-24
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [memos, memos-local-plugin, hermes-agent, memory, memtensor, memos, nous-research, openclaw, agent, local, vector-search, hybrid-search]
 sources: [raw/articles/memos-hermes-plugin]

@@ -3,7 +3,7 @@ title: "The Race to Own the Agentic Future | Tidemark"
 type: entity
 tags: [vc]
 created: 2026-05-19
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 8
 review_confidence: 9
 review_recommendation: worth-reading

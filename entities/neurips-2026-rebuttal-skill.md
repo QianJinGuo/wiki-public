@@ -1,7 +1,7 @@
 ---
 title: "NeurIPS 2026 Rebuttal Skill — 开源论文回复 Skill 工作流"
 created: 2026-07-24
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [ai-research, neurips, rebuttal, skill, open-source, academic-publishing]
 confidence: 0.8

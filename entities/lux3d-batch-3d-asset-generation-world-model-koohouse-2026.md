@@ -1,7 +1,7 @@
 ---
 title: "Lux3D 批量3D资产生成与世界模型探索（群核科技）"
 created: 2026-08-31
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [3d-generation, world-model, gaussian-splatting, pbr-material, batch-generation, physical-ai]
 confidence: 0.7

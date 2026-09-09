@@ -1,7 +1,7 @@
 ---
 title: "Workspace：面向 Agent 的组织资产基座（百度实践）"
 created: 2026-08-26
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [workspace, organizational-assets, knowledge-base, agent, harness, sdd, baidu, summarize, docs-engineering]
 sources: [raw/articles/workspace-organizational-asset-base-baidu-2026]

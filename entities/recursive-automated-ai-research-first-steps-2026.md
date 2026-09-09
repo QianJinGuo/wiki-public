@@ -1,7 +1,7 @@
 ---
 title: "Recursive First Steps Toward Automated AI Research：SOTA 三基准自动化研究系统"
 created: 2026-06-13
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [ai-research, automation, recursive-self-improvement, alphaevolve, nanogpt, nanochat, kernel-optimization, sota, recursive, agent, eval-loop, ai4ai-bench, algorithmic-design]
 sources: [raw/articles/recursive-automated-ai-research-first-steps-2026, raw/articles/ai4ai-bench-agent-algorithmic-design-rsi-einsia-2026]

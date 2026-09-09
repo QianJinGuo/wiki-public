@@ -2,7 +2,7 @@
 
 title: "Token 经济学与 AI 效率"
 created: 2026-04-30
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [token-economics, ai-productivity, model-routing, enterprise-ai, ai-pricing, harness, inference-optimization]
 sources:

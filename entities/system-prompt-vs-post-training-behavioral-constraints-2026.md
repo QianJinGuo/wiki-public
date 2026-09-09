@@ -1,7 +1,7 @@
 ---
 title: "System Prompt vs Post-Training：行为约束该写还是该训？"
 created: 2026-06-12
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [system-prompt, post-training, dpo, sft, agent-engineering, prompt-engineering, behavioral-constraints]
 sources: [raw/articles/system-prompt-vs-post-training-behavioral-constraints-2026]

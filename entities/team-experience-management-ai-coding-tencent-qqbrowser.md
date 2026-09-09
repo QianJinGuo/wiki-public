@@ -1,7 +1,7 @@
 ---
 title: "QQ浏览器团队经验管理系统：从AI Coding对话中提纯团队经验"
 created: 2026-07-30
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [agent, team-experience, experience-management, three-layer-governance, qqbrowser, tencent, codebuddy, agent-memory, knowledge-base, mcp-retrieval]
 sources:

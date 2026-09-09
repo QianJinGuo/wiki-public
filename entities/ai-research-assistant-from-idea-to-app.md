@@ -2,7 +2,7 @@
 
 title: "From idea to AI app: creating intelligent research assistants"
 created: 2026-06-01
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: ['aws', 'ai-agent', 'research-assistant', 'tutorial']
 source: [[raw/articles/ai-research-assistant-from-idea-to-app]]

@@ -1,7 +1,7 @@
 ---
 title: "Noe-0 世界动作模型（无本体数据训练）"
 created: 2026-08-27
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [embodied-ai, world-model, wam, robot, no-teleoperation, cross-embodiment, data-infra]
 confidence: 0.68

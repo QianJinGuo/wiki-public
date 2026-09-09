@@ -1,7 +1,7 @@
 ---
 title: "Vime-Ascend — 基于 vLLM 的开源 RL 后训练框架（华为云昇腾版）"
 created: 2026-07-11
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [rl, reinforcement-learning, post-training, vllm, ascend, npu, modelarts, huawei, grpo, training]
 sources: [raw/articles/vime-ascend-rl-framework-modelarts-huawei]

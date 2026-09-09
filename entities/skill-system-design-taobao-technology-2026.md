@@ -1,7 +1,7 @@
 ---
 title: "AI Agent Skill 系统设计：淘宝技术工程实践"
 created: 2026-07-01
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [skill, agent, system-design, engineering-practice, alibaba, taobao, testing, gate-mechanism]
 sources: [raw/articles/skill-system-design-taobao-technology-2026]

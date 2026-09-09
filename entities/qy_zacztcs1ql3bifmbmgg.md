@@ -1,7 +1,7 @@
 ---
 title: "Claude Code Subagent 详解：把探索过程关进独立工作区"
 created: 2026-06-10
-updated: 2026-09-07
+updated: 2026-09-10
 tags: [agent, claude-code, harness, context-engineering, subagent, working-set, hermes]
 provenance_state: inferred
 review_value: 7

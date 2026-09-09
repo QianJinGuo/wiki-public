@@ -1,7 +1,7 @@
 ---
 title: "Real-Time Personalisation at Scale: How Zepto Understands What You Want, Right Now"
 created: 2026-06-25
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: ["recommendation-system", "real-time", "personalization", "engineering", "ranking"]
 provenance_state: inferred

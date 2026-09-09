@@ -1,7 +1,7 @@
 ---
 title: "Nikesh Arora 20VC 访谈：Token 定价、FDE、SaaS→AI 转型与记忆护城河"
 created: 2026-07-01
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [token-economics, ai-industry, business-strategy, memory-as-moat, fde, cybersecurity, saas-vs-ai, model-economy]
 sources: [raw/articles/nikesh-arora-20vc-business-strategy]

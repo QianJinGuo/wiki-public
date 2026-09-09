@@ -3,7 +3,7 @@ title: "火山引擎 SearchCLI：Agent 驱动的搜索自迭代与 SPA 策略优
 type: entity
 tags: [volcengine, bytedance, search, agent, self-iteration, spa, optimization, cli, open-source]
 created: 2026-07-29
-updated: 2026-09-07
+updated: 2026-09-10
 rating: v8c9
 sources:
   - raw/articles/volcengine-searchcli-agent-driven-search-self-iteration

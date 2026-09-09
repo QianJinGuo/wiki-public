@@ -9,7 +9,7 @@ tags: [macos, malware, stealer, apple, security]
 
 created: 2026-05-20
 
-updated: 2026-09-07
+updated: 2026-09-10
 
 review_value: 9
 

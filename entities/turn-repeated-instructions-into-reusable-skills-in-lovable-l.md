@@ -5,7 +5,7 @@ tags: [newsletter, lovable, ai-agent, skills, productivity]
 source: newsletter
 source_url:
 created: 2026-05-20
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 7
 sources: [raw/articles/turn-repeated-instructions-into-reusable-skills-in-lovable-l]
 review_confidence: 8

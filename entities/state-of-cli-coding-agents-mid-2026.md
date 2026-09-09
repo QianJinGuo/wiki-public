@@ -1,7 +1,7 @@
 ---
 title: "State of CLI Coding Agents, Mid-2026"
 created: 2026-07-08
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [cli, coding-agent, agent, survey, ecosystem, tooling]
 confidence: 0.8

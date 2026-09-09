@@ -1,7 +1,7 @@
 ---
 title: "Twilight of the Chatbots：从聊天机器人到自主 Agent 的转型"
 created: 2026-07-02
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [mollick, ai-agent, ai-capability, chatbot, autonomous-agent, transition, exponential-growth, harness-engineering]
 sources: [raw/articles/the-twilight-of-the-chatbots]

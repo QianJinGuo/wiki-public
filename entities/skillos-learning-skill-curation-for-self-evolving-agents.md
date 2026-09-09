@@ -1,7 +1,7 @@
 ---
 title: "SkillOS: Learning Skill Curation for Self-Evolving Agents"
 created: 2026-05-12
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [agent-tools, ai-agent, llm, newsletter, agent]
 review_value: 7

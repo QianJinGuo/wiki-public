@@ -3,7 +3,7 @@ title: "Pwn2Own Berlin 2026, Day Three: DEVCORE Crowned Master of Pwn, $1.298 Mi
 type: entity
 tags: [securityaffairs]
 created: 2026-05-19
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 7
 review_confidence: 8
 review_recommendation: worth-reading

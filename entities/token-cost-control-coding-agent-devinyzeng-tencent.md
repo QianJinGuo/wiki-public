@@ -1,7 +1,7 @@
 ---
 title: "AI Coding Agent Token 成本控制五层模型"
 created: 2026-06-15
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [token-cost, coding-agent, prompt-cache, context-compression, model-routing, code-graph, multi-agent, orchestrator-worker, rtk, caveman, headroom, graphify, codegraph, context-mode]
 sources:

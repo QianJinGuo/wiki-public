@@ -2,7 +2,7 @@
 title: "Spec Kit / OpenSpec / Superpowers 融合：棕地项目的三层Harness架构"
 slug: spec-kit-openspec-superpowers-hybrid-harness
 created: 2026-07-08
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags:
   - spec-kit

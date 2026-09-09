@@ -1,7 +1,7 @@
 ---
 title: "Mathematical Optimization at Enterprise Scale: AWS Innovation Center Methodology and Case Studies"
 created: 2026-06-09
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [aws, mathematical-optimization, decision-making, operations-research, ai, prescriptive-analytics, ml, business-decisions]
 source: "[[raw/articles/better-decisions-at-scale-how-mathematical-optimization-deli|原文存档]]"

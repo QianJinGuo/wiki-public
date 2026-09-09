@@ -1,7 +1,7 @@
 ---
 title: "Meet Noz, your AI teammate inside SigNoz"
 created: 2026-08-01
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: ['raw', 'article']
 sources: [raw/articles/meet-noz-your-ai-teammate-inside-signoz]

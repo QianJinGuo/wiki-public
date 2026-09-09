@@ -4,7 +4,7 @@ title: "所有实验室都怕字节，所有人都在夸DeepSeek！美国研究�
 type: entity
 tags: [china-ai, deepseek, bytedance, open-source, culture, nathan-lambert]
 created: 2026-05-12
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 7
 review_confidence: 7
 review_recommendation: worth-reading

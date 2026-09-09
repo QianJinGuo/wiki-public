@@ -2,7 +2,7 @@
 
 title: "SkillOpt"
 created: 2026-06-04
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [agent-skill, prompt-optimization, training, validation-gate, optimizer-model, microsoft, lora, ablation, prompt-drift, codex, claude-code, harness, self-evolution, skillgraph, skillos, skillops, aliexpress]
 sources: [raw/articles/skillopt-skill-document-training-microsoft-sjtu, raw/articles/自我进化的-agent-skill微软-skillopt-到底解决了什么, raw/articles/skill-self-evolution-skillopt-practice-aliexpress-2026-08-19]

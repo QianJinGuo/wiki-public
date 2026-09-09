@@ -3,7 +3,7 @@
 
 title: "刚刚Opus 4.7发布，相比4.6核心变化，与Claude Code搭配最佳实践"
 created: 2026-05-16
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [claude-code, anthropic, aws, engineering, ai]
 sources:

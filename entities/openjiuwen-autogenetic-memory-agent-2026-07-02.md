@@ -1,7 +1,7 @@
 ---
 title: "OpenJiuwen AutoGenetic Memory — 华为开源自主生长Agent记忆引擎"
 created: 2026-07-02
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [agent, memory, openjiuwen, huawei, agent-memory, open-source, swarm-memory]
 sources: [raw/articles/openjiuwen-autogenetic-memory-agent-2026-07-02]

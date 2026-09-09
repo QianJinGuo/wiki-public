@@ -3,7 +3,7 @@ title: "The new AI lock-in"
 type: entity
 tags: [claude-code, anthropic, ai, lock-in, enterprise, mcp, orchestration]
 created: 2026-05-20
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 8
 sources: [raw/articles/the-new-ai-lock-in]
 review_confidence: 8

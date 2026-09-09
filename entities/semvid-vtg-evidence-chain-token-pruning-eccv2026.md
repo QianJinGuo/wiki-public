@@ -1,7 +1,7 @@
 ---
 title: "SemVID：面向视频时序定位的训练免费 Token 剪枝（Evidence Chain）"
 created: 2026-08-20
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [video, token-pruning, vtg, multimodal, inference-optimization, eccv]
 sources: [raw/articles/semvid-vtg-evidence-chain-token-pruning-eccv2026]

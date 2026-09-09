@@ -2,7 +2,7 @@
 
 title: "一点天下：Context Engineering 与 Agentic AI (QCon)"
 created: 2026-05-08
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 value: 8
 tags: [agent, llm, aws, architecture, engineering]

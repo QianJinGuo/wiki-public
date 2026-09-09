@@ -1,7 +1,7 @@
 ---
 title: "基于AgentCore构建自学习、可进化的文旅行业近似信息抽取Agents | 亚马逊AWS官方博客"
 created: 2026-05-14
-updated: 2026-09-07
+updated: 2026-09-10
 tags: [aws-china-blog, bedrock-agentcore]
 sources: [raw/articles/self-learning-evolvable-agents-for-cultural-tourism-info-extraction-with-agentcore]
 review_value: 8

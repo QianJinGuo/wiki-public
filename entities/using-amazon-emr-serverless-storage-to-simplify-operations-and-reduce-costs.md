@@ -2,7 +2,7 @@
 
 title: "使用Amazon EMR Serverless Storage简化运维节省成本 | 亚马逊AWS官方博客"
 created: 2026-05-14
-updated: 2026-09-07
+updated: 2026-09-10
 tags: [aws-china-blog, emr]
 sources: [raw/articles/using-amazon-emr-serverless-storage-to-simplify-operations-and-reduce-costs]
 review_value: 8

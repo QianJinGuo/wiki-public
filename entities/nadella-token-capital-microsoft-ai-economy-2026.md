@@ -1,7 +1,7 @@
 ---
 title: 纳德拉「Token 资本」论 — Microsoft CEO 的 AI 时代企业战略宣言
 created: 2026-06-15
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [enterprise-ai, strategy, microsoft, nadella, token-economics, knowledge-management, agentic-architecture, learning-loop, ai-economy, semantic-engine]
 sources: [raw/articles/nadella-token-capital-microsoft-ai-economy-2026]

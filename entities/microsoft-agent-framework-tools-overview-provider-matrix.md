@@ -2,7 +2,7 @@
 
 title: Microsoft Agent Framework Tools 总览：4 类工具 + Provider 矩阵 + Tool Approval
 created: 2026-06-04
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [microsoft-agent-framework, agent-framework, tools, function-tools, hosted-tools, mcp-tools, foundry-tools, tool-approval, provider-matrix, agent-as-tool, responses-api, chat-completion, foundry, anthropic, ollama, foundry-local, github-copilot, function-calling, hosted-mcp, local-mcp, bing-grounding, sharepoint]
 confidence: 0.95

@@ -2,7 +2,7 @@
 title: "RAG vs LLM Wiki 深度对比：企业知识库架构选型指南"
 type: entity
 created: 2026-05-07
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 9
 review_confidence: 8
 review_recommendation: strong

@@ -1,7 +1,7 @@
 ---
 title: "skill-mcp — 把 AI 技能当软件包管理（MCP 权限网关 + 只调度不执行的 Pipeline）"
 created: 2026-06-30
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags:
   - skill-mcp

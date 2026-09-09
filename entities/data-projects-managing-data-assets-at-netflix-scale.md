@@ -2,7 +2,7 @@
 
 title: "Data Projects"
 created: 2026-07-10
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [netflix, tool]
 sources: [raw/articles/data-projects-managing-data-assets-at-netflix-scale]

@@ -4,7 +4,7 @@ title: "Prompt Context Harness 三次演进"
 type: entity
 tags: [context, harness, openai, prompt]
 created: 2026-05-21
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/prompt-context-harness-three-evolutions]

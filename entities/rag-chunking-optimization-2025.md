@@ -2,7 +2,7 @@
 
 title: "RAG 分块优化 2025：策略选择与工程实践"
 created: 2026-05-21
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [rag, chunking, embedding, optimization, retriever, hyde, meta-chunking, parent-child-chunking, rerank, evaluation]
 sources: [raw/articles/rag-chunking-vectorization-rerank-distillation, raw/articles/rag-full-pipeline-taobao, raw/articles/rag-chunk-embedding-rerank-pipeline]

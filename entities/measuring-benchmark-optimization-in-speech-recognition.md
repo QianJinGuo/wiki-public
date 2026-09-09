@@ -1,7 +1,7 @@
 ---
 title: "Measuring benchmark optimization in speech recognition"
 created: 2026-08-21
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [asr, speech-recognition, benchmark, evaluation, benchmaxxing, benchmark-optimization, model-evaluation, open-source]
 provenance_state: extracted

@@ -1,7 +1,7 @@
 ---
 title: "改 Skill 的可重复流程 — 评测与轨迹驱动（孙成心）"
 created: 2026-08-13
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [agent, skill, evaluation, trajectory, regression, workflow, qoder]
 sources: [raw/articles/agent-越改越乱之后我用评测和轨迹把它拉回来了]

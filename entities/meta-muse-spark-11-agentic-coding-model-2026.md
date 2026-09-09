@@ -1,7 +1,7 @@
 ---
 title: "Meta Muse Spark 1.1 — 匹敌 Opus 4.8 的 Agentic/Coding 模型"
 created: 2026-07-10
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [meta, muse-spark, coding-agent, agentic-model, benchmark, open-source]
 sources: [raw/articles/meta-重回牌桌推出匹敌-opus-48-的编程模型muse-spark-11, raw/articles/小扎深夜亮王牌meta烧出白菜价模型掀翻grok-45]

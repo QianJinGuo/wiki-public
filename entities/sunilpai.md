@@ -3,7 +3,7 @@ title: "never waste a token"
 type: entity
 tags: [agent, ai, llm]
 created: 2026-06-18
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 8
 review_confidence: 7
 review_recommendation: worth-reading

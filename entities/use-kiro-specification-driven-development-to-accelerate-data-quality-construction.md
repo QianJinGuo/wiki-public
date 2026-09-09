@@ -1,7 +1,7 @@
 ---
 title: "使用 Kiro 规范驱动开发加速数据质量建设 | 亚马逊AWS官方博客"
 created: 2026-05-14
-updated: 2026-09-07
+updated: 2026-09-10
 tags: [aws-china-blog, kiro]
 sources: [raw/articles/use-kiro-specification-driven-development-to-accelerate-data-quality-construction]
 review_value: 8

@@ -1,7 +1,7 @@
 ---
 title: "State of Memory in Agent Harness — mem0 视角的九大 harness 横评"
 created: 2026-06-12
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [agent, harness, memory, mem0, comparison, landscape, survey, benchmark]
 sources: [raw/articles/state-of-memory-in-agent-harness-mem0-2026]

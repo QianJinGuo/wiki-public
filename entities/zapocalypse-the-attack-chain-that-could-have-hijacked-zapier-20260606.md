@@ -2,7 +2,7 @@
 
 title: "Zapocalypse: The Attack Chain That Could Have Hijacked Zapier"
 created: 2026-06-06
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [article, aws, code, data, k8s, memory, observability, rag, search, security, source-archive, tool-use, vision]
 sources: [raw/articles/zapocalypse-the-attack-chain-that-could-have-hijacked-zapier-20260606]

@@ -4,7 +4,7 @@ title: "去哪儿网 AI Coding 研发平台实践：L0-L5 自动化分级 + Harn
 authors:
   - 李佳奇（去哪儿旅行基础架构负责人/技术总监）
 created: 2026-07-05
-updated: 2026-09-07
+updated: 2026-09-10
 source: wechat
 url:
 type: entity

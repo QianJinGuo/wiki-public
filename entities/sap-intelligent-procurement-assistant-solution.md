@@ -4,7 +4,7 @@ title: "基于Strands框架和Bedrock AgentCore的SAP智能采购助手方案 | 
 type: entity
 tags: [agent, aws, sdk]
 created: 2026-05-21
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 8
 review_confidence: 8
 sources: [raw/articles/sap-intelligent-procurement-assistant-solution]

@@ -3,7 +3,7 @@ title: "新程Alpha认知模型：4B参数端侧部署，群体智能以小搏�
 type: entity
 tags: [cognitive-model, on-device, nextie, group-intelligence, harness, xiaoice, reasoning, paradigm-shift]
 created: 2026-06-10
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 8
 review_confidence: 7
 review_recommendation: strong

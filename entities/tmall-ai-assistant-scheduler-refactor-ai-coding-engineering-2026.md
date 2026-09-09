@@ -1,7 +1,7 @@
 ---
 title: "天猫AI助手调度框架重构与AI Coding工程化"
 created: 2026-08-12
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [scheduler, reducer, event-sourcing, state-management, ai-coding, skills, hooks, observability, telemetry, tmall, first-party, engineering-capability]
 review_value: 8

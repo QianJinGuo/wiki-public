@@ -1,7 +1,7 @@
 ---
 title: "Qwen3.7-Max Opus 级体验 - Alibaba 旗舰模型长程任务实测"
 created: 2026-07-11
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [qwen, alibaba, model, benchmark, llm, agent, post-training, tool-calling, multi-agent]
 confidence: 0.75

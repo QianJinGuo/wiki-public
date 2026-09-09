@@ -1,7 +1,7 @@
 ---
 title: "阿里Qwen开源 Skill-SP：自博弈实现模型和Skill协同进化新范式"
 created: 2026-07-28
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: ['auto-harvested', 'self-play', 'skill-evolution', 'search-agent', 'curriculum-learning']
 sources:

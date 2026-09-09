@@ -1,7 +1,7 @@
 ---
 
 created: 2026-06-10
-updated: 2026-09-07
+updated: 2026-09-10
 title: "Business intelligence at scale: Key obstacles"
 type: entity
 tags: [rss, article, agent, ai, llm, bedrock, aws, observability]

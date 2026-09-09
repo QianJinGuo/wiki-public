@@ -1,7 +1,7 @@
 ---
 title: "PostHog 用 Claude Code 重写 SQL 解析器：PBT + 影子模式的生产级 AI 重写实践"
 created: "2026-07-14"
-updated: 2026-09-07
+updated: 2026-09-10
 type: "entity"
 tags: [claude-code, ai-coding, sql-parser, rust, pbt, posthog, rewriting]
 confidence: 0.8

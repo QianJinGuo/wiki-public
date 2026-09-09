@@ -1,7 +1,7 @@
 ---
 title: "Vibe Coding 与 AI 软件工程"
 created: 2026-07-02
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [vibe-coding, ai-coding, software-engineering, methodology]
 review_value: 6

@@ -2,7 +2,7 @@
 
 title: "Build Specialized Agent Workflows for Your Business with Amazon Bedrock"
 created: 2026-07-24
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [aws, bedrock, agent, workflow]
 sources: [raw/articles/build-specialized-agent-workflows-for-your-business-with-ama]

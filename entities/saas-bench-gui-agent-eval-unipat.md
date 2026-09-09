@@ -3,7 +3,7 @@ title: "SaaS-Bench：浙大阿里 Steering Computer-Use Agent 真实系统评测
 type: entity
 tags: [benchmark, computer-use, gui-agent, saas-bench, unipat, long-horizon, eval, agent-failure, zhejiang-university, alibaba, docker-real-system, path-dependence, checkpoint-score, resolved-score, cua-paradigm-limit]
 created: 2026-06-10
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 8
 review_confidence: 8
 provenance_state: extracted

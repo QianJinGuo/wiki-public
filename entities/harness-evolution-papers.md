@@ -2,7 +2,7 @@
 
 tags: [harness, research, paper]
 title: "Harness进化论文 — M⋆记忆程序进化与AutoHarness动作约束"
-updated: 2026-09-07
+updated: 2026-09-10
 created: 2026-04-30
 type: entity
 sources: [raw/articles/two-harness-papers-microsoft-google]

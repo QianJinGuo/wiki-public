@@ -1,7 +1,7 @@
 ---
 title: "规模化云迁移：Bedrock AgentCore 多 Agent 编排框架"
 created: 2026-08-21
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [agentcore, aws, multi-agent, orchestration, migration, cloud-migration, aws-ml-blog, strands]
 sources: [raw/articles/scaling-cloud-migrations-with-agentic-ai-on-amazon-bedrock-agentcore]

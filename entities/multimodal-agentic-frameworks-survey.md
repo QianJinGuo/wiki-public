@@ -1,7 +1,7 @@
 ---
 title: "多模态智能体框架综述：感知融合策略×四模块×四赛道"
 created: "2026-08-31"
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [agent, multimodal, perception, fusion, robotics, gui, survey]
 sources:

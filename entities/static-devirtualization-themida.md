@@ -5,7 +5,7 @@ type: entity
 source: newsletter
 source_url:
 created: 2026-05-13
-updated: 2026-09-07
+updated: 2026-09-10
 tags: [reverse-engineering, devirtualization, themida, software-protection, binary-analysis]
 review_value: 9
 review_confidence: 9

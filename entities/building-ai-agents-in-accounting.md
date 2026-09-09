@@ -4,7 +4,7 @@ title: "Building AI Agents in Accounting"
 type: entity
 tags: [newsletter, ai-agent, accounting, automation, mcp, skill-config-separation]
 created: 2026-05-18
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 8
 review_confidence: 9
 review_recommendation: worth-reading

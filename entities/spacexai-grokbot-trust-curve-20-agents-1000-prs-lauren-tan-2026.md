@@ -2,7 +2,7 @@
 
 title: "SpaceXAI GrokBot：从 1 个 Agent 到 20 个并行的信任曲线"
 created: 2026-09-01
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [ai-coding, grokbot, spacexai, parallel-agents, trust-building, engineering-management, cursor, agent-orchestration]
 sources: [raw/articles/spacexai-grokbot-trust-curve-20-agents-1000-prs-lauren-tan-2026]

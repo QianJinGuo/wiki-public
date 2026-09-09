@@ -7,7 +7,7 @@ sources: [raw/articles/microsoft-agent-framework-python-zizhi]
 review_confidence: 8
 tags: [microsoft, agent-framework, semantic-kernel, multi-agent, workflow]
 created: "2026-05-18"
-updated: 2026-09-07
+updated: 2026-09-10
 reviewed: 2026-09-07
 review_verdict: keep
 review_category: practice

@@ -2,7 +2,7 @@
 
 title: Build an AI-powered AWS support companion with Amazon Bedrock AgentCore
 created: 2026-07-10
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [tool, mcp, aws, bedrock, agent]
 sources: [raw/articles/build-an-ai-powered-aws-support-companion-with-amazon-bedroc]

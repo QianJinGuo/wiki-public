@@ -2,7 +2,7 @@
 
 title: "MiroFlow：Deep Research Agent 脚手架 —— 与 Code Agent 的 6 大工程差异"
 created: 2026-06-04
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [miroflow, mirothinker, miromind, deep-research, agent-harness, code-vs-research, xml-tool-use, mcp-server, e2b-sandbox, context-management, sub-agent, jupyter-kernel, wayback-machine]
 sources: [raw/articles/miroflow-deep-research-agent-harness-mirothinker]

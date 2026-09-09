@@ -6,7 +6,7 @@ author: AgentBuff
 publish_date: 2026-05-12
 tags: [wechat, agent, coding, engineering]
 created: 2026-05-19
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 8
 sources: [raw/articles/three-tools-in-one-gstack-superpowers-openspec-engineering-ai-coding]
 review_stars: 4

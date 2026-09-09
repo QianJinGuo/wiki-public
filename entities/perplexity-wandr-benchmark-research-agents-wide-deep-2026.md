@@ -1,7 +1,7 @@
 ---
 title: "WANDR Benchmark — 评估 Research Agent 的 Wide-and-Deep 研究能力"
 created: 2026-07-16
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [agent-evaluation, benchmark, research-agent, perplexity, search-as-code, wide-and-deep]
 sources: [raw/articles/perplexity-wandr-benchmark-research-agents-wide-deep-2026]

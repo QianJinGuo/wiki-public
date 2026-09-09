@@ -2,7 +2,7 @@
 
 title: "Agent Harness 上下文管理：工作集视角"
 created: "2026-04-30"
-updated: 2026-09-07
+updated: 2026-09-10
 type: "entity"
 tags: [agent-harness, context-management, working-set, compaction, contextual-boundaries, memory-hierarchy, session-management]
 sources:

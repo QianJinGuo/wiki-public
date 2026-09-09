@@ -3,7 +3,7 @@ title: "自进化 Agent 安全治理：3 类污染风险与 5 道写入闸门"
 type: entity
 tags: [agent-security, self-evolving-agent, hermes, skill-governance, desensitization, prompt-injection, adversarial-learning, memory-security, write-gates, sandbox, emergency-response, enterprise-security]
 created: 2026-06-30
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 8
 review_confidence: 7
 sources: [raw/articles/self-evolving-agent-security-governance-hermes]

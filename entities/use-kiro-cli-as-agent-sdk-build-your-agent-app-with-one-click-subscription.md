@@ -1,7 +1,7 @@
 ---
 title: "把 Kiro CLI 当作 Agent SDK：一键订阅即可构建你的Agent应用 | 亚马逊AWS官方博客"
 created: 2026-05-14
-updated: 2026-09-07
+updated: 2026-09-10
 tags: [aws-china-blog, kiro]
 sources: [raw/articles/use-kiro-cli-as-agent-sdk-build-your-agent-app-with-one-click-subscription]
 review_value: 8

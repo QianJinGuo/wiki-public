@@ -2,7 +2,7 @@
 
 title: "LoHoSearch — 下一代搜索智能体评测基准"
 created: 2026-07-24
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [search-agent, benchmark, knowledge-graph, evaluation, ai-agent, meituan, open-source]
 confidence: 0.7

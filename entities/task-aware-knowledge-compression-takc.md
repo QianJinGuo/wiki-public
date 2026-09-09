@@ -1,7 +1,7 @@
 ---
 title: "Task-Aware Knowledge Compression (TAKC)"
 created: 2026-07-28
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [rag, knowledge-compression, aws, bedrock, retrieval, enterprise-ai]
 sources: [raw/articles/beyond-rag-task-aware-knowledge-compression-for-enterprise-a]

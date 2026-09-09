@@ -1,7 +1,7 @@
 ---
 title: "被高估的视触觉：VBTS 技术路线批判与具身触觉产业反思"
 created: 2026-08-28
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [tactile-sensor, vbst, vision-based-tactile, embodied-ai, robotics, sensor, force-sensing, industrial-reliability, gelsight]
 sources: [raw/articles/vision-based-tactile-sensor-overrated-critique-2026]

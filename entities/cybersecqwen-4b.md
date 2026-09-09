@@ -1,7 +1,7 @@
 ---
 title: "CyberSecQwen-4B"
 created: "2026-05-12"
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [cybersecurity, small-language-model, specialized-model, threat-intelligence, lora-finetuning]
 related_topics: [cybersecqwen-4b, cti-bench, foundation-sec-instruct-8b, qwen3-4b-instruct]

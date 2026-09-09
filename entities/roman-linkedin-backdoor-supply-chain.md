@@ -1,7 +1,7 @@
 ---
 title: "A backdoor in a LinkedIn job offer"
 created: 2026-06-16
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [article, newsletter]
 source_url: "https://roman.pt/posts/linkedin-backdoor/"

@@ -2,7 +2,7 @@
 
 title: "Memento-Skills — 技能外部记忆让 Agent 自进化（arXiv 2603.18743）"
 created: 2026-05-15
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [agent-self-evolution, skill-memory, agent-memory, continuous-learning, skill-routing, llm-agent, external-memory, reflective-learning, self-designing-agent, arxiv-2603.18743]
 sources: [raw/articles/memento-skills-let-agents-design-agents]

@@ -2,7 +2,7 @@
 description: Auto-generated placeholder
 title: "Natural Language Autoencoders — Anthropic 激活→文字可解释性方法"
 created: 2026-05-09
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [interpretability, anthropic, mech-interp]
 source_url:

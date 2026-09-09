@@ -9,7 +9,7 @@ review_recommendation: strong
 review_stars: 4
 date: 2026-05-27
 created: 2026-05-28
-updated: 2026-09-07
+updated: 2026-09-10
 tags: [ai-scientist, multi-agent, co-scientist, robin, futurehouse, google-deepmind, nature, drug-repurposing, research-agent, lab-automation]
 type: entity
 provenance_state: synthesized

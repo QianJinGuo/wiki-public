@@ -3,7 +3,7 @@ title: "Task Queue Priority and Fairness: Your Task Queue, your way"
 type: entity
 tags: [temporal, task-queue, distributed-systems, workflow-orchestration, concurrency]
 created: 2026-05-14
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 6
 sources: [raw/articles/task-queue-priority-and-fairness-your-task-queue]
 review_confidence: 7

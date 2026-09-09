@@ -1,7 +1,7 @@
 ---
 title: "腾讯研究院 2026 Q2 Agent 产业回顾——Agent 跌跌撞撞进入世界"
 created: 2026-07-22
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [tencent, industry-review, 2026-q2, agent, tokenmaxxing, multi-agent, loop-engineering, cpu-centric, human-in-the-loop, skill-duplication]
 review_value: 8

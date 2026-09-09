@@ -1,7 +1,7 @@
 ---
 title: "PyTorch Monarch: AMD GPU Distributed Training on ROCm"
 created: 2026-07-08
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [pytorch, amd, rocm, distributed-training, ai-infrastructure, llm]
 confidence: 0.75

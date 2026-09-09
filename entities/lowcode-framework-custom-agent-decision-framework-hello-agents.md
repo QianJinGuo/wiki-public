@@ -4,7 +4,7 @@ title: "低代码 Agent、框架 Agent、自研 Agent，分别适合谁"
 type: entity
 tags: [agent, framework]
 created: 2026-05-21
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/lowcode-framework-custom-agent-decision-framework-hello-agents]

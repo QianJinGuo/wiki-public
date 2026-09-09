@@ -1,7 +1,7 @@
 ---
 title: "Relay-OPD：在线蒸馏的前缀失败纠偏（浙大×阿里，2026）"
 created: 2026-08-25
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [post-training, on-policy-distillation, distillation, math-reasoning, speculative-decoding, zju, alibaba]
 sources: [raw/articles/relay-opd-handoff-trigger-online-distillation-zju-alibaba-2026]

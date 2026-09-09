@@ -2,7 +2,7 @@
 title: "Netflix Metadata Service and Model Lifecycle Graph"
 description: "Netflix 通过 MDS + Model Lifecycle Graph 将异构 ML 基础设施（pipeline、model registry、feature store、experimentation）统一为可探索图谱。"
 created: 2026-06-07
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [netflix, mlops, metadata-service, model-lifecycle, ml-infrastructure, ml-platform]
 source: [[raw/articles/democratizing-machine-learning-at-netflix-building-the-model]]

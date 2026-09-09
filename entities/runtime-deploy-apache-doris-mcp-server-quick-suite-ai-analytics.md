@@ -4,7 +4,7 @@ title: "Apache Doris MCP Server + Quick Suite AI 分析部署"
 type: entity
 tags: [agent, aws]
 created: 2026-05-21
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 6
 review_confidence: 7
 sources: [raw/articles/runtime-deploy-apache-doris-mcp-server-quick-suite-ai-analytics]

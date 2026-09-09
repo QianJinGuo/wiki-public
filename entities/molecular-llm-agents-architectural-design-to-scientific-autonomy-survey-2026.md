@@ -2,7 +2,7 @@
 
 title: "分子 LLM 智能体：从架构设计到科学自主"
 created: 2026-09-09
-updated: 2026-09-09
+updated: 2026-09-10
 type: entity
 tags: [scientific-ai, llm-agent, molecular, survey, autonomy, workflow]
 sources: [raw/articles/molecular-llm-agents-architectural-design-to-scientific-autonomy-survey-2026]

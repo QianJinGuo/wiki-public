@@ -1,7 +1,7 @@
 ---
 title: "PersonaVLM — 长期个性化多模态大模型"
 created: 2026-04-27
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [research, model, multimodal, memory, personalization, cvpr2026]
 sources: [raw/articles/personavlm-long-term-personalization]

@@ -1,7 +1,7 @@
 ---
 title: "腾讯 Token 优化实战 — 省 Token 和用好 AI 是同一件事"
 created: 2026-07-08
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [token-optimization, context-management, agent-architecture, sub-agent, prompt-engineering, cost-efficiency, harness-design, tencent, progressive-disclosure, deferred-tools]
 provenance_state: extracted

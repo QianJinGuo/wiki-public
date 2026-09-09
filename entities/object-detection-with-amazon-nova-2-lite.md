@@ -2,7 +2,7 @@
 
 title: "Amazon Nova 2 Lite 视觉对象检测（自然语言驱动）"
 created: 2026-06-03
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [aws]
 source: "[[raw/articles/object-detection-with-amazon-nova-2-lite]]"

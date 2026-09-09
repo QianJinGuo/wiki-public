@@ -4,7 +4,7 @@ tags: [aws-china-blog, openclaw]
 sources:
   - raw/articles/openclaw-from-personal-assistant-to-customer-service-a-trust-model-flip
 created: 2026-05-16
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 8
 review_confidence: 8
 review_recommendation: strong
