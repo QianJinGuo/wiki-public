@@ -13,8 +13,6 @@ review_category: practice
 
 > -> [[raw/articles/2026-06-20-打造真实项目的-AI-编程环境-Matt-Pocock-的-Skill-工作流完-技术极简主义.md|原文存档]]
 
-sha256: 37ae7b4c863e350f0ad8141e2a2a02c7b4a474bc480988d0029acf47adb8f6f6 ^[raw/articles/2026-06-20-打造真实项目的-AI-编程环境-Matt-Pocock-的-Skill-工作流完-技术极简主义.md]
-
 ## 摘要
 
 技术极简主义公众号解读 TypeScript 社区知名开发者 Matt Pocock 于 2026 年 3 月开源的 Claude Code skills 仓库（mattpocock/skills，副标题 "Skills for Real Engineers. Straight from my .claude directory"）。它不是多 Agent 编排框架，本质是一组 Markdown 文件，每个 Skill 对应一种工程实践，核心观点是：AI 编程的失败普遍源于工程反馈链的失效，而非模型不够聪明。针对四大问题给出对应 Skill：需求没听懂用 /grill-me 和 /grill-with-docs（让 Agent 反过来拷问用户并把领域语言沉淀到 CONTEXT.md）；代码"形状正确但不 work"用 /tdd（严格 red-green-refactor 垂直切片，一个行为一个失败测试一个最小实现）和 /diagnose（复现→缩小范围→假设→插桩验证→修复）；架构腐化用 /to-prd、/to-issues（按端到端可验收的垂直切片拆任务而非按文件拆）、/zoom-out、/improve-codebase-architecture ^[raw/articles/2026-06-20-打造真实项目的-AI-编程环境-Matt-Pocock-的-Skill-工作流完-技术极简主义.md]

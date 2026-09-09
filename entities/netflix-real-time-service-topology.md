@@ -22,13 +22,6 @@ review_category: tech
 ## 核心内容
 
 -2615bd06b42e---4
-ingested: 2026-05-29^[raw/articles/netflix-real-time-service-topology.md]
-
-feed_name: Netflix Tech Blog^[raw/articles/netflix-real-time-service-topology.md]
-
-source_published: 2026-05-29T14:01:02Z^[raw/articles/netflix-real-time-service-topology.md]
-
----
 
 ## From Silos to Service Topology: Why Netflix Built a Real-Time Service Map
 
@@ -249,7 +242,6 @@ In our next post, we'll pull back the curtain on the engineering challenges we f
 
 In future posts, we'll explore the lessons we learned that apply to any distributed system at scale, and where we're heading next with time travel capabilities and Automated root cause analysis. ^[raw/articles/netflix-real-time-service-topology.md]
 
-## 深度分析
 
 ### 多层图融合架构的核心洞察
 

@@ -13,8 +13,6 @@ review_category: practice
 
 > -> [[raw/articles/meet-noz-your-ai-teammate-inside-signoz.md|原文存档]]
 
-sha256: 6231167270f562d4f70985676559008e14ad5012606e0cc3e4aa339bef1d9ac3 ^[raw/articles/meet-noz-your-ai-teammate-inside-signoz.md]
-
 ## 摘要
 
 SigNoz 发布了内置于产品的 AI 队友 Noz（beta 阶段免费），它以侧边栏（sidepane）形式存在、自动感知当前页面上下文，可以基于用户自己的遥测数据和文档回答问题，也能根据自然语言描述直接生成告警规则和仪表盘，例如"当 checkout p99 延迟超过 2 秒时告警"即可自动构建对应告警规则。这个产品的出发点并非"加一个 AI 聊天机器人"，而是观察到用户长期把产品内置的人工客服聊天当成 AI 使用——期望即时回答 dashboard 构建和数据查询问题——说明产品内助手的需求早已存在。^[raw/articles/meet-noz-your-ai-teammate-inside-signoz.md]

@@ -19,18 +19,9 @@ review_category: tech
 
 > -> [[raw/articles/deepseek-v4-training-58-page-paper-deep-dive.md|原文存档]]
 
-## 摘要
 ---   ^[raw/articles/deepseek-v4.md]
-source: wechat
-source_url: https://mp.weixin.qq.com/s/jcqQS4W4QW61PaIzJuUxeg ^[raw/articles/deepseek-v4.md]
-ingested: 2026-05-12^[raw/articles/deepseek-v4-training-58-page-paper-deep-dive.md]
-
-feed_name: AI寒武纪
 wechat_mp_fakeid: MP_WXS_3871912638^[raw/articles/deepseek-v4-training-58-page-paper-deep-dive.md]
 
-source_published: 2026-05-03^[raw/articles/deepseek-v4-training-58-page-paper-deep-dive.md]
-
----
 DeepSeek-V4深度拆解：一篇论文同时做了五件大事^[raw/articles/deepseek-v4-training-58-page-paper-deep-dive.md]
 
 ↑阅读之前记得关注+星标⭐️，😄，每天才能第一时间接收到更新^[raw/articles/deepseek-v4-training-58-page-paper-deep-dive.md]
@@ -60,7 +51,6 @@ DeepSeek-V4的论文试图同时完成多件事，而且这些事之间的联系
 - [[concepts/transformer-architecture|Transformer Architecture]]
 - [[entities/design-patterns-for-ai-agents-2026|Design Patterns for AI Agents 2026]]
 
-## 深度分析
 ### 1. 架构追赶背后的工程化壁垒
 DeepSeek-V4的核心意图是正面挑战Anthropic Opus系列和GPT-5最大模型代表的闭源架构差距。这类超大稀疏MoE模型的关键特征是：规模极大、极度稀疏，能够在保持可服务性的前提下维持前所未有的宽搜索空间。 ^[raw/articles/deepseek-v4.md]
 **深层含义**：这种架构差距的本质不是算法创新，而是工程能力的积累——需要从底层算子（kernel）开始重写，才能精细调度节点互联通信，将通信时间嵌入计算时间中并行完成。这是对整个AI基础设施团队能力的考验。 ^[raw/articles/deepseek-v4.md]

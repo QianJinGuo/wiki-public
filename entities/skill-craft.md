@@ -101,7 +101,6 @@ Skill Craft 和 [[concepts/harness-engineering-framework|Harness Engineering]] �
 - **Skill Craft**：Skill 本身的结构质量和系统级治理（微观工具）
 Skill Craft 的 fix 回归验证逻辑与 Harness 的 Generator/Evaluator 循环有共通之处——都是通过**持续验证**防止能力退化。 ^[raw/articles/claude-skill-quality-tool-skill-craft.md]
 
-## 关联阅读
 ## 相关实体
 - [[entities/skill-issues-compromising-claude-code-with-malicious-skills-agents-part-1]]
 - [[entities/claude-design-skill-web-design-engineer]]

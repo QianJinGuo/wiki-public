@@ -13,8 +13,6 @@ review_category: practice
 
 > -> [[raw/articles/pair-nova-2-lite-with-claude-for-cost-optimized-document-pro.md|原文存档]]
 
-sha256: c8851ea611bd9d2a9d198657d99d50af19600b6dbe436f61713a013c5ec51c94 ^[raw/articles/pair-nova-2-lite-with-claude-for-cost-optimized-document-pro.md]
-
 ## 摘要
 
 AWS 机器学习博客介绍了一个在 Amazon Bedrock 上构建的两模型文档数字化流水线：Amazon Nova 2 Lite 在单次 Converse 调用中完成原生多模态提取（照片检测与 bounding box、带坐标的姓名提取、页面级元数据），Claude Sonnet 4.6 随后基于页面布局做空间推理，把姓名匹配到对应人脸。在 336 页扫描年鉴上，流水线产出 3,122 条姓名-人脸关联，其中 93.3% 置信度 ≥0.95，仅 0.3% 低于 0.90。两模型拆分方案每页约 $0.033，比单模型全量方案（约 $0.10/页）便宜约三分之二，10 万页可节省约 $6,500 ^[raw/articles/pair-nova-2-lite-with-claude-for-cost-optimized-document-pro.md]

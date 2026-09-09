@@ -1298,6 +1298,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/W1cua_2pXfshl_OUKgn2hA"
     },
     {
+      "path": "raw/articles/agent-benchmark-task-set-construction-gaia-clawsbench-tau-2026-09.md",
+      "title": "Agent评测题集怎么造？ 从任务设计到环境构建",
+      "sourceUrl": "https://mp.weixin.qq.com/s/_N9N4Ehuu_chQihMRpAabA"
+    },
+    {
       "path": "raw/articles/agent-browser-zombie-process-cleanup-mac-tool-2026.md",
       "title": "agent-browser-zombie-process-cleanup-mac-tool-2026",
       "sourceUrl": "https://mp.weixin.qq.com/s/AbJMzQybcESpdfvpawZmRQ"
@@ -1351,6 +1356,11 @@
       "path": "raw/articles/agent-eval-counterintuitive-insights-langfuse.md",
       "title": "agent eval counterintuitive insights langfuse",
       "sourceUrl": null
+    },
+    {
+      "path": "raw/articles/agent-eval-eight-dimension-framework-product-comparison-2026-09.md",
+      "title": "Agent测评框架——怎么判断一个AI Agent好不好用？",
+      "sourceUrl": "https://mp.weixin.qq.com/s/KRKKYCaGxZ5aUOWbfm_TBg"
     },
     {
       "path": "raw/articles/agent-eval-wallezhang-yaml-driven-agent-evaluation.md",
@@ -15621,6 +15631,11 @@
       "path": "raw/articles/skillevo-multi-turn-evolution-governance-tencent-xhs-2026-08-21.md",
       "title": "SkillEvo：智能客服场景的 Skill 进化&治理（Self-Renewing Evolution Gradients from Multi-Turn Interaction Feedback）",
       "sourceUrl": "https://www.xiaohongshu.com/explore/6a7ec6b400000000060050f4"
+    },
+    {
+      "path": "raw/articles/skilljack-persistent-skill-backdoor-tencent-mindchain-2026-09.md",
+      "title": "腾讯提出 SkillJack：自进化智能体中的持久化技能后门",
+      "sourceUrl": "https://mp.weixin.qq.com/s/Ffevle69IBuha79J-Q_67w"
     },
     {
       "path": "raw/articles/skillopt-lite-一行vibe指令进化agent技能.md",

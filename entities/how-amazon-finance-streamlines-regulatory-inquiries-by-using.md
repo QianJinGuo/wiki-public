@@ -17,12 +17,6 @@ review_category: practice
 
 # "How Amazon Finance streamlines regulatory inquiries by using generative AI on AWS"
 ---   ^[raw/articles/how-amazon-finance-streamlines-regulatory-inquiries-by-using.md]
-source: rss ^[raw/articles/how-amazon-finance-streamlines-regulatory-inquiries-by-using.md]
-source_url: https://aws.amazon.com/blogs/machine-learning/how-amazon-finance-streamlines-regulatory-inquiries-by-using-generative-ai-on-aws/ ^[raw/articles/how-amazon-finance-streamlines-regulatory-inquiries-by-using.md]
-ingested: 2026-05-13 ^[raw/articles/how-amazon-finance-streamlines-regulatory-inquiries-by-using.md]
-feed_name: AWS China ML ^[raw/articles/how-amazon-finance-streamlines-regulatory-inquiries-by-using.md]
-source_published: 2026-05-12T16:41:33Z ^[raw/articles/how-amazon-finance-streamlines-regulatory-inquiries-by-using.md]
----
 
 ## How Amazon Finance streamlines regulatory inquiries by using generative AI on AWS
 Amazon's Finance Technology (FinTech) teams build and operate systems for Amazon teams to manage regulatory inquiries in compliance with different jurisdictions. These teams process regulatory inquiries from authorities, each presenting different requirements, document formats, and complexity levels. ^[raw/articles/how-amazon-finance-streamlines-regulatory-inquiries-by-using.md]

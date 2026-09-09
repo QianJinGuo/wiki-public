@@ -38,7 +38,6 @@ gent harness（执行编排层）正在成为提升长周期代理性能的核�
 ---
 title: Agent的编排层：长任务中的上下文管理架构^[raw/articles/2026-05-01-Agent的编排层-长任务中的上下文管理架构-unknown.md]
 
-source: wechat
 url: https://mp.weixin.qq.com/s/vT_KE8GnvA24BfrMAQVvPw ^[raw/articles/2026-05-01-Agent的编排层-长任务中的上下文管理架构-unknown.md]
 mp_name: Unknown
 publish_date: 2026-05-01^[raw/articles/2026-05-01-Agent的编排层-长任务中的上下文管理架构-unknown.md]

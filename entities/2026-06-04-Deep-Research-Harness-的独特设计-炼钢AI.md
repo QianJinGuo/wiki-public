@@ -13,8 +13,6 @@ review_category: tech
 
 > -> [[raw/articles/2026-06-04-Deep-Research-Harness-的独特设计-炼钢AI.md|原文存档]]
 
-sha256: 12f24d9c42c1c6be47f52c3e47c55735dc6971140f6e6105ca55c2829903ef8c ^[raw/articles/2026-06-04-Deep-Research-Harness-的独特设计-炼钢AI.md]
-
 ## 摘要
 
 炼钢AI 公众号深度解析 MiroFlow（MiroThinker 产品背后的 deep research agent 脚手架）的独特设计，与 Claude Code 这类 code agent 脚手架逐项对比。文章先指出两类任务的本质差异：code 目标清晰可验证、操作本地文件系统、5–50 个工具调用、错误成本高；deep research 目标模糊、操作不可控外部世界、可能需要几百轮操作、错误几乎无副作用但需要更强容错。MiroFlow 的关键设计包括：当天日期硬编码进 system prompt（避免模型按训练 cutoff 判断"今年"写出诡异 query）、强制每次 response 只返回一个工具调用（与 Claude Code 鼓励并行调用相反，因为 deep research 的工具调用之间有强依赖，必须把每步中间结果纳入推理）^[raw/articles/2026-06-04-Deep-Research-Harness-的独特设计-炼钢AI.md]

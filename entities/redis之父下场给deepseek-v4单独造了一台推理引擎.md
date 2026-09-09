@@ -14,9 +14,6 @@ review_category: tech
 > → [[raw/articles/redis之父下场给deepseek-v4单独造了一台推理引擎.md|原文存档]]
 从微信文章 [[raw/articles/redis之父下场给deepseek-v4单独造了一台推理引擎.md|Redis之父下场，给DeepSeek V4单独造了一台推理引擎]] 提取。  ^[raw/articles/redis之父下场给deepseek-v4单独造了一台推理引擎.md]
 
-## 核心内容
-source_url: https://mp.weixin.qq.com/s/9X0bcfUGZYxoXuQwt89zkQ ^[raw/articles/redis之父下场给deepseek-v4单独造了一台推理引擎.md]
-
 ### 主要章节
 - #####  henry 发自 凹非寺
 - ##  专为V4 Flash打造的本地推理引擎
@@ -30,7 +27,6 @@ source_url: https://mp.weixin.qq.com/s/9X0bcfUGZYxoXuQwt89zkQ ^[raw/articles/red
 - [[entities/deepseek-v4-pro-vs-claude|We Tested DeepSeek V4 Pro and Flash Against Claude Opus 4.7 and Kimi K2.6]]
 - [[entities/wetesteddeepseekv4proandflashagainstclau.md|We Tested DeepSeek V4 Pro and Flash Against Claude Opus 4.7 and Kimi K2.6]]
 
-## 深度分析
 ### 1. 项目定位：专有推理引擎的回归
 ds4.c的出现，本质上是对"通用框架"路线的否定。antirez在README中直白地指出：通用引擎为了兼容所有模型，必须做抽象，而抽象意味着妥协。他的解法是**刻意走窄路**：一个模型、一个推理引擎、用官方logits做验证。这种思路在 llama.cpp 主导的开源社区中几乎是异类。 ^[raw/articles/redis之父下场给deepseek-v4单独造了一台推理引擎.md]
 从技术选型上看，ds4.c有三个关键设计决策： ^[raw/articles/redis之父下场给deepseek-v4单独造了一台推理引擎.md]

@@ -13,8 +13,6 @@ review_category: practice
 
 > -> [[raw/articles/2026-06-02-啊-我刚开源的-Skills-已经-7K-Star-了--code秘密花园.md|原文存档]]
 
-sha256: d6f064ad6fde6d1103017ed2767b9a2ecb542cb78b1817ff9e9755c5183d77c4 ^[raw/articles/2026-06-02-啊-我刚开源的-Skills-已经-7K-Star-了--code秘密花园.md]
-
 ## 摘要
 
 作者 ConardLi 把近几篇 AI Agent 教程中陆续开源的 Skill 整理进 garden-skills 合集仓库，写文时已接近 7K Star，并借机阐述他对 Skill 价值的核心判断：Skill 的价值不在提示词漂亮，而在于把一套可重复、稳定工作的方法交给 Agent，把"任务"变成"生产线" ^[raw/articles/2026-06-02-啊-我刚开源的-Skills-已经-7K-Star-了--code秘密花园.md]。文章介绍了三个主力 Skill 及其近期更新：web-video-presentation（用网页模拟视频效果、内置多套主题模板、TTS 改为可插拔，支持 MiniMax/OpenAI 示例并兼容 ElevenLabs、edge-tts 等）、web-design-engineer（对抗"AI 味"网页审美、新增 25 套含具体设计规则的主题）、gpt-image-2（18 大类 79 个结构化 Prompt 模板、本地/宿主工具/顾问三种运行模式） ^[raw/articles/2026-06-02-啊-我刚开源的-Skills-已经-7K-Star-了--code秘密花园.md]。每个 Skill 都附有在线预览站点，作者同时给出了"模型很关键、第一轮 Review 要认真看、别期待一次到位"等使用建议 ^[raw/articles/2026-06-02-啊-我刚开源的-Skills-已经-7K-Star-了--code秘密花园.md]。

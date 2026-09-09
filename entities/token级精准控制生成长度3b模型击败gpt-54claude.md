@@ -17,9 +17,6 @@ review_category: tech
 > -> [[raw/articles/token级精准控制生成长度3b模型击败gpt-54claude.md|原文存档]]
 从微信文章 [[raw/articles/token级精准控制生成长度3b模型击败gpt-54claude.md|token级，精准控制生成长度：3B模型击败GPT 5.4、Claude]] 提取。  ^[raw/articles/token级精准控制生成长度3b模型击败gpt-54claude.md]
 
-## 核心内容
-source_url: https://mp.weixin.qq.com/s/wj5L4eEHatAyP0Kjcw1rjQ ^[raw/articles/token级精准控制生成长度3b模型击败gpt-54claude.md]
-
 ### 主要章节
 - ### 
 

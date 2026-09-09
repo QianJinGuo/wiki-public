@@ -102,18 +102,18 @@ SubAgent 模式通过这两个钩子封装成普通工具，不是核心内置�
 自动上下文压缩：`reserveTokens: 16384`，`keepRecentTokens: 20000`。Token 费用展示缺失。 ^[raw/articles/pi-main-agent-engineering-17-dimensions.md]
 
 ## 设计对照表
-|| 维度 | 关键设计 | 可照抄程度 |
+| 维度 | 关键设计 | 可照抄程度 |
 |------|---------|-----------|
-|| 主循环 | 双层 while + terminate | ★★★★★ |
-|| 纠错 | isError 统一返回 | ★★★★★ |
-|| 工具系统 | TypeBox + executionMode | ★★★★★ |
-|| 记忆压缩 | JSONL + 结构化摘要 | ★★★★★ |
-|| HITL | 异步 steer + AbortController | ★★★★★ |
-|| 会话分支 | BranchSummaryMessage | ★★★★★ |
-|| 扩展性 | beforeToolCall + afterToolCall | ★★★★★ |
-|| 安全 | 依赖沙盒（非引擎层） | ★★★☆☆ |
-|| 可观测性 | Token 费用追踪缺失 | ★★☆☆☆ |
-|| 评估体系 | 无 Golden Set | ★★☆☆☆ |
+| 主循环 | 双层 while + terminate | ★★★★★ |
+| 纠错 | isError 统一返回 | ★★★★★ |
+| 工具系统 | TypeBox + executionMode | ★★★★★ |
+| 记忆压缩 | JSONL + 结构化摘要 | ★★★★★ |
+| HITL | 异步 steer + AbortController | ★★★★★ |
+| 会话分支 | BranchSummaryMessage | ★★★★★ |
+| 扩展性 | beforeToolCall + afterToolCall | ★★★★★ |
+| 安全 | 依赖沙盒（非引擎层） | ★★★☆☆ |
+| 可观测性 | Token 费用追踪缺失 | ★★☆☆☆ |
+| 评估体系 | 无 Golden Set | ★★☆☆☆ |
 
 ## 深度分析
 ### 双层 while 架构：分离"会话终止"与"本轮终止"

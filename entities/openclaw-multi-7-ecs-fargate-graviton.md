@@ -80,8 +80,6 @@ review_category: practice
 4. **双 Agent 并行不是冗余** — OpenClaw 覆盖即时交互面，Hermes 覆盖长期记忆+自动化操作面，uid/gid 差异天然隔离 ^[raw/articles/openclaw-multi-7-ecs-fargate-graviton.md]
 5. **Agent 驱动数据分析验证** — Hermes 预装 kubectl/aws cli + EKS Spark 集群可让 Agent 直接做端到端数据工作流，从部署到业务验证一气呵成 ^[raw/articles/openclaw-multi-7-ecs-fargate-graviton.md]
 
-## 关联阅读
-
 ## 深度分析
 
 ### 1. OpenClaw 从单机到多租户的架构演进

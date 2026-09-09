@@ -13,8 +13,6 @@ review_category: practice
 
 > -> [[raw/articles/2026-06-24-场景营销前端-AI-Coding-AI-Native-的视觉稿还原-大淘宝技术.md|原文存档]]
 
-sha256: 545b4465852394c62b4f68e05fde85e688029d3ae507d0dd194eb09b2a4ece64 ^[raw/articles/2026-06-24-场景营销前端-AI-Coding-AI-Native-的视觉稿还原-大淘宝技术.md]
-
 ## 摘要
 
 淘天用户场景营销技术团队提出 Tarot Pixel——一个 AI Native 思维的视觉稿还原方案，核心理念是"不生成代码，让 Coding Agent 自己看懂设计稿" ^[raw/articles/2026-06-24-场景营销前端-AI-Coding-AI-Native-的视觉稿还原-大淘宝技术.md]。文章先论证传统 D2C 平台的结构性矛盾：图层整理、切图、多状态识别等环节仍依赖大量人工，且脱离业务上下文单独生成的代码只是空壳——视觉还原从来与业务状态、交互逻辑、数据流耦合，前端没有独立的 D2C 任务 ^[raw/articles/2026-06-24-场景营销前端-AI-Coding-AI-Native-的视觉稿还原-大淘宝技术.md]。Tarot Pixel 的解法是"不建管道，建图书馆"：设计稿一次性导出为结构化视觉预览，本地 Web Agent 提供 20 多个按需查询的 REST API（overview、d2c-context、composite、screenshot、chat、node-map 等），Coding Agent 通过纯 API 参考的 SKILL.md 自主决定查什么怎么用，信息按需拉取而非全量推送 ^[raw/articles/2026-06-24-场景营销前端-AI-Coding-AI-Native-的视觉稿还原-大淘宝技术.md]。工程层负责像素级精确的数据提取与降噪（蒙版翻译、PEN 形状识别、装饰图层标记 [likely-decorative]、自动合图），AI 层专注语义理解；Chat API 背后的独立视觉 Agent 还分担了 Coding Agent 的上下文压力 ^[raw/articles/2026-06-24-场景营销前端-AI-Coding-AI-Native-的视觉稿还原-大淘宝技术.md]。作者强调真正的效率指标是人工干预次数而非 AI 代码采纳率；当前 34 个测试视觉稿完整验证 24 个，UI 还原性问题一般 1-3 次人工对话引导即可完成，人工介入程度远低于 D2C 流程 ^[raw/articles/2026-06-24-场景营销前端-AI-Coding-AI-Native-的视觉稿还原-大淘宝技术.md]。

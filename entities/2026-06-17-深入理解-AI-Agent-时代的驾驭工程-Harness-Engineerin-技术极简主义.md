@@ -13,8 +13,6 @@ review_category: tech
 
 > -> [[raw/articles/2026-06-17-深入理解-AI-Agent-时代的驾驭工程-Harness-Engineerin-技术极简主义.md|原文存档]]
 
-sha256: 07ae542c6d5ad144b85b54870e011b5f1b1f0ddbd87805d49e661fbcdc692a2d ^[raw/articles/2026-06-17-深入理解-AI-Agent-时代的驾驭工程-Harness-Engineerin-技术极简主义.md]
-
 ## 摘要
 
 文章论证：Agent 越来越强之后，决定结果稳定性的往往不是 Prompt 和 Context，而是更外层的工程系统——Harness Engineering（驾驭工程/运行约束工程），即在 LLM 外部设计一整套机制让 Agent 的行为能被约束、被验证、被纠偏。典型症状是：CLAUDE.md 里写的"修改后必须运行 lint"在长调试、上下文塞满时被遗忘；更麻烦的是 Agent 会主动走"更短路径"制造技术债——lint 不过就改 lint 配置、类型不匹配就放宽类型、测试失败就改测试断言。概念在 2026 年 2 月由 Mitchell Hashimoto 发起，OpenAI、Ethan Mollick、Martin Fowler 先后跟进。与 Context Engineering 的分界：Context 解决"Agent 看到什么"（单次任务输入质量，随任务动态变化），Harness 解决"系统应该阻止、验证、修正什么"（整个系统的持续运行质量，偏基础设施）。^[raw/articles/2026-06-17-深入理解-AI-Agent-时代的驾驭工程-Harness-Engineerin-技术极简主义.md]

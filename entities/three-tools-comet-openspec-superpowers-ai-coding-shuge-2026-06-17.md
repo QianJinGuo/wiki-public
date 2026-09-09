@@ -415,11 +415,11 @@ artifacts:
 ## 相关实体
 
 → [[raw/articles/three-tools-comet-openspec-superpowers-ai-coding-shuge-2026-06-17|原文存档]]^[raw/articles/three-tools-comet-openspec-superpowers-ai-coding-shuge-2026-06-17.md]
-→ [[entities/three-tools-in-one-gstack-superpowers-openspec-engineering-ai-coding]] — 同期同主题：gstack 作为第三器的视角 ^[raw/articles/three-tools-comet-openspec-superpowers-ai-coding-shuge-2026-06-17.md]
-→ [[entities/superpowers-deep-dive-kaiyuandakashuo]] — Superpowers 单项目深度 ^[raw/articles/three-tools-comet-openspec-superpowers-ai-coding-shuge-2026-06-17.md]
-→ [[entities/openspec-spec-driven-development-trae-solo]] — OpenSpec 单项目深度 ^[raw/articles/three-tools-comet-openspec-superpowers-ai-coding-shuge-2026-06-17.md]
-→ [[entities/openspec-四步法深度复盘-流程完整不等于代码正确]] — OpenSpec 四步法实战复盘 ^[raw/articles/three-tools-comet-openspec-superpowers-ai-coding-shuge-2026-06-17.md]
-→ [[entities/ai-production-development-workflow-openspec-superpowers-gstack]] — gstack + OpenSpec + Superpowers 生产级实践 ^[raw/articles/three-tools-comet-openspec-superpowers-ai-coding-shuge-2026-06-17.md]
-→ [[entities/claude-code-skills-superpowers-practice]] — Claude Code + Superpowers 实践 ^[raw/articles/three-tools-comet-openspec-superpowers-ai-coding-shuge-2026-06-17.md]
-→ [[entities/hermes-agent-skills-source-code-analysis-shuge]] — 术哥本人对 Hermes Agent Skills 的源码分析（方法论参照） ^[raw/articles/three-tools-comet-openspec-superpowers-ai-coding-shuge-2026-06-17.md]
+- [[entities/three-tools-in-one-gstack-superpowers-openspec-engineering-ai-coding]] — 同期同主题：gstack 作为第三器的视角 ^[raw/articles/three-tools-comet-openspec-superpowers-ai-coding-shuge-2026-06-17.md]
+- [[entities/superpowers-deep-dive-kaiyuandakashuo]] — Superpowers 单项目深度 ^[raw/articles/three-tools-comet-openspec-superpowers-ai-coding-shuge-2026-06-17.md]
+- [[entities/openspec-spec-driven-development-trae-solo]] — OpenSpec 单项目深度 ^[raw/articles/three-tools-comet-openspec-superpowers-ai-coding-shuge-2026-06-17.md]
+- [[entities/openspec-四步法深度复盘-流程完整不等于代码正确]] — OpenSpec 四步法实战复盘 ^[raw/articles/three-tools-comet-openspec-superpowers-ai-coding-shuge-2026-06-17.md]
+- [[entities/ai-production-development-workflow-openspec-superpowers-gstack]] — gstack + OpenSpec + Superpowers 生产级实践 ^[raw/articles/three-tools-comet-openspec-superpowers-ai-coding-shuge-2026-06-17.md]
+- [[entities/claude-code-skills-superpowers-practice]] — Claude Code + Superpowers 实践 ^[raw/articles/three-tools-comet-openspec-superpowers-ai-coding-shuge-2026-06-17.md]
+- [[entities/hermes-agent-skills-source-code-analysis-shuge]] — 术哥本人对 Hermes Agent Skills 的源码分析（方法论参照） ^[raw/articles/three-tools-comet-openspec-superpowers-ai-coding-shuge-2026-06-17.md]
 → [[entities/openspec-superpowers-decommissioning-frankenstein-three-questions-shuge-2026-06-18|缝合怪识别与减法决策论：OpenSpec + Superpowers 融合方案下线记]] — 同期同作者 24h 后反思 ^[raw/articles/three-tools-comet-openspec-superpowers-ai-coding-shuge-2026-06-17.md]

@@ -53,7 +53,6 @@ Lighthouse 选择了**对称池化**：Q、K、V 在金字塔每一层按相同�
 5. **上下文并存的可行性**：保留被拒绝的粗粒度条目而非丢弃，避免了稀疏感知因果掩码的需求，使得标准下三角因果掩码直接适用，无需修改注意力内核 。 ^[raw/articles/lighthouse_attention.md]
 --- ^[raw/articles/lighthouse_attention.md]
 
-## 关联阅读
 ## 相关实体
 - [[entities/nvidias-jensen-huang-bets-on-this-british-startup-to-build-next-frontier-of-ai]]
 - [[entities/from-doer-to-director-the-ai-mindset-shift]]

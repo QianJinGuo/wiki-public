@@ -19,9 +19,6 @@ review_category: practice
 ---   ^[raw/articles/using-amazon-bedrock-agentcore-openclaw-multi-2.md]
 title: "AI Agent 的迁移与现代化 — 使用 Amazon Bedrock AgentCore 将 OpenClaw 从单机改造为多租户 Serverless 架构 第二篇 | Amazon Web Services" ^[raw/articles/using-amazon-bedrock-agentcore-openclaw-multi-2.md]
 url: https://aws.amazon.com/cn/blogs/china/using-amazon-bedrock-agentcore-openclaw-multi-2/ ^[raw/articles/using-amazon-bedrock-agentcore-openclaw-multi-2.md]
-source: rss ^[raw/articles/using-amazon-bedrock-agentcore-openclaw-multi-2.md]
-feed_name: AWS China Blog ^[raw/articles/using-amazon-bedrock-agentcore-openclaw-multi-2.md]
----
 
 ## [亚马逊AWS官方博客](https://aws.amazon.com/cn/blogs/china/)
 摘要：基于 AWS 示例项目，展示如何将 OpenClaw 迁移为基于 Amazon Bedrock AgentCore 的多租户 Serverless 架构。全系列 6 篇，涵盖 Replatform 与 Refactor 两种策略。本篇为第二篇：环境准备与代码获取，安装依赖工具、配置 AWS 环境、克隆项目代码、了解 cdk.json 配置项，以及初始化 CDK。 ^[raw/articles/using-amazon-bedrock-agentcore-openclaw-multi-2.md]

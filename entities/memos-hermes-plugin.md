@@ -123,11 +123,11 @@ curl -fsSL https://raw.githubusercontent.com/MemTensor/MemOS/openclaw-local-plug
 5. **评估记忆插件价值时拉长时间周期，而非单次使用成本** — 建议记录"首次命中失败但长期积累后成功检索"的案例数，作为记忆系统ROI的核心指标。单次使用感受不到价值是预期行为，设计演示场景时应展示"三个月后还能精准召回三个月前的信息"。 ^[raw/articles/memos-hermes-plugin.md]^[raw/articles/memos-hermes-plugin.md]
 
 ## 关联分析
-|| 相关文章 | 关联点 | ^[raw/articles/memos-hermes-plugin.md]
+| 相关文章 | 关联点 | ^[raw/articles/memos-hermes-plugin.md]
 |---------|--------| ^[raw/articles/memos-hermes-plugin.md]
-|| [[entities/hermes-agent|Hermes Agent]] | MemOS 是 Hermes 的记忆插件，解决 Hermes 记忆乱的痛点 | ^[raw/articles/memos-hermes-plugin.md]
-|| [[entities/claude-code-architecture|Claude Code 架构解析]] | Claude Code 的 Query Loop 含上下文管理，和 MemOS 的记忆注入思路一致 | ^[raw/articles/memos-hermes-plugin.md]
-|| [[entities/agentcore-harness|AgentCore Harness]] | AgentCore 管运行时，MemOS 管记忆，是不同维度的 Agent 基础设施 | ^[raw/articles/memos-hermes-plugin.md]
+| [[entities/hermes-agent|Hermes Agent]] | MemOS 是 Hermes 的记忆插件，解决 Hermes 记忆乱的痛点 | ^[raw/articles/memos-hermes-plugin.md]
+| [[entities/claude-code-architecture|Claude Code 架构解析]] | Claude Code 的 Query Loop 含上下文管理，和 MemOS 的记忆注入思路一致 | ^[raw/articles/memos-hermes-plugin.md]
+| [[entities/agentcore-harness|AgentCore Harness]] | AgentCore 管运行时，MemOS 管记忆，是不同维度的 Agent 基础设施 | ^[raw/articles/memos-hermes-plugin.md]
 **核心洞察**：Harness Engineering（AgentCore）和记忆工程（MemOS）是 Agent 走向生产的两个不同维度——前者管"运行"，后者管"记忆"。 ^[raw/articles/memos-hermes-plugin.md]
 
 ## Related

@@ -13,8 +13,6 @@ review_category: practice
 
 > -> [[raw/articles/2026-06-26-腾讯混元AI-Infra如何优化Hy3-Preview-一次大模型推理性能提升的-腾讯技术工程.md|原文存档]]
 
-sha256: d5481a4c017610659bcb55ba77bc8938598fcba990e15bd055b7329195930259 ^[raw/articles/2026-06-26-腾讯混元AI-Infra如何优化Hy3-Preview-一次大模型推理性能提升的-腾讯技术工程.md]
-
 ## 摘要
 
 腾讯混元 AI Infra 推理团队剖析了 Hy3 preview 模型（GQA+MoE 混合架构、原生 256K 上下文）在算力更低、显存更紧凑的 NVIDIA Hopper 卡上的推理全栈优化实践，从算子优化与融合、并行策略、多级缓存、MTP 和异步调度、量化与稀疏五大维度展开。算子层面：动态调度的 Attention 负载均衡在单 batch 长文本场景单算子最高加速 2.95x；Router GEMM 用双 BF16 重构 FP32 计算，相比 cuBLAS FP32 实现加速 2.86x~3.22x；FusedMoE 流水线重构相比 vLLM/SGLang 加速 1.5x-1.6x；采样算子将十余个 Kernel 融合为 2 个，全词表只加载 1 次，相比 vLLM 提升约 5.5x。^[raw/articles/2026-06-26-腾讯混元AI-Infra如何优化Hy3-Preview-一次大模型推理性能提升的-腾讯技术工程.md]

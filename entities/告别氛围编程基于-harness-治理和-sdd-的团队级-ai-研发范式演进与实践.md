@@ -16,9 +16,6 @@ review_category: practice
 > -> [[raw/articles/告别氛围编程基于-harness-治理和-sdd-的团队级-ai-研发范式演进与实践.md|原文存档]]
 从微信文章 [[raw/articles/告别氛围编程基于-harness-治理和-sdd-的团队级-ai-研发范式演进与实践.md|告别“氛围编程”：基于 Harness 治理和 SDD 的团队级 AI 研发范式演进与实践]] 提取。 ^[raw/articles/告别氛围编程基于-harness-治理和-sdd-的团队级-ai-研发范式演进与实践.md]
 
-## 核心内容
-source_url: https://mp.weixin.qq.com/s/-_IBJFuXpvoqMJxL9oaEJQ ^[raw/articles/告别氛围编程基于-harness-治理和-sdd-的团队级-ai-研发范式演进与实践.md]
-
 ### 主要章节
 - ####  原因2：存量应用进行 Vibe Coding 风险非常高
 - ####  原因3：大型项目、复杂需求超出了单次 AI 对话的能力边界

@@ -13,8 +13,6 @@ review_category: practice
 
 > -> [[raw/articles/2026-05-02-语音操控-记忆觉醒-Hermes-高级功能完整指南-unknown.md|原文存档]]
 
-sha256: 635257bf0f0908ec54acce9be47ec1c80b869e4bf7e860fb42738f68268a58ae ^[raw/articles/2026-05-02-语音操控-记忆觉醒-Hermes-高级功能完整指南-unknown.md]
-
 ## 摘要
 
 这是一篇 Hermes 智能体高级功能实操指南，覆盖语音模式、安全机制、SOUL.md 个性化、网络与浏览器能力四大板块，并以对比表给出 Hermes 与 OpenClaw 的能力差异。语音方面，Hermes 底层依赖可本地运行的 OpenAI Whisper（模型从 tiny 约 75MB 到 large 约 3GB 五档），提供 CLI 语音模式（按住 Space 录音）、即时通信语音消息（钉钉/飞书）、语音频道（实时多轮、可打断、多人参与）三种方式，国内下载模型可设 HF_ENDPOINT=https://hf-mirror.com 镜像。安全方面内置三层防护：外发操作二次确认、桌面/下载/文档/主目录等敏感目录的高风险批量操作警告（建议配合回收站保护与分批上限）、私有信息隔离。SOUL.md（位于 [本地运行时路径已隐藏]，最大 5KB 建议 2KB 以内）包含身份、语气、边界、专业领域四个板块，与 config.yaml（技术参数）、Skills（执行规则）、MEMORY.md（项目知识）、USER.md（用户偏好）各司其职；AGENTS.md 上限 10KB、Context Files 总量上限 50KB 且加载前经恶意 prompt 注入安全扫描。网络与浏览器能力通过 MCP 协议连接 Playwright 实现登录、填表、截图等自动化，并可外接邮件、日历、网盘、文档、数据库等服务；文末结论是 Hermes 胜在个性化、隐私与复杂自动化，OpenClaw 胜在开箱即用。^[raw/articles/2026-05-02-语音操控-记忆觉醒-Hermes-高级功能完整指南-unknown.md]

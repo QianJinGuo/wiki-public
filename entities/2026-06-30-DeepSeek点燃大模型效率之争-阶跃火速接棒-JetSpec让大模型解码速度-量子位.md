@@ -13,8 +13,6 @@ review_category: tech
 
 > -> [[raw/articles/2026-06-30-DeepSeek点燃大模型效率之争-阶跃火速接棒-JetSpec让大模型解码速度-量子位.md|原文存档]]
 
-sha256: 5154ffcbc975958fb9699291e32702d75b4b0b6cdcf727c08e566478d1ee539c ^[raw/articles/2026-06-30-DeepSeek点燃大模型效率之争-阶跃火速接棒-JetSpec让大模型解码速度-量子位.md]
-
 ## 摘要
 
 文章对比了几乎同期发布的两篇投机解码论文：DeepSeek 的 DSpark 与阶跃星辰参与发表的《JetSpec：Breaking the Scaling Ceiling of Speculative Decoding with Parallel Tree Drafting》。DSpark 关注高并发推理服务中的验证效率（展示生产系统仍有 Flash 模型 60%-85%、Pro 模型 57%-78% 的提速空间，Qwen3-8B/AIME25 上把平均接受长度从 DFlash 的 4.07 提到 5.01）；JetSpec 则从 Draft 生成本身入手，把因果性直接融入并行草稿头生成路径条件化的草稿树：在 Qwen3-8B 上相比标准自回归解码最高实现 9.64 倍端到端解码加速，MATH-500 上一次验证平均可接受 10.76 个 token，HumanEval、LiveCodeBench、MT-Bench 分别加速 7.12 倍、7.67 倍、4.58 倍。JetSpec 作者含阶跃 CEO 姜大昕与 CTO 朱亦博，一作 Lanxiang Hu 为 UCSD 博士生（阶跃实习期间完成），团队此前还合作过 PD 分离开山论文 DistServe；文章认为两者共同说明推理效率正成为 Agent 规模化落地的基础变量。^[raw/articles/2026-06-30-DeepSeek点燃大模型效率之争-阶跃火速接棒-JetSpec让大模型解码速度-量子位.md]

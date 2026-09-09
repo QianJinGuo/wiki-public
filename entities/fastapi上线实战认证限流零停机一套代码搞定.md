@@ -17,9 +17,6 @@ review_category: practice
 > -> [[raw/articles/fastapi上线实战认证限流零停机一套代码搞定.md|原文存档]]
 从微信文章 [[raw/articles/fastapi上线实战认证限流零停机一套代码搞定.md|FastAPI上线实战：认证、限流、零停机，一套代码搞定]] 提取。  ^[raw/articles/fastapi上线实战认证限流零停机一套代码搞定.md]
 
-## 核心内容
-source_url: https://mp.weixin.qq.com/s/zYnWWSUptDtRMOelZMLkVw ^[raw/articles/fastapi上线实战认证限流零停机一套代码搞定.md]
-
 ### 主要章节
 - ##  核心概念类比：就像开一家餐厅
 - ##  1\. 认证：让每一次请求都有"身份证"
@@ -44,7 +41,6 @@ source_url: https://mp.weixin.qq.com/s/zYnWWSUptDtRMOelZMLkVw ^[raw/articles/fas
 - [[entities/民生银行基于规格驱动开发sdd的-codeagent-私域研发探索与实践|民生银行基于规格驱动开发（SDD）的 CodeAgent 私域研发探索与实践]]
 - [[entities/我把-karpathy-的-autoresearch-搬到了软件开发领域效果炸了|我把 Karpathy 的 AutoResearch 搬到了软件开发领域，效果炸了]]
 
-## 深度分析
 ### 1. 认证的本质：信任链的建立而非简单的token验证
 文章揭示了一个常见的认知误区：许多开发者把认证简单理解为"JWT字符串解码"。实际上，生产环境的认证是一个完整的信任链体系： ^[raw/articles/fastapi上线实战认证限流零停机一套代码搞定.md]
 

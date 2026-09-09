@@ -13,8 +13,6 @@ review_category: tech
 
 > -> [[raw/articles/the-next-big-breakthrough-will-be-ais-learning-on-the-job.md|原文存档]]
 
-sha256: 8e20a931ea9cae9c14fd33ebda63509ca1feb3b54cc8c2160bfa3585ebead099 ^[raw/articles/the-next-big-breakthrough-will-be-ais-learning-on-the-job.md]
-
 ## 摘要
 
 Dwarkesh Patel 在这篇长文中质疑实验室的主流押注——通过在数千个 RL 环境中训练 AI 完成数百万可验证任务（RLVR）来造出 AGI。核心论据是：一个领域不仅要"可验证"，还必须"可反复研磨"（grindable）——即能对确定性、可重放的模拟器跑大量并行 rollout。编程满足这个条件，而 computer use 不满足（无法让一千个 Agent 同时在 Amazon 上跑结账流程），更做不到的领域包括创业、打官司、赢选举等——这些 rollout 必须与真实世界交互，验证回路可能长达数月数年。模型在训练中样本效率比人类低百万倍，而大多数领域的真实数据稀疏、不可重放，因此"除非能为一个领域建造可重放的训练目标，否则模型很难取得进展"。^[raw/articles/the-next-big-breakthrough-will-be-ais-learning-on-the-job.md]

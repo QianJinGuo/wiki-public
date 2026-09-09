@@ -104,8 +104,7 @@ def _spawn_background_review(
 ### 知识系统区分
 | 系统 | 知识类型 | 示例 |
 |------|----------|------|
-|| **M
-emory** | 声明性知识（知道什么） | 用户偏好、环境事实、长期信息 | ^[raw/articles/hermes-agent-closed-learning-loop.md]
+| **Memory** | 声明性知识（知道什么） | 用户偏好、环境事实、长期信息 | ^[raw/articles/hermes-agent-closed-learning-loop.md]
 | **Skills** | 程序性知识（知道怎么做） | 复杂任务流程、试错方法、可重用技能 |
 两个系统相互补充，共同构建 Agent 的智能基础。 ^[raw/articles/hermes-agent-closed-learning-loop.md]
 

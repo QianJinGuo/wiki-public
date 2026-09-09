@@ -47,8 +47,6 @@ microVM 的临时性（空闲超时销毁）与用户工作区持久化需求之
 
 5. **在设计多租户隔离时，优先考虑 Per-User STS 凭证而非应用层权限控制** — AWS STS 生成的限制版临时凭证在 microVM 层面即限制了用户 A 无法访问用户 B 的 S3 前缀和 DynamoDB 记录，比在应用代码中做权限判断更可靠 。 ^[raw/articles/openclaw-multi-1.md]
 
-## 关联阅读
-
 ## 相关实体
 - [[entities/openclaw-multi-4]]
 - [[entities/openclaw-multi-3]]

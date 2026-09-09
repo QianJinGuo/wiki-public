@@ -16,9 +16,6 @@ review_category: tech
 > -> [[raw/articles/国产顶尖模型-benchmark-评分那么高可实际效果为什么差看完-anthropic-这篇博客刷分的因素太单一了.md|原文存档]]
 从微信文章 [[raw/articles/国产顶尖模型-benchmark-评分那么高可实际效果为什么差看完-anthropic-这篇博客刷分的因素太单一了.md|国产顶尖模型 benchmark 评分那么高，可实际效果为什么差？看完 Anthropic 这篇博客，刷分的因素太单一了]] 提取。 ^[raw/articles/国产顶尖模型-benchmark-评分那么高可实际效果为什么差看完-anthropic-这篇博客刷分的因素太单一了.md]
 
-## 核心内容
-source_url: https://mp.weixin.qq.com/s/asGfEOjxrZq8sNaPXSySfQ ^[raw/articles/国产顶尖模型-benchmark-评分那么高可实际效果为什么差看完-anthropic-这篇博客刷分的因素太单一了.md]
-
 ### 主要章节
 - ##  为什么机器配置能影响这么大
 - ##  3 倍是个分水岭

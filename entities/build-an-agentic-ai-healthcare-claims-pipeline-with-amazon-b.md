@@ -13,8 +13,6 @@ review_category: practice
 
 > -> [[raw/articles/build-an-agentic-ai-healthcare-claims-pipeline-with-amazon-b.md|原文存档]]
 
-sha256: 661e4fc3ca640636f2e80281858344f1ad71587fdfc371fcdcf6001f250193cb ^[raw/articles/build-an-agentic-ai-healthcare-claims-pipeline-with-amazon-b.md]
-
 ## 摘要
 
 AWS 机器学习博客演示如何用 Amazon Bedrock Data Automation（BDA）+ Amazon Bedrock AgentCore + AWS HealthLake 构建医疗理赔（CMS-1500 表单 PDF）自动化处理流水线。流程：提交者把 PDF 上传到 S3 → Lambda 触发 → BDA 用 OCR + ML + 生成式 AI 智能提取结构化数据（Blueprint 模板，输出带置信度分数和 bounding box 的 JSON）→ 运行在 AgentCore 上的 Strands Agent 校验数据——通过 create_fhir_claim 和 search_fhir_resources 两个工具在 HealthLake 中查找 Insured、Patient、Practitioner、Coverage 参照资源，校验通过后创建标准化 FHIR claim 资源 → Amazon SNS 发送技术摘要（给理赔处理员）和患者友好的状态说明。Lambda 作为 agent 工作流的确定性监督者，未处理的文档进入死信队列 ^[raw/articles/build-an-agentic-ai-healthcare-claims-pipeline-with-amazon-b.md]

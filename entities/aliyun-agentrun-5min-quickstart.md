@@ -95,7 +95,6 @@ review_category: practice
 ### 6. CLI 和 SDK 适合集成到现有系统
 对于已有内部平台或需要将 Agent 能力集成到现有系统的团队，AgentRun CLI 和 Python SDK 提供了 programmatic 访问途径。尤其是 Python SDK，可以直接 `pip install agentrun-sdk` 集成到 Python 项目中，适合内部工具链自动化场景。 ^[raw/articles/aliyun-agentrun-5min-quickstart.md]
 
-## 资源链接
 ## 相关实体
 - [[entities/深势科技携手阿里云-agentrun加速科研-ai-agent-全速运行]]
 - [[entities/aliyun-agentrun]]

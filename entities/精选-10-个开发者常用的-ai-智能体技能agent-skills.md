@@ -17,9 +17,6 @@ review_category: practice
 > -> [[raw/articles/精选-10-个开发者常用的-ai-智能体技能agent-skills.md|原文存档]]
 从微信文章 [[raw/articles/精选-10-个开发者常用的-ai-智能体技能agent-skills.md|精选 10 个开发者常用的 AI 智能体技能（Agent Skills）]] 提取。 ^[raw/articles/精选-10-个开发者常用的-ai-智能体技能agent-skills.md]
 
-## 核心内容
-source_url: https://mp.weixin.qq.com/s/ieQhpziDVspRQ0Kun_mYzw ^[raw/articles/精选-10-个开发者常用的-ai-智能体技能agent-skills.md]
-
 ### 主要章节
 - ##  前端开发类
 - ###  1️⃣ frontend-design

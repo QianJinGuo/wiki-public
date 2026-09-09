@@ -193,7 +193,7 @@ ReadFromChannel -> Routes -> KubeDecorator -> DockerDecorator -> NameResolution 
 ## 相关实体
 
 → [[raw/articles/open-telemetry-ebpf-instrumentation-obi-zero-code-observability-aliyun-2026|原文存档]]^[raw/articles/open-telemetry-ebpf-instrumentation-obi-zero-code-observability-aliyun-2026.md]
-→ [[entities/cilium-tetragon-kubernetes-runtime-security-ebpf]] — 同为 eBPF 内核级方案，但聚焦运行时安全拦截 ^[raw/articles/open-telemetry-ebpf-instrumentation-obi-zero-code-observability-aliyun-2026.md]
-→ [[entities/openclaw-agent-observability-session-logs-otel-sls]] — LLM 应用层 Session 日志可观测（OTel + SLS） ^[raw/articles/open-telemetry-ebpf-instrumentation-obi-zero-code-observability-aliyun-2026.md]
-→ [[entities/alibabacloud-cms-manage-skill-natural-language-observability]] — 阿里云 CMS 2.0 可观测接入的 AI Agent Skill 化（OBI 是其底层引擎之一） ^[raw/articles/open-telemetry-ebpf-instrumentation-obi-zero-code-observability-aliyun-2026.md]
-→ [[entities/agent-harness-observability-production]] — Agent Harness 生产可观测性 ^[raw/articles/open-telemetry-ebpf-instrumentation-obi-zero-code-observability-aliyun-2026.md]
+- [[entities/cilium-tetragon-kubernetes-runtime-security-ebpf]] — 同为 eBPF 内核级方案，但聚焦运行时安全拦截 ^[raw/articles/open-telemetry-ebpf-instrumentation-obi-zero-code-observability-aliyun-2026.md]
+- [[entities/openclaw-agent-observability-session-logs-otel-sls]] — LLM 应用层 Session 日志可观测（OTel + SLS） ^[raw/articles/open-telemetry-ebpf-instrumentation-obi-zero-code-observability-aliyun-2026.md]
+- [[entities/alibabacloud-cms-manage-skill-natural-language-observability]] — 阿里云 CMS 2.0 可观测接入的 AI Agent Skill 化（OBI 是其底层引擎之一） ^[raw/articles/open-telemetry-ebpf-instrumentation-obi-zero-code-observability-aliyun-2026.md]
+- [[entities/agent-harness-observability-production]] — Agent Harness 生产可观测性 ^[raw/articles/open-telemetry-ebpf-instrumentation-obi-zero-code-observability-aliyun-2026.md]

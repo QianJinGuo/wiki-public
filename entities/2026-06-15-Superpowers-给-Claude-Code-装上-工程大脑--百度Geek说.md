@@ -13,8 +13,6 @@ review_category: practice
 
 > -> [[raw/articles/2026-06-15-Superpowers-给-Claude-Code-装上-工程大脑--百度Geek说.md|原文存档]]
 
-sha256: 47518294cba699dee622bef9fa70fcf2a43801a85bee893b6e5747c291d07637 ^[raw/articles/2026-06-15-Superpowers-给-Claude-Code-装上-工程大脑--百度Geek说.md]
-
 ## 摘要
 
 这是百度 Geek说公众号对 Claude Code 插件 Superpowers 的万字深度解析，一句话定位是"Superpowers 不是让 Claude 变聪明，而是让 Claude 变守纪律"——它通过 14 个内置技能强制 AI 走"澄清→设计→规划→执行→验证"的工程流程。作者（奔跑的脆皮肠）从其 querit.ai 订阅支付前端项目的真实翻车经历（4 天 10+ 轮交互、状态机混乱、mock 数据与后端对不上）出发，把裸跑 AI 的三大原罪归结为回答随机性、直觉快思考与注意力稀释，并以认知负荷理论、《清单革命》等框架解释 Superpowers 的分步流程与验证清单为何有效。文章剖析了 Jesse Vincent（obra，30 年开源老兵、RTorrent/Request Tracker 作者）的设计动机——"AI 编码代理缺少的不是能力，而是纪律"，并给出项目数据：2025.10.09 发布，2026.05 达 170,000+ Stars，Anthropic 官方插件市场安装量近 30 万次、居第三方第一。技术层面拆解了 brainstorming Skill 的源码（强制触发、一次一问、2-3 方案、YAGNI、200-300 字分段设计确认、设计文档落盘 docs/plans/）与 TDD Skill（RED/GREEN/REFACTOR），提出"概率操控"解释（MUST 强制词汇、数字锚点、状态锁定、链式 Skill 调用锁定采样路径），并以 chardet v7 重写（5 天、性能提升最高 48 倍、与旧版仅 1.29% 代码重叠、LGPL 转 0BSD）为标杆案例，同时诚实列出八项负向收益（简单任务流程开销、创意约束、上下文占用、过度工程化等）。^[raw/articles/2026-06-15-Superpowers-给-Claude-Code-装上-工程大脑--百度Geek说.md]

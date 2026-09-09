@@ -13,8 +13,6 @@ review_category: practice
 
 > -> [[raw/articles/2026-06-23-我把Seed-2-1-Pro塞进Claude-Code-让它修我自己产品的bug-花叔.md|原文存档]]
 
-sha256: 16c59e73ac4db124d173790ee2b373a1f50e89bc1793b1adc8829ebdf2fdfc49 ^[raw/articles/2026-06-23-我把Seed-2-1-Pro塞进Claude-Code-让它修我自己产品的bug-花叔.md]
-
 ## 摘要
 
 博主花叔在豆包大模型 2.1（即 Seed 2.1 Pro）发布当天，把它接入自己天天使用的 Claude Code 工作流做实测：配置只需三步（火山方舟开通 doubao-seed-2-1-pro-preview、拿 ARK API Key、设 ANTHROPIC_BASE_URL/AUTH_TOKEN/MODEL 三个环境变量指向兼容 Anthropic 协议的端点），并在 .zshrc 里写 doubao 别名与原 claude 命令互不干扰。测试一是修自己开源产品 FanBox（Coding Agent 驾驶舱，自写代码 28 个文件 15609 行，主逻辑 app.js 达 4572 行，一周多 97 次提交从 v1.1 滚到 v2.3）的两个真实 GitHub issue：#27 终端复制粘贴失效、#28 新增 skills 加载不出来。Seed 2.1 Pro 的表现是"先探索、再规划、最后才动手"——自动进 plan mode、并行派两个 Explore 子 agent（一个 45 次工具调用 12 万 token 啃终端实现、一个 35 次近 4 万 token 查 skills 机制）、再起 Plan agent 花十来分钟设计方案，然后在 auto mode 里一口气自己跑了 40 多分钟完成两个 issue，中间无需人工干预。^[raw/articles/2026-06-23-我把Seed-2-1-Pro塞进Claude-Code-让它修我自己产品的bug-花叔.md]

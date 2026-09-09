@@ -248,8 +248,6 @@ review_category: practice
 - **作者**: 高德信息业务中心（业务 + 算法联合作战）
 - **业务结果**: 年度化利润增量预期千万级
 
-## 原文链接
-
 ## 相关实体
 - [[entities/autoresearch-marketing-growth-amap-ai-native]]
 

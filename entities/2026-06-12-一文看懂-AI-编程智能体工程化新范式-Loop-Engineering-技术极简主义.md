@@ -13,8 +13,6 @@ review_category: tech
 
 > -> [[raw/articles/2026-06-12-一文看懂-AI-编程智能体工程化新范式-Loop-Engineering-技术极简主义.md|原文存档]]
 
-sha256: c3a862af6d6b4e03f089c42794994c91489b3b266c6a7086624a2545423f22dc ^[raw/articles/2026-06-12-一文看懂-AI-编程智能体工程化新范式-Loop-Engineering-技术极简主义.md]
-
 ## 摘要
 
 文章系统阐述 Loop Engineering 这一 AI 编程新范式：AI 编程的关键能力正从"写好提示词"升级为"设计可持续运转的智能体工作系统"。开篇引 Peter Steinberger（"You shouldn't be prompting coding agents anymore. You should be designing loops that prompt your agents"）与 Claude Code 负责人 Boris Cherny（"My job is to write loops"）的判断，指出 Prompt Engineering 关注"这一轮怎么问得更好"，Loop Engineering 关注"整个流程怎么持续变好"——前者解决一次回答的质量，后者解决一段流程的可靠性。Loop 的定义是围绕 AI 编程智能体设计可重复、可观察、可验证、可修正的工作循环，需要六个核心构件：Automations（定时/事件触发，循环的心跳，需设可验证的停止条件）、Worktrees（git worktree 隔离并行 agent 防文件冲突）、Skills（把项目知识沉淀为外部能力，形成复利）、Plugins/Connectors（接入 issue tracker、PR、CI、Slack 等真实工具链，权限越深设计越要保守）、Sub-agents（把 maker 与 checker 分开，审查者可用不同模型/提示词，宜用于架构变更、支付链路等高风险环节）、Memory（Markdown 文件或 Linear board 等对话外状态存储，防止循环失忆）。文末列出四大风险（token 成本、无人值守错误、理解债、认知投降）并强调"Loop 是杠杆，不是替身"，工程师的工作位置从执行前移到设计边界、设置验证信号与关键判断。^[raw/articles/2026-06-12-一文看懂-AI-编程智能体工程化新范式-Loop-Engineering-技术极简主义.md]

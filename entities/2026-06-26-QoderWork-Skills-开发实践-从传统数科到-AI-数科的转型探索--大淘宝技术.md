@@ -13,8 +13,6 @@ review_category: practice
 
 > -> [[raw/articles/2026-06-26-QoderWork-Skills-开发实践-从传统数科到-AI-数科的转型探索--大淘宝技术.md|原文存档]]
 
-sha256: 4ebc436019f798ed3f9ae37c938e536a885d90db7fb4d25d4045dbd555860738 ^[raw/articles/2026-06-26-QoderWork-Skills-开发实践-从传统数科到-AI-数科的转型探索--大淘宝技术.md]
-
 ## 摘要
 
 本文是淘天直播技术团队作者从传统数科向 AI 数科转型的实践总结，系统阐述了 Skills 的开发方法论与工程体系，核心公式是 Skill = 领域知识 + 标准流程 + 输出模板 + 避坑指南，它解决的不是"让模型更聪明"而是"让系统更可控" ^[raw/articles/2026-06-26-QoderWork-Skills-开发实践-从传统数科到-AI-数科的转型探索--大淘宝技术.md]。作者提出四层分离架构：SKILL.md 只做编排不做执行（建议 200 行以内）、config.yaml 是模板而非填好的表单（用 auto 占位符和空列表留给运行时）、scripts/ 固定需要精确控制的复杂逻辑（如 AB 实验字段自动检测）、references/ 承担渐进式披露的知识细节 ^[raw/articles/2026-06-26-QoderWork-Skills-开发实践-从传统数科到-AI-数科的转型探索--大淘宝技术.md]。文章通过拆解 Follow Builders（配置极简化、知识层解构为三种形态、GitHub Actions 中心化数据服务）和 Frontend Slides（NON-NEGOTIABLE 标注法对抗注意力衰减、反模式清单阻断模式坍缩、一次性问完指令）两个优秀案例，展示四层架构的不同"溶解"形态 ^[raw/articles/2026-06-26-QoderWork-Skills-开发实践-从传统数科到-AI-数科的转型探索--大淘宝技术.md]。作者自研的用户洞察报告（PIA 框架、RFM 自动分层、敏感信息自动脱敏）和 AB 实验分析（SRM 强制校验、检验方法自动选择、结论判定矩阵）两个 Skill 则示范了工程化落地，并总结测试驱动开发可能占 Skill 开发工作量的 70%-80% ^[raw/articles/2026-06-26-QoderWork-Skills-开发实践-从传统数科到-AI-数科的转型探索--大淘宝技术.md]。

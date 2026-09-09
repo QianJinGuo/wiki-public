@@ -37,7 +37,6 @@ review_category: practice
 4. **使用 QLoRA 降低 RLVR 训练资源门槛**：文中使用 QLoRA（load_in_4bit: true，lora_r: 16）配合 GRPO 训练 Qwen2.5-0.5B，显著降低显存占用和训练时间，同时保留可接受的精度。这是将 RLVR 方法落地到资源受限场景的关键工程实践。 ^[raw/articles/overcoming-reward-signal-challenges-verifiable-rewards-based-reinforcement-learn.md]
 5. **配置 DeepSpeed ZeRO-3 + HuggingFace Accelerate 实现分布式扩展**：当模型规模超过单卡容量时，使用 DeepSpeed ZeRO-3 分片优化器状态、梯度和参数，配合 HuggingFace Accelerate 自动处理多卡通信和设备管理。可通过 `accelerate launch --config_file accelerate_configs/deepspeed_zero3.yaml --num_processes ${NUM_GPUS}` 启动多 GPU 训练。 ^[raw/articles/overcoming-reward-signal-challenges-verifiable-rewards-based-reinforcement-learn.md]
 
-## 关联阅读
 ## 相关实体
 - [[entities/build-real-time-voice-applications-with-amazon-sagemaker-ai]]
 - [[entities/end-to-end-encrypted-ml-inference-sagemaker-fhe]]

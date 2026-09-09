@@ -13,8 +13,6 @@ review_category: practice
 
 > -> [[raw/articles/cursor-ios-mobile-app.md|原文存档]]
 
-sha256: 9d7485d970079eba039c75cd4b2ab25db70050ad853c2b91e9236ed0183efeb4 ^[raw/articles/cursor-ios-mobile-app.md]
-
 ## 摘要
 
 Cursor 官方博客（2026-06-29）宣布 Cursor for iOS 原生应用进入公测：开发者可以从手机启动云端 always-on agent，或用 Remote Control 远程操控运行在自己电脑上的 agent，灵感来时随时开工，工作完成后收到通知，在手机上直接 review 和 merge PR。手机端支持选择任意 frontier 模型、语音输入描述想法、slash commands 引导；针对本机 agent 可开启保持电脑唤醒的设置。官方团队和早期测试者已用它形成新工作流：on-call 时被 pager 叫醒就先让 agent 调查并准备 PR、离席时处理客户时效性 bug、在 X 上看到用户反馈就截图标注发给 agent 作为 UI 改动的视觉上下文 ^[raw/articles/cursor-ios-mobile-app.md]

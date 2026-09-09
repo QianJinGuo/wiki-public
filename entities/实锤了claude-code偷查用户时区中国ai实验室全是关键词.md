@@ -14,15 +14,8 @@ review_category: tech
 # 实锤了：Claude Code偷查用户，时区、中国AI实验室全是关键词
 
 --- ^[raw/articles/实锤了claude-code偷查用户时区中国ai实验室全是关键词.md]
-source: wechat
-source_url: https://mp.weixin.qq.com/s/Rpo7Ig3NJmTc7rR6j9q82Q^[raw/articles/实锤了claude-code偷查用户时区中国ai实验室全是关键词.md]
-
-ingested: 2026-07-01 ^[raw/articles/实锤了claude-code偷查用户时区中国ai实验室全是关键词.md]
-feed_name: 机器之心
 wechat_mp_fakeid: MP_WXS_3073282833^[raw/articles/实锤了claude-code偷查用户时区中国ai实验室全是关键词.md]
 
-source_published: 2026-07-01 ^[raw/articles/实锤了claude-code偷查用户时区中国ai实验室全是关键词.md]
----
 
 ## 实锤了：Claude Code偷查用户，时区、中国AI实验室全是关键词
 
@@ -43,15 +36,7 @@ source_published: 2026-07-01 ^[raw/articles/实锤了claude-code偷查用户时�
 ## 详细信息
 
 ---
-source: wechat
-source_url: https://mp.weixin.qq.com/s/Rpo7Ig3NJmTc7rR6j9q82Q ^[raw/articles/实锤了claude-code偷查用户时区中国ai实验室全是关键词.md]
-ingested: 2026-07-01^[raw/articles/实锤了claude-code偷查用户时区中国ai实验室全是关键词.md]
-
-feed_name: 机器之心
 wechat_mp_fakeid: MP_WXS_3073282833 ^[raw/articles/实锤了claude-code偷查用户时区中国ai实验室全是关键词.md]
-source_published: 2026-07-01^[raw/articles/实锤了claude-code偷查用户时区中国ai实验室全是关键词.md]
-
----
 
 ## 实锤了：Claude Code偷查用户，时区、中国AI实验室全是关键词
 

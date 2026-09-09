@@ -13,8 +13,6 @@ review_category: tech
 
 > -> [[raw/articles/2026-05-23-万字详解-codex-全链路架构-Codex-不是一个-App-而是一套-Age-科技充电站.md|原文存档]]
 
-sha256: 3b9e39cf49b5f8b8641d7934fe944158d2f8b34f2605236c6ead13302526f78d ^[raw/articles/2026-05-23-万字详解-codex-全链路架构-Codex-不是一个-App-而是一套-Age-科技充电站.md]
-
 ## 摘要
 
 作者基于 OpenAI 官方 App Server 工程文章与多份资料拆解 Codex 全链路架构，核心判断是：Codex 不是一个端而是一组端——Web/Cloud、桌面 App、CLI/TUI、IDE 扩展、Exec、SDK、MCP Server、GitHub Action 共享同一个 Codex harness、同一套 thread/turn/item 抽象和同一个 app-server 协议面，OpenAI 正在把 coding agent 做成可嵌入、可远控、可审计、可扩展的运行时 ^[raw/articles/2026-05-23-万字详解-codex-全链路架构-Codex-不是一个-App-而是一套-Age-科技充电站.md]。App Server 是理解全局的关键：它不是业务后端，而是本地 agent runtime 的控制接口，客户端经 JSON-RPC 发起 thread、turn、approval 与工具调用；OpenAI 最早试过 MCP server 暴露方案，但富交互场景需要 streaming、diff、approval 等语义才演进出了 App Server ^[raw/articles/2026-05-23-万字详解-codex-全链路架构-Codex-不是一个-App-而是一套-Age-科技充电站.md]。文章解释了 thread（可持久化会话，支持 resume/fork/archive）、turn（一次输入触发的完整任务）、item（最小事件单元）三层会话模型为何让 Web 端断线重连和任务后台续跑成为可能，并给出沙箱三档（read-only / workspace-write / danger-full-access）与 CODEX_HOME 本地状态的工程建议 ^[raw/articles/2026-05-23-万字详解-codex-全链路架构-Codex-不是一个-App-而是一套-Age-科技充电站.md]。作者对第三方的选型建议是：MVP 先用 codex exec --json，做自己的桌面 App 或 IDE 集成时再上 App Server，不要一开始就绕远路 ^[raw/articles/2026-05-23-万字详解-codex-全链路架构-Codex-不是一个-App-而是一套-Age-科技充电站.md]。

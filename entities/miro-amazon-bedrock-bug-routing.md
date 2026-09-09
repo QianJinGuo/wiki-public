@@ -35,4 +35,3 @@ _This post is co-authored with Philipp Pavlov, Dmytro Romantsov, Evgeny Mironenk
 5. **用 OpenSearch Serverless 作为知识库向量存储，配合增量同步策略** — Miro 选择 OpenSearch Serverless 而非自建向量数据库，核心考量是「增量 re-sync」能力：只有变更的文档才重新嵌入，避免全量重建的高成本。如果你要构建类似系统，优先考察向量存储的增量更新机制，而非单纯对比向量相似度指标。 ^[raw/articles/miro-amazon-bedrock-bug-routing.md]
 6. **在评估扩展思考成本时，以 53 秒作为参考基准** — Miro 的平均端到端分类延迟为 53 秒，这包含了多步 RAG 检索 + Nova Pro 图像理解 + Claude Sonnet 4 扩展思考。如果你的 SLA 要求在 30 秒以内，需要在 Prompt 复杂度、上下文窗口大小、扩展思考 token 预算之间做取舍。 ^[raw/articles/miro-amazon-bedrock-bug-routing.md]
 
-## 关联阅读

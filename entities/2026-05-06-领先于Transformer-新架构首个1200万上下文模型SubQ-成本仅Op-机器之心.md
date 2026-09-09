@@ -13,8 +13,6 @@ review_category: tech
 
 > -> [[raw/articles/2026-05-06-领先于Transformer-新架构首个1200万上下文模型SubQ-成本仅Op-机器之心.md|原文存档]]
 
-sha256: 4c85f0eda05fcae3a1252ceeee84cc621696e7e8b547b20ff5ac70550d93f266 ^[raw/articles/2026-05-06-领先于Transformer-新架构首个1200万上下文模型SubQ-成本仅Op-机器之心.md]
-
 ## 摘要
 
 机器之心介绍了 Subquadratic 公司发布的 SubQ 模型——首个基于完全亚二次稀疏注意力架构（SSA）构建、首个拥有 1200 万 token 上下文窗口的前沿模型，联合创始人 Alexander Whedon 称其为"LLM 智能的一次重大突破"：100 万 token 场景下比 FlashAttention 快 52 倍，成本不到 Opus 的 5%，有望将计算量降低近 1000 倍。文章先论证了稠密注意力的困境：all-pairs 计算随序列长度二次增长（上下文翻倍成本变四倍），且训练好的模型中绝大多数注意力权重接近于零——"稠密注意力不仅是二次复杂度，而且是浪费性的二次复杂度"；FlashAttention 只是执行得更高效，RAG、上下文压缩、Agent 编排等系统层补救则是在绕开而非消除二次成本这条边界，且 RAG 丢失位置信息与引用关系、Agent 工作流的错误在步骤间累积。企业真正的难题本质都是长上下文的多跳推理问题（代码库跨模块调用、合同跨页引用、科研证据整合）。^[raw/articles/2026-05-06-领先于Transformer-新架构首个1200万上下文模型SubQ-成本仅Op-机器之心.md]

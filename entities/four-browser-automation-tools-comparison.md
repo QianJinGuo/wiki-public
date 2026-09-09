@@ -16,7 +16,7 @@ review_category: practice
 
 > 来源：[行小招 - 科技充电站](https://mp.weixin.qq.com/s/2aqrTvswa6FtqI-GK-EmvQ)，2026-05-19
 > 评分：v=6, c=7, v×c=42 → 作为 [[entities/opencli|OpenCLI]] entity 的补充
-| 维度 | chrome-devtools-mcp | Playwright | agent-browser | browser-use | BrowserAct | ^[raw/articles/four-browser-automation-tools-comparison.md] [raw/articles/browseract-agent-browser-execution-layer-rejected.md]
+| 维度 | chrome-devtools-mcp | Playwright | agent-browser | browser-use | BrowserAct |
 |------|--------------------|-----------|---------------|-------------|------------|
 | 语言/运行时 | Node.js | Node.js，多语言绑定 | Rust，原生二进制 | Python | Node.js + Rust 内核 |
 | 浏览器协议 | CDP 直接暴露 | 自有协议封装 CDP | CDP | Playwright | CDP + 自有反检测层 |

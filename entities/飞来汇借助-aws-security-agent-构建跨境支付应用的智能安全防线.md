@@ -18,15 +18,6 @@ review_category: practice
 ---
 
 # 飞来汇借助 AWS Security Agent 构建跨境支付应用的智能安全防线
-source: rss
-source_url: https://aws.amazon.com/cn/blogs/china/security-agent-build-payment-application-intelligent-security/ ^[raw/articles/飞来汇借助-aws-security-agent-构建跨境支付应用的智能安全防线.md]
-ingested: 2026-05-28^[raw/articles/飞来汇借助-aws-security-agent-构建跨境支付应用的智能安全防线.md]
-
-feed_name: AWS China Blog^[raw/articles/飞来汇借助-aws-security-agent-构建跨境支付应用的智能安全防线.md]
-
-source_published: 2026-05-27T08:26:50Z^[raw/articles/飞来汇借助-aws-security-agent-构建跨境支付应用的智能安全防线.md]
-
----
 
 ## 飞来汇借助 AWS Security Agent 构建跨境支付应用的智能安全防线
 
@@ -346,7 +337,6 @@ AWS Security Agent 之所以在越权与业务逻辑漏洞场景上表现亮眼�
 ![](https://d2908q01vomqb2.cloudfront.net/472b07b9fcf2c2451e8781e944bf5f77cd8457c8/2026/05/14/2026_Summits_Commercial_Banner_1440x657.png)^[raw/articles/飞来汇借助-aws-security-agent-构建跨境支付应用的智能安全防线.md]
 
 
-## 深度分析
 
 ### 多智能体协作在支付安全领域的结构性优势
 

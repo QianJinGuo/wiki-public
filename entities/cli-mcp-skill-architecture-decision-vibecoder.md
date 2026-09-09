@@ -134,8 +134,6 @@ MCP server 暴露的工具应该是**高层意图工具**，不是 REST API 的 
 
 Skill 是组织经验和方法论的载体。不要把 Skill 看作"让 Agent 调用工具的配置文件"，而应该看作**组织最佳实践的编码**。当新成员加入时，应该能通过阅读 Skill 理解："我们团队是怎么做发布前检查的？"、"线上告警应该按什么顺序排查？" ^[raw/articles/cli-mcp-skill-architecture-decision-vibecoder.md]
 
-## 关联阅读
-
 ## 相关实体
 - [[entities/production-ai-agents-mcp-cli-skills-stack-ayi]]
 - [[entities/from-agent-protocol-to-harness-skill]]

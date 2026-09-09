@@ -363,7 +363,6 @@ PS：从这里也可以看出来，图谱的存在其实是为了解决工程维
 - 从"检索增强"走向"推理增强"
 - 未来的AI知识系统将不再显式区分组件，而是内化为Agent的自主规划、多步推理、自我校验能力
 
-## 关联阅读
 ## 相关实体
 - [[entities/google-agentic-rag-sufficient-context-agent-framesqa]]
 - [[entities/architecture-data-foundations-for-ai-powered-search]]

@@ -13,8 +13,6 @@ review_category: practice
 
 > -> [[raw/articles/debugging-production-agents-with-amazon-bedrock-agentcore-ob.md|原文存档]]
 
-sha256: 4fa3868058e181c2bdc3b17a0ec7f4748ad445e632e19f5bfe4fb593f44a0d15 ^[raw/articles/debugging-production-agents-with-amazon-bedrock-agentcore-ob.md]
-
 ## 摘要
 
 AWS 机器学习博客介绍如何用 Amazon Bedrock AgentCore Observability 调试生产环境 Agent。生产 Agent 常常"静默失败"——返回看似合理但错误的答案、陷入无限推理循环、选错工具，且不触发任何报错，标准日志和指标无法捕捉决策过程。文章将生产问题分为质量（幻觉、事实错误、在多 Agent 系统中传播）、可靠性（工具调用失败、上下文丢失）、效率（高延迟、token 浪费）三类，并给出三层可观测性工具：CloudWatch 仪表盘（系统级）、OpenTelemetry 分布式 traces（执行级，遵循 OTEL 协议，可导出到 Datadog/Grafana/Elastic）、关键指标（性能 p50/p95/p99 延迟、资源、按类型细分的错误率）^[raw/articles/debugging-production-agents-with-amazon-bedrock-agentcore-ob.md]

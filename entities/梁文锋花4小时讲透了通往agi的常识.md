@@ -16,14 +16,6 @@ review_category: tech
 
 > source: wechat source_url: https://mp.weixin.qq.com/s/FxqkPgzoPCf1Y349N34CEg ingested: 2026-07-24 source_published: 2026年7月23日 07:09 --- # 梁文锋花4小时，讲透了通往AGI的常识！ 昨天大半夜，一篇《梁文锋四小时投资人会议实录》刷屏了。 你现在可以翻一下自己的朋友圈。如果转发这篇的还不到十个人，那要么说明你的圈子已经老了，要么说明它跟AI没什么关系。 它甚至把王慧文都炸了出来。这位很少在社交平台冒泡的美团联合创始人，转发的时候配了一句：这格局，有三四层楼那么
 
-## 摘要
-
-source: wechat
-source_url: https://mp.weixin.qq.com/s/FxqkPgzoPCf1Y349N34CEg^[raw/articles/梁文锋花4小时讲透了通往agi的常识.md]
-
-ingested: 2026-07-24^[raw/articles/梁文锋花4小时讲透了通往agi的常识.md]
-
-source_published: 2026年7月23日 07:09^[raw/articles/梁文锋花4小时讲透了通往agi的常识.md]
 
 --- ^[raw/articles/梁文锋花4小时讲透了通往agi的常识.md]
 

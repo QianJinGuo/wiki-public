@@ -20,13 +20,6 @@ review_category: practice
 
 ## 一、识别 AI Coding 的三大核心问题
 
-## 相关实体
-- [[entities/claude-code-prompt-context-harness]]
-- [[entities/fudan-peking-ahe-agentic-harness-engineering]]
-- [[entities/pi-openclaw-coding-harness]]
-- [[entities/ai-production-development-workflow-openspec-superpowers-gstack]]
-- [[entities/harness-engineeringai-能在真正出事会炸的后端系统里写代码吗-v2]]
-
 → [[raw/articles/gaode-sdd-harness-team-ai-coding-paradigm-IBJFu|原文存档]]^[raw/articles/gaode-sdd-harness-team-ai-coding-paradigm-IBJFu.md]
 
 - [[entities/从提需求到部署发布全ai全自动化后研发效能全面跃升]]
@@ -203,7 +196,7 @@ Harness 的类比值得深思：不改变马的基因（模型本身），而是
 
 两篇是同一团队（高德广告工程 / 高德技术公众号）在 6 周内的演进：先讲"为什么要 Harness"，再讲"具体 Harness 体系长什么样"。 ^[raw/articles/gaode-sdd-harness-team-ai-coding-paradigm-IBJFu.md]
 
-## 相关实体（更新）
+## 相关实体
 - [[entities/claude-code-prompt-context-harness]]
 - [[entities/fudan-peking-ahe-agentic-harness-engineering]]
 - [[entities/pi-openclaw-coding-harness]]

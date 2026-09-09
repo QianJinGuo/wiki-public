@@ -13,8 +13,6 @@ review_category: tech
 
 > -> [[raw/articles/gpu-kernel.md|原文存档]]
 
-sha256: 76b09750ef9b2c7a5beadae8e6d99e219066a794c91a2497fa28161585315668 ^[raw/articles/gpu-kernel.md]
-
 ## 摘要
 
 这是一篇深度技术长文，以一个在 RTX 4090 上把两个百万长度向量相加的极简 CUDA 程序为例，完整追踪一次 kernel 从源码到硬件的执行全链路 ^[raw/articles/gpu-kernel.md]。编译阶段，nvcc 驱动 cicc 把设备代码编译成与设备无关的 PTX 虚拟 ISA，再由 ptxas 编译成特定架构的 SASS，fatbinary 把两者打包进 ELF 格式的可执行文件（PTX 作为前向兼容的 JIT 回退） ^[raw/articles/gpu-kernel.md]。启动阶段，主机端把参数打包进 QMD（Queue Meta Data）描述符，通过 pushbuffer/GPFIFO 通道写入 GPU 方法流，最后以一次 MMIO 写操作敲响 doorbell 寄存器触发计算 ^[raw/articles/gpu-kernel.md]。执行阶段，compute work distributor 把 4096 个 block 分配到 128 个 SM 上，每个 SM 借助 ptxas 写入指令的静态 stall 计数、yield 提示和 6 个 scoreboard barrier 实现接近零硬件开销的延迟隐藏，最终 DRAM 以约五分之四的峰值带宽在 10.78 微秒内完成计算 ^[raw/articles/gpu-kernel.md]。文中还给出了用 LD_PRELOAD shim 拦截 mmap、解析 pushbuffer 命令流、解码 ioctl 等窥探闭源驱动内部机制的方法 ^[raw/articles/gpu-kernel.md]。

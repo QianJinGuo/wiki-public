@@ -39,4 +39,3 @@ review_category: tech
 4. **用组合式 Steering 代替单一大向量**：复杂的概念（如"代码审查严格模式"）可能需要多个简单向量组合叠加，避免单一向量与整个模型权重高度重叠 ^[raw/articles/deepseek-v4-flash-means-llm-steering-is-interesting-again.md]
 5. **Steering 作为 Agent Harness 的条件开关**：在 Agent 系统中根据任务类型动态注入不同的 Steering 向量——例如 coding agent 注入"精确性"向量，闲聊 agent 注入"随和性"向量，无需重新加载模型 ^[raw/articles/deepseek-v4-flash-means-llm-steering-is-interesting-again.md]
 
-## 关联阅读

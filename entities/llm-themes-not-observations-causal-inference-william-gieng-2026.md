@@ -272,7 +272,6 @@ Python 案例使用 `numpy.default_rng(7)` + 4 个 logistic 方程，可重现�
 - [[entities/loss-function-development-elvis-sun-goal-loop-2026]]（LFD 强制熵同源 — 都是"系统化检查"思维）
 - [[entities/state-of-memory-in-agent-harness-mem0-2026]]（Agent 记忆体系 — 类似"看起来像观测但实际是生成"）
 - [[entities/recent-developments-in-llm-architectures-jiqizhixin]]（LLM 架构最新进展 — 同主题）
-- [[entities/2-year-25-ai-projects-summary]]（2 年 25 个 AI 项目 — 失败方法论对照）
 - [[entities/while-breathless-in-stodgy-viridian]]（对 LLM 局限的反思同源）
 
 → [[raw/articles/llm-themes-not-observations-william-gieng-causal-inference-2026|原文存档]] ^[raw/articles/llm-themes-not-observations-william-gieng-causal-inference-2026.md]

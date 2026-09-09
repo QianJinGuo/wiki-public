@@ -51,8 +51,6 @@ Claude 主动承认"浏览器自动读取偶尔会因为 SSO 多域 cookie 处�
 
 5. **长项目建立"状态快照"机制**：超过 1 小时的多轮对话项目，维护一份当前代码状态速记文档，每次改模块前先贴出完整现状，防止 AI 重新发明已知结论。 ^[raw/articles/2-小时0-行手写代码我用-claude-做了一个生产级-vscode-插件.md]
 
-## 关联阅读
-
 ## 相关实体
 - [[entities/claude-code-prompt-context-harness]]
 - [[entities/claude-vscode-plugin-zero-code]]

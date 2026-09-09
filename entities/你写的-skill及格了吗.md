@@ -17,9 +17,6 @@ review_category: practice
 > -> [[raw/articles/你写的-skill及格了吗.md|原文存档]]
 从微信文章 [[raw/articles/你写的-skill及格了吗.md|你写的 Skill，及格了吗？]] 提取。 ^[raw/articles/你写的-skill及格了吗.md]
 
-## 核心内容
-source_url: https://mp.weixin.qq.com/s/kPW5lgHmhn4vUihRcNo7uQ ^[raw/articles/你写的-skill及格了吗.md]
-
 ### 主要章节
 - ##
 Skill 是 Agent 能力的最小封装单元，它把领域知识、工作流程和工具集成打包成一个即插即用的模块，让通用 Agent 秒变领域专家。 ^[raw/articles/你写的-skill及格了吗.md]

@@ -17,9 +17,6 @@ review_category: practice
 > -> [[raw/articles/我把-karpathy-的-autoresearch-搬到了软件开发领域效果炸了.md|原文存档]]
 从微信文章 [[raw/articles/我把-karpathy-的-autoresearch-搬到了软件开发领域效果炸了.md|我把 Karpathy 的 AutoResearch 搬到了软件开发领域，效果炸了]] 提取。 ^[raw/articles/我把-karpathy-的-autoresearch-搬到了软件开发领域效果炸了.md]
 
-## 核心内容
-source_url: https://mp.weixin.qq.com/s/JFvYo9RCn9Xm8ilx1Chd6g ^[raw/articles/我把-karpathy-的-autoresearch-搬到了软件开发领域效果炸了.md]
-
 ### 主要章节
 - ##
 * ** karpathy/autoresearch  ** — 核心循环：只保留可测量的改进，其余全部回滚

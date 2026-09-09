@@ -118,7 +118,6 @@ Skill命中率>70%不一定是好事——可能意味着Skill过度抽象，把
 - 前置篇：Memory/Skill/Nudge Engine/Review Agent各论
 - 同系列：hermes-self-improving-overview-winty（全局总览）
 
-## 关联阅读
 ## 相关实体
 - [[entities/hermes-skill-system-winty]]
 - [[entities/hermes-agent-self-evolving-source-analysis]]

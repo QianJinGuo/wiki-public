@@ -13,8 +13,6 @@ review_category: tech
 
 > -> [[raw/articles/2026-05-07-TACO-让-CLI-Agent-在自主迭代中学会丢掉无用上下文-机器之心.md|原文存档]]
 
-sha256: dd5f1d21f23c967a6c284b4213548c1f4ad4f8031fca8e247fcf6cbe2cabad15 ^[raw/articles/2026-05-07-TACO-让-CLI-Agent-在自主迭代中学会丢掉无用上下文-机器之心.md]
-
 ## 摘要
 
 机器之心介绍曼彻斯特大学、北航、港科大与 MAP 团队提出的 TACO（Terminal Agent Compression）——一个无需训练、即插即用的终端智能体自进化观测压缩框架。其出发点是：长程 CLI Agent 的瓶颈不是上下文窗口不够大，而是上下文在多轮交互中越来越"脏"——在 TerminalBench 2.0 轨迹中，Qwen3-Coder-480B、DeepSeek-V3.2、MiniMax-M2.5 的 raw prompt 有 24.6%–44.1% 可被人工判定为低价值冗余。TACO 用轻量级自进化规则引擎（触发条件 + 保留/剔除模式组成的函数）替代人工预设截断和 LLM 实时总结，通过任务内动态纠偏、全局跨域沉淀三个阶段（Terminal Output Compression、Intra-Task Rule Set Evolution、Global Rule Pool Evolution）持续学习哪些输出可安全过滤、哪些行动线索必须保留 ^[raw/articles/2026-05-07-TACO-让-CLI-Agent-在自主迭代中学会丢掉无用上下文-机器之心.md]

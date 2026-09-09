@@ -18,15 +18,6 @@ review_category: practice
 ---
 
 # Powering agentic AI sales strategy with Amazon Bedrock AgentCore
-source: rss
-source_url: https://aws.amazon.com/blogs/machine-learning/powering-agentic-ai-sales-strategy-with-amazon-bedrock-agentcore/ ^[raw/articles/powering-agentic-ai-sales-strategy-with-amazon-bedrock-agent.md]
-ingested: 2026-05-28^[raw/articles/powering-agentic-ai-sales-strategy-with-amazon-bedrock-agent.md]
-
-feed_name: AWS China ML^[raw/articles/powering-agentic-ai-sales-strategy-with-amazon-bedrock-agent.md]
-
-source_published: 2026-05-27T18:00:07Z^[raw/articles/powering-agentic-ai-sales-strategy-with-amazon-bedrock-agent.md]
-
----
 
 ## Powering agentic AI sales strategy with Amazon Bedrock AgentCore
 
@@ -222,7 +213,6 @@ Special thanks to everyone who contributed to this launch: ^[raw/articles/poweri
 
 ## About the authors
 
-## 深度分析
 
 ### 1. 从定制基础设施到平台服务的范式转移
 

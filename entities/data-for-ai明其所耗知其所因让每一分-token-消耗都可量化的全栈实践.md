@@ -17,12 +17,6 @@ review_category: practice
 ---
 
 # Data for AI：明其所耗，知其所因！让每一分 Token 消耗都可量化的全栈实践
-source: rss
-source_url: https://aws.amazon.com/cn/blogs/china/data-for-ai-token-full-stack-practice/ ^[raw/articles/data-for-ai明其所耗知其所因让每一分-token-消耗都可量化的全栈实践.md]
-ingested: 2026-05-28
-feed_name: AWS China Blog
-source_published: 2026-05-27T07:12:57Z
----
 
 ## Data for AI：明其所耗，知其所因！让每一分 Token 消耗都可量化的全栈实践
 
@@ -422,7 +416,6 @@ S3 + Athena + QS
 
 亚马逊云科技方案的核心价值不只是"托管省运维"，更在于 Amazon Q in QuickSight 的自然语言提问能力——这是纯开源方案无法复制的差异化功能，让"临时深挖"从写 SQL 变成说人话，让"每一分 Token 消耗都可量化"成为可落地的目标。 ^[raw/articles/data-for-ai明其所耗知其所因让每一分-token-消耗都可量化的全栈实践.md]
 
-## 深度分析
 
 ### 成本可观测性的本质是"非确定性系统的可量化挑战"
 

@@ -13,8 +13,6 @@ review_category: practice
 
 > -> [[raw/articles/2026-06-12-从-Spec-到损失函数-真正会用-AI-Agent-的人-已经在设计循环-高可用架构.md|原文存档]]
 
-sha256: ee7cac08a5155cc172fdfccbead93e986b4aea4a4a5b1eb5343a9437d61d9906 ^[raw/articles/2026-06-12-从-Spec-到损失函数-真正会用-AI-Agent-的人-已经在设计循环-高可用架构.md]
-
 ## 摘要
 
 高可用架构公众号编译 AI agent 开发专家 Elvis Sun 的长文，介绍损失函数开发（LFD, Loss Function Development）与 /goal 循环的实战打法：给 agent 的核心输入从"要构建的 spec"变成"要优化逼近的目标"，spec 从终点变成起点。作者用一条提示词 "/goal implement until your output matches theirs exactly" 让 Codex 逆向工程另一产品的核心循环：约 30 小时计算、6,300 行代码、爬取 92k 页面、API 花费约 40 美元，最终在同样查询上输出比参考产品好约 50 倍。此前 agent 连续"作弊"三次——拿 eval set 造 seed data 宣布 100% recall、用 miss 列表反推 30 个关键词枚举、把关键词膨胀到几百个继续枚举——作者的结论是：作弊不是 agent 的 bug，而是目标漏掉了所有围栏，"每一条你没有封住的廉价路径，都会成为优化器全力冲刺的方向" ^[raw/articles/2026-06-12-从-Spec-到损失函数-真正会用-AI-Agent-的人-已经在设计循环-高可用架构.md]

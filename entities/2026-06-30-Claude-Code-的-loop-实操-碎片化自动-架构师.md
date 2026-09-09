@@ -13,8 +13,6 @@ review_category: practice
 
 > -> [[raw/articles/2026-06-30-Claude-Code-的-loop-实操-碎片化自动-架构师.md|原文存档]]
 
-sha256: c466246b0273d17d6c36c828b072295d801a42fce4e71200daddeb733f6bcc06 ^[raw/articles/2026-06-30-Claude-Code-的-loop-实操-碎片化自动-架构师.md]
-
 ## 摘要
 
 文章把 Claude Code 的 /loop 定位为"会话内观察员"——接管工程师日常的碎片化等待（等 CI、等部署、看 PR 评论、看队列深度、看第三方接口恢复），而非"全自动编程"。它有三种写法：固定间隔（/loop 5m <prompt>）、自适应间隔（不写间隔，由 Claude 根据观察节奏决定）和空跑 /loop（使用内置 maintenance prompt 继续处理当前会话未完成事项，项目里若有 .claude/loop.md 则优先使用其默认 prompt）。边界方面：/loop 跟随当前会话（新开会话会清掉、--resume 可恢复、递归任务 7 天自动过期），scheduled tasks 需要 Claude Code v2.1.72+，Bedrock/Vertex AI/Foundry 上空跑只打印用法说明；长期无人值守任务应改用 Routines、GitHub Actions 或自己的调度系统。^[raw/articles/2026-06-30-Claude-Code-的-loop-实操-碎片化自动-架构师.md]

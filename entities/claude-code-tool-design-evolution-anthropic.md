@@ -99,7 +99,6 @@ Anthropic 官方复盘 Claude Code 中三个工具的设计演进过程，揭示
 4. **多 Agent 系统中用 Task 替代 TodoList 作为协调原语**：如果你的多 Agent 系统还在用共享 TodoList 管理任务，立即迁移到支持依赖关系、跨 Agent 引用、动态修改的 Task 工具。TodoList 在单 Agent 场景是注意力管理工具，在多 Agent 场景会成为协作瓶颈。 ^[raw/articles/claude-code-tool-design-evolution-anthropic.md]
 5. **将用户反馈工具设计为阻塞式，异步任务设计为非阻塞式**：阻塞式交互（AskUserQuestion）适合需要用户明确决策的关键节点；非阻塞式（Task）适合后台执行和跨 Agent 协作。不要混用——在一个需要用户决策的场景使用异步弹窗，会导致模型在用户未回应时继续执行，产生逻辑撕裂。 ^[raw/articles/claude-code-tool-design-evolution-anthropic.md]
 
-## 关联阅读
 ## 相关实体
 - [[entities/claude-code-harness-deep-understanding]]
 - [[entities/准备开一个新坑从零复刻一个-claude-codenn目标是在这个过程中和大家一起学习-claude-code-的-harness-是如何做的nnclaude-]]

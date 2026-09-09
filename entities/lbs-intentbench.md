@@ -99,8 +99,6 @@ Qwen3.5-35B-A3B 在 POI 语义理解和事实检索上逼近顶级闭源模型�
 - 开源地址：https://github.com/lbs-researcher/LBS-IntentBench
 - 相关体系：[[entities/skillclaw]]（同属高德 AMAP-ML）
 
-## 关联条目
-
 ## 相关实体
 - [[entities/perplexity-internal-skill-design-guide|Perplexity 内部 Skill 设计指南：四维体系与维护方法论]]
 - [[entities/anthropic-long-running-agent-adversarial-architecture|Anthropic 长时运行 Agent 架构：对抗式设计 + 合同谈判 + 审美量化]]

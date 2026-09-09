@@ -114,9 +114,6 @@ review_category: tech
 - 仓库地址：https://github.com/github/multilingual-repositories
 - CC0-1.0 许可
 
-## 原文链接
-
-
 ## 相关实体
 - [[entities/open-source-projects-leaving-github|明星开源项目，为什么开始离开 github？]]
 - [[entities/cisa-admin-leaked-aws-govcloud-keys-on-github|cisa admin leaked aws govcloud keys on github]]

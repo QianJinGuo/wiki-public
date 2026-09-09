@@ -62,8 +62,6 @@ vivo AI 导购项目的核心工程价值在于**小模型 + 大模型协同**�
 4. **安全投入不可忽视**：1.6W 条测试语料 + 三层防护是生产级别的安全基线。 ^[raw/articles/vivo-ai-sales-guide-ecommerce-agent.md]
 5. **AB 实验验证价值**：GMV 和解决率的双重正向贡献是 AI 导购项目成功的核心指标。 ^[raw/articles/vivo-ai-sales-guide-ecommerce-agent.md]
 
-## 关联阅读
-
 ## 相关实体
 - [[entities/harness-engineering耗时一周我是如何将应用的ai-coding率提升至90的]]
 - [[entities/wangyunhe-harness-optimization-agentsoul]]

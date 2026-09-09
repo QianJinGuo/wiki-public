@@ -13,8 +13,6 @@ review_category: practice
 
 > -> [[raw/articles/2026-06-24-别再手动复制-Skill-了-多-Agent-时代的-Skill-管理方案-阿里云云原生.md|原文存档]]
 
-sha256: 6194a420b01755a64083dc77aa59abf1bddac90dccdbb55717357cdf39993144 ^[raw/articles/2026-06-24-别再手动复制-Skill-了-多-Agent-时代的-Skill-管理方案-阿里云云原生.md]
-
 ## 摘要
 
 阿里云云原生团队发布 Nacos Skill Sync，解决多 Agent 时代的 Skill 管理碎片化问题：同一份 Skill 在 Codex 里更新了、Claude Code 里还是旧版、Cursor 下还可能有同名异容副本，手动复制时间一长就陷入"哪份最新、该用谁覆盖谁"的混乱。此前社区方案的共同缺口是：Git submodule/Monorepo 太重、Syncthing 只懂文件不懂 Skill 语义且双向修改易覆盖、LangSmith 等 Prompt 平台不管本地 Agent 配置文件。Nacos Skill Sync 的一句话定位是"把 Skill 收敛到一个中心仓库，再按需分发给各个 Agent"——默认用软链接让各 Agent 目录指向中心仓库（改一处全部生效），环境不支持软链接时切换复制模式，同步状态随时可查。^[raw/articles/2026-06-24-别再手动复制-Skill-了-多-Agent-时代的-Skill-管理方案-阿里云云原生.md]

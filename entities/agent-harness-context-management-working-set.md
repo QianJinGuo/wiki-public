@@ -154,9 +154,9 @@ review_category: tech
 ## 三篇 Harness 文章的关联
 | 文章 | 核心议题 |
 |------|---------|
-|| [[raw/articles/sub-agent-vs-agent-team-selection-guide.md|Sub-Agent vs Agent Team]] | 多 Agent 架构先看上下文边界 |
-|| [[raw/articles/claude-code-subagents-context-hygiene.md|Claude Code Subagent 上下文卫生]] | Subagent 是 Harness 的上下文卫生工具 |
-|| [[entities/harness-engineering-systematic-framework|Harness Engineering 系统梳理]] | Harness 是把经验沉淀成下一轮默认存在的能力 |
+| [[raw/articles/sub-agent-vs-agent-team-selection-guide.md|Sub-Agent vs Agent Team]] | 多 Agent 架构先看上下文边界 |
+| [[raw/articles/claude-code-subagents-context-hygiene.md|Claude Code Subagent 上下文卫生]] | Subagent 是 Harness 的上下文卫生工具 |
+| [[entities/harness-engineering-systematic-framework|Harness Engineering 系统梳理]] | Harness 是把经验沉淀成下一轮默认存在的能力 |
 **上下文管理决定系统能不能持续协作。** ^[raw/articles/agent-harness-context-management-working-set.md]^[raw/articles/openclaw-agent-observability-session-logs-otel-sls.md]
 
 

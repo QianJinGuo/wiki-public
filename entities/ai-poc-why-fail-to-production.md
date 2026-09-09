@@ -17,19 +17,9 @@ review_category: practice
 ---
 > -> [[raw/articles/ai-poc-why-fail-to-production.md|原文存档]]
 
-## 摘要
 ---   ^[raw/articles/ai-poc-why-fail-to-production.md]
-source: wechat
-source_url: https://mp.weixin.qq.com/s/w9SWYuM7d_rI1GBYdXJyeA^[raw/articles/ai-poc-why-fail-to-production.md]
-
-ingested: 2026-05-12^[raw/articles/ai-poc-why-fail-to-production.md]
-
-feed_name: 高可用架构
 wechat_mp_fakeid: MP_WXS_3000551159^[raw/articles/ai-poc-why-fail-to-production.md]
 
-source_published: 2026-04-15^[raw/articles/ai-poc-why-fail-to-production.md]
-
----
 很多企业做完 AI PoC，为什么还是上不了生产^[raw/articles/ai-poc-why-fail-to-production.md]
 
 > AI 项目最难的，从来不是把 Demo 做出来，而是把系统稳定跑进真实业务。

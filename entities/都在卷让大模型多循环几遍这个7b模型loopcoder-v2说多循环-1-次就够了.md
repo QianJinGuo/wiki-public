@@ -14,15 +14,8 @@ review_category: tech
 # 都在卷「让大模型多循环几遍」，这个7B模型LoopCoder v2说：多循环 1 次就够了
 
 --- ^[raw/articles/都在卷让大模型多循环几遍这个7b模型loopcoder-v2说多循环-1-次就够了.md]
-source: wechat
-source_url: https://mp.weixin.qq.com/s/L_Bmxw44h4PFCQTO68lrpg^[raw/articles/都在卷让大模型多循环几遍这个7b模型loopcoder-v2说多循环-1-次就够了.md]
-
-ingested: 2026-07-01 ^[raw/articles/都在卷让大模型多循环几遍这个7b模型loopcoder-v2说多循环-1-次就够了.md]
-feed_name: 机器之心
 wechat_mp_fakeid: MP_WXS_3073282833^[raw/articles/都在卷让大模型多循环几遍这个7b模型loopcoder-v2说多循环-1-次就够了.md]
 
-source_published: 2026-06-30 ^[raw/articles/都在卷让大模型多循环几遍这个7b模型loopcoder-v2说多循环-1-次就够了.md]
----
 
 ## 都在卷「让大模型多循环几遍」，这个7B模型LoopCoder v2说：多循环 1 次就够了
 
@@ -38,15 +31,7 @@ source_published: 2026-06-30 ^[raw/articles/都在卷让大模型多循环几遍
 ## 详细信息
 
 ---
-source: wechat ^[raw/articles/都在卷让大模型多循环几遍这个7b模型loopcoder-v2说多循环-1-次就够了.md]
-source_url: https://mp.weixin.qq.com/s/L_Bmxw44h4PFCQTO68lrpg^[raw/articles/都在卷让大模型多循环几遍这个7b模型loopcoder-v2说多循环-1-次就够了.md]
-
-ingested: 2026-07-01^[raw/articles/都在卷让大模型多循环几遍这个7b模型loopcoder-v2说多循环-1-次就够了.md]
-
-feed_name: 机器之心 ^[raw/articles/都在卷让大模型多循环几遍这个7b模型loopcoder-v2说多循环-1-次就够了.md]
 wechat_mp_fakeid: MP_WXS_3073282833^[raw/articles/都在卷让大模型多循环几遍这个7b模型loopcoder-v2说多循环-1-次就够了.md]
-
-source_published: 2026-06-30^[raw/articles/都在卷让大模型多循环几遍这个7b模型loopcoder-v2说多循环-1-次就够了.md]
 
 --- ^[raw/articles/都在卷让大模型多循环几遍这个7b模型loopcoder-v2说多循环-1-次就够了.md]
 

@@ -13,8 +13,6 @@ review_category: practice
 
 > -> [[raw/articles/2026-06-29-开启Harness-Engineering探索之旅-腾讯技术工程.md|原文存档]]
 
-sha256: b9670709d7fa796cefb9e7f2a6d32a810619e03f6a5577d808a16cee4aafb744 ^[raw/articles/2026-06-29-开启Harness-Engineering探索之旅-腾讯技术工程.md]
-
 ## 摘要
 
 腾讯团队复盘其 Harness Engineering 实践：AI 写代码占比一路走高但版本节奏提效不成正比，出码率与提效之间"裂开一道缝"，根因是研发瓶颈从来不在"写"而在理解、对齐、验证、沉淀等非编码环节，需要为 Agent 搭建可执行、可约束、可验证、可反馈的工程环境 ^[raw/articles/2026-06-29-开启Harness-Engineering探索之旅-腾讯技术工程.md]。整套体系是"2 条轨道 + 1 个长期记忆"：研发端到端交付落在 SpecWorker 上（协议层定义 AI 每步输入输出契约、管线层标准化 P1 需求到 P6 归档的 6+1 阶段、纪律层硬编码 TDD/Debug/Verify/Review/Evaluate 五道门禁且评分 95 分以下打回重做），线上运营轨道用 7 步处理告警闭环，知识库作为 AI 的长期记忆分项目级 specs/ 与变更级 knowledge-spec/ 两套并通过 index.md 互通 ^[raw/articles/2026-06-29-开启Harness-Engineering探索之旅-腾讯技术工程.md]。文章给出了大量具体机制：P1 阶段 TAPD 拉取 + AC 可测 + test-cases 同源、P3 的 UI 像素+SSIM 双 95% 五轮自愈校准、P4 后端 API 测试失败时自动拉 CLS 日志查 MySQL 看 Redis 的诊断 SubAgent、P5 的 SQL 变更强制人工确认、P6 的 changes-sync/knowledge-sync/specs-generator 归档三件套 ^[raw/articles/2026-06-29-开启Harness-Engineering探索之旅-腾讯技术工程.md]。文末总结 4 条工程原则（追求确定性而非自由发挥、上下文控制、Token 成本优化、确定性过程用脚本实现并优先 SKILL 而非 MCP）与 4 个典型问题（指令遵循、需求歧义、设计稿还原、产物可靠性）的标准应对，并坦诚列出了六件还在路上的事 ^[raw/articles/2026-06-29-开启Harness-Engineering探索之旅-腾讯技术工程.md]。

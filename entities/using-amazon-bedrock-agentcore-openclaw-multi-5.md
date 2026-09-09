@@ -19,9 +19,6 @@ review_category: practice
 ---   ^[raw/articles/using-amazon-bedrock-agentcore-openclaw-multi-5.md]
 title: "AI Agent 的迁移与现代化 — 使用 Amazon Bedrock AgentCore 将 OpenClaw 从单机改造为多租户 Serverless 架构 第五篇 | Amazon Web Services" ^[raw/articles/using-amazon-bedrock-agentcore-openclaw-multi-5.md]
 url: https://aws.amazon.com/cn/blogs/china/using-amazon-bedrock-agentcore-openclaw-multi-5/ ^[raw/articles/using-amazon-bedrock-agentcore-openclaw-multi-5.md]
-source: rss ^[raw/articles/using-amazon-bedrock-agentcore-openclaw-multi-5.md]
-feed_name: AWS China Blog ^[raw/articles/using-amazon-bedrock-agentcore-openclaw-multi-5.md]
----
 摘要：基于 AWS 示例项目，展示如何将 OpenClaw 迁移为基于 Amazon Bedrock AgentCore 的多租户 Serverless 架构。全系列 6 篇，涵盖 Replatform 与 Refactor 两种策略。本篇为第五篇：配置消息渠道与端到端验证，配置 Telegram / 飞书 Bot、发送第一条消息、查看监控大盘和日志。 ^[raw/articles/using-amazon-bedrock-agentcore-openclaw-multi-5.md]
 **目录** ^[raw/articles/using-amazon-bedrock-agentcore-openclaw-multi-5.md]
 01[七、配置消息渠道](https://aws.amazon.com/cn/blogs/china/using-amazon-bedrock-agentcore-openclaw-multi-5/#section1) ^[raw/articles/using-amazon-bedrock-agentcore-openclaw-multi-5.md]
