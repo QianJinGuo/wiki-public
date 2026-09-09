@@ -24,7 +24,7 @@ wechat_mp_fakeid: MP_WXS_3073282833^[raw/articles/实锤了claude-code偷查用�
 source_published: 2026-07-01 ^[raw/articles/实锤了claude-code偷查用户时区中国ai实验室全是关键词.md]
 ---
 
-# 实锤了：Claude Code偷查用户，时区、中国AI实验室全是关键词
+## 实锤了：Claude Code偷查用户，时区、中国AI实验室全是关键词
 
 机器之心编辑部
 
@@ -53,7 +53,7 @@ source_published: 2026-07-01^[raw/articles/实锤了claude-code偷查用户时�
 
 ---
 
-# 实锤了：Claude Code偷查用户，时区、中国AI实验室全是关键词
+## 实锤了：Claude Code偷查用户，时区、中国AI实验室全是关键词
 
 机器之心编辑部 ^[raw/articles/实锤了claude-code偷查用户时区中国ai实验室全是关键词.md]
 

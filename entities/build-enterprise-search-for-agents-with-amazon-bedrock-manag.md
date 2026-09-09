@@ -18,7 +18,7 @@ review_category: practice
 
 ## 摘要
 
-# Build enterprise search for agents with Amazon Bedrock Managed Knowledge Base
+## Build enterprise search for agents with Amazon Bedrock Managed Knowledge Base
 
 Knowledge bases that ground agents and generative AI applications over your enterprise data are hard to build at scale. Teams typically stitch together connectors, parsers, vector stores, knowledge graphs, and retrieval logic, then operationalize all of it for production. Each piece brings its own challenges. You must decide which data sources to connect and how to parse multimodal document types. You must choose between graph and vector databases, then provision and scale them. You must also handle complex queries that reason across diverse content, and layer on the document-level access control, observability, and security that production demands. ^[raw/articles/build-enterprise-search-for-agents-with-amazon-bedrock-manag.md]
 

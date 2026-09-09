@@ -68,7 +68,6 @@ LightRAG
 从"过一层模型"到"思维链驱动的并行检索"^[raw/articles/ai-答疑助手优化实践从-rag-到-lightrag-的全链路升级.md]
 
 
-▐
 为什么意图识别是核心问题
 
 2025 年，Andrej Karpathy 公开表示他更倾向于用^[raw/articles/ai-答疑助手优化实践从-rag-到-lightrag-的全链路升级.md]

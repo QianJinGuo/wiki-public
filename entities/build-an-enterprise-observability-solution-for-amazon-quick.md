@@ -21,7 +21,7 @@ review_category: practice
 
 ## 核心内容
 
-# Build an enterprise observability solution for Amazon Quick
+## Build an enterprise observability solution for Amazon Quick
 
 When hundreds to thousands of users are onboarded to an enterprise AI platform, business leaders and platform owners need visibility into who is using the platform, whether users are satisfied with the answers they receive, and which capabilities are driving the most engagement. Without a centralized observability solution, this data is scattered across multiple AWS services and difficult to analyze at scale. ^[raw/articles/build-an-enterprise-observability-solution-for-amazon-quick.md]
 

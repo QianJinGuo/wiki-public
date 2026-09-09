@@ -21,7 +21,7 @@ review_category: practice
 
 → [[raw/articles/predicting-risk-in-content-launches-how-data-driven-insights|原文存档]] ^[raw/articles/predicting-risk-in-content-launches-how-data-driven-insights.md]
 
-# Predicting Risk in Content Launches: How Data-Driven Insights can Transform Launch Planning
+## Predicting Risk in Content Launches: How Data-Driven Insights can Transform Launch Planning
 
 by [Emily Gill](<https://www.linkedin.com/in/ecgill/>) ^[raw/articles/predicting-risk-in-content-launches-how-data-driven-insights.md]
 

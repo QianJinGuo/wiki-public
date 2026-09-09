@@ -16,7 +16,7 @@ review_category: tech
 # 从Vibe Coding到Vibe Worlding：AI开始自己“造世界”了
 
 
-# 从Vibe Coding到Vibe Worlding：AI开始自己“造世界”了
+## 从Vibe Coding到Vibe Worlding：AI开始自己“造世界”了
 
 腾讯技术工程 2026-08-31 17:36 广东
 

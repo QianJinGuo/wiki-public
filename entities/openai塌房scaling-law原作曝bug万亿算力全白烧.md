@@ -14,9 +14,7 @@ review_category: tech
 
 # OpenAI塌房！Scaling law原作曝bug，万亿算力全白烧
 
-### 
 
-### 
 
 **   ****新智元报道  **
 
@@ -53,9 +51,7 @@ OpenAI误导了整个AI圈好几年！
 
 > 本文通过article、llm视角，分析了的AI/ML技术动态。
 
-### 
 
-### 
 
 **   ****新智元报道  **
 
@@ -158,7 +154,6 @@ DeepMind那位以扩散模型封神的**Sander Dieleman** ，转头就在推特�
 本文的核心技术价值在于：
 - ### 
 
-### 
 
 **   ****新智元报道  **
 

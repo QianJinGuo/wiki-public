@@ -22,7 +22,7 @@ review_category: practice
 ## 核心内容
 
 
-# Building AI agents for business support using Amazon Bedrock AgentCore
+## Building AI agents for business support using Amazon Bedrock AgentCore
 
  
 

@@ -29,7 +29,7 @@ CHERIoT 在 CHERI 基础上专为嵌入式 / IoT 场景做了轻量化适配，�
 # "CHERIoT-Ibex: Closing the door on memory safety vulnerabilities with hardware-enforced protection"
 URL Source: https://techcommunity.microsoft.com/blog/azureinfrastructureblog/cheriot-ibex-closing-the-door-on-memory-safety-vulnerabilities-with-hardware-enf/4517904 ^[raw/articles/cheriot-ibex-memory-safety-hardware-enforcement.md]
 
-# CHERIoT-Ibex: Closing the door on memory safety vulnerabilities with hardware-enforced protection | Microsoft Community Hub
+## CHERIoT-Ibex: Closing the door on memory safety vulnerabilities with hardware-enforced protection | Microsoft Community Hub
 Open Side Menu ^[raw/articles/cheriot-ibex-memory-safety-hardware-enforcement.md]
 [Skip to content](https://techcommunity.microsoft.com/blog/azureinfrastructureblog/cheriot-ibex-closing-the-door-on-memory-safety-vulnerabilities-with-hardware-enf/4517904#main-content)[![Image 1: Brand Logo](https://techcommunity.microsoft.com/t5/s/gxcuf89792/m_assets/themes/customTheme1/favicon-1730836271365.png?time=1730836274203)](https://techcommunity.microsoft.com/) ^[raw/articles/cheriot-ibex-memory-safety-hardware-enforcement.md]
 [Tech Community](https://techcommunity.microsoft.com/)[Community Hubs](https://techcommunity.microsoft.com/Directory) ^[raw/articles/cheriot-ibex-memory-safety-hardware-enforcement.md]
@@ -50,7 +50,7 @@ Open Side Menu ^[raw/articles/cheriot-ibex-memory-safety-hardware-enforcement.md
 Azure Infrastructure Blog ^[raw/articles/cheriot-ibex-memory-safety-hardware-enforcement.md]
 3 MIN READ ^[raw/articles/cheriot-ibex-memory-safety-hardware-enforcement.md]
 
-# CHERIoT-Ibex: Closing the door on memory safety vulnerabilities with hardware-enforced protection
+## CHERIoT-Ibex: Closing the door on memory safety vulnerabilities with hardware-enforced protection
 [![Image 2: kunyanliu's avatar](https://techcommunity.microsoft.com/t5/s/gxcuf89792/m_assets/avatars/default/avatar-9.svg?image-dimensions=50x50)](https://techcommunity.microsoft.com/users/kunyanliu/3487734)^[raw/articles/cheriot-ibex-memory-safety-hardware-enforcement.md]
 [kunyanliu](https://techcommunity.microsoft.com/users/kunyanliu/3487734)^[raw/articles/cheriot-ibex-memory-safety-hardware-enforcement.md]
 ![Image 3: Icon for Microsoft rank](https://techcommunity.microsoft.com/t5/s/gxcuf89792/images/cmstNC05WEo0blc?image-dimensions=100x16&constrain-image=true)Microsoft^[raw/articles/cheriot-ibex-memory-safety-hardware-enforcement.md]

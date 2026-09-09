@@ -31,7 +31,7 @@ review_category: practice
 
 与其说是 AI 改变了研发，不如说是 AI 像一面照妖镜，逼着我们去直面那些欠了十几年的工程债。 真正的 AI First，本质上是一场彻头彻尾的“软件工程革命”。 ^[raw/articles/ai-first不这明明是软件工程-first.md]
 
-# 01 所谓 AI First，其实是“把人踢出执行链条”
+## 01 所谓 AI First，其实是“把人踢出执行链条”
 
 原文的核心逻辑极其冷酷且高效：在 AI 时代， 人已经成为了流水线上最慢的组件。^[raw/articles/ai-first不这明明是软件工程-first.md]
 
@@ -53,7 +53,7 @@ review_category: practice
 
 这要求我们把人从琐碎的执行中拿掉。AI 不只是写代码，它要负责审计、跑测试、部署、监控甚至是故障自愈。而人，退回到“架构师”的位置，只在关键节点做“判断题”。 ^[raw/articles/ai-first不这明明是软件工程-first.md]
 
-# 02 落地 AI 之前，先看这五块“工程压舱石”
+## 02 落地 AI 之前，先看这五块“工程压舱石”
 
 很多人觉得买个 Cursor 订阅、装个 Copilot 就算 AI First 了。那是“AI 辅助”，不是“AI 优先”。在你想照搬这套玩法之前，请先对照以下五点进行“灵魂拷问”。如果这五点做不到，AI 产出越高，你的系统崩得越快。 ^[raw/articles/ai-first不这明明是软件工程-first.md]
 

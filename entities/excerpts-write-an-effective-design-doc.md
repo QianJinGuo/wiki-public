@@ -84,11 +84,9 @@ Consider these questions:
 *   Will multiple people coordinate work to implement the design?
 *   Will the project take more than three months of full-time dev work?
 *   Will the implementation run in production for several years?
-*
 
 → [[raw/articles/excerpts-write-an-effective-design-doc|原文存档]] ^[raw/articles/excerpts-write-an-effective-design-doc.md]
 
 ---
 ## 关联
 - 相关概念: [[concepts/harness-engineering-framework|Harness Engineering]]
-

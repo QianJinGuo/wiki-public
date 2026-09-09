@@ -21,7 +21,7 @@ review_category: practice
 
 → [[raw/articles/data-modeling-best-practices-for-amazon-quick-sight-multi-da|原文存档]] ^[raw/articles/data-modeling-best-practices-for-amazon-quick-sight-multi-da.md]
 
-# Data modeling best practices for Amazon Quick Sight multi-dataset relationships
+## Data modeling best practices for Amazon Quick Sight multi-dataset relationships
 
 Business intelligence analysts routinely face the same challenge at the start of every analytics project: the data needed to answer a single business question lives across multiple tables. Sales transactions sit in one place, customer demographics and product attributes in another, while returns, forecasts, and operational metrics occupy still others. ^[raw/articles/data-modeling-best-practices-for-amazon-quick-sight-multi-da.md]
 

@@ -19,7 +19,6 @@ review_category: practice
 架构师（JiaGouX）  我们都是架构师！   ^[raw/articles/subagents-详解claude-code-如何避免上下文污染.md]
 架构未来，你来不来？
 
-#
 
 * * *
 昨天在梳理 Agent Harness 的上下文管理，我一直在想一个很小但很真实的场景：^[raw/articles/subagents-详解claude-code-如何避免上下文污染.md]

@@ -16,7 +16,7 @@ review_category: practice
 # 从 ReAct 到 Agent Teams：一个工程师视角的 Agent 协作机制思考
 
 
-# 从 ReAct 到 Agent Teams：一个工程师视角的 Agent 协作机制思考
+## 从 ReAct 到 Agent Teams：一个工程师视角的 Agent 协作机制思考
 
 原创 蒋泽林(林曜) 2026-08-31 09:47 浙江
 

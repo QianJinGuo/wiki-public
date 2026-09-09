@@ -16,13 +16,12 @@ review_category: tech
 # 不止AutoResearch！策略与Harness共进化，EvoTrainer跑通自主闭环
 
 
-# 不止AutoResearch！策略与Harness共进化，EvoTrainer跑通自主闭环
+## 不止AutoResearch！策略与Harness共进化，EvoTrainer跑通自主闭环
 
 原创 让你更懂AI的 2026-08-31 13:51 北京
 
 训练系统也开始自进化
 
-## 
 
 自动跑实验只是第一步。EvoTrainer 开始让 AI 自己分析 Reward、Rollout 和失败轨迹，再反过来升级训练策略与 Harness。 ^[raw/articles/不止autoresearch策略与harness共进化evotrainer跑通自主闭环.md]
 

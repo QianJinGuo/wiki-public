@@ -80,7 +80,6 @@ review_category: practice
 
 * * *
 
-###
 ## 深度分析
 ### 上下文窗口作为稀缺资源
 Claude Code 的 1M token 上下文窗口在表面上是一个"充裕"的上限，但文章揭示了一个反直觉的现实：上下文越多，模型性能反而越差。  这种现象被称为"上下文腐化"（Context Rot），其根本机制是注意力分散——当模型需要处理的信息量超过其最佳处理阈值时，有价值的信号被噪声淹没。 ^[raw/articles/使用claude-codesession管理与1m上下文.md]

@@ -24,7 +24,7 @@ review_category: practice
 
 ---
 
-# 你的 AI 为什么总在演示时掉链子？
+## 你的 AI 为什么总在演示时掉链子？
 
 你做过一个聊天机器人。也许还接上了几个工具，跑个 ReAct 循环。演示的时候一切正常。^[raw/articles/超级ai背后的秘密武器agent-harness深度解析.md]
 

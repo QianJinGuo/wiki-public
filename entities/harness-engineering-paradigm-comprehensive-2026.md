@@ -190,7 +190,7 @@ harness 不会「**一次到位**」——它在生产中会不断暴露问题�
 
 ---
 
-# 第 3 来源补充：ECC（affaan-m/everything-claude-code）— Harness 操作系统的开源实现案例
+## 第 3 来源补充：ECC（affaan-m/everything-claude-code）— Harness 操作系统的开源实现案例
 
 > VibeCoder / Vibe编码 2026-06-16 对 affaan-m/ECC 仓库的源码深度分析。如果说第 1/2 来源建立了"Harness = LLM 时代的操作系统"的概念框架，这一篇给出了**真实可用的开源实现案例**——一个完整的 Harness OS 怎么组织、怎么工作、怎么落地。
 

@@ -21,7 +21,7 @@ review_category: practice
 
 → [[raw/articles/data-modeling-patterns-for-amazon-quick-sight-multi-dataset-|原文存档]] ^[raw/articles/data-modeling-patterns-for-amazon-quick-sight-multi-dataset-.md]
 
-# Data modeling patterns for Amazon Quick Sight multi-dataset relationships
+## Data modeling patterns for Amazon Quick Sight multi-dataset relationships
 
 In Part 1 of this series, we introduced Amazon Quick Sight Multi-Dataset Relationships and covered the foundational concepts of dimensional modeling, best practices for designing clean data models, and a decision framework for when to use runtime joins versus pre-joined datasets. If you haven’t read [Part 1 yet, we recommend starting there](<https://aws.amazon.com/blogs/machine-learning/data-modeling-best-practices-for-amazon-quick-sight-multi-dataset-relationships/>). ^[raw/articles/data-modeling-patterns-for-amazon-quick-sight-multi-dataset-.md]
 

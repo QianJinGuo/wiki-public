@@ -18,7 +18,7 @@ review_category: practice
 
 ## 摘要
 
-# Build specialized agent workflows for your business with Amazon Quick and NVIDIA NeMo Relay
+## Build specialized agent workflows for your business with Amazon Quick and NVIDIA NeMo Relay
 
 Fast-growing companies and enterprise supply-chain teams often have enough data to see that something is wrong, but not enough time to manually investigate every disruption. A supplier delay can require a planner to check purchase orders, inventory, customer commitments, contract rules, logistics options, and approval policies before deciding what to do next. ^[raw/articles/build-specialized-agent-workflows-for-your-business-with-ama.md]
 

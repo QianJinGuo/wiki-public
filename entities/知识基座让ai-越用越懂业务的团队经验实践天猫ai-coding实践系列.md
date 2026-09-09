@@ -42,7 +42,6 @@ review_category: practice
 
 从超级个体到超级团队
 
-▐
 超级个体的涌现
 
 AI Coding 工具已经非常成熟。Cursor、Qoder、Copilot……加上大模型本身能力的飞速提升，诞生了大量的^[raw/articles/知识基座让ai-越用越懂业务的团队经验实践天猫ai-coding实践系列.md]
@@ -69,7 +68,6 @@ AI 超级个体
 这些人的研发效率可能是普通开发者的 5X甚至 10X。我周围就见过不少这样的超级个体。^[raw/articles/知识基座让ai-越用越懂业务的团队经验实践天猫ai-coding实践系列.md]
 
 
-▐
 但超级个体的经验难以复制
 
 问题在于：

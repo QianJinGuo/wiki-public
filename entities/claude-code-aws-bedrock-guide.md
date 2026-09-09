@@ -19,7 +19,7 @@ review_category: practice
 
 ## 核心内容
 
-# Claude Code on AWS Bedrock 配置指南
+## Claude Code on AWS Bedrock 配置指南
 
 ## Claude Code on AWS Bedrock 配置指南
 

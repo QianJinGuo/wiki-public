@@ -21,7 +21,7 @@ review_category: practice
 
 ## 核心内容
 
-# OpenClaw + Amazon Bedrock + Amazon EKS联动实践：打印机包装质检助手实战
+## OpenClaw + Amazon Bedrock + Amazon EKS联动实践：打印机包装质检助手实战
 
 摘要：随着打印机出厂包装质检工作量的增长，产线质检员每天需要目视比对大量包装图片，判断泡沫托盘中每个槽位的配件是否齐全。传统方式准确率和效率难以保障。希望借助 AI Agent 将领域专家的判断规则固化下来，同时保持快速迭代能力。 ^[raw/articles/openclaw-amazon-bedrock-eks-printer-qc.md]
 

@@ -27,7 +27,7 @@ review_category: practice
 → [[raw/articles/fundamentals-large-tabular-model-nexus-is-now-available-on-a|原文存档]] ^[raw/articles/fundamentals-large-tabular-model-nexus-is-now-available-on-a.md]
 
 
-# Fundamental’s Large Tabular Model NEXUS is now available on Amazon SageMaker JumpStart
+## Fundamental’s Large Tabular Model NEXUS is now available on Amazon SageMaker JumpStart
 
 Today, we’re announcing support for Fundamental’s NEXUS model on [Amazon SageMaker AI](<https://aws.amazon.com/sagemaker/ai/>). With this launch, you can deploy a foundation model (FM) purpose-built for tabular data prediction. This model helps your enterprise generate accurate, deterministic predictions from structured data in days instead of months. ^[raw/articles/fundamentals-large-tabular-model-nexus-is-now-available-on-a.md]
 

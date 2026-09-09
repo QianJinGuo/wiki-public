@@ -21,7 +21,7 @@ review_category: practice
 
 → [[raw/articles/使用-amazon-s3-tables-优化数据湖从hudi-迁移到托管-iceberg|原文存档]] ^[raw/articles/使用-amazon-s3-tables-优化数据湖从hudi-迁移到托管-iceberg.md]
 
-# 使用 Amazon S3 Tables 优化数据湖：从Hudi 迁移到托管 Iceberg
+## 使用 Amazon S3 Tables 优化数据湖：从Hudi 迁移到托管 Iceberg
 
 摘要：某零售品牌因 Hudi 0.12.x 版本老化、并发冲突和全量覆盖场景低效，迁移至 Amazon S3 Tables。团队采用混合策略：DW 层用 S3 Tables 实现增量 MERGE，DM 层全量覆盖表直接写 Parquet。通过新旧并行分批迁移，最终核心作业性能提升最高 8 倍，ETL 月度成本降低 72%。  ^[raw/articles/使用-amazon-s3-tables-优化数据湖从hudi-迁移到托管-iceberg.md]
 
@@ -144,7 +144,7 @@ Amazon S3 Tables 每次增量提交都会产生新数据文件。如果不加控
 3\. 定期 Compaction：配置每周调度合并小文件^[raw/articles/使用-amazon-s3-tables-优化数据湖从hudi-迁移到托管-iceberg.md]
 
 
-# Compaction 调度示例（每周日凌晨），优化后单文件平均大小从 9 MB 提升到 224 MB。
+## Compaction 调度示例（每周日凌晨），优化后单文件平均大小从 9 MB 提升到 224 MB。
 
 **4.4.2 write.distribution-mode 配置注意事项**^[raw/articles/使用-amazon-s3-tables-优化数据湖从hudi-迁移到托管-iceberg.md]
 

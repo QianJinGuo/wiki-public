@@ -22,7 +22,7 @@ review_category: practice
 ## 核心内容
 
 
-# How a Mid-Tier Enterprise SaaS Provider Automates Cloud Support Triage
+## How a Mid-Tier Enterprise SaaS Provider Automates Cloud Support Triage
 
 Mid-tier SaaS automates cloud support triage with a 5-agent workflow, boosting ticket validation, routing, and SLA compliance in enterprise cloud support. ^[raw/articles/how-a-mid-tier-enterprise-saas-provider-automates-cloud-supp.md]
 

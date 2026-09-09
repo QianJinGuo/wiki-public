@@ -50,7 +50,6 @@ RAG（Retrieval-Augmented Generation）知识库^[raw/articles/告别伪智能�
 
 前置知识调研
 
-▐
 Spec简介：
 AI Coding 的“宪法”
 

@@ -15,7 +15,7 @@ review_category: practice
 
 # Qoder 工程实践：当瓶颈从模型转移到人
 
-# Qoder 工程实践：当瓶颈从模型转移到人
+## Qoder 工程实践：当瓶颈从模型转移到人
 
 ---
 source: wechat
@@ -27,7 +27,7 @@ source_published: 2026年6月12日 17:55^[raw/articles/qoder-工程实践当瓶�
 
 --- ^[raw/articles/qoder-工程实践当瓶颈从模型转移到人.md]
 
-# Qoder 工程实践：当瓶颈从模型转移到人
+## Qoder 工程实践：当瓶颈从模型转移到人
 
 这是2026年的第23篇文章
 
@@ -35,7 +35,7 @@ source_published: 2026年6月12日 17:55^[raw/articles/qoder-工程实践当瓶�
 
 （注：下文中的“我”系作者本人）
 
-# 引言
+## 引言
 
 当 AI 输出的价值稳定超过 Token 成本之后，瓶颈从模型能力转移到了人的精力。^[raw/articles/qoder-工程实践当瓶颈从模型转移到人.md]
 

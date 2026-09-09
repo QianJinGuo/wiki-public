@@ -67,6 +67,7 @@ metadata:
   name: qwen3-8b
   namespace: ml-team
 spec:
+```
 
 
 → [[raw/articles/building-modelplane|原文存档]]
@@ -74,4 +75,3 @@ spec:
 ---
 ## 关联
 - 相关概念: [[concepts/harness-engineering-framework|Harness Engineering]]
-

@@ -65,7 +65,6 @@ review_category: practice
 
 台 、端边云的高性能渲染链路以及结合跨端的场域所设计的一系列 AI 产品。 ^[raw/articles/淘宝跨端体验优化-ai-演进之路.md]
 
-▐
 什
 么
 是
@@ -80,7 +79,6 @@ review_category: practice
 
 发平台的深度融合，是跨端应用一站式解决方案平台。 ^[raw/articles/淘宝跨端体验优化-ai-演进之路.md]
 
-▐
 平
 台
 AI

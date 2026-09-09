@@ -19,7 +19,7 @@ review_category: tech
 
 > **Source archive**: [[raw/articles/end-to-end-encrypted-ml-inference-with-amazon-sagemaker-ai-a|原文存档]] ^[raw/articles/end-to-end-encrypted-ml-inference-with-amazon-sagemaker-ai-a.md]
 
-# End-to-end encrypted ML inference with Amazon SageMaker AI and FHE
+## End-to-end encrypted ML inference with Amazon SageMaker AI and FHE
 
 Machine learning (ML) inference often requires processing sensitive data—medical records, proprietary business information, or personal communications. What if you could run ML inference in the cloud while hiding your data from the cloud itself? More specifically, what if you could enforce that your data stayed encrypted throughout the entire ML inference process? This post will show you how to use [Amazon SageMaker AI](<https://aws.amazon.com/sagemaker/ai/>) with fully homomorphic encryption (FHE) to perform ML inference. Using FHE, we present an approach to ML inference that’s designed to keep queries, responses, and intermediate values encrypted and unreadable by observers—including SageMaker AI itself. ^[raw/articles/end-to-end-encrypted-ml-inference-with-amazon-sagemaker-ai-a.md]
 

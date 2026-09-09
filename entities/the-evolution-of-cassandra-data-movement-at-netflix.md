@@ -21,7 +21,7 @@ review_category: practice
 
 → [[raw/articles/the-evolution-of-cassandra-data-movement-at-netflix|原文存档]] ^[raw/articles/the-evolution-of-cassandra-data-movement-at-netflix.md]
 
-# The Evolution of Cassandra Data Movement at Netflix
+## The Evolution of Cassandra Data Movement at Netflix
 
 By [Guil Pires](<https://www.linkedin.com/in/guilhermesmi/>), [Jennifer Prince](<https://www.linkedin.com/in/jenjprince/>), [Jose Camacho](<https://www.linkedin.com/in/josecamachof/>), [Ken Kurzweil](<https://www.linkedin.com/in/kenkurzweil/>), [Phanindra Chunduru](<https://www.linkedin.com/in/phanindra-chunduru/>) ^[raw/articles/the-evolution-of-cassandra-data-movement-at-netflix.md]
 

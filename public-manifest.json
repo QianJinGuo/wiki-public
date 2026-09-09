@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "sourceRevision": "58484315f082fa2aa3737c9c9fabd8c9db491a76",
+  "sourceRevision": "aace1c93f47d0609bab8026ced5272e67c275576",
   "files": [
     {
       "path": "raw/articles/0.25秒识破未见攻击-lod-lvlm-jailbreak-detection-emnlp2026.md",
@@ -4553,6 +4553,11 @@
       "sourceUrl": "https://arxiv.org/abs/2608.17528"
     },
     {
+      "path": "raw/articles/agent-long-task-intentional-resume-taobao-live-2026-09.md",
+      "title": "Agent 长程任务断点续传：从框架 Checkpoint 到跨进程恢复的完整实践",
+      "sourceUrl": "https://mp.weixin.qq.com/s/Vy2HpOyr7wVmPTVWa3mGig"
+    },
+    {
       "path": "raw/articles/agent-loop-engineering-handbook-8-questions-chen-jin-tencent-self-2026.md",
       "title": "读完 Agent Loop 工程手册，我有 8 个还没想明白的问题",
       "sourceUrl": "https://mp.weixin.qq.com/s/DtQ0FfSpUxYdRR8XOvppaw"
@@ -4751,6 +4756,11 @@
       "path": "raw/articles/agent-skills-development-guide-shugex-2026.md",
       "title": "PDF Processing",
       "sourceUrl": null
+    },
+    {
+      "path": "raw/articles/agent-skills-six-stage-lifecycle-survey-sjtu-2026-09.md",
+      "title": "上海交大提出 Agent Skills 全景综述：智能体技能的全生命周期与可信治理",
+      "sourceUrl": "https://mp.weixin.qq.com/s/TE78RbRTqN-TptW0JyydHQ"
     },
     {
       "path": "raw/articles/agent-skills-spec-no-dependency-design.md",
@@ -7903,6 +7913,11 @@
       "sourceUrl": "https://blog.bytebytego.com/p/how-microsoft-ships-ai-agents-at"
     },
     {
+      "path": "raw/articles/bytedance-seed-three-self-evolving-agents-paperagent-2026-09.md",
+      "title": "字节一天连发3篇自进化Agent（Aspire / S3Gym / HarnessDev）",
+      "sourceUrl": "https://mp.weixin.qq.com/s/L6pY-3rDUy6pLQ96DcOFyg"
+    },
+    {
       "path": "raw/articles/bytedance-trae-harness-engineering-guide.md",
       "title": "来自字节跳动TRAE的Harness Engineering指南",
       "sourceUrl": "https://mp.weixin.qq.com/s/xBNtHjseMomMA-aOQyOrJg"
@@ -10598,6 +10613,11 @@
       "sourceUrl": "https://huggingface.co/blog/ServiceNow-AI/eva-bench-data"
     },
     {
+      "path": "raw/articles/eval-engineering-practical-guide-roger-ai-2026-09-09.md",
+      "title": "别再凭感觉上线 Agent——评估工程（Eval Engineering）实战指南",
+      "sourceUrl": "https://mp.weixin.qq.com/s/HMp04-931qCyRbekKNos3w"
+    },
+    {
       "path": "raw/articles/evals-three-methods-of-ai-evaluation.md",
       "title": "Evals 到底在评什么？一文拆解 AI 评估的三种方法",
       "sourceUrl": "https://mp.weixin.qq.com/s/hQyh7ln5RlIjKdssnDiwSQ"
@@ -10681,6 +10701,11 @@
       "path": "raw/articles/exploring-self-distilled-reasoning-for-supervised-fine-tunin.md",
       "title": "Exploring Self-Distilled Reasoning for SFT",
       "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/exploring-self-distilled-reasoning-for-supervised-fine-tuning-with-amazon-nova"
+    },
+    {
+      "path": "raw/articles/exprag-clinical-rag-patient-similarity-aiery-2026-09.md",
+      "title": "ACL 2026 | ExpRAG：临床 RAG 先找像这个人病例",
+      "sourceUrl": "https://mp.weixin.qq.com/s/iQyOFWNmr42OPpJoqJoqmA"
     },
     {
       "path": "raw/articles/extending-mcp-support-for-amazon-bedrock-agentcore-gateway.md",
@@ -11488,6 +11513,11 @@
       "sourceUrl": "https://github.blog/news-insights/company-news/github-copilot-individual-plans-introducing-flex-allotments-in-pro-and-pro-and-a-new-max-plan/"
     },
     {
+      "path": "raw/articles/github-hot-harness-projects-survey-mozhi-space-2026-09.md",
+      "title": "GitHub热门Harness项目解析：架构拆解、机制对比与选型指南（PDF综述）",
+      "sourceUrl": "https://mp.weixin.qq.com/s/Rag6HXb4L3VOZq0CJ7hIgQ"
+    },
+    {
       "path": "raw/articles/github-internal-data-analytics-agent-copilot.md",
       "title": "github-internal-data-analytics-agent-copilot",
       "sourceUrl": "https://github.blog/ai-and-ml/github-copilot/how-we-built-an-internal-data-analytics-agent/"
@@ -11946,6 +11976,11 @@
       "path": "raw/articles/graphify-software-engineering-knowledge-graph.md",
       "title": "开源 AI 编程可查询的软件工程知识图谱：Graphify 完整上手攻略",
       "sourceUrl": "https://mp.weixin.qq.com/s/yG2JXr3AWFIdRzNDG7a70w"
+    },
+    {
+      "path": "raw/articles/graphmemix-multimodal-agent-memory-evidence-forest-zhiyanlab-xhs-2026-09.md",
+      "title": "北大&MemoraX AI：Agent 长期记忆不只靠检索（GraphMemix）",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/6a9fc9260000000019031ad9?xsec_source=app_share&xsec_token=CBAOYznjERvpFyFWRfLYIofom19n0oBegdLokzWkD1J4Y="
     },
     {
       "path": "raw/articles/graphrag-needed-aws-9-rag-comparison-2026.md",
@@ -16658,6 +16693,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/j9aavJfKJyRG6c1mWRC7tw"
     },
     {
+      "path": "raw/articles/opsharness-self-evolving-rca-harness-vibelife-2026-09.md",
+      "title": "港中文&字节跳动：让 harness 自进化出智能体错误分析专家（OpsHarness）",
+      "sourceUrl": "https://mp.weixin.qq.com/s/Ju2c3dvgCU19a3IgOsOefw"
+    },
+    {
       "path": "raw/articles/opspilot-zero-multi-agent-ops-9-judgments.md",
       "title": "一个多 Agent 零人工运维系统的设计复盘：4 个 Agent、7 个 Skill 与 9 条工程判断",
       "sourceUrl": "https://mp.weixin.qq.com/s/oxIuX6WJhSmzh_0gdxFi8w"
@@ -17383,6 +17423,11 @@
       "sourceUrl": "https://qwen.ai/blog?id=qwen3.8"
     },
     {
+      "path": "raw/articles/qwindustry-knowledge-graph-lora-moe-industrial-shenlan-2026-09.md",
+      "title": "QwIndustry：如何用知识图谱给 LoRA 专家分科，做一个工业 AI 副驾驶",
+      "sourceUrl": "https://mp.weixin.qq.com/s/78CAx4B24ckQu7aOR7UXNg"
+    },
+    {
       "path": "raw/articles/qy_zaCZTCs1Ql3BIFmBMgg.md",
       "title": "Subagents 详解：Claude Code 如何避免上下文污染",
       "sourceUrl": "https://mp.weixin.qq.com/s/qy_zaCZTCs1Ql3BIFmBMgg"
@@ -17401,6 +17446,11 @@
       "path": "raw/articles/rag-chunking-vectorization-rerank-distillation.md",
       "title": "RAG深度解析：分块、向量化、召回、重排，才是“蒸馏同事skill”的关键",
       "sourceUrl": "https://mp.weixin.qq.com/s/Bl_u18--lqczQDV2x_NG-g"
+    },
+    {
+      "path": "raw/articles/rag-document-parsing-chunking-tutorial-pengyou-2026-09.md",
+      "title": "RAG文档解析与知识库构建",
+      "sourceUrl": "https://mp.weixin.qq.com/s/xGIVYtT012pY-O3CKlRDKg"
     },
     {
       "path": "raw/articles/rag-full-pipeline-taobao.md",
@@ -19641,6 +19691,11 @@
       "path": "raw/articles/timeseriesscientist-general-purpose-ai-agent-time-series-2025.md",
       "title": "论文笔记：TimeSeriesScientist——用多智能体复刻人类时序预测工作流",
       "sourceUrl": "https://mp.weixin.qq.com/s/Nn1YgdTxRw0Jcx-IrWjczA"
+    },
+    {
+      "path": "raw/articles/tls-agentloop-llm-observability-volcengine-2026-09.md",
+      "title": "TLS 全链路可观测体系：破解 LLM 应用黑盒，实现会话透明复盘",
+      "sourceUrl": "https://mp.weixin.qq.com/s/qbhsUJWQzI55T0d6sSplig"
     },
     {
       "path": "raw/articles/tmall-ai-assistant-scheduler-refactor-ai-coding-engineering-2026-08-12.md",

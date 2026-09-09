@@ -42,8 +42,6 @@ review_category: practice
 想明白这件事之后，我开始动手。但在造系统之前，我先学到了一条最重要的原则。 ^[raw/articles/ai-agent-exploration-path-legacy-tech.md]
 > ** 工程建议：  ** 如果你现在也在手动管多个 AI 终端，先别急着造系统。先记录一周：哪些操作是重复的？哪些切换是可以消除的？瓶颈清单比技术方案更重要。 
 _ 你现在同时开几个 AI 窗口？上限是多少？评论区聊聊。  _ ^[raw/articles/ai-agent-exploration-path-legacy-tech.md]
-_ ^[raw/articles/ai-agent-exploration-path-legacy-tech.md]
-_ ^[raw/articles/ai-agent-exploration-path-legacy-tech.md]
 
 ###  第二章：80% 的 AI 需求不需要 AI 
 我开始认真折腾 AI 的时候，第一件事不是去调模型、搞 RAG，而是写了一套 Bash 脚本来自动化日常工作流。 ^[raw/articles/ai-agent-exploration-path-legacy-tech.md]
@@ -76,8 +74,6 @@ Agent 层  |  多步推理、动态决策、循环执行  |  自动修 bug、端
 ** 能用 10 行 Bash 解决的，别折腾 AI。这不是反 AI，是尊重工程。  ** ^[raw/articles/ai-agent-exploration-path-legacy-tech.md]
 > ** 工程建议：  ** 拿到一个新需求时，从表格最底行往上看——先问"10 行 Bash 能搞定吗？"，再问"一次 LLM 调用够吗？"，最后才考虑 Agent。这个习惯会帮你省掉 80% 的过度工程。 
 _ 你团队里有没有"明明脚本就能搞定，偏要上 AI"的项目？说出来让大家乐乐。  _ ^[raw/articles/ai-agent-exploration-path-legacy-tech.md]
-_ ^[raw/articles/ai-agent-exploration-path-legacy-tech.md]
-_ ^[raw/articles/ai-agent-exploration-path-legacy-tech.md]
 
 ###  第三章：Vibe Coding 翻车记 
 知道了"什么时候该用 AI"，接下来就是动手造系统了。 ^[raw/articles/ai-agent-exploration-path-legacy-tech.md]
@@ -106,8 +102,6 @@ SDD 恰好相反。写 spec 很慢，做设计很枯燥，但一旦 spec 写清�
 Day 15 那一天的"设计与实现对齐"很痛苦。但正是这一天，建立了让系统后续能自动运转的全部基础——设计文档、架构约束、SDD 流程。没有这一天，就没有后面的 24h 打工人。 ^[raw/articles/ai-agent-exploration-path-legacy-tech.md]
 > ** 工程建议：  ** 如果你现在正在 Vibe Coding，享受前几天的快感没问题，但第三天就要开始补 spec。越早补，代价越小。哪怕只有三段话——要做什么、不做什么、怎么算完成。 
 _ 你 Vibe Coding 翻车过吗？最后是怎么收场的？  _ ^[raw/articles/ai-agent-exploration-path-legacy-tech.md]
-_ ^[raw/articles/ai-agent-exploration-path-legacy-tech.md]
-_ ^[raw/articles/ai-agent-exploration-path-legacy-tech.md]
 
 ###  第四章：24h 打工人——第一个真正的系统 
 翻车之后，我重新来过。这一次，先设计再动手。 ^[raw/articles/ai-agent-exploration-path-legacy-tech.md]
@@ -193,8 +187,6 @@ AI CLI 工具经常遇到配额限制。我的方案是配合 Tool Prober 定时
 单个工具挂了不影响整体，配额耗尽自动切换。这套机制让系统真正做到了 24 小时无人值守——从 4 个终端的手忙脚乱，到 20-30 个并发任务的稳定执行。 ^[raw/articles/ai-agent-exploration-path-legacy-tech.md]
 > ** 工程建议：  ** 起步阶段，文件系统 + JSON 状态比数据库更适合 Agent 系统。原因很实际——出了 bug 可以直接让 AI 读文件排查，不需要教它查数据库。等系统稳定到需要事务和并发锁的时候，再升级不迟。 
 _ 你的 Agent 系统出了 bug，排查过程是什么样的？靠翻日志还是靠猜？  _ ^[raw/articles/ai-agent-exploration-path-legacy-tech.md]
-_ ^[raw/articles/ai-agent-exploration-path-legacy-tech.md]
-_ ^[raw/articles/ai-agent-exploration-path-legacy-tech.md]
 
 ###  第五章：Agent 自己修了自己的 bug 
 花了一整天做"设计与实现对齐"之后不久，一个有意思的事情发生了。 ^[raw/articles/ai-agent-exploration-path-legacy-tech.md]

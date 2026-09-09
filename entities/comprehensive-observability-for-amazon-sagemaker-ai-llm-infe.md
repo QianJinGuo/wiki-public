@@ -31,7 +31,7 @@ source_published: 2026-05-29T23:36:58Z^[raw/articles/comprehensive-observability
 
 ---
 
-# Comprehensive observability for Amazon SageMaker AI LLM inference: From GPU utilization to LLM quality
+## Comprehensive observability for Amazon SageMaker AI LLM inference: From GPU utilization to LLM quality
 
 Deploying large language models (LLMs) at scale on [Amazon SageMaker AI Inference](<https://aws.amazon.com/sagemaker/ai/deploy/>) makes observability a critical pillar of any production machine learning (ML) strategy. Unlike conventional software that returns deterministic outputs, LLMs generate variable, free-form responses that are difficult to validate with standard metrics. LLM output quality can change over time as input distributions shift, and quality monitoring helps detect these changes early. For generative AI workloads, observability also includes the model serving infrastructure, where unpredictable token consumption, GPU memory pressure, and latency spikes make capacity planning and cost control a moving target. ^[raw/articles/comprehensive-observability-for-amazon-sagemaker-ai-llm-infe.md]
 

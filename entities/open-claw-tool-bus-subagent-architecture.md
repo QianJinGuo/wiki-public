@@ -24,24 +24,20 @@ review_category: tech
 基础设施：Tool 抽象与 ToolRegistry^[raw/articles/open-claw-tool-bus-subagent-architecture.md]
 
 
-####  **\n|**
-####  ** ▐Tool 抽象类  **\n
+#### Tool 抽象类
 一个工具由四个要素组成：  ` name  ` 、  ` description  ` 、  ` input_schema  ` 、  ` execute  ` 。 ^[raw/articles/open-claw-tool-bus-subagent-architecture.md]
     export abstract class Tool {  abstract readonly name: string;  abstract readonly description: string;  abstract readonly input_schema: AnthropicTool["input_schema"];  abstract execute(args: Record<string, unknown>): Promise<unknown>;  toSchema(): AnthropicTool {    return {      name: this.name,      description: this.description,      input_schema: this.input_schema,    };  }} ^[raw/articles/open-claw-tool-bus-subagent-architecture.md]
 ` input_schema  ` 的类型直接取自  ` @anthropic-ai/sdk  ` 的  ` Tool  ` 类型定义。  ` toSchema()  ` 将实例转换为 Anthropic API 要求的 function calling schema。没有中间层转换，SDK 类型就是唯一的 schema 定义。 ^[raw/articles/open-claw-tool-bus-subagent-architecture.md]
 这里有一个刻意的取舍：schema 使  用运行时普通对象定义，而非 Zod 等库。好处是零额外依赖、直接对齐 SDK 类型。代价是没有运行时参数校验——LLM 传入的参数如果类型不对，只能靠  ` execute  ` 内部的  ` as  ` 断言和实际调用时的错误来  兜底。对于当前规模，这个取舍可以接受。 ^[raw/articles/open-claw-tool-bus-subagent-architecture.md]
 
-###  ▐  ** ** ToolRegistry
-###
+### ToolRegistry
 注册表本身是一个  ` Map<string, Tool> ` ：^[raw/articles/open-claw-tool-bus-subagent-architecture.md]
 
     export class ToolRegistry {  private tools = new Map<string, Tool>();  register(tool: Tool) {    this.tools.set(tool.name, tool);  }  async execute(name: string, args: Record<string, unknown>) {    const tool = this.tools.get(name);    if (!tool) throw new Error(`Tool "${name}" not found`);    return tool.execute(args);  }  getToolDefinition(): AnthropicTool[] {    return Array.from(this.tools.values()).map((tool) => tool.toSchema());  }  exclude(names: string[]): ToolRegistry {    const excludeSet = new Set(names);    const filtered = new ToolRegistry();    for (const [name, tool] of this.tools) {      if (!excludeSet.has(name)) {        filtered.register(tool);      }    }    return filtered;  }} ^[raw/articles/open-claw-tool-bus-subagent-architecture.md]
 ` exclude()  ` 是为子 Agent 设计的。子 Agent 不应该持有  ` spawn  ` （避免递归创建子 Agent）、  ` message  ` （避免直接向用户发消息）等工具，所以需要从主 Agent 的工具集中排除特定工具，生成一个受限子集。  ` exclude()  ` 返回新的  ` ToolRegistry  ` 实例，  不修改原注册表。 ^[raw/articles/open-claw-tool-bus-subagent-architecture.md]
 内置工具一览
 
-###
-####  ** ▐文件操作  **\n
-**\n|**\n
+#### 文件操作
 ** ReadFileTool  ** — 读取文件内容  ，  动态  ` import("node:fs/promises")  ` 加载模块。 ^[raw/articles/open-claw-tool-bus-subagent-architecture.md]
 ** WriteFileTool  ** — 写入文件。写入前调用  ` mkdir(dirname(path), { recursive: true })  ` 自动创建父目录，避免因目录不存在而失败。 ^[raw/articles/open-claw-tool-bus-subagent-architecture.md]
 ** EditFileTool  ** —  精确文本替换。核心逻辑：^[raw/articles/open-claw-tool-bus-subagent-architecture.md]

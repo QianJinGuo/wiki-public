@@ -14,7 +14,7 @@ review_category: tech
 
 # 解构Scaling Law：优化、架构、数据的三重奏
 
-# 解构Scaling Law：优化、架构、数据的三重奏
+## 解构Scaling Law：优化、架构、数据的三重奏
 
 苏剑林 2026-08-24 18:38 北京
 

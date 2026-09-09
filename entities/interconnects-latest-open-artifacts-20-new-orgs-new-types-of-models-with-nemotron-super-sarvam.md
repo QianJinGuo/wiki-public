@@ -26,7 +26,7 @@ review_category: tech
 → [[raw/articles/latest-open-artifacts-20-new-orgs-new-types-of-models-with-n|原文存档]]
 
 
-# Latest open artifacts (#20): New orgs! New types of models! With Nemotron Super, Sarvam, Cohere Transcribe, & others
+## Latest open artifacts (#20): New orgs! New types of models! With Nemotron Super, Sarvam, Cohere Transcribe, & others
 
 This Artifacts Log post is unusual in how many diverse, quirky models there are across use-cases and modalities. Normally these model roundups are dominated by big models from the likes of Qwen, DeepSeek, Kimi, etc. There are models for all sorts of different use-cases in this post, from optical character recognition (OCR), RAG search, audio transcription, computer-use, code-editing, math theorem proving, and more. The artifacts covered this month also come from a much broader list of open model builders.
 
@@ -36,7 +36,7 @@ This gives us a lot of hope for the future of open models, where we see [the nee
 
 To encourage people to take a look at the diversity of models in this issue, the core part of the update is not paywalled. An otherwise quiet month at the top end of open models really delivered.
 
-# Artifacts Log
+## Artifacts Log
 
 ### **Our Picks**
 

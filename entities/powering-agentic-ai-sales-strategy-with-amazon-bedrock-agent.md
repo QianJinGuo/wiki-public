@@ -28,7 +28,7 @@ source_published: 2026-05-27T18:00:07Z^[raw/articles/powering-agentic-ai-sales-s
 
 ---
 
-# Powering agentic AI sales strategy with Amazon Bedrock AgentCore
+## Powering agentic AI sales strategy with Amazon Bedrock AgentCore
 
  
 

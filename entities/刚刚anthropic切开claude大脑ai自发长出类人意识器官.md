@@ -13,9 +13,7 @@ review_category: tech
 
 # 刚刚，Anthropic切开Claude大脑！AI自发长出类人「意识器官」**
 
-### 
 
-### 
 
 **   ****新智元报道  **
 

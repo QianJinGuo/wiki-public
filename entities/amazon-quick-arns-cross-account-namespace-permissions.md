@@ -19,7 +19,7 @@ review_category: practice
 
 > **Source archive**: [[raw/articles/amazon-quick-arns-cross-account-migration-and-namespace-perm|原文存档]] ^[raw/articles/amazon-quick-arns-cross-account-migration-and-namespace-perm.md]
 
-# Amazon Quick ARNs: Cross-account migration and namespace permissions
+## Amazon Quick ARNs: Cross-account migration and namespace permissions
 
 You migrate dashboards from development to production, but the permissions don’t carry over. You share a dashboard with your Finance team, but they keep getting “access denied.” You set up namespaces for multi-tenant isolation, and the same username works in one namespace but not another. ^[raw/articles/amazon-quick-arns-cross-account-migration-and-namespace-perm.md]
 

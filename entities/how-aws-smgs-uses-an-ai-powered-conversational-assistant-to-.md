@@ -31,7 +31,7 @@ source_published: 2026-05-27T18:51:45Z^[raw/articles/how-aws-smgs-uses-an-ai-pow
 
 ---
 
-# How AWS SMGS uses an AI-powered conversational assistant to transform business management with Amazon Bedrock AgentCore
+## How AWS SMGS uses an AI-powered conversational assistant to transform business management with Amazon Bedrock AgentCore
 
  
 

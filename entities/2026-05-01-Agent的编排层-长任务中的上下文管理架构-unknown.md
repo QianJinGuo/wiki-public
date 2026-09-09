@@ -24,7 +24,7 @@ publish_date: 2026-05-01^[raw/articles/2026-05-01-Agent的编排层-长任务中
 
 ---
 
-# Agent的编排层：长任务中的上下文管理架构
+## Agent的编排层：长任务中的上下文管理架构
 
 **来源**: Unknown
 
@@ -55,7 +55,7 @@ publish_date: 2026-05-01^[raw/articles/2026-05-01-Agent的编排层-长任务中
 
 ---
 
-# Agent的编排层：长任务中的上下文管理架构
+## Agent的编排层：长任务中的上下文管理架构
 
 **来源**: Unknown
 

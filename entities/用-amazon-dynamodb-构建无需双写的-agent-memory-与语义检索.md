@@ -16,7 +16,7 @@ review_category: practice
 # 用 Amazon DynamoDB 构建无需双写的 Agent Memory 与语义检索
 
 
-# 用 Amazon DynamoDB 构建无需双写的 Agent Memory 与语义检索
+## 用 Amazon DynamoDB 构建无需双写的 Agent Memory 与语义检索
 
 摘要：本文用一个可运行的 Agent 长期记忆场景，说明如何把业务属性和 embedding 放进同一条 item，用一次 PutItem 完成写入，用 SearchVectors 完成语义召回；同时给出这套设计在真实项目里需要提前验证的几个点，以及它明确不适合的场景。  
   

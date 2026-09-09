@@ -14,7 +14,7 @@ review_category: practice
 
 # AI 创新实践｜「架构师 Agent」系统化落地
 
-# AI 创新实践｜「架构师 Agent」系统化落地
+## AI 创新实践｜「架构师 Agent」系统化落地
 
 原创 刘瑞洲 2026-08-27 18:06 浙江
 

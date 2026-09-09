@@ -21,7 +21,7 @@ review_category: practice
 
 → [[raw/articles/streaming-benchmark-and-recommendation-results-to-mlflow-wit|原文存档]] ^[raw/articles/streaming-benchmark-and-recommendation-results-to-mlflow-wit.md]
 
-# Streaming benchmark and recommendation results to MLflow with Amazon SageMaker AI
+## Streaming benchmark and recommendation results to MLflow with Amazon SageMaker AI
 
 Teams benchmarking generative AI models often evaluate dozens of GPU instance types, serving containers, parallelism strategies, and optimization techniques such as speculative decoding before deploying to production. Practitioners can spend weeks navigating configuration decisions and manually piecing together what they tried, what worked, and why. That complexity is exactly why we introduced [optimized generative AI inference recommendations for Amazon SageMaker AI](<https://aws.amazon.com/blogs/machine-learning/amazon-sagemaker-ai-now-supports-optimized-generative-ai-inference-recommendations/>): to help teams move from manual trial-and-error to guided, data-driven optimization and benchmarking. ^[raw/articles/streaming-benchmark-and-recommendation-results-to-mlflow-wit.md]
 

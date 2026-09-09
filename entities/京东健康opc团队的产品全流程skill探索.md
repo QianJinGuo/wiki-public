@@ -15,7 +15,7 @@ review_category: practice
 
 # 京东健康OPC团队的产品全流程Skill探索
 
-# 京东健康OPC团队的产品全流程Skill探索
+## 京东健康OPC团队的产品全流程Skill探索
 
 ---
 source: wechat
@@ -27,13 +27,11 @@ source_published: 2026年6月26日 17:26^[raw/articles/京东健康opc团队的�
 
 --- ^[raw/articles/京东健康opc团队的产品全流程skill探索.md]
 
-# 京东健康OPC团队的产品全流程Skill探索
+## 京东健康OPC团队的产品全流程Skill探索
 
-**
 
 一、背景和适用场景
 
-**  
   
 
 
@@ -57,11 +55,9 @@ Anthropic 开源的 Product Management Skills （https://github.com/anthropics/
 
 本文把这套实践适配到 OPC 的工作场景，快速补齐OPC团队的产品能力，跑通从需求发现、定义、排期、开发到上线复盘的全过程。 ^[raw/articles/京东健康opc团队的产品全流程skill探索.md]
 
-**
 
 二、流程总览
 
-**  
   
 
 
@@ -92,11 +88,9 @@ Anthropic 开源的 Product Management Skills （https://github.com/anthropics/
 
 ****
 
-**
 
 三、第一阶段：问题判断
 
-**  
   
 
 

@@ -41,11 +41,9 @@ review_category: tech
 
 - 代码地址：  https://github.com/fletcherjiang/SignThought
 
-### 
 
 ### 研究背景
 
-### 
 
 近年来，gloss-free 手语翻译逐渐成为研究热点。与传统依赖 gloss 标注的方案不同，这类方法希望直接从手语视频生成自然语言句子，避免昂贵而繁琐的中间标注成本。 ^[raw/articles/acl-2026ai-for聋哑群体港理工开源思考型手语翻译模型.md]
 

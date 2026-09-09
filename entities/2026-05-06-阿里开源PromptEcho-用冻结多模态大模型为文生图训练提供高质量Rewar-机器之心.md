@@ -24,7 +24,7 @@ publish_date: 2026-05-06^[raw/articles/2026-05-06-阿里开源PromptEcho-用冻�
 
 ---
 
-# 阿里开源PromptEcho：用冻结多模态大模型为文生图训练提供高质量Reward
+## 阿里开源PromptEcho：用冻结多模态大模型为文生图训练提供高质量Reward
 
 **来源**: 机器之心
 
@@ -58,7 +58,7 @@ publish_date: 2026-05-06^[raw/articles/2026-05-06-阿里开源PromptEcho-用冻�
 
 ---
 
-# 阿里开源PromptEcho：用冻结多模态大模型为文生图训练提供高质量Reward
+## 阿里开源PromptEcho：用冻结多模态大模型为文生图训练提供高质量Reward
 
 **来源**: 机器之心
 

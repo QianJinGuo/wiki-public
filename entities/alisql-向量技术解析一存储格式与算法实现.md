@@ -47,9 +47,9 @@ AliSQL 原生支持最高 16,383 维向量数据的存储及计算，集成主�
 
 创建带有向量索引的表，插入数据并进行向量搜索。
 
-# 创建带有向量索引的表CREATE TABLE `t1` (  `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,  `animal` VARCHAR(10),   `vec` VECTOR(2) NOT NULL, # 新增vector类型列  VECTOR INDEX `vi`(`vec`) m=6 distance=cosine # 显示指定m和distance  );  
-# 插入数据INSERT INTO `t1`(`animal`, `vec`) VALUES  ("Frog", VEC_FROMTEXT("[0.1, 0.2]")),  ("Dog", VEC_FROMTEXT("[0.6, 0.7]")),  ("Cat", VEC_FROMTEXT("[0.6, 0.6]"));  
-# 向量搜索SELECT `animal`, VEC_DISTANCE(`vec`, VEC_FROMTEXT("[0.1, 0.1]")) AS `distance` FROM t1 ORDER BY `distance`;
+## 创建带有向量索引的表CREATE TABLE `t1` (  `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,  `animal` VARCHAR(10),   `vec` VECTOR(2) NOT NULL, # 新增vector类型列  VECTOR INDEX `vi`(`vec`) m=6 distance=cosine # 显示指定m和distance  );  
+## 插入数据INSERT INTO `t1`(`animal`, `vec`) VALUES  ("Frog", VEC_FROMTEXT("[0.1, 0.2]")),  ("Dog", VEC_FROMTEXT("[0.6, 0.7]")),  ("Cat", VEC_FROMTEXT("[0.6, 0.6]"));  
+## 向量搜索SELECT `animal`, VEC_DISTANCE(`vec`, VEC_FROMTEXT("[0.1, 0.1]")) AS `distance` FROM t1 ORDER BY `distance`;
 
 结果示例
 

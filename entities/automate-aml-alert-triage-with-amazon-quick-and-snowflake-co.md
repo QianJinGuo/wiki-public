@@ -27,7 +27,7 @@ feed_name: AWS China ML
 source_published: 2026-05-28T16:41:07Z
 ---
 
-# Automate AML alert triage with Amazon Quick and Snowflake Cortex AI
+## Automate AML alert triage with Amazon Quick and Snowflake Cortex AI
 
  
 

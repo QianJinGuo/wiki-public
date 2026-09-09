@@ -24,7 +24,7 @@ publish_date: 2026-05-06^[raw/articles/2026-05-06-GRPO遭遇瓶颈-G²RPO-A让�
 
 ---
 
-# GRPO遭遇瓶颈？G²RPO-A让自适应指导为小模型推理能力「开外挂」
+## GRPO遭遇瓶颈？G²RPO-A让自适应指导为小模型推理能力「开外挂」
 
 **来源**: 机器之心
 
@@ -56,7 +56,7 @@ publish_date: 2026-05-06^[raw/articles/2026-05-06-GRPO遭遇瓶颈-G²RPO-A让�
 
 ---
 
-# GRPO遭遇瓶颈？G²RPO-A让自适应指导为小模型推理能力「开外挂」
+## GRPO遭遇瓶颈？G²RPO-A让自适应指导为小模型推理能力「开外挂」
 
 **来源**: 机器之心
 
@@ -90,11 +90,9 @@ publish_date: 2026-05-06^[raw/articles/2026-05-06-GRPO遭遇瓶颈-G²RPO-A让�
 
 图 1：Naive Guidance 的困境。使用 Qwen2.5-Math-7B 在 s1K-1.1 数据集上训练，简单的固定长度指导在早期训练阶段有短暂提升，但很快与 vanilla GRPO 无异。 ^[raw/articles/2026-05-06-GRPO遭遇瓶颈-G²RPO-A让自适应指导为小模型推理能力-开外挂--机器之心.md]
 
-### 
 
 ### 一、小模型的「推理瓶颈」到底卡在哪？
 
-### 
 
 当前，尽管 GRPO 等强化学习算法在大模型上取得了巨大成功，但在小规模语言模型（SLMs）上却面临严峻挑战。研究团队通过深入分析发现，问题的核心在于「稀疏奖励」困境： ^[raw/articles/2026-05-06-GRPO遭遇瓶颈-G²RPO-A让自适应指导为小模型推理能力-开外挂--机器之心.md]
 
@@ -106,7 +104,6 @@ publish_date: 2026-05-06^[raw/articles/2026-05-06-GRPO遭遇瓶颈-G²RPO-A让�
 
 ### 二、G²RPO-A 核心算法架构
 
-### 
 
 为了缓解小模型在 RLVR 中的先天劣势，G²RPO-A 并不是简单地把标准答案喂给模型，而是在 roll-out 的部分轨迹中注入高质量 thinking trajectory，并根据训练状态动态调整 guidance 强度。 ^[raw/articles/2026-05-06-GRPO遭遇瓶颈-G²RPO-A让自适应指导为小模型推理能力-开外挂--机器之心.md]
 

@@ -24,7 +24,7 @@ feed_name: AWS China ML ^[raw/articles/how-amazon-finance-streamlines-regulatory
 source_published: 2026-05-12T16:41:33Z ^[raw/articles/how-amazon-finance-streamlines-regulatory-inquiries-by-using.md]
 ---
 
-# How Amazon Finance streamlines regulatory inquiries by using generative AI on AWS
+## How Amazon Finance streamlines regulatory inquiries by using generative AI on AWS
 Amazon's Finance Technology (FinTech) teams build and operate systems for Amazon teams to manage regulatory inquiries in compliance with different jurisdictions. These teams process regulatory inquiries from authorities, each presenting different requirements, document formats, and complexity levels. ^[raw/articles/how-amazon-finance-streamlines-regulatory-inquiries-by-using.md]
 Processing these regulatory inquiries involves reviewing documentation, extracting relevant information, retrieving supporting data from multiple systems within Amazon's infrastructure, and compiling responses within regulatory timeframes. As inquiry frequency and business complexity grew, Amazon needed a more scalable approach. ^[raw/articles/how-amazon-finance-streamlines-regulatory-inquiries-by-using.md]
 In this post, we demonstrate how Amazon FinTech teams are using [Amazon Bedrock](<https://aws.amazon.com/bedrock/?nc2=type_a>) and other AWS services to build a scalable AI application to transform how regulatory inquiries are handled. Each team using this solution creates and maintains its own dedicated knowledge base, populated with that team's specific documents and reference materials. ^[raw/articles/how-amazon-finance-streamlines-regulatory-inquiries-by-using.md]

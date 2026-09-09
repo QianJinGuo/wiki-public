@@ -21,7 +21,7 @@ review_category: practice
 
 → [[raw/articles/从-claude-code-记忆系统看四层-agent-记忆方案一个比一个夯|原文存档]] ^[raw/articles/从-claude-code-记忆系统看四层-agent-记忆方案一个比一个夯.md]
 
-# 从 Claude Code 记忆系统看四层 Agent 记忆方案，一个比一个夯
+## 从 Claude Code 记忆系统看四层 Agent 记忆方案，一个比一个夯
 
 我先给 Claude Code 一条明确约束：^[raw/articles/从-claude-code-记忆系统看四层-agent-记忆方案一个比一个夯.md]
 

@@ -21,7 +21,7 @@ review_category: practice
 
 → [[raw/articles/powering-scientific-discovery-byokg-and-graphrag-for-intelli|原文存档]] ^[raw/articles/powering-scientific-discovery-byokg-and-graphrag-for-intelli.md]
 
-# Powering scientific discovery: BYOKG and GraphRAG for intelligent pharmaceutical research
+## Powering scientific discovery: BYOKG and GraphRAG for intelligent pharmaceutical research
 
 In pharmaceutical research, scientists face a fundamental challenge: accessing and connecting the vast amount of scientific knowledge scattered across disparate systems. From published literature and internal lab notes to genomics databases, critical insights remain trapped in silos, making it difficult for researchers to form comprehensive connections and generate promising hypotheses. This fragmentation slows down the drug discovery process. It also risks valuable institutional knowledge being lost as researchers transition, ultimately affecting the industry’s ability to research and develop efficiently. The need for a solution that can intelligently bridge these knowledge gaps while maintaining scientific integrity has become increasingly important. ^[raw/articles/powering-scientific-discovery-byokg-and-graphrag-for-intelli.md]
 

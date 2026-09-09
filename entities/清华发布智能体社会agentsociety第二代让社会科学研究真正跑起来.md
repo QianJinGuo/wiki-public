@@ -16,9 +16,7 @@ review_category: tech
 
 # 清华发布智能体社会AgentSociety第二代：让社会科学研究真正「跑起来」
 
-###
 
-###
 
 ** ** ** 新智元报道  **
 

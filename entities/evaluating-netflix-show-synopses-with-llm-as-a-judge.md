@@ -34,7 +34,7 @@ source_published: 2026-04-10^[raw/articles/evaluating-netflix-show-synopses-with
 
 ---
 
-# Evaluating Netflix Show Synopses with LLM-as-a-Judge
+## Evaluating Netflix Show Synopses with LLM-as-a-Judge
 
 by [Gabriela Alessio](<https://www.linkedin.com/in/gabrielaalessio/>), [Cameron Taylor](<https://www.linkedin.com/in/cameronntaylor/>), and [Cameron R. Wolfe](<https://www.linkedin.com/in/cwolferesearch/>) ^[raw/articles/evaluating-netflix-show-synopses-with-llm-as-a-judge.md]
 

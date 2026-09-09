@@ -15,7 +15,7 @@ review_category: tech
 
 # 强化学习没作用？人大DelTA精准识别关键token，推理正确率大幅上升
 
-#  强化学习没作用？人大DelTA精准识别关键token，推理正确率大幅上升
+##  强化学习没作用？人大DelTA精准识别关键token，推理正确率大幅上升
 
 关注前沿科技  关注前沿科技  [ 量子位 ](<javascript:void\(0\);>)^[raw/articles/强化学习没作用人大delta精准识别关键token推理正确率大幅上升.md]
 

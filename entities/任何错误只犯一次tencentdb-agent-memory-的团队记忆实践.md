@@ -14,7 +14,7 @@ review_category: practice
 
 # 任何错误只犯一次：TencentDB Agent Memory 的团队记忆实践
 
-# 任何错误只犯一次：TencentDB Agent Memory 的团队记忆实践
+## 任何错误只犯一次：TencentDB Agent Memory 的团队记忆实践
 
 原创 腾讯程序员 2026-08-18 17:36 广东
 

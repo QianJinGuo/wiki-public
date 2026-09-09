@@ -23,7 +23,6 @@ source_url: https://mp.weixin.qq.com/s/wj5L4eEHatAyP0Kjcw1rjQ ^[raw/articles/tok
 ### 主要章节
 - ### 
 
-###
 - #####  ** 【新智元导读】  LenVM将长度建模提升到token级别，开辟可扩展价值预训练的新维度——3B开源模型精确长度控制全面击败GPT-5.4、Claude-Opus-4-6等顶级闭源模型；相同token预算下推理准确率提升10倍（63% vs 6%）；沿模型规模、数据量、采样数三轴无饱和scaling的value pretraining  **
 - ##
 ** **

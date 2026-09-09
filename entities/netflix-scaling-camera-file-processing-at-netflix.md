@@ -24,7 +24,7 @@ review_category: practice
 → [[raw/articles/scaling-camera-file-processing-at-netflix|原文存档]] ^[raw/articles/scaling-camera-file-processing-at-netflix.md]
 
 
-# Scaling Camera File Processing at Netflix
+## Scaling Camera File Processing at Netflix
 
 _Orchestrating Media Workflows Through Strategic Collaboration_ ^[raw/articles/scaling-camera-file-processing-at-netflix.md]
 

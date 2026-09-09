@@ -24,7 +24,7 @@ publish_date: 2026-05-06^[raw/articles/2026-05-06-刷榜AI全挂了-Meta斯坦�
 
 ---
 
-# 刷榜AI全挂了！Meta斯坦福地狱级测试，GPT/Claude/Gemini交出0分
+## 刷榜AI全挂了！Meta斯坦福地狱级测试，GPT/Claude/Gemini交出0分
 
 **来源**: 新智元
 
@@ -35,7 +35,6 @@ publish_date: 2026-05-06^[raw/articles/2026-05-06-刷榜AI全挂了-Meta斯坦�
 
 ---
 
-### 
 
 ### --- 新智元报道
 
@@ -60,7 +59,7 @@ publish_date: 2026-05-06^[raw/articles/2026-05-06-刷榜AI全挂了-Meta斯坦�
 
 ---
 
-# 刷榜AI全挂了！Meta斯坦福地狱级测试，GPT/Claude/Gemini交出0分
+## 刷榜AI全挂了！Meta斯坦福地狱级测试，GPT/Claude/Gemini交出0分
 
 **来源**: 新智元
 
@@ -71,7 +70,6 @@ publish_date: 2026-05-06^[raw/articles/2026-05-06-刷榜AI全挂了-Meta斯坦�
 
 ---
 
-### 
 
 ### --- 新智元报道
 
@@ -97,7 +95,6 @@ publish_date: 2026-05-06^[raw/articles/2026-05-06-刷榜AI全挂了-Meta斯坦�
 
 不是修bug，是从零造软件
 
-## 
 
 过去一年，「让AI Agent从零造软件」的案例报道越来越多。^[raw/articles/2026-05-06-刷榜AI全挂了-Meta斯坦福地狱级测试-GPT-Claude-Gemini交出-新智元.md]
 
@@ -152,7 +149,6 @@ ProgramBench则完全反过来。
 
 九大模型排排坐，成绩全部吃鸭蛋
 
-## 
 
 参加测试的共有9款模型，涵盖Claude、Gemini、GPT三大家族。^[raw/articles/2026-05-06-刷榜AI全挂了-Meta斯坦福地狱级测试-GPT-Claude-Gemini交出-新智元.md]
 

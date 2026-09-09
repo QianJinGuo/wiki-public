@@ -90,7 +90,7 @@ def reset(self):
 
 3
 
-# TODO: auto task reset
+## TODO: auto task reset
 
 4
 
@@ -114,7 +114,7 @@ def get_reward(self, obs, act):^[raw/articles/nvidia-enpire-agentic-robot-policy
 
 9
 
-# TODO: scalar reward
+## TODO: scalar reward
 
 10
 

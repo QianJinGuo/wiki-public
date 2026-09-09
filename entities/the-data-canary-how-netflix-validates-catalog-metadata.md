@@ -21,7 +21,7 @@ review_category: practice
 
 → [[raw/articles/the-data-canary-how-netflix-validates-catalog-metadata|原文存档]] ^[raw/articles/the-data-canary-how-netflix-validates-catalog-metadata.md]
 
-# The Data Canary: How Netflix Validates Catalog Metadata
+## The Data Canary: How Netflix Validates Catalog Metadata
 
 By [Celina Amados](<https://www.linkedin.com/in/celina-amados/>) ^[raw/articles/the-data-canary-how-netflix-validates-catalog-metadata.md]
 

@@ -100,5 +100,5 @@ MIT NANDA 报告显示 95% 企业 genAI pilot 未能交付可衡量的业务影�
 -  — 管理平面与控制平面作为产品
 - [[raw/articles/new-ai-lock-in.md|原文存档]]
 
-## ## 相关实体
+## 相关实体
 - [[entities/yumanju-ai-full-flow-efficiency|柚漫剧 AI 全流程提效拆解]]

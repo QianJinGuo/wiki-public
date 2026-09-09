@@ -21,7 +21,7 @@ review_category: practice
 
 → [[raw/articles/全网最全的claude-fable-5-省钱攻略都在这了|原文存档]] ^[raw/articles/全网最全的claude-fable-5-省钱攻略都在这了.md]
 
-# 全网最全的Claude Fable 5 省钱攻略都在这了
+## 全网最全的Claude Fable 5 省钱攻略都在这了
 
 ---
 source: wechat
@@ -33,7 +33,7 @@ source_published: 2026年7月8日 09:31^[raw/articles/全网最全的claude-fabl
 
 --- ^[raw/articles/全网最全的claude-fable-5-省钱攻略都在这了.md]
 
-# 全网最全的Claude Fable 5 省钱攻略都在这了
+## 全网最全的Claude Fable 5 省钱攻略都在这了
 
 天才程序员体验卡+5！
 

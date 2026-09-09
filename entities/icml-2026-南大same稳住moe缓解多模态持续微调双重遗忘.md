@@ -15,7 +15,7 @@ review_category: tech
 
 # ICML 2026 | 南大SAME稳住MoE，缓解多模态持续微调双重遗忘
 
-# ICML 2026 | 南大SAME稳住MoE，缓解多模态持续微调双重遗忘
+## ICML 2026 | 南大SAME稳住MoE，缓解多模态持续微调双重遗忘
 
 ---
 source: wechat
@@ -26,7 +26,7 @@ source_published: 2026年7月1日 14:21^[raw/articles/icml-2026-南大same稳住
 
 ---
 
-# ICML 2026 | 南大SAME稳住MoE，缓解多模态持续微调双重遗忘
+## ICML 2026 | 南大SAME稳住MoE，缓解多模态持续微调双重遗忘
 
 多模态大语言模型（MLLM）通过指令微调获得了强大的视觉-语言理解能力，但真实部署场景中，模型往往需要持续学习新的任务、领域和回答格式，这使多模态持续指令微调（Multimodal Continual Instruction Tuning，MCIT）成为重要问题。 ^[raw/articles/icml-2026-南大same稳住moe缓解多模态持续微调双重遗忘.md]
 

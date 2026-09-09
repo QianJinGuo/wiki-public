@@ -25,7 +25,7 @@ review_category: practice
 → [[raw/articles/what-ive-been-building-atom-report-post-training-course-fini|原文存档]]
 
 
-# What I’ve been building: ATOM Report, post-training course, finishing my book, and ongoing research
+## What I’ve been building: ATOM Report, post-training course, finishing my book, and ongoing research
 
 This post is a roundup of my recent efforts that did not warrant a standalone Interconnects post, why I’m spending time on them, and what they accomplished.
 

@@ -21,6 +21,10 @@ review_category: practice
 <p><strong style="font-size: 18px;color: #333">目录</strong></p> ^[raw/articles/ai-agent-的迁移与现代化-使用-amazon-bedrock-agentcore-将-openclaw-从单机改造为多租户-serverless-架构-.md]
 <div style="line-height: 1.8;margin: 0;padding: 0"> ^[raw/articles/ai-agent-的迁移与现代化-使用-amazon-bedrock-agentcore-将-openclaw-从单机改造为多租户-serverless-架构-.md]
 
+</div>
+</div>
+</div>
+
 ## 相关实体
 - [[entities/using-amazon-bedrock-agentcore-openclaw-multi-5]]
 - [[entities/using-amazon-bedrock-agentcore-openclaw-multi-2]]
@@ -107,4 +111,3 @@ KMS 密钥的 7-30 天删除等待期是一个容易被忽视的细节，在生�
 10. **多渠道消息路由**：项目预留了 Slack、Discord、WhatsApp 的接口，Router Lambda 已内置 Slack HMAC 签名验证。这表明架构设计时应考虑未来的扩展性，预留插件式扩展点。 ^[raw/articles/ai-agent-的迁移与现代化-使用-amazon-bedrock-agentcore-将-openclaw-从单机改造为多租户-serverless-架构-.md]
 
 11. **多区域部署准备**：CDK 代码和部署脚本支持多区域，关键在于为每个区域创建独立工作目录和设置不同的 `TARGET_REGION`。如果业务有全球化需求，这个架构可以平滑扩展。 ^[raw/articles/ai-agent-的迁移与现代化-使用-amazon-bedrock-agentcore-将-openclaw-从单机改造为多租户-serverless-架构-.md]
-</div> ^[raw/articles/ai-agent-的迁移与现代化-使用-amazon-bedrock-agentcore-将-openclaw-从单机改造为多租户-serverless-架构-.md]

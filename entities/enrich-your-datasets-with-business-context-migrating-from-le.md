@@ -21,7 +21,7 @@ review_category: practice
 
 → [[raw/articles/enrich-your-datasets-with-business-context-migrating-from-le|原文存档]] ^[raw/articles/enrich-your-datasets-with-business-context-migrating-from-le.md]
 
-# Enrich your datasets with business context: Migrating from legacy Topics to semantic datasets in Amazon Quick
+## Enrich your datasets with business context: Migrating from legacy Topics to semantic datasets in Amazon Quick
 
 If you’ve been managing [Amazon Quick](<https://aws.amazon.com/quick/>) legacy Topics alongside your datasets, you know the challenge: two assets that must stay perfectly synchronized, each with its own permissions, lineage, and versioning. Column synonyms drift. Calculated fields diverge. A rename in the dataset breaks the Legacy Topic silently. You can now use Amazon Quick to embed that business context directly into the dataset itself through **Dataset Enrichment** in the new data prep experience. Column descriptions, synonyms, calculated fields, custom instructions, and business rules all live alongside the data. Dataset Enrichment bakes business context directly into the dataset. Everything (permissions, semantics, AI context) travels with the data and is automatically inherited by anything built on top of it. One asset, one source of truth, one place to govern. ^[raw/articles/enrich-your-datasets-with-business-context-migrating-from-le.md]
 
@@ -35,7 +35,7 @@ Legacy Topics provided the initial approach to adding business context to datase
 
 ### Key differences: Topics (legacy) vs. Dataset Enrichment (new data prep)
 
- 
+
 
 | **Legacy Topics** |
 

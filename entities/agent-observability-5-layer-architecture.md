@@ -2,10 +2,10 @@
 
 title: "Agent 可观测体系五层架构"
 created: 2026-07-02
-updated: 2026-09-07
+updated: 2026-09-09
 type: entity
 tags: [agent, observability, llmops, evaluation, trace, monitoring, clickhouse, llm-as-judge, otel, oneagent, volcano-engine, sli]
-sources: [raw/articles/agent-observability-5-layer-architecture, raw/articles/volcano-agent-observability-ct-qcon-2026]
+sources: [raw/articles/agent-observability-5-layer-architecture, raw/articles/volcano-agent-observability-ct-qcon-2026, raw/articles/tls-agentloop-llm-observability-volcengine-2026-09]
 review_value: 8
 review_confidence: 8
 confidence: 0.8
@@ -106,6 +106,15 @@ Agent 不是普通服务，每一次推理、工具调用、检索、子 Agent �
 **观测→评测闭环**：定位高价值 Trace（失败异常 + 高频典型链路）→ 回流成评测集 → 离线（版本回归对比）+ 在线（持续监控误答率/Token 波动）评测 → 沉淀优化动作（提示词/检索/路由）。数据回流分离线（周期清洗转评测集）与在线（点赞点踩、分钟级告警）；评测系统含 LLM-as-evaluator + 白盒化人工复核对齐、多实验对比分析。^[raw/articles/volcano-agent-observability-ct-qcon-2026.md]
 
 **OpenClaw 六层 SLI 实测**：Channel（连接/端到端成功率+耗时，北极星）→ Message/Session（初始化/卡顿恢复）→ 调度（出入队列延迟）→ 执行层 → 大模型工具层 → 缓存命中层；自研 Hook 插件在会话/推理/工具调用/任务分配关键点采集，MTTR 整体降 80% 以上。^[raw/articles/volcano-agent-observability-ct-qcon-2026.md]
+
+## 火山引擎 TLS AgentLoop：LLM 应用可观测产品落地（SUPP 2026-09-09）
+火山引擎日志服务 TLS 的 AgentLoop 提供 LLM 应用可观测的工程化产品视角（字节跳动技术团队第一方），补充 QCon 架构与评测视角之外的具体落地能力。^[raw/articles/tls-agentloop-llm-observability-volcengine-2026-09.md]
+
+**LLM Observer SDK 不拦截调用**：应用仍通过模型客户端调用火山方舟等 OpenAI 兼容服务，SDK 独立采集模型/Token/耗时/错误状态上报 TLS——观测与推理解耦。^[raw/articles/tls-agentloop-llm-observability-volcengine-2026-09.md]
+
+**三层 Span 模型**：Agent Span（一次业务请求）/ Model Span（一次模型调用）/ Tool Span（一次工具执行）；Session（用户会话，含多个 Trace）→ Trace（一次请求/一轮对话）→ Span（执行阶段）。工具调用 Trace 可还原模型决策/工具执行/最终回答，实现"会话透明复盘"。^[raw/articles/tls-agentloop-llm-observability-volcengine-2026-09.md]
+
+**敏感内容治理**：TLS_TRACE_CAPTURE_CONTENT 开关控制是否采集 Input/Output/工具参数/工具结果；关闭后模型/Token/耗时/状态观测信息仍保留——生产环境结合业务数据治理要求配置采集范围，避免密码/AK/SK/API Key 进 Trace。^[raw/articles/tls-agentloop-llm-observability-volcengine-2026-09.md]
 
 ## 关联
 - 相关概念: [[concepts/harness-engineering-framework|Harness Engineering]]

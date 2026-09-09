@@ -21,7 +21,7 @@ review_category: practice
 
 → [[raw/articles/build-a-unified-semantic-layer-across-datasets-with-multi-da|原文存档]] ^[raw/articles/build-a-unified-semantic-layer-across-datasets-with-multi-da.md]
 
-# Build a unified semantic layer across datasets with multi-dataset Topics in Amazon Quick
+## Build a unified semantic layer across datasets with multi-dataset Topics in Amazon Quick
 
 [Amazon Quick](<https://aws.amazon.com/quick/>) is an AI-powered unified intelligence service that connects structured data and unstructured enterprise content so teams can explore, analyze, and act from one place. Amazon Quick Sight, the business intelligence (BI) capability within Amazon Quick, delivers interactive dashboards, natural language querying, pixel-perfect reports, machine learning (ML)-driven insights, and embedded analytics. Topics in Quick function as the semantic layer that business users can use to ask questions in natural language and get answers directly from their data. ^[raw/articles/build-a-unified-semantic-layer-across-datasets-with-multi-da.md]
 

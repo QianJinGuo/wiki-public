@@ -16,7 +16,7 @@ review_category: practice
 # zg 正式开源：本地检索，不止于关键词
 
 
-# zg 正式开源：本地检索，不止于关键词
+## zg 正式开源：本地检索，不止于关键词
 
 飞鸿 2026-08-31 18:40 浙江
 
@@ -71,7 +71,7 @@ zg 支持 **macOS、Linux 和 Windows** ，面向开发者提供 **CLI** ，面�
 
 
 
-# 1. 安装 zg  
+## 1. 安装 zg  
     npm install -g @zvec/zvec-grep  
     # 自动发现本机已安装的 Agent，并完成 MCP 配置；  
     # 也可以指定目标，例如：zg install --target codex --yes  

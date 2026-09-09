@@ -30,7 +30,7 @@ source_published: 2026-05-29T14:01:02Z^[raw/articles/netflix-real-time-service-t
 
 ---
 
-# From Silos to Service Topology: Why Netflix Built a Real-Time Service Map
+## From Silos to Service Topology: Why Netflix Built a Real-Time Service Map
 
 _By_[ _Parth Jain_](https://www.linkedin.com/in/parth-jain-8a09abb6/), [_Rakesh Sukumar_](https://www.linkedin.com/in/raskuma/) _,_[_Yingwu Zhao_](https://www.linkedin.com/in/yingwu-zhao-62037418/) _,_[_Renzo Sanchez_](https://www.linkedin.com/in/renzosanchezsilva/) _ & _[_Nathan Fisher_](https://www.linkedin.com/in/nathfisher/) _ ^[raw/articles/netflix-real-time-service-topology.md]
 How we built a living map of our distributed infrastructure to help engineers understand dependencies, troubleshoot faster, and keep Netflix running smoothly for our members around the world. ^[raw/articles/netflix-real-time-service-topology.md]

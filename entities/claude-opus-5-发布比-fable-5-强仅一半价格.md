@@ -14,7 +14,7 @@ review_category: tech
 
 # Claude Opus 5 发布，比 Fable 5 强，仅一半价格
 
-# Claude Opus 5 发布，比 Fable 5 强，仅一半价格
+## Claude Opus 5 发布，比 Fable 5 强，仅一半价格
 
 刚刚，Claude Opus 5 终于发布了！
 

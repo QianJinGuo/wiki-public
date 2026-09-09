@@ -16,7 +16,7 @@ review_category: tech
 # EMNLP 2026 | ClawBench实测8款Agent：真能完成日常在线任务吗？
 
 
-# EMNLP 2026 | ClawBench实测8款Agent：真能完成日常在线任务吗？
+## EMNLP 2026 | ClawBench实测8款Agent：真能完成日常在线任务吗？
 
 让你更懂AI的 2026-08-31 13:51 北京
 
