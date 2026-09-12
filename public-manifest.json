@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "sourceRevision": "6b4c831d9381393415412cbffea2a1df8327cdc3",
+  "sourceRevision": "cca792e56a6deb6e788661da3dbecb51378165cd",
   "files": [
     {
       "path": "raw/articles/0.25秒识破未见攻击-lod-lvlm-jailbreak-detection-emnlp2026.md",
@@ -2213,6 +2213,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/ObmgF8prPkn4ioknlHbtAw"
     },
     {
+      "path": "raw/articles/ageval-pluggable-agent-eval-plugin-decoupling-zju-2026.md",
+      "title": "ageval-pluggable-agent-eval-plugin-decoupling-zju-2026",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247922331&idx=2&sn=31d53cffe48bc2b01fe20512a63dc043"
+    },
+    {
       "path": "raw/articles/agi-road-may-be-wrong-from-the-start-wang-peng-tencent.md",
       "title": "AGI 之路，可能从一开始就走错了",
       "sourceUrl": "https://mp.weixin.qq.com/s/rjfXTvfCukL5Y2x2T6PjEA"
@@ -2901,6 +2906,11 @@
       "path": "raw/articles/ainmm-ai-native-maturity-model-taobao.md",
       "title": "AINMM：存量生产级工程向 AI Native 演进的五级成熟度模型",
       "sourceUrl": "https://mp.weixin.qq.com/s/VBbr0jqHSQQn1W-iwRuG8g"
+    },
+    {
+      "path": "raw/articles/airbnb-beyond-prompts-prism-harness-xhs-2026.md",
+      "title": "Airbnb 论文《Beyond Prompts》：生产级 Agent Harness 怎么自动进化（小红书 @AI拯救打工人）",
+      "sourceUrl": "https://www.xiaohongshu.com/discovery/item/6aa4f159000000000d027031"
     },
     {
       "path": "raw/articles/airbyte-agents-a-new-era-for-airbyte-airbyte.md",
@@ -3971,6 +3981,11 @@
       "path": "raw/articles/armin-ronacher-ben-vinegar-token-blackbox-harness-lockin-infoq-2026-08-24.md",
       "title": "你以为买的是 DeepSeek Flash，到手可能是 1.5 bit 缩水版：Pi 核心贡献者谈 AI Token 黑箱",
       "sourceUrl": "https://mp.weixin.qq.com/s/z5tER47s_gxHViLGrNRqIw"
+    },
+    {
+      "path": "raw/articles/arxiv-2509-19376-temporal-rag-freshness-trend-detection.md",
+      "title": "Freshness and the Limits of Heuristic Trend Detection in Temporal RAG",
+      "sourceUrl": "https://arxiv.org/html/2509.19376v2"
     },
     {
       "path": "raw/articles/arxiv-2605-15846-roadmapbench.md",
@@ -8023,6 +8038,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/qjDeDksKaRXRfgRlccyWAA"
     },
     {
+      "path": "raw/articles/fde-soe-three-year-ai-landing-retrospective-datawhale-2026.md",
+      "title": "FDE 走进央国企！一个三年 AI 项目的落地复盘（微信 @Datawhale）",
+      "sourceUrl": "https://mp.weixin.qq.com/s/gOQUdI0e5E5nN61JKD24lA"
+    },
+    {
       "path": "raw/articles/fed-cash-use.md",
       "title": "Fed Data Shows Cash Use Holding Steady",
       "sourceUrl": "https://www.americanbanker.com/payments/news/fed-data-shows-cash-use-holding-steady"
@@ -10273,6 +10293,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/KUjcRORhJDhtX6NpysPiuw"
     },
     {
+      "path": "raw/articles/icoder-27b-agent-led-rsi-industrial-coding-model-2026.md",
+      "title": "AI到底能不能自己造AI？别吵了，有人做出来了（iCoder-27B）（微信 @数据派THU 转载机器之心）",
+      "sourceUrl": "https://mp.weixin.qq.com/s/wub_vwZBKoZpD1ti1ceLOQ"
+    },
+    {
       "path": "raw/articles/icon-pack-websites-designers-should-bookmark.md",
       "title": "icon-pack-websites-designers-should-bookmark",
       "sourceUrl": "https://www.hongkiat.com/blog/icon-pack-websites-designers-should-bookmark/"
@@ -11296,6 +11321,11 @@
       "path": "raw/articles/lighthouse-agentic-browsing-scoring.md",
       "title": "Lighthouse Agentic Browsing Scoring",
       "sourceUrl": "https://developer.chrome.com/docs/lighthouse/agentic-browsing/scoring"
+    },
+    {
+      "path": "raw/articles/lightnav-0-light-react-liangyuan-embodied-scaling-post-training-2026.md",
+      "title": "从认路到「跌倒再战」，机器人也在重走大模型的 Scaling 之路？",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651056768&idx=2&sn=4654e82cec450b3529f97ef07f1aa2a4"
     },
     {
       "path": "raw/articles/lightseek-tokenspeed.md",
@@ -12643,6 +12673,11 @@
       "sourceUrl": "https://huggingface.co/blog/ServiceNow/mosaicleaks"
     },
     {
+      "path": "raw/articles/motus-2-self-evolving-world-model-dexterous-manipulation-2026.md",
+      "title": "刚刚，国产世界模型 Motus 2 发布！灵巧操作开始「自进化」",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652725362&idx=1&sn=15cce7ff702a6cd1225a6bfb9e685879"
+    },
+    {
       "path": "raw/articles/mountpoint-s3-与-s3-files-在-eks-上的实战对比.md",
       "title": "mountpoint-s3-与-s3-files-在-eks-上的实战对比",
       "sourceUrl": "https://aws.amazon.com/cn/blogs/china/mountpoint-s3-s3-files-eks-comparison"
@@ -13968,6 +14003,11 @@
       "sourceUrl": "https://www.productledseo.com/p/seo-is-a-product-aeo-is-brand"
     },
     {
+      "path": "raw/articles/pageindex-flash-tree-index-long-pdf-xhs-2026.md",
+      "title": "PageIndex Flash 开源：面向长 PDF 的高速树索引引擎（小红书 @PageIndex）",
+      "sourceUrl": "https://www.xiaohongshu.com/discovery/item/6a9eb838000000002b025a0d"
+    },
+    {
       "path": "raw/articles/pagepilot-pc-ai-test-skill-design-practice.md",
       "title": "pagepilot-pc-ai-test-skill-design-practice",
       "sourceUrl": "https://mp.weixin.qq.com/s/lO2WKHD-L0dTfHhXV-Um6Q"
@@ -15106,6 +15146,11 @@
       "path": "raw/articles/ruofei-claude-18-actions-personal-ai-workbench.md",
       "title": "用好 Claude 的 18 个动作：搭一个个人 AI 工作台",
       "sourceUrl": "https://mp.weixin.qq.com/s/pAVt6MeapUIDyVu256FI4w"
+    },
+    {
+      "path": "raw/articles/ruofei-google-multi-agent-best-practices-2026.md",
+      "title": "来自 Google 的多智能体最佳实践（微信 @架构师若飞）",
+      "sourceUrl": "https://mp.weixin.qq.com/s/YWeJbyenVRCEuckhc0VoyA"
     },
     {
       "path": "raw/articles/saas-bench-gui-agent-eval-unipat.md",
@@ -17476,6 +17521,11 @@
       "path": "raw/articles/vibe-life-agent-harness-improvement-7-papers-2026.md",
       "title": "改进 Agent Harness 的七篇方法梳理（Meta-Harness/AHE/Self-Harness/RHO/RHI/HarnessX/LIFE）",
       "sourceUrl": "https://mp.weixin.qq.com/s/Cd-FQ3hnqAXEcNS9w-QEjQ"
+    },
+    {
+      "path": "raw/articles/vibe-life-harness-self-evolution-two-papers-joint-reading-2026.md",
+      "title": "Harness 自演化真的「在演化」吗?——两篇分析论文合读（微信 @vibe life）",
+      "sourceUrl": "https://mp.weixin.qq.com/s/2AbGy3Sd3GSkDvXWz7ir3w"
     },
     {
       "path": "raw/articles/vibe-life-meta-harness-ahe-self-harness-deep-read-2026.md",

@@ -1,7 +1,7 @@
 ---
 title: 透镜提案队列
 created: 2026-09-10
-updated: 2026-09-10
+updated: 2026-09-13
 type: query
 tags: [meta, emergence, proposal-queue, dashboard]
 confidence: high
@@ -43,6 +43,8 @@ confidence: high
 | 17 | 记忆簇立场光谱同框：五档立场（蒸馏教条→治理哲学→工程税→怀疑论→反方）散在五页从未同框，建议在决策点 MOC 增设立场光谱节收纳本稿光谱表 | [[drafts/wiki-emergent-viewpoints-2026-09-adversarial-memory|反方记忆轮]]立场光谱节 | 已有 MOC 增改（最小档） | `landed`（光谱节入决策点 MOC） | 2026-09-10 | approve 2026-09-10 |
 | 18 | 通道枚举判据页增订：第三簇（记忆）检验通过，增订"衍生通道"为一等通道类 + "写入前声明衍生预算"扩展陈述（涌现稿有现成扩展文本） | [[drafts/wiki-emergent-viewpoints-2026-09-crosscluster-memory|跨簇迁移第二对]]涌现点 | 已有页增订（增改档） | `landed`（判据页衍生通道节已增订） | 2026-09-10 | approve 2026-09-10 |
 | 19 | 记忆影响谱系可观测性页候选："哪条偏好影响了这次决策"可回答性在库内零覆盖；与卡 #15 写入门槛清单互为表里（门槛管写入前、可观测管写入后） | [[drafts/wiki-emergent-viewpoints-2026-09-crosscluster-memory|跨簇迁移第二对]]空白 | 独立补页（`concepts/memory-derivation-observability`） | `landed`（concepts/memory-derivation-observability 已建） | 2026-09-10 | approve 2026-09-10 |
+| 20 | 自校准认识仪器理论页：统一透镜轮的命名理论对象（五命题 + 真值衰减检索内核），作为第十一轮特稿一体先行落地 | [[drafts/wiki-emergent-viewpoints-2026-09-unification|统一轮]]观点一/二 | 独立补页（`concepts/self-calibrating-epistemic-instrument`） | `landed`（页已建；**裁决 pending**——自主研究轮先行落地，人审驳回即撤页留卡） | 2026-09-13 | — |
+| 21 | SCEI 验证轮三处增订：理论页加"形式化"节（门控引理/删失估计引理/聚合形式约定）与"验证状态"滚动表；半衰期页机制类行加删失下界口径（Y=64 页日 → 95% 下界约两周）与真值钟取样规则 | [[drafts/wiki-emergent-viewpoints-2026-09-unification-verify|验证轮]]观点一/二/四 | 已有页增订（增改档 ×2） | `landed`（已改；**裁决 pending**——驳回即回滚两页增订） | 2026-09-13 | — |
 
 ## 与其他机制的关系
 

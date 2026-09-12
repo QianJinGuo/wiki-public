@@ -1,7 +1,7 @@
 ---
 title: 断言半衰期
 created: 2026-09-05
-updated: 2026-09-05
+updated: 2026-09-13
 type: concept
 tags: [meta, temporal, half-life, epistemics, knowledge-decay]
 confidence: 0.7
@@ -20,6 +20,8 @@ provenance_state: inferred
 | 模型代际"最强"类 | ≈ 59 天 | [[entities/claude-opus-4-8-system-card-zvi|Opus 4.8]]（06-02）→ [[entities/claude-opus-5-vending-bench-andon|Opus 5]]（07-31） |
 | 发布预期 vs 交付类 | ≈ 109 天 | [[entities/deepseek-v4|V4 论文解读]]（05-13）→ [[entities/连夜实测deepseek-v4-pro-正式版低于预期不推荐接入codex|正式版实测]]（08-30） |
 | 机制/原理类（评测防火墙、经验抽象度等） | 未测得（0 条被推翻） | [[concepts/eval-optimizer-firewall]] 等 |
+
+> **删失下界（2026-09-13 验证轮增订，提案卡 #21 pending）**：D=0 不等于"不衰变"。按删失估计引理，机制类九页总暴露 Y=64 页日 → 半衰期 95% 下界约两周（s=1 假设，检测器敏感度不足时按比例缩水）；下界随暴露量机械收紧，12 月判定窗按 [[queries/prediction-ledger|台账]] #13 口径复算。复跑：`python3 scripts/tdr-retrospective-eval.py --exposure`。另立取样口径：半衰期样本只从**真值钟**（台账判定/矛盾解决）取数，supersedes 版次链（如 karpathy v2→v3→v4）是版次钟、不产生断言级推翻事件，不得计入样本。
 
 ## 读库协议
 

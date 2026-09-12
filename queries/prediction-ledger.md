@@ -1,7 +1,7 @@
 ---
 title: 预测对账台账
 created: 2026-09-05
-updated: 2026-09-10
+updated: 2026-09-13
 type: query
 tags: [meta, prediction, temporal, ledger, dashboard]
 confidence: high
@@ -26,6 +26,9 @@ confidence: high
 | 9 | 对抗页三问②：harness 工件平均存活期随模型升级**变长**（正方赢；变短 = 衰减假说成立）。证据口径：框架页"衰减"节记录链（现值 -38%/代）+ 后续同源记录追加 | [[comparisons/model-capability-vs-harness-engineering]] · [[concepts/harness-engineering-framework]] | 2026-09-05 | 2027-03-01（半年度） | pending | — |
 | 10 | 对抗页三问③：同任务 harness 开销占比下降且绝对收益上升（正方赢；绝对收益同步下降 = 反方赢）。证据口径：成本可对账的任务页对（如 [[entities/computer-use-45x-more-expensive-than-structured-apis|Computer Use 45x]] 族） | [[comparisons/model-capability-vs-harness-engineering]] | 2026-09-05 | 2027-03-01（半年度） | pending | — |
 | 11 | 反方立场轮主张：记忆工件（memory 文件/skill）的跨模型代际价值衰减——记忆增强 Agent 相对裸模型的任务增益随模型换代收窄（正方赢=增益持平或扩大；增益收窄=反方赢）。证据口径：跨代同任务对照的记忆增益差；harness 工件衰减记录为对照基线 | [[drafts/wiki-emergent-viewpoints-2026-09-adversarial-memory]] | 2026-09-10 | 2027-03-01（半年度，与 #9/#10 同窗） | pending | — |
+| 12 | 统一轮主张：类条件半衰期排序稳定性——术语 < 代际 < 发布交付 的排序在每类观测充足（n≥5）后保持不变；排序翻转即 SCEI 动力学命题（P2）证伪 | [[concepts/claim-half-life]] · [[drafts/wiki-emergent-viewpoints-2026-09-unification]] | 2026-09-13 | 2026-12 判定窗（随提案卡 #3 首测，勿提前） | pending | — |
+| 13 | 统一轮主张：机制/原理类断言一年存活率 ≥95%（观测期内入库的机制类 claim 被 365 天内推翻的比例 ≤5%） | [[concepts/claim-half-life]] · [[queries/negative-results-registry]] | 2026-09-13 | 2027-09-13 | pending | — |
+| 14 | 统一轮主张（外部）：2027-06-30 前至少一家主流向量库/Agent 记忆产品把"类条件真值衰减"或"权威失效边（supersedes/invalid_at）"做成一等检索特征——官方文档出现一等 API 即 fulfilled；届时无一家即 falsified | [[raw/articles/arxiv-2509-19376-temporal-rag-freshness-trend-detection]]（其 future work 即本预测靶点） | 2026-09-13 | 2027-06-30 | pending | — |
 
 ## 中期检视（2026-09-05 · 非判定）
 

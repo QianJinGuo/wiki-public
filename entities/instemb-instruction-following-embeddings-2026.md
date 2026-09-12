@@ -1,7 +1,7 @@
 ---
 title: "InstEmb：未来感知指令嵌入（ICML 2026）"
 created: 2026-08-13
-updated: 2026-09-07
+updated: 2026-09-13
 type: entity
 tags: [embedding, instruction-following, retrieval, icml, jd, look-ahead, representation-learning]
 sources:
@@ -52,6 +52,32 @@ review_category: tech
 
 - Attention pattern：原始 LLaMA-3-8B-Instruct 有明显 attention sink（注意力集中在序列开头）；InstEmb 训练后注意力更选择性（关注 system prompt 结尾、instruction 结尾等语义关键位置）
 - Hidden-state 相似度：最后输入 token 与后续位置相似度低（input-intrinsic）；look-ahead tokens 与 golden output tokens 相似度高（output-aware）^[raw/articles/instemb-instruction-following-embeddings-jd-2026.md]
+
+## 深度分析
+
+### 一次 prefill 为什么能拿到「未来语义」：把输出语义搬上连续通道
+
+HyDE 一类的 decode-then-encode 需要先让模型生成一段假想文档，再把它编码成向量：输出侧语义被迫经过一层**离散文本**中转，代价是额外的一次解码，以及「采样出来的文本 ≠ 模型内部真正携带语义的表示」这一重构间隙。InstEmb 改走另一条通道——student 输入以 `<eos>` 收尾后接一组可学习 token，训练目标是让这些位置的 hidden state 对齐 frozen teacher 在同一位置、看到真实输出后形成的表示。于是未来语义不经离散 token 中转，直接以连续向量搬运；可学习 token 相当于一条**内容可学、带宽固定**的通道，它必须塞下「若继续回答会讲什么」，推理时却只需一次 prefilling pass，开销与输出长度解耦。
+
+### MSE 与 KL 的分工不是超参选择，而是两种目标之间的代价
+
+MSE 直接在 hidden state 空间对齐，约束更强、更贴近「表示本身」，因此细粒度指令任务更强；KL 经语言模型头对齐概率分布，迁移的是分布层面的知识，对通用任务更稳健。二者不能同时最大化并非偶然——把 student 的表示压到 teacher 的具体向量上，保真度最高，却容易过拟合到 teacher 在该任务上的表示几何；用分布对齐留出表示自由度，泛化更好但信号更弱。这说明「保真度」与「可泛化性」在自蒸馏里是一对**互为代价**的目标，单一损失无法同时吃满。这也提示 [[concepts/model-distillation-compression|模型蒸馏与压缩]] 常被当作压缩手段的那套叙事并不完整——同一条 distilled 信号同时划定表示的可迁移边界，任务族才是选目标的依据。
+
+### 多视图对比是防 collapse 的必要条件，而非锦上添花
+
+去掉第二个 student dropout view 与 student output view 后，指令任务从 67.08 掉到 56.44——这不是调参层面的抖动，而是 embedding collapse 的直接证据。自蒸馏若只优化一个「对齐」目标，模型可以把所有输入压到一条退化方向上而仍然降低蒸馏损失；多视图对比学习通过「同一样本的不同视图互为正例」强行撑开表示空间，其中 SimCSE 式的 dropout augmentation 承担了最廉价的正例供给：同一次编码的两次不同 dropout mask 天然构成一对正例，不需要额外标注或额外前向。换言之，对比项不是加分项，而是让蒸馏目标不至于塌缩的**结构前提**。
+
+### 可解释性证据的方法论价值
+
+两处证据把「output-aware 语义真的被编码」与「只是评测分数变好」区分开：其一，attention pattern 从原始模型的 attention sink（注意力堆在序列开头）转向 system prompt 结尾、instruction 结尾等语义关键位置；其二，hidden-state 相似度显示最后输入 token 与后续位置相似度低（专注 input-intrinsic），而 look-ahead tokens 与 golden output tokens 相似度高（承担 output-aware）。前者说明模型改变了取信息的路径，后者说明新增 token 的表示确实落在输出语义附近——这类「机制层面对得上」的证据比单一 benchmark 分数更能支撑结论，也为判断 embedding 是否真学到未来语义提供了可复用的探针。
+
+## 实践启示
+
+1. **先问「需要的语义在输入侧还是输出侧」**：[[concepts/rag-retrieval-augmented-generation|RAG]] 检索、分类、聚类对 embedding 的诉求并不相同；若任务真正依赖「模型会怎么回答」的隐含语义，last-token pooling 就是结构性天花板，换 backbone 或加数据都补不上。
+2. **用 frozen teacher + 可学习通道替代生成式改写**：想让 embedding 带上输出侧语义，不必走 HyDE 式「先生成再编码」；让一组可学习 token 对齐 teacher 在真实输出位置的表示，可省掉解码阶段与离散化间隙，工程上更容易满足线上延迟预算。
+3. **pooling 应由训练目标显式定义，而不是事后搜索**：DAAP 把训练时真正被优化的两个锚点（最后输入 token 与 look-ahead 平均）放进推理路径，AllMean 明显落后正说明这两类 token 不可随意平均。先确定目标函数优化了哪些位置，再让池化与之一一对应。
+4. **蒸馏目标按任务族选，别指望一个损失通吃**：细粒度指令任务优先 MSE，需要保住通用能力时优先 KL；若必须兼顾，用两套配置分别评测，而不是在一个损失里做折中。
+5. **把 embedding collapse 当作首要失败模式来设计正则**：先用 SimCSE 式 dropout 正例兜底，再视预算补跨视图正例；消融中 10 分以上的落差提示，缺少对比项时蒸馏模型的退化往往悄无声息。
 
 ## 相关实体
 

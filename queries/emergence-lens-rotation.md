@@ -1,7 +1,7 @@
 ---
 title: 涌现透镜轮换
 created: 2026-09-05
-updated: 2026-09-10
+updated: 2026-09-13
 type: query
 tags: [meta, emergence, synthesis, dashboard]
 confidence: high
@@ -21,7 +21,7 @@ confidence: high
 
 > 合约版本：v1（2026-09-05 定型五条）→ v2（度量轮免定额、节奏分化）→ v3（补页走提案卡闭环 + ZG 验收门，2026-09-10）。
 
-## 透镜目录（7 个，按启动成本排序）
+## 透镜目录（8 个，按启动成本排序）
 
 | # | 透镜 | 撞什么 | 预期火花 | 启动成本 |
 |---|------|--------|----------|----------|
@@ -32,6 +32,7 @@ confidence: high
 | 5 | **预测到期** | 带时间谓词的断言（"X 将在 Y 前取代 Z"）集中回访 | prediction ledger + 对/错判定（时间透镜的常量化） | 中 |
 | 6 | **嵌入相似度** | qmd 嵌入找"语义近但无互链"的页对 | 该连未连的边、误判的重复页 | 中（需跑 qmd） |
 | 7 | **外部系统** | 外部 repo/产品合集当探针（[[drafts/wiki-emergent-viewpoints-2026-08-phd-lens|phd-lens 模式]]） | 一等设计轴（如"经验抽象度"）、wiki 缺的整页概念 | 高（需外部素材） |
+| 8 | **统一** | 透镜制自身产出当撞库对象：多轮机制/度量/矛盾收拢为单一可证伪理论 | 命名理论对象 + 台账预测条目 | 低（纯存量，但要求机制页已存在） |
 
 ## 轮换状态
 
@@ -49,6 +50,8 @@ confidence: high
 | 2026-09-10 | 第八轮·**嵌入相似度·全库下钻**（目录⑥，同透镜第二层） | [[drafts/wiki-emergent-viewpoints-2026-09-embed-fullvault]] + 提案卡 #10-#14 | entities 层 4208 页首挖、全库 4546 页嵌入 → 候选 18847 对；四类新发现：redirect 墓碑积压（1348 块占层三分之一，"一份归档一块桩"不变式缺席）、活体孪生 136 对（中英双 slug 同文为主型，slug 语言形态确定性预筛）、concept↔entity 缺锚 644 对、comparison↔concept 缺锚 118 对（SCHEMA 规则缺席）；类型过滤防墓碑假阳性为方法论增量；**透镜⑥判定收敛**（残差清单随卡交付） |
 | 2026-09-10 | 第九轮·**反方立场·记忆簇**（目录③第二轮） | [[drafts/wiki-emergent-viewpoints-2026-09-adversarial-memory]] + 提案卡 #15-#17 + 台账 #11 | steelman 三论纲：记忆是正在消失的问题（跨代贬值可证伪化→台账 #11 预写口径）、记忆即攻击面（SkillJack/bleeding-LLAMA/清算不可行，写入门槛清单缺位）、胜者形态是纯文本+模型理解力（记忆消融全库零记录→负结果候选）；五档立场光谱首次同框；补页走卡 |
 | 2026-09-10 | 第十轮·**跨簇迁移·第二对**（目录④第二轮） | [[drafts/wiki-emergent-viewpoints-2026-09-crosscluster-memory]] + 提案卡 #18-#19 | 通道枚举判据第三簇（记忆）检验：判分成功（bleeding-LLAMA 存储通道）/扩展（SkillJack 衍生链——通道清单=I/O+衍生，写入前声明衍生预算）/空白（影响谱系可观测性零覆盖）；合成与检验分离两轮，透镜④已备料对子清空 |
+| 2026-09-13 | 第十一轮·**统一**（目录⑧新增） | [[drafts/wiki-emergent-viewpoints-2026-09-unification]] + [[concepts/self-calibrating-epistemic-instrument]] + 台账 #12-#14 + 外部摄入 [[raw/articles/arxiv-2509-19376-temporal-rag-freshness-trend-detection]] | 八机制首次合龙为命名理论：自校准认识仪器（SCEI 五命题）+ 真值衰减检索内核（score = sim × 生存 × 权威）；外部查新：temporal RAG 半衰期手工定值 + "学习型时序模型"列为 future work = 公开留白恰在本库开工处；理论页随特稿落地，提案卡 #20 裁决 pending |
+| 2026-09-13 | 第十二轮·**统一·理论验证**（目录⑧第二层） | [[drafts/wiki-emergent-viewpoints-2026-09-unification-verify]] + 工具 `tdr-retrospective-eval.py` + 提案卡 #21 | 验证轮：门控引理 + 删失估计引理入册、聚合形式辨析（先检查后立论：原稿无混写）；机制类"≈不衰变"被删失下界降级（Y=64 页日 → 95% 下界约两周，随暴露量机械收紧）；TDR 回溯评测四案例——纯相似度术语链错序被修、**全局手调衰减对照组误伤机制页而 TDR 免疫（判别性实验）**；复访率归一削弱幸存者偏差质疑；反方五问（问三被实验+引理联合驳回，问五接纳为开放问题）；未消耗 12 月判定窗 |
 | — | （待跑：内容轮——反方立场换簇或跨簇迁移第二对；年末判定窗按提案卡 #3 锁定勿提前） | | 下一轮占位 |
 
 ## 与其他机制的关系
