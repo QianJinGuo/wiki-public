@@ -75,3 +75,7 @@ TACO 的实用价值在于它不要求重新训练模型或修改 Agent 核心�
 → [[raw/articles/taco-cli-agent-context-compression-terminalbench.md|原文存档]]
 → [[concepts/context-engineering|Context Engineering]]
 → [[entities/cli-agent-patterns-mcp-shell-agents|CLI Agent 模式]]
+
+## 关联
+
+- 同题异语种孪生页：[[entities/2026-05-07-TACO-让-CLI-Agent-在自主迭代中学会丢掉无用上下文-机器之心]]（归并候选，提案卡 #11 批1）

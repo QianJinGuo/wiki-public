@@ -53,3 +53,7 @@ Agentic RAG 则代表了 RAG 架构向**自主规划**方向的进化。它不�
 4. **Chunk 策略的设计应与 RAG 架构选型联动考虑**。Classic RAG 对 Chunk size 敏感度最高，过大的 Chunk 引入噪声，过小的 Chunk 丢失上下文；在 Graph RAG 中，Chunk 同时承担向量化检索和实体抽取的双重职责，需要在两者之间找到平衡点；Agentic RAG 对 Chunk 本身的依赖相对较低，因为它主要依赖工具调用而非直接检索，但仍建议保留一个 Classic RAG 风格的向量检索层作为默认的「第一步」工具 。 ^[raw/articles/three-rag-architectures-classic-graph-agentic.md]
 
 5. **在企业级项目中，建议架构设计时即保留「路由层」作为三种 RAG 引擎的统一入口**，根据问题类型自动分发到最合适的引擎。这比一开始就选择单一架构然后在遇到瓶颈时做大规模重构要经济得多。路由层的实现可以是简单的规则匹配（问题关键词、问题结构特征），也可以训练一个小模型做分类，核心原则是根据「回答这个问题需要几跳关系」「是否涉及多数据源」「是否是开放式调查」等维度判断分发策略 。 ^[raw/articles/three-rag-architectures-classic-graph-agentic.md]
+
+## 关联
+
+- 同题异语种孪生页：[[entities/rag技术框架的演进方向]]（归并候选，提案卡 #11 批1）

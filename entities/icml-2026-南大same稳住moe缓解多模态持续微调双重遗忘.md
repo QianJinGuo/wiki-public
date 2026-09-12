@@ -2,7 +2,7 @@
 
 title: "ICML 2026 | 南大SAME稳住MoE，缓解多模态持续微调双重遗忘"
 created: 2026-07-05
-updated: 2026-08-01
+updated: 2026-09-10
 type: entity
 tags: [ai, agent, llm]
 sources: [raw/articles/icml-2026-南大same稳住moe缓解多模态持续微调双重遗忘]
@@ -167,4 +167,6 @@ MLLM 通常由视觉编码器、多模态投影器和大语言模型组成，并
 ## 关联
 - 相关概念: [[concepts/harness-engineering-framework|Harness Engineering]]
 - 相关: Agent 架构
+- 同题异语种孪生页：[[entities/nju-same-moe-continual-learning]]（归并候选，提案卡 #11 批1）
+
 

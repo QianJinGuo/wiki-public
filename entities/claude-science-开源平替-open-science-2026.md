@@ -1,7 +1,7 @@
 ---
 title: "Claude Science 开源平替 OpenScience"
 created: 2026-07-08
-updated: 2026-08-01
+updated: 2026-09-10
 type: entity
 tags: [claude-science, open-science, ai-research-assistant, open-source, yc]
 sources: [raw/articles/claude-science-开源平替-deepseek-glm-2026]
@@ -76,3 +76,7 @@ OpenScience 发布后直接冲上 X 热搜，社区反应热烈。但一个耐�
 4. **AI 科研能力边界管理**：将 AI 定位为「研二学生」而非独立研究者——让 AI 负责信息检索、数据整理、初稿生成等辅助工作，关键判断和方向决策仍需人类主导。这种分工在艾伦研究所和 UCSF 的案例中都被证明是有效的。
 
 → [[raw/articles/claude-science-开源平替-deepseek-glm-2026|原文存档]]
+
+## 关联
+
+- 同题异语种孪生页：[[entities/claude-science-anthropic-research-ai-workbench]]（归并候选，提案卡 #11 批1）

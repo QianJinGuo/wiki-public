@@ -1,7 +1,7 @@
 ---
 title: "Claude Code Loop 四档控制权：自检→目标→定时→工作域"
 created: 2026-07-08
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [claude-code, loop-engineering, control-rights, agent-autonomy, harness-engineering, turn-based, goal-based, time-based, proactive]
 sources: [raw/articles/claude-code-loop-control-rights-four-levels]
@@ -56,3 +56,7 @@ review_category: practice
 ---
 
 → [[raw/articles/claude-code-loop-control-rights-four-levels|原文存档]]
+
+## 关联
+
+- 同题异语种孪生页：[[entities/claude官方教你用-loop如何让claude-code上夜班的四个交接点]]（归并候选，提案卡 #11 批1）

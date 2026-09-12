@@ -101,4 +101,6 @@ SAME 的谱感知路由不直接存储旧任务样本（避免数据回放带来
 ## 关联
 - 相关概念: [[concepts/harness-engineering-framework|Harness Engineering]]
 - 相关: Agent 架构
+- 同题异语种孪生页：[[entities/icml-2026-南大same稳住moe缓解多模态持续微调双重遗忘]]（归并候选，提案卡 #11 批1）
+
 

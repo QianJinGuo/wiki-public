@@ -1,7 +1,7 @@
 ---
 title: "Agent 部署形态战略：当下选本地、终局云端——行小招的现场论与三阶段路径"
 created: 2026-06-05
-updated: 2026-08-29
+updated: 2026-09-10
 type: concept
 tags: [agent-deployment, local-agent, cloud-agent, onsite-context, organization-context, context-engineering, harness, openclaw, manus, claude-code, hermes, xingxiaozhao, agent-strategy, three-phase-path, enterprise-agent, r-d-delivery]
 sources:
@@ -179,6 +179,9 @@ OpenClaw / Claude Code / Hermes 这类本地 Agent 之所以火，不是模型�
 
 
 → [[raw/articles/local-vs-cloud-agent-onsite-context-debate-xingxiaozhao|原文存档]]
+
+- 母体实体：[[entities/local-vs-cloud-agent-onsite-context-debate-xingxiaozhao]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/agent-protocol-cost-evolution-roundtable-2026]]（嵌入近邻锚点，提案卡 #12 批1）
 
 ## 所属 MOC
 

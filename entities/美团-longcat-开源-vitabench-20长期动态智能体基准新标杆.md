@@ -2,7 +2,7 @@
 title: "美团 LongCat 开源 VitaBench 2.0：长期动态智能体基准新标杆"
 type: entity
 created: 2026-07-03
-updated: 2026-08-01
+updated: 2026-09-10
 tags: [wechat, ai, benchmark, agent, evaluation, memory]
 rating: v8c8
 sources:
@@ -78,3 +78,7 @@ VitaBench 2.0 的另一重要发现是：开启模型的"思考模式"（推理�
 - [[concepts/harness-engineering-framework|Harness Engineering Framework]] — Agent 工程化的系统框架
 
 → [[raw/articles/美团-longcat-开源-vitabench-20长期动态智能体基准新标杆|原文存档]]
+
+## 关联
+
+- 同题异语种孪生页：[[entities/meituan-longcat-vitabench-20-long-term-dynamic-agent-benchmark]]（归并候选，提案卡 #11 批1）

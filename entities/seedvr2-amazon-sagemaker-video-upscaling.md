@@ -13,7 +13,7 @@ review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 4
 created: 2026-06-26
-updated: 2026-09-10
+updated: 2026-09-12
 reviewed: 2026-09-07
 review_verdict: keep
 review_category: practice
@@ -81,6 +81,51 @@ SeedVR2 专注于**修复/超分辨率**（输入低清 → 输出高清），�
 - GitHub: [sample-sagemaker-video-upscaler](https://github.com/aws-samples/sample-sagemaker-video-upscaler)
 - 模型: [SeedVR2 for ComfyUI](https://github.com/numz/ComfyUI-SeedVR2_VideoUpscaler)
 
+## 深度分析
+
+### 视频超分为什么是重量级推理负载
+
+视频超分要同时满足「逐帧处理」与「时序一致」：单帧可独立上采样，但相邻帧的纹理、边缘与噪声必须连贯，否则会帧间闪烁（temporal flicker），模型因此必须把时间维度一并建模。 ^[raw/articles/implementing-super-resolution-by-deploying-seedvr2-on-amazon.md]
+
+算力与显存随分辨率、帧数近似超线性增长：540p 到 4K 像素数提升一个数量级以上，注意力窗口（Swin Transformer 自适应）随空间膨胀，显存同时受分辨率与 batch 挤压，每提一档画质都要重估单卡容量。 ^[raw/articles/implementing-super-resolution-by-deploying-seedvr2-on-amazon.md]
+
+改变成本曲线的关键在结构：SeedVR2 用 diffusion adversarial post-training（APT）对齐扩散与 GAN，以渐进蒸馏把采样从 64 步压到 1 步，落在 16B 参数的 GAN 架构上（部署权重为 3B fp8），每帧只需一次高质量前向而非反复迭代采样。 ^[raw/articles/implementing-super-resolution-by-deploying-seedvr2-on-amazon.md]
+
+### 三层 AWS 架构的解耦逻辑
+
+三层切分把「请求编排」的轻量组件、「GPU 推理」的重资产与「大对象留存」的存储分开：Lambda 只做触发与作业编排，无状态、按调用计费，请求速率与 GPU 驻留解耦；SageMaker processing job 承载推理，跑完即随实例回收。 ^[raw/articles/implementing-super-resolution-by-deploying-seedvr2-on-amazon.md]
+
+异步/作业化设计解决时长问题——单段视频超分动辄数分钟到数十分钟，远超同步调用的等待窗口，于是用带时间戳命名的作业加轮询状态表达进度；原始与成品视频只经 S3 桶流转，不穿过 Lambda 内存。 ^[raw/articles/implementing-super-resolution-by-deploying-seedvr2-on-amazon.md]
+
+让 GPU 不空转需同时管批处理参数（resolution / batch_size / model）、队列深度与实例选择（`ml.g5.4xlarge` 为最低档）；数据量增大时设 `S3DataDistributionType=ShardedByS3Key`，以多实例并行换水平扩展。
+
+### 大模型权重的部署工程
+
+把数 B 级权重打进 Docker 镜像会拉长镜像拉取、放大冷启动（每个新实例都要从 ECR 重拉容器）；更稳的做法是镜像只带运行时（ComfyUI + 推理代码），权重放 S3 或共享存储、启动后拉取并缓存到节点本地。 ^[raw/articles/implementing-super-resolution-by-deploying-seedvr2-on-amazon.md]
+
+常驻 endpoint 适合低延迟高频请求，视频超分却多为低频长任务，常驻 GPU 要为闲置付费，processing job / 异步推理这类「按需起、跑完停」更匹配。`ml.g5.4xlarge` 按需约 1.20 美元/小时（随 Region 浮动）且只按运行时长计费，再用 Spot 可降本，代价是要容忍中断。 ^[raw/articles/implementing-super-resolution-by-deploying-seedvr2-on-amazon.md]
+
+### 什么时候值得上重量级方案
+
+分界线是「画质交付」与「规格统一」。bicubic 插值只是让画面变大：锐度略有改善，纹理却被平滑、细节无法真实重建；ffmpeg 一类方案几乎无 GPU 成本，适合粗筛与转码，而 SeedVR2 重建细节、锐化边缘、降噪并保持胶片质感纹理。 ^[raw/articles/implementing-super-resolution-by-deploying-seedvr2-on-amazon.md]
+
+故经验规则是：内容值得重制的素材（历史影像修复、老片 4K 化、AI 生成视频后处理）才上生成式超分，仅需满足播放规格的批量素材先用传统缩放。 ^[raw/articles/implementing-super-resolution-by-deploying-seedvr2-on-amazon.md]
+
+生产坑集中在三处：长任务无断点续跑，失败即整段重来，需按分片或帧区间切分以获得可重试单元；输出体积随分辨率成倍增长，S3 成本随库规模线性放大；成本线性外推，清理流程需在 PoC 阶段就固定下来。
+
+## 实践启示
+
+1. **先分级再做超分。** 用传统缩放完成粗筛与规格统一，只对真正要交付画质的素材调用 SeedVR2。
+2. **让 GPU 跟着作业走。** 低频长任务用 processing job / 异步推理而非常驻 endpoint，「按需起、跑完停」。
+3. **把权重从镜像里拆出来。** 镜像只带运行时，权重走 S3 或共享存储并在节点本地缓存。
+4. **参数先小样定标。** resolution / batch_size / model 全部配置化（`config.yaml`），先小样定平衡点再全库批跑。
+5. **横向扩展 + 可重试单元。** 用 `ShardedByS3Key` 切分数据集，并把任务拆成幂等分片，避免失败重算整段。
+6. **预算与产物一起管。** 输出存储随库规模膨胀，PoC 阶段就配好生命周期策略、版本控制与资源清理。
+
 ## 相关实体
 
 - [[concepts/inference-optimization|推理优化]]
+- [[entities/comfyui-sagemaker-processing-workflows|ComfyUI on SageMaker 处理工作流]]
+- [[entities/reducing-container-cold-start-times-using-soci-index-on-dlam|SOC 索引缓解容器冷启动]]
+
+→ [[raw/articles/implementing-super-resolution-by-deploying-seedvr2-on-amazon|原文存档]]

@@ -1,7 +1,7 @@
 ---
 title: "harness 作为产品界面"
 created: 2026-06-12
-updated: 2026-08-29
+updated: 2026-09-10
 type: concept
 tags: [concept, harness, product, claude-code, agentcore, interface]
 sources: [entities/agentcore-harness, entities/claude-code-core-internals, entities/openclaw-prompt-context-harness]
@@ -69,3 +69,12 @@ harness-as-product-surface 在 2026 年的一个明显趋势是界面标准化�
 ## 所属 MOC
 
 - [[moc/layer-4-ecosystem|Layer 4 Ecosystem]]
+
+## 关联
+
+- 母体实体：[[entities/harness-pilot-claude-code-plugin-yangtong-2026-06-17]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/harness-design-long-running-apps]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/claude-code-multi-agent-harness-source-analysis]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/claude-code-large-codebase-team-deployment-agent-harness]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/from-prompt-to-harness-claude-official]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/harness-engineering-7-layers-openclaw-hermes-claude-code-p1anu]]（嵌入近邻锚点，提案卡 #12 批1）

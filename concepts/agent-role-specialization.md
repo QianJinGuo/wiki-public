@@ -1,7 +1,7 @@
 ---
 title: "Agent 角色专业化"
 created: 2026-06-12
-updated: 2026-08-29
+updated: 2026-09-10
 type: concept
 tags: [concept, agent, role, specialization, multi-agent, prompt-engineering]
 sources: [entities/openclaw-完全指南这可能是全网最新最全的系统化教程了32w字建议收藏, entities/龙虾装上了可以用来干啥分享下我的-openclaw-多智能体团队搭建经验-v2]
@@ -66,3 +66,7 @@ prompt engineering 模式 中的「角色扮演」技巧就是角色专业化的
 ## 所属 MOC
 
 - [[moc/layer-4-ecosystem|Layer 4 Ecosystem]]
+
+## 关联
+
+- 母体实体：[[entities/agent-skills-comprehensive-survey]]（嵌入近邻锚点，提案卡 #12 批1）

@@ -1,7 +1,7 @@
 ---
 title: "AI 安全全景图"
 created: 2026-07-02
-updated: 2026-08-29
+updated: 2026-09-10
 type: concept
 tags: [security, ai, framework, agent-security, supply-chain]
 provenance_state: inferred
@@ -46,3 +46,7 @@ confidence: 0.75
 ## 所属 MOC
 
 - [[moc/cybersecurity-privacy|Cybersecurity Privacy]]
+
+## 相关 MOC
+
+- [[moc/security-landscape|安全全景主题地图]] — 本概念的主题 hub，含簇内实体与学习路径

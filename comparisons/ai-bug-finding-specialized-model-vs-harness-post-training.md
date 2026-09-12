@@ -1,7 +1,7 @@
 ---
 title: "AI 漏洞发现能力归因：专用安全模型 vs Harness + 后训练"
 created: 2026-09-05
-updated: 2026-09-05
+updated: 2026-09-10
 type: comparison
 tags: [vulnerability-research, ai-security, harness, post-training, contradiction]
 sources: [raw/articles/cloudflare-glasswing-mythos-security, raw/articles/how-harnesses-and-post-training-close-the-open-weight-bug-finding-gap-20260606]
@@ -47,3 +47,8 @@ Vincenzo Iozzo 用 5 个开源权重模型对同一个真实 C 漏洞做受控�
 → [[entities/cloudflare-glasswing-mythos-security|甲方页]] · → [[entities/how-harnesses-and-post-training-close-the-open-weight-bug-finding-gap-20260606|乙方页]]
 → [[entities/mythos-finds-a-curl-vulnerability|curl 案例一手记录（Stenberg）]]
 → [[raw/articles/cloudflare-glasswing-mythos-security|甲方原文存档]] · → [[raw/articles/how-harnesses-and-post-training-close-the-open-weight-bug-finding-gap-20260606|乙方原文存档]]
+
+## 关联
+
+- 被比对象：[[concepts/ai-r-and-d-when-ai-builds-itself-bottleneck-shift-r-d-harness]]（嵌入近邻锚点，提案卡 #13 批1）
+- 被比对象：[[concepts/when-not-to-harness-engineering]]（嵌入近邻锚点，提案卡 #13 批1）

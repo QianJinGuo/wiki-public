@@ -1,7 +1,7 @@
 ---
 title: 第 17 章：Harness 工程框架
 created: 2026-06-24
-updated: 2026-08-29
+updated: 2026-09-10
 type: concept
 tags: [learning-path, chapter-17, layer-4]
 estimated_minutes: 75
@@ -134,3 +134,10 @@ Harness 怎么解：**可托管**（Agent 不需要人实时盯）/ **可验证*
 ## ⏭️ 下一章预告
 
 第 18 章讲 **多 Agent 协作**——多个 Agent 怎么分工合作。
+
+## 关联
+
+- 母体实体：[[entities/harness-engineering-14-step-roadmap]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/alibaba-harness-autonomous-agent-iteration]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/harness-工程实践如何让-agent-完成自主迭代]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/agent-终章harness-成本篇一次百炼账单降低-88-实战]]（嵌入近邻锚点，提案卡 #12 批1）

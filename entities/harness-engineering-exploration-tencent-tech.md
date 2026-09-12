@@ -97,3 +97,9 @@ review_category: practice
 ## 原文存档
 
 → [[raw/articles/开启harness-engineering探索之旅|原文存档]]
+
+## 关联
+
+- 同题异语种孪生页：[[entities/开启harness-engineering探索之旅]]（归并候选，提案卡 #11 批1）
+- 同题异语种孪生页：[[entities/2026-06-29-开启Harness-Engineering探索之旅-腾讯技术工程]]（归并候选，提案卡 #11 批1）
+

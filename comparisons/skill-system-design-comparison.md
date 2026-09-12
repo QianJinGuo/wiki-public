@@ -1,7 +1,7 @@
 ---
 title: Skills 系统设计三方对比
 created: 2026-04-27
-updated: 2026-04-27
+updated: 2026-09-10
 type: comparison
 tags: [skill-system, openclaw, claude-code, hermes-agent, agent-architecture, skill-design, progressive-disclosure, supply-chain-security]
 sources: ['raw/articles/skill-system-design-three-way-comparison']
@@ -77,3 +77,9 @@ Claude Code 的 Skills 全部由使用者自己编写，放入 `.claude/skills/`
 - [[queries/hermes-agent-vs-openclaw-claude-code-core-differences-and-use-cases|Hermes vs OpenClaw vs Claude Code 核心差异]] — 三框架对比的补充视角
 ## 参考文献
 - AllenTang / 架构师带你玩转AI — 《AI Agent 架构设计（七）：Skills 系统设计》
+
+## 关联
+
+- 被比对象：[[concepts/hermes-agent-skill]]（嵌入近邻锚点，提案卡 #13 批1）
+- 被比对象：[[concepts/skill-formal-theory-survey]]（嵌入近邻锚点，提案卡 #13 批1）
+- 被比对象：[[concepts/hermes-agent]]（嵌入近邻锚点，提案卡 #13 批1）

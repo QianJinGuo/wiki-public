@@ -2,7 +2,7 @@
 
 title: "深入浅出 Harness Engineering 之核心模式与理念"
 created: 2026-06-10
-updated: 2026-09-07
+updated: 2026-09-10
 tags: [agent, architecture, claude, code, data, evaluation, harness-engineering, k8s, llm, memory, mlops, prompt, rag, search, security, tool-use, workflow]
 review_value: 7
 review_confidence: 7
@@ -51,3 +51,7 @@ moc_rebuilt: 2026-09-07
 - [[moc/agent-memory-architecture-decision-points|Agent Memory 架构选择的关键决策点是什么？]]
 - [[moc/agent-engineering-guide|Agent 工程全景指南]]
 - [[moc/layer-2-interaction|第 2 层全库索引：交互实践]]
+
+## 关联
+
+- 同题异语种孪生页：[[entities/harness-engineering耗时一周我是如何将应用的ai-coding率提升至90的]]（归并候选，提案卡 #11 批1）

@@ -1,7 +1,7 @@
 ---
 title: "Software 3.0 技术栈"
 created: 2026-06-12
-updated: 2026-08-01
+updated: 2026-09-10
 type: concept
 tags: [concept, software-3-0, karpathy, llm, paradigm, stack]
 sources: [entities/karpathy-vibe-coding-agentic-engineering, entities/karpathy-llm-wiki-v2-2026]
@@ -66,3 +66,7 @@ LLM Wiki 的文件树结构也是三层叠加的具体体现：`raw/` 是 1.0 �
 ## 所属 MOC
 
 - [[moc/layer-0-foundation|Layer 0 Foundation]]
+
+## 关联
+
+- 母体实体：[[entities/软件-30-时代来临]]（嵌入近邻锚点，提案卡 #12 批1）

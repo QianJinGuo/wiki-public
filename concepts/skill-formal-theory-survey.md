@@ -1,7 +1,7 @@
 ---
 title: Skill 形式化理论：表示、执行、评估与进化
 created: 2026-05-07
-updated: 2026-08-01
+updated: 2026-09-10
 type: concept
 tags: [skill, formal-theory, dag, blueprint-skill, agent-gpa, skill-mining, harness-engineering]
 related:
@@ -223,6 +223,9 @@ MCP 服务器上的工具定义直接导入为 Skill，触发 Skill 注册流程
 - [[entities/hermes-skill-system]] — 替代/补充方案
 - [[entities/hermes-skill-system]] — 替代/补充方案
 - [[entities/skill-design-patterns]] — 替代/补充方案
+
+- 母体实体：[[entities/hermes-skill-system-winty]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/skill-product-philosophy-guicang-爆款经验-2026-06-12]]（嵌入近邻锚点，提案卡 #12 批1）
 
 ## 所属 MOC
 

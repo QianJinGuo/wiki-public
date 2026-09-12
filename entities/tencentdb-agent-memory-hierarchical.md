@@ -198,3 +198,7 @@ Hermes 接入场景中，Gateway 把 capture、search、recall 暴露为 HTTP �
 → [[raw/articles/tencentdb-agent-memory-hierarchical|原文存档]]
 → [[raw/articles/tencentdb-agent-memory-governance-ruofei-2026|若飞拆解 2026-08]]
 → [[raw/articles/tencentdb-agent-memory-team-memory-practice-2026-08-18|团队记忆实践 2026-08]]
+
+## 关联
+
+- 同题异语种孪生页：[[entities/任何错误只犯一次tencentdb-agent-memory-的团队记忆实践]]（归并候选，提案卡 #11 批1）

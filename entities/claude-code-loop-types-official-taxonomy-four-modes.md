@@ -1,7 +1,7 @@
 ---
 title: "Claude Code Loop Types — 官方四种循环模式分类法"
 created: 2026-07-07
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [claude-code, loop-engineering, goal, schedule, auto-mode, dynamic-workflows, agent-framework]
 sources:
@@ -109,3 +109,7 @@ Claude Code 里 agent 的自动化触发有五种形态：/loop（时间表）�
 → [raw/articles/fyjE5EhnV1jKzE8NnscZDQ|原文存档 2 (AI寒武纪)] ^[raw/articles/claude-code-loop-types-official-taxonomy-four-modes.md]
 → [raw/articles/anthropic-loop-four-types-practical-guide-jiagoux-2026-07-15|原文存档 3 (架构师)] ^[raw/articles/anthropic-loop-four-types-practical-guide-jiagoux-2026-07-15.md]
 → [raw/articles/claude-code-loop-practical-cron-prompt-datathu-2026-08-06|原文存档 4 (数据派THU)] ^[raw/articles/claude-code-loop-practical-cron-prompt-datathu-2026-08-06.md]
+
+## 关联
+
+- 同题异语种孪生页：[[entities/claude官方教你用-loop如何让claude-code上夜班的四个交接点]]（归并候选，提案卡 #11 批1）

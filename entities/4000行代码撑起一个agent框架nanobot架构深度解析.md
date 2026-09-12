@@ -3,7 +3,7 @@
 title: "4000行代码撑起一个Agent框架？nanobot架构深度解析"
 type: entity
 created: "2026-07-01"
-updated: "2026-07-27"
+updated: 2026-09-10
 tags: [wechat, ai, agent, architecture, agent-framework, mcp]
 rating: v9c9
 sources:
@@ -97,4 +97,6 @@ MCP 工具被自动包装为 Tool 对象，命名规则为 `mcp_{server_name}_{t
 ## 关联
 - 相关概念: [[concepts/harness-engineering-framework|Harness Engineering]]
 - 相关: Agent 架构
+- 同题异语种孪生页：[[entities/nanobot-agent-framework-architecture-deep-dive]]（归并候选，提案卡 #11 批1）
+
 

@@ -1,7 +1,7 @@
 ---
 title: "Agent 评估框架/平台对比"
 created: 2026-06-12
-updated: 2026-06-12
+updated: 2026-09-10
 type: comparison
 tags: [comparison, agent-eval, benchmark, framework, vendor]
 sources: [entities/agentops-operationalize-agentic-ai-at-scale-with-amazon-bedr, entities/agent-evalkit-aws-opensource-cli-agent-eval-toolkit, concepts/agent-evaluation-benchmarks, concepts/evaluation-harness-design]
@@ -35,3 +35,7 @@ sources: [entities/agentops-operationalize-agentic-ai-at-scale-with-amazon-bedr,
 - [[entities/agent-evalkit-aws-opensource-cli-agent-eval-toolkit]]
 - "Agent 评估基准体系"
 - [[concepts/evaluation-harness-design]]
+
+## 关联
+
+- 被比对象：[[concepts/agent-evaluation-benchmark-frameworks]]（嵌入近邻锚点，提案卡 #13 批1）

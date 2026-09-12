@@ -1,7 +1,7 @@
 ---
 title: "Retrieval-Augmented Generation (RAG)"
 created: 2026-05-21
-updated: 2026-08-01
+updated: 2026-09-10
 type: concept
 tags: [rag, llm, knowledge-graph, retrieval, inference, architecture]
 sources:
@@ -189,3 +189,7 @@ GraphRAG 通过路由、查询规划形成自上而下的三层防御：
 ## 所属 MOC
 
 - [[moc/layer-2-interaction|Layer 2 Interaction]]
+
+## 姊妹页定位（2026-09-10 提案卡 #5）
+
+本页侧重**知识图谱增强 RAG** 与图谱本体论视角。同对象的通用工程范式入口见 [[concepts/rag-retrieval-augmented-generation|RAG 检索增强生成]]（两阶段架构与 chunk/rerank 实践）。二者分工互补而非重复。

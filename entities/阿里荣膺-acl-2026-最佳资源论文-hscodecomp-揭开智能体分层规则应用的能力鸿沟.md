@@ -1,7 +1,7 @@
 ---
 title: "阿里荣膺 ACL 2026 最佳资源论文 | HSCodeComp 揭开智能体「分层规则应用」的能力鸿沟"
 created: 2026-08-13
-updated: 2026-08-13
+updated: 2026-09-10
 type: entity
 tags: [ai, research, agent, ai-agent, multi-agent, evaluation, benchmark, agent-eval, search, agent-search]
 sources: [raw/articles/阿里荣膺-acl-2026-最佳资源论文-hscodecomp-揭开智能体分层规则应用的能力鸿沟.md]
@@ -28,3 +28,7 @@ review_category: tech
 ## 相关实体
 
 "Agent 架构" [[concepts/agent-orchestration-patterns]] "Agent 评估基准体系" [[concepts/evaluation-harness-design]]
+
+## 关联
+
+- 同题异语种孪生页：[[entities/hscodecomp-acl-2026-best-resource-paper]]（归并候选，提案卡 #11 批1）

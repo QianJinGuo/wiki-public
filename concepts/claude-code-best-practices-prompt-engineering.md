@@ -1,7 +1,7 @@
 ---
 title: "Claude Code Best Practices: Prompt Engineering"
 created: 2026-05-21
-updated: 2026-08-29
+updated: 2026-09-10
 type: concept
 tags: [claude-code, prompt-engineering, best-practices, agent, harness, context]
 sources:
@@ -324,6 +324,9 @@ const preToolUseHook = async (tool, args, env) => {
 
 → [[raw/articles/claude-code-prompt-source-analysis-fanone|原文存档：Claude Code Prompt 提示词体系源码解析]]
 → [[raw/articles/claude-code-prompt-context-harness|原文存档：深度解析 Claude Code Prompt/Context/Harness]]
+
+- 母体实体：[[entities/claude-code-core-internals]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/claude-code-performance-benchmarking]]（嵌入近邻锚点，提案卡 #12 批1）
 
 ## 新增关联实体
 - [[entities/claude-code-html-artifacts]]

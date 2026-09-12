@@ -2,7 +2,7 @@
 
 title: "龙虾装上了，可以用来干啥？分享下我的 OpenClaw 多智能体团队搭建经验！"
 created: 2026-06-10
-updated: 2026-09-07
+updated: 2026-09-10
 tags: [agent, architecture, code, data, llm, memory, mlops, open-source, openclaw, prompt, security, tool-use]
 review_value: 7
 review_confidence: 7
@@ -51,3 +51,7 @@ moc_rebuilt: 2026-09-07
 - [[moc/agent-memory-architecture-decision-points|Agent Memory 架构选择的关键决策点是什么？]]
 - [[moc/agent-engineering-guide|Agent 工程全景指南]]
 - [[moc/openclaw-architecture|OpenClaw 的架构设计为什么值得研究？它与 Hermes/Claude Code 的核心差异？]]
+
+## 关联
+
+- 同题异语种孪生页：[[entities/openclaw-multi-agent-team-practice]]（归并候选，提案卡 #11 批1）

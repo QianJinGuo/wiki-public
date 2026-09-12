@@ -2,7 +2,7 @@
 
 title: "Agent架构关键变化：Harness正在成为新后端"
 created: 2026-05-10
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [ai-agent, engineering, agent-tools, wechat]
 review_value: 6
@@ -47,3 +47,9 @@ moc_rebuilt: 2026-09-07
 - [[entities/你写的-skill及格了吗|你写的 Skill，及格了吗？]] — D1元数据定生死评估框架
 - [[entities/ollama-已经不是-2024-年那个了一键配齐-claude-codecodexopenclaw|Ollama 已经不是 2024 年那个了！一键配齐 Claude Code/Codex/OpenClaw]] — GGUF解锁+launch：从Docker到入口层
 - [[entities/从不敢发到天天发ai-agent-时代的-cicd-生存指南|从「不敢发」到「天天发」：AI Agent 时代的 CI/CD 生存指南]] — 分层门禁逃生舱机制
+
+## 关联
+
+- 同题异语种孪生页：[[entities/harness-engineering-reliable-long-term-agent]]（归并候选，提案卡 #11 批1）
+- 同题异语种孪生页：[[entities/agentcore-managed-harness]]（归并候选，提案卡 #11 批1）
+

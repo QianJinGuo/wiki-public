@@ -1,7 +1,7 @@
 ---
 title: "Anthropic 14 个 Agent Skills 设计模式"
 created: 2026-05-10
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [anthropic, skill, agent, design-patterns, best-practices]
 sources: [raw/articles/anthropic-agent-skills-design-patterns-14]
@@ -47,3 +47,9 @@ moc_rebuilt: 2026-09-07
 
 ## 延伸导航
 - [[moc/claude-code-complete-guide|Claude Code 生态完全指南]]
+
+## 关联
+
+- 同题异语种孪生页：[[entities/anthropic-官方技能最佳实践14-个可复用的-agent-skills-设计模式]]（归并候选，提案卡 #11 批1）
+- 同题异语种孪生页：[[entities/anthropic-官方-agent-harness-平台claude-managed-agents-完整指南]]（归并候选，提案卡 #11 批1）
+

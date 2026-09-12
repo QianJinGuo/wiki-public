@@ -1,7 +1,7 @@
 ---
 title: "Harness Engineering 详解：如何将 AI Coding 率提升至 90%"
 created: 2026-06-11
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [harness-engineering, ai-coding, engineering, llm, agent, productivity]
 sources: [raw/articles/harness-engineering耗时一周我是如何将应用的ai-coding率提升至90的]
@@ -48,3 +48,11 @@ moc_rebuilt: 2026-09-07
 
 ## 延伸导航
 - [[moc/layer-3-agent-engineering|第 3 层全库索引：Agent 工程]]
+
+## 关联
+
+- 同题异语种孪生页：[[entities/harness-engineering-core-patterns-claude-code]]（归并候选，提案卡 #11 批1）
+- 同题异语种孪生页：[[entities/harness-engineering-systematic-framework]]（归并候选，提案卡 #11 批1）
+- 同题异语种孪生页：[[entities/harness-engineering-reliable-long-term-agent]]（归并候选，提案卡 #11 批1）
+
+

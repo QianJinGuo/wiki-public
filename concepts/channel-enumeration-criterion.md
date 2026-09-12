@@ -1,7 +1,7 @@
 ---
 title: 通道枚举判据
 created: 2026-09-05
-updated: 2026-09-05
+updated: 2026-09-10
 type: concept
 tags: [isolation, security, evaluation, channel, boundary, systems]
 confidence: 0.7
@@ -29,6 +29,10 @@ provenance_state: inferred
 **执行隔离侧**（[[concepts/agent-sandbox|Agent 沙箱]]）：
 - 逃逸通道实例：[[entities/nomshub-cursor-remote-tunnel-sandbox-breakout-straiker|Shell builtin 绕过 + 远程隧道外联]]——沙箱策略枚举了"文件/进程"通道，漏了"内置命令语义"+"既有隧道"两条。
 - [[entities/microsoft-mxc-execution-containers-agent-sandbox-origin|MXC]] 的 AppContainer 分级本质是把通道清单做进 OS 原语。
+
+## 衍生通道（2026-09-10 第三簇检验扩展）
+
+跨簇迁移第二对以记忆簇检验本判据（[[drafts/wiki-emergent-viewpoints-2026-09-crosscluster-memory|涌现稿]]）：判据第三簇成立，且记忆簇逼出判据的一等扩展——**衍生通道**。评测簇与沙箱簇的通道都是 I/O 通道（边界两侧是同时存在的系统）；记忆簇暴露第三种：信息经摘要、偏好提取、行为影响不断变形存续的**影响谱系**。两个区别：衍生边在写入时自动生成、无需攻击者构造（[[raw/articles/skilljack-persistent-skill-backdoor-tencent-mindchain-2026-09|SkillJack]] 只需污染源头）；枚举单位不是交互面而是影响谱系（[[concepts/agent-memory-lifecycle-philosophies|生命周期哲学]]的"影响链清算"是事后补做，判据要求写入前预枚举）。**扩展陈述**：通道清单 = I/O 通道 + 衍生通道；对衍生通道，"逐通道最小化"翻译为**写入前声明衍生预算**——这条信息允许影响哪些类别的未来行为。失效语义现状：衍生通道的可观测性（"哪条偏好影响了这次决策"）库内零覆盖（候选页见 [[queries/lens-proposals|提案卡]] #19）。
 
 ## 使用方式
 

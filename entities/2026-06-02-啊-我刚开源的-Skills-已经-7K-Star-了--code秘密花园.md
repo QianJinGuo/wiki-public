@@ -1,7 +1,7 @@
 ---
 title: "啊 我刚开源的 Skills 已经 7K Star 了  code秘密花园"
 created: 2026-08-01
-updated: 2026-08-29
+updated: 2026-09-10
 type: entity
 tags: ['raw', 'article']
 sources: [raw/articles/2026-06-02-啊-我刚开源的-Skills-已经-7K-Star-了--code秘密花园]
@@ -28,3 +28,7 @@ review_category: practice
 ## 来源
 
 - 原文：[[raw/articles/2026-06-02-啊-我刚开源的-Skills-已经-7K-Star-了--code秘密花园.md|啊 我刚开源的 Skills 已经 7K Star 了  code秘密花园]]
+
+## 关联
+
+- 同题异语种孪生页：[[entities/conardli-skills-7k-star-open-source-agent-2026]]（归并候选，提案卡 #11 批1）

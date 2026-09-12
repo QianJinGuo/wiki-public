@@ -1,7 +1,7 @@
 ---
 title: "多模态智能体框架综述：感知融合策略×四模块×四赛道"
 created: "2026-08-31"
-updated: 2026-09-10
+updated: 2026-09-11
 type: entity
 tags: [agent, multimodal, perception, fusion, robotics, gui, survey]
 sources:
@@ -16,45 +16,57 @@ review_category: tech
 
 # 多模态智能体框架综述：感知融合策略×四模块×四赛道
 
-Maryland/KAUST/Oxford/NUS 等二十余位研究者的60页综述，以三种感知融合策略为主线，分析多模态对智能体感知、推理、记忆、行动四个模块的影响，覆盖四大应用赛道，剖析性能-效率-可扩展性权衡。^[raw/articles/multimodal-agentic-frameworks-survey-arxiv-2608-20379.md]
+由马里兰大学、KAUST、牛津大学、新加坡国立大学等机构二十余位研究者完成的 60 页综述，系统梳理多模态智能体框架的技术演进。其核心判断是：多模态不是文本智能体的外设，而是决定架构形态的主变量——融合层级直接决定感知、推理、记忆、行动四个模块各自的形态。^[raw/articles/multimodal-agentic-frameworks-survey-arxiv-2608-20379.md]
 
-## 三种感知融合策略
+## 摘要
 
-**委托感知（Delegated）**：AI调用外部工具（CLIP等），灵活但信息丢失严重。代表：VisProg、HuggingGPT。^[raw/articles/multimodal-agentic-frameworks-survey-arxiv-2608-20379.md]
+本综述以三种感知融合策略（委托感知、后期融合、早期融合）为主线，分析融合深度对感知、推理、记忆、行动四个模块的结构性影响，覆盖机器人、GUI 导航、多媒体生成、长视频理解四条赛道。最反直觉的结论是：架构的融合方式比参数量更重要——7B OpenVLA 凭统一的感知-行动 token 架构超过 55B RT-2-X。综述同时指出，多模态智能体在接地（grounding）、长周期记忆与评测可复现性上仍有系统性缺口，而扩大上下文窗口不能替代推理能力的提升。
 
-**后期融合（Late-fusion）**：ViT编码器+投影层映射到LLM嵌入空间。代表：Flamingo、RT-2。比纯文本好但视觉和语言在高层才融合。^[raw/articles/multimodal-agentic-frameworks-survey-arxiv-2608-20379.md]
+## 核心要点
 
-**早期融合（Early-fusion）**：所有模态Token化统一处理，最前沿方向。代表：GPT-4o、Gemini。^[raw/articles/multimodal-agentic-frameworks-survey-arxiv-2608-20379.md]
+- **融合深度决定能力上限**：委托感知（VisProg、HuggingGPT）最灵活，但视觉信息转述为文本时大量流失；后期融合（Flamingo、RT-2）把视觉编码器接进 LLM 嵌入空间，视觉与语言直到高层才交汇；早期融合（GPT-4o、Gemini）统一 token 化、保留信息最多，是当前最前沿方向。
+- **四模块被逐层改写**：编排器（推理 / 规划 / 记忆）、感知、行动三模块构成基础架构；推理从纯语言 CoT 到 ToT，再到把坐标标注拉进推理链的「视觉基础推理」与同步整合多模态信号的跨模态推理。
+- **行动有三种形态**：语言驱动（Toolformer、Gorilla，走 API / JSON / Python）、视觉基础（AppAgent、CogAgent，操作像素坐标与 UI 元素）、具身多模态（RT-2、OpenVLA，输出连续控制信号）。
+- **架构 > 参数**：7B OpenVLA 超过 55B RT-2-X，融合方式而非模型规模才是性能瓶颈所在。
+- **记忆是算力与跨模态关联性的取舍**：模态专属记忆分模态存储、文本索引检索，省算力但跨模态关联弱；统一记忆映射进同一嵌入空间，支持跨模态检索但开销激增。VideoAgent 每查询只检索 8.4 帧（比密集采样少 20 倍），VLog 以紧凑叙事换来 10-20 倍加速。
+- **长上下文 ≠ 强推理**：Gemini 1.5 的百万上下文在长视频推理上依然薄弱，窗口扩容解决不了推理瓶颈。
+- **落地更倾向专用模型**：融合越深效果通常越好，但原生多模态 API 成本延迟高；综述判断训练领域专用模型长期比持续调用商用 API 更可行。
+- **六大局限**：接地鸿沟（GUI 像素级定位差距巨大）、性能-效率矛盾、长周期记忆脆弱、评测隐患（闭源 API 不可复现、数据泄露）、对抗鲁棒性不足、多模态幻觉。
 
-## 关键结论：架构融合比参数量更重要
+## 深度分析
 
-7B OpenVLA 依靠统一感知-行动token架构，性能超过55B RT-2-X。^[raw/articles/multimodal-agentic-frameworks-survey-arxiv-2608-20379.md]
+### 融合策略的本质：信息在哪一层「交汇」
 
-## 四大应用赛道
+三种策略不是并列的选型，而是一条按「信息损失与算力成本此消彼长」排列的谱系。委托感知把视觉理解外包给专用模型，最灵活、最易拼装，代价是细节必须先压缩成文本才能进入推理——即综述反复强调的「密集型模态转文字造成严重信息损失」。后期融合把视觉编码器接进 LLM 嵌入空间，保真度提升，但视觉与语言直到高层才交互，空间细节仍可能在池化与投影中丢失。早期融合在 token 层统一处理所有模态，保留信息最多，却把算力与延迟推向最高。^[raw/articles/multimodal-agentic-frameworks-survey-arxiv-2608-20379.md]
 
-### 机器人与具身智能
-三阶段演化：SayCan（LLM规划+视觉评估）→ PaLM-E（后期融合）→ VLA端到端（RT-2、OpenVLA）。痛点：云端API延迟、真实环境泛化。^[raw/articles/multimodal-agentic-frameworks-survey-arxiv-2608-20379.md]
+### 四个模块如何被多模态逐层改写
 
-### GUI与网页导航
-从HTML/XML文本→CogAgent高分辨率微调→GPT-4o原生多模态+SoM标记。WebArena基准SOTA距人类仍60-70%差距。^[raw/articles/multimodal-agentic-frameworks-survey-arxiv-2608-20379.md]
+综述拒绝把多模态当作一个「输入接口」，转而追踪它如何渗透进智能体的每一层。感知模块把图像 / 视频 / 音频转成抽象表征，这是多模态与纯文本 LLM 最根本的分野；真正被低估的是推理层——「视觉基础推理」把坐标标注拉进推理链，让模型能指认画面中的哪个位置，这是纯文本 CoT 做不到的。行动层则分裂成语言驱动、视觉基础、具身多模态三条路线。这也解释了同样的 ReAct 式框架搬到 GUI 或机械臂上为何立刻失效。
 
-### 多媒体内容生成
-从VISPROG/AudioGPT编排工具→GenArtist原生多模态自我纠错。^[raw/articles/multimodal-agentic-frameworks-survey-arxiv-2608-20379.md]
+### 记忆：模态专属与统一之间的成本-关联性权衡
 
-### 长视频理解
-VideoAgent选择性检索（20倍效率提升）、VideoMind Chain-of-LoRA。Gemini 1.5百万上下文仍推理薄弱——扩大窗口无法解决推理瓶颈。^[raw/articles/multimodal-agentic-frameworks-survey-arxiv-2608-20379.md]
+记忆部分点出最现实的工程难题：跨模态关联与算力开销几乎不可兼得。模态专属记忆按模态分开存储、只用文本索引检索，工程上最省，但「图像里的某物」与「文本里提到它的那句话」难以被同一查询同时召回；统一记忆把全部模态塞进同一嵌入空间，跨模态检索成为可能，存储与检索开销却迅速失控。折中案例很有启发：VideoAgent 每查询只检索 8.4 帧换来 20 倍算力节省，VLog 用紧凑叙事把长视频压成可检索描述——长视频理解的瓶颈不在「看清」，而在「记得住且找得到」。
 
-## 性能-效率权衡
+### 评测缺口：接地、可复现性与对抗鲁棒性
 
-- 融合越深效果越好，但原生多模态API成本延迟高
-- 领域微调模型在速度/成本/精度间取得更好平衡
-- **面向真实落地，训练领域专用模型长期比持续调用商用API更可行**^[raw/articles/multimodal-agentic-frameworks-survey-arxiv-2608-20379.md]
+综述把评测摆到与能力同等重要的位置。GUI 赛道最能说明问题：WebArena 上的 SOTA 距人类仍差 60-70%，核心是像素级接地精度——模型知道「要点击确认按钮」，却点不准按钮的位置。更系统的隐患在于，许多领先系统依赖闭源多模态 API，评审者无法复现、训练数据存在泄露风险，对抗鲁棒性也缺乏统一标准；叠加多模态幻觉与脆弱的长周期记忆，多模态智能体极易级联错误，而每加一层校验就多一层延迟。这构成「能力-效率-可靠性」三角约束。^[raw/articles/multimodal-agentic-frameworks-survey-arxiv-2608-20379.md]
 
-## 六大局限
+## 实践启示
 
-1. 接地鸿沟（GUI像素级定位差距巨大）
-2. 性能与效率矛盾
-3. 长周期记忆脆弱
-4. 评测隐患（闭源API无法复现、数据泄露）
-5. 对抗鲁棒性不足
-6. 多模态幻觉
+1. **先选融合层级，再选模型**：任务对空间细节敏感（GUI、机器人操作）时优先早期融合或视觉基础的行动表征；只是「看图答题」则委托感知加工具编排最划算。融合深度应是架构第一决策。
+2. **别用上下文窗口掩盖推理缺陷**：百万级上下文也没修复长视频推理的薄弱；把力气花在选择性检索（每查询 8.4 帧的思路）与紧凑叙事压缩上。
+3. **记忆架构要显式取舍**：先问「查询是否需要跨模态联合召回」，再决定用模态专属记忆（省算力）还是统一嵌入空间（保关联）。
+4. **为多模态任务预留校验预算**：级联错误是固有风险，感知结果与工具调用都需校验，但校验会抬高延迟——把它放在错误代价最高的环节。
+5. **认真算「专用模型 vs 商用 API」的长期账**：综述判断训练领域专用模型长期更可行；在延迟、成本、数据外发敏感的场景，持续调用商用 API 等于把可复现性押在外部依赖上。
+6. **把可复现性与接地精度设为硬门槛**：优先选开权重、可复现的模型与基准，并把 GUI / 机器人类的接地精度差距作为上线前门禁。
+
+## 相关实体
+
+- [[concepts/embodied-intelligence-frontier|具身智能前沿]] — 机器人赛道三阶段演化（SayCan → PaLM-E → VLA）的对照。
+- [[concepts/agent-memory-architecture|Agent 记忆架构]] — 模态专属 vs 统一记忆与通用记忆分层的对照。
+- [[concepts/agent-evaluation-benchmark-frameworks|Agent 评测基准框架]] — 对应综述强调的评测缺口与可复现性。
+- [[entities/om-ai-vlx-seek-vlm-3b-fine-grained-perception-2026|细粒度感知 VLM]] — 接地鸿沟方向的实证进展。
+- [[entities/让gui-agent不再边做边忘快手浙大提出memgui-agent攻克长程gui任务|MemGUI-Agent]] — GUI 长程记忆强化，正对该综述的 GUI 与记忆痛点。
+- [[entities/colt-eccv-2026-latent-thought-chain-multimodal-reasoning|Latent Thought Chain 多模态推理]] — 跨模态推理层级的后续研究。
+
+→ [[raw/articles/multimodal-agentic-frameworks-survey-arxiv-2608-20379|原文存档]]

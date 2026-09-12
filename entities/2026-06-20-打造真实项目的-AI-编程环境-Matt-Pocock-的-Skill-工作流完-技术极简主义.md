@@ -1,7 +1,7 @@
 ---
 title: "打造真实项目的 AI 编程环境 Matt Pocock 的 Skill 工作流完 技术极简主义"
 created: 2026-08-01
-updated: 2026-08-29
+updated: 2026-09-10
 type: entity
 tags: ['raw', 'article']
 sources: [raw/articles/2026-06-20-打造真实项目的-AI-编程环境-Matt-Pocock-的-Skill-工作流完-技术极简主义]
@@ -30,3 +30,7 @@ review_category: practice
 ## 来源
 
 - 原文: [[raw/articles/2026-06-20-打造真实项目的-AI-编程环境-Matt-Pocock-的-Skill-工作流完-技术极简主义.md|打造真实项目的 AI 编程环境 Matt Pocock 的 Skill 工作流完 技术极简主义]]
+
+## 关联
+
+- 同题异语种孪生页：[[entities/mattpocock-skills-grill-me-grill-with-docs-caveman]]（归并候选，提案卡 #11 批1）

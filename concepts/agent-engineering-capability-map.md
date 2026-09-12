@@ -1,7 +1,7 @@
 ---
 title: "Agent Engineering 能力地图"
 created: 2026-06-12
-updated: 2026-09-05
+updated: 2026-09-10
 type: concept
 tags: [concept, agent-engineering, capability, skill, career, engineer]
 sources: [entities/ai-agent-engineer-capability-map, entities/agent-engineering-principles-architecture-practice]
@@ -76,3 +76,8 @@ Agent Engineering 能力地图在 2026 年的实践中已经分化出三个流�
 ## 所属 MOC
 
 - [[moc/layer-4-ecosystem|Layer 4 Ecosystem]]
+
+## 关联
+
+- 母体实体：[[entities/agent-harness-architecture-design-production-guide]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/agent-principle-architecture-engineering-practice]]（嵌入近邻锚点，提案卡 #12 批1）

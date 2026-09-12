@@ -1,7 +1,7 @@
 ---
 title: "Open Code Review：阿里开源的 AI 代码评审 CLI 工具"
 created: 2026-07-01
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [code-review, ali, open-source, cli, ai-assisted]
 source: "[[raw/articles/ali-open-code-review-cli-tool]]"
@@ -129,3 +129,6 @@ Open Code Review 的关键创新是**反思模型（Reflection Model）**：利�
 - 组织实践：AI 代码评审从个人工具升级为团队规范，外部贡献者协作模式
 - 可迁移方法论：把开源复盘提炼为可复用的方法论给想做开源的开发者 ^[raw/articles/open-code-review-github-trending-5-days-retrospective-2026-08-11.md]
 
+## 关联
+
+- 同题异语种孪生页：[[entities/阿里开源-open-code-review一周揽下-5k-star更专业的代码评审-cli]]（归并候选，提案卡 #11 批1）

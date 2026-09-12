@@ -1,7 +1,7 @@
 ---
 title: "Skill 工程原则"
 created: 2026-07-02
-updated: 2026-09-05
+updated: 2026-09-10
 type: concept
 tags: [skill, agent-skill, harness-engineering, agent, methodology]
 provenance_state: inferred
@@ -28,6 +28,13 @@ Skill 是 Agent 的可复用能力单元——类似函数之于程序。Skill �
 - [[entities/skill-version-comparison-five-principles-winty|Skill 版本对比五大原则]]
 - [[entities/skill-version-management-semantic-versioning-practices-winty|Skill 版本管理五大原则]]
 - [[entities/harness-skill-engineering-alibaba-practice|阿里云 Skill 工程实践]]
+
+- 母体实体：[[entities/agent-skills-no-dependency-design-philosophy]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/skill-system-design-taobao-technology-2026]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/skill-iteration-evaluation-trajectory-sunchengxin-2026]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/skill-design-patterns]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/agent-skills-comprehensive-survey]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/skill-orchestration-6-dependencies]]（嵌入近邻锚点，提案卡 #12 批1）
 
 ## 所属 MOC
 

@@ -1,7 +1,7 @@
 ---
 title: "Agent 记忆架构"
 created: 2026-06-11
-updated: 2026-08-29
+updated: 2026-09-10
 type: concept
 tags: [agent, architecture, memory, llm, rag]
 description: "Agent 记忆架构：工作记忆、长期记忆、情景记忆的系统设计与选型"
@@ -422,3 +422,16 @@ Memory 的治理问题比存储问题更根本。治理层要回答的不是"如
 ## 所属 MOC
 
 - [[moc/layer-3-agent-engineering|Layer 3 Agent Engineering]]
+
+## 相关 MOC
+
+- [[moc/agent-memory-architecture-decision-points|记忆架构决策点地图]] — 本概念的主题 hub，含簇内实体与学习路径
+
+## 关联
+
+- 母体实体：[[entities/agent-memory-architecture-ruofei]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/what-makes-good-agent-memory-system-yuanrunzi-2026]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/agent-memory-main-contradiction-context-scheduling]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/agent-memory-evaluation-landscape-taobao-survey]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/agent-skills-teams-architecture-evolution-selection-guide]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/tencentdb-agent-memory-hierarchical]]（嵌入近邻锚点，提案卡 #12 批1）

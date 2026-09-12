@@ -4,7 +4,7 @@ title: "在 Amazon EKS 上使用 NVIDIA GPU Operator 管理自定义 GPU 驱动�
 type: entity
 tags: [aws, eks, kubernetes, gpu, nvidia, gpu-operator, driver-management, cuda, mcp, kiro]
 created: 2026-06-03
-updated: 2026-09-07
+updated: 2026-09-10
 sources: [raw/articles/在-amazon-eks-上使用-nvidia-gpu-operator-管理自定义-gpu-驱动与-cuda-工作负载]
 review_value: 8
 review_confidence: 9
@@ -208,3 +208,7 @@ CUDA workload image nvidia/cuda:12.2.2-runtime-ubuntu22.04
 - [[entities/gpu-virtualization-using-mig-technology-on-amazon-sagemaker-hyperpod]]
 - [[entities/build-multi-tenant-ai-agent-on-eks-graviton-openclaw-k8s-practice]]
 - [[entities/openclaw-amazon-bedrock-eks-printer-qc]]
+
+## 关联
+
+- 同题异语种孪生页：[[entities/在-amazon-eks-上使用-nvidia-gpu-operator-管理自定义-gpu-驱动与-cuda-工作负载]]（归并候选，提案卡 #11 批1）

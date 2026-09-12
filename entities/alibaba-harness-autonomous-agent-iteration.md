@@ -1,7 +1,7 @@
 ---
 title: "阿里 Harness 工程实战：Agent 自主迭代 17 小时优化业务 Agent"
 created: 2026-07-08
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [harness-engineering, agent-iteration, autonomous-agent, loop-engineering, champion-challenger, alibaba]
 sources: [raw/articles/alibaba-harness-autonomous-agent-iteration]
@@ -69,3 +69,7 @@ review_category: practice
 ---
 
 → [[raw/articles/alibaba-harness-autonomous-agent-iteration|原文存档]]
+
+## 关联
+
+- 同题异语种孪生页：[[entities/harness-工程实践如何让-agent-完成自主迭代]]（归并候选，提案卡 #11 批1）

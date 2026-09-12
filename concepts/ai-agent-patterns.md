@@ -1,7 +1,7 @@
 ---
 title: "AI Agent Patterns"
 created: 2026-05-21
-updated: 2026-08-01
+updated: 2026-09-10
 type: concept
 tags: [agent, ai-agent, patterns, architecture, autonomous, goal-driven]
 sources:
@@ -285,6 +285,9 @@ class ErrorRecovery:
 
 
 → [[raw/articles/你不知道的-agent原理架构与工程实践|原文存档]]
+
+- 母体实体：[[entities/agent-skills-comprehensive-survey]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/ai-friendly-architecture]]（嵌入近邻锚点，提案卡 #12 批1）
 
 ## 新增关联实体
 - [[entities/pi-main-agent-engineering-17-dimensions]]

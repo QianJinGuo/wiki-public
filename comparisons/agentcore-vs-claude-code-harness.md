@@ -1,7 +1,7 @@
 ---
 title: "AgentCore vs Claude Code：托管 vs 自建 Harness 决策"
 created: 2026-06-12
-updated: 2026-06-12
+updated: 2026-09-10
 type: comparison
 tags: [comparison, agentcore, claude-code, harness, managed, self-built]
 sources: [entities/agentcore-harness, entities/claude-code-harness-deep-understanding, entities/agent-harness-architecture]
@@ -36,3 +36,8 @@ sources: [entities/agentcore-harness, entities/claude-code-harness-deep-understa
 - [[entities/agentcore-harness]]
 - [[entities/claude-code-harness-deep-understanding]]
 - [[entities/agent-harness-architecture]]
+
+## 关联
+
+- 被比对象：[[concepts/harness-tool-design-evolution]]（嵌入近邻锚点，提案卡 #13 批1）
+- 被比对象：[[concepts/claude-code-source-leak-lifecycle]]（嵌入近邻锚点，提案卡 #13 批1）

@@ -2,7 +2,7 @@
 title: "开启Harness Engineering探索之旅"
 type: entity
 created: "2026-07-01"
-updated: "2026-07-15"
+updated: 2026-09-10
 tags: [wechat, ai, harness-engineering, agent, specworker, ai-coding, devops]
 provenance_state: inferred
 rating: v9c9
@@ -102,3 +102,7 @@ SpecWorker的管线设计体现了一个核心工程判断：**AI工作流编排
 - AI原生工程
 
 → [[raw/articles/开启harness-engineering探索之旅|原文存档]]
+
+## 关联
+
+- 同题异语种孪生页：[[entities/harness-engineering-exploration-tencent-tech]]（归并候选，提案卡 #11 批1）

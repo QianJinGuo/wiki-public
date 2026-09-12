@@ -1,7 +1,7 @@
 ---
 title: "AI 任务调度 + Agent Sandbox 动态休眠/唤醒：阿里云 MSE 让 Agent 成本下降 90% 的运行时方案"
 created: 2026-06-05
-updated: 2026-08-29
+updated: 2026-09-10
 type: concept
 tags: [ai-task-scheduling, agent-sandbox, dynamic-hibernate, microvm, kubernetes, aliyun-mse, openclaw, hermes-agent, schedulerx, cost-optimization, runtime-decoupling, multi-agent-orchestration, prompt-self-evolution]
 sources:
@@ -201,6 +201,9 @@ description: 基于阿里云中间件 MSE 团队 2026-06-05 官方发布的合�
 
 
 → [[raw/articles/aliyun-mse-ai-task-scheduling-agent-sandbox-cost-90-percent|原文存档]]
+
+- 母体实体：[[entities/aliyun-mse-ai-task-scheduling-agent-sandbox-cost-90-percent]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/sandboxing-an-ai-agent]]（嵌入近邻锚点，提案卡 #12 批1）
 
 ## 所属 MOC
 

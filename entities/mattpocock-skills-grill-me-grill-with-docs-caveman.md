@@ -166,3 +166,7 @@ Agent 加速编码也加速软件熵。zoom-out（理解系统位置）和 impro
 - **setup = 项目配置**：setup-matt-pocock-skills 不是安装向导，而是建立 Agent 可读的项目配置（issue tracker/标签/文档位置），让其他 skill 消费这些约束
 - **Ubiquitous Language for Agent**：CONTEXT.md 定义了统一术语（Issue/Issue tracker/Triage role），既是人类协作语言也是 Agent 协作语言
 - **Codex 启发**：AGENTS.md 当路标而非百科；高频工程动作做成 skill；skill 消费项目事实而非泛泛提示；保留人的控制权
+
+## 关联
+
+- 同题异语种孪生页：[[entities/2026-06-20-打造真实项目的-AI-编程环境-Matt-Pocock-的-Skill-工作流完-技术极简主义]]（归并候选，提案卡 #11 批1）

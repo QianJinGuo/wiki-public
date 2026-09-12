@@ -1,7 +1,7 @@
 ---
 title: Cloud AI Infrastructure
 created: 2026-05-21
-updated: 2026-08-01
+updated: 2026-09-10
 type: concept
 tags: [cloud, ai-infrastructure, aws, azure, multi-tenant, workflow, genai]
 sources: [raw/articles/Microsoft-for-Startups-Microsoft-v2, raw/articles/amazon-cloudfront-deploy-guide-cloudfront-domain-multi-tenant-architecture, raw/articles/aws-bedrock-halliburton-seismic-workflow-genai, raw/articles/5237660-1]
@@ -117,6 +117,13 @@ provenance_state: merged
 -  — 替代/补充方案
 -  — 替代/补充方案
 
+- 母体实体：[[entities/built-technologies-ai-document-intelligence-2026]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/build-ai-agents-for-business-intelligence-with-amazon-bedrock-agentcore]]（嵌入近邻锚点，提案卡 #12 批1）
+
 ## 所属 MOC
 
 - [[moc/amazon-aws-ai|Amazon Aws Ai]]
+
+## 相关 MOC
+
+- [[moc/aws-cloud-ai-infrastructure|AWS 云 AI 基础设施地图]] — 本概念的主题 hub，含簇内实体与学习路径

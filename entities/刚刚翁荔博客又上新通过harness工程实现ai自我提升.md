@@ -1,7 +1,7 @@
 ---
 title: "刚刚，翁荔博客又上新：通过Harness工程实现AI自我提升"
 created: 2026-07-08
-updated: 2026-08-01
+updated: 2026-09-10
 type: entity
 tags: [harness-engineering, self-improvement, lilian-weng, agent, rsi, context-engineering]
 sources:
@@ -105,4 +105,6 @@ Weng 将"弱且模糊的评估者"列为七大挑战之首，这一判断切中�
 ## 关联
 - 相关概念: [[concepts/harness-engineering-framework|Harness Engineering]]
 - 相关: Agent 架构
+- 同题异语种孪生页：[[entities/harness-engineering-self-improvement-survey-lilian-weng]]（归并候选，提案卡 #11 批1）
+
 

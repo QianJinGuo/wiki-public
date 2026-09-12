@@ -1,7 +1,7 @@
 ---
 title: "Lost in the Middle 长上下文注意力衰减"
 created: 2026-06-30
-updated: 2026-08-01
+updated: 2026-09-10
 type: concept
 tags: [concept, llm, attention, context-window, rag, long-context]
 sources: []
@@ -49,3 +49,7 @@ Stanford 和 UC Berkeley 的 Nelson F. Liu 等人在 2023 年论文 "Lost in the
 ## 所属 MOC
 
 - [[moc/memory-context-systems|Memory Context Systems]]
+
+## 关联
+
+- 母体实体：[[entities/attention-collapse-context-management]]（嵌入近邻锚点，提案卡 #12 批1）

@@ -5,7 +5,7 @@ type: entity
 tags: [agent, harness, long-term-task, orchestration]
 sources: [raw/articles/harness-engineering-让-coding-agent-可靠完成长程任务]
 created: 2026-05-10
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 7
 review_confidence: 8.333333333333334
 review_recommendation: worth-reading
@@ -50,3 +50,7 @@ moc_rebuilt: 2026-09-07
 
 ## 延伸导航
 - [[moc/agent-engineering-guide|Agent 工程全景指南]]
+
+## 关联
+
+- 同题异语种孪生页：[[entities/harness-engineering-reliable-long-term-agent]]（归并候选，提案卡 #11 批1）

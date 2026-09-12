@@ -2,7 +2,7 @@
 title: "Harness Engineering - 让 Coding Agent 可靠完成长程任务"
 type: entity
 created: 2026-05-10
-updated: 2026-09-07
+updated: 2026-09-10
 tags: [harness, engineering, coding-agent, long-term, reliability]
 sources:
   - raw/articles/harness-engineering-让-coding-agent-可靠完成长程任务
@@ -48,3 +48,11 @@ moc_rebuilt: 2026-09-07
 - [[entities/claude-code-multi-agent-harness-source-analysis|Claude Code 多 Agent Harness 源码拆解：留纸条、抠上下文、抠缓存、捆手脚]] — 留纸条抠上下文
 - [[entities/qunar-ai-coding-large-core-system-refactor-2026|去哪儿 AI Coding 驱动大型核心系统重构 — Harness+Loop+Task 工程化方法论]] — 15万行重构提效70%：Harness约束+Loop推进
 - [[entities/ai-native-sdlc-playbook-anthropic|AI Native SDLC Playbook：Anthropic 应用 AI 团队的软件开发生命周期重构方法论]] — SDLC六阶段重构
+
+## 关联
+
+- 同题异语种孪生页：[[entities/harness-engineering-让-coding-agent-可靠完成长程任务-v2]]（归并候选，提案卡 #11 批1）
+- 同题异语种孪生页：[[entities/agent架构关键变化harness正在成为新后端]]（归并候选，提案卡 #11 批1）
+- 同题异语种孪生页：[[entities/harness-engineering耗时一周我是如何将应用的ai-coding率提升至90的]]（归并候选，提案卡 #11 批1）
+
+

@@ -1,7 +1,7 @@
 ---
 title: "PhoneWorld 规模化 Mobile Agent 环境：腾讯混元+港中深+人大+武大 从真实 App 重建可训练 mock Android 世界（arxiv 2605.29486）"
 created: 2026-06-05
-updated: 2026-08-29
+updated: 2026-09-10
 type: concept
 tags: [phoneworld, arxiv-2605-29486, mobile-agent, tencent-hunyuan, mock-android-app, gui-agent, androidworld, androidcontrol, hymobilebench, scaling-environments, agent-training-infrastructure, prd-generation, kotlin-jetpack-compose, agent-environment, mock-app-vs-real-app, hy3, real-trajectory-to-mock, task-verifier, kuaishou-prd]
 sources:
@@ -203,6 +203,8 @@ PhoneWorld 真正回答的不是"能不能造一个 App"，而是：
 
 
 → [[raw/articles/phoneworld-mobile-agent-scaling-mock-environments-tencent-hunyuan-arxiv-2605-29486|原文存档]]
+
+- 母体实体：[[entities/phoneworld-mobile-agent-scaling-mock-environments-tencent-hunyuan-arxiv-2605-29486]]（嵌入近邻锚点，提案卡 #12 批1）
 
 ## 所属 MOC
 

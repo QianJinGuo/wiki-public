@@ -1,7 +1,7 @@
 ---
 title: Routa Harness 可视化：Vibe Coding 时代的工程可控性
 created: 2026-05-07
-updated: 2026-08-01
+updated: 2026-09-10
 type: concept
 tags: [harness, routa, vibe-coding, engineering-governance, feedback-loop, lifecycle]
 related:
@@ -153,6 +153,9 @@ Routa 的 trace 可视化在此扮演的角色是**让信息传递路径可观�
 - [[entities/routa-harness-engineering-visualization]] — 替代/补充方案
 - [[entities/tencent-cdn-lego-harness]] — 替代/补充方案
 -  — 替代/补充方案
+
+- 母体实体：[[entities/从vibe-coding到harness-一套大仓ai工程化实战]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/vibe-coding-ai-software-engineering]]（嵌入近邻锚点，提案卡 #12 批1）
 
 ## 所属 MOC
 

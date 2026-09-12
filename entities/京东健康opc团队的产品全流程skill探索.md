@@ -2,7 +2,7 @@
 
 title: "京东健康OPC团队的产品全流程Skill探索"
 created: 2026-07-05
-updated: 2026-08-01
+updated: 2026-09-10
 type: entity
 tags: [ai, agent, llm]
 sources: [raw/articles/京东健康opc团队的产品全流程skill探索]
@@ -121,4 +121,6 @@ Anthropic 的做法不是让团队手工整理一份完整报告后再交给 AI�
 ## 关联
 - 相关概念: [[concepts/harness-engineering-framework|Harness Engineering]]
 - 相关: Agent 架构
+- 同题异语种孪生页：[[entities/jd-health-opc-skill-full-process]]（归并候选，提案卡 #11 批1）
+
 

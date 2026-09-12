@@ -1,7 +1,7 @@
 ---
 title: "一文看懂 AI 编程智能体工程化新范式：Loop Engineering"
 created: 2026-07-11
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [loop-engineering, agent, ai-coding, engineering, automation, workflow, sub-agent]
 source_url: ""
@@ -67,3 +67,9 @@ Loop Engineering 并没有让工程师消失——它只是把工程师的工作
 - [[entities/ant-group-medical-agent-afu]] — 蚂蚁医疗 Agent 的 Harness Engineering，对比 Loop 架构的适用边界
 
 → [[raw/articles/一文看懂-ai-编程智能体工程化新范式loop-engineering|原文存档]]
+
+## 关联
+
+- 同题异语种孪生页：[[entities/一文看懂-ai-编程智能体工程化新范式loop-engineering]]（归并候选，提案卡 #11 批1）
+- 同题异语种孪生页：[[entities/2026-06-12-一文看懂-AI-编程智能体工程化新范式-Loop-Engineering-技术极简主义]]（归并候选，提案卡 #11 批1）
+

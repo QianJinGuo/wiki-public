@@ -1,7 +1,7 @@
 ---
 title: "vibe coding 编程范式"
 created: 2026-06-12
-updated: 2026-08-01
+updated: 2026-09-10
 type: concept
 tags: [concept, vibe-coding, karpathy, software-3-0, ai-coding, paradigm]
 sources: [entities/karpathy-vibe-coding-agentic-engineering, entities/karpathy-vibe-coding-to-agentic-engineering, entities/karpathy-最新访谈从-vibe-coding-到-agentic-engineering]
@@ -69,3 +69,10 @@ vibe coding 真正的正确用法是作为 agentic engineering 的前置探索�
 ## 所属 MOC
 
 - [[moc/layer-0-foundation|Layer 0 Foundation]]
+
+## 关联
+
+- 母体实体：[[entities/vibe-coding-ai-software-engineering]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/karpathy-vibe-coding-agentic-engineering-v4]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/erik-schluntz-vibe-coding-in-production]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/impeccable-vibe-design-philosophy-anomaly]]（嵌入近邻锚点，提案卡 #12 批1）

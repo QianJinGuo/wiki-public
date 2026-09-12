@@ -2,7 +2,7 @@
 
 title: "任何错误只犯一次：TencentDB Agent Memory 的团队记忆实践"
 created: 2026-08-30
-updated: 2026-08-30
+updated: 2026-09-10
 type: entity
 tags: ['harness', 'context', 'ai', 'coding', 'agent']
 sources: [raw/articles/任何错误只犯一次tencentdb-agent-memory-的团队记忆实践]
@@ -58,3 +58,7 @@ OPC 并没有消灭协作，而是把大量人际协作改写成一个人与多�
 最危险的情况往往不是两个人有明显相反的习惯，而是工作分支上存
 
 → [[raw/articles/任何错误只犯一次tencentdb-agent-memory-的团队记忆实践|原文存档]] ^[raw/articles/任何错误只犯一次tencentdb-agent-memory-的团队记忆实践.md]
+
+## 关联
+
+- 同题异语种孪生页：[[entities/tencentdb-agent-memory-hierarchical]]（归并候选，提案卡 #11 批1）

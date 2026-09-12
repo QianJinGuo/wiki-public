@@ -1,7 +1,7 @@
 ---
 title: "LLM Wiki 知识范式"
 created: 2026-06-12
-updated: 2026-08-01
+updated: 2026-09-10
 type: concept
 tags: [concept, llm-wiki, karpathy, knowledge-base, obsidian, paradigm]
 sources: [entities/karpathy-llm-wiki-v2-2026, entities/karpathy-llm-wiki-second-brain-awkthole, entities/llm-wiki-architecture]
@@ -67,3 +67,9 @@ Karpathy 本人的 MenuGen 项目展示了 Software 3.0 思路和 LLM Wiki 思�
 ## 所属 MOC
 
 - [[moc/layer-0-foundation|Layer 0 Foundation]]
+
+## 关联
+
+- 母体实体：[[entities/llm-wiki-knowledge-management]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/rag-vs-llm-wiki-enterprise-knowledge-base]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/llm-wiki-architecture-karpathy-markdown-knowledge-base]]（嵌入近邻锚点，提案卡 #12 批1）

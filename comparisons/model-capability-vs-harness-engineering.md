@@ -1,7 +1,7 @@
 ---
 title: 模型能力 vs Harness Engineering：两论点对抗
 created: 2026-09-05
-updated: 2026-09-05
+updated: 2026-09-10
 type: comparison
 tags: [harness-engineering, model-capability, debate, agent, evaluation]
 confidence: 0.75
@@ -49,3 +49,9 @@ contradicted_by: []
 ## 检索入口
 
 正方：[[concepts/harness-engineering-framework]] · [[moc/coding-agent-practice]] ｜ 反方：[[concepts/when-not-to-harness-engineering]] · [[queries/negative-results-registry]] ｜ 中立机制：[[concepts/claim-half-life]] · [[concepts/eval-optimizer-firewall]]
+
+## 关联
+
+- 被比对象：[[concepts/harness-engineering-paradigm-shift]]（嵌入近邻锚点，提案卡 #13 批1）
+- 被比对象：[[concepts/agent-harness-engineering-paradigm]]（嵌入近邻锚点，提案卡 #13 批1）
+- 被比对象：[[concepts/evaluation-harness-design]]（嵌入近邻锚点，提案卡 #13 批1）

@@ -1,7 +1,7 @@
 ---
 title: "深入理解 Claude Code 源码中的 Agent Harness 构建之道"
 created: 2026-06-11
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [claude-code, harness, agent-architecture, open-source, anthropic, source-code]
 sources: [raw/articles/深入理解-claude-code-源码中的-agent-harness-构建之道-v2.md]
@@ -49,3 +49,13 @@ moc_rebuilt: 2026-09-07
 ## 延伸导航
 - [[moc/claude-code-complete-guide|Claude Code 生态完全指南]]
 - [[moc/loop-engineering|Loop Engineering 主题地图 (MOC)]]
+
+## 关联
+
+- 同题异语种孪生页：[[entities/claude-code-harness-deep-dive-founder-park]]（归并候选，提案卡 #11 批1）
+- 同题异语种孪生页：[[entities/claude-code-prompt-context-harness]]（归并候选，提案卡 #11 批1）
+- 同题异语种孪生页：[[entities/claude-managed-agents-developer-guide]]（归并候选，提案卡 #11 批1）
+- 同题异语种孪生页：[[entities/claude-code-harness-deep-understanding]]（归并候选，提案卡 #11 批1）
+
+
+

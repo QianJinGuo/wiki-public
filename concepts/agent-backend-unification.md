@@ -1,7 +1,7 @@
 ---
 title: Agent 与后端统一架构
 created: 2026-04-30
-updated: 2026-08-01
+updated: 2026-09-10
 type: concept
 tags: [architecture, agent, backend, infrastructure]
 related:
@@ -350,6 +350,11 @@ trace_id: abc123
 - [[entities/design-patterns-for-ai-agents-2026]] — 替代/补充方案
 - [[entities/iii-dev]] — 替代/补充方案
 - [[entities/thin-harness-fat-skills]] — 替代/补充方案
+
+- 母体实体：[[entities/2026-05-01-Harness-即后端-当Agent基础设施消解于统一原语-unknown]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/harness-即后端当agent基础设施消解于统一原语]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/agent-harness-architecture-design-production-guide]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/agent-harness-production]]（嵌入近邻锚点，提案卡 #12 批1）
 
 ## 所属 MOC
 

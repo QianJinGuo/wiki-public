@@ -1,7 +1,7 @@
 ---
 title: Hermes-Agent
 created: 2026-04-24
-updated: 2026-08-01
+updated: 2026-09-10
 type: concept
 tags: [open-source, agent, nous-research, self-evolving, cron-scheduler, skill-system, memory, persistent-process, hermes, session-management, message-gateway]
 sources: ['raw/articles/agent-tools-research']
@@ -259,6 +259,17 @@ Hermes 既不是纯工具框架（OpenClaw）也不是纯托管平台（AgentCor
 **平行协作**:
 - [[entities/harness不是目的知识才是护城河-一个ai工程交付团队的知识沉淀实践]] — 替代/补充方案
 - [[entities/harness不是目的知识才是护城河-一个ai工程交付团队的知识沉淀实践]] — 替代/补充方案
+
+- 母体实体：[[entities/hermes-agent-memory-system-vs-openclaw]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/agent-tools-research]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/hermes-agent-deep-dive]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/hermes-agent-vs-openclaw-comparison]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/hermes-agent-self-evolving-source-analysis]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/hermes-agent-memory-system-openclaw-comparison]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/hermes-agent-closed-learning-loop]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/hermes-agent-12-layer-full-configuration-guide]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/hermes-agent-loop-source-code-anatomy]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/hermes-observability-aliyun]]（嵌入近邻锚点，提案卡 #12 批1）
 
 ## 所属 MOC
 

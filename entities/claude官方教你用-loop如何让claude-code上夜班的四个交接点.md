@@ -1,7 +1,7 @@
 ---
 title: "Claude官方教你用 Loop：如何让Claude Code上夜班的四个交接点"
 created: 2026-07-05
-updated: 2026-08-01
+updated: 2026-09-10
 type: entity
 tags: [claude-code, loop-engineering, agent, coding-agent, skill, goal, schedule, routine, dynamic-workflow, ai-engineering, harness-engineering]
 sources: [raw/articles/claude官方教你用-loop如何让claude-code上夜班的四个交接点]
@@ -110,6 +110,10 @@ Dynamic workflows 是官方博客中最容易被低估的部分。它把编排�
 - [[entities/agent落地真相-协议-成本与进化-关于智能体从能跑通到能投产的讨论|Agent 落地真相]] — Agent 从可用到可靠的生产化路径
 - [[entities/skill-hub-mvp-evaluation-rollback-release|Skill Hub MVP 评估与发布]] — Skill 生命周期管理的工程实践
 - [[entities/skill-orchestration-6-dependencies|Skill 编排的六大依赖]] — Skill 间的依赖与编排模式
+
+- 同题异语种孪生页：[[entities/claude-code-loop-types-official-taxonomy-four-modes]]（归并候选，提案卡 #11 批1）
+
+- 同题异语种孪生页：[[entities/claude-code-loop-control-rights-four-levels]]（归并候选，提案卡 #11 批1）
 
 ## 退出
 

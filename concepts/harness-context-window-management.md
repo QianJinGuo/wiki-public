@@ -1,7 +1,7 @@
 ---
 title: "harness 上下文窗口管理"
 created: 2026-06-12
-updated: 2026-08-29
+updated: 2026-09-10
 type: concept
 tags: [concept, harness, context-management, working-set, agent, context-engineering]
 sources: [entities/agent-harness-context-management-working-set, entities/harness-engineering, entities/agent-harness-architecture]
@@ -80,3 +80,7 @@ Anthropic 官方提出的 Context Engineering 五大实战模式（Anthropic 官
 
 - [[moc/layer-2-interaction|Layer 2 Interaction]]
 - [[moc/layer-4-ecosystem|Layer 4 Ecosystem]]
+
+## 关联
+
+- 母体实体：[[entities/harness-design-long-running-apps]]（嵌入近邻锚点，提案卡 #12 批1）

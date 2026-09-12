@@ -1,7 +1,7 @@
 ---
 title: "AI Agent 落地：如何攻克稳定性、成本与评估难题？ — Trace即Evals"
 created: 2026-07-01
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [agent, evaluation, trace, harness, observability, evals]
 source: "[[raw/articles/ai-agent-trace-evals-stability-cost-evaluation-zhangyanfei]]"
@@ -11,6 +11,7 @@ review_value: 8
 review_confidence: 9.2
 sources:
   - raw/articles/ai-agent-trace-evals-stability-cost-evaluation-zhangyanfei
+  - raw/articles/only-pass-deceives-you-coding-agent-trace-eval-evot-databend-2026-09-10
 reviewed: 2026-09-07
 review_verdict: keep
 review_category: practice
@@ -58,6 +59,46 @@ Databend 对此的应对方案具有很强的工程参考价值：基于对象�
 
 
 这个发现对 Agent 工程有深远影响。它意味着 Agent 的优化不能只看"最终成功与否"，而应该关注"每一步的选择质量"。通过在关键分叉点埋入诊断逻辑，系统可以自动识别"模型在第几步开始走偏"、"哪一类工具选择更容易导致绕路"。这些分叉点数据不仅是调试工具，更是模型训练的核心燃料——它们揭示了模型在当前 Harness 中的行为弱点，为针对性强化学习提供了精准的目标信号。 ^[raw/articles/ai-agent-trace-evals-stability-cost-evaluation-zhangyanfei.md]
+
+## 六条 Session 实证：只看 PASS 会骗你（evot.ai / Databend，2026-09-10）
+
+张雁飞「Trace 即 Evals」命题在同年 9 月有了同平台的量化实证——同一评测平台（trace.evot.ai）对 Evot / Pi / DeepSeek Harness 三个 Harness × GPT-6-Astra / Claude-Fable-5.1 两个模型跑同一任务（修复 serde-rs/json issue #979），逐条比对模型请求、工具调用与验证过程。本页前述内容是「为什么必须要 Trace」，本节补上「Trace 具体把哪些汇总指标看不见的成本拆了出来」。^[raw/articles/only-pass-deceives-you-coding-agent-trace-eval-evot-databend-2026-09-10.md]
+
+### 前提校准：提示已经给出方案时，PASS 与补丁一致性失去区分力
+
+六次运行**全部通过完整测试、核心补丁逐字节相同**。但任务提示已指出根因位置与修复方向（明确写了「先 peek 下一个非空白字节再分支」）——**提示把修复方案说得这么近时，PASS 率和补丁一致性很难再区分模型**，Session 里的执行过程更有参考价值。这一条是对本页「只看最终结果无法定位根因」的实证加固：连「完全相同的结果」都不代表「相同的工程行为」。^[raw/articles/only-pass-deceives-you-coding-agent-trace-eval-evot-databend-2026-09-10.md]
+
+### 反作弊环境设计（本页原缺的可复用工程约束）
+
+模型获取修复方案有三条路：读代码与失败测试、去外网查资料、从 Git 历史翻官方补丁。后两条在本实验里被封死：^[raw/articles/only-pass-deceives-you-coding-agent-trace-eval-evot-databend-2026-09-10.md]
+
+- **执行阶段断网**：容器启动时写入出站网络规则，只放行 loopback、已建立连接与容器内 LLM 代理进程，其他出站一律拒绝；规则生效后移除进程的 `NET_ADMIN` 与 `NET_RAW` 能力——**Agent 即使以 root 运行也改不了网络规则**。
+- **Git 历史裁剪**：issue #979 的官方修复位于本次锁定 commit 之后，完整历史里一条 `git log --all` 就能把补丁翻出来。准备阶段删除全部 tag/remote/分支、清空 reflog、执行 gc，最后**检查基准 commit 之后还有无可达提交，检查失败则整次运行不开始**。
+- **验证阶段同样离线**：只有拉取依赖的准备阶段允许联网，依赖在 Agent 启动前准备好。
+
+结果是信息来源被收得很窄：模型只能读当前代码和那条失败的回归测试。^[raw/articles/only-pass-deceives-you-coding-agent-trace-eval-evot-databend-2026-09-10.md]
+
+### Trace 拆出的四类「diff 看不见」的成本
+
+**① 工具能力声明与运行环境不一致（六次全中）。** 六条 Session 第一条命令都是用 `rg` 搜索、都返回 `command not found`，然后下一回合改用 `grep`。原因是 **Evot 与 Pi 的系统提示把 `ls`/`rg`/`find` 当例子建议模型用 bash 操作文件，而评测镜像没装 ripgrep**——Harness 告诉模型工具可用、运行环境给不出来，每条 Session 白花一个回合。此事与离线模式无关（基础镜像安装清单本就没有 ripgrep；离线只限制网络）。**最终 diff 看不见、PASS 率不受影响，但批量跑时每条任务固定多一次无效调用、账单持续累加。**^[raw/articles/only-pass-deceives-you-coding-agent-trace-eval-evot-databend-2026-09-10.md]
+
+**② Harness 工具名兼容性直接改变执行成本。** Claude 在 Pi 上前四步有三步没推进任务（12 回合里摩擦占 3 个 = 25%）：第一步 `Read`、第二步 `Bash` 都因 **Pi 不接受首字母大写工具名**而失败，第三步改小写读到文件，第四步撞 ripgrep 缺失，第五步换 `grep` 才继续。**Evot 接受大写工具名**——同一个模型带同样调用习惯，换个 Harness 就多花两个回合。这为本页「工具名称大小写会造成下一个 token 预测偏差并在多步执行中放大」提供了具体账目。^[raw/articles/only-pass-deceives-you-coding-agent-trace-eval-evot-databend-2026-09-10.md]
+
+**③ 上下文压缩与重复生成被错误归给模型。** Claude 在 DSH 上 14 个回合中 1 次由 Harness 生成会话标题、10 次用于修复、尾部 3 次异常：第 11 步生成最终答复（4,070 token）→ 第 12 步**触发上下文压缩**（1,980 token，耗时 25.7 秒，为六条 Session 中最慢的一次模型调用）→ 第 13 步**重新生成同一份最终答复**（再 4,070 token）。整条 Session 输出 10,120 token，重复答复 4,070 + 压缩 1,980 = **6,050 token（60%）没有推进任务**。**若只看汇总很容易得出「Claude 输出太长」的结论**；Trace 把来源拆开后可见这 6,050 来自 Harness 的上下文管理，**模型成本与框架附加成本必须分开统计**。补充：GPT 在 DSH 上同样请求过一次会话标题但未触发压缩——相同 Harness 只压缩了 Claude 的 Session（上下文长度可能刚好越过阈值，也可能 Claude 的输出习惯让上下文增长更快；现有数据无法确定原因，但可确认压缩成本会随模型行为变化）。^[raw/articles/only-pass-deceives-you-coding-agent-trace-eval-evot-databend-2026-09-10.md]
+
+**④ 完成时间必须拆成模型延迟与工具时间。** Claude 在 Pi 上总耗时 135.4 秒，但模型延迟 91.8 秒反而低于它在 DSH 的 110.1 秒——剩余 43.6 秒花在工具执行（占总时长 32%，基本可判断是在等编译）。**只看完成时间很容易把锅扣给模型；拆开后问题落到工具链。** 稳定性维度：GPT 三条 Session 落在 50.2–55.4 秒（差 5.2 秒），Claude 是 94.0–135.4 秒（差 41.4 秒）——生产排期与超时配置必须为这种波动留空间。^[raw/articles/only-pass-deceives-you-coding-agent-trace-eval-evot-databend-2026-09-10.md]
+
+### 模型行为差异：直接命中 vs 谨慎审查
+
+GPT-6-Astra 在三个 Harness 上路径几乎一样（找目标函数 → 读两个文件 → 改代码 → 跑完整 `cargo test` → 检查 diff），无重复读取、无额外测试矩阵，最终报告仅 77–101 token，工具调用数 7/9/7。Claude-Fable-5.1 补丁相同但动代码前花更多精力检查兼容性：Evot 上额外搜索已有错误测试并解释 `MapKey` 为何不能直接复用（`MapKey` 会处理从带引号字符串解析数字等额外行为，直接换可能改变 enum variant 现有语义）；Pi 上验证范围最完整（临时建测试文件检查非法数组 key/非法数字 key、空对象、截断输入、正常字符串与带空白输入，验证后删除临时文件）。**结论是场景化的而非排名式的**：解析器、安全边界或兼容性敏感的代码值得这样多查几遍（如金融系统序列化逻辑），代价是更多源码阅读、更长解释与更多模型回合。汇总数字：**Claude 比 GPT 多用 44% 模型回合、输出 token 多 9.6 倍、耗时多 2.3 倍**。^[raw/articles/only-pass-deceives-you-coding-agent-trace-eval-evot-databend-2026-09-10.md]
+
+### 七条评测习惯修正（可直接复用）
+
+作者跑完六条 Session 后修正的评测习惯：①**同任务、同版本、同一天运行**（模型/Harness/依赖版本都会变，时间错开可比性很快消失）；②**把「不能抄」写进环境约束**（断外网 + 裁掉含答案的仓库历史 + 检查裁剪结果；缺这些限制，实验可能测到的是搜索能力，Benchmark 高分也可能来自训练数据里见过相似题）；③**每个组合至少跑 3 次并报告分布**（一次运行无法说明稳定性）；④**先查 token 上报口径再算成本**（本次一个模型把输入全部报成 0、另一个把中间请求的输出全部报成 0——口径没核对成本计算一定错）；⑤**完成时间拆成模型延迟与工具时间**；⑥**完整 Trace 要留下**（diff 能说明改了什么，Trace 能还原它怎么改，工程决策经常更关心后者）；⑦**不同任务类型分开统计**（小补丁与跨模块重构会表现不同习惯）。^[raw/articles/only-pass-deceives-you-coding-agent-trace-eval-evot-databend-2026-09-10.md]
+
+### 存储量级估算与「先沉数据」的结论
+
+实验侧数据集很小（50 条 Session / 14 个模型 / 4 种 Harness，合计不到 1 GB，几份 JSON + 一段脚本够用）；但**评测仓库里一条 Coding Session 中位存储量 5.7 MB、最大 32 MB**，保存每次模型请求的完整输入输出、工具调用与返回值，还保留原始流式响应，一条 Session 通常几十次请求、最长 86 次。基于此的推算：**每天 1,000 条 Session ≈ 8 GB/天，10,000 条 ≈ 80 GB/天，一年约 30 TB**；需要支撑的查询类型为「按模型/Agent 版本/任务类型聚合成功率与成本」「从会话汇总下钻到某一次工具调用」「跨 Session 搜索工具名不匹配与重复调用等模式」「保留完整原始上下文供回放复核」。这从存储侧印证本页「先把数据沉下来、原始 Trace 长期保留」的架构主张：几百 MB 时脚本与文件更合适，每天上万条时存储费用与查询延迟才会成为问题。^[raw/articles/only-pass-deceives-you-coding-agent-trace-eval-evot-databend-2026-09-10.md]
 
 ## 实践启示
 

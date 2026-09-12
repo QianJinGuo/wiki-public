@@ -1,7 +1,7 @@
 ---
 title: "Claude Code vs OpenClaw：两种 Agent 范式对比"
 created: 2026-06-12
-updated: 2026-06-12
+updated: 2026-09-10
 type: comparison
 tags: [comparison, claude-code, openclaw, agent, coding, paradigm]
 sources: [entities/claude-code-core-internals, entities/openclaw-完全指南这可能是全网最新最全的系统化教程了32w字建议收藏]
@@ -34,3 +34,9 @@ Claude Code 是「单 Agent 做深」的代表，适合个人/小团队和明确
 
 - [[entities/claude-code-core-internals]]
 - [[entities/openclaw-完全指南这可能是全网最新最全的系统化教程了32w字建议收藏]]
+
+## 关联
+
+- 被比对象：[[concepts/claude-code-source-leak-lifecycle]]（嵌入近邻锚点，提案卡 #13 批1）
+- 被比对象：[[concepts/subagent-spawning-pattern]]（嵌入近邻锚点，提案卡 #13 批1）
+- 被比对象：[[concepts/coding-agent-architecture]]（嵌入近邻锚点，提案卡 #13 批1）

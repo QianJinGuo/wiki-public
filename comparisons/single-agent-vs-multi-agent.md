@@ -1,7 +1,7 @@
 ---
 title: "单 Agent vs 多 Agent 系统选择"
 created: 2026-06-12
-updated: 2026-06-12
+updated: 2026-09-10
 type: comparison
 tags: [comparison, single-agent, multi-agent, tradeoff, architecture, selection]
 sources: [entities/openclaw-完全指南这可能是全网最新最全的系统化教程了32w字建议收藏, entities/claude-code-core-internals, entities/agent-harness-architecture]
@@ -35,3 +35,9 @@ sources: [entities/openclaw-完全指南这可能是全网最新最全的系统�
 - [[entities/openclaw-完全指南这可能是全网最新最全的系统化教程了32w字建议收藏]]
 - [[entities/claude-code-core-internals]]
 - [[entities/agent-harness-architecture]]
+
+## 关联
+
+- 被比对象：[[concepts/coding-agent-architecture]]（嵌入近邻锚点，提案卡 #13 批1）
+- 被比对象：[[concepts/agent-orchestration-patterns]]（嵌入近邻锚点，提案卡 #13 批1）
+- 被比对象：[[concepts/ai-agent-patterns]]（嵌入近邻锚点，提案卡 #13 批1）

@@ -1,7 +1,7 @@
 ---
 title: Claude Code 架构深度分析
 created: 2026-05-07
-updated: 2026-08-30
+updated: 2026-09-10
 type: concept
 tags: [claude-code, architecture, agent-harness]
 sources: ['raw/articles/claude-code-deep-architecture-analysis']
@@ -271,6 +271,8 @@ Claude Code splits budget management into **four independent control dimensions*
 - [[entities/claude-code-source-architecture]] — 替代/补充方案
 - [[entities/ai-agent-tool-count-trap]] — 替代/补充方案
 - [[entities/openclaw-security-and-feature-enhancement-practices]] — 替代/补充方案
+
+- 母体实体：[[entities/claude-code-deep-architecture-analysis]]（嵌入近邻锚点，提案卡 #12 批1）
 
 ## 所属 MOC
 

@@ -1,7 +1,7 @@
 ---
 title: Harness Engineering 七层框架
 created: 2026-05-07
-updated: 2026-08-01
+updated: 2026-09-10
 type: concept
 tags: [harness-engineering, openclaw, hermes, claude-code, framework]
 related:
@@ -143,6 +143,10 @@ Harness 设计再完善，生产环境中仍会遭遇七类典型失效模式，
 - [[entities/claude-opus-4-7-launch]] — 替代/补充方案
 - [[entities/imclaw通过微信飞书操控claude-code-coodex-gemini-clipi-agent蜂群]] — 替代/补充方案
 - [[entities/hermes-agent-deep-dive]] — 替代/补充方案
+
+- 母体实体：[[entities/harness-engineering-systematic-framework]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/harness-engineering-exploration-tencent-tech]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/harness-engineering-让-coding-agent-可靠完成长程任务-v2]]（嵌入近邻锚点，提案卡 #12 批1）
 
 ## 所属 MOC
 

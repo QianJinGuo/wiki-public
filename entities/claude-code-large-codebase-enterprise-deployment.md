@@ -6,7 +6,7 @@ sources: [raw/articles/claude-code-large-codebase-enterprise-deployment-anthropi
 review_confidence: 8
 tags: [anthropic, claude-code, enterprise-deployment, large-codebase, harness]
 created: "2026-05-18"
-updated: 2026-09-07
+updated: 2026-09-10
 provenance_state: inferred
 reviewed: 2026-09-07
 review_verdict: hub-retained
@@ -49,3 +49,7 @@ moc_rebuilt: 2026-09-07
 ## 延伸导航
 - [[moc/claude-code-complete-guide|Claude Code 生态完全指南]]
 - [[moc/loop-engineering|Loop Engineering 主题地图 (MOC)]]
+
+## 关联
+
+- 同题异语种孪生页：[[entities/两万字详解claude-code源码核心机制]]（归并候选，提案卡 #11 批1）

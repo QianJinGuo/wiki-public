@@ -4,7 +4,7 @@ title: "Harness工程火遍硅谷，AgentCore今天交卷!"
 type: entity
 tags: [agent, api, browser, context, harness, openai, prompt]
 created: 2026-05-21
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/agentcore-managed-harness]
@@ -48,3 +48,7 @@ moc_rebuilt: 2026-09-07
 
 ## 延伸导航
 - [[moc/agent-engineering-guide|Agent 工程全景指南]]
+
+## 关联
+
+- 同题异语种孪生页：[[entities/agent架构关键变化harness正在成为新后端]]（归并候选，提案卡 #11 批1）

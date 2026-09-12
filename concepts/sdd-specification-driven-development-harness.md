@@ -1,7 +1,7 @@
 ---
 title: SDD + Harness 团队级 AI 研发范式
 created: 2026-05-07
-updated: 2026-08-01
+updated: 2026-09-10
 type: concept
 tags: ['sdd', 'harness', 'aicoding', 'specificationdriven', '高德', 'qoder']
 related:
@@ -199,6 +199,10 @@ SDD+Harness 模式在第 1-3 个月处于**投入期**：规范建设、Harness 
 - [[entities/pi-agent-framework]] — 替代/补充方案
 -  — 替代/补充方案
 -  — 替代/补充方案
+
+- 母体实体：[[entities/gaode-sdd-harness-team-ai-coding-paradigm-ibjfu]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/harness-sdd-duiwu-ai-fullstack-dewux]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/告别氛围编程基于-harness-治理和-sdd-的团队级-ai-研发范式演进与实践]]（嵌入近邻锚点，提案卡 #12 批1）
 
 ## 所属 MOC
 

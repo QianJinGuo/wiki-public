@@ -1,7 +1,7 @@
 ---
 title: Claude Code 源码级生命周期解析
 created: 2026-05-07
-updated: 2026-08-01
+updated: 2026-09-10
 type: concept
 tags: [claude-code, source-leak, agent-harness, query-loop, context-assembly, permission-system, tool-execution, async-generator]
 related:
@@ -186,6 +186,36 @@ DeepSeek V4 的完全开源策略（开源权重 + 训练账单 + 数据配方�
 - [[concepts/managed-agents-architecture]] — Anthropic Managed Agents 架构
 - [[concepts/harness-engineering-framework]] — Harness Engineering 框架
 - [[entities/claude-code-agentic-harness-design-patterns]] — Claude Code 12个可复用 Harness 设计模式
+
+- 母体实体：[[entities/claude-code-performance-benchmarking]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/深入理解-claude-code-源码中的-agent-harness-构建之道]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/claude-code-source-leak-lifecycle-analysis]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/claude-code-architecture]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/claude-code-automatic-feedback-report-self-diagnosis]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/claude-code-source-architecture]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/claude-code-20000-char-source-analysis]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/claude-code-seven-customization-methods-anthropic-official]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/claude-code-tool-design-evolution-anthropic]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/读完-claude-code-和-openclaw-的-memory-源码我对agent记忆需要向量数据库这件事产生了怀疑]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/claude-code-7-layer-memory-architecture]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/claude-code-core-internals]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/claude-code-why-instructions-ignored-jia-gou-x-2026]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/claude-code-source-deep-dive-warrior]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/claude-code-engineering-truth-1.6-98.4]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/claude-code-governance-soft-rules]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/claude-code-architecture-analysis]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/how_claude_code_works_in_large_codebases]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/claude-code-memory-setup-token-71x楠楠自瑜]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/claude-code-open-source-model-enterprise-practice]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/claude-code-and-what-comes-next]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/claude-code-search-architecture-tencent-2026]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/claude-code-academic-literature-review-sci]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/claude-code-large-codebase-harness-configuration]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/从-claude-code-记忆系统看四层-agent-记忆方案一个比一个夯]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/claude-code-best-community-fork-evolution-vibecoder]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/使用claude-codesession管理与1m上下文]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/claude-md-12-rules-mnilax]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/claude-code-openclaw-memory-comparison]]（嵌入近邻锚点，提案卡 #12 批1）
 
 ## 关联实体
 

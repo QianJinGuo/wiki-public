@@ -1,7 +1,7 @@
 ---
 title: "Agent 安全攻防"
 created: 2026-06-11
-updated: 2026-08-01
+updated: 2026-09-10
 type: concept
 tags: [security, agent, data, llm, prompt, attack-surface, defense-in-depth, threat-model, sandbox-escape, tool-call, supply-chain]
 description: "Agent 安全攻防：Prompt 注入、越狱、供应链攻击、防御机制"
@@ -119,3 +119,7 @@ L4 人工兜底：高风险操作需人类审批
 ## 所属 MOC
 
 - [[moc/layer-5-production-security|Layer 5 Production Security]]
+
+## 关联
+
+- 母体实体：[[entities/agent-prompt-injection-defense-volcano-engine-2026]]（嵌入近邻锚点，提案卡 #12 批1）

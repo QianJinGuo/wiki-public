@@ -10,3 +10,8 @@ archived_reason: stub_under_300_chars
 
 > 本实体已于 2026-08-29 质量闭环清理中归档（原因: stub_under_300_chars）。
 > 原文见 `raw/articles/`，归档件见 `_archive/checkup-2026-08-29/向量检索知识图谱与-llm-wikirag-被嘲笑了三年但企业还是离不开它-1.md`。
+
+> 提案卡 #10 墓碑合并：本组原有多块重复桩（-N 后缀，内容同为归档告示），已并为本桩一处指路。本组全部归档件：
+> - `_archive/checkup-2026-08-29/向量检索知识图谱与-llm-wikirag-被嘲笑了三年但企业还是离不开它-1.md`
+> - `_archive/checkup-2026-08-29/向量检索知识图谱与-llm-wikirag-被嘲笑了三年但企业还是离不开它-2.md`
+> - `_archive/checkup-2026-08-29/向量检索知识图谱与-llm-wikirag-被嘲笑了三年但企业还是离不开它-3.md`

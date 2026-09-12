@@ -2,7 +2,7 @@
 
 title: "在 Amazon EKS 上使用 NVIDIA GPU Operator 管理 GPU 驱动与 CUDA"
 created: 2026-06-10
-updated: 2026-06-30
+updated: 2026-09-10
 tags: [aws, fine-tuning, k8s, memory, mlops, nvidia, observability, tool-use, vision]
 review_value: 7
 review_confidence: 7
@@ -41,4 +41,6 @@ NVIDIA driver 535. ^[raw/articles/在-amazon-eks-上使用-nvidia-gpu-operator-�
 - [[entities/end-to-end-encrypted-ml-inference-with-amazon-sagemaker-ai-a]]
 - [[entities/openclaw-完全指南这可能是全网最新最全的系统化教程了32w字建议收藏-v2]]
 - [[entities/karpathy-最新访谈从-vibe-coding-到-agentic-engineering]]
+- 同题异语种孪生页：[[entities/eks-gpu-operator-custom-driver-cuda-workload]]（归并候选，提案卡 #11 批1）
+
 

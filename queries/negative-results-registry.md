@@ -1,7 +1,7 @@
 ---
 title: 负结果登记簿
 created: 2026-09-05
-updated: 2026-09-05
+updated: 2026-09-10
 type: query
 tags: [meta, negative-results, evaluation, dashboard, epistemics]
 confidence: high
@@ -29,6 +29,7 @@ confidence: high
 ## 观察区（有嫌疑、缺对照）
 
 - entities/agent-memory-architecture 与 `-essence` 双页同标题并存（疑似重复入库，待 quality 轮裁决，见 twin-cleanup 2026-09-05 记录）
+- **记忆消融缺席（2026-09-10，反方记忆轮）**：全库零"同任务有/无记忆系统"对照——记忆架构的增量价值未被测量。非变差实证，属缺席类观察；补齐需外部消融素材或自跑实验（提案卡 #16）。见 [[drafts/wiki-emergent-viewpoints-2026-09-adversarial-memory|反方记忆稿]]论纲三。
 - `harness` 簇 517 页均分 7.73 高于全库 7.35（+0.38，n=347）——尚不能区分"簇质量高"与"同温层互评偏置"（49% 来源为单一渠道 mp.weixin.qq.com）
 
 ## 关联

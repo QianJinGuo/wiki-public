@@ -2,7 +2,7 @@
 
 title: "我把 Karpathy 的 AutoResearch 搬到了软件开发领域，效果炸了"
 created: 2026-05-10
-updated: 2026-05-10
+updated: 2026-09-10
 type: entity
 tags: [ai-agent, engineering, mlops, wechat]
 review_value: 6
@@ -62,3 +62,7 @@ review_category: practice
 - [[entities/harness-engineering|一文带你弄懂 AI 圈爆火的新概念：Harness Engineering]]
 - [[entities/龙虾装上了可以用来干啥分享下我的-openclaw-多智能体团队搭建经验|龙虾装上了，可以用来干啥？分享下我的 OpenClaw 多智能体团队搭建经验！]]
 - [[entities/harness-engineering耗时一周我是如何将应用的ai-coding率提升至90的|Harness Engineering：耗时一周，我是如何将应用的AI Coding率提升至90%的]]
+
+## 关联
+
+- 同题异语种孪生页：[[entities/karpathy-autoresearch-software-development-niaowo]]（归并候选，提案卡 #11 批1）

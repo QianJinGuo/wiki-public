@@ -1,7 +1,7 @@
 ---
 title: Coding Harness 工程本质
 created: 2026-05-07
-updated: 2026-09-05
+updated: 2026-09-10
 type: concept
 tags: [harness, agent, coding, engineering, pi, openclaw]
 related:
@@ -70,6 +70,8 @@ prompt scaffolding 会变薄，runtime harness 会变硬。
 - [[entities/langchain-anatomy-agent-harness|LangChain Anatomy of Agent Harness]] — Agent=Model+Harness框架 + 六大组件 + Context Rot 三策略
 - [[concepts/harness-engineering-framework|Harness Engineering 框架]] — Prompt/Context/Harness三层 + 七环节控制回路 + Generator/Evaluator
 - Pi Agent Runtime — Pi agent runtime 核心源码解析
+- 母体实体：[[entities/pi-openclaw-coding-harness]]（嵌入近邻锚点，提案卡 #12 批1）
+
 ## 关联实体
 
 **上游依赖**:

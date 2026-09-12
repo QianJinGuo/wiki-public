@@ -1,7 +1,7 @@
 ---
 title: "Subagents 详解：Claude Code 如何避免上下文污染"
 created: 2026-05-16
-updated: 2026-08-29
+updated: 2026-09-10
 source: "[[raw/articles/subagents-详解claude-code-如何避免上下文污染|原文存档]]"
 type: entity
 value: 8
@@ -422,3 +422,7 @@ description字段的本质是**路由契约**而非说明文档。它告诉Claud
 - [[entities/打造可靠的-ai-编程环境claude-code-hooks-完整开发者指南-v2]]
 - [[entities/claude-code-source-architecture]]
 - [[entities/skill-system-design-three-way-comparison]]
+
+## 关联
+
+- 同题异语种孪生页：[[entities/qy_zacztcs1ql3bifmbmgg]]（归并候选，提案卡 #11 批1）

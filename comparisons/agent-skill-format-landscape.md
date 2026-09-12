@@ -1,7 +1,7 @@
 ---
 title: Agent 技能格式版图
 created: 2026-09-05
-updated: 2026-09-05
+updated: 2026-09-10
 type: comparison
 tags: [agent-skill, format, portability, comparison, skills]
 confidence: 0.65
@@ -34,3 +34,9 @@ Doubao 本地 `skills/` 目录为**空**（无格式样本），CodeBuddy 的 Cl
 ## 参见
 
 [[entities/everything-claude-code|ECC 探针存档]] · [[concepts/skill-engineering-principles|Skill 工程原则]] · [[entities/agent-skill-writing-guide|Agent Skill 写作指南]] · [[concepts/agent-identity-portability|身份可移植性]]
+
+## 关联
+
+- 被比对象：[[concepts/hermes-agent-skill]]（嵌入近邻锚点，提案卡 #13 批1）
+- 被比对象：[[concepts/hermes-agent]]（嵌入近邻锚点，提案卡 #13 批1）
+- 被比对象：[[concepts/hermes-agent-onboarding]]（嵌入近邻锚点，提案卡 #13 批1）

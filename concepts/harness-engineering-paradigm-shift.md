@@ -1,7 +1,7 @@
 ---
 title: Harness Engineering 三次范式跃迁与四根支柱
 created: 2026-05-07
-updated: 2026-08-29
+updated: 2026-09-10
 type: concept
 tags: [harness-engineering, context-engineering, prompt-engineering, agentic-coding, anthropic, openai, four-pillars, failure-modes, enterprise]
 description: 从 Prompt Engineering → Context Engineering → Harness Engineering 的三次范式跃迁，四根支柱（上下文架构/专业化/持久化记忆/结构化执行），四类失败模式，企业级 AI 代码率从 24.86%→90.54% 的实战方法论。
@@ -70,6 +70,14 @@ Harness Engineering 是 2026 年 AI Coding 的核心方法论。从 Prompt Engin
 → [[entities/深入理解-claude-code-源码中的-agent-harness-构建之道-v2|深入理解 Claude Code 源码中的 Agent Harness 构建之道]]
 **四阶段执行流**：理解 → 规划 → 执行 → 验证（每阶段有质量门禁）
 > "Waiting is expensive, fixing is cheap" ^[raw/articles/harness-engineering-90-percent-pillars.md]
+- 母体实体：[[entities/harness-engineering-survey-2026]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/开启harness-engineering探索之旅]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/agent-harness-architecture-design-production-guide]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/harness-engineering-2026-why-it-matters]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/harness-engineering-comprehensive-guide-conardli]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/harness-engineering-alibaba-java-case-study]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/prompt-context-harness-three-evolutions]]（嵌入近邻锚点，提案卡 #12 批1）
+
 ## Anthropic 四类失败模式
 | 模式 | 描述 | 解法 |
 |------|------|------|

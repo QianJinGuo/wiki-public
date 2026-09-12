@@ -1,7 +1,7 @@
 ---
 title: "下一代搜索智能体评测基准！美团开源LoHoSearch，用知识图谱校准AI能力认知"
 created: 2026-08-13
-updated: 2026-08-13
+updated: 2026-09-10
 type: entity
 tags: [ai, research, agent, ai-agent, multi-agent, evaluation, benchmark, agent-eval, graphrag, kg, rag, search, agent-search]
 sources: [raw/articles/下一代搜索智能体评测基准美团开源lohosearch用知识图谱校准ai能力认知.md]
@@ -28,3 +28,7 @@ review_category: tech
 ## 相关实体
 
 "Agent 架构" [[concepts/agent-orchestration-patterns]] "Agent 评估基准体系" [[concepts/evaluation-harness-design]] "Agentic RAG 模式"
+
+## 关联
+
+- 同题异语种孪生页：[[entities/meituan-lohosearch-search-agent-benchmark-knowledge-graph-2026]]（归并候选，提案卡 #11 批1）

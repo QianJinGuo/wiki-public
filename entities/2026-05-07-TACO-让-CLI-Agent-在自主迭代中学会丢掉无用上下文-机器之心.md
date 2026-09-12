@@ -1,7 +1,7 @@
 ---
 title: "TACO 让 CLI Agent 在自主迭代中学会丢掉无用上下文 机器之心"
 created: 2026-08-01
-updated: 2026-08-29
+updated: 2026-09-10
 type: entity
 tags: ['raw', 'article']
 sources: [raw/articles/2026-05-07-TACO-让-CLI-Agent-在自主迭代中学会丢掉无用上下文-机器之心]
@@ -30,3 +30,7 @@ review_category: tech
 ## 来源
 
 - 原文: [[raw/articles/2026-05-07-TACO-让-CLI-Agent-在自主迭代中学会丢掉无用上下文-机器之心.md|TACO 让 CLI Agent 在自主迭代中学会丢掉无用上下文 机器之心]]
+
+## 关联
+
+- 同题异语种孪生页：[[entities/taco-terminal-agent-context-compression]]（归并候选，提案卡 #11 批1）

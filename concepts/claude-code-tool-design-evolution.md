@@ -1,7 +1,7 @@
 ---
 title: Claude Code 工具设计演化
 created: 2026-05-07
-updated: 2026-08-01
+updated: 2026-09-10
 type: concept
 tags: [claude-code, tool-design, anthropic, agent-harness]
 related:
@@ -141,7 +141,7 @@ Claude Code 文档中提到的"定期工具审计"在 MCP 生态中有了更具�
 - [[entities/boris-cherny-新访谈开发工具正在从-ide-变成-agent-控制台|Boris Cherny 新访谈：开发工具正在从 IDE 变成 Agent 控制台]]
 
 ## 新增关联实体
-- [[entities/ai-20260506]]
+- [[entities/ai-20260429]]
 - [[entities/anthropic-ai-windows-mcp-strategy-geekpark-2026]]
 - [[entities/anthropic-building-next-claude]]
 - [[entities/anthropic-com-research-making-claude-a-chemist]]
@@ -162,7 +162,9 @@ Claude Code 文档中提到的"定期工具审计"在 MCP 生态中有了更具�
 **平行协作**:
 - [[entities/claude-发布官方报告承认存在-3-处质量退化问题]] — 替代/补充方案
 - [[entities/boris-cherny-新访谈开发工具正在从-ide-变成-agent-控制台]] — 替代/补充方案
-- [[entities/ai-20260506]] — 替代/补充方案
+- [[entities/ai-20260429]] — 替代/补充方案
+
+- 母体实体：[[entities/claude-code-tool-design-evolution-anthropic]]（嵌入近邻锚点，提案卡 #12 批1）
 
 ## 所属 MOC
 

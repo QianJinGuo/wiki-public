@@ -1,7 +1,7 @@
 ---
 title: "Agent Teams 协作机制：从 ReAct 到七机制团队设计"
 created: "2026-08-31"
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [agent, multi-agent, collaboration, teams, orchestration, harness-engineering, organization]
 sources:
@@ -80,3 +80,7 @@ L1 Copilot → L2 Task Agent → L3 ReAct Agent → L4 Team Agent → L5 Autonom
 - [[entities/agentteams-和-claude-tag-都进入群聊模式是新范式还是新叙事|AgentTeams 与 Claude Tag 群聊模式]] — 工程实现维度（基础设施/Matrix/A2A），本文补充协作机制维度
 - [[entities/agent-orchestration-multi-agent-systems|多 Agent 编排系统]] — 编排层控制面（Step Functions/审批门），本文聚焦组织设计
 - [[entities/agent-productivity-paradox-collaboration-bottleneck|Agent 生产力悖论：协作瓶颈]] — 诊断问题，本文给出解决方案
+
+## 关联
+
+- 同题异语种孪生页：[[entities/从-react-到-agent-teams一个工程师视角的-agent-协作机制思考]]（归并候选，提案卡 #11 批1）

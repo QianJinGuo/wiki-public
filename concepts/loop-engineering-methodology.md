@@ -1,7 +1,7 @@
 ---
 title: "Loop Engineering 方法论"
 created: 2026-07-02
-updated: 2026-08-01
+updated: 2026-09-10
 type: concept
 tags: [loop-engineering, agent, methodology, ai-coding]
 provenance_state: inferred
@@ -30,6 +30,18 @@ Loop Engineering 是 Agent 工程的核心执行模式：将任务拆解为可�
 - [[entities/一文看懂-ai-编程智能体工程化新范式loop-engineering|Loop Engineering 新范式]]
 - [[entities/别只盯着模型agent-真正的护城河是这四层循环|Agent 的四层循环护城河]]
 
+- 母体实体：[[entities/loop-engineering-concept-analysis-feixue-ali-2026]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/loop-engineering应该赞成还是反对]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/loop-engineering-tsinghua-2026]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/2026-06-18-Loop-Engineering-概念解析-思考与实践-阿里技术]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/dittos-loop-codex-product-pm-zhongshiliu-2026]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/ai-native-development-workflow]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/agentic-loop-engineering-handbook-empirical-framework]]（嵌入近邻锚点，提案卡 #12 批1）
+
 ## 所属 MOC
 
 - [[moc/agent-engineering-guide|Agent Engineering Guide]]
+
+## 相关 MOC
+
+- [[moc/loop-engineering|循环工程主题地图]] — 本概念的主题 hub，含簇内实体与学习路径

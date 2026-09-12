@@ -4,7 +4,7 @@ title: "从零复刻 Claude Code：Harness 构建学习笔记"
 type: entity
 tags: [agent, claude, coding, harness]
 created: 2026-05-21
-updated: 2026-06-30
+updated: 2026-09-10
 review_value: 7
 review_confidence: 8
 sources: [raw/articles/准备开一个新坑从零复刻一个-claude-codenn目标是在这个过程中和大家一起学习-claude-code-的-harness-是如何做的nnclaude-]
@@ -96,3 +96,7 @@ Claude Code 源码泄漏后本来想根据它的代码直接出一个分析解�
 - [[entities/from-prompt-to-harness-claude-official]]
 
 → [[raw/articles/准备开一个新坑从零复刻一个-claude-codenn目标是在这个过程中和大家一起学习-claude-code-的-harness-是如何做的nnclaude-|原文存档]] ^[raw/articles/准备开一个新坑从零复刻一个-claude-codenn目标是在这个过程中和大家一起学习-claude-code-的-harness-是如何做的nnclaude-.md]
+
+## 关联
+
+- 同题异语种孪生页：[[entities/claude-code-large-codebase-team-deployment-agent-harness]]（归并候选，提案卡 #11 批1）

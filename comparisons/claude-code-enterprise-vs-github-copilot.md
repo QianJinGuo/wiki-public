@@ -1,7 +1,7 @@
 ---
 title: "Claude Code Enterprise vs GitHub Copilot 企业级对比"
 created: 2026-05-21
-updated: 2026-05-21
+updated: 2026-09-10
 type: comparison
 tags: [comparison, claude-code, github-copilot, enterprise, ai-coding, anthropic, microsoft]
 sources:
@@ -152,3 +152,7 @@ Claude Code 的能力由 **Harness**（与模型同样重要）决定：^[raw/ar
 ## 相关概念
 
 - [[concepts/tool-use-patterns-ai-agents|Tool Use Patterns]] — AI Agent 工具生态
+
+## 关联
+
+- 被比对象：[[concepts/claude-code-source-leak-lifecycle]]（嵌入近邻锚点，提案卡 #13 批1）

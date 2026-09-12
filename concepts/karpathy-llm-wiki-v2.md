@@ -1,7 +1,7 @@
 ---
 title: Karpathy LLM Wiki V2
 created: 2026-05-07
-updated: 2026-08-29
+updated: 2026-09-10
 type: concept
 tags: [knowledge-base, rag-alternative, memory, agent, karpathy]
 related:
@@ -144,6 +144,9 @@ Karpathy 方案的精神源头是 1945 年万尼瓦尔·布什的 Memex 构想�
 - [[entities/context-engineering-three-memory-paradigms-comparison]] — 替代/补充方案
 - [[entities/ai-coding-agent-memory-system]] — 替代/补充方案
 - [[entities/how-ai-agent-memory-works]] — 替代/补充方案
+
+- 母体实体：[[entities/karpathy-llm-wiki-v2-deep-analysis-rohit-ghumare]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/karpathy-llm-wiki-v2-2026]]（嵌入近邻锚点，提案卡 #12 批1）
 
 ## 所属 MOC
 

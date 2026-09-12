@@ -3,7 +3,7 @@
 
 title: "Anthropic 最新博客：Prompt Caching 是构建 Claude Code 的一切"
 created: 2026-05-07
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [claude-code, anthropic, engineering, ai]
 sources:
@@ -210,7 +210,7 @@ Anthropic 把缓存命中率当作基础设施级别指标来监控，一旦下�
 - [[entities/opus-4-7-launch-claude-code-best-practices-wechat]]
 - [[entities/introducing-claude-platform-on-aws-anthropics-native-platfor]]
 - [[entities/anthropic-claude-managed-agents-platform-launch]]
-- [[entities/ai-20260506|腾讯研究院ai速递 20260506]]
+- [[entities/ai-20260429|腾讯研究院ai速递 20260506]]
 - [[entities/claude-code-kairos-paradigm-2026|claude-code-kairos-paradigm-2026]]
 - [[entities/complexity-ratchet-garry-tan|你的ai代码越写越乱，他72小时合了14个pr每个都更好——差距只在一个机制]]
 

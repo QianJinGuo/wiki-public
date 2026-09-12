@@ -2,7 +2,7 @@
 
 title: "从 ReAct 到 Agent Teams：一个工程师视角的 Agent 协作机制思考"
 created: 2026-09-01
-updated: 2026-09-01
+updated: 2026-09-10
 type: entity
 tags: [ai, agent, harness, memory, mcp, multimodal]
 sources: [raw/articles/从-react-到-agent-teams一个工程师视角的-agent-协作机制思考]
@@ -68,3 +68,7 @@ ReAct 的成功来自对「个体智能」的正确抽象。Agent 间的协作�
 
 
 → [[raw/articles/从-react-到-agent-teams一个工程师视角的-agent-协作机制思考|原文存档]] ^[raw/articles/从-react-到-agent-teams一个工程师视角的-agent-协作机制思考.md]
+
+## 关联
+
+- 同题异语种孪生页：[[entities/agent-teams-collaboration-mechanism-seven-design]]（归并候选，提案卡 #11 批1）

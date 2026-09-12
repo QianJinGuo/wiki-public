@@ -1,7 +1,7 @@
 ---
 title: Claude 4 Sonnet 4 vs Opus 4 模型对比
 created: 2026-05-21
-updated: 2026-05-21
+updated: 2026-09-10
 type: comparison
 tags: [claude, anthropic, model-comparison, sonnet, opus, benchmark, agent, coding]
 sources:
@@ -12,6 +12,10 @@ confidence: high
 ---
 
 # Claude 4 Sonnet 4 vs Opus 4 模型对比
+
+## 姊妹页分工（2026-09-10 提案卡 #6）
+
+本页覆盖基准数据、token 效率与成本、行为变化、选型决策树——**数据/选型向**。姊妹页 [[comparisons/claude-opus-vs-sonnet-model-comparison|Claude Opus vs Sonnet 深度分析]] 为**机制/体验向**深度解读。同日异源双文，分工互补。
 
 ## 概述
 

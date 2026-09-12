@@ -64,3 +64,7 @@ LoHoSearch 的三项核心贡献：
 
 - [[entities/meituan-longcat-vitabench-20-long-term-dynamic-agent-benchmark|美团 LongCat 开源 VitaBench 2.0：长期动态智能体基准新标杆]] — 美团 LongCat 团队的另一个智能体基准
 - [[entities/agent-evaluation-systematic-guide-metrics-to-closed-loop|Agent 评测体系化指南]] — Agent 评测方法论
+
+## 关联
+
+- 同题异语种孪生页：[[entities/下一代搜索智能体评测基准美团开源lohosearch用知识图谱校准ai能力认知]]（归并候选，提案卡 #11 批1）

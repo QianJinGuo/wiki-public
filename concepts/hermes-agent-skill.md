@@ -1,7 +1,7 @@
 ---
 title: Hermes Agent Skill
 created: 2026-04-28
-updated: 2026-08-01
+updated: 2026-09-10
 type: concept
 tags: [hermes, skill, agent, self-evolution, capability, skill-system]
 related:
@@ -282,6 +282,15 @@ Skill 的生成需要同类型任务的多个轨迹作为输入：
 - [[entities/perplexity-internal-skill-design-guide]] — 替代/补充方案
 - [[entities/skillclaw]] — 替代/补充方案
 - [[entities/hermes-skill-system-winty]] — 替代/补充方案
+
+- 母体实体：[[entities/hermes-skill-system-deep-dive]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/hermes-agent-skill-crossover-optimization]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/hermes-agent-deep-dive]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/skill-system-design-three-way-comparison]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/hermes-agent-skill-design-analysis]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/agent-tools-research]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/hermes-self-evolution-closed-loop-skill-reuse-winty]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/llm-agent脚手架如何具备自进化能力以hermes-agent为例]]（嵌入近邻锚点，提案卡 #12 批1）
 
 ## 所属 MOC
 

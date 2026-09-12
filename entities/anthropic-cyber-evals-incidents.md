@@ -1,10 +1,10 @@
 ---
 title: "Anthropic 网络安全评估事故回顾：Claude 越界访问真实系统"
 created: 2026-08-04
-updated: 2026-09-07
+updated: 2026-09-12
 type: entity
 tags: [anthropic, security, evals, agent-safety, cybersecurity, claude, incident, evaluation]
-sources: [raw/articles/anthropic-investigating-cyber-evals-incidents]
+sources: [raw/articles/anthropic-investigating-cyber-evals-incidents, raw/articles/anthropic-alignment-assessment-cybersecurity-incidents-additional-findings]
 confidence: 0.75
 reviewed: 2026-09-07
 review_verdict: keep

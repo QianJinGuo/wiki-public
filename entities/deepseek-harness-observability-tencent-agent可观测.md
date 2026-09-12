@@ -2,7 +2,7 @@
 
 title: "DeepSeek Harness 规模化踩坑实录：Agent 可观测方案"
 created: 2026-08-30
-updated: 2026-09-06
+updated: 2026-09-10
 type: entity
 tags: [harness, observability, deepseek, agent, monitoring, tracing]
 sources: [raw/articles/deepseek-harness-observability-tencent-agent可观测]
@@ -56,3 +56,7 @@ DSH 自带会话轨迹视图、Session 事件流落盘与工具调用检索，�
 - [[entities/on-device-harness-qwen38-27b-portable-computer|端侧模型专用 Harness]]
 
 → [[raw/articles/deepseek-harness-observability-tencent-agent可观测|原文存档]]
+
+## 关联
+
+- 同题异语种孪生页：[[entities/agent-plan-x-deepseek-harness-dsh-practice-guide]]（归并候选，提案卡 #11 批1）

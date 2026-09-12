@@ -1,7 +1,7 @@
 ---
 title: AHE — Agentic Harness Engineering
 created: 2026-05-07
-updated: 2026-08-29
+updated: 2026-09-10
 type: concept
 tags: [harness-engineering, research, agent-evolution, observability, fudan, peking-university, autonomy-spectrum, failure-modes, oversight]
 related:
@@ -420,6 +420,12 @@ AHE 能证明「通用协调模式」而非「模型特定提示词」的关键�
 - [[entities/langchain-anatomy-agent-harness]] — 替代/补充方案
 - [[entities/agent-memory-architecture]] — 替代/补充方案
 - [[entities/claude-code-core-internals]] — 替代/补充方案
+
+- 母体实体：[[entities/fudan-peking-ahe-agentic-harness-engineering]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/agentic-harness-engineering-ahe]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/fudan-agentic-harness-engineering-ahe-gpt54-7points]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/agentic-environment-engineering-jiagoux-2026-06-27]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/code-as-agent-harness-survey]]（嵌入近邻锚点，提案卡 #12 批1）
 
 ## 所属 MOC
 

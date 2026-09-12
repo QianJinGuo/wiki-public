@@ -1,7 +1,7 @@
 ---
 title: "Anthropic 官方 Agent Harness 平台：Claude Managed Agents 完整指南"
 created: 2026-05-10
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [mlops, ai-agent, agent-tools, engineering, anthropic, claude, claude-managed-agents, harness-engineering, agent-platform]
 review_value: 7
@@ -49,3 +49,11 @@ moc_rebuilt: 2026-09-07
 
 ## 延伸导航
 - [[moc/anthropic-ecosystem|Anthropic 生态与战略]]
+
+## 关联
+
+- 同题异语种孪生页：[[entities/claude-managed-agents-developer-guide]]（归并候选，提案卡 #11 批1）
+- 同题异语种孪生页：[[entities/anthropic-agent-skills-design-patterns-14]]（归并候选，提案卡 #11 批1）
+- 同题异语种孪生页：[[entities/anthropic-claude-code-large-codebase-best-practices-50002a089323]]（归并候选，提案卡 #11 批1）
+
+

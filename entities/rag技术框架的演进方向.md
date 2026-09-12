@@ -2,7 +2,7 @@
 
 title: "RAG技术框架的演进方向"
 created: "2026-05-20"
-updated: "2026-07-27"
+updated: 2026-09-10
 type: entity
 tags: [rag, rag, graph-rag, rag, knowledge-graph, retrieval-augmented-generation, llm, evolution, agentic-rag, google, sufficient-context, cross-corpus, multi-agent, framesqa]
 confidence: 0.8
@@ -222,4 +222,6 @@ Google Research + Google Cloud 2026 联合发布的 **Agentic RAG 框架**——
 ## 关联
 - 相关概念: [[concepts/harness-engineering-framework|Harness Engineering]]
 - 相关: Agent 架构
+- 同题异语种孪生页：[[entities/three-rag-architectures-classic-graph-agentic]]（归并候选，提案卡 #11 批1）
+
 

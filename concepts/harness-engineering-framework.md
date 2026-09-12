@@ -1,7 +1,7 @@
 ---
 title: Harness Engineering 框架
 created: 2026-04-27
-updated: 2026-08-29
+updated: 2026-09-10
 type: concept
 tags: [concept, agent, architecture, harness, prompt-engineering, context-engineering]
 related:
@@ -155,6 +155,12 @@ Generator-Evaluator 模式与 Harness 六层结构的对应关系：Generator �
 - [[entities/ai-native-时代-研发组织何去何从]] — 替代/补充方案
 - [[entities/long-running-agent-ralph-loop-handover-harness-ruofei]] — 替代/补充方案
 - [[entities/agent-era-architect-skills-guide]] — 替代/补充方案
+
+- 母体实体：[[entities/harness-engineering-systematic-explainer]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/harness-engineering-exploration-tencent-tech]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/agent-harness-architecture-design-production-guide]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/harness-engineering-jk-launcher-baijiajie]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/harness-engineering-core-patterns]]（嵌入近邻锚点，提案卡 #12 批1）
 
 ## 所属 MOC
 

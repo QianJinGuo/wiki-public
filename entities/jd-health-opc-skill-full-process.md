@@ -1,7 +1,7 @@
 ---
 title: "京东健康 OPC 团队产品全流程 Skill 探索"
 created: 2026-07-04
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [jd, health, opc, skill, agent, product-flow, engineering-practice, product-management, ai-coding]
 sources: [raw/articles/jd-health-opc-skill-full-process]
@@ -133,3 +133,7 @@ OPC（One Person Company）模式的核心理念是让小型团队拥有端到�
 ## 来源
 
 → [[raw/articles/jd-health-opc-skill-full-process|原文存档]]
+
+## 关联
+
+- 同题异语种孪生页：[[entities/京东健康opc团队的产品全流程skill探索]]（归并候选，提案卡 #11 批1）

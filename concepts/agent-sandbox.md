@@ -1,7 +1,7 @@
 ---
 title: Agent 沙箱与执行容器
 created: 2026-09-05
-updated: 2026-09-05
+updated: 2026-09-10
 type: concept
 tags: [sandbox, agent, security, isolation, execution-container, harness]
 confidence: 0.75
@@ -30,9 +30,14 @@ Agent 从"生成文本"变成"执行代码"后，执行环境本身成为产品�
 2. **网络策略**：能否限制外联（NomShub 案的隧道外联是常见失守点）
 3. **文件系统边界**：只读基座 + 显式写入区的粒度
 4. **与 harness 的耦合**：沙箱是外挂组件还是执行原语（MXC 路线 vs peerd 路线）
+5. **信息边界**：该策略保护哪类信息——执行隔离（代码/行为不外泄）与信息隔离（数据/轨迹不内流）是不同目标，第五问先问保护对象，再谈强度（见 [[concepts/channel-enumeration-criterion|通道枚举判据]]；2026-09 跨簇迁移轮半成功结论转正，[[drafts/wiki-emergent-viewpoints-2026-09-cross-cluster|涌现稿]]提案卡 #2）
 
 ## 检索入口
 
 - 高分簇页：[[entities/microsoft-mxc-execution-containers-agent-sandbox-origin|MXC]] · [[entities/claude-managed-agents-self-hosted-sandbox-enterprise|Managed Agents 企业边界]] · [[entities/nomshub-cursor-remote-tunnel-sandbox-breakout-straiker|NomShub 逃逸链]] · [[entities/miroflow-deep-research-agent-harness-mirothinker|MiroFlow]]
 - 相邻概念：[[concepts/agent-security-attack-defense|Agent 攻防]] · [[concepts/agent-security-architecture|Agent 安全架构]] · [[concepts/harness-engineering-framework|Harness Engineering 框架]]
 - 检测数据：[[queries/vault-evolution-dashboard|进化仪表板]] · `metrics/concept-gaps.json`
+
+## 关联
+
+- 母体实体：[[entities/sandboxing-an-ai-agent]]（嵌入近邻锚点，提案卡 #12 批1）

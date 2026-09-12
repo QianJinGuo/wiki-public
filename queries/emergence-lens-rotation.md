@@ -44,7 +44,12 @@ confidence: high
 | 2026-09-05 | **③ 反方立场** | [[drafts/wiki-emergent-viewpoints-2026-09-adversarial]] + [[concepts/when-not-to-harness-engineering]] + [[comparisons/model-capability-vs-harness-engineering]] + [[queries/negative-results-registry]] | harness 簇检验：厂商指控被驳回（1%）、同温层 49%、衰减推论缺席；5 条负结果入册；跨目录孪生同步清理 |
 | 2026-09-05 | **④ 跨簇迁移** | [[drafts/wiki-emergent-viewpoints-2026-09-cross-cluster]] + [[concepts/channel-enumeration-criterion]] + [[comparisons/information-isolation-vs-execution-isolation]] | 评测防火墙 × 沙箱：通道枚举判据合成；判分 2 成功 1 半成功 1 空白；对抗页三问登记台账 #8-#10 |
 | 2026-09-05 | **⑤ 概念缺位·复测（度量轮）** | [[drafts/wiki-emergent-viewpoints-2026-09-metrology]] + 检测器升级（delta/history/D2 排除）+ 仪表板六指标基线 | D3 133→128（覆盖 5：实覆盖 2/重标签 2/借道 1）；新增缺口 0；合约 v2（度量轮免定额）；节奏分化决议 |
-| — | （待跑：内容轮——外部系统透镜需备素材，或 roadmap 在册候选批量走 quality 轮） | | 下一轮占位 |
+| 2026-09-10（补登） | 第六轮·**外部系统**（目录⑦） | [[drafts/wiki-emergent-viewpoints-2026-09-external-probe]] | ECC 蒸馏集与商业 Agent 产物撞库：簇间独立收敛同原语集、SOUL.md 身份可移植工件、厂商技能格式空白；此前漏登轮换表，随本轮补记 |
+| 2026-09-10 | 第七轮·**嵌入相似度**（目录⑥） | [[drafts/wiki-emergent-viewpoints-2026-09-embed-similarity]] + 提案卡 #5-#9 | 综合层 284 页全量嵌入（Ollama nomic-embed 旁路，qmd 后端故障）；三类发现：异源同题双页（RAG 与 Claude 对比对）、同名 concept↔MOC 缺边家族、草稿层概念锚点薄层；结构性豁免刻画谓词精度边界；合约 v3 首轮（产出先落卡、验收门 PASS） |
+| 2026-09-10 | 第八轮·**嵌入相似度·全库下钻**（目录⑥，同透镜第二层） | [[drafts/wiki-emergent-viewpoints-2026-09-embed-fullvault]] + 提案卡 #10-#14 | entities 层 4208 页首挖、全库 4546 页嵌入 → 候选 18847 对；四类新发现：redirect 墓碑积压（1348 块占层三分之一，"一份归档一块桩"不变式缺席）、活体孪生 136 对（中英双 slug 同文为主型，slug 语言形态确定性预筛）、concept↔entity 缺锚 644 对、comparison↔concept 缺锚 118 对（SCHEMA 规则缺席）；类型过滤防墓碑假阳性为方法论增量；**透镜⑥判定收敛**（残差清单随卡交付） |
+| 2026-09-10 | 第九轮·**反方立场·记忆簇**（目录③第二轮） | [[drafts/wiki-emergent-viewpoints-2026-09-adversarial-memory]] + 提案卡 #15-#17 + 台账 #11 | steelman 三论纲：记忆是正在消失的问题（跨代贬值可证伪化→台账 #11 预写口径）、记忆即攻击面（SkillJack/bleeding-LLAMA/清算不可行，写入门槛清单缺位）、胜者形态是纯文本+模型理解力（记忆消融全库零记录→负结果候选）；五档立场光谱首次同框；补页走卡 |
+| 2026-09-10 | 第十轮·**跨簇迁移·第二对**（目录④第二轮） | [[drafts/wiki-emergent-viewpoints-2026-09-crosscluster-memory]] + 提案卡 #18-#19 | 通道枚举判据第三簇（记忆）检验：判分成功（bleeding-LLAMA 存储通道）/扩展（SkillJack 衍生链——通道清单=I/O+衍生，写入前声明衍生预算）/空白（影响谱系可观测性零覆盖）；合成与检验分离两轮，透镜④已备料对子清空 |
+| — | （待跑：内容轮——反方立场换簇或跨簇迁移第二对；年末判定窗按提案卡 #3 锁定勿提前） | | 下一轮占位 |
 
 ## 与其他机制的关系
 

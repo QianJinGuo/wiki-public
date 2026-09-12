@@ -2,7 +2,7 @@
 title: "一文看懂 AI 编程智能体工程化新范式：Loop Engineering"
 type: entity
 created: "2026-07-01"
-updated: "2026-07-16"
+updated: 2026-09-10
 tags: [wechat, ai, loop-engineering, agent, prompt-engineering, engineering-paradigm]
 provenance_state: inferred
 rating: v9c9
@@ -87,3 +87,7 @@ Loop Engineering 最有吸引力也最危险的地方在于其自动运行能力
 - [[entities/backend-for-agent|Backend for Agent]]
 
 → [[raw/articles/一文看懂-ai-编程智能体工程化新范式loop-engineering|原文存档]]
+
+## 关联
+
+- 同题异语种孪生页：[[entities/loop-engineering-overview-tech-minimalism]]（归并候选，提案卡 #11 批1）

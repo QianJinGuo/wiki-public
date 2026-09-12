@@ -1,7 +1,7 @@
 ---
 title: OpenClaw 架构解析（800行实现）
 created: 2026-04-24
-updated: 2026-08-01
+updated: 2026-09-10
 type: concept
 tags: [openclaw, architecture, tool, message-bus, subagent, typescript, anthropic, claude-api, agent-framework, replit, taobao]
 sources: ['raw/articles/openclaw-architecture-800lines']
@@ -180,6 +180,13 @@ OpenClaw 的 REPL 主循环表面上是一个简单的交互式入口，但它�
 - [[entities/ai-agent-tool-count-trap]] — 替代/补充方案
 - [[entities/openclaw-comprehensive-guide-32k-chars]] — 替代/补充方案
 
+- 母体实体：[[entities/openclaw-multi-1]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/exploring-openclaw-use-cases-in-ecommerce-platforms]]（嵌入近邻锚点，提案卡 #12 批1）
+
 ## 所属 MOC
 
 - [[moc/agent-engineering-guide|Agent Engineering Guide]]
+
+## 相关 MOC
+
+- [[moc/openclaw-architecture|OpenClaw 架构主题地图]] — 本概念的主题 hub，含簇内实体与学习路径

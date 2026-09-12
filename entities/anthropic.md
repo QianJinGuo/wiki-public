@@ -1,7 +1,7 @@
 ---
 title: "Anthropic"
 created: 2026-04-23
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [company, lab, anthropic]
 review_value: 6
@@ -45,3 +45,7 @@ moc_rebuilt: 2026-09-07
 - [[entities/microsoft-agent-framework-tools-overview-provider-matrix|Microsoft Agent Framework Tools 总览：4 类工具 + Provider 矩阵 + Tool Approval]] — 4类工具+Provider矩阵+Approval闸门16453字
 - [[entities/claude-code-first-year-retrospective-boris-cat-2026|Claude Code 一周年回顾：Boris Cherny + Cat Wu 的完整时间线]] — 一周年回顾14k主版
 - [[entities/anthropic-claude-managed-agents-platform-2026|Anthropic Claude Managed Agents 平台正式发布]] — 平台发布14k主版
+
+## 关联
+
+- 同题异语种孪生页：[[entities/anthropic-官方-agent-harness-平台claude-managed-agents-完整指南]]（归并候选，提案卡 #11 批1）

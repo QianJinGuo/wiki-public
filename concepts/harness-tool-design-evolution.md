@@ -1,7 +1,7 @@
 ---
 title: "harness 工具设计演化"
 created: 2026-06-12
-updated: 2026-08-01
+updated: 2026-09-10
 type: concept
 tags: [concept, harness, tool-use, claude-code, tool-design, evolution]
 sources: [entities/claude-code-core-internals, entities/claude-code-harness-deep-understanding, entities/claude-code-20000-char-source-analysis]
@@ -69,3 +69,9 @@ harness tool 设计的一个进阶原则是可组合性——tool 应该设计�
 ## 所属 MOC
 
 - [[moc/layer-4-ecosystem|Layer 4 Ecosystem]]
+
+## 关联
+
+- 母体实体：[[entities/claude-code-multi-agent-harness-source-analysis]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/harness-pilot-claude-code-plugin-yangtong-2026-06-17]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/claude-code-large-codebase-team-deployment-agent-harness]]（嵌入近邻锚点，提案卡 #12 批1）

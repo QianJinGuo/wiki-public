@@ -1,7 +1,7 @@
 ---
 title: "Boris Cherny 新访谈：开发工具正在从 IDE 变成 Agent 控制台"
 created: 2026-06-10
-updated: 2026-09-07
+updated: 2026-09-10
 tags: [agent, claude, code, harness-engineering, llm, workflow, subagents, skills, harness, boris-cherny, sequoia-ascent-2026]
 review_value: 7
 review_confidence: 7
@@ -191,3 +191,7 @@ Boris 谈到的"Loop"概念值得专门关注："它让 Agent 从一次回答，
 - [[entities/deepseek-v4-flash-pro-通往百万级上下文与万亿参数推理的新纪元|DeepSeek V4 Flash Pro]]
 - [[entities/accelerate-llm-model-loading-and-increase-context-windows-wi|加速 LLM 模型加载与上下文窗口]]
 - [[entities/fundamentals-large-tabular-model-nexus-is-now-available-on-a|大型表格模型基础]]
+
+## 关联
+
+- 同题异语种孪生页：[[entities/boris-cherny-新访谈开发工具正在从-ide-变成-agent-控制台]]（归并候选，提案卡 #11 批1）

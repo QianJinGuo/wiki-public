@@ -121,7 +121,7 @@ C 端 AI 编码不好用的主要原因是**视觉与逻辑耦合度太高，而
 - 文档 AI 生成 + 人工修改并存
 - 知识库统一存放位置，便于读取 ^[raw/articles/天猫新品营销技术团队ai编码实战指南上.md]
 
-值得注意的是：前期冷启动写前置文档非常费劲（投入产出比看似低），但**复用到第二个相似需求时，"预制文档"的价值会显著体现**。这与 [[entities/腾讯研究院ai速递-20260506|腾讯混元 CL-Bench Life 测试]]揭示的"AI 错因主要是上下文误用而非长文推理不足"完全吻合——AI 不会主动检索时，把信息直接堆到入口文档反而效率最高。 ^[raw/articles/天猫新品营销技术团队ai编码实战指南上.md]
+值得注意的是：前期冷启动写前置文档非常费劲（投入产出比看似低），但**复用到第二个相似需求时，"预制文档"的价值会显著体现**。这与 [[entities/腾讯研究院ai速递-20260429|腾讯混元 CL-Bench Life 测试]]揭示的"AI 错因主要是上下文误用而非长文推理不足"完全吻合——AI 不会主动检索时，把信息直接堆到入口文档反而效率最高。 ^[raw/articles/天猫新品营销技术团队ai编码实战指南上.md]
 
 ### 4. "git 版本管理+多分支多方案对比"是 AI 编码的安全网
 
@@ -175,7 +175,7 @@ C 端 AI 编码不好用的主要原因是**视觉与逻辑耦合度太高，而
 
 - [[entities/nanobot-agent-framework-architecture-deep-dive]] — 极简 Agent 框架，展示 subagent 分治的实现样本
 - [[entities/codex-major-update-appshots-goal-xinzhiyuan]] — Codex 新功能与"AI 队友"形态
-- [[entities/腾讯研究院ai速递-20260506]] — CL-Bench Life 暴露的上下文工程瓶颈，与本文"前置文档"机制呼应
+- [[entities/腾讯研究院ai速递-20260429]] — CL-Bench Life 暴露的上下文工程瓶颈，与本文"前置文档"机制呼应
 - [[entities/karpathy-vibe-coding-agentic-engineering]] — vibe coding 与 agentic engineering 的边界
 - [[concepts/harness-engineering-framework]] — Agent harness 的工程框架与 working set 管理
 - [[entities/agent-harness-context-management-working-set]] — 上下文工程的具体落地手段

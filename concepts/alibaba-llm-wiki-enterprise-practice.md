@@ -1,7 +1,7 @@
 ---
 title: "阿里数据团队 LLM Wiki 企业实践：LLM 编译思维构建结构化知识资产"
 created: 2026-06-30
-updated: 2026-08-28
+updated: 2026-09-10
 type: concept
 tags:
   - llm-wiki
@@ -175,3 +175,10 @@ Lint 把健康检查从"构建后一次性兜底"扩展为"持续性质量巡检
 ## 所属 MOC
 
 - [[moc/wiki-pending-concepts-roadmap|Wiki Pending Concepts Roadmap]]
+
+## 关联
+
+- 母体实体：[[entities/2026-06-26-构建-AI-时代的知识底座-直播数据-LLM-Wiki-实践-阿里云开发者]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/llm-wiki-knowledge-management]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/ai-knowledge-base-llm-wiki-practice-alicloud]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/llm-wiki-architecture]]（嵌入近邻锚点，提案卡 #12 批1）

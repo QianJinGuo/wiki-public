@@ -2,7 +2,7 @@
 
 title: "两万字详解Claude Code源码核心机制"
 created: 2026-06-10
-updated: 2026-09-07
+updated: 2026-09-10
 tags: [agent, architecture, claude, code, data, llm, memory, open-source, prompt, rl, security, tool-use]
 review_value: 7
 review_confidence: 7
@@ -51,3 +51,7 @@ moc_rebuilt: 2026-09-07
 - [[moc/agent-memory-architecture-decision-points|Agent Memory 架构选择的关键决策点是什么？]]
 - [[moc/agent-engineering-guide|Agent 工程全景指南]]
 - [[moc/llm-research-frontiers|LLM 研究前沿]]
+
+## 关联
+
+- 同题异语种孪生页：[[entities/claude-code-large-codebase-enterprise-deployment]]（归并候选，提案卡 #11 批1）

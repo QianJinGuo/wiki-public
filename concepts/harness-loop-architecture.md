@@ -1,7 +1,7 @@
 ---
 title: "harness 主循环架构"
 created: 2026-06-12
-updated: 2026-08-29
+updated: 2026-09-10
 type: concept
 tags: [concept, harness, agent-loop, architecture, react, claude-code]
 sources: [entities/agent-harness-architecture, entities/claude-code-architecture, entities/wow-harness-v3-governance-protocol]
@@ -69,3 +69,9 @@ Harness Engineering 的长程任务框架（long-running-agent-tasks）展示了
 ## 所属 MOC
 
 - [[moc/layer-4-ecosystem|Layer 4 Ecosystem]]
+
+## 关联
+
+- 母体实体：[[entities/agent-harness-architecture-deep-dive-aksahy]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/agent-harness-architecture-design-production-guide]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/agent-harness-evolution-from-llm-call-to-harness-tencent-2026]]（嵌入近邻锚点，提案卡 #12 批1）

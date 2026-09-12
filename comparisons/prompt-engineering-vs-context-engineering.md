@@ -1,7 +1,7 @@
 ---
 title: "Prompt Engineering vs Context Engineering"
 created: 2026-06-12
-updated: 2026-06-12
+updated: 2026-09-10
 type: comparison
 tags: [comparison, prompt-engineering, context-engineering, harness, agent]
 sources: [concepts/prompt-engineering-patterns, concepts/context-engineering, entities/agent-harness-context-management-working-set]
@@ -35,3 +35,7 @@ Prompt 工程是 Software 2.0 时代的元技能，context 工程是 Software 3.
 - "Prompt 工程模式"
 - [[concepts/context-engineering]]
 - [[entities/agent-harness-context-management-working-set]]
+
+## 关联
+
+- 被比对象：[[concepts/harness-engineering-framework]]（嵌入近邻锚点，提案卡 #13 批1）

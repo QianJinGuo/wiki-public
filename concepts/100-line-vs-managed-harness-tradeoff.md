@@ -1,7 +1,7 @@
 ---
 title: "100 行 vs 托管 harness 权衡"
 created: 2026-06-12
-updated: 2026-08-01
+updated: 2026-09-10
 type: concept
 tags: [concept, harness, tradeoff, claude-code, agentcore, build-vs-buy]
 sources: [entities/claude-code-core-internals, entities/agentcore-harness, entities/agent-harness-architecture]
@@ -67,3 +67,7 @@ build-vs-buy 决策的真实算法是「团队规模 × 任务复杂度 × 时�
 ## 所属 MOC
 
 - [[moc/agent-engineering-guide|Agent Engineering Guide]]
+
+## 关联
+
+- 母体实体：[[entities/claude-code-之父最新访谈编程已经结束harness-将消失claude-code-将只有-100-行代码loop-才是未来]]（嵌入近邻锚点，提案卡 #12 批1）

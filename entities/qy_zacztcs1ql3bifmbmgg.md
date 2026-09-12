@@ -122,3 +122,6 @@ Claude Code 自动扫描这些文件，根据 `description` 决定何时调用�
 - [[concepts/harness-engineering-framework]]
 - [[entities/k-dense-the-model-is-no-longer-the-bottleneck|k-dense — the model is no longer the bottleneck]]
 
+## 关联
+
+- 同题异语种孪生页：[[entities/subagents-详解claude-code-如何避免上下文污染]]（归并候选，提案卡 #11 批1）

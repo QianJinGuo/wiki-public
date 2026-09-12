@@ -1,7 +1,7 @@
 ---
 title: "Codex 重磅升级：Appshots / Goal 毕业 / 锁屏远程操控"
 created: 2026-06-10
-updated: 2026-09-07
+updated: 2026-09-10
 tags: [agent, code, llm, openai, codex, computer-use, ai-coding, workflow, autonomous-agent]
 review_value: 8
 review_confidence: 7
@@ -138,7 +138,7 @@ OpenAI 的产品策略路径开始清晰：
 3. 用 Codex 的能力扩张到"所有需要操作电脑的知识工作"
 4. 用 ChatGPT for PowerPoint 这类插件回头反向渗透传统办公软件 ^[raw/articles/codex-major-update-appshots-goal-xinzhiyuan.md]
 
-这与 [[entities/腾讯研究院ai速递-20260506|同期 a16z 对话 Roblox PM]] "工具型 App 首当其冲被 Agent 入口替代" 的判断完全一致。 ^[raw/articles/codex-major-update-appshots-goal-xinzhiyuan.md]
+这与 [[entities/腾讯研究院ai速递-20260429|同期 a16z 对话 Roblox PM]] "工具型 App 首当其冲被 Agent 入口替代" 的判断完全一致。 ^[raw/articles/codex-major-update-appshots-goal-xinzhiyuan.md]
 
 ### 5. 增长 hack：用 quota reset 强化用户增长
 
@@ -196,7 +196,7 @@ Appshots（屏幕感知） + /goal（长周期自主） + Locked Use（物理边
 ## 关联实体
 
 - [[entities/nanobot-agent-framework-architecture-deep-dive]] — subagent / 长周期任务的极简框架样本
-- [[entities/腾讯研究院ai速递-20260506]] — 同期 AI 行业全景，含"工具型 App 消亡"判断
+- [[entities/腾讯研究院ai速递-20260429]] — 同期 AI 行业全景，含"工具型 App 消亡"判断
 - [[entities/天猫新品营销技术团队ai编码实战指南上]] — AI 编码全流程工程化方法论
 - [[entities/karpathy-vibe-coding-agentic-engineering]] — vibe coding 到 agentic engineering 的演进
 - [[entities/karpathy-最新访谈从-vibe-coding-到-agentic-engineering]] — 锯齿智能与 Codex 能力组合

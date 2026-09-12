@@ -5,7 +5,7 @@ type: entity
 tags: [agent, skill-design, anthropic, claude-code]
 sources: [raw/articles/anthropic-14-skill-patterns-best-practices, raw/articles/anthropic-agent-skills-design-patterns-14, raw/articles/anthropic-官方技能最佳实践14-个可复用的-agent-skills-设计模式]
 created: 2026-05-10
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 5
 review_confidence: 10
 review_recommendation: worth-reading
@@ -50,3 +50,9 @@ moc_rebuilt: 2026-09-07
 
 ## 延伸导航
 - [[moc/claude-code-complete-guide|Claude Code 生态完全指南]]
+
+## 关联
+
+- 同题异语种孪生页：[[entities/anthropic-agent-skills-design-patterns-14]]（归并候选，提案卡 #11 批1）
+- 同题异语种孪生页：[[entities/anthropic-claude-code-large-codebase-best-practices-50002a089323]]（归并候选，提案卡 #11 批1）
+

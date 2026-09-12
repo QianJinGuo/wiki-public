@@ -1,7 +1,7 @@
 ---
 title: 何时不要 Harness Engineering
 created: 2026-09-05
-updated: 2026-09-05
+updated: 2026-09-10
 type: concept
 tags: [harness-engineering, anti-patterns, boundary-conditions, negative-results, cost]
 confidence: 0.7
@@ -39,3 +39,11 @@ harness 的全部收益前提是"任务会被重复执行、且失败代价高"�
 
 - 正方主页：[[concepts/harness-engineering-framework|框架]] · [[entities/harness-engineering|范式主页]] · [[moc/coding-agent-practice|Coding Agent 实践 MOC]]
 - 对抗综合：[[comparisons/model-capability-vs-harness-engineering|两论点对抗页]] · [[queries/negative-results-registry|负结果登记簿]]
+
+## 关联
+
+- 母体实体：[[entities/开启harness-engineering探索之旅]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/harness-engineering-exploration-tencent-tech]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/2026-06-29-开启Harness-Engineering探索之旅-腾讯技术工程]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/harness不是目的知识才是护城河-一个ai工程交付团队的知识沉淀实践]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/harness-engineering-future-persistence-vs-erosion]]（嵌入近邻锚点，提案卡 #12 批1）

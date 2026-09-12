@@ -2,7 +2,7 @@
 
 title: "Harness Engineering for Self-Improvement — 翁荔 Lilian Weng 系统梳理 Harness 自我提升研究全景"
 created: 2026-07-07
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [lilian-weng, harness-engineering, self-improvement, recursive-self-improvement, ace, meta-context-engineering, meta-harness, self-harness, stop, ai-scientist, adas, aflow, darwin-godel-machine, alphaevolve, sia, evolutionary-search, context-engineering, workflow-design, rsi, memoharness, per-instance-tuning]
 sources:
@@ -139,3 +139,6 @@ Karpathy's autoresearch: 规划 → 执行 → 观察/测试 → 改进 的目�
 
 [^1]: raw/articles/kZrryL8_fxfq2pSFw6LSqg
 
+## 关联
+
+- 同题异语种孪生页：[[entities/刚刚翁荔博客又上新通过harness工程实现ai自我提升]]（归并候选，提案卡 #11 批1）

@@ -47,3 +47,7 @@ moc_rebuilt: 2026-09-07
 - [[entities/hermes-agent-k2-6-tutorial|Hermes+Kimi K2.6 多Agent军团实战教程]] — 六Profile军团实战9590字全教程
 - [[entities/我用阿里-agentscope-复刻了一个-workbuddy|我用阿里 AgentScope 复刻了一个 WorkBuddy — 从开源框架到可运行 Agent 的实践拆解]] — Toolkit权限四层工具架构
 - [[entities/openagents-workspace-multi-agent-collaboration-itech|OpenAgents Workspace：多 Agent 协作平台]] — Agent孤岛问题：Workspace+Launcher+Network SDK
+
+## 关联
+
+- 同题异语种孪生页：[[entities/龙虾装上了可以用来干啥分享下我的-openclaw-多智能体团队搭建经验-v2]]（归并候选，提案卡 #11 批1）

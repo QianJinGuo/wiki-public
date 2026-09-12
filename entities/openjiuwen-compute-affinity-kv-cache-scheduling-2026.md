@@ -1,10 +1,10 @@
 ---
 title: "openJiuwen 算力亲和 — Agent 任务状态与推理引擎的语义通道"
 created: 2026-08-13
-updated: 2026-09-10
+updated: 2026-09-11
 type: entity
 tags: [huawei, openjiuwen, agent, kv-cache, inference, scheduling, compute-affinity, jiuwen]
-sources: [raw/articles/openjiuwen协同昇腾打造智能体算力亲和技术首token时延砍半推理存储占用下降25]
+sources: [raw/articles/openjiuwen协同昇腾打造智能体算力亲和技术首token时延砍半推理存储占用下降25, raw/articles/openjiuwen-rsi-dual-dimension-harness-artifacts-2026]
 confidence: 0.85
 provenance_state: extracted
 reviewed: 2026-09-07
@@ -66,3 +66,13 @@ KV Cache 从被动管理走向主动协同，首 token 时延砍半、推理存�
 6. **量化评估全链路**：同时测 TTFT、E2E 时延、Prefix Cache 命中率与池化缓存峰值，才能完整反映算力亲和的价值。
 
 → [[raw/articles/openjiuwen协同昇腾打造智能体算力亲和技术首token时延砍半推理存储占用下降25|原文存档]]
+
+
+## RSI 框架下的算力亲和实测（2026-09-11 SUPP，机器之心 openJiuwen RSI 通稿）
+
+RSI（Recursive Self-Improvement）的本质是拿算力换智力：反复生成候选、执行任务、评测结果，一次完整实验动辄成千上万次模型调用。openJiuwen RSI 框架四层协作（任务层/迭代优化层/执行层/基础框架层）+ 六阶段闭环（评测验证基线→分析优化→提案构建→采纳融合→RSI 经验沉淀→归档停止）；AgentLoop 负责单次任务"推理—行动—观察—反馈"，控制器负责跨版本优化，候选经融合后必须重测（避免用生成者主观判断代替验证）。双维度优化对象：**Harness 优化**（Prompt/Skill/Tool/Rail 四装备，失败案例驱动，候选先验证目标用例再回放完整评测集防改坏）与 **Artifacts 优化**（科研论文用 Frontier 选择父版本、算法程序用 PUCT 安排搜索）。^[raw/articles/openjiuwen-rsi-dual-dimension-harness-artifacts-2026.md]
+
+**Harness 优化量化结果**：DeepSeek-V4-Flash 任务模型、最多 5 Epoch 配置下，SWE-bench Lite Dev 全部 23 题通过率 61.0%→87.0%；冻结优化后 Harness，Evo-Bench General 64 道独立评测题单次执行通过率 60.9%→71.9%——优化收益泛化到未参与优化的任务。^[raw/articles/openjiuwen-rsi-dual-dimension-harness-artifacts-2026.md]
+
+**算力亲和 RSI 场景新数字**（科研算法程序优化实验；区别于早前蜂群场景的 TTFT -57.46%/存储 -25.24%）：开启算力亲和后 TTFT 均值 -15.83%、P90 -19.16%；Token 加权 KV Cache 命中率 7.53%→14.36%（近乎翻倍）；HBM 与 DDR 峰值使用率分别 -22.82% 与 -30.74%——重复 Prefill 减少、首 Token 更快、存储压力更低。机制：Agent Hint 把任务运行/等待/恢复/结束信息传给引擎，在昇腾 NPU 显存、鲲鹏 CPU 内存和远端缓存池之间主动调度 KV Cache（等待时卸载低成本存储、恢复前预取、结束释放）。^[raw/articles/openjiuwen-rsi-dual-dimension-harness-artifacts-2026.md]
+

@@ -4,7 +4,7 @@ title: "智能体编排层中的上下文管理架构"
 type: entity
 tags: [agent, architecture, context]
 created: 2026-05-21
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/agent-context-management-architecture-patterns]
@@ -49,3 +49,7 @@ moc_rebuilt: 2026-09-07
 ## 延伸导航
 - [[moc/agent-memory-architecture-decision-points|Agent Memory 架构选择的关键决策点是什么？]]
 - [[moc/agent-engineering-guide|Agent 工程全景指南]]
+
+## 关联
+
+- 同题异语种孪生页：[[entities/构建基于多智能体架构的深度思考交易系统-v2]]（归并候选，提案卡 #11 批1）

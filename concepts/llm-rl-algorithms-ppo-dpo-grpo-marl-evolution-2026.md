@@ -1,7 +1,7 @@
 ---
 title: "LLM RL 算法演进图谱：从 PPO 到 DPO 到 GRPO 再到 MARL（2026 综述）"
 created: 2026-06-05
-updated: 2026-08-29
+updated: 2026-09-10
 type: concept
 tags: [rlhf, ppo, dpo, grpo, rlvr, marl, agent-rl, alignment, deepseek, prm, orm, agent-lightning, agent-r1, verl, openrlhf, trl, reinforcement-learning, instruction-tuning, r1, rlaif, rft, post-training]
 sources:
@@ -333,6 +333,9 @@ Step-level MDP 抽象：每一步存自己的 prompt 和 response；下一个 ob
 
 
 → [[raw/articles/2026-llm-rl-algorithms-deeplog-imba-ppo-dpo-grpo-marl|原文存档]]
+
+- 母体实体：[[entities/2026-llm-rl-algorithms-deeplog-imba-ppo-dpo-grpo-marl]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/2026-05-01-强化学习的进化-从PPO到MaxRL-LLM推理训练的算法演进史-机器之心]]（嵌入近邻锚点，提案卡 #12 批1）
 
 ## 新增关联实体
 - [[entities/deepseek-v4深度拆解一篇论文同时做了五件大事]]

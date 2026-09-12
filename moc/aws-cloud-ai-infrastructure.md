@@ -2,7 +2,7 @@
 title: AWS 云 AI 基础设施
 type: moc
 created: 2026-06-18
-updated: 2026-06-18
+updated: 2026-09-10
 tags: [aws, bedrock, agentcore, sagemaker, cloud, infrastructure]
 description: AWS AI 基础设施全景：Bedrock AgentCore、SageMaker、安全、DevOps Agent、部署实战。
 ---
@@ -40,3 +40,7 @@ description: AWS AI 基础设施全景：Bedrock AgentCore、SageMaker、安全�
 
 - [[entities/aws-一周综述amazon-bedrock-agentcore-付款适用于-aws-的-agent-工具套件等2026-年-5-月-11-日|AWS 一周综述：Bedrock AgentCore 付款等
 - [[entities/control-where-your-ai-agents-can-browse-with-chrome-enterprise-policies-on-amazo|Chrome Enterprise 控制 Agent 浏览
+
+## 相关 Concept
+
+- [[concepts/cloud-ai-infrastructure]] — 同名概念页

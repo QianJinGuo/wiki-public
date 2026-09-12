@@ -1,7 +1,7 @@
 ---
 title: Claude Opus vs Sonnet 模型对比深度分析
 created: 2026-05-21
-updated: 2026-05-21
+updated: 2026-09-10
 type: comparison
 tags: [anthropic, model, comparison, coding, agent]
 sources: [raw/articles/claude-opus-47-并不是一次全面升级甚至部分能力大幅衰退nn大家应该在合适的场景下选择使用nn昨晚-opus-47-上线全网又炸了nn我仔细看了下官, raw/articles/wangyunhe-harness-optimization-agentsoul]
@@ -171,3 +171,7 @@ Anthropic 似乎在用**通用检索能力**换取**特定垂直场景精度**�
 | **最佳实践** | 多模型并行、建立路由机制、按场景选型 |
 
 → [[raw/articles/claude-opus-47-并不是一次全面升级甚至部分能力大幅衰退nn大家应该在合适的场景下选择使用nn昨晚-opus-47-上线全网又炸了nn我仔细看了下官|原文存档]]
+
+## 姊妹页分工（2026-09-10 提案卡 #6）
+
+本页为**机制/体验向**深度解读。姊妹页 [[comparisons/claude-4-sonnet-4-opus-4-model-comparison|Claude 4 Sonnet 4 vs Opus 4 模型对比]] 覆盖**基准数据/成本/选型决策树**。同日异源双文，分工互补。

@@ -6,7 +6,7 @@ tags: [agentcore, bedrock, aws, harness-engineering, multi-agent, devops, mcp, a
 source: [[raw/articles/基于-amazon-bedrock-agentcore-与-aws-devops-agent-打造对话式多账户运维助手]]
 sources: [raw/articles/基于-amazon-bedrock-agentcore-与-aws-devops-agent-打造对话式多账户运维助手]
 created: 2026-06-12
-updated: 2026-06-15
+updated: 2026-09-10
 review_value: 7
 review_confidence: 7
 review_recommendation: worth-reading
@@ -112,3 +112,7 @@ review_category: practice
 - vs [[ai-agent-的迁移与现代化-使用-amazon-bedrock-agentcore-将-openclaw-从单机改造为多租户-serverless-架构-]] — 后者讲 OpenClaw 单机→多租户迁移，本文讲 Strands Agents + DevOps Agent 组合
 
 → [[raw/articles/基于-amazon-bedrock-agentcore-与-aws-devops-agent-打造对话式多账户运维助手|原文存档]] ^[raw/articles/基于-amazon-bedrock-agentcore-与-aws-devops-agent-打造对话式多账户运维助手.md]
+
+## 关联
+
+- 同题异语种孪生页：[[entities/building-enterprise-level-with-bedrock-agentcore-and-strands]]（归并候选，提案卡 #11 批1）

@@ -1,7 +1,7 @@
 ---
 title: "啊？我刚开源的 Skills 已经 7K Star 了？！"
 created: 2026-07-10
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [skill, open-source, agent, community, developer]
 sources: [raw/articles/啊我刚开源的-skills-已经-7k-star-了]
@@ -104,3 +104,7 @@ garden-skills 最值得关注的不是单个 Skill 的实现细节，而是它�
 - Agent Skills 生态
 
 → [[raw/articles/啊我刚开源的-skills-已经-7k-star-了|原文存档]]
+
+## 关联
+
+- 同题异语种孪生页：[[entities/2026-06-02-啊-我刚开源的-Skills-已经-7K-Star-了--code秘密花园]]（归并候选，提案卡 #11 批1）

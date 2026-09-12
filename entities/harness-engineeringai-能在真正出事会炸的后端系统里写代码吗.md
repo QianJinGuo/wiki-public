@@ -2,7 +2,7 @@
 
 title: 'Harness Engineering：AI 能在真正"出事会炸"的后端系统里写代码吗？'
 created: 2026-05-16
-updated: 2026-06-15
+updated: 2026-09-10
 type: entity
 tags: [harness-engineering, engineering, ai]
 sources:
@@ -392,3 +392,7 @@ AI Coding 不是"让 AI 替你写代码"，而是重新  定义  人与 AI 协�
 - [[entities/harness-engineering-jk-launcher-baijiajie]]
 - [[entities/agent-harness-engineering-survey-2026]]
 - [[entities/ai-coding-入门指南-如何更好地让ai真正帮你干活]]
+
+## 关联
+
+- 同题异语种孪生页：[[entities/tencent-cdn-lego-harness-engineering]]（归并候选，提案卡 #11 批1）

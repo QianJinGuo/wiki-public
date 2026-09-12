@@ -2,7 +2,7 @@
 
 title: "我们刚过了人类最后一个劳动节？AI新职业的八个变化"
 created: 2026-05-21
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [ai-employment, labor-market, tencent-research, fde, deployment-army, governance, ecpgs-framework, anthropic, openai, deepmind, zhipu, kimi, deepseek, tongyi, agentic-ai, api-economy, enterprise-deployment, customer-success, ai-compliance]
 sources: [raw/articles/ai-employment-eight-changes-tencent-research]
@@ -166,6 +166,6 @@ OpenAI 的 ADE 招聘要求明确写道："你必须是 AI 编程工具的深度
 ## 相关实体
 
 - [[entities/agent-era-architect-skills-guide|Agent时代架构师技能指南]] — AI时代工程师技能转型参考
-- [[entities/enterprise-software-moats-agent-era|企业软件护城甲：Agent时代的竞争格局]] — AI企业市场竞争分析- [[entities/腾讯研究院ai速递-20260508|腾讯研究院ai速递 20260508]]
+- [[entities/enterprise-software-moats-agent-era|企业软件护城甲：Agent时代的竞争格局]] — AI企业市场竞争分析- [[entities/腾讯研究院ai速递-20260429|腾讯研究院ai速递 20260508]]
 - [[moc/openai-developer-ecosystem|MOC]]
 

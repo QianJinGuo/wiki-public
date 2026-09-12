@@ -1,7 +1,7 @@
 ---
 title: "Harness Engineering 规范主页（Hub）"
 created: 2026-08-29
-updated: 2026-08-30
+updated: 2026-09-10
 type: concept
 tags: [concept, harness, hub, agent-engineering, meta, navigation]
 sources: [concepts/harness-engineering-framework, concepts/agentic-engineering-paradigm, entities/harness-engineeringai-能在真正出事会炸的后端系统里写代码吗, entities/agent-harness-engineering-survey-2026]
@@ -60,3 +60,9 @@ provenance_state: merged
 - 学习路径入口：[[moc/agent-engineering-guide|Agent Engineering Guide]] · [[moc/layer-3-agent-engineering|Layer 3 Agent Engineering]]
 - 循环专项：[[moc/loop-engineering|Loop Engineering]]
 - 记忆专项：[[moc/memory-context-systems|Memory & Context Systems]]
+
+## 关联
+
+- 母体实体：[[entities/code-as-agent-harness-survey]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/harness-engineering-exploration-tencent-tech]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/agent-harness-architecture-design-production-guide]]（嵌入近邻锚点，提案卡 #12 批1）

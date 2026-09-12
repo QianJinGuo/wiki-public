@@ -1,7 +1,7 @@
 ---
 title: "AI 伦理与负责任 AI"
 created: 2026-07-02
-updated: 2026-08-01
+updated: 2026-09-10
 type: concept
 tags: [ethics, responsible-ai, ai, impact-assessment]
 provenance_state: inferred
@@ -38,6 +38,11 @@ AI 系统的部署不只是技术决策，更是社会决策。Agent 系统的�
 - [[entities/diffusiongemma-transparency-audit-lesswrong|DiffusionGemma 透明度审计]]
 - [[entities/noam-brown-ai-evaluation-reasoning-budget-performance-cost-curve|Noam Brown 评估方法论]]
 - [[entities/repo-jacking-anthropics-claude-community-plugins|Claude 插件供应链安全]]
+
+- 母体实体：[[entities/ai-friendly-architecture]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/enterprise-ai-ontology-agent-knowledge-governance]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/gaode-ai-companion-agent-architecture]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/当-agentic-ai-重塑生产关系-智能体浪潮下的企业战略与行动框架]]（嵌入近邻锚点，提案卡 #12 批1）
 
 ## 所属 MOC
 

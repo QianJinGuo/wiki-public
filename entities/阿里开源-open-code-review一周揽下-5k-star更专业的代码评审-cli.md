@@ -2,7 +2,7 @@
 title: "阿里开源 Open Code Review：一周揽下 5k star，更专业的代码评审 CLI"
 type: entity
 created: "2026-07-01"
-updated: "2026-07-21"
+updated: 2026-09-10
 tags: [wechat, code-review, alibaba, ai-engineering, cli, open-source, quality-engineering]
 provenance_state: extracted
 rating: v9c8
@@ -105,3 +105,7 @@ Open Code Review 的应对架构：^[raw/articles/阿里开源-open-code-review�
 - [[three-tools-in-one-gstack-superpowers-openspec-engineering-ai-coding]] — AI 编码工具集成栈
 
 → [[raw/articles/阿里开源-open-code-review一周揽下-5k-star更专业的代码评审-cli|原文存档]]
+
+## 关联
+
+- 同题异语种孪生页：[[entities/ali-open-code-review-cli-tool]]（归并候选，提案卡 #11 批1）

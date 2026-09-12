@@ -2,7 +2,7 @@
 
 title: "Claude Managed Agents 开发者指南"
 created: 2026-05-01
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [anthropic, managed-agents, harness, cloud-agent, api]
 sources:
@@ -47,3 +47,9 @@ moc_rebuilt: 2026-09-07
 - [[entities/prompt-debugger-compare-templates-winty|Prompt 调试器：A/B 测试模板对比]] — Prompt调试器三件套：A/B+评分沉淀+模板库
 - [[entities/专为-managed-agents-而生的-harness-底座agentscope-20|专为 Managed Agents 而生的 Harness 底座：AgentScope 2.0]] — brain hands拆分控制面数据面
 - [[entities/ai-native-sdlc-playbook-anthropic|AI Native SDLC Playbook：Anthropic 应用 AI 团队的软件开发生命周期重构方法论]] — SDLC六阶段重构
+
+## 关联
+
+- 同题异语种孪生页：[[entities/anthropic-官方-agent-harness-平台claude-managed-agents-完整指南]]（归并候选，提案卡 #11 批1）
+- 同题异语种孪生页：[[entities/深入理解-claude-code-源码中的-agent-harness-构建之道-v2]]（归并候选，提案卡 #11 批1）
+

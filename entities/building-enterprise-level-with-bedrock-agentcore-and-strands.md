@@ -1,7 +1,7 @@
 ---
 title: "基于Bedrock AgentCore+Strands构建企业级智能搜索平台实践 | 亚马逊AWS官方博客"
 created: 2026-05-14
-updated: 2026-09-07
+updated: 2026-09-10
 tags: [aws-china-blog, bedrock-agentcore, strands-sdk]
 sources: [raw/articles/building-enterprise-level-with-bedrock-agentcore-and-strands]
 review_value: 8
@@ -54,3 +54,7 @@ Strands Agents 采用**模型驱动（Model-Driven）**设计，开发者只需�
 
 ### 快速集成路径
 对于中国区用户，小宿科技提供了更便捷的模型接入路径（通过 SKyrouter 访问 DeepSeek 等模型），结合 Strands Agents 的多模型支持，企业可在不改变代码的情况下切换底层模型。实施路径建议：1）项目初始化使用 uv 管理依赖；2）本地使用 Strands Agent + Bedrock 模型快速验证；3）通过 AgentCore Runtime 部署到云端；4）通过 Gateway 集成第三方 MCP 工具；5）启用 Memory 实现个性化服务。这一路径可将企业级 Agent 项目从概念验证到生产部署的时间大幅缩短。 ^[raw/articles/building-enterprise-level-with-bedrock-agentcore-and-strands.md]
+
+## 关联
+
+- 同题异语种孪生页：[[entities/基于-amazon-bedrock-agentcore-与-aws-devops-agent-打造对话式多账户运维助手]]（归并候选，提案卡 #11 批1）

@@ -1,7 +1,7 @@
 ---
 title: "Model Context Protocol (MCP)"
 created: 2026-05-21
-updated: 2026-08-06
+updated: 2026-09-10
 type: concept
 tags: [mcp, agent, tool, protocol, architecture, integration]
 sources:
@@ -244,6 +244,8 @@ MCP Apps 允许工具返回一个**可交互界面**，客户端在聊天界面�
 
 
 → [[raw/articles/anthropic-12-mcp-production-patterns|原文存档]]
+
+- 母体实体：[[entities/claude-code-mcp-server]]（嵌入近邻锚点，提案卡 #12 批1）
 
 ## 新增关联实体
 - [[entities/livekit-agents-voice-ai-streaming-cascade-interruption-detection]]

@@ -1,7 +1,7 @@
 ---
 title: "harness 长程任务模式"
 created: 2026-06-12
-updated: 2026-08-01
+updated: 2026-09-10
 type: concept
 tags: [concept, harness, long-running, agent, persistence, resume]
 sources: [entities/harness-engineering-long-term-agent-tasks, entities/agent-harness-architecture]
@@ -63,3 +63,10 @@ Claude Code 的 Auto Mode 在大型 PR 上就是长程任务的典型场景：�
 
 - [[moc/layer-4-ecosystem|Layer 4 Ecosystem]]
 - [[moc/layer-5-production-security|Layer 5 Production Security]]
+
+## 关联
+
+- 母体实体：[[entities/agent-harness-production]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/agent-harness-architecture-design-production-guide]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/生产级-agent-全景架构harness-工程组织与人才]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/agent-architecture-harness-new-backend]]（嵌入近邻锚点，提案卡 #12 批1）

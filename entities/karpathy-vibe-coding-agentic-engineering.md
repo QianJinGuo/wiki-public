@@ -1,7 +1,7 @@
 ---
 title: "从氛围编程到智能体工程"
 created: 2026-06-10
-updated: 2026-09-07
+updated: 2026-09-10
 tags: [agent, ai-coding, architecture, code, data, database, evaluation, fine-tuning, llm, memory, mlops, prompt, rl, security, tool-use]
 review_value: 7
 review_confidence: 7
@@ -50,3 +50,9 @@ moc_rebuilt: 2026-09-07
 - [[moc/agent-memory-architecture-decision-points|Agent Memory 架构选择的关键决策点是什么？]]
 - [[moc/agent-engineering-guide|Agent 工程全景指南]]
 - [[moc/mlops-training-inference|MLOps：训练、推理与模型运维全景]]
+
+## 关联
+
+- 同题异语种孪生页：[[entities/构建基于多智能体架构的深度思考交易系统-v2]]（归并候选，提案卡 #11 批1）
+- 同题异语种孪生页：[[entities/karpathy-最新访谈从-vibe-coding-到-agentic-engineering]]（归并候选，提案卡 #11 批1）
+

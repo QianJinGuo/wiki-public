@@ -1,7 +1,7 @@
 ---
 title: "Skill Framework & Writing Patterns"
 created: 2026-05-21
-updated: 2026-08-01
+updated: 2026-09-10
 type: concept
 tags: [skill, agent, framework, writing, patterns, governance]
 sources:
@@ -272,6 +272,8 @@ class SkillImprover:
 
 
 → [[raw/articles/anthropic-12-mcp-production-patterns|原文存档]]
+
+- 母体实体：[[entities/agent-skills-no-dependency-design-philosophy]]（嵌入近邻锚点，提案卡 #12 批1）
 
 ## 新增关联实体
 - [[entities/baidu-netdisk-three-layer-agent-architecture]]

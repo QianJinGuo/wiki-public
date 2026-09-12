@@ -1,7 +1,7 @@
 ---
 title: "When AI Builds Itself：Anthropic Institute 报告解读——AI 进入 AI 研发执行层、瓶颈迁移与研发级 Harness（架构师 JiaGouX）"
 created: 2026-06-05
-updated: 2026-08-29
+updated: 2026-09-10
 type: concept
 tags: [anthropic-institute, when-ai-builds-itself, ai-r-and-d, ai-self-improvement, metr-time-horizon, claude-mythos, claude-code-76-percent, claude-80-percent-merge, automated-weak-to-strong, research-harness, r-d-harness, bottleneck-shift, execution-cheap-validation-expensive, brake-engineering, prepared-framework-v2, 7-layer-task-admission, jiagoux]
 sources:
@@ -253,6 +253,8 @@ Automated Weak-to-Strong Researcher 实验里，**Agent 也发明了多种 rewar
 
 
 → [[raw/articles/anthropic-institute-when-ai-builds-itself-jiagoux-interpretation|原文存档]]
+
+- 母体实体：[[entities/anthropic-institute-when-ai-builds-itself-jiagoux-interpretation]]（嵌入近邻锚点，提案卡 #12 批1）
 
 ## 所属 MOC
 

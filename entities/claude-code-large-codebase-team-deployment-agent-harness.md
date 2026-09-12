@@ -1,7 +1,7 @@
 ---
 title: "面向大型代码库的 Claude Code 团队落地经验与扩展策略（Agent Harness）"
 created: 2026-06-10
-updated: 2026-09-07
+updated: 2026-09-10
 tags: [agent, claude, code, deployment, harness-engineering, llm, memory, mlops, rag, search, security, tool-use, workflow]
 review_value: 7
 review_confidence: 7
@@ -71,3 +71,7 @@ review_category: practice
 - [[concepts/harness-engineering-framework|Harness Engineering 框架]]
 - [[concepts/agent-harness-engineering-paradigm|Agent Harness 工程范式]]
 - [[moc/claude-code-complete-guide|Claude Code 完全指南 MOC]]
+
+## 关联
+
+- 同题异语种孪生页：[[entities/准备开一个新坑从零复刻一个-claude-codenn目标是在这个过程中和大家一起学习-claude-code-的-harness-是如何做的nnclaude-]]（归并候选，提案卡 #11 批1）

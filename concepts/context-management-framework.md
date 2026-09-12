@@ -1,7 +1,7 @@
 ---
 title: "上下文管理框架"
 created: 2026-07-02
-updated: 2026-08-01
+updated: 2026-09-10
 type: concept
 tags: [context-management, llm, agent, framework]
 provenance_state: inferred
@@ -30,6 +30,8 @@ confidence: 0.7
 - [[entities/attention-collapse-context-management|注意力塌缩与上下文管理]]
 - [[entities/taco-让-cli-agent-在自主迭代中学会丢掉无用上下文|Taco 上下文压缩]]
 - [[entities/llm-inference-pipeline-internals|LLM 推理流水线]]
+
+- 母体实体：[[entities/agent-harness-context-management-working-set]]（嵌入近邻锚点，提案卡 #12 批1）
 
 ## 所属 MOC
 

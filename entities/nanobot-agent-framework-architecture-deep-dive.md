@@ -271,8 +271,10 @@ nanobot 把所有决策路径强塞进一个 while 循环，与 LangGraph 的 DA
 - [[entities/loop-engineering-addy-osmani-challengehub]] — ReAct 循环工程化的另一视角
 - [[entities/codex-major-update-appshots-goal-xinzhiyuan]] — Codex 同样采用单循环 + 长寿命任务设计
 - [[entities/天猫新品营销技术团队ai编码实战指南上]] — AGENT.md 持续约定模式的实战
-- [[entities/腾讯研究院ai速递-20260506]] — CL-Bench Life 揭示的"上下文误用"问题，呼应 nanobot 的 progressive loading 设计
+- [[entities/腾讯研究院ai速递-20260429]] — CL-Bench Life 揭示的"上下文误用"问题，呼应 nanobot 的 progressive loading 设计
 - [[concepts/harness-engineering-framework]] — Agent harness 的工程框架
+
+- 同题异语种孪生页：[[entities/4000行代码撑起一个agent框架nanobot架构深度解析]]（归并候选，提案卡 #11 批1）
 
 ## 相关链接
 

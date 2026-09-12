@@ -1,7 +1,7 @@
 ---
 title: "Agent Plan x DeepSeek Harness 实践指南"
 created: 2026-09-04
-updated: 2026-09-09
+updated: 2026-09-10
 type: entity
 tags: [agent, harness, deepseek, workflow, session, event-sourcing]
 review_value: 7
@@ -77,3 +77,7 @@ DSH 的 session 不把会话实现成 messages[] 数组，而是一份**只追�
 - [[entities/agent-harness-engineering-survey-2026|Agent Harness 工程综述]]
 - [[entities/thin-harness-fat-skills|Thin Harness, Fat Skills]]
 - [[entities/agent-memory-modular-framework|Agent 记忆模块化框架]]
+
+## 关联
+
+- 同题异语种孪生页：[[entities/deepseek-harness-observability-tencent-agent可观测]]（归并候选，提案卡 #11 批1）

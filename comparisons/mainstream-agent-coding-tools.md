@@ -1,7 +1,7 @@
 ---
 title: "主流 Agent 编码工具对比"
 created: 2026-07-02
-updated: 2026-08-14
+updated: 2026-09-10
 type: comparison
 tags: [comparison, agent, ai-coding, tools]
 sources: [raw/articles/ai-coding-tools-ultimate-review-2026-code-completion-to-swe-agent-datapai]
@@ -77,3 +77,5 @@ Claude Code 的优势在于 Loop Engineering 的成熟度和 Skill 生态；Code
 - [[entities/icse-2026杰出论文-突破代码模型真实工程落地瓶颈北大团队提出sealign对齐框架显著提升软件工程智能体决策质量|SEAlign：软件工程智能体决策质量对齐]]
 
 → [[raw/articles/ai-coding-tools-ultimate-review-2026-code-completion-to-swe-agent-datapai|原文存档]] ^[raw/articles/ai-coding-tools-ultimate-review-2026-code-completion-to-swe-agent-datapai.md]
+- 被比对象：[[concepts/agent-identity-portability]]（嵌入近邻锚点，提案卡 #13 批1）
+

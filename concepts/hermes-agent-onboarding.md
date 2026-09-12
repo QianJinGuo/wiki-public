@@ -1,7 +1,7 @@
 ---
 title: Hermes Agent 新手上手指南
 created: 2026-05-07
-updated: 2026-08-01
+updated: 2026-09-10
 type: concept
 tags: [hermes, agent, tutorial, workflow]
 related:
@@ -157,6 +157,13 @@ Gateway 配置的核心挑战不在连接本身，而在于**消息路由与会�
 
 
 → [[raw/articles/hermes-agent-newbie-guide-dotta|原文存档]]
+
+- 母体实体：[[entities/hermes-skill-system-deep-dive]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/hermes-agent-deep-dive]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/hermes-agent-12-layer-full-configuration-guide]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/hermes-agent-memory-system-vs-openclaw]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/hermes-agent-operator上手-把一个-agent-养成可运营系统-若飞]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/hermes-agent-newbie-guide-dotta]]（嵌入近邻锚点，提案卡 #12 批1）
 
 ## 相关实体
 - [[entities/skill-development-guide-aliyun-2026|重新定义Skill开发：保姆级教程&一站式开发助手发布]]

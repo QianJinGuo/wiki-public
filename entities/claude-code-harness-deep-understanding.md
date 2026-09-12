@@ -4,7 +4,7 @@ title: "Claude Code Harness Deep Understanding"
 type: entity
 tags: [agent, anthropic, claude, harness, llm]
 created: 2026-05-21
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/claude-code-harness-deep-understanding]
@@ -50,3 +50,7 @@ moc_rebuilt: 2026-09-07
 - [[moc/claude-code-complete-guide|Claude Code 生态完全指南]]
 - [[moc/agent-engineering-guide|Agent 工程全景指南]]
 - [[moc/anthropic-ecosystem|Anthropic 生态与战略]]
+
+## 关联
+
+- 同题异语种孪生页：[[entities/深入理解-claude-code-源码中的-agent-harness-构建之道-v2]]（归并候选，提案卡 #11 批1）

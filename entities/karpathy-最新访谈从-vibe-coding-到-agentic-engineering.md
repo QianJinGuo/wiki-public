@@ -1,7 +1,7 @@
 ---
 title: "Karpathy 最新访谈：从 Vibe Coding 到 Agentic Engineering"
 created: 2026-06-10
-updated: 2026-09-07
+updated: 2026-09-10
 tags: [agent, ai-coding, architecture, code, data, database, evaluation, fine-tuning, llm, memory, mlops, prompt, rl, security, tool-use, harness-engineering, agentic-engineering, vibe-coding, software-3-0]
 review_value: 8
 review_confidence: 8
@@ -49,3 +49,7 @@ moc_rebuilt: 2026-09-07
 - [[moc/agent-memory-architecture-decision-points|Agent Memory 架构选择的关键决策点是什么？]]
 - [[moc/agent-engineering-guide|Agent 工程全景指南]]
 - [[moc/mlops-training-inference|MLOps：训练、推理与模型运维全景]]
+
+## 关联
+
+- 同题异语种孪生页：[[entities/karpathy-vibe-coding-agentic-engineering]]（归并候选，提案卡 #11 批1）

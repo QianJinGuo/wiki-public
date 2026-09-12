@@ -1,7 +1,7 @@
 ---
 title: "agentic engineering 工程范式"
 created: 2026-06-12
-updated: 2026-08-01
+updated: 2026-09-10
 type: concept
 tags: [concept, agentic-engineering, karpathy, harness, verifier, paradigm]
 sources: [entities/karpathy-vibe-coding-agentic-engineering, entities/karpathy-最新访谈从-vibe-coding-到-agentic-engineering, entities/karpathy-vibe-coding-to-agentic-engineering]
@@ -74,3 +74,12 @@ harness / context / verifier 三件套不是独立的——它们之间有强依
 
 - [[moc/layer-0-foundation|Layer 0 Foundation]]
 - [[moc/layer-4-ecosystem|Layer 4 Ecosystem]]
+
+## 关联
+
+- 母体实体：[[entities/karpathy-vibe-coding-agentic-engineering-v4]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/karpathy-vibe-coding-agentic-engineering-v3]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/karpathy-vibe-coding-agentic-engineering-v2]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/karpathy-vibe-coding-agentic-engineering-2026-shuge]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/karpathy-vibe-engineering-silicon-era-jiangtao]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/tencent-vibe-coding-to-agentic-engineering-backend]]（嵌入近邻锚点，提案卡 #12 批1）

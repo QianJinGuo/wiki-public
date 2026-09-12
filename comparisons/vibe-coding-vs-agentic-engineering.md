@@ -1,7 +1,7 @@
 ---
 title: "vibe coding vs agentic engineering：Karpathy 范式迁移"
 created: 2026-06-12
-updated: 2026-06-12
+updated: 2026-09-10
 type: comparison
 tags: [comparison, vibe-coding, agentic-engineering, karpathy, paradigm]
 sources: [entities/karpathy-vibe-coding-agentic-engineering, entities/karpathy-最新访谈从-vibe-coding-到-agentic-engineering, entities/karpathy-vibe-coding-to-agentic-engineering]
@@ -35,3 +35,7 @@ vibe coding 不是错——它解决了「快速做出来」。agentic engineeri
 - [[entities/karpathy-vibe-coding-agentic-engineering]]
 - [[entities/karpathy-最新访谈从-vibe-coding-到-agentic-engineering]]
 - [[entities/karpathy-vibe-coding-to-agentic-engineering]]
+
+## 关联
+
+- 被比对象：[[concepts/routa-harness-visualization]]（嵌入近邻锚点，提案卡 #13 批1）

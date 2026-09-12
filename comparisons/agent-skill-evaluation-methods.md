@@ -1,7 +1,7 @@
 ---
 title: Agent / Skill 评估方法对比
 created: 2026-05-01
-updated: 2026-05-01
+updated: 2026-09-10
 type: comparison
 tags: [comparison, meta, benchmark]
 sources:
@@ -89,3 +89,10 @@ confidence: high
 ## 相关概念
 - [[concepts/agent-evaluation-benchmark-frameworks|Agent 评测框架]] — pass@k、评分器设计、CI/CD 集成
 - [[concepts/skill-framework-writing-patterns|Skill 框架写作模式]] — Skill 设计影响评估方法论
+
+## 关联
+
+- 被比对象：[[concepts/skill-engineering-principles]]（嵌入近邻锚点，提案卡 #13 批1）
+- 被比对象：[[concepts/agent-self-improvement-loops]]（嵌入近邻锚点，提案卡 #13 批1）
+- 被比对象：[[concepts/skill-formal-theory-survey]]（嵌入近邻锚点，提案卡 #13 批1）
+- 被比对象：[[concepts/hermes-agent-skill]]（嵌入近邻锚点，提案卡 #13 批1）

@@ -1,7 +1,7 @@
 ---
 title: AI Team 知识沉淀体系
 created: 2026-04-27
-updated: 2026-08-01
+updated: 2026-09-10
 type: concept
 tags: [knowledge-management, harness-engineering, team-knowledge, knowledge-lifecycle, context-engineering, workflow-automation, karpathy-llm-wiki, knowledge-layering]
 related:
@@ -160,6 +160,9 @@ AI Team 的知识沉淀体系与 Garry Tan 倡导的 Thin Harness Fat Skills 理
 - [[entities/thin-harness-fat-skills]] — 替代/补充方案
 - [[entities/context-engineering-three-memory-paradigms]] — 替代/补充方案
 - [[entities/tmall-ai-coding-practice-team-knowledge-base]] — 替代/补充方案
+
+- 母体实体：[[entities/harness不是目的知识才是护城河-一个ai工程交付团队的知识沉淀实践]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/tencent-harness-engineering-team-specification-2026]]（嵌入近邻锚点，提案卡 #12 批1）
 
 ## 所属 MOC
 

@@ -2,10 +2,10 @@
 
 title: "DeepSeek Code Harness"
 created: 2026-05-23
-updated: 2026-09-09
+updated: 2026-09-11
 type: entity
 tags: [deepseek, harness, claude-code, agent, coding-agent, china-ai, evaluation, terminal-bench, three-dimension, agent-plan, cordis, spatiotemporal-composability, post-training, self-evolution]
-sources: [raw/articles/deepseek-code-harness-competitor-tina, raw/articles/deepseek-harness-v01-open-source-everything-plugin-infoq-2026, raw/articles/deepseek-harness-orange-book-shuhua-2026, raw/articles/deepseek-harness-agent-engineering-new-paradigm-aliyun-2026, raw/articles/deepseek-harness-cordis-runtime-mechanics-tencent-chino-2026, raw/articles/deepseek-harness-拆解一套能拼装的-agent-架构, raw/articles/deepseek-harness是今年最有野心的一次agent开源, raw/articles/deepseek-harness-实测模型之外的那一半到底带来了什么, raw/articles/deepseek-harness-agentloop-three-dimension-eval-qianwen-2026-08-19, raw/articles/dsh-observability-tencentcloud-agent-obs-2026-08-24, raw/articles/deepseek-harness-ptc-creation-cordis-baidu-geek-2026, raw/articles/deepseek-harness-cordis-spatiotemporal-composability-paper-lss233-2026-09-04, raw/articles/deepseek-harness-post-training-enterprise-evolution-aliyun-2026-09-05, raw/articles/deepseek-harness-mobile-kuikly-tencent-2026]
+sources: [raw/articles/dsh-turn-step-freeze-monotonic-guard-ruofei-2026, raw/articles/deepseek-code-harness-competitor-tina, raw/articles/deepseek-harness-v01-open-source-everything-plugin-infoq-2026, raw/articles/deepseek-harness-orange-book-shuhua-2026, raw/articles/deepseek-harness-agent-engineering-new-paradigm-aliyun-2026, raw/articles/deepseek-harness-cordis-runtime-mechanics-tencent-chino-2026, raw/articles/deepseek-harness-拆解一套能拼装的-agent-架构, raw/articles/deepseek-harness是今年最有野心的一次agent开源, raw/articles/deepseek-harness-实测模型之外的那一半到底带来了什么, raw/articles/deepseek-harness-agentloop-three-dimension-eval-qianwen-2026-08-19, raw/articles/dsh-observability-tencentcloud-agent-obs-2026-08-24, raw/articles/deepseek-harness-ptc-creation-cordis-baidu-geek-2026, raw/articles/deepseek-harness-cordis-spatiotemporal-composability-paper-lss233-2026-09-04, raw/articles/deepseek-harness-post-training-enterprise-evolution-aliyun-2026-09-05, raw/articles/deepseek-harness-mobile-kuikly-tencent-2026, raw/articles/dsh-plugin-design-applicability-boundary-qiniu-2026-09-10]
 review_value: 8
 review_confidence: 8
 reviewed: 2026-09-07
@@ -328,6 +328,51 @@ DSH 最值得注意的 @deepseek-ai/dsh-tool-cordis"自指的 Cordis 工具集"�
 
 **两种远程连接**：①SSH 模式建立本地端口转发（loopback→127.0.0.1:3080）；②扫码 Relay 模式（Host 插件主动连 Relay，手机 App 连同一 Relay，两端配对后流量经密封隧道转发，电脑无需把 DSH 开放到局域网/公网）。Kuikly 的跨端组件市场（KuiklyMarkdown 流式渲染、KuiklyWebview）+ AI 开发配套（KuiklyUI-AI 供 Agent 生成代码）是选型主因。该客户端不永久绑定 DSH，对多数 Agent Host 移动端基础能力相近，未来接其他 Agent 服务主要新增协议适配器。^[raw/articles/deepseek-harness-mobile-kuikly-tencent-2026.md]
 
+### 扩展性设计的适用边界：这套插件设计何时值得借鉴（七牛开发者「拆解 dsh」系列终篇）
+
+七牛开发者八篇「拆解 dsh」系列（基线 dsh 0.1.2-rc.1 / commit a66e470204，数据由 `pnpm run gen-doc-graphs` 从 `docs/event-producer-consumer.md` 与 `docs/capability-seams.md` 生成、可复现核对）的终篇转向**元问题**：什么样的 Agent 运行时需要这套设计、哪些方法可以单独拿出来用。前几批（chino 机制拆解 / Cordis 论文形式化 / 自指工具集 / 后训练目的论 / 移动端）都在讲「DSH 是什么」，本篇补的是**「你该不该抄、抄哪一部分」的取舍框架**——这是本实体原缺的决策维度。^[raw/articles/dsh-plugin-design-applicability-boundary-qiniu-2026-09-10.md]
+
+**高扩展性的四项成本账**（先算成本再谈适用）：^[raw/articles/dsh-plugin-design-applicability-boundary-qiniu-2026-09-10.md]
+
+- **调试成本**：多个插件介入同一执行节点后，同一行为受多层插件共同影响。按 0.1.2-rc.1 统计，**`agent/pre-step` 单事件有 15 个包监听**（compaction-basic / plan-mode / agent-instructions / session-checkpoint-policy / session-reference / tool-skill / time-context / subagent-in-process-driver / tmux-context / tool-subagent / tool-cordis / hooks-claude-code / goal-round-driver / hooks-codex / repeat-tool-reminder）。静态 import 关系只能看出模块依赖，**当前加载了哪些插件、以什么顺序参与处理，必须结合展开后的配置判断**。此外事件派发方式（`emit` / `serial` / `parallel` / `waterfall`）本身就是接口语义的一部分——dsh 为事件声明 `@mode` 再用生成脚本核对声明与实际派发；一个原本只做通知的事件若需允许插件改写输入，就要把 `emit` 改成 `waterfall`，相关监听器的函数签名与调用方式随之调整。
+- **生命周期**：插件注册的事件监听、服务与工具随插件上下文回收，文件 watcher / timer / 外部连接通过 `ctx.effect()` 纳入同一套生命周期。复杂度的主要来源是**卸载与重组阶段**——插件卸载、重载、Provider 替换或服务重绑定后，旧监听/连接/状态若未同步释放会继续影响后续 Turn。
+- **Session 协议**：模型上下文由 Session Log 事件按规则生成，因此**每新增一种要进入模型上下文的内容，都要同时处理对应事件、生成规则、序列化要求与格式兼容**（仅涉及底层结构变化才提升 `SESSION_FORMAT_VERSION`）。Session Log 因此除记录执行过程外，还承担了一部分协议职责。
+- **理解成本**：仓库内有 **240 个公开发布的 `@deepseek-ai` 包**；定位一个功能可能要先找对应 seam、再确认 Definition / Consumer / 当前加载的 Provider，再结合事件与配置才能还原运行时关系。**`capability-seams.md` 与 `event-producer-consumer.md` 这类生成文档由此承担「运行时索引」职责**——模块拆得越细，越需要额外文档把能力、事件与实际运行组合串起来。
+
+**适用边界：两维四象限。** 插件契约与生命周期成本取决于两个条件——**扩展由谁提供**、**运行期是否需要动态重组**：^[raw/articles/dsh-plugin-design-applicability-boundary-qiniu-2026-09-10.md]
+
+| 扩展来源 | 运行期动态重组 | 建议 |
+|---|---|---|
+| 外部独立作者 | 需要 | **dsh / Cordis 完整机制覆盖最完整**：事件契约开放关键执行节点 + Definition/Provider/Consumer 划分能力替换边界 + Cordis 上下文管理插件生命周期资源创建回收 |
+| 外部独立作者 | 仅启动时加载 | 事件契约、能力 seam、配置入口仍重要（扩展作者不能依赖主程序内部实现），但**无需承担完整运行期生命周期管理**——卸载/重绑定/资源回收可简化；**第三方插件生态与动态生命周期可以分开设计** |
+| 内部团队 | 需要动态重组 | 对公开契约要求可低（Consumer/Provider 同属一个研发体系，接口可随版本调整），但**生命周期管理仍有必要**（effect / 资源回收 / Provider 生命周期保留），可缩小需长期稳定的扩展接口范围 |
+| 内部团队 | 静态形态 | 完整插件运行时的收益最小——**依赖注入、显式 registry、函数组合或配置组装即可覆盖能力替换**；控制流可集中在 Agent Loop 内，沿固定路径排查。Profile/Bundle 正适合这种启动期组装（web/headless/desktop 经配置选择能力组合） |
+
+作者特别点出 dsh 的最特殊场景：**`dsh-tool-cordis` 把 Cordis 能力交给 Agent**——模型可检查当前运行时、生成插件代码并挂进现有插件树（注册 Tool Schema、监听事件、占用 Service Key、创建资源），**只要运行时允许这类变化，插件退出时能否完整清理状态就会影响后续 Turn**。^[raw/articles/dsh-plugin-design-applicability-boundary-qiniu-2026-09-10.md]
+
+**三条可复用设计（可脱离 Cordis 单独采用）**：^[raw/articles/dsh-plugin-design-applicability-boundary-qiniu-2026-09-10.md]
+
+1. **上下文重建（与插件机制无绑定）**：不单独维护模型消息历史，执行过程先写入追加式 Session Log、再按规则筛选组织事件生成模型上下文——**模型上下文与执行记录共用同一份基础数据**，重建/压缩/崩溃恢复都沿这套机制（压缩结果作为新事件写入、历史事件继续保留；崩溃恢复利用 Turn/Step/Tool Call 事件判断执行停在哪，恢复记录与状态而**不重放已发生的工具操作**）。收益：消除「消息历史与执行记录分别维护」带来的漏写、顺序变化、压缩不一致等同步问题——**即使 Agent Loop 集中在一个模块里也适用**。
+2. **能力接缝的四条约束**（不依赖 Cordis，可用 DI 容器 / registry / 显式函数参数实现）：①**Definition 独立于实现**（接口、数据结构、行为语义先形成稳定定义）；②**Consumer 依赖 Definition 而非具体 Provider**（底层才有替换空间）；③**接口只保留稳定可替换能力**（如 `ctx.lsp` 只暴露四个只读操作，接口越克制、Provider 需对齐的行为越少）；④**行为语义也属于契约**——`subagent-acp` 暴露过：方法签名可保持一致，但 Consumer 还可能依赖契约未明确描述的**时序行为**，切换 Provider 后这类隐含假设会变成兼容问题。E2B 替换结果印证：底层 Provider 替换后大部分 Consumer 仍沿原 Definition 工作，**出问题处集中在契约未覆盖的行为语义上**。
+3. **扩展接口围绕「决策位置」设计**：0.1.2-rc.1 事件目录 69 行 = 65 个带派发模式的具名 Harness 事件 + 4 行内部分类；65 个具名事件按模式分布为 **`emit` 49（通知型）/ `waterfall` 14（可改写、可结束后续传递）/ `serial` 1 / `parallel` 1**。比事件总数更值得关注的是**哪些位置允许插件改变后续执行**——14 个 waterfall 分布在主循环（`agent/pre-step`、`agent/request`、`agent/request-error`）、模型（`llm/stream`）、提示词（`system-prompt/assemble`）、工具（`tools/pre-execute`、`tools/execute`、`tools/post-execute`、`tools/ptc-dispatch-log`）、文件（`fs/write-intent`、`fs/edit-intent`）、人工介入（`approval/request`、`user-questions/request`）与遥测（`session-telemetry/record`），共同点是**都处在可能影响后续执行结果的关键节点**。方法：先沿运行过程找出真正需要开放的决策位置，再决定插件在每个位置能参与到什么程度（仅通知 / 可改输入返回值 / 可结束后续传递 / 待异步完成）。对比例子：`agent/turn-stopping` 用 `serial`（监听器完成后主循环重新检查 Inbox 再决定 Turn 是否继续），`session/flush` 用 `parallel`（需等待相关监听器完成持久化）——两者都涉及等待，但运行语义不同。**结论：判断扩展能力时事件数量只是表面信息，重要的是哪些运行节点被开放、插件在这些位置能做什么。**
+
+**系列终局的结论**：八篇期间 dsh 基线从 0.1.0-rc.7 走到 0.1.2-rc.1（跨 0.1.1、0.1.2 两轮版本），项目仍处 developer preview。系列最终留下的是一组关于**Agent 运行时扩展边界的设计取舍**，可归纳为三点：**模型上下文从可重建的日志生成；可替换能力明确区分 Definition / Provider / Consumer；扩展接口围绕运行时的决策位置设计并明确插件在每个位置可参与到什么程度**。而 Cordis、动态重组与完整插件生命周期采用到什么程度，取决于扩展来源、运行形态与系统实际需要开放的范围。^[raw/articles/dsh-plugin-design-applicability-boundary-qiniu-2026-09-10.md]
+
 ## 相关实体
 
 - [[moc/coding-agent-practice|MOC]]
+
+
+## 2026-09-11 SUPP：Turn/Step 请求冻结与单调拒绝守卫（若飞 v0.1.2 续篇，第 13 来源）
+
+若飞（架构师）v0.1.2-alpha.2 源码拆解续篇，本篇新增库内零覆盖的四个运行时边界机制：^[raw/articles/dsh-turn-step-freeze-monotonic-guard-ruofei-2026.md]
+
+**Turn/Step 双层与 inbox 三入口**：Turn 是连续工作轮次，Step 是其中一次模型请求+工具执行。待处理输入分 `next-turn`/`next-step` 两队列经 `agent/inbox/spliced` 写入 Session（进程恢复时由投影重新折叠，不靠内存对象）——`followup()` 进下一轮并唤醒、`steer()` 进下一步并主动唤醒当前 Agent、`inject()` 进下一步但不唤醒休眠 Agent。解决"用户在模型思考时补充一句话应改变当前步、定时任务上下文先排队"的具体问题。^[raw/articles/dsh-turn-step-freeze-monotonic-guard-ruofei-2026.md]
+
+**请求冻结（prepareCall 后 derive and freeze）**：`agent/pre-step` 允许插件检查/拒绝/改写输入 → `agent/request`+`prepareCall()` 解析 provider/model/工具 schema → 冻结本次请求消息再进 `llm/stream`。失败重试重试的是同一份已渲染组装结果，不重新读取可能已变化的插件状态。取消在异步准备阶段则不提交 system/user 消息；失败尝试记 `assistant/attempt` 留日志但不进入模型历史（不伪装成 `assistant/message`）。^[raw/articles/dsh-turn-step-freeze-monotonic-guard-ruofei-2026.md]
+
+**工具管线与单调拒绝守卫（monotonic guard）**：tool/call → pre-execute（allow/deny/ask 可扩展）→ **monotonic guard（只能继续拒绝，不能被后续逻辑放开——拒绝单调性从 Hook 中剥离）** → execute（超时/重试/指标）→ post-execute（改写/阻止/附加上下文）→ finalizeContent → tool/result（只观察已冻结的权威结果）。并行调用按模型原调用顺序落盘；取消批次记录"分发前中止"，回放不出现悬空 tool/call。PTC 子调用回到宿主注册表走同一管线（`tool/ptc-dispatch` 审计）。Worker Thread 与 node:vm 都不是可信安全边界。^[raw/articles/dsh-turn-step-freeze-monotonic-guard-ruofei-2026.md]
+
+**Session 未知态边界**：tool/call 已记录而进程在 tool/result 写入前崩溃 → 恢复逻辑只能确认"调用已发出"，不能确认外部世界是否改变——既非失败也非可重试，是需要人工或恢复策略的**未知态**；读/幂等操作可重试，写入/扣款/发信先核对外部状态。**Model-visible ⟺ logged**：模型看过的每条消息必须能从 Session 日志派生。^[raw/articles/dsh-turn-step-freeze-monotonic-guard-ruofei-2026.md]
+
+**能力接缝（capability seam）三件套与 Dynamic Cordis 边界**：能力 = Service Definition（声明接口）+ Provider（实现）+ Consumer（消费）；"换文件系统为远程沙箱"影响的是 Bash/PTY/LSP/子 Agent 依赖的同一组文件进程边界，不是换一个读取函数。Dynamic Cordis（define→run→stop→undefine）改变后续运行图但：动态定义存进程内存，重启不自动持久化（无评测/发布/迁移/回滚=还不是自进化闭环）；切换插件≠热迁移运行中任务（Loop 取消信号/inbox/已发调用/Session 游标交接需专门协议）。作者结论：DSH 是"为复杂运行场景预留位置的 Agent Runtime"——把能力装配、事件记录、运行时替换放到明确位置，但自进化最难的部分（独立评测/权限控制/版本记录/可回滚发布）仍未完成。^[raw/articles/dsh-turn-step-freeze-monotonic-guard-ruofei-2026.md]

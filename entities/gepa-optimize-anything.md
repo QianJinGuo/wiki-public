@@ -9,7 +9,7 @@ ingested: 2026-05-08
 review_product: 64
 sha256: 9460c2e897c5a40f380db306b3eb5fd38d564e3e575b003fc36440656e1aca04
 created: 2026-05-10
-updated: 2026-09-07
+updated: 2026-09-10
 tags: [agent, llm, architecture, ai, hermes, skill-evolution, gepa]
 review_value: 8
 sources: [raw/articles/gepa-optimize-anything-universal-text-optimization, raw/articles/hermes-agent-skill-co-evolution-gepa-optimize-anything-case]
@@ -146,7 +146,7 @@ KK大叔用 `optimize_anything` 框架在 Hermes Agent 上落地了一个 4 轮�
 → [[raw/articles/2026.md|原文存档]] ^[raw/articles/gepa-optimize-anything-universal-text-optimization.md]
 
 - [[raw/articles/gepa-optimize-anything-universal-text-optimization|原文存档]]
-- [[entities/腾讯研究院ai速递-20260507]]
+- [[entities/腾讯研究院ai速递-20260429]]
 - [[entities/karpathy-ai-agent-7-bits-value-decline-2026-allentan]]
 - [[entities/kasra-blog-llm-hacking-empirical-test]]
 - [[entities/hermes-agent-v014-architecture-shugex]]

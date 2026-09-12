@@ -1,7 +1,7 @@
 ---
 title: "HSCodeComp：阿里 ACL 2026 最佳资源论文——层级规则应用 Agent 基准"
 created: 2026-07-15
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [acl-2026, best-resource-paper, agent-benchmark, hierarchical-rule-application, deep-search, hs-code, expert-benchmark, agent-evaluation, level-3-knowledge, reasoning-drift, harness-engineering, alibaba-tech, ath-maas]
 sources:
@@ -65,3 +65,7 @@ HSCodeComp 定位在现有 Deep Search 基准的盲区——测量 Agent 在"规
 - [[concepts/evaluation-harness-design|评估 Harness 设计]] — 任务设计与评测方法论
 
 → [[raw/articles/hscodecomp-acl-2026-best-resource-paper|原文存档]] ^[raw/articles/hscodecomp-acl-2026-best-resource-paper.md]
+
+## 关联
+
+- 同题异语种孪生页：[[entities/阿里荣膺-acl-2026-最佳资源论文-hscodecomp-揭开智能体分层规则应用的能力鸿沟]]（归并候选，提案卡 #11 批1）

@@ -1,7 +1,7 @@
 ---
 title: "Loop Engineering 主题地图 (MOC)"
 created: 2026-06-15
-updated: 2026-06-15
+updated: 2026-09-10
 type: moc
 tags: [moc, loop-engineering, harness, claude-code, peter-steinberger, boris-cherny, 2026, agent-paradigm, feedback-control]
 sources: [raw/articles/loop-engineering-infoq-boris-cherny-peter-steinberger, raw/articles/loop-engineering-peter-steinberger-boris-cherny, raw/articles/loop-engineering-工程现场-ruofei, entities/loop-engineering-feedback-control-system, entities/loop-engineering-addy-osmani-challengehub, entities/harness-engineering, entities/claude-code-core-internals]
@@ -90,6 +90,11 @@ sources: [raw/articles/loop-engineering-infoq-boris-cherny-peter-steinberger, ra
 ### 平行 Entity
 
 - [[entities/loop-engineering-addy-osmani-challengehub|Loop Engineering：不再写提示词，而是设计替你写提示词的循环 — **5864 字**，Addy Osmani 视角 + 6 大构件 + 5 阶段循环，含 Fleet Loop 拓扑 + Boris/Peter 公开访谈原始引用
+- [[entities/claude-code-loop-engineering-guide|Claude Code Loop 工程指南]]
+- [[entities/loop-engineering-concept-analysis-feixue-ali-2026|Loop Engineering 概念解析（飞书/阿里 2026）]]
+- [[entities/loop-engineering应该赞成还是反对|Loop Engineering：应该赞成还是反对]]
+- [[entities/loop-engineering-tsinghua-2026|清华 2026 Loop Engineering]]
+- [[entities/loop-engineering-codebuddy-tencent-eliqiao-2026|CodeBuddy 腾讯 Loop Engineering]]
 
 ### 上游 / 下游 Entity
 
@@ -175,3 +180,7 @@ _本 MOC 由 4 entity + 3 raw 综合收口，最后更新 2026-06-15_
 - [[concepts/activation-engineering|Activation Engineering]]
 - [[concepts/harness-component-expiry-build-to-delete|Build to Delete 工程原则与开放问题]]
 - [[concepts/routa-harness-visualization|Routa Harness 可视化：Vibe Coding 时代的工程可控性]]
+
+## 相关 Concept
+
+- [[concepts/loop-engineering-methodology]] — 同名概念页

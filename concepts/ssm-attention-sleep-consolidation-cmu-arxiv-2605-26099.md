@@ -1,7 +1,7 @@
 ---
 title: "SSM-Attention 睡眠巩固机制：CMU 让 LLM 在 N 次递归前向中「睡一觉「消化长上下文（arxiv 2605.26099）"
 created: 2026-06-05
-updated: 2026-08-29
+updated: 2026-09-10
 type: concept
 tags: [ssm-attention, sleep-consolidation, fast-weights, arxiv-2605-26099, cmu, jet-nemotron, ouro, gsm-infinite, memory-consolidation, kv-cache, state-space-model, long-context, mamba-family, offline-computation, hippocampus-replay]
 sources:
@@ -189,6 +189,8 @@ CMU 论文的"睡眠巩固"机制对 Agent Memory 设计有强启发：^[raw/art
 
 
 → [[raw/articles/arxiv-2605-26099-ssm-attention-sleep-consolidation-cmu|原文存档]]
+
+- 母体实体：[[entities/arxiv-2605-26099-ssm-attention-sleep-consolidation-cmu]]（嵌入近邻锚点，提案卡 #12 批1）
 
 ## 新增关联实体
 - [[entities/lighthouse_attention]]

@@ -1,7 +1,7 @@
 ---
 title: "Hermes Agent vs Claude Code：Agent 框架架构对比"
 created: 2026-06-12
-updated: 2026-06-12
+updated: 2026-09-10
 type: comparison
 tags: [comparison, hermes-agent, claude-code, agent, framework, architecture]
 sources: [entities/hermes-agent, entities/hermes-agent-self-evolving, entities/claude-code-core-internals, entities/claude-code-architecture]
@@ -37,3 +37,10 @@ sources: [entities/hermes-agent, entities/hermes-agent-self-evolving, entities/c
 - [[entities/hermes-agent-self-evolving]]
 - [[entities/claude-code-core-internals]]
 - [[entities/claude-code-architecture]]
+
+## 关联
+
+- 被比对象：[[concepts/hermes-agent-onboarding]]（嵌入近邻锚点，提案卡 #13 批1）
+- 被比对象：[[concepts/claude-code-source-leak-lifecycle]]（嵌入近邻锚点，提案卡 #13 批1）
+- 被比对象：[[concepts/hermes-agent-skill]]（嵌入近邻锚点，提案卡 #13 批1）
+- 被比对象：[[concepts/coding-agent-architecture]]（嵌入近邻锚点，提案卡 #13 批1）

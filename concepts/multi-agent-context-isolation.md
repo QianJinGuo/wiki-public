@@ -1,7 +1,7 @@
 ---
 title: "多智能体上下文隔离"
 created: 2026-06-12
-updated: 2026-08-01
+updated: 2026-09-10
 type: concept
 tags: [concept, multi-agent, context, isolation, subagent, claude-code]
 sources: [entities/openclaw-完全指南这可能是全网最新最全的系统化教程了32w字建议收藏, entities/claude-code-architecture]
@@ -66,3 +66,7 @@ sources: [entities/openclaw-完全指南这可能是全网最新最全的系统�
 ## 所属 MOC
 
 - [[moc/layer-4-ecosystem|Layer 4 Ecosystem]]
+
+## 关联
+
+- 母体实体：[[entities/context-isolation]]（嵌入近邻锚点，提案卡 #12 批1）

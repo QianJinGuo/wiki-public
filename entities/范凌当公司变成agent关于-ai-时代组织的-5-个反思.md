@@ -4,7 +4,7 @@ title: "范凌：当公司变成Agent，关于 AI 时代组织的 5 个反思"
 type: entity
 tags: [agent]
 created: 2026-05-21
-updated: 2026-05-21
+updated: 2026-09-10
 review_value: 6
 review_confidence: 7
 sources: [raw/articles/范凌当公司变成agent关于-ai-时代组织的-5-个反思]
@@ -47,3 +47,7 @@ review_category: practice
 - **场景发现应成为 pod leader 的核心职责之一（约 30%-40% 时间）**：特赞让 pod leader 用 AI 从数百个客户需求中提炼共性场景，并用 SPIS 方法论结构化，带着"别人的痛点"而非产品 demo 去和客户对话，能显著提升客户共情和对话质量。这是 AI 时代销售和客户开发的新工作方式。
 
 - **面向 AI 时代的产品战略应聚焦于"AI 不能压缩时间的能力积累"**：在 AI 能力快速迭代的背景下，单纯依赖模型能力的功能开发壁垒脆弱。应将资源投入与真实物理场景和独有数据结合的方向（如特赞的 Game Lab evals 和 Atypica 主观世界模型），构建需要长期积累而非短期套用的差异化壁垒。
+
+## 关联
+
+- 同题异语种孪生页：[[entities/fanling-company-as-agent-ai-org-reflection-v2]]（归并候选，提案卡 #11 批1）

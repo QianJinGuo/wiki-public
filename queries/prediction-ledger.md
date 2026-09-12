@@ -25,6 +25,7 @@ confidence: high
 | 8 | 对抗页三问①：长程任务上裸模型与 harness-agent 差距持续 ≥2 代模型不收敛（正方赢；一代内收敛 ≥50% = 反方赢） | [[comparisons/model-capability-vs-harness-engineering]] | 2026-09-05 | 2027-09-05（跨 2 代） | pending | — |
 | 9 | 对抗页三问②：harness 工件平均存活期随模型升级**变长**（正方赢；变短 = 衰减假说成立）。证据口径：框架页"衰减"节记录链（现值 -38%/代）+ 后续同源记录追加 | [[comparisons/model-capability-vs-harness-engineering]] · [[concepts/harness-engineering-framework]] | 2026-09-05 | 2027-03-01（半年度） | pending | — |
 | 10 | 对抗页三问③：同任务 harness 开销占比下降且绝对收益上升（正方赢；绝对收益同步下降 = 反方赢）。证据口径：成本可对账的任务页对（如 [[entities/computer-use-45x-more-expensive-than-structured-apis|Computer Use 45x]] 族） | [[comparisons/model-capability-vs-harness-engineering]] | 2026-09-05 | 2027-03-01（半年度） | pending | — |
+| 11 | 反方立场轮主张：记忆工件（memory 文件/skill）的跨模型代际价值衰减——记忆增强 Agent 相对裸模型的任务增益随模型换代收窄（正方赢=增益持平或扩大；增益收窄=反方赢）。证据口径：跨代同任务对照的记忆增益差；harness 工件衰减记录为对照基线 | [[drafts/wiki-emergent-viewpoints-2026-09-adversarial-memory]] | 2026-09-10 | 2027-03-01（半年度，与 #9/#10 同窗） | pending | — |
 
 ## 中期检视（2026-09-05 · 非判定）
 

@@ -1,7 +1,7 @@
 ---
 title: "Agent Memory 架构选择的关键决策点是什么？"
 created: "2026-05-21"
-updated: "2026-05-21"
+updated: 2026-09-10
 type: moc
 tags: [query, agent, memory, architecture, decision-framework]
 ---
@@ -74,3 +74,17 @@ Agent Memory 架构决策树
 
 > [!summary]
 > Agent Memory 架构选择的核心决策点：①是否跨Session持久化 ②记忆粒度 ③多模态需求 ④安全隔离级别。建议从上下文窗口起步，按需叠加外部记忆系统，并始终将安全隔离作为架构底线。
+
+## 相关 Concept
+
+- [[concepts/agent-memory-architecture]] — 同名概念页
+
+## 记忆簇立场光谱（2026-09-10 反方立场轮同框）
+
+从最信任记忆到最怀疑记忆，五档立场散在五个页面，本节首次同框：
+
+- 蒸馏教条：[[concepts/agent-self-improvement-loops|Agent 自改进循环]] — 记忆/skill 蒸馏被当作成熟标志
+- 治理哲学：[[concepts/agent-memory-lifecycle-philosophies|生命周期哲学]] — 写入即影响力预算分配
+- 工程税：[[entities/agent-memory-engineering-tax-aws-china-2026|记忆系统工程税]] — 写入有五重税与缓存冲突
+- 怀疑论：[[entities/读完-claude-code-和-openclaw-的-memory-源码我对agent记忆需要向量数据库这件事产生了怀疑|向量库怀疑论]] — 纯文本 + 模型理解力可能就够
+- 反方：[[drafts/wiki-emergent-viewpoints-2026-09-adversarial-memory|反方记忆稿]] — 默认别建，写入先过门槛（跨代贬值主张在 [[queries/prediction-ledger|台账]] #11）

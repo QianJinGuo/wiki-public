@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "sourceRevision": "d20b0bb122ef01944edef256b1fddb5fb9bd4c3b",
+  "sourceRevision": "43ecdd9179d46115e572c42230c32fe93c435bb2",
   "files": [
     {
       "path": "raw/articles/0.25秒识破未见攻击-lod-lvlm-jailbreak-detection-emnlp2026.md",
@@ -1183,6 +1183,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/Tno2fglNx6_JCHVunRimDg"
     },
     {
+      "path": "raw/articles/acl2026-rag-trust-era-five-papers-zhishichang-2026.md",
+      "title": "ACL 2026 论文速览③：检索增强进入\"可信时代\"，从\"能用就行\"到\"用对了吗\"",
+      "sourceUrl": "https://mp.weixin.qq.com/s/BpuBdJ-3z54hz5fSCKmSjQ"
+    },
+    {
       "path": "raw/articles/acm-agentic-context-management-xhs-2026-08-03.md",
       "title": "acm-agentic-context-management-xhs-2026-08-03",
       "sourceUrl": "https://www.xiaohongshu.com/explore/6a708855000000002202d3e6?xsec_source=app_share&xsec_token=CBjhtLDgr4aGkqF4rKYaATYSIk63wybsleaRLSQ8tqQrU="
@@ -1361,6 +1366,16 @@
       "path": "raw/articles/agent-eval-eight-dimension-framework-product-comparison-2026-09.md",
       "title": "Agent测评框架——怎么判断一个AI Agent好不好用？",
       "sourceUrl": "https://mp.weixin.qq.com/s/KRKKYCaGxZ5aUOWbfm_TBg"
+    },
+    {
+      "path": "raw/articles/agent-eval-testset-first-version-xiaobai-2026.md",
+      "title": "AI评测方法论 ③：Agent 测评集——是什么、测什么、怎么搭第一版",
+      "sourceUrl": "https://mp.weixin.qq.com/s/PfRXKlMzEre_qRIjrlS5tA"
+    },
+    {
+      "path": "raw/articles/agent-eval-vs-llm-eval-long-horizon-collapse-dapingce-2026.md",
+      "title": "一篇文章讲明白：Agent评测怎么做？与LLM评测的区别是什么？",
+      "sourceUrl": "https://mp.weixin.qq.com/s/WeCvRp1bx6JeeI7bycVPQQ"
     },
     {
       "path": "raw/articles/agent-eval-wallezhang-yaml-driven-agent-evaluation.md",
@@ -1708,6 +1723,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/5VDN-T9K8Wr-DaQ15-I6CA"
     },
     {
+      "path": "raw/articles/agent-self-evolution-skill-to-weights-panorama-aliexpress-2026-08-25.md",
+      "title": "Agent 如何自己变强？从 Skill 到模型权重的进化全景图",
+      "sourceUrl": "https://mp.weixin.qq.com/s/AKvtr7IQ9oCGf5xldKeBNw"
+    },
+    {
       "path": "raw/articles/agent-self-improvement-six-mechanisms.md",
       "title": "Agent 自我改进的六条路",
       "sourceUrl": "https://mp.weixin.qq.com/s/CH4wIRZVcDDZOmRvPFu43Q"
@@ -1933,6 +1953,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/WaH2ouRp9VZ-EkV4ImJCEg"
     },
     {
+      "path": "raw/articles/agentic-harness-workflow-ai-coding-engineering-li-zhongze-baidu-2026-09-10.md",
+      "title": "Agentic Harness Workflow 框架：把 AI Coding 变成工程化流程",
+      "sourceUrl": "https://mp.weixin.qq.com/s/6t-NCpm0ucs53EO-rQb3Rg"
+    },
+    {
       "path": "raw/articles/agentic-loop-engineering-工程手册.md",
       "title": "Agentic Loop Engineering 工程手册（附完整代码）",
       "sourceUrl": "https://mp.weixin.qq.com/s/HZ8DD90RmVb953zlvq_4Hg"
@@ -2061,6 +2086,11 @@
       "path": "raw/articles/agentops-operationalize-agentic-ai-at-scale-with-amazon-bedr.md",
       "title": "agentops-operationalize-agentic-ai-at-scale-with-amazon-bedr",
       "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/agentops-operationalize-agentic-ai-at-scale-with-amazon-bedrock-agentcore/"
+    },
+    {
+      "path": "raw/articles/agentopsd-repro-day-work-night-evolve-bysjx-2026.md",
+      "title": "白天干活，晚上进化：我跑通了一个 Agent 自我改进闭环（AgentOPSD 算法级复现）",
+      "sourceUrl": "https://mp.weixin.qq.com/s/gqAe0SsGSqj2Q1ROKewidQ"
     },
     {
       "path": "raw/articles/agentos-minimax-forge-model-adaptation-yaoge.md",
@@ -2306,6 +2336,11 @@
       "path": "raw/articles/ai-asset-measurement-evaluation-gaode.md",
       "title": "如何构建一套完整的 AI 资产度量与评价体系？",
       "sourceUrl": "https://mp.weixin.qq.com/s/X0ssweELGT6D0xU0p_LTwA"
+    },
+    {
+      "path": "raw/articles/ai-b2b-product-pmf-fengzhigang-jd-2026.md",
+      "title": "AI 使用心得：B 端产品工作中的方法、边界与实践（京东零售 冯志纲）",
+      "sourceUrl": "https://mp.weixin.qq.com/s/yPa49Sgx5bF1-y5k9faUhA"
     },
     {
       "path": "raw/articles/ai-cambrian-google-agentic-rag-sufficient-context-cross-corpus-20260606.md",
@@ -2821,6 +2856,11 @@
       "path": "raw/articles/ai4ai-cognitive-exoskeleton-meta-learning.md",
       "title": "ai4ai-cognitive-exoskeleton-meta-learning",
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651053526&idx=3&sn=86488a72c65463f7a70e5fcbf92681d5"
+    },
+    {
+      "path": "raw/articles/ai4ai-survey-composition-gap-recursive-self-improvement-2026.md",
+      "title": "第一篇 AI4AI 综述：让 AI 改进 AI 发展到哪步了？",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652725028&idx=3&sn=e1f1fac83f33b7b69deca04d6530d22e"
     },
     {
       "path": "raw/articles/ai4s-2026-h1-frontier-panorama-yinxi.md",
@@ -3428,6 +3468,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/JDqeh3N7JlrqJpkqRRzRTA"
     },
     {
+      "path": "raw/articles/anthropic-alignment-assessment-cybersecurity-incidents-additional-findings.md",
+      "title": "Alignment assessment of cybersecurity incidents: additional findings",
+      "sourceUrl": "https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents"
+    },
+    {
       "path": "raw/articles/anthropic-apple-foundation-models-claude.md",
       "title": "Apple Foundation Models",
       "sourceUrl": "https://platform.claude.com/docs/en/cli-sdks-libraries/libraries/apple-foundation-models"
@@ -3916,6 +3961,11 @@
       "path": "raw/articles/argus-microsoft-agent-long-horizon-runtime-2026.md",
       "title": "Argus:微软开源的Agent长任务通用运行时",
       "sourceUrl": "https://www.xiaohongshu.com/discovery/item/6a772aac000000003203085f"
+    },
+    {
+      "path": "raw/articles/arise-rl-rubric-self-evolution-alibaba-xhs-2026.md",
+      "title": "ARISE-RL：阿里×盒马 Rubric-Grounded 迭代自进化 RL（小红书 @Agent前沿论文）",
+      "sourceUrl": "https://www.xiaohongshu.com/discovery/item/6aa3ea840000000011031a2b"
     },
     {
       "path": "raw/articles/armin-ronacher-ben-vinegar-token-blackbox-harness-lockin-infoq-2026-08-24.md",
@@ -6073,6 +6123,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/mg-ZLhNlwJ7kg8poBFvodw"
     },
     {
+      "path": "raw/articles/co-evolving-harnesses-and-models-on-policy-correction-arxiv-2609-09134.md",
+      "title": "Co-Evolving Harnesses and Models: On-Policy Correction Helps Weaker Models Catch Up Where Imitation Fails",
+      "sourceUrl": "https://arxiv.org/abs/2609.09134"
+    },
+    {
       "path": "raw/articles/co-existence-and-the-end-of-co-intelligence.md",
       "title": "co-existence-and-the-end-of-co-intelligence",
       "sourceUrl": "https://www.oneusefulthing.org/p/co-existence-and-the-end-of-co-intelligence"
@@ -6273,6 +6328,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/newlO_w5OEHGhg7dk7Wa4w"
     },
     {
+      "path": "raw/articles/cohere-megakernel-serving-engine-north-mini-code.md",
+      "title": "Inside the Megakernel Serving Engine for North Mini Code",
+      "sourceUrl": "https://cohere.com/blog/megakernels"
+    },
+    {
       "path": "raw/articles/cohere-north-mini-code-agentic-coding-model.md",
       "title": "Introducing North Mini Code: Cohere's first model for developers",
       "sourceUrl": "https://cohere.com/blog/north-mini-code"
@@ -6416,6 +6476,11 @@
       "path": "raw/articles/control-where-your-ai-agents-can-browse-with-chrome-enterprise-policies-on-amazo.md",
       "title": "control-where-your-ai-agents-can-browse-with-chrome-enterprise-policies-on-amazo",
       "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/control-where-your-ai-agents-can-browse-with-chrome-enterprise-policies-on-amazon-bedrock-agentcore/"
+    },
+    {
+      "path": "raw/articles/controlfoley-controllable-video-sound-generation-xiaomi-acm-mm-2026.md",
+      "title": "ControlFoley：多模态可控视频音效生成（ACM MM 2026，小米）",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIwMTc4ODE0Mw==&mid=2247722787&idx=2&sn=f7952e3eb3450995344011a125ce0ff7"
     },
     {
       "path": "raw/articles/controlled-study-attention-only-transformers-arxiv-2607-18363.md",
@@ -7003,6 +7068,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/jcqQS4W4QW61PaIzJuUxeg"
     },
     {
+      "path": "raw/articles/deepseek-v41-engram-model-memory-table-harness-vibecoder-2026-09-10.md",
+      "title": "DeepSeek V4.1 的 Engram：模型内存表如何改写 Agent Harness",
+      "sourceUrl": "https://mp.weixin.qq.com/s/kXvqPAPllQQZ7izhLTnvWA"
+    },
+    {
       "path": "raw/articles/deepseek-visual-primitives-thinking.md",
       "title": "DeepSeek Thinking with Visual Primitives 深度解读",
       "sourceUrl": "https://mp.weixin.qq.com/s/tz7Zdbv8KhHtG8fCGqQ5LQ"
@@ -7348,6 +7418,16 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/6P9l4HftpJLDK-xZazMtow"
     },
     {
+      "path": "raw/articles/dsh-plugin-design-applicability-boundary-qiniu-2026-09-10.md",
+      "title": "拆解 dsh：这套插件设计该如何借鉴",
+      "sourceUrl": "https://mp.weixin.qq.com/s/CCAMmQHYQ8I1Kxq27Du2Gw"
+    },
+    {
+      "path": "raw/articles/dsh-turn-step-freeze-monotonic-guard-ruofei-2026.md",
+      "title": "DeepSeek Harness 底层原理深度解析：Turn/Step 请求冻结与单调拒绝守卫（若飞 v0.1.2 源码拆解续篇）",
+      "sourceUrl": "https://mp.weixin.qq.com/s/Wwx3MhO2MBstCyxV8rIFOg"
+    },
+    {
       "path": "raw/articles/dumb-ways-for-an-open-source-project-to-die.md",
       "title": "Dumb Ways for an Open Source Project to Die",
       "sourceUrl": "https://nesbitt.io/2026/05/19/dumb-ways-for-an-open-source-project-to-die.html"
@@ -7621,6 +7701,11 @@
       "path": "raw/articles/enterprise-openclaw-security-deploy-architecture-guide.md",
       "title": "企业级OpenClaw安全部署架构指南 | 亚马逊AWS官方博客",
       "sourceUrl": "https://aws.amazon.com/cn/blogs/china/enterprise-openclaw-security-deploy-architecture-guide/"
+    },
+    {
+      "path": "raw/articles/enterprise-rag-retrieval-strategy-full-review-xiaoming-2026-08-05.md",
+      "title": "生产级企业知识库 RAG 检索策略全梳理",
+      "sourceUrl": "https://mp.weixin.qq.com/s/1HU9487hkPBWp4TI62jmWA"
     },
     {
       "path": "raw/articles/enterprise-trust-专用ai.md",
@@ -9208,6 +9293,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/rlIyIIZOXFObNIXbPI7gDg"
     },
     {
+      "path": "raw/articles/harness-engineering-agent-harnessing-mozhi-space-pdf-2026-09.md",
+      "title": "Harness Engineering 智能体驾驭工程（模智空间 PDF 讲义）",
+      "sourceUrl": null
+    },
+    {
       "path": "raw/articles/harness-engineering-alibaba-6-layer-architecture-duxueyou.md",
       "title": "AI 不缺智商缺纪律:一场 Harness 工程化实践",
       "sourceUrl": "https://mp.weixin.qq.com/s/HoStCq53XElBlbLU6uPTJA"
@@ -9326,6 +9416,11 @@
       "path": "raw/articles/harness-engineering长程自动化-ai-coding-skills-开发实践.md",
       "title": "Harness Engineering：长程自动化 AI Coding / Skills 开发实践",
       "sourceUrl": "https://mp.weixin.qq.com/s/mSjb20PDsfiK88C9AQB7og"
+    },
+    {
+      "path": "raw/articles/harness-handbook-tencent-full-paper-ruhan-wang-2026.md",
+      "title": "Harness Handbook: Making Evolving Agent Harnesses Readable, Navigable, and Editable (论文原文 PDF)",
+      "sourceUrl": "https://ruhan-wang.github.io/Harness-Handbook/"
     },
     {
       "path": "raw/articles/harness-handbook-tencent-ruhan-wang-2026.md",
@@ -9701,6 +9796,11 @@
       "path": "raw/articles/hipporag-neurobiologically-inspired-rag-using-amazon-bedrock.md",
       "title": "hipporag-neurobiologically-inspired-rag-using-amazon-bedrock",
       "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/hipporag-neurobiologically-inspired-rag-using-amazon-bedrock-amazon-neptune-and-personalized-pagerank"
+    },
+    {
+      "path": "raw/articles/hl-mem-local-long-term-memory-governed-cognition-taobao-2026-09-11.md",
+      "title": "让 Agent 像人一样记忆：本地长期记忆系统 HL-Mem 的设计与取舍",
+      "sourceUrl": "https://mp.weixin.qq.com/s/kNUoqHRWapbDYVtlej_bzg"
     },
     {
       "path": "raw/articles/how_claude_code_works_in_large_codebases.md",
@@ -10768,6 +10868,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MjM5NjQ5MTI5OA==&mid=2651783138&idx=1&sn=31ddcb07ef2bf6c73c2415934ab288dc"
     },
     {
+      "path": "raw/articles/kg-ontology-modeling-telecom-adguancha-2026.md",
+      "title": "从本体论出发，实战拆解知识图谱（电信场景建模方法论）",
+      "sourceUrl": "https://mp.weixin.qq.com/s/0whlaSfuTj-th19YyLpNDg"
+    },
+    {
       "path": "raw/articles/kimi-attention-residuals-preNorm-dilution-block-attnres.md",
       "title": "省下1.25倍算力！Kimi这篇论文，可能改写所有大模型的训练方式",
       "sourceUrl": "https://mp.weixin.qq.com/s/PE7jd52Oef-LTh4NvWQemA"
@@ -11308,6 +11413,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/SMqIYoWUlbr0B_OaWbXxNA"
     },
     {
+      "path": "raw/articles/livesim-environment-shaped-users-multi-agent-livestream-emnlp-2026.md",
+      "title": "中科院×字节提出直播间模拟器：让大模型还原用户如何被环境一步步改变 | EMNLP'26",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247921478&idx=3&sn=b512b1e355e62dacafb5bba199be7587"
+    },
+    {
       "path": "raw/articles/liveworld视频世界模型新范式让镜头之外的世界继续演化-1.md",
       "title": "LiveWorld：视频世界模型新范式，让镜头之外的世界继续演化",
       "sourceUrl": "https://mp.weixin.qq.com/s/IBAIk3TPzS_UExnHCtNUwg"
@@ -11788,6 +11898,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/boUmwrrSP45leZzPh2a3Xw"
     },
     {
+      "path": "raw/articles/magic-10x-more-efficient-pretraining.md",
+      "title": "Magic: 10x More Efficient Pretraining",
+      "sourceUrl": "https://magic.dev/blog/pretraining"
+    },
+    {
       "path": "raw/articles/malware-crew-teampcp-opensources-its-shaihulud-worm-on.md",
       "title": "Malware crew TeamPCP open-sources its Shai-Hulud worm on GitHub",
       "sourceUrl": "https://www.theregister.com/security/2026/05/13/malware-crew-teampcp-open-sources-its-shai-hulud-worm-on-github/5239319"
@@ -11966,6 +12081,11 @@
       "path": "raw/articles/meet-noz-your-ai-teammate-inside-signoz.md",
       "title": "Meet Noz, your AI teammate inside SigNoz",
       "sourceUrl": "https://signoz.io/blog/introducing-noz-your-ai-teammate-in-signoz"
+    },
+    {
+      "path": "raw/articles/meituan-agent-eval-whitepaper-overview-2026-09-10.md",
+      "title": "《Agent 评测白皮书》系列01：Agent 评测全览",
+      "sourceUrl": "https://mp.weixin.qq.com/s/hBSIPQnsBeWwX9UZLjWYFA"
     },
     {
       "path": "raw/articles/meituan-aigc-poster-generation-2026.md",
@@ -12423,6 +12543,11 @@
       "sourceUrl": "https://modal.com/blog/truly-serverless-gpus"
     },
     {
+      "path": "raw/articles/model-agnostic-pii-detection-with-llms.md",
+      "title": "model-agnostic-pii-detection-with-llms",
+      "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/model-agnostic-pii-detection-with-llms"
+    },
+    {
       "path": "raw/articles/model-driven-harness-thinning-vibecoder-2026-08-03.md",
       "title": "model-driven-harness-thinning-vibecoder-2026-08-03",
       "sourceUrl": "https://mp.weixin.qq.com/s/eH2s3EKNDvcn48pgbGqsTw"
@@ -12496,6 +12621,11 @@
       "path": "raw/articles/moonbit-llm-code-generation-no-resource-languages-ieee-2026.md",
       "title": "moonbit-llm-code-generation-no-resource-languages-ieee-2026",
       "sourceUrl": "https://mp.weixin.qq.com/s/Ma_y7a5TNbJy64YK2Fh74Q"
+    },
+    {
+      "path": "raw/articles/mooncake-cluster-level-kv-cache-pooling-production-2026-09-11.md",
+      "title": "日均产出万亿 Token！Mooncake 落地生产，KV Cache 命中率稳定突破 90%",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247921612&idx=3&sn=093fb9795201626263820bf95a370eac"
     },
     {
       "path": "raw/articles/moondream-popping-gpu-bubble-photon-engine.md",
@@ -13248,6 +13378,11 @@
       "sourceUrl": "https://www.oneusefulthing.org/p/what-it-feels-like-to-work-with-mythos"
     },
     {
+      "path": "raw/articles/only-pass-deceives-you-coding-agent-trace-eval-evot-databend-2026-09-10.md",
+      "title": "只看 PASS 会骗你，6 条 Agent Trace 里的 Coding Agent 评测真相",
+      "sourceUrl": "https://mp.weixin.qq.com/s/OjWTtUFTydr7O_FSzygyMA"
+    },
+    {
       "path": "raw/articles/ontology-enterprise-ai-methodology-genai-symbiont-2026-08-12.md",
       "title": "企业AI落地方法论之Ontology",
       "sourceUrl": "https://www.xiaohongshu.com/explore/6a7bedd2000000003301054e?xsec_source=app_share&xsec_token=CBi29DWYi8HwMaddzA0i19WOow27W0IGtGRoYEky0C9FA="
@@ -13321,6 +13456,11 @@
       "path": "raw/articles/openagents-workspace-multi-agent-collaboration-itech.md",
       "title": "OpenAgents Workspace：让 Claude Code 和 Codex 在同一个群里干活",
       "sourceUrl": "https://www.cnblogs.com/itech/p/19889215"
+    },
+    {
+      "path": "raw/articles/openai-agents-api-launch-aicambrian-2026.md",
+      "title": "OpenAI 重磅上线 Agents API：Codex 同款底座开放（AI寒武纪）",
+      "sourceUrl": "https://mp.weixin.qq.com/s/crDQohY2dyIntwvmyi63uA"
     },
     {
       "path": "raw/articles/openai-astra-looped-transformer-debunk-raschka-2026.md",
@@ -13656,6 +13796,11 @@
       "path": "raw/articles/openjiuwen-autogenetic-memory-agent-2026-07-02.md",
       "title": "openjiuwen-autogenetic-memory-agent-2026-07-02",
       "sourceUrl": "https://mp.weixin.qq.com/s/loIZliLAfYr4z2eedjmX1w"
+    },
+    {
+      "path": "raw/articles/openjiuwen-rsi-dual-dimension-harness-artifacts-2026.md",
+      "title": "openJiuwen 首发双维度 RSI 框架：AI 自修改落地办公智能体，算力亲和助力又快又省",
+      "sourceUrl": "https://mp.weixin.qq.com/s/6twzavkttuvIgaIFj-j7UQ"
     },
     {
       "path": "raw/articles/openjiuwen协同昇腾打造智能体算力亲和技术首token时延砍半推理存储占用下降25.md",
@@ -14143,6 +14288,11 @@
       "sourceUrl": "https://linuxfoundation.org/press/linux-foundation-and-industry-leaders-launch-akrites-to-defend-critical-open-source-software-against-ai-enabled-cyber-threats"
     },
     {
+      "path": "raw/articles/pretraining-progress-is-mostly-data.md",
+      "title": "Pretraining Progress Is Mostly Data",
+      "sourceUrl": "https://www.dwarkesh.com/p/pretraining-progress-is-mostly-data"
+    },
+    {
       "path": "raw/articles/price360-kb-project-harness-ai-driven-rdd-taobao-2026.md",
       "title": "AI 驱动研发体系的实践和思考 — Price360-KB 项目 Harness",
       "sourceUrl": "https://mp.weixin.qq.com/s/OSYCiNajJw6c5-hGFSAfYw"
@@ -14246,6 +14396,11 @@
       "path": "raw/articles/programbench-swe-agent-benchmark.md",
       "title": "programbench swe agent benchmark",
       "sourceUrl": "https://programbench.com/"
+    },
+    {
+      "path": "raw/articles/progressive-point-matching-long-horizon-rl.md",
+      "title": "Progressive Point Matching: Long-Horizon Language Model Reinforcement Learning",
+      "sourceUrl": "https://www.prestonfu.com/notes/ppm/"
     },
     {
       "path": "raw/articles/prompt-context-harness-three-evolutions-tencent.md",
@@ -14513,6 +14668,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/xGIVYtT012pY-O3CKlRDKg"
     },
     {
+      "path": "raw/articles/rag-full-chain-principles-xu-tongxue-2026-08-15.md",
+      "title": "RAG 全链路原理剖析：从数据到回答再到评估调优的完整旅程（10万字耗时一周整理）",
+      "sourceUrl": "https://mp.weixin.qq.com/s/9kue7P53RfbJSKpt6jwDQg"
+    },
+    {
       "path": "raw/articles/rag-full-pipeline-taobao.md",
       "title": "RAG 全链路技术详解",
       "sourceUrl": "https://mp.weixin.qq.com/s/aA2PFaabKNlDq96jhAdDkQ"
@@ -14678,6 +14838,11 @@
       "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/reduce-asr-inference-costs-by-75-with-nvidia-mps-on-amazon-ec2"
     },
     {
+      "path": "raw/articles/reduce-llm-latency-with-prefix-aware-routing-on-amazon-sagemaker-inference.md",
+      "title": "reduce-llm-latency-with-prefix-aware-routing-on-amazon-sagemaker-inference",
+      "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/reduce-llm-latency-with-prefix-aware-routing-on-amazon-sagemaker-inference"
+    },
+    {
       "path": "raw/articles/reduce-rag-costs-on-amazon-bedrock-with-query-aware-compress.md",
       "title": "Reduce RAG costs on Amazon Bedrock with query-aware compression",
       "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/reduce-rag-costs-on-amazon-bedrock-with-query-aware-compression"
@@ -14776,6 +14941,11 @@
       "path": "raw/articles/rigged-game-scarcruft-compromises-gaming-platform-supply-chain-attack.md",
       "title": "rigged-game-scarcruft-compromises-gaming-platform-supply-chain-attack",
       "sourceUrl": "https://www.welivesecurity.com/en/eset-research/rigged-game-scarcruft-compromises-gaming-platform-supply-chain-attack/"
+    },
+    {
+      "path": "raw/articles/rl-agent-memory-management-six-papers-vibelife-2026.md",
+      "title": "强化学习驱动的 LLM 智能体记忆管理：六篇论文对比（MEM1/MemAgent/Memory-R1/Mem-α/MemSearcher/AgeMem）",
+      "sourceUrl": "https://mp.weixin.qq.com/s/ANaPVnR1pTsq76V7UDhLrw"
     },
     {
       "path": "raw/articles/rl-beyond-the-verifiable.md",
@@ -15108,6 +15278,11 @@
       "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/sciencesofts-hipaa-compliant-ai-voice-scheduler-built-on-aws"
     },
     {
+      "path": "raw/articles/scoped-hiring-process-aware-fairness-multi-agent-emnlp-2026.md",
+      "title": "SCOPED-Hiring：LLM 多智能体决策的过程感知公平性诊断（EMNLP 2026）",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652724290&idx=3&sn=8b278949cfc9029ec1a8719f4a269ef1"
+    },
+    {
       "path": "raw/articles/sdd-practice-lattice-harness-team-ai-coding.md",
       "title": "爆肝长文：SDD 实战下篇，从渐进式 SDD 到 Lattice Harness：AI Coding 的团队级闭环",
       "sourceUrl": "https://mp.weixin.qq.com/s/VlEVdzRsuX_uEyyVVfs9RQ"
@@ -15388,6 +15563,11 @@
       "sourceUrl": "https://www.sentinelone.com/blog/shub-reaper-macos-stealer-spoofs-apple-google-and-microsoft-in-a-single-attack-chain"
     },
     {
+      "path": "raw/articles/sierra-hyper-tau-bench-agents-that-build-agents.md",
+      "title": "Hyper-τ-bench: Evaluating Agents That Build Agents",
+      "sourceUrl": "https://sierra.ai/blog/hyper-t-bench-evaluating-agents-that-build-agents"
+    },
+    {
       "path": "raw/articles/sigir-2026oxygensearch-之生成式检索偏好对齐-rad-dpo-技术解析.md",
       "title": "SIGIR 2026: RAD-DPO 生成式检索偏好对齐",
       "sourceUrl": "https://mp.weixin.qq.com/s/iPaRBCnSPk5kq0h9R6kM5Q"
@@ -15456,6 +15636,11 @@
       "path": "raw/articles/skill-entropy-rl-princeton-2608-05139-hyman-2026.md",
       "title": "skill-entropy-rl-princeton-2608-05139-hyman-2026",
       "sourceUrl": "https://mp.weixin.qq.com/s/cL9FHZDtLxxdboktK9BZ1A"
+    },
+    {
+      "path": "raw/articles/skill-eval-publish-gate-continuous-regression-skillhub-2026-08-06.md",
+      "title": "别发布没做 Eval 的 Skill：从真实提示到持续回归",
+      "sourceUrl": "https://mp.weixin.qq.com/s/ptzRKRDPd2GqpZ_s7JTzUQ"
     },
     {
       "path": "raw/articles/skill-factory-yueheng.md",
@@ -15861,6 +16046,11 @@
       "path": "raw/articles/ssd-spec-driven-development-harness-asd-shuge-2026-06-17.md",
       "title": "ssd-spec-driven-development-harness-asd-shuge-2026-06-17",
       "sourceUrl": "https://mp.weixin.qq.com/s/d1j7JCOkAFd5L-W1LK-Qug"
+    },
+    {
+      "path": "raw/articles/ssr-merge-subspace-signal-routing-lora-merging-icml-2026.md",
+      "title": "SSR-Merge：免训练 LoRA 合并的子空间信号路由（ICML 2026）",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247920779&idx=3&sn=18f5eb81b14b5d60903503df5a463897"
     },
     {
       "path": "raw/articles/stable-audio-3.md",
@@ -18156,6 +18346,11 @@
       "path": "raw/articles/zg-正式开源本地检索不止于关键词.md",
       "title": "zg-正式开源本地检索不止于关键词",
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=Mzg4NTczNzg2OA==&mid=2247511367&idx=1&sn=7a7ea589cdf19b68dc5eb8b9f04e8030"
+    },
+    {
+      "path": "raw/articles/zhipu-loop-transformer-scaling-juliette-xhs-2026.md",
+      "title": "智谱正在重写大模型 Scaling：Loop Transformer 与有效深度路线（小红书 @居丽叶）",
+      "sourceUrl": "https://www.xiaohongshu.com/explore/6aa133ef000000002902cc1a"
     },
     {
       "path": "raw/articles/zhizi-xinyuan-ai-for-computing.md",

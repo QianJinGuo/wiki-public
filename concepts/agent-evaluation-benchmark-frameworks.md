@@ -1,7 +1,7 @@
 ---
 title: "Agent Evaluation & Benchmark Frameworks"
 created: 2026-05-21
-updated: 2026-08-01
+updated: 2026-09-10
 type: concept
 tags: [evaluation, benchmark, testing, agent, pass@k, quality, metrics]
 sources:
@@ -228,6 +228,8 @@ type Grader interface {
 
 
 → [[raw/articles/agent-eval-wallezhang-yaml-driven-agent-evaluation|原文存档]]
+
+- 母体实体：[[entities/anthropic-multi-agent-research-system]]（嵌入近邻锚点，提案卡 #12 批1）
 
 ## 新增关联实体
 - [[entities/browser-request-recording-ai-code-generation-e2e-api-testing]]

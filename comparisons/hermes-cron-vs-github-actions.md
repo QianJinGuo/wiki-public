@@ -1,7 +1,7 @@
 ---
 title: "Hermes Cron vs GitHub Actions：自动化对比"
 created: 2026-06-12
-updated: 2026-06-12
+updated: 2026-09-10
 type: comparison
 tags: [comparison, hermes, cron, github-actions, automation, scheduling]
 sources: [entities/hermes-agent, entities/hermes-agent-self-evolving]
@@ -34,3 +34,7 @@ sources: [entities/hermes-agent, entities/hermes-agent-self-evolving]
 
 - [[entities/hermes-agent]]
 - [[entities/hermes-agent-self-evolving]]
+
+## 关联
+
+- 被比对象：[[concepts/hermes-agent]]（嵌入近邻锚点，提案卡 #13 批1）

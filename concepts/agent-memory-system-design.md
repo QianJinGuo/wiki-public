@@ -1,7 +1,7 @@
 ---
 title: Agent Memory System Design
 created: 2026-04-30
-updated: 2026-09-05
+updated: 2026-09-10
 type: concept
 tags: [agent, architecture, memory, context-management]
 related:
@@ -193,6 +193,8 @@ Memory System 的质量不能靠单一指标衡量，必须建立多维度评测
 - [[entities/how-ai-agent-memory-works]] — 替代/补充方案
 - [[entities/hermes-agent-memory-system-vs-openclaw]] — 替代/补充方案
 - [[entities/ai-agent-engineer-capability-map]] — 替代/补充方案
+
+- 母体实体：[[entities/agent-memory-architecture-essence]]（嵌入近邻锚点，提案卡 #12 批1）
 
 ## 所属 MOC
 

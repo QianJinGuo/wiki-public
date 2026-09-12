@@ -1,7 +1,7 @@
 ---
 title: "Coding Agent Architecture"
 created: 2026-05-21
-updated: 2026-08-01
+updated: 2026-09-10
 type: concept
 tags: [coding, agent, code-generation, programming, IDE, developer-tools]
 sources:
@@ -273,6 +273,10 @@ class CodeVerifier:
 
 
 → [[raw/articles/打造可靠的-ai-编程环境claude-code-hooks-完整开发者指南-v2|原文存档]]
+
+- 母体实体：[[entities/claude-code-automatic-feedback-report-self-diagnosis]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/baidu-comate-coding-agent-feedback-loop-wanpeng]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/agentmemory-source-analysis-coding-agent-local-memory]]（嵌入近邻锚点，提案卡 #12 批1）
 
 ## 新增关联实体
 - [[entities/2026年最值得关注的15款开发者工具-深度解读]]

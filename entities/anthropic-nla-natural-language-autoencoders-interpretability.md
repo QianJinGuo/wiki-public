@@ -3,7 +3,7 @@
 
 title: "Claude思考黑箱终结了！Anthropic 祭出AI读心术：揭秘Claude的隐藏想法！"
 created: 2026-05-08
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [claude-code, anthropic, llm, ai]
 sources:
@@ -137,5 +137,5 @@ NLAs 揭示的"模型内部评估意识"现象值得重视：当模型意识到�
 *入库时间：2026-05-08*^[raw/articles/anthropic-nla-natural-language-autoencoders-interpretability.md]
 ## 相关实体
 - [[entities/anthropic-msm-anti-defection-paper]]
-- [[entities/ai-20260506|腾讯研究院ai速递 20260506]]
+- [[entities/ai-20260429|腾讯研究院ai速递 20260506]]
 

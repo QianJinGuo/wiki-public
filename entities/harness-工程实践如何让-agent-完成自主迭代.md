@@ -1,7 +1,7 @@
 ---
 title: "Harness 工程实践：如何让 Agent 完成自主迭代"
 created: 2026-07-08
-updated: 2026-08-01
+updated: 2026-09-10
 type: entity
 tags: [harness, agent, autonomous-iteration, alibaba, engineering-practice, prompt-engineering, reward-hacking, evaluation]
 sources: [raw/articles/harness-工程实践如何让-agent-完成自主迭代]
@@ -137,3 +137,7 @@ Harness 工程最容易被误解的地方在于，人们认为它是「让 AI �
 - **Prompt Engineering** — 自主迭代中的 prompt 优化方法论
 
 → [[raw/articles/harness-工程实践如何让-agent-完成自主迭代|原文存档]]
+
+## 关联
+
+- 同题异语种孪生页：[[entities/alibaba-harness-autonomous-agent-iteration]]（归并候选，提案卡 #11 批1）

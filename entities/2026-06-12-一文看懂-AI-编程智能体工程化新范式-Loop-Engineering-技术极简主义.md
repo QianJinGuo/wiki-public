@@ -1,7 +1,7 @@
 ---
 title: "一文看懂 AI 编程智能体工程化新范式 Loop Engineering 技术极简主义"
 created: 2026-08-01
-updated: 2026-08-29
+updated: 2026-09-10
 type: entity
 tags: ['raw', 'article']
 sources: [raw/articles/2026-06-12-一文看懂-AI-编程智能体工程化新范式-Loop-Engineering-技术极简主义]
@@ -29,3 +29,7 @@ review_category: tech
 ## 来源
 
 - 原文: [[raw/articles/2026-06-12-一文看懂-AI-编程智能体工程化新范式-Loop-Engineering-技术极简主义.md|一文看懂 AI 编程智能体工程化新范式 Loop Engineering 技术极简主义]]
+
+## 关联
+
+- 同题异语种孪生页：[[entities/loop-engineering-overview-tech-minimalism]]（归并候选，提案卡 #11 批1）

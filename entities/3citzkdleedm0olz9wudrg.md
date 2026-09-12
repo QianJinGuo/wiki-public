@@ -1,7 +1,7 @@
 ---
 title: "ICLR 2026 Scenethesis：英伟达 & 普渡大学用 Agent 闭环实现文生 3D"
 created: 2026-06-10
-updated: 2026-09-07
+updated: 2026-09-10
 tags: [agent, data, llm, nvidia, rl, robotics, vision, 3d-scene-generation, embodied-ai, iclr-2026]
 review_value: 7
 review_confidence: 7
@@ -164,3 +164,4 @@ Scenethesis 的真正贡献在于范式层面：
 - [[entities/minimax-m3-frontier-three-set-open-source]] — MiniMax M3 开源前沿三件套
 - [[entities/nvidia-isaac-lab-sagemaker-robot-rl-humanoid]] — NVIDIA Isaac Lab + SageMaker 人形机器人 RL
 - [[entities/four-sub-agent-patterns]] — 2026 四大子 Agent 模式
+- 同题异语种孪生页：[[entities/iclr-2026-英伟达-普渡大学用agent闭环实现文生3d]]（归并候选，提案卡 #11 批1）

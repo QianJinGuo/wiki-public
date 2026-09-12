@@ -113,3 +113,7 @@ VitaBench 2.0 对模型失败模式的精细分类揭示了 Agent 能力的阶�
 - [[concepts/agent-harness-engineering-paradigm|Agent Harness 工程范式]]
 
 → [[raw/articles/meituan-longcat-vitabench-20-long-term-dynamic-agent-benchmark|原文存档]]
+
+## 关联
+
+- 同题异语种孪生页：[[entities/美团-longcat-开源-vitabench-20长期动态智能体基准新标杆]]（归并候选，提案卡 #11 批1）

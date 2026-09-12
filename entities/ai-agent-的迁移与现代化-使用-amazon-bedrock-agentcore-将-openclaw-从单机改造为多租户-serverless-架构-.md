@@ -30,7 +30,7 @@ review_category: practice
 - [[entities/using-amazon-bedrock-agentcore-openclaw-multi-2]]
 - [[entities/using-amazon-bedrock-agentcore-openclaw-multi-4]]
 - [[entities/using-amazon-bedrock-agentcore-openclaw-multi-1]]
-- [[entities/openclaw-multi-5]]
+- [[entities/openclaw-multi-1]]
 
 → [[raw/articles/ai-agent-的迁移与现代化-使用-amazon-bedrock-agentcore-将-openclaw-从单机改造为多租户-serverless-架构-|原文存档]] ^[raw/articles/ai-agent-的迁移与现代化-使用-amazon-bedrock-agentcore-将-openclaw-从单机改造为多租户-serverless-架构-.md]
 

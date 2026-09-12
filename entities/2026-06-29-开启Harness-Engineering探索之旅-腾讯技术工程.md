@@ -1,7 +1,7 @@
 ---
 title: "开启Harness Engineering探索之旅 腾讯技术工程"
 created: 2026-08-01
-updated: 2026-08-29
+updated: 2026-09-10
 type: entity
 tags: ['raw', 'article']
 sources: [raw/articles/2026-06-29-开启Harness-Engineering探索之旅-腾讯技术工程]
@@ -28,3 +28,7 @@ review_category: practice
 ## 来源
 
 - 原文：[[raw/articles/2026-06-29-开启Harness-Engineering探索之旅-腾讯技术工程.md|开启Harness Engineering探索之旅 腾讯技术工程]]
+
+## 关联
+
+- 同题异语种孪生页：[[entities/harness-engineering-exploration-tencent-tech]]（归并候选，提案卡 #11 批1）

@@ -1,7 +1,7 @@
 ---
 title: "本文以作者从传统数科向 AI 数科转型的实践为背景，系统阐述了 QoderWork Skills 的开发方法论与工程体系。文章指出 Skill 本质是将领域知识、标准流程及避坑指南封装为 AI Agent 可执行的“数字助手”，并提出了由编排层（SKILL.md）、参数层（config.yaml）、实现层（scripts/）和知识层（references/）构成的四层分离架构，强调通过结构化指令而"
 created: 2026-08-01
-updated: 2026-08-29
+updated: 2026-09-10
 type: entity
 tags: ['raw', 'article']
 sources: [raw/articles/2026-06-26-QoderWork-Skills-开发实践-从传统数科到-AI-数科的转型探索--大淘宝技术]
@@ -28,3 +28,7 @@ review_category: practice
 ## 来源
 
 - 原文：[[raw/articles/2026-06-26-QoderWork-Skills-开发实践-从传统数科到-AI-数科的转型探索--大淘宝技术.md|本文以作者从传统数科向 AI 数科转型的实践为背景，系统阐述了 QoderWork Skills 的开发方法论与工程体系。文章指出 Skill 本质是将领域知识、标准流程及避坑指南封装为 AI Agent 可执行的“数字助手”，并提出了由编排层（SKILL.md）、参数层（config.yaml）、实现层（scripts/）和知识层（references/）构成的四层分离架构，强调通过结构化指令而]]
+
+## 关联
+
+- 同题异语种孪生页：[[entities/qoderwork-skills-development-practice-taobao]]（归并候选，提案卡 #11 批1）

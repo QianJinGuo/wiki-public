@@ -1,7 +1,7 @@
 ---
 title: "Boris Cherny 新访谈：开发工具正在从 IDE 变成 Agent 控制台"
 created: 2026-05-10
-updated: 2026-06-17
+updated: 2026-09-10
 type: entity
 tags: [claude-code, agent, boris-cherny, anthropic, devtools]
 sources: [raw/articles/boris-cherny-新访谈开发工具正在从-ide-变成-agent-控制台-v2]
@@ -117,3 +117,7 @@ Boris 提到"最值钱的不是知道某个 API 怎么写，而是知道这套�
 - [[entities/claude-code开发负责人-为何放弃rag而选择agentic-search|Claude Code 开发负责人：为何放弃 RAG 而选择 Agentic Search]]
 - [[entities/boris-cherny-interview-2026-ide-to-agent-console|Boris Cherny 新访谈：开发工具正在从 IDE 变成 Agent 控制台]]- [[entities/harness-production-agent-engineering-deficit|Harness如何支撑Agent在生产环境稳定运行？]]
 - [[entities/claude-code-first-year-retrospective-agi-hunt|claude code 一周年回顾：boris cherny + cat wu 对话]]
+
+## 关联
+
+- 同题异语种孪生页：[[entities/iqsixinp9lxnkg7avfhfcq]]（归并候选，提案卡 #11 批1）

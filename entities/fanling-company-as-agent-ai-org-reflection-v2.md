@@ -4,7 +4,7 @@ title: "Fanling：AI Agent 时代的组织反思"
 type: entity
 tags: [agent, context, orchestration]
 created: 2026-05-21
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 6
 review_confidence: 7
 sources: [raw/articles/fanling-company-as-agent-ai-org-reflection-v2]
@@ -48,3 +48,7 @@ GEA（Generative Enterprise Agent）架构的核心理念是"不执着于单个 
 - **场景发现能力成为核心竞争力**：在产品过剩、用户不足的时代，pod leader 花 30%-40% 时间在客户场景收集上，用 SPIS 方法结构化提炼共性需求，比直接推销产品更有效
 - **上下文系统设计要克制**：建立分层（公司级/团队级/个人级）的上下文架构，但避免过度填充；某些核心数据应主动排除在 AI 可访问范围之外
 - **评估体系是 AI 产品的生死线**：从 0 到 0.1 的 Demo 容易，但进入生产环境需要可靠的 Evals 体系。特赞的 Game Lab 方式值得借鉴：通过真人数据与 AI 决策对比来持续校准 AI 行为
+
+## 关联
+
+- 同题异语种孪生页：[[entities/范凌当公司变成agent关于-ai-时代组织的-5-个反思]]（归并候选，提案卡 #11 批1）

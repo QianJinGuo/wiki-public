@@ -4,7 +4,7 @@ title: "Anthropic 博客：Claude Code 大型代码库最佳实践"
 type: entity
 tags: [agent, anthropic, claude, rag, claude-code, large-codebase, harness, hook, skills, plugins, lsp, mcp, sub-agents, configuration, enterprise-deployment, 治理]
 created: 2026-05-21
-updated: 2026-09-07
+updated: 2026-09-10
 review_value: 9
 review_confidence: 9
 sources: [raw/articles/anthropic-claude-code-large-codebase-best-practices-50002a089323]
@@ -51,3 +51,9 @@ moc_rebuilt: 2026-09-07
 - [[moc/claude-code-complete-guide|Claude Code 生态完全指南]]
 - [[moc/agent-engineering-guide|Agent 工程全景指南]]
 - [[moc/rag-knowledge-retrieval|RAG 在知识密集型 Agent 中的最优实践是什么？]]
+
+## 关联
+
+- 同题异语种孪生页：[[entities/anthropic-官方-agent-harness-平台claude-managed-agents-完整指南]]（归并候选，提案卡 #11 批1）
+- 同题异语种孪生页：[[entities/anthropic-官方技能最佳实践14-个可复用的-agent-skills-设计模式]]（归并候选，提案卡 #11 批1）
+

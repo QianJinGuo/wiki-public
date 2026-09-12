@@ -1,7 +1,7 @@
 ---
 title: Anthropic Managed Agents 架构：脑手分离设计
 created: 2026-05-07
-updated: 2026-08-29
+updated: 2026-09-10
 type: concept
 tags: [anthropic, managed-agents, agent-architecture, session-harness-sandbox, k8s-analogy, cattle-not-pet, prompt-injection, security, context-management, outcomes-loop, evaluation-harness, brain-hand-separation]
 related:
@@ -256,6 +256,11 @@ OAuth Token → 安全保险箱 → MCP 代理 → 专用 MCP 工具
 
 
 → [[raw/articles/anthropic-claude-managed-agents-platform-launch.md|原文存档]]
+
+- 母体实体：[[entities/anthropic-managed-agents-scaling]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/anthropic-long-running-agent-architecture-6h-retroforge]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/anthropic-claude-managed-agents-guide]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/claude-managed-agents-self-hosted-sandbox-mcp-tunnels-enterprise]]（嵌入近邻锚点，提案卡 #12 批1）
 
 ## 新增关联实体
 - [[entities/5238111]]

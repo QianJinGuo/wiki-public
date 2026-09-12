@@ -1,7 +1,7 @@
 ---
 title: "RAG 检索增强生成"
 created: 2026-06-30
-updated: 2026-08-01
+updated: 2026-09-10
 type: concept
 tags: [concept, rag, retrieval, llm, grounding, hallucination-reduction]
 sources: []
@@ -52,3 +52,7 @@ RAG 概念最早由 Facebook AI Research（Lewis et al., 2020）在论文 "Retri
 ## 所属 MOC
 
 - [[moc/rag-knowledge-retrieval|Rag Knowledge Retrieval]]
+
+## 姊妹页定位（2026-09-10 提案卡 #5）
+
+本页是**通用 RAG 工程范式**入口（检索-生成两阶段、chunk/embedding/rerank/hybrid 实践）。同对象的另一投影 [[concepts/retrieval-augmented-generation-rag|Retrieval-Augmented Generation (RAG)]] 侧重**知识图谱增强 RAG**（向量库是前菜、知识图谱是本体论一线）。二者分工互补而非重复。

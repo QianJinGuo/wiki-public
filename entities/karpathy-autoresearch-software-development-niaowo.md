@@ -2,7 +2,7 @@
 
 title: "我把 Karpathy 的 AutoResearch 搬到了软件开发领域，效果炸了"
 created: 2026-06-10
-updated: 2026-09-07
+updated: 2026-09-10
 tags: [agent, architecture, code, fine-tuning, llm, memory, mlops, nvidia, open-source, prompt, search, security, tool-use, workflow]
 review_value: 7
 review_confidence: 7
@@ -44,6 +44,8 @@ review_category: practice
 - [[entities/openclaw-完全指南这可能是全网最新最全的系统化教程了32w字建议收藏]]
 - [[entities/ethan-he-cosmos-grok-imagine-latent-space-video-agent-20260606]]
 - [[entities/karpathy-vibe-coding-agentic-engineering]]
+
+- 同题异语种孪生页：[[entities/我把-karpathy-的-autoresearch-搬到了软件开发领域效果炸了]]（归并候选，提案卡 #11 批1）
 
 ## 相关实体
 

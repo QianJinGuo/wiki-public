@@ -1,7 +1,7 @@
 ---
 title: "AI Infra 全景图：9 层 Agent 生产架构"
 created: 2026-07-02
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [ai-infra, agent-framework, production, architecture, infrastructure, llm-serving, agent-orchestration, rag, evaluation, observability]
 sources:
@@ -67,7 +67,7 @@ review_category: practice
 
 - [[entities/harness-engineering|Harness Engineering：AI 从"聪明"到"可靠"的第三代工程范式]] — 互补概念：Harness 关注如何构建可靠 AI 系统，AI Infra 关注需要哪些基础设施组件
 - [[entities/loop-engineering-feedback-control-system|Loop Engineering：反馈控制系统]] — Agent 运行时的闭环控制
-- [[entities/腾讯研究院ai速递-20260702|腾讯研究院 AI 速递]] — 行业动态
+- [[entities/腾讯研究院ai速递-20260429|腾讯研究院 AI 速递]] — 行业动态
 - [[entities/agentic-ai-system-architecture-harness-skill-mcp|Agentic AI System Architecture]] — 分层 Agent 系统架构（5 层：Orchestrator → Harness → Skill → MCP → Model）
 
 → [[raw/articles/ai-infra-panorama-9-layer-agent-framework-production|原文存档]] ^[raw/articles/ai-infra-panorama-9-layer-agent-framework-production.md]

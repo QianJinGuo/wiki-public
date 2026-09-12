@@ -1,7 +1,7 @@
 ---
 title: "Agent Harness 工程范式"
 created: 2026-07-02
-updated: 2026-08-01
+updated: 2026-09-10
 type: concept
 tags: [harness-engineering, agent, paradigm, architecture]
 provenance_state: inferred
@@ -34,6 +34,26 @@ Harness Engineering（驾御工程/运行约束工程）是在 LLM 外部设计�
 - [[entities/claude-code-loop-engineering-guide|Claude Code Loop Engineering]]
 - [[entities/twelve-agent-design-patterns-yunduojun-datastudio|12 Agent 设计模式]]
 - [[entities/agent-loop-engineering-handbook-8-questions-chen-jin-tencent-self-2026|Agent Loop 8 问]]
+
+- 母体实体：[[entities/agent-harness-evolution-from-llm-call-to-harness-tencent-2026]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/agent-harness-architecture-deep-dive-aksahy]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/harness-之后-状态边界与失败闭环-ruofei]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/agent-harness-architecture-design-production-guide]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/harness-engineering-14-step-roadmap]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/harness-engineered-business-agent-evaluation-aliyun-boyu]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/agent-harness-auto-repair-debug-184]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/agent-harness-12-components-7-decisions]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/数据研发-multi-agent-harness-工程实践]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/agent-harness-architecture]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/taobao-live-anchor-agent-harness-engineering-2026]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/agent-harness-production]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/harness-handbook-tencent-behavior-level-manual-2026]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/code-as-agent-harness-survey]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/harness-production-agent-engineering-deficit]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/harness-skill-engineering-alibaba-practice]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/wangyunhe-harness-optimization-agentsoul]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/better-harness-eval-trace-methodology]]（嵌入近邻锚点，提案卡 #12 批1）
+- 母体实体：[[entities/agent-harness-skill-system-practical-guide]]（嵌入近邻锚点，提案卡 #12 批1）
 
 ## 所属 MOC
 

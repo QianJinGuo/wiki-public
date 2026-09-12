@@ -2,7 +2,7 @@
 
 title: "Harness Engineering 系统梳理"
 created: 2026-04-30
-updated: 2026-09-07
+updated: 2026-09-10
 type: entity
 tags: [harness-engineering, agent, control-loop, context-engineering, generator-evaluator]
 sources:
@@ -55,3 +55,7 @@ moc_rebuilt: 2026-09-07
 - [[entities/claude-code-source-leak-lifecycle-analysis|CLAUDE.md]] — 8步生命周期10k
 - [[entities/qq-music-harness-engineering-monorepo-microservices|QQ音乐 Harness Engineering 实践（大仓多服务场景）]] — 代码产出=AI能力×上下文质量（乘法）15606字rv9
 - [[entities/tdsql-harness-subtraction-l0-l3-tencent-2026-08-06|Harness 减法工程——删掉 61% 之后什么该留（L0-L3 四层归属）]] — 减法工程L0-L3四层归属
+
+## 关联
+
+- 同题异语种孪生页：[[entities/harness-engineering耗时一周我是如何将应用的ai-coding率提升至90的]]（归并候选，提案卡 #11 批1）
