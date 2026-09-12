@@ -5,7 +5,7 @@ type: entity
 source: newsletter
 source_url:
 created: 2026-05-13
-updated: 2026-09-10
+updated: 2026-09-12
 tags: [reverse-engineering, devirtualization, themida, software-protection, binary-analysis]
 review_value: 9
 review_confidence: 9
@@ -160,4 +160,4 @@ Back Engineering Labs 方法的核心洞察是：去虚拟化的主要工作量�
 - [[entities/static-devirtualization-of-themida|Static Devirtualization of Themida]]（另一版本）
 
 - [[entities/static-devirtualization-2024]]
-- [[entities/2026|static devirtualization of themida]]
+- [[entities/themida-static-devirtualization|static devirtualization of themida]]

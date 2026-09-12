@@ -12,8 +12,8 @@ tags: [observability, monitoring, tracing, otel]
 
 ## 核心实体
 
-- [[entities/5237875|ICO 对 South Staffordshire 处以 96.3 万英镑罚款：2022 年 Cl0p 勒索软件攻击暴露的安全失败]]
-- [[entities/820297|Engineering roles shift from developing code to managing AI | CIO Dive]]
+- [[entities/ico-south-staffordshire-cl0p-ransomware-fine|ICO 对 South Staffordshire 处以 96.3 万英镑罚款：2022 年 Cl0p 勒索软件攻击暴露的安全失败]]
+- [[entities/engineering-roles-shift-managing-ai|Engineering roles shift from developing code to managing AI | CIO Dive]]
 - [[entities/agent-oriented-infra-intent-driven-code-sedimentation|晓斌：从 People-Oriented 到 Agent-Oriented Infra —— 意图驱动 + 代码沉淀的进化体]]
 - [[entities/agent-runtime-7-responsibilities-secondcurve-2026|Agent 的骨架:Agent Runtime 7 大职责 + 3 主流框架对比 (LangGraph / OpenAI Agents SDK / 自研)]]
 - [[entities/agentic-incident-triage-assistant-amazon-quick-new-relic-asana|Agentic Incident Triage Assistant with Amazon Quick, New Relic MCP Server, and Asana]]

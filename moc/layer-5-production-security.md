@@ -73,7 +73,7 @@ chap-21 生产级 Agent（50min）→ chap-22 可观测性（50min）→ chap-23
 ### 可观测
 - Agent 可观测
 - [[entities/2026-05-14-code-intelligence-1778979927|Code Intelligence]]
-- [[entities/820297|Engineering roles shift]]
+- [[entities/engineering-roles-shift-managing-ai|Engineering roles shift]]
 
 ### 安全
 - [[entities/ai-agents-security-survey-attack-defense|Agent 安全全景]]

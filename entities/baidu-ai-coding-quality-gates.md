@@ -2,7 +2,7 @@
 
 title: "百度 AI Coding 质量关卡实践"
 created: "2026-07-14"
-updated: 2026-09-10
+updated: 2026-09-12
 type: "entity"
 tags: [agent, ai-coding, quality-assurance, code-review, engineering, baidu]
 confidence: 0.8
