@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "sourceRevision": "cca792e56a6deb6e788661da3dbecb51378165cd",
+  "sourceRevision": "29169244f2c3cc2ab5236a5f65711bf218fff653",
   "files": [
     {
       "path": "raw/articles/0.25秒识破未见攻击-lod-lvlm-jailbreak-detection-emnlp2026.md",
@@ -4036,6 +4036,11 @@
       "path": "raw/articles/asana-agentic-work-management-platform-lettertwo.md",
       "title": "Asana Launches Agentic Work Management Platform",
       "sourceUrl": "https://thelettertwo.com/2026/06/04/asana-agentic-work-management-platform/"
+    },
+    {
+      "path": "raw/articles/astar-meta-ai-system-evolution-alibaba-zju-2026.md",
+      "title": "Astar：用 AI 指导 AI 系统进化（阿里 + 浙大，机器之心）",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651056885&idx=2&sn=44f99018c4f0e3bed9770da929cc3aed"
     },
     {
       "path": "raw/articles/asynchronous-patterns-for-calling-amazon-bedrock-agentcore.md",
@@ -14508,6 +14513,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/_IlrlfGpPa42VhTaKNAj6A"
     },
     {
+      "path": "raw/articles/pyrodash-token-level-small-large-collaborative-inference-2026.md",
+      "title": "PyroDash: 成本感知的 token 级大小模型协同推理（机器之心）",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651056885&idx=1&sn=41944a973ec96b3a392598b4e3c349cf"
+    },
+    {
       "path": "raw/articles/python-315-beta-practical-test-new-features.md",
       "title": "python-315-beta-practical-test-new-features",
       "sourceUrl": "https://mp.weixin.qq.com/s/7JiW6lUtEPvDiTBtVrqMxg"
@@ -15151,6 +15161,11 @@
       "path": "raw/articles/ruofei-google-multi-agent-best-practices-2026.md",
       "title": "来自 Google 的多智能体最佳实践（微信 @架构师若飞）",
       "sourceUrl": "https://mp.weixin.qq.com/s/YWeJbyenVRCEuckhc0VoyA"
+    },
+    {
+      "path": "raw/articles/ruofei-multi-agent-consistency-four-questions-2026.md",
+      "title": "面试官：讲一讲多 Agent 协作如何保持一致性（微信 @架构师若飞）",
+      "sourceUrl": "https://mp.weixin.qq.com/s/XnSQdFpG-MdbctvLtHiMMA"
     },
     {
       "path": "raw/articles/saas-bench-gui-agent-eval-unipat.md",
@@ -17521,6 +17536,11 @@
       "path": "raw/articles/vibe-life-agent-harness-improvement-7-papers-2026.md",
       "title": "改进 Agent Harness 的七篇方法梳理（Meta-Harness/AHE/Self-Harness/RHO/RHI/HarnessX/LIFE）",
       "sourceUrl": "https://mp.weixin.qq.com/s/Cd-FQ3hnqAXEcNS9w-QEjQ"
+    },
+    {
+      "path": "raw/articles/vibe-life-de-novo-environment-synthesis-five-papers-2026.md",
+      "title": "训练 Agent 缺环境？5 篇论文讲解从零合成环境（微信 @vibe life）",
+      "sourceUrl": "https://mp.weixin.qq.com/s/-sebSNPAO7opTNhWwaWN_Q"
     },
     {
       "path": "raw/articles/vibe-life-harness-self-evolution-two-papers-joint-reading-2026.md",

@@ -37,7 +37,7 @@ S_κ(Δt) = exp(−λ_κ · Δt)，  λ_κ = ln2 / T½(κ)
 
 TDR 与外部最近邻的可证伪差异不在"要不要衰减"，而在**衰减常数从哪来**：2026-09 摄入的 temporal RAG 实验把半衰期作为手工定值参数（默认 h=14 天），作者自述这些值是"经验启发式、换域需重调"，并把"学习更丰富的时序模型"明确列为未来工作^[raw/articles/arxiv-2509-19376-temporal-rag-freshness-trend-detection.md]。TDR 的回答是：h 不该调出来，该从判定事件流里**估**出来——每个 λ_κ 背后是对账记录而非参数扫描；这就是 P2 与 P5 闭合的回路。
 
-## 形式化（2026-09-13 验证轮增订）
+## 形式化（2026-09-13 验证轮增订；证明全文见 [[concepts/scei-formal-proofs]]）
 
 两条可证命题（证明见 [[drafts/wiki-emergent-viewpoints-2026-09-unification-verify|验证轮涌现稿]]观点一）：
 

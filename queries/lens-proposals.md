@@ -45,6 +45,7 @@ confidence: high
 | 19 | 记忆影响谱系可观测性页候选："哪条偏好影响了这次决策"可回答性在库内零覆盖；与卡 #15 写入门槛清单互为表里（门槛管写入前、可观测管写入后） | [[drafts/wiki-emergent-viewpoints-2026-09-crosscluster-memory|跨簇迁移第二对]]空白 | 独立补页（`concepts/memory-derivation-observability`） | `landed`（concepts/memory-derivation-observability 已建） | 2026-09-10 | approve 2026-09-10 |
 | 20 | 自校准认识仪器理论页：统一透镜轮的命名理论对象（五命题 + 真值衰减检索内核），作为第十一轮特稿一体先行落地 | [[drafts/wiki-emergent-viewpoints-2026-09-unification|统一轮]]观点一/二 | 独立补页（`concepts/self-calibrating-epistemic-instrument`） | `landed`（页已建；**裁决 pending**——自主研究轮先行落地，人审驳回即撤页留卡） | 2026-09-13 | — |
 | 21 | SCEI 验证轮三处增订：理论页加"形式化"节（门控引理/删失估计引理/聚合形式约定）与"验证状态"滚动表；半衰期页机制类行加删失下界口径（Y=64 页日 → 95% 下界约两周）与真值钟取样规则 | [[drafts/wiki-emergent-viewpoints-2026-09-unification-verify|验证轮]]观点一/二/四 | 已有页增订（增改档 ×2） | `landed`（已改；**裁决 pending**——驳回即回滚两页增订） | 2026-09-13 | — |
+| 22 | SCEI 形式化证明页：六定理（自校准一致性/门控消灭子刻画/删失估计/误差域支配/机制类无害性/反身性适定）+ 公理系 A1-A4 + 已证未证边界表；第十三轮特稿一体先行落地 | [[drafts/wiki-emergent-viewpoints-2026-09-unification-proofs|证明轮]]观点一至四 | 独立补页（`concepts/scei-formal-proofs`） | `landed`（页已建；**裁决 pending**——人审驳回即撤页留卡） | 2026-09-13 | — |
 
 ## 与其他机制的关系
 

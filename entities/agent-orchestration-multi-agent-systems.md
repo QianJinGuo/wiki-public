@@ -2,14 +2,14 @@
 
 title: "多 Agent 编排系统"
 created: 2026-07-02
-updated: 2026-09-07
+updated: 2026-09-14
 type: entity
 tags: [agent, multi-agent, orchestration, architecture]
 review_value: 7
 review_confidence: 8
 provenance_state: stub-upgraded
 confidence: 0.6
-sources: [raw/articles/agent-orchestration]
+sources: [raw/articles/agent-orchestration, raw/articles/ruofei-multi-agent-consistency-four-questions-2026]
 reviewed: 2026-09-07
 review_verdict: keep
 review_category: tech
@@ -59,6 +59,17 @@ review_category: tech
 多 Agent 的冲突不止来自任务竞争，还来自状态分歧：各 Agent 对「当前世界状态」认知不一致时，合并结果互相覆盖。消解手段从轻到重：结构化消息携带版本与来源信息、协调者做结果合并仲裁、投票共识稀释分歧，最终兜底的是人工审批门——把高冲突、高影响的决策显式挂起等待人类签核。 ^[raw/articles/agent-orchestration.md]
 
 故障处理同样依赖编排层而非 Agent 自律：确定性工作流（Step Functions / MWAA 等）以状态机或 DAG 的形式为每一步提供重试、分支与并行执行语义，状态持久化在编排层而非 Agent 内存中，从而把「单个 Agent 宕机」从级联灾难降级为可重试的普通故障。 ^[raw/articles/agent-orchestration.md]
+
+## 一致性协议四问框架（若飞 2026-09）
+
+若飞《面试官：讲一讲多 Agent 协作如何保持一致性》提出以四个追问贯穿一致性边界的原创框架，与上述编排模式/冲突消解互补——编排层回答"怎么组织协作"，四问框架回答"协作中什么算数"：^[raw/articles/ruofei-multi-agent-consistency-four-questions-2026.md]
+
+- **第一问·为什么拆**：任务可并行 ≠ 编排可静态——前者看任务依赖，后者看编排方式；执行中产生新线索时调度器要能收回/合并/补派。认领去重不靠调度器里加 if，靠稳定任务身份 + 带条件认领、租约和唯一约束，把"不重复"变成数据库可检查的事实。
+- **第二问·交什么**：Agent 间传的不是更长聊天记录而是可继续执行的工作状态（基于哪一版 snapshot/commit、已确认 evidence refs、仍在猜 assumptions、允许做什么 constraints、产物在哪 artifact refs、怎样算完成 acceptance）；任务状态落 agent_task 执行记录（global_task_id/sub_task_id/agent_id/input_snapshot/status/version/attempt/lease_until/result_ref），attempt+version 让系统识别过期消息，跨服务用 Outbox 把事件与本地状态写进同一事务后异步投递。
+- **第三问·谁拍板**：分歧不是问题，"基于不同现实却被当同一份现实汇总"才是——汇总不能只做文本拼接，结论要能回到输入快照/来源/证据；结果标"候选/已验证/冲突/已否决"四态；异构输出靠版本化结果契约或接入层适配器对齐；审查只有改变后续动作才算进入系统（"没有后果的批评只是另一段文本"）。
+- **第四问·凭什么算完成**：完成由验收条件定义、由运行时留下证据——是状态机里的状态，不是 Agent 回复里的句号；写操作带幂等键，超时按"未执行/已执行/状态未知"分支处理（状态未知 ≠ 失败）；失败落在子任务层做局部重试而非整任务重跑（避免副作用重复落库）；调度器重启靠租约+心跳防双执行者。
+
+核心命题：**多 Agent 并没有绕开分布式系统的老问题，只是把执行者从服务和线程换成了会自主判断的 Agent**——模型负责判断下一步，运行时负责证明这一步确实发生过；这正是 Harness 需要承担的部分（给正确工作集/限制动作/记录真实结果/失败后带回可继续状态）。该框架与 [[entities/anthropic-multi-agent-research-system|Anthropic 多 Agent 研究系统]] 的宽度优先拆分、Google Antigravity Teamwork 的审查闭环互为印证。^[raw/articles/ruofei-multi-agent-consistency-four-questions-2026.md]
 
 ## 实践启示
 

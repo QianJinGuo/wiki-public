@@ -1,7 +1,7 @@
 ---
 title: "MobileForge：无标注手机 GUI Agent 适配系统（快手、浙大）"
 created: 2026-07-09
-updated: 2026-09-10
+updated: 2026-09-14
 type: entity
 tags: [gui-agent, mobile-agent, annotation-free, reinforcement-learning, grpo, kuaishou, zhejiang-university]
 sources: [raw/articles/不用人工标注gui-agent跑起数据飞轮快手浙大开源mobileforge]
@@ -58,6 +58,35 @@ HiFPO 将失败经验转化为训练信号，包含四条关键设计：^[raw/ar
 | ForgeOwl-8B | 跨域泛化（无 MobileWorld 训练数据） | MobileWorld GUI-only | **41.0%** |
 
 实验共生成 3249 个 AndroidWorld 候选任务（20 个 App、527 个源轨迹），且展示了清晰的数据规模扩展趋势。^[raw/articles/不用人工标注gui-agent跑起数据飞轮快手浙大开源mobileforge.md]
+
+## 深度分析
+
+### 一、瓶颈不在"点得准"，而在"适应不了"
+
+移动端困难不在"会不会点"：App 生态碎片化、界面随版本变动，任务常跨多页面，稀疏奖励无法定位失败在哪一步。已有无标注方法还差统一底座，策略优化亦把 rollout 当孤立样本。^[raw/articles/不用人工标注gui-agent跑起数据飞轮快手浙大开源mobileforge.md]
+
+### 二、用分层评估器替代人工标注
+
+MobileGym-Critic 不训奖励模型（无标注下没有奖励标签可训），而是用 agentic hierarchical evaluator 分层判定 rollout，输出轨迹级 outcome label、步骤级 process label 与纠错 hint，把“任务是否完成”与“每步是否合理”拆成两层信号。它解决长链路信用分配：失败轨迹常含正确动作，成功轨迹也可能有冗余动作，二值标签会把信号丢掉。
+
+Critic 消融显示换成 Qwen3-VL-8B 当决策模型，仍能把 Pass@1 从 40.5% 抬到 44.8%、Pass@3 从 55.2% 抬到 60.3%：闭环不绑定特定闭源评价器，而评价器质量即数据质量上限。^[raw/articles/不用人工标注gui-agent跑起数据飞轮快手浙大开源mobileforge.md]
+
+### 三、自博弈闭环：累积经验 + 步骤级筛选
+
+HiFPO 前半段是带提示的多次尝试：同一任务连续尝试 K 次，失败后由 Critic 生成的 hint 追加进下一次指令。收益来自经验累积而非采样量：不加 hint 时总成功率 52.0%，加 hint 后升到 77.0%，Pass@3 从 49.0% 到 72.5%。
+
+后半段是过滤与选择：按经验成功率 SR(x) 去掉"全成功"的已掌握任务，保留全失败与部分成功任务（SR ∈ [0.0, 0.9]）；优先选步骤质量最高的成功轨迹（全失败时取局部合理步骤占比最高者），只保留 Critic 判定合理的步骤。长轨迹因此切成密集的 step-level 样本且不强化错误动作。^[raw/articles/不用人工标注gui-agent跑起数据飞轮快手浙大开源mobileforge.md]
+
+### 四、基准数字与泛化边界
+
+域内：Qwen3-VL-8B 在 AndroidWorld 上 Pass@3 为 55.2%，用 900 个自动任务适配后 ForgeQwen3-8B 达 67.2%，接近闭源数据训练的 GUI-Owl-1.5-8B 的 69.0%；继续适配得到 ForgeOwl-8B 的 77.6% Pass@3。域外更值得警惕：完全不用 MobileWorld 数据的 GUI-only 任务上，ForgeOwl-8B 只从 37.6% 提到 41.0%，ForgeQwen3-8B 从 7.6% 到 10.3%——适配只能强化基座已有的手机 GUI 能力。失败热力图也划出边界：提升集中在 verification、search、complex UI、screen reading 等界面锚定能力，而 game-playing、multi-app、memorization 仍很难。
+
+## 实践启示
+
+1. **先选基座再谈适配**：域外 41.0% 对 7.6% 说明收益是基座能力的倍数项。
+2. **让失败在任务内累积**：K 次尝试 + hint 注入把尝试串成经验链，比加大采样量有效。
+3. **过滤已掌握任务而非失败任务**：全成功任务没有梯度，关键是步骤级选择救回正确动作。
+4. **任务生成锚定探索轨迹**：只基于 landing screen 会让课程退化为首页功能。
 
 ## 与相关实体的关系
 

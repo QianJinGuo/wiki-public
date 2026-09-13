@@ -1,7 +1,7 @@
 ---
 title: "Databend — 开源云原生湖仓（Snowflake-like），面向 AI 的多模态一体化数仓"
 created: 2026-06-30
-updated: 2026-09-07
+updated: 2026-09-14
 type: entity
 tags:
   - databend
@@ -84,6 +84,33 @@ Databend Cloud on AWS 架构 ^[raw/articles/databend-on-aws-ai-multimodal-lakeho
 1. 开放的数据执行层 — Agent 以 SQL/API 方式访问可信数据
 2. 低成本的上下文供给层 — 承载 JSON、trace、日志、文档、向量等多形态数据
 3. Snowflake-like 但更开放的替代底座 — S3-native、Parquet-native、开源内核、更透明的成本模型
+
+## 深度分析
+
+### Agent 负载为何不同于 BI 负载
+
+BI 是少量大查询、可排队的分析负载，可为吞吐牺牲尾延迟；Agent 负载相反——一次推理触发数十条轨迹写入与多轮记忆召回，以高频小点查为主，随对话量瞬时起落。延迟预算是秒级而非分钟级，写进去的数据必须立刻参与召回；而"先建模、再导入、再定时刷新"的传统链路，在这里会表现为"对话早已结束，记忆还没落库"。 ^[raw/articles/databend-on-aws-ai-multimodal-lakehouse-2026.md]
+
+### 多模态数据与 schema-on-read
+
+Agent 数据天然不规整：轨迹是深度嵌套 JSON，工具参数随版本漂移，图像视频只以"对象存储路径 + 元数据"出现。若先定 schema 再入库，每次提示词变更都变成一次建模排期。Databend 把半结构化类型当一等公民，原生存取任意 JSON、库内清洗抽取，再把高频路径固化为虚拟加速列与倒排索引——灵活性保留，检索性能靠物化拿回；图像视频本体不进引擎，只有元数据与向量进表。
+
+### 架构取舍：一体化引擎 vs 湖仓 + 独立向量库
+
+"数据湖 + 独立向量库"要写两份原文、检索跨系统两跳，过滤条件与向量相似度难在同一执行计划里对齐。Databend 把倒排与向量索引放进同一个 Rust 引擎、同一张表，让过滤、召回、匹配收敛为一条 SQL；p99 9.3 秒 → 0.85 秒、年成本 31.5 万 → 3.7 万美元，本质是省掉跨系统副本与协调开销。代价是两类索引都得做扎实，且社区规模远小于 Trino/Snowflake、企业级治理与生态成熟度待验证——宜定位为"内核可控、退出路径明确"的底座，而非默认答案。
+
+### AWS 集成的实际形态
+
+S3 是开放数据基石（开放列式格式留出迁移出口），Graviton 提供性价比算力，Bedrock 与 Lambda 让 AI 处理以库内自定义函数完成，MCP 让 Agent 以协议查询。真正减少的是组件数量：从"日志/向量 → 消息队列 → 调度器 → 数仓"收敛为"写入 → S3 → Task + COPY INTO"，特征迭代从"天级"到"分钟级"。MCP 打通的只是查询入口，不等于权限、审计与多租户的完备。 ^[raw/articles/databend-on-aws-ai-multimodal-lakehouse-2026.md]
+
+## 实践启示
+
+1. **按负载特征选引擎，而不是按数据量。** 看写入后可见延迟与点查 p99，而非单查询扫描速度。
+2. **能合并的索引就合并。** 同一份数据既要过滤又要语义召回时，一体化引擎能消掉跨系统副本与两跳检索。
+3. **schema-on-read 当默认，物化当性能手段。** 原始 JSON 直接入库，再对高频字段建加速列与索引。
+4. **守住退出成本。** 数据落在对象存储与开放列式格式上，引擎只是计算层，评估期即可真跑生产负载；可参考 [[entities/agentic-ai-data-mesh-aws-s3-vectors-mcp|Agentic AI 数据网格]]。
+5. **让 Agent 走协议而不是拼 SQL。** 用 MCP 一类接口暴露受控查询，把权限与口径收敛在数据层。
+6. **为小社区项目设定验收与退出条件。** 上生产前用真实负载压测并明确回退时间窗；可对照 [[entities/agent-memory-storage-engineering-practical-guide|Agent 记忆存储工程]] 与 [[entities/agent-observability-5-layer-architecture|Agent 可观测性五层架构]] 评估记忆与可观测层。
 
 ## 资源
 
