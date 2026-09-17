@@ -2,7 +2,7 @@
 
 title: "Beyond Vibe Coding — Directed Generation as Design Methodology"
 created: 2026-06-27
-updated: 2026-09-07
+updated: 2026-09-17
 type: entity
 tags: [vibe-coding, directed-generation, design, ai-assisted-design, harness, human-ai-collaboration]
 source: [[raw/articles/beyond-vibe-coding-a-designer-s-case-for-directed-generation]]
@@ -56,6 +56,41 @@ This article is fundamentally about **how humans direct AI generation** — dire
 - "Designer role from specifying instances to defining conditions" = agent harness orchestration paradigm
 
 → [[raw/articles/beyond-vibe-coding-a-designer-s-case-for-directed-generation|source archive]] ^[raw/articles/beyond-vibe-coding-a-designer-s-case-for-directed-generation.md]
+
+## 深度分析
+
+### The mechanism: a shift in where authority lives
+
+The useful distinction is not whether AI touched the work — it is who holds authority in the loop. In [[concepts/vibe-coding-paradigm|vibe coding]] generation drives decisions: prompt, accept, adjust at the margins, ship. In hand-crafting the designer is the sole generator and the model is absent. Directed generation differs from both in mechanism, not slogan: judgment arrives first, and the curated reference — sketch, screenshot, visual precedent — *is* that judgment, carrying decisions about proportion, tone, hierarchy, and intent that would take paragraphs to articulate in words and still arrive less precisely. The model does not supply taste; it pressure-tests the designer's. The test for any workflow is structural: trace where authority sits at each step, not how many of the pixels a machine produced. ^[raw/articles/beyond-vibe-coding-a-designer-s-case-for-directed-generation.md]
+
+### Why the three phases are order-bearing, not a menu
+
+Directing → Collaborating → Editing is a dependency chain, not three interchangeable modes. Directing front-loads intent into references and constraints, and that defines the space of everything iteration can later reach; collaborating spends that intent, re-steering the way you would redirect a capable developer who still needs your eye; editing catches the residue no prompt can fully anticipate — the spacing that feels off, the hierarchy that works technically but does not land, the consistency the model optimized for when the moment called for contrast. Strip out the first phase and collaboration has no reference to steer against, so it decays into prompt-accept-adjust — vibe coding with extra steps. Strip out the last and the model's statistical defaults win at exactly the resolution where craft becomes legible. Phase competence in isolation is worth less than correct sequencing. ^[raw/articles/beyond-vibe-coding-a-designer-s-case-for-directed-generation.md]
+
+### Language precision as the interface contract
+
+Orwell's observation runs both ways — slovenly language eases foolish thoughts, precise language makes precise thinking possible — and at the model interface the vocabulary functions as a contract. Each candidate term locates authorship differently: *directed generation* names the human as the directing force, *reference-guided generation* names the curated input as the decisive act, *compositional prompting* treats the assembly of sketch, reference, constraint, and intent as the craft. A team that adopts supervisory framing asks the model for output to approve; a team that adopts directing framing composes constraints before generating. This is the lever [[concepts/prompt-engineering-fundamentals|prompt engineering]] pulls, one level up: not the wording of the prompt, but the shared term that determines what goes into it at all. Because the term also travels outward — to clients, hiring managers, rate justifications — imprecision is not only a description bug but a valuation bug. ^[raw/articles/beyond-vibe-coding-a-designer-s-case-for-directed-generation.md]
+
+### Where the paradigm breaks down
+
+**Priors versus intent.** Recomposition is not invention. The model recombines what its training data contains, so when intent is genuinely novel or brand-specific the reference cannot transmit it and output drifts toward the average of what the model has already seen. ^[raw/articles/beyond-vibe-coding-a-designer-s-case-for-directed-generation.md]
+
+**The evaluation gap.** Non-deterministic output has no fixed diff to review. If the result cannot be predicted, the acceptance test cannot be fully specified in advance either, so verification collapses onto taste — which does not scale across a team unless the primitives and constraints are shared. ^[raw/articles/beyond-vibe-coding-a-designer-s-case-for-directed-generation.md]
+
+**Iteration cost.** Front-loaded craft — curated references, rigorous constraints, quality primitives — is an investment paid before any output exists; cheap-looking iterations conceal an expensive setup whose payoff appears only when the pattern recurs across surfaces. Where risk tolerance is low, production components still need to be specified, reviewed, and locked. ^[raw/articles/beyond-vibe-coding-a-designer-s-case-for-directed-generation.md]
+
+### The through-line to harness engineering
+
+Directed generation is the design-side instance of the move [[concepts/harness-engineering-framework|Harness Engineering]] makes on the engineering side: neither hand-write every artifact nor surrender the loop, but encode judgment into constraints, references, and primitives so acceptable outputs reliably emerge. "The designer authors the grammar; the system speaks it fluently" is the design twin of an agent operating inside a specification — see [[concepts/sdd-specification-driven-development-harness|specification-driven development]] — and agentic delivery inherits the same open problem as [[concepts/agent-evaluation-benchmark-frameworks|agent evaluation]]: verifying non-deterministic output at scale without re-litigating intent every run. The design-system instance is already visible where agents author the pattern vocabulary itself (see [[entities/design-systems-agent-author-evolution|design systems agent author evolution]]), and the wider framing belongs with agentic engineering. ^[raw/articles/beyond-vibe-coding-a-designer-s-case-for-directed-generation.md]
+
+## 实践启示
+
+1. **Curate the reference before writing the prompt.** Treat the sketch, screenshot, or precedent as the primary artifact of direction; a weak reference cannot be rescued by prompt wording.
+2. **Sequence deliberately: direct, then collaborate, then edit.** Refuse to start iterating while the reference set and constraints are vague — an under-directed start silently converts the session into vibe coding.
+3. **Reserve editing time as a first-class budget line.** Spacing, hierarchy, and contrast calls are where authorship becomes visible; they are not cleanup.
+4. **Choose deterministic versus non-deterministic by risk tolerance, per phase of work.** Generative wireframing and concept exploration take the non-deterministic path; shipped components still get specified, reviewed, and locked.
+5. **Invest upstream in primitives and constraints.** Because craft moves into primitive quality, reference precision, and constraint rigor, tooling spend belongs there rather than in prompt tricks.
+6. **Name the practice in your own terms and defend it where it counts.** Portfolio reviews, client kickoffs, and onboarding juniors are where a precise term converts into clarity and rate justification.
 
 ---
 ## 关联

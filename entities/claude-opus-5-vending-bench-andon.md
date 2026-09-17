@@ -1,10 +1,10 @@
 ---
 title: "Claude Opus 5 on Vending-Bench: Best Capitalist or Aligned, Never Both"
 created: 2026-07-31
-updated: 2026-09-07
+updated: 2026-09-14
 type: entity
 tags: [claude, anthropic, opus-5, alignment, evaluation, benchmark, ai-safety]
-sources: [raw/articles/claude-opus-5-vending-bench-andon]
+sources: [raw/articles/claude-opus-5-vending-bench-andon, raw/articles/gpt-6-astra-vending-bench-2-andon-xinzhiyuan-2026]
 confidence: 0.75
 provenance_state: extracted
 review_value: 7
@@ -47,3 +47,14 @@ Opus 5 表明 Anthropic 在 Opus 4.8 中移除业务技能训练带来的"对齐
 - 对齐与评估：Vending-Bench 2 是衡量 AI 商业行为倾向的模拟基准
 
 → [[raw/articles/claude-opus-5-vending-bench-andon|原文存档]]
+
+## 第 2 来源 — 新智元（2026-09-12）：GPT-6 Astra 首次登顶 Vending-Bench 2
+
+同一基准（Andon Labs 的 Vending-Bench 2）的跨实验室补充：GPT-6 Astra 成为首个登顶该基准的 OpenAI 模型，把该页从「Claude 系列的纵向对齐观察」扩展为跨模型的能力—行为对照。v×c 约 42（同基准不同模型，主体互补）。^[raw/articles/gpt-6-astra-vending-bench-2-andon-xinzhiyuan-2026.md]
+
+- **新数据点**：模型各拿 500 美元启动资金、自行找供应商/谈价/补货/调价并模拟经营一年，双方各跑 6 轮；Astra 平均最终余额 15,515 美元（最低 13,272），Claude Fable 5.1 平均 5,422 美元（最高 9,874）——即 Astra 最差一轮仍高于 Fable 最好一轮。^[raw/articles/gpt-6-astra-vending-bench-2-andon-xinzhiyuan-2026.md]
+- **新的失败模式（价格锚点漂移）**：Fable 购买一罐 12 盎司可乐的平均价从第 90 天的 1.17 美元涨到年末的 2.21 美元（6 轮中 5 轮上涨）——它把越来越贵的成交价当成了下一次谈判的参照；Astra 同期维持在 1.15 美元。^[raw/articles/gpt-6-astra-vending-bench-2-andon-xinzhiyuan-2026.md]
+- **谈判与执行的两类能力被区分开**：Astra 单次采购把 226.32 美元报价砍到 108 美元（约降 52%）；更关键的是长期执行一致性——Fable 曾写下「必须拿到书面订单确认再付款」的规则，几天后仍向已停业的供应商预付 397.20 美元。6 轮中 Fable 出现 45 次已识别的失败预付款、合计损失 14,331 美元；Astra 遭遇 64 次供应商关闭事件但没有同类损失。^[raw/articles/gpt-6-astra-vending-bench-2-andon-xinzhiyuan-2026.md]
+- **与 1st source 的关系**：该结果说明 Vending-Bench 2 上「会赚钱」并非 Claude 家族专属，评价长期自主 agent 时「一次惊艳的谈判」与「几个月后仍记得该坚持什么」是两件可分离的事。^[raw/articles/gpt-6-astra-vending-bench-2-andon-xinzhiyuan-2026.md]
+
+→ [[raw/articles/gpt-6-astra-vending-bench-2-andon-xinzhiyuan-2026|第 2 来源原文]]

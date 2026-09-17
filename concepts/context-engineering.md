@@ -1,12 +1,13 @@
 ---
 title: "上下文工程"
 created: 2026-06-11
-updated: 2026-08-13
+updated: 2026-09-15
 type: concept
 tags: [agent, harness, prompt-engineering, context-engineering, memory, context-window, context-compaction, prompt-caching, retrieval-augmented]
 description: "上下文工程：Prompt 设计 → 上下文窗口管理 → 信息密度优化的范式演进"
 sources:
   - raw/articles/claude-code-no-magic-context-engineering-primitives-daisy-hollman-2026
+  - raw/articles/context-engineering-agent-ce-vs-harness-tencent-2026
 ---
 
 # 上下文工程
@@ -275,6 +276,14 @@ Anthropic Claude Code 插件与 Agent 团队负责人 Daisy Hollman（NDC Copenh
 | G | Governance & Security | 跨模型、系统、组织层的行为约束 |
 
 **关键发现**：Context & Memory 和 Governance & Security 在开源生态中最为薄弱，是未来工程投入的重点方向。
+
+### 补充框架：三大物理约束 × 七类要素 × ReAct 四陷阱（腾讯技术工程 2026-09）
+
+腾讯技术工程 lingnyliang《别再只卷 Prompt 了》以 Anthropic 文章为主要参考，把本页四个维度向上收拢为**三大物理约束**（均实验验证、彼此独立且相互加强）：①**Lost in the Middle**（Liu et al. arXiv:2307.03172，U 型曲线：答案文档在首/尾 ≈75%，中间 ≈35%，低于闭卷基线 56.1%——"塞更多信息"可为负贡献）→ 工程对策是**首因/近因位置规则**（系统级指令放开头、关键约束放结尾、最相关文档放首位或末位、关键规则不夹在工具调用记录中间）；②**Context Rot**（召回率随 Token 线性下降，"不是崩溃而是慢性退化"——规范信号被无关内容稀释，Agent 生成 snake_case 不是忘了指令而是注意力占比下降）；③**Attention Budget**（O(n²)，每个进入窗口的 Token 都消耗注意力预算，加无关内容不是中性操作）。收束公式：**最优上下文 = 最小 Token 数 × 最高信噪比**。
+
+信息分类上采用 Schmid 七类要素（Instructions/User Prompt/State & History/Long-Term Memory/Retrieved Information/Available Tools/Structured Output）逐项给出设计原则，其中库内此前零覆盖的要点：**Goldilocks Zone 是需反复校准的动态平衡点而非固定答案**（原则性指令 vs 枚举式脆性指令 vs 空洞指令光谱）；**工具定义即上下文**（ACI=Agent-Computer Interface，把工具文档当 UI/UX 做"可用性测试"；工具返回值消化后清除=最轻量 Compaction）；**Task State 只注入最小字段集合、用引用代替内容**。长任务三技术中补充了 Claude Code Compaction 实现细节（摘要额外保留最近访问 5 个文件："摘要负责知道发生了什么，最近文件负责知道正在看什么"）与 Compaction（被动触发）/Note-Taking（主动卸载）的主动-被动区分。^[raw/articles/context-engineering-agent-ce-vs-harness-tencent-2026.md]
+
+对 ReAct 的修补被整理为**四陷阱↔破解映射表**（库内首见体系化表述）：Observation 膨胀（50 轮累计 80K+ Token）→ 工具结果管理；**规则漂移 Rule Drift**（系统指令被历史从开头推入中间、落入 Lost in the Middle 性能洼地，30 轮后完全混用规范，常被误归因为"模型不稳定"）→ 关键规则置顶 + Compaction 后在新窗口开头重置；错误轨迹污染（失败记录像"谣言"流传）→ 压缩只提取有效轨迹 + 经验写入外部笔记；Thought 冗余 → 摘要只留决策与结论。同一 50 轮任务数字化对比：无 CE 到第 50 轮实际失败（~120K Token、重复审查已审查文件），有 CE 历经 3 次 Compaction 始终 ~20K、行为与第 1 轮一致——**CE 不是减少信息量，而是用更少 Token 承载同样有效信息**。该文还给出 CE↔Harness Engineering 四组件映射（Rules↔①Instructions/程序记忆、Skills↔④+少样本、Memory↔④情节+语义、Cases↔情节），把 HE 定位为"CE 的工程化落地体系"：CE 回答"为什么管、管什么"，HE 回答"怎么沉淀成团队资产"。^[raw/articles/context-engineering-agent-ce-vs-harness-tencent-2026.md]
 
 ## 实践启示
 

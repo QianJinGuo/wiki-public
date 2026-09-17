@@ -1,8 +1,9 @@
 ---
 title: "AI 自我改进与自举"
 created: 2026-06-11
-updated: 2026-08-29
+updated: 2026-09-14
 type: concept
+sources: [raw/articles/glm-60-fully-self-training-zhipu-funding-qbitai-2026]
 tags: [agent, self-improvement, llm, memory, recursive-self-improvement, data-flywheel, skill-evolution, lossy-improvement]
 description: "AI 自我改进与自举：递归优化、自对弈、数据飞轮、能力迭代"
 ---
@@ -47,6 +48,8 @@ description: "AI 自我改进与自举：递归优化、自对弈、数据飞轮
 [Prime Intellect](entities/ai-recursive-self-improvement-nanogpt-prime-intellect) 公开了 nano-GPT Prime 实验：从一个 16M 参数的小模型出发，用**自对弈（self-play）生成的训练样本**迭代训练 7 轮，模型在 MATH benchmark 上分数持续上升。这是递归自改进的"教科书案例"，但其样本生成器也是 LLM——存在自噬风险。
 
 [MIRA + MPA](entities/mira-mpa-deep-principle-ai4s-40-sota) 在材料科学领域用同样的递归思路做出 40 项实验 SOTA，**关键差异**是 MIRA 的反馈来自真实物理实验（DFT 计算），不是 LLM 自身——大幅降低自噬风险。
+
+**前沿实验室的资本承诺级工业化路线（智谱 GLM-6.0「完全自训练」，2026-09）**：智谱在港交所配售公告中把 RSI 表述为「完全自训练」（Fully Self Training），约 235 亿港元（募资净额 60%）投向下一代 GLM 基础模型与该体系研发——首个以前沿模型公司募资规模承诺的 RSI 路线。定义为「下一代 GLM 在上一代 GLM 搭建的环境里训练」的递归闭环，展开为三个维度：①**数据自产**——自我对弈/规则校验/执行验证/模型评审/人工抽检五级生成-筛选管道，数据回流预训练、中训练、后训练全阶段（不止后训练）；②**环境自造**——智能体自己试做任务、自己生成验证器、自己检查可解性，把任务环境变成「可规模化生产及复用的训练资源」；③**基础设施自我优化**——用模型编码与系统能力优化其自身赖以运行的算子/内核/调度/缓存/服务栈，模型逐步参与支撑自身迭代的 Infra 升级。与 Prime Intellect 单实验范式相比，智谱把自改进从「一个基准上刷分」扩展到「数据-环境-基础设施三层供给体系」，其中基础设施自我优化维度在库内其余自改进案例中均未出现。^[raw/articles/glm-60-fully-self-training-zhipu-funding-qbitai-2026.md]
 
 ### 3.2 Skill 进化 — 沉淀可复用三元组
 

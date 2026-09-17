@@ -1,7 +1,7 @@
 ---
 title: "高德 AI 资产度量与评价体系：三层评估模型 + 离线采集 + 人工反馈闭环"
 created: 2026-07-15
-updated: 2026-09-07
+updated: 2026-09-15
 type: entity
 tags: [ai-metrics, asset-measurement, evaluation-framework, skill-metric, mcp-metric, knowledge-base-metric, three-layer-model, gaode-tech, outcome-process-evidence, human-intervention]
 sources:
@@ -64,6 +64,41 @@ AI 资产价值 = 任务成功率提升 + 自主完成率提升 - 人工介入�
 ## 与业界方案的区别
 
 GitHub Copilot（acceptance rate）、Cursor（tab completion/agent task completion）、Devin（autonomous completion rate）的共同失真边界：度量"AI 产出了多少"而非"人的投入减少了多少"。高德体系以"人工介入时间/次数"为北极星指标。^[raw/articles/ai-asset-measurement-evaluation-gaode.md]
+
+## 深度分析
+
+### 北极星指标：为什么度量"人的介入"而不是"AI 的产出"
+
+度量口径本身就是行为指令：团队会朝被计数的方向优化。acceptance rate 只统计 AI 输出是否被点采纳，不追采纳之后用户修 bug 花掉的时间；token 数度量的是消耗而非节省。高德把北极星收束到"人工介入次数 / 时间"，因为它把返工、纠偏、手动接管、错误恢复折进同一个量，直接对应"人的投入减少了多少"。^[raw/articles/ai-asset-measurement-evaluation-gaode.md]
+
+副作用必须承认：从不被触发的资产不会增加介入次数，单看介入指标会奖励"不作为"。这正是公式必须同时保留"任务成功率提升 + 自主完成率提升"的原因——正向项回答"做成了没有"，负向项回答"代价是多少"，缺一半指标就能被刷。^[raw/articles/ai-asset-measurement-evaluation-gaode.md]
+
+### 同一套公式，三类资产，三种失败模式
+
+公式只有一个，但落到 Skill / MCP / 知识库上，"哪个负项在起作用"完全不同：Skill 的典型失败是"被选中却没被遵守"，故过程层看遵守度与选择精度；MCP 失败于"调用了但参数错、工具报错"，看成功率与参数正确率；知识库失败于"检索到了但排序不对、事实有误"，看命中率与排序质量。^[raw/articles/ai-asset-measurement-evaluation-gaode.md]
+
+因此三类资产统一打分再排行会误导：三者削减的负项不同（Skill 减解释与纠偏，MCP 减手动操作与工具错误，知识库减查资料与事实纠错），可比性只存在于"同一负项在采用前后的变化"里。过程指标必须跟着负项走，否则测到的是资产形态，不是价值。^[raw/articles/ai-asset-measurement-evaluation-gaode.md]
+
+### 证据层：把数字变成可被反驳的判断
+
+三层模型的闭环是"结果做决策、过程做改进、证据做校准"，三者不可互替：结果层给数回答"要不要投入"，过程层回答"哪一环断了"，证据层回答"这个数凭什么可信"。没有证据层，结果指标只是孤立数字——websearch MCP 调用 28 次像是使用率冠军，直到 59 分的质量分把它还原成"最常被反复重试"；codebase-structure 显式加载 11 次像是无人使用，直到 91 次隐式影响暴露其收益来自规范约束而非调用次数。^[raw/articles/ai-asset-measurement-evaluation-gaode.md]
+
+所以"没有证据的结果指标会误导决策"在这是工程约束而非修辞：计数类走确定性统计、不交给 LLM；判断类必须输出证据与理由；低置信度时经 bounded context escalation 扩展上下文再下结论，看不清就输出 unknown。宁可承认没看见过程，也不把弱推断包装成强结论——这与 [[concepts/llm-observability-4-layer-model|LLM 可观测性四层模型]]、[[entities/agent-harness-observability-production|生产级 Harness 可观测性]] 的分层留痕同源。^[raw/articles/ai-asset-measurement-evaluation-gaode.md]
+
+### 反直觉发现与采集路线：先证伪指标，再投资采集
+
+"高调用低质量 / 低调用高质量"的方法论含义是：调用量是行为指标，不是价值指标。高调用可能意味着反复重试（websearch 28 次 vs ast_grep 5 次，质量分 59 对 82），显式加载也不等于真实影响范围（11 次 vs 91 次）。任何以使用量为核心的度量都会系统性惩罚"低摩擦、高约束"的资产——其价值恰在"没发生的事"：少犯的错、少走的弯路。这类价值天然不可计数，只能由过程层遵守度和结果层介入下降间接推断，与 [[entities/agent-eval-counterintuitive-insights-langfuse|Langfuse 的评测反直觉发现]] 属同一类系统性偏差。^[raw/articles/ai-asset-measurement-evaluation-gaode.md]
+
+四阶段路线（CLI 历史会话 → 插件级实时 → MCP Proxy → 任务级）是成本递增的排序赌注：Phase 1 用已有 CLI 日志回答"这套指标有没有信号"；只有粗粒度数据已能区分资产，Phase 2–4 的投入才谈得上回报。若最便宜的一期都看不出差异，说明指标选错或资产无可测收益，加装 Proxy 只会放大误差。业界失真边界相同：Copilot 的 acceptance rate、Cursor 完成率、Devin 的 autonomous completion rate 都在度量"AI 产出了多少"，盲区是"产出被接受 ≠ 人的投入减少"，可对照 [[entities/agent-evaluation-systematic-guide-metrics-to-closed-loop|Agent 评测：从指标到闭环]]。^[raw/articles/ai-asset-measurement-evaluation-gaode.md]
+
+## 实践启示
+
+1. **先写口径，再谈指标**——把"人工介入次数/时间"落成可执行定义：什么算一次介入、跨会话是否累计、纠偏与返工如何记账，口径含糊，团队就会往好算的方向优化。
+2. **为每类资产预先声明它要削减的负项**——Skill 减解释与纠偏，MCP 减手动操作与工具错误，知识库减查资料与事实纠错；评估表跟着负项设计，而非跟着调用量排行。
+3. **用质量分给使用量排行榜做交叉验证**——裁撤或加投入前至少补一次质量分；低调用高质量的资产（如 ast_grep）通常比高调用低质量的资产（如 websearch）更值得保留。
+4. **禁止把弱推断包装成强结论**——允许系统输出 confidence 与 unknown，把证据摊开给人看；不敢说"没看见过程"的报告，价值低于其成本。
+5. **prompt/rubric 变更永不自动上线**——须经离线 replay + 人工批准才成为 active version，否则度量系统自身会被指标化，优化的是分数而非价值。
+6. **把度量反过来用在度量者身上**——同一公式可评估 agent harness、skill 库与知识库本身：它们究竟让人少介入几次、少返工几轮，才是该被回答的问题。
 
 ## 关联
 

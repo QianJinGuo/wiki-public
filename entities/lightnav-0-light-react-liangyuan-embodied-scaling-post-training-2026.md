@@ -1,10 +1,10 @@
 ---
 title: "亮源新创 LightNav-0 / Light REACT：把大模型的三段范式搬进具身"
 created: 2026-09-12
-updated: 2026-09-12
+updated: 2026-09-14
 type: entity
 tags: [embodied-ai, vision-language-navigation, post-training, online-rl, preference-alignment, resilience, whole-body-in-context-learning, rvq, qwen3-vl, liangyuan, scaling]
-sources: [raw/articles/lightnav-0-light-react-liangyuan-embodied-scaling-post-training-2026]
+sources: [raw/articles/lightnav-0-light-react-liangyuan-embodied-scaling-post-training-2026, raw/articles/liangyuan-lightparkour-lightnav0-light-react-qbitai-2026]
 confidence: 0.65
 ---
 
@@ -41,3 +41,14 @@ Light REACT（REsilient humAnoid ConTrol）解决「摔不垮」，其目标是�
 相关工作见 [[concepts/embodied-intelligence-frontier|具身智能前沿]]、[[concepts/world-models|世界模型]]、[[entities/urbanground-embodied-navigation-benchmark-2026|UrbanGround 导航基准]]、[[entities/lingbot-vla-2-60000h-open-source-vla|LingBot-VLA 2（6 万小时开源 VLA）]]、[[entities/embodied-native-llm-embodied-intelligence-new-stage|具身原生 LLM]]、[[concepts/rlvr-reinforcement-learning-verified-reasoning|RLVR 与可验证强化学习]]。
 
 → [[raw/articles/lightnav-0-light-react-liangyuan-embodied-scaling-post-training-2026|原文存档]]
+
+## 第 2 来源 — 量子位（2026-09-13）：三项技术并列，补上 LightParkour
+
+同一批发布被量子位以「三项技术」而非「两次发布」组织，与首发来源（机器之心）互补之处集中在第三项技术 LightParkour，以及把 Scaling 的定义从「参数量/数据量」改写成「能力能否持续规模化扩展」的表述。v×c 约 42（同题跨号重发，主体重叠高）。^[raw/articles/liangyuan-lightparkour-lightnav0-light-react-qbitai-2026.md]
+
+- **LightParkour（维基此前未覆盖）**：从简短的人类动作片段出发，通过物理仿真与课程学习扩展复杂接触技能，对应三行发布中的「跑酷」方向——即机器人跨越障碍的接触密集运动技能获取。^[raw/articles/liangyuan-lightparkour-lightnav0-light-react-qbitai-2026.md]
+- 三项技术被明确映射为大模型三段范式：LightParkour 偏能力构建、LightNav-0 对应「对齐」、Light REACT 对应「部署」，三项共同指向「训练—对齐—真实部署」的学习闭环。^[raw/articles/liangyuan-lightparkour-lightnav0-light-react-qbitai-2026.md]
+- **Scaling 的重新定义**：此前阶段问的是机器人「会多少技能」，下一阶段问的是这些能力能否经历更多环境、覆盖更多任务、迁移到更多机器人本体，并在进入物理世界后继续适应训练阶段未见过的状态——把评价标准从技能清单转向可持续扩展性。^[raw/articles/liangyuan-lightparkour-lightnav0-light-react-qbitai-2026.md]
+- 数据侧口径一致：2000+ 互联网来源真实场景 → 可反复使用的仿真环境，合成 4000+ 小时视觉/语言/动作经验，用于通用导航后训练；发布时附带 210 个真实室内外场景、1097 个 episode 的部署评测集。^[raw/articles/liangyuan-lightparkour-lightnav0-light-react-qbitai-2026.md]
+
+→ [[raw/articles/liangyuan-lightparkour-lightnav0-light-react-qbitai-2026|第 2 来源原文]]
