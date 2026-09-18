@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "sourceRevision": "12cf1007994e2bd81e2332743058e6e568d35e6a",
+  "sourceRevision": "12c073f52a1d10e9d63c62f29b5ee9c32bedea2a",
   "files": [
     {
       "path": "raw/articles/0.25秒识破未见攻击-lod-lvlm-jailbreak-detection-emnlp2026.md",
@@ -1353,6 +1353,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/KRKKYCaGxZ5aUOWbfm_TBg"
     },
     {
+      "path": "raw/articles/agent-eval-platform-engineering-aliexpress-2026.md",
+      "title": "agent-eval-platform-engineering-aliexpress-2026",
+      "sourceUrl": "https://mp.weixin.qq.com/s/WBUYK5cG_dEJ6luDBbOKbQ"
+    },
+    {
       "path": "raw/articles/agent-eval-testset-first-version-xiaobai-2026.md",
       "title": "AI评测方法论 ③：Agent 测评集——是什么、测什么、怎么搭第一版",
       "sourceUrl": "https://mp.weixin.qq.com/s/PfRXKlMzEre_qRIjrlS5tA"
@@ -1781,6 +1786,11 @@
       "path": "raw/articles/agent-tools-research.md",
       "title": "微信文章：深度解析 Hermes Agent 如何实现\"自进化\"及其 Prompt / Context / Harness 的设计实践",
       "sourceUrl": "https://mp.weixin.qq.com/s/2xFei8dMx99lc-iyrZZrww"
+    },
+    {
+      "path": "raw/articles/agent-trajectory-failure-analysis-trajdebug-searchauditor-2026.md",
+      "title": "agent-trajectory-failure-analysis-trajdebug-searchauditor-2026",
+      "sourceUrl": "https://mp.weixin.qq.com/s/kqOazUFqWrD7W6Gl3uFTTg"
     },
     {
       "path": "raw/articles/agent-vs-workflow-control-continuum.md",
@@ -5218,6 +5228,11 @@
       "sourceUrl": "https://www.nextplatform.com/ai/2026/06/03/cisco-preps-for-a-world-of-ai-agent-coworkers-frontier-model-threats/5250406"
     },
     {
+      "path": "raw/articles/citation-grounding-rag-agent-engineering-challengehub-2026.md",
+      "title": "citation-grounding-rag-agent-engineering-challengehub-2026",
+      "sourceUrl": "https://mp.weixin.qq.com/s/nwRBPpc3a3jnuJOi9TgWqg"
+    },
+    {
       "path": "raw/articles/citriniresearch-supply-chain-inheritance.md",
       "title": "Semis Memo: Supply Chain Inheritance",
       "sourceUrl": "https://www.citriniresearch.com/p/semis-memo-supply-chain-inheritance"
@@ -7436,6 +7451,11 @@
       "path": "raw/articles/drupal-core-security-drupal-to-release-urgent-core-security.md",
       "title": "Drupal to Release Urgent Core Security Updates on May 20, Sites Told to Prepare",
       "sourceUrl": "https://thehackernews.com/2026/05/drupal-to-release-urgent-core-security.html"
+    },
+    {
+      "path": "raw/articles/dsh-agent-loop-pluginized-self-evolution-boundary-ruofei-2026.md",
+      "title": "dsh-agent-loop-pluginized-self-evolution-boundary-ruofei-2026",
+      "sourceUrl": "https://mp.weixin.qq.com/s/s6kXkA3D4XTKZGZH_BQYOg"
     },
     {
       "path": "raw/articles/dsh-observability-tencentcloud-agent-obs-2026-08-24.md",
@@ -10753,6 +10773,11 @@
       "sourceUrl": "https://blog.jetbrains.com/platform/2026/06/marketplace-ecosystem-security-update-malicious-ai-plugins/"
     },
     {
+      "path": "raw/articles/jev-typesafe-decision-model-vibe-analysis-2026.md",
+      "title": "jev-typesafe-decision-model-vibe-analysis-2026",
+      "sourceUrl": "https://mp.weixin.qq.com/s/QWFkGiEmC24RecPOyrl_lA"
+    },
+    {
       "path": "raw/articles/jingshuo-tech-embodied-ai-data-infrastructure-2026-07-15.md",
       "title": "jingshuo-tech-embodied-ai-data-infrastructure-2026-07-15",
       "sourceUrl": "https://mp.weixin.qq.com/s/04mNrcknYA33PzGnF2Hdug"
@@ -11218,6 +11243,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/BdisI0FZqLqEwyWnIQhzuQ"
     },
     {
+      "path": "raw/articles/last-ai-built-by-humans-rsi-survey-2026.md",
+      "title": "last-ai-built-by-humans-rsi-survey-2026",
+      "sourceUrl": "https://mp.weixin.qq.com/s/8hs87s_60WJSL5av8auNTQ"
+    },
+    {
       "path": "raw/articles/late-student-loan-payments-are-rising-is-a-domino-effect-com.md",
       "title": "late-student-loan-payments-are-rising-is-a-domino-effect-com",
       "sourceUrl": "https://www.americanbanker.com/news/late-student-loan-payments-are-rising-is-a-domino-effect-coming"
@@ -11603,6 +11633,11 @@
       "sourceUrl": null
     },
     {
+      "path": "raw/articles/llm-representational-equality-cross-country-value-simulation-cl-2026.md",
+      "title": "llm-representational-equality-cross-country-value-simulation-cl-2026",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIwMTc4ODE0Mw==&mid=2247722979&idx=2&sn=fd795d8616855b1f95d6cd515dad9e6d"
+    },
+    {
       "path": "raw/articles/llm-rl-entropy-collapse-acl-2026-outstanding-paper.md",
       "title": "llm-rl-entropy-collapse-acl-2026-outstanding-paper",
       "sourceUrl": "https://mp.weixin.qq.com/s/TGC3YDFCx0vJYOSRQtvOEg"
@@ -11711,6 +11746,11 @@
       "path": "raw/articles/london-met-police-big-tech-data-requests.md",
       "title": "London's police asked Big Tech for comms data over 700,000 times last year",
       "sourceUrl": "https://www.theregister.com/databases/2026/05/20/londons-police-asked-big-tech-for-comms-data-over-700000-times-last-year/5242590"
+    },
+    {
+      "path": "raw/articles/long-context-llm-fullstack-survey-datapai-2026.md",
+      "title": "long-context-llm-fullstack-survey-datapai-2026",
+      "sourceUrl": "https://mp.weixin.qq.com/s/M_blp8kl7lYeqhQEXeQ3KQ"
     },
     {
       "path": "raw/articles/long-horizon-agent-training-practice-jiagoux-2026-07-20.md",
@@ -12193,6 +12233,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/QAnbNhmRBz40kkq9l5xTjQ"
     },
     {
+      "path": "raw/articles/meituan-torchtensor-data-agent-harness-dynamicpo-2026.md",
+      "title": "美团 2026 三项学术成果：TorchTensor 数据 Agent 系统设计、DynamicPO 偏好优化坍塌、GeoRA",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MjM5NjQ5MTI5OA==&mid=2651783408&idx=1&sn=994f37a61bdc62ab93bef46256c53a48"
+    },
+    {
       "path": "raw/articles/meituan-turing-agent-evaluation-methodology-2026-08-06.md",
       "title": "Agent 评测，从打分动作走向基础设施能力",
       "sourceUrl": "https://mp.weixin.qq.com/s/gZKWRqznB8sNBFf69fBIvw"
@@ -12281,6 +12326,11 @@
       "path": "raw/articles/memtrace-llm-memory-debugging-zjunlp-alibaba-2026.md",
       "title": "浙大&阿里新论文：LLM记忆系统终于能调试了（MemTrace）",
       "sourceUrl": "https://www.xiaohongshu.com/explore/6a86847d000000002800629c?xsec_source=app_share&xsec_token=CBtBWq2Djc4mXJIrkMeRVi2EktwNrlvd9xaU7o4bhfF6E="
+    },
+    {
+      "path": "raw/articles/mercor-skyrl-397b-agent-rl-recipe-2026.md",
+      "title": "mercor-skyrl-397b-agent-rl-recipe-2026",
+      "sourceUrl": "https://mp.weixin.qq.com/s/wCQistml2lV40I0-xfKGIQ"
     },
     {
       "path": "raw/articles/mesh-spiralformer-recurrent-transformer-ali-qbitai-2026-09-06.md",
@@ -13578,6 +13628,11 @@
       "sourceUrl": null
     },
     {
+      "path": "raw/articles/openai-compaction-state-injection-datafun-2026.md",
+      "title": "openai-compaction-state-injection-datafun-2026",
+      "sourceUrl": "https://mp.weixin.qq.com/s/mNny1wkGD-jHrVh2ldicvQ"
+    },
+    {
       "path": "raw/articles/openai-gpt-56-sol-terra-and-luna-are-now-generally-available.md",
       "title": "openai-gpt-56-sol-terra-and-luna-are-now-generally-available",
       "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/openai-gpt-5-6-sol-terra-and-luna-are-now-generally-available-on-amazon-bedrock"
@@ -13971,6 +14026,16 @@
       "path": "raw/articles/openthinker3-data-recipe-iclr26-oral-qingshui-2026-08-05.md",
       "title": "ICLR26 Oral｜开源推理模型封神数据配方 — OpenThinker3-7B / OpenThoughts3-1.2M",
       "sourceUrl": "https://www.xiaohongshu.com/explore/6a7180d80000000032032d63"
+    },
+    {
+      "path": "raw/articles/openviking-experience-memory-agent-evolution-loop-2026.md",
+      "title": "openviking-experience-memory-agent-evolution-loop-2026",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzI1MzYzMjE0MQ==&mid=2247522604&idx=1&sn=6ea201d826647e12047227cd3d386ba4"
+    },
+    {
+      "path": "raw/articles/openviking-experience-memory-content-creation-agent-2026.md",
+      "title": "openviking-experience-memory-content-creation-agent-2026",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzI1MzYzMjE0MQ==&mid=2247522604&idx=2&sn=38a6922a7fb8711c9851a44e15582b31"
     },
     {
       "path": "raw/articles/openworker-desktop-agent-local-first-architecture-ruofei-2026.md",
@@ -14833,6 +14898,11 @@
       "sourceUrl": "https://www.xiaohongshu.com/discovery/item/6a6b20ab000000002402cf58"
     },
     {
+      "path": "raw/articles/rarg-relevance-guided-corpus-interaction-hyman-2026.md",
+      "title": "rarg-relevance-guided-corpus-interaction-hyman-2026",
+      "sourceUrl": "https://mp.weixin.qq.com/s/_OdrYB6o-ku0KEBIFJWXxg"
+    },
+    {
       "path": "raw/articles/raw-coda-bench-code-agent-data-benchmark-renmin-2026.md",
       "title": "raw coda bench code agent data benchmark renmin 2026",
       "sourceUrl": "https://mp.weixin.qq.com/s/ofOV3iGUdfZyGpZ8az0fFA"
@@ -15158,6 +15228,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651054414&idx=1&sn=8b059e8c7025fd12ef2262632d066f8d"
     },
     {
+      "path": "raw/articles/rsi-survey-towards-ai-that-improves-itself-2026.md",
+      "title": "rsi-survey-towards-ai-that-improves-itself-2026",
+      "sourceUrl": "https://mp.weixin.qq.com/s/XiAdIwQ6VqLz2OO2RHKG3g"
+    },
+    {
       "path": "raw/articles/rsi-test-time-training-time-evolution-architecture-qingke-2026.md",
       "title": "关于 RSI 的一些思考：Test-Time 沉淀与 Training-Time 演化的架构终局",
       "sourceUrl": "https://mp.weixin.qq.com/s/r0rFponJnI5KmW1I9B-VIg"
@@ -15393,6 +15468,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651050586&idx=2&sn=005d605a168bfbea6afdb2136fe639fe"
     },
     {
+      "path": "raw/articles/scienceide-claude-biomolecular-code-optimization-agent-environments-2026.md",
+      "title": "ScienceIDE + Claude 生物分子模型优化：把科学代码库变成智能体可学习环境",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651058476&idx=1&sn=866ebd2b67118cdf580eba94a824a12a"
+    },
+    {
       "path": "raw/articles/sciencesofts-hipaa-compliant-ai-voice-scheduler-built-on-aws.md",
       "title": "sciencesofts-hipaa-compliant-ai-voice-scheduler-built-on-aws",
       "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/sciencesofts-hipaa-compliant-ai-voice-scheduler-built-on-aws"
@@ -15603,6 +15683,11 @@
       "sourceUrl": "https://www.pathtostaff.com/p/everything-a-senior-engineer-needs"
     },
     {
+      "path": "raw/articles/sensenova-u1-5-neo-unify-native-unified-multimodal-4k-sensetime-2026.md",
+      "title": "sensenova-u1-5-neo-unify-native-unified-multimodal-4k-sensetime-2026",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIwMTc4ODE0Mw==&mid=2247722979&idx=1&sn=a8ea6c6479b5c97bc0e0ccae28592888"
+    },
+    {
       "path": "raw/articles/sensnova-u1-deep-dive-jiqizhixin-d8602ded5c51.md",
       "title": "商汤SenseNova U1深度拆解，原生统一架构终结缝合时代",
       "sourceUrl": null
@@ -15701,6 +15786,11 @@
       "path": "raw/articles/sign-of-the-future-gpt-55-mollick.md",
       "title": "sign-of-the-future-gpt-55-mollick",
       "sourceUrl": "https://www.oneusefulthing.org/p/sign-of-the-future-gpt-55"
+    },
+    {
+      "path": "raw/articles/simplememvla-native-visual-context-vla-memory-2026.md",
+      "title": "SimpleMemVLA：用原生视觉上下文做机器人记忆，流式推理把决策延迟压到 0.68 秒",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247924343&idx=3&sn=38ca52bb0e0e19c301f8d9ab482f7c8c"
     },
     {
       "path": "raw/articles/simplify-model-selection-in-amazon-bedrock-with-open-source-model-router.md",
@@ -16346,6 +16436,11 @@
       "path": "raw/articles/strands-agents-sdk-build-analytics-layer-vqr-amazon-bedrock-practice.md",
       "title": "用 Strands Agents SDK 构建确定性数据分析：语义层 + VQR 在 Amazon Bedrock 上的实践 | 亚马逊AWS官方博客",
       "sourceUrl": "https://aws.amazon.com/cn/blogs/china/strands-agents-sdk-build-analytics-layer-vqr-amazon-bedrock-practice/"
+    },
+    {
+      "path": "raw/articles/strategy-agent-eval-auto-rubrics-taobao-2026.md",
+      "title": "strategy-agent-eval-auto-rubrics-taobao-2026",
+      "sourceUrl": "https://mp.weixin.qq.com/s/gOCMe2lrO8PFGfZoKhUmfA"
     },
     {
       "path": "raw/articles/streaming-benchmark-and-recommendation-results-to-mlflow-wit.md",
@@ -18856,6 +18951,11 @@
       "path": "raw/articles/从-hy3-preview-看-ai-下半场单位智能时代的一次工程答卷.md",
       "title": "从 Hy3 preview 看 AI 下半场：单位智能时代的一次工程答卷",
       "sourceUrl": "https://mp.weixin.qq.com/s/soGCMknejh725lJ6LiYVCg"
+    },
+    {
+      "path": "raw/articles/从-llm-ocr-到分布式-agent一个报销工具的三次进化.md",
+      "title": "从-llm-ocr-到分布式-agent一个报销工具的三次进化",
+      "sourceUrl": "https://aws.amazon.com/cn/blogs/china/llm-ocr-distributed-agent-tool"
     },
     {
       "path": "raw/articles/从-loop-到-graph-engineering-的演进思考与实战.md",

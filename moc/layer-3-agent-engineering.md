@@ -1,7 +1,7 @@
 ---
 title: 第 3 层全库索引：Agent 工程
 created: 2026-06-24
-updated: 2026-06-24
+updated: 2026-09-18
 type: moc
 tags: [learning-path, layer-3, agent, engineering]
 layer: 3
@@ -70,6 +70,7 @@ chap-13 从对话到 Agent（50min）→ chap-14 Agent 记忆（75min）→ chap
 - [[entities/17-agent-architectures-evolution|17 种 Agent 架构演进]]
 - [[entities/agent-architecture-harness-new-backend|Harness 成为新后端]]
 - [[entities/a-missing-layer-in-agentic-systems|Agentic 缺失的一层]]
+- [[entities/agent-as-distributed-system-three-stage-evolution-2026|Agent 即分布式系统：三阶段进化与四个生产事故]]
 
 ### 记忆实践
 - [[entities/agent-memory-modular-framework|Agent Memory 模块化框架]]

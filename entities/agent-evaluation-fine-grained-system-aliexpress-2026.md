@@ -5,10 +5,11 @@ source: AliExpress技术 (2026-07-21)
 score: v=9, c=9, v×c=81
 type: entity
 created: 2026-07-24
-updated: 2026-09-07
+updated: 2026-09-18
 tags: [agent-evaluation, LLM-as-Judge, benchmark, agent-testing, evaluation-metrics, fine-grained-evaluation, production-agent, quality-cost-performance]
 sources:
   - raw/articles/agent-evaluation-fine-grained-system-aliexpress-2026
+  - raw/articles/agent-eval-platform-engineering-aliexpress-2026.md
 reviewed: 2026-09-07
 review_verdict: keep
 review_category: practice
@@ -65,6 +66,16 @@ Agent 按内部结构拆解为四个模块，评测指标与架构同构——�
 "Aone 文档知识工具集"输入文档 URL → 按数据集类型 Prompt 模板生成结构化用例 → 人工审核 → 入库。 ^[raw/articles/agent-evaluation-fine-grained-system-aliexpress-2026.md]
 
 ---
+
+## SUPP：评估平台工程落地与评估体系自身的三个坑（2026-09-18 第三来源）
+
+同团队第三篇把镜头从「评什么」（四模块白盒指标）转向「谁来跑、跑在哪、怎么接发布流程」与「评估体系自己怎么坏」。平台定位收窄为**评估执行框架**：规范制定/工程脚手架/自动执行/结果管理/发布卡口归平台，评估内容（数据集设计、判分逻辑）由各业务在 `eval.py` 自行实现——契约先行（业务仓库 `eval.yaml` + 固定产物 `output/result.json`/`report.md`），平台只认契约不看实现。三模块架构：eval-runner（Agent 化编排器，git-fetch/py-executor/result-collector 三 Skill 串行）+ 任务状态服务（写入走 Python stdio MCP 仅四工具，查询走独立 REST；状态机极简 PENDING→RUNNING→SUCCESS/FAILED）+ 评测脚本模板。V1 靠砍需求一周两人落地（幂等缓存/趋势查询/SDK 抽象全砍），立项首日上午只验证三件事（沙箱 clone 内网仓库/pip install/Java MCP SDK hello world）。^[raw/articles/agent-eval-platform-engineering-aliexpress-2026.md.md]
+
+选型对照：DeepEval（pytest 形态合意，卡在本地 CI vs 平台侧远程触发）、Promptfoo（卡口能力最接近，以 GitHub Actions 为中心）、RAGAS（无内建阈值卡口）、Arize Phoenix（许可需法务确认）、LangSmith（Cloud 数据落对方云）——它们解决「怎么算分」，卡住作者的「谁来跑/存哪/接卡口」无现成方案；选型新变量：Promptfoo 2026-03 被 OpenAI 收购、Langfuse 2026-01 被 ClickHouse 收购。指标体系 outcome/quality/efficiency/safety 四分类 + L0/L1/L3/L4/L5 分层加权（L2 留空位防字段重排；边界鲁棒 25% 与 L0 并列最高——对话式 Agent 出事故的往往不是答不准而是被诱导越界）；卡口三档：阻断级（通过率<0.8 拦截）/告警级/对比级（不允许对基线倒退），未过支持人工确认放行。^[raw/articles/agent-eval-platform-engineering-aliexpress-2026.md.md]
+
+**三个坑（评估体系自身的失效模式，全部静默产出看似合理的假数据）**：①抽样绕过卡口——`sample_size=5` 跑出 100% 通过/S 级 95.1 分/pass:true，同报告 L1/L3/L4 得分 0.0（空层），归一化口径与渲染口径各自「没错」合出自相矛盾结论，比全量 57.1 分高 38 分还被系统认证可发布；修法=空层不出等级/报告显示 N/A/抽样模式 pass 返回 null。②评测集 expected 字段空串误判——Agent 输出 `scene:"unknown"` 判 FAIL（数据集没填期望值），安全维度同套字段比对连带误判（Prompt 注入防御 0/6 中 5 条此签名）；只让分数单向变低没人怀疑，L4 的 9.1 分险些被当真实结论；修法=入库 schema 校验拒收空期望/判分函数对空期望抛异常。③同数据集四次跑出四个分数——78 条同日四跑 60.26%/61.54%/62.82%/64.10%（差值恰为 1/78=每次多对一条），延迟 2.5s 漂到 6.5s，卡口 0.8 精确阈值 vs ±4pp 噪声：真退化与正常抖动不可区分（Evan Miller《Adding Error Bars to Evals》arXiv:2411.00640 主张评测即实验、需聚类标准误/配对比较/事前样本量规划，当前仅重复跑看散布）。共同点：三坑全是工程问题非模型问题，「一个会静默给出错误分数的评估系统比没有评估更自信」——评估体系上线后需自配元校验。^[raw/articles/agent-eval-platform-engineering-aliexpress-2026.md.md]
+
+**对照数据与外部证据**：87 条用例 865 秒通过率 60.92% 综合 57.1 分 D 级卡口 FAIL；L1 参数映射 90.5 最稳（code 判分路径有效）/L4 边界鲁棒 9.1（后经坑②修正部分为数据噪声）；LLM-as-a-Judge：GPT-4 vs 专家一致率 85%（MT-Bench）但扣随机一致的 Cohen's κ 普遍低 33-41pp（arXiv:2606.19544，21 判官 54 万次判断：位置偏差未解决[稳定≠无偏]、冗长偏差已可后排）；METR reward hacking：o3 RE-Bench 128 跑 39 次作弊（30.4%，Optimize LLM Foundry 21/21）vs HCAST 0.7%，提示词缓解无效（「请只用预期方法」反升至 95%），2026-05 RHB（arXiv:2605.02964）13 模型 0%-13.9%（同族 RL 后训练风格差异），作弊率低≠评测集安全可能只是题不够难；arXiv:2507.02825（Percy Liang/Ion Stoica 等）：SWE-bench Verified 测试覆盖不足、τ-bench 无解任务「环境未被改变」判定让空 Agent 拿 38%（高于 GPT-4o），ABC checklist 套 CVE-Bench 压下高估 33pp；「评测要不要先行」：Anthropic 主张 eval-driven development，Hamel Husain 对严格版回答 Generally no，作者落中间——评测不必先行但发布前就位，同类问题出现第二次才写进评测集。^[raw/articles/agent-eval-platform-engineering-aliexpress-2026.md.md]
 
 ## 与现有 wiki 知识的关系
 

@@ -1,7 +1,7 @@
 ---
 title: "The Primitive is the Product — AI 时代的产品哲学：从功能到原语"
 created: 2026-07-02
-updated: 2026-09-10
+updated: 2026-09-19
 type: entity
 tags: [ai, product, agent, software-engineering, philosophy, api-design]
 sources: [raw/articles/primitive-is-the-product-amplify-partners]
@@ -70,6 +70,44 @@ VC 喜欢平台（网络效应、高切换成本、拥有整个品类）。原�
 - **产品经理**需要像 API 设计师一样思考
 - **工程师**需要考虑可组合性和约束，而不仅是实现
 - **销售团队**需要以能力而非工作流来阐述价值
+
+## 深度分析
+
+### 原语暴露成本为何坍塌
+
+人类消费软件的时代，暴露一项能力的成本极高：能力做完只是起点，还要叠加 UI、引导、文档、客服话术与销售叙事，用户才真正用得上——护城河因此建在"包装"而非"能力"上。^[raw/articles/primitive-is-the-product-amplify-partners.md]
+
+Agent 改写了这笔成本结构：它看不到 GUI，却完整消费 API spec，只关心输入、输出、显式约束，以及这些能力能否被可靠调用与链式组合。^[raw/articles/primitive-is-the-product-amplify-partners.md] "集成"于是从厂商的工程负担变成消费方的推理动作——契约只要设计对一次，此后的新组合方式无需厂商多写一行产品代码，这正是"最好的 agent 产品就是最好的开发者产品"的实际含义。^[raw/articles/primitive-is-the-product-amplify-partners.md]
+
+### 经济学不对称：功能的平方成本 vs 原语的线性成本
+
+"功能是货币"的时代有一笔隐性税负：价值随功能数近似线性增长，但维持 N 个功能彼此兼容、文档覆盖、测试遍历、UI 各得其所，集成与 QA 成本会按交互面近似 N² 增长。^[raw/articles/primitive-is-the-product-amplify-partners.md]
+
+原语逻辑把这条曲线掰开了：暴露稳定契约是**一次性设计成本**，组合数却是开放的——N 个原语之间的组合由消费方在自己的上下文里完成，提供方不为组合结果承担 QA 面。^[raw/articles/primitive-is-the-product-amplify-partners.md] 价值曲线来自生态侧复用（订阅、发票、风控全建在 charge 之上），成本曲线停在设计侧不再上浮。
+
+### 什么样的原语是"好原语"
+
+一是**契约稳定**：语义一旦漂移就沿组合图向下游扩散，所以边界、语义与失败模式确定后不该反复重画；文章判断很硬——设计糟糕的原语比没有原语更糟，它引入复杂度、认知负担与组合摩擦。^[raw/articles/primitive-is-the-product-amplify-partners.md]
+
+二是**可组合与引用透明**：同一输入在同一状态下产出同一结果，没有隐藏会话状态与顺序依赖，调用者才能在无人复核时把它嵌进更长的链条。原语的防御性不在难构建，而在难设计对。^[raw/articles/primitive-is-the-product-amplify-partners.md]
+
+三是**对 agent 的可观测性**：结构化输出、显式约束、类型化错误码（而非自然语言报错），让消费方区分"参数错 / 权限不足 / 速率受限 / 暂时失败"，自主决定重试、改参还是上报。工具不是给人看的功能入口，而是给推理循环用的动作原语 → [[concepts/model-context-protocol-mcp|MCP]]、[[entities/mcp-tool-design-tradeoffs-anthropic-2026|MCP 工具设计权衡]]、[[entities/agent-ready-api-design-patterns-2026|Agent-Ready API 设计模式]]。反之，把工具描述当提示词文案写、把工具数量当能力指标堆，原语就退化成昂贵的噪声 → [[entities/ai-agent-tool-count-trap|工具数量陷阱]]。
+
+### 原语优先与产品优先：价值捕获的张力
+
+不舒服的推论：原语越标准、契约越清晰，越容易被同契约的另一份实现替换——获利者可能是组合方（agent 平台、编排层、交付结果的厂商），而不一定是原语作者。文章的反驳是好原语会变成基础设施，被嵌入工作流后替换成本高到不可想象。^[raw/articles/primitive-is-the-product-amplify-partners.md] 但这个防御**滞后生效**：只在组合已发生、切换成本已沉淀之后才起作用；在被采纳之前，它面对的是"小而可商品化"的默认质疑——恰是 VC 偏爱平台、低估原语的直觉来源。^[raw/articles/primitive-is-the-product-amplify-partners.md]
+
+所以原语优先必须同时回答分发与定价：把收费点从座位与功能清单移到能力本身（调用量、结果、SLA），让原语越被组合、收入越随之放大 → [[entities/stripe-agent-economic-infrastructure-5-products|Stripe Agent 经济基础设施]]、[[concepts/harness-as-product-surface|Harness as Product Surface]]、[[concepts/agent-as-software-3-0-substrate|Agent as Software 3.0 基底]]。
+
+### 原语论的失效边界
+
+边界一，**发现与打包仍是人的事**：原语解决"被组合"，不解决"被发现"；当最终买单的是人而非 agent（预算、采购、合规、信任），功能包装、品牌与关系仍在决定成交——企业采购买的是可归责的结果，而非一组可组合能力。
+
+边界二，**过早抽象是真实的失败模式**：文章提醒糟糕的原语比没有更糟，并建议约 10 人的团队先花六个月找到原语，而不是急着做数据平台。^[raw/articles/primitive-is-the-product-amplify-partners.md] 但缺少真实反馈时，"先找原语"会退化成闭门设计——没有工作流样本，团队判断不了抽象层该更高还是更低。
+
+边界三，**不可组合的领域**：延迟敏感、强合规、失败代价不可逆的场景（清算、医疗、安全响应）无法把组合权完全交给消费方，原语必须被封成有边界、有承诺的托管服务，即重新回到产品形态。
+
+更稳的读法：原语是 agent 时代的**分发单位**，产品仍是人类时代的**信任单位**——"产品即原语"在 agent 已是主要消费方的品类里最强，在采购与信任仍由人类中介的品类里最弱。
 
 ## 相关实体
 
