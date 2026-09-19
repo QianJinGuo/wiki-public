@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "sourceRevision": "12c073f52a1d10e9d63c62f29b5ee9c32bedea2a",
+  "sourceRevision": "12754538ba7694314ab850ea407418ddc79f5198",
   "files": [
     {
       "path": "raw/articles/0.25秒识破未见攻击-lod-lvlm-jailbreak-detection-emnlp2026.md",
@@ -2943,6 +2943,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/Tzm4AqhrGxFx5t3q0vOXJg"
     },
     {
+      "path": "raw/articles/ai离理解万物还有多远先拿癌细胞和行星轨道试试水.md",
+      "title": "AI离“理解万物”还有多远？先拿癌细胞和行星轨道试试水",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247924617&idx=1&sn=b62cd4d096d1ad94285a91a808f2fd6d"
+    },
+    {
       "path": "raw/articles/ai科学家再聪明10倍科学也快不起来瓶颈是300年前发明的论文.md",
       "title": "AI科学家再聪明10倍，科学也快不起来：瓶颈是300年前发明的「论文」",
       "sourceUrl": "https://mp.weixin.qq.com/s/kvzh0kBeb4vuvzNNi4YhFA"
@@ -3038,6 +3043,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/lTdRNB3vTJoU0nAPBkHNtw"
     },
     {
+      "path": "raw/articles/aliexpress-ai-eval-platform-consistency-confidence-2026.md",
+      "title": "让AI输出变得可信：评测一致性与置信度提升实践",
+      "sourceUrl": "https://mp.weixin.qq.com/s/a8DQ73o9brkvi1WTMKJ0VA"
+    },
+    {
       "path": "raw/articles/aliexpress-harness-ai-native-architect-2026-08-03.md",
       "title": "aliexpress-harness-ai-native-architect-2026-08-03",
       "sourceUrl": "https://mp.weixin.qq.com/s/UbF04NBK6jccBpAeLr5InQ"
@@ -3096,6 +3106,11 @@
       "path": "raw/articles/aliyun-cloud-native-fable-5-safety-guardrails-evolution.md",
       "title": "基础设施到 Agent 体验丨从 Claude Fable 5 看安全护栏的演进",
       "sourceUrl": "https://mp.weixin.qq.com/s/VUubr0E2w13pmVvzBy9exg"
+    },
+    {
+      "path": "raw/articles/aliyun-cloudmonitor-agent-trace-session-clustering-2026-09.md",
+      "title": "智能聚类：从海量 Trace 中理解 Agent 的行为和表现",
+      "sourceUrl": "https://mp.weixin.qq.com/s/IMCmuAZlNxdRXDRquGlWWg"
     },
     {
       "path": "raw/articles/aliyun-cms2-cli-skill-5-scenarios-chenyanbing-2026.md",
@@ -10171,6 +10186,11 @@
       "path": "raw/articles/huggingface-inference-endpoints-papers-with-code-search.md",
       "title": "huggingface-inference-endpoints-papers-with-code-search",
       "sourceUrl": "https://huggingface.co/blog/pwc-search"
+    },
+    {
+      "path": "raw/articles/huggingface-skills-sagemaker-agent-skill-deployment-2026.md",
+      "title": "huggingface-skills-sagemaker-agent-skill-deployment-2026",
+      "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/deploy-hugging-face-models-on-amazon-sagemaker-ai-with-coding-agents"
     },
     {
       "path": "raw/articles/huggingface-torch-mlp-fusion-profiling-2026.md",

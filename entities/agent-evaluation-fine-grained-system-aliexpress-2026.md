@@ -5,11 +5,12 @@ source: AliExpress技术 (2026-07-21)
 score: v=9, c=9, v×c=81
 type: entity
 created: 2026-07-24
-updated: 2026-09-18
+updated: 2026-09-19
 tags: [agent-evaluation, LLM-as-Judge, benchmark, agent-testing, evaluation-metrics, fine-grained-evaluation, production-agent, quality-cost-performance]
 sources:
   - raw/articles/agent-evaluation-fine-grained-system-aliexpress-2026
   - raw/articles/agent-eval-platform-engineering-aliexpress-2026.md
+  - raw/articles/aliexpress-ai-eval-platform-consistency-confidence-2026
 reviewed: 2026-09-07
 review_verdict: keep
 review_category: practice
@@ -134,6 +135,22 @@ Agent 评测的天然挑战是工具调用的不确定性——真实 API 可能
 5. **从 8 类分层评测数据集中选择"基础覆盖 + 专项探测"的结构**：不要试图一次性构建全面评测集。先从基础技能和知识问答两类构建基座，再根据业务场景逐步增加多轮对话、异常输入、工具调用等专项数据集。每一类数据集都有明确的规模建议（如基础技能 ≥50 条）。
 
 ---
+
+## Supplementary：AI 评测平台的可信度工程——一致性与置信度分离度量（2026-09-19）
+
+同账号（AliExpress技术，作者鹿奚）评估系列第 4 篇，把镜头从「评什么」（前作四模块白盒指标）与「谁来跑」（第三篇评估执行框架）转向「**分数凭什么可信**」——给出一致性（被测侧稳不稳）与置信度（评委侧稳不稳）的分离度量工程实现，这是前三篇与全库均未覆盖的维度：^[raw/articles/aliexpress-ai-eval-platform-consistency-confidence-2026.md]
+
+**问题定义：单次分数分不清波动来源**。一次评测 8.5 分、次日复跑 6.2 分，是被测对象退化还是评委打偏？平台把两件事拆成独立指标：被测侧由**一致性评估**负责（同场景同数据集多轮跑的结果稳定性，可独立发起任务），评委侧由**置信度**负责。^[raw/articles/aliexpress-ai-eval-platform-consistency-confidence-2026.md]
+
+**置信度公式与离群分剔除**。基于 MT-Bench/Chatbot Arena 已系统识别的评委偏差（位置偏差/冗长偏差/自我增强偏差/数学推理判分失灵），平台不回避评委而是量化其抖动：多轮执行完成后由 ConfidenceScoreCalculator 计算 `confidence = max(0, 10 − stdDev × 5)`（基于全部成功打分的总体标准差），并把「与其余分数均值偏差最大」的一条剔除、取剩余均值为最终分——设计逻辑是「不追问哪个分才对（无法回答），只做保守的事：把最不合群的那条请出去」。分数与置信度并列呈现，分数高而置信度低时由使用方决定采信或人工复核。这与第三篇「评估体系自身失效模式」的元校验思路呼应：评委抖动显性化 = 量化指标层，三个坑修复 = 工程缺陷层。^[raw/articles/aliexpress-ai-eval-platform-consistency-confidence-2026.md]
+
+**平台架构：四大领域无关抽象 + 双任务链**。Experiment/Dataset/Evaluator/EvalTask 四核心实体让核心引擎不感知被测对象（新增场景核心引擎代码量增长为零）；EvalTask 与 AnalysisTask 拆成两条独立异步链路，避免重聚合分析阻塞评测回调。执行层按被测对象分同步通道（agent 类 HSF/HTTP 直调）与异步沙箱通道（生码/知识库/skill 类 MetaQ 派发 → eval-scenario 场景模块拉起 Skill 沙箱 → HTTP 回调聚合）。当前规模：4 大类被测对象 × 155 个评测场景 × 4 种可插拔评估器（MANUAL 人工/CUSTOM SDK 注解注册/HTTP 外部服务/SKILL 云沙箱——SKILL 型最重，知识库评测要克隆 KB+Workspace+源码三仓逐节点交叉比对）。^[raw/articles/aliexpress-ai-eval-platform-consistency-confidence-2026.md]
+
+**数据集治理：从散落 Excel 到生产→沉淀闭环**。统一数据集服务收敛多源导入（Excel/ODPS/系统同步）；**数据集组（Dataset Group）** 以 `current_eval_dataset_id` 指针指向最新版本，实验绑定组自动用最新数据、并可按维度（正常/异常/边界用例）挂多评测集；**黄金数据集**作为能力回归基准，支持从日常评测中把典型数据经权限校验晋升；**数据推荐与采纳**闭环让数据构造 skill 批量产出的候选数据经清洗→打分→人工采纳→自动写入黄金集——基准随评测积累越攒越厚，解决「一次性人工整理攒不起基准」的问题。这一数据资产闭环是前作 8 类数据集设计之上的运营层补全。^[raw/articles/aliexpress-ai-eval-platform-consistency-confidence-2026.md]
+
+**结果消费：结构化问题清单 + 三级严重度 + 处置闭环**。评测完成自动触发分析任务，按得分归类（满分/普通低分/超级低分，可扩展）；**问题挖掘**可独立于单实验发起，覆盖增量需求/知识库/数据构造 skill/待确认规则四类来源；每个问题带维度与严重度（CRITICAL/MAJOR/MINOR），处置状态（待处理/已采纳/已拒绝）沉淀可查——对「结果驱动不了决策」的回答是把分数变成可处置、可追踪的问题清单。三种触发方式（手动/定时如每日 08:30 巡检/变更如仓库新提交自动拉起）把评测从一次性验收变为持续巡检，直指「局部恶化、总分没动」的黑盒漂移难题——与知识库评测的 G1–G7 分层独立出分（PASS/CONDITIONAL/FAIL 分档）配合，任何一层退化不被其他层总分掩盖。^[raw/articles/aliexpress-ai-eval-platform-consistency-confidence-2026.md]
+
+**增量核验**（对照本实体前两来源与第三篇平台工程文）：置信度公式与离群剔除、一致性/置信度分离度量、四大抽象+双任务链、数据集组指针机制、黄金集晋升+推荐采纳闭环、问题挖掘三级严重度处置、SKILL 沙箱评估器（克隆三仓）——全部为此前零覆盖维度；前作 6 种 Judge Task 的「评得稳」与本文「分数可信度」是互补层而非重复。知识库评测「LLM 提取方法签名 vs 源码比对」（条目数 3↔8 波动）实例直接印证前作非确定性挑战的工程化应对。
 
 ## 延伸阅读
 
