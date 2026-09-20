@@ -1,7 +1,7 @@
 ---
 title: "The New Bottleneck: Theory of Constraints in the Age of AI Coding"
 created: 2026-06-19
-updated: 2026-09-10
+updated: 2026-09-20
 type: entity
 tags: [agent, harness-engineering, ai-coding, theory-of-constraints, engineering-management, process-optimization]
 source: "[[raw/articles/the-new-bottleneck-theory-of-constraints-ai-coding-tools]]"
@@ -69,6 +69,53 @@ Intuit 工程总监 Eric Anderson 提出：当 UI 迭代成本几乎为零时，
 - **Harness = 约束管理**：Agent Harness 的设计本质上是识别和管理 AI Agent 系统中的约束
 - **代码生成不再是瓶颈**：当 LLM 可以生成代码时，真正的瓶颈转移到上下文管理、工具协调和质量验证
 - **流程必须适应工具**：Agent Harness 不能只是"更好的工具"，必须伴随流程重新设计
+
+## 深度分析
+
+### 1. 把 TOC 的五个聚焦步骤落到软件组织上
+
+约束理论的标准操作是一套循环：识别约束 → 充分利用现有约束（exploit）→ 让其余环节从属于约束（subordinate）→ 提升约束（elevate）→ 回到第一步。文章的论述其实停在"识别"上，而真正难执行的是 subordinate。^[raw/articles/the-new-bottleneck-theory-of-constraints-ai-coding-tools.md:14]
+
+识别这一步已经不难：文章点出的四个吸收产能的环节——需求与构思、设计交接、审查与判断、跨职能协调——其中只有"审查与判断"是纯工程内部、工程领导者可以单方面动手的。^[raw/articles/the-new-bottleneck-theory-of-constraints-ai-coding-tools.md:26-32] exploit 的含义是不加人手先榨出现有审查产能：把格式噪音与机器可判定的检查从人眼前移走。subordinate 才是关键一步——人的判断无法被加速，于是只能让整条链路按审查的节奏供料，包括让上游少生成一些还没准备好被审视的东西。
+
+多数团队的本能反应是跳过 subordinate 直接跳到 elevate（加人、上新工具），或者干脆在约束之前再加一把火：让 AI 生成更多代码。约束理论对此的判词很直接——在非约束环节提升产能，得到的不是吞吐，而是库存。^[raw/articles/the-new-bottleneck-theory-of-constraints-ai-coding-tools.md:14]
+
+### 2. 度量系统编码了它诞生时的约束
+
+Sprint、故事点、velocity 这一整套仪表盘诞生于"写代码很贵"的年代，它们要解决的是可预测性问题：小批量规划降低方向变更的成本，速度跟踪让交付可被规划。^[raw/articles/the-new-bottleneck-theory-of-constraints-ai-coding-tools.md:18] 度量一旦被当作目标就会退化——用故事点衡量人，得到的是故事点，而不是交付。
+
+于是出现本文开篇那个矛盾：个体生产力上升，sprint velocity 却基本没变，功能还是堵在同样的地方，回顾会上还是那些老抱怨。^[raw/articles/the-new-bottleneck-theory-of-constraints-ai-coding-tools.md:10] 当"每个人跑得更快"和"系统没有更快"同时成立时，多半不是执行问题，而是仪表盘接到了不再约束的子系统上。仪式的可预测性让人舍不得拆它，敏捷也因此固化成它当年替代的东西。^[raw/articles/the-new-bottleneck-theory-of-constraints-ai-coding-tools.md:38]
+
+### 3. 局部最优与 Little 定律：产能到底去了哪里
+
+Little 定律给出前置时间 = 在制品 ÷ 吞吐量。AI 工具压缩的是单个处理步骤的成本，并没有改变下游审查者的处理速率；多出来的产出于是变成在下游队列前堆积的在制品，前置时间不降反升。在非约束环节做局部优化，产出的是库存，而不是交付。
+
+这解释了文章那个谜题的机制：产能没有消失，它被流程吸收成了库存——还是那套交接、ready/done 定义、签字流程，原封不动地接住了新产能。^[raw/articles/the-new-bottleneck-theory-of-constraints-ai-coding-tools.md:12] 换引擎而不看路的比喻指向同一件事：工具层的改进会被未改动的流程层吃掉。^[raw/articles/the-new-bottleneck-theory-of-constraints-ai-coding-tools.md:54]
+
+### 4. 审查容量是新的约束，批次大小是唯一便宜的杠杆
+
+人的审查带宽基本固定：当产出翻倍而审查能力不变时，取舍是被迫发生的，而不是可选的组织设计。^[raw/articles/the-new-bottleneck-theory-of-constraints-ai-coding-tools.md:30] 排队系统的性质决定了把利用率推向饱和不会提速，只会让等待时间非线性上升，所以缩短前置时间的可行手段集中在两处：缩小批次，以及降低单次审查的成本。
+
+缩小批次指 trunk-based 的流动方式、短生命周期分支、小到一次专注内能看完的变更，而不是把大变更拆成形式上的多个 PR。降低单次审查成本则要求变更自带证据：测试结果、运行追迹、评测输出随变更一起交付，审查者面对的是"核对断言"而不是"从零重建作者的上下文"。这也是 Agent 生成物能够被当作常规工作对待的前提——否则审查者只能靠读代码重新推导，而这条路径的产能上限就是整个组织的交付上限。
+
+前端也要跟着动：需求与设计交接的"完整"定义本来就是为保护昂贵的工程时间而设的，当重做几乎免费，"完成设计先于动工"只剩下延迟成本。^[raw/articles/the-new-bottleneck-theory-of-constraints-ai-coding-tools.md:28] 文章建议的解法是把设计当作起点而非前置条件，让 PM 与工程师实时共同开发。^[raw/articles/the-new-bottleneck-theory-of-constraints-ai-coding-tools.md:46]
+
+### 5. Harness 工作是约束搬迁工程，而不是让 Agent 更聪明
+
+Harness 的每一次改进——上下文管理、验证器与门禁、可观测性、把重复判断固化成规则——都在把约束从一个环节搬到下一个更便宜的位置。判断一次 harness 改动是否有价值，标准不是"Agent 变聪明了"，而是"约束是否从人身上移走了"，这是 [[concepts/harness-engineering-framework|Harness Engineering 框架]] 的工程化读法。
+
+这条线索与 [[entities/harness-engineering-systematic-framework|Harness Engineering 系统化框架]] 中"识别与管理 AI Agent 系统中的约束"是同一个命题，也与 [[concepts/ai-r-and-d-bottleneck-shift|AI R&D 瓶颈迁移]] 记录的现象一致：生成能力被解决之后，瓶颈会依次迁往验证、集成与组织决策。因此当代码生成近乎免费，剩余约束必然落在人类判断与跨职能决策上——这是结构收敛的结果，不是团队的失败。^[raw/articles/the-new-bottleneck-theory-of-constraints-ai-coding-tools.md:32]
+
+## 实践启示
+
+1. **先做约束审计，再谈工具采购**：逐个流程环节追问"它当初防的是哪个约束，那个约束还成立吗"，工具只有在作用位置就是当前约束时才改变吞吐。
+2. **压 WIP 就是压前置时间**：前置时间 = 在制品 ÷ 吞吐量，AI 提速后不主动限制并行工作量的团队，只是把等待从写代码挪到排队。
+3. **换掉指向旧约束的仪表盘**：把 velocity 与故事点从绩效信号降级为内部参考，把度量转向已上线的变更、已获得的学习与前置时间分布。
+4. **缩短批次，而不是缩短评审**：trunk-based 流动、短生命周期分支、一次专注内可看完的变更粒度；形式上的多 PR 拆分不减少审查总量。
+5. **让变更自带证据**：测试、追迹、评测输出随变更交付，把审查从"重新推导"变成"核对断言"——这是保护稀缺判断力唯一可扩展的方式。
+6. **给下游造工具，而不是给下游加人**：把跨职能摩擦当工程问题，为产品、法务、安全提供自助入口、并行签字路径与自动检查。
+7. **把 ready/done 的定义调轻**：以实验与学习为目标时，"完成"的定义、评审门与成功指标都要一起重写。
+8. **每消除一个约束就回到第一步**：约束会迁移，把"识别当前约束"变成周期性动作，而不是一次性的流程改造项目。
 
 ## 相关实体
 

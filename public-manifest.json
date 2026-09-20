@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "sourceRevision": "12754538ba7694314ab850ea407418ddc79f5198",
+  "sourceRevision": "8243126aeaff48ecd56b21fd3f155b4031192ed3",
   "files": [
     {
       "path": "raw/articles/0.25秒识破未见攻击-lod-lvlm-jailbreak-detection-emnlp2026.md",
@@ -1121,6 +1121,11 @@
       "path": "raw/articles/accelerating-gemini-nano-models-on-pixel-with-frozen-multi-token-prediction.md",
       "title": "Accelerating Gemini Nano models on Pixel with frozen Multi-Token Prediction",
       "sourceUrl": "https://research.google/blog/accelerating-gemini-nano-models-on-pixel-with-frozen-multi-token-prediction"
+    },
+    {
+      "path": "raw/articles/acft-visual-origin-hallucination-mllm-2026.md",
+      "title": "肉眼看不出的幻觉？清华提出视觉源幻觉，仅用0.9%数据实现SOTA",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652727746&idx=3&sn=31fcb6676bf3aa080b7b3bec276c6b4d"
     },
     {
       "path": "raw/articles/acker-agent-evolution-three-routes-convergence.md",
@@ -3183,6 +3188,11 @@
       "sourceUrl": null
     },
     {
+      "path": "raw/articles/amap-navigation-live-mode-spacetime-agent-2026-09-20.md",
+      "title": "高德导航Live模式：从“一次做对”到“变化后还能做对”的时空Agent架构",
+      "sourceUrl": "https://mp.weixin.qq.com/s/C_92sxaNiXpH8F6AtMgfdA"
+    },
+    {
       "path": "raw/articles/amap-nl2sql-knowledge-engineering-2026-07-22.md",
       "title": "NL2SQL 在超大规模数仓场景的架构突破与工程实践",
       "sourceUrl": "https://mp.weixin.qq.com/s/RDIMNWfITiBqC7e8pBa8bw"
@@ -5116,6 +5126,11 @@
       "path": "raw/articles/causal-inference-ai-evaluation-attribution-xuhaixiang.md",
       "title": "相关性 ≠ 因果性：因果推断在 AI 评测归因中的方法与实践",
       "sourceUrl": "https://mp.weixin.qq.com/s/g8kqrvXl12llVS0g_DlyAg"
+    },
+    {
+      "path": "raw/articles/causalwm-causal-chain-of-thought-embodied-world-model-2026.md",
+      "title": "把「因果思维链」焊进世界模型，它凭什么登顶？",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651058614&idx=1&sn=927617ba7a8d204ac2a7f67944ed60c6"
     },
     {
       "path": "raw/articles/cdp-bridge-mcp-real-browser-agent.md",
@@ -15318,6 +15333,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/XnSQdFpG-MdbctvLtHiMMA"
     },
     {
+      "path": "raw/articles/ruofei-multi-agent-workflow-architecture-2026-09-20.md",
+      "title": "四大多 Agent 架构详解（一）：Workflow 如何把固定流程变成可回放的系统",
+      "sourceUrl": "https://mp.weixin.qq.com/s/xSNQGIKzDoEEEmYA3mIHtw"
+    },
+    {
       "path": "raw/articles/ruofei-react-to-agent-team-medical-dev-2026.md",
       "title": "从 ReAct 到 Agent Team：一个医疗系统研发任务里的信息流与责任边界",
       "sourceUrl": "https://mp.weixin.qq.com/s/JpDAPxDxt8HWdxwuVpOCGg"
@@ -17238,6 +17258,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/Cmioejp77LENAnAMo2r3Aw"
     },
     {
+      "path": "raw/articles/token-level-advertising-lama-generation-as-allocation-2026.md",
+      "title": "大模型正在吃掉搜索广告位，下一代广告该怎么做？人大团队把拍卖写进Token",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIwMTc4ODE0Mw==&mid=2247723042&idx=2&sn=1dd76a14486640dff0e80e41eb32d7db"
+    },
+    {
       "path": "raw/articles/tokenomics-the-625-minute-rule-for-claudes-cache.md",
       "title": "Tokenomics: the 62.5-minute rule for Claude's cache",
       "sourceUrl": "https://skids.dev/blog/anthropic-cache-tokenomics/"
@@ -18896,6 +18921,11 @@
       "path": "raw/articles/为什么-2026-年真正重要的是-harness-engineering.md",
       "title": "为什么-2026-年真正重要的是-harness-engineering",
       "sourceUrl": "https://mp.weixin.qq.com/s/RwWfknFIFvJPIdsJMgeNiQ"
+    },
+    {
+      "path": "raw/articles/为民航企业构建带入库质量门禁的-rag-知识库系统.md",
+      "title": "为民航企业构建带入库质量门禁的-rag-知识库系统",
+      "sourceUrl": "https://aws.amazon.com/cn/blogs/china/enterprise-build-library-rag-knowledge-base-system"
     },
     {
       "path": "raw/articles/五一活动来啦.md",

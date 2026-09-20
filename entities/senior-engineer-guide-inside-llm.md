@@ -2,7 +2,7 @@
 
 title: "Everything a Senior Engineer Needs to Know About What's Inside an LLM"
 created: 2026-06-23
-updated: 2026-09-10
+updated: 2026-09-20
 type: entity
 tags: [llm, transformer, architecture, engineering]
 provenance_state: inferred
@@ -22,42 +22,71 @@ review_category: tech
 
 > **来源**: [Everything a Senior Engineer Needs to Know About What's Inside an LLM](https://www.pathtostaff.com/p/everything-a-senior-engineer-needs)
 
-## 概述
+## 摘要
 
+Part Two of a five-part series that walks an experienced engineer through the LLM stack; this instalment covers model architecture — why recurrent networks lost, and how "Attention Is All You Need" became the paper that started it all. The author's angle is an engineer doing deep research rather than a researcher deriving math, so the value is the causal story of *why* each step displaced the last. The series structure is itself the argument: architecture is one layer of five, between hardware and training on one side and post-training and serving on the other. ^[raw/articles/senior-engineer-guide-inside-llm.md]
 
+## 核心要点
 
-Welcome back to Path to Staff! This series is a little different from our usual programming. In this series, we’re covering LLMs and AI in-depth. ^[raw/articles/senior-engineer-guide-inside-llm.md]
+- RNNs lost for two engineering reasons: the **sequential bottleneck** (N sequential steps for a length-N sequence, however much hardware you add) and **long-range decay** (the same weights multiplied at every step make gradients vanish or explode, so an early token cannot shape a late one).
+- LSTMs and GRUs mitigated what was remembered but left both flaws intact — they changed memory's content, not the computation's schedule.
+- Bahdanau et al. (2014) added **attention** as a bolt-on: rather than squeezing the input through one fixed summary vector, let the model weight whichever tokens matter for the current step. Still inside a recurrence: the bottleneck survived.
+- Vaswani et al. (2017) changed one thing: keep attention, **delete recurrence**. Self-attention makes all token pairs one parallel matrix multiply, and with no chain left, nothing decays.
+- A transformer is a sequence processor: input → N identical blocks → prediction head → **logits**, raw per-vocabulary scores that become words.
+- The canonical walkthrough is encoder–decoder translation ("The cat sat on the mat" → "猫坐在垫子上") — the task the paper was written for, though it already argued the same blocks generalise.
+- The five-part split is itself the insight: hardware, architecture, training, post-training/alignment and inference/serving/agents are separate disciplines with separate failure modes and cost centres.
+- After 2017 the frontier branched into encoder–decoder (translation), encoder-only (understanding), decoder-only (generation) and diffusion as a non-left-to-right regime.
 
-As an engineer, I never really had the time to understand AI’s internals. But I’ve spent the past few weeks doing deep research to unpack it all. ^[raw/articles/senior-engineer-guide-inside-llm.md]
+## 深度分析
 
-[![Image 1](https://substackcdn.com/image/fetch/$s_!I01Z!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fefe149c8-bf8b-437b-a163-d34bc252bf8d_2912x1536.png)](https://substackcdn.com/image/fetch/$s_!I01Z!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fefe149c8-bf8b-437b-a163-d34bc252bf8d_2912x1536.png) ^[raw/articles/senior-engineer-guide-inside-llm.md]
+### "Attention Is All You Need" 真正取代了什么
 
-As a reminder, this is Part Two of a five-part series: ^[raw/articles/senior-engineer-guide-inside-llm.md]
+The famous framing says the paper introduced attention, but attention already existed — Bahdanau bolted it onto a recurrent network three years earlier. What 2017 actually displaced was **recurrence as the mechanism for carrying information across positions**. Narrower, and more consequential: information need not travel down a chain, and once you stop chaining, the computation becomes a dense batched matrix multiply that accelerators love. ^[raw/articles/senior-engineer-guide-inside-llm.md]
 
-1.   **The Hardware Behind AI – And How It’s Programmed.** Transistors, semiconductors, and fabricators. Learn about the big players (TSMC, Nvidia, ASML). The memory-compute bottleneck. And all the acronyms you always wondered about (TPU, ASIC, FPGA, CUDA, etc.) ^[raw/articles/senior-engineer-guide-inside-llm.md]
+Read this way, the transformer is as much a hardware-shaped result as a modelling one. The RNN's limit was stated in systems terms — "training time was bound by the length of the chain, not the size of the chain" — and self-attention wins because the whole sequence is processed at once, so adding hardware buys throughput. That is why a translation paper became the substrate for everything downstream. ^[raw/articles/senior-engineer-guide-inside-llm.md]
 
-2.   **Model Architecture.**_(We are here.)_ Learn about what models are made of. We’ll cover the paper that started it all (”Attention is All You Need”), plus talk about transformers and diffusion models. ^[raw/articles/senior-engineer-guide-inside-llm.md]
+### Encoder-Decoder、Decoder-Only 与 Diffusion 的位置
 
-3.   **Training**. The meat of teaching a model. How does pretraining work? What goes into it (backpropagation, optimizers, loss functions)? What scaling laws should we weigh before we kick off an expensive training run (up to hundreds of millions of dollars)? ^[raw/articles/senior-engineer-guide-inside-llm.md]
+The translation example is encoder–decoder, with a clean division of labour: the encoder reads the input, the decoder generates the output. That split answers a question most people never ask out loud — who may look at what, and when. An encoder reads bidirectionally with the whole input in hand; a decoder writes causally, never seeing tokens it has not produced. ^[raw/articles/senior-engineer-guide-inside-llm.md]
 
-4.   **Post-Training & Alignment.** How does one guide a model once it’s been taught? How do we apply safety? How do we benchmark and know the model got better? How do we evaluate a model’s performance? ^[raw/articles/senior-engineer-guide-inside-llm.md]
+Decoder-only models (the shape that won for general-purpose LLMs) collapse that distinction: every token may only look backwards, so one stack serves reading and writing, and "understanding" becomes a special case of generation with the input as a prefix. Diffusion models sit on another axis, generating a whole candidate answer and iteratively denoising it instead of emitting tokens in causal order. As engineering contracts these are three different things — read-then-write, prefix-in/token-out, parallel-refine — not a ladder of capability.
 
-5.   **Inference, Serving and Agents.** This might be the most familiar topic, since it’s closest to you as an AI user. How does a model output its token and serve the result to you (SSE)? How do systems stay fair and fast? What tools are available (MCP, RAG, tool use) and how do agents work? ^[raw/articles/senior-engineer-guide-inside-llm.md]
+### 架构与训练：能力究竟从哪来
 
-I remember taking CS:188 by Pieter Abbeel at Berkeley, learning about Recurrent Neural Networks (RNNs) in 2014. I wish I’d paid more attention in class, but it was still a good foundation for working on this chapter. ^[raw/articles/senior-engineer-guide-inside-llm.md]
+Architecture fixes what is *representable* and at what cost per token; training — data, objective, scale — decides what actually gets *learned* inside that capacity. The transformer shows why both matter: the architecture made scaling affordable by turning sequence processing into parallel work, and scale is what turned capacity into capability. Neither half alone explains GPT-class behaviour. ^[raw/articles/senior-engineer-guide-inside-llm.md]
 
-To my surprise, RNNs are less popular today. And there’s a good reason for that. ^[raw/articles/senior-engineer-guide-inside-llm.md]
+This is the boundary the article's arc runs into. It explains mechanism thoroughly — flow, blocks, heads, logits — but never capability, because capability is not in the block diagram. The consequence is a ranking rule: when a benchmark number moves, "they changed the architecture" is weak unless the token or compute budget moved with it, while "they changed the data or the post-training recipe" is usually stronger. ^[raw/articles/senior-engineer-guide-inside-llm.md]
 
-If you haven’t studied neural networks before, you should know that a neural network looks at an input, guesses what it is, then immediately forgets it. The simplest form is a _feed-forward neural net_, where the data goes through and outputs as a layer at the end. ^[raw/articles/senior-engineer-guide-inside-llm.md]
+### 为什么生产环境的账单由 Serving 和 Agent 决定
 
-Recurrent neural networks take this one step further, with a built-in memory loop. It looks at the first word, jots it down in a hidden notebook (or layer), and then reads the second and jots it down again. This repeats over and over again. The downside is that it has terrible long-term memory, and would only remember what was most recently ^[raw/articles/senior-engineer-guide-inside-llm.md]
+The series' ordering is telling: hardware, architecture, training, post-training/alignment, then inference, serving and agents — the last flagged as "closest to you as an AI user", covering streaming, latency, MCP, RAG and agents. That is where the money goes. Per-token architecture sets serving behaviour (how context is stored, how costly a long prompt is to re-read), but the dominant term in a real bill is how many tokens a loop carries per step and how many model calls a task takes.
 
-## 原文存档
+An agent re-sending a 20k-token context on each of fifteen turns is not expensive because the model is smart; it is expensive because the architecture's memory behaviour is multiplied by loop structure. Architectural choices about attention and context therefore surface as finance and latency questions rather than leaderboard questions — which is why an engineer can be right about the architecture and still wrong about the system.
 
-→ [[raw/articles/senior-engineer-guide-inside-llm|原文存档]] ^[raw/articles/senior-engineer-guide-inside-llm.md]
+### 架构给不了你这个工程师什么
+
+Nothing in the block diagram tells you whether a model will refuse a request, hallucinate a citation, call a tool correctly, or express honest uncertainty. Those behaviours come from the data it saw and from post-training and alignment, and are invisible to anyone reading the architecture. Two models can share a near-identical architecture and parameter count and behave completely differently, which makes "same architecture" comparisons weak evidence.
+
+Architecture constrains the ceiling and the cost curve; alignment and prompting set the behaviour. A senior engineer reading a model announcement should separate three claims that usually arrive fused: what the architecture can represent, what the training budget bought, and what post-training optimised for.
+
+## 实践启示
+
+1. **Diagnose long-context failures by mechanism.** Attention-pattern limit (architecture), distribution shift (training), or instruction-following gap (post-training)? Remedy, owner and cost differ completely for each.
+2. **Interrogate "new architecture beats transformers" claims.** Which moved: parallelisability, memory per token at long context, or raw quality? Only the first two are architecture stories.
+3. **Budget context as a first-class engineering cost.** Price a feature in tokens-per-turn × turns, not in "how smart the model is" — that is how an agent loop becomes the largest line item.
+4. **Refuse to attribute benchmark deltas to architecture** when data, compute or token budgets also changed. Hold the variables apart before concluding anything from a leaderboard.
+5. **Use the five-layer stack as a debugging checklist** — hardware, architecture, training, post-training, serving/agents — and assume production incidents live in the last layer until proven otherwise.
+6. **Read "Attention Is All You Need" as a cost-model paper too.** Deleting recurrence unlocked parallelism, and parallelism made scale affordable; that is the transferable lesson, not the softmax.
+
+## 相关实体
+
+- [[concepts/attention-mechanism|Attention Mechanism]]
+- [[concepts/transformer-architecture|Transformer Architecture]]
+- [[concepts/llm-tokenizer|LLM Tokenizer]]
+- [[concepts/scaling-laws|Scaling Laws]]
+- [[entities/llm-inference-pipeline-internals|LLM 推理流水线]]
+- [[entities/llm-post-training-full-guide|LLM Post-Training 全景指南]]
 
 ---
-## 关联
-- 相关概念: [[concepts/harness-engineering-framework|Harness Engineering]]
-- 相关: Agent 架构
 
+→ [[raw/articles/senior-engineer-guide-inside-llm|原文存档]]

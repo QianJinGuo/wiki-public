@@ -2,7 +2,7 @@
 title: "高德Proactive Agent — LBS场景时空思考型主动服务Agent"
 created: 2026-05-18
 date: "2026-05-18"
-updated: 2026-09-07
+updated: 2026-09-20
 tags: [proactive-agent, lbs, amap, spacetime-reasoning, recommendation-system, genui]
 review_value: 8
 review_confidence: 7
@@ -79,6 +79,7 @@ GenUI（Generated UI）是一个常被忽视但至关重要的设计理念。传
 3. **全生命周期管理思维**：需求预估不是单点判断，而是对用户"出行前→出行中→出行后"全链路的覆盖，同一用户在不同生命周期节点的需求预估逻辑需要连贯。^[raw/articles/amap-proactive-agent-lbs-spacetime.md]
 ## 相关实体
 - [[entities/lbs-intent-bench-lbs-intentbench]]
+- [[entities/amap-navigation-live-mode-spacetime-agent-2026-09-20|高德导航Live模式：时空Agent架构]]：姊妹线。本文实体聚焦 Proactive Agent 范式跃迁与 Where-When-Who 信号放大（方法论视角）；Live 模式实体是驾车场景的完整架构落地（POI-Explore/LightSearch/长程任务/Agentic Memory/反事实干预/低时延 Harness）。
 
 → [[raw/articles/amap-proactive-agent-lbs-spacetime|原文存档]]^[raw/articles/amap-proactive-agent-lbs-spacetime.md]
 
