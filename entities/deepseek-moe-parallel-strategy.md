@@ -3,7 +3,7 @@ title: "DeepSeek MoE 并行策略与GPU通信优化"
 type: entity
 tags: [deepseek, moe, expert-parallel, gpu-parallel, distributed-training, dualpipe, waved-ep, tile-lang]
 created: 2026-05-17
-updated: 2026-09-07
+updated: 2026-09-21
 sources: [raw/articles/deepseek-moe-parallel-strategy]
 review_value: 8
 review_confidence: 8
@@ -45,17 +45,54 @@ EP是唯一一个"在forward pass内部把token重新换主"的并行维度—�
 **TileLang**: 写得出Triton写不出的mega-kernel（dispatch+GEMM+combine融合） ^[raw/articles/deepseek-moe-parallel-strategy.md]
 
 ## 深度分析
-**通信Bound的根源**: MoE架构中All-to-All通信占比极高，EP跨节点的IB带宽成为瓶颈。Dense模型不存在这个问题，所以切到MoE后MFU（Model FLOPs Utilization）暴跌。 ^[raw/articles/deepseek-moe-parallel-strategy.md]
-**DualPipe的SM划分策略**: 132SM中划出20个SM跑PTX级通信kernel，绕过了NCCL的通用优化，直接针对特定通信pattern做极致优化。这说明DeepSeek在通信层面做了非常深入的定制。 ^[raw/articles/deepseek-moe-parallel-strategy.md]
-**ZeRO-1的"免费午餐"逻辑**: ZeRO-1在非优化器step无通信，通信量同普通DP，但省12倍显存。把节省下来的IB带宽全部让给EP，是非常明智的策略选择。 ^[raw/articles/deepseek-moe-parallel-strategy.md]
-**EP与DP的正交性**: EP是唯一一个在forward内部让token换主的并行维度，其他并行维度（TP/PP/CP）都是静态切分。这使得EP和DP可以独立叠加，形成 `PP×EP×ZeRO-DP` 的混合策略。 ^[raw/articles/deepseek-moe-parallel-strategy.md]
+
+### 通信量算术：EP 与 TP/PP 不是同一种瓶颈
+
+三种并行维度的通信量由不同量纲支配：TP 与 PP 由参数量和层数决定、与 batch 无关；梯度同步（DP / ZeRO-2/3）由参数字节数决定，每个 optimizer step 只发生一次，可被 micro-batch 摊薄；EP 的 all-to-all 则按 token 计费，每一个 MoE 层都要重做一遍——dispatch 按路由结果送出 token、combine 收回专家输出，字节数正比于 `token 数 × top-k × 隐层维度 × 精度字节`。EP 通信量随 batch×seq 线性上涨且无法摊薄，梯度通信则是固定开销；Dense 训练里通信几乎全属后者，切成 MoE 后前者才成为主项。这才是 MFU 暴跌的算术根源，而不是「专家切分维度太小」。 ^[raw/articles/deepseek-moe-parallel-strategy.md]
+
+ZeRO-1 的「免费」也来自同一量纲差异：它在非 optimizer step 不产生通信，只切优化器状态就省下 12 倍显存。跨节点 IB 带宽因此可以整体让给按 token 计费的 EP——选它不是因为显存不够，而是因为它不跟 EP 抢带宽。 ^[raw/articles/deepseek-moe-parallel-strategy.md]
+
+### EP 是从 DP 维度里切出来的：64 × 2 = 128 这条等式
+
+配置里的数字值得拆开：2048 张卡除以 PP=16 得 128，这 128 又拆成 `EP=64 × DP_replica=2`。EP 不是一个可以独立增大的维度——它直接从 DP 维度里划走名额，EP 越大剩下的 replica 越少，由此产生两个非直觉的后果。
+
+其一是专家梯度的同步半径被反向缩小：专家权重在 EP 组内切分，专家参数只需跨那 2 个 replica 同步；需要 128-way 参与的是被完整复制的稠密参数。EP 扩大反而让专家侧梯度通信更便宜，这正是 [[entities/deepseek-v3-moe-architecture|DeepSeek V3 MoE 架构]] 中 `PP × EP × ZeRO-1 DP` 看上去「处处都不贵」的原因。 ^[raw/articles/deepseek-moe-parallel-strategy.md]
+
+其二是数据并行的样本吞吐被压缩：replica 只有 2 个，维持同样的全局 batch 就得拉长每个 replica 内的 micro-batch 序列，而 micro-batch 数 M 正是 PP 气泡挤压赖以成立的稳态长度。EP、DP、PP 三个旋钮并不正交——动 EP 会顺着 DP 一路压到 PP 的气泡上，真正的主控旋钮是 EP 与 DP 的比例。 ^[raw/articles/deepseek-moe-parallel-strategy.md]
+
+### 拓扑边界：跨出 NVLink 域就是 18 倍带宽悬崖
+
+节点内 900GB/s 对跨节点 50GB/s，18:1 的比值决定了 EP 组宽的物理上限。EP=64 意味着 EP 组横跨 8 个节点，组内只有 1/8 的通信对落在 NVLink 域内，其余 token 路由全部压到 IB 上。更糟的是 all-to-all 接近 barrier：一次 dispatch 的完成时间由最慢链路决定，任一 rank 的拥塞或热点专家都会拖住整组。EP 跨出 NVLink 域的代价因此是台阶式跳变。 ^[raw/articles/deepseek-moe-parallel-strategy.md]
+
+失败模式很具体：路由负载不均时，持有热点专家的卡既是计算瓶颈又是通信瓶颈，all-to-all 尾延迟直接叠加到下一层 GEMM 的启动时刻；IB 上只要一条链路降速或重传，整组 64 张卡的 dispatch 都在等它。退路只有两条——把 EP 组宽压在 NVLink 域内并接受切分度不足，或让调度层把这段跨节点等待藏起来。DualPipe 与 Waved-EP 是第二条路线的产物；推理侧的 [[entities/750b-moe-pd-disaggregation-aws-efa-vs-roce|750B MoE PD 分离（EFA vs RoCE）]] 撞上的是同一个悬崖。
+
+### 从「遮掩通信」到「重构依赖」：气泡压缩史与 Waved-EP
+
+PP 气泡演进的每一步都在回答同一个问题——谁负责把通信藏起来。GPipe 是朴素流水线，气泡大；1F1B 让激活更早释放以降低显存，于是可以用更大的 M 把气泡挤薄；ZB1P 拆开反向计算（先算 dx 再算 dw）用显存换计算，为计算与通信的重新排序腾出空间；DualPipe 才是结构性改动——双向 micro-batch，让同一时刻既有 forward 又有 backward 在飞，一个方向的通信掩盖另一个方向的计算。到此计算与通信已被焊进同一个调度，稳态长度 M 成为整个方案的前提。 ^[raw/articles/deepseek-moe-parallel-strategy.md]
+
+从 132 个 SM 里划出 20 个专跑 PTX 级通信 kernel（绕开 NCCL）是这种耦合的极端体现：通信不再是一个被调用的库，而是被调度器直接编排、与计算共享同一份 SM 预算的资源——代价是约 15% 算力常驻通信路径，且排布对 M 极度敏感。 ^[raw/articles/deepseek-moe-parallel-strategy.md]
+
+Waved-EP 换掉的是前提，而不是实现。RL 与推理没有 backward 可以遮掩、batch 又小，DualPipe 的稳态条件根本不成立；Waved-EP 把专家拆成 wave 组，让 wave 之间的 dispatch、计算、Combine 互相重叠——重叠关系从「跨 micro-batch」搬到「跨 wave」，对小 batch 同样成立。这就是它拿到 RL 1.96×、通用 1.50~1.73× 加速的机制：加速不来自更快的通信，而来自在新前提下重建出一条可重叠的关键路径。 ^[raw/articles/deepseek-moe-parallel-strategy.md]
+
+### 内核能修效率，调度才能修关键路径
+
+TileLang 的位置需要精确界定。Triton 的模型是带静态块结构的 tile program，而 dispatch+GEMM+combine 的 mega-kernel 需要数据相关的动态索引（token-expert 置换、变长分段边界、跨卡同步），这类控制流超出 Triton 的表达能力。它换来的是消除中间张量的显存往返与 kernel 启动开销，把带宽利用率推向接近峰值；[[entities/deepseek-v4-triton-fp4-optimization|DeepSeek V4 Triton FP4 优化]] 的收益上限同样是「把既有链路用满」。 ^[raw/articles/deepseek-moe-parallel-strategy.md]
+
+但内核有明确上界：它能提高链路利用率，却改变不了链路本身只有 50GB/s；它能消除启动与访存开销，却无法让一次必须发生的跨节点等待消失。等待暴露在关键路径上时，有效工具只有调度层重排（DualPipe 的错峰、Waved-EP 的 wave 重叠）；链路本身传得太慢时，内核融合与 PTX 级定制才真正兑现价值。混淆两者的典型症状是 kernel 越写越复杂而 wall-clock 几乎不动。
 
 ## 实践启示
-**1. MoE训练先看通信再调计算**: 不要只盯着MFU指标，先用NCCL通信分析确认瓶颈在All-to-All，再针对性做overlap设计。 ^[raw/articles/deepseek-moe-parallel-strategy.md]
-**2. EP+ZeRO-1是标准组合**: 跨节点EP通信使用IB带宽，用ZeRO-1避免额外梯度通信，让IB带宽专注服务于EP的All-to-All。 ^[raw/articles/deepseek-moe-parallel-strategy.md]
-**3. DualPipe需要大Batch**: 适用预训练场景。RL/推理场景Batch小，气泡无法被Overlap掩盖，需要切到Waved-EP。 ^[raw/articles/deepseek-moe-parallel-strategy.md]
-**4. Waved-EP的wave粒度选择**: wave间并行度决定通信和计算的重叠效率。需要根据GPU数量和Expert总数做实验调优。 ^[raw/articles/deepseek-moe-parallel-strategy.md]
-**5. TileLang做融合kernel**: 当Triton语法无法描述复杂的dispatch+GEMM+Combine融合时，TileLang可以写出极致性能的mega-kernel。 ^[raw/articles/deepseek-moe-parallel-strategy.md]
+
+**1. 先做通信量算术，再动 optimizer 和 batch** — 用 `token 数 × top-k × 隐层维度 × 精度字节 × MoE 层数` 估算每步 EP all-to-all 的字节数，再与参数字节数的梯度通信对比。若 all-to-all 是主导项，调学习率、调 M 只是在边角上修补。 ^[raw/articles/deepseek-moe-parallel-strategy.md]
+
+**2. 把 EP/DP_replica 的比例当作主控旋钮** — `2048 / PP = EP × DP_replica` 是硬约束：EP 增大必然压缩 replica 数、抬高维持全局 batch 所需的 micro-batch 数，并回头影响 PP 气泡。只盯显存会得出错误结论。 ^[raw/articles/deepseek-moe-parallel-strategy.md]
+
+**3. 让 ZeRO-1 专职「清空 IB 预算」** — 不用 ZeRO-2/3，梯度侧的跨节点通信就停在最低水平，IB 带宽可以整体让给 EP——整套配置里性价比最高的一项。 ^[raw/articles/deepseek-moe-parallel-strategy.md]
+
+**4. 跨节点 EP 之前，先算有多少通信能留在 NVLink 域内** — 8 卡节点上 EP=64 意味着 7/8 的通信对要走 IB；能用「节点内 EP + 跨节点 DP/PP」达到的切分度就不必用跨节点 EP 去换，必须跨节点时先确认调度层藏得住这段等待。 ^[raw/articles/deepseek-moe-parallel-strategy.md]
+
+**5. 按 batch regime 选重叠方案** — 预训练（大 M、有反向）用 DualPipe；RL 与推理（小 batch、无反向）用 Waved-EP，不要把依赖稳态流水的前提硬套到小 batch 场景。 ^[raw/articles/deepseek-moe-parallel-strategy.md]
+
+**6. 训练端的选择会一路传导到推理服务** — 训练期的 EP 布局在推理期以专家并行形态复现，但 decode 阶段每个 rank 只有极少量 token，all-to-all 从带宽问题变成延迟问题，这正是 MoE 服务走向 PD 分离的动因（参见 [[entities/disaggregated-prefill-decode-llm-inference-sagemaker|PD 分离推理]]）。wave 化、通信 kernel 化与 PD 分离在解同一个约束。
 
 ## 与现有知识的链接
 - → [[raw/articles/deepseek-moe-parallel-strategy|原文存档]]

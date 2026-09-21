@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "sourceRevision": "8243126aeaff48ecd56b21fd3f155b4031192ed3",
+  "sourceRevision": "2c97c3c4e2e6fcaf90c54579754dd98a46113a9e",
   "files": [
     {
       "path": "raw/articles/0.25秒识破未见攻击-lod-lvlm-jailbreak-detection-emnlp2026.md",
@@ -3523,6 +3523,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/pvtCp_Ari7QWJgnuWrtg8A"
     },
     {
+      "path": "raw/articles/anthropic-claude-80pct-code-ci-overload-postmortem-2026.md",
+      "title": "Claude狂写80%代码，差点干崩Anthropic！CI半年暴涨25倍",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652727030&idx=2&sn=7d889f9e50e3d7b224d31b211d9a1d9c"
+    },
+    {
       "path": "raw/articles/anthropic-claude-agents-meter-infoworld.md",
       "title": "Anthropic puts Claude agents on a meter across its subscriptions",
       "sourceUrl": "https://www.infoworld.com/article/4171274/anthropic-puts-claude-agents-on-a-meter-across-its-subscriptions.html"
@@ -6346,6 +6351,11 @@
       "path": "raw/articles/codex额度黑洞终于查清真凶竟是这个小功能.md",
       "title": "codex额度黑洞终于查清真凶竟是这个小功能",
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652720033&idx=2&sn=99070f047c3d100627a3d83e4135e7d5"
+    },
+    {
+      "path": "raw/articles/coding-agent-audit-risk-investigation-pilot-agentloop-2026.md",
+      "title": "看清 Coding Agent：从执行记录到风险调查",
+      "sourceUrl": "https://mp.weixin.qq.com/s/z8qJMB46ZoBeLRTwLmxy_Q"
     },
     {
       "path": "raw/articles/coding-agent-second-half-org-level-rd-system-agentscope-2026.md",
@@ -10808,6 +10818,21 @@
       "sourceUrl": "https://blog.jetbrains.com/platform/2026/06/marketplace-ecosystem-security-update-malicious-ai-plugins/"
     },
     {
+      "path": "raw/articles/jev-fast-compaction-judgment-layer-tencent-daryl-2026.md",
+      "title": "一万字Jev 工程实践长文：把 Agent 的“判断题”从大模型里拆出来",
+      "sourceUrl": "https://mp.weixin.qq.com/s/D1La4jMoVZ5Ip_RrVY1kPw"
+    },
+    {
+      "path": "raw/articles/jev-rlcd-decision-function-feixue-ai-2026.md",
+      "title": "深度解析 Jev 模型：如何快速做结构化决策",
+      "sourceUrl": "https://mp.weixin.qq.com/s/JuTtC2a9ZJXDxPym7enLiA"
+    },
+    {
+      "path": "raw/articles/jev-system-one-model-15-projects-datafun-2026.md",
+      "title": "Jev爆火一周，我扒了15个最值得看的实战项目!",
+      "sourceUrl": "https://mp.weixin.qq.com/s/pF0j0LdMvSHaeSN1hZPVvA"
+    },
+    {
       "path": "raw/articles/jev-typesafe-decision-model-vibe-analysis-2026.md",
       "title": "jev-typesafe-decision-model-vibe-analysis-2026",
       "sourceUrl": "https://mp.weixin.qq.com/s/QWFkGiEmC24RecPOyrl_lA"
@@ -11931,6 +11956,11 @@
       "path": "raw/articles/loop-engineering-prompt-context-loop-three-eras-challengehub.md",
       "title": "提示词工程、上下文工程之后，循环工程到底是什么？",
       "sourceUrl": "https://mp.weixin.qq.com/s/XEy2rXAVzk7H6XPVKwQKBQ"
+    },
+    {
+      "path": "raw/articles/loop-engineering-six-actions-taobao-suxiong-2026.md",
+      "title": "Loop engineering：把 agent 放进工程循环",
+      "sourceUrl": "https://mp.weixin.qq.com/s/RxRzTsRvmZJMmtQjQM79_g"
     },
     {
       "path": "raw/articles/loop-engineering-sre-state-machine-tiered-architecture-ruofei-2026.md",
@@ -13493,6 +13523,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/rZSOdEro90rveyVBwcBNLQ"
     },
     {
+      "path": "raw/articles/omniharness-visual-agent-self-practice-experience-reuse-2026.md",
+      "title": "创意任务解决率95%！让视觉AI自己练习，还能把经验带到视频",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652727030&idx=3&sn=16bea02711ea35168c1367459609f0f5"
+    },
+    {
       "path": "raw/articles/omniscientist-multimodal-ai-scientist-oscholar-2026.md",
       "title": "全模态AI Scientist来了！从原始数据做科研！",
       "sourceUrl": "https://www.xiaohongshu.com/explore/6a8d117c0000000017003033?xsec_source=app_share&xsec_token=CBkaJz2djldgBScQYz-X-MIO2HHKRjfRdxP9rl-RDktoc="
@@ -13551,6 +13586,11 @@
       "path": "raw/articles/ontology-enterprise-ai-methodology-genai-symbiont-2026-08-12.md",
       "title": "企业AI落地方法论之Ontology",
       "sourceUrl": "https://www.xiaohongshu.com/explore/6a7bedd2000000003301054e?xsec_source=app_share&xsec_token=CBi29DWYi8HwMaddzA0i19WOow27W0IGtGRoYEky0C9FA="
+    },
+    {
+      "path": "raw/articles/ontology-graph-rag-six-papers-wanzhuan-ai-2026.md",
+      "title": "RAG 遇到瓶颈？试试\"本体+知识图谱\"：6 篇前沿论文揭秘检索增强新范式",
+      "sourceUrl": "https://mp.weixin.qq.com/s/z5qYrcbkhtHft-55uA_XJQ"
     },
     {
       "path": "raw/articles/ontology-owl-driven-data-agent-design-part3-techart-2026.md",
@@ -15261,6 +15301,11 @@
       "path": "raw/articles/rsi-evomap-experience-driven-test-time-evolution-2026-09-03.md",
       "title": "RSI 离我们有多远？这家中国团队给出了第一梯队的工程解",
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651054414&idx=1&sn=8b059e8c7025fd12ef2262632d066f8d"
+    },
+    {
+      "path": "raw/articles/rsi-four-standards-five-advances-datawhale-zhaozhimin-2026.md",
+      "title": "这是一篇把\"RSI\"讲明白的科普级综述！",
+      "sourceUrl": "https://mp.weixin.qq.com/s/rlfTKyWhALsNONhAwGih1A"
     },
     {
       "path": "raw/articles/rsi-survey-towards-ai-that-improves-itself-2026.md",
@@ -17263,6 +17308,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIwMTc4ODE0Mw==&mid=2247723042&idx=2&sn=1dd76a14486640dff0e80e41eb32d7db"
     },
     {
+      "path": "raw/articles/token-perspective-agent-system-ppt-mozhi-2026.md",
+      "title": "55页PPT！从Token视角看智能体技术体系（附下载）",
+      "sourceUrl": "https://mp.weixin.qq.com/s/swkUpSBnWSZOJRbr1hbeoQ"
+    },
+    {
       "path": "raw/articles/tokenomics-the-625-minute-rule-for-claudes-cache.md",
       "title": "Tokenomics: the 62.5-minute rule for Claude's cache",
       "sourceUrl": "https://skids.dev/blog/anthropic-cache-tokenomics/"
@@ -17351,6 +17401,11 @@
       "path": "raw/articles/trace-context-engineering-vibecoder-2026-09-01.md",
       "title": "TRACE论文解读：Agent 答错以后，真正该改的是哪份上下文？",
       "sourceUrl": "https://mp.weixin.qq.com/s/zeaNdHXYKQTNYmMKSZF6pA"
+    },
+    {
+      "path": "raw/articles/trace-self-evolving-agent-benchmark-nlplearning-2026.md",
+      "title": "上海AI Lab等提出TRACE！让Agent Benchmark从“静态题库”走向可验证的自我演化",
+      "sourceUrl": "https://mp.weixin.qq.com/s/-e4pjIbiril16IwiNKMryw"
     },
     {
       "path": "raw/articles/trace2skill-trajectory-distillation-agent-skills.md",

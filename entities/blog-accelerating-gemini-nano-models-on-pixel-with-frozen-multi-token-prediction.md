@@ -2,7 +2,7 @@
 
 title: "Accelerating Gemini Nano models on Pixel with frozen Multi-Token Prediction"
 created: 2026-06-29
-updated: 2026-09-07
+updated: 2026-09-21
 type: entity
 tags: [llm, mlops, research, google]
 source: "[[raw/articles/blog-accelerating-gemini-nano-models-on-pixel-with-frozen-multi-token-prediction]]"
@@ -22,30 +22,62 @@ review_category: tech
 
 > **Source**: [research.google](https://research.google/blog/accelerating-gemini-nano-models-on-pixel-with-frozen-multi-token-prediction/)
 
-Specific technique (frozen Multi-Token Prediction) with implementation details for mobile deployment. Includes architectural innovations, references to prior work, and real-world deployment (Pixel 9/10). High technical depth and verifiability. ^[raw/articles/blog-accelerating-gemini-nano-models-on-pixel-with-frozen-multi-token-prediction.md]
+## 摘要
 
-## Content Summary
+Google Research has retrofitted Multi-Token Prediction (MTP) onto an already-trained, fully **frozen** Gemini Nano v3 backbone: a lightweight dense Transformer head is appended to the last layers, drafts several future tokens from the backbone's own hidden states, and has those drafts verified by the unchanged base model. Because only the head is trained and every rejected draft is rolled back, output stays bit-for-bit identical to the base model — the speedup ships as a pure efficiency update with no capability or safety-alignment regression. Shipped on Pixel 9 and 10, it gives 50%+ faster generation than comparable standalone drafters while cutting roughly 130MB of runtime memory per instance. ^[raw/articles/blog-accelerating-gemini-nano-models-on-pixel-with-frozen-multi-token-prediction.md]
 
+## 核心要点
 
-Having powerful Large Language Models (LLMs) right in your pocket is now a reality with on-device models like [Gemini Nano](https://developer.android.com/ai/gemini-nano) and [Gemma](https://deepmind.google/models/gemma/). This technology enables everyday features on your phone — such as instantly summarizing a flurry of notifications or proofreading an important text message — all without sending your private data off device. But to make these features useful for everyday users, they need to happen very efficiently. ^[raw/articles/blog-accelerating-gemini-nano-models-on-pixel-with-frozen-multi-token-prediction.md]
+- **Frozen-backbone retrofit.** MTP is bolted onto an already-deployed Gemini Nano v3 with frozen weights; only the appended head is trained, making it strictly an efficiency optimization.
+- **Deep-exit drafting.** The head consumes the backbone's *final high-dimensional activations* and predicts a span of future tokens — not a separate model reasoning from text history alone.
+- **Zero-copy KV reuse.** The head cross-attends directly to the main model's frozen KV cache instead of keeping its own, eliminating drafter prefill latency and saving ~130MB per instance.
+- **Measured gains.** 50%+ speedup on Pixel 9 depending on task; up to 55% better token acceptance on structurally predictable text (smart replies); nearly two extra correct tokens per pass in production.
+- **Lineage.** Extends speculative decoding, EAGLE, and Confident Adaptive Language Modeling (CALM); unlike the tandem-trained Gemma 4 heads, this head is frozen.
 
-Delivering this kind of speed on a mobile device is a significant challenge. Unlike vast server environments, mobile phones operate under a strict energy budget and hard memory (RAM) limits. Furthermore, standard language models generate text "autoregressively" — meaning they process and output just one word (or token) at a time. This step-by-step process creates a bottleneck, underutilizing the phone's processing power while straining its memory bandwidth, which can ultimately slow down the user experience and drain the battery. ^[raw/articles/blog-accelerating-gemini-nano-models-on-pixel-with-frozen-multi-token-prediction.md]
+## 深度分析
 
-To overcome this bottleneck, we are announcing a new architecture that retrofits Multi-Token Prediction (MTP) onto existing, "frozen" Gemini Nano v3 models. Building on prior approaches like the[EAGLE framework](https://arxiv.org/pdf/2401.15077) and [Confident Adaptive Language Modeling](https://research.google/blog/accelerating-text-generation-with-confident-adaptive-language-modeling-calm/) (CALM), we designed new architectural components to maximize these efficiency gains specifically for mobile environments. Our recent announcements highlighted accelerating [Gemma 4 with MTP](https://blog.google/innovation-and-ai/technology/developers-tools/multi-token-prediction-gemma-4/) and making it available to developers. ^[raw/articles/blog-accelerating-gemini-nano-models-on-pixel-with-frozen-multi-token-prediction.md]
+### 1. On-device decoding is memory-bandwidth bound, not compute bound
 
-Today's article tackles the unique, extreme constraints of edge computing. Recently rolled out to the Pixel 9 and 10 series, this approach acts as an out-of-the-box speedup. For users, this means that features like AI Notification Summaries and Proofread generate text significantly faster and with less energy consumption. For developers, it eliminates a major friction point: delivering high-speed on-device AI without the need to fine-tune separate, memory-heavy drafting models for every new task. ^[raw/articles/blog-accelerating-gemini-nano-models-on-pixel-with-frozen-multi-token-prediction.md]
+Server serving hides the cost of autoregressive decoding behind batch parallelism: one weight read feeds many requests, so arithmetic units stay busy. A phone has the opposite economics — it serves a single request under a hard RAM ceiling and a strict energy budget, and it decodes strictly autoregressively, one token per forward pass. Each pass must stream the model's weights and the growing KV cache through memory to produce a single token, so the binding constraint is bytes moved per token, not FLOPs per token. The processor sits underutilized while the memory bus saturates, which is exactly the observed symptom: sluggish-feeling generation and battery drain rather than compute-limited throughput. The corollary: throughput rises only by accepting more than one token per pass, and any second model or KV cache makes the bandwidth problem worse, not better. ^[raw/articles/blog-accelerating-gemini-nano-models-on-pixel-with-frozen-multi-token-prediction.md]
 
-## A "late exit" strategy
+### 2. Frozen MTP heads decouple drafting from the base model
 
-MTP builds upon the evolution of [speculative decoding](https://research.google/blog/looking-back-at-speculative-decoding/). In a traditional setup, generating _N_ tokens requires _N_ forward passes of the large model. Speculative decoding decouples this process into two parts: ^[raw/articles/blog-accelerating-gemini-nano-models-on-pixel-with-frozen-multi-token-prediction.md]
+Classical speculative decoding splits generation into two roles: a small, fast *drafter* proposes a short candidate sequence, and a large *verifier* scores those candidates in parallel, accepting the matching prefix and rolling back to the first divergence. The standalone version has two structural flaws on a phone. A separate drafter is a second set of weights competing for scarce RAM (128M parameters is not free beside a Nano-class model), and it is *blind* — predicting next tokens from text history only, with no access to the semantic state the main model has already computed. ^[raw/articles/blog-accelerating-gemini-nano-models-on-pixel-with-frozen-multi-token-prediction.md]
 
-1.   _Draft:_ a smaller, faster approximation model (the "drafter") generates a short sequence of candidate tokens (e.g., 3 tokens).
-2.   _Verify:_ a large model (the "verifier") processes these candidates in parallel. If the candidates match what the large model would have predicted, they are accepted. If not, the system rolls back to the first divergence.
+MTP swaps the standalone model for an integrated one. Rather than training a small model to imitate the big one, Google appends a lightweight Transformer head to the main model's final layers and lets it draft from the backbone's final hidden states — the "deep exit" layer. The drafting signal is conditioned on the same rich internal state the verifier will later use to check the draft, which is why MTP drafters out-predict standalone drafters of comparable parameter count. ^[raw/articles/blog-accelerating-gemini-nano-models-on-pixel-with-frozen-multi-token-prediction.md] Contrast this with the tandem-trained MTP used for the [[entities/gemma-4-multi-token-prediction-drafters|Gemma 4 MTP drafters]], where head and backbone are trained together.
 
-However, this results in
+### 3. The late-exit speculative-drafting loop, end to end
 
----
-## 关联
-- 相关概念: [[concepts/harness-engineering-framework|Harness Engineering]]
-- 相关: Agent 架构
+The mechanism is a two-phase loop over shared state. In the **draft** phase the MTP head reads the backbone's final activations and emits a short candidate sequence. In the **verify** phase the frozen backbone processes all candidates in one parallel pass; the longest prefix matching what the backbone itself would have produced is accepted, and everything from the first divergence onward is discarded and regenerated. Because verification evaluates several positions at once, the memory traffic that produced one token now validates several — the gain is better amortization of the same read, not a shortcut in the math. ^[raw/articles/blog-accelerating-gemini-nano-models-on-pixel-with-frozen-multi-token-prediction.md]
 
+Deploying it required redesigning the on-device inference stack around the *dependency* between the phases: drafting needs the backbone's activations and cache to already exist, and verification needs the draft to be complete. That is control-flow engineering as much as modeling, echoing [[entities/eagle-3-speculative-decoding-optimization|EAGLE-3]]-style kernel work; the zero-copy design keeps the dependency tractable. ^[raw/articles/blog-accelerating-gemini-nano-models-on-pixel-with-frozen-multi-token-prediction.md]
+
+### 4. Zero-copy memory and why "frozen" is the shipping argument
+
+Standard MTP implementations optimize for training efficiency by sharing *static* parameters (embedding weights) between main model and drafter. On-device inference faces a different constraint: *dynamic* memory. When a drafter processes context independently it pays a "double tax," maintaining its own KV cache on top of the backbone's. Google's zero-copy architecture instead has the MTP head cross-attend directly to the main model's frozen KV cache, querying context the backbone already computed. The payoff is two-fold: no drafter prefill latency (the head needs no extra prompt-processing time) and 130MB per instance saved by dropping drafter embedding tables, prefill attention variants, and app-specific tuning parameters. ^[raw/articles/blog-accelerating-gemini-nano-models-on-pixel-with-frozen-multi-token-prediction.md]
+
+The deeper reason to freeze is operational: once the backbone is deployed in the field, re-running pre-training or fine-tuning pipeline changes for every efficiency idea is prohibitive, so retrofitting an additive head is the only affordable path. With the backbone frozen and only the head trained on future-token prediction error, MTP becomes strictly additive — it cannot change what the model knows or how it is aligned. That lets speed improvements ship OTA on a cadence decoupled from model-quality releases, with both sides of the update producing identical text. ^[raw/articles/blog-accelerating-gemini-nano-models-on-pixel-with-frozen-multi-token-prediction.md]
+
+### 5. Acceptance rate, quality tradeoffs, and the Pixel 9/10 rollout
+
+Everything funnels into one number: the **acceptance rate** of drafted tokens. Speedup approximates the expected number of accepted tokens per verification pass, so freezing the backbone puts a ceiling on what the head can learn — it can only model the backbone's continuation distribution from final activations, never co-adapt with it. That ceiling varies sharply by task, hence per-workload results rather than one multiplier. On instruction-following work such as summarization or constrained rewriting, MTP clearly beat fine-tuned standalone drafters; on highly predictable text (smart replies) the head effectively learned the main model's syntactic patterns and lifted token acceptance by up to 55%. ^[raw/articles/blog-accelerating-gemini-nano-models-on-pixel-with-frozen-multi-token-prediction.md]
+
+That task-dependence is the practical caveat: a frozen head helps most where continuations are stereotyped and least where they are open-ended and high-entropy. On Pixel 9 and 10 in production (AI Notification Summaries, Proofread) MTP predicted on average nearly two extra tokens correctly per pass, and fewer verification steps meant less time waking the heavier processors — the source of the battery win. The roadmap targets the remaining losses: parallel decoding and auxiliary-head-free drafting to cut draft latency, plus *branching* exploration and relaxed non-exact verification to accept longer sequences when context is ambiguous. That last idea is the most delicate — the same relaxation that buys throughput is what a stricter variant, such as [[entities/approximate-speculative-decoding-asd-relaxed-validation-2026|ASD's relaxed validation]], has to bound carefully. ^[raw/articles/blog-accelerating-gemini-nano-models-on-pixel-with-frozen-multi-token-prediction.md]
+
+## 实践启示
+
+1. **Profile bytes per token, not FLOPs.** Decode latency tracks memory traffic per emitted token; only an architecture emitting more tokens per read will help.
+2. **Prefer integrated drafters when RAM is scarce.** A standalone drafter costs an extra parameter set *and* a duplicate KV cache; a head on the backbone's final activations buys better drafts at a fraction of the footprint.
+3. **Reuse the backbone's cache rather than only sharing static tables.** Cross-attention into the frozen KV cache removed both prefill latency and ~130MB per instance; static weight sharing would have addressed neither.
+4. **Treat frozen-backbone adapters as the deployment unit.** Freeze the shipped base model, train only the additive module, and verify identical output so efficiency updates ship independently of quality and safety review.
+5. **Report acceptance rate per task class.** A single average hides the story: structural tasks accept far more drafted tokens than open-ended generation, and the same head can be a large win on one and marginal on the other.
+
+## 相关实体
+
+- [[concepts/speculative-decoding|Speculative Decoding]] — the draft-then-verify foundation MTP builds on
+- [[entities/gemma-4-multi-token-prediction-drafters|Gemma 4 Multi-Token Prediction Drafters]] — the tandem-trained MTP variant contrasted here
+- [[entities/eagle-3-speculative-decoding-optimization|EAGLE-3 Speculative Decoding Optimization]] — the lineage of drafting-head efficiency work
+- [[entities/approximate-speculative-decoding-asd-relaxed-validation-2026|ASD: Relaxed Validation]] — the flip side of exact-match verification
+- [[entities/nvidia-gemma-4-edge-ai|Gemma 4 on the Edge (NVIDIA)]] — on-device constraints for a sibling model family
+
+→ [[raw/articles/blog-accelerating-gemini-nano-models-on-pixel-with-frozen-multi-token-prediction|原文存档]]
