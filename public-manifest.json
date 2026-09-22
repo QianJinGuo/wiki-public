@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "sourceRevision": "2c97c3c4e2e6fcaf90c54579754dd98a46113a9e",
+  "sourceRevision": "71d65c6666f2d5b735641791681ab5259004c34f",
   "files": [
     {
       "path": "raw/articles/0.25秒识破未见攻击-lod-lvlm-jailbreak-detection-emnlp2026.md",
@@ -2408,6 +2408,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MjM5ODYwMjI2MA==&mid=2649802960&idx=1&sn=c62698da543f3bd37ba36b617bc92b80"
     },
     {
+      "path": "raw/articles/ai-comes-for-the-if-statement-tunguz-2026.md",
+      "title": "AI Comes for the If Statement",
+      "sourceUrl": "https://tomtunguz.com/ai-comes-for-the-if-statement"
+    },
+    {
       "path": "raw/articles/ai-context-layer-kgc-2026.md",
       "title": "AI的Context Layer",
       "sourceUrl": "https://mp.weixin.qq.com/s/-ccWkKRKo78TuxkXgX_Geg"
@@ -2571,6 +2576,11 @@
       "path": "raw/articles/ai-mediakit-cli-skill-agent-workstation.md",
       "title": "ai-mediakit-cli-skill-agent-workstation",
       "sourceUrl": "https://mp.weixin.qq.com/s/Kfrcbw91WY71XKD50vVEmg"
+    },
+    {
+      "path": "raw/articles/ai-mediakit-video-subtitle-erasure-refm-volcano-2026.md",
+      "title": "从“看见文字”到“读懂画面”：AI MediaKit 如何实现视频字幕无痕擦除",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzI1MzYzMjE0MQ==&mid=2247522686&idx=1&sn=d051710a5d9f2c1e062ee6bf953be330"
     },
     {
       "path": "raw/articles/ai-native-dan-shipper-every-layered-thinking-walkwalk.md",
@@ -3713,6 +3723,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/Sz2hzXiNCyf1YNzPbeUo5Q"
     },
     {
+      "path": "raw/articles/anthropic-measuring-pace-ai-development.md",
+      "title": "anthropic-measuring-pace-ai-development",
+      "sourceUrl": "https://www.anthropic.com/institute/measuring-pace-of-ai-development"
+    },
+    {
       "path": "raw/articles/anthropic-model-personality-four-axes-2026.md",
       "title": "anthropic-model-personality-four-axes-2026",
       "sourceUrl": "https://mp.weixin.qq.com/s/09altWMaa57OCi81eI5fbw"
@@ -3983,6 +3998,11 @@
       "sourceUrl": "https://arxiv.org/pdf/2607.01120"
     },
     {
+      "path": "raw/articles/arena-ai-harness-tax-coding-agents.md",
+      "title": "arena-ai-harness-tax-coding-agents",
+      "sourceUrl": "https://arena.ai/blog/coding-agents-harness-tax"
+    },
+    {
       "path": "raw/articles/arex-verification-driven-autonomous-research-baai-2026.md",
       "title": "智源AREX自主研究智能体：从「盲目搜索」到「验证驱动」",
       "sourceUrl": "https://mp.weixin.qq.com/s/oWdXL5870oGM8BVVtnt6sQ"
@@ -4046,6 +4066,11 @@
       "path": "raw/articles/arxiv-2608-14071-scaling-domain-data-repetition-llm-pretraining.md",
       "title": "arxiv-2608-14071-scaling-domain-data-repetition-llm-pretraining",
       "sourceUrl": "https://arxiv.org/abs/2608.14071"
+    },
+    {
+      "path": "raw/articles/arxiv-2609-13009-physics-benchmark-expert-regrading.md",
+      "title": "arxiv-2609-13009-physics-benchmark-expert-regrading",
+      "sourceUrl": "https://arxiv.org/abs/2609.13009"
     },
     {
       "path": "raw/articles/arxiv-independent-nonprofit-2026-07-02.md",
@@ -5191,6 +5216,11 @@
       "path": "raw/articles/checkmarx-jenkins-plugin-compromised-in-new-supply-chain-attack.md",
       "title": "Checkmarx Jenkins plugin compromised in new supply chain attack",
       "sourceUrl": "https://www.techzine.eu/news/security/141212/checkmarx-jenkins-plugin-compromised-in-new-supply-chain-attack/"
+    },
+    {
+      "path": "raw/articles/chenxiao-ai-native-eval-layer-data-flywheel-2026.md",
+      "title": "AI-Native评估层｜评估层的搭建以及数据飞轮的实战笔记",
+      "sourceUrl": "https://mp.weixin.qq.com/s/Pn-rBJ3wWP4o8byQKxY-Zg"
     },
     {
       "path": "raw/articles/cheriot-ibex-memory-safety-hardware-enforcement.md",
@@ -6903,6 +6933,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/8NsgMxXYqL3wJKdVMSku7A"
     },
     {
+      "path": "raw/articles/dataflow-pku-data-engineering-operator-pipeline-agentcraft-2026.md",
+      "title": "北大开源了LLM 时代的数据工程基础设施",
+      "sourceUrl": "https://mp.weixin.qq.com/s/p8bhp3WKGxfgnizCw8b6Qg"
+    },
+    {
       "path": "raw/articles/dataworks-copilot-skill-data-request-24h-delivery-taobao-2026-07-20.md",
       "title": "dataworks-copilot-skill-data-request-24h-delivery-taobao-2026-07-20",
       "sourceUrl": "https://mp.weixin.qq.com/s/7JI5zJdT73OFbI-DVl3Oqg"
@@ -7136,6 +7171,11 @@
       "path": "raw/articles/deepseek-v41-engram-model-memory-table-harness-vibecoder-2026-09-10.md",
       "title": "DeepSeek V4.1 的 Engram：模型内存表如何改写 Agent Harness",
       "sourceUrl": "https://mp.weixin.qq.com/s/kXvqPAPllQQZ7izhLTnvWA"
+    },
+    {
+      "path": "raw/articles/deepseek-v41-flash-kv-cache-compression-limit-agiyanxishe-2026-09-22.md",
+      "title": "DeepSeek-V4.1-Flash 深度解读：把 KV Cache 压缩到极限的百万上下文 MoE 模型",
+      "sourceUrl": "https://mp.weixin.qq.com/s/JRav57LWihCmlvi3ha7FJQ"
     },
     {
       "path": "raw/articles/deepseek-visual-primitives-thinking.md",
@@ -8973,6 +9013,11 @@
       "sourceUrl": null
     },
     {
+      "path": "raw/articles/google-toolgrad-textual-gradients-tool-use.md",
+      "title": "google-toolgrad-textual-gradients-tool-use",
+      "sourceUrl": "https://research.google/blog/toolgrad-efficient-tool-use-dataset-generation-with-textual-gradients"
+    },
+    {
       "path": "raw/articles/google-workspace-updates-small-businesses-can-now-import-use.md",
       "title": "google-workspace-updates-small-businesses-can-now-import-use",
       "sourceUrl": "https://workspaceupdates.googleblog.com/2026/05/small-businesses-can-now-seamlessly-import-users-from-Microsoft-to-Google-Workspace.html"
@@ -9311,6 +9356,11 @@
       "path": "raw/articles/gstack-garry-tan-600k-lines-60-days.md",
       "title": "YC掌门人60天写了60万行代码：gstack开源",
       "sourceUrl": "https://mp.weixin.qq.com/s/-kJeOfYHMvetALarZOuZFw"
+    },
+    {
+      "path": "raw/articles/guangyusun-flat-unified-multimodal-representation.md",
+      "title": "guangyusun-flat-unified-multimodal-representation",
+      "sourceUrl": "https://guangyusun.com/flat-website/"
     },
     {
       "path": "raw/articles/gufabiancheng-spec-for-complex-tasks-cc-codex.md",
@@ -10823,6 +10873,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/D1La4jMoVZ5Ip_RrVY1kPw"
     },
     {
+      "path": "raw/articles/jev-model-demo-browser-use-benchmark-tencent-mason-2026.md",
+      "title": "聊聊最近爆火的Jev 模型，到底是个啥？",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MjM5ODYwMjI2MA==&mid=2649804208&idx=1&sn=42392abb524c9a6d137042a4adbc903b"
+    },
+    {
       "path": "raw/articles/jev-rlcd-decision-function-feixue-ai-2026.md",
       "title": "深度解析 Jev 模型：如何快速做结构化决策",
       "sourceUrl": "https://mp.weixin.qq.com/s/JuTtC2a9ZJXDxPym7enLiA"
@@ -11016,6 +11071,11 @@
       "path": "raw/articles/kg-ontology-modeling-telecom-adguancha-2026.md",
       "title": "从本体论出发，实战拆解知识图谱（电信场景建模方法论）",
       "sourceUrl": "https://mp.weixin.qq.com/s/0whlaSfuTj-th19YyLpNDg"
+    },
+    {
+      "path": "raw/articles/khare-kv-cache-truth-auditor.md",
+      "title": "khare-kv-cache-truth-auditor",
+      "sourceUrl": "https://siddhantkhare.com/writing/kv-cache-truth-auditor"
     },
     {
       "path": "raw/articles/kimi-attention-residuals-preNorm-dilution-block-attnres.md",
@@ -12938,6 +12998,11 @@
       "sourceUrl": "https://arxiv.org/abs/2608.05000"
     },
     {
+      "path": "raw/articles/muse-amazon-agent-platform-blocking-geekpark-2026-09-22.md",
+      "title": "Meta 个人 AI 助手刚火 13 天，Amazon 就拉闸了",
+      "sourceUrl": "https://mp.weixin.qq.com/s/OORHLoIlO-Xw6WWy-GQGSg"
+    },
+    {
       "path": "raw/articles/muse-autoskill-bytebrain-self-evolving-agent-arxiv-2605-27366.md",
       "title": "字节跳动 MUSE-Autoskill：自进化 Agent 五阶段技能生命周期，自生成技能超越人类上限",
       "sourceUrl": "https://mp.weixin.qq.com/s/3eDUjMNeM5AK4jUsgiFYng"
@@ -13221,6 +13286,11 @@
       "path": "raw/articles/notnotp-k8s-interviews-non-technical.md",
       "title": "What Job Interviews Taught Me About Kubernetes",
       "sourceUrl": "https://notnotp.com/notes/what-job-interviews-taught-me-about-kubernetes/"
+    },
+    {
+      "path": "raw/articles/noukhovitch-ngu-matthew-effect-rl.md",
+      "title": "noukhovitch-ngu-matthew-effect-rl",
+      "sourceUrl": "https://mnoukhov.github.io/posts/ngu/"
     },
     {
       "path": "raw/articles/novee-security-how-to-get-a-100-conference-acceptance-rate-the-no.md",
@@ -14263,6 +14333,11 @@
       "sourceUrl": "https://venturebeat.com/technology/perceptron-mk1-shocks-with-highly-performant-video-analysis-ai-model-80-90-cheaper-than-anthropic-openai-and-google"
     },
     {
+      "path": "raw/articles/periodic-neon-domain-xrd-outperforms-frontier.md",
+      "title": "periodic-neon-domain-xrd-outperforms-frontier",
+      "sourceUrl": "https://periodic.com/news/nature-is-our-learning-environment"
+    },
+    {
       "path": "raw/articles/perplexity-brain-self-improving-memory-agents.md",
       "title": "perplexity-brain-self-improving-memory-agents",
       "sourceUrl": "https://www.perplexity.ai/hub/blog/self-improving-memory-for-agents"
@@ -14553,6 +14628,11 @@
       "sourceUrl": "https://www.salesforce.com/blog/principal-summit/"
     },
     {
+      "path": "raw/articles/prismml-bonsai-2-27b-ternary-quantization.md",
+      "title": "prismml-bonsai-2-27b-ternary-quantization",
+      "sourceUrl": "https://prismml.com/news/bonsai-2-27b"
+    },
+    {
       "path": "raw/articles/private-fintech-has-quietly-become-bigger-than-public-fintec-569278.md",
       "title": "Private Fintech Has Quietly Become Bigger Than Public Fintech. Now What?",
       "sourceUrl": "https://www.heyfuturenexus.com/private-fintech-has-quietly-become-bigger-than-public-fintech-now-what/"
@@ -14571,6 +14651,11 @@
       "path": "raw/articles/problem-with-mathematically-proven-claims-about-llms.md",
       "title": "problem with mathematically proven claims about llms",
       "sourceUrl": "https://webdirections.org/blog/the-problem-with-mathematically-proven-claims-about-llms/"
+    },
+    {
+      "path": "raw/articles/procedural-graphs-agent-harness-tools-skills-memory-google-gatech-pku-2026.md",
+      "title": "工具、技能、记忆连成网，北大等提出自进化程序图PG，越用越聪明",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652728221&idx=3&sn=3e66a7857947456a65091583d7c48882"
     },
     {
       "path": "raw/articles/process-financial-documents-using-amazon-bedrock-data-automa.md",
@@ -15103,6 +15188,11 @@
       "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/reducing-container-cold-start-times-using-soci-index-on-dlami-and-dlc/"
     },
     {
+      "path": "raw/articles/redwood-opaque-serial-depth-monitorability.md",
+      "title": "redwood-opaque-serial-depth-monitorability",
+      "sourceUrl": "https://blog.redwoodresearch.org/p/an-operationalization-of-opaque-serial"
+    },
+    {
       "path": "raw/articles/regression-tax-skills-hurt-llm-agents-mozhi-2026.md",
       "title": "高质量Skill落地实操指南：5000+次实验拆解AI Agent回归税",
       "sourceUrl": "https://mp.weixin.qq.com/s/wxjbSCIvNiJ4S8T56kLeCA"
@@ -15186,6 +15276,11 @@
       "path": "raw/articles/rfc9958.md",
       "title": "rfc9958",
       "sourceUrl": "https://datatracker.ietf.org/doc/html/rfc9958"
+    },
+    {
+      "path": "raw/articles/rhoda-scaling-web-video-pretraining-robots.md",
+      "title": "rhoda-scaling-web-video-pretraining-robots",
+      "sourceUrl": "https://www.rhoda.ai/research/scaling-web-video-pretraining"
     },
     {
       "path": "raw/articles/rigged-game-scarcruft-compromises-gaming-platform-supply-chain-attack.md",
@@ -16263,6 +16358,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/m6KZ7kd0cyqXW9UHdEmnaA"
     },
     {
+      "path": "raw/articles/social-world-model-sdft-continual-learning-7b-uiuc-astraculum-2026.md",
+      "title": "清华初创&UIUC学者用7B模型在预测市场上自我蒸馏，跑赢GPT-5.6和Opus 5",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651058785&idx=2&sn=dd0de5cc2b7eab979a707886efaf53c6"
+    },
+    {
       "path": "raw/articles/some-ideas-for-what-comes-next-may-2026.md",
       "title": "Some ideas for what comes next, May 2026",
       "sourceUrl": "https://www.interconnects.ai/p/some-ideas-for-what-comes-next-may"
@@ -16813,6 +16913,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/VJgVPeJ5GZhVwbRtneEk_Q"
     },
     {
+      "path": "raw/articles/tencent-cloud-login-harness-verification-jiamanxin-2026-09-22.md",
+      "title": "边开飞机边换引擎：Harness如何解决验证难题",
+      "sourceUrl": "https://mp.weixin.qq.com/s/2-hYDib0sUzou0zsO98P8w"
+    },
+    {
       "path": "raw/articles/tencent-harness-engineering-team-specification-2026.md",
       "title": "tencent-harness-engineering-team-specification-2026",
       "sourceUrl": "https://mp.weixin.qq.com/s/g4nTfxm7ebzRwkAVIGdIbg"
@@ -17313,6 +17418,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/swkUpSBnWSZOJRbr1hbeoQ"
     },
     {
+      "path": "raw/articles/tokenizers-v1-encode-decode-and-scaling-measured.md",
+      "title": "tokenizers v1: encode, decode and scaling, measured",
+      "sourceUrl": "https://huggingface.co/blog/tokenizers-v1"
+    },
+    {
       "path": "raw/articles/tokenomics-the-625-minute-rule-for-claudes-cache.md",
       "title": "Tokenomics: the 62.5-minute rule for Claude's cache",
       "sourceUrl": "https://skids.dev/blog/anthropic-cache-tokenomics/"
@@ -17713,6 +17823,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/WBoogEyqUhiVrmciSBGKgA"
     },
     {
+      "path": "raw/articles/va-judger-human-preference-reward-model-joint-video-audio-fudan-2026.md",
+      "title": "复旦上线音视频模型新裁判：一万组数据对齐人类审美",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247925574&idx=3&sn=304b9f440849939c0d6dd6059738e4da"
+    },
+    {
       "path": "raw/articles/vad-multimodal-on-policy-distillation-visual-evidence-2026.md",
       "title": "不要把老师的答案整包学走：VAD 用反事实视觉证据重构多模态蒸馏目标",
       "sourceUrl": "https://mp.weixin.qq.com/s/zW290BgBmfmFGpCxuiMR-A"
@@ -17721,6 +17836,16 @@
       "path": "raw/articles/valkey-why-valkey-performance.md",
       "title": "Valkey 为什么这么快？盘点 Valkey 中提升性能的黑科技",
       "sourceUrl": "https://aws.amazon.com/cn/blogs/china/valkey-why-valkey-performance/"
+    },
+    {
+      "path": "raw/articles/vals-ai-cheating-on-the-rise-terminal-bench.md",
+      "title": "vals-ai-cheating-on-the-rise-terminal-bench",
+      "sourceUrl": "https://www.vals.ai/blogs/cheating-on-the-rise"
+    },
+    {
+      "path": "raw/articles/vals-ai-fable-solves-cyphral-distich.md",
+      "title": "vals-ai-fable-solves-cyphral-distich",
+      "sourceUrl": "https://www.vals.ai/blogs/fable-solves-cyphral-distich"
     },
     {
       "path": "raw/articles/varoa-ddosing-software-delivery-pipelines-2026.md",
@@ -18588,6 +18713,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/tK0rmfOYRC7SoWGggAT4lg"
     },
     {
+      "path": "raw/articles/yifanzhang-rlt1-recurrent-looped-transformer.md",
+      "title": "yifanzhang-rlt1-recurrent-looped-transformer",
+      "sourceUrl": "https://yifanzhang-pro.github.io/recurrent-looped-tranformer/"
+    },
+    {
       "path": "raw/articles/yMBIpbWPhUOtWjqwBHNKqQ/article.md",
       "title": "记忆体系工程实战：从设计选型到生产落地",
       "sourceUrl": null
@@ -18626,6 +18756,11 @@
       "path": "raw/articles/yuanxiaohui-ai-super-individual-super-team-productivity-paradox.md",
       "title": "袁晓辉：AI让每个人都变强了，但为什么公司没跑得更快？",
       "sourceUrl": "https://mp.weixin.qq.com/s/mu4ZiCeNuasv5J4Gt22jTA"
+    },
+    {
+      "path": "raw/articles/yue2-symbolic-planning-agentic-music-editing-mixture-of-transformers-2026.md",
+      "title": "Suno最强开源对手来了：4090一分钟出歌，把AI音乐从抽卡变成可编辑工程",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247925185&idx=3&sn=5c768d180f4f17717517d3f19280edac"
     },
     {
       "path": "raw/articles/yumanju-ai-full-flow-efficiency.md",

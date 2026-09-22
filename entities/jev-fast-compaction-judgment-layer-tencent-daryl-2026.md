@@ -1,12 +1,12 @@
 ---
 title: "Jev 快判断层与 fast-jev-compaction 上下文剪枝：把 Agent 的判断题从大模型里拆出来"
 created: 2026-09-21
-updated: 2026-09-21
+updated: 2026-09-23
 type: entity
 tags: [jev, system-one-model, context-compaction, fast-jev-compaction, agent-architecture, judgment-layer, probability-threshold, typesafe, tencent]
 confidence: 0.85
-provenance_state: extracted
-sources: [raw/articles/jev-fast-compaction-judgment-layer-tencent-daryl-2026]
+provenance_state: merged
+sources: [raw/articles/jev-fast-compaction-judgment-layer-tencent-daryl-2026, raw/articles/jev-model-demo-browser-use-benchmark-tencent-mason-2026, raw/articles/ai-comes-for-the-if-statement-tunguz-2026]
 ---
 
 # Jev 快判断层与 fast-jev-compaction 上下文剪枝
@@ -111,3 +111,34 @@ fast-jev-compaction 展示的"判断保留价值"路线与"摘要改写"路线�
 - [[entities/a-missing-layer-in-agentic-systems|A Missing Layer in Agentic Systems]] — "缺一层"的同类架构论证（HITL 层）
 
 → [[raw/articles/jev-fast-compaction-judgment-layer-tencent-daryl-2026|原文存档]]
+
+## 第 2 来源 — 腾讯技术工程（mason）Jev 上手 Demo：接口三型与「判断/生成」双模型的延迟证据
+
+来源：[[raw/articles/jev-model-demo-browser-use-benchmark-tencent-mason-2026|聊聊最近爆火的 Jev 模型，到底是个啥？]]（腾讯技术工程，mason，Principal Research Leader，2026-09-21）。同为腾讯技术工程对 Jev 的解读，但取的是**上手实测视角**：作者申请 API Key 后用 CodeBuddy 做了一个网页小游戏 demo，再横向看社区 demo。v×c≈36（双 API down 走 canonical heuristic，落 35–48 区间），与本文 70%+ 主题重叠（同一模型、同一「判断层从生成层拆出」命题），互补角度 ≥3 ⇒ 按 MERGE 矩阵并入本页作第 2 来源。^[raw/articles/jev-model-demo-browser-use-benchmark-tencent-mason-2026.md]
+
+**互补角度 5 条**：
+
+1. **接口三型的调用形态复述**：Jev 三种接口被落成「问什么 / 返回什么」表——Choice（玩家这句话在叫谁？→ 一个选项 + 各选项概率 + confidence）、Score（这段内容风险处于哪个等级？→ 按定义等级评分 + 概率分布 + confidence）、Noul（这条请求需要转人工吗？→ 取 0–1 的是非概率，不单独返回 confidence）。游戏场景里每一步的提问是「我现在有多少血，怪物和金币在哪里，出口在哪里，目标是拿到金币并活着出去，现在应该按哪个键」，可选项**预先枚举**为上/下/左/右/攻击/喝药，模型返回其一，执行后再把新局面发回——本页「三原语」小节的一手调用实例。^[raw/articles/jev-model-demo-browser-use-benchmark-tencent-mason-2026.md]
+2. **概率 ≠ 置信度 ≠ 胜率 的语义区分（对本页「概率可信尚不充分」护栏的直接补充）**：demo 第一步返回「攻击」概率约 95%，界面置信度约 93%，作者明确点出这是两个不同的数，且**都不是「这局有多大胜率」**——清晰划开了「分类概率」「模型自报置信」与「任务成功率」三者，正是概率阈值上线前必须做的语义校准。^[raw/articles/jev-model-demo-browser-use-benchmark-tencent-mason-2026.md]
+3. **Browser Use jev-ultrafast 的具体延迟证据**：页面先被整理成带编号的元素，Jev 决定操作什么、点哪个目标，需要填城市名时再调用生成模型产生文字；作者记录的一次航班查询用了 **7.073 秒，其中 17 次 Jev 请求 + 2 次文字生成调用**（开页与最终独立校验不计入）。本页「社区项目方向表」原先只列了该项目名称，此处补上数量级：高频局部判断确实由小判断模型承担，生成调用被压到 2 次。^[raw/articles/jev-model-demo-browser-use-benchmark-tencent-mason-2026.md]
+4. **分工叙事的具体化**：地图、伤害、碰撞由普通游戏代码处理，每一步按哪个键由 Jev 返回——「**Jev 是拿手柄的玩家，普通代码是游戏本身**」；它看到的是状态描述而不是屏幕截图，也没有人工写好的通关路线。这正是本页四层架构分工（慢思考/快判断/确定性/兜底）在具体项目里的落点。^[raw/articles/jev-model-demo-browser-use-benchmark-tencent-mason-2026.md]
+5. **对照实验的方法论诚实边界**：作者明确写出「我们已经搭了相同地图、相同规则的对比版本，但目前没有完成有效的双模型实测，所以这里不放胜负和性能结论」，并用一次低血量测试（20 点血时先攻击，被反击后剩 5 点血）说明「这个动作是不是最优要看后续局面，不能只凭没喝药下结论」。这是与本页「两个宣传误读与工程护栏」同向的方法论自律，也解释了为何上一条延迟数字可用于工程估算、却不可用于「Jev 比 GPT 更会玩」这类结论。^[raw/articles/jev-model-demo-browser-use-benchmark-tencent-mason-2026.md]
+
+**边界**：该文为个人上手 demo 记录（6 次真实 API 调用、单局游戏 + 一次航班查询），不构成基准对比；作者本人亦声明演示刻意放慢、不能说明响应时间。^[raw/articles/jev-model-demo-browser-use-benchmark-tencent-mason-2026.md]
+
+→ [[raw/articles/jev-model-demo-browser-use-benchmark-tencent-mason-2026|第 2 来源原文]]
+
+## 第 3 来源 — Tomasz Tunguz（Theory Ventures）：If-Statement 经济学——harness margin 与生产环境 98 封邮件实测
+
+来源：[[raw/articles/ai-comes-for-the-if-statement-tunguz-2026|AI Comes for the If Statement]]（Tomasz Tunguz, Theory Ventures GP, 2026-09-22）。LLM 评分 v=7/c=7/stars=4（v×c=49, ark glm-5.3-flash）。与前两源（技术解读 + 上手 demo）不同，Tunguz 取的是**投资人经济学视角**：把 Jev/SemIf 这类 machine-native 判断模型放进「软件原语特化 → harness 毛利扩大」的框架里。70%+ 主题重叠（同一模型家族、同一「判断与生成分离」命题），互补角度 ≥3 ⇒ 按 MERGE 矩阵并入本页作第 3 来源。^[raw/articles/ai-comes-for-the-if-statement-tunguz-2026.md]
+
+**互补角度 4 条**：
+
+1. **98 封生产邮件线程的对照分类实测**：同一数据集上，生产环境生成式 LLM 分类器 47%（46/98），Jev 80%（78/98），本地 SemIf 82%（80/98）——判断模型在生产邮件分流场景**同时更准更便宜**的一手数字；另有 31 封线上邮件试点，本地判断模型处理 8 封零错误、其余安全升级到 frontier 模型。^[raw/articles/ai-comes-for-the-if-statement-tunguz-2026.md]
+2. **成本量级：76x–209x 价差**：Jev 定价 $0.042/M input + $0 output，对比 Sonnet 级 $3/$15——按 2000 input + 60 output 的典型分类调用算 82x 便宜；TypeSafe 自己的 workflow evals 给出 $0.0004 vs $0.0304/$0.0836（76x–209x）。本页成本论证的最sharp的一组数字。^[raw/articles/ai-comes-for-the-if-statement-tunguz-2026.md]
+3. **SemIf 机制描述（本页开源复现条目的原理补全）**：不做自回归 token 生成，attention 只跑一遍，直接从输出 logits 评估候选选项，完全跳过多层 FFN 与 decode 步骤——与 [[entities/pyrodash-token-level-small-large-collaborative-inference-2026|PyroDash token 级协同推理]] 的「跳过生成路径」同型。^[raw/articles/ai-comes-for-the-if-statement-tunguz-2026.md]
+4. **Harness margin 命题（经济学视角独有的战略判断）**：AI 的分工正在两极化——frontier 模型做发现与架构、特化模型做生产；harness 的价值是把执行成本压下来而不牺牲准确率，特化原语进一步扩大 harness 的毛利空间。「harnesses are about to capture a lot more margin」是 [[entities/agent-harness-evolution-from-llm-call-to-harness-tencent-2026|Agent Harness 演化论]] 的工程叙事之外的资本视角印证。^[raw/articles/ai-comes-for-the-if-statement-tunguz-2026.md]
+
+**边界**：Tunguz 是 Theory Ventures GP，文内有基金立场（投资叙事框架）；邮件分类实验为作者自测（hand-verified 但非独立复现），Jev 定价被 TypeSafe 自己标注"may be subsidized"。^[raw/articles/ai-comes-for-the-if-statement-tunguz-2026.md]
+
+→ [[raw/articles/ai-comes-for-the-if-statement-tunguz-2026|第 3 来源原文]]
