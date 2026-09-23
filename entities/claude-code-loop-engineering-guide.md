@@ -1,7 +1,7 @@
 ---
 title: "Claude Code Loop Engineering 完整攻略"
 created: 2026-07-01
-updated: 2026-09-07
+updated: 2026-09-24
 type: entity
 tags: [claude-code, loop-engineering, agent-workflow, boris-cherny, best-practices]
 sources: [raw/articles/claude-code-loop-engineering-guide-tutuangi-2026]
@@ -123,6 +123,37 @@ Inner Loop 决定这一轮跑不跑得通，Outer Loop 决定下一轮还踩不�
 → [[raw/articles/claude-code-loop-engineering-guide-tutuangi-2026|原文存档]]
 
 ---
+## 深度分析
+
+### 为什么 Loop Engineering 在 2026 取代了 Prompt Engineering
+
+三段演进的本质是「优化的对象」逐层上移：Prompt Engineering 优化单次问答的质量，Multi-Agent Orchestration 优化任务的分派结构，Loop Engineering 则把整个流程本身当作被设计的对象。翻转的动因是「人肉循环」的不可持续——传统模式下每一轮迭代都靠人手动触发，人名义上是导演，实际上被卡在循环里当监工。Loop Engineering 把触发、审查、判断、继续这一整套迭代逻辑交给系统，人的工作从「写提示词」退到「写让提示词自己生成的循环」。这一身份转变与 [[concepts/harness-engineering-framework|Harness Engineering]] 的思路同源：竞争的焦点不再是模型能力，而是围绕模型搭建的环境。
+
+### ReAct 是引擎，Reflexion 是学习机制
+
+ReAct 的「思考 → 行动 → 观察」交替架构解释了单轮迭代为什么能推进：每一次「改 → 跑 → 看 → 改」就是一圈循环。但只有引擎的系统会在同一个坑上反复摔倒——Reflexion 补上了失败处理：把失败用自然语言说清楚，存入记忆，供下一次尝试引用。落到工程上，这对组合分别对应 Inner Loop 的自驱验证行为和 Outer Loop 的持久化经验文件（SKILL.md、progress.md）。引擎没有学习机制，Loop 只是机械重复；学习机制没有引擎，反思无从产生。两者耦合才构成一个能随运行次数变聪明的系统，这也是 [[concepts/agent-self-improvement-loops|Agent 自改进循环]] 的理论起点。
+
+### Inner/Outer Loop 的复利机制
+
+Inner Loop 决定这一轮跑不跑得通，Outer Loop 决定下一轮还踩不踩同一个坑——这句话点出了复利的来源。Inner Loop 的产出是可靠交付（写测试、跑测试、修边界、绿灯后才算完成）；Outer Loop 把每轮结束时的经验教训写入持久化文件，下一轮启动时先读再干。单次「更新 lessons.md 花 30 秒」的投入极低，但它改变的是后续所有轮次的起点：Loop 与普通脚本的本质区别不在于自动化，而在于系统状态随运行次数单调递增。Context Engineering 在这里的角色是设计「哪些信息值得跨会话保留」——记忆写错了，复利就变成了复亏。
+
+### 「5+1」组件是一条依赖链而非清单
+
+把 Addy Osmani 的六个组件平铺看待会低估其结构：它们之间存在明确的依赖次序。Automations 让循环跑起来（但没有停止条件就是吞噬 Token 的黑洞）；跑起来后多 Agent 并行需要 Worktrees 隔离机械冲突；要让每轮「重新理解项目」的成本归零，必须有 Skills 沉淀项目知识；要接入真实工具链则需要 Plugins，且权限边界要提前锁死；高风险环节才引入 Sub-agents 分离生成与验证；最后 Memory 把这一切串成跨会话的连续进程。砍掉中间任何一环，上游组件的投入都会被下游的遗忘吃掉——这正是 [[concepts/loop-engineering-methodology|Loop Engineering 方法论]] 强调「组件齐备才成系统」的原因。
+
+### Open-loop 与 Closed-loop 的经济学
+
+两种形态的取舍表面上是自由度之争，实质上是预算经济学。Open-loop 让 Agent 自主探索多条路径，能产出启动时未定义的结果，但 Token 消耗随探索宽度爆炸，当下只有预算不设限的团队玩得起；Closed-loop 在人类预设的轨道内运行，路径受限所以预算可控，是当前真正产出成果的模式。原文给出的次序判断值得记住：先跑稳 Closed-loop，再考虑用 Open-loop 做探索。这个次序与 [[entities/claude-code-loop-types-official-taxonomy-four-modes|Claude Code Loop 官方分类]] 中按自主程度分级的思路一致——自由度是逐步放出去的，不是一次性交给的。
+
+## 实践启示
+
+1. **从「10 分钟内能验证」的小闭环起步**。不要一上来就搭建全自主 Agent 舰队；先定义一个清晰目标、设好停止条件的小 Closed-loop，跑通之后再逐步扩大范围。
+2. **没有停止条件的 Loop 不是系统，是 bug**。每个循环必须有三种终止路径之一：验证通过（测试绿灯、lint 零告警）、达到迭代上限（自动挂起并通知人）、标记挂起（Agent 判断超出能力，附上分析转 needs-human）。
+3. **用 /goal 作为第一个 Loop 工具**。Claude Code 内置的 /loop、/goal、Dynamic Workflows 三者中，/goal 目标驱动、有明确完成标准，最不容易出错；Dynamic Workflows 留给超大规模编排。
+4. **把每轮结束的 30 秒当作最划算的投资**。花 30 秒更新 lessons.md（遇到什么问题、怎么解决的），下一轮的 Agent 就能直接跳过这个坑——这是 Outer Loop 复利的最低成本入口。
+5. **生成者与验证者必须分离**。最危险的结构是让写代码的 Agent 自己验证自己的代码；在高风险环节引入 Generator/Evaluator 分工，普通 CRUD 不必上这个复杂度。
+6. **Loop 是杠杆，会同时放大判断力和缺席**。设计者不能「让它在后台跑就不管了」——定期 Review Loop 的产出和它的经验教训质量，最终对输出负责的仍然是设计 Loop 的人。控制权如何分阶段移交，可参考 [[entities/claude-code-loop-control-rights-four-levels|Claude Code Loop 控制权四级]] 与 [[concepts/context-engineering|Context Engineering]]。
+
 ## 关联
 - 相关概念: [[concepts/harness-engineering-framework|Harness Engineering]]
 

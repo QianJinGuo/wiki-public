@@ -1,10 +1,10 @@
 ---
 title: "小米 MiMo-V2.6 强化学习直播：RL 扩展的三条轴与「每 1 个百分点多少钱」"
 created: 2026-09-17
-updated: 2026-09-17
+updated: 2026-09-23
 type: entity
 tags: [mimo, xiaomi, reinforcement-learning, post-training, agentic-rl, training-economics, data-mixture, rl-scaling]
-sources: [raw/articles/mimo-v2-6-rl-training-livestream-economics-xiaomi-2026]
+sources: [raw/articles/mimo-v2-6-rl-training-livestream-economics-xiaomi-2026, raw/articles/xiaomi-mimo-v26扩展强化学习规模迈向自我提升]
 confidence: 0.8
 provenance_state: extracted
 ---
@@ -65,5 +65,17 @@ provenance_state: extracted
 - [[entities/agentic-rl-frameworks-practices-long-horizon-wolfe-2026|Agentic RL 框架长程实践]]
 - [[entities/mimo-code-xiaomi-coding-harness-2026|MiMo Code：编码 Harness]]
 - [[entities/mimo-v2-5-inference-system-optimization-hybrid-swa|MiMo-V2.5 推理系统优化]]
+
+
+
+## 第 2 来源 — 小米官方发布：MiMo-V2.6 正式开源（2026-09-22）
+
+小米 2026-09-22 正式发布并开源 MiMo-V2.6 系列（Pro + Flash 两个原生全模态模型），官方将其定位为探索 RSI（递归自我改进）路径的关键一步：以可验证的复杂任务为基础，规模化扩展强化学习（RL）算力，让模型在持续的探索与反馈中不断拓展智能边界。^[raw/articles/xiaomi-mimo-v26扩展强化学习规模迈向自我提升.md]
+
+- **成绩**：MiMo-V2.6-Pro 在 Artificial Analysis Intelligence Index（AA 综合智能指数）取得 46 分，超过 Kimi K3 和 Qwen3.8 Max，成为当前最强的开源模型^[raw/articles/xiaomi-mimo-v26扩展强化学习规模迈向自我提升.md]
+- **RSI 路线声明**：官方明确「在一个智能容易被复制的时代，选择把算力投进真实环境，让模型在反馈中一次次试错、自己学会」——与第 1 来源直播数据（6 天 Live RL 训练、113 万+美元花费）互为印证：直播是过程，本篇是结果^[raw/articles/xiaomi-mimo-v26扩展强化学习规模迈向自我提升.md]
+- 互补角度 3 条：(1) 官方 RSI 定位与 RL 算力扩展路线的正式声明；(2) AA 指数 46 分超越 Kimi K3/Qwen3.8 Max 的开源最强成绩单；(3) Pro/Flash 双版本原生全模态定位确认
+
+→ [[raw/articles/xiaomi-mimo-v26扩展强化学习规模迈向自我提升|第 2 来源原文存档]]
 
 → [[raw/articles/mimo-v2-6-rl-training-livestream-economics-xiaomi-2026|原文存档]]

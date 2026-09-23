@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "sourceRevision": "71d65c6666f2d5b735641791681ab5259004c34f",
+  "sourceRevision": "5525bb702d183112e3d33c6587c94542b0218ea3",
   "files": [
     {
       "path": "raw/articles/0.25秒识破未见攻击-lod-lvlm-jailbreak-detection-emnlp2026.md",
@@ -848,6 +848,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/jfDSlBf_Szz3OTGnmvZjaQ"
     },
     {
+      "path": "raw/articles/4300万论文30亿三元组科研agent实现多视角创新评估-1.md",
+      "title": "4300万论文、30亿三元组，科研Agent实现多视角创新评估",
+      "sourceUrl": null
+    },
+    {
       "path": "raw/articles/4300万论文30亿三元组科研agent实现多视角创新评估.md",
       "title": "4300万论文、30亿三元组，科研Agent实现多视角创新评估",
       "sourceUrl": null
@@ -1023,6 +1028,11 @@
       "sourceUrl": "https://9to5google.com/2026/05/17/gemini-app-thinking-level/"
     },
     {
+      "path": "raw/articles/a-0-click-exploit-chain-for-the-pixel-10-when-a-door-closes-a-window-opens-1.md",
+      "title": "A 0-click exploit chain for the Pixel 10: When a Door Closes, a Window Opens",
+      "sourceUrl": "https://projectzero.google/2026/05/pixel-10-exploit.html"
+    },
+    {
       "path": "raw/articles/a-0-click-exploit-chain-for-the-pixel-10-when-a-door-closes-a-window-opens.md",
       "title": "A 0-click exploit chain for the Pixel 10: When a Door Closes, a Window Opens",
       "sourceUrl": "https://projectzero.google/2026/05/pixel-10-exploit.html"
@@ -1056,6 +1066,11 @@
       "path": "raw/articles/a-recent-experience-with-chatgpt-55-pro-gowerss-weblog.md",
       "title": "a-recent-experience-with-chatgpt-55-pro-gowerss-weblog",
       "sourceUrl": "https://gowers.wordpress.com/2026/05/08/a-recent-experience-with-chatgpt-5-5-pro/"
+    },
+    {
+      "path": "raw/articles/a-tale-of-two-flink-autoscalers.md",
+      "title": "A Tale of Two Flink Autoscalers",
+      "sourceUrl": "https://netflixtechblog.com/a-tale-of-two-flink-autoscalers-e9f6a1b1492b"
     },
     {
       "path": "raw/articles/a16z-com-the-next-frontier-of-visual-ai-is-code.md",
@@ -1143,6 +1158,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/7F0chfVurkfIp3sFunuzUA"
     },
     {
+      "path": "raw/articles/acl-2026-routemoa无需预推理的动态路由实现高效多智能体混合-1.md",
+      "title": "ACL 2026 | RouteMoA：无需预推理的动态路由，实现高效多智能体混合",
+      "sourceUrl": "https://mp.weixin.qq.com/s/nHWEqgpdH2FdZ08AaPylSg"
+    },
+    {
       "path": "raw/articles/acl-2026-routemoa无需预推理的动态路由实现高效多智能体混合.md",
       "title": "ACL 2026 | RouteMoA：无需预推理的动态路由，实现高效多智能体混合",
       "sourceUrl": "https://mp.weixin.qq.com/s/nHWEqgpdH2FdZ08AaPylSg"
@@ -1151,6 +1171,11 @@
       "path": "raw/articles/acl-2026-用图异常检测抓出多智能体网络中的内鬼xg-guard.md",
       "title": "acl-2026-用图异常检测抓出多智能体网络中的内鬼xg-guard",
       "sourceUrl": "https://mp.weixin.qq.com/s/V1NTbaNsWKgwq-iTPaqgSA"
+    },
+    {
+      "path": "raw/articles/acl-2026ai-for聋哑群体港理工开源思考型手语翻译模型-1.md",
+      "title": "ACL 2026｜AI for聋哑群体，港理工开源思考型手语翻译模型",
+      "sourceUrl": "https://mp.weixin.qq.com/s/PgSi0r7Ywy5VdOoCaA4fKw"
     },
     {
       "path": "raw/articles/acl-2026ai-for聋哑群体港理工开源思考型手语翻译模型.md",
@@ -1848,6 +1873,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=Mzg4NTczNzg2OA==&mid=2247511201&idx=1&sn=4af859e8a065ac8c1fa687ace0ea5feb"
     },
     {
+      "path": "raw/articles/agent-评测方法论与体系设计-1.md",
+      "title": "Agent 评测：方法论与体系设计",
+      "sourceUrl": null
+    },
+    {
       "path": "raw/articles/agent-评测方法论与体系设计-2.md",
       "title": "Agent 评测：方法论与体系设计",
       "sourceUrl": null
@@ -2176,6 +2206,11 @@
       "path": "raw/articles/agent的上限可能不在模型而在团队知识.md",
       "title": "Agent的上限，可能不在模型，而在团队知识",
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MjM5ODYwMjI2MA==&mid=2649803612&idx=1&sn=13be122cb61484933486e146d5724e37"
+    },
+    {
+      "path": "raw/articles/agent的自演进被刚刚开源的areal-20按下了加速键-1.md",
+      "title": "Agent的自演进，被刚刚开源的AReaL 2.0按下了加速键",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651019403&idx=1&sn=d35d1f707bb710e0c15f22426ebb2a32&scene=21"
     },
     {
       "path": "raw/articles/agent的自演进被刚刚开源的areal-20按下了加速键.md",
@@ -3796,6 +3831,11 @@
       "path": "raw/articles/anthropic-s-bug-hunting-mythos-was-greatest-marketing-stunt-ever-says-curl-creat.md",
       "title": "anthropic-s-bug-hunting-mythos-was-greatest-marketing-stunt-ever-says-curl-creat",
       "sourceUrl": "https://www.theregister.com/security/2026/05/11/anthropics-bug-hunting-mythos-was-greatest-marketing-stunt-ever-says-curl-creator/5238111"
+    },
+    {
+      "path": "raw/articles/anthropic-to-share-mythos-cyber-flaw-findings-with-global-finance-watchdog-1.md",
+      "title": "Anthropic to share Mythos cyber flaw findings with global finance watchdog",
+      "sourceUrl": "https://www.theguardian.com/technology/2026/may/18/anthropic-ai-claude-mythos-cyber-financial-stability-board-fsb"
     },
     {
       "path": "raw/articles/anthropic-to-share-mythos-cyber-flaw-findings-with-global-finance-watchdog.md",
@@ -5818,6 +5858,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/OUc02wmVtH9RQMhYhZGIdg"
     },
     {
+      "path": "raw/articles/claude-code-太折腾这个国产开源-ai-编程平台打开就能用-1.md",
+      "title": "Claude Code 太折腾？这个国产开源 AI 编程平台打开就能用",
+      "sourceUrl": "https://github.com/chaitin/MonkeyCode/"
+    },
+    {
       "path": "raw/articles/claude-code-太折腾这个国产开源-ai-编程平台打开就能用.md",
       "title": "Claude Code 太折腾？这个国产开源 AI 编程平台打开就能用",
       "sourceUrl": "https://github.com/chaitin/MonkeyCode/"
@@ -5931,6 +5976,11 @@
       "path": "raw/articles/claude-md-12-rules-mnilax-cf2019.md",
       "title": "Mnilax：CLAUDE.md 规则从 Karpathy 的 4 条增加到 12 条，Claude 错误率从 41% 降到 3%",
       "sourceUrl": null
+    },
+    {
+      "path": "raw/articles/claude-md-is-hope-hooks-are-law-2026-09-23.md",
+      "title": "claude-md-is-hope-hooks-are-law-2026-09-23",
+      "sourceUrl": "https://mp.weixin.qq.com/s/zBDd2lVlCkkC0uyCu5D9Dw"
     },
     {
       "path": "raw/articles/claude-opus-4-8-system-card-zvi.md",
@@ -6231,6 +6281,11 @@
       "path": "raw/articles/code-as-agent-harness-survey-2026.md",
       "title": "UIUC、Meta、斯坦福等最新综述！Code as Agent Harness",
       "sourceUrl": "https://mp.weixin.qq.com/s/vJqB2bXnpqU4XqiOEJqL2Q"
+    },
+    {
+      "path": "raw/articles/code-intelligence-changelog-1.md",
+      "title": "Code Intelligence – Changelog",
+      "sourceUrl": "https://linear.app/changelog/2026-05-14-code-intelligence"
     },
     {
       "path": "raw/articles/code-intelligence-changelog.md",
@@ -7018,6 +7073,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/vlIMBcywGL7Xy9_Yc8iJQQ"
     },
     {
+      "path": "raw/articles/deepseek-dsec-agent-training-sandbox-qbitai-2026.md",
+      "title": "deepseek-dsec-agent-training-sandbox-qbitai-2026",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247926294&idx=3&sn=b98b25ac1ed421b8f3c241de5dc50b42"
+    },
+    {
       "path": "raw/articles/deepseek-dspark-speculative-decoding-2026.md",
       "title": "DeepSeek V4 DSpark：投机解码框架",
       "sourceUrl": "https://mp.weixin.qq.com/s/xFzo8SBzqcxtAL3mYnYV-A"
@@ -7728,6 +7788,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/73-7shonpfBBWqsTposzsw"
     },
     {
+      "path": "raw/articles/embodiedskills-closed-loop-agentloop-vla-2026.md",
+      "title": "embodiedskills-closed-loop-agentloop-vla-2026",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIwMTc4ODE0Mw==&mid=2247723105&idx=2&sn=a7a77676b606f13d7d6c5a388ec76744"
+    },
+    {
       "path": "raw/articles/emces-icml2026-episodic-memory-controlled-experience-synthesis-rl.md",
       "title": "emces-icml2026-episodic-memory-controlled-experience-synthesis-rl",
       "sourceUrl": "https://mp.weixin.qq.com/s/rT9VXJk3BZcgVHwgsbz1yw"
@@ -8038,6 +8103,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/WbeRHxfXri_j0rJMoqcnyw"
     },
     {
+      "path": "raw/articles/fable-5回归全网抓紧测发现glm-52更香了价格只有139-1.md",
+      "title": "Fable 5回归全网抓紧测！发现GLM-5.2更香了，价格只有1/39",
+      "sourceUrl": null
+    },
+    {
       "path": "raw/articles/fable-5回归全网抓紧测发现glm-52更香了价格只有139.md",
       "title": "Fable 5回归全网抓紧测！发现GLM-5.2更香了，价格只有1/39",
       "sourceUrl": null
@@ -8198,6 +8268,11 @@
       "sourceUrl": "https://www.figma.com/blog/figma-make-now-on-your-local-code/"
     },
     {
+      "path": "raw/articles/figure-helix-index-human-action-pretraining-2026.md",
+      "title": "figure-helix-index-human-action-pretraining-2026",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247926294&idx=2&sn=a30d0c8cd90866fbf1d0647fe7340802"
+    },
+    {
       "path": "raw/articles/file-upload-multimodal-vector-pipeline-real-time-2026-08-04.md",
       "title": "文件上传即可检索：实时多模态向量链路落地实践",
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzI1MzYzMjE0MQ==&mid=2247521103&idx=2&sn=e4de10f386f34f1620fadc40729e8ec4"
@@ -8271,6 +8346,11 @@
       "path": "raw/articles/flat-feedforward-latent-triangle-splatting.md",
       "title": "flat-feedforward-latent-triangle-splatting",
       "sourceUrl": "https://flat-splat.github.io/"
+    },
+    {
+      "path": "raw/articles/flattening-memory-peaks-long-context-moe-training-arxiv-2026.md",
+      "title": "Flattening Every Memory Peak in Long-Context Mixture-of-Experts Training",
+      "sourceUrl": "https://arxiv.org/abs/2609.14306"
     },
     {
       "path": "raw/articles/flo-health-medical-content-review-bedrock.md",
@@ -8674,6 +8754,11 @@
     },
     {
       "path": "raw/articles/generalization-dynamics-lm-pretraining.md",
+      "title": "Generalization Dynamics of LM Pre-training — Jiaxin Wen",
+      "sourceUrl": "https://jiaxin-wen.github.io/blog/generalization-dynamics"
+    },
+    {
+      "path": "raw/articles/generalization-dynamics-of-lm-pre-training-jiaxin-wen-1.md",
       "title": "Generalization Dynamics of LM Pre-training — Jiaxin Wen",
       "sourceUrl": "https://jiaxin-wen.github.io/blog/generalization-dynamics"
     },
@@ -9581,6 +9666,11 @@
       "path": "raw/articles/harness-engineering长程自动化-ai-coding-skills-开发实践.md",
       "title": "Harness Engineering：长程自动化 AI Coding / Skills 开发实践",
       "sourceUrl": "https://mp.weixin.qq.com/s/mSjb20PDsfiK88C9AQB7og"
+    },
+    {
+      "path": "raw/articles/harness-evolution-vs-test-time-scaling-2026.md",
+      "title": "harness-evolution-vs-test-time-scaling-2026",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651057510&idx=2&sn=8e1bea2b097f6ec4c012b75cf0ccfacb"
     },
     {
       "path": "raw/articles/harness-handbook-tencent-full-paper-ruhan-wang-2026.md",
@@ -10788,6 +10878,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/VHLC8m75AE1WaCZOQdvajg"
     },
     {
+      "path": "raw/articles/is-software-losing-its-head-1.md",
+      "title": "Is Software Losing Its Head?",
+      "sourceUrl": "https://www.a16z.news/p/is-software-losing-its-head"
+    },
+    {
       "path": "raw/articles/is-software-losing-its-head-a16z.md",
       "title": "Is Software Losing Its Head?",
       "sourceUrl": "https://www.a16z.news/p/is-software-losing-its-head"
@@ -11313,6 +11408,11 @@
       "sourceUrl": "https://www.xiaohongshu.com/explore/6a14f1040000000008025eea"
     },
     {
+      "path": "raw/articles/langgraph-10别再用-dag-写-agent-了你的-agent-需要一个操作系统-1.md",
+      "title": "LangGraph 1.0：别再用 DAG 写 Agent 了，你的 Agent 需要一个操作系统",
+      "sourceUrl": null
+    },
+    {
       "path": "raw/articles/langgraph-10别再用-dag-写-agent-了你的-agent-需要一个操作系统-2.md",
       "title": "LangGraph 1.0：别再用 DAG 写 Agent 了，你的 Agent 需要一个操作系统",
       "sourceUrl": null
@@ -11638,6 +11738,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247921478&idx=3&sn=b512b1e355e62dacafb5bba199be7587"
     },
     {
+      "path": "raw/articles/liveworld视频世界模型新范式让镜头之外的世界继续演化-1.md",
+      "title": "LiveWorld：视频世界模型新范式，让镜头之外的世界继续演化",
+      "sourceUrl": "https://mp.weixin.qq.com/s/IBAIk3TPzS_UExnHCtNUwg"
+    },
+    {
       "path": "raw/articles/liveworld视频世界模型新范式让镜头之外的世界继续演化.md",
       "title": "LiveWorld：视频世界模型新范式，让镜头之外的世界继续演化",
       "sourceUrl": "https://mp.weixin.qq.com/s/IBAIk3TPzS_UExnHCtNUwg"
@@ -11863,6 +11968,11 @@
       "sourceUrl": "https://tomtunguz.com/localmaxxing/"
     },
     {
+      "path": "raw/articles/logics-parsing-v3-长文跨页解析阿里云栖.md",
+      "title": "云栖首发：Logics-Parsing-V3 重磅升级——贯通全文，长文无界",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=Mzg4NTczNzg2OA==&mid=2247511554&idx=2&sn=bb63ca216e344e7ab783a06ef3dacd39"
+    },
+    {
       "path": "raw/articles/london-met-police-big-tech-data-requests.md",
       "title": "London's police asked Big Tech for comms data over 700,000 times last year",
       "sourceUrl": "https://www.theregister.com/databases/2026/05/20/londons-police-asked-big-tech-for-comms-data-over-700000-times-last-year/5242590"
@@ -11891,6 +12001,11 @@
       "path": "raw/articles/long-running-agent-ralph-loop-harness-takeover.md",
       "title": "长周期 Agent 详解：从 Ralph Loop 到可接管 Harness",
       "sourceUrl": "https://mp.weixin.qq.com/s/ML5aD3f2ilHWjSB-wpBukw"
+    },
+    {
+      "path": "raw/articles/longds-bench-zhejiang-emnlp-2026.md",
+      "title": "longds-bench-zhejiang-emnlp-2026",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIwMTc4ODE0Mw==&mid=2247722976&idx=2&sn=2b29e5ac5a2006d0ff45213171b9a8a6"
     },
     {
       "path": "raw/articles/longhorizon-harness-mea-alibaba-dreamx-arxiv-2026-09-01.md",
@@ -12518,6 +12633,11 @@
       "sourceUrl": "https://engineering.fb.com/2026/07/01/data-infrastructure/metas-ai-storage-blueprint-at-scale/"
     },
     {
+      "path": "raw/articles/metis-eeg-foundation-model-2026.md",
+      "title": "metis-eeg-foundation-model-2026",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIwMTc4ODE0Mw==&mid=2247723081&idx=3&sn=7276b1242aa2087ef4f68f6c5aac1ae3"
+    },
+    {
       "path": "raw/articles/metis-memory-foundation-model-hyman-2026.md",
       "title": "MemTensor 开源 Metis：把记忆写进模型内部，128K 长文本端到端加速 1.6 倍",
       "sourceUrl": "https://mp.weixin.qq.com/s/x7gSZb1Agp2T01nlLGgnYA"
@@ -12691,6 +12811,11 @@
       "path": "raw/articles/minicpm5-2b-multi-agent-edge-4b-tier-training-open-source-paperweekly-2026.md",
       "title": "minicpm5-2b-multi-agent-edge-4b-tier-training-open-source-paperweekly-2026",
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIwMTc4ODE0Mw==&mid=2247722778&idx=1&sn=9c434a5ab563c8132329aef1768bd735"
+    },
+    {
+      "path": "raw/articles/minigame-self-iterating-agent-taobao-tian-2026-09-23.md",
+      "title": "minigame-self-iterating-agent-taobao-tian-2026-09-23",
+      "sourceUrl": "https://mp.weixin.qq.com/s/jWpz6woP95eowKaFYVUSpg"
     },
     {
       "path": "raw/articles/minimal-cli-agent-250-line-python-ollama-7-stages.md",
@@ -12913,6 +13038,11 @@
       "sourceUrl": "https://www.theregister.com/security/2026/05/18/mozilla-warns-uk-breaking-vpns-will-not-magically-fix-britains-age-check-mess/5241770/"
     },
     {
+      "path": "raw/articles/mozilla-warns-uk-breaking-vpns-will-not-magically-fix-britain-s-age-check-mess-1.md",
+      "title": "Mozilla warns UK: Breaking VPNs will not magically fix Britain's age-check mess",
+      "sourceUrl": "https://www.theregister.com/security/2026/05/18/mozilla-warns-uk-breaking-vpns-will-not-magically-fix-britains-age-check-mess/5241770"
+    },
+    {
       "path": "raw/articles/mozilla-warns-uk-breaking-vpns-will-not-magically-fix-britain-s-age-check-mess.md",
       "title": "Mozilla warns UK: Breaking VPNs will not magically fix Britain's age-check mess",
       "sourceUrl": "https://www.theregister.com/security/2026/05/18/mozilla-warns-uk-breaking-vpns-will-not-magically-fix-britains-age-check-mess/5241770/"
@@ -12926,6 +13056,11 @@
       "path": "raw/articles/msa-sparse-attention-three-kingdoms-huashu-2026-06-12.md",
       "title": "MSA上桌，稀疏注意力玩家开始三国杀：MSA/DSA/MoBA/NSA 四方案深度对比",
       "sourceUrl": "https://mp.weixin.qq.com/s/4ij1qsval_7k2GwehW1Tzg"
+    },
+    {
+      "path": "raw/articles/mtfm美团统一推荐基座大模型在外卖多业务场景的落地实践-送中秋礼盒.md",
+      "title": "mtfm美团统一推荐基座大模型在外卖多业务场景的落地实践-送中秋礼盒",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MjM5NjQ5MTI5OA==&mid=2651783470&idx=1&sn=da5e4ae285f534a2687fce77543806b0"
     },
     {
       "path": "raw/articles/mtp-加速推理最佳实践在亚马逊云科技中国区使用-llamacpp-部署-qwen36-的实测指南.md",
@@ -12986,6 +13121,11 @@
       "path": "raw/articles/multimodal-agentic-frameworks-survey-mozhi-space-2026.md",
       "title": "60页综述：多模态智能体框架基础与前沿",
       "sourceUrl": "https://mp.weixin.qq.com/s/NcJSy3AyB2_qMlfOLmduQw"
+    },
+    {
+      "path": "raw/articles/multimodal-agents-self-improvement-five-layer-kaust-zhuge-2026.md",
+      "title": "multimodal-agents-self-improvement-five-layer-kaust-zhuge-2026",
+      "sourceUrl": "https://mp.weixin.qq.com/s/JGh_vj-o5yckThapvQludQ"
     },
     {
       "path": "raw/articles/multimodal-evaluators-mllm-as-judge-image-to-text.md",
@@ -13838,6 +13978,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/ppu5uNhfDvR0YthSo1XG-g"
     },
     {
+      "path": "raw/articles/openai公开大规模稳定训练的秘密英伟达amd英特尔都受益-1.md",
+      "title": "OpenAI公开大规模稳定训练的秘密，英伟达AMD英特尔都受益",
+      "sourceUrl": "https://mp.weixin.qq.com/s/QugylM-Bhdx785Gnxca84w"
+    },
+    {
       "path": "raw/articles/openai公开大规模稳定训练的秘密英伟达amd英特尔都受益.md",
       "title": "OpenAI公开大规模稳定训练的秘密，英伟达AMD英特尔都受益",
       "sourceUrl": "https://mp.weixin.qq.com/s/QugylM-Bhdx785Gnxca84w"
@@ -14211,6 +14356,11 @@
       "path": "raw/articles/opus-4-7-launch-claude-code-best-practices-wechat.md",
       "title": "刚刚Opus 4.7发布，相比4.6核心变化，与Claude Code搭配最佳实践",
       "sourceUrl": "https://mp.weixin.qq.com/s/99QSrB_bwEOcVo0_rd6iSg"
+    },
+    {
+      "path": "raw/articles/opus-55-official-prompting-guide-agi-hunt-2026-09-23.md",
+      "title": "opus-55-official-prompting-guide-agi-hunt-2026-09-23",
+      "sourceUrl": "https://mp.weixin.qq.com/s/JXnBsVEgJ-lPfqRiR4Qxeg"
     },
     {
       "path": "raw/articles/orchestrating-self-evolving-agents-with-crewai-and-nvidia-ne.md",
@@ -15393,6 +15543,11 @@
       "sourceUrl": "https://arxiv.org/abs/2606.26294"
     },
     {
+      "path": "raw/articles/rrsi-regularized-recursive-self-improvement-agent-harnesses.md",
+      "title": "RRSI: Regularized Recursive Self-Improvement of Agent Harnesses",
+      "sourceUrl": "https://regularized-rsi.com/"
+    },
+    {
       "path": "raw/articles/rsi-evomap-experience-driven-test-time-evolution-2026-09-03.md",
       "title": "RSI 离我们有多远？这家中国团队给出了第一梯队的工程解",
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651054414&idx=1&sn=8b059e8c7025fd12ef2262632d066f8d"
@@ -15471,6 +15626,11 @@
       "path": "raw/articles/ruofei-multi-agent-consistency-four-questions-2026.md",
       "title": "面试官：讲一讲多 Agent 协作如何保持一致性（微信 @架构师若飞）",
       "sourceUrl": "https://mp.weixin.qq.com/s/XnSQdFpG-MdbctvLtHiMMA"
+    },
+    {
+      "path": "raw/articles/ruofei-multi-agent-supervisor-dispatch-bottleneck-2026-09-23.md",
+      "title": "ruofei-multi-agent-supervisor-dispatch-bottleneck-2026-09-23",
+      "sourceUrl": "https://mp.weixin.qq.com/s/OlSIKX_ZPChOz9eaapK6TQ"
     },
     {
       "path": "raw/articles/ruofei-multi-agent-workflow-architecture-2026-09-20.md",
@@ -16788,6 +16948,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/72gop2ih2CjnWT2T3q2aqg"
     },
     {
+      "path": "raw/articles/taobao-generative-retrieval-rqvae-cikm-2026.md",
+      "title": "taobao-generative-retrieval-rqvae-cikm-2026",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIzOTU0NTQ0MA==&mid=2247562306&idx=1&sn=7377e0911a66a68752c933ed3f01f247"
+    },
+    {
       "path": "raw/articles/taobao-high-price-rate-ai-workbench-eval-optimization.md",
       "title": "taobao-high-price-rate-ai-workbench-eval-optimization",
       "sourceUrl": "https://mp.weixin.qq.com/s/MK7cqiAAeU6MMrehFhSiWw"
@@ -17651,6 +17816,11 @@
       "path": "raw/articles/twelve-agent-design-patterns-yunduojun-datastudio.md",
       "title": "一文读懂 12 个 Agent 工程设计底层逻辑",
       "sourceUrl": "https://mp.weixin.qq.com/s/vdHloWWaKC7O72sK0SSOig"
+    },
+    {
+      "path": "raw/articles/twist-privacy-preserving-llm-serving-ccs-2026.md",
+      "title": "twist-privacy-preserving-llm-serving-ccs-2026",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzI1MzYzMjE0MQ==&mid=2247522837&idx=1&sn=9a517deecee420b33ef098ae4fc00802"
     },
     {
       "path": "raw/articles/two-days-one-engineer-zero-guesswork-simplifying-a-complex-modernization-with-ib.md",
@@ -18643,6 +18813,11 @@
       "sourceUrl": "https://arxiv.org/abs/2602.01698"
     },
     {
+      "path": "raw/articles/xiaomi-mimo-v26扩展强化学习规模迈向自我提升.md",
+      "title": "xiaomi-mimo-v26扩展强化学习规模迈向自我提升",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzUxMDQxMDMyNg==&mid=2247520378&idx=2&sn=a6d824c9c91ef9f0b03b4c9cb953bda4"
+    },
+    {
       "path": "raw/articles/xiaomi-retail-ai-engineering-three-layer-practice.md",
       "title": "AI Coding 下半场：小米零售研发团队的三层工程实践",
       "sourceUrl": null
@@ -18983,6 +19158,11 @@
       "sourceUrl": "https://jetspec-project.github.io/jetspec-web/"
     },
     {
+      "path": "raw/articles/不改一行代码看透-ai-agent-的每一次调用-1.md",
+      "title": "不改一行代码，看透 AI Agent 的每一次调用",
+      "sourceUrl": null
+    },
+    {
       "path": "raw/articles/不改一行代码看透-ai-agent-的每一次调用-2.md",
       "title": "不改一行代码，看透 AI Agent 的每一次调用",
       "sourceUrl": null
@@ -19046,6 +19226,11 @@
       "path": "raw/articles/世界模型的deepseek时刻魔芯flash-world-model降本70跑出50fps实时交互.md",
       "title": "世界模型的deepseek时刻魔芯flash-world-model降本70跑出50fps实时交互",
       "sourceUrl": "https://mp.weixin.qq.com/s/eN842wwpGIonGbg8EwKkSg"
+    },
+    {
+      "path": "raw/articles/世界模型的新用途不做选手去当裁判-1.md",
+      "title": "世界模型的新用途：不做选手，去当裁判",
+      "sourceUrl": null
     },
     {
       "path": "raw/articles/世界模型的新用途不做选手去当裁判-2.md",
@@ -19131,6 +19316,11 @@
       "path": "raw/articles/京东-oxygen-xllm-大模型推理引擎正式捐赠开放原子开源基金会共建国产-ai-infra-生态.md",
       "title": "京东-oxygen-xllm-大模型推理引擎正式捐赠开放原子开源基金会共建国产-ai-infra-生态",
       "sourceUrl": "https://mp.weixin.qq.com/s/GO7WBBoXMj_ZdYI93EY4zA"
+    },
+    {
+      "path": "raw/articles/京东-taro-native-框架静态布局直渲提速-1.md",
+      "title": "京东 Taro Native 框架静态布局直渲提速",
+      "sourceUrl": null
     },
     {
       "path": "raw/articles/京东-taro-native-框架静态布局直渲提速.md",
@@ -19306,6 +19496,11 @@
       "path": "raw/articles/从日志学习到风洞验证构建-gpu-集群的-ai-native-稳定性闭环.md",
       "title": "从日志学习到风洞验证：构建 GPU 集群的 AI Native 稳定性闭环",
       "sourceUrl": "https://mp.weixin.qq.com/s/vz5AUT8eqsedUeUu7VmIWQ"
+    },
+    {
+      "path": "raw/articles/从月球漫步到赛博都市wbench测出了世界模型的边界-1.md",
+      "title": "从月球漫步到赛博都市，WBench测出了世界模型的边界",
+      "sourceUrl": null
     },
     {
       "path": "raw/articles/从月球漫步到赛博都市wbench测出了世界模型的边界-2.md",
@@ -19503,6 +19698,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/B7t3CjzWSerUXgXMm6bF0Q"
     },
     {
+      "path": "raw/articles/全球首个英伟达含量为0的万亿模型成了海外开发者的抢手货-1.md",
+      "title": "全球首个英伟达含量为0的万亿模型，成了海外开发者的抢手货",
+      "sourceUrl": "https://longcat.chat/platform/product"
+    },
+    {
       "path": "raw/articles/全球首个英伟达含量为0的万亿模型成了海外开发者的抢手货-2.md",
       "title": "全球首个英伟达含量为0的万亿模型，成了海外开发者的抢手货",
       "sourceUrl": "https://longcat.chat/platform/product"
@@ -19663,6 +19863,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/kZrryL8_fxfq2pSFw6LSqg"
     },
     {
+      "path": "raw/articles/刚刚阶跃step-5-preview发布一举杀进全球开源前三.md",
+      "title": "刚刚阶跃step-5-preview发布一举杀进全球开源前三",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652727746&idx=1&sn=51288ba67633d11f1b7e76f3461ce59b"
+    },
+    {
       "path": "raw/articles/刚刚首个空间原生的具身视觉基模开源机器人更会看我们的世界了.md",
       "title": "刚刚首个空间原生的具身视觉基模开源机器人更会看我们的世界了",
       "sourceUrl": "https://mp.weixin.qq.com/s/z1iVG8ZKv3Rj8TOMB6eezQ"
@@ -19793,6 +19998,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/2pk4Mhr4nLMapJrTqpYX6Q"
     },
     {
+      "path": "raw/articles/向量检索知识图谱与-llm-wikirag-被嘲笑了三年但企业还是离不开它-1.md",
+      "title": "向量检索、知识图谱与 LLM Wiki：RAG 被嘲笑了三年，但企业还是离不开它",
+      "sourceUrl": null
+    },
+    {
       "path": "raw/articles/向量检索知识图谱与-llm-wikirag-被嘲笑了三年但企业还是离不开它-2.md",
       "title": "向量检索、知识图谱与 LLM Wiki：RAG 被嘲笑了三年，但企业还是离不开它",
       "sourceUrl": null
@@ -19821,6 +20031,11 @@
       "path": "raw/articles/吴恩达ai-将最先杀死前端.md",
       "title": "吴恩达：AI 将最先杀死前端",
       "sourceUrl": "https://mp.weixin.qq.com/s/a_oKNMlSQLuAMfDMsOD0Wg"
+    },
+    {
+      "path": "raw/articles/吴恩达最新思考从分钟到天ai产品如何靠三层loop迭代-1.md",
+      "title": "吴恩达最新思考：从分钟到天，AI产品如何靠三层Loop迭代",
+      "sourceUrl": null
     },
     {
       "path": "raw/articles/吴恩达最新思考从分钟到天ai产品如何靠三层loop迭代-2.md",
@@ -20258,6 +20473,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/57U6XeKCGtVkQXnNqg9DJQ"
     },
     {
+      "path": "raw/articles/异构token工厂不再踩坑多机构联合发布工业级设计实践拆解跨硬件推理服务的核心边界-1.md",
+      "title": "异构Token工厂不再踩坑！多机构联合发布工业级设计实践，拆解跨硬件推理服务的核心边界",
+      "sourceUrl": "https://arxiv.org/pdf/2606.29708"
+    },
+    {
       "path": "raw/articles/异构token工厂不再踩坑多机构联合发布工业级设计实践拆解跨硬件推理服务的核心边界.md",
       "title": "异构Token工厂不再踩坑！多机构联合发布工业级设计实践，拆解跨硬件推理服务的核心边界",
       "sourceUrl": "http://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651042515&idx=2&sn=6994427190f016869ee92b7a2fab085a&chksm=84e676adb391ffbb1c9e0564cbb6cfe0d83768785f1ce952c8df564ea311519283ee1870d4d3"
@@ -20266,6 +20486,11 @@
       "path": "raw/articles/强化学习如何不用奖励模型提高通用问题推理能力.md",
       "title": "强化学习如何不用奖励模型提高通用问题推理能力",
       "sourceUrl": "https://mp.weixin.qq.com/s/b8FCa0JtRJu8PbnTVkAPxg"
+    },
+    {
+      "path": "raw/articles/强化学习没作用人大delta精准识别关键token推理正确率大幅上升-1.md",
+      "title": "强化学习没作用？人大DelTA精准识别关键token，推理正确率大幅上升",
+      "sourceUrl": null
     },
     {
       "path": "raw/articles/强化学习没作用人大delta精准识别关键token推理正确率大幅上升-2.md",
@@ -20406,6 +20631,11 @@
       "path": "raw/articles/手机本地一键成片靠的是一个8b小模型的自我进化-emnlp26.md",
       "title": "手机本地一键成片靠的是一个8b小模型的自我进化-emnlp26",
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247916663&idx=2&sn=174f44f53f5fb8296479fc52f461ad5f"
+    },
+    {
+      "path": "raw/articles/打破碎片化瓶颈浙大哈佛开源unigeo高保真相机可控编辑-1.md",
+      "title": "打破碎片化瓶颈！浙大&哈佛开源UniGeo，高保真相机可控编辑",
+      "sourceUrl": "https://mp.weixin.qq.com/s/ejSrcVpibbJebtQ1kiVuWw"
     },
     {
       "path": "raw/articles/打破碎片化瓶颈浙大哈佛开源unigeo高保真相机可控编辑.md",
@@ -20666,6 +20896,11 @@
       "path": "raw/articles/李飞飞lecun疯狂加注这匹中国黑马已在因果ai暗战6年.md",
       "title": "李飞飞lecun疯狂加注这匹中国黑马已在因果ai暗战6年",
       "sourceUrl": "https://mp.weixin.qq.com/s/stcgM_ps00Pr6gKOq0g5Pw"
+    },
+    {
+      "path": "raw/articles/李飞飞署名具身新论文sim2real烧不起real2sim量大管饱-1.md",
+      "title": "李飞飞署名具身新论文：Sim2Real烧不起，Real2Sim量大管饱",
+      "sourceUrl": null
     },
     {
       "path": "raw/articles/李飞飞署名具身新论文sim2real烧不起real2sim量大管饱.md",
@@ -21143,6 +21378,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/X-ZS8SVKSnkPBI1KeRn4eA"
     },
     {
+      "path": "raw/articles/美团-longcat-开源-vitabench-20长期动态智能体基准新标杆-1.md",
+      "title": "美团 LongCat 开源 VitaBench 2.0：长期动态智能体基准新标杆",
+      "sourceUrl": null
+    },
+    {
       "path": "raw/articles/美团-longcat-开源-vitabench-20长期动态智能体基准新标杆.md",
       "title": "美团 LongCat 开源 VitaBench 2.0：长期动态智能体基准新标杆",
       "sourceUrl": null
@@ -21218,6 +21458,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MjM5ODYwMjI2MA==&mid=2649803888&idx=1&sn=d8d6ffd2c6caf69c7f740a238d0f1619"
     },
     {
+      "path": "raw/articles/腾讯混元最新开源440m翻译模型手机离线就能用翻译质量超谷歌-1.md",
+      "title": "腾讯混元最新开源：440M翻译模型手机离线就能用，翻译质量超谷歌",
+      "sourceUrl": "https://mp.weixin.qq.com/s/YfAzeUGSsLzzcWSSFfH19w"
+    },
+    {
       "path": "raw/articles/腾讯混元最新开源440m翻译模型手机离线就能用翻译质量超谷歌.md",
       "title": "腾讯混元最新开源：440M翻译模型手机离线就能用，翻译质量超谷歌",
       "sourceUrl": "https://mp.weixin.qq.com/s/YfAzeUGSsLzzcWSSFfH19w"
@@ -21253,9 +21498,19 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/zBorm23mazS7dSG3XOibOA"
     },
     {
+      "path": "raw/articles/腾讯研究院ai速递-20260629-1.md",
+      "title": "腾讯研究院AI速递 20260629",
+      "sourceUrl": "https://mp.weixin.qq.com/s/PGvKPn8UmHxPh9CfwkTANA"
+    },
+    {
       "path": "raw/articles/腾讯研究院ai速递-20260629.md",
       "title": "腾讯研究院AI速递 20260629",
       "sourceUrl": "https://mp.weixin.qq.com/s/PGvKPn8UmHxPh9CfwkTANA"
+    },
+    {
+      "path": "raw/articles/腾讯研究院ai速递-20260630-1.md",
+      "title": "腾讯研究院AI速递 20260630",
+      "sourceUrl": "https://mp.weixin.qq.com/s/9NGJ_zY9fBU27-o3eLykaw"
     },
     {
       "path": "raw/articles/腾讯研究院ai速递-20260630.md",
@@ -21363,6 +21618,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/jyAy4ux8BUclTHnhsU-qzg"
     },
     {
+      "path": "raw/articles/训练世界模型开始从人类的肌肉和脑子里偷师了-1.md",
+      "title": "训练世界模型，开始从人类的肌肉和脑子里偷师了",
+      "sourceUrl": null
+    },
+    {
       "path": "raw/articles/训练世界模型开始从人类的肌肉和脑子里偷师了.md",
       "title": "训练世界模型，开始从人类的肌肉和脑子里偷师了",
       "sourceUrl": null
@@ -21406,6 +21666,11 @@
       "path": "raw/articles/谷歌史上最差ai模型发布-gemini-35-pro延期.md",
       "title": "谷歌史上最差ai模型发布-gemini-35-pro延期",
       "sourceUrl": "https://mp.weixin.qq.com/s/oQN0SESTlxn92kXJqLZqHw"
+    },
+    {
+      "path": "raw/articles/谷歌风雨飘摇市值蒸发数千亿美元gemini-spark能救场吗-1.md",
+      "title": "谷歌风雨飘摇，市值蒸发数千亿美元！Gemini Spark能救场吗？",
+      "sourceUrl": null
     },
     {
       "path": "raw/articles/谷歌风雨飘摇市值蒸发数千亿美元gemini-spark能救场吗.md",

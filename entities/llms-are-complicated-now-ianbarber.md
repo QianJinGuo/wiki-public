@@ -10,7 +10,7 @@ tags:
   - complexity
   - model-architecture
 created: 2026-06-22
-updated: 2026-09-07
+updated: 2026-09-24
 type: entity
 review_value: 7
 review_confidence: 7
@@ -53,6 +53,32 @@ Andrej Karpathy recently joined Anthropic, in part to develop richer auto-resear
 1.   And many smaller ones, shout outs to all my Content Understanding and integri ^[raw/articles/llms-are-complicated-now-ianbarber.md]
 
 ---
+## 深度分析
+
+### recsys→LLM 的复杂性收敛
+
+Ian Barber 的核心论点是：LLM 架构正在重演 recsys 的轨迹。2022-2023 年的 Meta 同时在做两件事——Llama 的前身是一条干净、平滑、重复堆叠的 Transformer 流水线，而推荐系统的图则"令人恐惧"。十年间，recsys 从干净的双塔（two-tower）稀疏神经网络出发，被"能力持续增长"与"推理必须高效"这对张力一步步逼进了优化迷宫。如今 LLM 也在走同一条路：注意力变体、MoE 路由、多模态混合、多卡推理的通信算子，全都长进了模型定义的中间。区别只在于起点更干净，终点的混乱程度正在追平。 ^[raw/articles/llms-are-complicated-now-ianbarber.md]
+
+### 注意力变体爆炸是一个 composability 问题
+
+现代模型的注意力早已不是单一算子：query grouping、compressed、sparse、linear、sliding-window 层出不穷；MoE 先给 FFN 加上了 selective routing，随后 routing 蔓延到 attention block 乃至 residual stream；视觉/音频编码器从外挂变成内嵌；推理跨多卡展开又引入了横切模型的通信边界。变体多本身不是问题，问题是这些变体都要求 fused kernel 才有竞争力——每换一次变体，就要重做一轮手写融合。这正是 [[concepts/attention-mechanism|Attention Mechanism]] 的研究迭代被 kernel 工程绑架的结构性原因：换掉变体 `A` 时，`B` 慢 10% 可以接受，慢一个数量级就不行；若 `A` 已高度 fused，`B` 至少要有部分 fused 版本才值得探索。相关落地案例可参见 [[entities/sliding-window-beats-linear-attention-microsoft-2026|Sliding-window beats linear attention]] 与 [[entities/deepseek-v3-moe-architecture|DeepSeek V3 MoE 架构]]。 ^[raw/articles/llms-are-complicated-now-ianbarber.md]
+
+### FlexAttention：composable + verifiable 的正面证明
+
+出路是 upfront 设计成可组合。PyTorch 的 FlexAttention 是 Barber 最欣赏的 kernel 开发之一：它把一整类 attention 操作收进统一抽象，经由 Triton 模板按需生成 kernel。关键在于它建立在庞大的 attention kernel 工作积累之上，并且从第一天就被设计为 composable 且 verifiable——研究者可以只付出很小的性能代价去探索新变体，而不必为每个变体手写融合。这就是"为 composability 设计"能把研究迭代循环从 kernel 工程中解耦出来的证明。 ^[raw/articles/llms-are-complicated-now-ianbarber.md]
+
+### agent 自动融合的 caveat：没有基线就无法验证
+
+很 tempting 的假设是 agent 会 Fix This——把 PyTorch/JAX 定义丢给 agent，让它生成最优 fused kernel（Hazy Research 的 Megakernels 是这个方向的原型）。但要让生成的 kernel 可信，需要一个 fixed、usable 的 baseline 来判定生成结果"是对的"。recsys 的教训在这里生效：性能从 optimization 变成 necessity 的缝隙极小——概念上可以保留一个纯模型定义当基线，实际上训练和测试一个模型要消耗大量资源，性能改进很快变成 load-bearing。没有可验证基线的 auto-fusion 循环是空中楼阁；Karpathy 加入 Anthropic 做 auto-research loop 时也强调，把架构裁剪到本质并使其可组合，与聪明的 agentic setup 同样重要。类似的 agent 生成 kernel 实例可参见 [[entities/fable-5-cuda-super-kernel-187x-speedup-2026|Fable 5 手搓 CUDA 超级内核]]。 ^[raw/articles/llms-are-complicated-now-ianbarber.md]
+
+## 实践启示
+
+1. **为 composability 提前设计**：在你自己的模型/推理栈里，把 attention 变体、routing 策略做成可插拔组件，而不是把变体 fuse 死在一个 monolithic kernel 里——参考 FlexAttention 的 Triton 模板思路。 ^[raw/articles/llms-are-complicated-now-ianbarber.md]
+2. **守住一个可验证的 baseline**：任何 auto-fusion 或 agent 生成 kernel 的工作流，必须先固定一个"纯模型定义"基线用于正确性校验，否则生成的代码无法判定对错。 ^[raw/articles/llms-are-complicated-now-ianbarber.md]
+3. **警惕性能从优化变成承重墙**：当性能改进开始 load-bearing（训练/测试成本高到无法重跑）时，重构窗口就关闭了——留给架构调整的时间比想象中少。 ^[raw/articles/llms-are-complicated-now-ianbarber.md]
+4. **评估新变体用相对成本阈值**：换注意力变体时，能接受 ~10% 的性能损失用于探索，不能接受数量级倒退；这决定了变体在多大程度融合后才值得评估。 ^[raw/articles/llms-are-complicated-now-ianbarber.md]
+5. **把 kernel 能力视为研究迭代的一等公民**：变体爆炸时代，没有 kernel 路径的架构想法无法被验证；团队应把 kernel 生成/组合能力当作基础设施投入，而非一次性优化任务。 ^[raw/articles/llms-are-complicated-now-ianbarber.md]
+
 ## 关联
 - 相关概念: [[concepts/harness-engineering-framework|Harness Engineering]]
 

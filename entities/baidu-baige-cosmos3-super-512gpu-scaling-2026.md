@@ -2,7 +2,7 @@
 title: "百度百舸 Cosmos3-Super 512 卡 Scaling：无 NVLink 通用 GPU 集群的 AI Infra 工程优化"
 type: entity
 created: "2026-08-03"
-updated: 2026-09-07
+updated: 2026-09-24
 tags: [wechat, ai-infra, distributed-training, world-model, fsdp2, scaling, baidu]
 rating: v8c9
 confidence: 0.85
@@ -65,6 +65,33 @@ review_category: practice
 - 大规模集群：FSDP2 全量分片、ERI 网络协同
 
 未来方向：为 WM、VLM、VLA 等新一代基础模型提供高效、稳定、可扩展训练平台。^[raw/articles/baidu-baige-cosmos3-super-512gpu-scaling-2026-08-03.md]
+
+## 深度分析
+
+### 无 NVLink 下 97.48% 弱扩展效率为何成立
+
+这份结果的价值在于它挑战了"没有专用互联就训不了世界模型"的前提假设。hpas.lgn7ib 实例间无 HPN、机内无 NVLink，跨节点通信完全依托 ERI（弹性 RDMA 互联）网络；与此同时，FSDP2 对参数、梯度和 Optimizer State 做全量分片（data_parallel_shard_degree 从 16 扩到 512），把每卡常驻显存压到最低，也从源头上削减了 AllReduce 需要搬运的通信量。换句话说，弱扩展效率不掉，靠的不是更快的网络单点，而是"分片降低通信基数 + RDMA 网络承接剩余流量"的组合替代了 NVLink/HPN 的作用。从 4n 到 64n，median step time 仅从 30.12s 增至 30.90s（约 +2.6%），说明通信开销没有随规模失控——这正是 [[concepts/scaling-laws]] 实验得以在通用集群上做大的先决条件。^[raw/articles/baidu-baige-cosmos3-super-512gpu-scaling-2026-08-03.md]
+
+### 718 个 Tensor / 31.26B 参数：冻结 Reasoner 的 SFT 模式
+
+64B 参数全部加载并参与前向，但只有 718 个 Tensor、约 31.26B 参数拥有梯度与 Optimizer State——这个数字本身就是一条可复用的工程结论。Cosmos3 的 MoT 双模块架构把知识表达与推理（Reasoner）和生成（Generator）解耦，SFT 只对 Generator 侧模块（moe_gen、time_embedder、vae2llm、llm2vae、action2llm、llm2action、action_modality_embed 等）开放梯度更新。对具身智能公司而言，这是一个成本可控的落地模式：用自家场景数据只调 Generator，就能针对性提升机器人任务表现，而不必承担全参微调 64B 模型的算力与显存代价。这与 [[entities/nvidia-cosmos-fine-tuning-robot-video-generation]] 和 [[entities/fine-tuning-cosmos]] 讨论的 Cosmos 系列微调路线一脉相承，也解释了为什么官方把这条 SFT 策略视为对具身智能行业的现实意义所在。^[raw/articles/baidu-baige-cosmos3-super-512gpu-scaling-2026-08-03.md]
+
+### Empty Local Shard：非 NVIDIA 集群上的框架成熟度试金石
+
+FSDP2 对小参数切分时产生合法的 Empty Local Shard（numel==0 的空分片），本是一个边界场景，但 NormMonitor 和 FusedAdam 都没有适配：前者会把空分片的范数算错，后者在 fused kernel 里处理空张量会出问题。百度百舸的修复方式是语义保持的——NormMonitor 将空分片范数贡献按 0 处理，FusedAdam 跳过 numel()==0 的分片并在更新后恢复梯度引用，不改变参数更新的数学结果。这个案例透露的信息是：主流训练框架在非 NVIDIA 集群上的组合（国产 GPU + FSDP2 + Torch Compile）仍处于"能用但要自己补边角"的阶段，生态位越偏离 NVIDIA 参考实现，这类边角问题越密集。对任何计划在 [[concepts/world-models]] 训练上迁移技术栈的团队，空分片这类隐式假设值得提前排查。^[raw/articles/baidu-baige-cosmos3-super-512gpu-scaling-2026-08-03.md]
+
+### 2 节点 OOM 与 Compile 取舍：小规模下的工程约束
+
+按官方配置 SFT Cosmos3-Super 需同时开启 VAE Compile 与 MoT Language Compile，但在 2 节点环境下 Language Compile 的编译期显存开销直接触发初始化 OOM，只能降级为 VAE Compile Only（14.76 samples/s）；扩到 4 节点后双 Compile 全开，吞吐跃升至 33.997 samples/s。4n 相对 2n 的 2.3x 涨幅超过节点翻倍的理论值 2x，说明 Language Compile 带来了额外性能收益——但由于同时混入了节点数因素，这并非严格的 Compile A/B 对照。这组数据是工程约束的典型样本：最小可行集群规模不是由算力决定的，而是由编译期显存峰值决定的；"Compile 开不开"在 2 节点和 4 节点上答案不同，优化策略必须随规模分段。^[raw/articles/baidu-baige-cosmos3-super-512gpu-scaling-2026-08-03.md]
+
+## 实践启示
+
+1. **无专用互联不等于不能 Scale**：ERI 网络 + FSDP2 全量分片的组合可以在无 HPN、无 NVLink 的通用集群上把 512 卡弱扩展效率做到 97.48%；评估训练平台时，应把"框架分片策略 + 网络"作为整体看待，而不是只看互联规格。
+2. **冻结主干、只调生成侧是具身智能的务实 SFT 路线**：参考 Cosmos3 MoT 的做法，用自家场景数据只微调 Generator 相关模块（约 31.26B/64B），即可针对性提升机器人任务表现，避免全参微调的显存与算力成本。
+3. **迁移训练框架到非 NVIDIA 集群时，先排查空分片类边界用例**：FSDP2 的 Empty Local Shard 在 NormMonitor/FusedAdam 上暴露的支持缺口说明，若组合偏离 NVIDIA 参考实现，需要为 optimizer、norm 监控等组件预留补丁预算。
+4. **最小集群规模由编译期显存峰值决定**：Language Compile 在 2 节点上触发 OOM、4 节点才能全开——规划训练资源时，把 Compile 的编译期显存开销纳入规模下限估算，不要只按稳态显存算。
+5. **扩展效率要用两种统计口径交叉验证**：本次 median 口径 97.48%、mean 口径 97.43%，结论一致才可信；单口径的扩展效率数据容易被离群 step 拉偏。
+6. **Loss 对齐是 Scale 验证的必要条件**：4n 与 64n 的 Loss 曲线从同一起点收敛到同一量级（26 → 1.7-2.1），吞吐数据只有配合收敛性验证才能证明工程优化无副作用。^[raw/articles/baidu-baige-cosmos3-super-512gpu-scaling-2026-08-03.md]
 
 ## 相关链接
 

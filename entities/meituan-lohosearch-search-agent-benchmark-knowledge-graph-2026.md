@@ -2,7 +2,7 @@
 
 title: "LoHoSearch — 下一代搜索智能体评测基准"
 created: 2026-07-24
-updated: 2026-09-10
+updated: 2026-09-23
 type: entity
 tags: [search-agent, benchmark, knowledge-graph, evaluation, ai-agent, meituan, open-source]
 confidence: 0.7
@@ -64,6 +64,32 @@ LoHoSearch 的三项核心贡献：
 
 - [[entities/meituan-longcat-vitabench-20-long-term-dynamic-agent-benchmark|美团 LongCat 开源 VitaBench 2.0：长期动态智能体基准新标杆]] — 美团 LongCat 团队的另一个智能体基准
 - [[entities/agent-evaluation-systematic-guide-metrics-to-closed-loop|Agent 评测体系化指南]] — Agent 评测方法论
+
+## 深度分析
+
+### 结构复杂度是独立于搜索空间的难度来源
+
+用 DeepSeek-V4-Flash 作探针对比两个基准：同一模型在 BrowseComp 上准确率 58.84%，在 LoHoSearch 上仅 10.02%；平均工具调用从 35 次增至 61 次（+74%），中位数从 26 升至 59。更关键的是，图结构题目准确率仅 8.01%，低于树结构的 11.89%——两者搜索空间都被放大，唯独图结构额外引入环形依赖与交叉约束，说明长推理链本身（而非候选数量）就是独立的难度维度。 ^[raw/articles/meituan-lohosearch-search-agent-benchmark-knowledge-graph-2026.md:99-105]
+
+### 人工出题存在系统性偏差，知识图谱出题是对症下药
+
+对比两个基准的"隐藏实体"特征可发现两层偏差：其一，BrowseComp 隐藏实体流行度明显更高，人工标注者倾向围绕自己熟知的实体构思，导致题目偏易；其二，即便将流行度控制在同一水平，LoHoSearch 的关系搜索空间仍显著更大，实体推断难度远高于 BrowseComp。这说明人工出题的局限不是个别标注者的能力问题，而是"人只能基于已知实体关系出题"这一机制的结构性缺陷，知识图谱因此成为系统化构造高难度题目的不可或缺的基础。 ^[raw/articles/meituan-lohosearch-search-agent-benchmark-knowledge-graph-2026.md:125-134]
+
+### pass@N 与 best-of-N 之间的落差暴露置信度校准缺口
+
+对 DeepSeek-V4-Flash 采样 16 个独立回答，pass@N 从 N=1 的 9.3% 升至 N=16 的 38.3%，收益可观；但 best-of-N 聚合仅 24.6%，与 pass@16 上界相差近 14 个百分点。模型"曾经答对过"却"选不出正确答案"，指向答案置信度校准的明显不足——采样扩展策略的天花板不在于模型多样性，而在于聚合时能否可靠识别正确轨迹。 ^[raw/articles/meituan-lohosearch-search-agent-benchmark-knowledge-graph-2026.md:109-113]
+
+### 上下文管理策略在长程搜索下失效，指向信息丢失而非容量不足
+
+以标准 ReAct 为基线，表现最佳的组合（Discard-all + Verify）仅将成绩从 10.02% 提至 16.82%，绝对提升 6.8 个百分点，而同一套策略在 BrowseComp 上可带来 14 个百分点的增益。收益近乎腰斩的原因是 LoHoSearch 需要更长的推理链：简单的轨迹压缩或重启无法解决长程搜索中的信息丢失问题。这表明当前上下文管理技术的问题不在"存不下"，而在"存下了但长程依赖断裂"——这类基准因此成为下一代上下文管理技术更有价值的试验场。 ^[raw/articles/meituan-lohosearch-search-agent-benchmark-knowledge-graph-2026.md:117-121]
+
+## 实践启示
+
+- **评测选型**：BrowseComp 上 90%+ 的饱和分数已无区分度，评估搜索智能体时应换用 LoHoSearch——最强模型也仅 34.74%，且其 544 道题覆盖 11 个领域，可按领域切片定位模型的短板方向。 ^[raw/articles/meituan-lohosearch-search-agent-benchmark-knowledge-graph-2026.md:97-97]
+- **Agent 工程预算**：解一道 LoHoSearch 题平均需要 61 次工具调用（BrowseComp 仅 35 次），工程实践中为搜索智能体配置工具调用预算、超时与重试上限时，应按长程任务（60+ 步）规划，而非按 BrowseComp 量级（35 步）估算。 ^[raw/articles/meituan-lohosearch-search-agent-benchmark-knowledge-graph-2026.md:99-105]
+- **上下文管理迭代方向**：若在改进 Summary/Discard 类策略，应选 LoHoSearch 而非 BrowseComp 作为迭代基准——后者上 14 个百分点的增益在前者上缩水到 6.8，只有在更难的基准上仍站得住的策略才是真改进。 ^[raw/articles/meituan-lohosearch-search-agent-benchmark-knowledge-graph-2026.md:144-144]
+- **答案聚合策略**：在推理预算允许时优先用 pass@N + 人工/规则复核，而非直接信任 best-of-N 的自选结果（24.6% vs 38.3%）；在模型侧则应投资置信度校准，让"多数聚合"能真正选出正确轨迹。 ^[raw/articles/meituan-lohosearch-search-agent-benchmark-knowledge-graph-2026.md:109-113]
+- **基准构造方法论迁移**：建图（762 万实体 + 2.65 亿边）→ 双维度难度控制（搜索空间 × 结构复杂度）→ 三层质量把关的流程是可复用的范式，可迁移到代码检索、多跳问答等其他需要可控难度的智能体评测构造上。 ^[raw/articles/meituan-lohosearch-search-agent-benchmark-knowledge-graph-2026.md:41-41]
 
 ## 关联
 
