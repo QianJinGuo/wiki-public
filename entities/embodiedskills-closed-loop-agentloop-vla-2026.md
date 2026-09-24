@@ -1,4 +1,5 @@
 ---
+
 title: "EmbodiedSkills 闭环AgentLoop组织VLA长任务"
 created: 2026-09-24
 updated: 2026-09-24
@@ -23,11 +24,11 @@ VLA 只会生成动作还不够
 
 ## 
 
-高层模型负责决定下一步做什么，低层 VLA 负责完成当前子任务，运行时负责检查，验证模块负责确认动作是否真的产生了进展。
+高层模型负责决定下一步做什么，低层 VLA 负责完成当前子任务，运行时负责检查，验证模块负责确认动作是否真的产生了进展。 ^[raw/articles/embodiedskills-closed-loop-agentloop-vla-2026.md]
 
-视觉-语言-动作模型正在成为机器人控制的重要基础模型。给定相机画面和自然语言指令，VLA 可以直接预测机械臂动作，完成抓取、移动、放置等操作。模型的动作能力不断提高，长任务执行却依然容易出错。
+视觉-语言-动作模型正在成为机器人控制的重要基础模型。给定相机画面和自然语言指令，VLA 可以直接预测机械臂动作，完成抓取、移动、放置等操作。模型的动作能力不断提高，长任务执行却依然容易出错。 ^[raw/articles/embodiedskills-closed-loop-agentloop-vla-2026.md]
 
-一个完整任务往往包含多个连续阶段。机器人需要先理解场景，再确定当前子目标，执行一段动作，检查动作结果，然后决定继续、推进还是重新规划。
+一个完整任务往往包含多个连续阶段。机器人需要先理解场景，再确定当前子目标，执行一段动作，检查动作结果，然后决定继续、推进还是重新规划。 ^[raw/articles/embodiedskills-closed-loop-agentloop-vla-2026.md]
 
 动作只完成一半时，系统需要保留当前子目标；视觉证据过期时，系统需要重新获取观察。
 
@@ -35,11 +36,11 @@ EmbodiedSkills 研究的是 VLA 系统层的长任务执行问题。
 
 论文题目：
 
-EmbodiedSkills: A Unified Framework for Orchestrating, Training, and Deploying VLA Agents
+EmbodiedSkills: A Unified Framework for Orchestrating, Training, and Deploying VLA Agents ^[raw/articles/embodiedskills-closed-loop-agentloop-vla-2026.md]
 
 作者机构：
 
-浙江大学、南京航空航天大学、Cornell University、新加坡国立大学、宇泛智能（UNIUBI AI）、云深处科技（DEEP Robotics）
+浙江大学、南京航空航天大学、Cornell University、新加坡国立大学、宇泛智能（UNIUBI AI）、云深处科技（DEEP Robotics） ^[raw/articles/embodiedskills-closed-loop-agentloop-vla-2026.md]
 
 论文链接：
 
@@ -57,11 +58,11 @@ VLA 只会生成动作还不够
 
 ## 
 
-高层模型负责决定下一步做什么，低层 VLA 负责完成当前子任务，运行时负责检查，验证模块负责确认动作是否真的产生了进展。
+高层模型负责决定下一步做什么，低层 VLA 负责完成当前子任务，运行时负责检查，验证模块负责确认动作是否真的产生了进展。 ^[raw/articles/embodiedskills-closed-loop-agentloop-vla-2026.md]
 
-视觉-语言-动作模型正在成为机器人控制的重要基础模型。给定相机画面和自然语言指令，VLA 可以直接预测机械臂动作，完成抓取、移动、放置等操作。模型的动作能力不断提高，长任务执行却依然容易出错。
+视觉-语言-动作模型正在成为机器人控制的重要基础模型。给定相机画面和自然语言指令，VLA 可以直接预测机械臂动作，完成抓取、移动、放置等操作。模型的动作能力不断提高，长任务执行却依然容易出错。 ^[raw/articles/embodiedskills-closed-loop-agentloop-vla-2026.md]
 
-一个完整任务往往包含多个连续阶段。机器人需要先理解场景，再确定当前子目标，执行一段动作，检查动作结果，然后决定继续、推进还是重新规划。
+一个完整任务往往包含多个连续阶段。机器人需要先理解场景，再确定当前子目标，执行一段动作，检查动作结果，然后决定继续、推进还是重新规划。 ^[raw/articles/embodiedskills-closed-loop-agentloop-vla-2026.md]
 
 动作只完成一半时，系统需要保留当前子目标；视觉证据过期时，系统需要重新获取观察。
 
@@ -69,11 +70,11 @@ EmbodiedSkills 研究的是 VLA 系统层的长任务执行问题。
 
 论文题目：
 
-EmbodiedSkills: A Unified Framework for Orchestrating, Training, and Deploying VLA Agents
+EmbodiedSkills: A Unified Framework for Orchestrating, Training, and Deploying VLA Agents ^[raw/articles/embodiedskills-closed-loop-agentloop-vla-2026.md]
 
 作者机构：
 
-浙江大学、南京航空航天大学、Cornell University、新加坡国立大学、宇泛智能（UNIUBI AI）、云深处科技（DEEP Robotics）
+浙江大学、南京航空航天大学、Cornell University、新加坡国立大学、宇泛智能（UNIUBI AI）、云深处科技（DEEP Robotics） ^[raw/articles/embodiedskills-closed-loop-agentloop-vla-2026.md]
 
 论文链接：
 
@@ -89,56 +90,56 @@ RoboTwin 2.0（<https://arxiv.org/abs/2506.18088>）
 
 RMBench（<https://arxiv.org/abs/2603.01229>）
 
-OpenPI（<https://github.com/Physical-Intelligence/openpi>）
+OpenPI（<https://github.com/Physical-Intelligence/openpi>） ^[raw/articles/embodiedskills-closed-loop-agentloop-vla-2026.md]
 
-浙江大学等单位将高层视觉语言模型、低层 VLA 策略和机器人环境放入一个闭环 AgentLoop。每次动作调用都经过运行时检查，动作结束后重新获取证据，后续决策继续使用更新后的状态。
+浙江大学等单位将高层视觉语言模型、低层 VLA 策略和机器人环境放入一个闭环 AgentLoop。每次动作调用都经过运行时检查，动作结束后重新获取证据，后续决策继续使用更新后的状态。 ^[raw/articles/embodiedskills-closed-loop-agentloop-vla-2026.md]
 
-论文将长任务执行概括为一个系统性问题：动作生成之外，系统还需要管理子目标、执行边界和物理反馈。EmbodiedSkills 将每次动作放入可回溯的执行链路，并在动作前后分别检查条件和读取结果。
+论文将长任务执行概括为一个系统性问题：动作生成之外，系统还需要管理子目标、执行边界和物理反馈。EmbodiedSkills 将每次动作放入可回溯的执行链路，并在动作前后分别检查条件和读取结果。 ^[raw/articles/embodiedskills-closed-loop-agentloop-vla-2026.md]
 
 为什么 VLA 需要一层 AgentLoop？
 
 在短时操作中，动作预测可以写成“观察加指令，输出动作”。
 
-一旦任务由多个动作组成，模型还要回答几个连续问题：现在正在完成哪个目标？上一步动作是否已经完成？动作是否满足执行条件？下一步应该继续当前尝试，还是切换到新的子目标？
+一旦任务由多个动作组成，模型还要回答几个连续问题：现在正在完成哪个目标？上一步动作是否已经完成？动作是否满足执行条件？下一步应该继续当前尝试，还是切换到新的子目标？ ^[raw/articles/embodiedskills-closed-loop-agentloop-vla-2026.md]
 
-以“把容器放到盘子上”为例，机器人至少要经历目标识别、接近、抓取、移动和放置。抓取不稳定时，移动动作没有可靠起点；容器已经移动到盘子附近但姿态不对时，任务也不能被判定为完成。
+以“把容器放到盘子上”为例，机器人至少要经历目标识别、接近、抓取、移动和放置。抓取不稳定时，移动动作没有可靠起点；容器已经移动到盘子附近但姿态不对时，任务也不能被判定为完成。 ^[raw/articles/embodiedskills-closed-loop-agentloop-vla-2026.md]
 
-真实环境中的偏差会让问题更复杂。机械臂可能遮挡相机，动作块可能在接触阶段提前停止，物体可能只移动了一部分，上一轮观察也可能因为场景变化而失效。
+真实环境中的偏差会让问题更复杂。机械臂可能遮挡相机，动作块可能在接触阶段提前停止，物体可能只移动了一部分，上一轮观察也可能因为场景变化而失效。 ^[raw/articles/embodiedskills-closed-loop-agentloop-vla-2026.md]
 
 下一轮决策需要同时参考当前画面、原始计划、活动子目标和此前的执行记录。
 
-这也是 VLA model 与 VLA agent 的区别。VLA model 主要学习观察到动作的映射，VLA agent 还需要管理任务阶段、动作边界、执行结果和失败后的恢复。
+这也是 VLA model 与 VLA agent 的区别。VLA model 主要学习观察到动作的映射，VLA agent 还需要管理任务阶段、动作边界、执行结果和失败后的恢复。 ^[raw/articles/embodiedskills-closed-loop-agentloop-vla-2026.md]
 
 EmbodiedSkills 的整体框架
 
-EmbodiedSkills 将每次模型输出视为一项待执行的操作提议。模型提出下一步要做什么，运行时检查这项提议是否能在当前状态下落地。
+EmbodiedSkills 将每次模型输出视为一项待执行的操作提议。模型提出下一步要做什么，运行时检查这项提议是否能在当前状态下落地。 ^[raw/articles/embodiedskills-closed-loop-agentloop-vla-2026.md]
 
-检查内容包括输入是否齐全、观察是否新鲜、活动子目标是否仍然有效、机器人和动作后端是否就绪，以及当前阶段是否允许调用这项技能。提议通过以后，低层 VLA 才会生成动作块。
+检查内容包括输入是否齐全、观察是否新鲜、活动子目标是否仍然有效、机器人和动作后端是否就绪，以及当前阶段是否允许调用这项技能。提议通过以后，低层 VLA 才会生成动作块。 ^[raw/articles/embodiedskills-closed-loop-agentloop-vla-2026.md]
 
 动作块执行结束以后，环境返回新的视觉证据和执行结果。系统把这些信息写回任务状态，再交给下一轮决策。
 
-局部目标已经完成时，AgentLoop 推进到下一个目标；局部目标仍未完成时，保留当前目标并继续尝试；证据不足时重新观察；计划失效时重新规划或恢复。
+局部目标已经完成时，AgentLoop 推进到下一个目标；局部目标仍未完成时，保留当前目标并继续尝试；证据不足时重新观察；计划失效时重新规划或恢复。 ^[raw/articles/embodiedskills-closed-loop-agentloop-vla-2026.md]
 
-在这个过程中，模型输出先作为待验证的操作提议进入运行时，经过技能契约和前置条件检查后才会执行。被拒绝的提议会连同原因和证据写入轨迹。
+在这个过程中，模型输出先作为待验证的操作提议进入运行时，经过技能契约和前置条件检查后才会执行。被拒绝的提议会连同原因和证据写入轨迹。 ^[raw/articles/embodiedskills-closed-loop-agentloop-vla-2026.md]
 
 一次 Skill Call 如何进入执行链
 
-每个 embodied skill 都包含输入、输出、前置条件、执行过程、状态更新和失败证据。不同技能可以使用不同的模型或确定性程序，但它们通过同一套接口加入 AgentLoop。
+每个 embodied skill 都包含输入、输出、前置条件、执行过程、状态更新和失败证据。不同技能可以使用不同的模型或确定性程序，但它们通过同一套接口加入 AgentLoop。 ^[raw/articles/embodiedskills-closed-loop-agentloop-vla-2026.md]
 
-以“执行当前子目标”为例，高层模型给出子目标和动作预算，运行时先确认任务状态和观察满足要求，低层 VLA 再生成有限长度的动作块。动作结束后，系统采集新的画面，产生执行报告和局部验证结果。
+以“执行当前子目标”为例，高层模型给出子目标和动作预算，运行时先确认任务状态和观察满足要求，低层 VLA 再生成有限长度的动作块。动作结束后，系统采集新的画面，产生执行报告和局部验证结果。 ^[raw/articles/embodiedskills-closed-loop-agentloop-vla-2026.md]
 
-验证结果会决定下一步路径。当前动作只完成了部分目标，系统继续使用原子目标；当前目标已经完成，系统切换到后续目标；画面无法支持判断，系统请求新的观察；原计划已经被环境状态改变，系统重新建立执行上下文。
+验证结果会决定下一步路径。当前动作只完成了部分目标，系统继续使用原子目标；当前目标已经完成，系统切换到后续目标；画面无法支持判断，系统请求新的观察；原计划已经被环境状态改变，系统重新建立执行上下文。 ^[raw/articles/embodiedskills-closed-loop-agentloop-vla-2026.md]
 
-观察、计划、动作和验证结果还带有来源和新鲜度信息。当关键证据发生变化时，依赖它的旧结果会被标记为需要刷新，仍然有效的上下文可以继续使用。
+观察、计划、动作和验证结果还带有来源和新鲜度信息。当关键证据发生变化时，依赖它的旧结果会被标记为需要刷新，仍然有效的上下文可以继续使用。 ^[raw/articles/embodiedskills-closed-loop-agentloop-vla-2026.md]
 
 六个阶段如何运行
 
-EmbodiedSkills 使用 Observe、Plan、Preflight、Execute、Verify 和 Recover 六个阶段描述一次任务。
+EmbodiedSkills 使用 Observe、Plan、Preflight、Execute、Verify 和 Recover 六个阶段描述一次任务。 ^[raw/articles/embodiedskills-closed-loop-agentloop-vla-2026.md]
 
 它们构成 AgentLoop 的主要语义，但运行时可以根据当前状态回到前面的阶段。
 
-Observe 阶段只使用部署时可见的图像和机器人状态，模拟器隐藏状态不作为策略输入。Plan 阶段保留完整任务计划，同时明确当前要完成的子目标。Preflight 阶段在物理动作发出前检查缺失输入、过期观察和非法阶段转移。
+Observe 阶段只使用部署时可见的图像和机器人状态，模拟器隐藏状态不作为策略输入。Plan 阶段保留完整任务计划，同时明确当前要完成的子目标。Preflight 阶段在物理动作发出前检查缺失输入、过期观察和非法阶段转移。 ^[raw/articles/embodiedskills-closed-loop-agentloop-vla-2026.md]
 
 Execute 阶段使用动作预算限制单次尝试的长度，一个子…
 
-→ [[raw/articles/embodiedskills-closed-loop-agentloop-vla-2026|原文存档]]
+→ [[raw/articles/embodiedskills-closed-loop-agentloop-vla-2026|原文存档]] ^[raw/articles/embodiedskills-closed-loop-agentloop-vla-2026.md]

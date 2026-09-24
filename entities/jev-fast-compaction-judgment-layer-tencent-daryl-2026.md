@@ -1,12 +1,12 @@
 ---
 title: "Jev 快判断层与 fast-jev-compaction 上下文剪枝：把 Agent 的判断题从大模型里拆出来"
 created: 2026-09-21
-updated: 2026-09-23
+updated: 2026-09-24
 type: entity
-tags: [jev, system-one-model, context-compaction, fast-jev-compaction, agent-architecture, judgment-layer, probability-threshold, typesafe, tencent]
+tags: [jev, system-one-model, context-compaction, fast-jev-compaction, agent-architecture, judgment-layer, probability-threshold, typesafe, tencent, rlcd]
 confidence: 0.85
 provenance_state: merged
-sources: [raw/articles/jev-fast-compaction-judgment-layer-tencent-daryl-2026, raw/articles/jev-model-demo-browser-use-benchmark-tencent-mason-2026, raw/articles/ai-comes-for-the-if-statement-tunguz-2026]
+sources: [raw/articles/jev-fast-compaction-judgment-layer-tencent-daryl-2026, raw/articles/jev-model-demo-browser-use-benchmark-tencent-mason-2026, raw/articles/ai-comes-for-the-if-statement-tunguz-2026, raw/articles/2400万人围观前openai研究员做了个闭嘴模型]
 ---
 
 # Jev 快判断层与 fast-jev-compaction 上下文剪枝
@@ -142,3 +142,6 @@ fast-jev-compaction 展示的"判断保留价值"路线与"摘要改写"路线�
 **边界**：Tunguz 是 Theory Ventures GP，文内有基金立场（投资叙事框架）；邮件分类实验为作者自测（hand-verified 但非独立复现），Jev 定价被 TypeSafe 自己标注"may be subsidized"。^[raw/articles/ai-comes-for-the-if-statement-tunguz-2026.md]
 
 → [[raw/articles/ai-comes-for-the-if-statement-tunguz-2026|第 3 来源原文]]
+## 相关页面
+
+第 4 来源（机器之心报道，RLCD 训练方法 + Diogo Almeida 背景 + 官方/外部性能数字）：[[entities/jev-rlcd-machine-heart-report-2026|Jev 与 RLCD：机器之心报道]]

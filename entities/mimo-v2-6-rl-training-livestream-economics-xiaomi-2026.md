@@ -1,10 +1,10 @@
 ---
 title: "小米 MiMo-V2.6 强化学习直播：RL 扩展的三条轴与「每 1 个百分点多少钱」"
 created: 2026-09-17
-updated: 2026-09-23
+updated: 2026-09-24
 type: entity
 tags: [mimo, xiaomi, reinforcement-learning, post-training, agentic-rl, training-economics, data-mixture, rl-scaling]
-sources: [raw/articles/mimo-v2-6-rl-training-livestream-economics-xiaomi-2026, raw/articles/xiaomi-mimo-v26扩展强化学习规模迈向自我提升]
+sources: [raw/articles/mimo-v2-6-rl-training-livestream-economics-xiaomi-2026, raw/articles/xiaomi-mimo-v26扩展强化学习规模迈向自我提升, raw/articles/mimo-v26-shixiaoyao-hands-on-review-2026]
 confidence: 0.8
 provenance_state: extracted
 ---
@@ -77,5 +77,16 @@ provenance_state: extracted
 - 互补角度 3 条：(1) 官方 RSI 定位与 RL 算力扩展路线的正式声明；(2) AA 指数 46 分超越 Kimi K3/Qwen3.8 Max 的开源最强成绩单；(3) Pro/Flash 双版本原生全模态定位确认
 
 → [[raw/articles/xiaomi-mimo-v26扩展强化学习规模迈向自我提升|第 2 来源原文存档]]
+
+## 第 3 来源：夕小瑶编辑部实测（2026-09-24 merge）
+
+夕小瑶编辑部在 MiMo-V2.6-Pro/Flash 正式发布后做了任务级实测，与第 2 来源的"官方成绩单"互补：
+
+- **基准确认（第三方口径一致）**：AA 智能指数 46 分、DeepSWE v1.1 超 Fable 5，Pro 版 RL Dashboard 终局 72.6 分——与第 2 来源官方数据吻合^[raw/articles/mimo-v26-shixiaoyao-hands-on-review-2026.md]
+- **成本坐标（独家数据点）**：Menlo Ventures 投资人实测口径——MiMo-V2.6-Pro 使用成本约为 Kimi K3 的 1/15、GLM 5.3 的 1/6、DeepSeek V4 的 1/2，在"AA 智能指数 × 单任务成本"图上处于左上角最优象限^[raw/articles/mimo-v26-shixiaoyao-hands-on-review-2026.md]
+- **架构评价（Raschka）**：GQA + 128-token 窗口 SWA 的经典组合，Sebastian Raschka 评价"simply the best (for now)"——进步主要来自数据与后训练，注意力变体只是效率优化，但这类优化能在训练/推理上省数百万美元^[raw/articles/mimo-v26-shixiaoyao-hands-on-review-2026.md]
+- **实测复核（评审纪律）**：复杂 Coding 任务（千万级孪生素数 WebGL 渲染、USGS 实时地震 3D 观测台）编辑部做了人工正确性复核——交付的确实是真孪生素数、真实 API 数据接入，非 benchmark 榜单分^[raw/articles/mimo-v26-shixiaoyao-hands-on-review-2026.md]
+
+→ [[raw/articles/mimo-v26-shixiaoyao-hands-on-review-2026|第 3 来源原文存档]]
 
 → [[raw/articles/mimo-v2-6-rl-training-livestream-economics-xiaomi-2026|原文存档]]

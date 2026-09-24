@@ -1,7 +1,7 @@
 ---
 title: "GeoRA — 面向 RLVR 优化几何的低秩适配方法（ACL 2026 杰出论文）"
 created: 2026-08-27
-updated: 2026-09-07
+updated: 2026-09-25
 type: entity
 tags: [geora, lora, rlvr, peft, low-rank-adaptation, reinforcement-learning, acl-2026, meituan, geometry, agentic-rl]
 sources: [raw/articles/geora-geometry-aware-lora-rlvr-meituan-2026]
@@ -38,6 +38,33 @@ RLVR（可验证奖励强化学习）与 SFT 的**优化几何存在本质差异
 
 ## 独立贡献
 ①揭示 RLVR 更新子空间稀疏但各向异性可压缩；②提出定位（双先验掩码）+压缩（截断 SVD）+残差锚点（函数不变）的低秩适配框架，避免几何错位与稀疏计算效率瓶颈；③1.5B-32B 多领域 RLVR 广泛验证 + 业务 Agentic RL 落地。^[raw/articles/geora-geometry-aware-lora-rlvr-meituan-2026.md]
+
+## 深度分析
+
+### 几何错位：为什么 SFT 的先验在 RLVR 上失灵
+
+LoRA/PiSSA/MiLoRA 共享一个隐含假设：有效更新应落在（或避开）预训练权重主奇异方向。这在 SFT 成立——SFT 靠改写主方向注入新知识；但 RLVR 是受约束的优化，有效更新分散在稀疏子空间且主动避开主方向，对主方向上的激进更新尤其敏感，易引发谱漂移与探索坍塌^[raw/articles/geora-geometry-aware-lora-rlvr-meituan-2026.md:19-21]。所以 PiSSA「把更新强推主成分」在 RLVR 上适得其反，实验中最易崩溃。迁移 PEFT 前先问：它为哪种优化几何设计^[raw/articles/geora-geometry-aware-lora-rlvr-meituan-2026.md:24-25]。
+
+### 双先验掩码 +「先换对象再取主方向」
+
+谱先验在低秩近似的低幅值区选参数，强调稳定性（主成分高幅值对应高曲率，改动易破坏预训练结构）；欧氏先验在原始权重近零区选参数，强调可塑性（近零参数「用得少」、可调空间大）。两者各选 20% 参数但交集仅 4.55%（Jaccard 0.128），稳定与可塑两个视角几乎不重叠，并集才是完整覆盖^[raw/articles/geora-geometry-aware-lora-rlvr-meituan-2026.md:31-34]。压缩步骤一句话划清界限：LoRA 不看权重、PiSSA 看主方向、MiLoRA 看尾方向，GeoRA 先换更合适的适配对象再在其中取 top-r 主方向，Eckart–Young 定理保证 Frobenius 最优^[raw/articles/geora-geometry-aware-lora-rlvr-meituan-2026.md:35-36]。消融证实去掉任一先验都掉性能，双先验是必要互补而非冗余。
+
+### 谱分析与 GRPO 实验：低秩是 RLVR 的内在属性
+
+三组奇异值谱构成证据链：随机噪声各向同性（稀疏不带来低秩）；几何子空间谱形似预训练权重（可压缩）；全参 RLVR 实际更新也呈重尾谱。结论：低秩为 RLVR 更新的内在属性，GeoRA 显式利用它——故 0.5% 参数即可追平全参，AIME24 达 23.75% 甚至略高于全参微调^[raw/articles/geora-geometry-aware-lora-rlvr-meituan-2026.md:44-50]。更有战略意义的信号是 OOD：全参在 IFEval/TruthfulQA 明显回退，GeoRA 基本无损，HumanEval 76.83 升至 82.93——几何对齐的更新提升目标域同时保护预训练能力^[raw/articles/geora-geometry-aware-lora-rlvr-meituan-2026.md:46]。对照 SparseFT（参数降 68% 耗时反升 10.8%）：兑现效率的是「低秩稠密」^[raw/articles/geora-geometry-aware-lora-rlvr-meituan-2026.md:25]。
+
+### 美团骑手招聘落地：从体感怀疑到方法验证
+
+骑手招聘场景（AI 触达候选人、多轮沟通识别意愿与决策卡点、推进约面入职）满足低秩训练三前提：基模大、长上下文开销大、增量能力小到低秩容量够用，且约面/入职/ROI 可验证^[raw/articles/geora-geometry-aware-lora-rlvr-meituan-2026.md:53]。业务最初的怀疑「为 SFT 设计的低秩先验未必适合 RLVR」正是方法论要验证的问题，最终效果追平全参、比 LoRA 提升约 12%，显存比全参降 54%^[raw/articles/geora-geometry-aware-lora-rlvr-meituan-2026.md:55]。两个工程技巧普适：Randomized SVD 把 72B 预处理压到 1 分钟内；利用函数不变性质，只存一份低秩冻结适配器即可现算 KL 参考策略，省掉整份参考模型^[raw/articles/geora-geometry-aware-lora-rlvr-meituan-2026.md:57-59]。这条「数学性质兑换工程收益」的路径，与 [[entities/aws-grpo-rlvr-sagemaker-math-reasoning|AWS GRPO RLVR SageMaker 数学推理]] 可互相参照。
+
+## 实践启示
+
+1. **先判几何再选 PEFT**：迁移参数高效方法进 RLVR 前，先确认其谱先验为哪种几何设计；SFT 式主方向先验（如 PiSSA）可能直接崩溃，[[concepts/rlvr-reinforcement-learning-verified-reasoning|可验证奖励强化学习]] 场景应优先几何感知方案。
+2. **稳定性与可塑性分开评估**：谱视角（避开高曲率主成分）保稳定、欧氏视角（近零参数）保可塑，单一准则不够；交集小说明互补，取并集才完整。
+3. **警惕稀疏的隐性算力税**：稀疏模式契合不等于部署高效，非结构化稀疏可能让省 68% 参数变成慢 10.8%；要效率落地，选低秩稠密。
+4. **先验证低秩假设再砍预算**：对训练后的更新量做奇异值谱分析，呈重尾谱才说明低秩适配有依据；否则勿盲目套低秩。
+5. **用 OOD 检验子空间质量**：域内追平全参不算赢，IFEval/TruthfulQA/HumanEval 等域外基准不掉甚至反升，才算没破坏预训练能力——把 OOD 纳入验收项。
+6. **复用函数不变性质省显存**：KL 参考策略不必存整份模型，存一份低秩冻结适配器即可现算，大基模长上下文收益最大，[[concepts/grpo-policy-optimization-2026|GRPO 策略优化]] 管线可直接套用。
 
 ## 相关实体
 - → [[entities/aws-grpo-rlvr-sagemaker-math-reasoning|AWS GRPO RLVR SageMaker 数学推理]] — RLVR 训练工程实践

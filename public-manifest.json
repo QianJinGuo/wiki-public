@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "sourceRevision": "5525bb702d183112e3d33c6587c94542b0218ea3",
+  "sourceRevision": "bb3efe73600dbed11713a4587783b636335961ca",
   "files": [
     {
       "path": "raw/articles/0.25秒识破未见攻击-lod-lvlm-jailbreak-detection-emnlp2026.md",
@@ -771,6 +771,11 @@
       "path": "raw/articles/235b参数也没用港中文等发布7模态数据集专测顶级vlm的感知盲区.md",
       "title": "235B参数也没用！港中文等发布7模态数据集，专测顶级VLM的感知盲区",
       "sourceUrl": "https://mp.weixin.qq.com/s/8YECVKpqSkIM9THujh1yZg"
+    },
+    {
+      "path": "raw/articles/2400万人围观前openai研究员做了个闭嘴模型.md",
+      "title": "2400万人围观前openai研究员做了个闭嘴模型",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651057816&idx=2&sn=e499ee2bea5824b0d433e5978ebe0b36"
     },
     {
       "path": "raw/articles/24g显卡可跑南大prism工具包来了多模态持续微调开箱即用.md",
@@ -4288,6 +4293,11 @@
       "sourceUrl": "https://unknown/autoresearch-taxonomy-chengzihong-chengzihong"
     },
     {
+      "path": "raw/articles/autoresearch严父来了astra硬刚fable顶级模型也难逃刷榜.md",
+      "title": "autoresearch严父来了astra硬刚fable顶级模型也难逃刷榜",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIwMTc4ODE0Mw==&mid=2247722976&idx=1&sn=e2fb65860a142b11809155ede59d713f"
+    },
+    {
       "path": "raw/articles/autoresearch怎么设计四种常见循环一套通用框架.md",
       "title": "autoresearch怎么设计四种常见循环一套通用框架",
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIwMTc4ODE0Mw==&mid=2247722442&idx=1&sn=daed09e058ba3f382df88a46cc70a6ec"
@@ -5908,6 +5918,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/sffWcLKPkXob2STrhkYBYg"
     },
     {
+      "path": "raw/articles/claude-discovers-art-enzyme-system.md",
+      "title": "claude-discovers-art-enzyme-system",
+      "sourceUrl": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system"
+    },
+    {
       "path": "raw/articles/claude-dispatch-and-the-power-of-interfaces.md",
       "title": "claude-dispatch-and-the-power-of-interfaces",
       "sourceUrl": "https://www.oneusefulthing.org/p/claude-dispatch-and-the-power-of"
@@ -6141,6 +6156,11 @@
       "path": "raw/articles/claude的脑子里也长出了一块意识.md",
       "title": "claude的脑子里也长出了一块意识",
       "sourceUrl": "https://mp.weixin.qq.com/s/GNoHINr0_ixxfcDYzizQIQ"
+    },
+    {
+      "path": "raw/articles/claude黑进了openai.md",
+      "title": "claude黑进了openai",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651058476&idx=2&sn=5420ed184501bc1d9f450971a41792c3"
     },
     {
       "path": "raw/articles/claw-anything-personal-assistant-agent-benchmark-three-dimensional-context.md",
@@ -6978,6 +6998,11 @@
       "sourceUrl": "https://securitylabs.datadoghq.com/articles/introducing-pathfinding-labs"
     },
     {
+      "path": "raw/articles/dataflex-rl-pku-rl-data-strategy-framework.md",
+      "title": "dataflex-rl-pku-rl-data-strategy-framework",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652729184&idx=3&sn=b1bd8fb95c5b23ab3bdebf106f29fb55"
+    },
+    {
       "path": "raw/articles/dataflow-harness-data-pipeline-agent-pku-2026.md",
       "title": "dataflow harness data pipeline agent pku 2026",
       "sourceUrl": "https://mp.weixin.qq.com/s/Gah00ChUSnHItOnDMO6jBQ"
@@ -7591,6 +7616,11 @@
       "path": "raw/articles/drupal-core-security-drupal-to-release-urgent-core-security.md",
       "title": "Drupal to Release Urgent Core Security Updates on May 20, Sites Told to Prepare",
       "sourceUrl": "https://thehackernews.com/2026/05/drupal-to-release-urgent-core-security.html"
+    },
+    {
+      "path": "raw/articles/dsec-deepseek-elastic-compute-mozhi-2026-09-24.md",
+      "title": "DeepSeek新作DSec：AI 智能体训练的底层执行基础设施（附下载）",
+      "sourceUrl": "https://mp.weixin.qq.com/s/ufNEsnYVJf1WNiU9wL4w6A"
     },
     {
       "path": "raw/articles/dsh-agent-loop-pluginized-self-evolution-boundary-ruofei-2026.md",
@@ -10108,6 +10138,11 @@
       "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/how-baz-improved-its-ai-agent-code-review-accuracy-using-amazon-bedrock-agentcore"
     },
     {
+      "path": "raw/articles/how-benchling-secured-multi-tenant-ai-agents-with-amazon-bed.md",
+      "title": "how-benchling-secured-multi-tenant-ai-agents-with-amazon-bed",
+      "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/how-benchling-secured-multi-tenant-ai-agents-with-amazon-bedrock-agentcore"
+    },
+    {
       "path": "raw/articles/how-claude-code-works-in-large-codebases-best-practices-and-where-to-start.md",
       "title": "How Claude Code works in large codebases: Best practices and where to start",
       "sourceUrl": "https://claude.com/blog/how-claude-code-works-in-large-codebases-best-practices-and-where-to-start"
@@ -10406,6 +10441,11 @@
       "path": "raw/articles/hunyuan-hy3-agent-benchmark-yaoshunyu-2026.md",
       "title": "hunyuan-hy3-agent-benchmark-yaoshunyu-2026",
       "sourceUrl": "https://mp.weixin.qq.com/s/L3d1Gnb5ldyg7k1iJfDVtQ"
+    },
+    {
+      "path": "raw/articles/hysparse2xiaomi-mimo-v3-新架构预览.md",
+      "title": "hysparse2xiaomi-mimo-v3-新架构预览",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzUxMDQxMDMyNg==&mid=2247520397&idx=1&sn=586bffd5f97e396711c400816f7d1262"
     },
     {
       "path": "raw/articles/i-sold-my-ai-startup-before-revenue-here-s-what-investors-missed-and-founders-sh.md",
@@ -10928,6 +10968,11 @@
       "sourceUrl": "https://www.theregister.com/security/2026/05/12/japans-pm-orders-cybersecurity-review-to-defend-against-anthropic-mythos/5238501"
     },
     {
+      "path": "raw/articles/jd-haibo-ai-knowledge-base-construction-jdtech-2026-09-24.md",
+      "title": "拆解京东海博 AI-Native 落地保障：海博团队 AI 知识库能力建设",
+      "sourceUrl": "https://mp.weixin.qq.com/s/rNox2XcWvgt2zdwGlVmfAg"
+    },
+    {
       "path": "raw/articles/jd-haibo-ai-native-harness-dual-loop-knowledge.md",
       "title": "拆解京东海博 AI-Native 落地保障：Harness、双 Loop、知识库与技能自主迭代实践",
       "sourceUrl": "https://mp.weixin.qq.com/s/8VbEoVKdBxatTUuvwgcq2A"
@@ -10961,6 +11006,11 @@
       "path": "raw/articles/jetbrains-marketplace-malicious-ai-plugins-security-update.md",
       "title": "JetBrains Marketplace Ecosystem Security Update: Malicious AI Plugins",
       "sourceUrl": "https://blog.jetbrains.com/platform/2026/06/marketplace-ecosystem-security-update-malicious-ai-plugins/"
+    },
+    {
+      "path": "raw/articles/jev-13-papers-landscape-paperweekly-2026-09-23.md",
+      "title": "Jev才火一周，13篇论文光速上线！网友：公式做题就是快",
+      "sourceUrl": "https://mp.weixin.qq.com/s/kK3du8zji4fa_9chnBl7Dw"
     },
     {
       "path": "raw/articles/jev-fast-compaction-judgment-layer-tencent-daryl-2026.md",
@@ -12518,6 +12568,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/nplUm1D6JFe45P_WEVgyIg"
     },
     {
+      "path": "raw/articles/memgui-bench-gui-agent-memory-eval-paperweekly-2026-09-23.md",
+      "title": "GUI Agent会操作，却记不住：MemGUI-Bench揭开长程交互的“记忆盲区”",
+      "sourceUrl": "https://mp.weixin.qq.com/s/7kPCQFimJzAHXrgUdZEs_Q"
+    },
+    {
       "path": "raw/articles/memharness-memory-reconstruction-agent-zju-2026-08-04.md",
       "title": "重构 AI 记忆底层逻辑，MemHarness智能体框架深度解析",
       "sourceUrl": "https://mp.weixin.qq.com/s/rTVKuZ6DU1YnnLiJxZpHZQ"
@@ -12781,6 +12836,11 @@
       "path": "raw/articles/mimo-v25-pro-ultraspeed-1000tps-xiaomi-2026.md",
       "title": "MiMo-V2.5-Pro-UltraSpeed：将 1T 参数模型的生成速度推向 1000 TPS",
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzUxMDQxMDMyNg==&mid=2247519598&idx=1&sn=7c72cef574c7b108218d4cc3c2e423c3"
+    },
+    {
+      "path": "raw/articles/mimo-v26-shixiaoyao-hands-on-review-2026.md",
+      "title": "mimo-v26-shixiaoyao-hands-on-review-2026",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIwNzc2NTk0NQ==&mid=2247622204&idx=1&sn=8adb0b9a6fbd3aa88431665d0a958bc2"
     },
     {
       "path": "raw/articles/mind-lab-lora-continual-learning-system.md",
@@ -14331,6 +14391,11 @@
       "path": "raw/articles/openworker-desktop-agent-local-first-architecture-ruofei-2026.md",
       "title": "吴恩达开源版WorkBuddy：拆解OpenWorker的桌面Agent架构",
       "sourceUrl": "https://mp.weixin.qq.com/s/j9aavJfKJyRG6c1mWRC7tw"
+    },
+    {
+      "path": "raw/articles/opsa-on-policy-self-adaptation-noisy-teacher-aitengzhe-2026-09-24.md",
+      "title": "没有教师、没有奖励，模型还能自我变强？OPSA重新解释OPD",
+      "sourceUrl": "https://mp.weixin.qq.com/s/RTsGMeRJfsKO5JArjR6LwA"
     },
     {
       "path": "raw/articles/opsharness-self-evolving-rca-harness-vibelife-2026-09.md",
@@ -15981,6 +16046,11 @@
       "path": "raw/articles/semantic-layer-smq-data-agent-sql-compiler-datafun-2026.md",
       "title": "Semantic Layer 还不够，Data Agent 到 SQL 之间为什么还缺一层？",
       "sourceUrl": "https://mp.weixin.qq.com/s/nxR-JdAdNneBnm_MA0m5mA"
+    },
+    {
+      "path": "raw/articles/semantic-search-4-vendor-comparison-noise-2026-09-22.md",
+      "title": "语义检索方案对比：Palantir vs Databricks vs 腾讯 vs Semantica",
+      "sourceUrl": "https://mp.weixin.qq.com/s/iidTGXfpuQ52ku4cy0YEJw"
     },
     {
       "path": "raw/articles/semantica-open-source-semantic-context-layer-2026-09-04.md",
@@ -17706,6 +17776,11 @@
       "path": "raw/articles/trail-of-bits-skill-scanner-bypass-distribution.md",
       "title": "The sorry state of skill distribution",
       "sourceUrl": "https://blog.trailofbits.com/2026/06/03/the-sorry-state-of-skill-distribution/"
+    },
+    {
+      "path": "raw/articles/training-a-coding-model-to-paint-watercolours-with-trl-and-openenv.md",
+      "title": "training-a-coding-model-to-paint-watercolours-with-trl-and-openenv",
+      "sourceUrl": "https://huggingface.co/blog/train-to-paint-with-code"
     },
     {
       "path": "raw/articles/trajdebug-agent-trajectory-error-locator-ai-xiansheng-2026.md",
@@ -19918,6 +19993,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/GX7KHAKoLC64Sy8nvKp3MA"
     },
     {
+      "path": "raw/articles/北交清华等提出argus多智能体协同断案给视频鉴伪补上证据链.md",
+      "title": "北交清华等提出argus多智能体协同断案给视频鉴伪补上证据链",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIwMTc4ODE0Mw==&mid=2247723184&idx=2&sn=dfc8c0701bdd886a0d4f8868de9c59d1"
+    },
+    {
       "path": "raw/articles/十万卡时代谁在定义新标准.md",
       "title": "十万卡时代谁在定义新标准",
       "sourceUrl": "https://mp.weixin.qq.com/s/BjSwUd0UP-5gyzPxBXAs-g"
@@ -20081,6 +20161,11 @@
       "path": "raw/articles/唐杰预告glm史诗级升级技术论文入选顶会colm.md",
       "title": "唐杰预告glm史诗级升级技术论文入选顶会colm",
       "sourceUrl": "https://mp.weixin.qq.com/s/otpUTfxwR1ISaAbnEFulvw"
+    },
+    {
+      "path": "raw/articles/啊啊啊gpt-6-astra这么不安全这次马斯克都瘫坐了.md",
+      "title": "啊啊啊gpt-6-astra这么不安全这次马斯克都瘫坐了",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247925574&idx=1&sn=6f2211249bf2fb8b2a7265af5e67f1e2"
     },
     {
       "path": "raw/articles/啊我刚开源的-skills-已经-7k-star-了.md",
@@ -20336,6 +20421,11 @@
       "path": "raw/articles/实时视频版nano-banana来了160亿参数重磅开源.md",
       "title": "实时视频版nano-banana来了160亿参数重磅开源",
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652716810&idx=1&sn=b814cb5b87c9cb3677ac63eb1016e090"
+    },
+    {
+      "path": "raw/articles/实测5款国产世界模型看清生成世界走到了哪一步.md",
+      "title": "实测5款国产世界模型看清生成世界走到了哪一步",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIwNzc2NTk0NQ==&mid=2247621654&idx=1&sn=87336c892e7d08112d9c1986ba65305f"
     },
     {
       "path": "raw/articles/实测glm-52百万上下文我让他做了85页的世界杯前瞻.md",
@@ -21813,6 +21903,16 @@
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIwMTc4ODE0Mw==&mid=2247722077&idx=1&sn=30e85278605c483ac9acb9d0439b7c7b"
     },
     {
+      "path": "raw/articles/重生之我在iclr连中八篇专防ai审稿错杀的skill来了.md",
+      "title": "重生之我在iclr连中八篇专防ai审稿错杀的skill来了",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIwMTc4ODE0Mw==&mid=2247723105&idx=1&sn=4862e7dd3c9b326439523c4a5e84ea2c"
+    },
+    {
+      "path": "raw/articles/错误码排查从-38-小时到分钟级agent怎么做到的.md",
+      "title": "错误码排查从-38-小时到分钟级agent怎么做到的",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MjM5ODYwMjI2MA==&mid=2649804239&idx=1&sn=877bddfed68e73a327c4c25e836d8258"
+    },
+    {
       "path": "raw/articles/长周期-agent-详解-从-ralph-loop-到可接管-harness.md",
       "title": "长周期-agent-详解-从-ralph-loop-到可接管-harness",
       "sourceUrl": "https://mp.weixin.qq.com/s/ML5aD3f2ilHWjSB-wpBukw"
@@ -21941,6 +22041,11 @@
       "path": "raw/articles/面对对齐研究者claude会心虚.md",
       "title": "面对对齐研究者claude会心虚",
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651050318&idx=3&sn=646235c43b02191b026359b92131c5a0"
+    },
+    {
+      "path": "raw/articles/音视频生成提速54倍turbot2va分布蒸馏与轨迹蒸馏的联合蒸馏方案.md",
+      "title": "音视频生成提速54倍turbot2va分布蒸馏与轨迹蒸馏的联合蒸馏方案",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247926872&idx=3&sn=14cba1e57fbf5b86daf0842671c40433"
     },
     {
       "path": "raw/articles/顶会入选-covert-面向视觉语言模型的隐私保护推理框架入选-eccv-2026.md",

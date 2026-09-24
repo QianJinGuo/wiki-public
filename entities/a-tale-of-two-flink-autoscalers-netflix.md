@@ -1,5 +1,6 @@
 ---
 title: "A Tale of Two Flink Autoscalers — Netflix 流处理自动扩缩容演进"
+type: entity
 source_url: "https://netflixtechblog.com/a-tale-of-two-flink-autoscalers-e9f6a1b1492b"
 ingested: 2026-09-23
 source_published: 2026-08-21

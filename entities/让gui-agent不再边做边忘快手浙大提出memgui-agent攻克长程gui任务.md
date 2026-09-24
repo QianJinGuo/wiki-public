@@ -1,10 +1,10 @@
 ---
 title: "让GUI Agent不再「边做边忘」：快手、浙大提出MemGUI-Agent，攻克长程GUI任务"
 created: 2026-07-07
-updated: 2026-07-24
+updated: 2026-09-24
 type: entity
 tags: [vision, gui-agent, multimodal, inference, research, agent, training, llm, applied-ai, memory-management, context-management]
-sources: [raw/articles/让gui-agent不再边做边忘快手浙大提出memgui-agent攻克长程gui任务]
+sources: [raw/articles/让gui-agent不再边做边忘快手浙大提出memgui-agent攻克长程gui任务], raw/articles/memgui-bench-gui-agent-memory-eval-paperweekly-2026-09-23
 confidence: 0.7
 reviewed: 2026-09-07
 review_verdict: keep
@@ -64,6 +64,14 @@ MemGUI-8B-SFT 在 MobileWorld（与 MemGUI-Bench 完全不同的 App 集合和�
 4. **数据集构建的"teacher→student"范式**：MemGUI-3K 的构建流程（强 teacher 执行 → 轨迹级过滤 → step-level 合理性过滤 → 弱 student SFT）是一个可复用的范式，适用于领域特定 Agent 数据集的低成本构建。
 
 5. **失败类型分析指导优化优先级**：ConAct 主要解决上下文诱发的幻觉，但 knowledge deficiency 和 intent misunderstanding 改善较小——说明后续优化应聚焦在 App 知识理解、任务意图鲁棒性等方向。
+
+### 评测体系侧：MemGUI-Bench 与 MemGUI-Eval（SUPP，2026-09-24 追加）
+
+同一团队体系的评测基准论文 MemGUI-Bench（arXiv:2602.06075，ACM MM 2026，浙大/南开/港中文 MMLab/上交/vivo AI Lab）补齐了本实体缺失的「怎么量」维度——128 任务、初始 11 基线扩展至 26 系统 Leaderboard，量化「会操作 ≠ 会记」：GUI-Owl-1.5-32B AndroidWorld 69.8% → MemGUI p@1 10.9%（-58.9pp），Gemini-3.1-Pro 70.7% → 43.8%；多数系统 MTPR < 0.1，常规 benchmark 掩盖约 4—10 倍记忆能力差距。^[raw/articles/memgui-bench-gui-agent-memory-eval-paperweekly-2026-09-23.md]
+
+**MemGUI-Eval 三阶段渐进式审查（Progressive Scrutiny）**：①Triage Judge（任务描述+动作日志+最后三张截图，证据明确才判成功，否则 Uncertain 不直接判失败）→ ②Step Descriptor 语义轨迹 + Semantic Judge（IRR Analyzer 计算信息保留比例）→ ③Visual Judge 定向回看 required steps 截图；SPA-Bench 高精度配置 99.0% F1，兼顾成本配置 95.9% F1（~$0.03/轨迹），跨应用 F1 94.1%—100%。^[raw/articles/memgui-bench-gui-agent-memory-eval-paperweekly-2026-09-23.md]
+
+**六 RQ 关键数字**：消融证明短期记忆是长程任务基本条件（移除 M3A Memory Agent 32.5%→2.5%，IRR 归零），长期记忆影响失败恢复与跨会话学习（无显式长期记忆系统 FRR 仅 0.8%—4.4% vs Agent-S2 21.5%）；跨应用复杂度递减（单应用→四应用降 16—40pp）；1M token 长上下文使 M3A Pass@1 +18.8pp 但历史越长冗余越多；统一 token 预算下 Agent-S2（~41760 token/步）Pass@3 49.2%→0。**失败分类法**：非超时失败中三类记忆幻觉占 58.9%——部分记忆幻觉（存入不完整）/过程记忆幻觉（忘记任务未结束）/输出记忆幻觉（取出遗漏），另区分知识缺陷与意图误解两类非纯记忆问题。这些为本文 ConAct 方法提供了直接的对位评测坐标系（ConAct 主要解决上下文诱发的记忆幻觉）。^[raw/articles/memgui-bench-gui-agent-memory-eval-paperweekly-2026-09-23.md]
 
 ## 相关实体
 

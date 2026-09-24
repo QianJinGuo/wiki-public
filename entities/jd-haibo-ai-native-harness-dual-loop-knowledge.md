@@ -3,7 +3,7 @@ title: "京东海博 AI-Native 研发工程体系：Harness+双Loop+知识库+�
 type: entity
 tags: [jd, haibo, ai-native, harness-engineering, tdd, skill, agent, knowledge-base, enterprise-practice]
 created: 2026-07-29
-updated: 2026-09-07
+updated: 2026-09-24
 rating: v9c9
 sources:
   - raw/articles/jd-haibo-ai-native-harness-dual-loop-knowledge
@@ -85,6 +85,11 @@ Agent 持续采集运行数据，AI 自动分析高频问题/质量/效率，生
 5. **落地成果的价值在于验证方法论**：堂食判官和 AI POS 的案例不仅是成果展示，更是验证方法论的样例。它们证明了 AI-Native 工程体系在"紧耦合业务"（需快速响应外部变化）和"系统化工程"（需持续质量保障）两个方向上均具可行性。
 
 ## 相关实体
+
+### 姊妹篇：知识供给侧（2026-09-24 互链）
+
+《海博团队 AI 知识库能力建设》（京东技术/徐双双，2026-09-24）补齐本文未展开的知识库供给侧：三层知识架构（项目×领域矩阵含 views/ 反向索引与待澄清问题.md → 角色化层 → Skill 层）、知识生成技能族（build-knowledge-catalog/build-flow-chains/build-domain-overview/okf-knowledge-read/distill-catalog/prd-diff-testcase/harvest-cases）、40w 行仓 1051 篇/前端 530 篇/聚合配送域 93 篇生成实测、AB 实验（知识库组快 44% 且发现两个隐藏阻塞点）、4 业务组测试采纳率 90—100%。本实体 17 技能消费的知识库即由该体系供给，两文共同构成海博 AI-Native 全景 → [[entities/jd-haibo-ai-knowledge-base-construction-jdtech-2026-09-24|京东海博 AI 知识库能力建设]]。
+
 
 - [[entities/xiaomi-harness-engineering-prompt-to-hook-to-plugin|小米 Harness 工程：从个人实践到团队标准]] — 另一团队级 Harness 实践
 - [[entities/harness-engineering|Harness Engineering]] — Harness 工程基础概念
