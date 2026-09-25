@@ -2,7 +2,7 @@
 title: "Multi-tenant LLM Analytics 三层安全架构"
 description: "PAR Technology 多租户 Text-to-SQL Agent 三层确定性安全架构：SigV4 签名 + 语义验证 + Split-Plane SQL，50K+ 查询零跨租户泄露"
 created: 2026-06-30
-updated: 2026-09-10
+updated: 2026-09-25
 type: entity
 tags:
   - agent
@@ -86,6 +86,37 @@ Reasoning Engine 在数据被触碰前验证用户问题是否映射到系统支
 | 行级安全 | CTE 预过滤，不依赖 LLM | 依赖 prompt 指令或后置过滤 |
 | 越狱防御 | 数据不存在 > 护栏拦截 | 系统 prompt + content filter |
 | 生产验证 | 50K+ 查询零泄露 | 多数停留在 PoC |
+
+## 深度分析
+
+### 为什么确定性边界优于提示词防御
+
+提示词防御把安全策略交给概率生成器执行：系统 prompt 写入 business_id 并要求模型"始终"过滤，但模型可能静默遗漏、幻觉过滤值，或在模糊 prompt 下自行扩大查询范围。文章指出，在消费者应用里非确定性只是不便，在处理敏感商业数据的多租户系统里它不足以构成安全边界——合规态势不能建立在"每次行为可能不同"的系统上。PAR 的解法是把策略执行从模型迁移到架构：签名验证、语义校验、CTE 预过滤全部是服务器端确定性操作。^[raw/articles/multi-tenant-llm-analytics-row-level-security-aws.md:44-52] 确定性边界不承诺阻止模型犯错，而是让模型的任何错误都无法转化为跨租户访问——失败模式从"数据泄露"降级为"查询报错"。
+
+### SigV4 → 语义验证 → Split-Plane SQL 三层纵深防御的失效模式分析
+
+- **Layer 1（SigV4）**：针对请求伪造与传输篡改。三个 ID 被加密绑定到调用者凭证，任何修改立即失效签名；即使签名被绕过，复合会话键还要求三个 ID 作为一个预注册组合共同解析。^[raw/articles/multi-tenant-llm-analytics-row-level-security-aws.md:120-132]
+- **Layer 2（语义验证）**：针对模糊输入导致模型对 scope 做危险假设。非确定性模型被问模糊问题时自由度远大于被问精确问题时，Layer 2 在数据被触碰前先收窄这个自由度，同时提升质量与安全。^[raw/articles/multi-tenant-llm-analytics-row-level-security-aws.md:134-152]
+- **Layer 3（Split-Plane SQL）**：兜底前两层全部被绕过的最坏情况。CTE 由复合会话键程序化生成，不依赖任何用户输入或 LLM 输出；租户注入失败是因为 Business 544 的数据从一开始就不在沙箱中，越狱失败是因为模型根本不知道 customers 表存在。^[raw/articles/multi-tenant-llm-analytics-row-level-security-aws.md:154-212]
+
+关键设计是序列无关的兜底：Layer 3 即使在 Layer 1/2 被绕过时仍强制行级安全，与单点防御（只靠 guardrail 或 system prompt）形成本质区别。
+
+### LLM 在安全边界内 vs 作为安全执行者的架构哲学
+
+核心哲学是 LLM sits inside the architecture, not above it——模型在无法跨越的边界内运行，而不是站在边界位置决定谁能看什么。v1 里模型是用户与数据库之间唯一屏障，每次非确定性波动都是安全事件；生产架构里模型职责被压缩为"对预过滤 schema 生成分析 SQL"，它能漂移、幻觉、被操纵，但作用域被限制在临时沙箱内。^[raw/articles/multi-tenant-llm-analytics-row-level-security-aws.md:190-212] 这与 [[concepts/agent-security-architecture|Agent 安全架构]] 的信任边界思想一致，也呼应 [[concepts/agent-sandbox|Agent Sandbox]] 的沙箱化原则：不信任生成器的输出，只信任构造生成环境的代码。
+
+### 生产验证数据的意义
+
+50,000+ 查询零跨租户泄露的意义不在绝对量级，而在证明三层架构在真实对抗环境下（300+ 企业、数千用户）可持续运转。文章还给出一个反直觉观察：安全与分析质量正相关——用户反馈持续优化 Reasoning Engine，系统"同时变得更安全、更智能"。^[raw/articles/multi-tenant-llm-analytics-row-level-security-aws.md:264-268] 这否定了"加安全必须牺牲可用性"的预设：当安全控制（强制澄清模糊问题）本身提升查询准确性时，用户没有动机绕过它。作者也诚实标注边界：该架构为 PAR 的特定合规环境设计，落地者仍需按自身监管框架做渗透测试与安全评审。^[raw/articles/multi-tenant-llm-analytics-row-level-security-aws.md:270-276]
+
+## 实践启示
+
+1. **永远不要让 LLM 充当行级安全的执行者**：把 business_id 放进 prompt 并要求模型"始终过滤"是 v1 的错误——概率生成器不适合做策略引擎，行级过滤必须在服务器端程序化完成。^[raw/articles/multi-tenant-llm-analytics-row-level-security-aws.md:44-48]
+2. **让攻击目标"不存在"优于"拦截"**：与其构建更聪明的护栏识别恶意 prompt，不如让模型只看到预过滤 CTE 的 schema——越狱一个不知道 customers 表存在的模型没有意义。设计数据沙箱而非内容过滤器。^[raw/articles/multi-tenant-llm-analytics-row-level-security-aws.md:198-212]
+3. **身份三元组在入口处加密绑定并全链路锚定**：Tenant/Business/Admin ID 在 API 入口与凭证绑定，拼接为复合会话键后锚定所有下游操作，防止会话间数据渗漏。^[raw/articles/multi-tenant-llm-analytics-row-level-security-aws.md:120-124]
+4. **用语义验证同时收窄安全与质量两个自由度**：在数据访问前强制问题映射到系统支持的、定义明确的业务指标，模糊问题停下澄清——同时减少 SQL 错误和 scope 蔓延。^[raw/articles/multi-tenant-llm-analytics-row-level-security-aws.md:134-144]
+5. **多 Agent 扩展时把安全控制提升到基础设施层**：身份验证、语义验证、数据过滤不嵌入单个 Agent，而是作为共享基础设施能力——Agent 数量增长时安全模型不变。^[raw/articles/multi-tenant-llm-analytics-row-level-security-aws.md:291-296]
+6. **配套控制不可缺位**：行级安全之外还需不可变审计日志、异常访问检测（2 店管理员突然请求 200 店数据）、rate limiting、密钥自动轮转等补充控制。^[raw/articles/multi-tenant-llm-analytics-row-level-security-aws.md:278-288]
 
 ## Related
 

@@ -1,7 +1,7 @@
 ---
 title: "快手 RCA Agent：复杂业务场景下排障 Agent 的探索实践"
 created: 2026-06-15
-updated: 2026-09-10
+updated: 2026-09-26
 type: entity
 tags: [rca, agent, kuaishou, root-cause-analysis, multi-agent, evaluation, benchmark, hallucination, alert-noise, evidence-pyramid, qcon-2026, guo-yongliang]
 sources:
@@ -97,6 +97,43 @@ review_category: practice
 - "拿着旧地图，找不到新大陆"——现有监控系统围绕人构建，Agent 不受认知带宽限制
 - 组织按人分工+信息隔离，Agent 不需要分工也不存在信息隔离
 - 终态方向：辅助决策 → Agent 出决策+人审批 → Agent 自主闭环
+
+## 深度分析
+
+### 业务资产在排障中的定位
+
+快手将技术系统切为基础设施层、中间件层、业务层三层，并把排障 Agent 的主战场放在业务层——这一层的三个特点（用户体验与营收的直接体现、业务代码迭代极快高度易变、业务问题无法预测排查步骤）决定了它无法靠通用监控方案覆盖。 ^[raw/articles/rca-agent-kuaishou-guo-yongliang-qcon-2026.md:27]
+
+Feed 流请求量上涨的典型案例揭示了传统监控三板斧的结构性盲区：A 调 B 请求正常时 Metrics 无法关联，E 调 F 因逻辑此前从未走过而根本没有 Log，两条证据链同时断裂，只剩业务经验可依赖。业务资产层（错误码语义标注、Metrics 业务化描述、指标拓扑关系、开关配置影响地图）本质上是把"人脑中的业务知识"外化为 Agent 可检索的代码抽象，弥补的正是这两类断点。 ^[raw/articles/rca-agent-kuaishou-guo-yongliang-qcon-2026.md:31-37]
+
+值得注意的工程权衡：纯靠 Coding Agent 在排障中实时分析代码不可行——从 Claude Agent SDK 的 30 分钟/库到 PI Coding Agent 的 5 分钟/库，完整排障需分析 3-5 个库仍需 15-25 分钟，因此业务资产必须走"离线沉淀 + 排障中按需生成沉淀为 Skill"的双模式，才能把分析成本摊销到故障发生之前。 ^[raw/articles/rca-agent-kuaishou-guo-yongliang-qcon-2026.md:35-37]
+
+### 证据金字塔与归因链
+
+告警噪声超过 75%、单次 ReAct 循环消耗 60-130 万 Token、月告警 2-3 万条——这三个数字相乘意味着"AI 全量处理"的年化成本达数百万人民币，噪声治理因此不是精度问题而是经济性问题。快手先用轻量置信度评估 Agent 提取告警画像（周期性、偏离程度、恢复时间、服务分布、曲线聚集）做统计初筛，再用证据金字塔做归因分级。 ^[raw/articles/rca-agent-kuaishou-guo-yongliang-qcon-2026.md:41-47]
+
+金字塔借鉴循证医学的证据分级思想：原始信号 → 背景上下文 → 单点观测 → 多元融合证据 → 直接因果推断（有向图拓扑、源码实锤、时间窗口直接变更）。这个分层暗含一个归因原则——证据等级越低的结论越接近猜测，Agent 输出的置信度应与证据层级绑定，而不是让模型自行"感觉"多确定。这与 [[concepts/harness-engineering-framework|Harness Engineering]] 中"把确定性从模型侧移到工程侧"的思路一致。 ^[raw/articles/rca-agent-kuaishou-guo-yongliang-qcon-2026.md:47]
+
+### 快照 Benchmark 的验收方法
+
+挑战三最有价值的发现是反面案例：引入单点抖动召回工具后单点问题确实召回了，但整体准确率反而下降——因为单点是极高频问题，Agent 在排查各种不同问题时都"找到"单点问题并错误建立因果。"优化一个 Case 引入其他 Bad Case"是 Agent 系统特有的回归模式，传统单元测试无法捕获。 ^[raw/articles/rca-agent-kuaishou-guo-yongliang-qcon-2026.md:49-51]
+
+快照式 Benchmark 的四个设计决策环环相扣：Case 从"故障发生→智能归因→专家标注→进入评测集"的线上真实异常中收集（而非混沌工程模拟，因为搜索量下降这类业务场景无法人为制造）；用快照式监控数据转储完整保存故障现场；用线索命中率 + 量化评分 + 与预期行为比对做评估。这使其可与 [[concepts/agent-evaluation-benchmark-frameworks|Agent 评测基准框架]] 中的真实故障回放方法相互印证，也与 [[entities/qwen-ai-native-chaos-engineering-agent-corps-2026-08-06|Qwen AI 原生混沌工程 Agent 军团]] 形成有趣对照——后者主动注入故障，快手则坚持只回放真实故障。 ^[raw/articles/rca-agent-kuaishou-guo-yongliang-qcon-2026.md:51-53]
+
+### Workflow 快思考与 Agent 慢思考的分工
+
+演进路线（Rule-Based → Prompt 编排 SOP → Workflow + MCP → Agent 自主决策）容易读成"后者取代前者"，但作者明确否定了这一点：Workflow 确定可控但缺灵活性，Agent 灵活但不确定、延迟高、Token 消耗大——两者是互补而非替代关系。 ^[raw/articles/rca-agent-kuaishou-guo-yongliang-qcon-2026.md:63-67]
+
+落地为三层分流架构：底层告警噪声治理（传统策略 + 智能告警）、中层 Workflow"快思考"处理 SOP 场景（Redis 排障、Java 异常等套路化问题）、上层 Agent"慢思考"处理核心业务指标突变等需要深度推理的问题。分层的真实收益是成本套利：把 75% 以上的高频套路化告警拦截在中层，昂贵的慢思考只花在真正不确定的问题上。 ^[raw/articles/rca-agent-kuaishou-guo-yongliang-qcon-2026.md:69-72]
+
+## 实践启示
+
+1. **排障 Agent 的第一投资是业务资产而非模型** — 错误码语义、指标拓扑、开关影响地图这些"代码抽象"决定了 Agent 能否看见证据链断点；没有它们，再强的模型也只能复述监控看板。 ^[raw/articles/rca-agent-kuaishou-guo-yongliang-qcon-2026.md:35-37]
+2. **用证据分级约束归因输出的置信度** — 直接因果推断（拓扑/源码/时间窗口变更）与单点观测必须区分报告等级，防止 Agent 把相关性说成因果。 ^[raw/articles/rca-agent-kuaishou-guo-yongliang-qcon-2026.md:47]
+3. **数值计算和趋势识别封装成传统算法 Tool** — 大模型是概率预测器，时间转时间戳都不准；孤立森林 + 规则的准确率显著更高且零 Token 消耗。确定性要求超过阈值就工程化封装，借鉴 AutoResearch/CodeAct 的"沉淀算法→跑评测→正向迭代"回路。 ^[raw/articles/rca-agent-kuaishou-guo-yongliang-qcon-2026.md:55-61]
+4. **每次优化必须跑全量快照回归** — 单点工具优化导致整体准确率下降的教训表明：Agent 系统的 Eval 必须覆盖真实业务问题空间，任何局部改动都要在快照集上验证无回归。 ^[raw/articles/rca-agent-kuaishou-guo-yongliang-qcon-2026.md:49-53]
+5. **把投资集中在稳定层，减少易变层投入** — 问题域业务资产、Eval 体系、结构化案例集、人机协作模式值得持续积累；Prompt 描述、工具选型、协议规范会随模型迭代失效，不必过度打磨。 ^[raw/articles/rca-agent-kuaishou-guo-yongliang-qcon-2026.md:88-90]
+6. **自进化用小模型 + 高温度探索案例** — Zero-shot 过发散、完全 SOP 过拟合，Few-shot 是平衡点；自动构建案例集（小模型高温度跑多路径→命中正确答案→摘要沉淀经验库）让经验积累不依赖人工。 ^[raw/articles/rca-agent-kuaishou-guo-yongliang-qcon-2026.md:79-82]
 
 ## 相关实体
 

@@ -1,12 +1,12 @@
 ---
 title: "Jev 快判断层与 fast-jev-compaction 上下文剪枝：把 Agent 的判断题从大模型里拆出来"
 created: 2026-09-21
-updated: 2026-09-24
+updated: 2026-09-26
 type: entity
 tags: [jev, system-one-model, context-compaction, fast-jev-compaction, agent-architecture, judgment-layer, probability-threshold, typesafe, tencent, rlcd]
 confidence: 0.85
 provenance_state: merged
-sources: [raw/articles/jev-fast-compaction-judgment-layer-tencent-daryl-2026, raw/articles/jev-model-demo-browser-use-benchmark-tencent-mason-2026, raw/articles/ai-comes-for-the-if-statement-tunguz-2026, raw/articles/2400万人围观前openai研究员做了个闭嘴模型]
+sources: [raw/articles/jev-fast-compaction-judgment-layer-tencent-daryl-2026, raw/articles/jev-model-demo-browser-use-benchmark-tencent-mason-2026, raw/articles/ai-comes-for-the-if-statement-tunguz-2026, raw/articles/2400万人围观前openai研究员做了个闭嘴模型, raw/articles/jev-shuaping-prehistory-timeprism-samples-to-scenarios-machine-heart-2026-09-25]
 ---
 
 # Jev 快判断层与 fast-jev-compaction 上下文剪枝
@@ -145,3 +145,18 @@ fast-jev-compaction 展示的"判断保留价值"路线与"摘要改写"路线�
 ## 相关页面
 
 第 4 来源（机器之心报道，RLCD 训练方法 + Diogo Almeida 背景 + 官方/外部性能数字）：[[entities/jev-rlcd-machine-heart-report-2026|Jev 与 RLCD：机器之心报道]]
+
+## 第 5 来源：Jev 前史——港中文 TimePrism「从采样到场景」（机器之心 2026-09-25）
+
+机器之心对 Jev 现象的**前史考证**：Jev 受关注的三个设计特征（显式概率 / 并行输出 / 面向决策）并非 TypeSafe 首创——港中文徐强团队 2025-09-24 的论文《From Samples to Scenarios: A New Paradigm for Probabilistic Forecasting》（arXiv 2509.19975，已中 ICLR 2026）在概率预测领域已提出同一命题。^[raw/articles/jev-shuaping-prehistory-timeprism-samples-to-scenarios-machine-heart-2026-09-25.md]
+
+核心增量与互补角度：
+
+- **␻samples→scenarios 范式**：TimePrism 把学习目标直接写成 {场景，概率}——一次前向并行输出整组可能未来及各自权重，取代「反复采样轨迹→估计分布」的传统路径；决策系统可对各场景直接算预期成本。^[raw/articles/jev-shuaping-prehistory-timeprism-samples-to-scenarios-machine-heart-2026-09-25.md]
+- **极简架构自证范式**：核心可学习结构仅三个并行线性层（两分支生成场景 + 一分支学习概率），在五个基准十项比较中九项最佳，胜过扩散/Flow/Transformer 基线——与团队 2023 年 DLinear《Are Transformers Effective for Time Series Forecasting?》（引用 6000+）「简单结构+正确目标函数」的路线一脉相承。^[raw/articles/jev-shuaping-prehistory-timeprism-samples-to-scenarios-machine-heart-2026-09-25.md]
+- **Jev↔TimePrism 收敛判读**：两者共同点是根据决策需求重设计输出——概率成为模型与决策系统之间的**接口**；差异在 Jev 面向给定问题作判断（选项由开发者定义），TimePrism 连候选未来也交给模型学习。^[raw/articles/jev-shuaping-prehistory-timeprism-samples-to-scenarios-machine-heart-2026-09-25.md]
+- **推广方向**：机器人轨迹比较、规划多后继状态、资源调度等「多候选结果+概率」任务都可能受益于该输出形式。^[raw/articles/jev-shuaping-prehistory-timeprism-samples-to-scenarios-machine-heart-2026-09-25.md]
+
+与本 entity 的 RLCD 校准叙事互为印证：Jev 的「typed probabilistic decisions out」在概率预测领域有同构先例，「AI 直接输出概率接口」正在从预测任务向 Agent 判断层扩散。
+
+→ [[raw/articles/jev-shuaping-prehistory-timeprism-samples-to-scenarios-machine-heart-2026-09-25|原文存档]]

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "sourceRevision": "bb3efe73600dbed11713a4587783b636335961ca",
+  "sourceRevision": "5906997ab53d2a3f45f25b2e5cf2353215ebb9aa",
   "files": [
     {
       "path": "raw/articles/0.25秒识破未见攻击-lod-lvlm-jailbreak-detection-emnlp2026.md",
@@ -3818,6 +3818,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/lF7yYI2Q2b_D5-jSsrfGcQ"
     },
     {
+      "path": "raw/articles/anthropic-project-swap-agent-marketplace-experiment-2026.md",
+      "title": "anthropic-project-swap-agent-marketplace-experiment-2026",
+      "sourceUrl": "https://www.anthropic.com/research/project-swap"
+    },
+    {
       "path": "raw/articles/anthropic-prompt-caching-claude-code-agihunt.md",
       "title": "Anthropic 最新博客：Prompt Caching 是构建 Claude Code 的一切",
       "sourceUrl": "https://mp.weixin.qq.com/s/2Qs5gRlhe7qSVYCd9r8t1g"
@@ -7021,6 +7026,11 @@
       "path": "raw/articles/dataworks-copilot-skill-data-request-24h-delivery-taobao-2026-07-20.md",
       "title": "dataworks-copilot-skill-data-request-24h-delivery-taobao-2026-07-20",
       "sourceUrl": "https://mp.weixin.qq.com/s/7JI5zJdT73OFbI-DVl3Oqg"
+    },
+    {
+      "path": "raw/articles/dayjob-finance-surge-long-horizon-agent-benchmark-2026.md",
+      "title": "dayjob-finance-surge-long-horizon-agent-benchmark-2026",
+      "sourceUrl": "https://surgehq.ai/benchmarks/dayjob-finance"
     },
     {
       "path": "raw/articles/debugging-production-agents-with-amazon-bedrock-agentcore-ob.md",
@@ -10743,6 +10753,11 @@
       "sourceUrl": "https://aws.amazon.com/cn/blogs/china/intelligence-agent-driven-testing-transformation-making-agents-the-first-principle-of-testing/"
     },
     {
+      "path": "raw/articles/intelligence-density-trajectory-density-aware-training-2026.md",
+      "title": "intelligence-density-trajectory-density-aware-training-2026",
+      "sourceUrl": "https://www.trajectory.ai/field-notes/intelligence-density"
+    },
+    {
       "path": "raw/articles/intelligent-cost-analysis-and-alerting-system-powered-by-bedrock-agentcore.md",
       "title": "基于Bedrock Agentcore 实现智能成本分析与告警系统 | 亚马逊AWS官方博客",
       "sourceUrl": "https://aws.amazon.com/cn/blogs/china/intelligent-cost-analysis-and-alerting-system-powered-by-bedrock-agentcore/"
@@ -11026,6 +11041,11 @@
       "path": "raw/articles/jev-rlcd-decision-function-feixue-ai-2026.md",
       "title": "深度解析 Jev 模型：如何快速做结构化决策",
       "sourceUrl": "https://mp.weixin.qq.com/s/JuTtC2a9ZJXDxPym7enLiA"
+    },
+    {
+      "path": "raw/articles/jev-shuaping-prehistory-timeprism-samples-to-scenarios-machine-heart-2026-09-25.md",
+      "title": "jev-shuaping-prehistory-timeprism-samples-to-scenarios-machine-heart-2026-09-25",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651059729&idx=2&sn=06e4002d14feae27e3bd282166d7742e"
     },
     {
       "path": "raw/articles/jev-system-one-model-15-projects-datafun-2026.md",
@@ -17736,6 +17756,11 @@
       "path": "raw/articles/towards-native-post-quantum-private-eth.md",
       "title": "Towards Native Post-Quantum Private ETH - Privacy - Ethereum Research",
       "sourceUrl": "https://ethresear.ch/t/towards-native-post-quantum-private-eth/25291"
+    },
+    {
+      "path": "raw/articles/tpu-megakernels-inferact-kimi-k3-700tps-2026.md",
+      "title": "tpu-megakernels-inferact-kimi-k3-700tps-2026",
+      "sourceUrl": "https://inferact.ai/blog/tpu-megakernels"
     },
     {
       "path": "raw/articles/trace-based-causal-attribution-agent-effects-2026-07-16.md",
