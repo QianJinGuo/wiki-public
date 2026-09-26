@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "sourceRevision": "5906997ab53d2a3f45f25b2e5cf2353215ebb9aa",
+  "sourceRevision": "852d0ecd26b6a3f06d451781d2c1bf3de72ecb5e",
   "files": [
     {
       "path": "raw/articles/0.25秒识破未见攻击-lod-lvlm-jailbreak-detection-emnlp2026.md",
@@ -8048,6 +8048,11 @@
       "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/evolving-from-legacy-bi-to-agentic-ai-at-tradeshift-with-amazon-quick"
     },
     {
+      "path": "raw/articles/evoontology-bi-bench-self-evolving-graph-paperagent-2026-09-26.md",
+      "title": "Graph的尽头是自进化Ontology~",
+      "sourceUrl": "https://mp.weixin.qq.com/s/E0GJfYjzSs8fBIcn8jhHtA"
+    },
+    {
       "path": "raw/articles/evoscientist-experience-memory-autoskills-2026.md",
       "title": "EvoScientist：经验积累成图、聚类成 Skill 的自进化 AI 科学家（本地代码库快照）",
       "sourceUrl": null
@@ -8821,6 +8826,11 @@
       "path": "raw/articles/genesis-ai-gene-25-embodied-foundation-model.md",
       "title": "蛰伏一年，周衔团队带来首个具身基础模型，烹饪做实验弹琴，效果炸场",
       "sourceUrl": "https://mp.weixin.qq.com/s/6jbIVQzSQ2nf1HY1xk-BOg"
+    },
+    {
+      "path": "raw/articles/genfirst-entropy-preserving-end-to-end-vae-aitengzhe-2026-09-26.md",
+      "title": "别让 VAE 先\"定型\"：GenFirst 用熵保持与先生成后重建，稳定端到端图像生成",
+      "sourceUrl": "https://mp.weixin.qq.com/s/Qd9iWHravT5tLDQEgMx-zQ"
     },
     {
       "path": "raw/articles/genpage-end-to-end-generative-homepage-construction-netflix.md",
@@ -12976,6 +12986,11 @@
       "path": "raw/articles/ml-intern-huggingface-autonomous-ml-agent.md",
       "title": "ml intern huggingface autonomous ml agent",
       "sourceUrl": "https://github.com/huggingface/ml-intern"
+    },
+    {
+      "path": "raw/articles/mmretheads-multimodal-retrieval-heads-emnlp-2026.md",
+      "title": "EMNLP 2026 | 上百页文档里AI怎么找证据？多模态检索头被找到了",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIwMTc4ODE0Mw==&mid=2247723233&idx=2&sn=f3707b2ec32045c2fa3ca1e2e8b79dc8"
     },
     {
       "path": "raw/articles/mnn-sana-edit-v2端侧运行的图像漫画风编辑大模型.md",

@@ -1,7 +1,7 @@
 ---
 title: "WorkBuddy Bench：从「修 Bug」到「完成工作」的 Agent 交付验收基准"
 created: 2026-08-05
-updated: 2026-09-10
+updated: 2026-09-26
 type: entity
 tags: [workbuddy-bench, agent-evaluation, benchmark, tencent, delivery-validation, artifacts, acceptance]
 sources: [raw/articles/workbuddy-bench-delivery-validation-tencent-ruofei-2026-08-05]
@@ -64,6 +64,33 @@ task/
 ## 五份小合同（团队自建评测指南）
 
 任务合同（目标/约束/停止点）→ 现场合同（基线/版本/数据/可见范围）→ 动作合同（工具/审批）→ 交付合同（结果位置/格式）→ 验收合同（规则/证据）。^[raw/articles/workbuddy-bench-delivery-validation-tencent-ruofei-2026-08-05.md]
+
+## 深度分析
+
+### 长时程 × dense reward：完成度本身可以度量
+
+LHTB（Long-Horizon Terminal-Bench）用 46 个长程终端任务把"完成"变成了连续量：单任务平均执行 85.3 分钟、消耗约 9.9M tokens、约 231 个 episodes，评分不问"最终绿没绿"，而用 dense reward 同时度量"做没做完"和"推进了多远"。结果很冷酷：15 个前沿模型中，最强模型 pass@1 仅 15.2%（0.95 阈值）/ 10.9%（1.0 阈值），模型均值只有 4.3% / 1.7%。这与 WorkBuddy Bench 的"完成四层"互为印证——当前 Agent 普遍卡在"动作"或"交付"层，真正抵达"完成"层的比例极低。榜单头部也远未饱和：Grok 4.5 以 0.505 均值登顶，solved 也只有 13/46；两个月前（5 月论文）15 个模型最高才完成 7/46，tetsuo 在推下的长评写道 "That ceiling is what fifth place looks like"——头部分数两个月内几乎翻倍，说明这个方向仍在快速爬坡期。
+
+### Harness 敏感性：两个基准共同的头条结论
+
+LHTB 发布者 Yucheng Shi（腾讯 HY LLM Frontier / Harness Handbook 共同作者）的核心观察是：同一个模型换一套 harness，表现可能完全不同——工具怎么组织、上下文怎么管理、失败后如何恢复，都直接决定 Agent 能否完成长程任务。这与 WorkBuddy Bench 的实测完全同频：GPT-5.5 Security 从 cbc 第六升至 cc 第二，MiniMax-M3 从第二跌到第五，HY-3 开启 passback 后 Code 提升 1.92~3.82。Grok 家族的变化更极端：4.2 以 0.080 在 LHTB 垫底，4.5 直接以 0.505 登顶——作者归因于 Cursor & XAI 把模型训练、RL、真实环境、harness 和评测闭环全部接起来后"进步速度肉眼可见"。两份榜单给出同一条方法论底线：评测记录必须同时保留模型 + Harness + 数据集 + 工具权限 + 指令协议，缺一项跨榜比较就失效。
+
+### 无算力研究者的切入点：验收端与 verifier
+
+LHTB 团队给资源有限的研究者指的路是不与大厂正面拼算力，转向 harness、context management、tool design、verifier 和 reward 这些"Agent 真正工作的系统"。WorkBuddy Bench 的五份小合同（任务/现场/动作/交付/验收）恰好构成一套可复用的 verifier 设计模板：验收合同规定规则与证据形式，交付合同规定结果位置与格式，加上未修改基线 ≤ 0.3 与 gold patch 后必须 1.0 的双重质量门槛——这与 LHTB 的 dense reward 评分属于同一条工程化路径：让"完成"可度量、可复跑、可审计。配套开源的 Harness Handbook 把复杂 harness 转化为人类可读的"行为地图"，与 WorkBuddy Bench 的任务包封装（instruction.md + task.toml + environment + tests）一样，都把可复现性当作一等公民。
+
+### 榜单结构：不存在包办一切交付的模型
+
+两份榜单的共同结构信号是冠军分散：WorkBuddy Bench 四赛道榜首分属 Claude Opus 4.8（Code/Web）、GPT-5.5（Office）、GLM-5.2（Security）；LHTB 前五名中 Claude 系占三席（Sonnet 5 / Opus 4.8 / Fable 5）但分数咬得极紧（0.487~0.497），Grok 4.5 和 GPT-5.6-Sol 各有强项。对团队选型的实际含义是：按工作类型（长程终端/编码/Web/Office/Security）分别跑基准，再按 harness 匹配做最终决策，比追求单一"最强模型"更贴近真实交付场景。
+
+## 实践启示
+
+1. **把"完成"写成分档验收标准**：按 WorkBuddy Bench 四层（回答→动作→交付→完成）为团队内 Agent 任务定义明确的验收边界，拒绝以"对话结束"为完成信号；每个任务的 instruction 里显式写清结果位置、格式与停止点。
+2. **评测任何 Agent 前固定四元组**：模型 + Harness + 数据集 + 工具权限 + 指令协议必须完整留档——LHTB 与 WorkBuddy Bench 都证明换 harness 可造成名次级波动，不带 harness 元数据的跑分无法比较。
+3. **给长任务上 dense/进度型评分**：不要只做二元 pass/fail；借鉴 LHTB 的 dense reward，记录"推进了多远"（如完成的子步骤数、通过的测试比例），否则长时程任务的中间失败全部不可见。
+4. **用双门槛防"躺过"与"不可解"**：新任务入库前跑未修改基线（应 ≤ 0.3）和 gold patch（应 = 1.0），两者任一不过即说明任务本身有缺陷，而不是 Agent 不行。
+5. **小团队的杠杆在验收与 verifier 而非算力**：五份小合同 + 确定性规则检查 + 固定证据的 LLM Judge 是可以在没有大规模 GPU 的前提下复用的整套模板；verifier 质量决定基准的可信度。
+6. **选型按赛道分别评测，再按 harness 匹配**：不存在四类工作全优的模型；先确定团队的主场景（Code/Web/Office/Security 或长程终端），在该赛道榜单上选模型，再投入 harness 侧调优——这往往比换模型收益更大。
 
 ## 与其他实体的关系
 

@@ -3,7 +3,7 @@ title: "Code is cheap: Harness 方法论——水流理论、最小混沌单元�
 type: entity
 tags: [harness-engineering, ai-native, aliyun, prompt, context-management, spec-driven, slop, best-practice-slop, anti-slop, water-flow-theory, minimal-chaos-unit, new-chat, context-rot, token-economy]
 created: 2026-07-03
-updated: 2026-09-07
+updated: 2026-09-26
 review_value: 9
 review_confidence: 8
 review_recommendation: strong
@@ -66,6 +66,33 @@ Harness 设计应像水流——在明确河道（spec/边界）内自主流动�
 ### Checkpoint 验证闭环
 
 每个最小混沌单元结束时产出可验证的 checkpoint，人不在中间过程里逐行 review，而是在 checkpoints 之间做方向性判断。 ^[raw/articles/code-is-cheap-ai-native-harness-wuyue-aliyun-2026.md]
+
+## 深度分析
+
+### 从第一性原理推导方法论：两个事实如何"逼出"整套 Harness
+
+这篇方法论的独特之处不在于罗列技巧，而在于每一条实践都能回溯到 LLM 的物理属性。事实一（概率采样）说明模型每一步都是"按概率挑一个"而非"想清楚再说"，小偏差沿链路累积——自由空间越大，跑偏概率越大。事实二（注意力稀薄化）说明窗口越长每个 token 拿到的注意力越少，"Lost in the Middle" 使长上下文中段信息最易被遗忘，多轮对话还叠加新旧方案共存与 recency bias ^[raw/articles/code-is-cheap-ai-native-harness-wuyue-aliyun-2026.md]。水流理论与最小混沌单元因此不是平行支柱，而是分别针对这两个事实的结构选择：粒度小则搜索空间小（对抗事实一），单次任务上下文小则不易腐烂（对抗事实二）。[[concepts/lost-in-the-middle|Lost in the Middle]] 现象与 [[concepts/context-window-economics|Context Window Economics]] 在这里被统一进同一个工程对策。
+
+### 反 slop 的本质：压缩搜索空间而非提升模型能力
+
+best-practice slop 的产生机制，是模型在过大的目标空间里把网上最常见的套路糊上来——"看似专业、结构漂亮，但不贴业务地形"。反 slop 的应对（复述→纠正→查证→沉淀 spec）本质上是在写代码之前把模型的搜索空间从"词表级自由"压缩到"spec 级约束"。作者强调这一轮可能不写一行代码，但它已把模型从"凭概率乱选路"挪到"在清晰目标和边界内自主推进" ^[raw/articles/code-is-cheap-ai-native-harness-wuyue-aliyun-2026.md]。这与把 slop 归咎于"模型不够聪明"的流行解释形成对照：问题不在能力，在约束缺失。相关诊断思路可对比 [[entities/how-to-avoid-ai-code-slop|How to Avoid AI Code Slop]]。
+
+### checkpoint 的真实分布：加料压倒放行
+
+作者统计了自己在多个项目 checkpoint 上的真实输入分布：加料（沿原方向叠新约束）约 47%，追问约 25%，放行仅约 9%，绕道/回炉/阻止合计不足 8% ^[raw/articles/code-is-cheap-ai-native-harness-wuyue-aliyun-2026.md]。这个反直觉的数据说明 checkpoint 的本质不是"裁判判决"而是"细颗粒控盘"——人的主要工作是在推进过程中持续补充约束、澄清事实，而非逐段批准。混合输入是常态（"ok 注意核心目标"= 放行+加料），六种动作只是主要桶。checkpoint 还有一个隐蔽收益：让模型复述目标会利用 recency bias 把目标从上下文中段推回尾段，反向对抗 lost-in-the-middle ^[raw/articles/code-is-cheap-ai-native-harness-wuyue-aliyun-2026.md]。
+
+### 验收哲学：不听"完成了"，要证据链
+
+"Agent 最危险的时候不是它报错，是它说'完成了'但没有证据"——这引出五层 safety net：自验（7 维度验收报告）、自测（模型自己跑接口测试读日志）、他测（干净上下文的 review agent + 测试同学）、自动化回归+巡检、灰度+金丝雀+一键回滚 ^[raw/articles/code-is-cheap-ai-native-harness-wuyue-aliyun-2026.md]。两层关键洞察：其一，自己 review 自己等于没 review——实施 agent 已在自己的方案里"住"了几十轮对话，被自己的设计锚住；其二，风险越高启用的层越多，0→1 项目两层够用，1→N 存量项目需全五层。这与 [[concepts/context-engineering|Context Engineering]] 的分层治理思路互为印证，也解释了为什么"我经常不看代码"在证据链完整时是姿态而非冒险。
+
+## 实践启示
+
+1. **接任务先问"搜索空间有多大"**：目标越模糊，越要先做反 slop（复述、纠正、查证）再动手；直接把模糊目标丢给模型，等于让它凭概率乱选路，产出大概率是 best-practice slop。
+2. **区分"省 token"和"省上下文"**：前者是成本问题，后者是质量问题。给模型喂料时追求干净、精炼、聚焦，而不是"越多越好"——上下文过长时关键信息反而会被噪音淹没。
+3. **任务粒度遵循"小到可检查，大到可自治"**：拆分标准是每段都能验、失败能局部回炉。任务过大最大的风险不是必然失败，而是失败得太晚——回滚半径等于整个任务。
+4. **把"do it"当成六种控盘动作之一而非唯一**：实际占比最高的是加料（~47%）和追问（~25%），纯放行不到 10%。checkpoint 上盯四件事：有没有越界、目标有没有偏、证据链够不够、风险有没有进安全通道。
+5. **spec 必须落到本地文件并持续回写**：转向时分叉点说清楚后让模型回去重读 spec，而不是口头复述——脑子里的约定会随对话腐烂。0→1 的 spec 允许"待后续补充"，它是活文档而非一次写完的完美文档。
+6. **用风险等级决定验收层数**：0→1/内部工具/可灰度可回滚的场景，自验+自测两层够用；存量项目、权限支付安全路径、无回滚机制的线上改动，必须全五层——代码可以便宜，后果不能便宜。
 
 ## 与现有 Harness 实体的关系
 
