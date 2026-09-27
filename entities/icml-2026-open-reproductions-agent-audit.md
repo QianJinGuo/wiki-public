@@ -1,7 +1,7 @@
 ---
 title: "ICML 2026 Open Reproductions — 大规模 Agent 驱动的论文复现审计"
 created: 2026-08-16
-updated: 2026-09-07
+updated: 2026-09-27
 type: entity
 tags: [agent, evaluation, reproducibility, icml, coding-agent, scientific-research, harness]
 sources: [raw/articles/what-we-learned-by-reproducing-2200-papers-from-icml]
@@ -50,6 +50,33 @@ Hugging Face + alphaXiv 于 2026-07-15 ~ 08-02 举办的 ICML 2026 Open Reproduc
 ## 行业意义
 
 这是 agent 在科研评估中从"辅助写作/跑实验"走向"独立 claim 验证基础设施"的实证：agent 复现规模（2,226 篇/19 天）远超人类审稿容量（审稿人自述"未仔细检查 proofs"的 spotlight 论文被复现推翻）。审计产物（logbook + 轨迹 + 裁决）全部公开，主办方希望记录被打破。
+
+## 深度分析
+
+### 复现性是对抗过程，不是二元判定
+
+23% 的已检论文至少 1 个 claim 被 falsified，其中最值得注意的是 242 篇出现独立复现团队对同一 claim 得出相反 verdict 的情形——同一实验设置，不同 agent 得出不同结论，说明任何单次复现都不是终审。Frank-Wolfe 定理的反例最早在 t=224 步才出现违例，此前所有"verified"都是检查时域不足的产物；反过来，也有 logbook 在 units mismatch（per-trajectory 对比 per-batch-of-50）上构建出假 falsification。可信度不取决于"是否被复现过"，而取决于检查的时域长度、数值边界与对抗强度。^[raw/articles/what-we-learned-by-reproducing-2200-papers-from-icml.md:61-65]
+
+### 规模驱动的审稿危机与 agent 的对称解法
+
+ICML 2026 收到 23,918 篇投稿、录取 6,352 篇，约为前一年两倍——增长部分正由 agent 加速实验与写作驱动；而志愿者审稿容量没有同步扩张，一篇 spotlight 论文的审稿人自述"未仔细检查 proofs"，该论文随后被复现推翻。结构性洞见在于对称性：造成投稿洪水的同一技术（coding agent 写论文）恰好也是解法（coding agent 逐 claim 读论文并验证），把"一位审稿人一个周末"的检查压缩成"数千次并行、每次一个下午"。^[raw/articles/what-we-learned-by-reproducing-2200-papers-from-icml.md:20-32]
+
+### 有限时域检查是系统性盲区
+
+多个案例共享同一失效模式：检查在效应显现之前停止。paging 论文多个"verified" verdict 来自 log-k 增长可见之前的检查，只有把 sweep 扩展到 k=1024 才以约 9 sigma 确认 Θ(log k) 的真实增长；"Do Transformers Need Three Projections?" 中约 66% 的被评 label 位置是趋近零 loss 的 EOS padding token，perplexity 被稀释约 3 倍。默认超参与有限时域会把真问题标记为"验证通过"，最干净的反例甚至用精确有理数算术消除了浮点歧义的存在空间。^[raw/articles/what-we-learned-by-reproducing-2200-papers-from-icml.md:76-88]
+
+### 人类价值从执行移向问题定义
+
+agent 最可靠的结果来自人类 steering 的 workflow：重新指向 agent、质疑假设、在烧掉一周算力之前判定实验前提错误。human-in-the-loop 冠军案例进一步显示分工形态——量化论文的数值指标显示"无坍缩"，但图像是否实际可用是感知问题，agent 自建 review UI、人类亲自裁决全部 128 对图像、agent 事后验证标注一致性。人类角色被重新定位为 PI 式的"有效管理智能"：搭建 harness、算力与数据环境，提出正确的问题，然后让 agent 跑。^[raw/articles/what-we-learned-by-reproducing-2200-papers-from-icml.md:103-109]
+
+## 实践启示
+
+1. **把审计设计成 claim 级而非论文级**：主办方预先抽取核心科学 claim，让 agent 从可检验的具体目标起步——35,908 个 claim 级裁决远比 2,226 个论文级模糊判断更可操作、更可聚合
+2. **不信任被评估方的自我评估**：Logbook Judge 被明确要求不信任 logbook 自评；同时让审计过程本身可审计（公开 logbook、代码、artifacts、完整 agent trace），形成双层验证
+3. **对 claimed falsification 做 adversarial re-verification**：35 个正式 falsification 声称全部经过重读论文、重推导数学、从论文文本重新实现后才确认——这既筛出了真问题，也拦截了复现方自身的算术错误
+4. **把数值检查 sweep 到失效边界**：扩展 k、延长 t、修正评估位置的归一化——默认参数下的"验证通过"可能是检查窗口太短的假象；必要时用精确有理数算术排除浮点歧义
+5. **在感知类判断上显式引入 human-in-the-loop**：数值指标无法回答的问题（图像可用性、生成质量），采用「agent 搭建评审工具 → 人类裁决 → agent 验证标注一致性」的循环，而不是让 agent 对感知结论下终审
+6. **以作者确认为审计闭环的终点**：用 "here is what we found, here is all the evidence, do you agree?" 的框架联系作者，早期响应积极，多个 arXiv 修正已在途——审计的产出是修正，不是定罪
 
 ## 相关实体
 

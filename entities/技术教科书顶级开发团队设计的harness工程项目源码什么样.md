@@ -3,7 +3,7 @@
 title: "技术教科书：顶级开发团队设计的Harness工程项目源码什么样"
 type: entity
 created: 2026-07-04
-updated: 2026-08-01
+updated: 2026-09-27
 tags: [wechat, ai]
 rating: v8c8
 sources:
@@ -104,6 +104,35 @@ TypeScript 源文件
 ^[raw/articles/技术教科书顶级开发团队设计的harness工程项目源码什么样.md]
 
 → [[raw/articles/技术教科书顶级开发团队设计的harness工程项目源码什么样|原文存档]] ^[raw/articles/技术教科书顶级开发团队设计的harness工程项目源码什么样.md]
+
+---
+
+## 深度分析
+
+### 95/5 的代码分布：Harness 才是 Agent 的主体
+
+原文最震撼的统计不是 512K 行代码本身，而是它的构成：模型调用相关的代码不足 5%，其余 95% 全部是 Harness——压缩、权限、隔离、恢复、熵治理。query() 主循环有 16 个步骤，其中只有第 8 步是"调用 API"，其余 15 步全是验证、修复与状态管理。这与"Agent = Model + Harness"的公式形成强呼应：瓶颈从来不在模型智能，而在基础设施（原文引用 LangChain 实验：同一模型仅改变外部 Harness，TerminalBench 排名从第 30 跃升至第 5）。^[raw/articles/技术教科书顶级开发团队设计的harness工程项目源码什么样.md]
+
+### Fail-Closed 不是理念，是默认值
+
+工具系统把安全哲学固化进了 buildTool() 工厂的默认值：isConcurrencySafe 默认 false（假设不安全）、isReadOnly 默认 false（假设会写入）。任何忘记显式声明的工具都会自动落到最受限路径——"遗漏不是漏洞"。配合编译时 feature() 特性门控（外部构建完全剥离内部工具）与运行时环境开关的双层机制，安全约束由机器强制执行而非依赖开发者自律或 prompt 的软约束。^[raw/articles/技术教科书顶级开发团队设计的harness工程项目源码什么样.md]
+
+### 渐进降级与确定性：长循环的两大工程支柱
+
+面对上下文耗尽与输出截断，该项目展示了教科书式的"渐进降级"：四级压缩管道从零 API 调用的 Snip 裁剪、缓存编辑的 Micro Compact、读时投影的 Context Collapse，到最后手段的 LLM 全量摘要 Auto Compact，每一级都有明确的触发条件。max_output_tokens 截断则有三层恢复策略（token 升级 → 多轮恢复最多 3 次 → 放弃报错）。另一个容易被忽视的细节是 QueryConfig 快照：Statsig 门控值在查询入口一次性快照而非实时读取，保证同一次 query() 内行为确定、可复现——transition 字段更把"这次循环为什么继续"变成可断言的状态机数据。^[raw/articles/技术教科书顶级开发团队设计的harness工程项目源码什么样.md]
+
+### 多 Agent 编排：控制面与数据面分离
+
+Coordinator 模式的核心约束是协调器"不能自己动手"——主线程只持有 AgentTool、TaskStopTool、SendMessageTool 三个工具，所有文件操作归 worker。子 Agent 有独立上下文窗口、消息历史和 AbortController，错误不向父级传播；Agent 间通过结构化消息通信而非共享原始上下文，进程内 teammate 用 UDS（~50μs RTT）替代 HTTP（~500μs）。任务系统用 7 种显式 TaskType（含"dream"后台分析）加类型前缀 ID（b/a/r/t/w/m/d），枚举设计避免类型混淆，ID 前缀让运维无需查库即可识别任务种类。^[raw/articles/技术教科书顶级开发团队设计的harness工程项目源码什么样.md]
+
+## 实践启示
+
+1. **把 95% 的精力投在 Harness 而非模型调用上**：压缩、权限、隔离、恢复、熵治理才决定 Agent 可靠性，模型 API 调用只是冰山一角。^[raw/articles/技术教科书顶级开发团队设计的harness工程项目源码什么样.md]
+2. **安全默认值一律 Fail-Closed**：工具注册工厂把 isConcurrencySafe/isReadOnly 默认为最保守值，遗漏即受限；权限模型做五层纵深（Deny Rules → 工具自检 → 通用规则 → 模式判断 → 分类器兜底），用机器约束代替人的自律。^[raw/articles/技术教科书顶级开发团队设计的harness工程项目源码什么样.md]
+3. **Agent Loop 用异步生成器抽象**：它天然支持流式 UI、任意点中断（Ctrl+C 触发 .close()）与背压控制，比 callback 或 Observable 更简洁清晰。^[raw/articles/技术教科书顶级开发团队设计的harness工程项目源码什么样.md]
+4. **上下文压缩走渐进管道，配置读取用快照**：从零成本裁剪到 LLM 摘要逐级升级，别一上来就全量摘要；长运行循环中一次性快照外部门控状态，避免服务端推送导致的不可复现行为。^[raw/articles/技术教科书顶级开发团队设计的harness工程项目源码什么样.md]
+5. **多 Agent 协作遵循"结构化消息 + 工具白名单"**：协调器与 worker 的工具集分离（控制面不碰数据面），子 Agent 禁止递归生成，Agent 间不共享原始上下文只传结构化消息。^[raw/articles/技术教科书顶级开发团队设计的harness工程项目源码什么样.md]
+6. **性能优化做在关键路径的每一个细节**：Fast Path 零导入（--version 仅 12ms）、并行预取节省 ~65ms、重量级模块（OTel ~400KB、gRPC ~700KB）延迟加载、工具列表分区排序保 prompt cache 命中率——排序稳定性背后是真金白银的成本节约。^[raw/articles/技术教科书顶级开发团队设计的harness工程项目源码什么样.md]
 
 ---
 ## 关联

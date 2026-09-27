@@ -1,7 +1,7 @@
 ---
 title: "Agent Harness 开始自动修复：系统级 Debug 最高提升 18.4 点"
 created: 2026-08-15
-updated: 2026-09-07
+updated: 2026-09-27
 type: entity
 tags: [ai, agent, harness, debug, self-repair, 可观测性, 论文解读]
 sources: [raw/articles/agent-harness开始自动修复系统级debug最高提升184点]
@@ -33,6 +33,33 @@ HarnessFix 的第一步是构造 Harness-aware Trace Intermediate Representation
 ## 实验结果与边界
 
 诊断质量支持上述解释：Full HTIR 在人工标注诊断集上达到 85.0% step accuracy、83.8% cause accuracy、81.3% implementation anchor accuracy 和 86.2% harness-layer macro-F1，raw trace 对应指标只有 55.0%、53.8%、50.0%、58.4%。消融实验显示 prompt-only repair、去掉 trace-grounded diagnosis、去掉 scoped repair operators 都会降低表现；跨模型迁移实验中，用 GPT-5 mini 修好的 GAIA harness 在 Claude Sonnet 4.5、DeepSeek V3.2、Qwen3.5 Plus 和 Gemini 3 Pro 上仍带来 5.5 到 9.5 个百分点提升，说明部分修复针对的是模型共享的 harness 机制。边界在于：它依赖可获得的轨迹、可定位的 harness artifact 和可执行的验证集——缺乏可观测性或没有可靠回归检查时，修复质量会受限。^[raw/articles/agent-harness开始自动修复系统级debug最高提升184点.md]
+
+## 深度分析
+
+### 失败证据的三级抽象链
+
+HarnessFix 的真正贡献是把「失败」拆成三层递进的抽象：raw trace 里的症状、HTIR 里可归因的因果链、flaw record 里跨轨迹复发的共同根因。诊断指标逐级支撑这条链：Full HTIR 达到 85.0% step accuracy、83.8% cause accuracy、82.5% repair-operator accuracy，而 raw trace 对应只有 55.0%、53.8%、51.3%，说明表示层的投入（TraceStep / TraceLink / implementation anchor）直接兑换成了归因精度，而不是停留在轨迹可视化。^[raw/articles/agent-harness开始自动修复系统级debug最高提升184点.md:50-66,96]
+
+### 为什么 scoped repair 比自由编辑更可靠
+
+修复阶段把 flaw record 映射到预定义的 scoped repair operators（如 tool-schema narrowing、verification-gated finalization、effect-evidence completion guarding），本质是把修复动作空间从整个仓库压缩到与 harness 层绑定的有限算子集。消融实验中去掉 scoped repair operators 或 regression-aware acceptance 都会降低表现，这与动机研究里 45.3% 开发记录属 harness 相关相互印证：当缺陷系统性分布在 7 层而非集中在一处，无约束的搜索既慢又容易改出回归。^[raw/articles/agent-harness开始自动修复系统级debug最高提升184点.md:44-48,74-80,98]
+
+### 跨模型提升揭示了机制层的独立性
+
+用 GPT-5 mini 修好的 GAIA harness 迁移到 Claude Sonnet 4.5、DeepSeek V3.2、Qwen3.5 Plus、Gemini 3 Pro 仍有 5.5 到 9.5 个百分点提升，同时 Meta-Harness 的 evolving/repair token 消耗比 HarnessFix 高 63.5% 到 100.5%。这暗示 harness 缺陷中有相当一部分是模型无关的工程错误，例如完成条件不验证副作用、错误信息被吞掉；修这类错误不依赖对特定模型行为的过拟合，因此比 outcome-driven 自进化更省 token、更可迁移。^[raw/articles/agent-harness开始自动修复系统级debug最高提升184点.md:94-100]
+
+### 方法成立的三个前提
+
+HarnessFix 的修复质量受制于三个前置条件：轨迹可获得（依赖可观测性）、harness artifact 可定位（implementation anchor 要能落到 prompt 模板、工具规范、验证脚本等可编辑物）、存在可执行的验证集（regression check）。这把 agent 可靠性问题重新定义为可观测性、工程产物结构化、回归验证三个基础设施问题，而非单纯的模型能力问题。^[raw/articles/agent-harness开始自动修复系统级debug最高提升184点.md:104-108]
+
+## 实践启示
+
+1. **为 agent 系统建立结构化轨迹层**：不要只存日志文本，按 TraceStep + TraceLink（数据流/控制流）记录，失败时才能做归因而非凭感觉调 prompt。
+2. **把每条 harness 缺陷锚定到可编辑 artifact**：prompt 模板、工具 schema、适配器、验证脚本都应显式归位，让「修哪一层」有落点。
+3. **用 scoped repair operators 约束修复范围**：按 harness 层预定义有限修复算子，配合修复 specification（目标、可编辑范围、禁止项），而不是让 agent 自由改仓库。
+4. **验收以 flaw 频率下降加回归检查为准**：补丁必须在验证集上证明降低了目标 flaw 出现频率且不引入回归，不接受「成功率看起来变高」。
+5. **优先补齐 Lifecycle / Tool Interface / Observability 三层**：动机研究显示这三层缺陷几乎遍布全部 30 个开源仓库，是最高频的可靠性杠杆。
+6. **先诊断后修复，警惕 outcome-driven 自进化改过宽**：只看最终成功率的方法可能调出更好的工作流，却不知道失败证据在哪；trace-grounded diagnosis 应先于任何自动修复。
 
 ## 相关实体
 

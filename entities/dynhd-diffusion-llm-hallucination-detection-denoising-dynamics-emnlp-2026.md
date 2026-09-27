@@ -1,7 +1,7 @@
 ---
 title: "DynHD：扩散大语言模型的去噪动态幻觉检测（EMNLP 2026）"
 created: 2026-09-15
-updated: 2026-09-15
+updated: 2026-09-28
 type: entity
 tags: [diffusion-llm, hallucination-detection, uncertainty-quantification, evaluation, emnlp-2026, llm-reliability]
 sources: [raw/articles/dynhd-diffusion-llm-hallucination-detection-denoising-dynamics-emnlp-2026]
@@ -55,6 +55,36 @@ DynHD 由两个组件构成：
 - **白盒前提**：方法依赖对去噪轨迹（每步 token 级 entropy/不确定性）的访问，对只暴露 API 的封闭模型不可直接迁移——这让它与黑盒语义一致性检测（如 self-consistency 类）处于不同适用面。
 - **证据强度**：数值来自作者自述稿，摘要未给出 baseline 实现的复现细节；跨模型仅覆盖两个 7B/8B 级开源 D-LLM。
 - **价值定位**：属于"评测/可靠性"方向的方法贡献——把幻觉检测的对象从 final answer 移到 generation dynamics，对 D-LLM 这一仍在快速扩张的分支（[[entities/llada2-2-agentic-diffusion-model-ant-2026]]、[[entities/cola-dlm-byte-dance-continuous-latent-diffusion-language-model]]）提供了一个自然的可靠性视角。
+
+## 深度分析
+
+### 幻觉检测的信号源从"空间"扩展到"时间"
+
+自回归模型的幻觉检测基本只在一维上做文章：输出分布的空间维度（token 概率、logit 熵）或语义维度（多采样一致性）。DynHD 的贡献在于指出 D-LLM 天然多出一个时间维度——去噪轨迹本身携带事实性信息。这不是简单的特征增加，而是检测对象的重新定义：幻觉不再只是"答案的属性"，而是"收敛过程的属性"。这个视角对后续 D-LLM 可靠性工作构成了互补——检测端利用动态信号，训练侧（如 [[entities/d-opsd-diffusion-llm-on-policy-self-distillation]] 代表的 self-distillation 路线）则从源头减少动态异常。^[raw/articles/dynhd-diffusion-llm-hallucination-detection-denoising-dynamics-emnlp-2026.md]
+
+### 结构性 token 是固定长度生成的系统性污染源
+
+平均所有 token 的 entropy 之所以失效，根源在于 D-LLM 的固定长度序列设计：padding、边界标记等结构 token 数量多、与事实性无关，把有信息的少数高熵 token 稀释掉了。这提示一个更一般的教训：**任何对生成过程做统计聚合的评测方法，都必须先回答"哪些位置根本不该进入统计"**。这与 [[concepts/evaluation-harness-design]] 中"评测面前置筛选"的原则同构——聚合统计的分母选择本身就是方法设计的一部分，选错了分母，信号会被噪声完全淹没。^[raw/articles/dynhd-diffusion-llm-hallucination-detection-denoising-dynamics-emnlp-2026.md]
+
+### 动态偏差学习：把"正常轨迹"变成可学习的参照系
+
+DynHD 不是给熵设定绝对阈值，而是学习一条 reference trajectory 来回答"这个模型正常情况下该怎么收敛"，再衡量实际轨迹的偏离。这本质上是把 OOD 检测引入生成过程内部：幻觉样本去噪后期的停滞（stagnation）或反弹（rebound）相当于生成动力学上的异常事件。相比单点阈值，参照系方法对模型规模、问题难度等混杂因素更鲁棒——同一条熵值曲线，对难问题可能是正常的，对易问题就是异常，只有相对于"该问题的正常轨迹"才可判读。^[raw/articles/dynhd-diffusion-llm-hallucination-detection-denoising-dynamics-emnlp-2026.md]
+
+### 效率优势来自"复用"而非"新增"
+
+与 repeated-sampling 类不确定性方法（需要 N 次独立生成）不同，DynHD 的检测信号在本来就要发生的那一次生成里已经存在，属于零额外采样成本的"搭便车"设计。AUROC 从 TraceDet 的 72.0% 提升到 84.2% 的同时不增加推理开销，这种"性能—效率"双优在检测方法里不多见。但要注意其白盒前提：它需要访问逐步的 token 级熵，对只开放 API 的封闭模型不可用，因此它抢占的不是黑盒方法的生态位，而是白盒内部方法之间的生态位。^[raw/articles/dynhd-diffusion-llm-hallucination-detection-denoising-dynamics-emnlp-2026.md]
+
+### 证据强度的边界要诚实看待
+
+84.2% / 84.3% 的 AUROC 全部来自作者自报，覆盖的基座只有 LLaDA-8B-Instruct 和 Dream-7B-Instruct 两个 7B/8B 级模型；跨数据集 zero-shot（72.9%）虽优于 TraceDet（66.3%），但绝对值明显低于 in-distribution，说明 reference trajectory 的泛化仍有缺口。这里的教训与 [[concepts/eval-surface-rotation]] 的主张一致：单一评测面（三个 QA 数据集）上的领先，不足以支撑"方法普遍有效"的结论；方法在不同生成配置（去噪步数、序列长度、并行度）下的稳定性也尚未被检验。^[raw/articles/dynhd-diffusion-llm-hallucination-detection-denoising-dynamics-emnlp-2026.md]
+
+## 实践启示
+
+1. **用 D-LLM 时先看轨迹再看答案**：使用 LLaDA / Dream 类扩散模型做幻觉排查时，不要只盯最终输出——导出去噪各步的 token 熵轨迹，后期停滞或反弹是最容易识别的红旗信号。
+2. **聚合不确定性统计前先过滤结构 token**：任何对生成序列做熵/置信度平均的实现，都应先剔除 padding 与边界标记，否则正确与幻觉样本的统计量高度重合，检测失去区分度。
+3. **检测信号优先选择零额外采样的方案**：预算受限的线上场景，DynHD 式"复用既有生成轨迹"的检测比 repeated-sampling 便宜一个数量级，应作为白盒部署的默认候选。
+4. **用"偏离参照轨迹"而非"绝对阈值"作为异常判据**：这一模式可迁移到其他评测场景——为不同问题难度档建立正常收敛基线，偏离度比原始分数更能抗混杂因素。
+5. **引用数值前注明自报属性**：该方法的 AUROC 数字尚无第三方复现，在评测对比（如 [[concepts/evaluation-harness-design]] 的框架下）引用时应显式标注"作者自报、单一评测面"，避免被当成已验证结论传播。
 
 ## 关联
 

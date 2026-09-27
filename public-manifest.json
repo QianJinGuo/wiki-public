@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "sourceRevision": "852d0ecd26b6a3f06d451781d2c1bf3de72ecb5e",
+  "sourceRevision": "a07d09631f6564580b8bfade05d01e08d227c689",
   "files": [
     {
       "path": "raw/articles/0.25秒识破未见攻击-lod-lvlm-jailbreak-detection-emnlp2026.md",
@@ -14463,6 +14463,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/JXnBsVEgJ-lPfqRiR4Qxeg"
     },
     {
+      "path": "raw/articles/opus-55干一半就开溜官方揭秘你的程序替它打了下班卡.md",
+      "title": "opus-55干一半就开溜官方揭秘你的程序替它打了下班卡",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652729774&idx=2&sn=9f10ffe14498ab222ca98a3b95a5c560"
+    },
+    {
       "path": "raw/articles/orchestrating-self-evolving-agents-with-crewai-and-nvidia-ne.md",
       "title": "Orchestrating Self-Evolving Agents with CrewAI and NVIDIA NemoClaw",
       "sourceUrl": "https://blog.crewai.com/orchestrating-self-evolving-agents-with-crewai-and-nvidia-nemoclaw"
@@ -20793,6 +20798,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/TpmrSdx13CqApwN3iZQVew"
     },
     {
+      "path": "raw/articles/扩散模型路线之争可以停了latentpixel混合扩散生成新范式上线-eccv26.md",
+      "title": "扩散模型路线之争可以停了latentpixel混合扩散生成新范式上线-eccv26",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247927186&idx=3&sn=183643e7cd585c109342f78b6829c18e"
+    },
+    {
       "path": "raw/articles/技术教科书顶级开发团队设计的harness工程项目源码什么样.md",
       "title": "技术教科书：顶级开发团队设计的Harness工程项目源码什么样",
       "sourceUrl": "https://mp.weixin.qq.com/s/MKWckXraK1irNvMgCIJXZw"
@@ -21463,6 +21473,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651051506&idx=3&sn=aa2e1f4dd425cf0a52631efb49e2f182"
     },
     {
+      "path": "raw/articles/笔记本跑7000亿参数glm无gpu也行-ssd当显存用火爆github.md",
+      "title": "笔记本跑7000亿参数glm无gpu也行-ssd当显存用火爆github",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247927186&idx=2&sn=ede8e96cce37ad0b747e8362dc0a048e"
+    },
+    {
       "path": "raw/articles/第-07-篇-skills方法论的标准化调用.md",
       "title": "第 07 篇 · Skills：方法论的标准化调用",
       "sourceUrl": "https://mp.weixin.qq.com/s/9L7MXM2aNMbJ0UkcVI-uwg"
@@ -22076,6 +22091,11 @@
       "path": "raw/articles/面向监控场景的无订阅异常发现问题思路与边界.md",
       "title": "面向监控场景的无订阅异常发现问题思路与边界",
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=Mzg4NTczNzg2OA==&mid=2247510834&idx=1&sn=9e785f8e33b7a2e4f0f53e52671023dd"
+    },
+    {
+      "path": "raw/articles/面向视觉语言模型的强化隐空间推理先分解看再推理emnlp26.md",
+      "title": "面向视觉语言模型的强化隐空间推理先分解看再推理emnlp26",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652729774&idx=3&sn=29dc4cea03ed939f4300e61f3b1ab853"
     },
     {
       "path": "raw/articles/面对对齐研究者claude会心虚.md",
