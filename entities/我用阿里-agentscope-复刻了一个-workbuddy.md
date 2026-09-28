@@ -1,7 +1,7 @@
 ---
 title: "我用阿里 AgentScope 复刻了一个 WorkBuddy — 从开源框架到可运行 Agent 的实践拆解"
 created: 2026-07-22
-updated: 2026-08-06
+updated: 2026-09-28
 type: entity
 tags: [agent, agentscope, workbuddy, multi-agent, harness-engineering, tool-management, permission, model-config, mcp, skill-loader, practice, tutorial]
 sources:
@@ -67,6 +67,28 @@ AgentScope 通过 ToolCallStartEvent、ToolCallDeltaEvent、ToolCallEndEvent 流
 - [[entities/agentscope-java-harness-framework|AgentScope Java Harness]] — AgentScope Java 版的企业级 Harness 实现，本文对应 Python 版实践
 - [[entities/mem0-vs-workbuddy-agent-memory-comparison|WorkBuddy 记忆对比]] — 记忆层面的比较分析
 - [[entities/openclaw-workbuddy-loop-engineering-who-is-hot-useful-demo|OpenClaw vs WorkBuddy]] — 工作流引擎对比
+
+## 深度分析
+
+### 框架层与产品自建层的边界
+
+AgentScope 只提供模型对象、Toolkit、权限引擎这些框架原语，而产品化所需的状态管理——models.json、connectors.json、skills.json 及其增删改查——全部由项目自建的 WorkspaceStore 承担。这条边界划得非常清楚：凡是需要跨请求存活的用户配置，框架一概不管。作者用"无数据库 + JSON 文件 + 临时文件 os.replace 原子写入"的方案换取小产品的简单性，API 层从不直接碰 JSON，运行时也统一从 WorkspaceStore 读配置再交给 AgentScope。这给选型者的启示是：评估 Agent 框架时先看它把哪些问题留给了应用层——留白多意味着接入成本高，但也意味着框架更薄、更可控。参见 [[entities/agentscope-builder-enterprise-self-evolving-agent-harness|AgentScope Builder]]。
+
+### 缓存 key 即一致性机制
+
+文章两篇里反复出现同一个模式：模型、连接器、显式 Skill 这三类用户可切换的资源，全部被编码进 Agent 缓存 key（`base_key:connectors:rev` / `:skill:id`）。本质上是用"缓存不可命中即重建 Agent"代替"增量更新"——直接丢弃绑定了旧模型客户端、旧 MCP Client 或旧 Skill Loader 的 Agent，避免页面状态与 Agent 内部绑定出现静默漂移。这是无状态 Web 后端与有状态 Agent 对象之间一座成本低廉的桥。有趣的是折中设计：动态发现类资源（自动发现模式下已启用的 Skill 列表）刻意不进 key，靠动态 Loader 在运行时重读启用列表、权限上下文随 Agent 复用同步更新来兜底——只有用户显式选择的资源才值得支付重建代价。
+
+### 权限模型的三层收敛
+
+AgentScope 的权限体系实际有三层：PermissionMode（5 档交互策略）、PermissionRule（工具名 + 命令/路径的细粒度 allow/deny/ask 规则，存于 PermissionContext）、以及工具自检（只读工具返回 PASSTHROUGH 交规则裁决，MCP 工具按 Server 返回的 readOnlyHint 决定 ALLOW 或 ASK）。mini-WorkBuddy 把 5 档收敛为 3 档暴露给用户，而作者实测结论是"自动审批"（ACCEPT_EDITS）才是日常档位——DEFAULT 模式下 Agent 每步都要点确认会把用户逼走，BYPASS 风险高到几乎不用。这个产品化裁剪与 WorkBuddy 本尊只保留"默认 + 完全放行"两档的取舍互相印证：权限档位不是越多越好，关键是把高频路径做到零摩擦、把危险路径（rm、写 shell 配置）拦死，再用 PermissionRule 补个性化例外（如 `uv run pytest` 恒允许）。
+
+### STDIO/HTTP 双传输的生命周期分化
+
+MCP 接入中最有含金量的细节是传输方式决定客户端形态（背景见 [[concepts/model-context-protocol-mcp|MCP]]）：STDIO Server 是本地子进程，必须用 Stateful Client 并在创建 Agent 前显式 `connect()`，让后续多次工具调用复用同一进程；HTTP Server 独立运行，用 Stateless Client，由框架按需管理临时会话。更进一步，作者没有直接用 AgentScope 的 MCPClient，而是实现了 RequestSafeMCPClient 子类——把 `connect()`/`close()` 固定在一个长期存活的 owner task 中执行。原因是 AgentScope 底层用 AnyIO 管理 STDIO 连接，cancel scope 不能跨越任务：在 A 请求里 connect、B 请求里 close 会破坏 Starlette 的任务状态。这是"框架默认实现 × Web 服务器并发模型 = 隐性冲突"的典型案例，任何把 Agent 框架嵌入 SSE 流式后端的项目都会撞上。
+
+### Skill 渐进式披露与"目录即真相"
+
+Skill 体系继承并落地了渐进式披露设计：Toolkit 只把名称、简介交给模型，完整的 SKILL.md 由一个特殊 Skill 工具按需读取，避免十几个技能的全文一开始就挤进上下文、规则互相干扰。产品层面则体现"目录即真相"：skills.json 只是索引，扫描时发现目录里有 SKILL.md 但不在索引中的，会被自动识别为 manual 安装——用户从别处复制技能进目录即可用，无需改索引。审批与权限也贯穿到技能：Skill 目录（用户选择的、自动启用的、专家包携带的）都要加入 PermissionContext.working_directories，否则模型按技能说明执行 `scripts/run.py` 时会因目录越界被拒。最值得注意的是闭环设计：添加技能这个产品功能本身就是一个内置 skill（skill-creator 一字未改地复制自 WorkBuddy），用 Agent 的方式扩展 Agent。参见 [[entities/workbuddy-skill-全拆解从创建到自进化|WorkBuddy Skill 全拆解]] 与 [[concepts/skill-engineering-principles|Skill 工程原则]]。
 
 ## 四层工具架构
 

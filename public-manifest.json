@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "sourceRevision": "a07d09631f6564580b8bfade05d01e08d227c689",
+  "sourceRevision": "1ad761939c8b7770528464c67d9181fc5e8bbee1",
   "files": [
     {
       "path": "raw/articles/0.25秒识破未见攻击-lod-lvlm-jailbreak-detection-emnlp2026.md",
@@ -4151,6 +4151,11 @@
       "path": "raw/articles/ath-agent-trust-handshake-protocol.md",
       "title": "为了让agent更安全的工作，有多少人操碎了心",
       "sourceUrl": "https://mp.weixin.qq.com/s/Ib241_1rIS3A5-MThimJ1A"
+    },
+    {
+      "path": "raw/articles/atrex-kernel-agent-qwen38-max-production-kernels-2026-09-28.md",
+      "title": "atrex-kernel-agent-qwen38-max-production-kernels-2026-09-28",
+      "sourceUrl": "https://mp.weixin.qq.com/s"
     },
     {
       "path": "raw/articles/auditing-gitlab-cicd-kill-chain-black-hills-2026.md",
@@ -10993,6 +10998,11 @@
       "sourceUrl": "https://www.theregister.com/security/2026/05/12/japans-pm-orders-cybersecurity-review-to-defend-against-anthropic-mythos/5238501"
     },
     {
+      "path": "raw/articles/jd-forge-agent-sindri-search-rec-data-platform-2026.md",
+      "title": "jd-forge-agent-sindri-search-rec-data-platform-2026",
+      "sourceUrl": "https://mp.weixin.qq.com/s/hI5nHc3XBBhf57lOTVorqA"
+    },
+    {
       "path": "raw/articles/jd-haibo-ai-knowledge-base-construction-jdtech-2026-09-24.md",
       "title": "拆解京东海博 AI-Native 落地保障：海博团队 AI 知识库能力建设",
       "sourceUrl": "https://mp.weixin.qq.com/s/rNox2XcWvgt2zdwGlVmfAg"
@@ -12978,6 +12988,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/GwwveRqcxk6ZEXVGqavUqw"
     },
     {
+      "path": "raw/articles/mit-social-simulation-arena-ssa-eval-2026-09-28.md",
+      "title": "mit-social-simulation-arena-ssa-eval-2026-09-28",
+      "sourceUrl": "https://mp.weixin.qq.com/s"
+    },
+    {
       "path": "raw/articles/mit团队把泛化写进harness短任务训练解锁32倍长度外推.md",
       "title": "mit团队把泛化写进harness短任务训练解锁32倍长度外推",
       "sourceUrl": "https://mp.weixin.qq.com/s/GwwveRqcxk6ZEXVGqavUqw"
@@ -14763,6 +14778,11 @@
       "sourceUrl": "https://www.xiaohongshu.com/explore/6a7087a90000000006005e48?xsec_source=app_share&xsec_token=CBjhtLDgr4aGkqF4rKYaATYWHUY1nmtuRPGDiFGFi4ADk="
     },
     {
+      "path": "raw/articles/poincare-conjecture-lean-formal-verification-ai-2026-09-28.md",
+      "title": "poincare-conjecture-lean-formal-verification-ai-2026-09-28",
+      "sourceUrl": "https://mp.weixin.qq.com/s"
+    },
+    {
       "path": "raw/articles/pointfive-token-reduction-not-cost-reduction.md",
       "title": "pointfive-token-reduction-not-cost-reduction",
       "sourceUrl": "https://www.pointfive.co/AI-Research"
@@ -15148,6 +15168,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/yw3DvqKBIV5fIZkSG12zdA"
     },
     {
+      "path": "raw/articles/quail-ai-sql-inference-engine-modal-cmu-billion-tpm.md",
+      "title": "quail-ai-sql-inference-engine-modal-cmu-billion-tpm",
+      "sourceUrl": "https://modal.com/blog/quail-billion-tpm"
+    },
+    {
       "path": "raw/articles/quantamind-reactive-mlff-moleculemind-science-advances-2026.md",
       "title": "QuantaMind：分子之心的反应性机器学习力场（Science Advances）",
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652725823&idx=2&sn=df1b36d5cf12be72db54a4d7337edf92"
@@ -15461,6 +15486,11 @@
       "path": "raw/articles/rein-go-agent-4-modules-5-type-boundaries.md",
       "title": "Rein：4 模块 + 5 类型边界防止 agent.go 膨胀到 3000 行",
       "sourceUrl": "https://mp.weixin.qq.com/s/P9hUlN3Nv7EdJqxuDbLsJQ"
+    },
+    {
+      "path": "raw/articles/reinforce-from-scratch-policy-gradient-llm-tyler-romero.md",
+      "title": "reinforce-from-scratch-policy-gradient-llm-tyler-romero",
+      "sourceUrl": "https://www.tylerromero.com/posts/2026-09-policy-gradient"
     },
     {
       "path": "raw/articles/reinforcing-recursive-language-models-alphaxiv.md",
@@ -15921,6 +15951,11 @@
       "path": "raw/articles/sciencesofts-hipaa-compliant-ai-voice-scheduler-built-on-aws.md",
       "title": "sciencesofts-hipaa-compliant-ai-voice-scheduler-built-on-aws",
       "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/sciencesofts-hipaa-compliant-ai-voice-scheduler-built-on-aws"
+    },
+    {
+      "path": "raw/articles/scientisttwo-autonomous-research-closed-loop-challengehub-2026.md",
+      "title": "scientisttwo-autonomous-research-closed-loop-challengehub-2026",
+      "sourceUrl": "https://mp.weixin.qq.com/s/dOhHdGjbHrsKC5Epknd3CQ"
     },
     {
       "path": "raw/articles/scoped-hiring-process-aware-fairness-multi-agent-emnlp-2026.md",

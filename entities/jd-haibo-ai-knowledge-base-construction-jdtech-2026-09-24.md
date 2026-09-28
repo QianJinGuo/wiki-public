@@ -3,7 +3,7 @@ title: "京东海博 AI 知识库能力建设：三层知识架构与 Harness �
 type: entity
 tags: [jd, haibo, knowledge-base, okf, context-engineering, ai-native, harness, skill, test-knowledge, enterprise-practice]
 created: 2026-09-24
-updated: 2026-09-24
+updated: 2026-09-28
 sources: [raw/articles/jd-haibo-ai-knowledge-base-construction-jdtech-2026-09-24]
 confidence: 0.9
 provenance_state: extracted
@@ -52,3 +52,7 @@ provenance_state: extracted
 - 姊妹实体：[[entities/jd-haibo-ai-native-harness-dual-loop-knowledge|京东海博 AI-Native 研发工程体系（运行时侧）]]
 - 知识格式：[[entities/google-okf-open-knowledge-format-v0-1-2026|Google OKF]]（本文采纳的规范）、[[entities/llm-wiki-knowledge-management|LLM Wiki]]（同判前移思路）
 - → [[raw/articles/jd-haibo-ai-knowledge-base-construction-jdtech-2026-09-24|原文存档]]
+
+## 同平台姊妹篇（数据生产侧，2026-09-28）
+
+京东技术同号第 3 能力层：《数据涅槃：Agentic 重塑搜推数据生产体系》——Forge Agent + Sindri + ADF 受控数据研发链路（领域 DSL/两阶段提交门禁/质量血缘贯穿/先证据后自动化），与本文知识供给侧、运行时侧实体构成同平台三层能力互链：→ [[entities/jd-forge-agent-sindri-search-rec-data-platform-2026]] ^[raw/articles/jd-forge-agent-sindri-search-rec-data-platform-2026.md]

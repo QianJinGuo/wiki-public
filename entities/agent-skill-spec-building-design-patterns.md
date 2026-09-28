@@ -2,7 +2,7 @@
 title: "Agent Skill 规范、构建与设计模式"
 type: entity
 created: 2026-07-02
-updated: 2026-09-07
+updated: 2026-09-29
 tags: [agent, skill, specification, design-patterns, anthropic, google-adk, skill-creator]
 rating: v7c7
 sources:
@@ -94,6 +94,27 @@ Vercel 发布的开放、厂商中立标准，为 Skill + MCP server 提供统�
 → [[raw/articles/agent-skill-spec-building-design-patterns|原文存档]]
 
 ---
+## 深度分析
+
+把两个来源放在一起看，会得到单篇阅读时看不到的三层结构判断。
+
+**第一层：规范层与打包层的分工正在收敛。** Anthropic 的 SKILL.md 标准回答"一个 Skill 长什么样"，Agent Plugins 1.0.0 回答"多个组件如何一起分发"。两者刻意不重叠：plugin.json 最低只要 `$schema` + `name` 两个字段，其余契约交给目录结构本身——这正是 Unix "约定优于配置"哲学在 Agent 生态的复刻。Skill 的 `skills/summarize/{SKILL.md,scripts,references}` 子目录在 plugin 内原样保留，说明打包标准复用而非替换组件规范^[raw/articles/agent-skill-spec-building-design-patterns.md, raw/articles/vercel-agent-plugins-skill-mcp-packaging-2026.md]。
+
+**第二层：加载经济学决定了一切设计。** 三层渐进式加载把 Token 成本从"每个 Skill 全文常驻"压到"目录级 ~50-100 tokens 常驻"，20 个 Skill 初始加载仅 1000-2000 tokens。这不是实现细节，而是整个设计空间的约束函数：Description 只写触发条件不写工作流程（否则 Agent 按 description 执行、跳过正文）、Tool Wrapper 模式把完整规范推到 references/ 按需读、Agent Plugins 把重活留给客户端——全都是同一个约束的不同投影。理解了 L1/L2/L3 的成本结构，五个设计模式的选择标准就自然浮现。
+
+**第三层：评估链是把 Skill 当软件工程做的关键。** Skill-Creator 的 Grader→Comparator→Analyzer 三 Agent 链，本质是把 ML 的"泛化而非过拟合"纪律迁移到 Prompt Engineering：不为测试用例针对性改 Skill、双盲比较、事后揭盲归因。这与 [[entities/agent-skill-writing-advanced|Skill 高级写作]]、[[entities/agent-skill-writing-evaluation|Skill 评估]] 形成方法闭环——写作产出 Skill，评估链决定 Skill 是否值得保留。
+
+跨来源的张力点也值得记录：Anthropic 路线假设单客户端内的最佳实践（Skill-Creator、评估链都是客户端内工具），而 Agent Plugins 路线假设组件要在五个以上客户端间流转（ChatGPT/Codex、Cursor、Copilot、Kiro、VS Code）。前者优化深度，后者优化可移植性；v1 明确"小而有意"，把 commands/hooks/agents 留在客户端侧，就是在两种张力之间划的最小可行边界^[raw/articles/vercel-agent-plugins-skill-mcp-packaging-2026.md]。
+
+## 实践启示
+
+- **写 Description 前先问"什么任务该触发它"**：只描述触发条件，一个字都不要写工作流程。这是整个规范里性价比最高的一条纪律——写错它，L2 正文永远不会被读到。
+- **Token 预算当作硬约束来设计**：L1 控制在 ~100 tokens 内，L2 <5000 tokens，L3 承担体积。Skill 超重时先想"哪些内容可以降到 references/"，而不是压缩措辞——这正是 Tool Wrapper 模式的适用信号。
+- **选择设计模式看两件事：任务是否有固定阶段、用户是否知道要什么。** 有阶段用 Pipeline（+Reviewer 做阶段间质量闸门）；用户说不清需求用 Inversion 先采访；两者都不明显再考虑 Generator。单一模式够用就不要组合。
+- **Skill 出现"第三次重复"时立即抽取**：Agent 反复写同类辅助脚本，就把脚本落进 `scripts/` 直接调用——重复模式是Skill 陷入过拟合的最早信号。
+- **要跨客户端分发的组件，从第一天就按 Agent Plugins 目录布局组织**：`plugin.json` + `skills/` + `mcp.json` 的结构成本几乎为零，而事后重打包的成本极高。纯客户端内使用的 Skill 则不必为此付出结构税。
+- **评估不是可选项**：修改 Skill 后至少跑一轮 Grader 评分 + Comparator 盲比，避免"为单个坏 case 改一次就回归一次"的过拟合循环。
+
 ## 关联
 - 相关概念: [[concepts/harness-engineering-framework|Harness Engineering]]
 - 相关: Agent 架构

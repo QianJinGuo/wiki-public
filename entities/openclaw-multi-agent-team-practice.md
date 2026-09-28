@@ -1,4 +1,5 @@
 ---
+
 title: "OpenClaw 多智能体团队搭建实战经验"
 created: 2026-05-09
 updated: 2026-09-28
@@ -15,7 +16,9 @@ review_verdict: hub-retained
 review_category: dup
 review_note: "judged dup-0.8: 同团队2857字版，留12180字版; retained as hub (in-links>=20); MOC rewrite candidate"
 moc_rebuilt: 2026-09-07
----# OpenClaw 多智能体团队搭建实战经验
+---
+
+# OpenClaw 多智能体团队搭建实战经验
 
 > 本页原内容在 2026-09-07 质量闭环中判定为 **dup-0.8**，已按导航页（MOC）重建；
 > 原文备份见 `_archive/hub-rewrite-2026-09-07/openclaw-multi-agent-team-practice.md`，一手来源仍见下方 sources。
@@ -52,23 +55,23 @@ moc_rebuilt: 2026-09-07
 
 ### 专精胜于全能：为什么隔离是第一设计原则
 
-ConardLi 的七人「花园团队」用两个月的实际使用回答了多智能体系统最经典的架构问题——为什么不做一个全能 Agent。他给出的三个失败模式高度凝练：**上下文污染**（生图模板、投资框架、写作风格挤在同一窗口，注意力互相稀释，写文章混入投资术语）、**技能冲突**（开发助手需要 ACP 调度 Claude Code 的权限对写作助手纯属多余且有安全风险）、**人设冲突**（严谨的数据分析师与有温度的写作者难以在同一身份里共存）。这三条分别对应 context、capability、identity 三个维度的隔离需求，本质上是把软件工程里的单一职责原则和高内聚低耦合迁移到了 Agent 组织设计上。这与 [[concepts/agent-role-specialization]] 中的角色分工理论互相印证：隔离不是为了整齐，而是为了让每个 Agent 的 prompt、权限、记忆、工具黑名单都能做到最小化。
+ConardLi 的七人「花园团队」用两个月的实际使用回答了多智能体系统最经典的架构问题——为什么不做一个全能 Agent。他给出的三个失败模式高度凝练：**上下文污染**（生图模板、投资框架、写作风格挤在同一窗口，注意力互相稀释，写文章混入投资术语）、**技能冲突**（开发助手需要 ACP 调度 Claude Code 的权限对写作助手纯属多余且有安全风险）、**人设冲突**（严谨的数据分析师与有温度的写作者难以在同一身份里共存）。这三条分别对应 context、capability、identity 三个维度的隔离需求，本质上是把软件工程里的单一职责原则和高内聚低耦合迁移到了 Agent 组织设计上。这与 [[concepts/agent-role-specialization]] 中的角色分工理论互相印证：隔离不是为了整齐，而是为了让每个 Agent 的 prompt、权限、记忆、工具黑名单都能做到最小化。 ^[raw/articles/openclaw-multi-agent-team-practice.md]
 
 ### 需求驱动而非设计驱动：Agent 是「用出来的」
 
-文中一个容易被忽略的关键点：六个专精 Agent 「不是设计出来的，是用出来的」。作者从日常最高频的需求出发逐个搭建迭代，每搭一个经验多一分，下一个就更快更好。这避免了多智能体项目最常见的失败路径——一开始就规划七个角色、写七套 SOUL.md，结果大部分 Agent 从未产生真实使用。渐进式搭建让每个 Agent 都有明确的真实任务锚点，也让人设和记忆文件在真实反馈中自然长出，而非凭空想象。对个人 Agent 团队而言，**冷启动的正确姿势是先有一个 Agent 跑通闭环，再按痛点裂变**。
+文中一个容易被忽略的关键点：六个专精 Agent 「不是设计出来的，是用出来的」。作者从日常最高频的需求出发逐个搭建迭代，每搭一个经验多一分，下一个就更快更好。这避免了多智能体项目最常见的失败路径——一开始就规划七个角色、写七套 SOUL.md，结果大部分 Agent 从未产生真实使用。渐进式搭建让每个 Agent 都有明确的真实任务锚点，也让人设和记忆文件在真实反馈中自然长出，而非凭空想象。对个人 Agent 团队而言，**冷启动的正确姿势是先有一个 Agent 跑通闭环，再按痛点裂变**。 ^[raw/articles/openclaw-multi-agent-team-practice.md]
 
 ### 三层记忆 + 技能检索：把「默契」工程化
 
-花园生图助手案例展示了 OpenClaw 记忆体系的精髓：短期记忆（会话上下文）、中期记忆（`memory/YYYY-MM-DD.md` 日记文件，启动时加载当天与前一天）、长期记忆（`MEMORY.md`，沉淀筛选后的偏好与流程）。配合 `prompt-templates` 技能把十几段提示词模板变成可检索资产，生图流程「识别意图 → 召回记忆 → 检索技能 → 拼接 Prompt → 调用工具」全部自动完成。普通生图应用是无状态工具、每次从零开始；而 Agent 的价值恰在于把用户与工具之间反复磨合出的「默契」固化成 [[concepts/agent-memory-architecture]] 中描述的持久化结构。投资助手的 `investment_framework.md`（评分体系）+ `investment_report_template.md`（交付结构）则进一步说明：**方法论本身也应该建模为技能文件，而不只是散落在 prompt 里**。
+花园生图助手案例展示了 OpenClaw 记忆体系的精髓：短期记忆（会话上下文）、中期记忆（`memory/YYYY-MM-DD.md` 日记文件，启动时加载当天与前一天）、长期记忆（`MEMORY.md`，沉淀筛选后的偏好与流程）。配合 `prompt-templates` 技能把十几段提示词模板变成可检索资产，生图流程「识别意图 → 召回记忆 → 检索技能 → 拼接 Prompt → 调用工具」全部自动完成。普通生图应用是无状态工具、每次从零开始；而 Agent 的价值恰在于把用户与工具之间反复磨合出的「默契」固化成 [[concepts/agent-memory-architecture]] 中描述的持久化结构。投资助手的 `investment_framework.md`（评分体系）+ `investment_report_template.md`（交付结构）则进一步说明：**方法论本身也应该建模为技能文件，而不只是散落在 prompt 里**。 ^[raw/articles/openclaw-multi-agent-team-practice.md]
 
 ### ACP 协议：编排者与执行者的解耦
 
-开发助手案例中，OpenClaw 并不亲自写代码，而是通过 ACP（Agent Client Protocol）结构化地调度 Claude Code。文章点出了这一设计的核心动机：不再靠解析命令行 ANSI 转义序列「盲操」编程 Agent，而是拿到带类型的结构化消息（思考过程、工具调用、代码 diff、执行结果）。这是「编排者不执行、执行者不编排」的清晰分层，与 [[concepts/agent-orchestration-patterns]] 中的编排模式一致。但文中的坑也很典型：ACP 会话是非交互式（no TTY）的，Claude Code 弹出权限确认时无人可点，必须显式配置 `permissionMode approve-all`——而 approve-all 意味着 Agent 可执行任意命令，**便利性与安全边界之间的权衡必须由使用者显式知情并接受**。
+开发助手案例中，OpenClaw 并不亲自写代码，而是通过 ACP（Agent Client Protocol）结构化地调度 Claude Code。文章点出了这一设计的核心动机：不再靠解析命令行 ANSI 转义序列「盲操」编程 Agent，而是拿到带类型的结构化消息（思考过程、工具调用、代码 diff、执行结果）。这是「编排者不执行、执行者不编排」的清晰分层，与 [[concepts/agent-orchestration-patterns]] 中的编排模式一致。但文中的坑也很典型：ACP 会话是非交互式（no TTY）的，Claude Code 弹出权限确认时无人可点，必须显式配置 `permissionMode approve-all`——而 approve-all 意味着 Agent 可执行任意命令，**便利性与安全边界之间的权衡必须由使用者显式知情并接受**。 ^[raw/articles/openclaw-multi-agent-team-practice.md]
 
 ### 零人工干预的价值锚点：定时任务 + 既有脚本复用
 
-资讯助手是全自动程度最高的案例，但它的搭建思路值得细读：作者没有让 Agent 凭空重建日报系统，而是把已有的 Node.js 分析脚本复用进来，仅让 OpenClaw 做了两件增量改造——脚本从远程拉取改为读本地文件，以及给 IMAP 技能增加一个 `fetch-to-file` 方法衔接邮件与脚本。加上定时任务与防重复优化后即达成每天零人工干预。这说明**Agent 化改造的最优路径往往是「胶水层自动化」，而非全量重写**：把 LLM 用在意图识别、流程编排、结果总结这些它擅长的环节，把确定性逻辑留在脚本里。
+资讯助手是全自动程度最高的案例，但它的搭建思路值得细读：作者没有让 Agent 凭空重建日报系统，而是把已有的 Node.js 分析脚本复用进来，仅让 OpenClaw 做了两件增量改造——脚本从远程拉取改为读本地文件，以及给 IMAP 技能增加一个 `fetch-to-file` 方法衔接邮件与脚本。加上定时任务与防重复优化后即达成每天零人工干预。这说明**Agent 化改造的最优路径往往是「胶水层自动化」，而非全量重写**：把 LLM 用在意图识别、流程编排、结果总结这些它擅长的环节，把确定性逻辑留在脚本里。 ^[raw/articles/openclaw-multi-agent-team-practice.md]
 
 ## 实践启示
 
@@ -76,7 +79,7 @@ ConardLi 的七人「花园团队」用两个月的实际使用回答了多智�
 2. **专精拆分时同时隔离三样东西**：上下文（独立 workspace 与记忆）、权限（工具黑白名单、`allowAgents` 白名单）、人设（独立 SOUL.md）。三者缺一，「专精」就名不副实。
 3. **把方法论写成技能文件**：分析框架、评分体系、报告模板、提示词模板都应沉淀为 `SKILL.md` + `references/` 结构，让 Agent 可检索可复用，而不是每次对话重新解释。
 4. **长期记忆写入的是流程与偏好，不是临时任务**。用类似「请记到长期记忆：用户要求生图时先检索模板再拼接再调用工具」的方式，把工作流一次性固化，之后零重复说明。
-5. **自动化改造优先做胶水层**：定时任务 + 邮箱/IMAP 接入 + 复用既有脚本，比让 Agent 从零重建系统更快更稳；接入外部 Agent 用协议（ACP）而非文本流盲操。
+5. **自动化改造优先做胶水层**：定时任务 + 邮箱/IMAP 接入 + 复用既有脚本，比让 Agent 从零重建系统更快更稳；接入外部 Agent 用协议（ACP）而非文本流盲操。 ^[raw/articles/openclaw-multi-agent-team-practice.md]
 
 ## 关联
 

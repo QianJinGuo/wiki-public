@@ -1,7 +1,7 @@
 ---
 title: "Speculative Programmatic Tool Calling (sPTC) — Alex Zhang 2026"
 created: 2026-08-26
-updated: 2026-09-10
+updated: 2026-09-28
 type: entity
 tags: [harness, inference-optimization, rlm, tool-calling, speculative-execution, code-execution, latency]
 sources:
@@ -48,6 +48,37 @@ review_category: tech
 sPTC 认为对更复杂程序中的工具加 speculation 比标准 tool calling 更有用，因为程序运行时未知。标准 tool calling 下，LLM 生成足够 token 完整指定工具调用时，剩余 token 通常不多；而代码执行使实际工具调用模式显著更复杂，留下更多重叠空间。^[raw/articles/speculative-programmatic-tool-calling-sptc-alex-zhang-2026.md]
 
 实现：https://github.com/alexzhang13/spec-ptc（当前 {Python, bash, Bun} x {Coding harness, RLM, game agent}）。
+
+## 深度分析
+
+### 与 CPU speculative execution 的类比及其边界
+
+三者押注对象不同：CPU 分支预测押控制流，speculative decoding 押 token 分布，sPTC 押数据流中的调用意图——从部分生成的代码提前读出"这个工具迟早会被以这些输入调用"。类比成立处：都是"提前启动 + 命中免等待"，失败代价都是丢弃（speculator 不写真实 REPL 状态）。类比破裂处有三：其一，CPU/speculative decoding 的验证是精确比对，sPTC 的"验证"近乎免费——解析出的调用签名与最终生成一致即缓存可用，真正的风险不在猜错输出，而在猜错输入依赖是否就绪（Case 4 被阻塞的根源）；其二，speculate 边界由人工契约（`speculatable=True, pure=True`、unsafe allowlist）划定，而非全自动硬件机制，更像开发者标注、运行时调度的混合体；其三，CPU speculation 是微秒级，sPTC 处理的是秒级 sub-LLM 延迟，收益空间大一个数量级，这也解释了为何它自称"naive JIT 编译器"。
+
+### 开销结构：为什么 1-1.2x 但仍然值得
+
+OOLONG（trec-coarse 132k / Pairs 32k，Qwen3-30B-A3B，8xH100 + vLLM）给出的 1-1.2x 看似温和，但开销结构是三个"近乎为零"换来的：speculator 只做廉价解析检查（CPU）；shadow REPL 的 deepcopy 相对 132k 上下文变量可忽略（内存）；speculator 不用作真实 executor，错误代码不污染状态、无需回滚（正确性）。因此 speed-up 下限不是被开销吃掉，而是被**命中率**吃掉：可 speculate 的高延迟 sub-LLM 调用占比、streaming 期间输入依赖多早确定，共同决定收益上限。唯一真实风险是 serving engine 被大量并发 speculated 请求堵塞——浪费发生在工具端推理容量而非 harness 端，调优杠杆在 speculate 激进度与工具排队策略。本地部署另有红利：解码 memory-bound 时 speculation 恰好提高 arithmetic intensity，这是云端 batched serving（请求被抽象到独立 engine）拿不到的。
+
+### 何时赢、何时输：任务画像
+
+收益判据可以概括为：**高延迟工具调用占端到端时间比例 × 可提前解析出的调用比例**。
+
+- 赢面大：依赖少量昂贵 sub-LLM/sub-agent 调用的代码执行 harness（RLM 典型）；"think 很久"的长推理模型——主上下文生成越慢，streaming 重叠窗口越大；代码中多个写法串行、数据独立的工具调用（JIT 式并行化）；本地自控 serving 栈。
+- 赢面小：工具本身廉价（重叠收益小于复杂度成本）；sub-RLM 等递归成本过高的调用（契约明确排除）；标准 JSON tool calling——调用签名生成完时剩余 token 已不多，窗口天然窄（作者的核心论证：code execution 让调用模式更复杂，反而留出更多重叠空间）；共享 serving engine 且 speculated 请求易堵塞他人的多租户场景。
+- 结构性风险：依赖 unsafe 函数（如 `open`）的调用被完全阻塞；非确定性工具需 occurrence 级索引，多数投票场景若不追踪唯一实例，一个 speculated 调用会被错误路由到每个副本。
+
+### 在 latency-hiding 工具箱中的位置
+
+sPTC 与两类常见手法正交且可叠加：prompt caching 是空间换时间，降低每 token 成本，不改变调用间串行结构；并行工具调用（AsyncFC 式 future wrapper）需要模型显式写出并行结构，收益止于模型"知道"的并行度。sPTC 的独特性在于从**部分生成的代码**推断并行性——模型不必写异步代码，harness 替它做 JIT。前继 Conveyor（按行部分执行）与 Speculative Interaction Agents（重 TTFT）证明 decoding 期间部分执行可行，sPTC 把粒度推进到 REPL 命名空间级（Case 3 peekable 依赖），并用 deepcopy shadow REPL 解决"部分执行不污染状态"。与 [[concepts/speculative-decoding]] 同构不同层：后者在 token 层隐藏解码延迟，前者在工具调用层隐藏执行延迟，两者同押"验证便宜、重算昂贵"。它也是 [[concepts/harness-engineering]] 中 latency-hiding 一脉与 [[concepts/inference-optimization]] 的交叉点。
+
+## 实践启示
+
+1. **speculate 契约先行于实现**：先明确哪些工具 `speculatable` 且 `pure`（sub-LLM 可以，sub-RLM 不行），再写解析器。契约错误的代价不是性能损失而是正确性损失（非确定性调用的多个副本被错误路由）。
+2. **把整个 REPL cell 当作计算单元**：speculator 与真实 executor 分离、deepcopy shadow REPL 试运行，是"部分执行"类技巧的通用安全模式，可迁移到任何 streaming 解析场景。
+3. **盯住 serving 侧拥塞这一唯一真实开销**：基准下限来自命中率而非解析开销；speculated 请求与真实请求共享 engine 时，激进 speculation 会把收益变成他人的延迟。
+4. **优先在 code-execution harness 上启用**：标准 JSON tool calling 的重叠窗口天然窄；代码执行让调用模式复杂化，才是 speculation 的主场。
+5. **本地部署是收益放大器**：memory-bound 解码下 speculation 提高算术强度；用云端 batched API 则这层收益消失。
+6. **与 prompt caching、并行工具调用叠加而非替代**：三者作用在不同层（token 成本 / 显式并行 / 隐式推断并行），组合使用延迟收益近似可加。
 
 ## 相关实体
 

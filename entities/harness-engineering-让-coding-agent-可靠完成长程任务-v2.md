@@ -1,5 +1,6 @@
 ---
 
+
 title: "Harness Engineering: 让 Coding Agent 可靠完成长程任务"
 type: entity
 tags: [agent, harness, long-term-task, orchestration]
@@ -15,7 +16,9 @@ review_verdict: hub-retained
 review_category: dup
 review_note: "judged dup-0.75: 长程任务v2 10087字，batch-30已留rv9框架版; retained as hub (in-links>=20); MOC rewrite candidate"
 moc_rebuilt: 2026-09-07
----# Harness Engineering: 让 Coding Agent 可靠完成长程任务
+---
+
+# Harness Engineering: 让 Coding Agent 可靠完成长程任务
 
 > 本页原内容在 2026-09-07 质量闭环中判定为 **dup-0.75**，已按导航页（MOC）重建；
 > 原文备份见 `_archive/hub-rewrite-2026-09-07/harness-engineering-让-coding-agent-可靠完成长程任务-v2.md`，一手来源仍见下方 sources。
@@ -55,23 +58,23 @@ moc_rebuilt: 2026-09-07
 
 ### 长程任务的失败不是能力问题，而是状态问题
 
-文章最核心的洞察是：长程任务失败的三个根源（上下文耗尽、中断重来、规模不可控）没有一个是模型推理能力问题，全部是**状态管理**问题。上下文压缩导致的信息逐层流失、"上下文焦虑"导致的提前收尾、跨会话记忆缺失导致的从零重启，本质上都是 Agent 的执行状态只存在于易失的对话上下文中。File As Progress 的设计把状态锚定到磁盘文件，等于把 Agent 从"靠记忆工作"改造成"靠账本工作"——恢复逻辑不需要知道之前发生了什么，只需读到当前状态就能推导续传策略。这也是它比 checkpoint/摘要类方案更可靠的原因：文件是确定性的，摘要是概率性的。
+文章最核心的洞察是：长程任务失败的三个根源（上下文耗尽、中断重来、规模不可控）没有一个是模型推理能力问题，全部是**状态管理**问题。上下文压缩导致的信息逐层流失、"上下文焦虑"导致的提前收尾、跨会话记忆缺失导致的从零重启，本质上都是 Agent 的执行状态只存在于易失的对话上下文中。File As Progress 的设计把状态锚定到磁盘文件，等于把 Agent 从"靠记忆工作"改造成"靠账本工作"——恢复逻辑不需要知道之前发生了什么，只需读到当前状态就能推导续传策略。这也是它比 checkpoint/摘要类方案更可靠的原因：文件是确定性的，摘要是概率性的。 ^[raw/articles/harness-engineering-让-coding-agent-可靠完成长程任务.md]
 
 ### 边界三种实现方式暗含一张依赖分类决策树
 
-任务边界的实现（无依赖直接并行 / 有依赖拓扑排序 / 有冲突物理隔离）实际上构成一个按"任务间关系"分类的决策树：先做文件级依赖分析判断能否并行，再检测写冲突判断是否需要 Git Worktree 隔离。值得注意的细节是冲突的**延迟处理**策略——不在多 Agent 竞态中实时协调，而是等所有子任务跑完、工作区静止后再由 Agent 解冲突。这是因为静止状态下的冲突集合是确定的、不再变化的，Agent 面对的是快照而非移动靶。网状协作（Agent Teams）被明确排在最后选项，因为通信开销和不确定性会随节点数放大。
+任务边界的实现（无依赖直接并行 / 有依赖拓扑排序 / 有冲突物理隔离）实际上构成一个按"任务间关系"分类的决策树：先做文件级依赖分析判断能否并行，再检测写冲突判断是否需要 Git Worktree 隔离。值得注意的细节是冲突的**延迟处理**策略——不在多 Agent 竞态中实时协调，而是等所有子任务跑完、工作区静止后再由 Agent 解冲突。这是因为静止状态下的冲突集合是确定的、不再变化的，Agent 面对的是快照而非移动靶。网状协作（Agent Teams）被明确排在最后选项，因为通信开销和不确定性会随节点数放大。 ^[raw/articles/harness-engineering-让-coding-agent-可靠完成长程任务.md]
 
 ### CLI 化子任务解决的是 Prompt 的"传话失真"
 
-子任务不嵌套在主 Agent 对话里、而是由外部脚本独立启动，这个设计最容易被低估的价值是**消除转述损耗**。文章给出的实证很典型：主 Agent 收到结构化指令后会"自由发挥"，把文件内容全部内联进 Prompt 而不是让 subagent 自己渐进式读文件，还混入了自己的推断，一旦推断有误审查方向就被带偏。程序化构建 Prompt（build-prompt.js）保证了所有子任务指令结构一致、逐字节确定。这本质上是把 Prompt 从"自然语言口头禅"降级为"编译产物"——主 Agent 只声明意图，指令由脚本生成。同时 CLI 进程化让并发数由 dispatch.js 控制，绕开了模型在对话内调度时"过于谨慎、不敢开高并发"的行为偏差。
+子任务不嵌套在主 Agent 对话里、而是由外部脚本独立启动，这个设计最容易被低估的价值是**消除转述损耗**。文章给出的实证很典型：主 Agent 收到结构化指令后会"自由发挥"，把文件内容全部内联进 Prompt 而不是让 subagent 自己渐进式读文件，还混入了自己的推断，一旦推断有误审查方向就被带偏。程序化构建 Prompt（build-prompt.js）保证了所有子任务指令结构一致、逐字节确定。这本质上是把 Prompt 从"自然语言口头禅"降级为"编译产物"——主 Agent 只声明意图，指令由脚本生成。同时 CLI 进程化让并发数由 dispatch.js 控制，绕开了模型在对话内调度时"过于谨慎、不敢开高并发"的行为偏差。 ^[raw/articles/harness-engineering-让-coding-agent-可靠完成长程任务.md]
 
 ### 状态机粒度是成本与恢复精度的权衡，产物存在性是唯一可信判据
 
-状态设计（TODO → ANALYZING → ANALYZED → EXECUTING → …）的每个中间状态都必须对应一个落盘产物，所以"每多一个状态就多一个可精确恢复的断点"的直接代价是维护成本。文章给出的准则是务实的：只在执行时间长、或中间产物明确可复用的环节加状态；10 秒能跑完的任务三状态足够。另一个关键判断是 IN_PROGRESS 残留的甄别——不信任状态字段本身，而是以**产出物的存在性与合法性**（编译通过、JSON 可解析、符合 schema）作为唯一判据。重试分层（内层恢复会话 / 中层带反馈重试 / 外层重新调度）同样以文件状态而非 Agent 文本输出作为切换依据，因为模型自报的"任务完成"不可信，这在"完成的真实性"一节有直接教训。
+状态设计（TODO → ANALYZING → ANALYZED → EXECUTING → …）的每个中间状态都必须对应一个落盘产物，所以"每多一个状态就多一个可精确恢复的断点"的直接代价是维护成本。文章给出的准则是务实的：只在执行时间长、或中间产物明确可复用的环节加状态；10 秒能跑完的任务三状态足够。另一个关键判断是 IN_PROGRESS 残留的甄别——不信任状态字段本身，而是以**产出物的存在性与合法性**（编译通过、JSON 可解析、符合 schema）作为唯一判据。重试分层（内层恢复会话 / 中层带反馈重试 / 外层重新调度）同样以文件状态而非 Agent 文本输出作为切换依据，因为模型自报的"任务完成"不可信，这在"完成的真实性"一节有直接教训。 ^[raw/articles/harness-engineering-让-coding-agent-可靠完成长程任务.md]
 
 ### meta-skill 是编排经验的自举，边界假设会随模型过期
 
-结尾的 Skill for Skill 思路把编排经验本身沉淀为 meta-skill（long-term-task-orchestration），让 Agent 生产"能反复做这类任务的工具"而非完成一次性任务——这是用 Agent 强化 Agent 的自举结构，与 [[concepts/coding-harness-engineering]] 中 harness 知识资产化的方向一致。同时文章保持了清醒：harness 每个环节都隐含"当前模型做不到"的假设，模型进化后边界会移动，工程职责是定期重新审视"哪些环节该交给模型、哪些留在框架里"这个判断本身。相关长程任务四原则的更细拆解见 [[entities/harness-engineering-long-term-agent-tasks]]，3000 行粒度公式的完整推导也在该页；Claude Code 源码层的对应实现可参考 [[entities/claude-code-core-internals]]，上下文流失的机制背景可延伸至 [[concepts/context-management-agent-systems]]。
+结尾的 Skill for Skill 思路把编排经验本身沉淀为 meta-skill（long-term-task-orchestration），让 Agent 生产"能反复做这类任务的工具"而非完成一次性任务——这是用 Agent 强化 Agent 的自举结构，与 [[concepts/coding-harness-engineering]] 中 harness 知识资产化的方向一致。同时文章保持了清醒：harness 每个环节都隐含"当前模型做不到"的假设，模型进化后边界会移动，工程职责是定期重新审视"哪些环节该交给模型、哪些留在框架里"这个判断本身。相关长程任务四原则的更细拆解见 [[entities/harness-engineering-long-term-agent-tasks]]，3000 行粒度公式的完整推导也在该页；Claude Code 源码层的对应实现可参考 [[entities/claude-code-core-internals]]，上下文流失的机制背景可延伸至 [[concepts/context-management-agent-systems]]。 ^[raw/articles/harness-engineering-让-coding-agent-可靠完成长程任务.md]
 
 ## 实践启示
 
@@ -79,7 +82,7 @@ moc_rebuilt: 2026-09-07
 2. **能用脚本判定的校验绝不交给 Agent。** tsc 编译、构建通过、单测通过这类有客观对错标准的检查用程序化校验（零 Token、结果确定、可无限重复）；只有主观判断（如 review 意见质量）才用独立会话的 Evaluator，且做事与评价的 Agent 必须隔离会话——同会话的历史推理会形成"自我说服"效应，必要时引入跨模型 Evaluator 进一步降低偏见。
 3. **区分"硬失败"与"通过但有妥协"。** 把 99% 完成度的产出也 revert 重跑，会让大量文件在 DONE_WITH_WARNINGS 本可合入的状态下反复烧 Token。TS strict 迁移中遗留的少量 `@ts-ignore` 应记录为人工优化清单而非触发重试。只有重试耗尽且产出明显错误才标记 FAILED 回退人工。
 4. **调度用随到随补，输出对人和对 Agent 分通道。** 子任务耗时不均匀时按批次等齐会浪费大量坑位空转时间，poll.js 补位策略让每个并发槽位始终有任务在跑；终端给人看的输出只要数字、比例、异常摘要，结构化完整状态写文件供新会话恢复时程序化解析，两者不要混在一起。
-5. **把重试上限和停止边界写进编排协议。** 中层带反馈重试限制 2-3 次，耗尽后 revert、清理、标记 FAILED，子任务层面到此为止；外层是否重新 dispatch 需按 FAILED 数量决策——两三个值得重跑一轮，几十个说明规则本身有问题，盲目重跑只是烧 Token。先排查原因再决定，不要把重试当作万能兜底。
+5. **把重试上限和停止边界写进编排协议。** 中层带反馈重试限制 2-3 次，耗尽后 revert、清理、标记 FAILED，子任务层面到此为止；外层是否重新 dispatch 需按 FAILED 数量决策——两三个值得重跑一轮，几十个说明规则本身有问题，盲目重跑只是烧 Token。先排查原因再决定，不要把重试当作万能兜底。 ^[raw/articles/harness-engineering-让-coding-agent-可靠完成长程任务.md]
 
 ## 关联
 
