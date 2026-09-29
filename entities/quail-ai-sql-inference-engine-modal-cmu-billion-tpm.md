@@ -1,4 +1,5 @@
 ---
+
 title: "Hitting a billion tokens per minute on one GPU by combining a query planner and an inference engine"
 created: 2026-09-29
 updated: 2026-09-29
@@ -12,13 +13,13 @@ confidence: 0.7
 
 ## 定位与问题
 
-Quail 是 Modal 与 CMU 数据库研究者合作开源的 **AI-SQL 推理引擎**：不是"用自然语言生成 SQL"（Text-to-SQL），而是方向相反——用 SQL 扩展**程序化地构造（并消费）发给 AI 系统的 prompt**，如 `AI.IF(PROMPT("{customers.profile} might buy this: {products.description}"))`。这类负载主要出现在 BI 平台对半结构化数据（文档、自由文本字段）的模糊查询场景。
+Quail 是 Modal 与 CMU 数据库研究者合作开源的 **AI-SQL 推理引擎**：不是"用自然语言生成 SQL"（Text-to-SQL），而是方向相反——用 SQL 扩展**程序化地构造（并消费）发给 AI 系统的 prompt**，如 `AI.IF(PROMPT("{customers.profile} might buy this: {products.description}"))`。这类负载主要出现在 BI 平台对半结构化数据（文档、自由文本字段）的模糊查询场景。 ^[raw/articles/quail-ai-sql-inference-engine-modal-cmu-billion-tpm.md]
 
-关键洞察：AI-SQL 负载与 chatbot/coding agent 负载的推理特征完全不同——单个查询可能产生数百万条数千 token 的序列，且所需智能远低于前沿模型（小开源模型即可胜任）。朴素地将其送入为 agentic inference 优化的引擎是大规模低效的。
+关键洞察：AI-SQL 负载与 chatbot/coding agent 负载的推理特征完全不同——单个查询可能产生数百万条数千 token 的序列，且所需智能远低于前沿模型（小开源模型即可胜任）。朴素地将其送入为 agentic inference 优化的引擎是大规模低效的。 ^[raw/articles/quail-ai-sql-inference-engine-modal-cmu-billion-tpm.md]
 
 ## 核心技术：查询计划器 + KV cache 主动管理
 
-核心胜利点：**拿到结构化查询后，可以预先排序请求以更好地 cache（和驱逐）KV**——这需要对推理引擎的调度层做轻度改造。同时，大量针对小模型的小请求会产生可观开销，而预先知道请求结构可以规避这些开销。
+核心胜利点：**拿到结构化查询后，可以预先排序请求以更好地 cache（和驱逐）KV**——这需要对推理引擎的调度层做轻度改造。同时，大量针对小模型的小请求会产生可观开销，而预先知道请求结构可以规避这些开销。 ^[raw/articles/quail-ai-sql-inference-engine-modal-cmu-billion-tpm.md]
 
 ## 实测性能
 
@@ -29,7 +30,7 @@ Quail 是 Modal 与 CMU 数据库研究者合作开源的 **AI-SQL 推理引擎*
 
 ## 与已有 wiki 实体的关系
 
-与 [[entities/jev-fast-compaction-judgment-layer-tencent-daryl-2026]]（Jev 快判断层）互补：Jev 解决"Agent 判断题从大模型里拆出来"（模型侧），Quail 解决"结构化 prompt 负载的推理调度"（推理侧）。两者都指向同一趋势——**大量低智能密度、高吞吐的推理负载需要专门的系统工程**，而非通用 frontier 推理引擎。作者团队自称这是"推理与数据库交叉的开源性能工程的开端"，鼓励"expert-parallel"协作（数据库视角另有专文）。
+与 [[entities/jev-fast-compaction-judgment-layer-tencent-daryl-2026]]（Jev 快判断层）互补：Jev 解决"Agent 判断题从大模型里拆出来"（模型侧），Quail 解决"结构化 prompt 负载的推理调度"（推理侧）。两者都指向同一趋势——**大量低智能密度、高吞吐的推理负载需要专门的系统工程**，而非通用 frontier 推理引擎。作者团队自称这是"推理与数据库交叉的开源性能工程的开端"，鼓励"expert-parallel"协作（数据库视角另有专文）。 ^[raw/articles/quail-ai-sql-inference-engine-modal-cmu-billion-tpm.md]
 
 ## 关联
 

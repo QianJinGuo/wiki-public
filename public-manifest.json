@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "sourceRevision": "1ad761939c8b7770528464c67d9181fc5e8bbee1",
+  "sourceRevision": "68181a938abb189e7c82f8827231999479fe63df",
   "files": [
     {
       "path": "raw/articles/0.25秒识破未见攻击-lod-lvlm-jailbreak-detection-emnlp2026.md",
@@ -4236,6 +4236,11 @@
       "path": "raw/articles/automating-confidential-containers-coco-infrastructure-with-kyverno.md",
       "title": "Automating Confidential Containers (CoCo) infrastructure with Kyverno",
       "sourceUrl": "https://www.cncf.io/blog/2026/05/19/automating-confidential-containers-coco-infrastructure-with-kyverno/"
+    },
+    {
+      "path": "raw/articles/automating-eval-design-and-hillclimbing-claude-dev.md",
+      "title": "automating-eval-design-and-hillclimbing-claude-dev",
+      "sourceUrl": "https://claude.dev/blog/automating-eval-design-and-hillclimbing/"
     },
     {
       "path": "raw/articles/automation-anywhere-collaborates-with-cisco-nvidia-okta-and-openai-launching-ent.md",
@@ -9786,6 +9791,11 @@
       "path": "raw/articles/harness-what-is-model-outside-execution-system-ruofei.md",
       "title": "Harness 到底是什么：为什么同一个模型，换个 Coding Agent 结果会不一样？",
       "sourceUrl": "https://mp.weixin.qq.com/s/TusR9UFK6YIfpre7puKbIg"
+    },
+    {
+      "path": "raw/articles/harness-zero-agent-as-harness-mozhi-2026-09-29.md",
+      "title": "Harness-Zero：北大&谷歌提出 Agent-as-Harness——把 Harness 行为蒸馏进模型权重（模智空间解读）",
+      "sourceUrl": "https://mp.weixin.qq.com/s/OHpSXWlVcMmh6RRTOg-V0g"
     },
     {
       "path": "raw/articles/harness-之后-状态边界与失败闭环-若飞.md",
@@ -15398,6 +15408,11 @@
       "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/real-time-voice-agents-with-stream-vision-agents-and-amazon-nova-2-sonic/"
     },
     {
+      "path": "raw/articles/realtime-venus-ant-tsinghua-full-duplex-harness-2026.md",
+      "title": "一套Harness打通前后台：蚂蚁清华开源9B模型Realtime-Venus，让AI办事对话异步并行",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247927071&idx=3&sn=ca0c54154bbd2cfa22d37afcf2cf2153"
+    },
+    {
       "path": "raw/articles/reasoning-lift.md",
       "title": "Reasoning lift: What happens to AI visibility when AI thinks harder",
       "sourceUrl": "https://www.growth-memo.com/p/reasoning-lift-what-happens-to-ai"
@@ -15611,6 +15626,11 @@
       "path": "raw/articles/roadmapbench-evaluating-long-horizon-agentic-software-development.md",
       "title": "RoadmapBench: Evaluating Long-Horizon Agentic Software Development Across Version Upgrades",
       "sourceUrl": "https://arxiv.org/abs/2605.15846"
+    },
+    {
+      "path": "raw/articles/roboflywheel-embodied-simulation-assets-2026.md",
+      "title": "百万级仿真资产，正在重构机器人训练场：阿里巴巴RoboFlywheel首发",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=Mzg4NTczNzg2OA==&mid=2247511569&idx=2&sn=2572283725cf86c25f42f32a134cfb71"
     },
     {
       "path": "raw/articles/robostral-navigate.md",
