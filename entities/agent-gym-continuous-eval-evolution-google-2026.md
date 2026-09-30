@@ -1,7 +1,7 @@
 ---
 title: "Agent Gym：人机协同的 LLM Agent 持续评估与演化框架（Google Cloud）"
 created: 2026-08-25
-updated: 2026-09-07
+updated: 2026-10-01
 type: entity
 tags: [agent-gym, llm-agent, continuous-evaluation, agent-evolution, human-in-the-loop, rule-engine, constitution, external-correction, domain-agnostic, google-cloud, adk, spec-to-note, first-party]
 rating: v7c8
@@ -44,6 +44,22 @@ review_category: tech
 参考实现（发票处理，ADK+Gemini）：统一双模式 LlmAgent（18 个函数工具，推理+学习两模式），自包含 Python 模块。Acting pipeline 九阶段（Classifier→Extractor→Phase1-4 Validators→Transformer→Output Generator→Audit Logger），每阶段编号 JSON artifact 全可追踪。验证属性：领域适应性（换 master data YAML 即适配新文档）、运营就绪、自包含。
 
 **局限**：bootstrap 目前手动；调查 agent LLM 成本随 case/规则组扩展（机制已大幅降低但量化是未来工作）；只在单一领域（发票）验证，多领域验证需确立领域无关性。**未来方向**：自动化规则建议、规则生命周期管理（晋升进 acting agent）、跨领域迁移、自动化 bootstrap、Spec-to-Note 作 release gate。 ^[raw/articles/agent-gym-continuous-eval-evolution-google-paper-2026.md]
+
+## 深度分析
+
+1. **修正与实现的解耦是这篇论文最核心的架构赌注**。Agent Gym 把「agent 行为出错」从代码问题重新定义为数据问题：错误模式沉淀为 ALF 规则（条件+动作的声明式记录），而不是直接改 Prompt 或代码。这带来一个可审计、可回滚、可批量分析的行为版本层——规则库本身就是 agent 的「补丁历史」。代价是双系统复杂度：21 种条件操作符的确定性引擎加上 LLM 修正路径，团队必须同时维护两套语义。 ^[raw/articles/agent-gym-continuous-eval-evolution-google-paper-2026.md:60-70]
+2. **成本工程是框架能否落地的隐形胜负手**。三层调查架构的每一层都内嵌成本对策：Layer 2 的 SHA-256 规则缓存把 LLM 规则发现摊销到零，节过滤让 LLM 只读规则书相关章节，三重检查对合规 case 单次调用即早期退出。这意味着稳态下系统的边际调查成本几乎与规则数量脱钩——这是「持续评估」从演示走向生产的关键工程决策，多数同类论文对此避而不谈。 ^[raw/articles/agent-gym-continuous-eval-evolution-google-paper-2026.md:52-58]
+3. **治理分级回应了 agent 运维中最容易被忽视的权限问题**。框架明确区分三类变更主体：案例级 ALF 规则由领域 SME 发现和批准，核心宪法修改需多利益相关者审批，acting agent 逻辑的永久变更走「规则晋升」路径。程序化安全循环（在代码而非 Prompt 中强制）保证 LLM 无法自我授权——这与「LLM 自我改进」路线形成对照：这里演化的每一次推进都有人类签名，LLM 只负责提议和起草。 ^[raw/articles/agent-gym-continuous-eval-evolution-google-paper-2026.md:42-43,70]
+4. **Spec-to-Note Gap 把透明度问题转化为一阶信号处理问题**。将 spec→实现→note 视为自然语言自编码器，重构损失（spec 与 note 的偏差）直接指向未测量行为、静默作用域蔓延和缺失能力。其深层洞察是：审计输出必须与 SME 的认知接口对齐（可读的自然语言 note），否则评测数据再多也无法进入治理循环——SME 的注意力才是整个系统的稀缺资源。 ^[raw/articles/agent-gym-continuous-eval-evolution-google-paper-2026.md:78-79]
+5. **宪法双向流（constitution→code 与 code→constitution）让框架超越了评估工具**。正向流用宪法作为代码生成的 grounding（bootstrap agent 四阶段流水线），反向流让运行时积累的修正规则反哺宪法演化为活文档。这与「规格文档写完即过时」的常见宿命相反：宪法在这里有持续的经济激励保持更新，因为它是修正规则的挂靠点和规则晋升的目标态。 ^[raw/articles/agent-gym-continuous-eval-evolution-google-paper-2026.md:33,75-76]
+
+## 实践启示
+
+1. **给生产 agent 加一层外部修正层，而不是改 Prompt**。当 agent 出现系统性误用时，先用「条件→动作」规则记录错误模式并在下游修正（保留原始输出可审计），累积验证后再晋升进 agent 永久逻辑——避免每次纠错都重部署、丢失可回滚性。 ^[raw/articles/agent-gym-continuous-eval-evolution-google-paper-2026.md:40-43,89]
+2. **把领域知识写成机器可解析的宪法（YAML master data + Markdown 规则书），使其可被校验和缓存**。这样新领域只需换配置，校验规则可哈希缓存摊销成本，且同一份宪法可直接用作新 agent 代码生成的 grounding——一份资产三处复用。 ^[raw/articles/agent-gym-continuous-eval-evolution-google-paper-2026.md:33,41-42,75-76]
+3. **无 ground truth 的校验用「确定性优先 + LLM 保守兜底」的分层设计**：纯代码检查（数据源/绕过检测）打底，LLM 规则检查结果做三重交叉验证且偏保守（模糊判合规），假阳性会被 SME 惩戒机制放大，宁漏勿错。 ^[raw/articles/agent-gym-continuous-eval-evolution-google-paper-2026.md:52-58]
+4. **任何 LLM 产出的规则必须过程序化安全门**：schema 校验→目标匹配→附带影响评估，对历史 case 确定性求值，意外匹配自动加窄（vendor/金额范围/类别等条件），循环封顶三次、超限带警告交人工。这是防止「一条宽泛规则静默污染大量正常 case」的最小可行护栏。 ^[raw/articles/agent-gym-continuous-eval-evolution-google-paper-2026.md:70]
+5. **为 SME 设计与 harness 解耦的审阅接口**：把 agent 行为编译成结构化自然语言 note（Spec-to-Note 模式），让领域专家标记错误假设和监管边缘案例，其评论直接转为系统 tickets——评测闭环的瓶颈在人而不在指标。 ^[raw/articles/agent-gym-continuous-eval-evolution-google-paper-2026.md:78-79]
 
 ## 关联实体
 

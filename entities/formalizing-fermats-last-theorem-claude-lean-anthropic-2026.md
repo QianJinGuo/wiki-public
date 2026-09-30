@@ -1,7 +1,7 @@
 ---
 title: "Formalizing Fermat's Last Theorem：Claude 用 Lean 端到端形式化证明费马大定理"
 created: 2026-09-07
-updated: 2026-09-07
+updated: 2026-09-30
 type: entity
 tags: [ai4math, formal-verification, lean, prove2me, multi-agent, anthropic, claude, theorem-proving]
 sources: [raw/articles/formalizing-fermats-last-theorem-claude-lean-anthropic-2026]
@@ -39,6 +39,26 @@ Claude 的证明遵循 Darmon-Diamond-Taylor 对 Wiles 证明的简化版本。�
 Anthropic 与评论者（Kevin Buzzard）认为这证明"自动形式化当代数学文献已成为可能"——可用来找出数学共同语料中的错误、减轻审稿/referee 负担，并以可校验方式核查 LLM 生成的数学。形式化也被视为人类对 AI 生成数学结果建立信心的主要途径：AI 产出越来越多"声称的证明"后，形式化可能是数学界跟上的唯一可行方式。^[raw/articles/formalizing-fermats-last-theorem-claude-lean-anthropic-2026.md]
 
 一个低成本信号：用三个个人 Claude Max 订阅、完全经 Prove2Me 协作，agent 在三天内完成了 Vinogradov 三素数定理的形式化——说明在合适 scaffold 下，用消费级 AI 订阅协作形式化重大结果可达。这也呼应 [[entities/lean-scaling|Lean 软件扩展定律]] 所关注的形式化规模与成本问题。^[raw/articles/formalizing-fermats-last-theorem-claude-lean-anthropic-2026.md]
+
+## 深度分析
+
+**失败的结构性根源不在模型能力，而在状态外化。** Claude 的初始尝试并非败在数学推理——agent 早期能产出有效进展——而是"快速丢失项目状态、停止有效协作"，即长周期任务中典型的记忆退化（memory degradation）与协调崩塌。失败尝试的 ~7% 非样板代码行最终被回收进证明，说明这些失败并非全然浪费，但真正的分水岭是换用 Prove2Me 这类外部化状态结构。这与 [[entities/claude-code-multi-agent-harness-source-analysis|Claude Code Multi-Agent Harness]] 的核心结论一致：agent 系统的成败往往由 harness 决定，而非底层模型。^[raw/articles/formalizing-fermats-last-theorem-claude-lean-anthropic-2026.md:116-128]
+
+**三个平台设计要点对应三类 harness 通病。** 定理语句 DAG 解决"无共享任务图的并行必然跑偏"——每个 agent 以 DAG 为唯一真相源决定下一步证明什么，任务依赖显式化；定理陈述与证明分文件、独立维护链接，解决的是验证式编程中"改一行声明、全库重编译"的资源瓶颈；自然语言定理描述解决的是"已证明结果无法被检索复用"的问题，缩短证明路径。三者都是通用 harness 模式（任务 DAG、编译/构建加速、语义索引）在形式化领域的具体化。^[raw/articles/formalizing-fermats-last-theorem-claude-lean-anthropic-2026.md:124-136]
+
+**Lean 编译器充当了无限耐心的 verifier 与训练信号的双重角色。** 13 百万行代码、29,500 个中间定理的量级下，任何人类评审都不可能逐行核验，而 Lean 用三个标准公理提供机器级确定性——comparator 进一步确认定理表述与 Mathlib 的 FLT 表述一致，堵住"形式对了但证的不是同一个定理"的漏洞。原论文脚注中 Hales 的 Kepler 猜想证明（12 人评审后只能给出"99% 确信"）与 FLT 形成对照：形式化把验证从社会过程变成了计算过程。^[raw/articles/formalizing-fermats-last-theorem-claude-lean-anthropic-2026.md:140-144]
+
+**人类输入的角色是"方向仲裁"而非"解题"。** 全程人类贡献仅限 Tianyi Peng 的少数高层指令（"Jacobian as a scheme 优先级高""尽快推 Mazur 定理"）——本质是利用人类对 Wiles 证明结构的先验知识来调整优先级，而非参与任何具体推导。Claude 走的是 Darmon-Diamond-Taylor 简化路线，且承认其证明很可能"远比必要的更长"（对比简洁且经过充分评审的 Mathlib）——AI 形式化当前的优势是"证出来"，而非"证得优雅"。^[raw/articles/formalizing-fermats-last-theorem-claude-lean-anthropic-2026.md:100-104]
+
+**成本曲线的斜率比绝对水平更值得关注。** 6 billion output tokens 换 FLT（此前预计需数年），而三个消费级 Claude Max 订阅三天完成 Vinogradov 三素数定理形式化——说明形式化成本已从"机构级项目"降到"个人订阅+合适 scaffold"级别。这与 [[entities/lean-scaling|Lean 软件扩展定律]] 的规模-成本框架吻合：瓶颈正在从人类专家工时转移到 token 支出，而 token 成本仍在快速下降。^[raw/articles/formalizing-fermats-last-theorem-claude-lean-anthropic-2026.md:140-160]
+
+## 实践启示
+
+- **给长周期多 agent 任务先建外部状态图，再谈模型能力。** 若没有 DAG 化的任务真相源，并行 agent 会重复劳动、互相冲突直至崩盘——先投入 scaffold 设计，往往比换更强模型收益更大。^[raw/articles/formalizing-fermats-last-theorem-claude-lean-anthropic-2026.md:116-128]
+- **把"验证器在环"做成架构而非事后检查。** Lean 即时判定每一步的正确性，agent 因此可以无限试错而不积累隐性错误；任何 AI 代码/推理管线都可类比：选一个机器可判定的 oracle 并让它在生成过程中持续反馈。^[raw/articles/formalizing-fermats-last-theorem-claude-lean-anthropic-2026.md:86-94]
+- **分离声明与实现以加速验证循环。** Prove2Me 把定理陈述与证明拆到不同文件、独立维护链接来提速编译——软件工程中的接口/实现分离在 agent 时代有了新动机：缩短反馈回路本身就是生产力。^[raw/articles/formalizing-fermats-last-theorem-claude-lean-anthropic-2026.md:130-136]
+- **失败产物可资产化。** ~7% 的最终证明代码来自失败尝试——多 agent 系统应设计失败回收机制（DAG 中可复用的中间定理天然支持这一点），而非把每次失败当作纯成本。^[raw/articles/formalizing-fermats-last-theorem-claude-lean-anthropic-2026.md:116]
+- **用人类做高层仲裁，用形式化工具做机器级验证。** 对 AI 产出的可校验声明（数学、代码、合规推理），最经济的信任管线是：人类只校准方向与表述，正确性交由编译器/形式化工具闭环——Buzzard 预言的"为每份面向人类的写作同时产出形式化证明"可能成为 AI 内容质量保障的标配模式。^[raw/articles/formalizing-fermats-last-theorem-claude-lean-anthropic-2026.md:148-152]
 
 ## 相关实体
 
