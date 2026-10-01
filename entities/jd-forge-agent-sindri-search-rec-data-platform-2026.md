@@ -3,7 +3,7 @@ title: "京东搜推数据生产 Agentic 重塑：Forge Agent + Sindri + ADF 受
 type: entity
 tags: [jd, data-platform, agentic, search-rec, dsl, forge-agent, sindri, adf, harness, enterprise-practice]
 created: 2026-09-28
-updated: 2026-09-28
+updated: 2026-10-02
 sources: [raw/articles/jd-forge-agent-sindri-search-rec-data-platform-2026]
 review_value: 8
 review_confidence: 9
@@ -37,6 +37,35 @@ DSL 生成准确性的三类失效：需求信息不完整时自行补全业务�
 ## 质量贯穿与「先证据、后自动化」的自愈观
 
 数据质量系统纵向贯穿全链路四类能力：数据核对（全量/抽样校验+差异归因）、数据质量（规则校验/完整性/阈值告警）、血缘追踪（字段级血缘+影响分析）、监控大盘（SLA/时效/异常）。自愈闭环规划判断：不应以"全自动"为目标起步，而应先打通规划证据（目标环境/语义结构/确认结果）、提交证据（预览/权限判断/对象标识）、运行证据（DAG/实例/日志/结构化错误），再让自动化在有证据支撑的范围内逐步扩大——证据链越完整，可安全交给自动化的动作就越多；真正的自愈还需要稳定状态机、幂等机制、风险分级、重试上限、结果复核与人工接管。^[raw/articles/jd-forge-agent-sindri-search-rec-data-platform-2026.md]
+
+## 深度分析
+
+### 四层职责架构：为什么把「组织流程」与「解释执行」分层
+
+这套架构的要害不在「四层」这个数字，而在每层回答的问题不同：Forge Agent 面向人，回答「研发过程如何被组织」；Sindri 后端面向平台，回答「这项数据加工究竟要如何执行」。二者之间不靠提示词对话，而是靠参数明确、返回结果稳定的确定性工具交互，模型被明确禁止直接拼装 ADF 请求。^[raw/articles/jd-forge-agent-sindri-search-rec-data-platform-2026.md:90]
+
+分层的动机是失效模式的分布：若让模型一层到底，需求理解的小偏差会直接变成生产事故——「任何一步缺失都可能让看起来正确的任务变成生产事故」。^[raw/articles/jd-forge-agent-sindri-search-rec-data-platform-2026.md:29] 分层后，模型只负责需求理解和流程组织，生产操作仍由平台接口、权限规则和执行结果约束，现有平台在规划、调度、权限、审计上的确定性被完整保留。^[raw/articles/jd-forge-agent-sindri-search-rec-data-platform-2026.md:84] 典型链路中「Sindri 权威规划 → 提交预览 → 显式确认」正是分层语义的体现：规划权在后端，确认权在人，模型两头都不拥有。^[raw/articles/jd-forge-agent-sindri-search-rec-data-platform-2026.md:94]
+
+### 领域 DSL：把准确性从生成问题转化为工程流程
+
+DSL 环节最值得注意的判断：当前最突出的问题「不是能不能生成代码，而是输出是否稳定、是否符合当前 SDK 和后端规则」。^[raw/articles/jd-forge-agent-sindri-search-rec-data-platform-2026.md:112] 这是把问题从「模型能力」重新定义为「工程约束」——三类失效（信息不完整时自行补全、多 Skill 职责重叠提前提交、旧记忆导致拓扑不符）没有一类能靠更强的模型消灭，因为它们源于信息缺失、职责边界和知识过期。^[raw/articles/jd-forge-agent-sindri-search-rec-data-platform-2026.md:114]
+
+Sindri Plugin 的解法是把流程拆成「单场景路由—需求契约—标准示例—SDK 事实—本地校验—后端规划—人工确认」，逐级消化三类失效：场景路由消灭职责重叠，需求契约消灭自行补全，SDK 事实消灭记忆过期。^[raw/articles/jd-forge-agent-sindri-search-rec-data-platform-2026.md:120] 权限切分同样关键：本地校验只证明结构成立，任务拆分、引擎选择、资源规划的最终决定权在后端；提交两阶段门禁，先预览、用户明确确认后才真实提交。^[raw/articles/jd-forge-agent-sindri-search-rec-data-platform-2026.md:122] 由此语义层与执行层解耦：DSL 只描述数据依赖与业务拓扑，实时分支落哪类 Flink 任务、要哪些算子和资源，全交给 Sindri 结合表类型与运行配置生成。^[raw/articles/jd-forge-agent-sindri-search-rec-data-platform-2026.md:108]
+
+### 「先证据、后自动化」：自愈闭环的演进次序
+
+自愈部分最反直觉的规划判断：闭环不应一开始就以「全自动」为目标，而应先打通证据，再让自动化在有证据支撑的范围内逐步扩大。^[raw/articles/jd-forge-agent-sindri-search-rec-data-platform-2026.md:156] 证据分三类：规划证据（目标环境/语义结构/确认结果）、提交证据（预览/权限判断/对象标识）、运行证据（DAG/实例/日志/结构化错误），分别回答「为什么这样做」「凭什么提交」「跑成了什么样」。^[raw/articles/jd-forge-agent-sindri-search-rec-data-platform-2026.md:160]
+
+这条次序的逻辑是：Agent 基于事实继续处理的前提是事实存在且结构化——运行证据特别强调「结构化错误」，正因为非结构化报错日志无法被 Agent 消费。^[raw/articles/jd-forge-agent-sindri-search-rec-data-platform-2026.md:164] 在此之上，局部校验、诊断建议、有限重试逐步接入，但真正的自愈还需要稳定状态机、幂等机制、风险分级、重试上限、结果复核和人工接管。结论可提炼为一条判据：证据链越完整，可以安全交给自动化的动作就越多。^[raw/articles/jd-forge-agent-sindri-search-rec-data-platform-2026.md:166] 这与数据质量系统「把核对/质量/血缘/监控沉淀的证据逐步开放给自动化消费」的定位是同一件事的两面。^[raw/articles/jd-forge-agent-sindri-search-rec-data-platform-2026.md:154]
+
+## 实践启示
+
+1. **确定性工具是 Agent 进生产环境的第一道门票**：Agent 与平台之间靠参数明确、返回稳定的工具交互，而非让模型直接拼装底层请求——任何让 Agent 直连生产系统的设计，都应先回答「哪一层在替模型兜底执行语义」。^[raw/articles/jd-forge-agent-sindri-search-rec-data-platform-2026.md:90]
+2. **把「生成不准」重新表述为工程流程问题**：DSL 准确性不靠更强的提示词，而靠「场景路由—需求契约—标准示例—SDK 事实—本地校验—后端规划—人工确认」逐级流程；自己系统里的生成失败多数能映射到这七级中的某一级缺失。^[raw/articles/jd-forge-agent-sindri-search-rec-data-platform-2026.md:120]
+3. **高危操作一律两阶段门禁**：先预览、后显式确认、再真实提交，且最终规划权（引擎/资源）收在后端而非模型——这是 [[concepts/harness-loop-architecture|harness 环路设计]]中人在环上的最小充分实现。^[raw/articles/jd-forge-agent-sindri-search-rec-data-platform-2026.md:122]
+4. **自愈的扩张速度由证据链决定**：不要从「全自动修复」起步，先结构化沉淀规划/提交/运行三类证据，再逐类开放自动化动作。^[raw/articles/jd-forge-agent-sindri-search-rec-data-platform-2026.md:166]
+5. **复用的正确抽象是「稳定中间层」而非统一代码**：上游、下游、执行形态都可变，锁死的只有领域语义、规划接口、提交边界、状态模型四样——把不变量显式化、把变量隔离出去，与 [[concepts/data-quality-framework|数据质量框架]] 的可度量约束思路同构。^[raw/articles/jd-forge-agent-sindri-search-rec-data-platform-2026.md:138]
+6. **质量系统的终局角色是证据供给方**：核对/质量/血缘/监控做完「保障」只是上半场，下半场是把证据开放给自动化消费——质量指标应从一开始就按「可被 Agent 读取」的结构化标准设计。^[raw/articles/jd-forge-agent-sindri-search-rec-data-platform-2026.md:154]
 
 ## 与现有知识的关联
 

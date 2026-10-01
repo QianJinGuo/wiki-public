@@ -1,7 +1,7 @@
 ---
 title: "Claude Code 多 Agent Harness 源码拆解：留纸条、抠上下文、抠缓存、捆手脚"
 created: 2026-06-23
-updated: 2026-09-07
+updated: 2026-10-02
 type: entity
 tags: [claude-code, multi-agent, harness, source-code, prompt-caching, coordinator, context-isolation, agent-communication, engineering]
 sources: [raw/articles/claude-code-multi-agent-harness-source-analysis]
@@ -87,6 +87,48 @@ Prompt Caching 折扣条件：**字节级完全相同**（byte-identical）。 ^
 
 这是 Harness Engineering 的核心命题：**决定 AI 系统行不行的，不是里面那个模型，是外面这层 harness**。^[raw/articles/claude-code-multi-agent-harness-source-analysis.md]
 
+
+## 深度分析
+
+### pendingMessages：异步信箱把"通信"降级成"留纸条"
+
+源码里没有 agent 之间的实时对话。每个子 AI 配一个信箱（`pendingMessages`），主 AI 调 `SendMessage` 往信箱末尾塞一张纸条就扭头走人，根本不等它看——因为子 AI 接的活可能要跑 5 分钟，主 AI 若交出去就干等，整个会话等于卡死。 ^[raw/articles/claude-code-multi-agent-harness-source-analysis.md:23]
+
+更深一层看：**真正去信箱取纸条的根本不是子 AI，是它外面那套循环机制**。子 AI 不主动查信箱，只是埋头一轮轮干活，harness 在每一轮结束、进入下一轮的接缝处替它瞄一眼，有新纸条就塞进下一轮输入。子 AI 自始至终被动——它既不知道有信箱，也不知道是谁在喂它。 ^[raw/articles/claude-code-multi-agent-harness-source-analysis.md:25] 这意味着"收消息"这个最基础的协作动作，也不在 agent 的能力范围内，而在 harness 的接缝逻辑里。
+
+反向汇报同样没有"完工信号"这种正式协议：子 AI 把完工报告拼成一段 XML，伪装成一条"用户发来的消息"塞进主 AI 的对话（源码叫 task notification）。对主 AI 来说，这玩意儿跟用户突然说一句话没有任何区别。 ^[raw/articles/claude-code-multi-agent-harness-source-analysis.md:31]
+
+### task notification XML：用伪装换协议成本
+
+task notification 的本质是一种**消息伪装**：不定义新协议、不新增消息类型，直接把结构化完工报告（`<状态>完成</状态>` 这类带标签文本）包装成主 AI 已有的输入通道——用户消息。 ^[raw/articles/claude-code-multi-agent-harness-source-analysis.md:33] 工程上的取舍很清楚：主 AI 的理解能力本来就在，与其为 agent 间通信发明一套它需要额外学习的协议，不如复用它每轮都在处理的"用户输入"格式，零新增解析逻辑。这是典型的 harness 思维——能借模型已有能力解决的，就不在脚手架里加机制。
+
+### createSubagentContext：逐项隔离，因为两个极端都是坑
+
+"给子 AI 一个独立工作空间"听起来是发个全新大脑从零开始。源码显示这恰恰是最磨人的细活：主 AI 身上挂着一堆随身记录（文件读到第几行、屏幕显示、停止键状态、后台任务），派子 AI 时这些给不给？ ^[raw/articles/claude-code-multi-agent-harness-source-analysis.md:43]
+
+两个想当然的答案都是坑：
+
+- **全给**：主 AI 读文件到 100 行，子 AI 接着读到 200 行，主 AI 的书签被划走——等它自己再读这文件，以为读过了直接跳过。子 AI 一个动作搅乱了主 AI 的记忆。 ^[raw/articles/claude-code-multi-agent-harness-source-analysis.md:47]
+- **全不给**：用户按停止键想中止任务，信号广播出去，子 AI 因为跟主 AI 啥都不共享根本收不到，自顾自接着跑，彻底失联。 ^[raw/articles/claude-code-multi-agent-harness-source-analysis.md:49]
+
+`createSubagentContext` 函数的解法是近乎偏执的细心：不一刀切，而是对这一大堆记录**一项一项单独决定**怎么处理。 ^[raw/articles/claude-code-multi-agent-harness-source-analysis.md:51] 这正是上下文工程里"共享 vs 隔离"没有默认答案的实证——每个状态字段的传递策略都必须显式决策，漏一项就出事故。
+
+### Fork Subagent 与 Coordinator 模式：抠缓存的对齐、捆手脚的并行
+
+**Fork Subagent**（分叉子 AI）解决了多 agent 的隐性成本问题：每派一个有专属 system prompt 的子 AI，背后的大模型就得把上万 token 的系统提示词从头重算重收。Prompt Caching 折扣的条件极其苛刻——必须字节级完全相同，错一个字符，从那个字符往后缓存全部作废。 ^[raw/articles/claude-code-multi-agent-harness-source-analysis.md:62] 有真实翻车案例：某团队在系统提示词开头写了"今天是 {当前日期}"，一个每天会变的动态字段，废掉一整天全部缓存折扣。 ^[raw/articles/claude-code-multi-agent-harness-source-analysis.md:64] Fork Subagent 刻意让分身的系统提示词与主 AI 一个字节都不差，就是为了吃满这个折扣。 ^[raw/articles/claude-code-multi-agent-harness-source-analysis.md:66]
+
+**Coordinator 模式**（`CLAUDE_CODE_COORDINATOR_MODE=1` 手动开启）则是任务大到十个 AI 同时上时的答案。反直觉的是：让并行高效的关键不是让 agent 更会协调，而是用最笨的办法把主 AI 的手脚捆死——系统提示词把它焊成"包工头"，只许指挥 worker 调研、施工、验收，绝不许自己下场抢活。 ^[raw/articles/claude-code-multi-agent-harness-source-analysis.md:74] 点睛指令是 "Parallelism is your superpower"：工人各干各的不互相等，能同时上的活绝不排队。 ^[raw/articles/claude-code-multi-agent-harness-source-analysis.md:79]
+
+但整套设计有条最容易被做砸的红线：**包工头必须自己"看懂"，不能只当传话筒**。源码反复叮嘱，工人交回调研结果后，包工头必须自己读懂、嚼碎、写成明确的施工图纸再派下去，不许甩一句"就照你查到的去改"。如果只是原样转话，工人直接跟客户对话就行了，包工头毫无存在必要——它的价值恰恰在于"汇总+出图纸"环节真正动脑子。 ^[raw/articles/claude-code-multi-agent-harness-source-analysis.md:83]
+
+## 实践启示
+
+1. **子 agent 通信默认异步，别设计实时对话。** 用信箱模式（追加消息 + 轮次间隙投递）代替"派活后干等"，主 agent 在子任务执行期间保持可响应。 ^[raw/articles/claude-code-multi-agent-harness-source-analysis.md:21]
+2. **子 agent 的完工回报可以伪装成用户消息。** 不必发明新协议——把结构化报告包进主 agent 已有的输入通道，零新增解析成本，主 agent 用理解用户的方式理解回报。 ^[raw/articles/claude-code-multi-agent-harness-source-analysis.md:31]
+3. **上下文继承逐字段决策，拒绝全给/全不给两个极端。** 写一个类似 `createSubagentContext` 的显式清单：哪些只读复制、哪些隔离、哪些广播，并对"书签被篡改"和"停止信号收不到"这两类事故分别设防。 ^[raw/articles/claude-code-multi-agent-harness-source-analysis.md:51]
+4. **动态内容（日期、时间、随机值）严禁放进 system prompt 开头。** 一个变化字段就能让后续全部 token 缓存作废；需要多 agent 共享缓存折扣时，让子 agent 的系统提示词与主 agent 保持字节级一致。 ^[raw/articles/claude-code-multi-agent-harness-source-analysis.md:64]
+5. **规模化并行时捆住协调者的手脚。** 在协调者的系统提示词里明令禁止它自己下场干活，并写入"能并行绝不排队"的强指令——并行度来自纪律，不来自智能。 ^[raw/articles/claude-code-multi-agent-harness-source-analysis.md:77]
+6. **协调者必须消化结果再派活，不做传话筒。** 工人回报后，协调者要自己读懂并产出明确的施工图纸；只转发不加工的协调层可以直接删掉，让工人直连需求方。 ^[raw/articles/claude-code-multi-agent-harness-source-analysis.md:83]
 
 ## 相关实体
 - [[concepts/harness-engineering-framework]]

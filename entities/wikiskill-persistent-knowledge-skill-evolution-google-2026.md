@@ -2,7 +2,7 @@
 title: "WikiSkill：将 Agent 经验编译为持久知识以驱动技能进化（Google Research）"
 slug: wikiskill-persistent-knowledge-skill-evolution-google-2026
 created: 2026-09-03
-updated: 2026-09-10
+updated: 2026-10-01
 type: entity
 tags: [agent, skill, skill-evolution, persistent-knowledge, wiki, google-research, self-evolution, harness, agent-experience, skill-transfer]
 review_value: 7
@@ -69,6 +69,26 @@ Table 3（Gemini-Flash）证明 wiki 是关键：^[raw/articles/wikiskill-persis
 ## 案例：ALFWorld 知识复利（Qwen-27B）
 
 Iter 0 的 goal-directed-action 过抽象被拒（验证 0.72）但 diff+拒绝保留；Iter 1 参考拒绝历史创建 break-repetition-loop（「Never Return an Item to Its Origin Location」，验证 0.78 接受）；Iter 2-4 新循环变体涌现、wiki 累积证据，Iter 4 补第二条规则「Each Operation Type ONCE Per Item」。链条：失败 → 沉淀 → 借鉴 → 更好技能 → 再失败 → 再沉淀。^[raw/articles/wikiskill-persistent-knowledge-paper-google-research-2026.md]
+
+## 深度分析
+
+**1. 复利的真正来源是「负结果资本化」**。WikiSkill 最被低估的设计不是 pattern 目录，而是 skill-impact.md 对被拒提案的保留：门控回滚技能集，但 diff、验证分数与拒绝理由永久留在 wiki 里（wiki 永不因接受/拒绝回滚）。ALFWorld 案例中，Iteration 0 的 goal-directed-action 提案因过抽象被拒（验证 0.72），Iteration 1 的 Proposer 正是参考这条拒绝历史，才写出具体可执行的「Never Return an Item to Its Origin Location」（0.78 接受）。大多数自进化框架把被拒提案当作噪音丢弃，等于每轮都从零开始；WikiSkill 把失败预算变成可复用资产，这是「失败沉淀借鉴再失败」链条能转起来的前提。对比 [[entities/skill-self-evolution-three-approaches|Skill 自进化三路线]] 与 [[entities/skillopt|SkillOpt]]，缺少的正是这个跨轮记忆。^[raw/articles/wikiskill-persistent-knowledge-paper-google-research-2026.md:28-33] ^[raw/articles/wikiskill-persistent-knowledge-paper-google-research-2026.md:67-72]
+
+**2. 读写解耦是反直觉但关键的角色分工**。消融显示 Proposer 能读 wiki 带来 +15.0（48.7% 到 63.7%），但 Inference Agent 读 wiki 反而把分数拉低 2.8（63.7% 降到 60.9%，LiveMath 72.6 降到 64.8）——执行时直接从 wiki 取答案，会让轨迹对技能改进「欠具信息量」，污染后续根因分析的原材料。这说明持久知识库在 agent 系统中的价值不在「运行时查询」而在「离线编译」：知识应该在写技能时被消费，而不是在跑任务时被消费。这与把 RAG 式检索直接塞进执行路径的常见做法构成一对张力。^[raw/articles/wikiskill-persistent-knowledge-paper-google-research-2026.md:54-65]
+
+**3. 技能与模型规模是互补 scaling，而非替代关系**。提升随模型规模单调放大：Qwen 家族 +12.3 / +17.5 / +23.9（4B / 9B / 27B），SpreadSheet 上 27B 比 4B 多赚约 34 个百分点——强模型更能把沉淀的流程性知识兑现成分数。同时技能又能反向弥补规模：Qwen-9B 配技能（47.4%）超过无技能的 Qwen-27B（39.4%）。两条曲线合起来意味着：在 [[concepts/scaling-laws|Scaling Laws]] 的语境里，持久知识是继参数、算力、数据之后的第四条可扩展轴，且与前三条相乘而非相加。^[raw/articles/wikiskill-persistent-knowledge-paper-google-research-2026.md:41-46]
+
+**4. 技能是「可移植性光谱」上的对象，而非二值的可迁移或不可迁移**。同一套技能既能反超自炼（Qwen-27B 技能把 Qwen-9B 在 SpreadSheet 带到 50.5%，自炼仅 33.6%），也能造成灾难性负迁移（Qwen-4B 技能把 Gemini-Flash 在 SpreadSheet 从 50.5% 打到 18.1%）。判据在技能编码的内容：通用流程（端到端脚本、诊断流程）可跨模型复用，模型特定 workaround（单行 Python 绕行、字符串转换规则）会束缚强模型并耗尽交互预算。更深一层，OfficeQA 上 Qwen-4B 技能降自己（30.2 降到 28.5）却提 Qwen-27B（42.1 升到 52.9）——技能「发现」与技能「执行」是两种可分离的能力，迁移好坏因此是技能内容与执行模型的双重函数。^[raw/articles/wikiskill-persistent-knowledge-paper-google-research-2026.md:48-52]
+
+**5. 三层分离本质是一条知识编译管线，且每层有不同的不变量**。raw 只写不改（证据不变量）、skills 可回滚（正确性不变量）、wiki 只增不减（复利不变量）——三者生命周期刻意不同步，与 [[concepts/source-first-knowledge-compilation|Source-First 知识编译]] 的取向一致：先固化原始证据，再编译为结构知识，最后生成可执行产物，编译失败可重跑而原始证据无损。这个不对称设计（技能回滚、知识不回滚）是整套系统能「越跑越懂」的结构性原因。^[raw/articles/wikiskill-persistent-knowledge-paper-google-research-2026.md:22-33]
+
+## 实践启示
+
+- **给自进化系统加一个「永不重置」的 wiki 层，并强制记录被拒提案**。至少维护三件东西：pattern 目录（失败模式加可操作解法）、逐轮 logs、逐提案 skill-impact（diff / 分数 / 接受或拒绝）。被拒提案的拒绝理由是后续提案最贵的上下文。^[raw/articles/wikiskill-persistent-knowledge-paper-google-research-2026.md:22-26] ^[raw/articles/wikiskill-persistent-knowledge-paper-google-research-2026.md:69-72]
+- **读写角色严格分离**：执行 agent 禁止读知识库（保轨迹信息量），技能提案 agent 用 ReAct 主动按需只读相关页面（索引、skill-impact、具体 pattern、raw 轨迹），不要把全部知识被动灌进 prompt——既省上下文又逼出真正的检索式诊断。^[raw/articles/wikiskill-persistent-knowledge-paper-google-research-2026.md:28-33] ^[raw/articles/wikiskill-persistent-knowledge-paper-google-research-2026.md:54-65]
+- **门控回滚只回滚产物、不回滚知识**：验证分不达标就还原技能集，但本轮的分析结论照常写回 wiki；评估技能更新时用「仅当 R 大于 Rbest 才接受」的硬阈值，避免技能集在噪声上漂移。^[raw/articles/wikiskill-persistent-knowledge-paper-google-research-2026.md:28-33]
+- **写技能时把内容压在「通用流程」一侧**：端到端脚本、诊断顺序、检查清单可以迁移；模型特定的绕行技巧（单行命令、字符串 hack）要留在 wiki 的 pattern 里而不是固化进 SKILL.md，否则对更强模型是负资产——迁移前先评估技能编码的是流程还是 workaround。^[raw/articles/wikiskill-persistent-knowledge-paper-google-research-2026.md:48-52]
+- **为已知的三个缺口预留工程预算**：技能检索（当前全文注入 prompt，技能多了成本失控）、wiki 修剪（持续膨胀会信息过载）、宽松门控（严格阈值会错杀「当前持平但未来有用」的改动）。自建持久知识系统时这三项迟早要还债。^[raw/articles/wikiskill-persistent-knowledge-paper-google-research-2026.md:80-85]
 
 ## 局限（Future Work）
 

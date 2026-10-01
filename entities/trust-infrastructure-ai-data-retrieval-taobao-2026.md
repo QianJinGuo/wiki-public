@@ -1,7 +1,7 @@
 ---
 title: "AI 取数信任基础设施：代号层 + 确定性 SQL 引擎 + Skill 门禁"
 created: 2026-08-28
-updated: 2026-09-10
+updated: 2026-10-01
 type: entity
 tags: [ai, data-retrieval, trust-infrastructure, semantic-layer, codename-layer, deterministic-sql, nl2sql, skill-gate, auditability, taobao, data-warehouse, text-to-sql, data-agent]
 sources:
@@ -53,6 +53,36 @@ AI 在复杂数仓环境中取数（将业务需求转化为 SQL 并取回数据
 
 - **数据开发**：从"写 SQL 的人"变为"建语义层的人"，核心工作从重复取数开发转向高价值、高复用的**语义资产建设**与数据质量管理
 - **协作模式**：信任基建可参与构建其他信任系统——下游分析 Agent 可直接对接取数 Skill 产出分析结论，运营工作台可接入取数基建；类似印刷机重塑印刷行业，用户更专注于"要印什么"而非"怎么印"^[raw/articles/trust-infrastructure-ai-data-retrieval-taobao-2026.md]
+
+## 深度分析
+
+### 从"检验正确"到"消除错误"
+
+原文给出一个关键数字：AI 可以生成语法完美但语义错误的 SQL，经过多种手段优化能到 70%–90% 的正确率——这在评测领域是好成绩，但在生产环境意味着永远有出错的可能，且用户无从判断某一次结果到底是对是错。^[raw/articles/trust-infrastructure-ai-data-retrieval-taobao-2026.md:50-56] 更致命的是，这套系统的用户是运营、产品、分析师，甚至是 AI Agent 本身，他们无法判断一段 SQL 是否语义正确——如果可靠性只能建立在"有人会审 SQL"的前提上，用户就没有被真正解放。^[raw/articles/trust-infrastructure-ai-data-retrieval-taobao-2026.md:56] 这正是 [[concepts/verifier-paradox|验证者悖论]] 的结构性困境：当验证者的能力不高于生成者时，事后检验是徒劳的。本文的解法因此不是"找一个更强的检查器"，而是**删除产生错误的步骤**——AI 不再写 SQL，幻觉便失去了载体。这是验证面从输出端回撤到生成机制的一次结构性转移，与 [[concepts/verifier-driven-development|验证器驱动开发]] 的思路同源。
+
+### 代号层是一个双边契约
+
+代号层不只是"字典"：对 AI 它是沟通共识层，解决代号对齐问题；对 SQL 引擎它是数仓映射层，让代号回归到物理表和字段。^[raw/articles/trust-infrastructure-ai-data-retrieval-taobao-2026.md:90-92] 一个抽象、两类消费者，这是它能成为"基础设施"而非普通术语表的原因。它的实现方式也包含对真实数仓的务实态度：数仓天然冗余存储，同一个代号往往有多份物理实现，代号层通过逻辑表把这些字段绑定到唯一代号上；真实数仓不按标准组织时，再用字段映射、自定义 CTE 等机制挂载到标准代号层。^[raw/articles/trust-infrastructure-ai-data-retrieval-taobao-2026.md:100-106] 这种"不要求世界标准化，而由标准方吸收非标准"的适配层设计，是语义治理能落地的前提——治理不是靠改造数仓完成，而是靠映射完成。
+
+### 笼子：收缩自由度的漏斗设计
+
+Skill 的三个机制可以读作对 AI 自由度的层层漏斗：门禁机制在高歧义场景强制 AI 停下来问用户、不允许自行决定；SQL 由工程生成后 AI 不允许修改；查询实体、JSON、SQL 全部留痕可审计；钩子在 Agent 平台层面对特定动作强制执行逻辑。^[raw/articles/trust-infrastructure-ai-data-retrieval-taobao-2026.md:126-140] 它们的共同点不是"让 AI 更聪明"，而是系统性缩小 AI 的发挥空间——信任不来自模型变强，而来自出错面变小。这也是本文与"更强模型路线"的根本分歧：文中明确分工是 AI 负责语义理解与用户对齐，工程负责确定性的输出。^[raw/articles/trust-infrastructure-ai-data-retrieval-taobao-2026.md:58-64]
+
+### 信任链：判断力的再分配
+
+原文对信任的定义是链条式的：每一环都有明确的角色负责判断——用户判断代号、数仓同学判断口径、引擎判断 SQL 的语法语义。^[raw/articles/trust-infrastructure-ai-data-retrieval-taobao-2026.md:68-78] 值得注意的是对用户的要求反而变高了：用户必须能判断 AI 对齐的代号是不是自己想要的，这反向要求代号层不能有二义性、含义必须唯一。信任基建并没有消灭人的判断，而是把判断从"会读 SQL"的专业动作下沉为"认对代号"的业务动作——把专业性转化为产品设计。
+
+## 实践启示
+
+**构建数据 Agent 时看两个指标，不是一个。** 90% 的 SQL 正确率在生产中不构成意义——真正要建设的是代号层的覆盖度与无二义性、SQL 引擎的确定性覆盖面；正确性应交给结构，而不是寄望于模型。^[raw/articles/trust-infrastructure-ai-data-retrieval-taobao-2026.md:50-56]
+
+**语义治理从字典开始，而不是从改造数仓开始。** 先把最小可用的代号集合做唯一、做无歧义，再用字段映射、自定义 CTE 等适配机制把不标准的存量数仓挂上来；不要试图先建一个完美数仓再谈 AI 取数。^[raw/articles/trust-infrastructure-ai-data-retrieval-taobao-2026.md:76-106]
+
+**把 AI 的输出接口压到尽量轻。** 让 AI 产出轻量 JSON 查询请求而非最终 SQL，接口越小、幻觉面越小、门禁越容易做——这是高风险 Agent 场景的通用模式。^[raw/articles/trust-infrastructure-ai-data-retrieval-taobao-2026.md:58-64]
+
+**约束要成体系地落在平台机制上。** 门禁（必须停）、禁改（不许动）、留痕（可追溯）、钩子（强制执行）四层叠加，不能依赖提示词里的"请遵守"；主流 Agent 平台的钩子设计正是承载这类强制约束的工程设施。^[raw/articles/trust-infrastructure-ai-data-retrieval-taobao-2026.md:126-140]
+
+**中心化日志是信任系统的飞轮起点。** SQL 引擎把查询请求忠实记录下来，供 DSL 分析、工程稳定性监控、评测系统构建与数仓迭代使用——没有留痕，就没有评测，也就没有持续改进的闭环。^[raw/articles/trust-infrastructure-ai-data-retrieval-taobao-2026.md:122-124]
 
 ## 与既有实体的关系
 

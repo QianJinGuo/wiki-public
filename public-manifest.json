@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "sourceRevision": "9b1e55313c350bef7b4ad2450a261e16c92983f2",
+  "sourceRevision": "71b2028ec948cf301897959d05656367ab168fe0",
   "files": [
     {
       "path": "raw/articles/0.25秒识破未见攻击-lod-lvlm-jailbreak-detection-emnlp2026.md",
@@ -4131,6 +4131,11 @@
       "path": "raw/articles/arxiv-2609-13009-physics-benchmark-expert-regrading.md",
       "title": "arxiv-2609-13009-physics-benchmark-expert-regrading",
       "sourceUrl": "https://arxiv.org/abs/2609.13009"
+    },
+    {
+      "path": "raw/articles/arxiv-2609-38149-lift-latent-information-feedback-transformer.md",
+      "title": "arxiv-2609-38149-lift-latent-information-feedback-transformer",
+      "sourceUrl": "https://arxiv.org/abs/2609.38149"
     },
     {
       "path": "raw/articles/arxiv-independent-nonprofit-2026-07-02.md",
