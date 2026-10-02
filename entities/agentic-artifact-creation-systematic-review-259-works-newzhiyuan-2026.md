@@ -1,7 +1,7 @@
 ---
 title: "Agentic Artifact Creation 系统综述：AI创作如何从「会生成」走到「能交付」"
 created: 2026-09-09
-updated: 2026-09-09
+updated: 2026-10-02
 type: entity
 tags: [agent, agentic-creation, artifact, survey, verification, multi-agent, harness, evaluation, harness-engineering]
 sources: [raw/articles/agentic-artifact-creation-systematic-review-259-works-newzhiyuan-2026]
@@ -44,6 +44,30 @@ provenance_state: extracted
 **设计原则**：(1) 把必须保留的要求写进作品状态并与具体页面/段落/镜头/测试建立联系；(2) 划清控制边界——执行能力和决策权限是两回事，置信度不能代替权限；(3) 让反馈导向修改——反馈需连接证据、诊断、可执行动作；(4) 修改后重新验证受影响状态——旧证据会过期，需按影响范围选择性重查。
 
 **未来方向**：全局一致性、精准修复（检测→定位→修复是三种能力）、系统自进化（跨任务留存的观念需独立验证+版本管理+回滚）、持续个性化、人类决策权限落地到具体行动、开放式成果可靠评估（承认一个任务可有多个好答案）。^[raw/articles/agentic-artifact-creation-systematic-review-259-works-newzhiyuan-2026.md]
+
+## 深度分析
+
+### 评估的真正短板：总分不携带修复信息
+
+综述最锋利的判断是：把评估收束为一个总分，只适合比较结果，不适合指导修复——总分不说明问题在哪里、由什么引起，也不给下一步可执行的修改^[raw/articles/agentic-artifact-creation-systematic-review-259-works-newzhiyuan-2026.md:95-97]。更隐蔽的陷阱是粒度错配：检查器发现整体叙事不连贯，系统却只能重写全文；评估器发现视觉层级有问题，编辑接口却只能重新生成整张图。反馈再准，落不进编辑粒度就等于没有反馈^[raw/articles/agentic-artifact-creation-systematic-review-259-works-newzhiyuan-2026.md:99]。这条判断对当前以 benchmark 分数为导向的 agent 评测是一记提醒：分数排行榜回答不了「下一个 patch 改哪里」。
+
+另一个常被忽略的证据问题是**评价者独立性**：当生成器与 LLM Judge 来自相近的模型家族，它们共享知识缺口、审美偏好和判断盲区，增加 Judge 数量并不能制造证据独立性^[raw/articles/agentic-artifact-creation-systematic-review-259-works-newzhiyuan-2026.md:111]。综述给出的解法是把「证据渠道」（来源对照、结构化状态、渲染结果、运行行为、构造历史、用户结果）与「评价者」（规则检查、专用模型、LLM Judge、人工评审）拆成两个正交维度，一次评价信号是两者的组合^[raw/articles/agentic-artifact-creation-systematic-review-259-works-newzhiyuan-2026.md:113]——这与 [[concepts/evaluation-harness-design|Evaluation Harness]] 中多渠道证据回灌的设计同构。
+
+### 构造难度是一个三维变量，而非按媒介排名
+
+六类作品不构成难度排行榜。真正的难度由三个变量决定：决策之间的关联程度、错误何时可见、能否在保留已有成果的前提下局部修复^[raw/articles/agentic-artifact-creation-systematic-review-259-works-newzhiyuan-2026.md:83]。文本与视觉可以静态检查、容易定位，但长距离一致性是硬骨头——改前文一个事实，后文的论证、图表、引用要连坐更新^[raw/articles/agentic-artifact-creation-systematic-review-259-works-newzhiyuan-2026.md:77]；音视频的错误要到播放/渲染后才暴露^[raw/articles/agentic-artifact-creation-systematic-review-259-works-newzhiyuan-2026.md:79]；行为型作品（软件/游戏）执行路径越长，获得有代表性观察的成本越高，失败越难追溯到具体状态^[raw/articles/agentic-artifact-creation-systematic-review-259-works-newzhiyuan-2026.md:81]。用这个三维框架看，任何新系统都可以先问三个问题再谈架构：错误多早能被看见？修一处要牵动多少处？已通过的部分能否免于重做？
+
+### 多 Agent 不是免费午餐：协调成本是隐藏税
+
+拆子任务降低单步难度，却引入三类协调成本：共享状态、依赖关系、完成标准^[raw/articles/agentic-artifact-creation-systematic-review-259-works-newzhiyuan-2026.md:87-91]。综述用一个非常具体的场景点破：文案 Agent 把文字改长，页面 Agent 是否知道版面已失效？事实核查更新了一个数字，图表与结论是否同步？每个 Agent 局部都完成了，全局结果仍可能互相冲突^[raw/articles/agentic-artifact-creation-systematic-review-259-works-newzhiyuan-2026.md:89]。解法不是更多沟通，而是**共享的作品表示**——把分工落到同一个可检查、可修改的交付物上^[raw/articles/agentic-artifact-creation-systematic-review-259-works-newzhiyuan-2026.md:93]。对短小易验证的任务，一个能稳定调用工具的单 Agent 往往更合适；多 Agent 的辩护责任在于证明中间观察确实改变了后续行动。
+
+### 设计原则的公共内核：要求进状态，权限划边界
+
+四项设计原则表面分散，内核一致。其一，把必须保留的要求写进作品状态并与具体页面/段落/镜头/测试挂钩，使「一次修改影响了哪些承诺」变成可查问题^[raw/articles/agentic-artifact-creation-systematic-review-259-works-newzhiyuan-2026.md:117]。其二，控制边界：执行能力与决策权限是两回事，置信度不能代替权限，创意取舍、事实确认、对外发布需要不同授权级别^[raw/articles/agentic-artifact-creation-systematic-review-259-works-newzhiyuan-2026.md:119]。其三，反馈要连接证据、诊断和可执行动作^[raw/articles/agentic-artifact-creation-systematic-review-259-works-newzhiyuan-2026.md:121]。其四，修改后按影响范围选择性重验——旧证据会随版本过期^[raw/articles/agentic-artifact-creation-systematic-review-259-works-newzhiyuan-2026.md:123]。综述同时诚实指出控制不是免费的：会推高表示、验证、协调成本，采用构造循环前需确认中间观察真能改善决策^[raw/articles/agentic-artifact-creation-systematic-review-259-works-newzhiyuan-2026.md:125]。
+
+### 同构观察：这是 Harness 工程在创作域的完整叙事
+
+把三功能角色与 [[entities/agent-harness-engineering-survey-2026|Agent Harness 工程综述]] 的工具+控制逻辑对读，可以看出两条独立收敛出的同一结论：可定位状态决定可修复性，验证证据决定策略质量。本综述的独特贡献是把这条线推到了「交付物」这个终点——Harness 讨论的是 agent 如何被约束，本综述讨论的是**被约束的 agent 最终如何交付一件持续变化的作品**。六个未来方向中，「检测→定位→修复是三种能力」（精准修复）与「跨任务留存需独立验证+版本管理+回滚」（系统自进化）尤其值得与 [[concepts/harness-engineering-framework|Harness Engineering]] 的演化议题合并跟踪。
 
 ## 与 wiki 焦点框架的连接
 

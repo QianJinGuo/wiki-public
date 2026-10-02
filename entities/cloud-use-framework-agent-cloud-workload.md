@@ -1,7 +1,7 @@
 ---
 title: "Cloud Use 框架：Agent 作为云上受治理主体的四层模型"
 created: 2026-07-09
-updated: 2026-09-07
+updated: 2026-10-02
 type: entity
 tags: [cloud-use, agent-cloud-workload, identity, credential, tool-governance, runtime, qoder, alibaba-cloud, agent-governance, cloud-native, harness-engineering]
 sources: [raw/articles/cloud-use-agent-cloud-native-execution-alibaba-2026]
@@ -74,6 +74,41 @@ Cloud Use 定义了 Agent 用云的成熟度路径：^[raw/articles/cloud-use-ag
 - 与 **Harness Engineering** 的"人在环中"安全原则一致——Agent 能力范围随信任积累逐步扩展
 - Cloud Use 的 **四层模型 (Identity→Credential→Tool→Runtime)** 是 Agent 云工作负载的完整治理栈，补充了 [[entities/qoder-cloud-agents-alibaba-skills|Qoder Cloud Agents 用云新范式]] 中 Skills 层的底层基础设施视角
 - Cloud Use 的 **Credential Use 层**（Vault 注入、短期令牌、服务端代理）可视为 Agent 版本的 [[entities/alibaba-agentic-cloud|阿里云 Agentic Cloud 战略]] 中任务级身份鉴权的具体实现
+
+## 深度分析
+
+### Agent 为何必须被建模为受治理主体，而非工具
+
+Cloud Use 最根本的立场是：Agent 与云的关系不能套用"客户端调用服务"的工具心智模型。工具是被动的能力点，被调用、被授权、用完即走；而 Agent 是一个持续运行、自主决策、会积累状态和信任历史的执行主体。它有目标理解能力（传统上属于"人"的属性），也有程序的调用速度与规模（传统上属于"机器"的属性），这种双重性使它无法被塞进任何一类现有治理框架——按"人"治理缺少账号体系适配，按"程序"治理缺少意图与可变行为的约束^[raw/articles/cloud-use-agent-cloud-native-execution-alibaba-2026.md]。
+
+"站在人的影子里"是这个问题的精准诊断：Agent 借用人的账号和 AK/SK，意味着每一次动作在审计链路上都伪装成人——权限无法按任务最小化，凭证生命周期与任务生命周期错位，出问题时无法回答"到底是谁、在什么授权下做了这件事"。只有把 Agent 提升为一等治理主体，给它独立身份、独立凭证、独立运行时，云才能对它应用与人类和 CI/CD 同等严谨但形态不同的治理规则^[raw/articles/cloud-use-agent-cloud-native-execution-alibaba-2026.md]。
+
+### 四层能力模型的依赖链逻辑
+
+Identity → Credential → Tool/API → Runtime 的排序不是并列清单，而是严格的依赖链：每一层的存在都以下一层为前提，反向不可行。没有 Identity Use（谁在操作可被回答），Credential Use 的短期令牌就无处签发、无人担责；没有 Credential Use（能用但看不到），Tool/API Use 的参数约束与调用审计就形同虚设——Agent 可以绕过治理直接持有明文凭证；没有 Tool/API Use 的治理边界，Runtime Use 里持续运行的 Session 就是一个无人看管的自动化进程，任务"活下去"等于风险"活下去"^[raw/articles/cloud-use-agent-cloud-native-execution-alibaba-2026.md]。
+
+这个依赖链也解释了为什么落地时必须自底向上补课：咖啡品牌 BI 案例的六道门槛（凭证、路径、角色边界、运行时、结果回传、验收）本质上就是四层模型在单一任务上的实例化——vault_credential_id 引用对应 Credential Use，任务合约对应 Tool/API Use 的边界约束，云上 Session 对应 Runtime Use，而"每个动作可回答发起者与权限来源"横贯 Identity 层^[raw/articles/cloud-use-agent-cloud-native-execution-alibaba-2026.md]。
+
+### 失败恢复模式才是真正的成熟度信号
+
+大多数 Agent 框架用"能完成什么任务"来衡量成熟度，Cloud Use 反其道而行：用"失败得是否可控"来衡量。这个视角转换的背后是一个工程事实——Agent 的失败模式与传统自动化根本不同。CI/CD 失败是确定性的、可复现的；Agent 会走向"看似合理但不可用"的 API，会在基础设施异常时自主"发挥"，会在结果回传时拿到半成品数据。这些失败不是 bug，而是自主决策能力的固有副产品^[raw/articles/cloud-use-agent-cloud-native-execution-alibaba-2026.md]。
+
+四类失败模式各有对应的结构性解法：错误路径沉淀进 Skill（把失败转化为组织记忆），基础设施异常用"预授权 + 边界"约束受控自救（自主性有上限），结果回传用 idle-后拉取 + 签名验证 + 幂等（分布式系统的老智慧迁移到 Agent 场景），验收用可执行 Rubric 收紧（把模糊的"做得好不好"变成可判定的谓词）。成熟度三阶段（只读 → 带确认执行 → 高风险人审批）本质上是信任随失败可控性积累而逐步放大的阶梯——一个框架把失败工程放在核心位置，说明它已经从 demo 心态进入生产心态^[raw/articles/cloud-use-agent-cloud-native-execution-alibaba-2026.md]。
+
+### 与 MCP / 工具治理类框架的对比定位
+
+以 [[concepts/model-context-protocol-mcp|MCP]] 为代表的工具治理框架解决的是"模型与工具之间的标准化接口"——它让任何模型能以统一方式发现和调用工具，但治理半径止步于调用边界之内。Cloud Use 的治理半径从身份开始、贯穿凭证生命周期、延伸到运行时与审计链路，边界是"云原生执行体系"——两者不是竞争关系，而是不同层的抽象：MCP 是 Tool/API Use 层的一种实现选择，Cloud Use 是包含该层的完整治理栈^[raw/articles/cloud-use-agent-cloud-native-execution-alibaba-2026.md]。
+
+与 [[concepts/harness-engineering-framework|Harness Engineering]] 的"人在环中"原则相比，Cloud Use 把同样的信任渐进思想从交互层（什么时候问人）下沉到基础设施层（身份、凭证、运行时如何为"问人"提供机制支撑）；与 [[concepts/agent-identity-portability|Agent 身份可移植性]] 讨论的跨系统身份问题相比，Cloud Use 给出了单一云域内身份—凭证—审计的完整闭环实现。更广地看，[[concepts/agent-security-architecture|Agent 安全架构]] 关注威胁建模与攻防，而 Cloud Use 关注接纳机制——前者回答"Agent 会被怎么攻击"，后者回答"云应该用什么姿势把 Agent 接进来"。Cloud Use 的独特贡献在于它是少数从云平台视角（而非 Agent 框架视角）出发的治理框架^[raw/articles/cloud-use-agent-cloud-native-execution-alibaba-2026.md]。
+
+## 实践启示
+
+1. **先给身份，再谈能力**：任何要让 Agent 进生产的团队，第一件事不是接更多工具，而是解决独立身份与凭证问题。若 Agent 还在用人的 AK/SK，它做的一切都只是"人的影子操作"，治理和审计从根上就是空的。
+2. **凭证永远不进 Prompt**：用 Vault 引用（如 vault_credential_id）+ 运行时兑换注入，让 Agent "能用但看不到"。这是 Credential Use 层最低成本、最高收益的第一步。
+3. **按依赖链补课，跳层必返工**：跳过 Identity/Credential 直接堆 Runtime 能力，等于给无身份的自动化进程长跑能力——跑得越远越危险。四层模型给出的是补课顺序，不是可选项清单。
+4. **把失败预案写进工程栈**：为错误路径沉淀 Skill、为基础设施异常设定预授权边界、为结果回传设计幂等重试、为验收写可执行 Rubric——这四件事的完备度比 Agent 能完成的任务上限更能预测生产可靠性。
+5. **信任用阶梯发放**：从只读巡检开始，逐步到带确认的执行、再到高风险人审批。每一次扩展都以"上一阶段的失败可控"为前提，而非以功能 demo 成功为前提。
+6. **验收标准要可判定**："结论带数字，数字回到查询结果"式的 Rubric 才能同时防住"验收过松"（LLM 自评放水）和"验收过细"（反复修正死循环）两种失败。
 
 ## 关键洞察
 

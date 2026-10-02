@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "sourceRevision": "71b2028ec948cf301897959d05656367ab168fe0",
+  "sourceRevision": "0fa5826a4b886c1e45d34cb8ab77bc2f8ca46ad9",
   "files": [
     {
       "path": "raw/articles/0.25秒识破未见攻击-lod-lvlm-jailbreak-detection-emnlp2026.md",
@@ -1991,6 +1991,11 @@
       "path": "raw/articles/agentic-harness-workflow-ai-coding-engineering-li-zhongze-baidu-2026-09-10.md",
       "title": "Agentic Harness Workflow 框架：把 AI Coding 变成工程化流程",
       "sourceUrl": "https://mp.weixin.qq.com/s/6t-NCpm0ucs53EO-rQb3Rg"
+    },
+    {
+      "path": "raw/articles/agentic-idea-manager-google-cloud-ai-2026.md",
+      "title": "agentic-idea-manager-google-cloud-ai-2026",
+      "sourceUrl": "https://imhgchoi.github.io/agentic-idea-manager/"
     },
     {
       "path": "raw/articles/agentic-loop-engineering-工程手册.md",
@@ -6111,6 +6116,11 @@
       "path": "raw/articles/claude-science-开源平替-deepseek-glm-2026.md",
       "title": "claude-science-开源平替-deepseek-glm-2026",
       "sourceUrl": "https://mp.weixin.qq.com/s/E8f2i7zwKG9q2Egs2kXIqA"
+    },
+    {
+      "path": "raw/articles/claude-shaped-science-anthropic-2026.md",
+      "title": "claude-shaped-science-anthropic-2026",
+      "sourceUrl": "https://www.anthropic.com/research/claude-shaped-science"
     },
     {
       "path": "raw/articles/claude-skill-quality-tool-skill-craft.md",

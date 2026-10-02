@@ -1,7 +1,7 @@
 ---
 title: "腾讯研究院 2026 AI 十大趋势——协同进化"
 created: 2026-07-24
-updated: 2026-09-10
+updated: 2026-10-02
 type: entity
 tags: [tencent-research, 2026, ai-trends, model-evolution, multimodal, context-learning, reinforcement-learning, engineering-infrastructure, memory-consolidation, ai-for-science, agent, waic]
 confidence: 0.7
@@ -47,6 +47,29 @@ review_category: tech
 ## 核心洞察
 
 报告的核心主张是：进化方式在改变（部署后继续学习），部署方式在改变（从单一模型到多 Agent 协作），由此带动的人机关系也在改变（从工具到协作者）。报告认为 2026 年最实际的产品护城河是 Context Learning 和 Memory Consolidation 的工程实现。^[raw/articles/tencent-research-ai-10-trends-2026-waic.md]
+
+## 深度分析
+
+### 三条主线的咬合逻辑
+
+报告的十个趋势不是并列清单，而是一条因果链：模型在部署后继续进化（在线进化），迫使工程重心从训练侧移到运行环境（Harness Engineering），运行环境的成熟又决定商业形态（智力即服务）与组织形态（液态组织）。其中 Harness Engineering 是连接技术板块与商业板块的枢纽：Anthropic 和 Cursor 的实践先于名词出现；同样基于 GPT-4o，有 Harness 的团队能跑 6 步以上自主流程，Devin 与裸模型 13.86% 对不足 2% 的差距，本质是运行环境工程质量的差距。理解这一枢纽，才能解释"竞争前沿移到模型外部"为何成为全篇的组织性判断。^[raw/articles/tencent-research-ai-10-trends-2026-waic.md:13-30]
+
+### 可信执行是进化的约束条件
+
+技术叙事之外，报告把安全从伦理议题重写为进化的前提：微软 365 Copilot 零点击提示注入漏洞（CVE-2025-32711）、首例几乎全自主的 AI 驱动网络攻击、Step Finance 因智能体权限过大损失约 3000 万美元，共同说明传统审批模式在机器级速度面前失效。可验证身份、可追溯行为、最小化操作权限三件事贯穿智能体全生命周期；A2A v1.0 强制 mTLS 双向认证、TC260 智能体身份标识要求、《智能体规范应用与创新发展实施意见》分别从协议、身份、合规三个层面落地。这与 [[concepts/agent-security-architecture]] 的分层防护视角一致：可信不是给进化踩刹车，而是把信任铺成管道。^[raw/articles/tencent-research-ai-10-trends-2026-waic.md:30-30]
+
+### 商业与组织的同步重写
+
+报告最具纵深的观察在商业与组织板块的联动：智力即服务让"购买智力"成为雇人、买软件、外包之后的第四种形态，成本侧用 Token 核算、定价侧按结果与岗位能力收费；智联网则把 Agent 变成互联网新主体，任务完成率（TCR）取代 DAU 的背后是竞争逻辑从流量分发转向能力调度；液态组织再沿同一逻辑压缩管理层——Block 裁员 40%、Anthropic 年化收入 140 亿美元而增长团队仅约 40 人。三者共同指向：AI 重组的是任务而非岗位，执行能力正在变便宜，架构能力正在变昂贵。^[raw/articles/tencent-research-ai-10-trends-2026-waic.md:40-43]
+
+### 实践启示
+
+1. Context Learning 是三条在线进化曲线中最值得关注的一条：信息摆在窗口里时最强模型的任务解决率仅 17%，跨会话留存的 Memory Consolidation 被报告点名为 2026 年最实际的产品护城河，与 [[concepts/context-engineering]]、[[concepts/memory-consolidation-decay]] 的讨论直接对接。^[raw/articles/tencent-research-ai-10-trends-2026-waic.md:21-21]
+2. 世界模型的竞争焦点已从预测下一帧转向预测行动后的下一状态——从渲染器向规划器演进。"理解世界不一定需要重建世界"的判断为 [[concepts/world-models]] 的架构争论提供了报告侧的佐证。^[raw/articles/tencent-research-ai-10-trends-2026-waic.md:21-21]
+3. Token 经济学的定价沿"卖资源到卖岗位"光谱右移：11x.ai 把 AI 销售代表定价为人类 SDR 全成本的四到五成，Intercom Fin 按解决一个客服工单收费——交易对象从消耗转向交付。^[raw/articles/tencent-research-ai-10-trends-2026-waic.md:42-42]
+4. TCR 正在取代 DAU 成为北极星指标，Agent 不看广告直接动摇注意力经济的曝光基础；垂直 Agent 的壁垒不在基础模型而在行业深度（数据积累、系统集成、工作流理解），IDC 数据显示 45% 企业已在核心业务部署自主决策 Agent、平均 ROI 达 171%。^[raw/articles/tencent-research-ai-10-trends-2026-waic.md:43-43]
+5. 强化学习扩散的瓶颈在领域数据基建而非算法：科学数据仍锁在国家实验室和学术机构里，谁先铺好程序化访问通路谁先拿到入场券，这与 [[entities/self-taught-rlvr]] 的可验证奖励路线互为补充。^[raw/articles/tencent-research-ai-10-trends-2026-waic.md:21-21]
+6. Harness 存在可预期的终局：模型逐代把外部搭建的能力内化，ADPS 已收拢 28 个标准化 Agent 搭建套路——可标准化代表显性化窗口不会持续太久，[[concepts/agent-harness-engineering-paradigm]] 相关实践正在被快速编目。^[raw/articles/tencent-research-ai-10-trends-2026-waic.md:29-29]
 
 ## 与现有实体的关联
 

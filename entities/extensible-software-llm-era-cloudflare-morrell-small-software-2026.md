@@ -1,7 +1,7 @@
 ---
 title: "可扩展软件（Extensible Software）：LLM 时代的软件形态——Cloudflare Morrell 与 YC Small Software"
 created: 2026-08-28
-updated: 2026-09-07
+updated: 2026-10-02
 type: entity
 tags: [extensible-software, small-software, llm, agent, platform, cloudflare, vibe-coding, capability-security, webassembly, sandbox]
 sources: [raw/articles/extensible-software-llm-era-cloudflare-morrell-small-software-2026]
@@ -53,6 +53,24 @@ LLM 让「写代码」成本趋零，软件形态从「发布那天就定稿的�
 ## 平台侧的分工与治理
 
 OpenAI《Codex as a Platform》开源智能体框架讲的是同一件事：把智能体嵌进用户本来在用的软件里，界面/业务上下文/工具/审批边界归应用方，智能体循环和沙箱执行归框架。当公司鼓励员工 vibe coding 做工具，几百上千个应用谁来维护、数据访问边界谁定、token 如何轮转、GDPR 怎么办——Morrell 的答案是：给员工一个**根本没有令牌可泄露的地方去部署**，数据访问交给平台团队统一兜底合规。产品经理的活儿随之改变：不必覆盖长尾需求，但必须设计稳定的扩展点、能力接口与长期兼容性承诺。^[raw/articles/extensible-software-llm-era-cloudflare-morrell-small-software-2026.md:209-237]
+
+## 深度分析
+
+### 门槛的转移：从「能不能写」到「让它能跑、又不失控」
+
+Morrell 论证里最容易被忽略的一点是：可扩展性的技术拼图二十年前就齐了——嵌入式解释器、沙箱、能力模型都是旧东西，LLM 改变的只是「谁来写扩展」。真正的瓶颈随之从写作侧移到托管侧：五道关（成本归零、毫秒级冷启动、硬限额、双层隔离、能力授予）本质上是一套基础设施经济学，决定了「百万用户各挂几行代码」这笔账能不能算得下去。这也是为什么 Cloudflare 这种本来就卖隔离与按次计费运行时的公司，会成为这波浪潮最自然的叙事者——扩展点不是加在产品上的功能，而是长在平台商业模式上的。^[raw/articles/extensible-software-llm-era-cloudflare-morrell-small-software-2026.md:79-183]
+
+### Capability 模型与 LLM 的双向适配
+
+三代委托模型的演进（API 密钥 → proxy → capability）通常被读成安全工程史，但它同样是一份 LLM 接口设计指南。对模型而言，一份 TypeScript 能力定义比 OpenAPI JSON 更省 token、语义更准，说明窄接口恰好也是模型最擅长消费的接口形态；对平台而言，能力函数「凭据不进用户代码地盘、拿到数据也没有外送通道」的结构，把安全性从「事后审查生成的代码」变成「事前封死误用的可能」——在用户代码由 AI 生成、无法逐行信任的场景下，这是唯一可扩展的信任模型。真正的门槛因此收敛为一句话：决定代码能碰到什么。^[raw/articles/extensible-software-llm-era-cloudflare-morrell-small-software-2026.md:123-151]
+
+### Sandstorm 的十年：理念没变，条件变了
+
+Sandstorm.io 的失败常被归咎于「理念太超前」，但 Varda 自己的复盘更精确：缺的是把软件逐个手工打包进沙箱的那份耐心——这是一个成本问题，不是认知问题。AI 恰好补上了这个成本项，于是 2026-08-05 Cloudflare OS 以 Apache 2.0 重新开源时，「每份文档跑在自己的沙箱里、只发能力不发钥匙」的原方案几乎原封不动地回来了。这个案例对判断「AI 时代哪些旧想法会复活」提供了一个可复用的判据：值得优先重试的不是当年论证不成立的想法，而是当年论证成立、只是执行成本压不下来的想法。[[concepts/agent-sandbox|Agent 沙箱]]正是这套思路在智能体语境下的延续。^[raw/articles/extensible-software-llm-era-cloudflare-morrell-small-software-2026.md:189-207]
+
+### 治理是规模化扩展的真正考验
+
+企业鼓励员工 vibe coding 自造工具时，维护归属、数据边界、令牌轮转、GDPR 这些问题会随应用数量线性放大。Morrell 给出的答案——给员工一个「根本没有令牌可泄露」的部署位，由平台团队统一兜底合规——实质上是把安全边界从每个应用的开发者责任上移为平台的结构性质，与 OpenAI《Codex as a Platform》「界面与审批归应用方、循环与沙箱归框架」的分工互为印证。两条路线指向同一结论：可扩展软件的竞争终局不在单个产品，而在谁能成为承载他人生成代码的那层平台。^[raw/articles/extensible-software-llm-era-cloudflare-morrell-small-software-2026.md:209-237]
 
 ## 相关概念
 
