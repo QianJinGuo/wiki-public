@@ -1,7 +1,7 @@
 ---
 
 created: 2026-06-10
-updated: 2026-09-10
+updated: 2026-10-03
 title: "Workflow architecture"
 type: entity
 tags: [rss, article, ai, llm, bedrock, sagemaker, aws, observability]
@@ -41,6 +41,38 @@ For full visibility into LLMs across the two monitoring dimensions of quantity a
 
 Custom quality metrics c^[raw/articles/comprehensive-observability-for-amazon-sagemaker-ai-llm-infe.md]
 
+
+## 深度分析
+
+### Quantity and quality are not two dashboards — they are one diagnostic loop
+
+The most interesting design decision in this architecture is not the tooling but the separation of metric namespaces: enhanced operational metrics flow to `/aws/sagemaker/InferenceComponents/<model-name>` while custom quality scores land in `/aws/sagemaker/inference-quality/<model-name>`. The split looks like hygiene, but it enables a diagnostic workflow neither signal supports alone: a latency spike without quality change points at infrastructure saturation (GPU memory pressure, noisy neighbors on a shared endpoint), while a quality drop with flat latency points at input drift or a bad model update. Correlating the two namespaces per inference component turns ambiguity ("something is wrong") into attribution ("what kind of wrong"). The article's framing that quantity and quality are "interdependent" is the practical core: an endpoint can be green on errors and p99 while producing unsafe completions, or serve excellent answers on hardware you are paying for and not using. ^[raw/articles/comprehensive-observability-for-amazon-sagemaker-ai-llm-infe.md:17-19] ^[raw/articles/comprehensive-observability-for-amazon-sagemaker-ai-llm-infe.md:27-34]
+
+### Multi-model endpoints change what observability must attribute
+
+SageMaker inference components let one endpoint host several LLMs (the article's example runs `gpt-oss-20b` and `Qwen2.5-7B-Instruct` side by side) with per-model traffic routing, scaling policies, and metric attribution. This quietly raises the observability bar: aggregate endpoint metrics become nearly useless because they blend models with different token profiles, GPU appetites, and quality baselines. The dashboards in the article are consistently dimensioned per model — GPU compute % per model, cost/hour per model, quality scores compared across models — because the actionable questions are per-model: is one model starving the other on shared GPUs, and which model is driving the bill? This is effectively the observability analog of unit economics: cost and quality both need a per-tenant denominator, and the inference-component dimension is what makes that denominator available without custom instrumentation. ^[raw/articles/comprehensive-observability-for-amazon-sagemaker-ai-llm-infe.md:25-25] ^[raw/articles/comprehensive-observability-for-amazon-sagemaker-ai-llm-infe.md:46-58]
+
+### LLM-as-judge quality scoring inherits the evaluator's failure modes
+
+Quality scores in the article are computed with an LLM-as-judge pattern (Claude Sonnet on Amazon Bedrock as the evaluator), and the article flags three governance constraints worth taking seriously: confirm the evaluator's terms permit judging other models' outputs, verify data-residency requirements, and pin the evaluator to a specific version so scores stay comparable over time. The version pin is the most consequential and easiest to skip — if the evaluator model silently updates, a composite score trending down may reflect judge drift rather than product degradation. This mirrors classical metric-instrument drift: the measurement apparatus is part of the system under test. A practical corollary the article only implies: judge latency is itself tracked (evaluation latency is a first-class quality metric), because quality sampling competes for the same budget as serving and can lag real-time by design. ^[raw/articles/comprehensive-observability-for-amazon-sagemaker-ai-llm-infe.md:72-72]
+
+### Silent degradation is a monitoring-architecture problem, not an alerting-configuration problem
+
+The article notes that quality degradation "rarely triggers traditional alerts" — unlike a 5xx spike, a slow slide in relevance or factual accuracy has no natural error rate to page on. The architectural answer is to build quality signals into the same alerting fabric as infrastructure signals: threshold-based Grafana Alerting rules dimensioned per inference component, routed through Amazon SNS into existing SRE triage (Slack, PagerDuty, OpsGenie). The notable choice is reusing the incident pipeline rather than inventing a separate ML-governance channel — quality breaches become ordinary incidents with the same severity classification and correlation automation. The staging guidance matters too: teams that jump straight to quality scoring tend to build alerts they cannot triage, because they lack the infrastructure context to attribute the cause. ^[raw/articles/comprehensive-observability-for-amazon-sagemaker-ai-llm-infe.md:64-66] ^[raw/articles/comprehensive-observability-for-amazon-sagemaker-ai-llm-infe.md:74-76] ^[raw/articles/comprehensive-observability-for-amazon-sagemaker-ai-llm-infe.md:15-15]
+
+## 实践启示
+
+1. **Start with quantity, then add quality — in that order.** Establish latency, error, and GPU utilization visibility before investing in LLM-as-judge scoring. Quality alerts are only triageable when you have infrastructure context to attribute the cause, and the staged approach keeps each alert actionable from day one. ^[raw/articles/comprehensive-observability-for-amazon-sagemaker-ai-llm-infe.md:15-15]
+
+2. **Separate quality metrics into their own CloudWatch namespace.** Publish custom quality scores to `/aws/sagemaker/inference-quality/<model-name>` rather than mixing them with enhanced metrics. The clean separation makes namespace-level IAM, retention, and dashboard scoping trivial, and prevents operational dashboards from breaking when quality metric schemas evolve. ^[raw/articles/comprehensive-observability-for-amazon-sagemaker-ai-llm-infe.md:29-34]
+
+3. **Dimension every alert and dashboard by inference component, never by endpoint.** On multi-model endpoints, aggregate metrics hide which model is saturated, degraded, or expensive. Per-component GPU %, cost/hour, and quality scores are what make the "which model is the problem?" question answerable in one glance. ^[raw/articles/comprehensive-observability-for-amazon-sagemaker-ai-llm-infe.md:25-25] ^[raw/articles/comprehensive-observability-for-amazon-sagemaker-ai-llm-infe.md:74-74]
+
+4. **Pin your LLM-as-judge evaluator to a fixed version.** Before trusting composite quality trends, lock the evaluator model version; otherwise evaluator drift masquerades as model degradation. Also confirm the evaluator's service terms cover judging other models' outputs and that data-residency requirements are met — both are governance blockers that are cheap to check upfront. ^[raw/articles/comprehensive-observability-for-amazon-sagemaker-ai-llm-infe.md:72-72]
+
+5. **Route quality breaches into your existing SRE incident pipeline.** Use threshold-based alerts on quality scores wired through SNS into the same triage tooling (PagerDuty/Slack/OpsGenie) as infrastructure alerts. A separate "ML governance" channel guarantees quality incidents get lower-priority handling; treating them as ordinary incidents gets them correlated and classified automatically. ^[raw/articles/comprehensive-observability-for-amazon-sagemaker-ai-llm-infe.md:74-76]
+
+6. **Diagnose by correlating the two namespaces, not by reading either alone.** Flat latency + falling quality suggests input or evaluator drift; spiking latency + stable quality suggests resource saturation. Build at least one Grafana panel that overlays a quality score against GPU memory % for the same component — that overlay is where the two-dimension strategy pays off. See also [[concepts/cloud-ai-infrastructure|cloud AI infrastructure]] for broader serving-context, and [[concepts/rag-retrieval-augmented-generation|RAG]] for the citation-quality dimension referenced in the quality taxonomy. ^[raw/articles/comprehensive-observability-for-amazon-sagemaker-ai-llm-infe.md:17-19] ^[raw/articles/comprehensive-observability-for-amazon-sagemaker-ai-llm-infe.md:66-66]
 
 ## 相关实体
 - [[entities/how-aws-smgs-uses-an-ai-powered-conversational-assistant-to-]]
