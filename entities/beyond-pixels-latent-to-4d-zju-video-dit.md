@@ -1,7 +1,7 @@
 ---
 title: "Beyond Pixels / Latent-to-4D：从视频 latent 直接走向 4D 世界（浙大）"
 created: 2026-08-20
-updated: 2026-09-07
+updated: 2026-10-06
 type: entity
 tags: [video-generation, 4d, latent, diT, world-model, multimodal]
 sources: [raw/articles/beyond-pixels-latent-to-4d-zju-video-dit]
@@ -33,6 +33,14 @@ Beyond Pixels 提出 Latent-to-4D 框架，把视频 DiT 最终去噪的 VAE lat
 
 - **一个 checkpoint 横跨三种 DiT**：最终训练阶段只用约 1K 条已有重建视频，同一 checkpoint 原样接入 Wan2.1-T2V-14B、Wan2.1-T2V-1.3B、Wan2.2-I2V-A14B（不同规模 Text-to-Video 与 Image-to-Video 模型，共享同一 Wan VAE），切换 DiT 不重新训练、不加条件分支、不做测试时微调。^[raw/articles/beyond-pixels-latent-to-4d-zju-video-dit.md]
 - **same-latent 严格对比**：与 Wan+4RC 基线（latent→RGB→4D 重建）使用完全相同的生成 latent。在 Text4D-200（200 个文本条件案例）与 I4D-200（200 个图像条件案例）评测中，Image-to-4D 测试全部指标排名第一。14B 与 1.3B 两个 Text-to-Video DiT 接入同一 checkpoint 后 DINO-F1 分别为 57.01 与 57.09，结果非常接近——为"共享 VAE latent 可成为统一接口"提供直接证据。^[raw/articles/beyond-pixels-latent-to-4d-zju-video-dit.md]
+
+## 深度分析
+
+**same-latent 对比是这项工作最有说服力的部分**：Latent-to-4D 与 Wan+4RC 基线共用完全相同的生成 latent，二者唯一差异是接口路径（latent→L4AR→4D 解码 vs latent→RGB→4D 重建），这把提升严格归因到“跳过像素翻译”本身，而非生成质量差异。14B 与 1.3B 两个规模相差一个数量级的 DiT 接入同一 checkpoint 后 DINO-F1 仅差 0.08（57.01 vs 57.09），说明接口性能与 DiT 规模基本解耦——统一接口的瓶颈在 VAE 表示空间的质量，而不在生成器的大小。^[raw/articles/beyond-pixels-latent-to-4d-zju-video-dit.md:181-198]
+
+**但“统一”是有条件的统一**：shared-VAE convention 是强前提——要求共享 VAE checkpoint、normalization、tensor layout、压缩规范和受支持的 latent shape，换一套 VAE 生态就要重训 L4AR，统一性实际上以“绑定 VAE 生态”为代价。论文同时明确划界：投影 DINO 指标只衡量新视角下的可见几何一致性与完整性，不等于度量级 4D 精度；机器人操作案例验证的是接口兼容性，而非动作成功率或物理正确性。把它读作“视频先验进入显式 4D 的统一入口”是准确的，读作“任意 DiT 即插即用”或“物理世界模拟器”则超出了证据范围。^[raw/articles/beyond-pixels-latent-to-4d-zju-video-dit.md:243-257]
+
+**更深一层的架构洞察：被复用的不是 DiT，而是 VAE 定义的表示空间**。训练阶段用的是冻结 Wan VAE 编码真实重建视频得到的 observed-video latent，生成 DiT 完全不参与——L4AR 学到的映射是“该 VAE 的 latent → 4D”，DiT 生成 latent 只是推理时的换源。文本/图像/姿态/轨迹/动作条件之所以无需为每个任务加分支，是因为它们都已被上游视频模型“实现”并收敛到同一个最终 latent 中；因此控制能力会随上游模型演进而自动被接口继承（为蒙娜丽莎戴墨镜、姿态驱动机器人厨师、沿轨迹移动等）。这正是 RGB 作为接口时做不到的：RGB 是一道信息瓶颈，latent 中的运动与结构线索要变回像素再被另一个模型重新猜测；把最终去噪 latent 当接口，等于把上游条件的作用终点直接暴露给下游。^[raw/articles/beyond-pixels-latent-to-4d-zju-video-dit.md:133-158, 229-241, 259-269]
 
 ## 实践启示
 

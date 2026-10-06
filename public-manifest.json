@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "sourceRevision": "60dc828d09ed03e771dba32600fe6cb0c96b9839",
+  "sourceRevision": "f643dfa28c42282e378c187c5a5ef2a4d7126ebc",
   "files": [
     {
       "path": "raw/articles/0.25秒识破未见攻击-lod-lvlm-jailbreak-detection-emnlp2026.md",
@@ -1543,6 +1543,11 @@
       "sourceUrl": "https://blog.crewai.com/agent-harnesses-are-dead-long-live-agent-harnesses"
     },
     {
+      "path": "raw/articles/agent-harness到底怎么选南洋理工大学安波团队最新研究给出答案.md",
+      "title": "agent-harness到底怎么选南洋理工大学安波团队最新研究给出答案",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651061081&idx=2&sn=cb11670b3a6aae956f8e44f4cdfa08e9"
+    },
+    {
       "path": "raw/articles/agent-harness开始自动修复系统级debug最高提升184点.md",
       "title": "agent-harness开始自动修复系统级debug最高提升184点",
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIwMTc4ODE0Mw==&mid=2247722169&idx=2&sn=fdb17581cfd7cf4fc0f4a9db4a156059"
@@ -2991,6 +2996,11 @@
       "path": "raw/articles/ai开始替人类调用aitoken用量已是人类52倍.md",
       "title": "ai开始替人类调用aitoken用量已是人类52倍",
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652720271&idx=2&sn=1501d6d57f652164dfdaee54b85c353a"
+    },
+    {
+      "path": "raw/articles/ai搜索的下一站可信度三层过滤机制从点击监督到答案级反馈.md",
+      "title": "ai搜索的下一站可信度三层过滤机制从点击监督到答案级反馈",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247930840&idx=3&sn=9e0dc013d1fc3fd02e08cd03ced2e90e"
     },
     {
       "path": "raw/articles/ai生图免训练提速1000办法最简洁的三阶段流水线-2026-07-08.md",
@@ -7343,6 +7353,11 @@
       "sourceUrl": "https://tridao.me/blog/2026/sonicmoe-blackwell/"
     },
     {
+      "path": "raw/articles/deepseek扩招弹性计算团队大量hc尤其需要资深工程师.md",
+      "title": "deepseek扩招弹性计算团队大量hc尤其需要资深工程师",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247930856&idx=1&sn=ec325c984ebc8d3707423fb2c41c9318"
+    },
+    {
       "path": "raw/articles/deepseek点燃大模型效率之争阶跃火速接棒jetspec让大模型解码速度最高提升近10倍.md",
       "title": "deepseek点燃大模型效率之争阶跃火速接棒jetspec让大模型解码速度最高提升近10倍",
       "sourceUrl": null
@@ -8016,6 +8031,11 @@
       "path": "raw/articles/envharness-awakening-static-worlds-google-mozhi-2026-08-24.md",
       "title": "谷歌Agent新作！给环境装一个Harness（附下载）",
       "sourceUrl": "https://mp.weixin.qq.com/s/k0hbcyPUO9ta_Z_hZTHXKg"
+    },
+    {
+      "path": "raw/articles/epoch-estimating-the-agent-population.md",
+      "title": "How Many AI Agents Could We Run?",
+      "sourceUrl": "https://epoch.ai/publications/estimating-the-agent-population"
     },
     {
       "path": "raw/articles/erik-schluntz-vibe-coding-in-production.md",
@@ -9168,6 +9188,11 @@
       "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-flash-nano-banana-2-lite"
     },
     {
+      "path": "raw/articles/google-federated-learning-tee-verified-dp.md",
+      "title": "google-federated-learning-tee-verified-dp",
+      "sourceUrl": "https://research.google/blog/toward-provably-private-learning-from-federated-data/"
+    },
+    {
       "path": "raw/articles/google-frozen-v2-server-ai-chip-gemini-hardware.md",
       "title": "google-frozen-v2-server-ai-chip-gemini-hardware",
       "sourceUrl": "https://mp.weixin.qq.com/s/_7HgLxbDZdJ-HaXqbXObQA"
@@ -9306,6 +9331,11 @@
       "path": "raw/articles/gpt-6-astra-vending-bench-2-andon-xinzhiyuan-2026.md",
       "title": "GPT-6 Astra 登顶 Vending-Bench 2：一年狂赚 1.5 万美元（新智元）",
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652725383&idx=2&sn=8df10b33525a0aff02bbd620030bb1a5"
+    },
+    {
+      "path": "raw/articles/gpt-6-astra也会看错流程图-einsia-ai发布pptbench视觉编程还有多远.md",
+      "title": "gpt-6-astra也会看错流程图-einsia-ai发布pptbench视觉编程还有多远",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651060792&idx=1&sn=d30e6a62a6b452c81c2470b4932d3230"
     },
     {
       "path": "raw/articles/gpt-6为刷榜黑进hugging-face捅篓子还得靠glm-52追查.md",
@@ -11683,6 +11713,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/guxZP2XFigkUvulxTfhZMg"
     },
     {
+      "path": "raw/articles/legoflow让智能体自主跑完代码数据构建训练测评全流程.md",
+      "title": "legoflow让智能体自主跑完代码数据构建训练测评全流程",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651060898&idx=2&sn=7c342e5f7de860d0e928dab50043d6b5"
+    },
+    {
       "path": "raw/articles/lerobot-v060-imagine-evaluate-improve.md",
       "title": "lerobot-v060-imagine-evaluate-improve",
       "sourceUrl": "https://huggingface.co/blog/lerobot-release-v060"
@@ -13456,6 +13491,11 @@
       "path": "raw/articles/neurips-in-icml-paper-title-tips-guidance-2026.md",
       "title": "neurips-in-icml-paper-title-tips-guidance-2026",
       "sourceUrl": "https://mp.weixin.qq.com/s/skwE6fMqQpHdE1zR4tii6Q"
+    },
+    {
+      "path": "raw/articles/neurips26-港科大从cpu到gpuai能否真正加速全流程.md",
+      "title": "neurips26-港科大从cpu到gpuai能否真正加速全流程",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652731150&idx=3&sn=67a9b831fd2ad980bd0f4db335c99b96"
     },
     {
       "path": "raw/articles/new-ai-lock-in.md",
@@ -15808,6 +15848,11 @@
       "sourceUrl": "https://runtimewire.com/article/microsoft-github-aws-ai-capacity-crunch"
     },
     {
+      "path": "raw/articles/ruofei-agent-architecture-full-chain-2026-10-05.md",
+      "title": "AI Agent 架构全链路拆解：从 Planner、Tool、MCP 到 Memory 和 Reflection",
+      "sourceUrl": "https://mp.weixin.qq.com/s/5SXa7vHTiGYTQNSIR6a-Pg"
+    },
+    {
       "path": "raw/articles/ruofei-ai-native-sdlc-full-chain-2026.md",
       "title": "Anthropic 公开了 AI 原生开发实践：规划、设计一直谈到部署和生产维护",
       "sourceUrl": "https://mp.weixin.qq.com/s/LwirSCwC7vkib1chNINy7Q"
@@ -18078,6 +18123,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/wKnGLew1EIwOIyUPBZevaw"
     },
     {
+      "path": "raw/articles/unievo-vl-onpolicy-self-distillation-2609.38721.md",
+      "title": "UniEvo-VL: An On-policy Self-Distillation Training Recipe for Multimodal Model Self-improvement",
+      "sourceUrl": "https://arxiv.org/abs/2609.38721"
+    },
+    {
       "path": "raw/articles/unifiedmodel-agent-semantic-layer-object-graph-aliyun-2026-09-06.md",
       "title": "AI Agent 时代，需要的不是更多数据，而是一个语义层",
       "sourceUrl": "https://mp.weixin.qq.com/s/tWFfO8kINq68e2nbcg5fzA"
@@ -18236,6 +18286,11 @@
       "path": "raw/articles/vals-ai-fable-solves-cyphral-distich.md",
       "title": "vals-ai-fable-solves-cyphral-distich",
       "sourceUrl": "https://www.vals.ai/blogs/fable-solves-cyphral-distich"
+    },
+    {
+      "path": "raw/articles/vals-ai-room-temperature-magnetic-semiconductors.md",
+      "title": "vals-ai-room-temperature-magnetic-semiconductors",
+      "sourceUrl": "https://www.vals.ai/blogs/room-temperature-magnetic-semiconductors"
     },
     {
       "path": "raw/articles/varoa-ddosing-software-delivery-pipelines-2026.md",
@@ -19348,6 +19403,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MjM5ODYwMjI2MA==&mid=2649803847&idx=1&sn=abe5cab137aac47cb042b6baa1a24191"
     },
     {
+      "path": "raw/articles/万分之一大模型后训练中的极端稀疏监督.md",
+      "title": "万分之一大模型后训练中的极端稀疏监督",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651060998&idx=2&sn=6e1b1eee268b769acca49b04819c6fd3"
+    },
+    {
       "path": "raw/articles/万字详解-codex-全链路架构codex-不是一个-app而是一套-agent-harness-runtime.md",
       "title": "万字详解-codex-全链路架构codex-不是一个-app而是一套-agent-harness-runtime",
       "sourceUrl": "https://mp.weixin.qq.com/s/gjxhwjKMZfztSo5ZclNsfA"
@@ -20141,6 +20201,11 @@
       "path": "raw/articles/北交清华等提出argus多智能体协同断案给视频鉴伪补上证据链.md",
       "title": "北交清华等提出argus多智能体协同断案给视频鉴伪补上证据链",
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIwMTc4ODE0Mw==&mid=2247723184&idx=2&sn=dfc8c0701bdd886a0d4f8868de9c59d1"
+    },
+    {
+      "path": "raw/articles/北大团队官宣庞加莱猜想被完整形式化首个双检验版本来了.md",
+      "title": "北大团队官宣庞加莱猜想被完整形式化首个双检验版本来了",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652730522&idx=2&sn=85eaaeeaa7495f16e68955d77c7ddeba"
     },
     {
       "path": "raw/articles/十万卡时代谁在定义新标准.md",
@@ -21488,6 +21553,11 @@
       "sourceUrl": "https://mp.weixi/"
     },
     {
+      "path": "raw/articles/看懂不等于做对va-bench测出大模型空间智能的执行断层.md",
+      "title": "看懂不等于做对va-bench测出大模型空间智能的执行断层",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651061111&idx=2&sn=cad2d261764e3894f685585728ae08b6"
+    },
+    {
       "path": "raw/articles/看见用户每一步session-replay-与热力图让体验优化有据可依.md",
       "title": "看见用户每一步session-replay-与热力图让体验优化有据可依",
       "sourceUrl": "https://mp.weixin.qq.com/s/1XceMfDUps_X5Kdk_kmW1w"
@@ -22241,6 +22311,11 @@
       "path": "raw/articles/首篇vla安全综述出炉机器人听懂指令安全评测也要升级.md",
       "title": "首篇vla安全综述出炉机器人听懂指令安全评测也要升级",
       "sourceUrl": "https://mp.weixin.qq.com/s/5Tb9x21QYy4kVXr7bSSfhg"
+    },
+    {
+      "path": "raw/articles/高德本地生活分析-agent-的-ai-native-实践全景万字长文回顾.md",
+      "title": "高德本地生活分析-agent-的-ai-native-实践全景万字长文回顾",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=Mzg4NTczNzg2OA==&mid=2247511846&idx=1&sn=e281c6ff590a8209e7d6e2719ee4e58a"
     },
     {
       "path": "raw/articles/鹅厂员工最近看的一本书是什么.md",
