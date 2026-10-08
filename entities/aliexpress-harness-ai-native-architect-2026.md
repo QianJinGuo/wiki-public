@@ -2,7 +2,7 @@
 title: "从 Architect 视角看 AI-Native 落地：AliExpress Harness 生成能力建设"
 type: entity
 created: "2026-08-03"
-updated: 2026-09-07
+updated: 2026-10-09
 tags: [wechat, harness, ai-native, code-generation, d2c, spec-driven, evaluation, self-evolution]
 rating: v8c9
 confidence: 0.85
@@ -80,6 +80,30 @@ AliExpress 团队在 Harness Engineering / Context Engineering / Loop Engineerin
 - **可动/不可动边界**：影响生成质量的规则不可动，服务端实现可动——共识起点是让步边界清晰可见
 - **真实 case**：早期 d2c Agent 简单模块跑 50 分钟，排查发现 1424 行 SKILL.md 无用加载，实际 LLM 生成仅 94 秒（90% 流程无用）——系统天花板不在模型能力而在架构设计
 - **架构师定位**（阿伦特 Labor/Work/Action 三层）：AI 替代 Labor、参与 Work、无法触及 Action——架构师新定位是 Action 层"定义什么是对的 + 设计让对的事自动发生的机制"：判断/诚实/体感/发起/组织感知五种行为 ^[raw/articles/aliexpress-harness-ai-native-architect-2026-08-03.md]
+
+## 深度分析
+
+### 1. Architect 视角的 Harness 生成：组织级 AI-Native 的真实抓手
+
+这篇最有信息量的不是某个具体技术组件，而是它的视角选择：以 Architect 而非工具用户的身份审视 Harness。当"定义什么是对的 + 设计让对的事自动发生的机制"成为架构师的新定位（对应阿伦特 Labor/Work/Action 三层中的 Action 层），Harness 就不再是工程脚手架，而是组织正确性的物化载体——13 个一级领域的治理体系、Owner 审批链、"命名即架构归属"，本质上是把组织内原有的架构治理权威重新编码成 AI 可执行的约束。这意味着 org 级 AI-Native 落地的最小闭环不是"选对模型 + 写好 Prompt"，而是组织先回答"谁有权定义正确"——这正是 Harness Engineering 范式下 [[concepts/harness-engineering-framework|Harness Engineering]] 与组织承载力相互约束的具体样本。标准化尺度不由技术完美性决定、由组织能承载的极限决定，这条结论值得所有 AI-Native 转型团队对表自查。^[raw/articles/aliexpress-harness-ai-native-architect-2026-08-03.md]
+
+### 2. 效果数据应该怎么读：97.2 分的边界条件
+
+C 端商品类模块 97.2 分是全文最常被引用的数字，但拆开三个口径看更准确：其一，分数是"评测体系自评"的产物——UI/功能/数据三维都由同一套 Spec 体系定义断言依据，分数高同时说明"标准化的内卷化成功"，即评测断言与生成约束同源，存在自我确认风险；其二，模块类型分化明显——玩法类型模块 93.4（功能仅 90.5）显著低于商品类 97.2，说明标准化的边际收益集中在"高频、结构可枚举"的模块形态，复合交互型功能仍依赖三层 Spec 结构化澄清而非组件直出；其三，B 端复杂页面（>1.5 万行）~80 分与 95% 交付目标之间还有明显缺口，印证了"页面规模 × 契约复杂度"仍是当前 Harness 的真实瓶颈。横向对比可参考 [[entities/agent-evaluation-fine-grained-system-aliexpress-2026|AI Agent 应用精细化评测（AliExpress）]] 的分层评测视角，两者在"评测断言必须有独立来源"这一点上互补。^[raw/articles/aliexpress-harness-ai-native-architect-2026-08-03.md]
+
+### 3. 三大能力的依赖顺序：标准化才是第一性
+
+文中将标准化/评测/自进化并列，但依赖关系是严格的单向链：评测的断言依据来自标准化定义的契约（没有 Data Spec 就没有数据完整性检查），自进化的修复对象是标准化产物（Skill/Spec/Rules），"消费保障"（每条知识必须有 Skill 读它）更直接把知识资产锚定在标准化结构上。因此三大能力的真实排序是 标准化 → 评测 → 自进化，跳过标准化直接建评测体系（很多团队的 AI 质量平台正是这个顺序）会陷入"断言无处安放"的困境。这也解释了为什么 4-Gate 自修复流程要强制"前置 Gate 未通过时后置 Gate 结果无效"——结构性问题（契约层面）永远优先于语义性问题（功能层面），与依赖链方向一致。对照 [[concepts/evaluation-harness-design|Evaluation Harness 设计]] 可以看到，断言来源问题在行业层面是共性难题，而非本文独有。^[raw/articles/aliexpress-harness-ai-native-architect-2026-08-03.md]
+
+### 4. Evolve 的克制：不写没人用的 knowledge
+
+自进化部分最有价值的不是三阶段流程本身，而是两条反向约束："永不降级"（证据不足时暂缓）和"消费保障"（无消费者的知识拒绝合入）。这两条把系统设计从"知识越多越好"扭转为"知识少而准"——本质上是承认 LLM 自进化循环最大的风险不是修不动，而是错误知识被大规模再消费、产生级联污染。"修复方向优先级 skill > spec > hooks > rules > knowledge" 则隐含一个判断：执行层比知识层更容易验证对错，所以越靠近执行侧的修复越值得做。这与 [[concepts/agent-self-improvement-loops|Agent 自进化循环]] 中"证据门槛与消费者约束是自进化系统防污染的两大闸门"的结论互相印证。^[raw/articles/aliexpress-harness-ai-native-architect-2026-08-03.md]
+
+### 5. 开放张力与未回答的问题
+
+- **范式淘汰的自反性**：文中把 LangGraph 多轮决策树、自建 RAG 归入"应丢弃的补丁"，但保留/丢弃的判定依据是"模型增强后是否自然消解"——这个判据本身依赖对未来模型能力的预测，与"资产 vs 补丁"二分法的确定性之间存在张力。判断力需要三个输入（对现有系统的理解 / 对新范式的认知 / 真实场景验证数据），第三个输入是回溯性的，前两个是前瞻性的，三者权重如何定并未给出答案。
+- **50 分钟 vs 94 秒 case 的可复制性**：1424 行 SKILL.md 无用加载的问题暴露的是 Harness 自身的"上下文治理"欠账，但文中未给出 Harness 自我诊断的通用方法——这类"Harness 之上的 Harness"（对 Harness 做元评测）是否会成为下一轮建设重点，值得追问。参考 [[concepts/loop-engineering-methodology|Loop Engineering 方法论]]，循环反馈机制目前主要作用于代码生成结果，尚未作用于 Harness 自身的执行效率。
+- **"生成就能上线"与人工兜底的边界移动**：verify 阶段始终由人做最终决策，这意味着当前准确率数据（97.2/95.5 等）全部停留在"人机协同后"的口径上。随着准确率提升，人的角色会从"兜底判断"退向"抽检 + 异常受理"，这个边界如何迁移、迁移到什么位置算"生产可用"，文中三角平衡（准确度/效率/体验）没有给出量化标准，是 org 级推广时必须先回答的问题。^[raw/articles/aliexpress-harness-ai-native-architect-2026-08-03.md]
 
 ## 相关链接
 

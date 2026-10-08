@@ -3,7 +3,7 @@
 title: "百度百舸 AI Infra 助力具身智能模型加速迭代"
 type: entity
 created: 2026-07-04
-updated: 2026-08-01
+updated: 2026-10-08
 tags: [wechat, ai]
 rating: v7c7
 sources:
@@ -88,6 +88,32 @@ review_category: practice
 **MFU 0.42**，超过 Cosmos 3 官方论文 GB200 基准（0.23-0.3）。所有优化均为无损精度。 ^[raw/articles/百度百舸-ai-infra-助力具身智能模型加速迭代.md]
 
 ---
+## 深度分析
+
+### 双系统分层架构决定了两条根本不同的 Infra 需求
+
+演讲最有信息量的部分是把 VLA 的「大脑（System 2）/小脑（System 1）」共识拆成两条实现路径并给出各自的 Infra 画像：端云协同学派把大脑放云端（参数量可超 200B、MoE 结构），需要的是极致吞吐的多机多卡并行与通信开销优化；单体模型学派把双系统压进 10B 以下端侧模型，需要的是与模型结构解耦、兼容 Hugging Face、敏捷试错的中小规模训练框架。两条路径对平台的诉求几乎正交——这解释了为什么百舸同时维护「大 MoE 加速」与「结构解耦敏捷框架」两条产品线。世界模型联合训练则是第三条平行路线：预测未来帧比 Action 序列有更密集的监督信号，数据利用效率更高，百舸为此专门优化了输入序列的多机多卡并行。^[raw/articles/百度百舸-ai-infra-助力具身智能模型加速迭代.md]
+
+### 强化学习是具身 Infra 与 LLM Infra 真正分岔的地方
+
+LLM 领域沉淀的 RLHF 工具链在具身场景会遇到三个新问题：多模态输入输出数据量大导致单控制节点数据预处理与分发成为瓶颈；多模态序列长度差异大导致多机负载不均；VLA 训练必须与仿真环境实时交互（生成动作→环境更新→新观察），这是现有开源 RL 框架缺失的环节。这个分岔说明具身智能不能简单复用文本 LLM 的 RL 基础设施，仿真器接入是必须自建的能力。^[raw/articles/百度百舸-ai-infra-助力具身智能模型加速迭代.md]
+
+### Cosmos 3 实战：国产 GPU 无 NVLink 反超 GB200 基准的方法论
+
+2026-07-08 补充的全链路优化把「工程优化能吃掉硬件代差」量化到了极点：在无 NVLink 的国产 GPU 上 MFU 0.42，超过 Cosmos 3 官方 1024×GB200 基准（0.23-0.3）。五步优化的顺序本身就是教科书——先用 Profiling 定位（ColorJitter 占 CPU 耗时 78.5%）再动手，任务启动从 37.2min OOM 到 25s 靠 Parquet 列裁剪消除冗余读取；I/O 迁 GPU +50%；torch.compile 禁用 mix-order reduction 适配国产 GPU 显存限制 +28.6%；分层 AC 精细化控制 +3.1%；弹性 RDMA + HSDP 让 12 节点扩展效率达 98.3%。关键约束是所有优化均无损精度（Loss 曲线与官方 Baseline 一致），说明这是纯粹的工程空间而非精度换速度。^[raw/articles/baidu-cosmos3-training-optimization-domestic-gpu.md]
+
+### GEN-0 的 Scaling Law 验证是平台叙事的支点
+
+演讲引用 GEN-0 基于 27 万小时真机数据预训练的结果，验证具身基础模型同样存在显著 Scaling Law——这是所有云厂商押注具身 Infra 的前提假设：如果 scaling 不成立，算力平台就没有复利空间。百舸的全景（昆仑芯超节点、MoE 优化 RDMA、开源模型加速版、Isaac CPU 敏感型任务调优）本质是对这个假设的下注。^[raw/articles/百度百舸-ai-infra-助力具身智能模型加速迭代.md]
+
+## 实践启示
+
+1. 评估具身训练平台时先确认自己的架构路线（端云协同 vs 单体端侧 vs 世界模型联合训练），三者对并行策略、框架解耦性、序列并行的需求完全不同。^[raw/articles/百度百舸-ai-infra-助力具身智能模型加速迭代.md]
+2. 做 VLA 强化学习前先检查 RL 框架是否支持仿真器在线交互；缺这一环就要自建环境接口，不能套用 LLM RLHF 工具链。^[raw/articles/百度百舸-ai-infra-助力具身智能模型加速迭代.md]
+3. 训练吞吐优化永远从 Profiling 开始：Cosmos 3 案例中 78.5% 的耗时在 CPU 端 ColorJitter，盲目堆 DataLoader Worker 无效，迁移单个算子就拿到 +50%。^[raw/articles/baidu-cosmos3-training-optimization-domestic-gpu.md]
+4. 数据加载 OOM 优先查列存储的冗余字段读取：Parquet 列裁剪 + 拷贝路径重构把 1734GB 内存需求压到 46GB，比加机器便宜 89 倍。^[raw/articles/baidu-cosmos3-training-optimization-domestic-gpu.md]
+5. 国产 GPU 适配编译器的正确姿势是按底层资源规格关策略（如 mix-order reduction），而非硬调超参。^[raw/articles/baidu-cosmos3-training-optimization-domestic-gpu.md]
+
 ## 关联
 - 相关概念: [[concepts/harness-engineering-framework|Harness Engineering]]
 

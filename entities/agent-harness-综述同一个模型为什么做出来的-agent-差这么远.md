@@ -3,7 +3,7 @@
 title: "Agent Harness 综述：同一个模型，为什么做出来的 Agent 差这么远"
 type: entity
 created: 2026-07-04
-updated: 2026-09-05
+updated: 2026-10-09
 tags: [wechat, ai]
 rating: v8c8
 sources:
@@ -105,6 +105,18 @@ Harness 回答的是一个工程问题：怎样把一个无状态、会推理的
 ---
 ## 关联
 - 相关概念: [[concepts/harness-engineering-framework|Harness Engineering]]
+
+## 深度分析
+
+**1. 同一模型分岔的真正机制：上下文才是每次实际执行的"程序"。** 裸模型只是一个无状态的概率分布，它每次跑出的行为完全由喂进去的上下文决定。两个产品用同一组权重，但主循环组装上下文的方式不同——工具定义怎么写、Observation 怎么回写、历史怎么压缩、失败信息是否显式保留——等于在运行两份不同的"程序"。从这个角度看，"同一个模型换 Harness 结果差一个量级"（LangChain 在 TerminalBench 2.0 上从 30 名外跳到第 5）并不是神秘现象，而是上下文组装策略差异的直接体现。Harness 的核心工作，就是把模型的通用推理分布约束到一条可预期的执行轨迹集合上，这也是 [[concepts/context-management-agent-systems|Context Management]] 与 [[concepts/context-engineering|Context Engineering]] 在 Harness 体系内地位持续上升的原因。
+
+**2. 验证回路决定误差是被清除还是被复利。** 10 步任务、每步 99% 成功率，全链路只剩约 90%——误差随步数复利累积，这是所有长任务 Agent 的宿命方程。工具给了模型行动能力，只有验证才给了模型纠错能力：没有外部反馈回路，失败会沿着轨迹静默传播，最终产出"看着像完成了"的交付物；有外部验证（测试、lint、截图、真实 API 响应），每一步的误差才有机会被就地清除而不是累积。Boris Cherny 给出的 2-3 倍质量提升，本质上是把误差模型从"累积"改成了"收敛"。而验证必须外移的原因也很硬：让生成器自验自己，它最容易放过自己。参见 [[concepts/verifier-driven-development|Verifier-Driven Development]]。
+
+**3. Harness 的厚度悖论，以及它被写进权重后的身份转变。** Harness 太薄，稳定性只能靠模型自觉；太厚，则笨重昂贵且与当前模型强绑定。Manus 半年重建五次都在做减法、Vercel 在 v0 上删掉 80% 的工具反而更好、Claude Code 靠懒加载砍掉 95% 上下文——这些案例共同指向一个判断：Harness 是针对当前模型能力欠拟合而搭的脚手架，模型每上一个台阶，就应该拆掉一批不再承重的结构。但 Claude Code 把特定 Harness 放进训练回路这件事，把这个悖论推向了更深的张力：当 Harness 成为训练分布的一部分，它就不再是"待拆除的脚手架"，而是被固化进权重的永久构件——换一套工具实现反而掉分。于是 Harness 同时具有两种身份：对下一代模型是临时 scaffolding，对当前模型是 permanent fixture。何时拆、何时焊死，没有公式，只有持续评测，这正是 [[concepts/harness-engineering-framework|Harness Engineering]] 至今未收敛的核心难题。
+
+**4. Harness Engineering 是 30 年软件工程复杂性问题的最新实例。** 设计模式解决对象协作的复杂性，分层架构与 DDD 解决业务边界的复杂性，微服务解决分布式运维的复杂性，Harness 解决的是一个会推理、会执行、还会不断消耗上下文预算的系统的复杂性——对象一直在换，问题从未变过：把复杂系统变成可控系统。这也解释了为什么工程师对 Harness 有天然的熟悉感。它的真正价值不在于让模型更能干，而在于让系统重新变得可设计、可治理、可拆边界；评判一个 Harness 的标准，不是组件数量，而是任务是否可见、动作是否可控、状态是否可恢复、结果是否可验证。
+
+**5. 未解的开放问题。** 综述读完仍有三处边界模糊：其一，"记忆是提示、不是事实"的原则正确，但记忆权重与真实状态校验的比例如何随任务长度动态调整，尚无成熟做法（参见 [[concepts/agent-memory-architecture|Agent 记忆架构]]）；其二，Translation Layer 只解决接入、不解决等价，跨 Provider 迁移的质量关卡只能靠重新评测兜底，意味着 Harness 与 Provider 之间始终存在一层不可抹平的语义损耗；其三，榜单成绩（76.4% 通过率的 Harness 搜索实验）不能直接等同于真实产品体验，Harness 优化的评估方法学本身还是一门不成熟的学科。
 
 ## 补强（2026-09-05）：Translation Layer 解决接入、不解决等价 + Earendil 四元定义（若飞）
 

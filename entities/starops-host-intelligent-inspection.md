@@ -1,7 +1,7 @@
 ---
 title: "STAROps Host Intelligent Inspection — 24/7 AI Doctor for ECS"
 created: 2026-08-01
-updated: 2026-09-10
+updated: 2026-10-08
 type: entity
 tags: [STAROps, host-inspection, Alibaba-Cloud, SysOM, ECS, SRE, AIOps, kernel, observability]
 sources: [raw/articles/starops-host-intelligent-inspection-ecs-ai-doctor-2026, raw/articles/sysom-巡检-skill-一键锁定根因]
@@ -50,6 +50,32 @@ STAROps 与阿里云操作系统控制台的运维组件 **SysOM** 分工协作�
 ## Agent 化五步巡检流程
 
 用户一句自然语言「/主机巡检，对当前 workspace 的所有 ecs 做一次巡检」即可触发：Agent 读取 Skill 补齐参数（region/UID/workspace/time_range）→ 调用 SLS 异常事件查询扫描（演示：3 类 CRITICAL、102 台实例、1380 事件）→ 对关键实例并发调用 SysOM（memgraph/diskanalysis）→ 汇总分级报告（🔴 P0 需立即处置 + 🟢 P2 持续观察）。这是 **Skill + Agent + SysOM 三件套**的落地形态。^[raw/articles/starops-host-intelligent-inspection-ecs-ai-doctor-2026.md]
+
+## 深度分析
+
+### 「慢性病→急症」模型与巡检的时间维度价值
+
+原文的核心洞察是把基础设施故障重新分类：内存连续爬升直到 OOM、conntrack 表悄悄逼近满载、光模块老化直到重传率飙升——大多数故障是慢性病累积成的急症，而传统监控只在指标触顶时告警（为时已晚），人工巡检受精力限制无法高频深度排查。主机智能巡检的价值不在单点技术而在时间维度前移：七大领域 50+ 检查项把「病发前」的信号（SReclaimable 异常爬升、ECC 错误、SMART 告警）变成可消费的报告。这与其姊妹能力 [[entities/starops-rum-intelligent-inspection|RUM 智能巡检]]（体验退化灰色地带）构成同一时间哲学在两层栈上的实现。^[raw/articles/starops-host-intelligent-inspection-ecs-ai-doctor-2026.md]
+
+### STAROps/SysOM 分层是「编排智能」与「领域诊断」的解耦范例
+
+架构上值得抽出的模式：STAROps 做统一入口、自然语言下发、编排流程、关联全域数据、生成分级报告；SysOM 提供内核态专项算子（memgraph 内存分析、diskanalysis 磁盘诊断）。调用链是巡检发现异常 → 编排者并发调用深度诊断 → 内核级结论汇总进报告。这个分工与 SRE 团队的自然分工同构——「望闻问切、统筹开方」与「深入病灶、精准化验」是两种能力，强行合并会让编排层被诊断细节淹没。Agent 化五步流程（自然语言指令 → Skill 补参 → SLS 异常扫描 → 并发 SysOM 诊断 → 🔴P0/🟢P2 分级报告）则是这个解耦在对话式运维入口的落地。^[raw/articles/starops-host-intelligent-inspection-ecs-ai-doctor-2026.md]
+
+### Skill 开源把巡检从产品能力变成可移植的专家经验
+
+2026-07-28 开源的 SysOM 巡检 Skill（19 项巡检执行项，`npx skills add aliyun/alibabacloud-aiops-skills`）把同一套能力以两种形态存在：向人是开箱即用的巡检产品，向 Agent 是可调用的技能包（支持 Qoder、Claude Code 等宿主）。对照评测显示接入 Skill 后 Agent 在对话轮次、工具调用次数、耗时上大幅下降，且提升集中在内核专家判断类场景（socket 缓冲区泄漏、vmalloc 异常、memcg 误判）——越依赖专家经验的问题，Skill 价值越大。内部评测异常识别准确率 80%+、高风险项误判率 0。37.4 秒完成 19 项巡检并把 40 分钟的人工排障（python 进程独占 12.95GB 匿名内存）压到 5 分钟内，验证了「巡检→诊断→处置」闭环的实际收益。^[raw/articles/sysom-巡检-skill-一键锁定根因.md]
+
+### 证据链完整性是 AI 运维区别于告警系统的分界线
+
+三个真实案例共有的结构是「发现 → 定位 → 根因 → 方案」四段完整证据链：iowait 偏高 → MySQL fsync 频繁 → sync_binlog=1 → 给出参数方案；SReclaimable 占 30% → 日志 Agent 遍历 /proc/*/fd 产生 dentry 缓存 → 调整采集策略释放 8GB。对比传统告警只回答「有没有异常」，AI 运维的分界线在于能否回答一线同学的三问：严重程度如何？根因在哪？下一步谁做什么？每条建议经线上验证、按紧急/中期/长期三步走、每项巡检配故障注入测试用例，是把「AI 说的」变成可信结论的工程保障。^[raw/articles/starops-host-intelligent-inspection-ecs-ai-doctor-2026.md]
+
+## 实践启示
+
+1. 自建巡检体系先按「慢性病指标」列清单：conntrack 使用率、Slab/SReclaimable 占比、ECC/SMART/CRC 硬件信号，比盯瞬时 CPU 峰值更有预防价值。^[raw/articles/starops-host-intelligent-inspection-ecs-ai-doctor-2026.md]
+2. 运维 Agent 架构采用编排层/诊断层解耦：让编排层消费结构化诊断结论，不要把内核分析逻辑写进编排 prompt。^[raw/articles/starops-host-intelligent-inspection-ecs-ai-doctor-2026.md]
+3. 把已验证的排查路径封装成 Skill 供 Agent 调用，收益最大的场景是内核专家判断类问题；通用 LLM 自己「想想看」在这类问题上准确率明显更低。^[raw/articles/sysom-巡检-skill-一键锁定根因.md]
+4. 巡检命中高风险项后自动串联深度诊断（memgraph/diskanalysis），报告必须给到「哪个进程、多少量、占比例、可排除什么」的根因级结论才算闭环。^[raw/articles/sysom-巡检-skill-一键锁定根因.md]
+5. K8s 短连接密集场景把 conntrack_max 默认值当风险项主动巡检，配合 keepalive，可避免「新连接被悄悄丢弃」这类无告警故障。^[raw/articles/starops-host-intelligent-inspection-ecs-ai-doctor-2026.md]
 
 ## 第 2 来源 — SysOM 巡检 Skill 开源（2026-07-28）
 

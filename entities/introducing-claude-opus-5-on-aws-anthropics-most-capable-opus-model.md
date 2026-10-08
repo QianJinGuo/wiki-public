@@ -1,7 +1,7 @@
 ---
 title: "Claude Opus 5 on AWS：Anthropic 最强 Opus 模型发布"
 created: 2026-07-26
-updated: 2026-09-07
+updated: 2026-10-08
 type: entity
 tags: [anthropic, claude-opus-5, aws, amazon-bedrock, model-launch, agentic-coding]
 sources: [raw/articles/introducing-claude-opus-5-on-aws-anthropics-most-capable-opus-model, raw/articles/shenhua-xiafang-claude-opus-5-fabu-2026-07-26, raw/articles/claude-opus-5-aihanwuji-发布详情与提示词指南-2026-07-25]
@@ -28,6 +28,28 @@ review_category: tech
 - 在 Bedrock 上默认提供零数据保留 (ZDR)，满足企业数据治理要求。^[raw/articles/introducing-claude-opus-5-on-aws-anthropics-most-capable-opus-model.md]
 - 由 Bedrock 下一代推理引擎驱动，支持企业安全、区域数据驻留和零操作员访问的扩展。^[raw/articles/introducing-claude-opus-5-on-aws-anthropics-most-capable-opus-model.md]
 - 同时通过 Claude Platform on AWS 提供，支持请求级别的零数据保留。^[raw/articles/introducing-claude-opus-5-on-aws-anthropics-most-capable-opus-model.md]
+
+## 深度分析
+
+### 发布策略：用 Opus 定价买 Fable 5 智能的市场卡位
+
+综合三个来源，Opus 5 的真实卡位是把「旗舰智能」从 Fable 5 的高价位段拉到 Opus 价位（输入 $5 / 输出 $25 每百万 token，与 4.8 持平）：ARC-AGI-3 得分为第二名（GPT-5.6 Sol 的 7.8%）的 3 倍、OSWorld 击败 Fable 5 且成本仅 1/3、64.7% 的「人类最后的考试」成绩。这既是产品策略（保住 Bedrock 上对价格敏感的企业存量客户），也是对 AWS 渠道的示好——Bedrock 默认零数据保留（ZDR）+ 区域数据驻留 + 零操作员访问，直接瞄准「不能用 Anthropic 直连 API」的合规型客户。^[raw/articles/introducing-claude-opus-5-on-aws-anthropics-most-capable-opus-model.md, raw/articles/shenhua-xiafang-claude-opus-5-fabu-2026-07-26.md, raw/articles/claude-opus-5-aihanwuji-发布详情与提示词指南-2026-07-25.md]
+
+### 行为层变化比跑分更值得工程侧关注
+
+官方提示词指南披露的行为 7 项变化（回答更长、主动汇报进度、主动扩大任务范围、更爱自行验证、更常用子 Agent、更常汇报修正过程）说明 Opus 5 已被明显往「长时间运行的 Agent 主体」方向训练——AWS 博客同样强调它「能工作数小时甚至通宵、绕开障碍、从错误中恢复」。对应的工程代价是指南中三条反直觉规则：降低 effort 参数不会缩短输出（需直接指令）、给大型独立任务派子 Agent 提效但小任务成本翻倍必须设调用上限、「仔细检查/最终验证」类指令会触发过度验证浪费 token（模型自带自动纠错）。^[raw/articles/introducing-claude-opus-5-on-aws-anthropics-most-capable-opus-model.md, raw/articles/claude-opus-5-aihanwuji-发布详情与提示词指南-2026-07-25.md]
+
+### 风险治理：自动回退与一致性审计
+
+两处值得纳入生产设计：其一，高危领域（cyber 等）Opus 5 可能自动回退到 4.8，用户会收到通知且可通过 API 配置回退策略——这是首个在 API 层把「能力分级回退」做成显式机制的旗舰模型；其二，自动化行为审计显示其鲁莽/欺骗行为率为历代最低，配合 API 更新中「中途改工具不失效提示词缓存」与「安全分类器拦截自动路由最佳可用模型」两项，构成完整的 enterprises-ready 治理闭环。^[raw/articles/introducing-claude-opus-5-on-aws-anthropics-most-capable-opus-model.md, raw/articles/claude-opus-5-aihanwuji-发布详情与提示词指南-2026-07-25.md]
+
+## 实践启示
+
+1. 迁移到 Opus 5 时先删除提示词里的「仔细检查」「最终验证」类指令，靠模型自验证省 token；话痨问题用直接指令（保持简短）而非降 effort 解决。^[raw/articles/claude-opus-5-aihanwuji-发布详情与提示词指南-2026-07-25.md]
+2. 子 Agent 召回要设上限：大型独立子任务（CV 管道自建、漏洞根因挖掘）交给子 Agent 提效明显，小任务拆分反而让成本翻倍。^[raw/articles/claude-opus-5-aihanwuji-发布详情与提示词指南-2026-07-25.md]
+3. 关闭思考模式时若出现 XML 标签泄露，允许模型调用工具前说一句话 + 全局模糊禁令（不点名具体标签）效果最好。^[raw/articles/claude-opus-5-aihanwuji-发布详情与提示词指南-2026-07-25.md]
+4. 合规型企业选 Bedrock 通道：ZDR 默认开启 + 零操作员访问 + 区域驻留，Claude Platform on AWS 则按请求级 ZDR 提供原生平台体验。^[raw/articles/introducing-claude-opus-5-on-aws-anthropics-most-capable-opus-model.md]
+5. 视觉任务先裁剪再交给模型，并搭配视觉验证工具，比单纯让模型多思考更划算。^[raw/articles/claude-opus-5-aihanwuji-发布详情与提示词指南-2026-07-25.md]
 
 ## Related Entities
 
