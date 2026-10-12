@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "sourceRevision": "8041bce51b61bd889caf1bf02a635a2a6e66a17c",
+  "sourceRevision": "64ccd4fdf7903312549731873e857cddad2dc86d",
   "files": [
     {
       "path": "raw/articles/0.25秒识破未见攻击-lod-lvlm-jailbreak-detection-emnlp2026.md",
@@ -1716,6 +1716,11 @@
       "path": "raw/articles/agent-productivity-paradox-collaboration-bottleneck-alibaba.md",
       "title": "Agent 时代的生产力悖论：当协作本身成为最大的瓶颈",
       "sourceUrl": "https://mp.weixin.qq.com/s/GPoQnFsXnnNpKdefWWiKRw"
+    },
+    {
+      "path": "raw/articles/agent-project-knowledge-base-expert-foundation-datapai-2026-10-07.md",
+      "title": "给项目建Agent知识库，一套完整方法来了！",
+      "sourceUrl": "https://mp.weixin.qq.com/s/oQSmNMoS3rSl9hADa1cQrw"
     },
     {
       "path": "raw/articles/agent-protocol-cost-evolution-roundtable-2026.md",
@@ -9133,6 +9138,11 @@
       "sourceUrl": "https://research.google/blog/unlocking-dependable-responses-with-gemini-enterprise-agent-platforms-agentic-rag/"
     },
     {
+      "path": "raw/articles/google-agentic-skills-survey-sixtuple-2026-10-10.md",
+      "title": "Google 46 页 Agentic Skills 系统综述：六元组定义 + 九阶段生命周期",
+      "sourceUrl": "https://mp.weixin.qq.com/s/CPgOAPoBhbDyQorb0XRywA"
+    },
+    {
       "path": "raw/articles/google-ai-vulnerability-exploitation-threat-intel.md",
       "title": "Adversaries Leverage AI for Vulnerability Exploitation, Augmented Operations, and Initial Access",
       "sourceUrl": "https://cloud.google.com/blog/topics/threat-intelligence/ai-vulnerability-exploitation-initial-access"
@@ -9631,6 +9641,11 @@
       "path": "raw/articles/hardwood-1-0-a-fast-lightweight-apache-parquet-reader-for-th.md",
       "title": "Hardwood 1.0: A Fast, Lightweight Apache Parquet Reader for the JVM",
       "sourceUrl": "https://www.morling.dev/blog/hardwood-1-0-fast-lightweight-apache-parquet-reader-for-the-jvm"
+    },
+    {
+      "path": "raw/articles/harness-anatomy-11-coding-agents-source-study-2026-10-10.md",
+      "title": "从 Claude Code 到 Codex：Harness Engineering 源码研究（11 个 Coding Agent 拆解）",
+      "sourceUrl": "https://mp.weixin.qq.com/s/HK1qFKZTsMzMg_c6YIn-jw"
     },
     {
       "path": "raw/articles/harness-design-long-running-apps.md",
@@ -11463,6 +11478,11 @@
       "sourceUrl": "https://aws.amazon.com/cn/blogs/china/kiro-quick-deploy-agent-deploy-amazon-bedrock-agentcore/"
     },
     {
+      "path": "raw/articles/kitta-domain-customized-code-review-agent-aliyun-2026-10-09.md",
+      "title": "Kitta：Code Review Agent，提升代码审查质量",
+      "sourceUrl": "https://mp.weixin.qq.com/s/thZD8n53iiVEeSKKzLidUQ"
+    },
+    {
       "path": "raw/articles/klarna-delivers-strong-start-to-2026-with-1bn-revenue-and-68m-adj-operating-prof.md",
       "title": "Klarna delivers strong start to 2026 with $1bn revenue and $68m adj. operating profit | Klarna International",
       "sourceUrl": "https://www.klarna.com/international/press/klarna-delivers-strong-start-to-2026/"
@@ -12508,6 +12528,11 @@
       "sourceUrl": "https://www.oneusefulthing.org/p/mass-intelligence"
     },
     {
+      "path": "raw/articles/mass-multi-agent-self-supervision-rsi-mozhi-2026-10-10.md",
+      "title": "MASS：多智能体自监督驱动的递归自我改进（内外双循环）",
+      "sourceUrl": "https://mp.weixin.qq.com/s/77ajhX3dtq78fU3qAQwxJw"
+    },
+    {
       "path": "raw/articles/matt-pocock-main-flow-5-stages-3-antipatterns.md",
       "title": "Matt Pocock main flow：5 环节 3 反例，把 AI 拽回工程纪律",
       "sourceUrl": "https://mp.weixin.qq.com/s/4C4-u7bEd9kFZMcO3KYzcQ"
@@ -12616,6 +12641,11 @@
       "path": "raw/articles/meet-noz-your-ai-teammate-inside-signoz.md",
       "title": "Meet Noz, your AI teammate inside SigNoz",
       "sourceUrl": "https://signoz.io/blog/introducing-noz-your-ai-teammate-in-signoz"
+    },
+    {
+      "path": "raw/articles/meituan-agent-eval-engineering-8-lessons-2026-10-10.md",
+      "title": "美团 Agent 评测工程范式系统拆解：8 条可直接迁移的工程启示",
+      "sourceUrl": "https://mp.weixin.qq.com/s/uvV3X03HOveY-pIrpW8i0g"
     },
     {
       "path": "raw/articles/meituan-agent-eval-whitepaper-overview-2026-09-10.md",
@@ -13968,6 +13998,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247918381&idx=4&sn=dfbbddb50c561e09f85e05c20c65bfb1"
     },
     {
+      "path": "raw/articles/omnivchat-native-audio-visual-dialogue-datapai-2026-10-11.md",
+      "title": "为了理解而生成：用合成数据教会模型「视频通话」（OmniVChat）",
+      "sourceUrl": "https://mp.weixin.qq.com/s/pyzg-Bt4pz3Oq8_2TsmjmA"
+    },
+    {
       "path": "raw/articles/on-device-harness-qwen38-27b-portable-computer.md",
       "title": "on-device-harness-qwen38-27b-portable-computer",
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651053526&idx=2&sn=c487c62ae639a7fd386b186820419f70"
@@ -14001,6 +14036,11 @@
       "path": "raw/articles/only-pass-deceives-you-coding-agent-trace-eval-evot-databend-2026-09-10.md",
       "title": "只看 PASS 会骗你，6 条 Agent Trace 里的 Coding Agent 评测真相",
       "sourceUrl": "https://mp.weixin.qq.com/s/OjWTtUFTydr7O_FSzygyMA"
+    },
+    {
+      "path": "raw/articles/ontology-driven-dev-semantics-asset-layer-2026-10-10.md",
+      "title": "ontology-driven-dev：把业务语义钉成 AI 原生应用的地基（三步法+七模型 YAML）",
+      "sourceUrl": "https://mp.weixin.qq.com/s/oexhixlqSPDcS2L2rfaeTA"
     },
     {
       "path": "raw/articles/ontology-enterprise-ai-methodology-genai-symbiont-2026-08-12.md",
@@ -14526,6 +14566,11 @@
       "path": "raw/articles/openthinker3-data-recipe-iclr26-oral-qingshui-2026-08-05.md",
       "title": "ICLR26 Oral｜开源推理模型封神数据配方 — OpenThinker3-7B / OpenThoughts3-1.2M",
       "sourceUrl": "https://www.xiaohongshu.com/explore/6a7180d80000000032032d63"
+    },
+    {
+      "path": "raw/articles/openviking-context-db-vikingmem-triehi-vikingrag-2026-10-10.md",
+      "title": "Context is all you need：Context 用对了，Agent 办公才高效",
+      "sourceUrl": "https://mp.weixin.qq.com/s/-7LmtflPn2xyTlwhqI2szw"
     },
     {
       "path": "raw/articles/openviking-experience-memory-agent-evolution-loop-2026.md",
@@ -18328,6 +18373,11 @@
       "sourceUrl": "https://blogs.nvidia.com/blog/vera-cpu-delivery"
     },
     {
+      "path": "raw/articles/vera-verifiable-environments-agentic-coevolution-vibelife-2026-10-11.md",
+      "title": "VERA 论文精读：把基准轨迹变成步骤级可验证的训练环境",
+      "sourceUrl": "https://mp.weixin.qq.com/s/x5d8eyG_rX4E-gTVRILlGw"
+    },
+    {
       "path": "raw/articles/verbalized-sampling-prompt-engineering-icml2026-mode-collapse.md",
       "title": "verbalized-sampling-prompt-engineering-icml2026-mode-collapse",
       "sourceUrl": "https://mp.weixin.qq.com/s/5bmi5qJJQgMS4pUyxaUB7g"
@@ -18376,6 +18426,11 @@
       "path": "raw/articles/vibe-coding-agentic-engineering-convergence-simon-willison.md",
       "title": "vibe-coding-agentic-engineering-convergence-simon-willison",
       "sourceUrl": "https://mp.weixin.qq.com/s/ONABFuHsqZqZV1JP6prdfw"
+    },
+    {
+      "path": "raw/articles/vibe-coding-fullstack-agent-template-4-projects-2026-10-10.md",
+      "title": "Vibe Coding 时代，如何搭一个能交付的智能体应用（FastAPI+React+SSE+Postgres/Milvus+Docker Compose）",
+      "sourceUrl": "https://mp.weixin.qq.com/s/aeGHJWKgGFqtJGhiQQLYUw"
     },
     {
       "path": "raw/articles/vibe-coding-god-object-7months-failure.md",

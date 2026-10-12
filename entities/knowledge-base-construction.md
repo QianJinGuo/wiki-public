@@ -1,9 +1,10 @@
 ---
 title: "知识库构建方法论"
 created: 2026-07-02
-updated: 2026-09-07
+updated: 2026-10-09
 type: entity
-tags: [knowledge-base, rag, methodology, practice]
+tags: [knowledge-base, rag, methodology, practice, expert-knowledge, agent-debugging]
+sources: [raw/articles/agent-project-knowledge-base-expert-foundation-datapai-2026-10-07]
 review_value: 7
 review_confidence: 5
 provenance_state: stub-upgraded
@@ -58,6 +59,16 @@ RAG 的优势是构建成本低、时效性高（灌一篇搜一篇），结构�
 5. **按知识特征选型而非追逐潮流**：高频变更用 RAG、稳定高查询量用 LLM Wiki、复杂分析用混合；用分层结构（实体/概念/素材三层或 Pyramid 五层）对抗粒度混乱
 6. **把健康度变成指标**：定期统计 orphan rate、覆盖率、链接密度，按变更驱动修复，避免知识库"建完即腐烂"
 
+## Supplementary：Agent 故障定位知识设计（2026-10-09 SUPP）
+
+数据派THU/王大鹏（转自 Datawhale，2026-10-07）《给项目建Agent知识库，一套完整方法来了！》为本实体补上"**为 Agent 故障定位而设计知识**"这一不可替代维度——前述方法论聚焦入库评分/溯源/选型/健康度，本文聚焦**知识内容本身如何支撑判断**。^[raw/articles/agent-project-knowledge-base-expert-foundation-datapai-2026-10-07.md]
+
+**槽位（slots）与机制**：先确定知识库要支持什么判断（定位生产问题+给出修改依据），再反推资料整理深度。待分析问题由槽位构成——哪个机制原本该完成什么/实际行为在哪个环节偏离预期/有什么证据造成什么影响；"机制"= 系统完成一件事所依靠的过程。槽位不是固定排查步骤，而是判断时需补齐的信息（拿到故障先留空，调查即缩小未知）。引子案例：删除接口 HTTP 500 但删除实际已完成——状态码≠动作结果，接口说明和错误码都不缺，缺的是过程知识与查证位置。^[raw/articles/agent-project-knowledge-base-expert-foundation-datapai-2026-10-07.md]
+
+**三个乘法公式**（设计简写非数学计算）：①专家认知 = 问题结构 × 对应的领域知识；②专家知识 = 专家认知 × 事实验证（每条结论保留依据/适用条件/待确认事项，不写"永远以代码为准"——先明确在确认生产行为还是接口契约）；③未知问题的解题能力 = 专家知识 × 求证方法 × 当前事实。^[raw/articles/agent-project-knowledge-base-expert-foundation-datapai-2026-10-07.md]
+
+**专家底座（expert foundation）**：在分散资料前放一份较短入口文档——关键过程+正常行为+重要约束+查证位置指针。Agent 读完至少应理解问题模块正常时怎样工作；底座提供认知参照而非固定命令序列，知识库与现场调查不一致时继续取证而非迁就文档。**知识按更新速度分五类保存**（领域知识/项目设计与实现/接口契约/运维资料/日期草稿区），故障复盘不整篇搬迁，结论分别更新+索引联系。**用新问题检查旧知识**：记录 Agent 走偏点并归因到入口/文档/求证方法，改后重跑旧案例，最好由未参与编写者独立验收；没有新证据的猜测不因重复出现升级为事实。^[raw/articles/agent-project-knowledge-base-expert-foundation-datapai-2026-10-07.md]
+
 ## 相关实体
 
 - [[entities/vivo-ai-sales-guide-ecommerce-agent|AI 导购在 vivo 官网的落地实践]]
@@ -69,3 +80,4 @@ RAG 的优势是构建成本低、时效性高（灌一篇搜一篇），结构�
 - [[entities/hermes-skills-llm-wiki-self-improving-knowledge-system|Hermes Skills LLM Wiki 自进化知识系统]] — 本 wiki 自身的流水线实现
 - [[entities/rag-vector-knowledge-graph-ontology|向量库·知识图谱·本体论：RAG 知识系统演进]] — 知识表示层的演进对照
 - [[moc/rag-knowledge-retrieval|RAG 知识检索 MOC]] — 主题地图导航
+- [[entities/ai-coding-team-expert-knowledge-process-workflow|AI 编程进团队：高手经验沉淀为可复用工序]] — 专家经验系统化的工序视角
