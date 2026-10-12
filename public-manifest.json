@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "sourceRevision": "64ccd4fdf7903312549731873e857cddad2dc86d",
+  "sourceRevision": "65c90453282afe14e660e79eb7094770f143a128",
   "files": [
     {
       "path": "raw/articles/0.25秒识破未见攻击-lod-lvlm-jailbreak-detection-emnlp2026.md",
@@ -2238,6 +2238,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651019403&idx=1&sn=d35d1f707bb710e0c15f22426ebb2a32&scene=21"
     },
     {
+      "path": "raw/articles/agent组队干活最强模型只完成50任务基准评测协作能力.md",
+      "title": "agent组队干活最强模型只完成50任务基准评测协作能力",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652733338&idx=3&sn=f08043e7f9a717d355592804bffb55f5"
+    },
+    {
       "path": "raw/articles/agent落地真相-协议-成本与进化-关于智能体从能跑通到能投产的讨论.md",
       "title": "agent落地真相-协议-成本与进化-关于智能体从能跑通到能投产的讨论",
       "sourceUrl": "https://mp.weixin.qq.com/s/CyA5UUXhH7MzLwes1XPgnQ"
@@ -4188,6 +4193,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/Ib241_1rIS3A5-MThimJ1A"
     },
     {
+      "path": "raw/articles/atlas-agentic-search-benchmark-exa.md",
+      "title": "atlas-agentic-search-benchmark-exa",
+      "sourceUrl": "https://exa.ai/blog/atlas-benchmark"
+    },
+    {
       "path": "raw/articles/atod-annealed-turn-aware-on-policy-distillation-azheteng-2026-09-30.md",
       "title": "atod-annealed-turn-aware-on-policy-distillation-azheteng-2026-09-30",
       "sourceUrl": "https://mp.weixin.qq.com/s/sHg1KGk31sGKc2YozqAAig"
@@ -5241,6 +5251,11 @@
       "path": "raw/articles/calv-oracle-and-the-firm.md",
       "title": "The Oracle and the Firm",
       "sourceUrl": "https://calv.info/the-oracle-and-the-firm"
+    },
+    {
+      "path": "raw/articles/can-ai-automate-epoch-agent-case-study.md",
+      "title": "can-ai-automate-epoch-agent-case-study",
+      "sourceUrl": "https://epoch.ai/publications/can-ai-automate-epoch"
     },
     {
       "path": "raw/articles/canvas-breach-disrupts-schools-colleges-nationwide.md",
@@ -9601,6 +9616,11 @@
       "path": "raw/articles/gzip-lm-compression-as-language-model.md",
       "title": "gzip-lm-compression-as-language-model",
       "sourceUrl": "https://nathan.rs/posts/gzip-lm/"
+    },
+    {
+      "path": "raw/articles/h-jepalecun世界模型创业交卷代码权重全部开源.md",
+      "title": "h-jepalecun世界模型创业交卷代码权重全部开源",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247932239&idx=1&sn=ce2c0c46d18fef9c6b7f1a02eae55e4b"
     },
     {
       "path": "raw/articles/habby-game-aws-devops-agent.md",
@@ -16933,6 +16953,11 @@
       "sourceUrl": "https://stackoverflow.blog/2026/06/10/announcing-stack-overflow-for-agents/"
     },
     {
+      "path": "raw/articles/stanford-cs329z-lecture3-rag-chengyansuo-2026-10-04.md",
+      "title": "stanford-cs329z-lecture3-rag-chengyansuo-2026-10-04",
+      "sourceUrl": null
+    },
+    {
       "path": "raw/articles/star-polya-math-reasoner-verifier-meta-strategist-tsinghua-msra-2026.md",
       "title": "STAR-PólyaMath：Reasoner-Verifier-Meta-Strategist 三智能体数学推理 Harness",
       "sourceUrl": "https://mp.weixin.qq.com/s/Dy1vtS6XJh3NwDuPrU_DGA"
@@ -19633,6 +19658,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/KL-r-MsruPzo6zhvPOpBjQ"
     },
     {
+      "path": "raw/articles/中科大团队把会倒推的世界模型塞进了机器人成立三个月拿下数千万融资.md",
+      "title": "中科大团队把会倒推的世界模型塞进了机器人成立三个月拿下数千万融资",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651062101&idx=3&sn=450dc47681e0de359cd4675203b3e3ee"
+    },
+    {
       "path": "raw/articles/丰饶之后ai-coding-观察报告-20ai-透镜系列研究.md",
       "title": "丰饶之后：AI Coding 观察报告 2.0｜AI 透镜系列研究",
       "sourceUrl": "https://mp.weixin.qq.com/s/dKgn6ZCeI8qSTt1UueuDEg"
@@ -19818,6 +19848,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/SyI_bJaZu3f3GuUONzQpMg"
     },
     {
+      "path": "raw/articles/从刷榜到做科研研究员还有多久被-ai超越.md",
+      "title": "从刷榜到做科研研究员还有多久被-ai超越",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651062101&idx=2&sn=ddd637c88b87e377fe89256311381c12"
+    },
+    {
       "path": "raw/articles/从多智能体编排到ai自主决策资损防控体系的架构演进.md",
       "title": "从多智能体编排到AI自主决策：资损防控体系的架构演进",
       "sourceUrl": "https://mp.weixin.qq.com/s/kwM5w3LNurraRHr0dxS__A"
@@ -19861,6 +19896,11 @@
       "path": "raw/articles/从生成到交付音视频-agent-要有生产级开发套件.md",
       "title": "音视频 Agent 生产级开发套件",
       "sourceUrl": "https://mp.weixin.qq.com/s/rljnVP8iy2GlEcT2JPlx6g"
+    },
+    {
+      "path": "raw/articles/从看日志猜问题到基于证据链调试agentic-ai-如何重塑-openbmc-软件诊断.md",
+      "title": "从看日志猜问题到基于证据链调试agentic-ai-如何重塑-openbmc-软件诊断",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzI1MzYzMjE0MQ==&mid=2247523100&idx=1&sn=b5ad83d4997a6f503ff106af2d9cae2f"
     },
     {
       "path": "raw/articles/从聊天窗口到多-agent-控制台一次-ai-编程协作范式的转移.md",
@@ -20156,6 +20196,11 @@
       "path": "raw/articles/刚刚gpt-56全面上线codex被合并生产力工具chatgpt-work来了.md",
       "title": "刚刚gpt-56全面上线codex被合并生产力工具chatgpt-work来了",
       "sourceUrl": "https://mp.weixin.qq.com/s/40QPEBLoGJSsqUia6w1_mQ"
+    },
+    {
+      "path": "raw/articles/刚刚gpt-6-astra推翻59年核聚变猜想.md",
+      "title": "刚刚gpt-6-astra推翻59年核聚变猜想",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652732740&idx=2&sn=cee400dea6790e8c5253dbaa8f225f86"
     },
     {
       "path": "raw/articles/刚刚kimi-k3正式开源3万亿模型权重全球开放.md",
@@ -20473,6 +20518,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/3TCXn4j9pmB02YnCo4xnmg"
     },
     {
+      "path": "raw/articles/图像生成模型调优新思路让解码器提前适应生成器的潜变量.md",
+      "title": "图像生成模型调优新思路让解码器提前适应生成器的潜变量",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247932054&idx=3&sn=96e932b591fda6b54a8c994ffbe55779"
+    },
+    {
       "path": "raw/articles/在-amazon-ec2-gpu-实例上部署-nvidia-nemoclaw-以-amazon-bedrock-作为推理.md",
       "title": "在 Amazon EC2 GPU 实例上部署 NVIDIA NemoClaw — 以 Amazon Bedrock 作为推理后端的生产级参考架构",
       "sourceUrl": "https://aws.amazon.com/cn/blogs/china/inference-ai-agent-nvidia-nemoclaw-llm-router-amazon-ec2"
@@ -20556,6 +20606,11 @@
       "path": "raw/articles/多-agent-不是虚拟公司从-anthropic-五种模式看信息流怎么设计.md",
       "title": "多 Agent 不是虚拟公司：从 Anthropic 五种模式看信息流怎么设计",
       "sourceUrl": "https://mp.weixin.qq.com/s/fMPSK00Lxb0uv90sun_BYQ"
+    },
+    {
+      "path": "raw/articles/多会话语音记忆基准voxmem专治音频大模型记不住谁说的怎么说.md",
+      "title": "多会话语音记忆基准voxmem专治音频大模型记不住谁说的怎么说",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652733131&idx=3&sn=6b91c3fc0c4519f5dea8ad255b583b1f"
     },
     {
       "path": "raw/articles/多模态理解与生成统一模型llmflow模型生成范式原理与代码解析.md",
@@ -21248,6 +21303,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/ljpogVzMsm5Nw9jpou5Zlg"
     },
     {
+      "path": "raw/articles/机器人也能像gpu一样调度清华联手无问芯穹开源具身智能平台rlark.md",
+      "title": "机器人也能像gpu一样调度清华联手无问芯穹开源具身智能平台rlark",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIwMTc4ODE0Mw==&mid=2247723184&idx=1&sn=79b268abe0ff19a265e23d184b93afbc"
+    },
+    {
       "path": "raw/articles/机器人看视频学操作伯克利首次打通互联网视频到灵巧手真机部署链路.md",
       "title": "机器人看视频学操作伯克利首次打通互联网视频到灵巧手真机部署链路",
       "sourceUrl": "https://mp.weixin.qq.com/s/XfcD1_lipFIyFDnQi7SITg"
@@ -21266,6 +21326,11 @@
       "path": "raw/articles/李飞飞lecun疯狂加注这匹中国黑马已在因果ai暗战6年.md",
       "title": "李飞飞lecun疯狂加注这匹中国黑马已在因果ai暗战6年",
       "sourceUrl": "https://mp.weixin.qq.com/s/stcgM_ps00Pr6gKOq0g5Pw"
+    },
+    {
+      "path": "raw/articles/李飞飞团队造了个世界动作模型换个底座机器人成功率直接飙升.md",
+      "title": "李飞飞团队造了个世界动作模型换个底座机器人成功率直接飙升",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651061834&idx=2&sn=6f2ba9bec78ffc3e25e49294ec828bce"
     },
     {
       "path": "raw/articles/李飞飞署名具身新论文sim2real烧不起real2sim量大管饱-1.md",
@@ -21663,6 +21728,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/UiR0DZtree46F2M5t0qmxg"
     },
     {
+      "path": "raw/articles/突发openai一次放出722篇数学成果准黎曼猜想4d挂谷都在列.md",
+      "title": "突发openai一次放出722篇数学成果准黎曼猜想4d挂谷都在列",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651061320&idx=1&sn=9ccf3204921b2620923ef26380fb3bb6"
+    },
+    {
       "path": "raw/articles/突发openai宣布断供cursor.md",
       "title": "突发openai宣布断供cursor",
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651053471&idx=1&sn=eb718841cd7d53921a32e5ecd15bbff5"
@@ -21988,6 +22058,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/efVIe28C_Hwai21zPnQNWA"
     },
     {
+      "path": "raw/articles/让机器人记住过去simplememvla把原生视觉上下文当记忆.md",
+      "title": "让机器人记住过去simplememvla把原生视觉上下文当记忆",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIwMTc4ODE0Mw==&mid=2247723294&idx=2&sn=2b64acc0a1a58404256d0eee5efea949"
+    },
+    {
       "path": "raw/articles/让生成式模型画出空间智能而非强迫llm输出坐标-浙大提出agentic空间认知评估框架.md",
       "title": "让生成式模型画出空间智能而非强迫llm输出坐标-浙大提出agentic空间认知评估框架",
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651049267&idx=3&sn=49011a107e9b97fbf50a12366969b72f"
@@ -22198,6 +22273,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIwMTc4ODE0Mw==&mid=2247723105&idx=1&sn=4862e7dd3c9b326439523c4a5e84ea2c"
     },
     {
+      "path": "raw/articles/量化后画面闪烁时序稳定的视频世界模型2-bit-kv-cache压缩方案诞生.md",
+      "title": "量化后画面闪烁时序稳定的视频世界模型2-bit-kv-cache压缩方案诞生",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651061320&idx=2&sn=da665a8e02881b7e48eea58bf8431ec1"
+    },
+    {
       "path": "raw/articles/错误码排查从-38-小时到分钟级agent怎么做到的.md",
       "title": "错误码排查从-38-小时到分钟级agent怎么做到的",
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MjM5ODYwMjI2MA==&mid=2649804239&idx=1&sn=877bddfed68e73a327c4c25e836d8258"
@@ -22386,6 +22466,11 @@
       "path": "raw/articles/鹅厂员工最近看的一本书是什么.md",
       "title": "鹅厂员工，最近看的一本书是什么？",
       "sourceUrl": "https://mp.weixin.qq.com/s/dJiIi3CP-iLmDrcqg_lSmA"
+    },
+    {
+      "path": "raw/articles/黑洞信息悖论推进至定量完备性模量清华团队开源veriloop-e2迈向可验证智能.md",
+      "title": "黑洞信息悖论推进至定量完备性模量清华团队开源veriloop-e2迈向可验证智能",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247932309&idx=3&sn=43903282d14f5e89059beb4b21d11ced"
     },
     {
       "path": "raw/articles/龙虾也需要看病一张旧病历引出三个新确诊.md",

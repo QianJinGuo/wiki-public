@@ -1,7 +1,7 @@
 ---
 title: "Kitta：领域定制的 Code Review Agent（阿里云 × 龙蜥社区）"
 created: 2026-10-09
-updated: 2026-10-09
+updated: 2026-10-12
 type: entity
 tags: [code-review, agent, agentic-ci, domain-customization, kernel, harness-engineering, alibaba, openanolis]
 sources: [raw/articles/kitta-domain-customized-code-review-agent-aliyun-2026-10-09]
@@ -38,6 +38,33 @@ AI 辅助编程普及后代码产出指数级增长但审查人力未同步扩�
 ## 数据飞轮
 
 审查服务持续沉淀四类数据反哺千问基座模型（数据向下沉淀、能力向上反哺）：专家标注 Benchmark 数据集 → 漏洞发现能力；Agent 思维链轨迹数据 → 指令跟随能力；用户偏好对齐数据 → 用户对话能力；用户后续 Coding 动作 → 跨语言 Coding 与 Debug 能力。^[raw/articles/kitta-domain-customized-code-review-agent-aliyun-2026-10-09.md]
+
+## 深度分析
+
+### 定位：从"模型能力竞争"转向"组织能力竞争"
+
+主流 Code Review 路线靠提升模型通用审查能力（更大上下文、更强误报治理）内卷，Kitta 把质量增长函数绑定在**项目级专家资产**上，解在模型之外。隔离复现一步是资产可信的关键：每条缺陷模式都要在真实评审历史中复现、经得起追问，使资产具备"证据"属性而非"启发式"属性——这也解释了为什么同一管线能跨六领域迁移：可复现的**提炼流程**比资产内容本身更通用。^[raw/articles/kitta-domain-customized-code-review-agent-aliyun-2026-10-09.md]
+
+### 回合补丁是领域特异性的试金石
+
+把内核场景的攻坚点选在回合补丁完整性/一致性上，是把"领域性"落到通用模型无法自动解决的具体检查：上游依赖链追踪、Fixes 排查、基础/上下文/语义三层对比都依赖领域知识的组织方式，而非更强的基座模型。这为其他领域提供了方法论模板——先找到该领域"通用工具结构做不了"的高频审查动作，再围绕它沉淀流程与资产，而非泛泛接入通用 Agent。^[raw/articles/kitta-domain-customized-code-review-agent-aliyun-2026-10-09.md]
+
+### 分层输出：自动化审查是在重新分配人的注意力
+
+五阶段流水线的产出设计（结果分层输出、无问题不报告、仅 Critical 内联定位）表明其真实价值不是"替代审查"，而是**重新分配 Maintainer 注意力**——从逐行确认转向关键争议裁决。97% 门禁准确率与 62% 稳定合入率的组合暗示：衡量自动化审查的标准应是人的时间结构变化与合入节奏可预期性，而非拦截问题数量。^[raw/articles/kitta-domain-customized-code-review-agent-aliyun-2026-10-09.md]
+
+### 数据飞轮的双重反馈回路
+
+四类沉淀数据（Benchmark 数据集、思维链轨迹、偏好对齐、后续 Coding 动作）分别反哺基座模型的漏洞发现、指令跟随、对话与 Coding 能力——审查系统同时是一个数据系统，把"审计副产品"转化为训练资产。叠加在线离线协同进化，形成两层反馈：短期靠采纳率监控与阈值调整越用越准，长期靠基座模型升级抬升能力天花板。^[raw/articles/kitta-domain-customized-code-review-agent-aliyun-2026-10-09.md]
+
+## 实践启示
+
+1. **先盘点后定制**：接入 Code Review Agent 前，先收集本项目的真实评审与缺陷历史，实测通用工具在本领域的失败模式（覆盖不全/位置漂移/效果不稳定），再决定定制方向。^[raw/articles/kitta-domain-customized-code-review-agent-aliyun-2026-10-09.md]
+2. **资产化而非提示词化**：领域知识应沉淀为可验证、可复用的专家资产（典型缺陷模式 + 流程约定），而非散落在提示词里——前者可跨项目管线化复用，后者换项目即作废。
+3. **每条规则必须可复现**：引入隔离复现环节，无法在真实历史中复现的缺陷模式按噪音剔除，避免把偶然当经验固化进资产。^[raw/articles/kitta-domain-customized-code-review-agent-aliyun-2026-10-09.md]
+4. **下游仓库优先建回合检查**：维护型/downstream 仓库的结构性盲区是补丁完整性（上游依赖链 + Fixes 排查）与回合一致性，值得在通用检查之前专门建设。
+5. **度量人的注意力而非拦截量**：评估审查 Agent 应追踪 Maintainer 追问轮次、意见采纳率与合入节奏，97%/62% 这类双指标组合比单一召回率更能反映真实价值。
+6. **以 Benchmark 差距驱动迭代**：用 LKML/sashiko 类真实数据源与 SOTA 方案横向对比，把特定缺陷类型/子系统的差距直接转化为 Skill 迭代优先级，配合 [[concepts/skill-engineering-principles]] 的资产化思路持续演进。^[raw/articles/kitta-domain-customized-code-review-agent-aliyun-2026-10-09.md]
 
 ## 与库内 Code Review 实践的关系
 

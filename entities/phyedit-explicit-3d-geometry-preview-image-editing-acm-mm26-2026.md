@@ -1,7 +1,8 @@
 ---
+
 title: "PhyEdit：显式 3D 几何 Preview 指导 DiT 图像编辑（浙大 ReLER，ACM MM 2026）"
 created: 2026-08-13
-updated: 2026-09-10
+updated: 2026-10-12
 type: entity
 tags: [3d-editing, image-editing, diffusion, dit, geometry, acm-mm26, zju-reler, world-model, multimodal]
 sources: [raw/articles/phyedit-explicit-3d-geometry-preview-image-editing-acm-mm26-2026]
@@ -48,4 +49,4 @@ review_category: tech
 - 扩散模型架构 — DiT backbone 基础
 - [[entities/amap-abot-earth-0.5-3d-native-world-model|3D Native World Model]] — 3D 空间理解相关
 
-→ [[raw/articles/phyedit-explicit-3d-geometry-preview-image-editing-acm-mm26-2026|原文存档]]
+→ [[raw/articles/phyedit-explicit-3d-geometry-preview-image-editing-acm-mm26-2026|原文存档]] ^[raw/articles/phyedit-explicit-3d-geometry-preview-image-editing-acm-mm26-2026.md]

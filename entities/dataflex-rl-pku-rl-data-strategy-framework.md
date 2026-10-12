@@ -1,7 +1,8 @@
 ---
+
 title: "DataFlex-RL：北大开源强化学习数据策略框架，接入更简单、对比更公平"
 created: 2026-09-24
-updated: 2026-09-24
+updated: 2026-10-12
 type: entity
 tags: [post-training, rl-data, data-strategy, grpo, rlvr, open-source, verl]
 sources: [raw/articles/dataflex-rl-pku-rl-data-strategy-framework]
@@ -24,7 +25,7 @@ confidence: 0.7
 
 ## 为什么重要
 
-随着推理模型与 RLVR 的发展，"模型练什么、怎么练"（数据选择、权重、领域配比）成为后训练的核心杠杆。此前换一个筛选规则就要改一遍训练器，且效果比较缺乏控制变量。DataFlex-RL 把这三类动作标准化为可配置组件，降低了数据策略实验的工程成本，也让"收益来自数据策略还是训练设置"这一归因问题变得可解。
+随着推理模型与 RLVR 的发展，"模型练什么、怎么练"（数据选择、权重、领域配比）成为后训练的核心杠杆。此前换一个筛选规则就要改一遍训练器，且效果比较缺乏控制变量。DataFlex-RL 把这三类动作标准化为可配置组件，降低了数据策略实验的工程成本，也让"收益来自数据策略还是训练设置"这一归因问题变得可解。 ^[raw/articles/dataflex-rl-pku-rl-data-strategy-framework.md]
 
 ## 相关
 
