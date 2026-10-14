@@ -1,12 +1,12 @@
 ---
 title: "Jev 快判断层与 fast-jev-compaction 上下文剪枝：把 Agent 的判断题从大模型里拆出来"
 created: 2026-09-21
-updated: 2026-10-13
+updated: 2026-10-15
 type: entity
 tags: [jev, system-one-model, context-compaction, fast-jev-compaction, agent-architecture, judgment-layer, probability-threshold, typesafe, tencent, rlcd]
 confidence: 0.85
 provenance_state: merged
-sources: [raw/articles/jev-fast-compaction-judgment-layer-tencent-daryl-2026, raw/articles/jev-model-demo-browser-use-benchmark-tencent-mason-2026, raw/articles/ai-comes-for-the-if-statement-tunguz-2026, raw/articles/2400万人围观前openai研究员做了个闭嘴模型, raw/articles/jev-shuaping-prehistory-timeprism-samples-to-scenarios-machine-heart-2026-09-25, raw/articles/agentscope-jev-harness-integration-aliyun-2026-10-12, raw/articles/agentjev-training-pipeline-datapai-2026-10-12]
+sources: [raw/articles/jev-fast-compaction-judgment-layer-tencent-daryl-2026, raw/articles/jev-model-demo-browser-use-benchmark-tencent-mason-2026, raw/articles/ai-comes-for-the-if-statement-tunguz-2026, raw/articles/2400万人围观前openai研究员做了个闭嘴模型, raw/articles/jev-shuaping-prehistory-timeprism-samples-to-scenarios-machine-heart-2026-09-25, raw/articles/agentscope-jev-harness-integration-aliyun-2026-10-12, raw/articles/agentjev-training-pipeline-datapai-2026-10-12, raw/articles/hiroute-jev-model-routing-agentcore-2026-10-14]
 ---
 
 # Jev 快判断层与 fast-jev-compaction 上下文剪枝
@@ -179,3 +179,14 @@ fast-jev-compaction 展示的"判断保留价值"路线与"摘要改写"路线�
 - **三阶段顺序不可颠倒**：检查点选优（只看 dev 未校准软交叉熵）→ 温度校准（calibration 集 81 候选温度拟合，实测 1.0-1.0718≈天然对齐）→ 测试集终评 78.05%（vs 官方 79.25%，差 1.2pp 同区间）；实测 DGX Spark 600 步 49 分钟/峰值 34GB。服务化后以胜出置信度做阈值门控（高门槛全自动/低门槛回退人工）。^[raw/articles/agentjev-training-pipeline-datapai-2026-10-12.md]
 
 → [[raw/articles/agentjev-training-pipeline-datapai-2026-10-12|原文存档]]
+
+## 第 8 来源：HiRoute——Jev 模型智能路由（阿里云 AgentCore 2026-10-14，v=7/c=9/63 SUPP）
+
+《Alibaba Cloud AI Agent Handbook》实践篇：HiRoute（本机开源路由引擎）把 Jev 判断接到**模型路由**——任务难度持续变化、效果只有做过才知道，模型选择应跟着变化走。^[raw/articles/hiroute-jev-model-routing-agentcore-2026-10-14.md]
+
+- **三类判断映射（零覆盖）**：当前做什么=categorical（choice）/当前多复杂=ordinal（score 有序档位，条件写成具体工作要求）/上一阶段做得如何=assessment（独立 score）；categorical+refinement 双组时一次 System One 调用问三个独立问题（分类/写稿复杂度/审稿复杂度），返回后只读选中类别的复杂度——"一次提问、代码组合结果"的官方用法。^[raw/articles/hiroute-jev-model-routing-agentcore-2026-10-14.md]
+- **胜任度接力（零覆盖，核心创新）**：0/0.5/1 三锚点描述阶段完成质量（0=关键失真需大幅纠正/0.5=有可用成果但明显遗漏/1=完成要求），System One 三级 0/1/2 用 score/2 转为 0-1 胜任度，默认下限 0.5——当前工作适合省钱组但上一阶段低分也触发主力接力。**q3 证据门**单独判断"是否有足够依据评价该阶段"（sufficient/insufficient+evidence_complete），通过才采用评分——把"没做好"和"看不清"分开。^[raw/articles/hiroute-jev-model-routing-agentcore-2026-10-14.md]
+- **历史上下文组织（零覆盖）**：给 Jev 的是执行分支和阶段编号而非模型名称（同一分支换模型=新阶段，HiRoute 本地维护阶段↔模型/档位/评分标准关联）；turn/stage/branch 编号不随历史裁剪改变；"整体历史缺口"与"被评分阶段完整性"分开记录；工具活动只留名称+粗粒度状态不给参数正文；防注入与反幻觉写进每题 instructions（不沿用历史 branch_id/遗漏不增加本轮复杂度/completed≠验收通过/忽略改评分规则的指令）。^[raw/articles/hiroute-jev-model-routing-agentcore-2026-10-14.md]
+- **实测**：无人介入编码任务 Qwen→Astra→Qwen→Astra 接力（343 项独立验收断言，31m36s）；消息系统调研混合模式（Qwen-3.8 Flash 整理+GPT-6 Astra 判断）卡片正确率 98.61% vs 全 Astra 99.72%，关键备忘录 3/3（全 Qwen 仅 1/3），**API 等价成本 -92.01%/-91.39%（含 Jev 决策调用与重试）**——"大量常规工作交经济模型，关键推导或执行困难再补足能力"。与第 6 来源（AgentScope 中间件）互补：那篇是框架内中间件接口面，本篇是独立路由引擎+成本量化。^[raw/articles/hiroute-jev-model-routing-agentcore-2026-10-14.md]
+
+→ [[raw/articles/hiroute-jev-model-routing-agentcore-2026-10-14|原文存档]]

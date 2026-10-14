@@ -2,7 +2,7 @@
 title: "LFM2.5-2.6B: Deploy Agents Everywhere"
 description: "Liquid AI 发布 LFM2.5-2.6B：2.6B 端侧 Agentic 模型，四阶段后训练（SFT → Teacher Specialization → MOPD → Agentic RL），~34T tokens 预训练，128K 上下文，支持手机/CPU 端侧运行"
 created: 2026-08-05
-updated: 2026-09-25
+updated: 2026-10-15
 type: entity
 sources: [raw/articles/liquid-ai-lfm2-5-2-6b-agentic-on-device]
 tags: [small-model, edge-deployment, agentic, liquid-ai, post-training, rl, on-device]
@@ -75,5 +75,6 @@ LFM2.5-2.6B 的核心论点：**移除 per-token 成本会改变开发者构建�
 - **Agentic RL 数据路线**：在真实 harness（Hermes/OpenClaw）内训练是「让模型适应 Agent 环境」的务实路径，与 [[entities/harness-engineering|Harness Engineering]] 领域关注点一致——环境即训练数据 ^[raw/articles/liquid-ai-lfm2-5-2-6b-agentic-on-device.md]
 - **on-policy 蒸馏的价值**：MOPD 解决 off-policy 蒸馏的分布漂移问题，teacher/student 同源是稳定性关键——对多领域能力融合有参考价值
 - **端侧 Agent 的成本论**：本地推理免除 per-token 成本 → Agent 可并行常驻，是 edge Agent 产品设计的经济学依据
+- **姊妹档**：[[entities/liquid-lfm2-5-24b-a2b-agentic-moe-2026|LFM2.5-24B-A2B]] 为同家族旗舰档（24B/2B 激活，131K context，含完整五阶段训练管线与沙箱 reward-hacking 案例）
 
 → [[raw/articles/liquid-ai-lfm2-5-2-6b-agentic-on-device|原文存档]]

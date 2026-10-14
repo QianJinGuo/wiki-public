@@ -1,7 +1,7 @@
 ---
 title: "Loop Engineering: 把反馈循环放进工程现场"
 created: 2026-06-15
-updated: 2026-09-07
+updated: 2026-10-15
 type: entity
 tags: [agent, harness, loop-engineering, feedback-control, claude-code, peter-steinberger, boris-cherny, engineering-paradigm, verifier, generator, closed-loop, open-loop, samuel-mcdonnell, bun-rust-translation, shensiquan, autoresearch, karpathy, five-decisions, three-traps, decision-table]
 sources:
@@ -13,6 +13,7 @@ sources:
   - raw/articles/claude-code-loop-engineering-site-ruofei-jiagoux-2026
   - raw/articles/loop-engineering-prompt-context-loop-three-eras-challengehub
   - raw/articles/great-loops-debate-aie-worlds-fair-2026
+  - raw/articles/infoq-harness-to-loop-roundtable-ant-tencent-jd-2026-10-13
 source_urls:
   review_value: 9
 review_confidence: 9
@@ -239,3 +240,15 @@ Peter Steinberger 提出的成本结构揭示了一个反直觉事实：Loop Eng
 
 - [[moc/agent-engineering-guide|MOC]]
 - [[moc/loop-engineering|MOC]]
+
+## 第 8 来源：三家一线圆桌——Harness→Loop 是生产关系变化（InfoQ 2026-10-13，v=7/c=7/49 SUPP）
+
+InfoQ《极客有约》QCon 2026 上海 Loop Engineering 专题预热：蚂蚁阿福（肖汉松 Harness 架构组）×腾讯（任磊达，游戏）×京东（曲奎林，前端）三家一线圆桌。与既有 7 来源（个人实践与方法论）互补——本篇提供**多组织生产环境的规模化视角**。^[raw/articles/infoq-harness-to-loop-roundtable-ant-tencent-jd-2026-10-13.md]
+
+- **生产关系定义（零覆盖）**："Harness→Loop 最本质的变化是生产关系的变化：人从执行职责里解放出来，变成 AI 干完活来找人做决策"；Harness=静态系统（怎么把任务完成），Loop=进化系统（怎么越变越强，"有点像 SFT"）。^[raw/articles/infoq-harness-to-loop-roundtable-ant-tencent-jd-2026-10-13.md]
+- **badcase 六阶段流转与自动化边界（零覆盖）**：阿福 badcase 三分类（Harness/模型/数据）→ 六阶段：发现（日标/点赞点踩/AI 巡检）→归因（AI 自己定位）→分派（路由表自动派工单）→修复（专项 Agent：prompt 小队/RAG 小队）→验证（评测集做成工具 Agent 自调）→AB 上线（Agent 自己部署发布）。**自动化边界：执行全是 Agent 干，人守方案决策+验收卡点两点**。计算器案例：入参是数学公式导致并发调十几个计算器，换代码解释器一次调用解决——"很多问题大部分是 Harness 没设计好"。^[raw/articles/infoq-harness-to-loop-roundtable-ant-tencent-jd-2026-10-13.md]
+- **锯齿式模型能力与叙事通胀（零覆盖）**："很多'更强的模型'只是叙事更强不是能力更强"；GPT-6 3D 建模强但编码无质突破/Kimi K3 前端审美强——排行榜不用多维角度度量"更好"；营销资损放大器（十万分之一 bug 被人发现放大成 100% 薅羊毛）。**代码生成率 90% 不解决问题——成本只是从开发转移到测试和线上**（AI 游戏大赛 40% 作品不可用）；该关注端到端交付周期/一次性通过率/线上事故率。^[raw/articles/infoq-harness-to-loop-roundtable-ant-tencent-jd-2026-10-13.md]
+- **验证空转（零覆盖，三家共识最大瓶颈）**：Agent 查自己的代码做形式化验证="为完成任务而完成任务，没有业务价值，还让代码越来越难维护"；prompt 简陋时只跑 happy path 就算验证完成甚至不写断言；解法=D2C 设计稿转可执行约束+测试用例真机联动。组织上下文缺口=最大缺口：业务背景/决策取舍/屎山潜规则在人脑里，"需要一个能访问组织上下文的 Agent"。^[raw/articles/infoq-harness-to-loop-roundtable-ant-tencent-jd-2026-10-13.md]
+- **进 Loop 四条件+三分流（零覆盖）**：可复现/确认来自 Agent/代表一类共性/解决有收益；筛选后业务规则进知识库、失败案例进评测集、未确认投诉偶发异常冲突反馈**不让 Agent 记住**；评测集定义是最难自动化的（"Agent 自己给自己造题就没人核验对错"）；Manus 式自动沉淀+自动遗忘降低进 Loop 决策压力。**Harness-模型打架**：GPT-6 要主动删 prompt、Claude 4.5 后 Claude Code 自删 80% 提示词——"模型把 Harness 能力更鲁棒地吸收进去，重复的东西会互相打架"；业务 Harness 要做模型升级适配。环境问题案例：部署系统报错无信息→Agent 无限重试卡死（人会看日志找 owner，Agent 不知道可以找谁）。^[raw/articles/infoq-harness-to-loop-roundtable-ant-tencent-jd-2026-10-13.md]
+
+→ [[raw/articles/infoq-harness-to-loop-roundtable-ant-tencent-jd-2026-10-13|原文存档]]

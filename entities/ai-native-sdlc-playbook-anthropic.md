@@ -1,7 +1,7 @@
 ---
 title: "AI Native SDLC Playbook：Anthropic 应用 AI 团队的软件开发生命周期重构方法论"
 created: 2026-08-26
-updated: 2026-09-07
+updated: 2026-10-14
 type: entity
 tags: [ai-native, sdlc, software-development, agent, harness, engineering, anthropic, lifecycle]
 provenance_state: extracted
@@ -65,6 +65,22 @@ review_category: practice
 - **权限看整条链**：Agent A 没代码写权限但能给 B 发消息，B 能写仓库触发流水线，A 最终能做什么不只取决于 A 自身权限。多 Agent 协作把权限关系画成图，工具调用/Agent 间消息/身份切换/自动审批都留审计记录。^[raw/articles/ruofei-ai-native-sdlc-full-chain-2026.md]
 - **人该看什么（出错代价尺度）**：低风险格式/类型/依赖给自动工具，普通改动 AI Review+人抽查，高代价（账务/权限/生产）人逐行+Owner 确认。^[raw/articles/ruofei-ai-native-sdlc-full-chain-2026.md]
 - **先跑通一条小链**：从低风险/经常出现/结果易验证的链路起步；评估别只数"AI 写了多少代码"，要看需求到可评审版本耗时、PR 在 Gate 前等多久、同类问题是否反复、生产问题能否回到新测试规则。^[raw/articles/ruofei-ai-native-sdlc-full-chain-2026.md]
+
+## 深度分析
+
+- **效率瓶颈的位置迁移是方法论成立的全部前提**：Anthropic 对卡点的判断不是「AI 写得不好」，而是「代码写得越快，旧流程卡得越明显」——评审、测试、发布、维护仍停留在人工作业的速度，于是出现 code review 一直堆积或代码带着风险直接上线两种失败模式。单个工程师多写几倍代码，未必让产品多交付几倍功能；真正需要重新评估的是需求进入工程的速度、评审的承载能力和测试反馈的时间。^[raw/articles/ai-native-sdlc-playbook-anthropic-2026.md:22-36]
+- **治理资产从「人的记忆」搬进「版本控制」**：这套方法论最深的改动不在单个工具，而在把一轮轮开会、返工、口头交接变成随代码一起被版本化、可审计的机制——团队规范过去活在 wiki、会议和老员工记忆里，现在放进 CLAUDE.md、skills 和 hooks 跟着代码一起版本化迭代；谁提了需求、AI 产出了什么、谁批准了什么都落在 commit 链上，交接变成明确读取同一组成果。^[raw/articles/ai-native-sdlc-playbook-anthropic-2026.md:56-58]
+- **规则体系是「指导→规范→强制」的三层递进结构**：CLAUDE.md 管开工避坑（指导性），Skill 管「某类活该怎么干」（规范性），Hook 管绝不能碰的红线（强制性）——文字提醒能告诉 AI 应该怎样做，却不能保证每次操作都符合要求，所以受保护文件、敏感信息、发布命令必须交给按指定操作自动触发的脚本直接拦截。这一分层正是「规则不是门禁」的根源：提示词层面的约束天然不可执行。^[raw/articles/ai-native-sdlc-playbook-anthropic-2026.md:90-106]
+- **自我验证不可信，评测要防「环境漂移」**：让写代码的 AI 检查自己，仍可能沿用原来的错误思路，所以手册要求换一个全新的对话只负责复核、不参与修改，并加 Hook 禁止 AI 改动测试文件。更关键的是测试通过只能证明这一次代码没有问题——换了模型或修改了 CLAUDE.md、Skill、Hook 之后 AI 的做法可能跟着变化，因此每次调整都要让 AI 重做任务并用同样标准检查（Evals），线上发生过的问题也回流进评测集。^[raw/articles/ai-native-sdlc-playbook-anthropic-2026.md:118-136]
+- **方法论的生态耦合是被作者自己点破的边界**：CLAUDE.md、skills、hooks、worktree、MCP 都是 Anthropic 生态里的具体实现，整套配置不能原封不动搬进任何团队；更稳妥的读法是吸收它的流程判断（Loop、artifact 链、分层规则、人守关键节点），再用现有代码托管、CI/CD、测试和权限系统重新实现。这一「流程可移植、实现不移植」的判断与 [[concepts/loop-engineering-methodology|Loop Engineering]] 的抽象化路径互为印证。^[raw/articles/ai-native-sdlc-playbook-anthropic-2026.md:212-214]
+
+## 实践启示
+
+- **按痛点选五个零门槛起点，不要全量铺开**：需求容易走样就先用 intent.md；AI 总犯同样的错误就先写 CLAUDE.md；AI 做完拿不出证据就先补测试反馈；高风险操作怕失控就先加 Hook；AI 一动手就改太多文件就先使用 Plan mode——五项都没有前置条件，先找到最耗时、最容易出错的地方，缺哪项补哪项。^[raw/articles/ai-native-sdlc-playbook-anthropic-2026.md:170-190]
+- **Plan mode 卡在「计划被接受前不许动代码」**：要求 AI 先进入计划模式——读代码库、列出要改哪些文件、怎么验证——开发人员反复跟它改这份计划，改到满意才写进 plan.md 并放行动手。把「先计划后代码」做成硬性时序，是防止 AI 一次生成几十个文件、方向从头就错的最直接手段。^[raw/articles/ai-native-sdlc-playbook-anthropic-2026.md:80-88]
+- **测试环节强制「作者回避」+ 换模型重验**：AI 自己跑测试、跑构建、比对结果并交出测试结果和截图证据，但复核必须换全新对话只查不改；修 Bug 时加 Hook 禁止改动测试文件；每次换模型或改规则后，用同一套 Evals 标准重跑，任何一项不合格就不能用到正在开发的项目里。^[raw/articles/ai-native-sdlc-playbook-anthropic-2026.md:118-136]
+- **发布权挂在具名的人身上，AI 动作必须事先批准**：开发环境可以让 AI 自行部署，生产环境它只能把发布准备好——Hook 挡住发布命令，直到一位具名的发布负责人授权；维护阶段 AI 能触发的动作（只读诊断、事先批准的回滚）都必须提前定好并演练过。AI 可以一路自动做到上线关口前，但绝不能自己主动上线。^[raw/articles/ai-native-sdlc-playbook-anthropic-2026.md:138-164]
+- **分层推进要守依赖顺序**：接入 CI/CD（第 4 层）之前必须先建好 PR 审查和 Hook——前者检查代码、后者守住发布权限；让 AI 参与需求设计和 PR 审查（第 3 层）的两个方向可以分别建设、不必同时完成；线上监控自动回到 intent.md（第 5 层）只面向想继续提高自动化程度的团队。这种渐进采纳路径与 [[entities/adopting-ai-coding-agents-six-lessons|采用 AI Coding Agent 的六课]] 的经验一致。^[raw/articles/ai-native-sdlc-playbook-anthropic-2026.md:166-190]
 
 ## 关联
 
