@@ -1,7 +1,7 @@
 ---
 title: "程序图 PG：把工具、技能、记忆连成网的 Agent 可演化程序知识"
 created: 2026-09-22
-updated: 2026-09-22
+updated: 2026-10-13
 type: entity
 tags: [agent, harness, memory, skill, tool, graph, self-improvement, context-engineering]
 sources: [raw/articles/procedural-graphs-agent-harness-tools-skills-memory-google-gatech-pku-2026]

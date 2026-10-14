@@ -1,12 +1,12 @@
 ---
 title: "Jev 快判断层与 fast-jev-compaction 上下文剪枝：把 Agent 的判断题从大模型里拆出来"
 created: 2026-09-21
-updated: 2026-09-26
+updated: 2026-10-13
 type: entity
 tags: [jev, system-one-model, context-compaction, fast-jev-compaction, agent-architecture, judgment-layer, probability-threshold, typesafe, tencent, rlcd]
 confidence: 0.85
 provenance_state: merged
-sources: [raw/articles/jev-fast-compaction-judgment-layer-tencent-daryl-2026, raw/articles/jev-model-demo-browser-use-benchmark-tencent-mason-2026, raw/articles/ai-comes-for-the-if-statement-tunguz-2026, raw/articles/2400万人围观前openai研究员做了个闭嘴模型, raw/articles/jev-shuaping-prehistory-timeprism-samples-to-scenarios-machine-heart-2026-09-25]
+sources: [raw/articles/jev-fast-compaction-judgment-layer-tencent-daryl-2026, raw/articles/jev-model-demo-browser-use-benchmark-tencent-mason-2026, raw/articles/ai-comes-for-the-if-statement-tunguz-2026, raw/articles/2400万人围观前openai研究员做了个闭嘴模型, raw/articles/jev-shuaping-prehistory-timeprism-samples-to-scenarios-machine-heart-2026-09-25, raw/articles/agentscope-jev-harness-integration-aliyun-2026-10-12, raw/articles/agentjev-training-pipeline-datapai-2026-10-12]
 ---
 
 # Jev 快判断层与 fast-jev-compaction 上下文剪枝
@@ -160,3 +160,22 @@ fast-jev-compaction 展示的"判断保留价值"路线与"摘要改写"路线�
 与本 entity 的 RLCD 校准叙事互为印证：Jev 的「typed probabilistic decisions out」在概率预测领域有同构先例，「AI 直接输出概率接口」正在从预测任务向 Agent 判断层扩散。
 
 → [[raw/articles/jev-shuaping-prehistory-timeprism-samples-to-scenarios-machine-heart-2026-09-25|原文存档]]
+
+## 第 6 来源：AgentScope Java 官方集成——11 组件全决策流程（阿里云云原生 2026-10-12，v=7/c=9/63 SUPP）
+
+阿里云云原生第一方集成教程：AgentScope Java 经 `agentscope-extensions-jev` 正式接入 TypeSafe JEV，把本 entity 的「判断层」从单一压缩场景扩展为**执行前→执行中→输出→交付四阶段的 11 组件全家桶**。^[raw/articles/agentscope-jev-harness-integration-aliyun-2026-10-12.md]
+
+- **契约层（库内零覆盖）**：SystemOneRequest = state + 按 ID 命名问题；概率语义三条边界（0.92 是概率判断非操作成功、非业务实测准确率）；JevJudge 状态四分 **PASS/FAIL/INCONCLUSIVE/ERROR**——证据不足与调用故障不与判断失败混同；运行模式 **OFF/SHADOW/ENFORCE** 按组件独立启用，SHADOW 下主模型仍收到原工具目录（先观察后采用）。^[raw/articles/agentscope-jev-harness-integration-aliyun-2026-10-12.md]
+- **11 组件**：执行前 JevToolSelection（多选+数量限制，"明确都不适用"≠"判断失败"，RECENT_WINDOW 8 条/8000 字符）/ JevPhaseRouting（阶段候选池按能力/容量/配额排除）/ JevTeamPlanner / JevAutoMode 执行防护（ENFORCE 拒绝不派发，判断通过≠授权）；执行中 JevContextCompactor（与本 entity 第 1 来源 fast-jev-compaction 同题的官方化版本：归档先行/恢复不重执行/截短保前缀≠摘要）+ JevMemoryGate（持久价值+冲突评审，压缩不自动转长期记忆）+ JevEvidenceProcessor（区分提示注入/答案证据/前提冲突——「退款需审核」否定前提却是关键证据）；输出 JevResponseMiddleware（失败才有限次纯文本修订，不重跑工具循环）；交付 JevSupervision（OFF/SHADOW，宿主验证证据要求——自称完成不构成交付）+ JevTraceEvaluator（指标保留分类/分数/状态，跳过/弃权/错误不混成低分）+ JevCodeReviewer/JevBrowserNavigator（只读，独立验证通过才 VERIFIED）。^[raw/articles/agentscope-jev-harness-integration-aliyun-2026-10-12.md]
+- **与本 entity 互补**：daryl 的 fast-jev-compaction 是社区单点实践（压缩率 91.5%），本文是平台方把 JEV 编排为 Harness 中间件标准的完整接口面——「判断层」进入框架级采纳阶段。^[raw/articles/agentscope-jev-harness-integration-aliyun-2026-10-12.md]
+
+→ [[raw/articles/agentscope-jev-harness-integration-aliyun-2026-10-12|原文存档]]
+
+## 第 7 来源：AgentJev 开源复刻训练全流程（数据派THU 转自 Datawhale 2026-10-12，v=7/c=6/42 SUPP）
+
+判别式决策模型的**训练侧**补强（前 6 来源均为推理/生态视角）：AgentJev = Jev 的开源社区复刻，Qwen3-0.6B 底座（去语言模型头）+ 决策候选头（投影层+两层轻量 Transformer+线性打分层），网络末层直接输出候选标量得分→归一化概率，一次前向数十毫秒。^[raw/articles/agentjev-training-pipeline-datapai-2026-10-12.md]
+
+- **训练机制（零覆盖）**：全参微调（非 LoRA），阶梯学习率骨干 1e-5/候选头 1e-4（候选头从零初始化需高一个数量级）；损失 = soft cross entropy + 0.1×Brier（抑制过度极端置信度）；数据集 LocalLLaMA/typed-decisions（案例制，state+questions[boolean/choice/score]+gold 目标分布，factors 字段显式过滤防走捷径）；**案例级切分防泄漏**（同案例多题不得跨集）+ state 文本哈希查重断言。^[raw/articles/agentjev-training-pipeline-datapai-2026-10-12.md]
+- **三阶段顺序不可颠倒**：检查点选优（只看 dev 未校准软交叉熵）→ 温度校准（calibration 集 81 候选温度拟合，实测 1.0-1.0718≈天然对齐）→ 测试集终评 78.05%（vs 官方 79.25%，差 1.2pp 同区间）；实测 DGX Spark 600 步 49 分钟/峰值 34GB。服务化后以胜出置信度做阈值门控（高门槛全自动/低门槛回退人工）。^[raw/articles/agentjev-training-pipeline-datapai-2026-10-12.md]
+
+→ [[raw/articles/agentjev-training-pipeline-datapai-2026-10-12|原文存档]]

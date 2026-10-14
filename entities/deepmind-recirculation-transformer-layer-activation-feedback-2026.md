@@ -1,7 +1,7 @@
 ---
 title: "DeepMind Recirculation：冻结权重、深层激活回流释放性能"
 created: 2026-08-21
-updated: 2026-09-07
+updated: 2026-10-14
 type: entity
 tags: [transformer, architecture, inference, activation-feedback, deepmind, paperweekly, arxiv]
 sources: [raw/articles/deepmind-recirculation-transformer-layer-activation-feedback-2026]
@@ -49,6 +49,32 @@ Transformer 的前馈结构决定了一个长期限制：语义消歧和状态�
 ## 意义
 
 Recirculation 不是可直接替代微调的通用方案，但证明一个可能：冻结模型权重后，改变内部状态传播方式同样能释放新性能空间。与同属"垂直反馈/信息回路"家族但机制不同的 [[entities/full-bandwidth-transformer-latent-feedback-arxiv-2608-08888|Full-Bandwidth Transformer]]（GLU latent feedback + scheduled multi-pass 训练）互补。^[raw/articles/deepmind-recirculation-transformer-layer-activation-feedback-2026.md]
+
+## 深度分析
+
+### 一条被前馈结构锁死的信息通路
+
+Transformer 逐层前馈的计算图意味着信息只持有单程通行证：深层才稳定下来的语义决策（如 `bank`→河岸）无法被后续 token 的浅层计算复用。Recirculation 的实质是在推理期给这个结构补一条旁路，而不是加深或加宽网络——这不是学术趣味：工程上意味着性能瓶颈多了一个不依赖堆深度/宽度的解法，且旁路在推理期即可挂载，已部署模型无需重训就能受益。这解释了收益分布：语言建模直接受益于全序列的状态利用率，下游任务则还要看回流时机与任务结构的匹配程度，因此 9/10 数据集稳定改善而下游敏感。这与 [[entities/topological-trouble-transformers-state-tracking-deepmind-2026-06-17|Transformer 状态追踪]] 的观察同向：架构能力的边界往往在"状态能否被后续计算读到"，而非参数量本身。
+
+### 与激活干预的关系：从一次性矫正到常设通路
+
+此前激活干预研究把已消歧的深层表示重新注入浅层，使上下文化错误减少约 60%，但那是针对特定错误的一次性矫正。Recirculation 把跨层回流变成每个 token 都执行的常设通路，且同时跨越网络深度与 token 时间（区别于 Looping 的纯深度重复），同一 layer 可持续承载更新后的状态。跨层融合之所以可行，论文归因于残差流各层共享同一表示空间——这与 [[concepts/transformer-architecture]] 中残差流的"公共底座"性质呼应，也说明此类免训练改造只在共享表示空间的架构上成立。
+
+### 参数效率叙事的边界条件
+
+冻结权重 + 基础版 8.5% / Adaptive 版 23.0% 的困惑度降幅，对比加入回流结构后的全量微调 21.6%，容易被读成"微调已死"，但边界条件很硬：其一，需先选定有效的源层→目标层组合，Gemma3 收益约 5%，而 Qwen3/Pythia/Ministral3/Phi2 未针对各自架构重新优化归一化与回流强度时收益低于 0.5%；其二，Adaptive 版的 MLP 控制器仍需在任务数据分布上训练，收益随之波动；其三，Lambada 例外与单 token 任务的小幅改善说明并非普适。这与 [[concepts/scaling-laws]] 并不对立，而是补充：状态传播方式是参数量之外的第二自由度。
+
+### 回流是一种激活层面的短程记忆
+
+收益随 token 间距衰减、相隔 256 token 仍可测、副词/形容词/动词受益多于数词/限定词/代词——这个剖面更接近一种短程激活记忆：内容词的状态被持续改写，功能词基本不动。它与 [[concepts/activation-engineering]] 的干预传统同族，也划出了与 [[entities/full-bandwidth-transformer-latent-feedback-arxiv-2608-08888|Full-Bandwidth Transformer]]（GLU latent feedback + scheduled multi-pass 训练）的分野：后者把反馈刻进训练过程，前者在推理期外挂，二者是同一"垂直反馈"设计空间的两个工作点。对可解释性研究而言，Recirculation 还提供了一个天然探针：回流通路的增益分布本身就在标注哪些状态更新"迟到"了——哪个源层→目标层组合有效，就说明哪类信息在原架构中传播得过晚。论文只加一次回流；若持续重复，系统会逐渐呈现真正循环神经网络的特征，这是值得追踪的后续方向（相关工作亦可参见 [[entities/deepmind-ai-pointer|DeepMind]])。
+
+## 实践启示
+
+1. 先试免训练改造，再谈微调：基础 Recirculation 不动权重即可在 10 个数据集中的 9 个上稳定改善，作为基线改进的性价比高于直接全量微调。
+2. 源层→目标层组合是首要超参：Gemma3 1B/4B/12B 的 11→4、18→9、35→16 显示最优配比大致落在"中深层→中浅层"，但换架构必须重新搜索，不能跨模型移植——且跨家族收益差距悬殊（Gemma3 约 5%，其他家族未重调归一化与回流强度时低于 0.5%），归一化方案与回流强度应作为一等的调参对象。
+3. 部署成本核算重点看 Prefill：回流状态必须按 token 顺序更新，长上下文下 Prefill 明显拖慢；自回归生成时两套计算可并行、额外延迟几乎可忽略。长 prompt 服务应先在 Prefill 侧预留预算。
+4. 小控制器可以反超大动作：Adaptive 版仅用一个 MLP 生成逐维回流系数即超过全量微调（GSM8K pass@1 29.3%→35.5%），冻结底座、只训控制器的"外挂微调"路线值得纳入 [[concepts/inference-optimization]] 工具箱。
+5. 别把结论外推出语言建模：指令遵循提升明显（4B 82.3%→87.3%、12B 93.0%→98.4%），但单 token 任务与部分上下文化设置无收益，任何任务迁移前先小规模验证回流配置，并同步归档该任务下的源层→目标层选择。
 
 ## 相关实体
 

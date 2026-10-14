@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "sourceRevision": "65c90453282afe14e660e79eb7094770f143a128",
+  "sourceRevision": "737b9a34bf01212a35d08ab7bea80f9dfb9be9b3",
   "files": [
     {
       "path": "raw/articles/0.25秒识破未见攻击-lod-lvlm-jailbreak-detection-emnlp2026.md",
@@ -1293,6 +1293,11 @@
       "sourceUrl": "https://www.oneusefulthing.org/p/against-brain-damage"
     },
     {
+      "path": "raw/articles/agan-codex-harness-source-deep-dive-2026-09-03.md",
+      "title": "万字长文 | 深度解读 Codex Harness 源码",
+      "sourceUrl": "https://mp.weixin.qq.com/s/xa2xrK-LyM5Ktow2hq1vWQ"
+    },
+    {
       "path": "raw/articles/agency-and-agents.md",
       "title": "agency-and-agents",
       "sourceUrl": "https://www.oneusefulthing.org/p/agency-and-agents"
@@ -2083,6 +2088,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/VBY65tBAjVWyuP8QcpzOLA"
     },
     {
+      "path": "raw/articles/agentjev-training-pipeline-datapai-2026-10-12.md",
+      "title": "从零实操！AgentJev决策模型全流程训练与部署",
+      "sourceUrl": "https://mp.weixin.qq.com/s/5sG_7Uvkp-BYHP7B4PVy1Q"
+    },
+    {
       "path": "raw/articles/agentloop-agent-experience-self-evolution-aliyun-2026-07-25.md",
       "title": "agentloop-agent-experience-self-evolution-aliyun-2026-07-25",
       "sourceUrl": "https://mp.weixin.qq.com/s/9zGGPFl5PKkzc6JLTnz6vQ"
@@ -2191,6 +2201,11 @@
       "path": "raw/articles/agentscope-java-harness-framework-enterprise-distributed.md",
       "title": "首个 Java Harness Framework：AgentScope 把 OpenClaw 带到企业分布式场景",
       "sourceUrl": "https://mp.weixin.qq.com/s/yBWOk-mpGih9bV4wqPnkOQ"
+    },
+    {
+      "path": "raw/articles/agentscope-jev-harness-integration-aliyun-2026-10-12.md",
+      "title": "让 Agent 学会判断：从 JEV 接入到完整 Harness 决策流程",
+      "sourceUrl": "https://mp.weixin.qq.com/s/XEZN19EJD-zneoX3NSwDDw"
     },
     {
       "path": "raw/articles/agentstream-streaming-self-evolving-benchmark-2026.md",
@@ -3761,6 +3776,11 @@
       "path": "raw/articles/anthropic-investigating-cyber-evals-incidents.md",
       "title": "anthropic-investigating-cyber-evals-incidents",
       "sourceUrl": "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals"
+    },
+    {
+      "path": "raw/articles/anthropic-investigating-unintended-model-actions.md",
+      "title": "anthropic-investigating-unintended-model-actions",
+      "sourceUrl": "https://www.anthropic.com/research/investigating-unintended-model-actions"
     },
     {
       "path": "raw/articles/anthropic-lessons-from-the-hacks-ai-safety-incentives.md",
@@ -7103,6 +7123,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/p8bhp3WKGxfgnizCw8b6Qg"
     },
     {
+      "path": "raw/articles/datastudio-pi-agent-harness-guide-2026-10-12.md",
+      "title": "Pi Agent Harness：一个把控制权交还给开发者的极简编程 Agent",
+      "sourceUrl": "https://mp.weixin.qq.com/s/G9WsndaEM3ukJtzdnlPIqQ"
+    },
+    {
       "path": "raw/articles/dataworks-copilot-skill-data-request-24h-delivery-taobao-2026-07-20.md",
       "title": "dataworks-copilot-skill-data-request-24h-delivery-taobao-2026-07-20",
       "sourceUrl": "https://mp.weixin.qq.com/s/7JI5zJdT73OFbI-DVl3Oqg"
@@ -7536,6 +7561,11 @@
       "path": "raw/articles/devin-fusion.md",
       "title": "devin fusion",
       "sourceUrl": "http://cognition.com/blog/devin-fusion"
+    },
+    {
+      "path": "raw/articles/dhsa-inference-time-preference-alignment-2026-10-12.md",
+      "title": "偏好对齐也能在推理时完成！256-16384个控制参数达到DPO水准",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247932508&idx=3&sn=ccdaf26ed615ca9d6d4481ac2e140d5f"
     },
     {
       "path": "raw/articles/dictation-agents-human-workspace.md",
@@ -9853,6 +9883,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/kKyyM4w0UJHleCaM5lqlmw"
     },
     {
+      "path": "raw/articles/harness-of-harness-paperweekly-firsthand-2026-10-12.md",
+      "title": "上海AI Lab提出Harness-of-Harness：5天无人干预，AI从零做出FPS游戏",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIwMTc4ODE0Mw==&mid=2247723330&idx=2&sn=de6ca9a27340dc8d10d18ac3c69f913c"
+    },
+    {
       "path": "raw/articles/harness-pilot-claude-code-plugin-yangtong-2026-06-17.md",
       "title": "harness-pilot-claude-code-plugin-yangtong-2026-06-17",
       "sourceUrl": "https://mp.weixin.qq.com/s/oy8xzG363P73jTM57yzJTQ"
@@ -10496,6 +10531,11 @@
       "path": "raw/articles/hscodecomp-acl-2026-best-resource-paper.md",
       "title": "阿里荣膺 ACL 2026 最佳资源论文 | HSCodeComp 揭开智能体「分层规则应用」的能力鸿沟",
       "sourceUrl": "https://mp.weixin.qq.com/s/Lec1nRrWVgj50PYR0DxKlg"
+    },
+    {
+      "path": "raw/articles/hspec-hybrid-speculative-decoding-astralord-2026.md",
+      "title": "hspec-hybrid-speculative-decoding-astralord-2026",
+      "sourceUrl": "https://astralord.github.io/posts/speculative-decoding-the-art-of-guessing-well/"
     },
     {
       "path": "raw/articles/https-posthog-com-blog-karpathy-autoresearch-query-engine-bug.md",
@@ -11758,6 +11798,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/guxZP2XFigkUvulxTfhZMg"
     },
     {
+      "path": "raw/articles/legacy-system-ai-integration-three-paths-tencent-2026-10-12.md",
+      "title": "Agent、MCP、Skill、Cli、Model 一次讲透：老系统接入 AI 的概念地图与三条路径",
+      "sourceUrl": "https://mp.weixin.qq.com/s/mUA-UziZPe0L1IfiMBss8w"
+    },
+    {
       "path": "raw/articles/legoflow让智能体自主跑完代码数据构建训练测评全流程.md",
       "title": "legoflow让智能体自主跑完代码数据构建训练测评全流程",
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651060898&idx=2&sn=7c342e5f7de860d0e928dab50043d6b5"
@@ -12753,6 +12798,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/nplUm1D6JFe45P_WEVgyIg"
     },
     {
+      "path": "raw/articles/memento3-huawei-rsi-arc-agi3-2026-10-12.md",
+      "title": "华为AI靠RSI通关25款游戏！操作次数比人类少56%",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247932508&idx=2&sn=7275707454b9b60af3bb7bce28ed4ab7"
+    },
+    {
       "path": "raw/articles/memgui-bench-gui-agent-memory-eval-paperweekly-2026-09-23.md",
       "title": "GUI Agent会操作，却记不住：MemGUI-Bench揭开长程交互的“记忆盲区”",
       "sourceUrl": "https://mp.weixin.qq.com/s/7kPCQFimJzAHXrgUdZEs_Q"
@@ -13136,6 +13186,11 @@
       "path": "raw/articles/mit-social-simulation-arena-ssa-eval-2026-09-28.md",
       "title": "mit-social-simulation-arena-ssa-eval-2026-09-28",
       "sourceUrl": "https://mp.weixin.qq.com/s"
+    },
+    {
+      "path": "raw/articles/mita-attention-as-ffn-fast-weights-neurips26-2026-10-12.md",
+      "title": "注意力也是FFN？从快权重出发，重新理解高效注意力 |NeurIPS'26",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652733619&idx=3&sn=ef711aeeff95c974783359065abac1ec"
     },
     {
       "path": "raw/articles/mit团队把泛化写进harness短任务训练解锁32倍长度外推.md",
@@ -15653,6 +15708,11 @@
       "sourceUrl": "https://arxiv.org/abs/2607.22520"
     },
     {
+      "path": "raw/articles/reharness-recurrent-harness-backward-revision-agiyanxishe-2026-10-13.md",
+      "title": "ReHarness：给 Agent 记忆装上反向传播",
+      "sourceUrl": "https://mp.weixin.qq.com/s/DNNXWeMSVouHDlHwKwVObw"
+    },
+    {
       "path": "raw/articles/rein-go-agent-4-modules-5-type-boundaries.md",
       "title": "Rein：4 模块 + 5 类型边界防止 agent.go 膨胀到 3000 行",
       "sourceUrl": "https://mp.weixin.qq.com/s/P9hUlN3Nv7EdJqxuDbLsJQ"
@@ -15863,6 +15923,11 @@
       "sourceUrl": "https://regularized-rsi.com/"
     },
     {
+      "path": "raw/articles/rsi-anything-world-model-universal-rsi-papertoday-2026-10-13.md",
+      "title": "万物皆可RSI，自进化AI大爆发",
+      "sourceUrl": "https://mp.weixin.qq.com/s/H3QRy0a7o_NaHKEOXLGMvg"
+    },
+    {
       "path": "raw/articles/rsi-evomap-experience-driven-test-time-evolution-2026-09-03.md",
       "title": "RSI 离我们有多远？这家中国团队给出了第一梯队的工程解",
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651054414&idx=1&sn=8b059e8c7025fd12ef2262632d066f8d"
@@ -15956,6 +16021,11 @@
       "path": "raw/articles/ruofei-multi-agent-workflow-architecture-2026-09-20.md",
       "title": "四大多 Agent 架构详解（一）：Workflow 如何把固定流程变成可回放的系统",
       "sourceUrl": "https://mp.weixin.qq.com/s/xSNQGIKzDoEEEmYA3mIHtw"
+    },
+    {
+      "path": "raw/articles/ruofei-pi-minimal-design-main-path-boundary-2026-10-11.md",
+      "title": "拆开 Pi：Agent Harness 的极简设计",
+      "sourceUrl": "https://mp.weixin.qq.com/s/43_tnAQrXV8Tri6PDaRsmQ"
     },
     {
       "path": "raw/articles/ruofei-react-to-agent-team-medical-dev-2026.md",
@@ -16954,8 +17024,8 @@
     },
     {
       "path": "raw/articles/stanford-cs329z-lecture3-rag-chengyansuo-2026-10-04.md",
-      "title": "stanford-cs329z-lecture3-rag-chengyansuo-2026-10-04",
-      "sourceUrl": null
+      "title": "斯坦福 Agent 工程课第 3 讲：检索增强生成（RAG）",
+      "sourceUrl": "https://mp.weixin.qq.com/s/ZLkVGEIMnPjfaH5-EasoqQ"
     },
     {
       "path": "raw/articles/star-polya-math-reasoner-verifier-meta-strategist-tsinghua-msra-2026.md",
@@ -16971,6 +17041,11 @@
       "path": "raw/articles/starfilm-ai-agent-ai-short-film-platform.md",
       "title": "AI短漫剧的Netflix来了！恒星AI推出全球首个影视级AI Agent「Starfilm」，打造AI短漫剧制作的“超级梦工厂”",
       "sourceUrl": "https://mp.weixin.qq.com/s/XA90W_rUyaJKzwD8Dky6fQ"
+    },
+    {
+      "path": "raw/articles/starops-agentic-ops-closed-loop-aliyun-2026-10-13.md",
+      "title": "阿里云 STAROps 全新升级，让 AI 持续推进问题闭环解决",
+      "sourceUrl": "https://mp.weixin.qq.com/s/NtsOAsHE38kHkGaFLXZJiw"
     },
     {
       "path": "raw/articles/starops-generalizable-rca-umodel-rcabench-aliyun-2026-08-18.md",
@@ -17301,6 +17376,11 @@
       "path": "raw/articles/taobao-product-domain-agent-architecture.md",
       "title": "万级实时推理的商品领域Agent实践思考和总结",
       "sourceUrl": "https://mp.weixin.qq.com/s/VacWMG2oaAPq4vBsKEf7SA"
+    },
+    {
+      "path": "raw/articles/taobao-shopping-assistant-online-eval-2026-10-12.md",
+      "title": "淘宝AI购物助手在线评测落地实践",
+      "sourceUrl": "https://mp.weixin.qq.com/s/blMjReLQZUuSK6bl6Bt3yA"
     },
     {
       "path": "raw/articles/taobao-shopx-ai-shopping-agent-interface-loss-2026.md",
@@ -18023,6 +18103,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/-e4pjIbiril16IwiNKMryw"
     },
     {
+      "path": "raw/articles/trace-streaming-emotion-understanding-emnlp26-2026-10-08.md",
+      "title": "蚂蚁×浙大新研究：让AI在流式对话中“读懂”情绪 | EMNLP'26",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247931820&idx=3&sn=977579bad1964fd79de323d03453a281"
+    },
+    {
       "path": "raw/articles/trace2skill-trajectory-distillation-agent-skills.md",
       "title": "Trace2Skill 把\"轨迹里的局部经验\"蒸馏成可迁移的 Agent Skills",
       "sourceUrl": "https://mp.weixin.qq.com/s/XUBnvDE1pxtHLr6dG7KKwA"
@@ -18371,6 +18456,11 @@
       "path": "raw/articles/vals-ai-room-temperature-magnetic-semiconductors.md",
       "title": "vals-ai-room-temperature-magnetic-semiconductors",
       "sourceUrl": "https://www.vals.ai/blogs/room-temperature-magnetic-semiconductors"
+    },
+    {
+      "path": "raw/articles/vals-multi-agent-vibe-code-bench-2026.md",
+      "title": "vals-multi-agent-vibe-code-bench-2026",
+      "sourceUrl": "https://www.vals.ai/blogs/multi-agent-vibe-code-bench"
     },
     {
       "path": "raw/articles/varoa-ddosing-software-delivery-pipelines-2026.md",
@@ -19203,6 +19293,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzUxMDQxMDMyNg==&mid=2247520299&idx=1&sn=6e9c0214b9773a4f2f16006694"
     },
     {
+      "path": "raw/articles/xiaoyi-stanford-cs146s-lee-robinson-always-on-agents-2026-10-11.md",
+      "title": "斯坦福 CS146S：Lee Robinson 讲 Always-On Agents",
+      "sourceUrl": "https://mp.weixin.qq.com/s/8FPUhzYm5O1Rpqn1-31nBQ"
+    },
+    {
       "path": "raw/articles/xinzhiyuan-openai-tax-ai-self-improving-codex-eval-loop-20260606.md",
       "title": "OpenAI Tax AI 自我进化：Codex Eval 闭环 6 周 25%→86% + Symphony + MOSS",
       "sourceUrl": "https://mp.weixin.qq.com/s/xAHmDUEgvHeilq1cXISxaQ"
@@ -19371,6 +19466,11 @@
       "path": "raw/articles/zg-正式开源本地检索不止于关键词.md",
       "title": "zg-正式开源本地检索不止于关键词",
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=Mzg4NTczNzg2OA==&mid=2247511367&idx=1&sn=7a7ea589cdf19b68dc5eb8b9f04e8030"
+    },
+    {
+      "path": "raw/articles/zhinengti-ai-rag-graphrag-ontology-lessons-2026-09-06.md",
+      "title": "踩坑两年：从简单 RAG 到 GraphRAG，再到本体论，我到底学到了什么？",
+      "sourceUrl": "https://mp.weixin.qq.com/s/gAe1-KkCpZiYTUTa_uDAfQ"
     },
     {
       "path": "raw/articles/zhipu-loop-transformer-scaling-juliette-xhs-2026.md",
