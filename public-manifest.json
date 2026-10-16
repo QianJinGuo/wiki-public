@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "sourceRevision": "3e8d6def96763f18b584f736e25b116d2a0f10f3",
+  "sourceRevision": "82066da0d04f67682f065018d1516d2eb45b88fc",
   "files": [
     {
       "path": "raw/articles/0.25秒识破未见攻击-lod-lvlm-jailbreak-detection-emnlp2026.md",
@@ -6396,6 +6396,11 @@
       "path": "raw/articles/cloudflare-temporary-accounts-ai-agents.md",
       "title": "Temporary Cloudflare Accounts for AI agents",
       "sourceUrl": "https://blog.cloudflare.com/temporary-accounts/"
+    },
+    {
+      "path": "raw/articles/cloudmonitor2-agentic-observability-yunqi-2026-10-15.md",
+      "title": "云栖实录丨云监控 2.0 让 Agent 看懂系统，也能看懂 Agent",
+      "sourceUrl": "https://mp.weixin.qq.com/s/yUm_QwpFfaBGUcgUHQ8JBQ"
     },
     {
       "path": "raw/articles/cloudsectidbits-masso-cognito-sso.html.md",
@@ -13218,6 +13223,11 @@
       "sourceUrl": "https://epoch.ai/MirrorCode"
     },
     {
+      "path": "raw/articles/missing-modality-geodesic-unlearning-datapai-2026-10-15.md",
+      "title": "多模态一定更好吗？从参数几何诊断缺失模态退化",
+      "sourceUrl": "https://mp.weixin.qq.com/s/9LfWAhXTntZrbQDwO9BVOA"
+    },
+    {
       "path": "raw/articles/mistral-ai-news-ocr-4.md",
       "title": "mistral-ai-news-ocr-4",
       "sourceUrl": "https://mistral.ai/news/ocr-4/"
@@ -14036,6 +14046,11 @@
       "path": "raw/articles/offline-llm-energy-use-html.md",
       "title": "Apple Silicon costs more than OpenRouter",
       "sourceUrl": "https://www.williamangel.net/blog/2026/05/17/offline-llm-energy-use.html"
+    },
+    {
+      "path": "raw/articles/okf-rag-hybrid-architecture-datapai-2026-10-15.md",
+      "title": "OKF + RAG：终极智能体架构",
+      "sourceUrl": "https://mp.weixin.qq.com/s/9jKoGPnZXszNIwdvCUr8BA"
     },
     {
       "path": "raw/articles/okta-ai-agents-fedramp.md",
@@ -17478,6 +17493,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/BpsscOnYq-DWsb_DrID8hA"
     },
     {
+      "path": "raw/articles/taobo-multi-agent-agentcore-agentloop-2026-10-15.md",
+      "title": "从单点探索到规模化运营：滔搏体育的企业级多智能体实践",
+      "sourceUrl": "https://mp.weixin.qq.com/s/VgS9RSRuZKe_9WJIOniapg"
+    },
+    {
       "path": "raw/articles/taolive-digital-avatar-agent-harness-aware-training-arxiv-2608-15763.md",
       "title": "TaoLive Digital Avatar Agent Technical Report: Training Agents to Evolve with Their Harness",
       "sourceUrl": "https://arxiv.org/abs/2608.15763"
@@ -19701,6 +19721,11 @@
       "path": "raw/articles/上交-x-阿里让机器人闭眼先学动作vla-成功率涨-43.md",
       "title": "上交 x 阿里：闭眼先学动作 VLA",
       "sourceUrl": "https://mp.weixin.qq.com/s/6QgldL0W5kMDTLj-lq28Vg"
+    },
+    {
+      "path": "raw/articles/上海ai-lab连发两项研究agent安全也能自我进化.md",
+      "title": "上海ai-lab连发两项研究agent安全也能自我进化",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIwMTc4ODE0Mw==&mid=2247723374&idx=2&sn=e887f071218de7e5db92f3b967bbbe54"
     },
     {
       "path": "raw/articles/下一代搜索智能体评测基准美团开源lohosearch用知识图谱校准ai能力认知.md",
@@ -22176,6 +22201,11 @@
       "path": "raw/articles/英伟达年度最危险论文ai自繁衍代码无限刷级进化.md",
       "title": "英伟达年度「最危险」论文！AI自繁衍代码，无限刷级进化",
       "sourceUrl": "http://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652709592&idx=1&sn=67287b57a9e541025be9a34c4b272334&chksm=f12e5629c659df3fd18bb528ac44f471dd2c924090608caf0b5249b1a0eb0e3f7492c380e903"
+    },
+    {
+      "path": "raw/articles/苹果lensvlm长上下文压缩成图片模型边看边放大.md",
+      "title": "苹果lensvlm长上下文压缩成图片模型边看边放大",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651062756&idx=3&sn=7b77525c43945b4e5a775f0d78cb4cbd"
     },
     {
       "path": "raw/articles/苹果新研究纯中文推理训练和用英文几乎没有差距.md",
