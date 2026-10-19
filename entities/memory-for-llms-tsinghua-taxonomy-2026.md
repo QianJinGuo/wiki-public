@@ -1,7 +1,7 @@
 ---
 title: "LLM 记忆架构三维分类体系（清华《Memory for Large Language Models》综述）"
 created: 2026-08-13
-updated: 2026-09-10
+updated: 2026-10-20
 type: entity
 tags: [llm, memory, architecture, taxonomy, kv-cache, ssm, ttt, moe, survey]
 sources:
@@ -82,6 +82,47 @@ review_category: tech
 ## 六大开放挑战
 
 统一 LLM 记忆理论（缺通用数学抽象量化容量/压缩损耗/干扰）→ 终身可塑参数记忆（无遗忘持续学习）→ 可解释可控更新规则（可逆可诊断写入）→ 自适应动态记忆调度（智能控制器分配注意力/循环/检索资源）→ 软硬件协同设计（芯片/加速器适配分层记忆）→ 标准化多维评测框架（容量/保真度/持久度/效率统一标准）。^[raw/articles/memory-for-llms-tsinghua-paper-arxiv-2026.md]
+
+## 深度分析
+
+### 隐式/显式之辨才是承重墙
+
+三维轴里只有 representation 真正承重，另两轴的意义取决于它。判据不是参数化与否，而是**是否被设计并作为记忆运行**：MoE 参数分区清晰却离线更新，按本文标准只是条件参数记忆；Titans 走参数路线，却因推理时专门规则更新而归于显式。反过来 KV cache 即使物化成张量，访问语义由架构固定、无独立寻址，仍是瞬态计算状态。这一刀切穿了"RAG/长上下文/微调"三选一的叙事——三者混用了持久性轴与表征轴。^[raw/articles/memory-for-llms-tsinghua-paper-arxiv-2026.md]
+
+隐式记忆的天花板是结构性的，不是工程量问题：容量受隐藏状态维度与窗口约束、无自主读写控制、会话结束即销毁，三条都不能靠堆显存消除，只能改变失效点位置。^[raw/articles/memory-for-llms-tsinghua-paper-arxiv-2026.md]
+
+### 五条更新规则：组合的收益与代价
+
+五条规则不是第四轴，回答的是"更新机会出现后记忆如何变化"。组合有用的前提是信号互补：signal-gated 决定要不要写，optimization-based 决定写多少，admission/eviction 决定留多久——StreamingLLM 的 attention sink 本质就是没有价值模型的准入策略。^[raw/articles/memory-for-llms-tsinghua-paper-arxiv-2026.md]
+
+变坏机制也具体：两条规则写同一 substrate 而目标不同，不匹配随更新累积；admission/eviction 的损失不可逆，门控误丢的内容后续优化补不回来。更隐蔽的是阈值通胀——[[concepts/attention-mechanism|注意力]]门控类方法靠人工调参，每叠一层就多一组校准与延迟相关性风险，论文的 risk 栏本身就是组合风险清单。
+
+### KV cache / SSM / TTT：同一设计空间上的三点
+
+三者不是竞争范式，而是在"压缩什么、写到哪里、谁来决定"上取不同坐标。KV 保留精确内容，代价是存储线性上涨、注意力开销随序列平方增长；[[concepts/ssm-attention-sleep-consolidation-cmu-arxiv-2605-26099|SSM]] 把全部历史压进固定尺寸状态换 O(n)，代价是细节丢失与长期状态干扰；TTT 在骨干外另开可更新参数、冻结主干规避灾难性遗忘，容量随模块参数增长，代价是推理时梯度更新的漂移风险与优化保证缺失。边界由坐标决定，不由实现质量决定。^[raw/articles/memory-for-llms-tsinghua-paper-arxiv-2026.md]
+
+稀疏注意力因此不算记忆创新：它不改变 KV 存储本质，只筛选哪些 token 参与注意力，属访问优化而非新增存储模块。读 benchmark 时"路由收益"与"记忆收益"必须分开记账。
+
+### 混合架构为何成主流，以及显式记忆的结构性风险
+
+混合胜出是工程原因：三轴正交，可直接叠。Kimi Linear 用 3:1 固定配比拼循环单元与注意力，便宜但静态；AMOR/HAM 的自适应路由则付出人工调阈值的代价。论文明确指出现有混合体都是静态配置、缺动态调度器——这本身是六大开放挑战之一，所以"混合是主流"与"混合尚未被真正设计"同时成立。^[raw/articles/memory-for-llms-tsinghua-paper-arxiv-2026.md]
+
+三项风险里最被低估的是**检索偏差**：lookup 系统中陈旧、冗余条目持续偏置检索，在召回导向评测里几乎不可见，通常以"个性化越用越怪"的形态暴露。容量增长是边际收益递减，索引与剪枝属配套成本；stability-plasticity 仍是核心未决张力，多时间尺度只算缓解。^[raw/articles/memory-for-llms-tsinghua-paper-arxiv-2026.md]
+
+### 四维评测及其盲区
+
+最有纪律的是第四维：同召回精度下比显存与延迟，区分"真记忆提升"与"单纯扩大窗口"；退化曲线能把 attention dilution 与 recency bias 分离。^[raw/articles/memory-for-llms-tsinghua-paper-arxiv-2026.md]
+
+盲区也清楚：NIAH、LongBench 奖励逐字召回，低估了显式记忆该换来的整合与抽象收益；四维全是单次运行，没有跨周持久性测量；只算读侧成本，不算写入开销；也缺矛盾更新的对抗测试。跨架构分数因此只在同一维度内可比——这正是论文把"标准化多维评测"单列为开放问题的原因。
+
+## 实践启示
+
+1. **先判定要不要显式接口，再选技术。** 需求止于单次会话内的长输入推理，隐式加稀疏注意力足够；要求跨会话沉淀，任何窗口尺寸都解决不了，必须引入可寻址存储。
+2. **把更新频率当一等超参，而非能力勋章。** 离线/在线是成本风险决策：在线写入买来适应性，付出漂移与累积偏差。上线前先跑"N 次更新后的旧任务保留率"，没有这条曲线就别开在线更新。
+3. **组合更新规则控制在两条以内并显式分工。** 一条管准入、一条管写入强度，避免目标不同的规则写同一 substrate；门控阈值要可观测、可回滚。
+4. **交付前必做矛盾更新测试。** 只测召回会漏掉显式记忆最典型的失效：旧条目未被覆盖、检索偏向陈旧内容。用"改一条事实、再看后续回答"的样本验证整合路径。
+5. **报效率数字必须锁定同等召回**，否则测的是窗口大小而非记忆质量；同时计入写入与整合成本，否则显式方案的账不完整。
+6. **混合架构按"静态配比 → 自适应门控"分阶段推进**，先用固定比例拿基线；校准预期时参照 [[concepts/catastrophic-forgetting|灾难性遗忘]]、[[concepts/moe-mixture-of-experts-2025|MoE]] 与 [[concepts/rag-retrieval-augmented-generation|RAG]] 的既有结论。
 
 ## 与库内实体关系
 

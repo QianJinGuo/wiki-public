@@ -1,7 +1,7 @@
 ---
 title: "Agent Harness 演化论：从一次 LLM 调用到完整运行时（四框架机制拆解）"
 created: 2026-09-07
-updated: 2026-09-07
+updated: 2026-10-19
 type: entity
 tags: [harness, agent, architecture, evolution, tencent, pi, opencode, codex, hermes, runtime]
 sources: [raw/articles/from-llm-call-to-complete-harness-tencent-tech-2026]
@@ -57,6 +57,24 @@ Pi 关心"少花 harness tax 完成眼前任务"，Hermes 问"第二次遇到类
 - **补充而非替代**：与 `[[concepts/harness-engineering-framework|Harness Engineering Framework]]`（概念框架）、`[[entities/harness-engineering-exploration-tencent-tech|腾讯 Harness Engineering 探索]]`（出码率/提效视角）互补——本文提供**逐层演化路径 + 四框架机制级横向拆解**这一库内零覆盖维度。
 - 与 `[[entities/pi-openclaw-coding-harness|Coding Harness 工程本质：从 Pi 到 OpenClaw]]` 互为姊妹：该篇深拆 Pi→OpenClaw 演进，本文横向对比 Pi/OpenCode/Codex/Hermes。
 - Hermes 自进化维度呼应 `[[entities/agent-lightning-v1-harnessed-agentic-rl-arxiv-2608-17528|harness 作为训练参与方]]` 与 `[[entities/agentic-rl-frameworks-practices-long-horizon-wolfe-2026|长期运行 Agent 实践]]`。
+
+## 深度分析
+
+### 否定式定义：Harness 由模型的"不能"反向定义
+
+Harness 的边界不是自己画的，是模型的失败模式画的，于是有个不常被说出的后果：**任何 Harness 改进都是暂定的**，它补的是模型此刻的缺口。文章自带证据——早期 ReAct 靠约定文本让程序用正则解析动作，Function Calling 把工具名与参数变成结构化输出后，整层"解析模型意图"的胶水就被删掉了。据此可把部件分两类：**会被吸收的**（提示词脚手架、推理模板、输出格式、单步重试）每随模型强一档而贬值；**不会被吸收的**（状态持久化、权限与沙箱、审计、验证与回滚）处理的是现实世界的不可逆性——文件被覆盖、命令执行过、凭证被读过，不因模型变聪明而可撤销。投资应压在后一类，前一类更该按 [[concepts/harness-component-expiry-and-build-to-delete|组件保质期与 build to delete]] 的原则来写。
+
+### 六层阶梯是成本曲线，不是成熟度阶梯
+
+把六层读成"能力等级"是错的：正确读法是**每一层都在用通用性换确定性，而交换比率逐层恶化**。前四层近乎无条件划算：装配历史只是字符串拼接，`while not finished` 是几十行代码，工具 schema 一旦标准化就被所有工具复用——成本近零，收益是"从不能行动到能行动"。拐点在记忆与完整运行时：记忆的难点不是存储，而是**写入与读取策略**（什么值得保存、重复事实何时合并、冲突谁覆盖、检索几条不挤掉当前任务、错记怎么纠正），每条都是买不到通用件的策略判断，且判断错了不会立刻报错。所以坍塌点不在某一层，而是一个条件：**当这一层的收益只能靠避免低频事故、或跨会话的第二次任务来体现时**，它就进入收益长尾，单次评测看不见。
+
+### 四框架收敛于同一设计空间，分歧都在"状态住在哪"
+
+四者在机制上高度收敛：一个循环控制器、一套工具协议、一个上下文管理器、一个往往隐式的验证者。真正的分歧只有两处，而这两处决定调试体验。**状态住哪**：Pi 是活动分支加 Compaction 后的会话投影，近乎无状态；OpenCode 投影进 SQLite，状态即可回放的事件流；Codex 是双层：内存一张活跃 Thread 表，冷任务才从 Rollout 重建；Hermes 把长期状态放进文件系统与会话归档。**谁拥有重试与终止**：依次是最小循环的收尾判断、Profile 的步数与权限、Turn/Item 协议状态机、后台 Review 管线。代价很具体：事件投影能回放到 Part 粒度，却新增事件顺序与投影一致性这类状态工程 bug；内存活跃表让 Resume 变快，代价是同一份历史不能起两套循环（Resume 命中活跃实例就直接返回）；文件式记忆可 diff、可纠正，但没有并发控制。选型该问的不是功能表，而是**半夜出问题时能不能定位到状态**。
+
+### 可删除的工地：接口要窄，评估只能端到端
+
+承认部件会过期，代码就该按"将来能整层删掉"写，而不是按"将来能继续加"写——这正是 [[entities/harness-engineering-deletable-worksite-ruofei|可删除的工地]] 的工程含义。它反向约束接口：上下文层只承诺给模型一段 token，工具层只承诺 schema 与 Tool Result 的身份对应，验证层只承诺可判定的成功/失败信号；契约越窄，模型升级时越能整层拿掉，不留半死分支。评估口径必须与接口同源：三套测评分别量通过率乘成本、共同子集完成率与每成功 token、跨会话增益加机制证据，都只在端到端成立，因为 Harness 质量是**成功率、成本、可恢复性的乘积**，任何单层指标都会被别层补偿（压缩强可掩盖检索差，权限厚可掩盖循环弱）。用层内指标（如压缩率）优化，几乎必然优化出别处漏水的系统；同模型同推理强度仅换 Harness 就能让单任务成本差两倍以上，也说明"模型贵不贵"在模型层面回答不了。参见 [[concepts/evaluation-harness-design|评估 Harness 设计]] 与 [[entities/harness-evolution-vs-test-time-scaling-2026|Harness Evolution vs 多跑几遍实证]]。
 
 ## 实践启示
 

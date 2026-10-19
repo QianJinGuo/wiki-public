@@ -1,7 +1,7 @@
 ---
 title: "OpenViking 经验记忆：Session→Trajectory→Experience 的 Agent 进化闭环"
 created: 2026-09-18
-updated: 2026-09-18
+updated: 2026-10-20
 type: entity
 tags: [agent-memory, experience-memory, context-database, trajectory, openviking, bytedance, mcp, skill, self-evolving-agent, tau2-bench]
 sources: [raw/articles/openviking-experience-memory-agent-evolution-loop-2026, raw/articles/openviking-experience-memory-content-creation-agent-2026]
@@ -62,6 +62,58 @@ OpenViking 用三个对象把「过去」转成「下一次可调用的方法」
 
 > [!note] 该篇性质
 > 第 2 来源整体是产品使用故事（含开通企业版/个人版引导），其可迁移部分集中在对象模型与 L0-L2 渐进加载设计；具体创作流程细节绑定 OpenViking 产品形态。
+
+## 深度分析
+
+### 记录错位：数据表示问题，不是提示词问题
+
+对话记录答「上次说了什么」，日志答「某工具返回了什么」，都是**证据视角**；Agent 面对同类任务要的是**决策视角**：先确认哪些条件、哪套顺序更可靠、哪些路径曾失败、最后检查什么才算完成。^[raw/articles/openviking-experience-memory-agent-evolution-loop-2026.md]
+
+prompt 补不上，因为 SOP 是写死的应然流程，覆盖不到长尾，也不携带「此处曾失败」这类反事实，而它只能从真实轨迹里挖。经验记忆因此不是「更好的 prompt」，而是数据建模：把执行过程当一等公民。
+
+### 三次有损变换：每一层丢掉了什么
+
+Session → Trajectory → Experience 是有损压缩链，损失点比保真点更值得看：
+
+- **Session**：全量证据，保真最高但不可迁移，混着噪音，无法区分必然有效与偶然成功；负面知识只在这一层完整。
+- **Trajectory**：还原目标、路径与结果，丢掉噪音与未选中的分支，换来「目标-过程-结果可对应」的可判定结构。原文要求保留能判断结果的完整片段，否则无法区分有效方法与偶然成功。^[raw/articles/openviking-experience-memory-agent-evolution-loop-2026.md] 风险也在此：失败分支若被裁掉，Experience 学不到负面知识。
+- **Experience**：丢掉任务参数（数字、订单号），留方法、检查项与风险边界。抽象换来可迁移性，代价是**适用条件被迫放宽**——误用的根源。
+
+首条经验可来自少量轨迹：冷启动快，但早期属低样本过拟合，靠后续样本对冲，等于承认经验有生命周期，与 [[concepts/memory-consolidation-decay|记忆的巩固与衰减]] 同源。
+
+### 两阶段闭环的失效面：过期经验的高置信度重放
+
+离线阶段以「结果可知」为条件——完成、失败修复、用户纠错、会话压缩前，而非固定时间片；在线阶段是「检索 → 读少量原文 → 核对环境、前置条件与风险边界 → 应用」，新结果又成为下轮证据。^[raw/articles/openviking-experience-memory-agent-evolution-loop-2026.md]
+
+「核对」是唯一防线，三类失效正从这里漏过：**过期**（工具改版、政策更新，经验仍是旧世界的准确描述）、**错配**（抽象时放宽的边界在此报复）、**自证**（上次复用错了但碰巧成功，结果被当作新证据写回）。第三类最险：闭环把「结果」当标签，结果却可能已被旧经验污染，飞轮转成自我确认。故 [[concepts/memory-source-provenance|记忆来源溯源]] 是必需配套。
+
+### τ²-bench 证明到哪里为止
+
+同一模型下 Retail 由 70.94% 升到 77.81%（+6.87pp），Airline 由 54.38% 升到 66.25%（+11.87pp）；「已送达商品换货」单题无经验时 8 次只成 2 次，召回含身份验证、状态检查与工具顺序的经验后 8 次全成。^[raw/articles/openviking-experience-memory-agent-evolution-loop-2026.md]
+
+它证明的是同领域、同类任务、有训练集沉淀条件下的增益，单题案例还说明经验主要压缩方差（2/8 → 8/8），而非抬高上限。不证明跨领域迁移、库膨胀后的检索精度、错误经验的破坏力。两个保留：Airline 基线更低，增益空间更大；训练集与测试集同源，存在「看过题」式泄露。
+
+### 从记忆到运行时策略：MCP、Skill 与 L0-L2 的 token 预算
+
+MCP 是工具面，Experience Skill 是使用协议（何时检索、如何核对、如何应用），Plugin 借宿主生命周期解决「没人主动记」。三者合起来，经验才从「可检索文档」变成**运行时策略**。
+
+与 skill-based 路线重叠之处是都把过程固化为可复用文本资产；差异在治理：Skill 由人编写、版本化、静态，Experience 自动蒸馏、按任务检索、带来源与适用条件、可增量更新。二者是上下游——Experience「发现」模式，Skill「固化」承诺；高频稳定者应上迁为 Skill，省掉每次注入的 token。见 [[entities/how-to-encode-experience-into-skills|把经验编码进 Skill]]。
+
+L0-L2 分层（摘要 → 概览 → 全文）的逻辑是：库随任务数线性增长，每次注入原文则成本与噪音同步增长，分层把「是否值得读全文」变成一次检索决策。^[raw/articles/openviking-experience-memory-content-creation-agent-2026.md] 代价是新失真——L0 摘要最容易被压掉的恰是「适用条件与失效条件」，即决定能否复用的那句，故 L0 应强制保留负面条件。
+
+## 实践启示
+
+1. **以「可判定结果的任务片段」为记录单位，而非会话。** 最小单元含目标、步骤、工具结果与验收结论；在完成、修复、纠错、即将压缩四个边界提交，无结果的轨迹不入库。
+
+2. **蒸馏用事件触发 + 阈值重蒸馏。** 边界触发增量，同类轨迹累积到阈值后重建。缺前者库长不大，缺后者经验僵化。
+
+3. **复用前做条件比对，别相似度命中即注入。** 环境、前置依赖、工具版本、政策边界做成结构化字段，先比对再决定「当流程用」还是「当参考看」。
+
+4. **给每条经验上失效管理。** 绑定来源 Session、生成时间、依赖的版本；变更时批量失效；复用后的失败显式写回负反馈，别静默重试。
+
+5. **评测同时覆盖增益与伤害。** 除同域 train/test 分离，加未见过题型（测迁移）与注入错误经验（测盲从）；单题多次运行看方差。
+
+6. **建经验上迁机制。** 高频稳定、跨任务重复者固化为 Skill 或硬规则，库只留长尾，否则检索成本随库增长而收益递减。
 
 ## 相关概念与实体
 

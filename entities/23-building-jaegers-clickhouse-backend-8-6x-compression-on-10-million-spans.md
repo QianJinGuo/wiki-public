@@ -2,7 +2,7 @@
 
 title: "Building Jaeger’s ClickHouse backend: 8.6× compression on 10 million spans"
 created: 2026-06-26
-updated: 2026-09-07
+updated: 2026-10-19
 type: entity
 tags: [article]
 source: "[[raw/articles/23-building-jaegers-clickhouse-backend-8-6x-compression-on-10-million-spans]]"
@@ -19,68 +19,78 @@ review_category: practice
 
 # Building Jaeger’s ClickHouse backend: 8.6× compression on 10 million spans
 
-> **来源**: [Building Jaeger’s ClickHouse backend: 8.6× compression on 10 million spans](https://cncf.io/blog/2026/06/23/building-jaegers-clickhouse-backend-8-6x-compression-on-10-million-spans/)
+*Mahad Zaryab (Jaeger maintainer, Software Engineer at Meta) · CNCF blog · 2026-06-23. ClickHouse ships as an alpha storage backend in Jaeger v2.18.0.*
 
+## 摘要
 
+Jaeger v2.18.0 finally ships ClickHouse as a native storage backend, closing a request maintainers had fielded for years. The author's argument is architectural rather than feature-level: trace data is append-only, highly repetitive along a handful of dimensions (service, operation, status code, tag key), and therefore a poor match for systems that spend work maintaining per-document inverted indexes. The real substance of the post is the schema argument — whether to sort spans by `trace_id` for fast `GetTrace`, or by `(service_name, name, start_time)` for fast search — resolved by measuring how asymmetric the two losses actually are. On a single node holding 10 million spans across 1 million traces, the backend ingested more than 50k spans/sec, compressed the spans table 8.6× (roughly 6 GiB down to about 722 MiB), and served trace retrieval in about 100 ms with most searches under 50 ms.^[raw/articles/23-building-jaegers-clickhouse-backend-8-6x-compression-on-10-million-spans.md]
 
+## 核心要点
 
-Posted on June 23, 2026 by Mahad Zaryab, CNCF Jaeger Project Maintainer and Software Engineer at Meta ^[raw/articles/23-building-jaegers-clickhouse-backend-8-6x-compression-on-10-million-spans.md]
+- **8.6× compression on the spans table**: "nearly 6 GiB" of span data reduced to "roughly 722 MiB" on disk in the benchmark.
+- **10 million spans across 1 million traces, single node**: that is the entire benchmark footprint — not a cluster test.
+- **More than 50k spans/sec** sustained ingestion on that single node.
+- **Primary key is not a uniqueness constraint**: it defines on-disk sort order and backs a sparse index with one entry per 8,192-row granule, which is why choosing it is "the single highest-leverage decision in the schema."
+- **Chosen sort order `(service_name, name, start_time)`**: queries filtering service + operation + time window become direct primary-key lookups.
+- **Rejected sort order `trace_id`**: trace spans land contiguously (single seek + sequential read), but `service_name` / `operation_name` filters cannot use the primary index at all.
+- **Measured asymmetry**: sorting by `trace_id` gave ~27 ms trace retrieval but ~880 ms search; re-sorting gave ~100 ms retrieval and ~140 ms multi-filter search.
+- **`bloom_filter` skip index on `trace_id`**: lets the engine prove a granule cannot contain a given ID without reading it.
+- **`trace_id_timestamps` materialized view**: supplies each matching trace's time bounds so the follow-up `GetTraces` call can prune partitions and granules.
+- **Five attribute levels** (resource, scope, span, event, link) with one `Nested` column per primitive type (Bool, Int64, Float64, String, plus Bytes/Slice/Map), disambiguated by an `attribute_metadata` table.
+- **Alpha in v2.18.0**, with native SPM methods computing service-level latency, call rate, and error rate from spans without an external metrics pipeline.
 
-CNCF projects highlighted in this post^[raw/articles/23-building-jaegers-clickhouse-backend-8-6x-compression-on-10-million-spans.md]
+## 深度分析
 
+### The sort key is the schema
 
-[![Image 1: Jaeger logo](https://landscape.cncf.io/logos/5877af58428f6cd35e6dc2df2afe82af3b90853bd191670a60111e6e8c01ea54.svg)](https://www.cncf.io/projects/jaeger "Go to Jaeger") ^[raw/articles/23-building-jaegers-clickhouse-backend-8-6x-compression-on-10-million-spans.md]
+ClickHouse differs from a B-tree store in a way that reorganises the whole design: the primary key does not enforce uniqueness, it declares the physical order of rows and seeds a sparse index — one entry per 8,192-row granule. Everything downstream follows from that. Compression ratio depends on how many consecutive rows share a value; skip-index usefulness depends on whether predicates correlate with the sort order; and query latency is largely a question of how many granules the engine can eliminate before reading. Picking the sort key is therefore not a tuning knob but the schema's thesis statement.
 
-As someone who’s been maintaining[Jaeger](https://www.jaegertracing.io/), I’ve watched users request[ClickHouse](https://clickhouse.com/)support consistently over the past few years. With Jaeger v2.18.0, we’ve finally delivered it. What excites me most isn’t just that ClickHouse is available—it’s that its architecture is practically custom-built for telemetry at scale. It swallows massive, append-only write streams and handles complex analytical aggregations in milliseconds, offering teams a highly efficient, production-grade storage backend. ^[raw/articles/23-building-jaegers-clickhouse-backend-8-6x-compression-on-10-million-spans.md]
+The two candidates map onto the two query families Jaeger actually serves. `GetTrace` wants every span of one trace adjacent, which `trace_id` ordering delivers as one seek plus a sequential read. Search wants service, operation, and time window, which `(service_name, name, start_time)` delivers as a prefix lookup. The two orders are close to mutually exclusive, and the post is candid that the constraints "don't all pull in the same direction."
 
-For those new to the project, Jaeger is a graduated Cloud Native Computing Foundation (CNCF)distributed tracing platform built to monitor and troubleshoot complex microservices. It tracks requests across service boundaries to expose latency bottlenecks and root causes, ultimately reducing a team’s mean time to repair (MTTR). By natively integrating ClickHouse, Jaeger can now leverage columnar storage to deliver blazing-fast query performance and high-ratio data compression for billions of spans. ^[raw/articles/23-building-jaegers-clickhouse-backend-8-6x-compression-on-10-million-spans.md]
+### Why the asymmetry decided it
 
-In this post, I’ll explain why ClickHouse is a strong choice for storing traces, how the schema is designed under the hood, and how you can start using it with Jaeger today. ^[raw/articles/23-building-jaegers-clickhouse-backend-8-6x-compression-on-10-million-spans.md]
+The benchmark made the tradeoff legible instead of rhetorical. Under `trace_id` ordering, retrieval cost 27 ms and search cost 880 ms. Under `(service_name, name, start_time)`, retrieval rose to about 100 ms while multi-filter search fell to about 140 ms. In ratio terms the search path gained roughly 6.3× while the trace path lost roughly 3.7× — but the ratios matter less than the absolute numbers. 100 ms is comfortably inside an interactive budget; 880 ms is not.
 
-## Why columnar storage wins
+There is a second, structural reason the trade is lopsided. The trace path is recoverable because the caller already knows the exact key it wants — a `trace_id` is a precise, high-selectivity predicate that an auxiliary structure can shortcut. The search path is not recoverable in the same way: a service-and-time-window query has no single key to look up, so once the sort order stops matching it, every candidate granule must be read. Degrading the recoverable path and protecting the unrecoverable one is the actual decision rule here, and it generalises well beyond Jaeger.
 
-At its core, the tracing problem is twofold: storing massive volumes of semi-structured event data and then searching that data quickly across multiple dimensions—service, operation, tags, duration, time range, and trace ID. Cassandra and Elasticsearch have served the Jaeger community well, but they come with operational costs. Indexing overhead adds latency and expense. Scaling becomes complex. Retention decisions force painful tradeoffs. ^[raw/articles/23-building-jaegers-clickhouse-backend-8-6x-compression-on-10-million-spans.md]
+### Two cheap mechanisms instead of one expensive index
 
-### High-throughput ingest and low-latency queries
+Rather than accept the regression, the design buys the trace path back twice. A `bloom_filter` skip index on `trace_id` gives a per-granule probabilistic membership test: a negative answer is definitive, so the engine can drop a granule without reading it, and a false positive only costs an unnecessary read. The `trace_id_timestamps` materialized view attacks the same problem from the other side — the search path first learns when each matching trace occurred, and that time information lets the subsequent `GetTraces` call prune partitions and granules before touching the spans table.
 
-ClickHouse is a column-oriented[OLAP database](https://thenewstack.io/how-to-run-olap-and-oltp-together-without-resource-contention/)designed for exactly these constraints: high-throughput ingestion, aggressive compression, and fast analytical queries. For tracing, this is nearly ideal. Trace data is repetitive by nature—the same service names, operation names, status codes, and tags appear over and over. A columnar layout thrives on that repetition.[](https://cncf.io/?utm_content=sponsor+module) ^[raw/articles/23-building-jaegers-clickhouse-backend-8-6x-compression-on-10-million-spans.md]
+The economics are the interesting part: both mechanisms are auxiliary structures over an existing table, not a second copy of the data, and both are paid for on write rather than on every read. Compared with the alternative — keeping `trace_id` order and accepting 880 ms searches — this is close to free. ClickHouse also makes the pattern cheap by construction, since materialized views incrementally transform inserts into target tables rather than requiring a batch job.
 
-> “Trace data is repetitive by nature—the same service names, operation names, status codes, and tags appear over and over. A columnar layout thrives on that repetition.”
+### Typed attributes and the five-level ambiguity
 
-### Compression that actually matters
+Jaeger v1 stored tags as strings. The v2 reader API accepts a typed map whose values may be Bool, Int64, Float64, String, or a complex type such as Bytes, Slice, or Map, and the storage layer cannot collapse that back to strings without losing filter semantics. The schema answers with one `Nested` column per primitive type, repeated at each of the five levels — resource, scope, span, event, and link — effectively a small table inside every row.
 
-We measured significant compression gains on trace data. Service names like “auth-service” or “payment-gateway” appear hundreds of thousands of times. Same with operation names, tag keys, and status codes. In a row-oriented database, that redundancy goes uncompressed. In a column-oriented one, ClickHouse groups identical values, making them trivial to compress. The result? An 8.6× compression ratio on the spans table in our benchmarks. ^[raw/articles/23-building-jaegers-clickhouse-backend-8-6x-compression-on-10-million-spans.md]
+That solves storage but creates a resolution problem at query time. For a filter like `http.status_code=200`, nothing in the request says whether "200" is a string or an integer, nor whether the attribute was recorded on the span or inherited from the resource. The same logical key can legitimately live in `str_attributes` or `int_attributes` at any of five levels, and different services may make different choices. Without extra metadata the reader would have to scan every type/level combination. The `attribute_metadata` table, populated by materialized views off the spans table, lets the reader resolve the key first and then query only the columns where that key was actually observed.
 
-### Real-time analytics
+The residual cost is honest and worth stating: attribute-only searches cannot use the primary index, because the index is built around top-level structural fields — service, operation, time. The post's guidance is therefore not "attributes are indexed" but "always combine attribute filters with structural ones," which is a design constraint pushed onto users rather than solved by the engine.
 
-ClickHouse also opens the door to more complex analytical queries on trace data. Because aggregations are highly efficient on columnar storage, Jaeger v2.18 includes native ClickHouse SPM methods to directly compute service-level latency, call rates, and error rates from your stored spans. This allows teams to generate core health and performance metrics for their microservices straight from their trace data, without needing an external metrics pipeline. ^[raw/articles/23-building-jaegers-clickhouse-backend-8-6x-compression-on-10-million-spans.md]
+### What the benchmark does and does not establish
 
-## Designing the schema
+The benchmark reports ingestion throughput — more than 50k spans/sec — but says nothing about part counts, batch sizes, flush intervals, or merge behaviour. For a columnar store that is the half of the system most likely to bite in production: too many small inserts create too many parts, and the merge backlog becomes the real latency source. The post does not claim otherwise; it simply leaves the write path as the next thing to characterise, and the alpha label is consistent with that.
 
-Schema design was where things got tricky. We needed to optimize for Jaeger’s core query patterns: trace lookup by trace ID, service, and operation; attribute filtering; time-range queries; and the aggregation powering the[Service Performance Monitoring (SPM)](https://www.jaegertracing.io/docs/2.17/architecture/spm/)feature. These constraints don’t all pull in the same direction. ^[raw/articles/23-building-jaegers-clickhouse-backend-8-6x-compression-on-10-million-spans.md]
+The broader caveat is scale. The framing promises compression "for billions of spans," while the measurement covers 10 million spans and 1 million traces on one node. Those are different regimes: 8.6× is a property of how repetitive this dataset is, and low-cardinality columns like service name and status code compress far better than high-cardinality ones like span IDs or free-text tags. There are no numbers for replication, high availability, retention or TTL behaviour, cluster query fan-out, or compression measured across the whole footprint rather than the spans table alone.
 
-There’s an excellent earlier[post](https://medium.com/jaegertracing/making-design-decisions-for-clickhouse-as-a-core-storage-backend-in-jaeger-62bf90a979d)by Ha Anh Vu that benchmarked ClickHouse schemas for Jaeger v1, and that work laid the foundation. However, Jaeger v2 adopts the OpenTelemetry data model, which forces us to revisit several decisions. ^[raw/articles/23-building-jaegers-clickhouse-backend-8-6x-compression-on-10-million-spans.md]
+What survives those caveats is the shape of the decision rather than its magnitudes. The 27 ms versus 880 ms gap is not noise — it follows mechanically from whether the sort order matches the predicate, and it would appear in any dataset with the same query mix. The specific latencies will move with cardinality, disk, and concurrency; the asymmetry will not.
 
-The design space is documented in detail in an[Architectural Decision Record (ADR)](https://github.com/jaegertracing/jaeger/blob/v2.18.0/docs/adr/008-clickhouse-storage-schema.md). The sections below walk through some of the key decisions worth understanding. ^[raw/articles/23-building-jaegers-clickhouse-backend-8-6x-compression-on-10-million-spans.md]
+## 实践启示
 
-### Trade-offs in primary key
+1. **Choose the sort key by pricing the loss, not by ranking query popularity.** The question is not which query runs most often but which degradation is tolerable in absolute terms — 100 ms passes an interactive test, 880 ms fails it, regardless of traffic mix.
+2. **Degrade the recoverable access path, protect the unrecoverable one.** A known-key lookup can be shortcut by a skip index or a lookup table; a multi-dimensional filter cannot. Sort for the query that has no fallback.
+3. **Recover a lost path with auxiliary structures before duplicating data.** A `bloom_filter` skip index plus a small materialized view bought back most of the trace path at write cost, with no second copy of the spans.
+4. **Treat attribute-only queries as an anti-pattern in the schema, not a feature gap.** If the primary index covers service/operation/time, require those predicates alongside attribute filters, and document the rule where query authors will read it.
+5. **Resolve polymorphic fields through metadata, not wider queries.** One `attribute_metadata` table beats scanning five levels times four type columns, and it keeps the read path's column count proportional to what was observed.
+6. **Do not size a deployment from this benchmark.** Single node, 10M spans, alpha, no HA or retention data — reproduce the measurement at your own cardinality and write rate before committing retention policy to it.
 
-In ClickHouse, the primary key isn’t a uniqueness constraint. Instead, it defines the on-disk sort order and powers a sparse index (one index per 8,192-row granule). Picking it is the single highest-leverage decision in the schema. ^[raw/articles/23-building-jaegers-clickhouse-backend-8-6x-compression-on-10-million-spans.md]
+## 相关实体
 
-We had two candidates for choosing a primary key:^[raw/articles/23-building-jaegers-clickhouse-backend-8-6x-compression-on-10-million-spans.md]
+- [[entities/clickhouse-ingestion-at-scale-an-open-source-zepto-engineering-story|ClickHouse Ingestion at Scale: An Open-Source Zepto Engineering Story]] — the write path, batching, and part management that this post leaves under-described.
+- [[entities/observability-platform|Observability Platform]] — where a trace store sits relative to metrics, logs, and the SPM layer built on top of spans.
+- [[entities/dynamically-splitting-wide-partitions-in-cassandra-for-time-|Dynamically Splitting Wide Partitions in Cassandra for Time Series Workloads]] — the operational tax on the Cassandra path that columnar ordering avoids.
+- [[entities/elasticpp重塑elasticsearch查询性能的c内核引擎|elasticpp：重塑 Elasticsearch 查询性能的 C++ 内核引擎]] — the inverted-index side of the tradeoff, and what it costs to make it fast.
+- [[entities/open-telemetry-ebpf-instrumentation-obi-zero-code-observability-aliyun-2026|OpenTelemetry eBPF Instrumentation (OBI)]] — a zero-code source of the span volume this backend has to absorb.
+- [[concepts/llm-observability-4-layer-model|LLM 可观测性 4 层模型与工具栈]] — how trace storage fits the broader telemetry stack.
 
-
-1.   **Optimize for trace retrieval:**sort by trace_id. Every span of a trace lands in one contiguous block, so GetTrace is a single seek + sequential read. However, search queries pay for this optimization, as the service_name and operation_name filters cannot use the primary key index at all.
-2.   **Optimize for search (chosen):**sort by (service_name, name, start_time). Search queries that filter by service, operation, and a time window become direct primary-key lookups.
-
-The decision came down to an asymmetric trade-off. Sorting by trace_id makes search performance terrible, but sorting by (service_name, name, start_time) hurts trace retrieval much less, because we can recover most of the lost performance with two cheap mechanisms: ^[raw/articles/23-building-jaegers-clickhouse-backend-8-6x-compression-on-10-million-spans.md]
-
-1.   A bloom_filter skip index on trace_id, which lets the engine prove a granule can’t contain a given ID without reading it.
-2.
-
-→ [[raw/articles/23-building-jaegers-clickhouse-backend-8-6x-compression-on-10-million-spans|原文存档]] ^[raw/articles/23-building-jaegers-clickhouse-backend-8-6x-compression-on-10-million-spans.md]
-
----
-## 关联
-- 相关概念: [[concepts/harness-engineering-framework|Harness Engineering]]
-
+→ [[raw/articles/23-building-jaegers-clickhouse-backend-8-6x-compression-on-10-million-spans|原文存档]]

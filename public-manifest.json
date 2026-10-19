@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "sourceRevision": "82066da0d04f67682f065018d1516d2eb45b88fc",
+  "sourceRevision": "6a4d489c1b940137264b0a09b766f633bd8dcbf0",
   "files": [
     {
       "path": "raw/articles/0.25秒识破未见攻击-lod-lvlm-jailbreak-detection-emnlp2026.md",
@@ -5938,6 +5938,11 @@
       "sourceUrl": "https://code.claude.com/docs/en/common-workflows"
     },
     {
+      "path": "raw/articles/claude-code-team-code-review-pipeline-anthropic-2026.md",
+      "title": "How the Claude Code team does code review",
+      "sourceUrl": "https://claude.dev/blog/solving-code-review-at-anthropic/"
+    },
+    {
       "path": "raw/articles/claude-code-token-cost-harness-comparison-30x-jiqizhixin-2026.md",
       "title": "Claude Code到底有多费token？对比实验来了：三大框架最多差30倍",
       "sourceUrl": "https://mp.weixin.qq.com/s/G29lkLZbQo59_s6wHGhAfQ"
@@ -7698,6 +7703,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/a9KVtosK59Oc8vmBx0969g"
     },
     {
+      "path": "raw/articles/diva-cross-step-conditional-propagation-dvlm-safety-emnlp-2026.md",
+      "title": "EMNLP'26 | 清华北邮联合警告：扩散式VLM的安全防线步步失守",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652734966&idx=3&sn=ed87de9c6a256d5c5d4e6bf5dd5ac54b"
+    },
+    {
       "path": "raw/articles/dockerless-environment-free-verifier-coding-agent-arxiv-2606-28436.md",
       "title": "Dockerless: 免环境补丁验证器，让 Coding Agent 后训练不再依赖 Docker",
       "sourceUrl": "https://mp.weixin.qq.com/s/940okCms5A4PdJEdrh2Gtg"
@@ -8893,6 +8903,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/OkctZudvJkxhBeSH3Ba8Tg"
     },
     {
+      "path": "raw/articles/gemini-4-argon-minecraft-agent-team-paperagent-2026-10-19.md",
+      "title": "刚刚，谷歌发布首篇 Gemini 4 Argon 技术论文",
+      "sourceUrl": "https://mp.weixin.qq.com/s/U8D7mjKfjxdbfff9KT6J2w"
+    },
+    {
       "path": "raw/articles/gemini-deep-guide-prompt.md",
       "title": "Gemini 深度导读生成器 Prompt",
       "sourceUrl": null
@@ -9993,6 +10008,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/c8BymWxcopweHr11u7zY-Q"
     },
     {
+      "path": "raw/articles/harness2-recursive-agent-harnessing-google-challengehub-2026-10-19.md",
+      "title": "Google Harness²：让 Agent 自己改流程，还能记住下次该怎么改",
+      "sourceUrl": "https://mp.weixin.qq.com/s/JQ-kJ96vQHKsHcf2c9JxIw"
+    },
+    {
       "path": "raw/articles/harnesseval-evaluation-harness-mirros-jiqizhixin-2026-08-18.md",
       "title": "开启 Benchmark 的 Harness 时代：15 家学术机构联合发布 HarnessEval",
       "sourceUrl": "https://mp.weixin.qq.com/s/T_fBh7p82OHaKw75oq-5cQ"
@@ -10681,6 +10701,11 @@
       "path": "raw/articles/i-wrote-an-ai-textbook-how-long-until-ai-can-do-it-better.md",
       "title": "i-wrote-an-ai-textbook-how-long-until-ai-can-do-it-better",
       "sourceUrl": "https://www.interconnects.ai/p/i-wrote-an-ai-textbook-how-long-until"
+    },
+    {
+      "path": "raw/articles/ianbarber-mo-turns-agentic-rl-onpolicy-integrity-2026-10-15.md",
+      "title": "Mo' turns, mo' problems",
+      "sourceUrl": "https://ianbarber.blog/2026/10/15/mo-turns-mo-problems/"
     },
     {
       "path": "raw/articles/ibm-forward-deployed-units-ai-deployment.md",
@@ -12808,6 +12833,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/QAnbNhmRBz40kkq9l5xTjQ"
     },
     {
+      "path": "raw/articles/meituan-slm-bounded-generation-inference-engine-2026.md",
+      "title": "SLM 生成式高并发推理引擎：延迟约束下的有效吞吐优化",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MjM5NjQ5MTI5OA==&mid=2651783496&idx=1&sn=53d56d7b5e384442b13fbba8f7e57ae2"
+    },
+    {
       "path": "raw/articles/meituan-torchtensor-data-agent-harness-dynamicpo-2026.md",
       "title": "美团 2026 三项学术成果：TorchTensor 数据 Agent 系统设计、DynamicPO 偏好优化坍塌、GeoRA",
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MjM5NjQ5MTI5OA==&mid=2651783408&idx=1&sn=994f37a61bdc62ab93bef46256c53a48"
@@ -13943,6 +13973,11 @@
       "sourceUrl": "https://huggingface.co/blog/nvidia/accelerating-fine-tuning-nvidia-nemo-automodel"
     },
     {
+      "path": "raw/articles/nvidia-nemotron-3-5-super-vl-multimodal-agent-model-2026-10-19.md",
+      "title": "NVIDIA Nemotron 3.5 Super VL Powers Specialized Agents with Multimodal Reasoning",
+      "sourceUrl": "https://developer.nvidia.com/blog/nvidia-nemotron-3-5-super-vl-powers-specialized-agents-with-multimodal-reasoning/"
+    },
+    {
       "path": "raw/articles/nvidia-nemotron-3-agents-rag-voice-safety.md",
       "title": "nvidia nemotron 3 agents rag voice safety",
       "sourceUrl": "https://developer.nvidia.com/blog/building-nvidia-nemotron-3-agents-for-reasoning-multimodal-rag-voice-and-safety/"
@@ -14933,6 +14968,11 @@
       "sourceUrl": "https://research.perplexity.ai/articles/wandr-benchmark-evaluating-research-agents-that-must-search-wide-and-deep"
     },
     {
+      "path": "raw/articles/personal-agent-landscape-always-on-datawhale-2026-10-19.md",
+      "title": "这是一篇把\"Personal Agent\"讲明白的科普级综述！",
+      "sourceUrl": "https://mp.weixin.qq.com/s/j6swcZFbBQuls7Def4HR-Q"
+    },
+    {
       "path": "raw/articles/personal-ai-memory-system-five-layer-tencent-2026.md",
       "title": "一文搞懂个人AI记忆系统构建全流程",
       "sourceUrl": "https://mp.weixin.qq.com/s/2Kz2JQK1r606S3quiCFUYg"
@@ -15096,6 +15136,11 @@
       "path": "raw/articles/poolside-laguna-xs-2-1-2026.md",
       "title": "poolside-laguna-xs-2-1-2026",
       "sourceUrl": "https://poolside.ai/blog/introducing-laguna-xs-2-1"
+    },
+    {
+      "path": "raw/articles/pos-explicit-belief-states-belief-trapping-aliyun-2026-10-16.md",
+      "title": "Agent 一直在行动，任务为何没有进展？PoS 识别并打破 Belief Trapping",
+      "sourceUrl": "https://mp.weixin.qq.com/s/GsIvpBuSegabngNuSeh4eg"
     },
     {
       "path": "raw/articles/posix-is-not-a-shell.md",
@@ -15778,6 +15823,11 @@
       "sourceUrl": "https://blog.redwoodresearch.org/p/an-operationalization-of-opaque-serial"
     },
     {
+      "path": "raw/articles/reflection-beam-501b-open-model-hf-blog-2026.md",
+      "title": "Welcome Beam: a 501B open model you can own, customize, and scale",
+      "sourceUrl": "https://huggingface.co/blog/reflection-beam"
+    },
+    {
       "path": "raw/articles/regression-tax-skills-hurt-llm-agents-mozhi-2026.md",
       "title": "高质量Skill落地实操指南：5000+次实验拆解AI Agent回归税",
       "sourceUrl": "https://mp.weixin.qq.com/s/wxjbSCIvNiJ4S8T56kLeCA"
@@ -16306,6 +16356,11 @@
       "path": "raw/articles/scientisttwo-autonomous-research-closed-loop-challengehub-2026.md",
       "title": "scientisttwo-autonomous-research-closed-loop-challengehub-2026",
       "sourceUrl": "https://mp.weixin.qq.com/s/dOhHdGjbHrsKC5Epknd3CQ"
+    },
+    {
+      "path": "raw/articles/scinetics-chain-of-science-tokens-cos-enzyme-design-2026.md",
+      "title": "AI也能在分子空间里做推演：Scinetics提出可验证的科学推理链",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247933725&idx=4&sn=9782cd55a48368305cc03265e22edb0f"
     },
     {
       "path": "raw/articles/scoped-hiring-process-aware-fairness-multi-agent-emnlp-2026.md",
@@ -17108,6 +17163,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247920779&idx=3&sn=18f5eb81b14b5d60903503df5a463897"
     },
     {
+      "path": "raw/articles/ssr-selection-based-structured-reasoning-apple-cmu-2026.md",
+      "title": "Agent推理快10倍是怎么做到的？苹果×CMU：把「生成」改成「做选择题」",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651063125&idx=3&sn=ea4caa15e65862454b786586bfcce177"
+    },
+    {
       "path": "raw/articles/stable-audio-3.md",
       "title": "Stable Audio 3.0, the model family built with open-weight models",
       "sourceUrl": "https://stability.ai/news-updates/meet-stable-audio-3-the-model-family-built-for-artistic-experimentation-with-open-weight-models"
@@ -17491,6 +17551,11 @@
       "path": "raw/articles/taobao-subsidy-data-analysis-agent-nl2mdl2sql-2026-09-04.md",
       "title": "淘宝百亿补贴数据分析助手 Agent 实战：NL2MDL2SQL + 多Agent协同 + 六层知识体系",
       "sourceUrl": "https://mp.weixin.qq.com/s/BpsscOnYq-DWsb_DrID8hA"
+    },
+    {
+      "path": "raw/articles/taobao-venue-agent-harness-ark-2026-10-19.md",
+      "title": "告别 AI Demo 页面：构建支持淘内货品运营、可C端投放的会场 Agent Harness",
+      "sourceUrl": "https://mp.weixin.qq.com/s/F-E3K8y-2X-BEyCIfkypJw"
     },
     {
       "path": "raw/articles/taobo-multi-agent-agentcore-agentloop-2026-10-15.md",
