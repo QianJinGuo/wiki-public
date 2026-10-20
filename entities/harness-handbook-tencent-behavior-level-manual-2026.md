@@ -1,7 +1,7 @@
 ---
 title: "Harness Handbook — 行为级 Agent Harness 手册：可理解、可审计、可编辑"
 created: 2026-07-18
-updated: 2026-09-11
+updated: 2026-10-21
 type: entity
 tags: [agent, harness, harness-engineering, behavior, manual, tencent, research]
 sources: [raw/articles/harness-handbook-tencent-ruhan-wang-2026, raw/articles/harness-handbook-tencent-full-paper-ruhan-wang-2026]
@@ -87,6 +87,38 @@ BGPD 将 behavior question 转化为可追踪的证据路径：^[raw/articles/ha
 ## Handbook Studio
 
 Interactive workbench —— 连接仓库 → 生成三层 Handbook → 在同一行为图上阅读/验证/提议修改。用户以行为级意图发起改动（如"让这个命令携带自己的环境变量"），系统定位所有 affected implementation sites（14 个代码点、10 个文件）并生成可审查的 edit plan 和 diff。^[raw/articles/harness-handbook-tencent-ruhan-wang-2026.md]
+
+## 深度分析
+
+### 行为是第二套索引，不是更好的摘要
+
+仓库按文件组织，请求按行为叙述。解法不是把代码总结得更短，而是在同一份源码上叠一张按行为寻址的索引：L1/L2/L3 是同一批地址的三级分辨率，不是三层摘要。配套的 state-register view Z 更被低估：它按**状态**而非按代码组织条目，显式列出跨阶段的读写站点。文件树和调用图都表达不了"这个字段在五个阶段被读、两个阶段被写"，而这恰是关键词搜索最易漏处。^[raw/articles/harness-handbook-tencent-full-paper-ruhan-wang-2026.md]
+
+### 可审计性来自权限分离，而非来自写得清楚
+
+事实层（路径、函数标识、签名、区间、已解析调用边）由静态分析独占，模型只能添加解释，不能改这些字段；配合"每个活跃 L3 locator 必须能在当前仓库重新解析并比对源码哈希，失败即冻结"，每个断言都对应一个可验证地址。更关键的是**拒绝被做成一等输出**：解析、分类、映射不了的条目进入 frozen / unmapped / needs-review 与覆盖记录。^[raw/articles/harness-handbook-tencent-full-paper-ruhan-wang-2026.md]
+
+### BGPD 省的是搜索，不是阅读
+
+定位路径：L1/L2 选阶段 → 沿 Z 纳入共享状态耦合的远距阶段 → 选 L3 → 沿调用图扩展 → 回当前仓库逐点验证。两个细节决定了它的性质：外部边界节点只作上下文、永不作编辑点；手册在规划契约里被明确限定为**纯位置索引**，卡片不含函数体，规划器必须打开真实源码并输出逐字 old/new。所以"质量升、规划 token 降"并不矛盾——省掉的是目录列举与死胡同式读文件，对源码的阅读一步没少，只是读得更准。^[raw/articles/harness-handbook-tencent-full-paper-ruhan-wang-2026.md]
+
+### Resync 的隐含假设与失效面
+
+重同步只在 diff 非空时触发，模型调用压缩到分类、文件分配、阶段内组织、描述改写四类，其余确定性，成本可控但假设会破：阶段骨架 S 仍能容纳改动，否则整本重建（重构执行流程因此贵得多）；函数身份可由忽略行号的函数体指纹恢复，于是"改签名并重写函数体"的改名被记成一删一增、归属丢失；未受影响的缓存 prose 可复用，然而改一个共享寄存器会扇出到所有读写它的阶段。失效还特别安静：**recall 随时间悄悄下降而不报错**，盲区躺在没人读的 coverage record 里。^[raw/articles/harness-handbook-tencent-full-paper-ruhan-wang-2026.md]
+
+### 那组数字证明了什么，没证明什么
+
+实验是 read-only 规划器、每 harness 30 条请求、三名 judge 打 0–100 分、δ=3 内判平局，被打分的是**计划文本**。所以它证明的是定位质量与规划成本（Codex +10.0pp / −12.7%，Terminus-2 +18.9pp / −8.6%）；没证明改动落地后的测试通过率、端到端成功率、人工评审，也完全没有重同步本身的成本与鲁棒性实验。两点折扣：Codex 的 Localization 维度均值仅 +2.2 且 judge 间不一致（GPT-5.5 为 −10.0），总体增幅部分来自 Scope Control 与 Reasoning；Terminus-2 只有 6 个源文件且额外拿到可信种子骨架，是顺风场景。增益与难度非单调，说明难度标签不是手册收益的代理变量——收益落在关键词搜索失效处。^[raw/articles/harness-handbook-tencent-full-paper-ruhan-wang-2026.md]
+
+## 实践启示
+
+1. **先做确定性事实层，再让模型写解释。** 静态分析产出路径/签名/区间/调用边，模型只把地址讲成人话，地址字段禁止被生成模型覆写。
+2. **把共享状态当一级索引对象。** 跨阶段变量的完整 read/write 清单比架构图更能暴露散落站点，改行为前先枚举它。
+3. **手册只负责路由，编辑必须回到真源码。** 规划产物带逐字 old/new 与唯一上下文，因为执行器会盲信；省 token 要省在探索上，不能省在读源码上。
+4. **给"不知道"留正式出口。** frozen / unmapped / needs-review 加覆盖率记录，比强行补全安全；但要在入口暴露冻结条目数，否则 recall 无声衰减。
+5. **diff 驱动失效，声明（Γ）只做合规审计。** diff 是发生了什么，声明是打算做什么；混成一个触发器，就会在"计划外改动"上失去判别力。
+
+^[raw/articles/harness-handbook-tencent-full-paper-ruhan-wang-2026.md]
 
 ## 与其他 Harness 实体的关系
 

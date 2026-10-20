@@ -1,7 +1,7 @@
 ---
 title: "亮源新创 LightNav-0 / Light REACT：把大模型的三段范式搬进具身"
 created: 2026-09-12
-updated: 2026-09-14
+updated: 2026-10-21
 type: entity
 tags: [embodied-ai, vision-language-navigation, post-training, online-rl, preference-alignment, resilience, whole-body-in-context-learning, rvq, qwen3-vl, liangyuan, scaling]
 sources: [raw/articles/lightnav-0-light-react-liangyuan-embodied-scaling-post-training-2026, raw/articles/liangyuan-lightparkour-lightnav0-light-react-qbitai-2026]
@@ -41,6 +41,36 @@ Light REACT（REsilient humAnoid ConTrol）解决「摔不垮」，其目标是�
 相关工作见 [[concepts/embodied-intelligence-frontier|具身智能前沿]]、[[concepts/world-models|世界模型]]、[[entities/urbanground-embodied-navigation-benchmark-2026|UrbanGround 导航基准]]、[[entities/lingbot-vla-2-60000h-open-source-vla|LingBot-VLA 2（6 万小时开源 VLA）]]、[[entities/embodied-native-llm-embodied-intelligence-new-stage|具身原生 LLM]]、[[concepts/rlvr-reinforcement-learning-verified-reasoning|RLVR 与可验证强化学习]]。
 
 → [[raw/articles/lightnav-0-light-react-liangyuan-embodied-scaling-post-training-2026|原文存档]]
+
+## 深度分析
+
+### 动作先被 token 化，RLHF 的工具链才接得上
+
+三段范式可搬，不在结构像，而在每步各有独立的规模化杠杆：文本、偏好、流量。具身缺前两个，所以 LightNav-0 第一步不是造数据，而是把动作变成基座原生输出——指点 token 表达空间意图，RVQ 落成 10 步 SE(2) 轨迹，由 Qwen3-VL-4B 的语言头自回归解码。动作进入 token 空间，SFT、偏好排序、在线 RL 才能原样复用；Light REACT 的「可直立则直立」是同一逻辑在控制层的重演。力控与接触密集操作暂时挂不进来。^[raw/articles/lightnav-0-light-react-liangyuan-embodied-scaling-post-training-2026.md]
+
+### 类比断在三处
+
+文本有互联网，动作没有——「2000+ 场景转仿真」的准确定位是：真实世界定义分布边界，仿真在边界内规模化合成，而非替代真实。第二处：仿真规模化得了几何与语义，规模化不了接触力、摩擦与噪声，sim-to-real 仍靠真机后训练兜底。第三处最硬：在线 RL 在语言模型里试错近乎免费，在硬件上是摔机与停机；这才是把「摔不垮」当前置条件的原因——否则经验回流被人工干预打断，飞轮转不起来。^[raw/articles/liangyuan-lightparkour-lightnav0-light-react-qbitai-2026.md]
+
+### 「零样本」零的是决策层，不是执行层
+
+口径是：同一权重、不采新数据、不微调，可迁到人形、四足、轮式与飞行本体；前提是输出仍为 SE(2) 速度或轨迹指令，且训练时相机几何被随机化。零样本的是「往哪走」，不是「怎么动」——每个本体仍需自己的底层控制器。代价是把空间意图压进图像坐标 token，放弃显式度量与地图：精度上限由最细一级码本约 4 cm 决定，狭窄通道与对接先撞天花板。
+
+### 韧性：从控制器属性改成训练分布加偏好目标
+
+经典鲁棒控制把抗扰当增益整定，Light REACT 改成数据问题：三类伤损域 × 6 个教师，DAgger 式蒸馏进单一学生；部署时抽掉故障标签，只给 64 帧因果上下文推断身体状态，（Transformer > RNN > MLP）说明这是时序推断而非分类。收益是零切换、零权重更新；代价是恢复受窗口约束，且只在训练覆盖的伤损分布内成立。偏好 RL 把直立比例从约 42% 提到 76%，对齐的是调用时机，不是能力上限。^[raw/articles/liangyuan-lightparkour-lightnav0-light-react-qbitai-2026.md]
+
+### 环境覆盖度才是具身的数据 scaling 变量
+
+Real2Sim2Real 的资产不是 4000 小时，而是「一个场景 = 一个可反复出题的生成器」：随机目标、路线与相机几何。转述的实验结论更值得记：扩大环境覆盖度比同环境堆轨迹更能提升泛化，边际收益来自「世界数」而非「步数」，与 [[concepts/scaling-laws|Scaling Law]] 的形状不同。但证据有限：10 项仿真领先、210 场景/1097 episode 均为自报，无第三方同口径复现；口径不齐（10 步轨迹三级码本 vs 3 个 token），且缺任务完成率、干预率与 MTBF。^[raw/articles/liangyuan-lightparkour-lightnav0-light-react-qbitai-2026.md]
+
+## 实践启示
+
+1. **先统一表示，再谈三阶段**：把动作压进基座词表，否则中期训练—SFT—在线 RL 无处落脚；码本分辨率要当精度上限来验收。
+2. **数据预算优先买「世界数」**：新增场景的泛化收益高于同场景加轨迹；把场景做成可重放生成器（随机目标/路线/视角/相机）。
+3. **故障工况写进训练分布，部署时抽掉标签**：多教师 → 单学生 → 因果上下文推断自身状态；调参旋钮用上下文帧数，不是故障分类准确率。
+4. **韧性设成偏好目标而非硬约束**：先训全保命技能再排序（直立 > 跛行 > 爬行），否则会收敛到「躺平也能完成任务」的退化解。
+5. **自报数字先换算成运维指标**：补 MTBF、干预率与失败模式分类；只有行为比例而无任务完成率时，不得推断部署成本下降。
 
 ## 第 2 来源 — 量子位（2026-09-13）：三项技术并列，补上 LightParkour
 

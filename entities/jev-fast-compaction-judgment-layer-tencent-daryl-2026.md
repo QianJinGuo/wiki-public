@@ -1,12 +1,12 @@
 ---
 title: "Jev 快判断层与 fast-jev-compaction 上下文剪枝：把 Agent 的判断题从大模型里拆出来"
 created: 2026-09-21
-updated: 2026-10-15
+updated: 2026-10-20
 type: entity
 tags: [jev, system-one-model, context-compaction, fast-jev-compaction, agent-architecture, judgment-layer, probability-threshold, typesafe, tencent, rlcd]
 confidence: 0.85
 provenance_state: merged
-sources: [raw/articles/jev-fast-compaction-judgment-layer-tencent-daryl-2026, raw/articles/jev-model-demo-browser-use-benchmark-tencent-mason-2026, raw/articles/ai-comes-for-the-if-statement-tunguz-2026, raw/articles/2400万人围观前openai研究员做了个闭嘴模型, raw/articles/jev-shuaping-prehistory-timeprism-samples-to-scenarios-machine-heart-2026-09-25, raw/articles/agentscope-jev-harness-integration-aliyun-2026-10-12, raw/articles/agentjev-training-pipeline-datapai-2026-10-12, raw/articles/hiroute-jev-model-routing-agentcore-2026-10-14]
+sources: [raw/articles/jev-fast-compaction-judgment-layer-tencent-daryl-2026, raw/articles/jev-model-demo-browser-use-benchmark-tencent-mason-2026, raw/articles/ai-comes-for-the-if-statement-tunguz-2026, raw/articles/2400万人围观前openai研究员做了个闭嘴模型, raw/articles/jev-shuaping-prehistory-timeprism-samples-to-scenarios-machine-heart-2026-09-25, raw/articles/agentscope-jev-harness-integration-aliyun-2026-10-12, raw/articles/agentjev-training-pipeline-datapai-2026-10-12, raw/articles/hiroute-jev-model-routing-agentcore-2026-10-14, raw/articles/jev-system-one-decision-component-jdtech-2026-10-20]
 ---
 
 # Jev 快判断层与 fast-jev-compaction 上下文剪枝
@@ -190,3 +190,20 @@ fast-jev-compaction 展示的"判断保留价值"路线与"摘要改写"路线�
 - **实测**：无人介入编码任务 Qwen→Astra→Qwen→Astra 接力（343 项独立验收断言，31m36s）；消息系统调研混合模式（Qwen-3.8 Flash 整理+GPT-6 Astra 判断）卡片正确率 98.61% vs 全 Astra 99.72%，关键备忘录 3/3（全 Qwen 仅 1/3），**API 等价成本 -92.01%/-91.39%（含 Jev 决策调用与重试）**——"大量常规工作交经济模型，关键推导或执行困难再补足能力"。与第 6 来源（AgentScope 中间件）互补：那篇是框架内中间件接口面，本篇是独立路由引擎+成本量化。^[raw/articles/hiroute-jev-model-routing-agentcore-2026-10-14.md]
 
 → [[raw/articles/hiroute-jev-model-routing-agentcore-2026-10-14|原文存档]]
+
+## 第 9 来源：京东技术——Jev 作为"语义决策组件"的生产落地方法论（2026-10-20，v=7/c=9/63 SUPP）
+
+京东科技王晓的第一方工程评论：核心命题"如果程序只需要一个决定，为什么要先让 AI 写一段话"，把 Jev 定位为软件内部的**决策节点**而非对话入口。^[raw/articles/jev-system-one-decision-component-jdtech-2026-10-20]
+
+- **三条必须自己守的边界（零覆盖）**：非自回归描述的是**计算方式**，不自动代表"不会出错"；System One 是**产品定位**，不等于模型内部认知机制；公开介绍足以解释产品行为，但不足以还原网络架构/训练目标/推理实现。^[raw/articles/jev-system-one-decision-component-jdtech-2026-10-20]
+- **三层正确性（零覆盖，最有价值的框架）**：**结构正确**（能否被程序合法读取）→ **语义正确**（是否符合事实与任务标准）→ **业务安全**（即使判断错误，损失是否可控）。有类型的接口只解决第一层，第二层靠评测、第三层靠系统设计——"不能把'不会生成答案集合之外的文本'扩大成'不会发生事实错误或业务误判'"（例：ALLOW/REVIEW/BLOCK 返回 ALLOW 类型合法但业务上可能致命）。^[raw/articles/jev-system-one-decision-component-jdtech-2026-10-20]
+- **Amdahl 换算（零覆盖）**：宣传的 200×/400× 是厂商基准（LangChain/Browserbase 转述口径为 20–200× 速度、40–400× 成本）；若决策只占链路 20% 耗时，100× 的决策加速只带来 `1/(0.8+0.2/100) ≈ 1.25×` 整体加速——应比较"每完成一个合格业务结果的成本"，而非"每次调用价格"，并看 P50/P95/P99 与整链路成功率。^[raw/articles/jev-system-one-decision-component-jdtech-2026-10-20]
+- **概率校准要落到指标（零覆盖）**：`P=0.95` 是个体上的一个数，校准看的是**群体频率**——落地需可靠性图、Brier Score、分组校准、覆盖率-错误率关系、分布漂移后的表现；概率的用途是决定"自动执行/升级/拒答"。^[raw/articles/jev-system-one-decision-component-jdtech-2026-10-20]
+- **决策契约六要素（零覆盖）**：输入 / 输出标签 / 每个标签的业务含义 / **弃权**（何时算无法判断）/ 回退（转给谁）/ 后果（误判损失）——比优化提示词更重要。^[raw/articles/jev-system-one-decision-component-jdtech-2026-10-20]
+- **多方基线（零覆盖）**：至少并列**确定性规则、传统分类器/小模型、LLM 结构化输出、Jev** 四类，否则只证明了"原来过度使用大模型"，没证明 Jev 最优。^[raw/articles/jev-system-one-decision-component-jdtech-2026-10-20]
+- **影子运行与放量路径（零覆盖）**：离线评测 → 影子运行（不影响真实决策）→ 低风险灰度 → 分类别扩大 → 持续监控复评；必须记录模型版本、问题模板、答案集合、策略版本与最终业务结果，否则无法定位退化发生在哪一层。^[raw/articles/jev-system-one-decision-component-jdtech-2026-10-20]
+- **四组件分工与接口契约演进（零覆盖）**：生成模型负责表达、决策模型负责选择、检索系统负责证据、确定性程序负责约束执行；API 从 `classify(): Category` 走向 `Decision<T> = {value, confidence, policyVersion}`，调用者必须处理"**合法但不够确定**"这一新状态；测试从单点断言扩展到统计保证（分组漏报、覆盖率-错误率、旧指标回归）。^[raw/articles/jev-system-one-decision-component-jdtech-2026-10-20]
+- **四个试点场景与各自陷阱**：①客服/工单分流（无"其他/无法判断"选项会强制归类）；②Agent 动作审核与工具路由（**答案空间受限不解决提示注入**，且只能作辅助层，确定性权限/金额/范围校验不可省）；③RAG 相关性筛选与候选排序（分数未必可跨查询比较，仍需专门检索评测）；④研发局部评审（补充而非取代编译器/测试/安全扫描/代码评审，"模型认为风险低"不是跳过测试的理由）。^[raw/articles/jev-system-one-decision-component-jdtech-2026-10-20]
+- 与既有来源的关系：第 1 来源（腾讯 daryl）是**源码级**证据（fast-jev-compaction 逐文件 + 91.5% 压缩率实测），本来源是**治理级**证据（如何把决策点接进生产而不被宣传数字误导），两者构成"实现 → 落地"的两端；三原语 Choice/Score/Noul 已被本文档覆盖，故不计入增量。^[raw/articles/jev-system-one-decision-component-jdtech-2026-10-20]
+
+→ [[raw/articles/jev-system-one-decision-component-jdtech-2026-10-20|原文存档]]

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "sourceRevision": "6a4d489c1b940137264b0a09b766f633bd8dcbf0",
+  "sourceRevision": "2c873a45d25cc84bcab3edf5bbc6a903d0acaaad",
   "files": [
     {
       "path": "raw/articles/0.25秒识破未见攻击-lod-lvlm-jailbreak-detection-emnlp2026.md",
@@ -2766,6 +2766,11 @@
       "path": "raw/articles/ai-productivity-paradox-cost-shifting-poischeme.md",
       "title": "ai-productivity-paradox-cost-shifting-poischeme",
       "sourceUrl": "https://terriblesoftware.org/2026/06/17/you-got-faster-your-company-didnt/"
+    },
+    {
+      "path": "raw/articles/ai-rd-automation-intelligence-explosion-chan-arxiv-2026-10-20.md",
+      "title": "当 AI 开始研发下一代 AI：智能爆炸离我们还有几道门槛？",
+      "sourceUrl": "https://mp.weixin.qq.com/s/FCvH1DCned1UDi1Zds_l7A"
     },
     {
       "path": "raw/articles/ai-research-assistant-from-idea-to-app.md",
@@ -7243,6 +7248,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/vlIMBcywGL7Xy9_Yc8iJQQ"
     },
     {
+      "path": "raw/articles/deepseek-deepinfer-open-source-inference-engine-2026.md",
+      "title": "刚刚，DeepSeek又掀桌了！开源推理引擎",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIwNzc2NTk0NQ==&mid=2247622545&idx=1&sn=c37ea1ceeff0497f207480f51f6420d7"
+    },
+    {
       "path": "raw/articles/deepseek-dsec-agent-training-sandbox-qbitai-2026.md",
       "title": "deepseek-dsec-agent-training-sandbox-qbitai-2026",
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247926294&idx=3&sn=b98b25ac1ed421b8f3c241de5dc50b42"
@@ -7403,6 +7413,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/kXvqPAPllQQZ7izhLTnvWA"
     },
     {
+      "path": "raw/articles/deepseek-v41-flash-1017-official-model-card.md",
+      "title": "DeepSeek-V4.1-Flash-1017 官方模型卡（小版本更新：推理/编码/Agentic/视觉基准改进）",
+      "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017"
+    },
+    {
       "path": "raw/articles/deepseek-v41-flash-kv-cache-compression-limit-agiyanxishe-2026-09-22.md",
       "title": "DeepSeek-V4.1-Flash 深度解读：把 KV Cache 压缩到极限的百万上下文 MoE 模型",
       "sourceUrl": "https://mp.weixin.qq.com/s/JRav57LWihCmlvi3ha7FJQ"
@@ -7461,6 +7476,11 @@
       "path": "raw/articles/defense_at_ai_speed_microsofts_new_multi.md",
       "title": "Defense at AI speed: Microsoft's new multi-model agentic security system",
       "sourceUrl": "https://www.microsoft.com/en-us/security/blog/2026/05/12/defense-at-ai-speed-microsofts-new-multi-model-agentic-security-system-tops-leading-industry-benchmark/"
+    },
+    {
+      "path": "raw/articles/defense-as-skill-skillsonar-runtime-guard-neurips-2026.md",
+      "title": "Defense-as-Skill：把 Agent 运行时安全守卫做成可进化 Skill（SkillSonar / SCOPE-R，NeurIPS 2026）",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIwMTc4ODE0Mw==&mid=2247723504&idx=2&sn=91e06e58ac5f247fb67d8bb4cc80f883"
     },
     {
       "path": "raw/articles/dele-w0-5-world-action-model-deepleap-2026.md",
@@ -7691,6 +7711,11 @@
       "path": "raw/articles/disgruntled-researcher-microsoft-zero-days.md",
       "title": "disgruntled-researcher-microsoft-zero-days",
       "sourceUrl": "https://www.theregister.com/security/2026/05/13/disgruntled-researcher-releases-two-more-microsoft-zero-days/5239758"
+    },
+    {
+      "path": "raw/articles/distilling-agentic-systems-roadmap-2026.md",
+      "title": "Distilling Agentic Systems：Agent 蒸馏系统级综述（模型 / 可复用资源 / Harness 三条主线）",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIwMTc4ODE0Mw==&mid=2247723504&idx=1&sn=e81af41ba28ca17028f8bdaa2c3abc93"
     },
     {
       "path": "raw/articles/distributed-rl-system-architecture-qingke-2026.md",
@@ -7996,6 +8021,11 @@
       "path": "raw/articles/emnlp-2026-clawbench实测8款agent真能完成日常在线任务吗.md",
       "title": "emnlp-2026-clawbench实测8款agent真能完成日常在线任务吗",
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIwMTc4ODE0Mw==&mid=2247722551&idx=2&sn=5a484456bac7ba942aec79f5598bde55"
+    },
+    {
+      "path": "raw/articles/emnlp-2026-multimodal-visual-concept-causal-probing-paperweekly.md",
+      "title": "EMNLP 2026 | 多模态大模型怎么“看”世界？上交大、蚂蚁揭秘视觉概念编码",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIwMTc4ODE0Mw==&mid=2247723546&idx=2&sn=485cfebff657b0b8516b348a8f09d8b1"
     },
     {
       "path": "raw/articles/emo-pretraining-mixture-of-experts-for-emergent-modularity-ai2.md",
@@ -8563,6 +8593,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/enxFJ-bEIvYI_PxuPYRbsg"
     },
     {
+      "path": "raw/articles/flux-3-image-klein-diffusers-layout-control-2026.md",
+      "title": "Welcome FLUX.3 Image Klein in Diffusers",
+      "sourceUrl": "https://huggingface.co/blog/flux-3"
+    },
+    {
       "path": "raw/articles/flux-3-multimodal-flow-model-black-forest-labs-2026.md",
       "title": "FLUX 3 — Multimodal Flow Models as the Backbone of Visual Intelligence",
       "sourceUrl": "https://bfl.ai/blog/flux-3"
@@ -8601,6 +8636,11 @@
       "path": "raw/articles/four-sub-agent-patterns-2026.md",
       "title": "Agent 如何管理其他 Agent：四种Sub Agent 模式",
       "sourceUrl": "https://mp.weixin.qq.com/s/OmdV7cucIVqwOVo7ZO_h1g"
+    },
+    {
+      "path": "raw/articles/fourth-institute-agent-society-automated-research-platform-hkust-2026.md",
+      "title": "港科大团队开源「第四大学」：让Agent社群与普通人共同创新",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652736302&idx=3&sn=16b2287f577c6d8405b9a2f48f871341"
     },
     {
       "path": "raw/articles/fragnesia-linux-kernel-local-privilege-escalation-via-esp-in-tcp.md",
@@ -10688,6 +10728,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/L3d1Gnb5ldyg7k1iJfDVtQ"
     },
     {
+      "path": "raw/articles/hybridagent-latent-thought-text-action-stanford-2026-10-20.md",
+      "title": "HybridAgent：用潜空间思考，用文本行动",
+      "sourceUrl": "https://mp.weixin.qq.com/s/x4B6dK9GnLNNajdjc6QPrQ"
+    },
+    {
       "path": "raw/articles/hysparse2xiaomi-mimo-v3-新架构预览.md",
       "title": "hysparse2xiaomi-mimo-v3-新架构预览",
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzUxMDQxMDMyNg==&mid=2247520397&idx=1&sn=586bffd5f97e396711c400816f7d1262"
@@ -11298,6 +11343,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651059729&idx=2&sn=06e4002d14feae27e3bd282166d7742e"
     },
     {
+      "path": "raw/articles/jev-system-one-decision-component-jdtech-2026-10-20.md",
+      "title": "Jev：当 AI 不再「写答案」，而是直接做决策",
+      "sourceUrl": "https://mp.weixin.qq.com/s/VpSspiVPJpgnZYyTIVeAUg"
+    },
+    {
       "path": "raw/articles/jev-system-one-model-15-projects-datafun-2026.md",
       "title": "Jev爆火一周，我扒了15个最值得看的实战项目!",
       "sourceUrl": "https://mp.weixin.qq.com/s/pF0j0LdMvSHaeSN1hZPVvA"
@@ -11306,6 +11356,11 @@
       "path": "raw/articles/jev-typesafe-decision-model-vibe-analysis-2026.md",
       "title": "jev-typesafe-decision-model-vibe-analysis-2026",
       "sourceUrl": "https://mp.weixin.qq.com/s/QWFkGiEmC24RecPOyrl_lA"
+    },
+    {
+      "path": "raw/articles/jevagentharness-decision-model-shared-control-uiuc-2026-10-18.md",
+      "title": "UIUC 提出 JevAgentHarness：决策模型与 LLM 共享控制权，智能体成本降 81% 到 89%",
+      "sourceUrl": "https://mp.weixin.qq.com/s/r9DgNwwjF5CYPZ_bX0eqXw"
     },
     {
       "path": "raw/articles/jingshuo-tech-embodied-ai-data-infrastructure-2026-07-15.md",
@@ -12128,6 +12183,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/OcCtw7lrAvXKwOoIH_Gxsg"
     },
     {
+      "path": "raw/articles/llm-architecture-evolution-bert-gpt-jev-tencent-2026.md",
+      "title": "从 BERT、GPT 到 Jev：一文看懂大模型架构的演进与分化",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MjM5ODYwMjI2MA==&mid=2649804707&idx=1&sn=9291fb648a66fa13fa295fc5a2156b84"
+    },
+    {
       "path": "raw/articles/llm-as-a-judge-agent-eval-offline-huolala-2026.md",
       "title": "重塑 Agent 度量衡：基于 LLM-as-a-Judge 的离线评估体系与实践",
       "sourceUrl": "https://mp.weixin.qq.com/s/jdY-kM3B-PWMCyAaU9QxCQ"
@@ -12938,6 +12998,11 @@
       "sourceUrl": "https://www.xiaohongshu.com/discovery/item/6a68674d000000000101c8f4"
     },
     {
+      "path": "raw/articles/memt-1-0-memory-native-transformer-memtensor-2026.md",
+      "title": "RSI三块关键拼图，MemT 1.0从模型层补上「记忆」",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247934889&idx=1&sn=12ccca4a87a549a80d18c3330f69fefa"
+    },
+    {
       "path": "raw/articles/memtrace-llm-memory-debugging-zjunlp-alibaba-2026.md",
       "title": "浙大&阿里新论文：LLM记忆系统终于能调试了（MemTrace）",
       "sourceUrl": "https://www.xiaohongshu.com/explore/6a86847d000000002800629c?xsec_source=app_share&xsec_token=CBtBWq2Djc4mXJIrkMeRVi2EktwNrlvd9xaU7o4bhfF6E="
@@ -13086,6 +13151,11 @@
       "path": "raw/articles/microsoft-is-quietly-shopping-for-an-openai-replac.md",
       "title": "Microsoft is quietly shopping for an OpenAI replacement",
       "sourceUrl": "https://thenextweb.com/news/microsoft-startup-deals-life-after-openai"
+    },
+    {
+      "path": "raw/articles/microsoft-mai-base-2-frontier-pretraining-2026-10.md",
+      "title": "Frontier Pre-training at Microsoft AI: MAI-Base-2",
+      "sourceUrl": "https://microsoft.ai/news/frontier-pre-training-at-microsoft-ai/"
     },
     {
       "path": "raw/articles/microsoft-mxc-execution-containers-agent-sandbox-origin.md",
@@ -14963,6 +15033,11 @@
       "sourceUrl": "https://research.perplexity.ai/articles/rethinking-search-as-code-generation"
     },
     {
+      "path": "raw/articles/perplexity-space-agent-sandbox-open-source-2026-10.md",
+      "title": "Open-sourcing SPACE: Perplexity 的 Agent 沙箱平台",
+      "sourceUrl": "https://www.perplexity.ai/hub/blog/open-sourcing-space"
+    },
+    {
       "path": "raw/articles/perplexity-wandr-benchmark-research-agents-wide-deep-2026.md",
       "title": "perplexity-wandr-benchmark-research-agents-wide-deep-2026",
       "sourceUrl": "https://research.perplexity.ai/articles/wandr-benchmark-evaluating-research-agents-that-must-search-wide-and-deep"
@@ -15426,6 +15501,11 @@
       "path": "raw/articles/pytorch-2-12-release.md",
       "title": "PyTorch 2.12 Release Blog",
       "sourceUrl": "https://pytorch.org/blog/pytorch-2-12-release-blog"
+    },
+    {
+      "path": "raw/articles/pytorch-215-mps-backend-optimization-2026.md",
+      "title": "MPS in PyTorch 2.15",
+      "sourceUrl": "https://huggingface.co/blog/mps-pytorch-2-15"
     },
     {
       "path": "raw/articles/pytorch-in-kernel-recsys-optimization.md",
@@ -16571,6 +16651,11 @@
       "path": "raw/articles/senior-engineer-guide-inside-llm.md",
       "title": "Everything a Senior Engineer Needs to Know About What's Inside an LLM",
       "sourceUrl": "https://www.pathtostaff.com/p/everything-a-senior-engineer-needs"
+    },
+    {
+      "path": "raw/articles/sensenova-robodojo-harness-ablation-embodied-agent-2026.md",
+      "title": "机器人也开始RSI了！商汤给GPT-6-Astra加「外挂」，成功率翻倍",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIwMTc4ODE0Mw==&mid=2247723546&idx=1&sn=0b17b2e931cf822f148ffc2f09eee6eb"
     },
     {
       "path": "raw/articles/sensenova-u1-5-neo-unify-native-unified-multimodal-4k-sensetime-2026.md",
@@ -18861,6 +18946,11 @@
       "path": "raw/articles/vla不够了触觉将改写具身智能新格局.md",
       "title": "vla不够了触觉将改写具身智能新格局",
       "sourceUrl": "https://spectrum.ieee.org/daimon-robotics-physical-ai"
+    },
+    {
+      "path": "raw/articles/vllm-push-based-kv-transfer-disaggregated-inference-2026.md",
+      "title": "Push-based KV transfer to improve TTFT and TPOT for disaggregated inference in vLLM | Artificial Int",
+      "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/push-based-kv-transfer-to-improve-ttft-and-tpot-for-disaggregated-inference-in-vllm/"
     },
     {
       "path": "raw/articles/vllm-server-hf-jobs-one-command.md",
