@@ -1,7 +1,7 @@
 ---
 title: "ArbiterOS — 港中文 CURE Lab 开源 Agent 运行时治理内核"
 created: 2026-08-03
-updated: 2026-09-07
+updated: 2026-10-21
 type: entity
 tags: ['agent-governance', 'runtime-governance', 'execution-control', 'instruction', 'data-flow', 'agent-safety', 'harness-engineering', 'arbiteros', 'cuhk']
 sources: [raw/articles/arbiteros-governance-kernel-cuhk-ruofei-2026-08-03]
@@ -61,6 +61,32 @@ Trace（log/{trace_id}.json 按轨迹组织）要回答三件事：**输入从�
 ## 评测数据有边界
 
 论文在 AgentDojo 和 Agent-SafetyBench 攻击轨迹上做确定性重放，人工复核得到 1,914 个危险案例：OpenClaw 原生策略拦截率 6.17%（118/1,914），集成 Arbiter-K 后 92.95%（1,779/1,914）。实验采用围绕危险步骤的 prior+current 重放以减少重新规划差异，不等于"生产 Agent 安全率"（规划漂移、插件覆盖、旁路调用、业务状态、网络环境仍在）。可用性代价：OpenClaw 312 个良性样本通过率从 92.95%（290/312）降到 88.78%（277/312），额外误拦截集中在跨会话委派、日历/界面副作用、外部通信等边界动作。论文：《From Craft to Kernel: A Governance-First Execution Architecture and Semantic ISA for Agentic Computers》（arXiv:2604.18652）。^[raw/articles/arbiteros-governance-kernel-cuhk-ruofei-2026-08-03.md]
+
+## 深度分析
+
+### 为什么治理层必须站在推理循环之外
+
+自我治理在结构上不成立，问题不在能力，在位置：规划者同时是决定"现在就做"的那一方，合规判断与行动冲动在同一套概率分布里竞争，服从约束只能靠采样，而策略要的是确定性。这不是引入一个更聪明的审查者，而是把判断权移出被判断者——和"业务代码不自己判断权限"是同一条原则。Prompt 加固因此不能替代：提示词改变的是先验，不是边界^[raw/articles/arbiteros-governance-kernel-cuhk-ruofei-2026-08-03.md:31-40]。事后审计同理：日志能归因不能阻止，邮件、支付、迁移不可逆，"事后发现"等于"已经失败"^[raw/articles/arbiteros-governance-kernel-cuhk-ruofei-2026-08-03.md:89-97]。
+
+### 执行前控制点的成本模型
+
+控制点付三种成本：延迟、误拦截的可用性损失、策略维护人力。三者互相拉扯：提高召回抬高误拦截，压低误拦截就漏。这构成"小策略表胜过学习型裁判"的理由：策略表可审计、可版本化、失败模式可枚举；学习型裁判的误判无法解释、无法定责，还把治理层变成第二个概率模型——问题只是换了位置^[raw/articles/arbiteros-governance-kernel-cuhk-ruofei-2026-08-03.md:110-122]。论文中良性通过率 92.95%→88.78%，误差集中在跨会话委派、日历副作用、外部通信等边界动作^[raw/articles/arbiteros-governance-kernel-cuhk-ruofei-2026-08-03.md:134-140]——成本该集中花在高风险终点：只有终点绑定不可逆副作用，也才有"草稿优先"这类手段吸收误拦截。
+
+### 指令级粒度买到的是什么
+
+工具级白名单是"能力"维度，指令级是"数据"维度。一次 POST 该不该放行，取决于请求体里有没有凭据内容、上游有没有不可信网页痕迹，而非工具名。这是把程序分析的污点传播搬到 Agent 轨迹：source 打标签，沿 parent_id / reference_tool_id 传播，sink 处校验，买到的是组合风险可见性——单步合法、连起来危险，工具名检查覆盖不到。代价是完整性依赖解析：参数未解析、数据经业务系统二次中转，标签链即断，而策略把"断链"读成"干净"，失效方向是假阴性而非假阳性^[raw/articles/arbiteros-governance-kernel-cuhk-ruofei-2026-08-03.md:58-75]。刚性边界仍需 [[concepts/agent-sandbox]] 兜底。
+
+### 作者自陈的边界与生产里最先坏的地方
+
+评测是围绕危险步骤的 prior+current 确定性重放，不等于生产安全率；策略撰写是人力密集的映射工程；Trace 只能证明治理层看到了什么^[raw/articles/arbiteros-governance-kernel-cuhk-ruofei-2026-08-03.md:136-140]。生产里最先坏的通常不是拦截率而是覆盖率：一个绕过代理的脚本或宿主机上的 MCP Server 就让有效治理率归零而报表照旧；代理成为单点后，默认放行还是默认阻断本身是新架构风险——作者建议高风险链路失败关闭、低风险只读有限降级并记录降级^[raw/articles/arbiteros-governance-kernel-cuhk-ruofei-2026-08-03.md:52-54]。其次是误拦截积累出的"关护栏"压力。
+
+## 实践启示
+
+1. **先量覆盖率，再谈拦截率。** 分母是全部工具调用；只统计走代理的请求，高拦截率没有解释力^[raw/articles/arbiteros-governance-kernel-cuhk-ruofei-2026-08-03.md:154-160]。
+2. **从不可逆终点倒推策略。** 先枚举外发、写库、删除、部署、对外通知这几类 sink，再决定哪些上游打标签。
+3. **fail-closed 写进架构而非配置。** 治理层不可用时默认行为要显式分级：高风险阻断、低风险只读降级、降级进审计。
+4. **治理通过与系统安全是两件事。** IAM、Sandbox、网络出口与业务补偿不可被策略层替代；执行权跟副作用绑定，恢复能力跟故障域绑定。
+5. **用 Trace 三问做迭代指标。** 规则高频命中通常是边界太宽或任务该拆，误拦截集中在某类工具则说明解析器缺上下文^[raw/articles/arbiteros-governance-kernel-cuhk-ruofei-2026-08-03.md:126-130]。
 
 ## 与相关实体关系
 

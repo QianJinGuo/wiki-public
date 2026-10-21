@@ -1,7 +1,7 @@
 ---
 title: "Agent Skills 开发指南：6 字段规范、3 级加载、5 步评估闭环"
 created: 2026-07-01
-updated: 2026-09-07
+updated: 2026-10-21
 type: entity
 tags: [agent-skills, skill-development, anthropic, best-practices, progressive-disclosure]
 sources: [raw/articles/agent-skills-development-guide-shugex-2026]
@@ -249,6 +249,45 @@ agent 截断/摘要旧消息时，应该豁免 skill 内容（skill 指令是持
 | 3 次 | 每条 query 跑的次数 |
 | 0.5 | 触发率阈值 |
 | 60/40 | train/validation split 比例 |
+
+## 深度分析
+
+### 渐进式披露是一次信息经济学交易，不是排版技巧
+
+三级加载的真正含义是：不同信息有不同的常驻费率。catalog 的 50-100 tokens/skill 是每个会话都要付的固定税，SKILL.md 的 5000 tokens 只在激活时付，references 的成本落在具体某一步。该问的不是"这段写多少字"，而是"这段信息值得按哪个费率计价"。
+
+由此有个反直觉推论：description 的杠杆远高于正文。catalog 里唯一可检索的只有 name + description，正文再好，不触发就等于零 —— 官方称其为"触发 skill 的唯一信号"，说的就是这个不对称。^[raw/articles/agent-skills-development-guide-shugex-2026.md:158-165]
+
+克制也不只是省钱，更是鲁棒性：压缩旧消息时 skill 内容理论上应被豁免，但实现依赖剪枝算法识别，越长越容易被误伤，而丢失是无声的 —— 模型继续干活，只是没了专门指令。^[raw/articles/agent-skills-development-guide-shugex-2026.md:462-468] 500 行上限同时是成本约束和故障率约束。
+
+### 6 字段是一份让 skill 熬过模型升级的契约
+
+六个字段没有一个绑定具体模型或 prompt 技巧：name 是身份，description 是检索键，compatibility 是环境前置，metadata 是扩展口袋，allowed-tools 是能力声明。全部是"关于 skill 的事实"，而不是"对模型说的话"。
+
+这种分离有三个收益：frontmatter 可在不加载正文时完成校验过滤，环境不满足、权限不足都在披露阶段就决定；能力用 `allowed-tools` 机读声明而非在正文描述，使工具集合成为约束而非自然语言承诺；`metadata` 加前缀则承认生态会膨胀，又不破坏解析。
+
+更能说明取向的是解析容错：name 与目录不符、超长都只 warn 仍加载，只有 description 缺失或 YAML 完全不可解析才跳过。^[raw/articles/agent-skills-development-guide-shugex-2026.md:421-429] 取舍很明确：宁可生态多些不完美的 skill，不要格式纯洁但无人采用。
+
+### 简洁与能力的张力，靠 scripts/ 泄压
+
+一边要求正文 5000 token 内，一边鼓励"每次都重发明的逻辑就打包成脚本"，二者并不矛盾：脚本是唯一能把确定性能力装进 skill 却几乎不占 context 的载体，所以 scripts/ 不是附录，而是预算泄压阀。
+
+但泄压有前提 —— I/O 契约要一起搬进去。脚本禁止交互式提示（agent 在非交互 shell 无从应答，会直接挂起），输出须结构化且大小可预测（很多 harness 在 10-30K 字符处自动截断），诊断走 stderr。^[raw/articles/agent-skills-development-guide-shugex-2026.md:360-396] 否则只是把 token 从 SKILL.md 挪到 stdout，总账没变，还多一个失败模式。
+
+### 官方 eval 闭环最弱的一环
+
+20 条 query、每条 3 次、阈值 0.5，意味着单条触发率只能落在 0/0.33/0.67/1 四档，"过 0.5"实际等于"三次里至少两次触发"。分辨率如此粗，near-miss 用例上的小幅改进量不出来，易被噪声读成进步。^[raw/articles/agent-skills-development-guide-shugex-2026.md:167-190] 其次，without 基线由当时模型能力决定，升级后旧 delta 不可比，却未约定复测；"先看首轮输出再写 assertion"虽务实，也让评估偏向已做到的部分。
+
+最大的缺口是拥挤 catalog：官方评测是单 skill 隔离场景，真实环境里几十个 skill 共存、关键词互相竞争，触发率会系统性下降。这恰是"装了但没被用"这一最常见失败的直接原因，却无实验覆盖。
+
+## 实践启示
+
+1. **先写 description，再写正文。** 用 20 条 query（8-10 正例 + 8-10 near-miss）卡过 0.5 再动内容；顺序反过来会让人舍不得改 description。
+2. **每条正文指令都过"删掉它 agent 会搞错吗"。** 答"不会"就删，这条自检直接对齐 context 预算。
+3. **Gotchas 段优先写。** 违反合理假设的环境特有事实，agent 不被告诉就必然踩，投入产出比最高。
+4. **确定性动作做成脚本：非交互 + 结构化 stdout + 诊断走 stderr。** 附 `--help`、有意义的退出码、破坏性操作的 `--dry-run`。
+5. **给默认值，别给菜单。** 多方案可行时挑一个默认并简述替代；只在顺序敏感、操作脆弱时写死步骤。
+6. **每次真实任务后读 trace，把纠正沉淀进 gotchas。** 两类 eval 都随模型版本失效，真实 trace 是唯一持续产出新信息的信号源。
 
 ## 相关实体
 

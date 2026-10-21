@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "sourceRevision": "2c873a45d25cc84bcab3edf5bbc6a903d0acaaad",
+  "sourceRevision": "5ec584c948b926e8cf1bec5aa3c5d4bd59ebe0e7",
   "files": [
     {
       "path": "raw/articles/0.25秒识破未见攻击-lod-lvlm-jailbreak-detection-emnlp2026.md",
@@ -1296,6 +1296,11 @@
       "path": "raw/articles/agan-codex-harness-source-deep-dive-2026-09-03.md",
       "title": "万字长文 | 深度解读 Codex Harness 源码",
       "sourceUrl": "https://mp.weixin.qq.com/s/xa2xrK-LyM5Ktow2hq1vWQ"
+    },
+    {
+      "path": "raw/articles/age-of-reasoning-epistemic-state-architecture-metis-2026.md",
+      "title": "The Age of Reasoning: Intelligence from First Principles",
+      "sourceUrl": "https://metisreasoning.ai/whitepaper/the-age-of-reasoning-2026-10.pdf"
     },
     {
       "path": "raw/articles/agency-and-agents.md",
@@ -7833,6 +7838,11 @@
       "sourceUrl": "https://nesbitt.io/2026/05/19/dumb-ways-for-an-open-source-project-to-die.html"
     },
     {
+      "path": "raw/articles/durable-harness-wal-replay-vercel-2026.md",
+      "title": "Making every harness durable",
+      "sourceUrl": "https://vercel.com/blog/making-every-harness-durable"
+    },
+    {
       "path": "raw/articles/dwarkesh-patel下一代ai可能是干活干出来的.md",
       "title": "Dwarkesh Patel：下一代AI，可能是干活干出来的",
       "sourceUrl": "http://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651041546&idx=2&sn=fedc77937dafe2bff30de5b1d8d47e40&chksm=84e66b74b391e2622fe2705d6d20db3f35685261a164ac701af536a6a098971b92c858cfd776"
@@ -11378,6 +11388,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/8hBKVQsjqPka0w9FxVNhaA"
     },
     {
+      "path": "raw/articles/jiuwen-symbiosis-physical-agent-wet-lab-automation.md",
+      "title": "Jiuwen Symbiosis：物理智能体走进自动化科研实验室",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651068687&idx=2&sn=cf6a5f114ed828710d6d6b0ed6a5bc4c"
+    },
+    {
       "path": "raw/articles/jiuwen-symphony-skill-orchestration-distribution-openjiuwen.md",
       "title": "openJiuwen 开源 Jiuwen Symphony — 海量技能的精准发现与稳定协同（技能编排与分发系统）",
       "sourceUrl": "https://mp.weixin.qq.com/s/l7219b4sFVsrxzMFZwiv-Q"
@@ -12933,6 +12948,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/CyZv5BQyW3SSVIJ1U8Ba9A"
     },
     {
+      "path": "raw/articles/memcurrent-persistent-memory-production-agents-databricks-2026.md",
+      "title": "MemCurrent: Designing Persistent Memory for Production Agents",
+      "sourceUrl": "https://www.databricks.com/blog/memcurrent-designing-persistent-memory-production-agents"
+    },
+    {
       "path": "raw/articles/memento-skills-agent-self-evolving.md",
       "title": "Memento-Skills：让 Agent 通过技能外部记忆持续进化",
       "sourceUrl": "https://mp.weixin.qq.com/s/c-7wTItL7tubqVFCrMQPCA"
@@ -13001,6 +13021,11 @@
       "path": "raw/articles/memt-1-0-memory-native-transformer-memtensor-2026.md",
       "title": "RSI三块关键拼图，MemT 1.0从模型层补上「记忆」",
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247934889&idx=1&sn=12ccca4a87a549a80d18c3330f69fefa"
+    },
+    {
+      "path": "raw/articles/memt-10-memory-native-rsi-jiqizhixin-2026.md",
+      "title": "MemT 1.0 发布：迈向递归自我改进，让记忆成为模型内生能力",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651068687&idx=1&sn=fcbc362d674840e32f9ae3d954e04744"
     },
     {
       "path": "raw/articles/memtrace-llm-memory-debugging-zjunlp-alibaba-2026.md",
@@ -16163,6 +16188,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/rlfTKyWhALsNONhAwGih1A"
     },
     {
+      "path": "raw/articles/rsi-retracing-deep-learning-path-damoxing-zhineng-2026-10-22.md",
+      "title": "RSI，正在重走深度学习的老路",
+      "sourceUrl": "https://mp.weixin.qq.com/s/oou0Ls4WqyK1jS0jNVzzUA"
+    },
+    {
       "path": "raw/articles/rsi-survey-towards-ai-that-improves-itself-2026.md",
       "title": "rsi-survey-towards-ai-that-improves-itself-2026",
       "sourceUrl": "https://mp.weixin.qq.com/s/XiAdIwQ6VqLz2OO2RHKG3g"
@@ -16406,6 +16436,11 @@
       "path": "raw/articles/schmoozing-is-dead-agents-are-hitting-120-of-humans-and-growth-is-the-only-thing.md",
       "title": "Schmoozing Is Dead, Agents Are Hitting 120% of Humans, and Growth Is the Only Thing That Matters",
       "sourceUrl": "https://www.saastr.com/schmoozing-is-dead-agents-are-hitting-120-of-humans-and-growth-is-the-only-thing-that-matters-10-things-from-the-closing-qa-at-saastr-ai-annual-2026/"
+    },
+    {
+      "path": "raw/articles/scholarevolve-research-guided-harness-evolution-ucsb-ms-2026.md",
+      "title": "AI Agent 学会自我进化：微软与 UCSB 的 ScholarEvolve 从论文里改 Harness",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651068870&idx=3&sn=c2afa68be033b7f3864579adae468ef1"
     },
     {
       "path": "raw/articles/sciagentgym-benchmark-multi-step-scientific-tool-use.md",
@@ -18313,6 +18348,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/zDDEkrWA-o5V1ZJj7fIdeA"
     },
     {
+      "path": "raw/articles/torchtpu-native-pytorch-tpu-backend-google-meta-2026.md",
+      "title": "Introducing TorchTPU: running PyTorch natively on Google TPUs",
+      "sourceUrl": "https://pytorch.org/blog/introducing-torchtpu/"
+    },
+    {
       "path": "raw/articles/toto-2-context-aware-log-analytics-for-complex-distributed-systems.md",
       "title": "Toto 2: Context-aware log analytics for complex distributed systems",
       "sourceUrl": "https://www.datadoghq.com/blog/ai/toto-2/"
@@ -19356,6 +19396,11 @@
       "path": "raw/articles/world-model-evaluation-position-paper-nju-2026.md",
       "title": "world-model-evaluation-position-paper-nju-2026",
       "sourceUrl": "https://mp.weixin.qq.com/s/0OD4XvDbVTIEVAduFCzHzQ"
+    },
+    {
+      "path": "raw/articles/worldmemarena-multimodal-agent-memory-benchmark-2026.md",
+      "title": "从记忆到行动，还有多远？WorldMemArena 把多模态记忆放进真实交互",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651068687&idx=3&sn=e71b564d56571d1000e85e0fb82bf595"
     },
     {
       "path": "raw/articles/worldtrace-addressable-memory-video-world-models.md",

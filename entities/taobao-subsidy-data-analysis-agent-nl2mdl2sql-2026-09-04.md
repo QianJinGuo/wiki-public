@@ -1,7 +1,7 @@
 ---
 title: "淘宝百亿补贴数据分析助手 Agent：NL2MDL2SQL + 多Agent协同 + 六层知识体系"
 created: 2026-09-04
-updated: 2026-09-10
+updated: 2026-10-21
 type: entity
 tags: [agent, data-agent, nl2sql, nl2mdl2sql, wrenai, semantic-layer, multi-agent, intent-routing, react, lineage, sql-lineage, metric-registry, attribution, evaluation, hologres, taobao, tmall, alibaba]
 sources:
@@ -87,6 +87,47 @@ MetricDef 以 GMV 为例：`formula_type=multiplicative`，factors=[IPVUV(column
 ## 新表接入（Onboard 五步自动化流水线）
 
 ①表结构同步（ODPS schema→mdl.json+TisPlus3）②表类型探查（A预聚合/B普通+主键+维度）③规则抽取（下游血缘代码→LLM 提取 WHERE 条件）④SQL 模板生成（B类表自动标准模板）⑤入库（规则/片段/能力清单写入 TisPlus3）。支持 Web 界面与 CLI 两种方式。^[raw/articles/taobao-subsidy-data-analysis-agent-nl2mdl2sql-2026-09-04.md]
+
+## 深度分析
+
+### 语义层作为编译目标：NL2MDL2SQL 究竟改变了什么
+
+三个失败模式（幻觉字段、口径错误、不可复用）同源：**把"写对一条 SQL"当成开放域文本生成**，候选空间是全部语法 × 字段 × 过滤组合，模型只能猜。NL2MDL2SQL 换的不是"多加一层"，而是**换了任务类型**——LLM 在 MDL 声明的模型/字段/关系上做选择与组装，`mdl.json` 是编译目标，SQL 只是产物。错误由此从"语义错误"降为"检索失败"：字段不在 MDL 里就是不存在，`expression` 就是口径，Validator Gate 的后置校验才有落点；口径也从 LLM 记忆搬进一处可 review 的定义，"可复用"与"可审计"因此是同一件事。^[raw/articles/taobao-subsidy-data-analysis-agent-nl2mdl2sql-2026-09-04.md]
+
+代价：MDL 是新单点，维护随表数线性增长，腐化比代码腐化隐蔽（diff 没人看）；未 onboard 的表即能力缺口，Agent 只能失败或退回它本想避免的自由 SQL；表达力止于"字段怎么算"，管不了"业务为什么这么拆"（需 L5）与"表该不该用"（时效/成本/权限）。它解决**字段级正确性**，不解决**业务意图正确性**。
+
+### 六层知识：为什么分层胜过一个更大的 prompt
+
+全塞进 prompt 也能跑，但会撞三堵墙：token 随表数膨胀、知识矛盾时无从仲裁、改一条规则要重发整段。分层把三者转成工程问题：**检索路由**（`search_metrics`(L5) → `cap_search`(L1) → `snippet`(L2) → `rule`(L3) → `lineage`(L4) 的固定优先级，对应先定口径、再定表、再找模板、再查规则、最后验血缘）、**指标注册表作契约**（乘法型恒等式铁律：因子相乘约分后必须等于 `total_col`，把"拆得对不对"变成可计算等式，不需 judge）、**冲突仲裁**（指标定义 > 规则 > 片段 > 常识，血缘提供证据链）。^[raw/articles/taobao-subsidy-data-analysis-agent-nl2mdl2sql-2026-09-04.md]
+
+L2 片段库、L3 规则库仍是软知识，质量取决于抽取；仲裁秩序不写显，层数越多越打架。
+
+### 6D 意图感知评测：精巧处与结构性盲区
+
+最聪明的是**意图感知权重**：归因意图 D5（SQL）为 0、取数意图 D1（因子）为 0，承认两种任务的成功定义不同。节点级归因是另一半价值：从事件流提取 7 个节点状态，把"43 分"翻译成 `gate - validation_exhausted` 或 `tool_call - 工具返回错误`，评测从"打分"变成"定位"。^[raw/articles/taobao-subsidy-data-analysis-agent-nl2mdl2sql-2026-09-04.md]
+
+四个盲区：**意图标签与被评对象同源**——权重按意图配、意图由 Intent Agent 判，分类一错就用取数权重评归因答案，且错误不可分离，必须给意图分类单建标注集；**加权和掩盖回归**——某维度在某意图下权重为 0 则退化永不显形，不锁权重版本时跨版本分差可能只是配置差异；**D4 的 LLM-as-Judge 与生成同源**，偏好自己熟悉的表述；**样本不足**——15 用例覆盖 6 意图，够做回归防护，不够证明提升。
+
+### Onboard 五步：护城河在流水线，不在模型
+
+换任何同档模型这套系统都能跑，壁垒在五步接入：表结构同步 → 表类型探查（A 预聚合 / B 普通+主键+维度）→ 规则抽取（从下游血缘代码 LLM 提 WHERE）→ 模板生成 → 入库。**准确率不是模型给的，是"这张表的口径有没有写进 L1/L3"给的**。^[raw/articles/taobao-subsidy-data-analysis-agent-nl2mdl2sql-2026-09-04.md]
+
+第三步最难也最不可替代："`ads_bybt_flow_sum_di` 必须加 `activity_type='百亿补贴'`"不在任何文档里，只活在下游 ETL 的 WHERE 与资深数仓脑子里；反抽能把隐性知识显性化，但它概率性，所以采集链路必须四段式（采集 → 沉淀 → 人工审核 → 入库）。被低估的还有脏活：外部表按需创建、LRU 缓存、断库重建重试、失败 fallback ODPS——它们决定"5-10 次下钻是 10 分钟还是 40 秒"，也决定分析师用不用第二次。
+
+### 多 Agent 协同：哪里真需要，哪里是过度设计
+
+文中理由是"单 Agent 需要巨大 prompt + 几十个工具"。更准确地说：**这是上下文隔离需求，不是智能分工需求**——Query 要 odps/血缘、Analysis 要归因树与 python 沙箱、Ops 要运维接口，工具集几乎不重叠，拆开只是把候选工具从几十个降到几个。^[raw/articles/taobao-subsidy-data-analysis-agent-nl2mdl2sql-2026-09-04.md]
+
+主链上也有多处不需要自主性：意图识别 → 路由 → 单一专家是确定性的，LLM 做路由只是给分类包了层不确定性；`build_sql → validate → execute` 是固定序列，交给 ReAct 只让延迟与成本不可预测。文中设计正好印证：Hologres 闸门只对 `stream_analysis` 生效、Validator 后置强制、切库走固定自愈重试——都是把不确定性收回确定性管线，真实形态是"确定性骨架 + 局部 ReAct"。
+
+## 实践启示
+
+1. **先建语义层，再谈 prompt**：字段与口径未声明前，prompt 优化都是在猜；语义层能让"字段不存在"变成编译期错误。
+2. **把口径写成可执行断言**：恒等式、必填 WHERE、字段白名单都不依赖模型判断；靠"模型应该知道"维持的口径必在升级后失效。
+3. **分层必须配权威等级**：冲突按"指标定义 > 规则 > 片段 > 常识"仲裁，血缘作证据链，否则层数越多越互相打架。
+4. **评测锁权重版本、给意图单独建标注集**：否则分类错与答题错混叠，分数不知在评什么；每类不足 10 例只当 smoke test。
+5. **把 onboarding 当产品做**：五步流水线 + 人工审核队列 + 表结构变更自动 regenerate，比模型选型更决定覆盖率。
+6. **只在工具集冲突处拆 Agent**：延迟敏感路径用闸门与固定重试，自主性留在"选哪条分析路径"而非"怎么调工具"。对照见 [[entities/trust-infrastructure-ai-data-retrieval-taobao-2026]]、[[entities/gaode-ai-native-data-agent]]。
 
 ## 与已有实体的关系
 

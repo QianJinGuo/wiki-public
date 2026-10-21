@@ -1,7 +1,7 @@
 ---
 title: "小米 MiMo-V2.6 强化学习直播：RL 扩展的三条轴与「每 1 个百分点多少钱」"
 created: 2026-09-17
-updated: 2026-09-24
+updated: 2026-10-22
 type: entity
 tags: [mimo, xiaomi, reinforcement-learning, post-training, agentic-rl, training-economics, data-mixture, rl-scaling]
 sources: [raw/articles/mimo-v2-6-rl-training-livestream-economics-xiaomi-2026, raw/articles/xiaomi-mimo-v26扩展强化学习规模迈向自我提升, raw/articles/mimo-v26-shixiaoyao-hands-on-review-2026]
@@ -58,6 +58,37 @@ provenance_state: extracted
 把时间线往前拉，这是小米今年在大模型上的第四波动作：3 月匿名模型 Hunter Alpha 登顶 OpenRouter 调用榜后被认领为 MiMo-V2-Pro；4 月 27 日 MiMo-V2.5 系列以 MIT 协议开源（Pro 版总参数 1T、激活 42B、上下文 100 万 token），同日宣布三年投入超 600 亿元；6 月发布 UltraSpeed 版本（1T 参数输出速度推到每秒 1000 token）并公开后训练方法 MOPD 论文。^[raw/articles/mimo-v2-6-rl-training-livestream-economics-xiaomi-2026.md]
 
 其中推理侧的系统优化已有沉淀（见 [[entities/mimo-v2-5-inference-system-optimization-hybrid-swa|MiMo-V2.5 推理系统全链路优化]]），编码 harness 侧的实践见 [[entities/mimo-code-xiaomi-coding-harness-2026|MiMo Code 编码 Harness]]；本页补充的是**后训练/RL 阶段的公开账本**这一此前缺位的一环。^[raw/articles/mimo-v2-6-rl-training-livestream-economics-xiaomi-2026.md]
+
+## 深度分析
+
+### 一、被公开的不是算法突破，而是一条生产成本曲线
+
+仪表盘真正披露的是「一步多少钱、这一步换回多少通过率」，把 RL 当成有价格的生产函数公布。这跟「某算法又涨了几个点」是两类信息：后者免费，前者一次 7.4 万美元。成本一旦进读数，问题就从「还能不能扩展」变成「按这个斜率还值不值得扩展」——这是资本配置问题，不是算法问题；扩展顺序与吞吐/成本的取舍可对照 [[entities/agentic-rl-frameworks-practices-long-horizon-wolfe-2026|长程 agentic RL 框架实践]]。^[raw/articles/mimo-v2-6-rl-training-livestream-economics-xiaomi-2026.md]
+
+### 二、三条轴里，rollout 长度最接近天花板
+
+算力、环境、评分器三轴同时放大，但成本结构显示吸血的是 rollout：一题平均 55 轮工具调用、9 万 token 上下文，一步 2.5 万次作答；官方口径下单步 token 已到 2.7～3.7B，按 30 步、Pro 262 万美元折算，每百万训练 token 约 23～32 美元，是其自身 API 输出单价（约 0.85 美元/百万）的三十倍量级。继续拉长轨迹，边际 token 买到的信息在变薄；评分器侧（组内相对比较、奖励更短路径）是把已有轨迹榨出更多信号，单价低得多。余量在「判卷」与「任务多样性」，不在「让模型多想几步」。轨迹 token 的统一计量口径见 [[entities/agentic-rl-token-in-token-out|token-in / token-out]]。^[raw/articles/xiaomi-mimo-v26扩展强化学习规模迈向自我提升.md]
+
+### 三、2/3 代码 + 13.1% 视觉 + 3% 对话，是按奖励密度配的
+
+三类的差别不在难度，而在单位 token 能挂几个可判定的检查点：代码有测试用例，视觉任务有渲染结果可对照，开放对话几乎没有客观判据。把对话压到 3%，是把 batch 里「不可验证 token」的占比压到最低——这是对可验证奖励密度的押注，不是对代码能力的偏好。推论：配比应跟随 verifier 覆盖率走；verifier 覆盖不到的能力，塞进 RL 只会放大 reward hacking 面——verifier 本身是否可信是独立课题，见 [[entities/adversarial-verification|对抗性验证]]。^[raw/articles/mimo-v2-6-rl-training-livestream-economics-xiaomi-2026.md]
+
+### 四、公开的显存故障，是一笔没写进预算的可靠性税
+
+「Pro 训练因一个节点的显存问题正在重启」比分数更有信息量：单节点故障能打断整条训练线，说明 step 是最小可恢复单元，而一步值 7.4 万美元——冷启动、重跑、异步 staleness 都要计入。官方对策（冻结 MoE Router 抑制专家负载漂移、覆盖奖励设计与验证器交叉校验的 reward hacking 防线）也印证：长跑 RL 的稳定性预算与算力预算是同一笔钱的两面；环境侧的故障面见 [[entities/agentenv-agentic-rl-execution-environment|AgentEnv 执行环境]]。^[raw/articles/xiaomi-mimo-v26扩展强化学习规模迈向自我提升.md]
+
+### 五、读厂商自家成本曲线要打折的三处
+
+一是分母：训练通过率测的是同一批 1568 道训练题，是拟合度不是能力，每题 16 次尝试还给采样运气很大权重。二是边际：14 万 / 3.8 万美元是「累计花费 ÷ 累计涨幅」的平均值，涨幅若在放缓，下一点的真实价格远高于均值。三是账外项：半年基础研究、集群摊销、失败 step、评测与 verifier 的独立算力都没进这个数字。用终局数据交叉复核：Pro 262 万美元买 DeepSWE +14.17 分（约 18.5 万美元/分），Flash 85 万美元买 +16.88 分（约 5 万美元/分），3.7 倍差距与直播期的 4 倍吻合——这个比值比绝对数额可信。^[raw/articles/mimo-v26-shixiaoyao-hands-on-review-2026.md]
+
+## 实践启示
+
+1. **先给一道题定价，再决定模型多大。** 用「工具调用轮次 × 上下文长度 × 每题尝试数 × 有效 batch」估单步成本，再乘以预期步数；rollout 是主项，参数更新不是。
+2. **训练通过率与样本外通过率分开记账。** 前者是拟合度、会饱和，后者才是能力；只报前者会高估收益，只报后者会看不出过拟合。
+3. **每 5～10 步重算一次边际斜率。** 斜率变平就换轴（加任务、提 verifier），不要靠加 rollout 硬推；平均值会掩盖衰减。
+4. **先买 verifier，再买卡。** 组内相对评分、交叉校验、对抗评测的单价远低于多跑一轮 rollout，且直接降低 reward hacking 风险。
+5. **把 3～5% 的重跑率写进预算。** 明确 checkpoint 粒度、单节点故障半径、异步 staleness 上限；一步 7 万美元的训练不该按 100% 有效步数报价。
+6. **先算停止条件。** 当「$/样本外百分点」高于同等预算投给数据清洗、蒸馏或推理优化的替代收益时，就该停——同代小模型的 RL 性价比可能高出 3～4 倍，先在小模型上把曲线跑穿。
 
 ## 相关
 

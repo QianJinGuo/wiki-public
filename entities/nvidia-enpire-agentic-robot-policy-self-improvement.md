@@ -11,7 +11,7 @@ tags:
   - real-world-robotics
   - policy-learning
 created: 2026-06-22
-updated: 2026-09-10
+updated: 2026-10-22
 type: entity
 review_value: 9
 review_confidence: 9
@@ -26,192 +26,74 @@ review_category: tech
 
 # Agentic Robot Policy Self-Improvement in the Real World
 
-> 原文存档：[[raw/articles/nvidia-enpire-agentic-robot-policy-self-improvement|原文存档]]
+## Summary
 
-## 核心内容
+ENPIRE is a harness framework from NVIDIA GEAR with CMU and UC Berkeley that turns real-world robot manipulation research into a closed loop a coding agent can drive: reset the scene, run a policy, verify the outcome, read the logs, and rewrite the training code. By exposing the physical environment through an automatic reset-and-verification interface, frontier coding agents autonomously develop manipulation policies that reach a 99% pass@8 success rate on PushT, pin-box organization, and zip-tie cutting, with matching simulation results in RoboCasa. The paper's real contribution is not a new RL algorithm but the claim that the missing abstraction for automating robotics research is a repeatable physical feedback routine. ^[raw/articles/nvidia-enpire-agentic-robot-policy-self-improvement.md]
 
+## Key Points
 
+- **Four modules, one loop.** Environment (EN) handles automatic reset and verification; Policy Improvement (PI) launches refinement; Rollout (R) evaluates policies on one or many physical robots in parallel; Evolution (E) has coding agents read logs, consult literature, and patch both algorithm code and training infrastructure.
+- **The agent only touches the world through reset and verify.** Every hypothesis is tested as a real-world success rate rather than a loss curve, so the objective the agent optimizes is the one that actually matters.
+- **Interchangeable PI regimes.** Heuristic learning, tool calling, behavior cloning, and offline or online RL all sit behind the same interface, which makes cross-recipe ablations fair and lets the harness stay fixed while the policy class varies. ^[raw/articles/nvidia-enpire-agentic-robot-policy-self-improvement.md]
+- **Automatic evaluation is a perception pipeline, not a human label.** For zip-tie insertion, a detector boxes the head and strap, a segmentation model resolves them into masks, each camera view independently judges whether the strap passes through the head above a length threshold, and the per-camera verdicts fuse into one binary reward. ^[raw/articles/nvidia-enpire-agentic-robot-policy-self-improvement.md]
+- **Automatic reset is the other half of autonomy.** Each task returns to a randomized but known initial state without intervention, and the system records whether the reset actually succeeded along with representative frames for inspection. ^[raw/articles/nvidia-enpire-agentic-robot-policy-self-improvement.md]
+- **A fleet beats a single arm.** ENPIRE parallelizes rollouts across multiple robots and proposes Mean Robot Utilization (MRU) and Mean Token Utilization (MTU) to score multi-agent physical autoresearch on the resources that are actually scarce: robot-minutes and tokens. ^[raw/articles/nvidia-enpire-agentic-robot-policy-self-improvement.md]
+- **The search is legible.** An idea tree records one branch per agent and one node per idea, with a green ring on ideas that raised the team's average success rate and green curves tracing cross-agent inspiration, plotted against wall-clock time next to the success-rate curve. ^[raw/articles/nvidia-enpire-agentic-robot-policy-self-improvement.md]
+- **Evolution is scheduled, not improvised.** Agents cycle through literature review, algorithm-variant proposals, infrastructure optimization (data sampler, parameter sweeps), and result summarization on a hill-climb timeline.
 
+## 深度分析
 
-## ENPIRE: Agentic Robot Policy Self-Improvement in the Real World
+### The missing abstraction is an environment contract, not a stronger policy
 
-, [Jia Xie](https://jia-xie.com/)2†, [Tonghe Zhang](https://tonghe-zhang.github.io/)2†, [Haotian Lin](https://darthutopian.github.io/)2†, [Letian "Max" Fu](https://max-fu.github.io/)3, [Haoru Xue](https://haoruxue.github.io/)3, Jalen Lu 2, ^[raw/articles/nvidia-enpire-agentic-robot-policy-self-improvement.md]
+The paper's framing is deliberately unglamorous. Dexterous manipulation in the real world is bottlenecked by human supervision and algorithmic engineering, and coding agents have already shown they can automate algorithm search — but only where the search runs against something executable, like a test suite. Robotics has no equivalent: there is no cheap, trustworthy oracle that tells an agent whether its last idea was better.
 
-[Yi Yang](https://yiyang-23.github.io/)2, [Cunxi Dai](https://cunxid.github.io/)2, [Zi Wang](https://ziwang1105.github.io/)1, [Jimmy Wu](https://jimmyyhwu.github.io/)1, [Guanzhi Wang](https://guanzhi.me/)1, [S. Shankar Sastry](https://www2.eecs.berkeley.edu/Faculty/Homepages/sastry.html)3, [Ken Goldberg](https://goldberg.berkeley.edu/)3, ^[raw/articles/nvidia-enpire-agentic-robot-policy-self-improvement.md]
+ENPIRE's answer is to manufacture that oracle out of the physical setup. The environment is written as a class with `reset`, `get_reward`, `get_observation`, and `step` — the same shape as a gym environment — and the agent is handed nothing but that interface plus a code repository. Once the contract exists, every skill a coding agent already has transfers intact: read a stack trace, grep the literature for a named failure mode, edit the trainer, rerun, compare numbers. The insight is that the transfer problem in robotics is not about giving the model motor knowledge; it is about giving it a feedback channel with the right latency, cost, and reliability.
 
-[Linxi "Jim" Fan](https://jimfan.me/)1‡, [Yuke Zhu](https://yukezhu.me/)1‡, [Guanya Shi](https://www.gshi.me/)2‡ ^[raw/articles/nvidia-enpire-agentic-robot-policy-self-improvement.md]
+This also explains why the framework calls itself a harness rather than a system. The policy is one replaceable component inside it; the durable asset is the loop.
 
-1 NVIDIA 2 CMU 3 UC Berkeley†Equal contribution‡Equal advising ^[raw/articles/nvidia-enpire-agentic-robot-policy-self-improvement.md]
+### Two unfilled functions decide whether the loop is autonomous
 
-[Paper](https://drive.google.com/drive/folders/1J8w1yQux9ODYqTNZ2ynOIFjerBIQtw1V?usp=sharing) ^[raw/articles/nvidia-enpire-agentic-robot-policy-self-improvement.md]
+The environment scaffold contains two placeholders a human must fill in before anything runs: `# TODO: auto task reset` and `# TODO: scalar reward`. That snippet is the most honest part of the work, because those two functions are exactly where the autonomy stops. Everything else — the literature search, the hyperparameter sweep, the behavior-cloning script — is ordinary software work that agents already do well. ^[raw/articles/nvidia-enpire-agentic-robot-policy-self-improvement.md]
 
-![Image 1: NVIDIA](http://research.nvidia.com/labs/gear/enpire/images/logos/nvidia-logo.png)![Image 2: Carnegie Mellon University](http://research.nvidia.com/labs/gear/enpire/images/logos/cmu-logo.png)![Image 3: UC Berkeley](http://research.nvidia.com/labs/gear/enpire/images/logos/uc-berkeley-logo.png) ^[raw/articles/nvidia-enpire-agentic-robot-policy-self-improvement.md]
+**Reset.** Without automatic reset, every trial costs a human a few minutes, and worse, the distribution of initial states drifts as that human gets tired, so two policy versions are no longer compared under the same conditions. Reset has to do three things at once: randomize enough to prevent memorization, return to a known state so trials stay comparable, and verify that the reset actually succeeded — a task that silently starts from a bad pose poisons the next rollout and the agent has no way to know.
 
-## Abstract
+**Reward.** Without a scalar reward there is no hill to climb; the agent can only eyeball videos, which is precisely the human-in-the-loop cost the paper wants to remove. The chosen design is a multi-view perception pipeline that fuses per-camera binary verdicts, and the fusion matters: a single camera at a single angle would make occlusion look like failure, while independent verdicts give the agent a diagnostic signal — "top camera says no, right camera says yes" is debuggable in a way a single scalar is not.
 
-Achieving dexterous robotic manipulation in the real world relies heavily on human supervision and algorithmic engineering, which is a central bottleneck in the pursuit of general physical intelligence. Although emerging coding agents can generate code to automate algorithm search, their successes remain largely confined to digital environments. We conjecture that the missing abstraction to automate robotics research is a repeatable feedback loop for real-world policy improvement: reset the scene, execute a policy, verify the outcome, and refine the next iteration. ^[raw/articles/nvidia-enpire-agentic-robot-policy-self-improvement.md]
+Reward design is also the ceiling on what the loop can discover. A binary success signal is robust to noise but sparse and view-dependent; if the checker's geometry is slightly wrong, the agent will hill-climb toward whatever the checker rewards. That is not a hypothetical failure mode of agentic research — it is the standard one. Any self-improving loop inherits the specification errors of its verifier, and the more capable the searcher, the faster it finds them.
 
-To bridge this gap, we introduce ENPIRE, a harness framework for coding agents that instantiates this physical feedback routine with four core modules: an Environment module (EN) for automatic reset and verification, a Policy Improvement module (PI) that launches policy refinement, a Rollout module (R) to evaluate policies with single or multiple physical robots operating in parallel, and an Evolution module (E) in which coding agents analyze logs, consult literature, improve training infrastructure and algorithm code to address failure modes. ^[raw/articles/nvidia-enpire-agentic-robot-policy-self-improvement.md]
+### Real-world evaluation is a scheduling problem, and the paper prices it
 
-This closed-loop system transforms real-world robot learning into a controllable optimization procedure that agents can manage, thus minimizing human effort while allowing fair ablations across training recipes and agent variants. Powered by ENPIRE, frontier coding agents can autonomously develop a policy to achieve a 99% success rate on challenging, dexterous manipulation tasks in the real world, such as PushT, organizing pins into a pin box, and using a cutter to cut a zip tie. ^[raw/articles/nvidia-enpire-agentic-robot-policy-self-improvement.md]
+Robotics autoresearch is expensive in a way that LLM autoresearch is not: an experiment costs wall-clock time on a physical arm, and a failed rollout can damage hardware or leave the scene unusable. ENPIRE's response is to treat that scarcity explicitly with two metrics. Mean Robot Utilization measures how much of the fleet's available time went into useful rollouts rather than idling while a reset stalls or a policy compiles; Mean Token Utilization measures how many agent tokens were spent per unit of success-rate improvement, which separates an agent that reasoned about a failure mode from one that burned context on parameter sweeps. ^[raw/articles/nvidia-enpire-agentic-robot-policy-self-improvement.md]
 
-Coding agents can improve policies with various PI regimes, such as heuristic learning, tool calling, behavior cloning, offline or online RL. Moreover, ENPIRE can be significantly accelerated on a robot fleet, and we propose two metrics, namely, Mean Robot Utilization (MRU) and Mean Token Utilization (MTU) to measure the efficiency of multiagent physical autoresearch. We also include simulation results in RoboCasa. Our findings suggest a practical and scalable path toward autonomously advancing robotics in the real world. ^[raw/articles/nvidia-enpire-agentic-robot-policy-self-improvement.md]
+Together they convert "did the agent do good research?" into two efficiency questions with real denominators. That reframing travels further than the specific numbers: any autonomous experimentation system has one expensive physical resource and one expensive reasoning resource, and improvement per unit of each is the honest scorecard. It also makes the multi-agent structure legible — parallel idea branches let several hypotheses consume the same fleet concurrently, and the cross-agent inspiration curves mark the moments when one branch's finding short-circuits another's search.
 
-## Learned Manipulation Policy
+### What is genuinely new, and what is standard RL wearing a harness
 
-Policies trained with ENPIRE reach a 99% pass@8 success rate across the showcased manipulation tasks. ^[raw/articles/nvidia-enpire-agentic-robot-policy-self-improvement.md]
+Strip away the framing and the underlying policy techniques are conventional: behavior cloning, offline RL, online RL, heuristic controllers, code-as-policy. A 99% pass@8 figure on a handful of tabletop, quasi-static tasks with per-task reward engineering does not establish a general manipulation breakthrough. ^[raw/articles/nvidia-enpire-agentic-robot-policy-self-improvement.md]
 
-ENPIRE runs fully autonomously on real robots. Working only through the automated reset and verification interface, a team of coding agents proposes algorithmic hypotheses (heuristic learning, behavior cloning, offline and online RL), tests them against the real-world success rate, and keeps the changes that move it. The idea tree below traces that search as a hypothesis git-tree — one branch per agent, one node per idea tried — plotted on the same wall-clock-time axis as the success-rate curve, so you can see the ideas that moved the curve upward. ^[raw/articles/nvidia-enpire-agentic-robot-policy-self-improvement.md]
+What is new is narrower and more useful. First, the environment contract as an agent-operable API, including the verification half that most robot-learning stacks leave to a human with a clipboard. Second, the search space: the Evolution module edits data loaders, samplers, and infrastructure, not just hyperparameters, which is where compounding improvements actually live. Third, the accounting — MRU and MTU make physical autoresearch comparable across agent variants, the precondition for treating harness design itself as an empirical discipline. Fourth, the ablation discipline: fixing reset and reward is what makes "recipe A beat recipe B" a claim rather than an anecdote.
 
-**Figure 1:**Each coding agent explores its own branch of ideas, one lane per branch. Every dot is an idea it tried; a green ring marks an idea that raised the team’s average success rate, and green curves trace cross-agent inspiration. The lower panel tracks the team’s average success rate climbing over research wall-clock time. ^[raw/articles/nvidia-enpire-agentic-robot-policy-self-improvement.md]
+The limits are equally clear. Each new task still needs a human to author reset and reward, so the loop automates optimization but not onboarding. Real-world sample efficiency remains the wall — most reported gains look like better data handling and better priors rather than online RL suddenly working. Sim-to-real is asserted through RoboCasa results rather than demonstrated as a transfer study. ^[raw/articles/nvidia-enpire-agentic-robot-policy-self-improvement.md] And physical nondeterminism weakens attribution: "this idea raised the average" is a noisy claim when trial counts are small and variance is high, which is precisely why the idea tree and the wall-clock axis belong to the argument rather than the decoration.
 
-## ENPIRE System
+## 实践启示
 
-Construct Environment^[raw/articles/nvidia-enpire-agentic-robot-policy-self-improvement.md]
+1. **Build the verifier before the optimizer.** Any claim that an agent will self-improve a system is empty until there is a reset-and-score interface it can call unattended. If the checker needs a human, the agent is a suggestion engine, not a researcher.
 
+2. **Treat reset as a first-class subsystem.** Randomize, restore to a known state, and record whether the reset succeeded. Silent reset failures produce confident, wrong conclusions — the same class of bug as a flaky test suite everyone learns to ignore.
 
-Policy Improvement
+3. **Keep the per-signal verdicts, not just the aggregate.** Fusing per-camera or per-check judgments into one binary reward works, but retaining the individual verdicts is what lets an agent diagnose instead of guess. Lossy aggregation saves human attention and spends agent attention.
 
-Action
+4. **Let the agent edit infrastructure, not only hyperparameters.** The compounding gains here come from data samplers, training plumbing, and algorithmic structure. A harness that only exposes a config file caps its own upside.
 
-Obs
+5. **Account in the scarce resource.** MRU and MTU generalize: name your expensive physical resource and your expensive reasoning resource, then report improvement per unit of each. Utilization also exposes the real bottleneck, which is usually orchestration overhead rather than the model.
 
-Reward
+6. **Assume the searcher will attack the verifier.** The more capable the agent, the faster it finds specification gaps. Freeze the reward definition, review changes to it like production code, and keep humans on the spec rather than on the loop.
 
-env.py
-
-1
-
-class InsertionEnv:
-
-2
-
-def reset(self):
-
-3
-
-## TODO: auto task reset
-
-4
-
-pick_and_place(obj, target)^[raw/articles/nvidia-enpire-agentic-robot-policy-self-improvement.md]
-
-
-5
-
-go_home()
-
-6
-
-...
-
-7
-
-8
-
-def get_reward(self, obs, act):^[raw/articles/nvidia-enpire-agentic-robot-policy-self-improvement.md]
-
-
-9
-
-## TODO: scalar reward
-
-10
-
-mask = sam3(obs['left'])^[raw/articles/nvidia-enpire-agentic-robot-policy-self-improvement.md]
-
-
-11
-
-pos = boundlsdf(obs, mask)^[raw/articles/nvidia-enpire-agentic-robot-policy-self-improvement.md]
-
-
-12
-
-...
-
-13
-
-14
-
-def get_observation(self):^[raw/articles/nvidia-enpire-agentic-robot-policy-self-improvement.md]
-
-
-15
-
-...
-
-16
-
-17
-
-def step(self, act):^[raw/articles/nvidia-enpire-agentic-robot-policy-self-improvement.md]
-
-
-18
-
-...
-
-Human User
-
-Coding Agent
-
-Tool APIs
-
-![Image 4: Perception — SAM 3](http://research.nvidia.com/labs/gear/enpire/sam.min.jpg) ^[raw/articles/nvidia-enpire-agentic-robot-policy-self-improvement.md]
-
-Perception
-
-![Image 5: Planning — cuRobo](http://research.nvidia.com/labs/gear/enpire/curobo.min.jpg) ^[raw/articles/nvidia-enpire-agentic-robot-policy-self-improvement.md]
-
-Planning
-
-![Image 6: Control — YAM arm](http://research.nvidia.com/labs/gear/enpire/control.min.jpg) ^[raw/articles/nvidia-enpire-agentic-robot-policy-self-improvement.md]
-
-Control
-
-![Image 7: a real robot farm](http://research.nvidia.com/labs/gear/enpire/robot_farm.min.jpg)ENPIRE Environment ^[raw/articles/nvidia-enpire-agentic-robot-policy-self-improvement.md]
-
-01 Literature review^[raw/articles/nvidia-enpire-agentic-robot-policy-self-improvement.md]
-
-
-PLD RL-Token CaP-X
-
-02 Propose algorithm variant^[raw/articles/nvidia-enpire-agentic-robot-policy-self-improvement.md]
-
-
-Heuristics Off2On RL Code-as-policy BC^[raw/articles/nvidia-enpire-agentic-robot-policy-self-improvement.md]
-
-
-03 Optimize Infra
-
-Data Sampler Param Sweep^[raw/articles/nvidia-enpire-agentic-robot-policy-self-improvement.md]
-
-
-04 Summarize experiment result^[raw/articles/nvidia-enpire-agentic-robot-policy-self-improvement.md]
-
-
-Hillclimb Timeline
-
-![Image 8: GPU insertion](http://research.nvidia.com/labs/gear/enpire/gpu_insertion.min.jpg) ^[raw/articles/nvidia-enpire-agentic-robot-policy-self-improvement.md]
-
-GPU insertion
-
-![Image 9: Pin insertion](http://research.nvidia.com/labs/gear/enpire/pin_insertion_2.min.jpg) ^[raw/articles/nvidia-enpire-agentic-robot-policy-self-improvement.md]
-
-Pin insertion
-
-![Image 10: Push-T](http://research.nvidia.com/labs/gear/enpire/push_t.min.jpg) ^[raw/articles/nvidia-enpire-agentic-robot-policy-self-improvement.md]
-
-Push-T
-
-![Image 11: Zip tie cutting](http://research.nvidia.com/labs/gear/enpire/zip_tie.min.jpg) ^[raw/articles/nvidia-enpire-agentic-robot-policy-self-improvement.md]
-
-Zip tie cutting
-
-Real-world t
+→ [[raw/articles/nvidia-enpire-agentic-robot-policy-self-improvement|原文存档]]
 
 ---
 ## 关联
 - 相关概念: [[concepts/harness-engineering-framework|Harness Engineering]]
-
+- 同类闭环系统: [[entities/sensenova-robodojo-harness-ablation-embodied-agent-2026|SenseNova RoboRSI：换 Harness 提升机器人成功率]]
+- 代码即策略路线: [[entities/nvidia-aspire-robot-skill-library-code-as-policy|NVIDIA ASPIRE：机器人技能库]]
+- 自动研究循环: [[entities/karpathy-autoresearch-loop-cycle-harness-optimization|AutoResearch Loop 与 Harness 优化]]

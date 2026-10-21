@@ -1,7 +1,7 @@
 ---
 title: "Self-Improvements in Modern Agentic Systems: A Survey — Agent 自我改进综述"
 created: 2026-07-27
-updated: 2026-09-10
+updated: 2026-10-21
 type: entity
 tags: [survey, self-improvement, agent, harness, scaffolding, foundation-model, memory, tool, evaluation, schmidhuber]
 sources: [raw/articles/self-improvements-modern-agentic-systems-survey-arxiv-2607-13104, raw/articles/agent-self-evolution-skill-to-weights-panorama-aliexpress-2026-08-25]
@@ -93,6 +93,40 @@ KAUST + 吉林大学 + Jürgen Schmidhuber 团队于 2026 年 7 月发表的系�
 这篇综述为当天阅读的 7 篇文章（DataFlow-Harness、Reflection/Reflexion、TokenSpeed、MemoHarness、淘宝 SDD AI Coding、Agent OS、Own Your Intelligence）提供了统一的理论框架。其中淘宝 SDD AI Coding 对应 §7.1 软件工程实践，Reflection/Reflexion 对应 §6.1.2 定性反馈精炼，DataFlow-Harness 对应 §6.4 全支架改进，Agent OS 对应 §9.1 分层门控安全架构。^[raw/articles/self-improvements-modern-agentic-systems-survey-arxiv-2607-13104.md]
 
 → [[raw/articles/self-improvements-modern-agentic-systems-survey-arxiv-2607-13104|原文存档]]
+
+## 深度分析
+
+### 边界实际画在「回滚成本」上，不在「技术难度」上
+
+θ 与 Σ 的切分看似技术分类，实质是一条经济学界线：Σ 的每次改动都是可 diff、可回滚、单次毫秒级生效的文本或配置，而 θ 的一次更新是不可逆的权重覆写，需重跑全量回归且可能污染其他任务分布。因此决定某次改进落在哪一侧的，不是「哪种方法更先进」，而是「这次改动的错误代价能否被一次回滚吸收」。当一条经验的验证样本不足百条时，写进提示或记忆的期望收益恒高于做一次微调——这是成本结论，与模型能力无关。^[raw/articles/self-improvements-modern-agentic-systems-survey-arxiv-2607-13104.md]
+
+### 缺外部验证器的自改进回路，必然坍缩成奖励黑客
+
+凡把「自己生成的信号」当作「自己消费的信号」的回路，都在优化一个与真实目标逐渐脱钩的代理量。综述把评判器称作攻击面而非基准，正因为评测器与策略共享同一先验：模型看不见的盲点，它自己出的题也考不出来。可用的回路必须挂一个策略不可写的验证器——单测、真实环境 pass/fail、或人类抽检——且它要能**拒绝**更新，而不只是给分。缺这一步，回路不会停转，只会朝更容易被自己骗过的方向漂移，这与 [[entities/anthropic-reward-hacking-hacker-opus-hugging-face-2026-09|奖励黑客实例]] 的观察一致。^[raw/articles/self-improvements-modern-agentic-systems-survey-arxiv-2607-13104.md]
+
+### 形式化的真正收益：把「怎么变好」拆成四个可分别设计的算子
+
+扁平分类法只能回答「有哪些方法」；At = (θt, Σt) 加 Σt := (pt, mt, Tt, gt) 的分解，让四个问题第一次变得可问：这次更新的对象是哪个分量、该分量的状态空间有多大、经验到该分量的映射是否可微、更新后哪个不变量必须保持。第四条最关键——它把安全从外挂流程变成算子的约束项。没有这层分解，讨论自改进只能停在方法罗列；有了它，才判断得出两个方法是否真在同一坐标系里可比，也才谈得上把「快环经验」有损地蒸馏进「慢环参数」而不丢关键约束（参见 [[entities/lossy-self-improvement|有损自改进]]）。^[raw/articles/self-improvements-modern-agentic-systems-survey-arxiv-2607-13104.md]
+
+### 三条支架轴的代价与天花板各异，不能按同一节奏推进
+
+提示轴最便宜，秒级可迭代，但状态空间被上下文窗口硬性封顶，复杂度超过一定阈值后新增指令互相干扰、边际收益转负；记忆轴写入便宜而读取昂贵，真实成本在检索治理与陈旧条目清理，天花板取决于条目质量而非容量；工具轴最贵，需沙箱、权限与接口维护，却是唯一能突破模型固有能力上限的轴。故常见推进顺序是提示→记忆→工具，一旦诊断出瓶颈在「模型根本不会做」而非「没告诉它怎么做」，就该跳过前两轴。^[raw/articles/self-improvements-modern-agentic-systems-survey-arxiv-2607-13104.md]
+
+### 哥德尔机给了目标函数，现代 LLM 自改进给的是可行近似
+
+Schmidhuber 谱系的核心断言是：能改写自身代码、并能**证明**改写更优的系统可以无限自举；代价是「证明更优」在实践中不可判定。现代 LLM 自改进实际做的，是把不可判定的证明换成可运行的验证——不证明新版本更好，只在有限样本上测出它没变差就接受。这一替换使系统从理论上的封闭最优降格为工程上的有偏随机搜索，也解释了综述为何反复强调学习曲线与回归率：我们买到的不是保证，而是可观测的漂移。[[entities/rrsi-regularized-recursive-self-improvement-agent-harnesses|RRSI]] 的正则化思路正是对这一降格的补丁。^[raw/articles/self-improvements-modern-agentic-systems-survey-arxiv-2607-13104.md]
+
+## 实践启示
+
+1. **先给 Σ 建版本化存档，再谈自动改进。** 提示、记忆条目、工具签名、路由配置必须能在一个提交内整体回滚。没有 diff 与回滚，任何自动改写都是在生产上做不可逆实验；每次变更需记录触发的经验 id，指标下滑时才定位得到具体改动。
+
+2. **把评测器放在 harness 之外，并给它否决权。** 评测器不得与被测策略共用同一份提示和同一批示例；输出应是「接受/拒绝 + 原因」，而非可被优化器追逐的连续分数。每轮更新强制跑一组冻结回归集，旧任务掉分的候选一律拒绝。这是 [[concepts/agent-self-improvement-loops|自我改进循环]] 能否长期存活的唯一支点。
+
+3. **仪器化「每轮改了什么、涨了多少、退了多少」。** 只统计峰值分数会系统性高估收益；应按轮记录 pass 率、回归失败数、安全违规数、token 与延迟成本，四者同图观察，才能把真实提升从环境噪声里分出来。
+
+4. **用「模型是否会做」这道题决定要不要动权重。** 若失败模式是流程遗漏、格式不符、工具选错，属支架问题，改提示与路由即可；只有当同一任务在正确提示下仍稳定失败、且已积累上千条带验证标签的轨迹时，权重级投入才划算。
+
+5. **盯三个早期失败信号：指令膨胀、记忆腐化、验证器同质化。** 提示长度持续增长而分数不动，说明在打补丁；记忆条目数上升但命中率下降，说明在积累噪声；生成器与验证器的错误高度相关，说明回路已经开始自欺。
 
 ## 相关实体
 
