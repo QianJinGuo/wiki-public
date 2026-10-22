@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "sourceRevision": "5ec584c948b926e8cf1bec5aa3c5d4bd59ebe0e7",
+  "sourceRevision": "5312290dbfb9dc36c51db24d9776de68d381eaa7",
   "files": [
     {
       "path": "raw/articles/0.25秒识破未见攻击-lod-lvlm-jailbreak-detection-emnlp2026.md",
@@ -3158,6 +3158,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/lTdRNB3vTJoU0nAPBkHNtw"
     },
     {
+      "path": "raw/articles/alibaba-token-foundry-coda-skill-policy-coevolution-reliability-2026.md",
+      "title": "高分智能体为何反而更脆弱？阿里 Token Foundry 揭示「协同进化陷阱」，提出 CODA 可靠性评测协议",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=Mzg4NTczNzg2OA==&mid=2247512143&idx=1&sn=16294f252816161c648f6d5988c08032"
+    },
+    {
       "path": "raw/articles/aliexpress-ai-eval-platform-consistency-confidence-2026.md",
       "title": "让AI输出变得可信：评测一致性与置信度提升实践",
       "sourceUrl": "https://mp.weixin.qq.com/s/a8DQ73o9brkvi1WTMKJ0VA"
@@ -4356,6 +4361,11 @@
       "path": "raw/articles/autoresearch-claude-constrained-optimization-elliotcsmith-2026.md",
       "title": "autoresearch-claude-constrained-optimization-elliotcsmith-2026",
       "sourceUrl": "https://www.elliotcsmith.com/autoresearch-claude-and-constrained-optimization/"
+    },
+    {
+      "path": "raw/articles/autoresearch-cyclicgraph-engine-meituan-2026-10-22.md",
+      "title": "从LOOP到图探索 - 算法模型的AutoResearch自进化系统架构演进之路",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MjM5NjQ5MTI5OA==&mid=2651783546&idx=1&sn=23cd32a43243cd53e4e571a73a38a160"
     },
     {
       "path": "raw/articles/autoresearch-eval-agent-failure-meta-cognitive-loop-2026.md",
@@ -6131,6 +6141,11 @@
       "path": "raw/articles/claude-md-is-hope-hooks-are-law-2026-09-23.md",
       "title": "claude-md-is-hope-hooks-are-law-2026-09-23",
       "sourceUrl": "https://mp.weixin.qq.com/s/zBDd2lVlCkkC0uyCu5D9Dw"
+    },
+    {
+      "path": "raw/articles/claude-mods-attention-interface-harness-reversal-2026.md",
+      "title": "Claude Mods: Flipping the Harness Inside Out",
+      "sourceUrl": "https://www.latent.space/p/claude-mods"
     },
     {
       "path": "raw/articles/claude-opus-4-8-system-card-zvi.md",
@@ -9568,6 +9583,11 @@
       "sourceUrl": "https://go.granola.ai/adops-tldr-tech"
     },
     {
+      "path": "raw/articles/graph-agents-survey-three-modeling-directions-software-journal-2026.md",
+      "title": "当Agent开始用图来思考：一篇综述梳理图智能体三大方向",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIwMTc4ODE0Mw==&mid=2247723603&idx=2&sn=fd373656c7d78fa7b0f147298c263552"
+    },
+    {
       "path": "raw/articles/graph-engineering-agent-loop-fact-management-ruofei-2026.md",
       "title": "Agent Loop 与 Graph Engineering：多 Agent 如何执行任务、共享可信事实",
       "sourceUrl": "https://mp.weixin.qq.com/s/S84hkwrvXocw56TSrnfqOA"
@@ -10076,6 +10096,11 @@
       "path": "raw/articles/harnessopt-bench-llm-harness-optimization-eval-shai-2026.md",
       "title": "HarnessOpt-Bench：评估 LLM harness 优化（第一方发布）",
       "sourceUrl": "https://www.xiaohongshu.com/explore/6a7d828000000000290307ee"
+    },
+    {
+      "path": "raw/articles/harnesspro-cost-aware-recursive-harness-self-improvement-paperweekly-2026-10-22.md",
+      "title": "RSI不再烧钱！唐杰署名开源HarnessPro，Agent越进化越便宜",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIwMTc4ODE0Mw==&mid=2247723631&idx=1&sn=0ab96e0e2894c17792159b8600e16de6"
     },
     {
       "path": "raw/articles/harnessx-evolvable-agent-harness-foundry-hyman-2026.md",
@@ -12683,6 +12708,11 @@
       "sourceUrl": "https://www.theregister.com/security/2026/05/13/malware-crew-teampcp-open-sources-its-shai-hulud-worm-on-github/5239319"
     },
     {
+      "path": "raw/articles/mammoth-1-elephant-1-decision-models-base-labs-2026.md",
+      "title": "Mammoth-1 and Elephant-1: frontier decision models",
+      "sourceUrl": "https://labs.baseten.co/articles/mammoth-1-and-elephant-1-frontier-decision-models"
+    },
+    {
       "path": "raw/articles/management-as-ai-superpower.md",
       "title": "management-as-ai-superpower",
       "sourceUrl": "https://www.oneusefulthing.org/p/management-as-ai-superpower"
@@ -14343,6 +14373,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/d9C-0aR1fCIkKkFVtz7_jg"
     },
     {
+      "path": "raw/articles/opd-data-mechanism-eight-hard-examples-vibelife-2026-10-22.md",
+      "title": "8 道难题蒸馏，效果追平 1.7 万道全量——On-Policy Distillation 数据侧机制解读",
+      "sourceUrl": "https://mp.weixin.qq.com/s/pCB8lOPguoFjan73-rjbbQ"
+    },
+    {
       "path": "raw/articles/opd-revisiting-failure-modes-simple-fixes-storm.md",
       "title": "opd-revisiting-failure-modes-simple-fixes-storm",
       "sourceUrl": "https://unknown/opd-revisiting-failure-modes-simple-fixes-storm"
@@ -14868,6 +14903,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/j9aavJfKJyRG6c1mWRC7tw"
     },
     {
+      "path": "raw/articles/opposable-on-device-2b-computer-use-android-gui-owl-2026.md",
+      "title": "Computer use on the phone itself: a 2B model that operates Android apps",
+      "sourceUrl": "https://getopposable.com/blog/computer-use-on-the-phone"
+    },
+    {
       "path": "raw/articles/opsa-on-policy-self-adaptation-noisy-teacher-aitengzhe-2026-09-24.md",
       "title": "没有教师、没有奖励，模型还能自我变强？OPSA重新解释OPD",
       "sourceUrl": "https://mp.weixin.qq.com/s/RTsGMeRJfsKO5JArjR6LwA"
@@ -15111,6 +15151,11 @@
       "path": "raw/articles/physical-ai-industrial-deployment-jiangxing-multi-embodiment.md",
       "title": "physical-ai-industrial-deployment-jiangxing-multi-embodiment",
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651052153&idx=2&sn=5897d8c549935688b6db8a5f32e04d80"
+    },
+    {
+      "path": "raw/articles/physicianbench-ehr-agent-benchmark-aitengzhe-2026-10-22.md",
+      "title": "NeurIPS 2026 PhysicianBench：AI 写好了诊疗计划，为什么还是没完成任务？",
+      "sourceUrl": "https://mp.weixin.qq.com/s/E-KqwYGY5p9639Rc2i17SA"
     },
     {
       "path": "raw/articles/pi-agent-framework-event-bus-design.md",
@@ -15361,6 +15406,11 @@
       "path": "raw/articles/private-fintech-vs-public-fintech.md",
       "title": "Private Fintech Has Quietly Become Bigger Than Public Fintech. Now What?",
       "sourceUrl": "https://www.heyfuturenexus.com/private-fintech-has-quietly-become-bigger-than-public-fintech-now-what/"
+    },
+    {
+      "path": "raw/articles/proactive-ai-superintelligent-agents-6a-framework-uiuc-google-2026.md",
+      "title": "走向超级智能体，AI还需要主动性：UIUC、谷歌等联合综述",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652736685&idx=3&sn=5caf2223e36f92b90c419128be6a7382"
     },
     {
       "path": "raw/articles/problem-with-mathematically-proven-claims-about-llms.md",
@@ -16191,6 +16241,11 @@
       "path": "raw/articles/rsi-retracing-deep-learning-path-damoxing-zhineng-2026-10-22.md",
       "title": "RSI，正在重走深度学习的老路",
       "sourceUrl": "https://mp.weixin.qq.com/s/oou0Ls4WqyK1jS0jNVzzUA"
+    },
+    {
+      "path": "raw/articles/rsi-router-subtask-level-routing-cost-efficient-agents-paperweekly-2026-10-22.md",
+      "title": "成本腰斩，性能反超纯大模型！上海AI Lab提出Agent自进化路由框架",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIwMTc4ODE0Mw==&mid=2247723631&idx=2&sn=3a25d0fc5c8fc1c5678bc802c5a513b8"
     },
     {
       "path": "raw/articles/rsi-survey-towards-ai-that-improves-itself-2026.md",

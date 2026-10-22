@@ -1,7 +1,7 @@
 ---
 title: "TorchTPU: 为 PyTorch 原生构建的 TPU 后端（Google × Meta）"
 created: 2026-10-21
-updated: 2026-10-21
+updated: 2026-10-22
 type: entity
 tags: [pytorch, tpu, xla, training, inference, compiler, distributed-training, infra]
 sources: [raw/articles/torchtpu-native-pytorch-tpu-backend-google-meta-2026]
@@ -30,6 +30,47 @@ TorchTPU 是 Google 与 Meta PyTorch 团队的开源合作（2025 年中启动�
 ## 性能与验证口径
 
 官方给的训练侧数字是逐层优化后的累积效果：从开箱即用的 eager 基线出发，FLUX 模型在 TorchTitan + TorchTPU 上先提升到 3.02s/step（3.80× 加速），再叠加目标模型的 peephole 重写后到 2.78s/step（1.08 samples/s）；多机集群上表现为吞吐随规模线性增长、MFU 基本持平——这是"扩展效率没被通信吃掉"的直接信号。推理侧则引用第三方审计：TPU v7 搭配 vLLM-TorchTPU 栈，在性能/美元上具备竞争力；已验证的栈包括 vLLM、SGLang（多机推理）与 TorchTitan（训练/微调），编排走 Ray，另有 TorchRec。作者同时声明 TorchTPU 仍在活跃开发中，但已在部分 Google Cloud 大客户的生产推理与训练负载上使用。^[raw/articles/torchtpu-native-pytorch-tpu-backend-google-meta-2026.md]
+
+## 深度分析
+
+### 后端之争的本质：编译时机归谁
+
+PyTorch/XLA 的问题不是"慢"，而是把编译时机放在了开发者写代码的位置：基于 Lazy Tensor，用户得在源码里划出可编译区，等于被要求用 JAX 的思维写 PyTorch。这与 PyTorch 的演进方向正面冲突——新能力都先在 eager 落地，再等编译器追。要求生态先为后端让路，生态没有理由答应。^[raw/articles/torchtpu-native-pytorch-tpu-backend-google-meta-2026.md]
+
+"原生后端"的准确含义因此是**把图的边界从用户手里收回到框架手里**：TorchTPU 在 dispatcher 层注册 `tpu` 后端、在 aten 层拦截算子，图捕获交给 torch.compile（Dynamo backend `tpu`），eager 仍是默认且可调试的模式。开发者面对的仍是普通 PyTorch——换个 device 就跑，编译是可选的加速层而非入场券。官方对此的表述是与其它后端共享同一个编译器前端 Dynamo：前端归社区，厂商只竞争 lowering 质量。
+
+### 三种 eager：把"图多大"做成运行时旋钮
+
+它没在"逐算子"与"整图编译"之间二选一，而是给了三个形态：Strict Eager（逐算子异步下发，等同 GPU eager）、Synchronous（同步执行，慢但可开边界检查）、DeferAndFuse（把连续 aten 攒块再编译，官方称比 Strict Eager 快 50% 以上，融合还压低 HBM 峰值）。代价是延迟算子要做活性分析判断哪些必须物化、带副作用的算子（集合通信）必须保序。这也解释了 DeferAndFuse 在 FLUX 上只值 1.15×：省的是下发与临时显存，不改算子数值效率。^[raw/articles/torchtpu-native-pytorch-tpu-backend-google-meta-2026.md]
+
+比性能更硬的是两处语义冲突。其一是内存模型：PyTorch 的 tensor 是指针加 stride，可共享字节、就地写彼此可见，view 只改元数据；StableHLO 是纯函数式的、值不可变。TorchTPU 用 view 分解与反演桥接，这不是"多支持一个算子"，而是维持一套跨语言内存契约，破了则拼接参数数组这类惯用法直接失效。其二是通信发起方式：JAX 走干净 SPMD，靠 sharding 注解让 XLA 自动插通信并重叠；而 PyTorch 生态里 rank 条件分支与 DTensor 不均匀切分会让各 rank 模块不一致，踩到 sync flag / buffer offset 不匹配。对策是默认把每个集合通信编成独立 skinny 模块保一致，代价是丧失重叠（官方给 30-40% 端到端损失），再用 `@spmd_safe` 或编译期握手合大图换回重叠——**非 SPMD 生态里做分布式编译，正确性默认优先，重叠要用户显式担保才买得到**。^[raw/articles/torchtpu-native-pytorch-tpu-backend-google-meta-2026.md]
+
+### 数字怎么读：三组基线，三种失效边界
+
+- 训练侧 3.80× 是逐层加料的累积：11.49s →（DeferAndFuse）9.95 →（SimpleFSDP）6.52 →（SplashAttention）5.55 →（整步图 + 扫描）3.02 → 2.78。基线是"未调优的 eager"，度量的是**后端成熟度的落差**，不是 TPU 对 GPU 的硬件比。
+- 唯一真正可比的是 Qwen3 MoE 235B 在 64 卡上对 JAX/MaxText：1828 对 1937 TPS，约 94%，这才是"换框架不换硬件"的真实折扣。
+- 扩展性面，v6e-8 到 v6e-256 每样本步时 0.92s→1.00s、每芯片 TPS 走平，证明的是 XLA 把跨 DCN 的 all-reduce 压进了相邻层计算。
+- 推理侧以性能/美元计（InferenceX 审计：2.01 美分/百万 token）。
+
+边界：这些配置是每 TensorCore local batch 16、序列 4096 的宽 shape，正好喂饱 MXU。换成 memory-bound 的 decode、小 batch、shape 频繁变化，收益结构完全不同。稀疏负载更保守：DLRM v2 与 JAX 基线持平，是追平而非超越。
+
+### 生态后果与还没解决的部分
+
+地缘意义不在 TPU 而在**后端接口的所有权**：Google 有硬件缺开发者基数，Meta 有生态缺自研加速器，共做一个 backend 让"换加速器"从重写模型变成换 device，框架锁定与硬件锁定同时被削弱。这与 [[entities/pytorch-2-12-release-blog|PyTorch 2.12 发布]] 中 Dynamo 作为统一前端的路线同源。训练侧比 MFU 与扩展效率，推理侧比每美元 token 与 KV 布局——同一个后端、两套优化语汇，正合 [[concepts/inference-optimization|推理优化]] 的"优化层次分离"。
+
+未解清单同样重要：自定义算子仍有 Pallas / Tokamax / Helion 三条路线；FP8/FP4 在途；bounded dynamism 未默认开启；一进程一设备使 RL colocation 无法开箱支持；profiling 工具仍在迁移；`@spmd_safe` 靠用户自判是否真 SPMD，用错会让系统变脆。适合迁移的是"标准架构 + 标准并行 + 标准栈"，深度定制内核或生产级确定性仍须逐案评估。^[raw/articles/torchtpu-native-pytorch-tpu-backend-google-meta-2026.md]
+
+## 实践启示
+
+1. **先测"改一个 device 能不能跑通"，再谈性能。** 第一道门槛是算子覆盖与数值等价：eager 前向不崩、FX→StableHLO 发射成功、生成类困惑度相对差 ≤0.10，过了再进调优；引用加速比时把基线与 shape 一起写清。
+
+2. **把编译时延当独立 SLI 监控。** TorchTPU 用三级缓存加 graph key 压它。自建后端应从第一天设计缓存键，并把首次 step 与稳态 step 分开上报。
+
+3. **非 SPMD 代码里，先证一致性再索取重叠。** 跨 rank 图不一致会以死锁形式出现。默认保守（每通信独立模块），只在确无 rank 分支的区段用 `@spmd_safe` 换大图，并保留编译期握手作开关。
+
+4. **sharding 按物理拓扑排序，别按变量名顺手写。** 通信最重的并行维（TP/EP）贴最连续的 ICI 维，DP 放跨 slice 的 DCN。
+
+5. **别把"最高精度"当保险。** TPU 的 MXU 原生是 BF16 输入 + FP32 累加；`high`/`highest` 实际是 3 遍/6 遍分解，代价约 3× 到 6× 算力。只在确认收敛问题的那几层用线程局部精度域。
 
 ## 与既有基础设施条目的关系
 
