@@ -1,7 +1,7 @@
 ---
 title: "从 BERT、GPT 到 Jev：大模型架构演进与输出范式的分化"
 created: 2026-10-20
-updated: 2026-10-20
+updated: 2026-10-24
 type: entity
 tags: [transformer, architecture, bert, gpt, jev, laya, decision-model, moe, kv-cache]
 sources: [raw/articles/llm-architecture-evolution-bert-gpt-jev-tencent-2026]
@@ -49,6 +49,41 @@ Jev 发布三天后，Convai Innovations 以 Apache 2.0 开源 **Laya**（「33 
 ## 局限
 
 对 Jev 内部结构的描述属作者基于零样本表现的**推断**（参数量与结构未公开），文中已明示；Laya 的公开概率整体偏高（声称把握高于实际正确率），需自行校准后使用。
+
+## 深度分析
+
+### 不变量：一次前向，把序列压成每个位置的隐状态
+
+块内算式从 2017 年至今没动过：一次注意力做位置间交换，一次前馈做逐位置变换。真正的常量在更抽象一层——**给定序列，模型用固定次数的前向把它压成每个位置的隐状态；能力由压缩质量决定，任务由「从哪个位置、读几次」决定**。注意力取代循环后，「第 n 个词要等前 n−1 个」的约束消失，同一套参数才能被任意次、任意形式地查询。^[raw/articles/llm-architecture-evolution-bert-gpt-jev-tencent-2026.md:27-29] 创新因此只剩两类落点：让隐状态更便宜（常数因子），或改读出的位置与次数（复杂度阶）。
+
+### 分水岭在读出侧：串行采样 vs 并行读出
+
+判据只有两条：是否因果掩码（能看多远）、是否逐 token 生成（答案要跑几遍网络）。BERT 与 GPT 差在第一条，Jev 与所有 LLM 差在第二条，两条正交：因果却不生成、双向却仍生成，都存在。
+
+串行采样的成本随输出长度线性涨，第 t 步依赖第 t−1 步。更关键的是**概率长在哪个空间**：LLM 的概率在词表上，是「下一个 token」而非「陈述为真」，要从前一个得到后一个须先把判断外化成 CoT 再解析回标签，语义编解码一个来回，误差与延迟都随链长增长。Jev 把分布直接定义在**任务局部选项空间**上：255 个选项与 2 个选项耗时相同，因为选项是并行分支而非生成长度。^[raw/articles/llm-architecture-evolution-bert-gpt-jev-tencent-2026.md:144-152] JSON schema 不解决问题——它只约束字符串形状，逐 token 生成一步没少。
+
+### 为什么删掉生成比让生成更快便宜
+
+decode 访存受限：每 token 要搬全部权重加整份 KV cache，算术强度个位数 FLOP/byte，而加速器设计点在数百。成本正比于输出 token 数，kernel 优化、投机解码、大 batch 只压低斜率，不改 O(L)；prefill 相反，计算密集、完全并行、可摊薄。去掉 decode 等于把「访存受限的 L 步串行」换成「算力受限的 1 步并行」，两个数量级由此而来，不是来自更聪明的算子。组件与范式因此必须一起读：
+
+- **KV cache 是 decode 的产物**：前提是「后面还要复用」，单次前向零收益——Gated DeltaNet 的固定状态、V4.1 后 20 层 KV 投影都只为 decode 服务。反向则是双向可见与缓存复用冲突——Decoder-only 赢下主流靠它，decision model 甘愿付它。^[raw/articles/llm-architecture-evolution-bert-gpt-jev-tencent-2026.md:57-57]
+- **MoE 收益不对称**：它解耦总参数与每 token 算力，对 decode 收益最大，但路由要求 batch 内 token 散到不同专家，单请求摊不平 all-to-all；判断模型的 batch 被「选项 × 问题」填满，却更可能选全激活密集结构（Laya 400M 密集），瓶颈不在权重搬运。见 [[concepts/moe-mixture-of-experts-2025|MoE]]。
+- **注意力变体看瓶颈**：线性/稀疏注意力压 O(S²) 与 KV 增长，服务长 prefill 与长 decode；判断模型输入短、S 小，预算该投读出头与校准。
+
+### Laya 排除了什么，又把什么留在黑箱里
+
+Laya 是一次**单变量替换**：输出方式固定（选项前 `[MASK]` 读分、选项内 softmax、以校准为目标），只把底座从推断中的 LLM 级因果 Transformer 换成确定的 4 亿双向 encoder。由此排除三件事：读出方式不稀缺（33 ms 可复现）、架构新颖性不必要（ModernBERT 加小头即够）、把选项写进序列而非参数 400M 也走得通。^[raw/articles/llm-architecture-evolution-bert-gpt-jev-tencent-2026.md:158-164]
+
+没排除的恰是结论依赖的那一项：Laya 最好成绩来自**针对评测集微调之后**，Jev 是零样本，两者不同实验条件，故「差距在底层网络」是推断而非受控结论；把参数量与「预训练目标 + RLCD 校准数据」打包成「LLM 级理解能力」，是全文最弱一环。Laya 概率整体偏高亦然，反证校准依赖对任务的把握。局限由此显形：Jev 结构未公开、全靠行为反推；n=1 定位不了阈值（4 亿不够，40 亿呢？）；三原语覆盖不了数值与多步推理；六个 `noul` 不增延迟，state 却重复计六次 token。
+
+## 实践启示
+
+1. **先量输出长度分布再选范式。** P99 输出超几十且答案可枚举 → O(1) 前向优于任何 decode 加速；答案须是未见字符串 → 仍走 Decoder-only。
+2. **把任务指定从参数搬到请求。** 双向 encoder + 每选项读出头 + 选项内 softmax + 校准目标：换判断不必重训，代价是零样本能力被底座锁死。
+3. **别在判断模型上照搬生成模型的优化。** KV 压缩、线性注意力、投机解码对单次前向零收益；预算改投读出头、选项位置偏置与校准数据。
+4. **校准单独度量、训练、验收。** RLHF 会破坏校准（GPT-4 报告：预训练校准良好，后训练后明显变差），按阈值分流就用 ECE / Brier；采样投票不算替代品，那是把 decode 成本乘上采样数。^[raw/articles/llm-architecture-evolution-bert-gpt-jev-tencent-2026.md:68-68]
+5. **拆分粒度是成本问题。** 原子问题并行摊薄延迟，但 state 重复计 token；先用「问题数 × state 长度 × 单价」算边界，再定拆几层，组合逻辑放代码。
+6. **两种范式共享序列化与阈值层。** 判断模型不能写、不能思考、不能进 agent 循环；state 编解码、置信度分流、人工兜底做成共用中间件，免得维护两套链路。
 
 ## 关联
 

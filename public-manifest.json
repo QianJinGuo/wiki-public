@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "sourceRevision": "5312290dbfb9dc36c51db24d9776de68d381eaa7",
+  "sourceRevision": "ad47741b1b568d5dbc515c3403a3fd312ec4ec0f",
   "files": [
     {
       "path": "raw/articles/0.25秒识破未见攻击-lod-lvlm-jailbreak-detection-emnlp2026.md",
@@ -5363,6 +5363,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247924043&idx=3&sn=4da7396f16f787ac90703857d95c45a3"
     },
     {
+      "path": "raw/articles/cerebras-trillion-parameter-wafer-scale-deployment-2026.md",
+      "title": "How Cerebras deploys trillion-parameter frontier models on wafer-scale chips",
+      "sourceUrl": "https://www.cerebras.ai/blog/how-we-deploy-trillion-parameter-frontier-models-on-cerebras"
+    },
+    {
       "path": "raw/articles/cft-consistent-feature-transport-image-relighting-eccv-2026-meitu.md",
       "title": "cft-consistent-feature-transport-image-relighting-eccv-2026-meitu",
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651051744&idx=3&sn=2adfa49d951362117407be4da2b67d22"
@@ -6623,6 +6628,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/z8qJMB46ZoBeLRTwLmxy_Q"
     },
     {
+      "path": "raw/articles/coding-agent-dynamic-concurrency-failure-modes-2026.md",
+      "title": "Coding Agent 动态并发实证：354 任务 2124 次执行的收益、失败模式与有效协作机制",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652735857&idx=3&sn=a925b721541c36e911ad286af24c2919"
+    },
+    {
       "path": "raw/articles/coding-agent-second-half-org-level-rd-system-agentscope-2026.md",
       "title": "Coding Agent 下半场：从个人提效到组织级研发体系 — AgentScope Harness + Open SWE + Minions/Inspect/Cloudbot 收敛",
       "sourceUrl": "https://mp.weixin.qq.com/s/LA1AFSjb5ffTHDA2xkv0wQ"
@@ -7853,6 +7863,11 @@
       "sourceUrl": "https://nesbitt.io/2026/05/19/dumb-ways-for-an-open-source-project-to-die.html"
     },
     {
+      "path": "raw/articles/duomatching-few-step-video-generation-joint-marginal-2026.md",
+      "title": "duomatching-few-step-video-generation-joint-marginal-2026",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247935595&idx=4&sn=54c77ab9d128db203879a380792b4177"
+    },
+    {
       "path": "raw/articles/durable-harness-wal-replay-vercel-2026.md",
       "title": "Making every harness durable",
       "sourceUrl": "https://vercel.com/blog/making-every-harness-durable"
@@ -8021,6 +8036,11 @@
       "path": "raw/articles/embodied-intelligence-sim-to-real-active-inference-behavior-tree-intrinsic-motivation-chenzhiyan-2026-06-17.md",
       "title": "embodied-intelligence-sim-to-real-active-inference-behavior-tree-intrinsic-motivation-chenzhiyan-2026-06-17",
       "sourceUrl": "https://mp.weixin.qq.com/s/bB9ncEOvj3pTKtWpyGHkpQ"
+    },
+    {
+      "path": "raw/articles/embodied-memory-bench-emem-zju-2026.md",
+      "title": "EmbodiedMemory-Bench（EMem-Bench）：具身智能体长程记忆四类任务基准与 EMem 记忆系统",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652735627&idx=3&sn=2195898b4588173b111e6ffc13732156"
     },
     {
       "path": "raw/articles/embodied-native-llm-embodied-intelligence-new-stage-2026.md",
@@ -11573,6 +11593,11 @@
       "sourceUrl": "https://kasra.blog/blog/i-spent-1500-seeing-if-llms-could-hack-my-app/"
     },
     {
+      "path": "raw/articles/kdd-cup-2026-taac-recsys-scaling-law-unified-architecture.md",
+      "title": "600 万奖金的 KDD Cup，摸到了推荐系统 Scaling Law的关键",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIwNzc2NTk0NQ==&mid=2247622597&idx=1&sn=79991bfbf751f2755452319be7827427"
+    },
+    {
       "path": "raw/articles/kdd26-美团学术论文精选及kdd-cup26-dataagents赛道冠军思路解读.md",
       "title": "KDD'26 美团学术论文精选及KDD Cup'26 DataAgents赛道冠军思路解读",
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MjM5NjQ5MTI5OA==&mid=2651783138&idx=1&sn=31ddcb07ef2bf6c73c2415934ab288dc"
@@ -13138,6 +13163,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/x7gSZb1Agp2T01nlLGgnYA"
     },
     {
+      "path": "raw/articles/metr-openai-agent-monitoring-red-team-2026.md",
+      "title": "Red-Teaming OpenAI's Internal Agent Monitoring Systems (METR + Redwood pilot)",
+      "sourceUrl": "https://metr.org/blog/2026-10-22-red-teaming-openai-agent-monitoring/"
+    },
+    {
       "path": "raw/articles/metr-openai-hugging-face-agent-altruism-investigation.md",
       "title": "Brief independent investigation of agents' behavior, reasoning and collaboration in the OpenAI / Hugging Face hacking incident",
       "sourceUrl": "https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/"
@@ -14161,6 +14191,11 @@
       "path": "raw/articles/nvidias-jensen-huang-bets-on-this-british-startup-to-build-next-frontier-of-ai.md",
       "title": "nvidias-jensen-huang-bets-on-this-british-startup-to-build-next-frontier-of-ai",
       "sourceUrl": "https://www.cnbc.com/2026/05/13/google-deepmind-alumni-startup-partners-nvidia-superintelligence.html"
+    },
+    {
+      "path": "raw/articles/oasis-null-routing-attention-residuals-neurips-2026.md",
+      "title": "OASIS：注意力弃权与双层null路由（NeurIPS 2026）",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652737212&idx=3&sn=7142b34e5331746fe654dfb765b726f5"
     },
     {
       "path": "raw/articles/object-detection-with-amazon-nova-2-lite.md",
@@ -15918,6 +15953,11 @@
       "sourceUrl": "https://www.xiaohongshu.com/explore/6a86b73800000000350178df?xsec_source=app_share&xsec_token=CBtBWq2Djc4mXJIrkMeRVi2Ic7Sq6QGbo4ZKJauYtXeGU="
     },
     {
+      "path": "raw/articles/reasoningshield-cot-safety-moderation-2026.md",
+      "title": "ReasoningShield：思维链安全审核任务、基准与 1B/3B 审核模型（NeurIPS 2026）",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIwMTc4ODE0Mw==&mid=2247723647&idx=2&sn=b2602c1652494088a4365422d4b76d88"
+    },
+    {
       "path": "raw/articles/recent_developments_in_llm_architectures.md",
       "title": "Recent Developments in LLM Architectures: KV Sharing, mHC, a",
       "sourceUrl": "https://magazine.sebastianraschka.com/p/recent-developments-in-llm-architectures"
@@ -15946,6 +15986,11 @@
       "path": "raw/articles/red-sequoia-ai-summit-agi-declaration.md",
       "title": "100 年压缩到 100 天！红杉资本：这就是 AGI",
       "sourceUrl": "https://mp.weixin.qq.com/s/umG3dBKjsPZByhn-APBsfg"
+    },
+    {
+      "path": "raw/articles/redherring-agentic-vulnerability-discovery-defense-hkust.md",
+      "title": "RedHerring：用诱饵代码耗竭AI漏洞挖掘者（HKUST）",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652737151&idx=3&sn=2a98df9470076fbbb07af4832c6a3e39"
     },
     {
       "path": "raw/articles/redis之父下场给deepseek-v4单独造了一台推理引擎.md",
@@ -17273,6 +17318,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652721876&idx=2&sn=5940bc6c2c7e76a617ca41bbbfc60a08"
     },
     {
+      "path": "raw/articles/spanuq-span-level-uncertainty-quantification-neurips-2026.md",
+      "title": "SpanUQ：从Token到Span的LLM不确定性估计（NeurIPS 2026）",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651069516&idx=3&sn=ab8a98a972f88d5f4a2fdf785abb6197"
+    },
+    {
       "path": "raw/articles/spark-to-paper-thirteen-skills-2026.md",
       "title": "Spark-to-Paper：13 个 Skills 把一句话想法变成编译好的 PDF 论文（本地代码库快照）",
       "sourceUrl": null
@@ -17526,6 +17576,11 @@
       "path": "raw/articles/strategy-agent-eval-auto-rubrics-taobao-2026.md",
       "title": "strategy-agent-eval-auto-rubrics-taobao-2026",
       "sourceUrl": "https://mp.weixin.qq.com/s/gOCMe2lrO8PFGfZoKhUmfA"
+    },
+    {
+      "path": "raw/articles/streameval-interactive-streaming-video-benchmark-2026-10.md",
+      "title": "实时视频AI第一份公开成绩单出炉！最高才15分，37个模型全军覆没",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIwNzc2NTk0NQ==&mid=2247622709&idx=1&sn=77b6f06dba7a445c63825f95ee0280e5"
     },
     {
       "path": "raw/articles/streaming-benchmark-and-recommendation-results-to-mlflow-wit.md",
@@ -18301,6 +18356,11 @@
       "path": "raw/articles/tmall-ai-coding-practice-team-knowledge-base-npm.md",
       "title": "tmall ai coding practice team knowledge base npm",
       "sourceUrl": null
+    },
+    {
+      "path": "raw/articles/tmall-digital-employee-full-chain-practice-taobao-2026-10-23.md",
+      "title": "天猫数字员工（实践篇）- 接管全链路：交付能力与技术拆解",
+      "sourceUrl": "https://mp.weixin.qq.com/s/kLWwdqZzhm0rqEGQMzn2Iw"
     },
     {
       "path": "raw/articles/tmall-marketing-ai-workflow-best-practices.md",
@@ -19463,6 +19523,11 @@
       "sourceUrl": "https://research.nvidia.com/labs/sil/projects/WorldTrace/"
     },
     {
+      "path": "raw/articles/worldtui-terminal-world-model-360m-simulated-shell-2026.md",
+      "title": "WorldTUI: a 360M model trained to be a terminal (learned screen world model)",
+      "sourceUrl": "https://simedw.com/2026/10/21/world-model-terminal/"
+    },
+    {
       "path": "raw/articles/wow-harness-v3-governance-protocol.md",
       "title": "wow-harness v3 —— AI 开发的治理协议：跨 session 一致性 + Agent 组织化",
       "sourceUrl": "https://mp.weixin.qq.com/s/kXNivwgCweGoV-xW_WoCtg"
@@ -19701,6 +19766,11 @@
       "path": "raw/articles/yexiaochai-rag-to-ontology-knowledge-base-pitfalls-2026.md",
       "title": "从简单 RAG 到本体论：我用两年时间踩完 AI 知识库的所有坑（员工蒸馏 SOP×Data 框架）",
       "sourceUrl": "https://mp.weixin.qq.com/s/J6pqC1324ixs9GXDiedfzA"
+    },
+    {
+      "path": "raw/articles/yidian-ai-middle-platform-agentloop-case-aliyun-2026-10-23.md",
+      "title": "AI 中台的构建和智能体调优实践",
+      "sourceUrl": "https://mp.weixin.qq.com/s/tcsJxyBtEyG3ifcO-VLKfQ"
     },
     {
       "path": "raw/articles/yidian-tianxia-context-engineering-agentic-ai-qcon.md",

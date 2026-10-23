@@ -1,7 +1,7 @@
 ---
 title: "SenseNova RoboRSI：给通用模型换 Harness，机器人成功率 15.83% → 54.17%"
 created: 2026-10-20
-updated: 2026-10-20
+updated: 2026-10-23
 type: entity
 tags: [harness-engineering, embodied-agent, rsi, vla, benchmark, sensenova]
 sources: [raw/articles/sensenova-robodojo-harness-ablation-embodied-agent-2026]
@@ -58,6 +58,46 @@ SenseNova-RoboRSI 把提示词、Skill、模型、工具/MCP 收进同一运行�
 ## 代价与边界
 
 高完成率伴随可观时间成本：LIBERO-Long++ 标准预算下已超 97%，平均每回合仍消耗约 100 万 Token、53 分钟；RoboDojo 扩展预算下平均超过 3 小时。ICL 的收益也依赖「任务与示范接近」——RoboDojo 的 Open 任务缺少专属示范，知识包帮助有限，**经验向陌生任务迁移**仍是开放问题。^[raw/articles/sensenova-robodojo-harness-ablation-embodied-agent-2026.md]
+
+## 深度分析
+
+### 一、三个成功率数字来自三套装置
+
+文中至少三组成功率：Harness 消融内部的 15.83% → 54.17%（同基准、同模型、只改脚手架）；预算实验的 27.6% → 81.9%（210 回合，步数扩到 10 倍）；榜单参考分 22.48%。^[raw/articles/sensenova-robodojo-harness-ablation-embodied-agent-2026.md:23-27] 混读会得出错误因果。
+
+仅放宽步数就值五十多个百分点，比整套 Harness 消融的增益还大；15.83% 那个基线本就压缩了行动带宽与信息条件，度量下限而非上限。上界对比更有信息量：RoboDojo 实测 81.9% 对乐观上界 90%，缺口只剩 8 点，「步数不够」已被榨干；LHPR-VLN 10 倍预算只到 28.9%。^[raw/articles/sensenova-robodojo-harness-ablation-embodied-agent-2026.md:77-81] 这把「资源约束型失败」与「表征约束型失败」分开，也是重心从预算转向 Harness 的理由。
+
+### 二、审核跨度的经济学
+
+反常拐点：Astra 只下子目标、VLA 开环执行，成功率 5.83%，**比单用 VLA 的 6.91% 还低**。^[raw/articles/sensenova-robodojo-harness-ablation-embodied-agent-2026.md:111-115] VLA 在具体轨迹上微调，擅长续出下一个动作块；逼它理解语义子目标，等于让它在没被训练过的条件分布上推断。
+
+「每 4 个候选审一次」因此有第二重解释。766 万 → 280 万省下的主要是**轮次**：每轮 System 2 都要重发累积观察与知识包，成本随轮次近似二次增长。成功率同时升到 25.83%，说明逐动作审核还打断了本可收敛的序列——单步判据太少，模型容易把「看不清接触状态」误判成「这步错了」，于是拒绝、重采样。跨度 4 把判决点对齐到接触状态真正变化的动作块边界：时机应由状态节奏决定，而非固定计数。
+
+### 三、子 Agent 的不对称
+
+反馈子 Agent 带来 +8.89 点，因为它把「任务是否真的完成」外置成独立观察者。杯把案例里头部相机说已套上挂钩、腕部相机说还在桌上，主循环选了符合预期的那条再沿错误前提继续调——单线程推理无法同时持有互斥观测并主动消解。^[raw/articles/sensenova-robodojo-harness-ablation-embodied-agent-2026.md:29-29] 执行子 Agent 无提升则相反：动作生成已有比 LLM 更可靠的执行者（VLA、脚本、末端控制），再插一层只增延迟与噪声。
+
+压缩较早历史在成绩提升同时砍掉约 66.6% 的 Token ^[raw/articles/sensenova-robodojo-harness-ablation-embodied-agent-2026.md:127-129]，佐证长上下文对具身任务是负资产。判据因此不是「加不加」，而是**子 Agent 只能加在主循环看不见的地方**：观测冲突需仲裁，或粒度不够需换视角（双臂插花时移动空闲机械臂，让腕部相机看到花瓶口，把观察角度变成可规划的动作）。已有专用控制器且信息充分之处，加层只是收税。
+
+### 四、RSI 回路搬运的是成本
+
+RoboRSI 的改进对象是 Harness 而非权重：执行记录 → 定位规划/动作预测/反馈/记忆的问题 → 同条件复测 → 通过者进入下一版本，参数冻结。^[raw/articles/sensenova-robodojo-harness-ablation-embodied-agent-2026.md:103-109]
+
+闭环在 27B 那步合上：RoboCasa365 上 26.0% → 46.5%，输出 Token 59.5K → 15.9K（降 73.3%），成本约 Astra 的 1/50。^[raw/articles/sensenova-robodojo-harness-ablation-embodied-agent-2026.md:165-167] 机制是把「每步显式推理一遍」的检查蒸馏成行为倾向：成本只是从推理时搬到训练时。但 27B 在 RoboDojo 只有 20.83%，远低于 Astra 的 54.17%：蒸馏下来的是行为倾向而非泛化能力，离开经验覆盖过的形状就退回规模上限。这与 [[concepts/agent-evaluation-benchmark-frameworks|Agent 评测基准框架]] 中「脱离配置栈谈分数没有意义」一致。
+
+## 实践启示
+
+1. **先把步数预算当一等超参调。** 判定「模型不行」前画预算-成功率曲线并标上乐观上界：贴近上界则瓶颈在决策质量，远离则在表征与进度追踪。
+
+2. **审核点对齐状态变化，不要对齐每个动作。** 扫 1 / 4 / 8 三档跨度取拐点；逐动作审核既贵又会打断本可收敛的序列。
+
+3. **加子 Agent 前先问它补哪个观测缺口。** 只有「观测冲突需仲裁」与「粒度不够需换视角」值得加层；在已有专用控制器的动作生成上再插执行子 Agent，实测无提升。
+
+4. **把上下文压缩设为默认开启。** 压缩较早历史在提升成绩同时省约 66.6% 的 Token；取舍与 [[concepts/100-line-vs-managed-harness-tradeoff|100 行 vs 托管 harness 权衡]] 同构——省下的必须是重发成本，不是判断依据。
+
+5. **动作接口给末端位姿或相对方向，粒度要匹配执行器分布。** 直接输出关节角度效果更差；给 VLA 一个语义子目标再让它开环跑，可能比它自己跑更差。
+
+6. **执行与评测共用一套接口，逐回合落盘观察/动作/反馈/得分，再用验证过的轨迹蒸馏小模型并以同一 Harness 回归。** 没有轨迹，组件级消融就做不出来。
 
 ## 关联
 

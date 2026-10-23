@@ -1,7 +1,7 @@
 ---
 title: "WorldMemArena：多模态 Agent 记忆评测基准（召回率高≠答得对）"
 created: 2026-10-21
-updated: 2026-10-21
+updated: 2026-10-23
 type: entity
 tags: [agent, memory, benchmark, multimodal, evaluation, rsi]
 sources: [raw/articles/worldmemarena-multimodal-agent-memory-benchmark-2026]
@@ -60,6 +60,43 @@ WorldMemArena 是由 UCSB、斯坦福、苏黎世联邦理工、约翰斯·霍�
 - 项目主页：https://worldmemarena-mem.github.io/
 - 代码：https://github.com/UCSB-AI/WorldMemArena
 - 数据：https://huggingface.co/datasets/LCZZZZ/WorldMemArena
+
+## 深度分析
+
+### 拆的是度量，不是模型
+
+传统记忆评测接口很窄：一段长对话、一个问题、判对错。窄不是问题，不可归因才是——四个环节的失败都表现为 0 分。该基准把记忆展开成「写入—维护—检索—使用」闭环，并标注关键记忆点、状态更新、干扰项与答案证据链，让每一环有独立 ground truth。^[raw/articles/worldmemarena-multimodal-agent-memory-benchmark-2026.md:46-56]
+
+这一步是**度量设计**而非模型设计：把 end-to-end 改写成一组中间指标，才有 credit assignment——答错时能指出坏在哪一环。代价是标注带着研究者先验：「什么算关键记忆点」「干扰多强」由构造者决定，这层主观性会被后续工作继承。
+
+### 高召回为何仍然答错
+
+两组数字并排看：M2A 召回 86.83%、QA 50.14%；MemGPT 召回 85.20%、QA 57.81%。^[raw/articles/worldmemarena-multimodal-agent-memory-benchmark-2026.md:78-78] 容易漏掉的是——**召回只差 1.6 个百分点，QA 却差 7.7 个百分点**。此区间内召回几乎不携带最终表现的信息，方差全部产生在召回之后。
+
+三道断层。一是**检索到的不是承载答案的那条**：干扰项与正确证据共存，top-k 再高也不保证命中能支撑行动的证据。二是**检索成功但拿到过期版本**：召回率只问「记下了吗」，不问「现在还成立吗」——它对时间失明，问答对时间敏感，这是两个指标系统性脱节的根源。三是**证据进了上下文却没进决策**。
+
+截图入库只完成了「存」，从像素到决策之间还缺一层**状态抽象**：哪一处变了、变成什么、推翻了哪条旧判断。缺这层抽象，系统「看过」，却不改变后续动作。^[raw/articles/worldmemarena-multimodal-agent-memory-benchmark-2026.md:80-84]
+
+### 两类任务，测的是两种时间结构
+
+Lifelong Evolution 处理**世界状态的缓慢漂移**（偏好、预算、进度），核心操作是覆盖与合并，即记忆的版本管理；Agentic Execution 处理**自身轨迹的累积**（试过什么、哪步失败、环境后来如何），核心是保序地保存负知识与因果链。^[raw/articles/worldmemarena-multimodal-agent-memory-benchmark-2026.md:62-68]
+
+多数组在 Lifelong 上更好：用户事实可压成 profile，丢细节无妨；自己行动的记录被摘要后，顺序与失败原因先丢，对下一步毫无指引。系统擅长**语义化**（经历变事实），不擅长**保持情景性**（经历保持为事件），与 [[concepts/episodic-vs-semantic-memory-agent|情景记忆与语义记忆]] 的分野正好对上。中途与最终检查点是支点：同一问题问两次，才能分出「没记住」与「记错了」。
+
+### 记忆基准必须控制什么
+
+三条纪律可迁移。**先固定信息可达性**：证明证据在库里，再谈有没有用上，否则检索失败会被误记成推理失败。**干扰项要有对抗强度**：随机噪声不是干扰，与正确答案共享实体但时态不同的信息才是。**时间戳必须显式**：模型分不清两条记忆的新旧，测的就不是维护能力。
+
+报告方式同样关键：只给均值会掩盖「高召回、低利用」的双峰分布，应同时报告两者联合分布，与 [[concepts/evaluation-harness-design|评测框架设计]] 中「指标须能定位失败」一致。局限是：任务规模有限，跨 harness 泛化未验证，换检索器后排序是否稳定无证据；它是回归面而非排行榜，可对照 [[entities/meituan-longcat-vitabench-20-long-term-dynamic-agent-benchmark|VitaBench 2.0]]。
+
+## 实践启示
+
+1. **别把召回率当记忆系统的 KPI。** 同时埋 evidence-hit@k（命中承载答案证据比例）与 evidence-use（进入回答比例），两者之差即利用率损耗。
+2. **给写入建显式 supersede 路径。** 记录带（主体、属性、生效时间），新值写入时把旧记录标失效而非追加，检索默认过滤失效项。
+3. **把负知识做成一等公民。** 失败的工具调用与死路单独成条，规划阶段主动召回，而非留在流水日志。
+4. **视觉记忆存状态差分，不存原始帧。** 入库时抽成（元素、旧值、新值、时间），让跨时间比较成为结构化查询，补上像素到决策的抽象层。
+5. **失败样本按四类归因再修复。** 错例标为漏记 / 过时 / 未召回 / 未使用，只修占比最高的一环，避免多处同改无法归因。
+6. **把这类基准当回归面用。** 每次调整写、检索或巩固策略（合并与衰减，见 [[concepts/memory-consolidation-decay|记忆巩固与衰减]]），跑固定子集比分项指标，而非总分。
 
 ## 关联
 
