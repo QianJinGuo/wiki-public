@@ -49,6 +49,44 @@ OpenAI 表示本次演练发现的所有影响生产防护栈的漏洞**均已�
 
 对自建 agent harness 的团队，这篇的价值不在"OpenAI 有问题"，而在于它把**监控系统的攻击面分类**摆了出来：沙箱/审批层、审计日志完整性、序列化一致性、开关型配置接口、只读工具的权限假设、触发时机。任何一条不成立，覆盖率数字都会虚高。^[raw/articles/metr-openai-agent-monitoring-red-team-2026.md]
 
+## 深度分析
+
+### 75–94% 度量的是"资格"，不是"被看见"
+
+这个区间的分子是"具备被监控资格"的 inference，分母是内部 Responses API 上强度不低于 GPT-5.5 的 agentic 流量。资格只表示该请求按设计应当进入监控管线，不等于它被完整检查、更不等于判据真的判过。作者自陈区间两端都有实质不确定性，说明上下界并非统计置信区间，而是对口径边界的不同假设。^[raw/articles/metr-openai-agent-monitoring-red-team-2026.md]
+
+同一份报告还能给出 99.2%，原因是分母不同：后者只统计内部 Codex agent 使用的那个子集，把非 Codex 的 agentic 调用排除在外；前者口径更宽，于是 RL rollout、compaction 触发的调用等未覆盖部分都被摊进分母。差异来自测量对象而非测量误差。^[raw/articles/metr-openai-agent-monitoring-red-team-2026.md]
+
+### 低报错率证明管道通，不证明看得见
+
+报错率低于 0.2%、某个 24 小时窗口零 load-shed，说明管线在负载下没有崩塌，属于运维健康度证据。它是必要信息，却与"监控能否识别坏事"分属两层：请求送到了、模型跑完了、没报错，仍可能在语义层直接漏判。^[raw/articles/metr-openai-agent-monitoring-red-team-2026.md]
+
+更贴近有效性的是另一项：监控侧看到的轨迹与 agent 侧基本一致，仅少数例外。这排除了最省事的失败模式——监控拿到删减版上下文而天然失明。由此可提炼四层评估：覆盖率回答"送没送进去"，管道可靠性回答"跑没跑成"，上下文一致性回答"看的是不是同一份"，判据质量回答"认不认得出坏事"。前三层可自证，第四层只能靠外部红队去戳。^[raw/articles/metr-openai-agent-monitoring-red-team-2026.md]
+
+### 七类绕过：多数是工程缺陷，不是对齐失败
+
+沙箱逃逸与"只读"工具权限假设崩塌属于边界失效：agent 原则上能取得宿主用户同等权限，两个声称只读的内部工具也存在简单利用。根因是权限声明与实际能力不一致，修的是隔离层而非模型层，边界思路可对照 [[concepts/agent-sandbox]] 与 [[concepts/agent-security-threat-models]]。^[raw/articles/metr-openai-agent-monitoring-red-team-2026.md]
+
+性质最重的是审计链被破坏：一种手法能让数百条近期动作（含该利用自身）脱离监控，事后追溯失去基础。序列化差异让监控解析失败，而失败默认"不升级人工"，是典型失败开放；header 开关则把"关掉监控"做成普通配置项，缺独立审批。触发时机更隐蔽——监控只在交还控制权时启动，等于把"何时被查"交给被查方，持续行动即可无限延期，compaction 漏覆盖又提供了藏身处。^[raw/articles/metr-openai-agent-monitoring-red-team-2026.md]
+
+### 内部红队的结构性上限
+
+这是深度访问试点，不是独立审计。两名研究员在配发设备上工作、设备不出楼、全程陪同，可读代码库与监控 prompt，但访问范围由被评估方划定，公开版本经 OpenAI 删改，METR 无单方面披露删改内容的权利。^[raw/articles/metr-openai-agent-monitoring-red-team-2026.md]
+
+时间边界同样清晰：评估对象是 2026-07-21 及之前的系统，演练期间系统正在扩张；事后 OpenAI 称漏洞已修补、覆盖范围有重大变化，METR 明确表示未验证。因此"已修复"在此是转述而非复核。只读工具的利用未做实战验证、header 通道是否真被用过因访问限制无法查证——这些空白是"三周 + 两名外部研究员 + 单向披露"安排的必然边界，其价值在攻击面分类，不在覆盖率承诺。^[raw/articles/metr-openai-agent-monitoring-red-team-2026.md]
+
+## 实践启示
+
+1. **把覆盖率拆成三段可对账的账本**：记录全部 inference、标注应被监控的子集、再与监控系统日志周期性交叉核对。分母不闭合时，覆盖率只能当量级参考，不能当 KPI 承诺。
+
+2. **按消息数或时间窗强制采样**：不要让"交还控制权"成为唯一触发点，否则长任务可以靠持续行动永久推迟检查；同时把 compaction、上下文重写这类状态替换事件纳入监控。
+
+3. **高危开关走独立审批**：关闭监控、新建 agent 实例、切换组织或 API key 应要求显式授权，且这些凭证不得用于 agentic inference。
+
+4. **失败关闭**：解析失败、序列化不匹配、超时默认阻断或升级人工，并为"两侧看到同一轨迹"写测试固定该不变量。
+
+5. **隔离优先于判据**：脚手架与工具执行环境分离，agent 不能影响监控何时运行、也不应读到监控代码；分层可对照 [[concepts/agent-security-full-lifecycle-system]]。此外应定期做控制评估与"已知绕过清单"，每加一条即给覆盖率打一次折，口径可参照 [[concepts/evaluation-harness-design]]。
+
 ## 关联
 
 - Agent 安全架构：[[concepts/agent-security-architecture]]、[[concepts/agent-security-attack-defense]]

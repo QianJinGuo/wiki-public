@@ -1,10 +1,10 @@
 ---
 title: "阿里巴巴 RoboFlywheel 首发：百万级仿真资产重构机器人训练场"
 created: 2026-09-30
-updated: 2026-09-30
+updated: 2026-10-25
 type: entity
 tags: [embodied-ai, simulation, world-model, training-data, alibaba]
-sources: [raw/articles/roboflywheel-embodied-simulation-assets-2026]
+sources: [raw/articles/roboflywheel-embodied-simulation-assets-2026, raw/articles/roboflywheel-data-loop-embodied-bench-alibaba-2026-09]
 confidence: 0.7
 ---
 
@@ -23,6 +23,16 @@ RoboFlywheel 的核心主张是"先把物体做成可交互的资产，再把资
 **柔性体（RoboFlywheel-Soft）**：面向 485 种标准对象类型，将柔性实体、布片、薄壳、服装和袋体分成五类几何家族匹配不同仿真表示。最难补的是材料行为：先用视觉和语义先验提出参数，再由智能体选择仿真探测、诊断失败并有界调整，最后交给未参与调整的独立探测验收 ^[raw/articles/roboflywheel-embodied-simulation-assets-2026.md]。
 
 **与训练数据产线的关联**：RoboFlywheel 补的是具身智能"从真机到世界模型"之间缺失的仿真数据供给层，与 [[concepts/world-models|世界模型]]、[[concepts/embodied-intelligence-frontier|具身智能前沿]] 的模型侧进展互补——数据侧（资产可交互性验证、跨仿真器通过率）是其区别于纯模型论文的工程特色。类别级生成器思路与 [[concepts/agent-harness-engineering-paradigm|Harness Engineering]] 的"规则先行、验证闭环"方法论同构。
+
+## 第二来源：阿里数据侧的数据闭环与 Bench 评测（2026-09-28）
+
+阿里数据官方号从「数据配方」角度补足了同一项目的另一半：具身智能的瓶颈不是采集量而是有效训练量——采什么、留什么、怎么组合、如何训练与验证决定能力上限。项目在云栖大会上由阿里巴巴联合清华大学、上海交通大学发布，定位为具身智能开放数据基础设施，四项基础能力围绕数据生产、处理、验证与复用展开 ^[raw/articles/roboflywheel-data-loop-embodied-bench-alibaba-2026-09.md]。
+
+**RoboFlywheel-Sim 的资产规模首次给出具体量级**：首批覆盖 52 万刚体资产、40 万铰链资产与 10 万柔性资产，构建生成式资产底座。围绕统一资产格式、跨引擎资产编译、自然语言场景构建与声明式评测 Harness，同一套资产、场景和任务可在不同引擎中复现，支撑规模化压力测试、失败诊断与版本回归——仿真的价值被明确定义为「让更多问题在进入物理世界之前被更早发现」，而不替代真机检验 ^[raw/articles/roboflywheel-data-loop-embodied-bench-alibaba-2026-09.md]。
+
+**RoboFlywheel-Bench 把评测对象从模型扩展到具身系统**：首发的 WholeBodyBench 聚焦模型能力，从基础单元、单元组合到高层组合逐级提升任务复杂度，同时考察组合泛化、场景泛化以及成功与安全两维指标；后续评测还将覆盖真机与仿真的数据采集效率、机器人构型能力边界等模型之外决定落地成败的环节 ^[raw/articles/roboflywheel-data-loop-embodied-bench-alibaba-2026-09.md]。
+
+两个来源互补关系清晰：首篇（机器之心转载阿里技术）回答「资产怎么造得可交互」，本篇回答「资产与场景如何被组织成可比较、可复现的数据配方与评测」。后者把 [[concepts/agent-evaluation-benchmark-frameworks|评测框架]] 的「分级难度 + 成功/安全双指标」思路搬进了具身数据基础设施，与 [[concepts/embodied-intelligence-frontier|具身智能前沿]] 中仿真与真机之间的验证鸿沟直接对应 ^[raw/articles/roboflywheel-data-loop-embodied-bench-alibaba-2026-09.md]。
 
 ## 相关
 

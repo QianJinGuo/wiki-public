@@ -4,10 +4,10 @@ title: "ML Intern Huggingface Autonomous ML Agent"
 type: entity
 tags: [agent, research]
 created: 2026-05-21
-updated: 2026-09-10
+updated: 2026-10-24
 review_value: 6
 review_confidence: 7
-sources: [raw/articles/ml-intern-huggingface-autonomous-ml-agent]
+sources: [raw/articles/ml-intern-huggingface-autonomous-ml-agent, raw/articles/the-model-that-didnt-exist-so-you-made-it-yourself]
 score_validated: 2026-09-05
 reviewed: 2026-09-07
 review_verdict: keep
@@ -52,3 +52,15 @@ Benchmark 结果显示 ml-intern（基于 Qwen3-1.7B）达到了 32% 的 GPQA �
 使用 smolagents 框架构建自定义 ML Agent：ml-intern 基于 smolagents 构建，后者的 CodeAgent 设计将动作写成 Python 代码，比 JSON/text 格式减少 30% 步骤。如果你需要构建类似 ml-intern 的垂直领域 Agent，smolagents 是值得深入了解的基础框架。 ^[raw/articles/ml-intern-huggingface-autonomous-ml-agent.md]
 
 关注 Doom Loop 检测机制的实现：在使用任何自主 Agent 时，都要关注它是否有类似的重蹈覆辙检测机制。缺乏这种机制的 Agent 在复杂任务中容易陷入无效循环，浪费大量计算资源。开源 ml-intern 的 Doom Loop 检测实现值得研究和借鉴。 ^[raw/articles/ml-intern-huggingface-autonomous-ml-agent.md]
+
+## 第二来源：一周造 6 个模型的实操配方（HF 官方博客）
+
+Hugging Face 团队的实测记录给出了 ml-intern 的真实使用形态：一周内用它产出 6 个模型（柑橘病害 VLM 微调、角色 LoRA、相机视角 LoRA、涂鸦替换 LoRA、0.8B/2B 端侧重写器、4 步蒸馏学生模型），全部公开在 Hub 并附评测，总算力成本约 USD 103（单项从 1.9 到 37 美元）。这条来源的价值不在"agent 能训练模型"这个结论，而在**把不可控的自主 Agent 变成可控外包**的提示词工程方法。 ^[raw/articles/the-model-that-didnt-exist-so-you-made-it-yourself.md]
+
+提示词结构四要素：一句话写明想法与动机 → 点名确切的组件（数据集、基座模型、训练脚本）→ 已知事实单列在标题字面上写着 "Verified facts, do not re-derive" 的段落，避免 Agent 把预算花在重新发现你已经验证过的事 → 末尾写清交付物并要求设定预算上限（如 "Cap total spend at USD 12 and ask me before exceeding it"）。因为 ml-intern 每次任务都从零美元预算起步、执行付费作业前必须请求许可，这条预算上限能被严格执行。 ^[raw/articles/the-model-that-didnt-exist-so-you-made-it-yourself.md]
+
+两条被作者标为"关键"的提示词行：**训练前必须先报基线**（"report the base model's zero-shot score on the same metric before training"），否则你得到的是一个训好的模型却不知道是否比原来更好；**冒烟测试必须带断言**（例如要求 50 步训练后检查保存的权重确实发生了变化），再付全量训练的钱。 ^[raw/articles/the-model-that-didnt-exist-so-you-made-it-yourself.md]
+
+可验证的效果数字：柑橘病害 VLM 在 335 张测试图上把基座 Qwen3.5-2B 的准确率从 14.9% 提到 52.8%（1 张 A10G、两个 epoch、约 USD 1.9）；0.8B 重写器在 CPU 上运行、输出有效率 99.7%、token 消耗约为教师模型的四分之一；4 步蒸馏学生模型 GenEval 0.509→0.536（教师 50 步为 0.563），仅需四分之一步数算力。这些数字把"Agent 自主做 ML"从演示变成了可核算的工程账。 ^[raw/articles/the-model-that-didnt-exist-so-you-made-it-yourself.md]
+
+一个反直觉的失败模式也值得记：角色 LoRA 每 100 步存 checkpoint 并用同一组提示词出图，第 200 步首次"完全像"，但**从第 500 步起风格开始溢出到与该角色无关的提示词**——过拟合在生成模型上表现为风格污染，而不是简单的指标下降。 ^[raw/articles/the-model-that-didnt-exist-so-you-made-it-yourself.md]

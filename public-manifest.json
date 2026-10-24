@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "sourceRevision": "ad47741b1b568d5dbc515c3403a3fd312ec4ec0f",
+  "sourceRevision": "013c1e7232eb9209fdafef424b452a3c2fe03c7e",
   "files": [
     {
       "path": "raw/articles/0.25秒识破未见攻击-lod-lvlm-jailbreak-detection-emnlp2026.md",
@@ -1103,6 +1103,11 @@
       "sourceUrl": "https://dxlong2000.github.io/AARD/"
     },
     {
+      "path": "raw/articles/aaif-agent-infrastructure-four-projects-jqzx.md",
+      "title": "AAIF 一次纳入四个 Agent 基础设施项目：Agent Skills / Open Responses / OpenEnv / OpenSandbox",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651069672&idx=2&sn=068a7cc38c194f505ebebf54e913d5fc"
+    },
+    {
       "path": "raw/articles/abnormal-ai-agentcore-code-interpreter-agent-scratch-pad-email-security.md",
       "title": "Abnormal AI: Amazon Bedrock AgentCore for agentic email security at scale",
       "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/abnormal-ai-amazon-bedrock-agentcore-for-agentic-email-security-at-scale"
@@ -1771,6 +1776,11 @@
       "path": "raw/articles/agent-self-evolution-skill-to-weights-panorama-aliexpress-2026-08-25.md",
       "title": "Agent 如何自己变强？从 Skill 到模型权重的进化全景图",
       "sourceUrl": "https://mp.weixin.qq.com/s/AKvtr7IQ9oCGf5xldKeBNw"
+    },
+    {
+      "path": "raw/articles/agent-self-evolution-skill-to-weights-taxonomy-aliexpress-2026.md",
+      "title": "Agent 如何自己变强？从 Skill 到模型权重的进化全景图",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIzOTU0NTQ0MA==&mid=2247562373&idx=1&sn=b2afbd481dd9cbddc533641633f4bbe3"
     },
     {
       "path": "raw/articles/agent-self-improvement-six-mechanisms.md",
@@ -4098,6 +4108,11 @@
       "sourceUrl": null
     },
     {
+      "path": "raw/articles/architect-agent-systematic-landing-full-alibaba-2026-09.md",
+      "title": "【AI 创新实践】\"架构师 Agent\" 系统化落地（完整版）",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIzOTU0NTQ0MA==&mid=2247562372&idx=1&sn=3e8ea44766d7900fd4e55777cf24610b"
+    },
+    {
       "path": "raw/articles/architecture-data-foundations-for-ai-powered-search.md",
       "title": "Architecture & data foundations for AI-powered Search",
       "sourceUrl": "https://www.algolia.com/resources/asset/white-paper-architecture-data-foundations-for-ai-powered-search"
@@ -6398,6 +6413,11 @@
       "sourceUrl": "https://cursor.com/blog/cloud-agent-development-environments"
     },
     {
+      "path": "raw/articles/cloud-agent-team-handoff-capability-audit-vibecoder-2026-10-24.md",
+      "title": "云端Agent能写代码了，团队研发如何接力？",
+      "sourceUrl": "https://mp.weixin.qq.com/s/8C11N9jpe0-eSaLkMlVKww"
+    },
+    {
       "path": "raw/articles/cloud-ai-mobile-testing-new-era-amazon-device-farm-mcp-server-practical-guide-en.md",
       "title": "The New Era of Cloud AI Mobile Testing: Amazon Device Farm MCP Server Practical Guide | 亚马逊AWS官方博客",
       "sourceUrl": "https://aws.amazon.com/cn/blogs/china/cloud-ai-mobile-testing-new-era-amazon-device-farm-mcp-server-practical-guide-en/"
@@ -7963,6 +7983,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/UWCuBURt-xgo4A951lmnqQ"
     },
     {
+      "path": "raw/articles/echochat-empathetic-speech-dialogue-aaa-sdca-neurips-2026.md",
+      "title": "EchoChat：把共情语音对话拆成感知—心智理论推理—回复生成三段，并用分步信用分配训练",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651069794&idx=3&sn=24de4df712471843cfc352f370b7d213"
+    },
+    {
       "path": "raw/articles/echogen-var-subject-driven-generation-iclr2026.md",
       "title": "echogen-var-subject-driven-generation-iclr2026",
       "sourceUrl": "https://mp.weixin.qq.com/s/GOWyTkXnjx7fHLhUWRHCNg"
@@ -8086,6 +8111,11 @@
       "path": "raw/articles/enable-safe-agentic-payments-with-built-in-guardrails-using-.md",
       "title": "enable-safe-agentic-payments-with-built-in-guardrails-using-",
       "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/enable-safe-agentic-payments-with-built-in-guardrails-using-amazon-bedrock-agentcore-payments/"
+    },
+    {
+      "path": "raw/articles/end-to-end-ai-rd-pipeline-tencent-ok-platform-2026.md",
+      "title": "别只盯着 AI Coding，真正的变化发生在整个研发流程",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MjM5ODYwMjI2MA==&mid=2649804241&idx=1&sn=9938f93cb8517ac9dafb033f20535936"
     },
     {
       "path": "raw/articles/end-to-end-codingagent-design-taobao-subsidy-2026-08-03.md",
@@ -11328,6 +11358,11 @@
       "sourceUrl": "https://www.theregister.com/security/2026/05/12/japans-pm-orders-cybersecurity-review-to-defend-against-anthropic-mythos/5238501"
     },
     {
+      "path": "raw/articles/jd-agent-evaluation-system-teardown-silverwing-2026-10-23.md",
+      "title": "京东 Agent 评测体系技术拆解：从 6 亿人的购物车里长出来的评测体系",
+      "sourceUrl": "https://mp.weixin.qq.com/s/RyR5lGNlmWBfo-AUz6-Daw"
+    },
+    {
       "path": "raw/articles/jd-forge-agent-sindri-search-rec-data-platform-2026.md",
       "title": "jd-forge-agent-sindri-search-rec-data-platform-2026",
       "sourceUrl": "https://mp.weixin.qq.com/s/hI5nHc3XBBhf57lOTVorqA"
@@ -12186,6 +12221,11 @@
       "path": "raw/articles/litellm-bedrock-guardrail-placement-streaming-latency-2026.md",
       "title": "litellm-bedrock-guardrail-placement-streaming-latency-2026",
       "sourceUrl": "https://aws.amazon.com/cn/blogs/china/one-stop-how-to-litellm-configuration-amazon-bedrock-guardrail"
+    },
+    {
+      "path": "raw/articles/litellm-supply-chain-poisoning-higress-wasm-sandbox-aliyun-2026-10-23.md",
+      "title": "LiteLLM 半年两度被投毒，大模型的\"钥匙串\"该放在哪里？",
+      "sourceUrl": "https://mp.weixin.qq.com/s/wpHU8_UqRh-D-XYfzfZe1Q"
     },
     {
       "path": "raw/articles/litellm-生产级部署基于-aws-ecseks-的-ai-gateway-架构.md",
@@ -13626,6 +13666,11 @@
       "path": "raw/articles/multi-agent-architecture-retail-practice.md",
       "title": "Multi-Agent 架构在零售供应链运营中的实践：贯穿数据、洞察与行动 | 亚马逊AWS官方博客",
       "sourceUrl": "https://aws.amazon.com/cn/blogs/china/multi-agent-architecture-retail-practice/"
+    },
+    {
+      "path": "raw/articles/multi-agent-communication-protocol-tax-neurips-2026.md",
+      "title": "多Agent也会帮倒忙：80B给9B支招，准确率反降23.6个百分点（Bayes-Sufficient 压缩与 protocol tax，NeurIPS'26）",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247935810&idx=3&sn=4413b0b27aa8331deff0e7f935b3ee46"
     },
     {
       "path": "raw/articles/multi-agent-mission-factory-luke-aiengineer.md",
@@ -15908,6 +15953,11 @@
       "sourceUrl": "https://www.raindrop.ai/blog/signals-2-frontier-classification"
     },
     {
+      "path": "raw/articles/rea-reverse-engineer-anything-agent-architecture-tencent-2026.md",
+      "title": "把逆向工程交给 Agent：一文拆解爆火的 REA 技术原理",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MjM5ODYwMjI2MA==&mid=2649804299&idx=1&sn=e1808d10ae74ddad4c3b38a9e77d2c54"
+    },
+    {
       "path": "raw/articles/react-plan-execute-reflection-multi-agent-selection-guide-frontend-t-2026.md",
       "title": "ReAct、Plan-and-Execute、Reflection、Multi-Agent 模式选型指南：5 步决策树 + AgentScope 完整 Demo",
       "sourceUrl": "https://mp.weixin.qq.com/s/XeNEa0sZkUTBMhM0wzCy3A"
@@ -16178,6 +16228,11 @@
       "sourceUrl": "https://arxiv.org/abs/2605.15846"
     },
     {
+      "path": "raw/articles/roboflywheel-data-loop-embodied-bench-alibaba-2026-09.md",
+      "title": "实现高质量数据闭环，RoboFlywheel 驱动具身智能自衍进",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=Mzg4NTczNzg2OA==&mid=2247511604&idx=2&sn=e86e3982aecd1e77775c6759f38c5a17"
+    },
+    {
       "path": "raw/articles/roboflywheel-embodied-simulation-assets-2026.md",
       "title": "百万级仿真资产，正在重构机器人训练场：阿里巴巴RoboFlywheel首发",
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=Mzg4NTczNzg2OA==&mid=2247511569&idx=2&sn=2572283725cf86c25f42f32a134cfb71"
@@ -16186,6 +16241,11 @@
       "path": "raw/articles/robofoundry-self-evolving-system-as-policy-2026.md",
       "title": "robofoundry-self-evolving-system-as-policy-2026",
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651062250&idx=3&sn=0bf24d2253fc8b154cf8a6852eb1c6b8"
+    },
+    {
+      "path": "raw/articles/roboskill-explore-execute-evolve-skill-acquisition-embodied-agents-fudan-2026.md",
+      "title": "RoboSkill：Explore-Execute-Evolve，让具身 Agent 把摸索出的方法存成可复用 Skill",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247936009&idx=3&sn=afc99f41f0bda8539a989dbe5fba745d"
     },
     {
       "path": "raw/articles/robostral-navigate.md",
@@ -16686,6 +16746,11 @@
       "path": "raw/articles/self-developing-agents-rsi-benchmarks-aspire-s3gym-harnessdev-2026.md",
       "title": "AI会做题，却未必能自进化！字节Seed三项新基准探索RSI闭环",
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIwMTc4ODE0Mw==&mid=2247722940&idx=1&sn=326aae715e20ec5b1642b6b4474a5322"
+    },
+    {
+      "path": "raw/articles/self-distillation-agentic-rl-reality-check-grpo-2026.md",
+      "title": "天下苦Self-Distillation久矣？1.2万卡时实测：最能打的还是GRPO",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIwMTc4ODE0Mw==&mid=2247723484&idx=1&sn=e6ccded71a2cace84ff971e1eb5197b4"
     },
     {
       "path": "raw/articles/self-evolving-agent-security-governance-hermes.md",
@@ -18118,6 +18183,11 @@
       "sourceUrl": "https://danielmiessler.com/blog/the-main-path-to-truly-creative-ai"
     },
     {
+      "path": "raw/articles/the-model-that-didnt-exist-so-you-made-it-yourself.md",
+      "title": "The model that didn't exist, so you made it yourself",
+      "sourceUrl": "https://huggingface.co/blog/building-with-ml-intern"
+    },
+    {
       "path": "raw/articles/the-new-ai-lock-in.md",
       "title": "The new AI lock-in",
       "sourceUrl": "https://www.infoworld.com/article/4171983/the-new-ai-lock-in.html"
@@ -18468,6 +18538,11 @@
       "sourceUrl": "https://pytorch.org/blog/introducing-torchtpu/"
     },
     {
+      "path": "raw/articles/torchtpu-pytorch-conference-2026-native-tpu-benchmarks-jqzx.md",
+      "title": "谷歌开源TorchTPU：TPU 成 PyTorch 原生设备（PyTorch Conference 2026）",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651069794&idx=2&sn=ae62dbad6234b3c4c7359543936974c7"
+    },
+    {
       "path": "raw/articles/toto-2-context-aware-log-analytics-for-complex-distributed-systems.md",
       "title": "Toto 2: Context-aware log analytics for complex distributed systems",
       "sourceUrl": "https://www.datadoghq.com/blog/ai/toto-2/"
@@ -18506,6 +18581,11 @@
       "path": "raw/articles/trace-context-engineering-vibecoder-2026-09-01.md",
       "title": "TRACE论文解读：Agent 答错以后，真正该改的是哪份上下文？",
       "sourceUrl": "https://mp.weixin.qq.com/s/zeaNdHXYKQTNYmMKSZF6pA"
+    },
+    {
+      "path": "raw/articles/trace-rollout-guided-qat-fp4-rl-moe-qwen-arxiv-2610-07767.md",
+      "title": "TRACE：Rollout 引导的 FP4 量化感知训练，让 MoE 强化学习又快又稳",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651069672&idx=3&sn=6b461b4dbff4fd3f156ce081b60ac69e"
     },
     {
       "path": "raw/articles/trace-self-evolving-agent-benchmark-nlplearning-2026.md",
@@ -18681,6 +18761,16 @@
       "path": "raw/articles/u-of-t-ai-worm-cleverhans-research.md",
       "title": "U of T researchers demonstrate AI worm could target any online device",
       "sourceUrl": "https://www.utoronto.ca/news/u-t-researchers-demonstrate-ai-worm-could-target-any-online-device"
+    },
+    {
+      "path": "raw/articles/uber-legal-redlining-agent-architecture-jiagoux-2026-10-23.md",
+      "title": "Uber 的合同审阅 Agent 工程实践和拆解",
+      "sourceUrl": "https://mp.weixin.qq.com/s/RbvuDRNlFQ12BtF4_BnFfg"
+    },
+    {
+      "path": "raw/articles/ui2app-interaction-inference-screenshot-to-app-benchmark-hkust-gz-2026.md",
+      "title": "UI2App：只给静态截图，模型能否推断并实现隐含的交互行为",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652737586&idx=3&sn=c381f1250a66caf597b4a1994ee99be0"
     },
     {
       "path": "raw/articles/ultaep-moe-expert-load-balancing-300us.md",
@@ -19693,6 +19783,11 @@
       "sourceUrl": "https://arxiv.org/abs/2602.01698"
     },
     {
+      "path": "raw/articles/xiaomi-midashenglm-spatial-audio-llm-2026.md",
+      "title": "给大模型装上\"一双耳朵\"：小米开源空间音频理解大模型 MiDashengLM-Spatial",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzUxMDQxMDMyNg==&mid=2247520446&idx=1&sn=766c9b45d7302f1fa994f36adeda3943"
+    },
+    {
       "path": "raw/articles/xiaomi-mimo-v26扩展强化学习规模迈向自我提升.md",
       "title": "xiaomi-mimo-v26扩展强化学习规模迈向自我提升",
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzUxMDQxMDMyNg==&mid=2247520378&idx=2&sn=a6d824c9c91ef9f0b03b4c9cb953bda4"
@@ -19731,6 +19826,11 @@
       "path": "raw/articles/xopd-on-policy-distillation-landscape-banana-2026.md",
       "title": "xopd-on-policy-distillation-landscape-banana-2026",
       "sourceUrl": "https://mp.weixin.qq.com/s/hmxau7imqx0eYgtNLh9R2Q"
+    },
+    {
+      "path": "raw/articles/xthings-agentcore-smart-home-natural-language-control.md",
+      "title": "Xthings 基于 Amazon Bedrock AgentCore 与 Amazon Nova Lite 构建智能家居自然语言控制的实践",
+      "sourceUrl": "https://aws.amazon.com/cn/blogs/china/xthings-based-on-amazon-bedrock-agentcore-amazon-nova-lite"
     },
     {
       "path": "raw/articles/yann-dubois-openai-post-training-matt-turck-interview.md",
