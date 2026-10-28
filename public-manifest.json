@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "sourceRevision": "737cc51b585318cfeb2d137fc2703b83172f2db7",
+  "sourceRevision": "ff1d2bcf2dba1cb81f24f59fb41c6fe79e859fe6",
   "files": [
     {
       "path": "raw/articles/0.25秒识破未见攻击-lod-lvlm-jailbreak-detection-emnlp2026.md",
@@ -15313,6 +15313,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/c5k2iwYh1O1OLA8ULf5X_A"
     },
     {
+      "path": "raw/articles/personal-agent-product-comparison-trends-ali-2026-10-27.md",
+      "title": "Personal Agent 对比分析及未来技术发展趋势",
+      "sourceUrl": "https://mp.weixin.qq.com/s/BV_8653GjYAFrNKCan4iyw"
+    },
+    {
       "path": "raw/articles/personal-ai-memory-system-five-layer-tencent-2026.md",
       "title": "一文搞懂个人AI记忆系统构建全流程",
       "sourceUrl": "https://mp.weixin.qq.com/s/2Kz2JQK1r606S3quiCFUYg"
@@ -15808,6 +15813,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/l-L2_abmijjpG_XOCAMsZw"
     },
     {
+      "path": "raw/articles/qoder-agentloop-sensitive-data-credential-protection-aliyun-2026-10-28.md",
+      "title": "Qoder × AgentLoop：智能体规模化应用，敏感数据保护如何跟上？",
+      "sourceUrl": "https://mp.weixin.qq.com/s/pTUDmmQ8OIUjNgH5xy9FMQ"
+    },
+    {
       "path": "raw/articles/qoder-better-harness-code-level-analysis-vibecoder.md",
       "title": "Qoder 开源 Better Harness，专门审查 Coding Agent 的外部系统",
       "sourceUrl": "https://mp.weixin.qq.com/s/VQBxx1vFHNl7bUFcd0a-2A"
@@ -15816,6 +15826,11 @@
       "path": "raw/articles/qoder-cli-上运行-qwen38-max5-个硬核任务实测.md",
       "title": "qoder-cli-上运行-qwen38-max5-个硬核任务实测",
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=Mzg4NTczNzg2OA==&mid=2247511066&idx=1&sn=2abf64c9e90df880bdf02446965b4a5e"
+    },
+    {
+      "path": "raw/articles/qoder-cloud-agents-litetopic-hand-brain-separation-aliyun-2026-10-27.md",
+      "title": "Qoder Cloud Agents 手脑分离实践：RocketMQ LiteTopic 如何支撑规模化长程 Agent 任务",
+      "sourceUrl": "https://mp.weixin.qq.com/s/HDLycyI1BGoeZOqCH-DVNw"
     },
     {
       "path": "raw/articles/qoder-skill-ui-agent-human-collaboration.md",
@@ -17123,6 +17138,11 @@
       "sourceUrl": "https://arxiv.org/abs/2607.07508"
     },
     {
+      "path": "raw/articles/six-harness-agent-loop-implementation-comparison-paperweekly-2026-10-28.md",
+      "title": "不同 Harness 的 Agent Loop 怎么做？Claude Code、Codex 等 6 套方案详解",
+      "sourceUrl": "https://mp.weixin.qq.com/s/GryGhL7SLCPwDQF0VjsPeg"
+    },
+    {
       "path": "raw/articles/skill-complete-guide-alibaba.md",
       "title": "第一步：安装 Remotion Best Practice Skill",
       "sourceUrl": "https://mp.weixin.qq.com/s/PG-rXJllhrtynAfNZn5asg"
@@ -17626,6 +17646,11 @@
       "path": "raw/articles/starops-agentic-ops-closed-loop-aliyun-2026-10-13.md",
       "title": "阿里云 STAROps 全新升级，让 AI 持续推进问题闭环解决",
       "sourceUrl": "https://mp.weixin.qq.com/s/NtsOAsHE38kHkGaFLXZJiw"
+    },
+    {
+      "path": "raw/articles/starops-aiops-eval-set-fault-injection-aliyun-2026-10-28.md",
+      "title": "完整还原已经服务千家企业的 AIOps Agent 的评测和调优实践",
+      "sourceUrl": "https://mp.weixin.qq.com/s/U3djT_peTic52CdpxEhNeQ"
     },
     {
       "path": "raw/articles/starops-generalizable-rca-umodel-rcabench-aliyun-2026-08-18.md",
@@ -18841,6 +18866,11 @@
       "path": "raw/articles/tsinghua-harness-engineering-report.md",
       "title": "清华大学：驾驭工程 (Harness Engineering) 研究报告",
       "sourceUrl": "https://mp.weixin.qq.com/s/EdVjZuBVcXjd30TpxyLsXQ"
+    },
+    {
+      "path": "raw/articles/tsinghua-jev-deep-report-reading-gis-2026-10-27.md",
+      "title": "清华大学：Jev深度研究报告",
+      "sourceUrl": "https://mp.weixin.qq.com/s/YrF0Eze998PtUdbqzhc3MA"
     },
     {
       "path": "raw/articles/tsinghua-loop-engineering-report.md",
