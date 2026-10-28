@@ -7,6 +7,8 @@ tags: [aim, agentic-research, bayesian-optimization, idea-management, research-a
 sources: [raw/articles/agentic-idea-manager-google-cloud-ai-2026]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-10-26
+review_verdict: keep
 ---
 
 # AIM：贝叶斯优化式 Agentic Idea Management 自动化研究框架（Google Cloud AI，arXiv 2609.38445）

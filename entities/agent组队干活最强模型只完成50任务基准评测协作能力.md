@@ -6,6 +6,8 @@ type: entity
 tags: [multi-agent, benchmark, collaboration]
 sources: [raw/articles/agent组队干活最强模型只完成50任务基准评测协作能力]
 confidence: 0.75
+reviewed: 2026-10-26
+review_verdict: refresh
 ---
 
 # AgentWorld：多智能体协作评测基准

@@ -7,6 +7,8 @@ tags: [ai-mediakit, volcano-engine, bytedance, video-editing, video-inpainting, 
 sources: [raw/articles/ai-mediakit-video-subtitle-erasure-refm-volcano-2026]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-10-26
+review_verdict: keep
 review_note: "厂商产品公告（火山引擎 AI MediaKit 新版字幕擦除），仅内部评测对比帧，无公开 benchmark/复现数据；架构机制描述可迁移，量化结论不可引用"
 ---
 

@@ -7,6 +7,8 @@ tags: [ai4ai, recursive-self-improvement, survey, composition-gap, harness, eval
 sources: [raw/articles/ai4ai-survey-composition-gap-recursive-self-improvement-2026]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-10-26
+review_verdict: keep
 ---
 
 # 第一篇 AI4AI 综述 — Composition Gap 与递归自我改进的证据阶梯

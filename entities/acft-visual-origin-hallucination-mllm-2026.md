@@ -7,6 +7,9 @@ tags: [multimodal, vlm, hallucination, contrastive-learning, fine-tuning, evalua
 sources: [raw/articles/acft-visual-origin-hallucination-mllm-2026]
 confidence: 0.7
 review_recommendation: ingest
+reviewed: 2026-10-25
+review_verdict: keep
+review_category: tech
 ---
 
 # 视觉源幻觉与 ACFT：清华 ACM MM 2026 的 0.9% 数据幻觉修正法

@@ -7,6 +7,8 @@ tags: [bi, data-agent, ai-native, knowledge-governance, semantic-layer, quality-
 confidence: 0.85
 provenance_state: extracted
 sources: [raw/articles/amap-local-life-analysis-agent-ai-native-ali-2026-09-30]
+reviewed: 2026-10-26
+review_verdict: keep
 ---
 
 # 高德本地生活分析 Agent 的 AI Native 实践全景：BI 能力分级、知识语义治理与经营判断质量工程（阿里 2026）

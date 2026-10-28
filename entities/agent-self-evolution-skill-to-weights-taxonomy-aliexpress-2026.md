@@ -6,6 +6,9 @@ type: entity
 tags: [agent, self-evolution, skill, harness, memory, taxonomy]
 sources: [raw/articles/agent-self-evolution-skill-to-weights-taxonomy-aliexpress-2026]
 confidence: 0.7
+reviewed: 2026-10-25
+review_verdict: keep
+review_category: tech
 ---
 
 # Agent 自进化全景图：从 Skill 到模型权重的二维分类（AliExpress 技术）

@@ -7,6 +7,8 @@ tags: [agent, skill, self-evolution, co-evolution, evaluation, reliability, post
 sources: [raw/articles/alibaba-token-foundry-coda-skill-policy-coevolution-reliability-2026]
 confidence: 0.8
 provenance_state: extracted
+reviewed: 2026-10-26
+review_verdict: keep
 ---
 
 # 阿里 Token Foundry CODA：技能—策略协同进化的「协同进化陷阱」与可靠性评测协议

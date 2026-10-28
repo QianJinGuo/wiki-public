@@ -1,7 +1,7 @@
 ---
 title: "LittleLearner：课程受控预训练——预训练过滤设定能力上限的实验证据"
 created: 2026-08-17
-updated: 2026-09-07
+updated: 2026-10-25
 type: entity
 tags: [pretraining, curriculum, data-centric, knowledge-acquisition, elicitation, arxiv, mpi]
 sources: [raw/articles/littlelearner-pedagogical-curriculum-llm-arxiv-2608-13545]
@@ -39,6 +39,32 @@ scaling、SFT+GRPO 后训练、in-context learning 都能放大**课程内**（i
 - 与 [[entities/notes-on-pretraining-parallelisms-and-failed-training-runs|预训练失败模式]] 同属预训练实证研究族，本作聚焦数据分布侧。
 - 与 [[entities/emo-pretraining-mixture-of-experts-for-emergent-modularity-ai2|预训练涌现模块性]] 互补：那里研究结构涌现，这里研究知识边界。
 - 与 [[entities/generalization-dynamics-lm-pretraining|LM 预训练泛化动力学]] 概念同源：分布内 vs 分布外泛化的边界证据。
+
+## 深度分析
+
+### 1. 实验设计：把「预训练教了什么」变成可操纵的自变量
+
+难点不是「会不会」，而是归因：现代 LM 一次见完所有数据，能力出现无法区分是数据教会的还是后训练逼出来的。LittleLearner 把知识边界做成**可枚举**的——课程语料显式排除五年级以上的概念、事实与词汇，于是「该会什么、不该会什么」在训练前就被写下；再配同架构、同 token、同 recipe 的 Unfiltered 对照，预训练分布成为唯一差异项。^[raw/articles/littlelearner-pedagogical-curriculum-llm-arxiv-2608-13545.md]
+
+真正的贡献是把「能力存在」与「能力可被取出」拆成两个可分别测量的量：只有把 out-of-scope 单独建集，才会看到 scaling、SFT+GRPO、ICL 三者一致地把 in-scope 抬高、却把 out-of-scope 按在原地。^[raw/articles/littlelearner-pedagogical-curriculum-llm-arxiv-2608-13545.md] 「能力上限」由此从比喻变成可测量的量。
+
+### 2. 「Elicitation, not Acquisition」的机理（一种解读）
+
+与证据相容的读法：预训练在分布内装进去的主要是**接口**——这类问题怎么问、推理按什么步骤走、答案长什么形状——而事实与领域内容依附于数据覆盖。后训练与 ICL 优化的只是「把已有表示取出来」的效率，因此能把 in-scope 推近它的渐近线，却造不出从未被覆盖的表示。
+
+实践含义比「过滤会丢信息」更锋利：**过度激进的质量过滤削掉的往往不只是噪声，还有格式与推理支架**——解题模板、术语的规范用法、多步推导的中间态，而这些正是 elicitation 赖以发生的接口。代价因此双重：覆盖面收缩，接口变薄。
+
+### 3. 对 scaling law 与数据配方的影响
+
+若质量过滤器同时收缩覆盖率，它就不是纯去噪，而是在「质量—覆盖」两维上做交换，收益曲线可能非单调——与「过滤是单调增益」的默认假设冲突。放进 data-constrained 语境，「能力上限」解释了饱和：某知识维度被截断后，继续加算力或 token 只能把 in-scope 推向自己的天花板，out-of-scope 不动，宏观表现为某类任务收益停止增长，而非 loss 曲线出问题。^[raw/articles/littlelearner-pedagogical-curriculum-llm-arxiv-2608-13545.md]
+
+推论：覆盖率应与质量分并列成为显式优化维度，而非由 quality classifier 隐式代理。邻近证据见 [[entities/pretraining-progress-is-mostly-data|预训练进步主要来自数据]] 与 [[entities/arxiv-2608-14071-scaling-domain-data-repetition-llm-pretraining|领域数据重复的 scaling 行为]]；scaling law 的外推也需附加条件——换数据分布，指数会变，参见 [[concepts/scaling-laws|scaling laws]]。
+
+### 4. 方法学的可迁移性：给领域模型做一支 elicitation/acquisition 探针
+
+三步可复制：(i) **固定格式**——同 prompt 模板、同 few-shot 数、同 SFT/RL 配方；(ii) **只变覆盖**——一份显式截断语料配一份未截断对照，token 预算对齐；(iii) **OOD 单列**——分布外测试集从主指标拆出单列。判据很干脆：干预只抬分布内，你测到的是 elicitation；分布外同步上升，才谈得上 acquisition（先排除测试集泄漏）。
+
+边界要说清：单一小规模设定（最大 5B）；课程语料靠五阶段流水线蒸馏、构造成本不低；即便 token 匹配，过滤后语料在词汇与主题多样性上系统性更窄，「覆盖率」与「课程排序」仍难完全分离。所以「上限」结论的强度取决于边界划得干不干净，而不取决于模型规模。^[raw/articles/littlelearner-pedagogical-curriculum-llm-arxiv-2608-13545.md]
 
 ## 实践启示
 

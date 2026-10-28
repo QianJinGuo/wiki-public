@@ -7,6 +7,9 @@ tags: [reasoning, architecture, epistemic-state, hallucination, verification, wh
 sources: [raw/articles/age-of-reasoning-epistemic-state-architecture-metis-2026]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-10-25
+review_verdict: keep
+review_category: tech
 ---
 
 # The Age of Reasoning：以显式认知状态为核心的推理架构（Metis Reasoning 白皮书）

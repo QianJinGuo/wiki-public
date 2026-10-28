@@ -6,6 +6,8 @@ type: entity
 tags: [agent, evaluation, harness, agent-eval, plugin, sandbox, open-source, coding-agent]
 sources: [raw/articles/ageval-pluggable-agent-eval-plugin-decoupling-zju-2026]
 confidence: 0.7
+reviewed: 2026-10-26
+review_verdict: keep
 ---
 
 # ageval：浙大 ZJU-REAL 开源的插件化解耦 Agent 评测底座

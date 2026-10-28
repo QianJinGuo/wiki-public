@@ -7,6 +7,8 @@ tags: [b2b-product, ai-workflow, context-engineering, harness-engineering, prd, 
 sources: [raw/articles/ai-b2b-product-pmf-fengzhigang-jd-2026]
 confidence: 0.9
 provenance_state: extracted
+reviewed: 2026-10-26
+review_verdict: keep
 ---
 
 # B 端产品经理的 AI 工作方式重组：从 34 到 15 人日（京东零售 冯志纲）

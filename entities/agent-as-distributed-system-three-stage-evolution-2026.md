@@ -7,6 +7,9 @@ tags: [agent, distributed-systems, harness, idempotency, state-persistence, mcp,
 sources: [raw/articles/从-llm-ocr-到分布式-agent一个报销工具的三次进化]
 confidence: 0.8
 provenance_state: extracted
+reviewed: 2026-10-25
+review_verdict: keep
+review_category: practice
 ---
 
 # Agent 即分布式系统：报销工具的三阶段进化（LLM 纯函数 → Agent Loop → Skill+MCP）

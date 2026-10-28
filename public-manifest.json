@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "sourceRevision": "013c1e7232eb9209fdafef424b452a3c2fe03c7e",
+  "sourceRevision": "737cc51b585318cfeb2d137fc2703b83172f2db7",
   "files": [
     {
       "path": "raw/articles/0.25秒识破未见攻击-lod-lvlm-jailbreak-detection-emnlp2026.md",
@@ -816,6 +816,11 @@
       "path": "raw/articles/300万人在存的claude提示词.md",
       "title": "300万人在存的Claude提示词",
       "sourceUrl": "https://mp.weixin.qq.com/s/QU-f1n5Jhl_0wAt6crohXQ"
+    },
+    {
+      "path": "raw/articles/30b-on-device-inference-engine-predictive-loading.md",
+      "title": "30b-on-device-inference-engine-predictive-loading",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247936009&idx=1&sn=e6fb685ed336535de3f97dbdda25b34a"
     },
     {
       "path": "raw/articles/33万个skills为什么大多数都死在安装这一步.md",
@@ -2676,6 +2681,11 @@
       "path": "raw/articles/ai-native-dan-shipper-every-layered-thinking-walkwalk.md",
       "title": "AI Native 公司 Dan Shipper / Every 30 人做出 100 人产出：层次化思维 + SaaS 六维能力框架",
       "sourceUrl": "https://mp.weixin.qq.com/s/Ko_Tpq2UJEbyOBXq9x19ug"
+    },
+    {
+      "path": "raw/articles/ai-native-dev-quality-frontend-retrospective-alibaba-2026.md",
+      "title": "AI Native 回忆录：稳定性前端 S1 实践复盘",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=Mzg4NTczNzg2OA==&mid=2247511817&idx=1&sn=5284ab741c2a5ccd9520c86e9261770d"
     },
     {
       "path": "raw/articles/ai-native-org-guide-slowdown.md",
@@ -5913,6 +5923,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/RRvZ-MfdcU0hU1TTpcPtkg"
     },
     {
+      "path": "raw/articles/claude-code-self-review-anthropic-2026.md",
+      "title": "claude-code-self-review-anthropic-2026",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652735857&idx=2&sn=080a2d5531a5d51a3afe813509c04e82"
+    },
+    {
       "path": "raw/articles/claude-code-session-management-1m-context.md",
       "title": "使用Claude Code：session管理与1M上下文",
       "sourceUrl": "https://mp.weixin.qq.com/s/IOSlKDkKVB1djBO0RpOSgA"
@@ -6121,6 +6136,11 @@
       "path": "raw/articles/claude-for-small-business.md",
       "title": "claude-for-small-business",
       "sourceUrl": "https://www.anthropic.com/news/claude-for-small-business"
+    },
+    {
+      "path": "raw/articles/claude-formal-verification-rocq-riscv-theorem-labs-2026.md",
+      "title": "claude-formal-verification-rocq-riscv-theorem-labs-2026",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652737212&idx=1&sn=5a1bfdf04ac60667d4b36bd67a30c371"
     },
     {
       "path": "raw/articles/claude-invisible-watermark-genai-steganography-xinzhiyuan.md",
@@ -6488,6 +6508,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/vJqB2bXnpqU4XqiOEJqL2Q"
     },
     {
+      "path": "raw/articles/code-generation-bottleneck-software-delivery-agent.md",
+      "title": "code-generation-bottleneck-software-delivery-agent",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=Mzg4NTczNzg2OA==&mid=2247511569&idx=1&sn=ca79c9f4d04fde0b3d550d8cb46c8d90"
+    },
+    {
       "path": "raw/articles/code-intelligence-changelog-1.md",
       "title": "Code Intelligence – Changelog",
       "sourceUrl": "https://linear.app/changelog/2026-05-14-code-intelligence"
@@ -6598,6 +6623,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/RlgwFWpaLj2sH_pK-EZRAg"
     },
     {
+      "path": "raw/articles/codex-harness-token-budget-window-memory-qianwen-2026-10-27.md",
+      "title": "深度解析 Codex Harness 架构及其全新上下文压缩记忆体系的设计思路",
+      "sourceUrl": "https://mp.weixin.qq.com/s/IM-zakQ9Bnog54NdYiJSqA"
+    },
+    {
       "path": "raw/articles/codex-major-update-appshots-goal-xinzhiyuan.md",
       "title": "codex-major-update-appshots-goal-xinzhiyuan",
       "sourceUrl": "https://unknown/codex-major-update-appshots-goal-xinzhiyuan"
@@ -6616,6 +6646,11 @@
       "path": "raw/articles/codex-sites-cloudflare-worker-one-click-deploy-geekhome.md",
       "title": "codex-sites-cloudflare-worker-one-click-deploy-geekhome",
       "sourceUrl": "https://mp.weixin.qq.com/s/Gp1GkhT5Gs3xwmJnTxYQ9g"
+    },
+    {
+      "path": "raw/articles/codex-team-retro-feedback-unit-handoff-chain-jiaogoux-2026-10-26.md",
+      "title": "Codex 核心团队复盘：从 30 秒一次反馈，到放手跑几小时",
+      "sourceUrl": "https://mp.weixin.qq.com/s/rTyr9o2r2VMdp0MVfZf2tw"
     },
     {
       "path": "raw/articles/codex-token-quota-exhaustion-debug-2026.md",
@@ -7216,6 +7251,11 @@
       "path": "raw/articles/dataworks-copilot-skill-data-request-24h-delivery-taobao-2026-07-20.md",
       "title": "dataworks-copilot-skill-data-request-24h-delivery-taobao-2026-07-20",
       "sourceUrl": "https://mp.weixin.qq.com/s/7JI5zJdT73OFbI-DVl3Oqg"
+    },
+    {
+      "path": "raw/articles/dawa-scenes-ai-persistent-world-model-2026.md",
+      "title": "dawa-scenes-ai-persistent-world-model-2026",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247935810&idx=2&sn=ad04670f3876b6e0039749a333cf1dcc"
     },
     {
       "path": "raw/articles/dayjob-finance-surge-long-horizon-agent-benchmark-2026.md",
@@ -7893,6 +7933,11 @@
       "sourceUrl": "https://vercel.com/blog/making-every-harness-durable"
     },
     {
+      "path": "raw/articles/dust-zeroth-order-pretraining-transformer-qlabs-2026.md",
+      "title": "dust-zeroth-order-pretraining-transformer-qlabs-2026",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651070119&idx=2&sn=bb57ff281605456e1b9a19fdff11ef66"
+    },
+    {
       "path": "raw/articles/dwarkesh-patel下一代ai可能是干活干出来的.md",
       "title": "Dwarkesh Patel：下一代AI，可能是干活干出来的",
       "sourceUrl": "http://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651041546&idx=2&sn=fedc77937dafe2bff30de5b1d8d47e40&chksm=84e66b74b391e2622fe2705d6d20db3f35685261a164ac701af536a6a098971b92c858cfd776"
@@ -8186,6 +8231,11 @@
       "path": "raw/articles/enterprise-knowledge-graph-ontology-practice-yexiaochai-2026.md",
       "title": "准备上知识图谱和本体（Ontology）？要什么团队、选什么场景、花多少成本",
       "sourceUrl": "https://mp.weixin.qq.com/s/Y64HtE-cOJfI2YzfELNyrQ"
+    },
+    {
+      "path": "raw/articles/enterprise-legacy-system-ai-integration-concept-map-tencent-2026.md",
+      "title": "Agent、MCP、Skill、CLI、Model 一次讲透：老系统接入 AI 的概念地图与三条路径",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MjM5ODYwMjI2MA==&mid=2649804252&idx=1&sn=073e0806e5a950fae374c9e5f7a2a8b6"
     },
     {
       "path": "raw/articles/enterprise-next-gen-architecture-system-cli-process-skill-employee-agent-zhan.md",
@@ -9021,6 +9071,11 @@
       "path": "raw/articles/gemini-4-argon-minecraft-agent-team-paperagent-2026-10-19.md",
       "title": "刚刚，谷歌发布首篇 Gemini 4 Argon 技术论文",
       "sourceUrl": "https://mp.weixin.qq.com/s/U8D7mjKfjxdbfff9KT6J2w"
+    },
+    {
+      "path": "raw/articles/gemini-agents-minecraft-long-horizon-collaboration-2026.md",
+      "title": "gemini-agents-minecraft-long-horizon-collaboration-2026",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247936009&idx=2&sn=1f49e2fbdf8151c9d889c28a16ae8c3f"
     },
     {
       "path": "raw/articles/gemini-deep-guide-prompt.md",
@@ -10133,6 +10188,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/JQ-kJ96vQHKsHcf2c9JxIw"
     },
     {
+      "path": "raw/articles/harnessdev-self-built-harness-teardown-mozhi-2026-10-26.md",
+      "title": "字节 HarnessDev 论文解读：大模型能不能搭建、迭代自己的 Agent Harness？",
+      "sourceUrl": "https://mp.weixin.qq.com/s/qlyfSaGmtQ0cmE7XXHhB9g"
+    },
+    {
       "path": "raw/articles/harnesseval-evaluation-harness-mirros-jiqizhixin-2026-08-18.md",
       "title": "开启 Benchmark 的 Harness 时代：15 家学术机构联合发布 HarnessEval",
       "sourceUrl": "https://mp.weixin.qq.com/s/T_fBh7p82OHaKw75oq-5cQ"
@@ -10388,6 +10448,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/hRFZkhT_Bkm3FEjTr1tpjQ"
     },
     {
+      "path": "raw/articles/hi3d-open-3d-generation-model-2026.md",
+      "title": "hi3d-open-3d-generation-model-2026",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247935810&idx=1&sn=e902fe78365fb98b9af52b42ad51d354"
+    },
+    {
       "path": "raw/articles/hiclaw-v110-k8s-hermes-worker.md",
       "title": "HiClaw 发布 v1.1.0，提供 Kubernetes 集群部署实现，支持 Hermes Worker 运行时",
       "sourceUrl": "https://mp.weixin.qq.com/s/9HTo9BQ0DWrgyqKdEcu7JA"
@@ -10431,6 +10496,11 @@
       "path": "raw/articles/higress-v224-mcp-stateless-gateway-api-inference-aliyun-2026.md",
       "title": "从新版 MCP 到 Gateway API 推理扩展：读懂 Higress v2.2.4 的关键变化",
       "sourceUrl": "https://mp.weixin.qq.com/s/KJ_f87Jo6bA2FVqYKeK-wA"
+    },
+    {
+      "path": "raw/articles/hindsight-agent-memory-ontology-consolidation-datafun-2026-10-27.md",
+      "title": "Agent记忆走向本体化？这一开源项目让知识持续进化",
+      "sourceUrl": "https://mp.weixin.qq.com/s/qKqbLCNIx4RHq2NVCb_JTg"
     },
     {
       "path": "raw/articles/hipporag-neurobiologically-inspired-rag-using-amazon-bedrock.md",
@@ -11448,6 +11518,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/QWFkGiEmC24RecPOyrl_lA"
     },
     {
+      "path": "raw/articles/jeva-decision-model-architecture-nus-2026.md",
+      "title": "jeva-decision-model-architecture-nus-2026",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652737969&idx=3&sn=57bdfd605221dbcb2ddfbfade189ade6"
+    },
+    {
       "path": "raw/articles/jevagentharness-decision-model-shared-control-uiuc-2026-10-18.md",
       "title": "UIUC 提出 JevAgentHarness：决策模型与 LLM 共享控制权，智能体成本降 81% 到 89%",
       "sourceUrl": "https://mp.weixin.qq.com/s/r9DgNwwjF5CYPZ_bX0eqXw"
@@ -11626,6 +11701,11 @@
       "path": "raw/articles/kasra-blog-llm-hacking-empirical-test.md",
       "title": "I built a vulnerable app and spent $1,500 seeing if LLMs could hack it",
       "sourceUrl": "https://kasra.blog/blog/i-spent-1500-seeing-if-llms-could-hack-my-app/"
+    },
+    {
+      "path": "raw/articles/kdd-2026-uav-rider-seq2seq-joint-optimization.md",
+      "title": "kdd-2026-uav-rider-seq2seq-joint-optimization",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIwMTc4ODE0Mw==&mid=2247723484&idx=2&sn=4d2df0d39ac5ba457efb0a51660a9651"
     },
     {
       "path": "raw/articles/kdd-cup-2026-taac-recsys-scaling-law-unified-architecture.md",
@@ -13413,6 +13493,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/Xfsq8YDP7xkOLzbh1HwdjA"
     },
     {
+      "path": "raw/articles/minimax-m3-1-agent-vision-pipeline-review.md",
+      "title": "minimax-m3-1-agent-vision-pipeline-review",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIwNzc2NTk0NQ==&mid=2247622324&idx=1&sn=416d2f9a2b08a8809f4ba5c1a3cfb5f1"
+    },
+    {
       "path": "raw/articles/minimax-m3-frontier-three-set-open-source.md",
       "title": "国内首个 Frontier 三件套开源大模型：MiniMax M3 完整技术拆解",
       "sourceUrl": "https://mp.weixin.qq.com/s/h5NJdx7WZvMOWJLp6aFc9A"
@@ -13868,6 +13953,11 @@
       "sourceUrl": "https://www.xiaohongshu.com/explore/6a9ba5dd0000000012001024?xsec_source=app_share&xsec_token=CBJv9tPhZwRNMV9NGqVC-fjkq1V6GY0mFLbvR_wdq35-Y="
     },
     {
+      "path": "raw/articles/netflix-personalized-recommendations-causal-impact-measurement.md",
+      "title": "netflix-personalized-recommendations-causal-impact-measurement",
+      "sourceUrl": "https://netflixtechblog.com/measuring-the-impact-of-personalized-recommendations-4c26be3a4d96?source=rss----2615bd06b42e---4"
+    },
+    {
       "path": "raw/articles/netflix-real-time-service-topology.md",
       "title": "netflix-real-time-service-topology",
       "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/netflix-real-time-service-topology/"
@@ -13888,9 +13978,19 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/2BkYEpxmEuYdo1rwEID5XA"
     },
     {
+      "path": "raw/articles/neurips-2026-productivity-open-agent-analysis.md",
+      "title": "neurips-2026-productivity-open-agent-analysis",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIwMTc4ODE0Mw==&mid=2247723467&idx=1&sn=c0572e818d3aa10f3ff3ff8597c245b0"
+    },
+    {
       "path": "raw/articles/neurips-2026-rebuttal-skill开源-ac开源.md",
       "title": "neurips-2026-rebuttal-skill开源-ac开源",
       "sourceUrl": "https://mp.weixin.qq.com/s/gOwQz1pb3d7BG4WFSwj5yw"
+    },
+    {
+      "path": "raw/articles/neurips-2026-thinking-inertia-evaluation.md",
+      "title": "neurips-2026-thinking-inertia-evaluation",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652737830&idx=3&sn=cf5e7ed540f5f1f7bfeb87e8b3814cc1"
     },
     {
       "path": "raw/articles/neurips-in-icml-paper-title-tips-guidance-2026.md",
@@ -14898,6 +14998,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/gyp8lMkm06of925qHfOozw"
     },
     {
+      "path": "raw/articles/opensandbox-aaif-agent-sandbox-infrastructure.md",
+      "title": "opensandbox-aaif-agent-sandbox-infrastructure",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=Mzg4NTczNzg2OA==&mid=2247512151&idx=1&sn=4141fadeb55100e34b5481d5543e28b3"
+    },
+    {
       "path": "raw/articles/opensandbox-aliyun-cloud-agent-sandbox-vibecoder.md",
       "title": "阿里开源的安全沙箱解决方案 OpenSandbox",
       "sourceUrl": "https://mp.weixin.qq.com/s/5gQbCKjxFv-FBGp_2qLtIA"
@@ -15108,6 +15213,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/_yuGIG6qR22TxdjKBvb7Sg"
     },
     {
+      "path": "raw/articles/parallelworld-test-time-scaling-agentic-embodied-reasoning-2026.md",
+      "title": "parallelworld-test-time-scaling-agentic-embodied-reasoning-2026",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651070119&idx=3&sn=0b5bcfa3dbbba88884cf9dbff0a0c6a9"
+    },
+    {
       "path": "raw/articles/parametric-memory-survey-chenzikang-alitech-2026.md",
       "title": "parametric-memory-survey-chenzikang-alitech-2026",
       "sourceUrl": "https://mp.weixin.qq.com/s/ZTg1bEd2Vx2h7TakM7060w"
@@ -15188,9 +15298,19 @@
       "sourceUrl": "https://research.perplexity.ai/articles/wandr-benchmark-evaluating-research-agents-that-must-search-wide-and-deep"
     },
     {
+      "path": "raw/articles/personal-agent-daily-practice-tencent-spike-2026-10-26.md",
+      "title": "你的 Personal Agent 如何真正跑起来？Agent 实战指南",
+      "sourceUrl": "https://mp.weixin.qq.com/s/Nh-uiZ4N5C1qO9Uf9Im4bg"
+    },
+    {
       "path": "raw/articles/personal-agent-landscape-always-on-datawhale-2026-10-19.md",
       "title": "这是一篇把\"Personal Agent\"讲明白的科普级综述！",
       "sourceUrl": "https://mp.weixin.qq.com/s/j6swcZFbBQuls7Def4HR-Q"
+    },
+    {
+      "path": "raw/articles/personal-agent-proactivity-layers-ali-2026-10-26.md",
+      "title": "Personal Agent 落地思考：主动性从哪来，又卡在哪？",
+      "sourceUrl": "https://mp.weixin.qq.com/s/c5k2iwYh1O1OLA8ULf5X_A"
     },
     {
       "path": "raw/articles/personal-ai-memory-system-five-layer-tencent-2026.md",
@@ -15793,6 +15913,11 @@
       "sourceUrl": "https://github.com/QwenLM/qwen-code/issues/2447"
     },
     {
+      "path": "raw/articles/qwen-image-2-1-pro-turbo-inference-optimization.md",
+      "title": "qwen-image-2-1-pro-turbo-inference-optimization",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIzOTU0NTQ0MA==&mid=2247562479&idx=1&sn=98a5d92db5270a9cabb048cb8a99f0e0"
+    },
+    {
       "path": "raw/articles/qwen-image-30落字成画字字如印.md",
       "title": "qwen-image-30落字成画字字如印",
       "sourceUrl": "https://mp.weixin.qq.com/s/5JHEVpTMG_YOrvpaJTam5Q"
@@ -16251,6 +16376,11 @@
       "path": "raw/articles/robostral-navigate.md",
       "title": "Robostral Navigate: single-camera AI navigation | Mistral AI",
       "sourceUrl": "https://mistral.ai/news/robostral-navigate/"
+    },
+    {
+      "path": "raw/articles/robotwin-robodojo-world-action-model-physics.md",
+      "title": "robotwin-robodojo-world-action-model-physics",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651069794&idx=1&sn=27a6d06d4f43e6c032d7f79db1222815"
     },
     {
       "path": "raw/articles/robustreview-ai-peer-review-benchmark-2026.md",
@@ -17358,6 +17488,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651058785&idx=2&sn=dd0de5cc2b7eab979a707886efaf53c6"
     },
     {
+      "path": "raw/articles/softmax-cross-entropy-precision-bug-fix-deepmind-2026.md",
+      "title": "PyTorch、JAX 都被点名！Softmax 曝出隐藏 Bug，Gemini 立功",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651069889&idx=1&sn=f243963ab47a3c32471ca7d3319ef4c6"
+    },
+    {
       "path": "raw/articles/some-ideas-for-what-comes-next-may-2026.md",
       "title": "Some ideas for what comes next, May 2026",
       "sourceUrl": "https://www.interconnects.ai/p/some-ideas-for-what-comes-next-may"
@@ -17761,6 +17896,11 @@
       "path": "raw/articles/t-mem-anticipatory-memory-trigger-tencent-pcg-emnlp-2026.md",
       "title": "T-Mem：腾讯 PCG 的「联想回忆」式长期记忆系统（EMNLP 2026）",
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651056978&idx=2&sn=901b4973ad6d9c8cae04509443643876"
+    },
+    {
+      "path": "raw/articles/tabclustpfn-tabular-clustering-prior-data-fitted-network-2026.md",
+      "title": "聚类也能「开箱即用」了！人大等团队开源 TabClustPFN",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651069889&idx=3&sn=be03ed61a5b5eccacdb6e68cce1c5210"
     },
     {
       "path": "raw/articles/taco-cli-agent-context-compression-terminalbench.md",
@@ -18388,6 +18528,11 @@
       "sourceUrl": "https://www.pymnts.com/news/ecommerce/2026/thrive-capital-bets-100-million-on-shopifys-ai-future/"
     },
     {
+      "path": "raw/articles/tianyuan-dong-startup-first-model-ai-native-training-2026.md",
+      "title": "tianyuan-dong-startup-first-model-ai-native-training-2026",
+      "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651069516&idx=2&sn=c8828ee6931d4fb8aa6a093d9c964b0f"
+    },
+    {
       "path": "raw/articles/tidb-agent-stack-infra-kimi-k3-founder-park-2026-08-18.md",
       "title": "Agent 基建不是设计出来的，是被 Kimi K3 和一堆应用公司卷出来的",
       "sourceUrl": "https://mp.weixin.qq.com/s/H0UwPJ_eSiR7zO0mX_QG0w"
@@ -18426,6 +18571,11 @@
       "path": "raw/articles/tmall-ai-coding-practice-team-knowledge-base-npm.md",
       "title": "tmall ai coding practice team knowledge base npm",
       "sourceUrl": null
+    },
+    {
+      "path": "raw/articles/tmall-digital-employee-flow-efficiency-collaboration-2026-10-26.md",
+      "title": "天猫数字员工（效能篇）- 多角色场景下的 AI 研发流转效能分析",
+      "sourceUrl": "https://mp.weixin.qq.com/s/G62bCiHf1rkhKvZIsijEMw"
     },
     {
       "path": "raw/articles/tmall-digital-employee-full-chain-practice-taobao-2026-10-23.md",

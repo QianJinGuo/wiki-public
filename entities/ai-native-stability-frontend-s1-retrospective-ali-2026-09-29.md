@@ -7,6 +7,8 @@ tags: [ai-native, frontend, skill, plugin, pdfe, harness, team-collaboration, al
 confidence: 0.85
 provenance_state: extracted
 sources: [raw/articles/ai-native-stability-frontend-s1-retrospective-ali-2026-09-29]
+reviewed: 2026-10-26
+review_verdict: keep
 ---
 
 # AI Native 研发范式半年实践复盘：Skill→Plugin→分库协作→PDFE（阿里稳定性前端）

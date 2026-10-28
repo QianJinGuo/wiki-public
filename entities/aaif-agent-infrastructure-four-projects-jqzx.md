@@ -7,6 +7,9 @@ tags: [agent, standards, governance, agent-skills, mcp, sandbox, open-source, ec
 sources: [raw/articles/aaif-agent-infrastructure-four-projects-jqzx]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-10-25
+review_verdict: keep
+review_category: tech
 ---
 
 # AAIF 一次纳入四个 Agent 基础设施项目：Agent Skills / Open Responses / OpenEnv / OpenSandbox

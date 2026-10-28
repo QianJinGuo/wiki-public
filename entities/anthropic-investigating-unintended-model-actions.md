@@ -6,6 +6,8 @@ type: entity
 tags: [anthropic, ai-safety, agent, alignment]
 sources: [raw/articles/anthropic-investigating-unintended-model-actions]
 confidence: 0.6
+reviewed: 2026-10-26
+review_verdict: keep
 ---
 
 # Anthropic 调查非预期模型行为（Unintended Model Actions）

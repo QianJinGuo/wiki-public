@@ -7,6 +7,9 @@ tags: [agent, agentic-creation, artifact, survey, verification, multi-agent, har
 sources: [raw/articles/agentic-artifact-creation-systematic-review-259-works-newzhiyuan-2026]
 confidence: 0.75
 provenance_state: extracted
+reviewed: 2026-10-25
+review_verdict: keep
+review_category: tech
 ---
 
 # Agentic Artifact Creation 系统综述：AI创作如何从「会生成」走到「能交付」

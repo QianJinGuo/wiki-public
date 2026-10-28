@@ -8,6 +8,9 @@ source_published: 2026-08-21
 feed_name: "Netflix TechBlog"
 source: "rss"
 sha256: 6af0d020f43636a0acbfc40db434bb957189687bfa806b1bd77948054230750a
+reviewed: 2026-10-25
+review_verdict: keep
+review_category: practice
 ---
 
 # A Tale of Two Flink Autoscalers — Netflix 流处理自动扩缩容演进

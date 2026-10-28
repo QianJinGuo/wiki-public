@@ -9,6 +9,9 @@ confidence: 0.8
 provenance_state: extracted
 review_value: 7
 review_confidence: 6
+reviewed: 2026-10-25
+review_verdict: keep
+review_category: practice
 ---
 
 # ontology-driven-dev：业务语义作为可被机器消费的正式资产

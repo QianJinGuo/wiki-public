@@ -6,6 +6,9 @@ type: entity
 tags: [harness, agent, architecture, evolution, tencent, pi, opencode, codex, hermes, runtime]
 sources: [raw/articles/from-llm-call-to-complete-harness-tencent-tech-2026]
 confidence: 0.7
+reviewed: 2026-10-25
+review_verdict: keep
+review_category: tech
 ---
 
 # Agent Harness 演化论：从一次 LLM 调用到完整运行时

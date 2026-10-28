@@ -7,6 +7,9 @@ tags: [agent, harness, sandbox, code-interpreter, bedrock-agentcore, production-
 sources: [raw/articles/abnormal-ai-agentcore-code-interpreter-agent-scratch-pad-email-security]
 confidence: 0.7
 provenance_state: extracted
+reviewed: 2026-10-25
+review_verdict: keep
+review_category: practice
 ---
 
 # Abnormal AI：Agent 计算暂存区与零信任沙箱的生产实践
