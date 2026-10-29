@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "sourceRevision": "ff1d2bcf2dba1cb81f24f59fb41c6fe79e859fe6",
+  "sourceRevision": "00c4e6cdc792348eeea1f696b02800cf5564b01d",
   "files": [
     {
       "path": "raw/articles/0.25秒识破未见攻击-lod-lvlm-jailbreak-detection-emnlp2026.md",
@@ -6978,6 +6978,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/QjNm171Cld4BgZh1HR3sKg"
     },
     {
+      "path": "raw/articles/ctrip-flight-sse-full-stack-streaming-app-2026-10-29.md",
+      "title": "干货 | 告别轮询！携程机票 APP 基于 SSE 的全栈流式通信实战与性能优化",
+      "sourceUrl": "https://mp.weixin.qq.com/s/6AcTfv3Lk4SBZzUkvITScA"
+    },
+    {
       "path": "raw/articles/cubesandbox-v070-发布沙箱跨机流动集群平滑演进.md",
       "title": "cubesandbox-v070-发布沙箱跨机流动集群平滑演进",
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MjM5ODYwMjI2MA==&mid=2649803909&idx=2&sn=75a522e38308f9634ebaf54d7355af29"
@@ -7271,6 +7276,11 @@
       "path": "raw/articles/decathlon-chronos-2-demand-forecasting-at-scale.md",
       "title": "decathlon-chronos-2-demand-forecasting-at-scale",
       "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/how-decathlon-runs-demand-forecasting-at-scale-with-chronos-2"
+    },
+    {
+      "path": "raw/articles/decision-models-in-rag-three-papers-challengehub-2026-10-29.md",
+      "title": "决策模型进了 RAG，效果到底怎么样？",
+      "sourceUrl": "https://mp.weixin.qq.com/s/Qe7Lj2Y6a3B6Ga-dzlmY9w"
     },
     {
       "path": "raw/articles/decisions-and-dollars-agent-economics-data-fintech.md",
@@ -12208,6 +12218,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/DIAgalyLiTmazn5SYkRwrw"
     },
     {
+      "path": "raw/articles/linear-attention-kda-30k-deep-dive-tencent-2026-10-29.md",
+      "title": "AI Infra进阶：3万字深入理解线性注意力机制",
+      "sourceUrl": "https://mp.weixin.qq.com/s/O0_v8wz4iHxbkDLENy7EPg"
+    },
+    {
       "path": "raw/articles/lingbot-va-20-embodied-video-action-pretrain-ant-lingbo-2026.md",
       "title": "lingbot-va-20-embodied-video-action-pretrain-ant-lingbo-2026",
       "sourceUrl": "https://mp.weixin.qq.com/s/BbgMERwM08nKqwv2ydcxHA"
@@ -13051,6 +13066,11 @@
       "path": "raw/articles/meituan-aigc-poster-generation-2026.md",
       "title": "美团海报生成 AIGC 技术创新与实践",
       "sourceUrl": "https://github.com/MeiGen-AI%3E"
+    },
+    {
+      "path": "raw/articles/meituan-distributed-storage-ai-coding-verification-boundaries-2026-10-29.md",
+      "title": "如何在\"不能出错\"的系统里使用 AI Coding？分布式存储实践与边界",
+      "sourceUrl": "https://mp.weixin.qq.com/s/ubhctSeCv5NVrBzlBaL3AQ"
     },
     {
       "path": "raw/articles/meituan-lohosearch-search-agent-benchmark-knowledge-graph-2026.md",
@@ -17993,6 +18013,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/VacWMG2oaAPq4vBsKEf7SA"
     },
     {
+      "path": "raw/articles/taobao-shangou-shop-decoration-rsi-selection-agent-2026-10-29.md",
+      "title": "基于 RSI 架构的淘宝闪购店铺装修选品 Agent 实践",
+      "sourceUrl": "https://mp.weixin.qq.com/s/SF9_lSx-GOPEegSCYlcdZw"
+    },
+    {
       "path": "raw/articles/taobao-shopping-assistant-online-eval-2026-10-12.md",
       "title": "淘宝AI购物助手在线评测落地实践",
       "sourceUrl": "https://mp.weixin.qq.com/s/blMjReLQZUuSK6bl6Bt3yA"
@@ -18241,6 +18266,11 @@
       "path": "raw/articles/tenorshare-ai-diagrimo---free-ai-diagram-generator-online.md",
       "title": "Tenorshare AI Diagrimo​ - Free AI Diagram Generator Online",
       "sourceUrl": "https://www.tenorshare.ai/diagrimo.html"
+    },
+    {
+      "path": "raw/articles/terminal-rsi-recursive-self-improving-terminal-agent-mozhi-2026-10-29.md",
+      "title": "腾讯Terminal-RSI：面向终端智能体的递归自进化训练框架",
+      "sourceUrl": "https://mp.weixin.qq.com/s/vYj72lhB15OqqoFsICgmkw"
     },
     {
       "path": "raw/articles/tether-developer-grants-local-ai.md",
@@ -18841,6 +18871,11 @@
       "path": "raw/articles/trust-infrastructure-ai-data-retrieval-taobao-2026.md",
       "title": "信任需要基础设施：如何让AI可靠的取数",
       "sourceUrl": "https://mp.weixin.qq.com/s/K_-5EiY9PTURQ1Xj_llo0w"
+    },
+    {
+      "path": "raw/articles/trustworthy-rsi-survey-papertoday-2026-10-29.md",
+      "title": "彻底爆了，可信RSI全面综述出炉",
+      "sourceUrl": "https://mp.weixin.qq.com/s/ljFK-HKVzN1__lKSkbqNVw"
     },
     {
       "path": "raw/articles/tsinghua-agent-security-fangcun.md",
@@ -19751,6 +19786,11 @@
       "path": "raw/articles/workday-ai-inference-guardrails.md",
       "title": "Workday: Guardrails belong in the inference engine",
       "sourceUrl": "https://thenewstack.io/workday-ai-inference-guardrails/"
+    },
+    {
+      "path": "raw/articles/workflow-agent-multi-agent-architecture-selection-jiaogoux-2026-10-29.md",
+      "title": "Workflow、Agent、Multi-Agent，架构到底怎么选？",
+      "sourceUrl": "https://mp.weixin.qq.com/s/-h3Kqx_GI19o2LlPZJ1OZg"
     },
     {
       "path": "raw/articles/workos-pipes-third-party-integrations.md",

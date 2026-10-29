@@ -1,12 +1,12 @@
 ---
 title: "前端如何消费 Agent 的 SSE 流 — Agent 前端工程实践"
 created: 2026-07-24
-updated: 2026-08-01
+updated: 2026-10-29
 type: entity
 tags: [agent, sse, frontend, streaming, vue, agent-loop, event-driven]
 confidence: 0.8
 provenance_state: extracted
-sources: [raw/articles/前端如何消费agent-sse流]
+sources: [raw/articles/前端如何消费agent-sse流, raw/articles/ctrip-flight-sse-full-stack-streaming-app-2026-10-29]
 reviewed: 2026-09-07
 review_verdict: keep
 review_category: practice
@@ -148,3 +148,34 @@ mini-openclaw 的 SSE 流设计遵循了 Agent Loop 的核心思想：Agent 只�
 - [[entities/skill-orchestration-6-dependencies|Skill 编排与依赖管理]]
 
 → [[raw/articles/前端如何消费agent-sse流|原文存档]]
+
+---
+
+## 第 2 来源：携程机票 APP 的 SSE 全栈落地（2026-10-29，SUPP）
+
+前文讲的是"前端如何消费 Agent 的 SSE 流"；携程机票这篇把视角扩到**从 Web 到 APP（Native + RN）的全栈落地与性能优化**，补齐了三块前文没有的工程细节：全链路代理、端侧实现分层、以及预热/缓存/压缩这组优化。^[raw/articles/ctrip-flight-sse-full-stack-streaming-app-2026-10-29.md]
+
+### 全链路：SSE 卡在 7 层代理上
+
+业务的流量链路不是客户端—服务端直达，完全落地 SSE 需要全链路支持：7 层加速节点（akamai/aws）、流量接入层（slb）、中间转发节点（虫洞）、sidecar（envoy/nginx）。分块传输本质是传数据碎片，**中间层各自实现并不遵循统一标准**——nginx 默认会缓存 response。处理办法：链路上所有 nginx 主动关闭报文缓存并透传 `proxy_pass_header X-Accel-Buffering`，同时开启数据压缩。^[raw/articles/ctrip-flight-sse-full-stack-streaming-app-2026-10-29.md]
+
+### 端侧三层：云端 / Native / RN Plugin
+
+APP 侧基于 `text/event-stream` 响应体持续推送、通过 Event 处理数据，分三层实现（云端、native 层、RN 业务层），并在携程公共框架团队的 SSE 基础能力之上给业务提供接口；RN 侧另加 Plugin，分别处理 `onOpen`（建连）、`onMessage`（批次数据）、`onClosed`（完成）、`onError`（报错）。选型理由三条：移动平台可走原生网络库、同一套 SSE 服务同时支持 APP 与 H5（避免多套实时方案）、**单向推送的连接维护成本低于 WebSocket**，弱网/网络切换时重连逻辑更灵活。^[raw/articles/ctrip-flight-sse-full-stack-streaming-app-2026-10-29.md]
+
+### 四项优化：预建连、预请求、请求缓存、报文压缩
+
+- **预建连**（host 维度）：真正请求前提前建好连接；同 host 多请求在协议一致且连接空闲时自动复用，时机可在业务入口初始化触发。^[raw/articles/ctrip-flight-sse-full-stack-streaming-app-2026-10-29.md]
+- **预请求**（request 维度）：在前序流程里提前请求数据，做单一 request 的链路复用。^[raw/articles/ctrip-flight-sse-full-stack-streaming-app-2026-10-29.md]
+- **请求缓存**：命中时复用缓存数据或复用请求链路；用父子任务管理真实请求与在途——父任务管真实 network 请求，相同 cachekey 的在途请求作为子任务挂载，同步接收实时数据，并按状态标识复用情况。^[raw/articles/ctrip-flight-sse-full-stack-streaming-app-2026-10-29.md]
+- **报文压缩**：P90 上报文 size 与链路耗时显著正相关，必须开压缩。切换到 SSE 时压缩算法从 ZSTD 变成 Gzip，导致报文 size 显著上升（首批数据耗时出现少量负向影响），因此**把编码从 Gzip 换成 Brotli**。^[raw/articles/ctrip-flight-sse-full-stack-streaming-app-2026-10-29.md]
+
+### 数据与坑
+
+**数据**：列表页多批次加载完成的总耗时**平均提升 11.8%**；首批数据耗时无明显差异；链路侧减少 RN 与 Native 的通信（数十毫秒）与一次请求，并避免"服务端数据已 ready、还要等前端请求到达才下发"。压缩侧：Brotli 压缩率与 ZSTD 基本一致，平均报文比 Gzip 小约 20%、超长报文小约 30%，SSE-Br 比 SSE-Gzip 快约 20ms；服务端内存/CPU 无明显差异、平均报文压缩耗时下降 30%（基数小，主要用来证明无负向收益），且 Brotli 是标准 HTTP 编码、框架接入成本低。^[raw/articles/ctrip-flight-sse-full-stack-streaming-app-2026-10-29.md]
+
+**三个坑**：①**SSL Pinning**——接 SSE 前用 TCP、之后改 HTTP，部分使用 VPN 等网络环境的用户会无法访问；②**链路一致性**——上云/海外访问存在远距离传输，需确认所有地区都支持 SSE，否则出现部分地区分批失效（表现为多批数据同一时间到达），要降级处理并向服务商报障；③**重连风暴**——原生支持自动重连但暂未启用，若启用需防范极端场景大量用户重连压垮服务端。^[raw/articles/ctrip-flight-sse-full-stack-streaming-app-2026-10-29.md]
+
+### 异构分批：顺手解决 API 粒度与视图粒度的矛盾
+
+接口粒度常以资源为导向，而前端视图需求与后端资源划分不一致，导致前端要处理多个接口的请求时序、渲染时序与逻辑 PK 关系。把不同功能的接口包装成**异构多批数据聚合在同一个 SSE 请求里分批下发**，可把逻辑下沉到服务端（是否分批、如何分批由服务聚合控制）、简化时序边缘场景与多端复用，也显著降低预请求与缓存的实现复杂度；文中给出该场景下与 BFF 聚合、GraphQL 的横向对比。作者的最后一句判断值得记住：**SSE 的价值不是比 WebSocket 更快，而是用标准 HTTP 的最小代价同时获得服务端主动推送、全链路复用与原生重连异常处理**。^[raw/articles/ctrip-flight-sse-full-stack-streaming-app-2026-10-29.md]
