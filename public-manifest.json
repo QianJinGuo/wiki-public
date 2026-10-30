@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "sourceRevision": "00c4e6cdc792348eeea1f696b02800cf5564b01d",
+  "sourceRevision": "2de9b3cf948c88aaeed858286f55994c8a848426",
   "files": [
     {
       "path": "raw/articles/0.25秒识破未见攻击-lod-lvlm-jailbreak-detection-emnlp2026.md",
@@ -1381,6 +1381,11 @@
       "path": "raw/articles/agent-context-management-architecture-patterns.md",
       "title": "智能体编排层中的上下文管理架构",
       "sourceUrl": "https://mp.weixin.qq.com/s/kZVSwdC4I8tQmUkessHBxA"
+    },
+    {
+      "path": "raw/articles/agent-data-flywheel-platform-selection-zeus-1688-2026-10-30.md",
+      "title": "Agent 数据飞轮平台的选型和实践",
+      "sourceUrl": "https://mp.weixin.qq.com/s/x1DRgqBK-wzqnrYgjFWYfA"
     },
     {
       "path": "raw/articles/agent-engineering-principles-architecture-practice.md",
@@ -18008,6 +18013,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/Ky7oM7NIytxThVk4APjiTg"
     },
     {
+      "path": "raw/articles/taobao-live-search-rec-ai-friendly-architecture-migration-emeya-2026-10-30.md",
+      "title": "从 AI Friendly 架构到可复制的 AI 迁移能力 - 淘宝直播搜推在线架构升级实践",
+      "sourceUrl": "https://mp.weixin.qq.com/s/qsvb9pscxPHf0J1oWwDa_w"
+    },
+    {
       "path": "raw/articles/taobao-product-domain-agent-architecture.md",
       "title": "万级实时推理的商品领域Agent实践思考和总结",
       "sourceUrl": "https://mp.weixin.qq.com/s/VacWMG2oaAPq4vBsKEf7SA"
@@ -18206,6 +18216,11 @@
       "path": "raw/articles/tencent-teg-agent-skill-evaluation-tperf-martinskxu-2026-06-16.md",
       "title": "AI Agent & Skill 测评方案及落地实践 — 腾讯 TEG 网关测试团队",
       "sourceUrl": "https://mp.weixin.qq.com/s/PUbGqheJhFMmb6hGj1ZtOw"
+    },
+    {
+      "path": "raw/articles/tencent-tgr-generative-recommendation-stack-2026-10-30.md",
+      "title": "腾讯TGR：以生成式范式重塑推荐系统",
+      "sourceUrl": "https://mp.weixin.qq.com/s/1gQa3fYA42Pf1wkYY6xs4w"
     },
     {
       "path": "raw/articles/tencent-token-economics-ai-productivity.md",
@@ -18871,6 +18886,11 @@
       "path": "raw/articles/trust-infrastructure-ai-data-retrieval-taobao-2026.md",
       "title": "信任需要基础设施：如何让AI可靠的取数",
       "sourceUrl": "https://mp.weixin.qq.com/s/K_-5EiY9PTURQ1Xj_llo0w"
+    },
+    {
+      "path": "raw/articles/trustworthy-rsi-survey-82p-mozhi-deep-read-2026-10-30.md",
+      "title": "82页重磅RSI综述！拆解AI可信自我改进难题",
+      "sourceUrl": "https://mp.weixin.qq.com/s/oZmVpSe23azAg3xSH3OQgw"
     },
     {
       "path": "raw/articles/trustworthy-rsi-survey-papertoday-2026-10-29.md",

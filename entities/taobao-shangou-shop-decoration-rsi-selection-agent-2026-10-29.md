@@ -1,7 +1,7 @@
 ---
 title: "淘宝闪购店装选品的 RSI 系统：把「选法」做成可递归搜索的策略"
 created: 2026-10-29
-updated: 2026-10-29
+updated: 2026-10-30
 type: entity
 tags: [rsi, recursive-self-improvement, agent-loop, evolution-strategy, cma-es, multi-island, ilp, gated-experts, shop-decoration, taobao-shangou, ab-testing, first-party]
 sources:
@@ -121,7 +121,7 @@ CMA-ES 在固定预算下更好、Shinka 对照因三项解释性问题不能作
 ## 与相关实体的关系
 
 - 与 [[entities/agent-evaluation-turing-meituan-2026|美团图灵评测]]、[[entities/starops-aiops-eval-set-fault-injection-aliyun-2026-10-28|STAROps 评测集]] 共同回答"怎么证明改进是真的"：那两篇在评测侧，本篇在**策略搜索侧**（同日基线、留出评价、置信区间准入）。
-- 与 [[raw/articles/trustworthy-rsi-survey-papertoday-2026-10-29|可信 RSI 综述速览]] 形成理论与实践对照：综述给出"分数幻觉/继任继承/监督失效"的风险分类，本篇展示一个**主动把改进限制在策略层**的工业样本。
+- 与 [[raw/articles/trustworthy-rsi-survey-papertoday-2026-10-29|可信 RSI 综述速览]] 形成理论与实践对照（另见 [[raw/articles/trustworthy-rsi-survey-82p-mozhi-deep-read-2026-10-30|模智空间 82 页综述逐章拆解]]）：综述给出"分数幻觉/继任继承/监督失效"的风险分类，本篇展示一个**主动把改进限制在策略层**的工业样本。
 - 与 [[entities/meituan-distributed-storage-ai-coding-verification-boundaries-2026-10-29|美团 AI Coding 验证边界]] 同属"验证优先"的工程文化：都强调"变绿/涨分不等于解决"，且都保留了负结果与解释性问题。
 - 与 [[entities/agent-productivity-paradox-collaboration-bottleneck|协作成为新瓶颈]] 的关系在组织侧：本篇的 RSI 把"找更好选法"变成可无人值守的日滚，正是把人的判断收敛到"定目标与验收"。
 
