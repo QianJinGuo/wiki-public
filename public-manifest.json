@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "sourceRevision": "2de9b3cf948c88aaeed858286f55994c8a848426",
+  "sourceRevision": "b8d75995dbd8982b84940fa0ca41bd1ae93fccf9",
   "files": [
     {
       "path": "raw/articles/0.25秒识破未见攻击-lod-lvlm-jailbreak-detection-emnlp2026.md",
@@ -7258,6 +7258,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/G9WsndaEM3ukJtzdnlPIqQ"
     },
     {
+      "path": "raw/articles/datawhale-deepseek-dsh-superagent-open-source-news-2026-10-31.md",
+      "title": "突发！DeepSeek重磅开源：超级Agent架构！",
+      "sourceUrl": "https://mp.weixin.qq.com/s/LZxAxf0EO74YHQnZ2YOT9A"
+    },
+    {
       "path": "raw/articles/dataworks-copilot-skill-data-request-24h-delivery-taobao-2026-07-20.md",
       "title": "dataworks-copilot-skill-data-request-24h-delivery-taobao-2026-07-20",
       "sourceUrl": "https://mp.weixin.qq.com/s/7JI5zJdT73OFbI-DVl3Oqg"
@@ -7461,6 +7466,11 @@
       "path": "raw/articles/deepseek-moe-parallel-strategy.md",
       "title": "DeepSeek MoE 并行策略与通信优化",
       "sourceUrl": "https://mp.weixin.qq.com/s/zg0wHd170GPtpfiBjBZgTg"
+    },
+    {
+      "path": "raw/articles/deepseek-super-agent-design-router-worker-architecture-2026-10-31.md",
+      "title": "Super-agent 设计探索：迈向更自主的 Agent 系统",
+      "sourceUrl": "https://mp.weixin.qq.com/s/zoS7GlReWPhfCjENGxXCdg"
     },
     {
       "path": "raw/articles/deepseek-v4-ds4c-antirez-local-inference-qbitai.md",
