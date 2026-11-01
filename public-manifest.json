@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "sourceRevision": "b8d75995dbd8982b84940fa0ca41bd1ae93fccf9",
+  "sourceRevision": "42a79d8ef7139003326eabc85c4c7c183bef00d2",
   "files": [
     {
       "path": "raw/articles/0.25秒识破未见攻击-lod-lvlm-jailbreak-detection-emnlp2026.md",
@@ -7133,6 +7133,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/DN78uVqng8oAt3zw_in7HA"
     },
     {
+      "path": "raw/articles/cyber-chanyin-deepseek-super-agent-visual-explainer-2026-10-31.md",
+      "title": "动态图解：DeepSeek 的 Super-agent 架构",
+      "sourceUrl": "https://mp.weixin.qq.com/s/lcIkBMOKHSvkRYELgkduMg"
+    },
+    {
       "path": "raw/articles/Cyberscammers-are-bypassing-banks-security-with-illicit-tool.md",
       "title": "Cyberscammers are bypassing banks' security with illicit tools sold on Telegram",
       "sourceUrl": "https://www.technologyreview.com/cyberscammers-bypassing-banks-security-telegram/"
@@ -12606,6 +12611,11 @@
       "path": "raw/articles/long-context-llm-fullstack-survey-datapai-2026.md",
       "title": "long-context-llm-fullstack-survey-datapai-2026",
       "sourceUrl": "https://mp.weixin.qq.com/s/M_blp8kl7lYeqhQEXeQ3KQ"
+    },
+    {
+      "path": "raw/articles/long-document-visual-qa-task-centric-survey-zju-2026-11-01.md",
+      "title": "综述｜长文档视觉问答：从读懂页面到获取充分证据",
+      "sourceUrl": "https://mp.weixin.qq.com/s/PBct-Hw304D4Vq2uAWoh7Q"
     },
     {
       "path": "raw/articles/long-horizon-agent-training-practice-jiagoux-2026-07-20.md",
