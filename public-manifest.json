@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "sourceRevision": "42a79d8ef7139003326eabc85c4c7c183bef00d2",
+  "sourceRevision": "0fa0b3849cb94dad55e4c0376ec26579276c0df1",
   "files": [
     {
       "path": "raw/articles/0.25秒识破未见攻击-lod-lvlm-jailbreak-detection-emnlp2026.md",
@@ -3206,6 +3206,11 @@
       "path": "raw/articles/alisql-向量技术解析一存储格式与算法实现.md",
       "title": "AliSQL 向量技术解析（一）：存储格式与算法实现",
       "sourceUrl": "https://mp.weixin.qq.com/s/4fLgnwhIuJe76dX89Mv16A"
+    },
+    {
+      "path": "raw/articles/aliyun-agentcore-long-horizon-to-superagent-commentary-2026-11-02.md",
+      "title": "从长程 Agent 到 Super-agent，解锁更多场景",
+      "sourceUrl": "https://mp.weixin.qq.com/s/O6NdGGHP_rKAnH9PKrt6iQ"
     },
     {
       "path": "raw/articles/aliyun-agentloop-2026-07-08-announce.md",
@@ -10913,6 +10918,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/L3d1Gnb5ldyg7k1iJfDVtQ"
     },
     {
+      "path": "raw/articles/hybrid-retrieval-vector-bm25-rrf-rerank-tutorial-2026-09-30.md",
+      "title": "混合检索：向量 + BM25 + RRF + Rerank",
+      "sourceUrl": "https://mp.weixin.qq.com/s/g6lVUS__LeZjSdKOINyR_A"
+    },
+    {
       "path": "raw/articles/hybridagent-latent-thought-text-action-stanford-2026-10-20.md",
       "title": "HybridAgent：用潜空间思考，用文本行动",
       "sourceUrl": "https://mp.weixin.qq.com/s/x4B6dK9GnLNNajdjc6QPrQ"
@@ -11981,6 +11991,11 @@
       "path": "raw/articles/langchain-harrison-chase-sandbox-architecture.md",
       "title": "LangChain创始人解读：AI智能体两种沙盒架构",
       "sourceUrl": null
+    },
+    {
+      "path": "raw/articles/langchain-v1-create-agent-checkpointer-middleware-hitl-structured-output-yexiaochai-2026-11-02.md",
+      "title": "上一篇只是入门，这篇才是 LangChain Agent 真正能上线的关键",
+      "sourceUrl": "https://mp.weixin.qq.com/s/wMTgk3DYJBgLWNr-D_ceJA"
     },
     {
       "path": "raw/articles/langchain用agent做销售获客3个月转化率提升25倍看完后我发现国内-agent-落地的方法都错了.md",
@@ -13111,6 +13126,11 @@
       "path": "raw/articles/meituan-longcat-2-0-trillion-parameter-moe-2026.md",
       "title": "美团 LongCat-2.0 正式发布：在国产算力集群上完成全流程训练与推理的万亿参数模型",
       "sourceUrl": "https://mp.weixin.qq.com/s/9XFcx3fmFcmbry5bHMJsow"
+    },
+    {
+      "path": "raw/articles/meituan-longcat-2-5-native-multimodal-agentic-model-2026-11-02.md",
+      "title": "LongCat-2.5：面向智能体任务的原生多模态模型",
+      "sourceUrl": "https://mp.weixin.qq.com/s/H8_coutojFwqOuYONw4oOg"
     },
     {
       "path": "raw/articles/meituan-longcat-vitabench-20-long-term-dynamic-agent-benchmark.md",
@@ -15353,6 +15373,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/j6swcZFbBQuls7Def4HR-Q"
     },
     {
+      "path": "raw/articles/personal-agent-memory-philosophy-six-layers-three-values-zerox-2026-10-30.md",
+      "title": "哲学视角｜Personal Agent 的记忆机制如何设计：六层记忆、五问筛选、三种遗忘与三种价值",
+      "sourceUrl": "https://mp.weixin.qq.com/s/ZQi_TO69WkXvJfAWoscW1w"
+    },
+    {
       "path": "raw/articles/personal-agent-proactivity-layers-ali-2026-10-26.md",
       "title": "Personal Agent 落地思考：主动性从哪来，又卡在哪？",
       "sourceUrl": "https://mp.weixin.qq.com/s/c5k2iwYh1O1OLA8ULf5X_A"
@@ -16513,6 +16538,11 @@
       "sourceUrl": "https://regularized-rsi.com/"
     },
     {
+      "path": "raw/articles/rsi-2026-ten-top-papers-map-aipaoge-2026-10-30.md",
+      "title": "2026年RSI 最值得推荐的RSI（Recursive Self-Improvement）10篇顶会论文",
+      "sourceUrl": "https://mp.weixin.qq.com/s/31I_mPqF3oMcUS1nkRIeIA"
+    },
+    {
       "path": "raw/articles/rsi-anything-phai-world-model-benchmarks-2026.md",
       "title": "rsi-anything-phai-world-model-benchmarks-2026",
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651062250&idx=1&sn=01ec89d0007a47eba2bc2918aab03ecf"
@@ -16526,6 +16556,11 @@
       "path": "raw/articles/rsi-evomap-experience-driven-test-time-evolution-2026-09-03.md",
       "title": "RSI 离我们有多远？这家中国团队给出了第一梯队的工程解",
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651054414&idx=1&sn=8b059e8c7025fd12ef2262632d066f8d"
+    },
+    {
+      "path": "raw/articles/rsi-five-papers-oct-2026-joint-reading-loci-vibelife-2026-11-02.md",
+      "title": "递归自我改进：9–10 月五篇递归自我改进论文解读 下",
+      "sourceUrl": "https://mp.weixin.qq.com/s/e_5wQTTWY6CKBQO38Y7Z0w"
     },
     {
       "path": "raw/articles/rsi-four-standards-five-advances-datawhale-zhaozhimin-2026.md",
@@ -18006,6 +18041,11 @@
       "path": "raw/articles/taobao-ai-sre-digital-employee-code-quality-governance.md",
       "title": "大淘宝数字SRE：AI主导的代码质量治理实践",
       "sourceUrl": "https://mp.weixin.qq.com/s/jBXkp2Fz4hpcTEyBl6RwZg"
+    },
+    {
+      "path": "raw/articles/taobao-d2c-harness-three-platform-visual-verification-2026-11-02.md",
+      "title": "让 AI 看得见、判得准、改得对—— D2C 从设计稿到三端真机达标的自动化实践",
+      "sourceUrl": "https://mp.weixin.qq.com/s/Q-7Qek7YgAfccxzynSUfAA"
     },
     {
       "path": "raw/articles/taobao-digital-human-agentic-rl-multiagent-rl.md",
