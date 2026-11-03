@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "sourceRevision": "0fa0b3849cb94dad55e4c0376ec26579276c0df1",
+  "sourceRevision": "cb99a81457652567ef4f0e8e4c1a71a8ea0e6775",
   "files": [
     {
       "path": "raw/articles/0.25秒识破未见攻击-lod-lvlm-jailbreak-detection-emnlp2026.md",
@@ -6908,6 +6908,11 @@
       "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/how-couchbase-built-a-multi-model-ai-architecture-for-capella-iq-with-amazon-bedrock"
     },
     {
+      "path": "raw/articles/coworkos-agent-coworker-ruc-fudan-2026-11-03.md",
+      "title": "CoworkOS：把 Super Agent 的四标准做成「超级 AI 同事」",
+      "sourceUrl": "https://mp.weixin.qq.com/s/oWPhyARCHxUaNkgF60Os7w"
+    },
+    {
       "path": "raw/articles/coze-3-0-local-agent-codex-claude-code-project.md",
       "title": "扣子 3.0 离谱更新：把 Codex、Claude Code 拉进一个项目工作？",
       "sourceUrl": "https://mp.weixin.qq.com/s/4EaopxsTHEGx1f91DteElg"
@@ -7481,6 +7486,11 @@
       "path": "raw/articles/deepseek-super-agent-design-router-worker-architecture-2026-10-31.md",
       "title": "Super-agent 设计探索：迈向更自主的 Agent 系统",
       "sourceUrl": "https://mp.weixin.qq.com/s/zoS7GlReWPhfCjENGxXCdg"
+    },
+    {
+      "path": "raw/articles/deepseek-superagent-github-issue-to-pr-deployment-guide-jiagoux-2026-11-02.md",
+      "title": "DeepSeek Super-agent 上手：从 GitHub Issue 到 PR",
+      "sourceUrl": "https://mp.weixin.qq.com/s/1aR5yZSL01oQ0ms4L_486A"
     },
     {
       "path": "raw/articles/deepseek-v4-ds4c-antirez-local-inference-qbitai.md",
@@ -9948,6 +9958,11 @@
       "sourceUrl": "https://www.morling.dev/blog/hardwood-1-0-fast-lightweight-apache-parquet-reader-for-the-jvm"
     },
     {
+      "path": "raw/articles/harmony-harness-multi-objective-self-evolution-google-2026-11-03.md",
+      "title": "Harmony Harness：多目标自进化的 Agent Harness",
+      "sourceUrl": "https://mp.weixin.qq.com/s/QOJ6jCIa25ZuVSjB8uocFA"
+    },
+    {
       "path": "raw/articles/harness-anatomy-11-coding-agents-source-study-2026-10-10.md",
       "title": "从 Claude Code 到 Codex：Harness Engineering 源码研究（11 个 Coding Agent 拆解）",
       "sourceUrl": "https://mp.weixin.qq.com/s/HK1qFKZTsMzMg_c6YIn-jw"
@@ -12011,6 +12026,11 @@
       "path": "raw/articles/langfuse-agent-eval-tracing-cost-structure.md",
       "title": "做Agent评测的几个反直觉感悟",
       "sourceUrl": "https://www.xiaohongshu.com/explore/6a14f1040000000008025eea"
+    },
+    {
+      "path": "raw/articles/langfuse-eval-agent-evaluation-principles-practice-aijianjian-2026-10-24.md",
+      "title": "Langfuse Eval：Agent 评测原理与落地实践",
+      "sourceUrl": "https://mp.weixin.qq.com/s/OHDxK9E-cv2rZrWgHOlf-g"
     },
     {
       "path": "raw/articles/langgraph-10别再用-dag-写-agent-了你的-agent-需要一个操作系统-1.md",
@@ -14983,6 +15003,11 @@
       "sourceUrl": "https://aws.amazon.com/cn/blogs/china/openclaw-service-enterprise-share-system-design/"
     },
     {
+      "path": "raw/articles/openclaw-to-super-agent-product-evolution-tencent-2026-11-03.md",
+      "title": "从OpenClaw，怎么走到了Super Agent？",
+      "sourceUrl": "https://mp.weixin.qq.com/s/R8v1fxHpErVHq1o6euSroA"
+    },
+    {
       "path": "raw/articles/openclaw-vs-hermes-agent-三个重度日常场景深度体验后我为什么放弃了爱马仕选择了小龙虾.md",
       "title": "openclaw-vs-hermes-agent-三个重度日常场景深度体验后我为什么放弃了爱马仕选择了小龙虾",
       "sourceUrl": "https://mp.weixin.qq.com/s/TNByu2tENhnE481eEM9TRQ"
@@ -15526,6 +15551,11 @@
       "path": "raw/articles/playerzero-request-demo.md",
       "title": "Book a Demo | See PlayerZero in Action",
       "sourceUrl": "https://playerzero.ai/request-demo"
+    },
+    {
+      "path": "raw/articles/pluginrsi-plugin-level-harness-evolution-ustc-meituan-2026-11-03.md",
+      "title": "把Harness拆成插件：PluginRSI 的分块式自进化",
+      "sourceUrl": "https://mp.weixin.qq.com/s/jtUa1vOQ55cd6WAEDQ4oSg"
     },
     {
       "path": "raw/articles/plugmem-msr-fact-skill-memory-xhs-2026-08-03.md",
@@ -16548,6 +16578,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651062250&idx=1&sn=01ec89d0007a47eba2bc2918aab03ecf"
     },
     {
+      "path": "raw/articles/rsi-anything-world-model-formalization-agi-study-2026-11-02.md",
+      "title": "RSI-Anything：用世界模型驱动自我进化（形式化与证据分级）",
+      "sourceUrl": "https://mp.weixin.qq.com/s/RwbE3uSgHV8MWU9rbowN-Q"
+    },
+    {
       "path": "raw/articles/rsi-anything-world-model-universal-rsi-papertoday-2026-10-13.md",
       "title": "万物皆可RSI，自进化AI大爆发",
       "sourceUrl": "https://mp.weixin.qq.com/s/H3QRy0a7o_NaHKEOXLGMvg"
@@ -16586,6 +16621,11 @@
       "path": "raw/articles/rsi-test-time-training-time-evolution-architecture-qingke-2026.md",
       "title": "关于 RSI 的一些思考：Test-Time 沉淀与 Training-Time 演化的架构终局",
       "sourceUrl": "https://mp.weixin.qq.com/s/r0rFponJnI5KmW1I9B-VIg"
+    },
+    {
+      "path": "raw/articles/rsi-to-continual-learning-compounding-intelligence-overseas-unicorn-2026-10-20.md",
+      "title": "智能进步的复利：从 RSI 加速到持续学习",
+      "sourceUrl": "https://mp.weixin.qq.com/s/IIm-Yznjt7C0zjhU5rPrEg"
     },
     {
       "path": "raw/articles/rsibench-agent-self-improvement-benchmark-arxiv-2026.md",
@@ -17336,6 +17376,11 @@
       "path": "raw/articles/skill-rm-qwen-agent-skill-reward-model-hyman.md",
       "title": "阿里Qwen出手：Skill-RM把奖励模型做成可复用Agent Skill",
       "sourceUrl": "https://mp.weixin.qq.com/s/K92ZQp1PnVQq1UPOes9rtA"
+    },
+    {
+      "path": "raw/articles/skill-routing-description-self-evolution-qwen-platform-2026-11-03.md",
+      "title": "Skill 路由优化实战：基于真实业务请求的 description 自进化",
+      "sourceUrl": "https://mp.weixin.qq.com/s/K9Eh1zezOx_idgh8bzFvMA"
     },
     {
       "path": "raw/articles/skill-self-evolution-skillopt-practice-aliexpress-2026-08-19.md",
@@ -18216,6 +18261,11 @@
       "path": "raw/articles/tencent-cloud-login-harness-verification-jiamanxin-2026-09-22.md",
       "title": "边开飞机边换引擎：Harness如何解决验证难题",
       "sourceUrl": "https://mp.weixin.qq.com/s/2-hYDib0sUzou0zsO98P8w"
+    },
+    {
+      "path": "raw/articles/tencent-enterprise-agent-workbuddy-boundaries-infoq-2026-11-03.md",
+      "title": "从写一行代码到帮一家企业运转：腾讯 Agent 这一年的野心与边界",
+      "sourceUrl": "https://mp.weixin.qq.com/s/bR0cBfMaGOlBxF0fR0_iPw"
     },
     {
       "path": "raw/articles/tencent-harness-engineering-team-specification-2026.md",

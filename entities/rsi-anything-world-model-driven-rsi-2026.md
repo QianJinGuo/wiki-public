@@ -1,10 +1,10 @@
 ---
 title: "RSI-Anything：世界模型驱动的跨域自我进化框架"
 created: 2026-10-14
-updated: 2026-10-14
+updated: 2026-11-03
 type: entity
 tags: [rsi, world-model, self-evolution, agent, benchmark]
-sources: [raw/articles/rsi-anything-phai-world-model-benchmarks-2026, raw/articles/rsi-anything-world-model-universal-rsi-papertoday-2026-10-13]
+sources: [raw/articles/rsi-anything-phai-world-model-benchmarks-2026, raw/articles/rsi-anything-world-model-universal-rsi-papertoday-2026-10-13, raw/articles/rsi-anything-world-model-formalization-agi-study-2026-11-02]
 confidence: 0.7
 ---
 
@@ -54,3 +54,40 @@ PaperToday 版将框架概括为「预演—学习—留用」三步闭环 ^[raw
 
 ## 关联
 - → [[raw/articles/rsi-anything-phai-world-model-benchmarks-2026|原文存档]]
+
+## 附：协议层的四个设计（AGI研习社版补充，2026-11-02）
+
+前三份来源讲"做了什么、效果如何"；这一份补的是**协议细节**，其中四条对任何多组件自我改进系统都可直接借用。^[raw/articles/rsi-anything-world-model-formalization-agi-study-2026-11-02.md]
+
+### 一、两个时间尺度，且"周期数"不等于"改进次数"
+
+系统用 `t`（任务内动作步）与 `N`（"更新-验收"周期）两个尺度运转。关键定义：**`N` 统计的是更新周期，即使策略与世界模型都保持原样，一个周期也算结束**——于是"跑了多少轮"和"真的改进了几次"被显式分开。配套一条更狠的判据：**仅仅延长反馈历史不算策略或模型修订**。作者点评到位：这个区分看似吹毛求疵，实则**防止"被动积累数据"冒充"主动自我改进"**。^[raw/articles/rsi-anything-world-model-formalization-agi-study-2026-11-02.md]
+
+### 二、E0–E3 四级证据：把"凭什么信"分级
+
+| 级别 | 含义 |
+|---|---|
+| **E0** | 确定性规则检查 |
+| **E1** | 学习模型的预测与 rollout |
+| **E2** | 专用模拟器或更高保真度计算 |
+| **E3** | 外部测量或实验 |
+
+分级之后有一个常被忽略的分离：**想象轨迹进入训练集的准入门槛，与"是否分配外部评估预算"是两件事，分开管**。一条想象轨迹必须同时通过**有效性、效用阈值、不确定性上限、证据来源**四道关卡才能进训练集，但这不影响不确定的候选去接受外部评估。^[raw/articles/rsi-anything-world-model-formalization-agi-study-2026-11-02.md]
+
+### 三、适配的三重门控 + 一条保守但正确的可靠性规则
+
+世界模型适配**不是无条件触发**的，需同时满足：**预测被判定为不可靠**、**适配数据充足**、**剩余预算够付估计成本**。^[raw/articles/rsi-anything-world-model-formalization-agi-study-2026-11-02.md]
+
+可靠性评估有一条严格版本规则：**只有当前模型版本生成的预测（存储的或对记录输入重新预测的）才能计入当前误差估计，旧版本的预测只能用于分析历史决策**。另一条更值得抄：反馈只来自被选中的候选，所以评估结论只适用于**已观测和覆盖的候选范围**——**覆盖不足时给 `insufficient` 结论，而不是"可靠"背书，也不会触发适配**。作者的评价是"宁可不改，也不在证据不足时盲目适配"。^[raw/articles/rsi-anything-world-model-formalization-agi-study-2026-11-02.md]
+
+### 四、两道验收关卡与数据三分工
+
+- **组件检查**：分别评估策略的任务效用或预测器质量，**失败则只保留该组件的当前版本**。
+- **配对检查**：只要至少一个组件变化，就在**相同规定评估条件下**比较"组装候选对"与"当前对"；**失败则整对回滚**。
+- 为什么需要配对检查：**策略可能生成让"本来更优的预测器"失效的候选，预测器也可能改变哪些候选被选中——孤立组件的质量不等于组装系统的决策质量**。
+
+数据分工同样清晰：**更新数据构造候选版本，门控数据选择保留哪个版本，指定的留出审计集只用于最终报告**——三者不混用。^[raw/articles/rsi-anything-world-model-formalization-agi-study-2026-11-02.md]
+
+### 与前三源的差异
+
+数字层面三版一致（代码修复 26.3%→29.2%→31.2%、GUI 动作 -39.4%、规划 21.80%→46.01%、化学 96.15% vs 82.16%）；差异在抽象层级——机器之心版给结论，PaperToday 版给"预演—学习—留用"三步，本篇给**可写进代码的判定条件**（证据等级、准入四关、三重门控、覆盖不足即拒绝、整对回滚、数据三分工）。读这篇的顺序建议：先用三步理解意图，再用本篇的判定条件设计实现，最后用论文的局限清单（单任务内长期共同进化未验、湿实验需真机、化学仅两个筛选、免疫假说待验证）设定验收预期。^[raw/articles/rsi-anything-world-model-formalization-agi-study-2026-11-02.md]
