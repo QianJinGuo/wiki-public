@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "sourceRevision": "cb99a81457652567ef4f0e8e4c1a71a8ea0e6775",
+  "sourceRevision": "454ad6b4ff3f98d1c99723bb70c736356861b496",
   "files": [
     {
       "path": "raw/articles/0.25秒识破未见攻击-lod-lvlm-jailbreak-detection-emnlp2026.md",
@@ -3198,6 +3198,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/UbF04NBK6jccBpAeLr5InQ"
     },
     {
+      "path": "raw/articles/aliexpress-promo-ops-autonomous-multi-agent-l3-l4-2026-11-04.md",
+      "title": "阿里速卖通：从「辅助驾驶」到「自动驾驶」，面向大促全周期自治的多智能体实践",
+      "sourceUrl": "https://mp.weixin.qq.com/s/4NVWRTKZHL5WuK6Dn7mtlg"
+    },
+    {
       "path": "raw/articles/alipay-618-intent-recognition-small-model-evolution.md",
       "title": "一个小模型意图识别系统的 5 天进化实录｜支付宝618",
       "sourceUrl": "https://mp.weixin.qq.com/s/BML4DOAyeQgSFMxuz8Tnvw"
@@ -3211,6 +3216,11 @@
       "path": "raw/articles/aliyun-agentcore-long-horizon-to-superagent-commentary-2026-11-02.md",
       "title": "从长程 Agent 到 Super-agent，解锁更多场景",
       "sourceUrl": "https://mp.weixin.qq.com/s/O6NdGGHP_rKAnH9PKrt6iQ"
+    },
+    {
+      "path": "raw/articles/aliyun-agentcore-runloop-custom-harness-codex-2026-11-04.md",
+      "title": "AgentCore + Codex 构建生产级 Agent 的原理与实践",
+      "sourceUrl": "https://mp.weixin.qq.com/s/truZRvXkzIj6ZZoCLQ_vOQ"
     },
     {
       "path": "raw/articles/aliyun-agentloop-2026-07-08-announce.md",
@@ -3331,6 +3341,11 @@
       "path": "raw/articles/amap-ai-native-end-to-end-infrastructure.md",
       "title": "高德工业级能力底座：AI-Native的端云一体基建",
       "sourceUrl": null
+    },
+    {
+      "path": "raw/articles/amap-data-agent-two-way-translation-cfhl-framework-2026-11-04.md",
+      "title": "高德 Data Agent 实践：从业务问题到可信数据（上篇）",
+      "sourceUrl": "https://mp.weixin.qq.com/s/FAGAjEXd-dggWfBR-A0LLg"
     },
     {
       "path": "raw/articles/amap-local-life-analysis-agent-ai-native-ali-2026-09-30.md",
@@ -10263,6 +10278,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIwMTc4ODE0Mw==&mid=2247723631&idx=1&sn=0ab96e0e2894c17792159b8600e16de6"
     },
     {
+      "path": "raw/articles/harnesspro-pareto-self-evolution-cost-performance-thu-zhipu-2026-11-04.md",
+      "title": "清华&智谱 HarnessPro：让自进化既提性能，又降成本",
+      "sourceUrl": "https://mp.weixin.qq.com/s/07V3GbOZ_bTnQfDcpzJing"
+    },
+    {
       "path": "raw/articles/harnessx-evolvable-agent-harness-foundry-hyman-2026.md",
       "title": "harnessx-evolvable-agent-harness-foundry-hyman-2026",
       "sourceUrl": "https://mp.weixin.qq.com/s/x9MWptTps-nGUC2f7PEPHw"
@@ -16633,6 +16653,11 @@
       "sourceUrl": "https://www.xiaohongshu.com/discovery/item/6a699801000000000f015440"
     },
     {
+      "path": "raw/articles/rsihub-unified-rsi-experiment-benchmark-bytedance-sjtu-berkeley-2026-10-28.md",
+      "title": "字节联合开源 RSI 统一实验底座：Agent 自进化策略可搭配组合",
+      "sourceUrl": "https://mp.weixin.qq.com/s/aZoTZeqqVTvGUppnSOzGcw"
+    },
+    {
       "path": "raw/articles/rubrics-survey-llm-evaluation-ruc-nlpir-2026.md",
       "title": "The Rules of the Game: A Survey of Rubrics for Large Language Models",
       "sourceUrl": "https://mp.weixin.qq.com/s/fLqQmZRM_xt9Am7_favtUA"
@@ -17708,6 +17733,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/SWVnXUpnf1eig_jBOpNsvw"
     },
     {
+      "path": "raw/articles/sprint-loop-framework-slf-tencent-cloud-2026-07-13.md",
+      "title": "AI Agent 的敏捷开发：为什么你的 Loop 需要 Sprint？",
+      "sourceUrl": "https://developer.cloud.tencent.com/article/2708615"
+    },
+    {
       "path": "raw/articles/spyrl-rlsvr-open-ended-self-improvement-xhs-2026-08-03.md",
       "title": "spyrl-rlsvr-open-ended-self-improvement-xhs-2026-08-03",
       "sourceUrl": "https://www.xiaohongshu.com/explore/6a7045850000000032023a1e?xsec_source=app_share&xsec_token=CBjhtLDgr4aGkqF4rKYaATYZC3PrK5d0zWiUDDPieJsRw="
@@ -18763,6 +18793,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/kLWwdqZzhm0rqEGQMzn2Iw"
     },
     {
+      "path": "raw/articles/tmall-intl-ai-venue-building-agent-harness-taobao-2026-11-04.md",
+      "title": "天猫国际 AI 智能建场 Agent 工程实践：从一句话到可投放的会场页面",
+      "sourceUrl": "https://mp.weixin.qq.com/s/NoXKD12Xb6LRJ-lPPF1yVQ"
+    },
+    {
       "path": "raw/articles/tmall-marketing-ai-workflow-best-practices.md",
       "title": "淘天营销中后台生码工作流最佳实践",
       "sourceUrl": "https://mp.weixin.qq.com/s/VjTyHFr17l_bObG6x8-Mmw"
@@ -19531,6 +19566,11 @@
       "path": "raw/articles/vivo-magicbokeh-cvpr-2026-generative-bokeh-diffusion.md",
       "title": "vivo-magicbokeh-cvpr-2026-generative-bokeh-diffusion",
       "sourceUrl": "https://mp.weixin.qq.com/s/mjcWeZTCtTkBKDfmIIoAWA"
+    },
+    {
+      "path": "raw/articles/vivo-pm-agent-harness-design-task-card-contract-2026-11-04.md",
+      "title": "面向技术产品经理的 Agent Harness 设计：从任务编排到可验证交付",
+      "sourceUrl": "https://mp.weixin.qq.com/s/xDcGpE-s_UefbJwPwbE6uQ"
     },
     {
       "path": "raw/articles/vla不够了触觉将改写具身智能新格局.md",
