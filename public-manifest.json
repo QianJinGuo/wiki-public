@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "sourceRevision": "454ad6b4ff3f98d1c99723bb70c736356861b496",
+  "sourceRevision": "d7d5e20819d9b2ea67c0b0ac41dc3edd875c5ef6",
   "files": [
     {
       "path": "raw/articles/0.25秒识破未见攻击-lod-lvlm-jailbreak-detection-emnlp2026.md",
@@ -3208,6 +3208,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/BML4DOAyeQgSFMxuz8Tnvw"
     },
     {
+      "path": "raw/articles/alipay-double11-ai-harness-fullchain-delivery-alibaba-2026-11-05.md",
+      "title": "双11：当 AI 接管支付宝大促交付，模型之外还要建什么？",
+      "sourceUrl": "https://mp.weixin.qq.com/s/n_LLB8LtYIVH04v9JIO8Gg"
+    },
+    {
       "path": "raw/articles/alisql-向量技术解析一存储格式与算法实现.md",
       "title": "AliSQL 向量技术解析（一）：存储格式与算法实现",
       "sourceUrl": "https://mp.weixin.qq.com/s/4fLgnwhIuJe76dX89Mv16A"
@@ -3351,6 +3356,11 @@
       "path": "raw/articles/amap-local-life-analysis-agent-ai-native-ali-2026-09-30.md",
       "title": "amap-local-life-analysis-agent-ai-native-ali-2026-09-30",
       "sourceUrl": "https://mp.weixin.qq.com/s/-e96R2uTzxL00GFgErdEDw"
+    },
+    {
+      "path": "raw/articles/amap-marketing-ai-quality-engineering-oracle-permission-ladder-2026-11-05.md",
+      "title": "从风险识别到验证闭环：高德营销 AI 质量工程实践",
+      "sourceUrl": "https://mp.weixin.qq.com/s/5-A-Xp5X2kkgzME39qusbQ"
     },
     {
       "path": "raw/articles/amap-navigation-live-mode-spacetime-agent-2026-09-20.md",
@@ -3966,6 +3976,11 @@
       "path": "raw/articles/anthropic-self-replicating-ai-tv-box-sharding-2026.md",
       "title": "anthropic-self-replicating-ai-tv-box-sharding-2026",
       "sourceUrl": "https://www.anthropic.com/research/self-replicating-ai"
+    },
+    {
+      "path": "raw/articles/anthropic-seven-blogs-readthrough-part1-workflow-tool-context-2026-11-05.md",
+      "title": "Anthropic Engineer 系列 Agent 系统设计：模型、工具与上下文（上篇精读）",
+      "sourceUrl": "https://mp.weixin.qq.com/s/ma0vh-1KCInTx2AD05Rdfw"
     },
     {
       "path": "raw/articles/anthropic-to-share-mythos-cyber-flaw-findings-with-global-finance-watchdog-1.md",
@@ -4676,6 +4691,11 @@
       "path": "raw/articles/aws-skill-eval-three-layer-checks-datafun-2026-09-30.md",
       "title": "aws-skill-eval-three-layer-checks-datafun-2026-09-30",
       "sourceUrl": "https://mp.weixin.qq.com/s/cN4L7Ao8plxwfnCgrPSaGg"
+    },
+    {
+      "path": "raw/articles/aws-skill-eval-three-layer-strands-agentcore-2026-11-04.md",
+      "title": "AWS 发布 Skill Eval：Agent Skills 迈向软件工程",
+      "sourceUrl": "https://mp.weixin.qq.com/s/nBadI60SzbIG0lcxg3tyyA"
     },
     {
       "path": "raw/articles/aws-software-supply-chain-security-well-architected.md",
@@ -6873,6 +6893,11 @@
       "sourceUrl": null
     },
     {
+      "path": "raw/articles/context-not-session-group-chat-database-agent-fleet-fengruohang-2026-11-05.md",
+      "title": "DeepSeek Super-Agent 没回答的问题：管得了 Agent，管得好上下文吗？",
+      "sourceUrl": "https://mp.weixin.qq.com/s/ZijOHi38djrnKpkmGri1TQ"
+    },
+    {
       "path": "raw/articles/context-window-management-comparison.md",
       "title": "context window management comparison",
       "sourceUrl": "https://mp.weixin.qq.com/s/ajurJ3Vayd9qLIwh9M3Fnw"
@@ -7461,6 +7486,11 @@
       "path": "raw/articles/deepseek-harness-session-event-sourcing-shuge-2026-09-09.md",
       "title": "DeepSeek Harness 的会话不是消息数组：先记下事件，再决定模型看到什么",
       "sourceUrl": "https://mp.weixin.qq.com/s/Tkk42CC9fDLeXij4Ebgpwg?scene=1"
+    },
+    {
+      "path": "raw/articles/deepseek-harness-teardown-critical-notes-chenhuanxin-2026-11-05.md",
+      "title": "一文拆解 DeepSeek Harness",
+      "sourceUrl": "https://mp.weixin.qq.com/s/Lksj3TFBRNt4jAkdbn4Jbg"
     },
     {
       "path": "raw/articles/deepseek-harness-v01-open-source-everything-plugin-infoq-2026.md",
@@ -11526,6 +11556,11 @@
       "path": "raw/articles/jd-health-opc-skill-full-process.md",
       "title": "jd-health-opc-skill-full-process",
       "sourceUrl": "http://mp.weixin.qq.com/s?__biz=MzU1MzE2NzIzMg==&mid=2247502365&idx=1&sn=939804524a4d29f68e4170beb134dd89&chksm=fbf47af2cc83f3e4b82aea476c7d386da1261f42e9c8f944947fe716b4592a976357454f6b5f"
+    },
+    {
+      "path": "raw/articles/jd-logistics-multica-ai-native-org-transformation-2026-11-05.md",
+      "title": "从 AI 写代码到 AI 重构交付：京东物流国际技术的 Multi AI Native",
+      "sourceUrl": "https://mp.weixin.qq.com/s/RNsEho35Eyu9Astiep2QKA"
     },
     {
       "path": "raw/articles/jd-oxygen-aiic-industrial-item-center.md",
@@ -16143,6 +16178,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/VQ-RgrLYsxb_iLUMzGr3FQ"
     },
     {
+      "path": "raw/articles/ragflow-knowledge-compilation-context-supply-layer-agent-native-db-2026-11-05.md",
+      "title": "Harness 已经很准了，为什么还需要一个 Agent Native Database",
+      "sourceUrl": "https://mp.weixin.qq.com/s/e59b93IR-W8lEOgQbxaShA"
+    },
+    {
       "path": "raw/articles/rag如何炼成强大的向量召回模型.md",
       "title": "【RAG】如何炼成强大的向量召回模型",
       "sourceUrl": "https://mp.weixin.qq.com/s/pUE6XRTmbp-xjuBwdnh7OA"
@@ -17508,6 +17548,11 @@
       "sourceUrl": "https://www.xiaohongshu.com/explore/6a7ec6b400000000060050f4"
     },
     {
+      "path": "raw/articles/skillhone-continual-agent-skill-evolution-decision-history-wechat-2026-11-05.md",
+      "title": "腾讯微信团队提出 Skill 持续进化框架，让 Agent Skill 越用越强",
+      "sourceUrl": "https://mp.weixin.qq.com/s/kenyoCInniEyXBYsSiknXg"
+    },
+    {
       "path": "raw/articles/skilljack-persistent-skill-backdoor-tencent-mindchain-2026-09.md",
       "title": "腾讯提出 SkillJack：自进化智能体中的持久化技能后门",
       "sourceUrl": "https://mp.weixin.qq.com/s/Ffevle69IBuha79J-Q_67w"
@@ -17646,6 +17691,11 @@
       "path": "raw/articles/snowflake-agentic-enterprise-summit-2026-infoq.md",
       "title": "Snowflake 迈向 Agentic Enterprise 的关键一跃 — Summit 2026 Platform Keynote 解读",
       "sourceUrl": "https://mp.weixin.qq.com/s/wBWSwI4_RDd_XE5KT-i53w"
+    },
+    {
+      "path": "raw/articles/snowflake-business-ontology-enterprise-agent-2026-11-05.md",
+      "title": "Snowflake 重磅发布业务本体：企业 Agent 终于不再靠猜",
+      "sourceUrl": "https://mp.weixin.qq.com/s/FOvEBz0OxXonbvHOf6CWHA"
     },
     {
       "path": "raw/articles/snowflake-databricks-2026-agent-lakehouse.md",
@@ -20261,6 +20311,11 @@
       "path": "raw/articles/yidian-ai-middle-platform-agentloop-case-aliyun-2026-10-23.md",
       "title": "AI 中台的构建和智能体调优实践",
       "sourceUrl": "https://mp.weixin.qq.com/s/tcsJxyBtEyG3ifcO-VLKfQ"
+    },
+    {
+      "path": "raw/articles/yidian-tianxia-ai-itops-organization-agentloop-alibaba-agentcore-2026-11-05.md",
+      "title": "易点天下：AI 驱动 IT 运维组织提效的实践",
+      "sourceUrl": "https://mp.weixin.qq.com/s/s2_tOveu9V67CLH6UGUpyw"
     },
     {
       "path": "raw/articles/yidian-tianxia-context-engineering-agentic-ai-qcon.md",
