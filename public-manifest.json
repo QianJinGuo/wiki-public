@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "sourceRevision": "d7d5e20819d9b2ea67c0b0ac41dc3edd875c5ef6",
+  "sourceRevision": "a70b5831d5789c8e7c6718fd78508e729adb8a0f",
   "files": [
     {
       "path": "raw/articles/0.25秒识破未见攻击-lod-lvlm-jailbreak-detection-emnlp2026.md",
@@ -7343,6 +7343,11 @@
       "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/how-decathlon-runs-demand-forecasting-at-scale-with-chronos-2"
     },
     {
+      "path": "raw/articles/decision-model-jev-threshold-calibration-logit-tuning-alibaba-2026-11-06.md",
+      "title": "决策模型 Jev 可以直接上生产？用实验和公式理解 logit 调优与训练要领",
+      "sourceUrl": "https://mp.weixin.qq.com/s/NLfsVHKy_m6mZF6aq0Ut5A"
+    },
+    {
       "path": "raw/articles/decision-models-in-rag-three-papers-challengehub-2026-10-29.md",
       "title": "决策模型进了 RAG，效果到底怎么样？",
       "sourceUrl": "https://mp.weixin.qq.com/s/Qe7Lj2Y6a3B6Ga-dzlmY9w"
@@ -10093,6 +10098,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/lc_iBYAu0kMZNP4cy1P6NA"
     },
     {
+      "path": "raw/articles/harness-engineering-explainer-loop-vs-harness-architect-ai-2026-11-06.md",
+      "title": "一文搞懂 Harness 工程：Agent Loop 只是发动机，Harness 工程才是整辆车",
+      "sourceUrl": "https://mp.weixin.qq.com/s/LWNj0cwG-uqI1rV0ITHwrA"
+    },
+    {
       "path": "raw/articles/harness-engineering-exploration-journey-tencent-2026-06-29.md",
       "title": "harness engineering exploration journey tencent 2026 06 29",
       "sourceUrl": null
@@ -12673,6 +12683,11 @@
       "sourceUrl": "https://www.lmsys.org/blog/2026-06-15-next-generation-speculative-decoding-dflash-v2/"
     },
     {
+      "path": "raw/articles/lobehub-open-source-super-agent-acceptance-rsi-l3-l4-2026-11-06.md",
+      "title": "开源版 Super-agent 降临：LobeHub 的 24 小时全自动运营实测",
+      "sourceUrl": "https://mp.weixin.qq.com/s/cb5v8TBZLJIXjL09c8Ic3A"
+    },
+    {
       "path": "raw/articles/local-vs-cloud-agent-onsite-context-debate-xingxiaozhao.md",
       "title": "local-vs-cloud-agent-onsite-context-debate-xingxiaozhao",
       "sourceUrl": "https://mp.weixin.qq.com/s/IrRwi9YoDLdaayKGoIwCUg"
@@ -13298,6 +13313,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/1UfFSdrtnp07WIqe1gX0Nw"
     },
     {
+      "path": "raw/articles/memoproagent-memory-driven-proactive-assistance-meta-2026-11-06.md",
+      "title": "Meta MemoProAgent：记忆驱动的主动辅助，沉默也是正确答案",
+      "sourceUrl": "https://mp.weixin.qq.com/s/Y6zoANJUN5qb-oZlESvT9g"
+    },
+    {
       "path": "raw/articles/memory-agent-systems-cobanov.md",
       "title": "memory agent systems cobanov",
       "sourceUrl": "https://memory.cobanov.dev/"
@@ -13716,6 +13736,11 @@
       "path": "raw/articles/mmretheads-multimodal-retrieval-heads-emnlp-2026.md",
       "title": "EMNLP 2026 | 上百页文档里AI怎么找证据？多模态检索头被找到了",
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIwMTc4ODE0Mw==&mid=2247723233&idx=2&sn=f3707b2ec32045c2fa3ca1e2e8b79dc8"
+    },
+    {
+      "path": "raw/articles/mnn-pocket-0.3b-on-device-native-llm-taobao-2026-11-06.md",
+      "title": "淘宝 MNN 团队开源 0.3B 手机模型：iPhone 18 Pro 离线 350 token/s",
+      "sourceUrl": "https://mp.weixin.qq.com/s/qzHmJVktQv7f1uDt9VGnwg"
     },
     {
       "path": "raw/articles/mnn-sana-edit-v2端侧运行的图像漫画风编辑大模型.md",
@@ -17278,6 +17303,11 @@
       "sourceUrl": "https://www.sentinelone.com/blog/shub-reaper-macos-stealer-spoofs-apple-google-and-microsoft-in-a-single-attack-chain"
     },
     {
+      "path": "raw/articles/siboot-shared-context-group-topic-agent-files-tencent-2026-11-06.md",
+      "title": "多 Agent 协作的下一场竞争，不在模型，而在上下文",
+      "sourceUrl": "https://mp.weixin.qq.com/s/L7WgswCBgMGUF7mD7pcYfw"
+    },
+    {
       "path": "raw/articles/sierra-hyper-tau-bench-agents-that-build-agents.md",
       "title": "Hyper-τ-bench: Evaluating Agents That Build Agents",
       "sourceUrl": "https://sierra.ai/blog/hyper-t-bench-evaluating-agents-that-build-agents"
@@ -17551,6 +17581,11 @@
       "path": "raw/articles/skillhone-continual-agent-skill-evolution-decision-history-wechat-2026-11-05.md",
       "title": "腾讯微信团队提出 Skill 持续进化框架，让 Agent Skill 越用越强",
       "sourceUrl": "https://mp.weixin.qq.com/s/kenyoCInniEyXBYsSiknXg"
+    },
+    {
+      "path": "raw/articles/skillhone-emnlp-industry-ablation-internal-zhixingxing-2026-11-05.md",
+      "title": "腾讯微信提出 skills 持续进化框架：让每一次优化都有迹可循",
+      "sourceUrl": "https://mp.weixin.qq.com/s/F2qm-KvQwvS4MqRvVMkYfg"
     },
     {
       "path": "raw/articles/skilljack-persistent-skill-backdoor-tencent-mindchain-2026-09.md",
@@ -20206,6 +20241,11 @@
       "path": "raw/articles/xiamen-bank-rag-competition-financial-regulation-trustrag.md",
       "title": "怎么短平快地把RAG做好：厦门国际银行RAG初赛方案分享",
       "sourceUrl": "https://mp.weixin.qq.com/s/wJ6Zk_Wu4O3wcSWs0NnL_w"
+    },
+    {
+      "path": "raw/articles/xiaohongshu-recsys-eval-agent-context-driven-llm-as-judge-2026-10-23.md",
+      "title": "小红书推荐系统评测 Agent：上下文驱动的 LLM-as-Judge 实践",
+      "sourceUrl": "https://mp.weixin.qq.com/s/333qmTTiNsFp9m8h49Slgg"
     },
     {
       "path": "raw/articles/xiaomi-dasheng-audio-foundation-model-8gpu.md",
