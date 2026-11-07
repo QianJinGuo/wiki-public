@@ -2,7 +2,7 @@
 
 title: "用 Amazon DynamoDB 构建无需双写的 Agent Memory 与语义检索"
 created: 2026-09-01
-updated: 2026-09-01
+updated: 2026-11-07
 type: entity
 tags: [ai, agent, harness, evaluation, memory, mcp]
 sources: [raw/articles/用-amazon-dynamodb-构建无需双写的-agent-memory-与语义检索]
@@ -115,5 +115,32 @@ expires_at | TTL，短期记忆自动过期
 排序键前缀带上类型。MEM#conversation#<时间戳> 这样的结构，让「取最近 6 轮对话」变成一次 begins_with 的 Query，不需要额外的 GSI，也不需要过滤。 ^[raw/articles/用-amazon-dynamodb-构建无需双写的-agent-memory-与语义检索.md]
 
 向量索引分区键选 user_id。向量索引的分区键做两件事：把索引数据分片以便独立扩展，以及把每次搜索的范围限定在一个分区键值内。对多租 ^[raw/articles/用-amazon-dynamodb-构建无需双写的-agent-memory-与语义检索.md]
+
+## 深度分析
+
+### 双写问题的结构性根源
+
+Agent 长期记忆同时需要两种读取：按时间的 key-value 范围查询（最近几轮对话）和按语义的向量检索（数月前的相关记忆）。在操作型存储没有原生向量索引的年代，这两种读取只能落在两套存储上——事务数据在 DynamoDB，embedding 在独立向量库，写一条记忆这个逻辑事件被拆成两个物理写入。双写的成本由此变成一份固定清单：一致性（先写谁、中间失败怎么办、回滚了怎么办）、同步管道（Streams + Lambda 的重试、乱序、幂等、DLQ、背压）、两份 schema 的冗余同步、删除与 TTL 的跨库对账、双份的容量规划与监控。双写不是实现上的疏忽，而是「一个逻辑写、两个物理索引」架构的必然代价——每项都不产出业务价值，却都会在半夜报警，即 [[concepts/agent-memory-architecture]] 读写分离问题的存储层形态。
+
+### 原生向量索引如何收拢链路
+
+DynamoDB 把向量索引做成与 GSI/LSI 并列的索引类型：用 CreateTable/UpdateTable 声明，读取走 SearchVectors，索引与基表的同步由 DynamoDB 负责，应用只写基表一次。关键增益在事务性：PutItem、UpdateItem、BatchWriteItem、TransactWriteItems 都能触发索引更新，记忆写入可以和其他业务写入放进同一个事务原子提交——跨存储双写方案做不到这一点；删除同样对称，删 item、只删 embedding 属性或 TTL 过期都会带走索引条目。代价是新的静默失败面：item 缺少索引分区键属性时 PutItem 照样成功但永不入索引（基表查得到、SearchVectors 搜不到）；改了 text 而不重算向量，索引里留的是旧向量，搜索会安静返回错误匹配。
+
+### 单表数据模型的权衡
+
+设计核心是让同一条 item 同时满足两种读取：基表 pk/sk 承担按时间读（sk 前缀 MEM#conversation# 让「取最近 6 轮」变成一次 begins_with Query，无需额外 GSI），向量索引属性承担语义读。三个权衡值得展开：其一，向量索引分区键选 user_id，既分片扩展又把每次搜索限定在单用户分区内，是多租户记忆的天然边界，但分区键原则是低中基数——全局知识库场景反而不该定义；其二，Dimensions 与 DistanceFunction 建索引后不可修改，嵌入模型必须提前定死，且每个分区键值有独立配额（搜索 1 GBps、索引写入 10 MBps），头部租户会先撞限；其三，内联过滤只支持等值，强过滤配合 ANN 可能返回少于 TopK 的结果；响应上限 16 MB 且不分页，1024 维向量约 4 KB，默认不返回向量属性。嵌入侧还有一层不对称：Cohere Embed v4 按 input_type 区分文档与查询两个对齐但不对称的空间，实测无区分的对称模型 top1/top2 分差仅 0.016、无法设相似度阈值——向量索引选型与嵌入模型选型是两件独立的事，后者往往影响更大。
+
+### 一致性与安全边界
+
+向量索引读取是最终一致的，「最终」的时长依赖索引状态：稳态写入基本立即可搜；索引刚建完时即使 IndexStatus=ACTIVE 且 Backfilling=false，新写入实测还要 30~40 秒才可搜，期间搜索返回空列表而非报错。普适结论：需要读己之写的路径从基表用 GetItem/Query 读，语义召回只当尽力而为的旁路，不能当强一致的真相来源。安全上，分区键限定搜索范围是数据局部性与性能优化，不是访问控制——dynamodb:LeadingKeys 等细粒度条件键对 SearchVectors 不生效，任何持有索引级 dynamodb:SearchVectors 权限的主体都能搜索任意分区键值，强租户隔离必须用独立表或独立索引配独立 IAM 授权。持久性上，索引继承基表加密配置，副本到新区域时索引定义自动跟随；但 CloudFormation 尚无 VectorIndexes 属性，纯 IaC 团队短期需包一层 Lambda 自定义资源。
+
+## 实践启示
+
+1. 把嵌入模型选型放在建索引之前：Dimensions 与 DistanceFunction 创建后不可修改；给每条 item 记 embed_model 属性，将来换模型才知道哪些向量要回填——一个索引混两个模型的向量不报错，只会安静返回无意义结果。
+2. 在自己的数据上对比 512 与 1024 维的召回质量（Embed v4 支持 Matryoshka 维度）：维度直接乘进存储与按字节计费的成本，可能省一半；ANN 的召回特征只在百万级以上才显现，用真实分布与真实 QPS 压测，官方「个位数毫秒、99%+ recall」口径不能直接采信。
+3. 自动化流程里建完索引后用探针数据轮询到能搜出结果为止，不要只等 Backfilling 变 false；需要读己之写的路径一律从基表读，语义召回当作尽力而为的补充。
+4. 排查「数据在但搜不到」先查索引分区键属性是否缺失；任何更新记忆原文的代码路径必须同时重算并写回向量。
+5. 把「分区键不是安全边界」写进架构评审清单：IAM 条件键对 SearchVectors 不生效，强租户隔离要独立表/索引加独立授权；多租户分层设计可对照 [[entities/tencentdb-agent-memory-hierarchical]]。
+6. 明确不适用的场景：需要 BM25 融合、范围过滤、聚合的复杂混合检索选 OpenSearch；海量冷向量的低成本存储选 S3 Vectors；数据本不在 DynamoDB 里时，为这个特性搬数据只是把同步问题换了个位置——与 [[concepts/when-not-to-memory-architecture]] 的判断框架一致。
 
 → [[raw/articles/用-amazon-dynamodb-构建无需双写的-agent-memory-与语义检索|原文存档]] ^[raw/articles/用-amazon-dynamodb-构建无需双写的-agent-memory-与语义检索.md]

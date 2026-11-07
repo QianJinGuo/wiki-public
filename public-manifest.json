@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "sourceRevision": "a70b5831d5789c8e7c6718fd78508e729adb8a0f",
+  "sourceRevision": "eb5b07e6e3189b62ab4403da1185418ff8baeffa",
   "files": [
     {
       "path": "raw/articles/0.25秒识破未见攻击-lod-lvlm-jailbreak-detection-emnlp2026.md",
@@ -3703,6 +3703,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652727030&idx=2&sn=7d889f9e50e3d7b224d31b211d9a1d9c"
     },
     {
+      "path": "raw/articles/anthropic-claude-agent-memory-dreaming-architecture-2026-11-07.md",
+      "title": "刚刚，Anthropic 公开 Claude 记忆架构：模仿人脑机制，后台「做梦」改错",
+      "sourceUrl": "https://mp.weixin.qq.com/s/w-GWahEmeSUDwvD1apgc_w"
+    },
+    {
       "path": "raw/articles/anthropic-claude-agents-meter-infoworld.md",
       "title": "Anthropic puts Claude agents on a meter across its subscriptions",
       "sourceUrl": "https://www.infoworld.com/article/4171274/anthropic-puts-claude-agents-on-a-meter-across-its-subscriptions.html"
@@ -3781,6 +3786,11 @@
       "path": "raw/articles/anthropic-com-research-making-claude-a-chemist.md",
       "title": "anthropic-com-research-making-claude-a-chemist",
       "sourceUrl": "https://www.anthropic.com/research/making-claude-a-chemist"
+    },
+    {
+      "path": "raw/articles/anthropic-components-of-agent-memory-official-translation-2026-11-07.md",
+      "title": "智能体记忆组成部分（The components of agent memory）— Anthropic 官方原文中译",
+      "sourceUrl": "https://mp.weixin.qq.com/s/Xb7dzSuW_57vWaGJmx5bsA"
     },
     {
       "path": "raw/articles/anthropic-computer-use-best-practices.md",
@@ -8151,6 +8161,11 @@
       "path": "raw/articles/egosuite-open100k-embodied-human-video-data-open-source-2026.md",
       "title": "egosuite-open100k-embodied-human-video-data-open-source-2026",
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652720271&idx=1&sn=347905408c98987b2a92e0a662d3358a"
+    },
+    {
+      "path": "raw/articles/eigenflux-agent-network-discovery-layer-hub-spoke-2026-11-04.md",
+      "title": "从 Personal Agent 到 Agent Network，中间还缺什么？｜EigenFlux Tech Blog Vol.3",
+      "sourceUrl": "https://mp.weixin.qq.com/s/xIksc5det7O2rcP7v4dx6Q"
     },
     {
       "path": "raw/articles/elasticpp重塑elasticsearch查询性能的c内核引擎.md",
@@ -13173,6 +13188,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/pr0PIFl-ZZTAXmYmdxrAPg"
     },
     {
+      "path": "raw/articles/medenv-multimodal-virtual-medical-environment-long-horizon-diagnosis-2026-11-07.md",
+      "title": "MedEnv 解读：49.6 万条轨迹的多模态虚拟医疗环境与长程诊断智能体 Diagnosis-R1",
+      "sourceUrl": "https://mp.weixin.qq.com/s/eI-Uu3jRlyKTr-OBd1gVDg"
+    },
+    {
       "path": "raw/articles/meet-customers-where-they-are-agentforce-contact-center-now-offers-whatsapp-voice.md",
       "title": "Meet Customers Where They Are: Agentforce Contact Center Now Offers WhatsApp Voice",
       "sourceUrl": "https://www.salesforce.com/blog/agentforce-contact-center-whatsapp-voice/"
@@ -16671,6 +16691,11 @@
       "path": "raw/articles/rsi-anything-world-model-universal-rsi-papertoday-2026-10-13.md",
       "title": "万物皆可RSI，自进化AI大爆发",
       "sourceUrl": "https://mp.weixin.qq.com/s/H3QRy0a7o_NaHKEOXLGMvg"
+    },
+    {
+      "path": "raw/articles/rsi-automated-evaluation-five-papers-mlgym-posttrainbench-rsigym-2026-11-07.md",
+      "title": "五篇论文讲解递归自我改进的自动化评测：框架、数据集与发现",
+      "sourceUrl": "https://mp.weixin.qq.com/s/i2_s-aV2a5gzs34iNLWpCg"
     },
     {
       "path": "raw/articles/rsi-evomap-experience-driven-test-time-evolution-2026-09-03.md",
