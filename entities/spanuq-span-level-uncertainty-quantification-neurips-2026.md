@@ -1,7 +1,7 @@
 ---
 title: "SpanUQ：从 Token 到 Span 的 LLM 不确定性估计（NeurIPS 2026）"
 created: 2026-10-23
-updated: 2026-10-23
+updated: 2026-11-08
 type: entity
 tags: [uncertainty-quantification, llm, neurips-2026, evaluation, calibration, probe, distillation, multi-agent, research]
 sources: [raw/articles/spanuq-span-level-uncertainty-quantification-neurips-2026]
@@ -42,6 +42,30 @@ Sequence 级方法（多次采样 + 语义一致性）能给整体可靠性一�
 **Uncertainty-Aware Verification**：只对高不确定 claim 调用检索或验证模型，按不确定程度分级（直接用 / 轻量验证 / 外部检索与多模型交叉验证）；但低不确定性不等于事实正确。**Uncertainty-Guided Self-Refinement**：从整段重写走向只修正高不确定 Span，避免改动本来正确的内容。**Uncertainty-Aware Multi-Agent Communication**：Agent 之间不只传自然语言，还传每个 claim 的可靠性信号，接收方可据此请求补证或交叉验证。^[raw/articles/spanuq-span-level-uncertainty-quantification-neurips-2026.md]
 
 作者也列出未解问题：Calibration 是否足以让分数成为可信决策信号；跨模型（不同基座）输出的 uncertainty score 是否可比——若一个模型的 0.9 与另一个模型的 0.9 含义不同，错误校准的信号会在 Multi-Agent 系统中传播放大；以及能否扩展到复杂推理、代码生成等结构化输出。^[raw/articles/spanuq-span-level-uncertainty-quantification-neurips-2026.md]
+
+## 深度分析
+
+**1. 颗粒度问题的本质是"不确定性语义对齐"。** Token 级方法的失败不在计算精度，而在单位错位：token 是模型的计算单元，不是人类验证信息时的认知单元。SpanUQ 把评估单位从 token 换成语义片段，实际上是承认了一个被长期忽视的事实——概率不确定性（entropy）与事实不确定性（是否正确）是两个不同的量，前者在表达方式多样时对正确内容也会给高分，在模型"自信地犯错"时反而给低分。[[concepts/self-calibrating-epistemic-instrument|自校准认知仪器]] 关注的正是这类"分数 ≠ 可信度"的校准鸿沟。
+
+**2. 蒸馏思路把"贵的信息"变成"便宜的基础设施"。** SpanUQ 的真正杠杆不是 Probe 本身，而是把 multi-sample claim verification 这个昂贵的离线过程压缩成一次前向就能复用的信号源：离线用多次采样生成连续 soft label，在线用 25M Probe 直接从 Hidden States 预测。这延续了"训练贵、推理便宜"的蒸馏范式（对照 [[concepts/model-distillation-compression|模型蒸馏与压缩]]），且 10–20× 加速意味着细颗粒度不确定性第一次有了规模化部署的成本可行性——这类方法过去止步于论文的关键障碍正是推理开销。
+
+**3. 借用 DETR query 解决 span 边界问题是跨领域迁移的干净样本。** BIO 序列标注在重叠片段和联合预测上有结构性限制；DETR 式的可学习 Span Queries 用并行集合预测绕开了逐 token 标注，让"检测"和"打分"共享同一个 decoder。Span Detector F1 = 0.910（相对最强启发式 +39.4%）说明语义片段定位本身可以被当作一个目标检测问题来解——检测领域的表示学习成果可以直接迁移到 LLM 可靠性工程。
+
+**4. Span→Sequence 的可分解性暗示不确定性有层级结构。** 实验发现 sequence 级不确定性可由 span 级在一定程度上分解重建，这提示不同颗粒度的不确定性不是三个平行任务，而可能是同一底层结构在不同分辨率上的投影。若这一结构关系可精确建模，sequence 级分数可以从 span 级"聚合"出来而非独立估计，颗粒度选择就从互斥决策变成了显式权衡。
+
+**5. UCIR 体现了"用输出改进输出"的自反馈设计。** 第一轮不确定性预测被反馈回共享 decoder 修正片段预测，开销 <15% 却提升了排序相关性——不确定性和片段检测不是两个串联的独立阶段，而是可以互相条件化的联合任务。这种 iterate-on-own-uncertainty 的结构在推理优化（[[concepts/inference-optimization|推理优化]]）里是个值得复用的模式。
+
+## 实践启示
+
+**1. 不确定性要作为决策信号设计，而不是评测指标。** 作者反复强调的第三点（Actionable Uncertainty）是最可以直接搬走的原则：任何给 LLM 输出打置信度的系统，都应该问"下游拿到这个分数后能执行什么不同动作"。SpanUQ 的分级策略是现成模板——低不确定性直接用、中不确定性轻量验证、高不确定性外部检索 + 多模型交叉验证。
+
+**2. 验证预算应该按 span 分配，而不是按回答分配。** 十个 claim 里只有两个高不确定时，全量事实核查浪费 80% 的验证开销；span 级信号让系统把检索/验证资源集中在真正危险的内容上。对成本敏感的 RAG、Agent 工具调用管线，这是立即可行的省钱改造：只对高分片段触发检索或更强模型。
+
+**3. Self-Refinement 应从整段重写转向局部修正。** 整段重新生成既有额外计算，又可能把本来正确的部分改坏；先定位高不确定 span、再只针对这些片段验证或重写，是更安全的 refinement 协议。落地时要回答三个问题：阈值定在哪、局部修改如何保持上下文一致、如何确认 refinement 真的降低了风险。
+
+**4. Multi-Agent 通信协议应携带逐 claim 的可靠性元数据。** Agent 之间目前只传自然语言，接收方要自行猜测可信度；让消息附带每个 claim 的 uncertainty score，接收方可以据此请求补证或交叉验证，系统层面还能动态调度资源。但有一个必须防守的坑：不同基座模型的 0.9 分数含义未必相同，未校准的信号会在多跳传播中被放大——跨模型分数可比性是采用此模式的前置条件，不是附带假设。
+
+**5. 低不确定性 ≠ 事实正确，任何自动化策略都要保留兜底。** soft label 来自多次采样的一致性，是经验信号而非真值概率；模型可以一致地错。生产系统应把 uncertainty score 当作路由依据而非正确性保证，结合任务风险和校准程度设置最低验证门槛，高风险场景始终保留独立事实核查通道。
 
 ## 关联
 
