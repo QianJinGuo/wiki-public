@@ -2,7 +2,7 @@
 
 title: AutoResearch-LLM：让 Agent 接手 LLM 训练优化
 created: 2026-07-10
-updated: 2026-08-01
+updated: 2026-11-15
 type: entity
 tags: [sagemaker, llm, gpu, coding, agent]
 sources: [raw/articles/autoresearch-llm让-agent-接手-llm-训练优化]
@@ -118,6 +118,29 @@ CV 分类领域我之前做过一版 `auto_research_cv_cls_demo`（下文简称
 
 
 ---
+## 深度分析
+
+### 三阶段流水线：Agent 如何接管训练迭代
+
+框架沿用三阶段骨架，关键设计是每阶段都有文件产出物（`analysis_report.md` / `improve_guide.md` / `experiment_results.csv`），Agent 在长上下文里可凭文件"接力"，换会话也能恢复状态 ^[raw/articles/autoresearch-llm让-agent-接手-llm-训练优化.md:140-147]。第一阶段"不上来就调参，先做体检"：七维诊断（基座、数据质量、规模、Prompt、训练方式、Eval 配置、baseline 复盘）并给出量化信号，如错标 >10% 先清洗、生成类 <5K 样本先蒸馏扩数据 ^[raw/articles/autoresearch-llm让-agent-接手-llm-训练优化.md:150-160]。第二阶段写成 6 级优先级参数清单（LR/LoRA → batch → 训练策略 → 数据 → 分布式 → 评估），TAO 的 46 项知识库精简到 15+ 项 ^[raw/articles/autoresearch-llm让-agent-接手-llm-训练优化.md:168-192]。第三阶段每个实验走"生成 config → push 实验分支 → submit → 监控 → 评估 → 入 csv"闭环，实验以 `experiment-{编号}-{场景}-{方式}-{变量}` 命名、submodule 分支隔离 ^[raw/articles/autoresearch-llm让-agent-接手-llm-训练优化.md:194-208]。
+
+### 评估方法论：自动产出与一个典型陷阱
+
+核心改造是把评估内嵌进训练器：`--predict_with_generate=True` 让训练日志直接输出 BLEU-4/ROUGE-L，省掉独立的推理与算分轮 ^[raw/articles/autoresearch-llm让-agent-接手-llm-训练优化.md:316-332]；指标提取全自动——Agent 走 HTTP API 拉日志、正则提取指标追加进 csv，监控配合 `/loop` 定时唤醒，全程不开浏览器 ^[raw/articles/autoresearch-llm让-agent-接手-llm-训练优化.md:230-248]。最有教学价值的是 Qwen3 thinking mode 陷阱：`eval_loss = 0.004` 与 `predict_bleu-4 = 1.82` 并存——训练时模板让模型学"先输出空 think 再给答案"，推理时 `enable_thinking` 默认开启，generate 先吐思考内容污染 BLEU；关闭后 BLEU 跳到 46.32 ^[raw/articles/autoresearch-llm让-agent-接手-llm-训练优化.md:425-442]。这说明 loss 与生成类指标可能严重背离，自动化流水线必须内置任务级指标的 sanity check。作者对证据边界也诚实：候选库"业内经验区间"标注为报道值而非实测，目前只在 Query 改写 SFT LoRA 一条路径充分实验过 ^[raw/articles/autoresearch-llm让-agent-接手-llm-训练优化.md:181-192]。
+
+### 方法论亮点与局限
+
+两个可复用方法论：一是"平台问题外挂平台 skill，业务问题留在项目 skill"——平台级错误交给星云官方 `nebula-support` skill 诊断，项目 SKILL.md 只维护 DeepSpeed ckpt、thinking mode、oss_endpoint 等业务专属 Debug 表，分层在任何有官方 skill 的平台都成立 ^[raw/articles/autoresearch-llm让-agent-接手-llm-训练优化.md:354-368]；二是显式锁定不可调变量——基座在第一阶段锁定后，`MODEL_NAME` 不再可调，Agent 遇到饱和信号只能开"需要决策"节提示用户拍板，与 TAO 的 LOCKED 参数思路一致 ^[raw/articles/autoresearch-llm让-agent-接手-llm-训练优化.md:162-164]。局限方面作者坦承 ^[raw/articles/autoresearch-llm让-agent-接手-llm-训练优化.md:485-501]：实验循环按预设优先级线性推进、不按中间结果剪枝；跨场景知识不流通（`lessons.jsonl` 未定 schema）；在线 KD 未验证、RL 未统一进 `submit.sh`；业务指标 F1/NDCG 离线评估只有骨架；整体仍是单 Agent + 单 Skill，不及 TAO 四子 Agent 架构。
+
+## 实践启示
+
+1. **先体检后调参**：跑 baseline 前按七维诊断过一遍，改 Prompt 模板通常 +5~10%，比盲目扫 LR 便宜 ^[raw/articles/autoresearch-llm让-agent-接手-llm-训练优化.md:150-160]。
+2. **给 Agent 划权限边界**：把基座模型等变量显式声明为 LOCKED，Agent 遇饱和信号只能提示用户拍板——防止自动化循环跑偏的最便宜护栏 ^[raw/articles/autoresearch-llm让-agent-接手-llm-训练优化.md:162-164]。
+3. **Debug 知识按平台/业务分层**：平台级报错交给平台官方 skill，业务专属坑写入项目 SKILL.md Debug 表 ^[raw/articles/autoresearch-llm让-agent-接手-llm-训练优化.md:354-368]。
+4. **评估随训练自动产出并警惕指标背离**：用 `predict_with_generate` 省掉独立推理轮；loss 低不代表任务指标好，要有生成指标 sanity check ^[raw/articles/autoresearch-llm让-agent-接手-llm-训练优化.md:425-442]。
+5. **实验隔离用 Git、记录用机器可读格式**：每实验一个分支，明细写 csv（实验级）、总结写 final_report.md（研究级），粒度分开 Agent 才能接力 ^[raw/articles/autoresearch-llm让-agent-接手-llm-训练优化.md:196-248]。
+6. **重复易错的交给 Agent，判断留给人**：写配置、提交、监控、抓日志、算指标可让渡；数据清洗、Prompt 设计、何时换基座仍需人工判断 ^[raw/articles/autoresearch-llm让-agent-接手-llm-训练优化.md:509]。延伸：[[entities/autoresearch-llm-agent-llm-training-optimization-1688|1688 场景细节]]、[[concepts/loop-engineering-methodology|循环工程]]、[[concepts/model-distillation-compression|模型蒸馏]]、[[concepts/evaluation-harness-design|评估设计]]。
+
 ## 关联
 - 相关概念: [[concepts/harness-engineering-framework|Harness Engineering]]
 - 相关: Agent 架构

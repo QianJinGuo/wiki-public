@@ -1,7 +1,7 @@
 ---
 title: "LiteLLM × Bedrock Guardrail 集成：护栏位置选择与流式延迟物理"
 created: 2026-09-17
-updated: 2026-09-17
+updated: 2026-11-16
 type: entity
 tags: [guardrail, bedrock, litellm, ai-gateway, content-safety, streaming, agent, harness, aws]
 sources: [raw/articles/litellm-bedrock-guardrail-placement-streaming-latency-2026]
@@ -56,6 +56,34 @@ Amazon Bedrock Guardrails 提供两种使用方式：**驻场**（在 Converse/I
 → [[raw/articles/litellm-bedrock-guardrail-placement-streaming-latency-2026|原文存档]]
 
 ---
+
+## 深度分析
+
+### 护栏位置的本质是「控制面所有权」问题
+
+驻场与门外之分，表面是 API 用法，实质是检查逻辑的控制权归属。驻场模式把「查什么、何时查、怎么处置」三件事焊死在平台流水线里，调用方只能看到结果；门外模式把三件事全部解耦回调用方代码——这也是原文「结构满足」一词的真正含义：不是配置得恰好满足需求，而是需求满足度直接由代码结构字面保证，与平台内部实现零耦合。因此需求越精细（选择性送检、免检 output），越只能走向门外；驻场模式天然只适合「默认全查」的粗粒度兜底。这一所有权框架同样解释了坑 4：两种方式一起开时，控制权在中介与平台之间分裂，代价是重复计费与延迟叠加。
+
+### agent 工具循环打破了「最后一条 = 用户输入」假设
+
+坑 1 与坑 2 的共同根源是同一个启发式失效：LLM 网关按消息数组的末尾位置推断「用户输入」，而标准工具循环里请求经常以 `role=tool` 结尾（用户消息 → tool call → 工具返回 → 再次调用模型），「最后一条」与「用户亲笔内容」在 agent 场景下系统性地不是同一张纸。结构性修复只有一种：回溯**最后一条 `role=user`** 并显式排除 `toolResult` 后送检。这与 [[concepts/prompt-injection-defense|Prompt 注入防御]] 的信任边界原则同构——只有用户亲笔内容进入信任边界，系统自产内容（system prompt、工具回执）一律不送检，固定提示词误报才可能被根除。
+
+### 流式延迟是物理约束，不是实现缺陷
+
+「边流边查、零延迟」之所以不可能，是因为流式响应本质是逐段生成、逐段穿过调用方代码的数据流（进程在 socket 上阻塞、被内核唤醒后才拿到下一段）——不经过你的代码，就没有数据。任何「放行前检查」都必须扣住一段、查一段、放一段，缓冲延迟是插入点位置的必然结果（实测 `ApplyGuardrail` 单次约 150ms）。唯一不违背零延迟的方案是把检查移到放行之后：事后异步审计，代价是检查动作从「拦截」降级为「可观测」。这也是 [[concepts/harness-engineering|Harness Engineering]] 里的一个通用取舍：检查点在管道中的位置决定了它天然的成本下限。
+
+### 「架构必然」与「实现偶然」必须分层对待
+
+GPT-5.6 在 Bedrock 上 output 检查未生效，而 input 检查正常——分界线不是模型厂商，而是模型跑在哪条 serving 流水线上（专属 `bedrock-mantle` 通道 vs 自有栈）。这暴露出一个可靠性分层问题：「自研两步调用行」来自代码结构，是架构必然，任何模型都稳定；「某模型目前跳过 output 检查」是平台实现偶然，文档没有任何承诺。依赖偶然行为等于把生产可靠性押在别人未文档化的流水线实现上，唯一负责任的用法是配金丝雀把「偶然」变成「可监控的临时状态」，并保留一条架构必然的退路（自研 hook 或两步调用）。这与 [[entities/amazon-bedrock-mantle-litellm-gateway-2026|Bedrock Mantle + LiteLLM 网关收敛]] 中 pre-call 钩子的落地经验互为印证。
+
+## 实践启示
+
+1. **先问「护栏放在哪个位置」，再选护栏产品。** 需求越精细（选择性送检、output 免检），越必须用门外模式（独立 `ApplyGuardrail`）；只要「默认全查」兜底，驻场 `guardrailConfig` 才是代价更低的选项。
+2. **agent 工具循环中做输入侧护栏，送检前必须回溯最后一条 `role=user` 并排除 `toolResult`。** 任何「整袋送检」或「只查最后一条消息」的实现都会把 system prompt / tool result 误送检，产生 HTTP 400 误拦截。
+3. **流式输出要求零延迟时，output 侧用事后异步审计而非前置检查。** 全文流完再异步送检，结果只进日志与告警、不拦截——这是不违背物理约束的唯一方案，也是门外模式独有的解耦能力。
+4. **用 IAM 收敛模型调用权，把「查过才放行」的保证落到权限结构上。** 只给网关角色 `bedrock:InvokeModel` 权限、业务方拿不到，防止绕过门外安检直连模型；两次调用之间没有平台校验，安全保证完全来自代码结构 + 权限收敛的组合。
+5. **凡依赖「实测有效但文档未承诺」的厂商行为，必须部署金丝雀监控。** 定时任务让模型固定输出可拦截内容、断言客户端收到原文，金丝雀一旦被拦立即告警并切换到结构性方案。
+6. **不必为了护栏弃用 LiteLLM。** 继承 `CustomGuardrail` 写约百行的 pre_call hook（回溯最后一条 `role=user`、排除 toolResult、单独调 `ApplyGuardrail(INPUT)`），即可在 LiteLLM 内结构性复现门外方案，等于给中介的门口安检员一份「如何拆包挑材料」的委托书。
+
 ## 关联
 
 - 相关实体：[[entities/amazon-bedrock-guardrails-code-generation-six-patterns|Bedrock Guardrails 六大模式]] · [[entities/higress-qwen3guard-wasm-plugin-ai-gateway-content-safety|Higress Qwen3Guard 网关内容安全]] · [[entities/amazon-bedrock-mantle-litellm-gateway-2026|Bedrock Mantle + LiteLLM]] · [[entities/litellm-amazon-bedrock-cost-control-four-layer|LiteLLM Bedrock 成本控制]] · [[entities/litellm-aws-ecs-eks-ai-gateway-architecture|LiteLLM ECS/EKS 网关架构]]

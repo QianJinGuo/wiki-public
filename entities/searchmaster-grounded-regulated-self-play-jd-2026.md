@@ -1,7 +1,7 @@
 ---
 title: "SearchMaster：接地的受调节自博弈搜索 Agent 训练"
 created: 2026-08-07
-updated: 2026-09-10
+updated: 2026-11-11
 type: entity
 tags: [self-play, search-agent, agent-training, grpo, evidence-chain, reward-design, jd]
 sources: [raw/articles/searchmaster-grounded-regulated-self-play-jd-2026]
@@ -78,6 +78,35 @@ SearchMaster 与 Skill-SP（qwen-skill-self-play-hyman-2026 实体）同属 self
 - [[entities/qwen-skill-self-play-hyman-2026|阿里 Qwen Skill-SP 自博弈]]
 - [[entities/llm-self-improvement-system-survey-zesearch-nlp-2026|LLM 自改进系统综述]]
 - [[entities/native-parallel-reasoner-icml2026|Native Parallel Reasoner]]
+
+## 深度分析
+
+### 自博弈的瓶颈是信号质量而非算力
+
+naive 与 SearchMaster 的差距主要来自「换掉误导信号」而非算力：+ECG 单项即把 BrowseComp-Plus 从 45.18 拉到 53.25。自博弈是闭环反馈系统——Proposer 依 Solver 成功信号出题，信号偏差被循环放大：伪多跳任务奖励浅查，Solver 在假难度上变强，任务随之变浅。论文的元贡献是把信号接地变成显式机制：True Multi-Hop 从 24.2% 升到 78.6%。^[raw/articles/searchmaster-grounded-regulated-self-play-jd-2026.md:66-68]
+
+### SDR：行为可观察量优于结果统计量
+
+成功率型课程是策略能力的函数——Solver 每变强一次，同批任务的表观难度就降一次，naive 信号下任务 hmin 衰减到 2-3；SDR 把难度锚定在最浅成功解深度 hmin 后，任务深度稳定在 8-10。一般性原则：结果统计量会被被评估者的进步博弈掉，行为锚点不会。^[raw/articles/searchmaster-grounded-regulated-self-play-jd-2026.md:71]
+
+### OOP：惩罚行为形状而非行为用量
+
+OOP 把「过度」定义在 open/search 比率（1.5 起罚、2.5 满罚）而非打开次数上，先测量后定则：56.3% 的额外打开是重开已见文档——病理是冗余而非探索本身，比率罚命中冗余、不误伤合法多文档探索。^[raw/articles/searchmaster-grounded-regulated-self-play-jd-2026.md:27] 无 OOP 时双角色持续漂移（Figure 4）：过度打开是自博弈梯度下的吸引态而非偶发噪声。^[raw/articles/searchmaster-grounded-regulated-self-play-jd-2026.md:72]
+
+### 冻结 Verifier 与种子门控：循环外锚点
+
+自博弈最易塌向评估者与被评估者共同漂移。SearchMaster 保留两类不随优化的锚点：Verifier 是初始模型冻结副本；种子级 gate 对低奖励任务集整体否决，只保留最高奖励 K_S 条 rollout 防样本主导——评估与筛选不随 πθ 移动，闭环有外部参照。这与 [[entities/tencentdb-agent-memory-hierarchical|腾讯云分层记忆]] 的治理立场同构：验证门槛决定哪种成功值得学。^[raw/articles/searchmaster-grounded-regulated-self-play-jd-2026.md:44-47]
+
+## 实践启示
+
+1. 自博弈循环的第一审计对象是信号而非超参：先统计伪任务占比（GLM-5 判定 1000 种子×10 任务），naive 基线 47.1% 伪多跳即近半预算在奖励浅查，见 [[concepts/agent-self-improvement-loops|Agent 自改进循环]]。^[raw/articles/searchmaster-grounded-regulated-self-play-jd-2026.md:68]
+2. 课程难度用行为可观察量（最浅成功解深度）定义而非成功率：前者随能力增长保持稳定，后者会被策略进步博弈掉。^[raw/articles/searchmaster-grounded-regulated-self-play-jd-2026.md:71]
+3. 工具正则先测量再定罚：量化冗余占比（56.3% 重开已见文档），用渐进比率阈值代替硬上限，为合法探索留空间。^[raw/articles/searchmaster-grounded-regulated-self-play-jd-2026.md:72]
+4. 循环内保留不随策略更新的锚点：冻结评估器、集合级否决、保留上限并用，防信号漂移与样本主导。^[raw/articles/searchmaster-grounded-regulated-self-play-jd-2026.md:44-47]
+5. 接地与调节是正交杠杆：+ECG/+SDR 各约 +8，组合 57.71，加 OOP 到 60.24——单机制消融才能归因。^[raw/articles/searchmaster-grounded-regulated-self-play-jd-2026.md:66]
+6. 信号接地决定迁移：纯离线训练在线五基准全部提升，信号质量比环境保真度更能预测泛化。^[raw/articles/searchmaster-grounded-regulated-self-play-jd-2026.md:64]
+
+GRPO 配套：工具观测保留上下文但 mask 出 loss，梯度只流经自身生成 token（Eq 10），机制见 [[concepts/grpo-policy-optimization-2026|GRPO 策略优化]]。^[raw/articles/searchmaster-grounded-regulated-self-play-jd-2026.md:40]
 
 ## 来源
 

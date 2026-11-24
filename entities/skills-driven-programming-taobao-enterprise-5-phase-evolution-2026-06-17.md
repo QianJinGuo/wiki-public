@@ -19,7 +19,7 @@ tags:
   - knowledge-base
   - sdkf
 created: 2026-06-17
-updated: 2026-09-10
+updated: 2026-11-21
 type: entity
 review_value: 10
 review_confidence: 9
@@ -331,6 +331,24 @@ Spec 驱动原则强调项目评估、技术方案等前置环节的准确性—
 4. 时间相近（其林 2026-06-12 / 官亭 2026-06-17） ^[raw/articles/skills-driven-programming-taobao-enterprise-5-phase-evolution-2026-06-17.md]
 
 **本批仅入库官亭文（严格执行单 URL 决策），孤儿 raw 留给后续批处理整合**。 ^[raw/articles/skills-driven-programming-taobao-enterprise-5-phase-evolution-2026-06-17.md]
+
+## 深度分析
+
+### 演进主线的另一种读法：一条"确定性供给"曲线
+
+把五个阶段并排看，每一阶段的"瓶颈"与下一阶段的"做法"严格互补：Vibe Coding 输在产出质量不稳定、知识散落临时对话，Prompt 模板补的是**流程确定性**；Prompt 模板输在 AI 发散不可控、无法预览设计思路，SDD 补的是**规格确定性**；SDD 输在流程执行成本高、领域知识未固化，Skill 沉淀补的是**领域知识确定性**；Skill 沉淀输在上手门槛与本地 IDE 依赖，云端集成补的是**使用确定性**。因此这条演进路径不是工具升级史，而是一张**"把哪一类不确定性从模型侧移到工程侧"的顺序表**——先固化流程、再固化规格、再固化知识、最后固化分发，与"前序环节质量决定后续环节天花板"的元方法论自洽。^[raw/articles/skills-driven-programming-taobao-enterprise-5-phase-evolution-2026-06-17.md:122-124,134-137,151-153,164-167,182-185]
+
+### 50%→90% 的归因分解：三类问题、三种治理
+
+三类被攻破的问题各自对应一种治理机制，且只有一类是"让模型变好"：接口提取幻觉用**确定性脚本接管**——把高精度环节从模型能力中剥离，AI 只做格式理解与补漏；长文档输出崩塌用**架构拆分**——15 个接口拆为 4 个子 Skill，单接口独立上下文（各 ~8k tokens），不指望模型在超长上下文中保持一致性；领域知识缺失用**references 注入**——把映射规则、API 签名等专家经验显式写进 Skill。三选一是"提升模型"，两选二是"绕开模型"，这是"质量瓶颈不在模型，在知识工程"最硬的归因证据，也解释了为什么换更强模型从来不是该团队的选项。^[raw/articles/skills-driven-programming-taobao-enterprise-5-phase-evolution-2026-06-17.md:231-237,246,248-252,262-274]
+
+### ADJUSTMENT_PLAN：在 Anthropic 标准之上补的"缺陷回写回路"
+
+Anthropic Agent Skills 标准定义的是 Skill 的静态三件套（SKILL.md + references/ + scripts/），并不规定 Skill 上线后如何演化；本案例的 ADJUSTMENT_PLAN 机制（发现 → 定位 Skill → 补约束 → 验证 → 交叉验证，11 类高频问题沉淀后"不再复现"）实质是给 Skill 体系加了一个**缺陷回写回路**——语义上等同软件工程的 bug 回归闭环，而非经验分享。这说明标准只回答"Skill 长什么样"，落地方必须自己回答"Skill 怎么变好"：该回路与 [[entities/skill-craft|Skill Craft]] 的质量工程框架、[[entities/skill-hub-organization-asset-winty|winty Skill Hub]] 的质量门禁属同一问题域的不同解法，三方对照可提炼出 Skill 运维层的通用最小集。^[raw/articles/skills-driven-programming-taobao-enterprise-5-phase-evolution-2026-06-17.md:277,303-305]
+
+### 适用边界与未竟事项：范式不是普适解
+
+原文自带的适用性判据同时划出了反面：一次性任务、领域知识模糊（专家都说不清）、输出无客观 ground truth 的场景**不适用**——该范式高度依赖"知识可文档化 + 结果可校验"的业务形状，不是通用提效开关。且两项关键能力尚未完成：沙箱测试（TDD）与 SubAgent 并行化，即当前"事后审查"防线仍以审查 Skill 为主（接口覆盖 15/15、字段遗漏率 0%），**验证环节的自动化是下一个确定性供给点**；云端集成（OneDay + Aone 沙箱）解决的是使用门槛而非生成质量。与 [[entities/agent-skills-comprehensive-survey|Agent Skills 综述]] 的"表示→获取→检索→进化"框架对照：本案例已完成"表示"与"获取"，检索（三级索引 + kn-fetcher）刚成型、"进化"（ADJUSTMENT_PLAN）是自建补丁，[[entities/three-tools-comet-openspec-superpowers-ai-coding-shuge-2026-06-17|OpenSpec 与 Superpowers 的工程取舍]] 则从工具侧印证了阶段 3 选 OpenSpec 而非自研规格工具的路径。^[raw/articles/skills-driven-programming-taobao-enterprise-5-phase-evolution-2026-06-17.md:57-68,187-194,363-371]
 
 ## 11. 后续追踪建议
 

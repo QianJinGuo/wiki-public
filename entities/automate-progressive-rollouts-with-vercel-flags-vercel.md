@@ -12,13 +12,15 @@ review_confidence: 8
 review_recommendation: worth-reading
 review_stars: 3
 created: 2026-05-16
-updated: 2026-09-10
+updated: 2026-11-19
 reviewed: 2026-09-07
 review_verdict: keep
 review_category: practice
 ---
 
 > -> [[raw/articles/automate-progressive-rollouts-with-vercel-flags-vercel.md|原文存档]]
+
+# Automate progressive rollouts with Vercel Flags - Vercel
 
 ## 深度分析
 Vercel Flags 是 Vercel 平台推出的 Feature Flag 解决方案，本次更新新增 **渐进式发布（Progressive Rollouts）** 功能，属于 Feature Flag 策略中的「时间基权重」类型。 ^[raw/articles/automate-progressive-rollouts-with-vercel-flags-vercel.md]
@@ -43,6 +45,24 @@ Vercel Flags 是 Vercel 平台推出的 Feature Flag 解决方案，本次更新
 1. **Dashboard 可视化配置**：通过 Vercel Flags 界面管理 ^[raw/articles/automate-progressive-rollouts-with-vercel-flags-vercel.md]
 2. **CLI 命令**：`vercel flags rollout` 命令，支持自动化管道集成 ^[raw/articles/automate-progressive-rollouts-with-vercel-flags-vercel.md]
 这意味着 CI/CD pipeline 中可以方便地编排渐进式发布，结合监控告警实现自动化回滚。 ^[raw/articles/automate-progressive-rollouts-with-vercel-flags-vercel.md]
+
+### 渐进式发布中的 flag 生命周期：从「开关」到「调度对象」
+
+把这次更新放进 Feature Flag 的演进脉络里看，flag 的角色发生了实质变化。传统 flag 生命周期是「创建 → 人工拨动开关 → 删除」，开与关是两个瞬时动作，flag 只是一个布尔门闩；而渐进式发布把 flag 变成了一个**带时间表的调度对象**——每个阶段有目标百分比和持续时间，状态在「排期中、当前阶段、已完成」之间自动流转，不再依赖人工逐步拨动。 ^[raw/articles/automate-progressive-rollouts-with-vercel-flags-vercel.md]
+
+这个变化对工程组织的含义是：发布策略从「操作员的知识」变成「可版本化、可审计的配置」。当权重推进由平台按时间表自动执行时，团队讨论的焦点从「今天推到多少」变成「时间表本身设计是否合理」——阶段划分粒度、每阶段观察窗口时长、目标百分比曲线，这些成为 code review 的新对象。Dashboard 配置与 CLI 命令两条路径并存，恰好对应了这两种工作方式：前者服务手动观察与干预，后者服务把时间表作为代码管理。 ^[raw/articles/automate-progressive-rollouts-with-vercel-flags-vercel.md]
+
+### 回滚策略：时间表是「承诺」还是「可撤销的提议」
+
+原文强调渐进式发布能在小流量阶段「catch a regression on a small slice of users before it hits everyone」，但没有说明阶段推进过程中能否暂停或回退。这留下一个关键的工程判断：时间表究竟是平台自动履行的承诺，还是随时可撤销的提议？ ^[raw/articles/automate-progressive-rollouts-with-vercel-flags-vercel.md]
+
+两种语义对应两种运维姿态。若时间表不可中断，渐进式发布只是把「爆炸半径」从全量缩小到单阶段增量，团队仍需人工盯监控、在窗口期内手动干预；若支持暂停/回退，它才能与告警系统串成真正的自动化闭环——错误率超阈值即回退到上一稳定阶段，人在环外。从原文「每个阶段有目标百分比和持续时间」的表述看，Vercel 目前把中断语义留给了使用者自行处理，这意味着**自动回滚目前是集成问题而非平台内置能力**：需要团队自己用 CLI 命令 + 监控告警组装，或者等待平台补齐。采购这类功能时，「能否编程式暂停」应该作为验收标准之一。 ^[raw/articles/automate-progressive-rollouts-with-vercel-flags-vercel.md]
+
+### 与 CI/CD 的集成取舍：发布节奏该不该交给时间表
+
+渐进式发布天然存在一个张力：它的时间表是**日历驱动**的，而 CI/CD 的交付节奏是**事件驱动**的（build 完成、测试通过即触发部署）。把两者接起来时需要做取舍。 ^[raw/articles/automate-progressive-rollouts-with-vercel-flags-vercel.md]
+
+一是「什么该走 flag、什么该走部署」的边界：渐进式发布适合的是已经部署完成、只控制曝光比例的变更；代码本身的发布仍走常规 CI/CD。flag 时间表管的是「用户看到什么」，deploy 管的是「服务器跑什么」，混淆两者会导致回滚语义混乱——回退 flag 是瞬时操作，回退部署要重新构建。二是调度与流水线的所有权问题：如果发布节奏完全交给平台时间表，deploy pipeline 里的进度感知就变弱了；用 `vercel flags rollout` 把推进动作编入 pipeline，则保持了「一切变更皆由 CI 触发」的单一事实来源。原文把 CLI 与 Dashboard 并列给出，本质上就是把这个取舍交给团队：小团队用 Dashboard 手动控制观察窗口更务实，有严格变更管理要求的团队则应把时间表编排进 pipeline 以获得审计轨迹。 ^[raw/articles/automate-progressive-rollouts-with-vercel-flags-vercel.md]
 
 ## 实践启示
 1. **在 CI/CD 流程中集成渐进式发布**：结合监控指标（错误率、延迟）设置自动回滚阈值，当新版本指标恶化时自动降低流量比例。 ^[raw/articles/automate-progressive-rollouts-with-vercel-flags-vercel.md]

@@ -1,7 +1,7 @@
 ---
 title: "xOPD 全景梳理：16 篇论文拆解 On-Policy Distillation 的六个维度与教师角色演化主线"
 created: 2026-06-23
-updated: 2026-09-10
+updated: 2026-11-15
 type: entity
 tags: [opd, distillation, rlhf, grpo, post-training, self-distillation, teacher-student, rlvr, survey, taxonomy]
 sources: [raw/articles/xopd-on-policy-distillation-landscape-banana-2026]
@@ -157,6 +157,35 @@ Self-Distilled Reasoner 验证：full-vocab logit distillation > sampled-token p
 | Self-Distilled Reasoner | 2601.18734 | ⭐⭐⭐ | OPSD 源头，forward KL 胜出 |
 
 完整 16 篇 reading list + arXiv 链见原文附录。
+
+## 深度分析
+
+### 教师信号的边际价值是 student 状态的函数
+
+把各篇诊断放在一起，能得到比"教师退场"更精确的表述：teacher 在某处是否值得听，取决于 student 此刻在哪里。Apple 给出两端——student 已成功的轨迹上师生 cosine alignment ≈ 0.001（几乎正交），教师在这些位置没有增量；RLRT 的 information asymmetry 补上另一端：看过 ground truth 的 teacher 系统性偏向课本解法，当 student 在关键位置选了反常识但走通的 token，"往 teacher 拉"是在抹掉学生独有的探索。两者合并意味着信号强弱是 (student 状态 × 信号源) 的联合结果，选 teacher 的标准因此从"谁分数高"移到"谁分布贴"——Many Faces 的 RLVR-adapted teacher 结论（分数不必更高、分布贴即可）正是这个转移的推论。
+
+### 白盒访问 ≠ 可用信号，两者要分开测
+
+传统蒸馏默认"拿到 logits 就等于拿到监督"，这波工作把等式拆开了。ROPD 的对照最刺眼：rubric reward 预测最终正确性 AUC 0.90，teacher logits 只有 0.35——接近随机。Apple 的 token 级方差（std ~0.83，同一路径内 alignment 正负横跳）说明即使平均有信号，逐 token 分布也以噪声为主。工程上的可操作替换是：选定 loss 之前先测"当前信号源对 outcome 的预测力"，接近随机就换信号源（rubric、sibling 对比、privileged self-conditioning），而不是调 KL 权重。信号质量与白盒程度是两个独立轴，黑盒 teacher 在前者上可以反超。
+
+### Self-distillation 的 forward KL 是结构性后果，不是口味偏好
+
+外部 teacher 线全选 reverse KL（mode-seeking），理由是小 student 覆盖不了大 teacher 的 mode；Self-Distilled Reasoner 的 ablation 却显示自蒸馏下 forward KL 更稳。这不是口味，而是权重共享拆掉了 reverse KL 的前提：没有 capacity gap，teacher conditional 只是 student conditional 被 PI sharpen 的版本，它抬起的每个 token 都是 student 能表达、只是没注意到该提的——此时该把概率质量铺开（mode-covering）。配套细节是 per-token KL clipping：stylistic token 的 divergence 远高于推理承载 token，不截断就由噪声主导。这条"权重共享 ⇒ 换 KL 方向"的推理链，是判断任何新自蒸馏工作 loss 设计的第一性检查。
+
+### PI 结构是自蒸馏的成败分水岭，失败模式可提前识别
+
+Many Faces 不止给出 shared-rule/instance-specific 二分，而是指出 OPSD student 学到的是所有 PI 上的边际聚合策略：PI 是类级规则时聚合恰好等于内化，PI 是题级 GT 时聚合等于把各异解题路径拍成糊。后者有可提前识别的失败指纹——inference 时学生幻觉性说出"如参考答案上所言"，说明内化的是"条件里有答案"的统计痕迹而非解题能力。RLCSD 从信号侧量化了同一病理：style token 信号均值 0.263，task token 只有 0.083，特权泄漏的大头压在文风上。OPSDL 给出建设性对策——privileged 的不是更多 context 而是更少，短上下文版的自己是最能被 parse 的 teacher，与 Apple 的 comprehensibility 假设互为印证：PI 的正确形态由 student 能否 parse 决定，而非信息量。
+
+## 实践启示
+
+1. 先做信号体检再定方法：选 OPD 变体前，测 teacher 信号对最终正确性的预测力（AUC / alignment）；接近随机就换信号源（rubric 打分或自蒸馏），而不是调 loss 权重。
+2. 选 teacher 看分布贴合度，不看 benchmark 分数：更小但同分布的 teacher 常胜过更强但偏远的外部 teacher。
+3. 算力紧张先试缓存化：SFT 与 OPD 同 teacher 时可离线预计算 SFT rollout 上的 logits（Lightning 证明与在线解共享最优，约 4× 节省），且该技巧与其他 xOPD 改动正交可叠加。
+4. 用 routing 把蒸馏 loss 挂对样本：正确轨迹交还 vanilla GRPO，只在错误轨迹（或成功轨迹做 RLRT 式翻转）启用蒸馏；对 stylistic token 做 per-token clipping 防文风噪声主导。
+5. 自蒸馏的 privileged information 选 shared-rule 类（系统提示、风格指令），避开 instance-specific GT；多轮 agent 场景把 OPSD 降级为门控辅助项并对污染上下文做信号衰减（SOD/SDAR 信任门模式）。
+6. 把"教师退场"当调度问题实现：teacher 在 divergence 上升时介入、outcome 正确时闭嘴；在线/离线与触发时机是独立设计空间（参见 [[entities/relay-opd-handoff-trigger-online-distillation-zju-alibaba-2026]]、[[entities/on-policy-distillation-vs-offline-distillation-loster]]）。
+
+延伸脉络：[[entities/unievo-vl-onpolicy-self-distillation]]（多模态侧同名机制）、[[entities/self-distillation-agentic-rl-reality-check-grpo-2026]]（agentic RL 下的实证检验）、[[entities/the-distillation-panic]]。
 
 ## 相关实体
 - [[entities/opd-revisiting-failure-modes-simple-fixes-storm]]

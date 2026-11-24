@@ -4,7 +4,7 @@ title: "从 Prompt 到 Harness：Claude 官方学习资料"
 type: entity
 tags: [agent, anthropic, claude, harness, openai, prompt]
 created: 2026-05-21
-updated: 2026-09-07
+updated: 2026-11-17
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/from-prompt-to-harness-claude-official]
@@ -39,6 +39,16 @@ review_category: tech
 **验证不是收尾动作——验证会塑造实现方式。** 这一洞察颠覆了传统开发流程中"先实现后测试"的思维。在 Agent 场景下，由于 Agent 的自信来自局部代码判断而非系统级验证，必须将验证设计前置，才能确保实现方式本身是可测试的 。 ^[raw/articles/from-prompt-to-harness-claude-official.md]
 
 **OpenAI 案例（空 repo → 100 万行代码、1500 PR、0 人工 review）和 Stripe Minions（每周 1300+ PR）** 证明了在成熟 Harness 体系下，AI 代码生成的规模效应是真实的。这为"AI 写代码是否可行"提供了实践层面的正面证据 。 ^[raw/articles/from-prompt-to-harness-claude-official.md]
+
+
+### 五个子系统各自的失效路径
+把"系统缺失"落到具体场景，可以看到每个子系统缺席时的典型翻车姿势并不相同：指令缺失，Agent 每个新会话都要重新猜测项目规范，同一任务在不同会话间产出漂移；工具缺失，它只能靠想象作答，幻觉随之上升；环境缺失，上下文被"依赖为什么装不上"这类排障消耗殆尽；状态缺失，长任务跨会话失忆，已完成的工作被重复甚至覆盖；反馈缺失，它用"看起来对"替代"验证过对"。其中前四类缺失的症状是"做不动"，容易被察觉；反馈缺失的症状却是"自信地做错"，要到集成甚至上线才暴露——这正是反馈子系统最容易被低估的原因。这一视角与 [[entities/prompt-context-harness-three-evolutions]] 的 harness 演化梳理相互印证：harness 不是一次性配置，而是随任务复杂度逐步补齐的系统能力。与此同时，它与 [[entities/claude-code-harness-deep-understanding]] 中"把工程纪律外置到运行环境"的立场一致：修补单次失败没有意义，要修的是让失败可复现、可拦截的那层系统。
+
+### 验证前置如何反向塑造实现策略
+"验证会塑造实现方式"是全文杠杆最大的判断之一。当验证被放在最后，Agent 的理性选择是一口气做大改动——中途没有检查点，大步迈进与小步迭代在"通过"之前无法区分；而当每个功能都必须挂上可执行的具体验证命令，实现策略被迫改变：改动拆成可独立验证的小步，关键路径必须能被脚本触达。前置验证闸门因此不只是质量手段，而是通过重新定义"什么算完成"，间接约束了 Agent 选择实现路径的方式。三层终止检查（静态、运行时、系统级）则是对 Agent 自信来源的校准：它的自信建立在局部代码判断上，而真实正确性往往藏在模块边界与集成点，只有 E2E 走查能够暴露。与 WIP=1 组合后，三者构成纪律闭环——单任务限制防止过度延伸，前置验证防止带病前进，闸门式判定防止过早宣告完成。
+
+### 规模数据背后的两种信任模型
+OpenAI Frontier 案例（约 1500 个 PR、接近零人工 review）与 Stripe Minions（每周 1300+ PR、AI 生成加人工 review）常被并列引用，但两者的信任结构并不相同：前者把把关职责完全押给 harness 的机器验证链条，后者保留人工 review 作为最终闸门。这组对照说明"AI 能否写生产代码"已不是能力问题，而是组织愿意把多少验证职责交给机器的问题。另一个易被忽略的细节是人力配置：3 人涨到 7 人的团队产出约 100 万行代码，人的角色没有消失，而是从逐行写代码迁移到设计 harness、划定边界、处理机器验证不了的部分。这与 [[entities/claude-code-prompt-context-harness]] 的上下文工程实践和 [[entities/agentcore-managed-harness]] 的托管式 harness 思路指向同一方向：组织级 AI 编码的竞争力，正从模型选型转向验证体系与运行环境的搭建能力。
 
 ## 实践启示
 

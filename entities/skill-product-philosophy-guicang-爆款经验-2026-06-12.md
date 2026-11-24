@@ -3,7 +3,7 @@ title: "Skill 产品哲学：歸藏做了爆款 Skill 后的产品反思"
 type: entity
 tags: [skill, agent-skill, skill-product, capability-commodity, taste-constraints, center-short-radiate-thick, distribution-as-defense, k-shaped-divergence, skill-lifecycle, skill-philosophy, 歸藏, guicang, aiwuzang, ppt-skill, social-card-skill, logo-generator, ai-desk-card, skill-x-gene]
 created: 2026-06-16
-updated: 2026-06-16
+updated: 2026-11-18
 review_value: 9
 review_confidence: 8
 provenance_state: extracted
@@ -20,8 +20,6 @@ review_category: practice
 ---
 
 # Skill 产品哲学：歸藏做了爆款 Skill 后的产品反思
-
-→ [[raw/articles/skill-product-philosophy-guicang-爆款经验-2026-06-12|原文存档]] ^[raw/articles/skill-product-philosophy-guicang-爆款经验-2026-06-12.md]
 
 ## 一句话总结
 
@@ -221,6 +219,24 @@ review_category: practice
 - **Logo Generator 三层架构**: Logo 本体/展示场景/交互背景拆三层分别处理
 - **Skill × Gene 互补**: Skill 显性知识,Gene 隐性知识;Skill 提供起点,Gene 提供进化
 - **平台做策展而非堆量**: 场景化推荐/分级/对比,不要做仓库列表
+
+## 深度分析
+
+### K 型分化为何比"AI 平权"更可信
+
+本篇对"AI 平权"叙事的反驳之所以成立，在于它把差距的根源定位在**上下文与判断力**而非工具可及性：头部用户默认理解 Agent 的组成（文档/memory/loop/MCP/权限沙箱），普通用户只知道"Agent 能调 Skill"。 ^[raw/articles/skill-product-philosophy-guicang-爆款经验-2026-06-12.md:22-28] 这解释了为什么普通用户的卡点不是"没有 Skill"，而是不知道用什么、不会输入材料、不会验证结果、不会迭代 ^[raw/articles/skill-product-philosophy-guicang-爆款经验-2026-06-12.md:104-108] —— 四个卡点全部位于**输入端与判断端**，任何单点工具改进都绕不开。Skill 的价值因此不在"让 Agent 更强"，而在把弥合差距所需的那部分判断**预先封装**进可分发的单元。 ^[raw/articles/skill-product-philosophy-guicang-爆款经验-2026-06-12.md:30]
+
+### 品味工程化是接口设计，不是文风模仿
+
+"把品味变成约束"的三个例子（字号 28-32、每段 100 字、每 30 秒切镜头）表面是规则清单，实质是把**隐性审美判断翻译成可执行、可校验的输出契约**。 ^[raw/articles/skill-product-philosophy-guicang-爆款经验-2026-06-12.md:85-88] 这与"中心短辐射厚"互为表里：约束写进外围资源而非主指令，正是主上下文压力小、触发成本低的架构原因。 ^[raw/articles/skill-product-philosophy-guicang-爆款经验-2026-06-12.md:69-71] 与 [[entities/thin-harness-fat-skills]] 的胖资源主张互证 —— 品味护城河并不藏在 SKILL.md 的措辞里，而藏在资源层的模板与规则里。
+
+### 平台六项职责实为"供给侧 × 信任侧"两层
+
+平台职责清单可以收敛成两层：降低创建门槛、提升发现效率、保证调用质量属于**供给侧**（让好 Skill 生产出来并被找到）；签名/审核/评分、商业化、反盗用反低质属于**信任侧**（让用户敢用、作者愿留）。 ^[raw/articles/skill-product-philosophy-guicang-爆款经验-2026-06-12.md:146-151] "策展/分级/推荐/对比"则横跨两层 —— 它既是发现机制，也是质量信号。 ^[raw/articles/skill-product-philosophy-guicang-爆款经验-2026-06-12.md:96-100] 这与 [[entities/10万skill-背后腾讯skillhub如何帮用户找到真正好用的那20]] 的筛选式分发、[[entities/33万个skills为什么大多数都死在安装这一步]] 的安装漏斗问题构成三方印证：堆量生态必然死在发现与安装，策展是唯一出路。
+
+### 持续分发与 Skill × Gene 共享同一逻辑：贬值快于复制
+
+盗用防御（持续发布/迭代/签名/品牌） ^[raw/articles/skill-product-philosophy-guicang-爆款经验-2026-06-12.md:137-141] 与 Skill × Gene 分工 ^[raw/articles/skill-product-philosophy-guicang-爆款经验-2026-06-12.md:128-131] 背后是同一个前提：**静态资产必然贬值，只有"持续变化"才是护城河**。持续迭代让旧版本贬值、签名让正版可验证；Gene 的自动进化则把"持续变化"内化到 Agent 侧，Skill 侧保留人工可控的起点。两者合起来回答了"Skill 会不会像提示词一样被白嫖"：会，但复制者拿到的是上一个版本。
 
 ## 实践启示(本实体补全)
 

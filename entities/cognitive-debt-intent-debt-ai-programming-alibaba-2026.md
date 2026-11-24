@@ -1,7 +1,7 @@
 ---
 title: "当理解成为瓶颈：AI 编程时代的认知债与意图债"
 created: 2026-07-29
-updated: 2026-09-07
+updated: 2026-11-11
 type: entity
 tags: [ai, cognitive-debt, intent-debt, triple-debt-model, ai-programming, alibaba, agentic-engineering, vibe-coding, software-engineering]
 sources: [raw/articles/cognitive-debt-intent-debt-ai-programming-alibaba-2026]
@@ -74,6 +74,33 @@ Andrej Karpathy 在推出 Vibe Coding 一年后为其按下暂停键，提出 **
 > You can outsource your thinking but you can't outsource your understanding. — Andrej Karpathy^[raw/articles/cognitive-debt-intent-debt-ai-programming-alibaba-2026.md]
 
 AI 可以替你思考需求适合的技术方案、用何种算法，但它无法替你理解系统为何而建、核心要解决的根本问题是什么。这直接呼应了 Addy Osmani 的 "70% Problem"——AI 能飞快走完 70% 的路，剩下的 30% 才是资深工程师体现价值的地方。^[raw/articles/cognitive-debt-intent-debt-ai-programming-alibaba-2026.md]
+
+## 深度分析
+
+### 剪刀差：生成越快，理论蒸发越快
+
+文章的坐标系是两条曲线的剪刀差：AI 把代码生产速度推到「远超人类阅读」的量级，而人类建立心智模型的速度几乎不变，瓶颈于是从生产端转移到理解端^[raw/articles/cognitive-debt-intent-debt-ai-programming-alibaba-2026.md:34-38]，这正是大马士革刀失传的当代镜像。它与 [[entities/the-new-bottleneck-theory-of-constraints-ai-coding-tools|约束理论视角的新瓶颈论]] 相互印证。
+
+### 三债对 AI 的敏感度不对称
+
+三债的关键不是并存，而是对 AI 的敏感度不同：技术债看得见、有成熟还债工具，反而是大模型最擅长的；认知债长在人身上，随 `accept all` 以天为单位累积；意图债最致命——AI 生成时的每次取舍都是「统计上最合理的延续」，不进代码也不进记忆，生成那一刻就蒸发^[raw/articles/cognitive-debt-intent-debt-ai-programming-alibaba-2026.md:104-110]。Storey 的警告正在于此：还技术债的同时，认知债与意图债在加速累积^[raw/articles/cognitive-debt-intent-debt-ai-programming-alibaba-2026.md:116-120]。治理对象必须从代码扩展到人与制品，[[entities/hidden-technical-debt-agent-harness|隐性技术债]] 正是这层扩展的工程化尝试。
+
+### accept all 是认知债的复利加速器
+
+从零写烂代码时，卡壳的摩擦会逼出部分心智模型；换成 AI 生成，摩擦归零，理解未同步发生^[raw/articles/cognitive-debt-intent-debt-ai-programming-alibaba-2026.md:128-134]。「接手五年旧代码一脸懵」与「连续 accept all 五天不知系统如何运行」结构等价——都只拿到文本，没拿到理论。三债随即咬合成漩涡：意图债让新人建不起心智模型，认知债又制造更多糟糕实现^[raw/articles/cognitive-debt-intent-debt-ai-programming-alibaba-2026.md:148]。
+
+### 理解的新定位：从验收环节到驱动环节
+
+Litt 与 Karpathy 把理解从验收重新定位为驱动：项目是与 Agent 的上万次循环，能否问出下一句取决于有无整套心智模型；「可外包思考、不可外包理解」把人机分工的边界交给理解能力——做什么、为什么值得做、如何分配给 agent^[raw/articles/cognitive-debt-intent-debt-ai-programming-alibaba-2026.md:152-164]。Karpathy 为 Vibe Coding 按下暂停键、转向 Agentic Engineering，正是对这一边界的承认^[raw/articles/cognitive-debt-intent-debt-ai-programming-alibaba-2026.md:170-178]。
+
+## 实践启示
+
+1. 把「能否向新人解释清楚」设为 accept 门禁，解释不了的按认知债记账排期。
+2. 决策即外化：AI 接受的取舍同步写入 ADR/SPEC，未落制品的「为什么」视为蒸发。
+3. 用意图债表征做预警：反复澄清、答非所问、token 超耗同时出现即停手补上下文。
+4. 给关键路径保留摩擦：核心模块先人工写骨架再让 AI 补全，以摩擦换心智模型。
+5. 把「问出下一句」当评审指标：看提问质量而非行数，指令日益模糊即理解流失信号。
+6. 治理顺序先意图、后认知、再技术：用 [[concepts/specification-driven-agent-development|规格驱动开发]] 把目标、约束、理由做成人与 AI 都可查阅的活文档。
 
 ## 相关实体
 

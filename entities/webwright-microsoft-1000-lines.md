@@ -2,7 +2,7 @@
 
 title: "微软 1000 行代码，把 Claude Opus 干翻了 15 分"
 created: 2026-05-26
-updated: 2026-09-10
+updated: 2026-11-19
 type: entity
 tags: [agent, harness, web-agent, microsoft]
 source: [[raw/articles/webwright-microsoft-1000-lines]]
@@ -64,6 +64,24 @@ Webwright 将代码量级与主流框架对比：
 - **桌面 Agent**：让模型写 AppleScript/PowerShell，而非预测点击
 - **数据 Agent**：让模型写 SQL/Python，而非逐行扫描
 - **API Agent**：让模型写完整 fetch 脚本，而非逐端点调用
+
+### 「1000 行」的上下文：微软内部 agent coding 实践的缩影
+
+「1000 行」不是一个孤立的产品选择，而是微软研究院内部 agent coding 实践方式的一次公开亮相。依赖列表是第一个证据：httpx、pydantic、playwright、typer 四个依赖，全部是「胶水」层库，没有引入任何编排框架——这说明 Webwright 的复杂度预算全部花在了「模型 ↔ 终端 ↔ 浏览器」这条主干道上，作者甚至用「task → tool」来描述它的产出。第二个证据是它与自家 coding agent 的关系：README 明确声明产出的 Python 脚本「reusable in Claude Code, Codex, OpenClaw」，即一个 Webwright 任务跑完，脚本直接进入开发者的 agent 工具箱参与日常编码。这构成了一个完整的内部工作流闭环：研究任务由 agent 执行，执行产物沉淀为可复用的工程资产。 ^[raw/articles/webwright-microsoft-1000-lines.md]
+
+放在 2026 年 5 月的时间线上看更有意味：5 月 14 日 Claude Code 上线 /goal，5 月 18 日 Cursor 发 Composer 2.5，5 月 24 日微软开源 Webwright——三件事指向同一个收敛方向：让模型写代码 + 简洁 harness + 成本控制。作者判断这正是「agent 工程范式正在收敛」的信号，而 Webwright 是其中用 benchmark 数字说话的那一个。 ^[raw/articles/webwright-microsoft-1000-lines.md]
+
+### 验证闭环：错误信号标准化使 agent 自修复成为可能
+
+Webwright 的可靠性并不来自更聪明的模型，而来自一个**标准化的验证闭环**。传统 Web Agent 的错误是「环境性的」：模型声称点了按钮，但 DOM 已变，无法还原现场，人无从判断、模型也无法据此修正。Webwright 的错误是「程序性的」：Playwright timeout、selector 找不到、4xx/5xx——全部是标准代码报错，带明确栈信息。作者特别指出这些报错「直接贴日志给 Agent 它自己就能改」，即错误信号本身构成了修复指令。 ^[raw/articles/webwright-microsoft-1000-lines.md]
+
+这正是程序员工作流的翻版：写代码 → 运行 → 读报错 → 改代码，每一轮都有可机读的失败信号。验证闭环的质量决定了 agent 自主迭代的深度：错误信号越标准、越可定位，agent 无需人工介入就能修复的问题比例就越高。这也解释了为什么同一个 GPT-5.4 在两种 harness 下差距达 26.6 个百分点——不是模型变强了，而是闭环让模型的每一步都有了真实反馈可依。对构建者而言，设计 agent 系统时应优先设计**错误信号的格式**，而非增加推理轮数。 ^[raw/articles/webwright-microsoft-1000-lines.md]
+
+### 代码审查的角色变化：从审「改动」到审「生成代码的 harness」
+
+当 agent 产出的不再是点击记录而是可提交的 Python 脚本，代码审查的对象随之变化。第一层变化是审查的可行性：点击序列是「一次性黑盒」，审无可审；Python 脚本是标准工件，可以走常规 review 流程（读逻辑、跑测试、提意见），任务结果第一次变得**可审计**。作者给的落地场景都以此为前提：网页回归测试脚本「commit 进项目」、数据迁移脚本、定时爬取任务——这些产物要进版本库，就必须先通过人的审查。 ^[raw/articles/webwright-microsoft-1000-lines.md]
+
+第二层变化更深：当任务脚本积累到一定数量，团队真正的工程资产不再是单次任务的产物，而是「生成这些脚本的 harness + 预置工具脚本」。审查焦点从逐个审脚本，上移到审 harness 的设计——工具粒度是否合理、错误信号是否标准化、脚本模板是否可维护。作者观察到的行业走向与此一致：agent 工程范式正在向「简洁 harness + 模型写代码」收敛，价值从「写出这个脚本」转移到「设计出能持续产出好脚本的系统」。对工程管理者而言，这意味着 review 清单里要新增一栏：这套 harness 生成的代码，人看得懂、改得动、敢提交吗？ ^[raw/articles/webwright-microsoft-1000-lines.md]
 
 ## 实践启示
 

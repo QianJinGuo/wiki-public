@@ -2,7 +2,7 @@
 
 title: "Enrich your datasets with business context"
 created: 2026-07-10
-updated: 2026-09-10
+updated: 2026-11-14
 type: entity
 tags: [reasoning, aws]
 sources: [raw/articles/enrich-your-datasets-with-business-context-migrating-from-le]
@@ -38,6 +38,33 @@ Legacy Topics provided the initial approach to adding business context to datase
 
 
 | **Legacy Topics** |
+
+## 深度分析
+
+### Side-car semantics are structurally fragile
+
+The legacy Topic arrangement is not merely inconvenient; it is structurally fragile because the semantic layer and the data layer carry independent lifecycle state. The raw article's diagnosis is precise: two assets that must stay perfectly synchronized, each with its own permissions, lineage, and versioning, and failure modes that are silent — column synonyms drift, calculated fields diverge, and a dataset-side rename breaks the Legacy Topic without any error being raised. A side-car that fails quietly is worse than no side-car, because every consumer (dashboards, analyses, Q&A chat, downstream agents) keeps trusting context that may no longer match the schema it claims to describe. This is a classic split-brain problem in metadata management, and the migration described here is essentially its resolution.
+
+### The re-architecture: two layers with different ownership
+
+Dataset Enrichment is best understood as a layering decision, not a UI refresh. Dataset-intrinsic semantics — column descriptions, synonyms, row-level calculated columns, custom instructions, business rules — move down into the dataset itself via `semantic_model_configuration`, while Topic is re-purposed upward as the multi-dataset semantic and reasoning layer that owns cross-dataset relationships, business metrics, and shared business terminology. The dividing line is "true of exactly one dataset" versus "true of how several datasets compose." This separation is what makes the end state coherent: each enriched dataset is self-describing, and anything built on top inherits the context automatically instead of re-declaring it. The same two-layer logic reappears in the unified semantic layer built across datasets with multi-dataset Topics [[entities/build-a-unified-semantic-layer-across-datasets-with-multi-da]], which this article explicitly frames as the destination construct.
+
+### Migration is scenario-gated, not uniform
+
+The three migration scenarios encode a hard constraint: Dataset Enrichment requires the new data prep experience (`DataPrepConfiguration` rather than `LogicalTableMap`), and legacy datasets cannot be upgraded in place — there is no conversion API. Scenario 1 (no Topics, legacy dataset) and Scenario 2 (Topic on a legacy dataset) therefore both route through re-creating the dataset in the new experience; only Scenario 3 (Topic on a new-prep dataset) supports a direct in-place migration by passing `SemanticModelConfiguration` to `update-data-set`. The practical consequence is that migration planning must start with an inventory of dataset formats, not with the Topic metadata itself. A team that discovers mid-project that its highest-value dataset is legacy-built faces a rebuild-and-cut-over project, not a script run. The alternative of querying legacy datasets with raw column names through the Dataset Q&A feature exists, but it forfeits the semantic layer entirely.
+
+### The API contract shapes what automation can do
+
+Several constraints in the raw article determine how far automation can go. Named entities and filters have no dedicated fields in `SemanticModelConfiguration` — they degrade into structured text inside `CustomInstructions`, which preserves meaning but loses schema-level structure. Calculated fields become row-level `CreateColumnsStep` entries, so aggregation-level expressions may need restructuring. And `update-data-set` requires full replacement of all configuration on every call, which is why the migration script reads the topic, rebuilds the complete payload, and applies it through a raw SigV4-signed API call in one pass. The article's own validation protocol — a 10–20 question regression suite, side-by-side comparisons against the legacy Topic, edge cases, and real-user testing before retirement — exists precisely because these transformations are lossy enough to demand behavioral verification, not just schema diffing. The sibling best-practices piece for multi-dataset Quick chat [[entities/multi-dataset-topic-best-practices-for-amazon-quick-chat]] extends the same enrichment discipline to the conversational layer.
+
+## 实践启示
+
+1. Treat business context as a property of the data layer, not of tooling configuration: when semantics live beside the data, every consumer inherits them by default and drift becomes structurally impossible rather than a synchronization discipline.
+2. Audit dataset format before committing to a migration plan — whether a dataset uses `DataPrepConfiguration` or `LogicalTableMap` determines whether the path is a one-script migration or a rebuild-and-cut-over project.
+3. Build the validation question set before migrating: ten to twenty natural-language questions that work correctly against the legacy Topic become the regression suite that proves the enriched dataset is behaviorally equivalent.
+4. Expect fidelity loss at the entity and filter boundary: structured objects become text instructions, so plan how business users will reference rules by name or intent once the legacy Topic is gone.
+5. Keep both semantic assets alive during cutover — the article explicitly supports temporary coexistence so enriched-dataset Q&A behavior can be validated against the legacy Topic before retirement.
+6. Treat "no manual UI work" as the success criterion: the read-topic, transform, apply-via-API, verify pattern generalizes to any semantic-layer migration, and manual console edits are where transcription errors enter.
 
 ---
 ## 关联

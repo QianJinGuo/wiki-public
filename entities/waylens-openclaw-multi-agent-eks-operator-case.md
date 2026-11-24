@@ -3,7 +3,7 @@ title: "Waylens OpenClaw 多智能体平台 EKS+Operator 改造案例"
 type: entity
 tags: [multi-agent, eks, kubernetes, operator, openclaw, aws, case-study, waylens, agent-platform, infrastructure]
 created: 2026-06-12
-updated: 2026-09-10
+updated: 2026-11-21
 review_value: 7
 review_confidence: 7
 review_recommendation: worth-reading
@@ -15,9 +15,27 @@ review_verdict: keep
 review_category: practice
 ---
 
+# Waylens OpenClaw 多智能体平台 EKS+Operator 改造案例
+
 ## 深度分析
 > AWS China Blog 2026-06-12 案例研究：车载视频 AI 厂商 Waylens 把分散在 N 台 EC2 上的 OpenClaw 多智能体平台迁移到 Amazon EKS + CRD + Operator 三层架构。核心创新是 **把平台自身运维交给 agent 自管理**——Admin agent 负责跨 agent 升级编排，Rex（Backup EKS Operator）在 Admin 故障时接管，巡检/升级/故障恢复全 agent 化。配套 aws-samples/sample-your-opc-eks-agents 一键部署仓库。
 > 来源：[[raw/articles/从-n-台-ec2-到-amazon-eks-amazon-s3-fileswaylens-的-openclaw-多智能.md|原文存档]] ^[raw/articles/从-n-台-ec2-到-amazon-eks-amazon-s3-fileswaylens-的-openclaw-多智能.md]
+
+### 声明式收敛：agent 从"单进程"升格为"k8s 资源"
+
+迁移的本质不是 EC2 换成 pod，而是把每个 agent 从用户态单进程重新声明为一份 `OpenClawInstance` CR，由 Operator 展开成 StatefulSet + Pod + Service，升级、换模型、改人设统一为改 YAML。EC2 时代的三类痛点（小版本升级即崩溃、SOUL 漏改导致"性格漂移"、N 台机器=N 套运维）在结构上被消灭：漂移会在下一个 reconcile 周期收敛回声明态，YAML 成为唯一事实来源。这与 [[concepts/orchestrator-worker-architecture]] 同构：控制面不执行业务，只保证实际状态向声明状态收敛。 ^[raw/articles/从-n-台-ec2-到-amazon-eks-amazon-s3-fileswaylens-的-openclaw-多智能.md:73-105]
+
+### 双层自愈与 Rex 的单向冗余
+
+自愈拆成两层：EKS 层（滚动升级、liveness 重建、漂移收敛）回答"Pod 挂了怎么办"；语义层（何时升、怎么灰度）交给 Admin——选 Josh 做 canary 观察 24 小时，回归则自动 patch 回上一个 digest，SOUL 写死"先读后写"与"破坏性操作 @ 工程师确认"。Admin 成为新单点后由 Rex（Backup EKS Operator）接管，但冗余是单向的：Admin 不持 AWS 运维权限，不能反向备份 Rex。不对称是刻意的：AWS 资源面破坏性远大于 EKS 面，高危权限收窄到单一角色比"互为备份"更可控；链路尽头（删 IAM、销毁集群级资源）仍留人工签字。 ^[raw/articles/从-n-台-ec2-到-amazon-eks-amazon-s3-fileswaylens-的-openclaw-多智能.md:157-198]
+
+### 分层选模：多 agent 架构独有的成本自由度
+
+CR 把模型选择下放到每个 agent 后，出现单 agent 没有的自由度：决策密度高的 Admin/Rex 用高性能模型，高频低风险的 Luna/Josh 用经济型模型，配合 Rex 复核链路，整体推理成本比全员旗舰低一个量级。"改一行 YAML 换模型"让选型实验变成 agent 任务：Josh 试新模型、回归落 `/shared/eval/`、Rex 评审、工程师只在"是否给 Admin/Rex 换"签字——模型选型从运维事项变成平台自助实验。这是 [[concepts/agent-role-specialization]] 的基础设施化表达：角色分工写进 CR 后，获得独立调参、独立升权的运维语义。 ^[raw/articles/从-n-台-ec2-到-amazon-eks-amazon-s3-fileswaylens-的-openclaw-多智能.md:107-125]
+
+### 共享文件系统作为协作原语，与可复制的迁移样本
+
+跨 agent 协作靠 Discord @ 提及 + `/shared` POSIX 路径：S3 Files 把 S3 桶以 NFS 形态挂进 Pod，纪要、调研报告、运维变更日志统一落盘；Milo 主持的会议机制（其余 agent 点名才发言、超 3 轮强制收敛）靠人设规则而非代码实现，会议因读上次纪要而带记忆。对比 wiki 内其他 OpenClaw 平台路线——[[entities/openclaw-multi-7-ecs-fargate-graviton]] 走 Fargate 多租户，[[entities/mountpoint-s3-vs-s3-files-eks-storage-comparison]] 聚焦存储选型——本案例的独特贡献是把升级/巡检/故障恢复的运维闭环整体交给 agent 自管理，是 [[concepts/multi-agent-collaboration-patterns]] 少见的可整体复用的生产样本。 ^[raw/articles/从-n-台-ec2-到-amazon-eks-amazon-s3-fileswaylens-的-openclaw-多智能.md:200-236]
 
 ## 痛点：agent 平台运维吃掉业务时间
 

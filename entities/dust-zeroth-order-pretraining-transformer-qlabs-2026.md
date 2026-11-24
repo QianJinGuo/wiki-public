@@ -1,7 +1,7 @@
 ---
 title: "Dust：Q Labs 用零阶优化在 Transformer 预训练上正面对标反向传播"
 created: 2026-10-26
-updated: 2026-10-26
+updated: 2026-11-09
 type: entity
 tags: [pretraining, training, zeroth-order, evolution-strategy, transformer, scaling, research]
 sources: [raw/articles/dust-zeroth-order-pretraining-transformer-qlabs-2026]
@@ -45,6 +45,28 @@ SOTAAZ Lab 的第三方复现提供了更冷静的角度：在论文设定的一
 2. **扰动的落点决定采样效率**。同样的 ES 思想，落在权重空间是 16384 个成员打不过 64 次采样；落在激活空间并借 token 维度并行，种群规模才成为可调旋钮。选择"在哪里注入随机性"比"用什么搜索算法"更影响成本。
 3. **信用分配是零阶方法的真瓶颈**。token 间存在因果依赖，噪声互相污染，所以需要按层分组、缓存中间结果、对注意力组件改用输出误差信号——这些工程细节决定了方法能否 scale，而不是论文里的主公式。
 4. **"曲线拟合优于基线"必须单独标注**。第三方复现显示：换优化器/多训几轮后基线反超，说明跨方法比较的预算对齐方式能直接翻转结论；读这类论文先看比较协议，再看数字。
+
+## 深度分析
+
+### 为什么激活空间扰动能逼近 BP 梯度方向：同一个量的两种估计
+
+Dust 与 BP 的「梯度方向收敛」不是巧合，而是同一个量在两种估计方式下的一致性。线性层的 BP 梯度在数学上就是「输出端误差信号 × 层输入」的外积；Dust 不走链式法则，而是给该层输出注入高斯噪声、按每个 token 的损失变化给噪声打分，再把噪声按奖励加权平均——这正是对同一误差信号的蒙特卡洛估计。^[raw/articles/dust-zeroth-order-pretraining-transformer-qlabs-2026.md:93-101] 采样越多方差越低，估计方向自然向 BP 收敛，且训练已久仍成立，这是估计一致性的经验印证而非神秘现象。^[raw/articles/dust-zeroth-order-pretraining-transformer-qlabs-2026.md:149-151] 真正非平凡的是落点选择：扰动落在紧邻损失的残差流上，信号路径短、每样本方差低——相当于用架构先验给随机采样做了预处理。
+
+### 256 倍差距与规模不塌缩的真正含义
+
+EGGROLL 用 16384 个种群成员仍不及 64 次采样的 Dust，说明梯度估计的方差由扰动落点决定：权重空间的扰动要穿过整段非线性下游才影响损失（信号弱、方差高），激活空间的扰动立即耦合到损失。^[raw/articles/dust-zeroth-order-pretraining-transformer-qlabs-2026.md:137-139] 参数量扩约 120 倍而不塌缩、大模型从更多采样中获益更多，挑战了「维度灾难杀死零阶方法」的直觉。^[raw/articles/dust-zeroth-order-pretraining-transformer-qlabs-2026.md:141-145] 但要诚实读取机制：真正随规模扩张的是 token 级虚拟种群——采样轴是序列长度而非参数维度^[raw/articles/dust-zeroth-order-pretraining-transformer-qlabs-2026.md:35]；而「部分预算下超过 BP」的关键证据来自曲线拟合外推，尚未在真实训练中兑现。^[raw/articles/dust-zeroth-order-pretraining-transformer-qlabs-2026.md:155-157]
+
+### 零阶方法何时真正有竞争力
+
+全可微的监督预训练恰是 BP 协同设计积累最深的领域：第三方复现显示，一换更合适的优化器或多训几轮，BP 就明显领先，且计算成本远低于 Dust。^[raw/articles/dust-zeroth-order-pretraining-transformer-qlabs-2026.md:41] 零阶方法的主场在梯度不存在之处——奖励模型或可验证器打分的 RL 微调（对 reward 无法反传）、黑箱模拟器与硬件在环、离散或程序化模块。Dust 的信用分配——按扰动奖励加权、γ 衰减让后续 token 的改善也记功^[raw/articles/dust-zeroth-order-pretraining-transformer-qlabs-2026.md:87-91]——与 [[concepts/grpo-policy-optimization-2026|GRPO]] 一脉的「采样、按优势打分、加权平均」同属一个估计器家族，只是「动作」的角色换成了激活扰动。这条研究线的现实终点更可能出现在 reward-only 的后训练回路，而非预训练的替代。
+
+### 计算经济学：冷水与热度都需折价
+
+复现的冷水是预算对齐方式直接翻转结论；社区的热度同样要折价解读：Noise speedrun 十天内把训练用时从约 1.76 小时压到 1.6 秒（约 4000 倍），但这是达到规定验证损失（约 4.2）的用时而非训练到收敛，比较起点是早期 Dust+Adam 而非 BP，且作者自己承认部分加速技巧无法扩展到更大规模。^[raw/articles/dust-zeroth-order-pretraining-transformer-qlabs-2026.md:177-181] 被两边都忽略的变量是内存形态：BP 需要为反向传播存储中间激活，Dust 的前向-only 回路配合缓存复用（论文已在注意力组件与输出头上这样做^[raw/articles/dust-zeroth-order-pretraining-transformer-qlabs-2026.md:113-117]），在显存受限或训练/推理共用硬件的场景可能有不同的成本曲线——这是可检验的猜想，不是结论。
+
+### 什么会证伪这条路
+
+三个可观察的失败信号：(1) 梯度方向相似度在 1B+ 参数规模处平台化、不再随采样规模上升——「方向收敛」的规模叙事断裂；(2) γ 衰减信用分配无法处理长上下文——早期 token 的噪声污染数千个下游 token 的归因——虚拟种群被锁死在短序列；(3) 匹配预算、匹配优化器的对比下 BP 在更大规模上一致胜出——「苦涩的教训」式论证失去经验锚点，Dust 退回为「可微性是一种可选项」的存在性证明。^[raw/articles/dust-zeroth-order-pretraining-transformer-qlabs-2026.md:45-47]
 
 ## 关联
 

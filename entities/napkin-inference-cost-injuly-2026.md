@@ -75,7 +75,7 @@ vLLM's PagedAttention splits KV-cache into chunks allocated dynamically as conte
 
 The $4.32/month figure is the breakeven price for a subscription AI product using rented B200 GPUs. ^[raw/articles/napkin-inference-cost-injuly-2026.md]
 
-## Deep Analysis
+## 深度分析
 
 ### Memory-Bandwidth: The Universal Bottleneck
 
@@ -122,7 +122,7 @@ The article stops at single-GPU analysis, but real deployments use clusters with
 
 For serving at scale, data parallelism (multiple independent model replicas) is usually simplest and most cost-effective for moderate-scale deployments. ^[raw/articles/napkin-inference-cost-injuly-2026.md]
 
-## Practical Implications
+## 实践启示
 
 1. **Price your product using first principles**: Don't guess — use the GPU spec sheet + model size + context length to compute per-user costs. The formula: cost = GPU_rental / (VRAM_available / KV_cache_per_user × duty_cycle).
 2. **Optimize for memory bandwidth, not compute**: Invest in quantization (FP8/INT4), KV-cache compression (GQA, MQA), and efficient attention implementations. These directly reduce the binding constraint.

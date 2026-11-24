@@ -1,7 +1,7 @@
 ---
 title: "MAI-Base-2：微软 AI 前沿预训练（80B/2.8T MoE、scaling ladder 与 Muon 规模化）"
 created: 2026-10-20
-updated: 2026-10-20
+updated: 2026-11-11
 type: entity
 tags: [pretraining, moe, scaling-laws, muon, microsoft, training-infrastructure, llm]
 sources: [raw/articles/microsoft-mai-base-2-frontier-pretraining-2026-10]
@@ -75,5 +75,29 @@ Figure 1 的 BPB 数值（held-out code / QA / STEM / Math 四组）显示 MAI-B
 这条记录的价值不在"又一个前沿模型发布"，而在三处可复用的工程知识：(1) 超参 scaling law 的拟合与验证流程（含可用的解析式）；(2) MoE 布局选择必须由 MFU 归因驱动，而不是由 FLOPs 优势驱动；(3) 把训练稳定性信号用于数据质量诊断。它与 [[concepts/scaling-laws|Scaling Laws]]、[[concepts/llm-pretraining-vs-sft|预训练 vs SFT]] 两个概念页构成"预训练配方"这一簇的一手材料。^[raw/articles/microsoft-mai-base-2-frontier-pretraining-2026-10.md]
 
 MAI-Base-2 目前处于 post-training 阶段，MAI-Base-3 的准备工作已开始。^[raw/articles/microsoft-mai-base-2-frontier-pretraining-2026-10.md]
+
+## 深度分析
+
+### 三支柱中，难复制的是什么
+其中 scaling law 与 MFU 归因以流程形式公开；最难复制的是 co-design 的组织闭环与 16K 张 GB200 的资本门槛——公式可抄，闭环难抄。^[raw/articles/microsoft-mai-base-2-frontier-pretraining-2026-10.md:25-31]
+
+### 超参 law：把耦合超参解析化
+网格拟合 (LR, WD) 耦合的要点：单调 LR 时最优 WD 会漂移，一次给出联合最优。dropout law 把正则强度挂到激活参数量上——随规模变化的超参也走同一条流水线，而非逐个 ablate。^[raw/articles/microsoft-mai-base-2-frontier-pretraining-2026-10.md:49-59]
+
+### MFU 归因的顺序：先证 FLOPs，再修时间
+"每层 MoE" 的 EG FLOPs 优势早已成立，却被实现低效吃掉：dynamic routing 的内存碎片与极端负载预留、更细 expert 的 per-expert 开销。修复后 MFU 24%→35%，布局选择才翻转。要点：决策看修复后的时间，不看修复前的 FLOPs。^[raw/articles/microsoft-mai-base-2-frontier-pretraining-2026-10.md:65-75]
+
+### 数据纪律与评测口径互为表里
+organic-only与 BPB、vendor 出题、decontamination 互为证据：不用蒸馏数据，就无需为评测污染辩护。这条方法论分叉是效率优势可归因于预训练本身的前提。^[raw/articles/microsoft-mai-base-2-frontier-pretraining-2026-10.md:33-39,97]
+
+## 实践启示
+
+1. 对若干 (model size, TPP) 组合网格训练，拟合 2D 二次函数取 (LR*, WD*) 解析最小值；小规模拟合→中规模验证→全量使用。^[raw/articles/microsoft-mai-base-2-frontier-pretraining-2026-10.md:49-59]
+2. 改 MoE 布局前先做 MFU 归因：dynamic routing 内存碎片、极端负载预留、per-expert 开销；dropless + fixed-size memory 是已验证修复。^[raw/articles/microsoft-mai-base-2-frontier-pretraining-2026-10.md:65-75]
+3. Muon 上 16K GPU 三件事：多 batch 预取重叠通信；缓存 resharding metadata；router 等权重复制而非分片，Newton-Schulz 后一次 all-gather。^[raw/articles/microsoft-mai-base-2-frontier-pretraining-2026-10.md:79-87]
+4. 把 activation gradient clipping 触发当数据管线告警：定位出的畸形样本可回溯预处理 bug；其收益随规模增长，优先引入此类改动、淘汰收益恒定者。^[raw/articles/microsoft-mai-base-2-frontier-pretraining-2026-10.md:89-93]
+5. 评测口径先于对比实验：BPB 规避 tokenizer 差异，vendor 出题 + decontamination 降低污染质疑；对手 checkpoint 形态差异显式声明。^[raw/articles/microsoft-mai-base-2-frontier-pretraining-2026-10.md:33-39]
+
+关联：[[concepts/scaling-laws|Scaling Laws]]（解析式与验证流程一手材料）、[[entities/deepseek-v4-training-methodology|DeepSeek V4 训练方法论]]（organic 与蒸馏路线对照）、[[entities/ultaep-moe-expert-load-balancing-300us|UltaEP MoE 负载均衡]]（极端负载的另一解法）、[[entities/arxiv-2608-14071-scaling-domain-data-repetition-llm-pretraining|Scaling Domain Data Repetition]]（ladder 重复数据处理）。
 
 → [[raw/articles/microsoft-mai-base-2-frontier-pretraining-2026-10|原文存档]]

@@ -1,7 +1,7 @@
 ---
 title: "Super-agent：把 Agent 从单会话里放出来——Router/Worker 双层、事件驱动与存算分离"
 created: 2026-10-31
-updated: 2026-11-05
+updated: 2026-11-16
 type: entity
 tags: [super-agent, router-worker, event-driven, trigger, subscription, inline-spill, chain-of-recall, speculative-execution, async-react-loop, compute-storage-separation, byom, watchdog, deepseek-harness, first-party]
 sources:
@@ -11,6 +11,7 @@ sources:
   - raw/articles/aliyun-agentcore-long-horizon-to-superagent-commentary-2026-11-02
   - raw/articles/deepseek-superagent-github-issue-to-pr-deployment-guide-jiagoux-2026-11-02
   - raw/articles/deepseek-harness-teardown-critical-notes-chenhuanxin-2026-11-05
+  - raw/articles/octop-team-mode-superagent-contrast-tencent-2026-11-16
 confidence: 0.9
 provenance_state: extracted
 review_value: 9
@@ -347,3 +348,17 @@ cp examples/profile.cordis.patch.yml "$HOME/.dsh/profiles/superagent/cordis.patc
 ### 这一版补充为什么值得单独留档
 
 前面几条来源（阿里云 AgentCore、架构师部署手册）回答的是"**它怎么运转**"，这一篇回答的是"**它凭什么成立**"：Router 的决策能力不是模型能力问题，而是**上下文边界问题**；而 Super-agent 的天花板最终不在系统内部，而在**它能不能拿到身份**。这两条判断都可以直接拿去审自己的架构——**凡是"让模型理解全局再决策"的设计，先问它的上下文有没有物理/逻辑边界；凡是"我们的 Agent 更强"的论证，先问它比别人多认了几个身份。**^[raw/articles/deepseek-harness-teardown-critical-notes-chenhuanxin-2026-11-05.md]
+
+## 附六：Octop 团队模式的工程对照（腾讯技术工程，2026-11-16）
+
+第 7 来源：腾讯云开源多用户 AI 助手 Octop（github.com/TencentCloud/Octop，即开源版 WorkBuddy 一系）负责人 Jubaoliang 发于腾讯技术工程的第一方对照解读——Octop 1.0.2 已上线「团队模式」（主持人统筹分派 + 专家并行执行），本文以本实体的 DSH 设计为参照逐模块印证，是六份解读里唯一一个**把这套架构当成自家产品已上线事实**的视角 ^[raw/articles/octop-team-mode-superagent-contrast-tencent-2026-11-16.md]
+
+**同向印证（最硬的一处）**：Octop 主持人「系统权限做得很克制」，只配查看团队成员、分派子任务、检索长期记忆、感知时间四类轻量工具；专家成员被抽象封装为标准工具接口，主持人经工具调用分发任务、专家本地执行后异步回传。这与 DSH「Router 彻底拿走业务工具、从架构层面阻断亲自执行」完全一致——DSH 的消融试验（提示词注明可寻求帮手，五次无一触发分工）证明提示词约定不可靠，Octop 的实现证明**权限层的结构性拿走**是可落地的对应解 ^[raw/articles/octop-team-mode-superagent-contrast-tencent-2026-11-16.md]
+
+**四处取舍差异（限定而非反驳）**：①输出可见性——DSH 把执行单元对外发声全部收敛在调度员以保界面极简，Octop 反其道让专家带专属头像直接在协作房间发声，主持人只在终局给不超过三句话的收尾，分歧可追溯；②可靠性护栏——DSH 用独立 Watchdog 巡检逻辑偏航，Octop 不设自动巡检，而是把敏感工具调用交人类显式确认（最长等半小时）、活跃任务禁止移除专家、异常如实上报严禁编造替代结果——**同一风险面的两条护栏路线**；③等待机制抽象层——DSH 重构单次工具调用的等待协议，Octop 把协同链路抽象为事件收件箱（Inbox+Callback，分派即返回、后台并发、成果异步回填）；④环境分离——DSH 的「手脑分离」在 Octop 落成两实例 NAT 桥接：云端实例做认知入口，本地实例守仓库凭据内网，经已连上的桥转发请求 ^[raw/articles/octop-team-mode-superagent-contrast-tencent-2026-11-16.md]
+
+**上下文治理的工程细化**：工具返回数据前端渲染前截断并保留折叠标记；呈给主持人的专家答卷默认只提取核心结论节选；向下分派时把房间历史纪要压缩为精简背景概要并显式标注「仅供背景参考」；同轮调度支持并发多路分派（DSH 对应方案是把并发涌入消息合并成批）——均为本实体「上下文当 Cache 管」「Router 只处理新任务」在产品侧的具体形态 ^[raw/articles/octop-team-mode-superagent-contrast-tencent-2026-11-16.md]
+
+**边界同构**：Octop 官方 Beta 边界清单——未开放多团队嵌套协同、无跨专家共享工作空间、任务收件箱依赖内存状态（服务重启有丢失风险）、无独立看门狗、无推测执行、跨端协同在探索中——与 DSH 自陈的开放问题（长周期记忆一致性、凭据泄露、隐私隔离）高度重合；作者结论与本实体深度分析一致：这不是新理论，是分层治理/队列解耦/缓存精简/提交即返回/状态隔离/回调驱动这组经典系统原则在 Agent 场景的自然延伸 ^[raw/articles/octop-team-mode-superagent-contrast-tencent-2026-11-16.md]
+
+与 [[entities/tencent-enterprise-agent-workbuddy-boundaries-infoq-2026-11-03|腾讯企业 Agent 野心与边界]] 同属腾讯系（Octop 是其开源版同类），但那篇讲企业级 WorkBuddy 的安全准入与组织边界，本篇讲开源协作助手的具体实现；与 [[entities/context-not-session-group-chat-database-agent-fleet-fengruohang-2026-11-05|群是场·Topic 是焦点]] 互补——Octop 的协作房间即该文主张的显式 Context 容器的一种产品化落地 ^[raw/articles/octop-team-mode-superagent-contrast-tencent-2026-11-16.md]

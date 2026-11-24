@@ -4,7 +4,7 @@ title: "Anthropic Multi Agent Research System"
 type: entity
 tags: [agent, anthropic, evaluation, multi-agent, orchestration, research]
 created: 2026-05-21
-updated: 2026-09-07
+updated: 2026-11-19
 review_value: 8
 review_confidence: 9
 sources: [raw/articles/anthropic-multi-agent-research-system]
@@ -25,13 +25,23 @@ review_category: practice
 
 ## 深度分析
 
-**1. 路径正确性 vs 结果正确性的评估范式转移**：传统软件测试关注"是否按预设步骤执行"，但多 agent 系统的本质是探索性任务执行——相同目标可能有多条等效路径。Anthropic 的研究明确指出，多 agent 评估应关注 outcome 正确性和过程合理性，而非路径一致性。这对整个 AI 评估领域都是范式层面的修正 。 ^[raw/articles/anthropic-multi-agent-research-system.md]
+raw 文章的三条主张——outcome 优先、早期小样本、围绕真实使用模式设计 eval——指向同一个评估观：多 agent 系统要评估的是"问题是否被解决"，而非"步骤是否被复现"。以下四节沿这条主线展开。
 
-**2. 小样本早期测试的工程价值**：不必等到几百条样本才做评估——多 agent 系统的行为模式往往在 10-20 条样本时就已经暴露主要问题。这种"快速原型验证"思路与 [[entities/thin-harness-fat-skills]] 中 Fat Skills"固化高质量反馈流程"的方法论相通，都是通过尽早获取有效信号来降低迭代成本 。 ^[raw/articles/anthropic-multi-agent-research-system.md]
+### 1. 为什么"路径一致性"是脆弱的正确性标准
 
-**3. Eval Suite 设计应以真实使用模式为中心**：文章强调"优先围绕真实使用模式设计 eval suite"，而非依赖理论推导的合成任务。这意味着评估集的质量取决于对实际用户行为的理解深度，而不是合成任务的规模。这对任何生产级 AI 系统的评估体系设计都有指导意义 。 ^[raw/articles/anthropic-multi-agent-research-system.md]
+多 agent 系统执行的是探索性任务：同一目标天然存在多条等效路径，预定义路径只是其中之一。把"是否走预设路径"当作正确性标准，等于把实现细节误认为任务目标——它只能证明系统"没有偏离预设"，无法证明"是否解决了真正的问题"。更合理的结构是把评估拆成两层：outcome 层检查结果正确性与 durable 价值；过程层只检查推理与资源消耗是否合理，而不是与模板逐字对齐 。 ^[raw/articles/anthropic-multi-agent-research-system.md]
 
-**4. Orchestration 系统的评估特殊性**：wiki-evolver 等 orchestration 系统因为涉及多组件协调，评估难度更高。固定步骤完全一致作为正确性标准过于脆弱——它只能验证"没有偏离预设"，而无法验证"是否解决了真正的问题"。这与 [[entities/claude-code-harness-deep-dive-founder-park]] 中 Claude Code 的 checkpoint/rollback/fork 机制形成有趣的呼应：两者都在解决"如何评估不确定性执行"的问题 。 ^[raw/articles/anthropic-multi-agent-research-system.md]
+### 2. 小样本早期测试的信号经济学
+
+"不必等到几百条样本"背后是成本结构判断：多 agent 系统的主要行为缺陷（路径死循环、工具误用、评估盲区）在小样本上就会高频复现，样本量增加只是稀释而非揭示这些信号。因此早期小样本测试的价值不在统计显著性，而在快速证伪——缩短"发现缺陷→修正系统"的回路，而非积累报告篇幅；实践启示部分的 10-20 条量级正是这一思路的操作化。这与 [[entities/thin-harness-fat-skills]] 中"固化高质量反馈流程、尽早获取有效信号"的方法论相通 。 ^[raw/articles/anthropic-multi-agent-research-system.md]
+
+### 3. 真实使用模式是 eval suite 的设计原点
+
+围绕真实使用模式设计评估，意味着评估集的质量取决于对实际用户行为的理解深度，而非合成任务的规模。可操作的路径是：记录真实使用日志 → 提取典型任务模式 → 转化为评估用例，让 eval suite 随产品形态共同演化。合成任务在其中的位置是补充回归覆盖，而非评估主体——它无法保证与真实失败模式同分布 。 ^[raw/articles/anthropic-multi-agent-research-system.md]
+
+### 4. 对 orchestration 系统（如 wiki-evolver）的评估迁移
+
+wiki-evolver 不是纯多 agent 系统，但 orchestration 的评估逻辑可迁移：正确性标准应允许"不同路径得到同样有效的 durable outcome"，而非固定步骤完全一致。这与 [[entities/claude-code-harness-deep-dive-founder-park]] 的 checkpoint/rollback/fork 机制形成呼应——两者都在处理"不确定性执行"的评估问题：先允许偏离，再用结果质量回收判断权。放入本 vault 的概念坐标系：这条主线一端连着 [[concepts/agent-evaluation-benchmark-frameworks]]（评估框架层），另一端连着 [[concepts/agentic-workflow-patterns]]（执行模式层）——执行层越灵活，评估层就越必须以结果与过程合理性为中心 。 ^[raw/articles/anthropic-multi-agent-research-system.md]
 
 ## 实践启示
 

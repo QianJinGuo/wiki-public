@@ -2,7 +2,7 @@
 
 title: "How Amazon Bedrock catches AI-generated phishing"
 created: 2026-07-03
-updated: 2026-09-07
+updated: 2026-11-19
 type: entity
 tags: [aws, bedrock, security, ai-security, phishing, llm-security, guardrails, email-security]
 sources: [raw/articles/how-amazon-bedrock-catches-ai-generated-phishing]
@@ -27,7 +27,7 @@ AI-generated phishing emails represent a new class of cyber threat — grammatic
 - **Sender baseline tracking**: Profiles how employees normally write, establishing a reference point for detecting anomalous behavior
 - **Three risk scores**: Content anomaly, behavioral deviation, and context alignment scores combine into a 0–100 risk assessment
 
-## Deep Analysis
+## 深度分析
 
 ### 1. The paradigm shift: From surface indicators to behavioral detection
 
@@ -88,7 +88,7 @@ The Amazon Bedrock phishing detection framework has broader implications for ent
 - **Cross-functional requirements**: Effective deployment requires collaboration between security teams (who understand the threat landscape) and ML engineers (who configure the models and guardrails)
 - **Scaling human expertise**: The feedback loop amplifies the impact of a small security team by encoding their classifications into automated detection logic
 
-## Practical Insights
+## 实践启示
 
 1. **Start with a simple sender baseline**: Begin by profiling top executives and finance team members — they are the most common impersonation targets and their communication patterns are often distinctive enough to make behavioral deviation detection effective
 2. **Calibrate guardrails iteratively**: Start with moderately restrictive settings, monitor false positive rates, and adjust based on real-world feedback. The goal is to catch sophisticated attacks without overwhelming the security team with false alarms

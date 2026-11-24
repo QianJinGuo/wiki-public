@@ -1,7 +1,7 @@
 ---
 title: "Kimi K3: The Open-Weights Escalation"
 created: 2026-07-24
-updated: 2026-09-07
+updated: 2026-11-15
 type: entity
 tags: [ai, agent, open-weights, kimi, moonshot-ai, frontier-models, china-ai, open-source, model-competition]
 sources: [raw/articles/kimi-k3-the-open-weights-escalation, raw/articles/kimi-k3开源模型不开源价格]
@@ -30,7 +30,7 @@ Kimi K3, released by Moonshot AI on July 16, 2026, represents a watershed moment
 - **China's efficiency advantage is structural**: Chinese labs have raised "orders of magnitude less capital" than American counterparts yet produce competitive models. Architectural innovations like Kimi Delta Attention (KDA) and Attention Residuals (AttnRes) yield ~2.5× improvement in scaling efficiency over Kimi K2. ^[raw/articles/kimi-k3-the-open-weights-escalation.md]
 - **Open models are economically decelerationist for frontier labs**: By reducing margin potential, open models slow the reinvestment cycle and fundraising ability of closed labs — but diffuse AI capabilities more broadly across the economy. ^[raw/articles/kimi-k3-the-open-weights-escalation.md]
 
-## Deep Analysis
+## 深度分析
 
 ### The Watershed Has Arrived
 
@@ -63,7 +63,7 @@ Lambert's ranking of labs by peak model performance is revealing:
 
 The positioning of DeepMind at #7 and the concentration of Chinese labs in positions 3, 5, and 8 (with Qwen 3.8 announced) is a structural shift. The U.S. no longer has a monopoly on frontier AI development, and the open-weight ecosystem is now the primary vector for non-U.S. AI leadership. This has profound implications for everything from talent strategy to export controls.
 
-## Practical Insights
+## 实践启示
 
 1. **Re-evaluate model procurement strategy**: With K3 available as open weights and Qwen 3.8 on the horizon, teams should benchmark these models against their use cases. The cost-performance ratio of open frontier models is now dramatically better than just a few months ago.
 2. **Prepare for geopolitical bifurcation**: If U.S. restrictions on Chinese open models materialize, teams need fallback plans. The key metric to track is whether the Commerce Department adds Chinese AI labs to the Entity List.

@@ -8,7 +8,7 @@ review_value: 8
 review_confidence: 7
 sources:
   - raw/articles/ai-coding-practice-agent-eval-framework-five-dimensions-three-level-gating
-updated: 2026-09-07
+updated: 2026-11-20
 related: [entities/ai-evals-methodology, entities/agent-eval-wallezhang-yaml-driven-agent-evaluation-framework, entities/agent-evalkit-aws-opensource-cli-agent-eval-toolkit, entities/aws-reinforcement-fine-tuning-llm-as-judge, entities/spotify-llm-evals-funnel-not-fork, entities/langsmith-trajectory-evals, entities/saas-bench-gui-agent-eval-unipat, entities/taobao-smart-shopping-guide-agent-evaluation-pzmx, entities/aliyun-agentloop-enterprise-agent-self-evolution-flywheel, entities/harness-engineered-business-agent-evaluation-aliyun-boyu, entities/better-harness-eval-trace-harness-hill-climbing, entities/claw-swe-bench-harness-evaluation-benchmark-tokenrhythm, entities/anthropic-demystifying-evals-for-ai-agents]
 strategic_context: "[[queries/research-frontier-map|Frontier 1 — Harness/Skill 从个人能力到组织资产]]"
 provenance_state: inferred
@@ -340,6 +340,32 @@ Agent输出：{agent_output}
 | [[entities/better-harness-eval-trace-harness-hill-climbing]] | **trace 评测** | trace 级 harness 爬坡的工程方法 | ^[raw/articles/ai-coding-practice-agent-eval-framework-five-dimensions-three-level-gating.md]
 | [[entities/claw-swe-bench-harness-evaluation-benchmark-tokenrhythm]] | **SWE-Bench 评测** | Claw-SWE-Bench：harness 对编程 Agent 影响的独立基准 | ^[raw/articles/ai-coding-practice-agent-eval-framework-five-dimensions-three-level-gating.md]
 | [[entities/anthropic-demystifying-evals-for-ai-agents]] | **Anthropic evals** | Anthropic Agent 评测揭秘 | ^[raw/articles/ai-coding-practice-agent-eval-framework-five-dimensions-three-level-gating.md]
+
+## 深度分析
+
+### 红线指标之间的相互挤压：死循环率、错误恢复率与调用链效率
+
+三条指标各自陈述时都成立，放进同一张约束表里会立刻显出张力。死循环率必须为 0 的红线与错误恢复率 ≥ 60% 的基线方向相反：一个被高压规则驯化出"宁可早停也不重试"行为的 Agent，死循环率会很漂亮，错误恢复率却必然塌陷——因为"Agent 自身发出无法完成信号不算死循环"的豁免条款，实际是在奖励放弃。反过来，一个敢于反复重读文件、换关键词再搜的 Agent，恰恰因为框架开篇肯定的"犯错+修复是正常行为"而推高实际调用次数，机械地压低维度②的调用链效率（最小必要次数/实际次数）。于是维度②与维度③之间构成一个三难：越激进地探索恢复路径，效率分越低；越保守地早停，红线越干净但恢复能力越差。现有检测规则（连续 5 次同工具同参数、3 次相同决策模式）度量的是重试的次数而非重试之间的信息增量——参数变了、决策路径分化了，就不是循环。若把三条指标当作各自独立的及格线去优化，团队会被推向"保守早停"这个对三者同时有利的局部最优；正确的读法是把它们当作一组联合边界条件来审读，任何一条的改善都必须同时报告另外两条付出的代价。
+
+把这个张力操作化的方向不是再加一条独立阈值，而是改变报告结构：每次变更的评测报告应同时给出死循环率、错误恢复率、调用链效率三个指标的联合快照，并显式标注每一个改善是以哪一条的退化为代价换来的。更进一步，可以把"有效恢复"（恢复路径最终成功）消耗的额外调用次数与其挽救的任务价值并置，形成恢复的性价比视角，而不是单独追求恢复率最大化。这背后是对事实的承认：探索预算是有限资源，评测体系的职责不是命令 Agent 既永不放弃又永不重试，而是把"值得重试"与"应当止损"的边界显性化，让三条红线从彼此冲突的命令变成一张可谈判的预算表。
+
+### 准出分级保护的是变更风险，漏掉的是环境漂移
+
+L1/L2/L3 分级的隐含假设是：风险由变更引入，变更越重、评测越全。但生产环境在两次变更之间持续漂移——依赖库升级、仓库重构、工具服务端行为变化、上游接口弃用——这些都不经过准出门槛，却直接使 Layer 1/2 的历史基线失效。更尖锐的是，对抗/边界任务集只在高风险变更（L3 级）时才被触发，可"文件不存在、权限不足、工具不可用"这类失效恰恰最容易在低风险变更之后的日常运行中率先暴露。因此持续运营一节的监控告警阈值不应读作补充手段，而应读作漂移风险的那个缺失闸门：评测墙拦截变更引入的回归，是 [[concepts/eval-optimizer-firewall]] 承担的角色；线上监控拦截时间引入的退化。两者合起来才构成完整的准出语义，只按变更等级配置评测强度，等于默认环境是静止的。[[entities/anthropic-demystifying-evals-for-ai-agents]] 对 Agent 评测的分析同样指出，真正的失败集中在长尾场景而非均值表现——而长尾正是漂移最先冲击的区域：均值指标仍然稳定时，长尾可能已经开始塌方。
+
+顺着这个缺口再推一步，基线本身应当被当作有版本的生命周期对象来管理：一条基线实际是 任务集 × 环境版本 × Judge 版本 × 模型版本 的四元组快照，任何一元变动都应触发基线重锚（在同一组合下重跑并重新发布基准值），而不是默认旧基线仍然适用。实践中最常见的隐性误诊是把"连续两个月成功率下滑"归因于模型或 Prompt 退化，排查到最后发现只是仓库结构重构让旧任务的 expected_outcome 过时了。评测集对环境的隐式依赖之所以危险，恰恰因为它从未被声明——没被声明的前提，永远不会进入变更评审的检查清单。
+
+### LLM-as-Judge 本身是未被分级的变更源
+
+框架把模型升级、框架升级列为 L2/L3 级变更，却默认 Judge 模型是测量仪器而非被测系统。Judge 换版、Judge 提示词微调、甚至 Judge 服务端的静默更新，都会让历史基线失去可比性：上周与本周测得的 75% 通过率若出自不同 Judge 版本，数字相同而含义不同。由此有三个推论：其一，Judge 版本必须像依赖项一样被锁定与记录，任何基线只在其产生时的 Judge 版本内有效；其二，Judge 升级本身应按中风险变更对待，用固定的校准任务集量化新旧判定器的漂移，再决定是否重测基线；其三，结果评判与工具链评判执行着两种不相容的哲学——前者承认路径多样性、只认终局，后者隐含了一条 reference_trace 式的"正路"。评测任务 Schema 中保留 reference_trace 字段，即使团队声明只做结果评判，该字段也在持续诱导评测向模仿参考路径的方向优化，恰好惩罚了框架开篇强调的路径多样性。合理的分工是：结果评判决定"能不能上线"，trace 级分析只回答"下一步往哪里爬坡"（[[entities/better-harness-eval-trace-harness-hill-climbing]] 的用法），路径层面的分数永远不应反向变成准出门槛，否则 LLM-as-Judge 最大的价值——容忍不同的正确路径——会被自己的辅助维度侵蚀掉。
+
+与 Judge 版本化并列的，还有一个未言明的测量协议缺口：运行次数。Agent 执行是非确定性的，同一 (Agent, 任务) 对两次运行可能一胜一败，而框架所有阈值（L1 ≥ 40%、错误恢复率 ≥ 60%、死循环率 = 0%）都没有声明每任务跑几次、按哪种口径聚合——单次运行的通过率、多次运行的平均成功率、pass@k 与 pass^k 度量的其实是不同的东西（能力上限与稳定性下限各取其一）。"死循环率 = 0%" 在单次运行口径下尤其脆弱：一个 2% 的真实死循环率在 100 条任务的一次运行中大概率观测为零，红线由此沦为抽签。配套的动作是把运行协议写进分级标准本身——例如 L2 级每任务至少 3 次运行、A/B 对比强制使用同任务集的配对设计——否则所有"不劣化"判定都是在噪声幅度内做决策。
+
+### 评测集是可执行规格：淘汰机制、幸存者偏差与代价结构
+
+评测集一旦用于 merge blocking，它事实上成为 Agent 产品的可执行规格说明书："完成"的定义不再由需求文档给出，而由这三五百条任务给出。这个地位带来两个二阶后果。第一，每月淘汰 100% 通过的任务在维持区分度的同时引入幸存者偏差：留存下来的任务聚积着 Agent 反复失败的样本，而反复失败的原因可能是任务描述含混、预期结果过时，或环境变化已使题目本身失效——未必是 Agent 能力不足。淘汰因此必须伴随对留存任务的规格复核，否则评测集会被出题缺陷缓慢污染，团队还会把这些缺陷误读成能力缺口去"修复"。第二，分级准出的真实功能是评测成本的摊销结构：多数变更只付单工具回归的低成本，少数昂贵变更才触发全量套件，各层规模数字（200-500/100-200/50-100）与其说是统计学的样本量要求，不如说是一张按变更风险概率分配评测预算的定价表，这正是评测成本应当分层流动的逻辑 [[entities/spotify-llm-evals-funnel-not-fork]]。顺着这层理解，评测集的轮换与扩充就不是运营杂务，而是规格维护 [[concepts/eval-surface-rotation]]：这份"活的规格"由谁、经什么门槛修改，比谁修改 Agent 代码更值得被制度化——因为改代码出错会被评测集拦住，改评测集出错则会放行其后所有错误。
+
+把这条逻辑推到底还会撞上 Goodhart 问题：评测集一旦成为 merge blocker，它同时成为团队的适应度景观——Prompt 与 SKILL 的每次修改都是一次针对固定几百条任务的爬坡，被优化的逐渐是"通过这套评测"而非"办成用户的事"。每月从线上日志抽样新任务、补充 badcase 的轮换机制因此获得第二重身份：它不只是维持区分度的运营动作，而是防止过拟合的核心机制，轮换节奏直接决定了评测集被"刷穿"的时间尺度。更隐蔽的是 badcase 采样形成的闭环——线上流量决定评测课程，评测课程塑造 Agent 行为，行为再产生新的线上流量——评测集由此携带的永远是昨天的失败分布，会持续把能力投资引向已经出现过的失败形态，而非尚未出现的。对这份偏差保持自觉，是把评测体系当作度量仪器而非目标本身的最后一道防线。
 
 ## 十一、实践启示
 

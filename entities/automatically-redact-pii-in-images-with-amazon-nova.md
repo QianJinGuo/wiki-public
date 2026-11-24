@@ -1,7 +1,7 @@
 ---
 title: "Automatically redact PII in images with Amazon Nova"
 created: 2026-07-07
-updated: 2026-09-07
+updated: 2026-11-19
 type: entity
 tags: [ai, agent, ingest, aws, amazon-nova, pii, security, computer-vision]
 sources: [raw/articles/automatically-redact-pii-in-images-with-amazon-nova]
@@ -27,7 +27,7 @@ Amazon Web Services (AWS) has published a reference architecture for an automate
 - **Early-exit cost optimization**: If Nova determines no PII exists after initial assessment, the workflow exits early and routes the image directly to the output bucket, avoiding unnecessary downstream service invocations — a critical cost-control mechanism since most business images contain no PII.^[raw/articles/automatically-redact-pii-in-images-with-amazon-nova.md]
 - **Final quality verification**: After redaction, Nova performs a comprehensive review of the cleaned image as a final QA step. Images that pass are moved to the clean output folder; those with residual PII are quarantined for manual review.^[raw/articles/automatically-redact-pii-in-images-with-amazon-nova.md]
 
-## Deep Analysis
+## 深度分析
 
 ### The Architecture: Model-as-Orchestrator Pattern
 
@@ -79,7 +79,7 @@ Organizations processing large volumes of images (e.g., social media platforms, 
 - **Human-in-the-loop**: Manual redaction is the gold standard for accuracy but is prohibitively expensive and slow at scale.
 - **Nova-coordinated pipeline (this solution)**: Balances accuracy, cost, and scalability by using the right tool for each sub-task, orchestrated by a reasoning-capable coordinator.
 
-## Practical Takeaways
+## 实践启示
 
 1. **Use multimodal reasoning for context-dependent PII detection**: Simple regex or object-detection approaches miss PII that depends on contextual relationships (e.g., a street name + number = address). A multimodal model that jointly processes text and image is essential for comprehensive coverage.
 

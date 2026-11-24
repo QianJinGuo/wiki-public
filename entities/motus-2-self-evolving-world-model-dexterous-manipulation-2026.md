@@ -1,7 +1,7 @@
 ---
 title: "Motus 2：自进化通用世界模型（策略/仿真/评估三接口共享权重）"
 created: 2026-09-12
-updated: 2026-09-12
+updated: 2026-11-11
 type: entity
 tags: [world-model, embodied-ai, dexterous-manipulation, self-evolution, mbrl, test-time-planning, video-action-model, agent-planning, model-based-rl, shengshu, arxiv]
 sources: [raw/articles/motus-2-self-evolving-world-model-dexterous-manipulation-2026]
@@ -51,6 +51,33 @@ Motus 2 从推理与训练两个阶段实现自进化闭环，避免真实机器
 
 - 项目页：<https://motus-robotics.github.io/motus2/>
 - 论文：<https://arxiv.org/abs/2608.30237>
+
+## 深度分析
+
+### 五级路线坐标：从 L3 行动迈向 L4 自主智能体
+
+朱军团队五级路线以「互动、反馈、自主完成任务」为进阶依据，前代 Motus 攻克 L3，Motus 2 抢滩 L4。横向对照：DeepMind Genie 探索可交互环境生成，World Labs 分梳「渲染器/模拟器/规划器」，Motus 2 差异是让生成的未来参与动作比较、评价反过来改善策略。^[raw/articles/motus-2-self-evolving-world-model-dexterous-manipulation-2026.md:257-277]
+
+### 数据金字塔的消融证据：人类 Scaling Law 与「临门一脚」
+
+两组关键数字：双目人类数据从 2,000 增至 20,000 小时，人类动作预测误差平滑持续下降，[[concepts/scaling-laws|Scaling Law]] 在具身数据上依然成立；仅用人类数据预训练，真机平均成功率只有 51%，叠加 100 多小时领域对齐即达 84%（+33 个百分点）——人类数据供常识，机器人数据管身体适应，最贵数据压到最后一环。^[raw/articles/motus-2-self-evolving-world-model-dexterous-manipulation-2026.md:205-217]
+
+### 记忆与触觉：两个被消融数字验证的补丁
+
+单帧视觉「没有过去、看不见受力」，对策各有数字背书：记忆侧默认有界滑动窗口，对比全历史自回归与 MemoryWAM 式混合记忆（近期帧+锚点帧+压缩 token），长上下文版成功率 57.5%；触觉侧轻量专家复用主模型中间计算，在抽纸杯/撕纸任务上把成功率从 60% 提到 72.5%。^[raw/articles/motus-2-self-evolving-world-model-dexterous-manipulation-2026.md:219-255]
+
+### 冷静面：自进化闭环的边界条件
+
+团队自认两块硬骨头：触觉跨本体迁移、长时程预测的绝对稳定性。^[raw/articles/motus-2-self-evolving-world-model-dexterous-manipulation-2026.md:279-281] 可推出两点结构性依赖：Best-of-N 的收益上限受价值评估器可靠性约束，打分失真则系统性选错；MBRL 奖励全部来自模型推演，推演偏离真实物理时错误直接进入策略梯度——自进化的天花板等于世界模型的保真度。这一「评估器即瓶颈」判断与 [[entities/parallelworld-test-time-scaling-agentic-embodied-reasoning-2026|ParallelWorld 测试时规划]] 的前提一致：推演环境必须足够可信。
+
+## 实践启示
+
+1. **评估器做成第三接口而非外挂**：critic 与执行器共享权重、按输入切换，成本低，评判与行动共享同一套世界理解，避免评分漂移。
+2. **动作优先掩码是「决策不得偷看未来」的通用写法**：任何 plan-then-execute 架构都可用因果掩码固化「生成计划→推演→评估」次序。
+3. **失败轨迹入账而非丢弃**：把失败转成「为什么这个动作导致糟糕局面」的学习信号，是推演变训练收益的关键。
+4. **数据策略两头便宜中间贵**：廉价人类 Ego 视频打底建常识，最贵的领域对齐压到最后 100 小时量级——51%→84% 说明对齐数据价值密度最高。
+5. **先画规模-误差曲线再投入采集**：2,000→20,000 小时误差平滑下降提示，数据加码前先验证 Scaling 曲线，避免撞上收益递减。
+6. **同一闭环复用两次**：推理期 Best-of-N 改变「这次选什么」，训练期 MBRL 改变「下次生成什么」；Agent 系统同样可把运行期评估信号回流策略更新，参见 [[entities/lerobot-v060-imagine-evaluate-improve|LeRobot 想象-评估-改进循环]]。
 
 ## 与既有世界模型工作的关系
 

@@ -2,7 +2,7 @@
 
 title: 全网最全的Claude Fable 5 省钱攻略都在这了
 created: 2026-07-10
-updated: 2026-08-01
+updated: 2026-11-17
 type: entity
 tags: [openai, claude, coding, reinforcement-learning, agent]
 sources: [raw/articles/全网最全的claude-fable-5-省钱攻略都在这了]
@@ -141,6 +141,34 @@ pxpipe 就是中间这层转换：它是个本地代理，你正常递文本，�
 > https://github.com/100yenadmin/fable-token-sav
 
 ---
+## 深度分析
+
+三招"邪修"看似各管一摊，其实同源，且与官方说明书里的两个杠杆处在同一张成本地图上。
+
+### 三招同源：都在改"token 花在哪"，而不是换模型
+
+蒸馏把"这次怎么解"沉淀成 skill，让同类任务此后不再调用顶级模型；pxpipe 改变上下文的物理形态——文字渲染成图像，利用文字与图片两套计费标准的价差^[raw/articles/全网最全的claude-fable-5-省钱攻略都在这了.md:89-91]；包工头模式按"判断力 vs 执行力"拆分任务，Fable 5 只出策略、把结果关^[raw/articles/全网最全的claude-fable-5-省钱攻略都在这了.md:107-115]。三者都不换模型、不动提示词质量，纯粹在账单结构上做手术，思路与 [[concepts/ai-cost-optimization-framework|AI 成本优化框架]] 的"先降用量、再降单价、最后改架构"分层同构。
+
+### 定价缺口被制度窗口放大，官方杠杆是零成本的默认动作
+
+输入 $10 / 输出 $50 每百万 token、Opus 4.8 两倍的定价本身已贵^[raw/articles/全网最全的claude-fable-5-省钱攻略都在这了.md:27-29]，而订阅退出窗口把按量计费变成唯一通道后^[raw/articles/全网最全的claude-fable-5-省钱攻略都在这了.md:19-21]，成本风险才真正失控。文章尾段的官方说明书给出两个不写代码就能拿的杠杆：缓存命中把输入价砍 90%（5 分钟存活、命中续期、写 1.25 倍/读 0.1 倍）^[raw/articles/全网最全的claude-fable-5-省钱攻略都在这了.md:133-137]；批量接口输入输出全半价，两者叠加输入价可到约 0.5 折^[raw/articles/全网最全的claude-fable-5-省钱攻略都在这了.md:147-149]。三招"邪修"只应对这些默认动作之后的剩余账单。
+
+### 蒸馏是唯一"一次付费、长期摊销"的招，代价是知识保质期
+
+蒸馏的执行设计是一条带质量门的流水线：Fable 5 先以新任首席工程师视角通读仓库（README、构建、测试、CI、git 历史），最多问 5 个仓库自身回答不了的问题；并行十几个 agent 各产一份 skill（共 10-16 份，覆盖调试、构建环境、架构约定、踩坑），再由 3 个评审 agent 审事实、矛盾、可照做性，最后修复 agent 统一改完^[raw/articles/全网最全的claude-fable-5-省钱攻略都在这了.md:61-63]。oh-my-fable 把"先规划、自我纠错、不丢线索"抽象成不挑模型的执行框架，每步存档、崩溃原地续跑^[raw/articles/全网最全的claude-fable-5-省钱攻略都在这了.md:71-73]。但 skill 沉淀的是蒸馏时点的解法，代码库演化后会过期，需按 [[concepts/skill-engineering-principles|Skill 工程原则]] 的维护视角主动重蒸馏。
+
+### pxpipe 的价差利用有硬边界：有损 + 绑定单一模型视觉
+
+实测账单降 59%-70%、上下文越密省得越多^[raw/articles/全网最全的claude-fable-5-省钱攻略都在这了.md:95]，但文章交代了两条边界：逐字节内容（哈希、ID、密钥）识别不全对，12 位十六进制串 15 个里对 13 个，高精度任务仍须文本^[raw/articles/全网最全的claude-fable-5-省钱攻略都在这了.md:99]；整套转换为 Fable 5 的读图能力量身定做（渲染页 100/100，Opus 4.8 误读约 7%），换模型自担风险^[raw/articles/全网最全的claude-fable-5-省钱攻略都在这了.md:101]。它不是通用压缩层，而是押注单一模型视觉质量与现行图像计费规则——两者任一变化，节省即消失。
+
+## 实践启示
+
+1. 先拿免费的：按官方机制排缓存节奏——派活间隙发空请求给缓存续命，确定半小时以上的大活干脆放缓存过期^[raw/articles/全网最全的claude-fable-5-省钱攻略都在这了.md:139-141]，再叠加批量接口压掉一半基数，然后三招才轮到出场。
+2. 蒸馏选"天天重复干的固定流程"下手^[raw/articles/全网最全的claude-fable-5-省钱攻略都在这了.md:123-125]：skill 的价值 = 一次蒸馏成本 × 后续调用次数，长尾任务不值得蒸馏。
+3. 给蒸馏产物标注生成时的代码库状态，重构后主动重蒸馏，而不是等便宜模型开始出错才回头排查。
+4. pxpipe 只用于上下文长、内容密集、不含逐字节敏感串的场景^[raw/articles/全网最全的claude-fable-5-省钱攻略都在这了.md:123]；密钥、哈希、精确 ID 永远走文本通道。
+5. 包工头的"派工单"契约（干什么、边界在哪、怎么算干完 + 结果压缩回传）可独立借用，任何强弱模型搭配都适用，对应 [[concepts/orchestrator-worker-architecture|Orchestrator-Worker 架构]]。
+6. 按场景选主再组合：长上下文→pxpipe，重复任务→蒸馏，混杂团队→包工头^[raw/articles/全网最全的claude-fable-5-省钱攻略都在这了.md:123-125]；同赛道的 [[entities/fable-5被网友薅出省钱神招最高减70|省钱神招实测]] 与 [[entities/anthropic_cache_tokenomics|Anthropic 缓存代币经济学]] 可作延伸阅读。
 ## 关联
 - 相关概念: [[concepts/harness-engineering-framework|Harness Engineering]]
 - 相关: Agent 架构

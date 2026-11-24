@@ -2,7 +2,7 @@
 
 title: 构建 Amazon ElastiCache OSS Caches 慢查询监控方案
 created: 2026-07-10
-updated: 2026-08-01
+updated: 2026-11-14
 type: entity
 tags: [aws]
 sources: [raw/articles/构建-amazon-elasticache-oss-caches-慢查询监控方案]
@@ -21,113 +21,53 @@ review_category: practice
 
 → [[raw/articles/构建-amazon-elasticache-oss-caches-慢查询监控方案|原文存档]] ^[raw/articles/构建-amazon-elasticache-oss-caches-慢查询监控方案.md]
 
-## 构建 Amazon ElastiCache OSS Caches 慢查询监控方案
+## 摘要
 
-摘要：Redis 慢查询会阻塞单线程引擎引发故障，而 CloudWatch 缺少现成的慢查询计数指标。本方案借助 ElastiCache 慢日志的 JSON 结构化能力，用 CloudWatch Logs Metric Filter 直接生成自定义指标 RedisSlowQueryCount，零代码、纯托管、可批量部署，并经告警与 SNS 实现主动监控。  ^[raw/articles/构建-amazon-elasticache-oss-caches-慢查询监控方案.md]
+Redis 慢查询会阻塞单线程引擎，在高 QPS 下快速累积成缓存层不可用并击穿到后端数据库，而 CloudWatch 并不提供现成的"慢查询次数"指标。本方案利用 ElastiCache 慢日志可直接以 JSON 结构化投递到 CloudWatch Logs 的能力，通过 Metric Filter 生成自定义指标 `RedisSlowQueryCount`，配合 CloudWatch 告警与 SNS 实现主动监控，全程零代码、纯托管、可批量部署，在毫秒级问题积累成线上故障之前就发出信号。 ^[raw/articles/构建-amazon-elasticache-oss-caches-慢查询监控方案.md]
 
-  
-**目录** ^[raw/articles/构建-amazon-elasticache-oss-caches-慢查询监控方案.md]
+## 核心要点
 
-01 引言
+- **单线程模型是致命弱点**：KEYS *、大 Key 上的 HGETALL、复杂 Lua 脚本、超大 MGET/Pipeline 等 O(N) 命令一旦耗时几十毫秒，就会阻塞其后所有命令，表现为 EngineCPUUtilization 飙升、客户端超时、连接堆积——慢查询往往是线上故障最早、也最容易被忽视的前兆信号。
+- **原生 SLOWLOG 有三个固有缺陷**：仅存于节点内存、容量有限被滚动覆盖、需逐节点手动 SLOWLOG GET 拉取，且无法形成可告警的时间序列；在几十上百个集群的生产环境中，人工巡检几乎不可行。
+- **管道五段式**：参数组启用 slowlog-log-slower-than → 慢日志以 JSON 格式投递 CloudWatch Logs（日志组 `/aws/elasticache/redis/slowlog`）→ Metric Filter `{ $.CacheClusterId="*" }` 每命中一条计 1 → 自定义指标 `RedisSlowQueryCount`（命名空间 `ElastiCache/RedisSlowLog`）→ CloudWatch 告警 + SNS 多渠道通知。
+- **零 Lambda 是与 Aurora 慢查询方案的关键差异**：Aurora 慢日志是纯文本，需部署 Lambda 用正则解析 Query_time、Rows_examined 等字段；Redis 慢日志原生 JSON，Metric Filter 直接按 JSON 路径提取字段生成指标，无任何代码维护负担。
+- **告警按复制组聚合**：用 Metric Math 表达式 `SUM(METRICS())` 将复制组下所有成员节点（最多 10 个，符合 CloudWatch 限制）的慢查询计数相加，得到集群整体慢查询总量后再与阈值比较。
+- **幂等与安全设计**：脚本只对参数组已配置慢查询参数的集群继续配置导出与筛选器，日志组与指标筛选器已存在时自动跳过创建，可放心重复执行。
+- **正则批量匹配实现零遗漏**：一条命令即可覆盖成百上千个集群，配置驱动（alarm.yaml 提供日志组名称与 SNS 主题），可接入定时任务对新建集群自动开启监控。
 
-02 背景与方案价值
+## 深度分析
 
-03 方案架构与实现思路
+### 架构：纯托管管道，无任何常驻运行时
 
-04 实现步骤详解
+整条链路完全基于 AWS 托管服务，数据自左向右流动：ElastiCache 集群（参数组启用慢查询）→ CloudWatch Logs（持久化 JSON 慢日志）→ Metric Filter（方案核心，指标提取）→ CloudWatch 自定义指标 → CloudWatch 告警 → SNS（Email、SMS、Webhook、Lambda、飞书/钉钉）。与需要常驻采集进程或 Lambda 函数的自建方案相比，该架构没有任何需要持续运维的运行时组件，部署脚本只负责一次性创建资源而非持续采集。每条慢日志记录携带 CacheClusterId、CacheNodeId、Command、DurationInMicroseconds、ClientAddress、ClientName 等字段，既支撑计数指标，也为后续按命令聚合定位慢命令保留完整的排查线索。部署由两个脚本完成：redis_check_and_open_slowlog.py 依次完成"检查参数组 → 创建日志组 → 配置日志导出 → 创建指标筛选器"，redis_SlowQueries.py 负责批量创建告警。
 
-05 详细配置说明
+### 指标选择：为什么是"每分钟计数"而非延迟分布
 
-06 部署验证与故障排除
+CloudWatch 已有 EngineCPUUtilization、CurrConnections、CacheHits 等指标，但缺少直接量化"过去一分钟发生了多少次慢查询"的信号。传统监控只能等 CPU 或延迟告警触发后再反向排查是哪些命令导致——这是滞后的被动响应。本方案把 SLOWLOG 从节点内存转化为分钟级时间序列：指标值恒为 1，统计窗口内 Sum 聚合即为慢查询发生次数；维度映射到 CacheClusterId 与 CacheNodeId，既能按复制组告警，也能按节点粒度定位问题源头。Metric Filter 的筛选模式 `{ $.CacheClusterId="*" }` 匹配所有含该字段的记录，即每一条有效慢日志——一个简单到近乎平凡的规则，却完整填补了可观测性空白。
 
-07 最佳实践
+### 告警阈值：抑制毛刺的三重设计
 
-08 总结
+告警配置体现了明显的抗误报取向。统计方式 Sum、周期 60 秒；评估周期 3、数据点 3/3——连续 3 个周期越界才触发，抑制单次毛刺；缺失数据处理设为 ignore，无数据时保持上一状态，避免"没有慢查询"被误判为异常；ALARM 与 OK 状态均通知 SNS，保证恢复可见。阈值本身因业务而定：生产建议 slowlog-log-slower-than=10000 微秒（10ms），延迟敏感场景可收紧到 5000；告警阈值示例为每周期 100 次，最佳实践提出分级告警（如 Warning 50 次/分钟、Critical 200 次/分钟）分别路由到不同值班渠道。slowlog-max-len 推荐 128：过大占用节点内存，过小则日志在导出前可能被滚动覆盖。高 QPS 业务可适当放宽慢查询阈值以控制日志量，这本质上是在监控灵敏度与 CloudWatch Logs 摄入成本之间做权衡。
 
-09 附录：相关代码文件
+### 权衡：零代码换来的能力边界
 
-* * *
+以"零代码"换取架构简洁的同时，方案也放弃了部分灵活性。其一，Metric Filter 只能做计数与维度映射，无法像 Lambda 方案那样对日志做复杂变换或富化；其二，慢日志由 slowlog-log-slower-than 在源头过滤，阈值过低会推高 CloudWatch Logs 摄入与存储费用（保留期默认 7 天，需在排查窗口与成本之间权衡）；其三，单条告警的 SUM(METRICS()) 最多聚合 10 个成员指标，超大集群需拆分告警。验证环节也有约束：DEBUG SLEEP 会真实阻塞节点，只能在测试集群执行，生产验证应改用对大 Key 的只读命令（如对测试用大 Hash 执行 HGETALL）。另外 ElastiCache 默认参数组不可修改，必须先创建自定义参数组再应用到复制组。
 
-## **1\. 引言**
+## 实践启示
 
-说明：Redis 凭借其极致的内存访问性能，成为缓存、会话、排行榜、消息队列等高并发场景的首选。然而 KEYS、大 Key 上的 HGETALL、复杂 Lua 脚本、批量 MGET 等命令一旦阻塞单线程的 Redis，就可能引发整条调用链路的雪崩。本文介绍一套无需运行任何常驻代码、纯托管服务、可批量自动化部署的 ElastiCache for Redis 慢查询监控方案，帮助您在毫秒级问题积累成线上故障之前主动发现并告警。 ^[raw/articles/构建-amazon-elasticache-oss-caches-慢查询监控方案.md]
+1. **告警只是入口，消除慢查询才是目标**：收到告警后用 CloudWatch Logs Insights 按 Command 字段聚合，找出最频繁的慢命令并推动业务侧改造——用 SCAN 替代 KEYS、拆分大 Key、简化 Lua 脚本。
+2. **阈值必须结合业务 QPS 校准**：100 次/分钟对低 QPS 业务可能是灾难，对高 QPS 业务可能是常态噪声。上线后先观察一周基线再定分级阈值（Warning/Critical 双级），避免首轮误报消耗团队对告警的信任。
+3. **利用幂等设计纳入巡检定时任务**：资源已存在时自动跳过，可安全重复执行；将批量脚本接入定时任务，对新建集群自动开启慢查询监控，实现零遗漏覆盖。
+4. **验证链路时保护生产集群**：DEBUG SLEEP 会真实阻塞节点，仅用于测试集群；生产环境用大 Hash 的 HGETALL 等只读命令触发慢查询，约 1-2 分钟后用 get-metric-statistics 确认自定义指标出现。
+5. **排查按管道方向自上而下**：日志组无数据查参数组（阈值是否为负）与 LogDeliveryConfigurations 是否 active；筛选器无数据查 LogFormat 是否为 json（text 格式无法按 $.CacheClusterId 解析）；告警不触发查阈值与 3 周期越界条件；权限报错确认 elasticache:ModifyReplicationGroup、logs:PutMetricFilter、cloudwatch:PutMetricAlarm 等授权。
+6. **选型先看日志是否结构化**：为异构数据源选监控方案时，优先确认日志能否以 JSON 等结构化格式投递——它直接决定是否需要维护 Lambda 解析代码。Aurora（纯文本，需 Lambda）与 Redis（原生 JSON，仅需 Metric Filter）的对比即是最佳例证。
 
-## **2\. 背景与方案价值**
+## 相关实体
 
-### 2.1 为什么需要监控 Redis 慢查询
-
-Redis 在主线程中以单线程模型串行执行命令。这意味着任何一条耗时较长的命令都会阻塞其后所有命令的执行，直接推高整个实例的延迟。常见的慢查询来源包括： ^[raw/articles/构建-amazon-elasticache-oss-caches-慢查询监控方案.md]
-
-  * 高时间复杂度命令：KEYS *、SMEMBERS、HGETALL、SORT 等 O(N) / O(N log N) 命令在大集合上执行。
-  * 大 Key 操作：对存有数十万元素的 Hash、Set、ZSet 进行整体读写。
-  * 复杂 Lua 脚本：脚本中包含循环或对大量 Key 的访问，在 EVAL 期间独占主线程。
-  * 批量命令：超大 MGET/MSET、Pipeline 中堆积过多命令。
-
-
-
-这些命令单次执行可能只有几十毫秒，但在高 QPS 下会快速累积，表现为 EngineCPUUtilization 飙升、客户端超时、连接堆积，最终演变为缓存层不可用并击穿到后端数据库。慢查询往往是线上故障最早、也最容易被忽视的前兆信号。 ^[raw/articles/构建-amazon-elasticache-oss-caches-慢查询监控方案.md]
-
-### 2.2 Redis SLOWLOG 机制
-
-Redis 内置 SLOWLOG 机制，由两个参数控制：^[raw/articles/构建-amazon-elasticache-oss-caches-慢查询监控方案.md]
-
-
-  * `slowlog-log-slower-than`：慢查询阈值，单位为微秒。执行耗时超过该值的命令会被记入慢日志；设为 0 表示记录所有命令，设为负数表示关闭。
-  * `slowlog-max-len`：慢日志在内存中保留的最大条目数，超出后最旧的记录会被淘汰。
-
-
-
-原生 SLOWLOG 仅将记录保存在 Redis 节点内存中，存在三个固有缺陷：容量有限会被滚动覆盖、需要主动登录每个节点用 SLOWLOG GET 拉取、且无法形成可告警的时间序列指标。在拥有几十上百个集群的生产环境中，靠人工巡检几乎不可行。 ^[raw/articles/构建-amazon-elasticache-oss-caches-慢查询监控方案.md]
-
-### 2.3 AWS 原生监控的局限性
-
-ElastiCache 在 [Amazon CloudWatch](<https://aws.amazon.com/cn/cloudwatch/>) 中提供了 EngineCPUUtilization、CurrConnections、CacheHits 等丰富指标，但并不存在一个开箱即用的“慢查询次数”指标。运维团队通常只能在 CPU 或延迟告警触发后，再反向排查是哪些命令导致——这是一种滞后的、被动的响应模式。我们需要的是一个能够直接量化“过去一分钟内发生了多少次慢查询”的指标，并据此提前告警。 ^[raw/articles/构建-amazon-elasticache-oss-caches-慢查询监控方案.md]
-
-### 2.4 本方案的核心价值
-
-维度 | 原生 SLOWLOG / CloudWatch | 本方案  ^[raw/articles/构建-amazon-elasticache-oss-caches-慢查询监控方案.md]
-
----|---|---  
-慢查询计数指标 | 无 | 自定义指标 `RedisSlowQueryCount`，分钟级时间序列  ^[raw/articles/构建-amazon-elasticache-oss-caches-慢查询监控方案.md]
-
-持久化 | 仅内存，滚动覆盖 | CloudWatch Logs 持久化（保留期可配）  ^[raw/articles/构建-amazon-elasticache-oss-caches-慢查询监控方案.md]
-
-多集群管理 | 逐节点手动拉取 | 正则批量匹配，一条命令配置所有集群  ^[raw/articles/构建-amazon-elasticache-oss-caches-慢查询监控方案.md]
-
-告警 | 需自行搭建 | 自动创建 CloudWatch 告警 + SNS 多渠道通知  ^[raw/articles/构建-amazon-elasticache-oss-caches-慢查询监控方案.md]
-
-运维成本 | 需常驻采集进程 | 纯托管服务，零代码常驻、无 Lambda  ^[raw/articles/构建-amazon-elasticache-oss-caches-慢查询监控方案.md]
-
-  
-说明：与 Aurora 慢查询方案的关键差异：Aurora 慢日志是纯文本格式，需要部署 Lambda 函数用正则解析 Query_time、Rows_examined/Rows_sent 等字段后再发布指标。而 ElastiCache for Redis 的慢日志可以直接以 JSON 结构化格式投递到 CloudWatch Logs，因此本方案改用 CloudWatch Logs Metric Filter 直接按 JSON 路径提取字段生成指标——全程无需编写和维护任何 Lambda 代码，更轻量、更省成本、更易运维。 ^[raw/articles/构建-amazon-elasticache-oss-caches-慢查询监控方案.md]
-
-## **3\. 方案架构与实现思路**
-
-### 3.1 整体架构
-
-方案完全基于 AWS 托管服务构建，数据自左向右流动，最终在阈值被突破时通过 SNS 分发告警：^[raw/articles/构建-amazon-elasticache-oss-caches-慢查询监控方案.md]
-
-
-[](<https://d2908q01vomqb2.cloudfront.net/472b07b9fcf2c2451e8781e944bf5f77cd8457c8/2026/07/02/build-amazon-elasticache-oss-caches-query-monitoring-solution-1.png>) [图1：ElastiCache for Redis 慢查询监控整体架构]  ^[raw/articles/构建-amazon-elasticache-oss-caches-慢查询监控方案.md]
-
----  
-  
-核心组件说明： ^[raw/articles/构建-amazon-elasticache-oss-caches-慢查询监控方案.md]
-
-  * ElastiCache for Redis 集群：数据源。通过参数组启用 slowlog-log-slower-than，并配置慢日志以 JSON 格式投递到 CloudWatch Logs。
-  * CloudWatch Logs：接收并持久化结构化慢日志，日志组示例为 /aws/elasticache/redis/slowlog，保留期默认 7 天。
-  * Metric Filter（指标筛选器）：方案的核心。使用 JSON 筛选模式 { $.CacheClusterId=”*” } 匹配每一条慢日志记录，每命中一条即向自定义指标贡献计数 1。
-  * CloudWatch Metrics：存储自定义指标 RedisSlowQueryCount（命名空间 ElastiCache/RedisSlowLog）。
-  * CloudWatch Alarms：基于该指标按复制组聚合评估，超过阈值时进入 ALARM 状态。
-  * SNS Topic：将告警分发到 Email、SMS、Webhook、Lambda、飞书 / 钉钉等多种渠道。
-
-
-
-### 3.2 数据流与指标计算逻辑
-
-理解数据如何从
+- 相关概念: [[concepts/harness-engineering-framework|Harness Engineering]]
+- 相关实体: [[entities/observability-platform|可观测性平台]]
+- 相关实体: [[entities/sagemaker-inference-observability-cloudwatch-insights|SageMaker 推理可观测性]]
 
 ---
-## 关联
-- 相关概念: [[concepts/harness-engineering-framework|Harness Engineering]]
 
+→ [[raw/articles/构建-amazon-elasticache-oss-caches-慢查询监控方案|原文存档]] ^[raw/articles/构建-amazon-elasticache-oss-caches-慢查询监控方案.md]

@@ -3,7 +3,7 @@
 title: "kasra.blog LLM Agent 黑客能力实测: USD 1500 投石问路 14 模型"
 description: "安全研究员 Kasra 自建含 Firebase 配置泄露漏洞的 RN 应用, 对 14 款 LLM agent 做渗透测试:GPT 5.5 7/10 解决率独占鳌头, DeepSeek V4 Pro 与 Claude Sonnet 4.6/Opus 4.8 2-3/10, 多数模型在 Firebase 路径放弃/转向 API 攻击。 揭示 LLM agent 安全攻防真实能力分布与中文/英文模型行为差异"
 created: 2026-06-05
-updated: 2026-09-07
+updated: 2026-11-24
 type: entity
 tags: [agent, llm, llm-security, agent-security, offensive-security, penetration-testing, firebase, empirical-evaluation, model-benchmark, security-research]
 sources:
@@ -109,6 +109,28 @@ gemini-3.1-pro-preview 中位 tokens/run = 9k (其他模型 100k+) - **直接 re
 2. **14 模型成本-能力帕累托** - Mythos 只评 Anthropic 自家模型; Kasra 跨 7+ 提供商 14 模型, 给出 $/solve 成本效率排名 ^[raw/articles/kasra-blog-llm-hacking-empirical-test.md]
 3. **"中文模型对 DB 攻击更舒适" 行为观察** - 跨模型文化/训练数据对安全决策的差异, 业界无公开对照数据 ^[raw/articles/kasra-blog-llm-hacking-empirical-test.md]
 
+## 深度分析
+
+### 1. 成本-能力帕累托: 为什么 DeepSeek V4 Pro 是价值之王
+
+GPT 5.5 的 7/10 解决率 ($9.46/solve) 与 DeepSeek V4 Pro 的 3/10 ($0.62/solve) 在 95% Wilson 置信区间上大幅重叠 (40%-89% vs 11%-60%), 但单次解决成本相差 15 倍。把 $/solve 而非解决率作为第一排序维度, 结论立刻反转: 对预算有限的独立安全研究员, 用 DeepSeek V4 Pro 跑 25 次覆盖, 期望解决数高于用 GPT 5.5 跑 3 次。Claude Sonnet 4.6 ($45.75/solve) 与 GLM 5.1 ($34.73/solve) 落在帕累托前沿之外——能力不占优而成本数倍。这条曲线提示: agent 安全评测的成本结构本身就是结论的一部分, 离开 $/solve 谈能力排名会系统性高估昂贵模型。 ^[raw/articles/kasra-blog-llm-hacking-empirical-test.md]
+
+### 2. 拒答时机: Claude 的晚期拒答 vs Gemini 的早期拒答
+
+同一类安全对齐在不同模型上的生效时机截然不同: Claude Opus 4.8 多次逼近正确解却在会话中途被护栏掐断 ("Late refusals, not right off the bat"), Sonnet 4.6 五次运行倒在 budget 上限前且仍在 Firebase 正确路径上; 而 gemini-3.1-pro-preview 中位 tokens/run 仅 9k (其余模型 100k+), 是开题即拒。这说明对齐不是单一开关而是时间分布: 早期拒答浪费的只是极少 tokens, 晚期拒答浪费的是全部探索投入——后者对使用者更隐蔽也更昂贵, 因为它伪装成"模型能力不足"而非"模型拒绝"。评测 agent 安全能力时必须区分这两种失败, 否则会把 Claude 系的真实能力误判为无法解题。 ^[raw/articles/kasra-blog-llm-hacking-empirical-test.md]
+
+### 3. 中文模型对 DB 攻击路径的 "舒适" 及其含义
+
+"The Chinese models were way more comfortable attacking the DB" 是全文最刺眼的跨文化观察: DeepSeek/GLM/Minimax/Qwen 直接攻击 Firestore 而无明显伦理犹豫, 英文模型则反复出现 "this would affect the live database" 式的自我暂缓——即便最终绕过, 犹豫本身也在消耗 $10 budget 与两小时时限。一个合理的假设是训练语料构成与安全文化差异, 让中文模型对"攻击数据库"场景的先验阻力更低。其含义超出评测本身: 同一 agent 系统在不同来源模型上的真实风险行为不可互相外推, 防御设计不能假设所有模型共享同一套拒答阈值, 部署侧必须按模型来源分别建模其越权行为倾向。 ^[raw/articles/kasra-blog-llm-hacking-empirical-test.md]
+
+### 4. 失败模式分级: 从成功路径看能力阶梯
+
+14 个模型的失败方式构成一道清晰的能力阶梯: 第一层是复现成功路径 (unzip APK → 发现 google-services.json → 直接 Firebase 注册), 只有 GPT 5.5 与 DeepSeek V4 Pro 稳定到达; 第二层是"配置泄露已发现但接线错误"——拿 Firebase auth 去调 API 而非直连 DB (MiniMax M2.7 全部运行, DeepSeek V4 Pro 两次, GLM 5.1 两次), 说明攻击意图与攻击执行脱节; 第三层是路径固着 (Qwen 3.7 Max/Grok Build 0.1 死磕 API IDOR, Grok 甚至把"用户能读自己的评论"误报为 IDOR); 第四层是漫无目的 (owl-alpha 单次 200+ 请求打 API, Step 3.7 误报已找到漏洞)。这一分级比二元解决率更能定位模型在工具使用与目标保持上的具体缺陷。 ^[raw/articles/kasra-blog-llm-hacking-empirical-test.md]
+
+### 5. xz-utils 类比的深化: 不同的信任锚, 相同的信任滥用
+
+本次实测与 [[xz-utils-backdoor-maintainer-trust-hijack-2-years-on]] 的共同结构是"信任被滥用", 但信任锚不同: xz 事件被滥用的是人对人的维护者信任——社会性、建立缓慢、依赖长期互动, 攻击周期以年计; Firebase 配置泄露被滥用的是开发者对打包工具链的结构性信任——google-services.json 被自动打进产物, 泄露即时且可无限复制, 攻击以分钟计。前者靠社区审查缓解, 后者只能靠工程手段 (最小权限规则、密钥不出包) 缓解。Kasra 称这类 hardened API + wide-open Firebase 在真实生产中反复出现, 恰说明结构性信任缺口是系统性问题而非个例——这也是实证红队不可替代的原因: 只有真的打一遍, 才知道信任链条断在哪一环。 ^[raw/articles/kasra-blog-llm-hacking-empirical-test.md]
+
 ## 实践启示
 
 - **Agent 攻防测试的真实成本**: 单一目标 14 模型全 10 次 ~$1500 不可扩展。生产级安全评估需要更便宜的 setup (OpenRouter 而非直连各家 API)
@@ -129,28 +151,6 @@ gemini-3.1-pro-preview 中位 tokens/run = 9k (其他模型 100k+) - **直接 re
 | 中文模型对比 | 明确 "中文模型更舒适攻击 DB" | 无 | 无 |
 
 -> [[raw/articles/kasra-blog-llm-hacking-empirical-test|原文存档]] ^[raw/articles/kasra-blog-llm-hacking-empirical-test.md]
-
-## 深度分析
-
-### 1. LLM hacking 的实证测试
-Kasra 的实证研究测试了 LLM 安全防护的实际强度——结论是：大多数公开的安全防护在针对性攻击下效果有限，安全需要分层防御。 ^[raw/articles/kasra-blog-llm-hacking-empirical-test.md]
-
-### 2. 与 [[xz-utils-backdoor-maintainer-trust-hijack-2-years-on]] 的类比
-LLM hacking 和供应链攻击都是"信任被滥用"——prompt injection 滥用 LLM 对用户输入的信任，社会工程滥用开源社区对新维护者的信任。 ^[raw/articles/kasra-blog-llm-hacking-empirical-test.md]
-
-### 3. 红队测试的必要性
-实证红队测试是验证 LLM 安全防护有效性的唯一方式——理论分析不足以发现实际攻击路径。 ^[raw/articles/kasra-blog-llm-hacking-empirical-test.md]
-
-## 实践启示
-
-### 1. 定期对 agent 系统做红队测试
-每季度对生产 agent 系统做红队测试——验证安全防护是否仍然有效。 ^[raw/articles/kasra-blog-llm-hacking-empirical-test.md]
-
-### 2. 分层防御：不依赖单一安全机制
-prompt filter + input validation + output monitoring + human review——多层防御比单一机制更可靠。 ^[raw/articles/kasra-blog-llm-hacking-empirical-test.md]
-
-### 3. 红队测试结果反馈到 harness 设计
-红队发现的攻击路径应反馈到 harness 的约束设计——持续改进安全边界。 ^[raw/articles/kasra-blog-llm-hacking-empirical-test.md]
 
 ## 相关实体
 - [[entities/ai-skill-skill-creator-源码拆解]]

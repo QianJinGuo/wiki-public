@@ -1,7 +1,7 @@
 ---
 title: "ParallelWorld：把测试时算力用在具身智能体的多步预演上（清华/NUS）"
 created: 2026-10-26
-updated: 2026-10-26
+updated: 2026-11-10
 type: entity
 tags: [embodied-ai, test-time-scaling, agent, planning, vla, world-model, robot, research]
 sources: [raw/articles/parallelworld-test-time-scaling-agentic-embodied-reasoning-2026]
@@ -40,6 +40,24 @@ ParallelWorld 因此把"未来会看到什么、任务会推进到哪里"纳入�
 ## 边界：视觉合理性不等于物理可行
 
 收益取决于"决定任务成败的因素能否被预演结果可靠表达"。当难点是视角选择、目标辨认或空间布局时，比较不同未来能改善决策；当任务要求精确度量、接触动力学或对执行误差的细致预测时，视觉预演仍有明显边界。失败案例中，模型有时已看到足够信息却判断不出物体间的精确几何关系；有时生成画面看似合理，动作执行时却失败——**图像预测的视觉合理性不能直接等同于物理可行性**。要把这套预演推广到更多真实场景，还需要更可靠的物理预测、更准确的验证机制和可负担的推理开销。^[raw/articles/parallelworld-test-time-scaling-agentic-embodied-reasoning-2026.md]
+
+## 深度分析
+
+### 从 token 域到交互域：测试时扩展的另一种花法
+
+LLM 里的测试时扩展，通常指同一道题多采样几条推理链、再用一致性或验证器挑最好的一条；ParallelWorld 把同一种预算换成另一种货币——多预演几条行动路径，比较各自引出的未来观察与任务进展，再决定眼前这一步。搜索对象从 token 序列变成高层动作分支，评估信号从"答案自洽"变成"任务推进"。两者共享同一个成立条件：收益取决于能否可靠地比较候选，区别只在误差来源——一边是采样噪声，一边是预测偏差。这与 [[entities/gka-variable-test-time-compute-2026|GKA]] 的"按不确定性分配预算"同构，也与 [[entities/harness-evolution-vs-test-time-scaling-2026|Harness 演化 vs 测试时扩展]] 中"真实多跑几遍"的路线互为对照：预演一条未来比真实重跑便宜得多，代价是预演本身会失真。^[raw/articles/parallelworld-test-time-scaling-agentic-embodied-reasoning-2026.md:29]
+
+### 固定宽度 2 为什么反而更差：验证容量给搜索宽度封顶
+
+消融里最反直觉的一条是固定宽度 2 的成功率低于直接执行。机制上，预演的收益从来不是"多想"本身，而是验证器能在候选之间分辨优劣：候选太少，验证器没有可比较的材料；候选增多而验证容量不变，筛选噪声与冗余计算同步上升，坏分支反而挤掉好分支。这是 [[concepts/verifier-paradox|Verifier 悖论]] 在具身场景的具象——生成侧扩张容易，判别侧才是瓶颈。自适应宽度的本质，是把"提多少候选"也变成规划器按决策情境调整的变量，让计算流向仍有歧义的节点。^[raw/articles/parallelworld-test-time-scaling-agentic-embodied-reasoning-2026.md:92-98] 工程顺序因此是确定的：先量化验证器的分辨力，再定搜索宽度；在任何 proposer-verifier 架构里，验证器强度为搜索策略封顶，这也是 [[concepts/verifier-driven-development|verifier 驱动开发]] 把验证器当一等公民的同一逻辑。
+
+### 滚动规划是给"预测漂移"上的保险
+
+只执行选中轨迹的第一个动作、其余步骤仅作参照，等价于控制论里滚动时域优化的 agent 版：承认预测随步数漂移，就把行动窗口限制在预测尚可靠的近端，每执行一步用新观察重置规划起点。它不指望一次长程预演覆盖全任务，而是让预演收益与执行反馈逐轮结合。这个设计的隐含前提与世界模型的能力边界直接挂钩——预演循环的价值上限由"动作后观察"的预测保真度决定，滚动机制的作用是不让这个上限被放大成执行层面的级联错误。[[concepts/world-models|世界模型]] 的保真度每提高一档，可放心预演的深度就多一步，两者是同一条能力曲线的两端。^[raw/articles/parallelworld-test-time-scaling-agentic-embodied-reasoning-2026.md:64-66]
+
+### 收益的分界线：任务瓶颈是否落在"预演可表达"的变量上
+
+把四组结果放在一起看，分界线并不落在"具身理解 vs 机器人操作"上：ESI-Bench 26/28 项胜出，LIBERO-Pro 八种设置全胜，但刚性容纳与几何构型两类任务回退，Goal 与 LIBERO-10 收益有限。真正的分界线是任务瓶颈能否被预演结果可靠表达——视角选择、目标辨认、空间布局这类"看得见"的变量，画面比较足以支撑决策；精确几何、接触动力学、长程误差积累这类"摸得准"的变量，画得出来却不可靠，视觉合理性不等于物理可行性。对想复用这套架构的团队，判据要前置于部署：先分析任务成败落在哪一侧变量上——落在感知-辨认侧，预演收益为正；落在物理-接触侧，需要先补更可靠的物理预测与验证机制，否则 5.8 倍的推理开销买不到等值的安全边际。^[raw/articles/parallelworld-test-time-scaling-agentic-embodied-reasoning-2026.md:104-106]
 
 ## 可迁移的工程启示
 

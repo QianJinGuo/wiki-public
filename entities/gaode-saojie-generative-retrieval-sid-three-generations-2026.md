@@ -1,7 +1,7 @@
 ---
 title: "高德扫街榜生成式召回三代演进：从兴趣空间到地理空间（GeoGR → HF-SID → SPAR）"
 created: 2026-09-17
-updated: 2026-09-17
+updated: 2026-11-10
 type: entity
 tags: [generative-retrieval, semantic-id, lbs, poi-recommendation, geogr, hf-sid, spar, spatial-modeling, gaode, amap]
 sources: [raw/articles/gaode-saojie-generative-retrieval-sid-three-generations-2026]
@@ -34,6 +34,33 @@ provenance_state: extracted
 ## 第三代 SPAR：城市路网知识注入+防遗忘双分支微调
 
 三问题：直线近但河流/高架/单行道需大幅绕行；行为共现兴趣空间训练（预训练语料覆盖不到城市细粒度 POI 分布与路网）；CPT 注入空间知识后被海量行为 SFT 遗忘。「构建—培育—保持」：**SI-SID** 借鉴 NeRF/位置编码——经纬度归一化到周期区间投影到指数递减频率取正弦余弦，两层 MLP 得地理向量，与文本语义拼接 L2 归一化后三层 RQ-Kmeans+消歧索引=四 token（具有位移不变性与 Lipschitz 连续性）；**MG-CPT** 基于真实 POI/道路/导航数据构建 25 个空间数据集三层级（基础属性→空间关系→系统性导航知识：路线距离/通行时间/有序道路序列建模路网连通）；**TV-SFT 双分支低秩微调**——MG-CPT 相对基座的参数变化差=「城市空间知识」任务向量整体冻结，行为分支对基座全参微调拟合兴趣空间，空间分支只外挂 LoRA 增量（融合系数 1=在 MG-CPT 上微调；0=退化普通全参 SFT），空间知识被锚定不被行为数据冲淡。数据：消融 SI-SID +10.76%/MG-CPT 再 +15.38%/TV-SFT 再 +2.15-17.90%；**空间认知来自定向训练非参数量**：Qwen4B 经 MG-CPT 在 18 类空间认知任务 35.9→78.1，超 8 倍参数的 Qwen32B（44.3）达 34.8pp（通用 scaling 只提升 8.4pp）；无坐标时方向判断仍 76-79 分（学到城市空间布局本身而非拿到坐标现算）；navi_ 导航任务 4B 显著优于 32B；线上 **PV_CTR +2%/PV_CVR +4%**。^[raw/articles/gaode-saojie-generative-retrieval-sid-three-generations-2026.md]
+
+## 深度分析
+
+### 兴趣空间与地理空间的表征错位
+
+主流生成式召回的 SID 由文本语义导出，模型学到的只是行为共现的兴趣空间：坐标相邻的 POI 拿不到相邻 SID，连锁品牌相隔几十公里的门店共享几乎相同的 SID；机场与停车场式的跨类目强关联以时空共访而非文本相似的形式存在，文本路线天然表示不了。HF-SID 进一步拆出三类表征缺陷：坐标经数字子词/网格编码后边界突变，评分与访问量等异量纲数值共享子空间，细类目结构不可读。^[raw/articles/gaode-saojie-generative-retrieval-sid-three-generations-2026.md:16-16] ^[raw/articles/gaode-saojie-generative-retrieval-sid-three-generations-2026.md:39-51]
+
+### 方法论主线：空间监督信号逐代逼近物理真实
+
+三代共享「SID 构建→CPT→SFT→约束解码」范式，差异在监督信号来源：GeoGR 用共访正样本把邻近性间接写进表征；HF-SID 确立「先连续保真、再离散量化」，以米制三维地心坐标直接表示位置；SPAR 借鉴 NeRF 位置编码内化地理信号并注入路网可达性。量化 SID 技术族（同 [[entities/ebay-generative-retrieval-rq-vae-semantic-id-2026-06-30|eBay 生成式检索]]）由此分出电商文本与 LBS 地理两翼。^[raw/articles/gaode-saojie-generative-retrieval-sid-three-generations-2026.md:26-33] ^[raw/articles/gaode-saojie-generative-retrieval-sid-three-generations-2026.md:65-67]
+
+### 定向空间训练胜过通用参数 Scaling
+
+MG-CPT 后 Qwen4B 在 18 类空间认知任务平均准确率 35.9→78.1，超参数量 8 倍的 Qwen32B 达 34.8pp，而通用 scaling 只提升 8.4pp；不提供坐标时方向判断仍保持 76-79 分，说明学到的是城市空间布局本身而非「拿到坐标现算」。^[raw/articles/gaode-saojie-generative-retrieval-sid-three-generations-2026.md:67-71]
+
+### 空间知识的「构建—培育—保持」生命周期
+
+预训练语料覆盖不到城市细粒度 POI 分布与路网，CPT 注入的空间知识又会被海量行为 SFT 覆写。SPAR 把知识生命周期工程化：MG-CPT 相对基座的参数变化差作为空间知识任务向量整体冻结，行为分支全参微调拟合兴趣空间，空间分支只外挂 LoRA 增量，空间知识被锚定不被冲淡；后续方向含把可达性纳入生成目标的强化学习、街景多模态与持续学习。^[raw/articles/gaode-saojie-generative-retrieval-sid-three-generations-2026.md:63-73]
+
+## 实践启示
+
+1. LBS 场景勿直接复用文本语义 SID：先补齐坐标/数值/结构的连续保真再做离散量化，连锁门店 SID 撞车可由此根除。^[raw/articles/gaode-saojie-generative-retrieval-sid-three-generations-2026.md:51-53]
+2. 跨类目关联靠共访正样本对构造进入表征空间，不要把邻居序列拼进输入文本——过长会削弱目标 POI 语义。
+3. 部署在延迟与效果间取平衡：4B 单请求约 90ms，生产选 0.6B（50ms）；替换时保持推理链路不变以降低上线风险。^[raw/articles/gaode-saojie-generative-retrieval-sid-three-generations-2026.md:45-57]
+4. 空间能力靠定向数据集培育而非参数堆叠：中等模型加领域 CPT 即可大幅超越数倍参数的通用模型。
+5. 知识注入后的下游微调不必全参：冻结任务向量、外挂低秩增量即可防止行为数据冲淡已注入知识。^[raw/articles/gaode-saojie-generative-retrieval-sid-three-generations-2026.md:69-69]
+6. 评估空间建模看真实可达距离而非直线距离，可达性值得直接进入生成目标。
 
 ## 与既有实体的关系
 

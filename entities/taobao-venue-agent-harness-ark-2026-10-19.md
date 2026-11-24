@@ -1,7 +1,7 @@
 ---
 title: "淘天方舟 AI 会场 Agent Harness：从一句话到可投放的线上会场"
 created: 2026-10-19
-updated: 2026-10-19
+updated: 2026-11-18
 type: entity
 tags: [agent, harness, taobao, tmall, first-party, ark-protocol, skill, subagent, prompt-cache, context-engineering, quality-gate, observability, oss, html-generation]
 sources:
@@ -83,6 +83,33 @@ Skill 体系按五类认知供给会场知识：**内容认知**（主题落到�
 ## 未来规划与边界
 
 会场域认知目前只跑通当前业务的核心知识，不同业务的数据投放与盘货诉求不同，需要二三方开放能力建设；工作环境方面会场设计对视觉与货品的调整常有几十甚至上百轮，长程高频任务中如何不丢上下文、同时保持视觉创造力与货品运营灵活度仍需探索；自迭代环境已初步建立 AI 观测工作台，但仍缺 Task 维度分析与 Turn 维度深度分析，以及更自动化地反哺核心 Agent 迭代。^[raw/articles/taobao-venue-agent-harness-ark-2026-10-19.md]
+
+## 深度分析
+
+### 三类环境共用一个抽象：约束、能力与反馈的闭环
+
+把三类环境摆在一起看，它们回答的是同一个问题的三个切面——"会场怎么做"如何被翻译成模型可执行的程序。会场域认知环境供给**约束的语义**（视觉认知解释设计语言、数据认知解释供给归属、生码认知理解数据协议）；业务 Agent 的工作环境供给**能力的载体**（OSS 虚拟文件系统承载持久工作材料、业务工具收敛投放-选品复杂关系、SubAgent 隔离大段探索）；自迭代环境供给**反馈的回路**（确定性质检加 Provider 出口观测）。三者缺一不可：只有约束没有反馈，模型不知道自己错在哪；只有反馈没有约束，检查结果无从定位到该改的认知入口。这个"约束→能力→反馈"三元组（参见 [[concepts/agent-harness-engineering-paradigm]]）比通用的 skill/tool/subAgent 架构图更接近 harness 的本质——它同时解释了为什么 Skill 要"说清楚表达的认知，也要有明确约束和验收条件"，以及为什么观测必须记录 Provider 出口而非应用层。^[raw/articles/taobao-venue-agent-harness-ark-2026-10-19.md:30-36] ^[raw/articles/taobao-venue-agent-harness-ark-2026-10-19.md:85-86] ^[raw/articles/taobao-venue-agent-harness-ark-2026-10-19.md:97-102]
+
+### 一张 HTML 的三重约束：按强度梯度分配自由度
+
+文章最锋利的设计判断是：一张 HTML 页面同时承载设计语言、可运营性、可交付性三重约束，而三者"硬度"不同，必须用不同机制承载。视觉设计是**软约束**——风格 Skill 守住气质与视觉层级，相框、字体、留白仍可组合，自由度留给模型；货品数据是**认知约束**——AI 必须分清哪些内容随页面保留、哪些来自商品字段；生码是**硬约束**——Ark 协议规定节点归属、字段位置与装配边界，没有商量余地。真正的难点在冲突中心 page.html：视觉分组不等于供给分组，为 Slot 包一层 wrapper 就会改变 Grid/Flex 直接子项等布局前提。方舟的解法不是合并解释，而是**给正交的关注点分配正交的表达通道**——供给写进 `data-ark-slot`/`data-ark-index` 属性、布局保留 DOM 层级，两种分组各自成立、互不污染。这是一个可迁移的协议设计模式：当多个链路必须解释同一份产物时，不要让它们共享结构，让它们共享属性。^[raw/articles/taobao-venue-agent-harness-ark-2026-10-19.md:38-44] ^[raw/articles/taobao-venue-agent-harness-ark-2026-10-19.md:46-53]
+
+### 上下文分层就是 cache 经济学：P0-P3 的真实含义
+
+P0-P3 分层表面是重要性排序，实质是**缓存经济学决策**（参见 [[concepts/context-window-economics]]）：P1 的关键 Skill 必须以 `<skill-loaded>` 消息独立持久化、全量压缩后按预算恢复，因为重新加载等于一次整体 miss 换来的认知重建；P3 的 read 结果与早期截图"可重取"，在缓存冷却时清除反而划算。文章的反直觉结论值得单独记下：cache 命中率低可能与上下文工程无关——会话周期长、用户隔很久才追问、200k 窗口频繁触发全量压缩、SubAgent 空上下文启动重建 cache、子任务超过 5min 拖累主 Agent，都会拉低命中率。会场设计"几十甚至上百轮"的长程高频调整意味着压缩是常态而非异常，"缓存冷却时清理不重要信息"才是上下文工程与 cache 的正确权衡点，而 llm trace 是验证该权衡是否做对的唯一证据。^[raw/articles/taobao-venue-agent-harness-ark-2026-10-19.md:79-85] ^[raw/articles/taobao-venue-agent-harness-ark-2026-10-19.md:104-107]
+
+### 自迭代闭环的评测哲学：确定性检查乘以合法反例回归
+
+"生成需要创造力，交付需要确定性"背后有一套完整的评测哲学。其一，**确定性检查的难点不是写断言，而是重建浏览器的事实**：掉坑检查先确认共同父容器以区分显式缺格与末行不满；倾斜卡片要用变换前 `offsetWidth` 拿原始卡宽，否则把拍立得倾斜误判为不齐；遮挡要用 3×3 采样加 `elementsFromPoint` 看实际绘制层叠，外部浮层可能是贴纸。其二，**合法反例必须持续回归**：Bento、旋转、横向滚动一旦不进回归集，错误的通用规则会把模型逼成同一版式——"允许设计不等于豁免重叠"的边界靠反例集而非规则表述来守。其三，检查必须快到"随处编辑后随处调用"，才能成为基础工具而非上线前的门禁仪式。这套思路与 [[concepts/evaluation-harness-design]] 的评测哲学同源，其"生成侧实时质检"形态与 [[entities/minigame-self-iterating-agent-taobao-tian-2026-09-23]] 的 AB 门禁互证：前者把验收嵌进编辑循环，后者把验收放在发布链路。^[raw/articles/taobao-venue-agent-harness-ark-2026-10-19.md:97-102]
+
+## 实践启示
+
+1. **业务阶段不等于长期 Agent**：不要按策划/设计/前端常驻拆成七个 Agent，把委派边界落在"一次可验收的工作"上，主 Agent 保持业务主循环，专业能力由 Skill 与工具供给；只有输入输出说得清或真正独立的任务才值得交出去并行。^[raw/articles/taobao-venue-agent-harness-ark-2026-10-19.md:94-95]
+2. **SubAgent 交接用"结论＋执行记录地址"**（参见 [[concepts/multi-agent-context-isolation]]）：子任务执行记录写入工作区，Task 返回结论并附归档路径——只有结论没有条件与证据，下一轮就会把"因价格被排除"与"因敏感肌被排除"再猜一遍。^[raw/articles/taobao-venue-agent-harness-ark-2026-10-19.md:95]
+3. **先核验供给再执行**：候选不足要暴露给用户，"不能写静态卡片掩盖"；"第一个坑位"是位置不是商品 ID，固定主推要回到选品集与投放规则，而不是把商品名写死在 HTML 里。^[raw/articles/taobao-venue-agent-harness-ark-2026-10-19.md:77]
+4. **规则消息要能熬过压缩**（参见 [[concepts/skill-engineering-principles]]）：把已加载 Skill 正文包装为独立持久化的带名消息，压缩后按加载记录与预算恢复，超长保留截断与补读提示——否则长会话后半程"只剩一句风格摘要"，视觉遵循度随轮次衰减。^[raw/articles/taobao-venue-agent-harness-ark-2026-10-19.md:72]
+5. **精确数值交给工具、表达留给模型**：色值用像素采样与统计返回底缘色、主色簇，不让模型看图猜 hex；凡是需要稳定可复核的判断，都应落成工程手段而非模型目测。^[raw/articles/taobao-venue-agent-harness-ark-2026-10-19.md:69]
+6. **先查会话形态再怪上下文工程**：cache 命中率低先看会话周期、追问间隔与压缩触发频率，再做上下文优化；同时把 llm trace（含上下文组成）记录到位，否则一切上下文处理都无法验证。^[raw/articles/taobao-venue-agent-harness-ark-2026-10-19.md:85]
 
 ## 与相关实体的关系
 

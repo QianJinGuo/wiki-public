@@ -1,7 +1,7 @@
 ---
 title: "专为 Managed Agents 而生的 Harness 底座：AgentScope 2.0"
 created: 2026-08-02
-updated: 2026-08-02
+updated: 2026-11-16
 type: entity
 tags: [agent, harness, agentscope, managed-agents, brain-hands, control-plane, data-plane, sandbox, e2b, multi-tenant, workspace, cloud-native]
 sources: [raw/articles/专为-managed-agents-而生的-harness-底座agentscope-20]
@@ -79,6 +79,38 @@ MultiagentSpec 的 wire schema 是 `type + agents[]`；wait_async_results 用于
 ## 与既有 AgentScope 体系的定位差异
 
 AgentScope 2.0 在平台中的角色非常明确：**提供 HarnessAgent 与 FS/Sandbox 抽象，保证「效果默认项」和「执行面可替换」**；Managed Agents 负责租约、事件契约、多租与 ACL，而不是再包一层私有化的 ReAct。相比 [[entities/agentscope-java-2.0-enterprise-distributed-harness|AgentScope Java 2.0 企业级分布式 Harness]]（聚焦 JVM 多租户资源隔离与中间件体系）和 [[entities/agentscope-builder-enterprise-self-evolving-agent-harness|AgentScope Builder]]（自进化智能体的产品化），本实体聚焦 AgentScope 2.0 作为 **Managed Agents 底座 Runtime** 的 Brain/Hands 拆分、控制面/数据面分层与三种 Worker 执行模式。^[raw/articles/专为-managed-agents-而生的-harness-底座agentscope-20.md]
+
+## 深度分析
+
+### Brain/Hands 拆分的本质是信任边界的重构
+
+拆分并非架构洁癖，而是回答一个关键问题：模型决定「要调用什么」，不等于模型所在进程必须「亲自执行什么」。只要工具调用被表示为稳定的 schema、tool_use_id 和结果事件，Hands 就可以迁移到平台云沙箱或客户 VPC，而不改动 Brain 中的推理循环。安全团队因此能把原本纠缠在「一整个 Agent 容器」里的权限审核拆成三个独立问题：模型能看到哪些上下文、工具能访问哪些网络和文件、工具结果中哪些内容可以回传给 Brain。权限审核和故障定位的清晰度直接来自这次拆解。
+
+### Harness 默认项收编的是「工程责任」而非「配置项」
+
+传统低代码平台把压缩时机、超长上下文截断、工具异常重试、子任务回收拆成大量配置项交给用户，看似灵活，实际是把 Harness 的工程责任转嫁给业务开发者——同一个 Agent 因配置者经验不同，效果和稳定性可能完全不同。Managed Agents 只暴露业务差异（角色提示、Skills、MCP、工具权限、Environment），把机制一致性交给持续演进的 Harness，平台升级后所有 Agent 同步获得工程改进。但要注意边界：Harness 保证机制一致与可升级，最终任务效果仍取决于模型、system prompt、Skill 质量和业务评测，二者不可互相替代。
+
+### 状态归属上移是三层产品递进的暗线
+
+从 Claude Code CLI、Claude Agent SDK 到 Managed Agents，三层区别不只是封装变厚，而是状态归属逐步上移：CLI 的 Agent 与本地工作区、会话记录直接结合；SDK 把 Session、事件流和工具交互 API 化，但身份、租户和资源隔离仍由接入方负责；Managed Agents 把 Agent、Environment、Session 与执行面整体变成托管资源。用户看到的是模型推理和任务结果，平台真正托管的是可恢复的会话状态、工程化运行策略和可替换的 Hands——这正是 [[concepts/agent-harness-engineering-paradigm|Harness 工程范式]] 在产品侧的落点。
+
+### 四层状态必须作为一个恢复单元设计
+
+数据面托管四类生命周期不同的状态，不能用「保存对话历史」一笔带过：Session 事件能证明模型曾请求写文件，但不能代替文件本身；AgentStateStore 能恢复上下文，却不自动恢复外部数据库的副作用。Cloud Sandbox 选快照或 TAR 持久化时，只恢复模型上下文而没恢复文件，会造成「Agent 记得做过、工作区却不存在」的不一致。正确做法是分别恢复每一层，再用事件 ID、tool call ID 和资源引用重新关联——把模型上下文与文件系统当作一个恢复单元来设计。这层修复思路与 [[entities/agent-harness-production|Agent Harness 生产化]] 中强调的状态恢复纪律一致。
+
+### Self-hosted 的本质是执行发起权反转
+
+Cloud Sandbox 与 Self-hosted 的分野不在沙箱在哪，而在谁发起调用：前者由 Brain 主动打 E2B 兼容 API，平台掌握完整句柄，可统一设置超时、隔离范围和持久化策略；后者由 Brain 关闭本地实执行、把工具注册为外化 schema，客户 Worker 持 Environment Key 出站 poll 队列并在自己边界内执行，Brain 全程不进入客户 VPC。随之而来的责任转移是：平台提供协议与状态机，但不能替客户定义业务工具的幂等语义；本地沙箱存活、重复任务安全、结果脱敏都成为客户侧义务。当前参考 Worker 开箱只支持内置 shell/FS，数据库、自定义业务工具与内网 MCP 仍需扩展 SPI 或自行封装。
+
+## 实践启示
+
+1. 评估 Managed Agents 平台时，先看它把哪些工程决策从业务侧收走（压缩、恢复、工具结果淘汰），又暴露了哪些业务差异面——收得越干净，Agent 之间的稳定性差异越小。
+2. 设计 Agent 权限模型时用 Brain/Hands 三问拆解：模型可见上下文、工具可达边界、结果回传范围分别审批，而不是给整个 Agent 容器一把大锁。
+3. 用 Workspace/AbstractFileSystem 式抽象把 Agent 定义与执行面解耦，让同一 Agent 定义可切换 local/sandbox/self-hosted，隔离策略变更不改业务提示词。
+4. 恢复设计必须把模型上下文与文件系统当作一个恢复单元，恢复后用事件 ID 与 tool call ID 重新关联，否则会出现「记得做过、工作区不存在」。
+5. 多 Agent 编排按最小权限拆角色并独立审计（工作区权限、外部接入、汇总职责各自约束），靠权限边界而非提示词约束行为；可参考 [[concepts/agent-orchestration-patterns|Agent 编排模式]]。
+6. 高风险 MCP 写操作的审批与幂等要落在 MCP 网关侧，Agent body 中的 permissionPolicy 不进入确认中间件，不能作为唯一防线；更换信任边界时应新建 Session，避免同一事件历史跨越不同执行语义。
+
 
 ## 相关实体
 

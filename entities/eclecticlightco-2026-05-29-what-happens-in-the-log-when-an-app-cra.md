@@ -11,7 +11,7 @@ review_confidence: 8
 review_stars: 4
 review_recommendation: strong
 created: 2026-06-01
-updated: 2026-09-07
+updated: 2026-11-17
 reviewed: 2026-09-07
 review_verdict: keep
 review_category: tech
@@ -28,6 +28,18 @@ Practical and specific macOS debugging guide from a trusted source, with actiona
 > 来源：[[raw/articles/eclecticlightco-2026-05-29-what-happens-in-the-log-when-an-app-cra.md|原文存档]]
 
 本篇来自 TLDR AI Newsletter 推荐。技术深度评分：v=7, c=8, stars=4。 ^[raw/articles/eclecticlightco-2026-05-29-what-happens-in-the-log-when-an-app-cra.md]
+
+### 错误码语义：从码表反推具体缺陷
+
+日志最有诊断价值的产出之一是签名验证返回的错误码本身。原文整理的常见错误码表中，-67062（代码完全未签名）最为常见；-67030 表示 Info.plist 或签名被修改过，-67054 指向某个 sealed 资源缺失或失效，-67021 则对应嵌套代码被改动。这些码的粒度足够细，能把"签名坏了"缩小到具体缺陷类别：作者仅改动 Info.plist 里的一个字符，破坏了 CDHashes，日志便准确报出 -67030。掌握这张对照表后，看到错误码即可直接反推排查方向——重新签名、修复 plist，还是检查资源文件。
+
+### 日志的多进程接力叙事
+
+启动崩溃日志在结构上是一份多进程接力记录：Finder 报告双击动作，syspolicyd 与 trustd 先行发起签名验证，lsd 反复抛出同一个错误码，launchservices 随后给出更详细的错误描述，amfid 再次独立验证一遍，最后由内核执行裁决并以 `kernel ASP: Security policy would not allow process` 收尾。同一个错误在链条上被多个子系统重复确认，由此可得两个推论：单看某一层的一条记录容易误判，必须读完整链条才能定位失败真正发生在哪一层；各条目的"证词"来自不同进程视角，交叉比对能还原出比任何单条记录都完整的故障图像。
+
+### 可观测性的不对称分布
+
+四种常见崩溃原因在日志中留下的痕迹量差异极大，这决定了取证策略必须分层。代码签名错误和 translocation 由系统组件多层记录，几乎不可能漏掉；偏好设置问题只有在应用使用标准 `cfprefsd` 机制时才有 XPC 连接与 Loading Preferences 条目可循，而使用自定义偏好机制的应用（`cfprefsd` 与 `defaults` 命令均不覆盖）几乎不留任何痕迹；文档打开失败最隐蔽，唯一知道真相的进程是应用自身，第三方应用又很少往日志写入有用信息。换言之，日志的可观测性由"谁负责记录"决定：系统层故障天然自带证人，应用内部故障则依赖开发者自己的日志意识，痕迹稀薄的类型只能靠排除法间接推断。
 
 ## 扩展内容
 
@@ -52,6 +64,20 @@ Practical and specific macOS debugging guide from a trusted source, with actiona
 ### 文档打开失败：最隐蔽的崩溃类型
 
 在四种常见的启动崩溃原因中，"Failed to open document"（文档打开失败）是最难在日志中找到证据的类型。这是因为唯一知道发生了什么错误的进程是应用本身，而第三方应用通常不会向日志写入有意义的信息。与代码签名错误（整个系统多层验证）或 translocation（操作系统明确记录路径转换）不同，文档打开失败完全依赖于应用自身的日志记录意识。这意味着对于缺乏良好日志实践的应用，诊断工具只剩下交叉验证法：通过排除其他三种更明显的崩溃原因来间接推断问题所在。在 LogUI 中，可以通过将工具栏右侧的菜单设置为 **Processes**，然后在搜索框中输入应用名称来过滤相关条目——但即使这样做，许多情况下也不会有任何有用的信息出现。 ^[raw/articles/eclecticlightco-2026-05-29-what-happens-in-the-log-when-an-app-cra.md]
+
+## 实践启示
+
+1. **用时钟秒数法固定采样窗口**：菜单栏时钟显示秒数，秒数约 45 时选中应用、秒数到 00 时双击，随后至少 5 秒不碰键鼠；LogUI 新窗口会把起始时间预设为打开应用的时刻，直接提取 00 秒起 5 秒内的条目，无需手算时间范围。
+
+2. **以 softball emoji 条目为检索锚点**：双击在日志中表现为四条几乎相同的 `AppKit Finder sendAction:` 条目，第四条之后的第一条记录就是崩溃链条的起点；找不到时把 LogUI 工具栏右侧菜单切到 Messages 或 Processes，按应用名过滤。
+
+3. **见到签名错误码先查码表再下结论**：-67062（完全未签名）最常见，-67030 指向 Info.plist 或签名被改，-67054 是 sealed 资源缺失；但单个错误码只说明缺陷类别，要继续追到 `kernel ASP: Security policy would not allow process` 这行最终裁决，才能确认问题出在哪一层验证，避免只凭 lsd 层的重复报错就动手修复。
+
+4. **判定 translocation 需凑齐双重证据**：既要找到 `SecTranslocateCreateSecureDirectoryForURL` 的目录创建记录，也要确认应用确实从 `/private/var/folders/.../AppTranslocation/` 长路径运行（看 runningboard 的 `_executablePath` 条目）；只有创建记录不足以认定它是崩溃原因。
+
+5. **偏好设置崩溃盯紧 cfprefsd 的 XPC 连接**：按时间顺序确认 `com.apple.cfprefsd.daemon` 与 `com.apple.cfprefsd.agent` 两条连接建立、`Loading Preferences From User/System CFPrefsD` 条目出现后随即崩溃，即可锁定偏好文件读写环节；若应用使用自定义偏好机制，不要在日志里浪费时间。
+
+6. **对"最安静"的崩溃类型用排除法**：文档打开失败几乎不在日志留痕，先用 Processes 过滤确认不是签名、translocation、偏好这三类，再回头检查应用能否打开同类文档（损坏或不兼容），必要时借助崩溃报告而非日志取证。
 
 ## 相关实体
 - [[entities/reasoning-lift]]

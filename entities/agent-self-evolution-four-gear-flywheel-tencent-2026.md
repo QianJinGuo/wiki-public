@@ -1,7 +1,7 @@
 ---
 title: "Agent 自进化四齿飞轮：评测→记忆→落地→控制（腾讯技术工程）"
 created: 2026-08-26
-updated: 2026-09-07
+updated: 2026-11-10
 type: entity
 tags: [self-evolution, flywheel, evaluation, memory, skill, harness, tencent, human-in-the-loop, agent-engineering]
 sources: [raw/articles/agent-self-evolution-four-gear-flywheel-tencent-2026]
@@ -35,6 +35,28 @@ review_category: practice
 
 ## 齿三/齿四：落地工程化 + 控制（人机协作）
 落地解决"改什么、怎么生成修复、怎么安全上线"；控制是"方向盘和刹车"，确保进化方向不跑偏。评测是闭环输入源，Skill/Prompt 更新后必须能被评测验证，验证结果反哺下一轮——链路断任何一环飞轮都转不起来。^[raw/articles/agent-self-evolution-four-gear-flywheel-tencent-2026.md]
+
+## 深度分析
+
+### 飞轮为什么断一齿就停：衔接成本被系统性低估
+原文开篇的诊断不在单项技术，而在组织分工：评测打分止步周报、记忆被召回噪声拖垮、Skill 生成无版本管理——"眼睛/大脑/手脚/方向盘"各管一段，飞轮转不起来。^[raw/articles/agent-self-evolution-four-gear-flywheel-tencent-2026.md:19-21] 四齿的价值不在各自最优，而在接口契约：评测信号能流进记忆与 Skill 更新，更新后能被评测复验，验证结果反哺下一轮。工程含义是把环节间数据契约（失败样本回流、金标集、反例标记）当一等公民设计，而非只打磨各齿内部算法。
+
+### 评测可信度不是口号，是三层结构撑出来的
+可信度靠互相兜底的结构：手段分层（规则校验零成本打底、LLM-as-Judge 以生成/评估模型分离+temperature=0+结构化输出约束偏差、人工抽样+元评测集兜顶）；评测集三分法严格隔离（train 50-60%/val 20-30%/test 15-20%，互不泄漏，val 每 2-4 周更新 20-30% 防"背题"）；评估器自身被元评测。^[raw/articles/agent-self-evolution-four-gear-flywheel-tencent-2026.md:43-45] 反面是弱评估器的系统性偏差被多轮进化放大成"写长骗分"的错误正反馈。^[raw/articles/agent-self-evolution-four-gear-flywheel-tencent-2026.md:34] 与 [[concepts/eval-optimizer-firewall|评估-优化防火墙]] 的信号隔离思想一致：信号不可信时，自动化越强翻车越快。
+
+### 记忆治理的三条铁律：策展、分层、预算
+"治理>存储"落到工程是三条铁律。其一，策展写入：正信号触发、失败标记反例，配非对称淘汰（好经验 +0.05、坏经验 -0.12，淘汰速度 2.4 倍）——错误记忆的伤害大于正确记忆的收益。^[raw/articles/agent-self-evolution-four-gear-flywheel-tencent-2026.md:67] 其二，分层存储：L0 原始对话→L1 原子事实→L2 场景块→L3 用户画像，默认 L3、按需钻取。其三，读取预算：默认只注入顶层 500-800 token，Skill≤2000/Facts≤800/Profile≤500、单条≤200、最多 6 条；Mermaid+node_id 符号化压缩实测 Token -60%。^[raw/articles/agent-self-evolution-four-gear-flywheel-tencent-2026.md:73] 文件系统+Bash/grep 胜过专用记忆 API，说明 [[concepts/context-window-economics|上下文经济学]] 才是记忆第一约束，与 [[concepts/agent-memory-systematic-framework|记忆系统化框架]] 的分层/生命周期视角同构。
+
+### 齿三/齿四的角色：归因链路定精度，人机协作定方向
+评测终点不是分数，而是按根因分流的归因链路：系统性问题→Skill/Prompt 更新+Playbook，偶发→记忆反例，能力缺失→工具补充，回归→回滚+blocked。^[raw/articles/agent-self-evolution-four-gear-flywheel-tencent-2026.md:47] 归因粒度决定修复精度：粗归因引发大面积重写；连续 3 轮失败率 80%+ 不降，先查工具实现层而非配置层（曾有 20+ 轮无效迭代）。人机协作作为"方向盘与刹车"^[raw/articles/agent-self-evolution-four-gear-flywheel-tencent-2026.md:19] 在本存档着墨有限（原文截断于三/四/五章处），但定位明确：在可信评测与记忆治理之上把关进化方向，与 [[concepts/evaluation-harness-design|评测体系设计]] 的人工抽样校准同机制。
+
+## 实践启示
+
+1. **先立可信信号，再上自动化**：评测可信度 > 系统复杂度——管线开跑前先用元评测集验证评估器本身。
+2. **数据集三分并防泄漏**：train/val/test 互不泄漏、定期轮换更新，线上失败样本持续回流。
+3. **一切提升预算对等复测**：Best-of-N 式提升关掉额外预算就打回原形，评估必须同预算进行。
+4. **记忆默认少存、快淘汰**：策展而非全存；坏经验淘汰速度设为好经验强化的 2.4 倍。
+5. **上下文预算写进架构默认值**：渐进披露+分层 Token 预算+条数上限，防记忆反向挤压工作空间。
 
 ## 相关
 与 [[entities/agent-self-evolution-evaluator-bottleneck|Agent 自进化评估瓶颈（外置 evaluator）]]、[[entities/ai-skill-四层验证体系|Skill 四层验证体系]]、[[entities/agent-evaluation-turing-meituan-2026|美团图灵 Agent 评测体系]] 呼应（本文为整合四齿飞轮的体系级方法论）；与 [[entities/aliyun-agentloop-enterprise-agent-self-evolution-flywheel|阿里 AgentLoop 自进化飞轮]]、[[entities/hermes-self-evolution-closed-loop-skill-reuse-winty|Hermes 自进化闭环]] 同为自进化飞轮主题。与 [[entities/gaode-autosdk-observability-self-evolving-loop-2026|AutoSDK 可观测与自进化闭环]] 互补（该篇讲可观测地基，本篇讲评测-记忆-落地-控制全链条）。→ [[raw/articles/agent-self-evolution-four-gear-flywheel-tencent-2026|原文存档]]

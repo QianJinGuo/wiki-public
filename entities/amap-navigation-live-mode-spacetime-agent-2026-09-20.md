@@ -1,7 +1,7 @@
 ---
 title: "高德导航Live模式：时空Agent架构——从「一次做对」到「变化后还能做对」"
 created: 2026-09-20
-updated: 2026-09-20
+updated: 2026-11-19
 type: entity
 tags: [agent, harness, amap, spacetime-reasoning, long-horizon-task, agent-memory, search-agent, post-training, speech-interaction]
 review_value: 8
@@ -87,6 +87,33 @@ related:
 ## 五、总结与展望
 
 技术主线一句话：**把伴行 Agent 从「空间智能内核 + 行动引擎」升级为「时空智能内核 + 主动服务引擎」，从「一次做对」到「变化后还能做对」**。步行阶段展望的「用户个性化出行伙伴」落地为 Agentic Memory × 长程任务的组合。两个后续方向：①**世界模型从「训练期干预」走向「运行期预演」**——现在世界模型用于离线构造反事实训练数据，下一步在关键决策点做轻量运行期后果预演（「这一步之后世界会变成什么样」），构建 Agent 与世界模型协同进化体系；②**时空智能基座**——对现有基座模型做规模化的出行场景时空能力（时间/空间两维度深度理解与推理）连续预训练。^[raw/articles/amap-navigation-live-mode-spacetime-agent-2026-09-20.md]
+
+## 深度分析
+
+### 四大能力共享同一底层原则：把「不可控」收敛为「可裁决」
+
+纵向对齐四大能力，公共结构不是某个模型或工具，而是「门禁＋裁决」模式在四条输出通道上的复用：说得准靠 POI-Explore 候选漏斗的终态门禁——模型核验不满足、冲突或无法验证时返回未找到而非硬凑数量，选出后再执行严格半径、品类冲突、去重与显式排序^[raw/articles/amap-navigation-live-mode-spacetime-agent-2026-09-20.md:92]；搜得准靠 LightSearch 的证据门禁这一「价值锚点」——回答质量从概率问题变成可控问题，模型输出边界由检索到的证据强度而非语言流畅度决定^[raw/articles/amap-navigation-live-mode-spacetime-agent-2026-09-20.md:120-122]；看得准靠多模态指路的「沉默优于错报」，NARF 以 Tier 2/3 之间的软边界避免硬边界导致的沉默崩塌^[raw/articles/amap-navigation-live-mode-spacetime-agent-2026-09-20.md:195]；办得成靠触发时机裁决——主动服务的难点不在「能不能触发」，而在「该不该现在触发」^[raw/articles/amap-navigation-live-mode-spacetime-agent-2026-09-20.md:289]。这是一条与端到端生成路线相反的架构判断：出行场景中每条对外输出都先经过一道与领域真值（路网可达性、营业证据、URL domain、导航播报优先级）硬绑定的闸门，LLM 只在闸门之内做语义决策。近场感知把该原则推到极致：位置事实直接调用逆地理编码引擎、LLM 不参与，「睁开眼睛」不是「做一个决定」^[raw/articles/amap-navigation-live-mode-spacetime-agent-2026-09-20.md:167]。
+
+### 「办得成」是一条可托付性闭环：任务一等实体 × 记忆消费 × 时机裁决
+
+条件驱动范式（任务创建→条件持续监听→满足时主动播报→闭环/重置）以五类触发条件（路线前置距离/地点到达/相对时间/周期重复/条件重复）覆盖绝大多数委托；最关键的工程决策是把任务做成「可被 Agent 检索、指代、推理和改写」的一等实体，配创建/更新/触发/挂起/销毁五个工具接入时空 ReAct 引擎，复合诉求自动组合（沿路线 POI 搜索＋地点触发型长程任务）^[raw/articles/amap-navigation-live-mode-spacetime-agent-2026-09-20.md:221-233]。记忆侧与之咬合：五环节闭环（写入判断→双库沉淀→分层召回→地图回灌→行程巩固）中「地图回灌」把记忆还原成地图可识别候选交还搜索/算路工具，三条消费路径（路线约束项/播报人格/Proactive 发起判断）落实「只有被真实消费的记忆才算决策资产」^[raw/articles/amap-navigation-live-mode-spacetime-agent-2026-09-20.md:243-263]；裁决优先级「实时可行性与安全硬约束 > 当轮显式诉求 > 高置信记忆 > 低置信推断」给记忆的权力划了上界^[raw/articles/amap-navigation-live-mode-spacetime-agent-2026-09-20.md:275]。这条闭环与 [[entities/remember-when-it-matters-proactive-memory-agent-long-horizon-wu-meta-2026|Meta「该记时才记」的主动记忆长程 Agent]] 同题异解，与姊妹实体 [[entities/amap-proactive-agent-lbs-spacetime|高德 Proactive Agent]] 互为方法论与工程落地的两面。
+
+### 反事实干预：从「打分」到「出变化题」的训练范式转变
+
+步行阶段 RL（Env 层结构性硬约束＋Pipeline 层 LLM Judge 轨迹评分）本质是在给定轨迹上做评价，回答不了「变化真的发生时能否发现、诊断并恢复」；Live 模式引入反事实推断模型，以干预者＋裁判员双角色在关键决策点构造可观测、可验证、可恢复的变化，覆盖用户约束变化、候选点失效、工具异常、路线及途经点状态变化四类场景^[raw/articles/amap-navigation-live-mode-spacetime-agent-2026-09-20.md:305-318]。数据质量三重保障（规则校验＋独立模型评审＋人工审核）把审核对象扩展到「干预之后是否可恢复、恢复得是否正确」，定向消除状态丢失、错误搜索、重复调用、不合理收口四类失败^[raw/articles/amap-navigation-live-mode-spacetime-agent-2026-09-20.md:320-324]；最优模型需求满足率 87.0%（较纯 SFT +12.1pp），干预评测集 40.7%→83.1%^[raw/articles/amap-navigation-live-mode-spacetime-agent-2026-09-20.md:328]。其方法论意义在于把「场景反馈」从被动等待线上暴露变成可批量、可控地主动生成^[raw/articles/amap-navigation-live-mode-spacetime-agent-2026-09-20.md:336]——这是「通用能力强不等于垂直场景好」的工程解；展望中「世界模型从训练期干预走向运行期预演」是该逻辑的自然延伸，与 [[entities/baai-orca-next-state-prediction-world-model|BAAI Orca 下一状态预测世界模型]] 代表的下一状态预测路线同向。
+
+### 低时延 Harness 的不可能三角：按知识性质分配监督信号＋非平均分流＋最小必要上下文
+
+时延、质量、成本构成不可能三角，优化对象必须从单次模型调用扩展到 Agent 全链路^[raw/articles/amap-navigation-live-mode-spacetime-agent-2026-09-20.md:361-367]。模型侧的核心判断是按知识性质分配监督信号：拒答、工具协议等确定性知识一旦前序字段出错便无法恢复，走 Label-Anchored SFT 强监督；开放式表达、工具选择与恢复路径走 OPD，在学生自身生成的工具调用轨迹上引入教师纠偏，跨词表蒸馏用 Sparse BPM 与残差建模控制成本^[raw/articles/amap-navigation-live-mode-spacetime-agent-2026-09-20.md:373-377]（方法版图见 [[entities/xopd-on-policy-distillation-landscape-banana-2026|OPD 在策略蒸馏全景]]）。架构侧大小协同不是平均分流，而是难度前置判断→小模型主执行→高置信升级→状态与预算守门四段链路；上下文侧「不是越多越好」，按来源分层、事实优先级（DriveContext 提供实时路线真值，记忆只补充不覆盖当前状态）与三档加载取最小必要事实^[raw/articles/amap-navigation-live-mode-spacetime-agent-2026-09-20.md:381-408]——与 [[entities/ibm-research-model-routing-optimization-2026|模型路由优化研究]] 及 [[concepts/agent-harness-engineering-paradigm|Harness 工程范式]] 的路由与分层思想一致。
+
+## 实践启示
+
+1. **把「信息正确」升级为「行动可执行」**：领域搜索 Agent 的护城河在领域独有约束层（驾车场景是路网可达性）。把它做成硬约束闸门而非排序特征，输出才是可执行动作候选，而不只是一份列表。
+2. **给每条输出通道配一道「不通过则不说」的门禁**：返回未找到、主动沉默、低置信不强答都是合法终态——它们把回答质量从概率问题变成可控问题；宁可放弃覆盖率也不硬凑数量。
+3. **长程任务做成一等实体**：任务必须可检索、指代、推理、改写（支持自然语言二次修改与取消），能力可组合而非一句话对应一个技能——这是 Agent 与技能式语音助手的本质分界。
+4. **记忆只认一个 KPI：改变后续决策**：先设计「谁在哪个决策点消费这条记忆」，再决定记什么；没有消费路径的记忆是负债。冲突、过期、低置信一律降级或再次确认，实时可行性与安全永远高于记忆。
+5. **评测要主动「出变化题」**：只在顺利路径上打分的评测发现不了恢复缺陷；以真实轨迹为条件注入可恢复的反事实变化，把场景反馈从被动等待线上暴露变成可批量生产的训练资产。
+6. **低时延是系统工程而非单点换模型**：按知识性质分配监督信号（OPD/SFT 分治）、大小模型非平均分流、按任务加载最小必要上下文，三者叠加才在不牺牲质量的前提下逼近时延下界。
 
 ## 相关实体
 

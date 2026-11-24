@@ -1,7 +1,7 @@
 ---
 title: Harness Engineering 框架
 created: 2026-04-27
-updated: 2026-09-10
+updated: 2026-11-09
 type: concept
 tags: [concept, agent, architecture, harness, prompt-engineering, context-engineering]
 related:
@@ -12,6 +12,7 @@ related:
 sources:
   - raw/articles/harness-engineering-framework
   - raw/articles/peking-university-harness-engineering-taming-agent-2026
+  - raw/articles/huolala-harness-engineering-stable-agent-practice-2026-11-09
 confidence: high
 ---
 # Harness Engineering 框架
@@ -109,6 +110,28 @@ Generator-Evaluator 分离的核心要点：
 第三，**最大循环次数必须有上限**。反馈不是无限的——如果 Generator-Evaluator 循环 N 次仍未收敛，系统应该主动终止并上报，而不是无限重试。Harness 的第 6 层（约束、校验与失败恢复）提供的就是这一层的保障。
 
 Generator-Evaluator 模式与 Harness 六层结构的对应关系：Generator 主要工作在第 2 层（工具系统）和第 3 层（执行编排），Evaluator 主要工作在第 5 层（评估与观测），两者通过第 4 层（状态与记忆）共享信息，并通过第 6 层（约束、校验与失败恢复）获得兜底保障。
+
+## 生产实践补充：货拉拉风控分析 Agent 的四支柱（2026-09）
+
+上面六层是框架层；货拉拉技术这篇给的是**同一套结构在一个具体生产场景里的落地清单**——团队用团队 Agent 做 text2SQL 与提示词工程执行分析（把写 SQL、查数据、归因分析的重复事务从人身上剥走），随后撞上上下文爆炸、任务超时、幻觉、权限管理，这些问题继续优化提示词解决不了，才开始做 Harness。规模背景：网关日志原始数据一天**数 T 级**，清洗后仍近 T 级；分析任务接入覆盖 **1k+ API**。^[raw/articles/huolala-harness-engineering-stable-agent-practice-2026-11-09.md]
+
+**先回答「你需要 Harness 吗」——三个明确不需要的情景**：①只要短期、临时、少量单轮问答或资料检索，模型 + System Prompt + RAG 就够，上 Harness 反而增加复杂度；②预算充足、直接上最强模型，Harness 可能只会降低上限；③架构从一开始就由 AI 驱动、核心价值直接建立在推理/生成/决策上，几个人的小团队产出不一定低于大公司。判断轴是三条：任务复杂度与可靠性/一致性要求、成本是否合适、把 Agent 当 autopilot 还是 copilot。这与 [[concepts/when-not-to-harness-engineering|何时不要 Harness]] 的边界条件互补——那一页从模型代际/成本/安全切入，这一篇从任务形态与团队形态切入。^[raw/articles/huolala-harness-engineering-stable-agent-practice-2026-11-09.md]
+
+**四支柱与六层的对应关系**：约束动作空间（工具 / skill / 权限 / 重试熔断）、管理 I/O 与上下文（分层降维、成本）、调度与触发（"何时干活"交给确定性系统）、状态与记忆持久化（记忆、git 版本）。一句话总结：「**Agent = 模型 + Harness，模型负责聪明，Harness 负责稳**」。作者还给了一个很有说服力的观察：公司内部 Agent 大赛近三周，跑通 Demo 很容易，「让模型具备良好的视力和行动能力」不难，**让模型持续稳定输出**才占掉大部分时间。^[raw/articles/huolala-harness-engineering-stable-agent-practice-2026-11-09.md]
+
+**技能供给：原子化能力，但不要囤技能**。Agent 一般跑在沙箱里，第一步是让它"看得见、够得着"真实数据——小数据量可以手工搬运，重复性任务要靠稳定的 skill 与 MCP 工具固化（如 idp-mcp 查 Hive、ES 分析即时流量、威胁情报查 IP）；固化后的工具还能提升缓存命中率、降低成本。反面是**技能越多越好是错的**：社区有开发者装了上万个 skill，Agent 效果反而变差——应按解决问题为导向增删迭代。^[raw/articles/huolala-harness-engineering-stable-agent-practice-2026-11-09.md]
+
+**上下文管理的第一手段是数据预计算，而不是压缩**：不把低信息密度的数据直接交给模型。数仓三层里 ods 与 dwd 都不适合直接喂模型（各为 T 级），到 **dws 层天级数据只有百 M 级**，再按小时分区就降到几 M，模型只处理几 M 才现实；但 dws 的细粒度分析仍需回到 dwd 明细。配合两类控制：**被动限制**（MCP 返回行数、会话连接时长、思考轮次与时长、token plan）与**主动介入**（在技能文档里规定时间范围/查询范围/查询深度；按优先级层次分析——高风险全量、中风险 TopN、低风险抽样）。具体做法是：先用廉价资源在 dwd 层把流量预计算成风险等级，再让高风险走 ES 全量分析、中低风险做层次分析。^[raw/articles/huolala-harness-engineering-stable-agent-practice-2026-11-09.md]
+
+**指令系统的分寸**：系统层注入提示词（`CLAUDE.md` 与 `./prompts`）一次定义好、少改——**频繁调整反而让输出不稳定**。`duties.md` 定义工作模式（收到问题→判断是否需要调工具→制定分析计划→执行工具调用→基于结果给结构化回答）、内容呈现格式、工作原则（用什么工具、方案对比、信息来源）与禁止事项；`rules.md` 管两类边界：禁止中间文件乱放（保持工作空间干净有序）、以及"不自作聪明、未被 @ 时保持沉默"——作者明确说**幻觉靠写记忆压不住，边界性约束必须在 rules.md 里特别声明**。^[raw/articles/huolala-harness-engineering-stable-agent-practice-2026-11-09.md]
+
+**调度：把"何时干活"从 Agent 手里拿走**。cron 定时触发在实际生产中问题很大——上游任务完成时间不确定，定时会造成重复执行、漏执行、超时，整体成功率很低；团队试过 A2A 调用（当时不支持）与数据探针，只能解决一部分；最终改为**事件触发**：上游完成后用事件唤起模型，模型不再需要猜上游何时就绪。^[raw/articles/huolala-harness-engineering-stable-agent-practice-2026-11-09.md]
+
+**知识管理两条**：①**记忆是长期资产**——人在这里更多承担 reviewer，大量带个人色彩的业务判断、使用偏好、处理流程是私域信息，不前置沉淀就会拉长"磨合期"；②**用 git 管 agent 的基础文件**（系统提示词、记忆文件、启动脚本），保证迭代可回溯、团队可共享、沙箱重建不丢。这正好补上框架层常被忽略的一条：**重建一个数字分身很容易，保证行为一致性很难**。^[raw/articles/huolala-harness-engineering-stable-agent-practice-2026-11-09.md]
+
+**运行指标对比（同模型 qwen3.7-plus、同时段）与四项调整**：①调度改为事件管线驱动、不依赖 cron，Agent 不再管理与修改自身调度状态，减少工具调用步骤；②**重试熔断**——每个操作最多重试 2 次、不要反复换参数格式（此前大量 token 与时间花在解决工具调用失败上）；③**查询方式改为一次性导出数据快照到工作空间、后续本地聚合**，消除重复 Hive 读写与错误重试；④**逻辑固化为脚本**——一致性要求高的输出固化为稳定脚本与命令，避免口径不一致、省掉现场推理。效果是 Agent Loop 显著缩短、稳定性提高、执行效率明显改善；整体 token 消耗增加，但增量大多来自**缓存读取与缓存创建**，而**缓存命中价格只有普通输入价格的 1/10**——用少量成本换效率是划得来的。^[raw/articles/huolala-harness-engineering-stable-agent-practice-2026-11-09.md]
+
+**尚未解决**：Agent 一味输出而收不到人类反馈，会不断自我强化、陷进"死胡同"出不来；如何收集人类真实反馈与纠正、并让 Agent 总结避免再次踩坑，是下一步的重点。这条与 [[concepts/agent-self-improvement-loops|Agent 自改进循环]] 的"反馈来源必须外部化"同向。^[raw/articles/huolala-harness-engineering-stable-agent-practice-2026-11-09.md]
 
 ## 相关页面
 - [[entities/thin-harness-fat-skills|Thin Harness Fat Skills]] — Harness 哲学的另一种表达

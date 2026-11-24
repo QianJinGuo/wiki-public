@@ -1,7 +1,7 @@
 ---
 title: "实锤了：Claude Code偷查用户，时区、中国AI实验室全是关键词"
 created: 2026-07-01
-updated: 2026-08-01
+updated: 2026-11-17
 type: entity
 tags: [ai, llm]
 sources: [raw/articles/实锤了claude-code偷查用户时区中国ai实验室全是关键词]
@@ -109,6 +109,35 @@ Claude Code 被曝用隐形代码标记中国用户^[raw/articles/实锤了claud
 ## 原文
 
 → [[raw/articles/实锤了claude-code偷查用户时区中国ai实验室全是关键词|原文存档]]
+
+## 深度分析
+
+事件暴露了带内隐蔽信道的三层结构：检测、编码、分发全部复用已有表面，不新增任何可见字段。
+
+### 信道链路：从环境变量到日期分隔符
+
+触发端：仅当 ANTHROPIC_BASE_URL 指向自定义代理而非官方端点时生效；命中后提取代理域名、读取系统时区，重点核查 Asia/Shanghai 与 Asia/Urumqi，再与解码后含 147 条目的清单比对——覆盖百度、阿里、字节、Moonshot、MiniMax 等域名及大量转售与镜像地址。^[raw/articles/实锤了claude-code偷查用户时区中国ai实验室全是关键词.md:52-58] 编码端：无独立 telemetry 字段，载体是系统提示词里的「Today's date is...」——时区命中时日期分隔符由短横线变斜杠，撇号在 '、'、ʼ、ʹ 间切换，标记命中清单、实验室关键词或兼有。^[raw/articles/实锤了claude-code偷查用户时区中国ai实验室全是关键词.md:60-68]
+
+### 带内设计的得与失
+
+不新增字段则流量形状不变，常规审计无从察觉，机制因此长期隐藏。代价：提示词是用户可逐字节 diff 的表面，隐蔽性依赖「没人细读提示词」而非密码学强度，识破后完全可复现、可验证。
+
+### 曝光路径：社区验证闭环
+
+开发者先在 Reddit 质疑，后在 GitHub 发布验证报告，对 2.1.193/195/196 三个版本逐一核查，确认机制存在并定性为系统提示词中的隐蔽信息通道。^[raw/articles/实锤了claude-code偷查用户时区中国ai实验室全是关键词.md:50] Anthropic 技术成员 @trq212 回应并承诺次日新版本移除。^[raw/articles/实锤了claude-code偷查用户时区中国ai实验室全是关键词.md:90] 质疑→取证→多版本验证→厂商回应，是 client 端黑盒行为最有效的外部制衡。
+
+### 动机正当性不等于手段正当性
+
+争议不在目的：telemetry 采集普遍存在，防滥用、遏制转售、规避制裁、防蒸馏都是可理解的动机，清单中大量转售与镜像地址也印证治理需求。^[raw/articles/实锤了claude-code偷查用户时区中国ai实验室全是关键词.md:70-76] 争议在实现：公开披露的 telemetry 保留知情权与选择权，藏进肉眼难辨的字符差异则改变了信任前提；对接触源码与密钥的 coding agent，信任是存在的根基。^[raw/articles/实锤了claude-code偷查用户时区中国ai实验室全是关键词.md:84-86] 以 [[concepts/agent-security-threat-models|Agent 安全威胁模型]]视角看，这是威胁来自信任链上游的案例；同类参见 [[entities/claude-code-china-api-router-fingerprint|API 路由指纹]]与 [[entities/claude-invisible-watermark-genai-steganography-xinzhiyuan|GenAI 隐写水印]]。
+
+## 实践启示
+
+1. 审计 AI 客户端：逐字节 diff 系统提示词比读配置可靠，信号就藏在「Today's date is...」里。
+2. 把形近 Unicode 字符（'、'、ʼ、ʹ）列入安全扫描清单：不可辨的字符替换是现成隐写载体。
+3. 走自定义代理（ANTHROPIC_BASE_URL）的组织：非官方路由触发特殊分支，「client 行为披露」应列入供应商评估条款。
+4. 遇可疑行为复用质疑→取证→多版本核查路径：可复现的版本号证据最能推动厂商回应。
+5. 评估 telemetry 分两问：目的是否正当（防转售可以是），实现是否可披露（带内信道不是），不可互相辩护。
+6. 信任是 coding agent 的根基：权限确认防不住 vendor 侧隐蔽编码，权限治理与数据透明度是独立治理面。
 
 ---
 ## 关联

@@ -1,7 +1,7 @@
 ---
 title: "WorldTUI：360M 模型把终端学成世界模型——屏幕网格 token、333 词表与 DAgger 式自我纠错"
 created: 2026-10-24
-updated: 2026-10-24
+updated: 2026-11-10
 type: entity
 tags: [world-model, small-model, fine-tuning, terminal, agent-ui, dagger, decoding-constraints, on-device, webgpu]
 sources: [raw/articles/worldtui-terminal-world-model-360m-simulated-shell-2026]
@@ -47,6 +47,27 @@ provenance_state: extracted
 2. **误差累积是长程 agent 环境的头号问题，DAgger 式修正数据是可复用的解法**：环境模型和真实 agent 一样会"错一步、错到底"；把"修回来"当成显式训练目标（且限定在可解释信息范围内）比单纯加大数据更有效。^[raw/articles/worldtui-terminal-world-model-360m-simulated-shell-2026.md]
 3. **合成数据的可信度来自"可验证性"**：Docker 里跑真命令得到的标签天然正确，随机化人设与活动分布保证覆盖，1.2% typo 与中途接续是刻意制造的难度。^[raw/articles/worldtui-terminal-world-model-360m-simulated-shell-2026.md]
 4. **局限**：这是"终端世界"的模拟器，不是真实执行环境——它能预测屏幕，但不保证副作用正确；把它当作 agent 评测/训练环境时，需要与真实 shell 的抽样对齐（作者未给出与真实终端的分布偏移量化）。^[raw/articles/worldtui-terminal-world-model-360m-simulated-shell-2026.md]
+
+## 深度分析
+
+### 一致性来自表示而非规模：333 词表把输出压成"合法屏幕更新"
+
+最容易被低估的决策是把世界状态做成 64 行格子 + 行级操作：滚屏从约 96 token/行压到 3 token/行，词表收缩到 256 byte + 64 row 加少量特殊操作。360M 参数因此够用——模型要学的不是"什么是终端"，而是格子间的转移函数；表示与动作设计是比参数量更硬的杠杆。^[raw/articles/worldtui-terminal-world-model-360m-simulated-shell-2026.md:76-80]
+
+### 行并行的边界：先拿一致性换速度，再用自投机赎回
+
+行并行把解码成本从"所有行之和（至多 3,000 步）"降到"最长一行（约 100 步）"，大帧 p95 从 6.7s 降到 0.87s；但训练要配套行间注意力掩码，是架构级改动而非纯推理技巧。行独立也带来真实失败：内容开在错误的行、snake 被多行同时加食物；解法是同一模型自草稿自校验的自投机解码，浏览器里大更新从 2.5s 回到 0.9s。每一步性能优化都要回答"它破坏了哪条约束"。^[raw/articles/worldtui-terminal-world-model-360m-simulated-shell-2026.md:180-186]^[raw/articles/worldtui-terminal-world-model-360m-simulated-shell-2026.md:192-208]
+
+### 蒸馏揭示的记忆定位：通用准确率掩盖世界状态丢失
+
+嵌入表占基座 151,936 词表的 136M 参数，砍到 333 token 后模型从 494M 缩到 360M（990→716MB，int4 后 208MB）。蒸馏给出全文最锐利的发现：剪掉第 7 层，next-token 准确率仅从 99.3% 降到 98.9%，精确读回却从 64/64 崩到 0/64——"还会打字"与"还记得世界"是两种能力。用第 23 层顶替第 22 层的学生读回 31/64，恰为随机水平，480M token 也未恢复；保留 1/7/15/22 层的 16 层学生读回 64/64，ShellBench 却从 78 掉到 65。作者最终放弃蒸馏：长程记忆嵌在具体层里，删层会悄悄破坏它，通用指标测不出。^[raw/articles/worldtui-terminal-world-model-360m-simulated-shell-2026.md:212-216]^[raw/articles/worldtui-terminal-world-model-360m-simulated-shell-2026.md:220-220]^[raw/articles/worldtui-terminal-world-model-360m-simulated-shell-2026.md:222-226]
+
+### 对世界模型路线的启示
+
+1. **一致性要有专门探针**：跨会话读回测试（写两个值、分别读回）比 next-token 准确率更能暴露"假世界模型"；这与 [[entities/quantization-techniques|量化]] 里"困惑度不降但能力已损"的教训同构。^[raw/articles/worldtui-terminal-world-model-360m-simulated-shell-2026.md:218-224]
+2. **性能与一致性是两张支票**：行并行赢回延迟、输掉行间协调，自投机再把一致性赎回；[[concepts/speculative-decoding|投机解码]] 在此是同模型自校验而非大小模型协作。^[raw/articles/worldtui-terminal-world-model-360m-simulated-shell-2026.md:180-208]
+3. **作者自认这是"相当弱的世界模型"**：它维持着一个大体一致的世界，却没有实现任何底层规则——这为"学出来的环境"的能力边界提供了诚实锚点。^[raw/articles/worldtui-terminal-world-model-360m-simulated-shell-2026.md:280-284]
+4. **下一步实验最有信息量**：在数千个随机生成、各有控件与规则的应用上训练，检验模型能否凭上下文线索预测从未见过的应用——这是"世界模型能否零样本泛化到新环境"的直接实验设计。^[raw/articles/worldtui-terminal-world-model-360m-simulated-shell-2026.md:282-284]
 
 ## 关联
 

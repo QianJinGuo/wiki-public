@@ -1,7 +1,7 @@
 ---
 title: "Anthropic 官方 Agent Harness 平台：Claude Managed Agents 完整指南"
 created: 2026-05-10
-updated: 2026-09-10
+updated: 2026-11-21
 type: entity
 tags: [mlops, ai-agent, agent-tools, engineering, anthropic, claude, claude-managed-agents, harness-engineering, agent-platform]
 review_value: 7
@@ -47,6 +47,35 @@ moc_rebuilt: 2026-09-07
 - [[entities/精选-10-个开发者常用的-ai-智能体技能agent-skills|精选 10 个开发者常用的 AI 智能体技能（Agent Skills）]] — 四类技能质量筛选节点
 - [[entities/你写的-skill及格了吗|你写的 Skill，及格了吗？]] — D1元数据定生死评估框架
 
+## 深度分析
+
+### 定位：补齐企业级 Agent 的产品断层，Anthropic 走平台化路线
+Managed Agents 的本质不是又一个 Agent 框架，而是把 harness 从"开发者自己拼"变成"平台代管"：工具调用、上下文管理、错误恢复都内置于编排引擎，并随模型能力一起升级^[raw/articles/anthropic-官方-agent-harness-平台claude-managed-agents-完整指南.md:19-22]。文章指出的断层很真实——企业想跑长时间、能自主调工具的 Agent，过去得自建沙箱、状态管理、权限与错误恢复，这些 infra 工作往往比业务逻辑还重。作者的 EC2→Lambda 类比^[raw/articles/anthropic-官方-agent-harness-平台claude-managed-agents-完整指南.md:288-292]点出了战略含义：Anthropic 在复制云厂商的抽象阶梯（Messages API → Managed Agents），把 [[concepts/agent-harness-engineering-paradigm]] 从开发者自拼的工程实践收编为托管服务，与 [[entities/anthropic-claude-managed-agents-platform-2026]] 的平台发布主版互为印证。
+
+### 四概念模型：Agent / Environment / Session / Events 的关注点分离
+四个概念是一次教科书级的职责切分^[raw/articles/anthropic-官方-agent-harness-平台claude-managed-agents-完整指南.md:23-96]：
+- **Agent** = 可版本化的配置（模型 + 系统提示词 + 工具集），创建后拿 Agent ID 复用；`agent_toolset_20260401` 开箱即用（Bash/文件/搜索/Web）但可逐项禁用，且每次更新生成新版本，可把会话固定在指定版本上做生产灰度。
+- **Environment** = 运行模板（依赖、网络规则、挂载），支持 pip/npm/apt/cargo/gem/go 预装并缓存加速后续会话；网络默认 `unrestricted`，可切 `limited` + 域名白名单处理敏感数据；GitHub 仓库挂载后启动自动 clone，天然适配自动化 PR 检查。
+- **Session** = 独立容器中的运行实例，文件系统/进程/网络互相隔离，多轮对话保留状态、持续存在直到手动关闭或超时——这是它与无状态 API 调用的本质区别，后续任务直接基于已写好的代码继续。
+- **Events** = SSE 双向通道，消息下发与响应/工具调用/状态更新实时流回，全程可见、可中途打断。
+
+底层仍是与 Claude Code 相同的 ReAct（Reason → Act → Observe）循环，区别只在运行环境与调度逻辑已被平台接管^[raw/articles/anthropic-官方-agent-harness-平台claude-managed-agents-完整指南.md:165]——这与 [[entities/harness-generator-evaluator-anthropic]] 中 harness 能力内置化的演进方向一致。
+
+### 多智能体编排：对话隔离、文件系统共享的折中设计
+研究预览版的编排是 coordinator → worker 的一层分工，工作者不能再往下拆^[raw/articles/anthropic-官方-agent-harness-平台claude-managed-agents-完整指南.md:195-227]。设计上最有意思的取舍是"**对话隔离、结果共享**"：每个工作者在独立上下文运行、互不污染，但共享同一容器和文件系统——测试智能体能直接看到审查智能体标出的问题并针对性补测试。这等于用共享文件系统替代消息总线做 agent 间通信，简单但有效。作者把它类比成"AI 版 CI/CD 流水线"：lint、测试、安全扫描、部署各由专门 agent 处理，协调器统一收口。配套自定义工具（JSON Schema 定义、事件流接住请求再回传）与 MCP 直连（Slack/GitHub/Jira 复用现成工具），扩展面基本覆盖了企业内部系统集成的两类主流路径。
+
+### 成本结构：token 是思考成本，runtime 是环境成本
+计费 = token（与普通 API 同价）+ 会话运行时间 $0.08/小时、精确到毫秒、空闲不计费^[raw/articles/anthropic-官方-agent-harness-平台claude-managed-agents-完整指南.md:229-264]。作者先用一张"你要自己管多少东西"的对比表定位 Managed Agents，再给出实例账：Opus 4.6 跑 1 小时编码任务（50K 输入 + 15K 输出）总计约 $0.705。两个容易忽略的点是：Web 搜索 $10/1000 次可能悄悄成为大头；提示词缓存命中只算 0.1x——对上下文很长的 Agent 这是关键折扣。作者对 runtime 的判断也务实：对比自建 EC2 + 容器 + 调度 + 工具链，时间成本与工程复杂度往往更高。
+
+## 实践启示
+
+1. **选型先问"要管多少 infra"，再问场景**：完全定制走 Messages API，想复用 Claude Code 工具集但自托管走 Agent SDK，后端自动化（PR 审查、代码生成流水线、测试、文档生成）走 Managed Agents，本地交互式开发用 Claude Code CLI。
+2. **把 Environment 当 IaC 用**：敏感数据场景一律 `limited` 网络 + 域名白名单；GitHub 仓库挂载 + 环境缓存让自动化 PR 检查的冷启动成本趋近于零。
+3. **多智能体按流水线编排，不按对话编排**：一层 coordinator→worker 虽然受限，但"对话隔离 + 共享文件系统"的协作面足够支撑审查→补测试这类串行工作流；先想清楚 agent 间通过文件系统交接什么，而不是堆消息协议。
+4. **成本模型算三笔账**：token（思考成本）、runtime（环境成本，$0.08/小时空闲免费）、易漏的 Web 搜索与缓存折扣（命中 0.1x）——长上下文 Agent 务必开启提示词缓存，否则成本结构完全不同。
+5. **用 Agent 版本化做生产灰度**：每次更新生成新版本，先让测试会话跑新版本，验证后再把生产会话固定切过去。
+6. **自建沙箱的机会成本被系统性低估**：循环控制、工具调用、执行环境、上下文管理这些"看不见的 infra"正是平台收走的部分——对长时运行任务，托管方案的时间与工程复杂度优势通常是决定性的。
+
 ## 延伸导航
 - [[moc/anthropic-ecosystem|Anthropic 生态与战略]]
 
@@ -55,5 +84,3 @@ moc_rebuilt: 2026-09-07
 - 同题异语种孪生页：[[entities/claude-managed-agents-developer-guide]]（归并候选，提案卡 #11 批1）
 - 同题异语种孪生页：[[entities/anthropic-agent-skills-design-patterns-14]]（归并候选，提案卡 #11 批1）
 - 同题异语种孪生页：[[entities/anthropic-claude-code-large-codebase-best-practices-50002a089323]]（归并候选，提案卡 #11 批1）
-
-

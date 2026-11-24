@@ -2,7 +2,7 @@
 
 title: "从 ReAct 到 Agent Teams：一个工程师视角的 Agent 协作机制思考"
 created: 2026-09-01
-updated: 2026-09-10
+updated: 2026-11-15
 type: entity
 tags: [ai, agent, harness, memory, mcp, multimodal]
 sources: [raw/articles/从-react-到-agent-teams一个工程师视角的-agent-协作机制思考]
@@ -68,6 +68,50 @@ ReAct 的成功来自对「个体智能」的正确抽象。Agent 间的协作�
 
 
 → [[raw/articles/从-react-到-agent-teams一个工程师视角的-agent-协作机制思考|原文存档]] ^[raw/articles/从-react-到-agent-teams一个工程师视角的-agent-协作机制思考.md]
+
+## 深度分析
+
+### 为什么单循环 ReAct 在团队规模下失效
+
+ReAct 把个体智能抽象成 Thought → Action → Observation 的闭环，Observation 的外部接地抑制了幻觉与错误累积 ^[raw/articles/从-react-到-agent-teams一个工程师视角的-agent-协作机制思考.md:31-33]。但这个抽象只覆盖了「一个 Agent」：它的隐含前提是反馈、记忆、经验都装在同一个 context 里。大模型本身无状态，所谓「记得上次」只是把历史重新塞回 context ^[raw/articles/从-react-到-agent-teams一个工程师视角的-agent-协作机制思考.md:53-55]，于是当任务复杂到需要多个循环并行时，每个循环都活在各自的 context 里，谁也看不见谁的 Observation——协作这件事在 ReAct 里没有任何对应原语。
+
+文章用两组实验数据把失效量化：手工设计的多 Agent 系统在 9 个测试里有 6 个反而不如单个 Agent ^[raw/articles/从-react-到-agent-teams一个工程师视角的-agent-协作机制思考.md:55]；去掉协作进化机制后，20 个 Agent 的团队和 1 个 Agent 表现完全一致，多 Agent 的价值 100% 来自协作机制本身，加人不等于加价值 ^[raw/articles/从-react-到-agent-teams一个工程师视角的-agent-协作机制思考.md:57,135]。失效的根因不是模型不够强，而是结构性的：当前 Manager-Workers 架构里 Worker 之间完全隔离，只有指向 Leader 的纵向通道，缺少 peer-to-peer 的横向信息流 ^[raw/articles/从-react-到-agent-teams一个工程师视角的-agent-协作机制思考.md:17,23]——「分工不同」被实现成了「不能说话」。参见 [[concepts/orchestrator-worker-architecture]] 与 [[concepts/multi-agent-collaboration-patterns]]。
+
+### 协作拓扑与角色设计：作者主张什么
+
+拓扑选择上，作者直接引用学术结论：2025 年通信拓扑综述识别了 Flat / Hierarchical / Team / Society / Hybrid 五种架构，越是需要灵活交互、频繁互相求助的场景，全连接 Flat（P2P）结构反而优于层级结构 ^[raw/articles/从-react-到-agent-teams一个工程师视角的-agent-协作机制思考.md:17,33]。他的设计不是在 Leader-Worker 里修修补补，而是重造三个维度：
+
+- **角色**：Leader 必须与 Worker 有真实能力差——更强的模型、更长的 context、更全局的历史访问权——并具备四特征：深度参与方案制定、与 Worker 讨论后再执行、能兜底接手卡住的任务、负责方案变更审查；而不是「同质化的几个 Agent 换个 prompt 就当 Leader」 ^[raw/articles/从-react-到-agent-teams一个工程师视角的-agent-协作机制思考.md:71-73]。
+- **流程**：任务启动走显式的「讨论 → 共识 → 执行」三 Phase 协议（Leader Proposal / Worker Feedback / Consensus），把执行层约束前置到规划阶段；人类团队里最贵的沟通开会成本在 Agent 侧几乎不存在，三 Phase 可异步并行、秒级完成 ^[raw/articles/从-react-到-agent-teams一个工程师视角的-agent-协作机制思考.md:89-93]。
+- **管理风格**：命令式、带负面暗示的任务描述会让同一个模型产出保守机械、只做最低要求；鼓励式、探索式引导的产出深度和创造性有肉眼可见的提升——因为 RLHF/DPO 训练分布里「命令、否定」语境对应保守免责的回复 ^[raw/articles/从-react-到-agent-teams一个工程师视角的-agent-协作机制思考.md:79-83]。Leader 的语气本身就是工程变量。参见 [[concepts/multi-agent-team-coordination]] 与 [[concepts/agent-role-specialization]]。
+
+### 状态与上下文共享：从孤立 context 到分层资产
+
+文章把「共享什么、放在哪」拆成三层：
+
+- **文件层**：AgentTeams 用 MinIO 提供跨 Worker 的共享文件系统，把大块中间产物放进存储而不是塞进 context，直接降低 token 消耗 ^[raw/articles/从-react-到-agent-teams一个工程师视角的-agent-协作机制思考.md:21]。
+- **通信层**：Worker 间横向通信有三种模式——主动广播（push 阶段性成果与共同风险）、被动查询（pull 中间结果与专业判断）、求助升级（先横向找同伴，解决不了再向 Leader 升级） ^[raw/articles/从-react-到-agent-teams一个工程师视角的-agent-协作机制思考.md:101]。通道由 A2A / ANP / Matrix 提供底座，但只有通道不够，必须叠加通信策略：熟人网络（历史合作过的 Worker 更容易触发通信）、技能索引（按能力域路由请求）、通信预算（每 Worker 每任务上限），否则全连接会随 Worker 数量指数级爆炸 context ^[raw/articles/从-react-到-agent-teams一个工程师视角的-agent-协作机制思考.md:103]。参见 [[concepts/multi-agent-context-isolation]] 与 [[concepts/context-management-agent-systems]]。
+- **知识层**：集体复盘产出三类资产——方法论、协作模式（team playbook）、反模式——并存两处：所有 Worker 可读的团队共享知识库 + 只对当前岗位有意义的角色专属经验 ^[raw/articles/从-react-到-agent-teams一个工程师视角的-agent-协作机制思考.md:131]。这延续了「上下文即记忆」的路线：经验只有持久化并在下次精准塞回有限的 context window，才算真正发生过 ^[raw/articles/从-react-到-agent-teams一个工程师视角的-agent-协作机制思考.md:55-57]。
+
+岗位定义（JD）是另一层共享状态：能力要求、可用 Skill 池、质量标准、汇报关系、SLA 全部显式化，同一个模型配不同 JD 就是不同 Worker；再往上的 Mission 与宗旨，则负责在人类不下场时给自主取舍提供锚点，让能动性不变成失控 ^[raw/articles/从-react-到-agent-teams一个工程师视角的-agent-协作机制思考.md:119-123]。
+
+### 失效模式与恢复
+
+- **方向性返工**：Worker 埋头干到一半才发现方向错。恢复靠前置共识 + 方案变更审查——执行中想改方案必须经 Leader 判断合理性，避免局部最优毁掉全局 ^[raw/articles/从-react-到-agent-teams一个工程师视角的-agent-协作机制思考.md:71,89]。
+- **进度黑盒**：Worker 埋头干、Leader 到最后才知道结果。恢复靠跑在 OKR 上的三个自动机制：里程碑触发（KR 应达阶段值时自动检查）、偏离预警（上报进度显示达不到 KR 时自动升级 Leader）、KR 达成即关闭里程碑（避免「完成了再问是否完成」） ^[raw/articles/从-react-到-agent-teams一个工程师视角的-agent-协作机制思考.md:111]。关键前提是 Worker 必须参与 KR 制定——「KR2 缓存命中率 95% 做不到，因为业务本身长尾访问」这类约束只有执行 Agent 能提供 ^[raw/articles/从-react-到-agent-teams一个工程师视角的-agent-协作机制思考.md:111]。
+- **协商缺失**：AgentTeams 案例的缺口正是「通信通道有了，协作语义没有」——没有方案共同讨论、没有 OKR 协商、没有分歧仲裁、没有集体复盘、没有团队演化 ^[raw/articles/从-react-到-agent-teams一个工程师视角的-agent-协作机制思考.md:23-25]。恢复路径是借鉴 Meta-Team 的三层复盘节奏：任务过程中的微复盘（Agent 层互取「你的输出如何影响我决策」的反馈）、阶段交付后的中盘（更新对彼此能力与沟通方式的理解）、任务结束的总复盘（讨论组成是否合理、规则是否修订） ^[raw/articles/从-react-到-agent-teams一个工程师视角的-agent-协作机制思考.md:133]。
+- **隔离导致的重复踩坑**：Worker 互相看不见对方的坑。恢复靠横向广播 + 反模式库——踩过的坑作为 anti-pattern 提前规避 ^[raw/articles/从-react-到-agent-teams一个工程师视角的-agent-协作机制思考.md:101,131]。
+
+值得强调的是，AgentTeams 的工程侧（凭据安全、通信基础设施、共享存储、可观测性、人在环）已解决得相当彻底，瓶颈只在协作机制 ^[raw/articles/从-react-到-agent-teams一个工程师视角的-agent-协作机制思考.md:21-25]——基础设施回答「能不能说话」，还没回答「该说什么、怎么达成共识、说完之后如何沉淀」 ^[raw/articles/从-react-到-agent-teams一个工程师视角的-agent-协作机制思考.md:25]。
+
+## 实践启示
+
+1. **不要用「多开几个 Agent」解决单 Agent 的问题。** 消融数据显示 20 Agent 团队去掉协作机制后与 1 Agent 无差别；先设计协作语义，再扩数量 ^[raw/articles/从-react-到-agent-teams一个工程师视角的-agent-协作机制思考.md:57,135]。
+2. **Leader 与 Worker 之间要造能力差，而不是同质化换 prompt。** 更强模型、更长 context、更全局历史访问 + 兜底能力，是 Leader 区别于任务分发器的核心 ^[raw/articles/从-react-到-agent-teams一个工程师视角的-agent-协作机制思考.md:71-73]。
+3. **把沟通语气当成工程变量。** 命令式 prompt 激活保守回复分布，鼓励式引导激活探索分布；验收时明确指出做得好的地方，为下次高水平输出建立锚点 ^[raw/articles/从-react-到-agent-teams一个工程师视角的-agent-协作机制思考.md:79-85]。
+4. **横向通信要「通道 + 模式 + 预算」三件套一起上。** A2A/Matrix 只解决「能不能说话」，还要设计广播/查询/求助三种模式与通信预算约束，防止全连接把 context 炸掉 ^[raw/articles/从-react-到-agent-teams一个工程师视角的-agent-协作机制思考.md:101-103]。
+5. **KR 必须由执行者参与制定。** 单 Agent 递归分解 OKR 是单向灌输；「这个 KR 做不到，因为……」的真实约束只有 Worker 能给，多 Agent 协商式 OKR 才是可执行的目标契约 ^[raw/articles/从-react-到-agent-teams一个工程师视角的-agent-协作机制思考.md:111]。
+6. **经验要分层沉淀为团队资产，而不是留在角色内部。** 方法论/协作模式/反模式进共享知识库，角色技巧单独存放；按微复盘→中盘→总复盘的节奏持续触发 ^[raw/articles/从-react-到-agent-teams一个工程师视角的-agent-协作机制思考.md:131-133]。
 
 ## 关联
 

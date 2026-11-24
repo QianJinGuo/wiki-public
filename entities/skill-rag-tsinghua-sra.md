@@ -4,7 +4,7 @@ title: "Skill Retrieval Augmentation for Agentic AI — 清华 Skill-RAG"
 type: entity
 tags: [agent, claude, gpt, paper, rag]
 created: 2026-05-21
-updated: 2026-09-10
+updated: 2026-11-22
 review_value: 7
 review_confidence: 7
 sources: [raw/articles/skill-rag-tsinghua-sra]
@@ -31,15 +31,20 @@ RAG改换换了！清华提出Skill-RAG ^[raw/articles/skill-rag-tsinghua-sra.md
 - [[moc/ai-skill-design|MOC]]
 ## 深度分析
 
-**1. 技能库规模爆炸导致上下文窗口成为 Agent 瓶颈。** 截至 2026 年 4 月，仅 SkillsMP 平台就托管超过一百万个技能，OpenClaw、Claude Code 等系统也在快速增长。当技能数量从十几个增长到成千上万个时，将所有技能摘要塞进上下文的传统方法导致判断准确率断崖式下降。SRA-Bench 规模达到 26,262 个干扰技能——这不是夸张，而是真实场景的准确刻画。 ^[raw/articles/skill-rag-tsinghua-sra.md]
+### 规模定律：技能库增长把"全量加载"推向结构性失效
+现有 Agent 的默认做法是把所有可用技能的摘要塞进上下文窗口，让模型自行选择，这在技能只有十几个时工作正常。但截至 2026 年 4 月，仅 SkillsMP 一个平台就托管了超过一百万个技能，OpenClaw、Claude Code 等系统的技能库也在快速增长；技能数量到达成千上万量级时，上下文被塞满，判断准确率断崖式下降。^[raw/articles/skill-rag-tsinghua-sra.md:22-23] SRA-Bench 把黄金技能混入 26,262 个网络收集的干扰技能中，正是对这一真实规模的还原而非人为放大的压力测试。^[raw/articles/skill-rag-tsinghua-sra.md:27] 因此这不是"上下文不够长"的工程问题，而是全量摘要策略随规模增长必然失效的结构问题——参见 [[concepts/context-window-economics]] 对上下文成本随规模增长的分析。
 
-**2. SRA 与 RAG 有本质区别，不能简单套用。** RAG 检索的是陈述性知识（支撑文本生成），SRA 检索的是可执行能力（扩展 Agent 功能边界）。RAG 的评估指标是语义相似度，但 SRA 必须看最终任务有没有变好。这一本质差异意味着：把 RAG 系统的设计经验直接搬过来会出问题。 ^[raw/articles/skill-rag-tsinghua-sra.md]
+### 与 RAG 的本质差异：检索目标与评估范式都要换
+SRA 的形式像 RAG 的翻版——检索目标从"知识文档"换成"技能包"——但论文指出两处不可迁移的差异：RAG 检索的是陈述性知识、用于支撑文本生成，SRA 检索的是可执行能力、用于扩展 Agent 的功能边界；RAG 可用语义相似度评估召回质量，SRA 必须以最终任务是否变好为准。^[raw/articles/skill-rag-tsinghua-sra.md:25-26] 这意味着 Top-K 准确率、MRR 等检索指标无法代理 SRA 的效果评估，评估必须端到端落到任务层。已有 [[entities/three-rag-architectures-classic-graph-agentic]] 对经典/图谱/Agentic 三种 RAG 架构的总结与 [[concepts/retrieval-augmented-generation-rag]] 的方法论梳理在此构成参照系：SRA 相当于把 Agentic 检索的对象从知识换成了能力，评估范式随之从"相似度"迁移到"任务增益"。
 
-**3. 当前 Agent 存在"需求感知缺失"系统性缺陷。** 实验将测试实例分为 Agent 能答对和不能答对两组，理论上应分别表现为"保守加载技能"和"积极加载技能"。但结果显示两组技能加载率几乎相同——Agent 完全不知道自己哪些题会做、哪些不会。这不是偶发的 bug，而是当前 Agent 架构的系统性盲区。 ^[raw/articles/skill-rag-tsinghua-sra.md]
+### 两个实验暴露的系统性盲区：需求感知缺失与技能加载幻觉
+论文最有价值的发现来自分组实验：把测试实例分成"不用外部技能也能答对"与"答不对"两组，理性 Agent 应在前者保守加载、在后者积极加载，但两组的技能加载率几乎一模一样——Agent 完全不具备"需求感知"能力，不知道自己哪些题会做、哪些不会。^[raw/articles/skill-rag-tsinghua-sra.md:31-34] 更严重的推论是：即使检索结果中根本没有正确的黄金技能，加载率也没有明显下降，即"技能加载幻觉"——模型在盲加载且毫无察觉；只有最强的前沿模型表现出一定区分能力，仍远不理想。^[raw/articles/skill-rag-tsinghua-sra.md:35] 这说明缺陷不在提示词层面而在架构层面：当前 Agent 缺少对自身能力边界的校准。这与 [[entities/agentic-abstention-washington-allen-2026]] 研究的"该弃答时不弃答"是同一枚硬币的两面——一个是不知道何时该向外部求助，一个是不知道何时该承认不会。
 
-**4. "技能加载幻觉"揭示更严重的问题。** 即使检索结果中根本没有正确的黄金技能，Agent 的技能加载率也没有明显下降。模型在瞎加载技能，而且自己毫无察觉。这说明当前 Agent 的自我评估能力极差——不仅不知道自己会不会，连检索结果的质量都无法判断。 ^[raw/articles/skill-rag-tsinghua-sra.md]
+### 瓶颈错位：检索已接近可用，判断成为新的边际收益所在
+积极的一面：即使最简单的 BM25 从 26,000 多个技能中取 Top-1 注入上下文，也能显著提升任务表现；Oracle 设定（直接提供正确技能）下提升更大，说明大量任务确实超出 LLM 的参数知识范围，SRA 方向本身成立。^[raw/articles/skill-rag-tsinghua-sra.md:28-30] 论文随后测试了 BM25、TF-IDF、BGE、Contriever、混合检索与 LLM 重排序：检索质量持续提升且 LLM 重排序最好，但检索收益不能完全转化为任务收益——检索对了 Agent 可能不用，不该用时也在用。^[raw/articles/skill-rag-tsinghua-sra.md:36-38] "把极好的烹饪书递给不看菜谱的厨师"的比喻准确刻画了瓶颈位置：边际收益已从检索端转移到判断端。对系统设计者的含义是：继续堆更重的 reranker、更好的 embedding 回报递减，投资于"何时检索、何时加载、何时不用"的决策层回报更高。
 
-**5. 检索质量提升无法弥补判断能力缺失。** 论文测试了 BM25、TF-IDF、BGE、Contriever、混合检索和 LLM 重排序等多种方案。结论是更好的检索有帮助，但检索质量的提升无法完全转化为最终任务改进。瓶颈不在检索端而在判断端——"把好书递给不看菜谱的厨师"这个比喻精准描述了这个困境。 ^[raw/articles/skill-rag-tsinghua-sra.md]
+### SRA-Bench 的评测设计：把判断能力从任务能力中剥离
+SRA-Bench 包含 5,400 个测试实例、636 个人工标注黄金技能，覆盖数学推理、形式逻辑、工具调用、医学计算、竞赛数学和代码生成六大领域。^[raw/articles/skill-rag-tsinghua-sra.md:27] 其设计的关键在 Oracle/检索双轨：Oracle 轨道给出能力上限，检索轨道暴露判断损耗，两者之差即为"判断能力缺口"——这使它成为少有的能单独度量"知道自己会不会"这一元认知能力的 benchmark，与 [[concepts/agent-evaluation-benchmark-frameworks]] 收录的通用评测形成维度互补。技能生态仍在扩张（见 [[entities/google-agentic-skills-survey-sixtuple-2026]]），这一缺口的代价会随规模持续放大。
 
 ## 实践启示
 

@@ -2,7 +2,7 @@
 
 title: "Agent 记忆注入实战：5 维框架（选什么/放哪里/怎么放/放多少/何时放）+ 4 前沿论文（MemGuide/STITCH/ACE/Lost in the Middle）"
 created: 2026-06-16
-updated: 2026-09-07
+updated: 2026-11-16
 type: entity
 tags: [agent-memory, memory-injection, context-engineering, memguide, stitch, ace-framework, lost-in-the-middle, context-burst, intent-driven, slot-driven, context-filter, section-qa, rag, dynamic-context, google-deepmind, microsoft-research, anthropic, stanford, uc-berkeley, agent-shouji, 2026, qa-format, position-effect, helpful-score]
 sources: [raw/articles/agent-memory-injection-5-dimensions-4-papers-agent-shouji-2026]
@@ -184,6 +184,33 @@ LLM → 个性化推荐结果
 | 怎么放 | Section + QA 结构化 | 让模型一眼看到重点 |
 | 放多少 | 宁缺毋滥，5 条好过 20 条 | 每条都应有明确的"注入理由" |
 | 何时放 | Context Burst 动态控制 | 平时省钱，关键时刻舍得花 |
+
+## 深度分析
+
+### 语义相似 ≠ 任务相关：检索的第一性缺陷
+
+传统 RAG 把"像"当成"对"：Embedding 只度量字面与向量的接近程度，不感知任务目标。货运场景里，"去年想轻松跑了长途回家"与"今天想跑个轻松的活"在语义空间几乎重合，但对当次接单决策毫无价值——5 条检索结果中 2-3 条是噪声，而真正相关的"接了轻货短途"可能只排第 3。MemGuide 的解法是在检索前插入意图识别与槽位分析两道闸门，把匹配依据从"字面像"换成"对完成任务有用"，任务成功率因此从 88% 提到 99%。可见记忆系统的瓶颈通常不在召回率，而在选择器对任务相关性的建模。
+
+### 位置、格式、数量是同一份注意力预算的三张面孔
+
+Lost-in-the-Middle 的 U 形分布、Section+QA 的格式优势、"5 条好过 20 条"的数量结论，表面是三个独立技巧，实质是同一件事：模型的有效注意力是稀缺资源，每条注入记忆都在竞争它。放在中间等于花钱买曝光却排在无人看的位置；格式混乱等于信息存在但提取路径过长；条数翻倍则单条信号被噪声稀释（10→20 条性能提升 <5%，噪声增 2 倍）。三者可统一为一条准则：为每条记忆分配注意力预算——硬约束给开头、QA 给最短提取路径、限量给最低噪声底噪。参见 [[concepts/attention-mechanism]] 与 [[concepts/context-window-economics]]。
+
+### Context Burst 把注入从静态配置变成运行时决策
+
+两种极端各有明确代价：全量常驻带来高 token 成本、慢响应与噪声淹没；极端精简则让复杂场景缺信息、个性化变弱。ACE 的 Context Burst 以银行 VIP 服务类比跳出两难——基础 prompt 常驻 1-2k tokens，仅当触发条件命中（司机犹豫、价格低于预期、首次特殊货物、有投诉历史）时爆发到 3-5k。关键在于触发条件读取的是运行时状态而非 query 文本：示例代码里四个 trigger 全部来自 current_state / driver_profile，与检索相似度无关。"何时注入"因此是与"选什么"正交的决策维度，需要独立的规则层，而非检索器的副产品；这与 [[entities/context-engineering-three-memory-paradigms]] 的动态调度思路互为印证。
+
+### ACE 增量追加改变记忆的生命周期模型
+
+传统做法把记忆当作需定期重写的快照，每次更新覆盖整个 Context；ACE 把记忆当作持续增补的策略手册——新经验以带分类标记（STRATEGIES / COMMON MISTAKES）与 helpful 评分的 bullet 追加，Reflector 从执行结果提炼洞察，Curator 负责合并去重与淘汰低分条目。三角色分工把"记忆老化"从人工运维问题变成管线内自动化环节：低分策略自然沉底，高频复用策略获得更高权重。通用 Agent +10.6%、金融分析 +8.6% 说明组织形式（分类 + 评分）本身就能贡献显著收益，而不只是内容质量。
+
+## 实践启示
+
+1. 给每条记忆打意图标签、以 QA 对存储，让检索器先问"用户想干什么"再匹配，而不是直接算向量相似度——这是 MemGuide +11% 成功率的主要来源。
+2. 把意图对齐→槽位补缺→上下文过滤做成独立函数（先粗检索 Top-20、再精选 Top-5），过滤逻辑可单测、可回归，不与业务 prompt 耦合。
+3. 按 U 形分布排版注入内容：硬性约束放开头，用户画像放 Query 紧前面，关键警告放结尾，绝不把重要信息留在大段中间。
+4. 注入格式直接采用 Section + QA：Section 作跳转锚点，每个 Q 对应一个信息槽位；宁可多付编写成本，也不让模型在纯文本堆砌中自行定位。
+5. 给记忆数量加硬约束（常规 5 条、复杂场景 ≤10 条），并为每条维护"注入理由"——写不出理由的记忆就是噪声候选。
+6. 梳理业务中的"关键时刻"（犹豫/低价/首次特殊货物/投诉历史），为每类触发配置爆发注入包，平时保持 1-2k tokens 精简基线。
 
 ## 关联引用
 

@@ -2,7 +2,7 @@
 
 title: "Claude Opus 5 发布，比 Fable 5 强，仅一半价格"
 created: 2026-08-30
-updated: 2026-08-30
+updated: 2026-11-17
 type: entity
 tags: ['context', 'agent', 'ai']
 sources: [raw/articles/claude-opus-5-发布比-fable-5-强仅一半价格]
@@ -105,5 +105,36 @@ AutomationBench 成本曲线
 研究员 Nathan Lambert 的解读则是，这是更快的迭代速度加上规模化 RL 的产物，Fable 5 那个体量，目前反而还没办法好好做 RL。 ^[raw/articles/claude-opus-5-发布比-fable-5-强仅一半价格.md]
 
 HLE 成本曲线  0
+
+## 深度分析
+
+### 半价不是让利，是竞争逼出来的定价
+
+Fable 5 是史上最贵的通用模型，同一底座的 Mythos 5 只向少数合作伙伴开放；Opus 5 则把 10/50 美元的价位直接砍到 5/25，与上一代 Opus 4.8 持平。文章结尾那句「感谢 Kimi K3，Fable 终于不再是奢侈品了」点破了真实背景：K3 这类开放权重旗舰把前沿智能的价格锚拉了下来，Anthropic 是在用半价换份额，而不是单纯技术普惠。 ^[raw/articles/claude-opus-5-发布比-fable-5-强仅一半价格.md:29-33,169]
+
+### 反超是真的，但边界很清晰
+
+总表上十几个项目多数领先，但失守点都在垂直纵深：DeepSWE 由 GPT-5.6 Sol 以 72.7% 领先，法律、健康两项仍是 Fable 5 与 Mythos 5 更强，无工具版 HLE 仅以 0.2 分险守。更值得玩味的是 FrontierCode 的乌龙——53.4% 被涂成领先高亮色，旁边 Fable 5 明明是 53.5%。厂商跑分表的「领先色」是营销产物，读表必须自己核数，这与 [[entities/model-evaluation-from-benchmark-worship-to-self-built-evals]] 的结论一致。 ^[raw/articles/claude-opus-5-发布比-fable-5-强仅一半价格.md:55-59]
+
+### ARC-AGI-3 的 30.2% 是全场含金量最高的数字
+
+该基准专测模型解决从没见过的新题，背题刷分无效。Opus 5 拿到 30.2%，第二名 GPT-5.6 Sol 只有 7.8%，Opus 4.8 只有 1.5%——对上一代近 20 倍的跳变，意味着在全新任务结构上的泛化能力出现了数量级变化，与常规跑分的渐进提升是两种性质。 ^[raw/articles/claude-opus-5-发布比-fable-5-强仅一半价格.md:69]
+
+### 效率叙事有工程支撑，但 Medium 档怪曲线提醒别拉满
+
+Nathan Lambert 把效率优势归因于更快的迭代速度加规模化 RL——Fable 5 体量太大反而做不好 RL，与 [[concepts/llm-rl-algorithms-ppo-dpo-grpo-marl-evolution-2026]] 的规模化路径相印证。 ^[raw/articles/claude-opus-5-发布比-fable-5-强仅一半价格.md:81-97] 但 FrontierCode 上最好成绩出现在 medium 档（53.4%），继续加档反而掉到 48.0% 和 43.6%：想得多不等于答得对，用力过猛会扣分。 ^[raw/articles/claude-opus-5-发布比-fable-5-强仅一半价格.md:103-107]
+
+### 对齐进步是最容易被低估的部分
+
+自动化行为审计失准分 2.30，低于 Opus 4.8 的 2.85 与 Mythos 5 的 2.81，欺骗比例全家最低；安全分类器预期比 Fable 5 少拦约 85%，不会再莫名其妙降级。护栏允许在源代码里找漏修漏，生物类请求从拦截改为转给 Opus 5，但长时间自主研究仍受限——开放是分领域、有边界的，底座见 [[concepts/ai-safety]]。 ^[raw/articles/claude-opus-5-发布比-fable-5-强仅一半价格.md:147-163]
+
+## 实践启示
+
+1. **默认模型切换已经发生**：Claude Max 默认模型已是 Opus 5，Pro 能用的最强模型也是它，API 模型 ID 为 `claude-opus-5`。新任务没有理由再指定 Fable 5——成本只有一半。 ^[raw/articles/claude-opus-5-发布比-fable-5-强仅一半价格.md:35-37]
+2. **Effort 档位按任务标定，别默认拉满**：FrontierCode 最好成绩出现在 medium 档，最高档反而掉分；机制分析见 [[entities/codexclaude-code-推理-effort本质-就是往prompt里塞了一句话]]。 ^[raw/articles/claude-opus-5-发布比-fable-5-强仅一半价格.md:103-107]
+3. **大规模跑批优先 Opus 5**：OSWorld 2.0 用三分之一成本超过 Fable 5 最佳成绩，AutomationBench 同成本通过率约为第二名 1.5 倍——评测、批处理类高量任务的成本差会被量直接乘出来。 ^[raw/articles/claude-opus-5-发布比-fable-5-强仅一半价格.md:85-95]
+4. **读厂商跑分表先核数**：53.4% 高亮对 53.5% 的乌龙说明领先色不可信；重要选型结论先用自家任务集复核再定。 ^[raw/articles/claude-opus-5-发布比-fable-5-强仅一半价格.md:57-59]
+5. **更新安全与权限预期**：此前被安全分类器误拦、误降级的场景会大幅减少；源代码漏洞研究已放开，生物类请求会转给 Opus 5 处理，但长自主任务仍有明显限制。 ^[raw/articles/claude-opus-5-发布比-fable-5-强仅一半价格.md:151-163]
+6. **审计数字可作采购参考**：失准分 2.30、欺骗比例最低是可引用的量化锚点，做模型风险评估时直接对照 2.85 与 2.81。 ^[raw/articles/claude-opus-5-发布比-fable-5-强仅一半价格.md:145-151]
 
 → [[raw/articles/claude-opus-5-发布比-fable-5-强仅一半价格|原文存档]] ^[raw/articles/claude-opus-5-发布比-fable-5-强仅一半价格.md]

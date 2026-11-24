@@ -1,7 +1,7 @@
 ---
 title: "百亿补贴 C 端 AI Coding 实战：基于 SDD 的服务端 AI Coding 实践"
 created: 2026-08-05
-updated: 2026-08-05
+updated: 2026-11-18
 type: entity
 tags: [ai-coding, sdd, harness, context-engineering, agent-memory, taobao, production]
 sources: [raw/articles/百亿补贴-c-端-ai-coding-实战基于-sdd-的服务端-ai-coding-实践]
@@ -93,6 +93,25 @@ topics/
 **什么需要改进**：Spec 膨胀——技术方案数千行、伪代码占据大量篇幅打满上下文，违背 SDD「人定义 WHAT，AI 实现 HOW」原则。判断信号：「换一个技术栈实现，这份 Spec 是否仍然有效？」答案为否即说明 Spec 混入了 HOW。应对：提示词禁止完整伪代码、按模块拆分 Spec、建立抽象度检查环节。^[raw/articles/百亿补贴-c-端-ai-coding-实战基于-sdd-的服务端-ai-coding-实践.md]
 
 **对 AI Coding 的思考**：AI Coding 的上限不取决于模型有多强，而取决于开发者的工程素养有多高。SDD 的本质是把软件工程最佳实践适配到人机协作新范式。「AI 放大一切：好的工程实践被放大成高效产出，差的工程实践也被放大成更大的混乱。」SDD 提供可控性，自进化记忆提供连续性——两者结合才是 AI Coding 真正能用于生产的关键。^[raw/articles/百亿补贴-c-端-ai-coding-实战基于-sdd-的服务端-ai-coding-实践.md]
+
+## 深度分析
+
+### 从全自动到深度参与：一次被数据说服的路线修正
+
+P2C 阶段的挫折不是执行失败，而是架构判断失误：多 Agent 流水线「每一步的误差会层层放大，最终导致产出不可控」^[raw/articles/百亿补贴-c-端-ai-coding-实战基于-sdd-的服务端-ai-coding-实践.md:225]，采纳率停在 70%，且步骤过多、Spec 不精准、工具链缺失三重问题叠加^[raw/articles/百亿补贴-c-端-ai-coding-实战基于-sdd-的服务端-ai-coding-实践.md:189-199]。团队由此提炼的三条修正——流程须支持 Spec 快速迭代、关键节点质量由开发者把控、复杂项目仍需人参与上下文工程^[raw/articles/百亿补贴-c-端-ai-coding-实战基于-sdd-的服务端-ai-coding-实践.md:209-215]——本质是承认「全自动」目标里混入了当前模型能力承担不了的决策密度。这与 [[concepts/multi-agent-collaboration-patterns]] 的观察一致：用 coordinator/rewriter/clarifier/analyzer 四个 Agent 解决一个本应由人直接决策的问题，编排成本超过了他换来的收益。
+
+### 信任边界的重新划分：单步执行 vs 全流程判断
+
+「从『信任 AI 的全流程判断』变成『信任 AI 的单步执行能力』」^[raw/articles/百亿补贴-c-端-ai-coding-实战基于-sdd-的服务端-ai-coding-实践.md:265]是全文杠杆最大的一次概念重划：AI 被定位为受约束的执行单元而非自主决策者，擅长在明确约束下高质量完成单个任务，不擅长在长链路中自主做出一连串正确决策。这与 [[concepts/agent-harness-engineering-paradigm]] 的核心命题同构——Harness 解决的正是「AI 能力足够强时如何防止失控」。SDD 在其中的角色是信任的载体：Spec 把人的一次性架构判断固化为可反复引用的确定性输入，让每一次「单步」都有全局约束兜底，而不是靠模型自己记住全局。
+
+### 记忆 Git 化：把 AI 记忆当源代码管理
+
+四层文件结构（index 粗筛 → TOPIC 定位 → MEMORY 加载 → sessions 追溯）^[raw/articles/百亿补贴-c-端-ai-coding-实战基于-sdd-的服务端-ai-coding-实践.md:477-482]解决的是加载成本；「记忆文件是 `.md` 格式、存在项目目录中，天然支持 Git 版本化」^[raw/articles/百亿补贴-c-端-ai-coding-实战基于-sdd-的服务端-ai-coding-实践.md:512-514]解决的是组织问题——多人协作的记忆同步被降维成一次 `git pull`。这与 [[entities/agentmemory-coding-agent-local-memory]] 等向量化/数据库化记忆方案形成方法论对照：本文选择「文件即知识、Git 即同步」，牺牲检索灵活性换取可读、可审计、可版本化。而「不要用复杂的 Agent 编排来解决记忆问题，利用现有系统能力反而更稳定」^[raw/articles/百亿补贴-c-端-ai-coding-实战基于-sdd-的服务端-ai-coding-实践.md:512]进一步印证：最小侵入设计在既有工具链生态中比精巧编排更具生存力。
+
+### 质量责任的不可转移性
+
+「AI Coding 提升了代码生成效率，但质量保证的责任没有被转移——它依然在人的肩上」^[raw/articles/百亿补贴-c-端-ai-coding-实战基于-sdd-的服务端-ai-coding-实践.md:538]。深层原因是测试环境的结构性约束：分布式架构下部署与集成测试成本高，mock 无法覆盖真实场景^[raw/articles/百亿补贴-c-端-ai-coding-实战基于-sdd-的服务端-ai-coding-实践.md:281-283]，自动化用例之外还必须针对 AI 生成代码做手工回归^[raw/articles/百亿补贴-c-端-ai-coding-实战基于-sdd-的服务端-ai-coding-实践.md:536]。AI 把「写代码」的成本压到近零后，人的时间反而全部集中到 CR 与回归——质量瓶颈从未离开「验证」环节，这与「开发者角色从写代码变成做决策」互为表里，也说明 0 手写代码的交付纪录背后是更重而非更轻的人工质量投入。
+
 
 ## 相关实体
 

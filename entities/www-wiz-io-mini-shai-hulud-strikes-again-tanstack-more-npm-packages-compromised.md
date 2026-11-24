@@ -5,7 +5,7 @@ type: entity
 tags: [security, supply-chain, ai, cloud, npm, shai-hulud]
 source: "[[raw/articles/www-wiz-io-mini-shai-hulud-strikes-again-tanstack-more-npm-packages-compromised|原文存档]]"
 created: 2026-05-20
-updated: 2026-09-10
+updated: 2026-11-18
 sources: [raw/articles/www-wiz-io-mini-shai-hulud-strikes-again-tanstack-more-npm-packages-compromised]
 review_value: 8
 review_confidence: 7
@@ -21,22 +21,21 @@ review_category: tech
 - 5月13日分析发现 @uipath/ 和 @mistralai/ 包中的 payload 存在 bug 导致恶意功能失效
 
 ## 深度分析
-Mini Shai-Hulud 攻击标志着 AI 开源生态系统的供应链攻击进入新阶段。与传统恶意包主要针对开发者工作站不同，此次攻击的深度和广度表明攻击者正在将目标扩展到更广泛的企业基础设施。 ^[raw/articles/www-wiz-io-mini-shai-hulud-strikes-again-tanstack-more-npm-packages-compromised.md]
+### TanStack 攻击链：fork → pull_request_target → 缓存投毒 → OIDC 窃取
 
-**攻击技术特征**： ^[raw/articles/www-wiz-io-mini-shai-hulud-strikes-again-tanstack-more-npm-packages-compromised.md]
+攻击者全程未窃取 npm 凭据：先 fork `TanStack/router` 并重命名为 `zblgg/configuration` 逃避 fork 名单检索，再以 PR 触发 `pull_request_target` workflow 执行 fork 代码、向 GitHub Actions 缓存投毒恶意 pnpm store；待合法 PR 合入 main 触发发布 workflow 恢复被投毒缓存后，从 runner 进程内存（`/proc/<pid>/mem`）直接提取 OIDC 令牌并发布恶意版本（见 [[entities/postmortem-tanstack-npm-supply-chain-compromise-tanstack-blog|TanStack 官方 postmortem]]）。 ^[raw/articles/www-wiz-io-mini-shai-hulud-strikes-again-tanstack-more-npm-packages-compromised.md]
 
-- 利用 CI/CD 发布系统的合法发布机制分发恶意更新
-- 劫持 OpenID Connect 令牌绕过身份验证
-- 跨平台攻击（npm + PyPI 同时进行）
-- 多命名空间协同攻击（TanStack、UiPath、Mistral AI） ^[raw/articles/www-wiz-io-mini-shai-hulud-strikes-again-tanstack-more-npm-packages-compromised.md]
+### 双感染向量与蠕虫式横向扩散
 
-**受影响包的重要性**： ^[raw/articles/www-wiz-io-mini-shai-hulud-strikes-again-tanstack-more-npm-packages-compromised.md]
+恶意包有两条感染路径：`optionalDependencies` 指向孤儿 commit `github:tanstack/router#79ac49eedf...`，经 `prepare` 脚本执行；以及 tarball 内直接嵌入约 2.3MB 混淆文件 `router_init.js`。@uipath 系列则用 `preinstall: node setup.mjs` 下载 Bun 运行时执行 payload——与此前 SAP 攻击同投递机制、同 C2（见 [[entities/malware-crew-teampcp-opensources-its-shaihulud-worm-on|TeamPCP 开源 Shai-Hulud 蠕虫]]）。payload 是凭据窃取器 + 自传播蠕虫：窃取 CI/CD 令牌（GitHub Actions OIDC/GitLab/CircleCI）、云凭据（AWS IMDSv2/GCP/Azure）、Kubernetes service account、Vault 与注册表令牌，并以被盗令牌发布受害者有写权限的其他包的投毒版本。 ^[raw/articles/www-wiz-io-mini-shai-hulud-strikes-again-tanstack-more-npm-packages-compromised.md]
 
-- `@tanstack/react-router` 是 React 生态最流行的路由库之一
-- `@mistralai/mistralai` 是 Mistral AI 官方 TypeScript 客户端
-- `@uipath/apollo-core` 服务于企业自动化平台
+### 三重冗余 C2 与 gh-token-monitor 自毁守护
 
-**payload 技术细节**：恶意代码在包更新时执行，搜索 AWS/GCP/Azure/GitHub 凭据，有效凭据用于发布更多恶意包更新，无效凭据时执行本地环境擦除。 ^[raw/articles/www-wiz-io-mini-shai-hulud-strikes-again-tanstack-more-npm-packages-compromised.md]
+凭据外传走三条冗余通道：typosquat 域 `git-tanstack.com`、去中心化 Session 网络（`*.getsession.org`，抗 takedown，为本轮新增）以及 GitHub API dead drop（以 "Shai-Hulud: Here We Go Again" 为仓库描述）。对满足严格条件的 GitHub 令牌（repo scope、公开 profile、org 成员等），malware 安装持久化 `gh-token-monitor` 守护进程（LaunchAgent/systemd），每 60 秒轮询，令牌被撤销（40X）即执行删除用户主目录的自毁命令，24 小时后自动退出——响应必须先清除守护进程再轮换令牌，顺序颠倒会引爆 wiper。 ^[raw/articles/www-wiz-io-mini-shai-hulud-strikes-again-tanstack-more-npm-packages-compromised.md]
+
+### 原有 Shai-Hulud 防御为何部分失效
+
+既有防御主要围绕可疑版本扫描与 provenance 校验，但发布经由受害者自身合法的 OIDC trusted publishing 管道完成，令牌轮换与来源检查难以在发布前拦截。 ^[raw/articles/www-wiz-io-mini-shai-hulud-strikes-again-tanstack-more-npm-packages-compromised.md] 攻击横跨 npm + PyPI：Python 侧 `guardrails-ai@0.10.1`/`mistralai@2.4.6` 仅 13 行下载器代码，拉取未混淆的模块化窃取器 `transformers.pyz`，首次窃取 1Password/Bitwarden 密码库；payload 含俄语环境 kill switch。检测指标：包根目录的 `router_init.js`/`setup.mjs`、`.claude/` 与 `.vscode/` 中 npm uninstall 后残留的 `router_runtime.js`/`tanstack_runner.js`、`gh-token-monitor` 服务名，并在 DNS/proxy 层封禁 `git-tanstack.com` 与 `*.getsession.org`。5月13日更新确认 @uipath/* 与 @mistralai/* 的 payload 因 bug 失效，但修复版 payload 已被观测到处于预置状态。 ^[raw/articles/www-wiz-io-mini-shai-hulud-strikes-again-tanstack-more-npm-packages-compromised.md]
 
 ## 实践启示
 1. **供应链审计**：重新审视对 npm/PyPI 生态的依赖深度，实施依赖锁定策略 ^[raw/articles/www-wiz-io-mini-shai-hulud-strikes-again-tanstack-more-npm-packages-compromised.md]

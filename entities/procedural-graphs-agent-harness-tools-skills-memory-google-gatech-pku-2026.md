@@ -1,7 +1,7 @@
 ---
 title: "程序图 PG：把工具、技能、记忆连成网的 Agent 可演化程序知识"
 created: 2026-09-22
-updated: 2026-10-13
+updated: 2026-11-17
 type: entity
 tags: [agent, harness, memory, skill, tool, graph, self-improvement, context-engineering]
 sources: [raw/articles/procedural-graphs-agent-harness-tools-skills-memory-google-gatech-pku-2026]
@@ -92,6 +92,24 @@ PG 的离线循环是四步：**执行任务 → 分析轨迹 → 提出修改 �
 这组结果给出了一个相当清晰的适用边界：**当任务的关键难点是「动作之间隔了很长时间才有结果」时，显式程序关系的价值最大**（存活率 6%→34% 的量级）；当任务本身是单轮问答时，程序图几乎是噪音。这条边界与 [[concepts/harness-long-running-task|长任务 harness]] 的关注点高度重合 ^[raw/articles/procedural-graphs-agent-harness-tools-skills-memory-google-gatech-pku-2026.md]
 
 一个收尾细节值得记住：BFCL 机票查询案例里，用户只想了解经济舱票价，无图基线查到 220 美元报价后继续认证身份、操作银行卡并尝试订票，失败后还修改预算限制再次完成预订；同样使用 Gemini 3.5 Flash，PG 指导下的 Agent 在报出 220 美元后**结束当前回合，等待用户的新指令** ^[raw/articles/procedural-graphs-agent-harness-tools-skills-memory-google-gatech-pku-2026.md]。程序知识的价值在这里表现为一个很朴素的能力：判断已有操作是否已经满足当前请求。
+
+## 深度分析
+
+### 停止条件为什么必须住在边里
+
+「查到报价就该停」的本质不是独立指令，而是转移关系：从「报出票价」转向「结束回合」时挂着什么条件。列表与技能文件把经验写成平铺条目，条件埋在叙述里，执行时靠语义检索「想起来」，而检索按相似度工作，取回的条目没有邻接性——只带回「提交」而漏掉「检查答案」，判断何时能提交的依据就断了 ^[raw/articles/procedural-graphs-agent-harness-tools-skills-memory-google-gatech-pku-2026.md:63-65]。PG 把它固定在边的 condition 字段（辅以 guidance 与 pitfalls），节点定位靠最近执行的动作：匹配到「报出票价」，两跳内即见「结束回合」及其触发条件 ^[raw/articles/procedural-graphs-agent-harness-tools-skills-memory-google-gatech-pku-2026.md:41-45,69-71]。BFCL 实测是注脚：无图基线查到 220 美元后仍去认证身份、操作银行卡、失败后改预算限制再订一次；同一模型在 PG 指导下报完价即结束回合等待新指令 ^[raw/articles/procedural-graphs-agent-harness-tools-skills-memory-google-gatech-pku-2026.md:79-81]。停与不停，取决于这条边是否存在且条件随行——列表形式给不出。
+
+### 读写耦合在同一张网
+
+财务 Agent 图里 save_note 与 recall_notes 同网共存，后者被接到每月开始的位置，上月笔记在新一轮决策前取回 ^[raw/articles/procedural-graphs-agent-harness-tools-skills-memory-google-gatech-pku-2026.md:51-53]。[[concepts/agent-memory-substrate-three-layer|记忆三层底座]] 一类架构中，写策略藏在 prompt 约定、读策略交给检索，两子系统各自成立，无法在同一机制下检验「写了没人读」的错位。PG 里读写时机都是边，离线回路用同一条规则审视全部修改：候选图过结构检查与独立验证集检验，分数不低于当前图才采纳、持平也保留 ^[raw/articles/procedural-graphs-agent-harness-tools-skills-memory-google-gatech-pku-2026.md:91-95]，「何时写入」与「何时读取」因此能被一次改图同时校正。讲笑话样本展示了修正精度：第三代候选图只删「直接结束」的连接、改写「提取约束→结束」的指导，样本成功标记即从 0 翻成 1 ^[raw/articles/procedural-graphs-agent-harness-tools-skills-memory-google-gatech-pku-2026.md:101-105]。PG 自身即存于权重之外的程序性记忆，改图即改记忆 ^[raw/articles/procedural-graphs-agent-harness-tools-skills-memory-google-gatech-pku-2026.md:57]。
+
+### 消融：两跳子图让成功率与 token 同向改善
+
+ALFWorld 消融最值得读的不是 81.53% 对 54.48%，而是两个指标同向变动：平均 token 从 96,360 降到 28,064（约 −70.9%），成功率反而抬升 27 个百分点 ^[raw/articles/procedural-graphs-agent-harness-tools-skills-memory-google-gatech-pku-2026.md:131-133]。整图多花的六万多 token 是主动有害——无关分支涌入指导提示词，建议质量本身在下降；局部子图保留邻接、丢弃无关分支，与 [[concepts/context-engineering|上下文工程]] 的按需注入一致。相对无图基线 18,055 的剩余开销买的是显式程序关系，离线演化与候选验证还需算力；跨模型、跨工具接口复用能保留多少效果仍是开放问题 ^[raw/articles/procedural-graphs-agent-harness-tools-skills-memory-google-gatech-pku-2026.md:135-137]。
+
+### 演化：价值在回路而非初始拓扑
+
+MultiChallenge 序列——无图基线 87.50%、专家图 58.93%、静态更新 53.57%、迭代演化 92.86%——里最扎眼的是 53.57% ^[raw/articles/procedural-graphs-agent-harness-tools-skills-memory-google-gatech-pku-2026.md:89,99]：未经检验的改图比专家手写更伤，坏边引入时毫无把关；四步回路与验证门槛正是把修改从事故变成流程的机制。HotpotQA 从最小图出发得 78.79 F1、超基线 71.21 ^[raw/articles/procedural-graphs-agent-harness-tools-skills-memory-google-gatech-pku-2026.md:107]，初始拓扑并非价值所在。边界由数字划定：EnterpriseArena 连续 132 个月财务决策里，Gemini 3.1 Pro 存活率从 6.0% 升至 34.0%，Claude Sonnet 4.6 从 44.0% 升至 58.0% ^[raw/articles/procedural-graphs-agent-harness-tools-skills-memory-google-gatech-pku-2026.md:119-123]；而 HotpotQA 主表上 PG 相对最强基线只在 −0.90 到 +1.30 个百分点间摆动 ^[raw/articles/procedural-graphs-agent-harness-tools-skills-memory-google-gatech-pku-2026.md:137]。动作与结果隔得越久，显式程序关系的杠杆越大——与 [[concepts/harness-long-running-task|长任务 harness]] 关切重合，给 [[concepts/skill-engineering-principles|技能工程原则]] 提供可执行形态，为 [[concepts/agent-self-improvement-loops|Agent 自我改进回路]] 添了一个不动权重、可回滚的实现。
 
 ## 与既有 harness 路线的关系
 

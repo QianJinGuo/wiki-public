@@ -4,7 +4,7 @@ description: "PyTorch nn.Linear + MLP stacking performance profiling and torch.c
 source: [[raw/articles/huggingface-torch-mlp-fusion-profiling-2026]]
 tags: [pytorch, profiling, ml-engineering, model-architecture, optimization, kernel-fusion]
 created: 2026-06-12
-updated: 2026-09-07
+updated: 2026-11-14
 type: entity
 review_value: 7
 review_confidence: 7
@@ -87,6 +87,29 @@ review_category: tech
 
 - [[entities/deepseek-v4-triton-fp4-optimization]] — 同样涉及 Triton kernel 优化，与本文的 pointwise fusion 优化角度互补
 - [[concepts/inference-optimization]] — 推理优化通识，包含本文未覆盖的量化 / 蒸馏 / serving 层面的优化策略
+
+## 深度分析
+
+### Fused MLP kernel mechanics
+
+The GeGLU MLP (gate_proj / up_proj / down_proj, `[batch*seq=8192, dim=768, hidden=3072]`, bf16 on A100) reveals where fusion actually lives. In eager mode a single `nn.Linear` is already "fused" internally: `aten::linear` sees the bias and dispatches `aten::addmm`, so the bias add runs as a cuBLAS GEMM **epilogue** — a computation executed inside the GEMM kernel just before its result is written back to HBM. No separate `aten::add` kernel ever exists, and `torch.compile` on a lone Linear has nothing left to fuse: the compiled trace shows the byte-for-byte identical CUTLASS kernel (`..._tn_align8`), with compile only shaving CPU-side dispatch.
+
+The real fusion win sits *between* operators. Eager MLP forward = 5 GPU kernels: 3 cuBLAS GEMMs plus two pointwise launches (`vectorized_elementwise_kernel` for GeLU and for `h * u`). The intermediate `h = gelu(g)` is a full `[8192, 3072]` bf16 tensor (~50 MB) that the GeLU kernel writes to HBM and the mul kernel immediately reads back. `torch.compile`'s Inductor collapses GeLU + mul + reshape into one kernel, `triton_poi_fused__unsafe_view_gelu_mul_0` (`poi` = pointwise; merged ops: view, gelu, mul; `0` = graph id), keeping the intermediate in registers — one full round trip of ~50 MB through global memory eliminated per forward. The 3 GEMMs are untouched; their kernel names match eager exactly.
+
+### Profiling methodology
+
+The series' methodology is "guess first, then look": form an expected op/kernel list before opening the trace and treat every mismatch as the finding. Concretely: `torch.profiler` with `schedule(wait=1, warmup=1, active=3)`, both CPU and CUDA activities, a `record_function`-style annotation (`mlp_fwd`) to bracket the region, and `trace-util` to sync to Perfetto. Three reading habits carry most of the diagnostic value:
+
+- **Kernel names are identity hashes.** Same name = same GPU work. Layout suffixes (`_tn_` vs `_nn_`), dtypes, and tile descriptors (`128x128` vs `128x256`, `stages_32x5` vs `stages_64x3`) tell you the dispatcher took a different branch — cuBLAS/CUTLASS ship a separate precompiled binary per layout combination.
+- **Metadata ops launch zero kernels.** `aten::t`, `aten::transpose`, `aten::as_strided`, `aten::_unsafe_view` show `0.000us` CUDA time because they only rewrite shape/stride on the CPU; views never move data.
+- **Distinguish launch accounting.** Each GEMM does an extra `cudaOccupancyMaxActiveBlocksPerMultiprocessor` query before launch (cuBLAS sizing the grid); pointwise kernels launch directly. `Self CUDA Time` misses scheduling overhead — `cudaLaunchKernel` duration is the field to watch in overhead-bound regimes.
+
+### Measured wins from nn.Linear fusion
+
+- **Single Linear + compile: CPU-only gain.** Compile removes the eager `aten::linear → aten::t → aten::addmm` dispatch chain by tracing the view at compile time and emitting a direct `addmm` with strides hard-coded — a few µs of CPU work vanish while the GPU does identical math.
+- **MLP + compile: 5 kernels → 3 GEMMs + 1 fused Triton kernel.** The launch count drops from 9+ (counting dispatch) to 4 GPU launches, and the HBM round trip of the GeLU intermediate disappears — the dominant win for small-batch, overhead-bound inference.
+- **GEMM shape ≠ FLOPs.** All three GEMMs do the same `2·8192·768·3072 ≈ 38.7 GFLOP`, yet `down_proj` (N=768) runs ~0.17ms vs ~0.19ms for gate/up (N=3072): cuBLAS picks tile `128x256 / stages_64x3` over `128x128 / stages_32x5` for that shape, getting better reuse.
+- **Specialized vs generic kernel.** Inductor's shape-specialized fused kernel runs 89.4µs at `[8192, 3072]`; the hand-written Liger `_geglu_tanh_forward_kernel` (fused `gelu(gate) * up` in one pass, hardware-tuned launch params, no Dynamo guards) runs 92.8µs on any shape. The 3.4µs gap is the price of compile-time shape specialization — see [[entities/deepseek-v4-triton-fp4-optimization]] for the complementary Triton-kernel-authoring angle and [[concepts/inference-optimization]] for the broader serving-level context.
 
 ## 实践启示
 

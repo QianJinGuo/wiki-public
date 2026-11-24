@@ -1,7 +1,7 @@
 ---
 title: "Teaching models to forget: Selective unlearning with Amazon Nova"
 created: 2026-07-10
-updated: 2026-09-10
+updated: 2026-11-15
 type: entity
 tags: [unlearning, ai-safety, amazon, nova, model-edit, model-alignment, responsible-ai]
 sources: [raw/articles/teaching-models-to-forget-selective-unlearning-with-amazon-nova]
@@ -25,7 +25,7 @@ Selective unlearning is the process of removing specific knowledge or behaviors 
 - **Selectivity is key**: The technique removes specific behaviors (e.g., refusing safety-related prompts in a defensive context) while preserving the model's overall quality and safety guardrails for genuinely harmful requests^[raw/articles/teaching-models-to-forget-selective-unlearning-with-amazon-nova.md]
 - **Gradient ascent + retention regularization**: Uses gradient ascent on target knowledge to induce forgetting, combined with knowledge retention regularization to maintain model utility on unrelated tasks^[raw/articles/teaching-models-to-forget-selective-unlearning-with-amazon-nova.md]
 
-## Deep Analysis
+## 深度分析
 
 ### The Over-Deflection Problem: Why Prompt Engineering Isn't Enough
 
@@ -76,7 +76,7 @@ The most immediate applications of selective unlearning with rDPO include:
 
 Each of these represents a case where the model's default alignment creates friction with legitimate use — and selective unlearning provides a parameter-level escape valve without compromising the model's fundamental safety posture. This is analogous to the [[entities/backend-for-agent|backend-for-agent]] concept of context-aware permission systems: rather than a universal policy, apply policies that are sensitive to the specific task context and user role.^[raw/articles/teaching-models-to-forget-selective-unlearning-with-amazon-nova.md]
 
-## Practical Takeaways
+## 实践启示
 
 1. **Evaluate over-deflection before alignment tuning**: Before committing to a model alignment strategy, run systematic tests to identify legitimate use cases that the default safeguards would block. This informs the selective unlearning targets.^[raw/articles/teaching-models-to-forget-selective-unlearning-with-amazon-nova.md]
 

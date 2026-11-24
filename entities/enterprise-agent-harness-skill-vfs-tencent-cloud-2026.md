@@ -1,7 +1,7 @@
 ---
 title: "企业 Agent 平台三支柱：统一 Harness + Skill Control Plane + 虚拟文件系统（腾讯云开发者/随机比特）"
 created: 2026-09-17
-updated: 2026-09-17
+updated: 2026-11-15
 type: entity
 tags: [agent-harness, skill-control-plane, virtual-filesystem, stripe-kai, deep-agents, progressive-disclosure, session-scope, vfs-sandbox-boundary, enterprise-agent]
 sources: [raw/articles/enterprise-agent-harness-skill-vfs-tencent-cloud-2026]
@@ -43,6 +43,46 @@ provenance_state: extracted
 ## 演进四阶段与常见坑
 
 阶段一资产与风险基线（registry/lint/eval baseline，无基线无法证明新架构更安全）→ 阶段二统一 harness 试点（高频/读多写少/明确 artifact 流程，先验证最基本闭环：任务可恢复/skill 选得对/证据可追溯/写操作可阻断/产物可接管）→ 阶段三两阶段 skill 路由（catalog 几十项时先测纯 LLM 路由，预筛层有净收益才引入向量检索复杂度）→ 阶段四 Trace-to-Skill 闭环（生产 trace 发现缺口 → 候选 patch+eval → owner review → 隔离环境回归 → 合并发布，**生产 Agent 不直接改生产 skill**）。五个坑：统一 harness 做成新单体 Agent（统一的是执行安全治理不是把领域说明塞回超级 prompt）/allowed-tools 当完整授权/VFS 当无限期知识库（无发布流程和 TTL=数据沼泽）/过早引入多 Agent/只验证成功路径（权限拒绝/工具超时/发布中断/sandbox 资源耗尽/skill 冲突/证据过期才是关键测试）。^[raw/articles/enterprise-agent-harness-skill-vfs-tencent-cloud-2026.md]
+
+## 深度分析
+
+### 三支柱是一个整体，不是三件可选的组件
+
+文章最有价值的论证结构是把「模型」从企业 Agent 的核心竞争力中剥离出来：模型决定一次推理的上限，harness 决定这份能力能否稳定、可控地进入企业流程，换模型不会自动产生权限隔离、失败恢复、资产治理和交付证据。三支柱各解决一个正交问题——harness 解决「执行是否可靠可控」，skill 解决「分散在各团队的领域经验如何独立演进」，VFS 解决「跨越几百步的任务状态存在哪里」——缺任何一根，其余两根都会退化：没有 skill 约束的 harness 是不可维护的超级 prompt，没有 VFS 的 skill 只能交付聊天文本，没有 harness 的 VFS 则是一堆无人治理的文件。 这也解释了为什么 Stripe Kai 的转型被作者定义为「产品与运行时边界的重构」而非检索优化：4,000 个工作流 Agent 的失败不是质量波动，而是缺失了承载治理的运行时层。
+
+### 两阶段 skill 路由：把「选择」从生成问题改造成检索问题
+
+渐进披露（L1 发现 → L2 SKILL.md → L3 scripts）只压缩了单个 skill 的装载成本，没有回答「几百个描述相近的 skill 里选哪个」。Kai 的经验数据点很关键：system prompt 叠加到约 150 个技能时 frontier model 的选择质量已下降，于是路由被拆成两阶段——第一阶段追求召回率（几百项缩到十几项），第二阶段才由 LLM 结合会话上下文做精确选择。更彻底的一步在执行侧：harness 只在真正执行时注册被选 skill 允许的工具，无关工具不是「不建议调用」而是根本不出现在模型请求里（参见 [[concepts/skill-engineering-principles|Skill 工程原则]]）。这一设计同时买到两个东西：上下文成本随目录规模亚线性增长，攻击面随授权粒度收窄——把「目录选择的准确性问题」和「工具暴露的安全问题」用同一个机制解决，是全文最优雅的杠杆。
+
+### VFS 的创新点是信息生命周期，不是存储介质
+
+路径可以路由到对象存储、数据库或远端 workspace，所以 VFS 的价值不在 POSIX 语义，而在目录即生命周期：`evidence/` 默认不可被 Agent 覆盖，从机制上堵死模型「修正」原始证据的可能；`working/` 允许频繁变化；`artifacts/` 是对用户的交付承诺；只有显式发布才进入 `/shared/`，临时推理状态不会无意中变成组织事实。配套的 manifest.json 把「report.md 生成 ≠ 交付」变成机器可读的 contract——validation 字段区分本地验证、远端流水线、部署与业务验收，让 UI、后续 Agent 和审计系统读取结构化事实而非从自然语言猜状态。上下文治理上，文章给出了明确的三分法：summarization 压缩已发生的对话，文件系统保留可再验证的事实与产物，checkpoint 保存执行状态，三者不能互相替代（参见 [[concepts/harness-long-running-task|harness 长程任务模式]] 与 [[concepts/context-management-agent-systems|Agent 上下文管理]]）。
+
+### effective capability 把安全边界从「人」下沉到「会话」
+
+传统授权问「用户能做什么」，Agent 时代必须问「这次任务能做什么」：effective capability = user authorization ∩ agent configuration ∩ selected skill policy ∩ session/task scope ∩ tool-side enforcement。用户有权访问客户 A 和 B，不等于针对 A 的任务可读 B——会话创建时绑定 customer_id，工具服务端检查请求目标仍在 scope 内，换参数写法和 sandbox 内脚本都不能扩权。文章对「prompt 不是安全边界」的论证很克制：Deep Agents 明确采用 "trust the LLM" 模型，框架声明式 permissions 只覆盖内建文件工具，不覆盖自定义工具和 MCP，因此 allowed-tools、MCP 权限、sandbox policy 和业务 API 授权必须组合使用（参见 [[concepts/agent-security-architecture|Agent Security Architecture]]）。而 VFS 与 sandbox 必须是两个独立边界的推论同样重要：sandbox 保护宿主环境，不代表 sandbox 内数据天然安全，输入文件、网络、凭证、输出大小和 sync-out 路径要单独约束（参见 [[concepts/agent-sandbox|Agent 沙箱]]）。
+
+## 实践启示
+
+### 1. 先建 registry/lint/eval baseline，再动架构
+
+没有基线就无法证明新架构比旧架构更安全或更准确。第一阶段交付物不是新聊天页面，而是把现有 Agent、skill、tool 的所有权、入口、数据域、写操作和成功判据枚举清楚。
+
+### 2. 用近邻负例驱动 skill 目录评测
+
+单个 skill 的正例永远好看，真正的分辨力来自「查询构建日志 vs 下载构建制品」这类近邻混淆对。目录越大越应报告 top-1 accuracy、top-k recall、误触发率、漏触发率和混淆对，而不是只看回答是否合理。
+
+### 3. 把 evidence 只读与显式发布设为默认开关
+
+不要依赖提示词让模型「别改证据」：目录权限（evidence/ 只读）和发布流程（/shared/ 需显式发布）是结构性约束，配置一次就对所有 session 生效。临时推理状态与组织事实之间必须隔一道显式动作。
+
+### 4. sandbox 与 VFS 分别约束，别把 sandbox 当安全边界
+
+文件持久化与代码执行不绑同一宿主：Agent runtime 经 VFS 管状态，sandbox 按需作为工具调用。Sandbox 内的数据、网络、凭证与 sync-out 路径仍需独立授权模型——「代码跑在沙箱里」不等于「数据安全」。
+
+### 5. 用失败路径而不是成功路径验收平台
+
+权限拒绝、工具超时、发布中断、sandbox 资源耗尽、skill 冲突、证据过期才是企业 Agent 的关键测试。只能在依赖全部正常时完成任务的 Agent 仍然只是演示；试点选高频、读多写少、有明确 artifact 的流程，先验证任务可恢复、skill 选得对、证据可追溯、写操作可阻断这个最小闭环。
 
 ## 与既有实体的关系
 

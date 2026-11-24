@@ -1,7 +1,7 @@
 ---
 title: "gpt-image-2完全指南"
 created: 2026-05-12
-updated: 2026-06-17
+updated: 2026-11-18
 type: entity
 tags: [wechat, agent]
 sources: [raw/articles/gpt-image-2完全指南]
@@ -20,23 +20,17 @@ review_category: practice
 
 - [[moc/ai-skill-design|MOC]]
 ## 深度分析
-GPT-Image-2 在 Arena.AI Text-to-Image 排行榜以 1512 分登顶，领先第二名谷歌 Nano-Banana-2 共 242 分，是迄今为止最强大的图像生成模型。 ^[raw/articles/gpt-image-2完全指南.md]
-**核心能力矩阵：** ^[raw/articles/gpt-image-2完全指南.md]
+### 能力定位：把"图中文字"当核心能力做
+与上一代及 Nano-Banana 相比，GPT-Image-2 的差异化不在画质而在可控性：它把多语言文字渲染当成一等能力来对待，海报、菜单、招牌、UI 标签、信息图等高文字密度场景不再频繁"乱码"，而 Nano-Banana 在文字较多时经常出问题。指令遵循接近"按 brief 出图"——主体位置、背景、文案排版、风格倾向、禁用元素都能写进指令，只是仍达不到 Figma 那种像素级可控。图像输入以高保真方式处理，使产品换背景、局部替换、Logo/包装保留、参考图延展这类编辑任务成为可能，而不只是"生成一张新图"。 ^[raw/articles/gpt-image-2完全指南.md]
 
-- **文字渲染**：GPT-Image-2 把多语言文字渲染作为核心能力，海报、封面、菜单、招牌、PPT风格图、UI标签、信息图均可稳定输出，中文等多语言场景明显优于 Nano-Banana。
-- **指令遵循**：支持非常具体的构图指令（主体位置、背景、文案排版、风格、禁用元素），接近"按 brief 出图"的效果，虽然无法达到 Figma 像素级可控，但比上一代显著提升。
-- **编辑能力**：支持图像输入和编辑，以高保真方式处理输入图片，适合产品换背景、局部替换、风格统一、Logo/包装保留、物体参考图延展。
-**使用渠道对比：** ^[raw/articles/gpt-image-2完全指南.md]
-| 渠道 | 类型 | 适用场景 |
-|---|---|---|
-| ChatGPT (Plus/Pro/Business) | 官方对话框 | 直接对话式生图 |
-| OpenAI Codex | 官方 IDE 集成 | 开发时生成 UI 界面、游戏贴图、应用图标 |
-| Lovart / ChatCanvas | 第三方设计平台 | AI 设计协作画布，多模型串联 |
-| OpenAI Images API | 官方 API | 接入营销工具、电商后台、设计平台 |
-| OpenRouter | 模型路由平台 | 统一 API 格式、自动负载均衡、多模型切换 |
-| 302.AI | 国内平台 | 按用量付费，无需订阅，小白友好 |
-**与 Skill 体系的结合价值：** ^[raw/articles/gpt-image-2完全指南.md]
-作者开源的 gpt-image-2 Skill 覆盖 18 大类、79 个结构化模板，配合三种运行模式（Mode A 本地 API、Mode B Host 委托、Mode C Advisor 纯 prompt 顾问），可在 Claude Code、Cursor、Codex 等 Agent 环境中实现"说一句话就出图"的全流程自动化。 ^[raw/articles/gpt-image-2完全指南.md]
+### API 形态与渠道成本结构
+官方入口是 Images API：以 `model: "gpt-image-2"` 调用 images.generate 或 images.edit，分别对应文生图与图像编辑，适合接入营销工具、电商后台等内容生产系统。不想直连官方时，OpenRouter 提供同款模型（模型名 openai/gpt-5.4-image-2，与官方命名不同），附带统一 API 格式、自动负载均衡和多模型切换；302.AI 面向国内用户按用量计费、免订阅、支付门槛最低。渠道选择的实质是成本结构权衡：订阅制适合高频个人使用，按量付费适合低频试错，API 直连适合规模化集成。
+
+### Prompt 工程化是效果的分水岭
+文中所有惊艳案例的共同前提是长且结构化程度高的 prompt；"帮我画个海报"式的随手指令效果显著劣化。作者的做法是把 18 大类、79 个模板沉淀为 Markdown 模板库（含参数表、变体说明、典型案例），把"想一句写一句"变成"选模板、填字段、渲染 prompt"的可复用流程——这正是把隐性视觉需求显式化为结构化约束的提示词工程思路，参见 [[concepts/prompt-engineering-fundamentals|提示词工程基础]]。
+
+### Skill 三模式的适配逻辑
+开源生图 Skill 按 Agent 环境的能力分三种运行模式：自配 API Key 的环境走 Mode A 全自动（选模板→渲染 prompt→调脚本→图片落盘）；Codex 这类自带图像工具的宿主走 Mode B，Skill 退化为提示词指引，出图交给宿主原生工具；纯文本环境走 Mode C，只输出渲染好的 prompt 供人工粘贴到 ChatGPT/Lovart 使用。这种"按宿主能力自动降级"的设计是 Skill 工程的典型思路——同一份知识资产在不同 harness 下自动选择集成深度，参见 [[concepts/skill-engineering-principles|Skill 工程原则]] 与 [[concepts/media-generation|媒体生成]]。
 
 ## 实践启示
 **1. 拥抱长 prompt 工程化** ^[raw/articles/gpt-image-2完全指南.md]

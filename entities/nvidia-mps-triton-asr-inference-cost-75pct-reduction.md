@@ -1,7 +1,7 @@
 ---
 title: "NVIDIA MPS + Triton 降低 ASR 推理成本 75%"
 created: 2026-08-30
-updated: 2026-09-10
+updated: 2026-11-24
 type: entity
 tags: [nvidia, mps, triton, asr, inference, gpu-optimization, cost-reduction, speech-recognition]
 sources: [raw/articles/reduce-asr-inference-costs-by-75-with-nvidia-mps-on-amazon-e]
@@ -88,28 +88,35 @@ g7e 最优点比 g6e 吞吐高 51%+、延迟低 25%+；TensorRT + ONNX 虽降到
 
 ## 深度分析
 
-### 为什么是 4×25% 而不是更细的分区
+### 为什么是 4×25%，而不是更细的软分区
 
-MPS 的 SM 配额是软上限，分区越细、调度窗口越小；4×25% 与 preferred sizes [4, 8, 16] 对齐，batch 槽位与分区一对一。瓶颈在 SM 调度粒度与 CPU 侧开销，而非显存（2.5 GB × 4 远小于 48 GB）。
+单条 ASR 请求占 L40S 142 个 SM 的 15–20%，而 `CUDA_MPS_ACTIVE_THREAD_PERCENTAGE` 是软上限而非预留——分区一旦小于单请求的峰值需求，相邻分区的 kernel 就会互相挤占，延迟抖动随之放大。4×25% 是"每个分区装得下一个满负荷请求且留有余量"的最粗安全粒度：142 SM 的 25% 约 35 个 SM，对 21–28 个 SM 的单请求需求留出余量，四个分区又恰好铺满整卡。更细的 8 分区确实存在——分离模型走的就是 8×12%（各 ~1.8 GB）——但那服务的是算力需求更低的 Sortformer；转写若拆 8×12.5%，每分区反而低于单请求峰值。显存不是约束（2.5 GB × 4 远小于 48 GB），真正要对齐的是 preferred batch sizes [4, 8, 16] 与分区间的一对一映射。
 
-### 收益来自三层正交优化
+### 三层正交优化：MPS 管并发，TensorRT 管单请求，Triton 管排队
 
-MPS 管"同时能挂多少活"，TensorRT/ONNX 管"每份活多久"，Triton batching 管"多少活凑一起交"。单上 MPS 只有"实例减半、吞吐持平"，叠加 TensorRT 才把 g7e 推到 111.6 RPS。
+三层的收益维度互不重叠，缺一层就少一段量化跳变。MPS 解决"同一时刻能挂多少活"：利用率 ~20%→~80%、实例 16→4；但单上 MPS 在 g6e 的最优点吞吐几乎持平（62.3→60.8 RPS），因为每份活的计算时间没变。模型层解决"每份活多久"：Conformer encoder（24 层 / 1024 hidden）走 TensorRT EP 做 kernel 融合 + FP16 校准，TDT decoder 因变长 token 生成留在 PyTorch CUDA + graph caching；叠加后 g7e 才推到 111.6 RPS（64 并发才饱和）。Triton batching 解决"多少活凑一批"：50 ms 累积窗口 + preferred sizes [4, 8, 16] 把零散请求填满各分区。生产最终停在 75% 那条线，是第四个维度——运维成本——说了算：每周重导出 ONNX 的代价，压过了再省 2 台实例的收益。
 
-### 亚秒 SLA 约束的是并发上限
+### 亚秒 SLA 约束的是每分区的队列深度
 
-并发 1 → 100 时 p50 由 121 ms 涨到 964.7 ms，RPS 在 32 并发后饱和（92.1 → 106）：延迟上涨来自排队而非计算变慢，杠杆是"每个分区允许多深的队列"。
+g7e 的并发扫描（1→100，每档 5 轮均值）显示吞吐在 32 并发后基本饱和：92.1 → 99.7 → 106.0 RPS，而 p99 从 768.8 ms 翻倍到 1,544.6 ms，p50 从 290.5 ms 涨到 964.7 ms——多买到的 ~15% 吞吐全是用延迟换的。原因是 4 个分区的算力上限决定了稳态吞吐，超出的并发只是把等待从客户端挪进 Triton 的 50 ms 累积队列；单请求计算本身没有变慢（45 秒音频 ~160 ms）。所以"最优运行点"被定义为 mean < 650 ms 且 p99 < 1,000 ms 的最后一个并发档位——SLA 实际约束的是每分区允许排多深的队，容量规划的锚点是 4 GPU × 92.1 RPS，而不是压测能摸到的峰值 106 RPS。
 
-### 会崩在哪：共享 context 是硬边界
+### 共享 context 是崩溃的硬边界
 
-地址隔离保护内存，但 CUDA graph 重捕、非法地址属 context 级状态——一个实例翻车会污染兄弟实例的 capture，`cudaErrorIllegalAddress` 由此而来；能否上生产取决于 flock 串行加载、预热信封 + eager 回退、wedge sentinel + 探针。
+MPS 的隔离承诺只到地址空间一级：内存受独立地址空间保护，但 CUDA context 与 graph 捕获状态是全卡共享的。实测的翻车路径：NeMo decoder 遇到预热信封之外的新 tensor 形状时触发 graph 重捕，1.5–2.5 秒的捕获窗口内兄弟实例的 kernel 会污染捕获，进程以 `cudaErrorIllegalAddress` 崩溃。生产可用的三个前置条件全部围绕这条边界设计：`fcntl.flock` 串行化加载（600M 模型 × 4 进程同时初始化会打爆显存）；5/15/30/45/60 秒 + 61 秒 batch 2 的预热信封让生产形状全部命中缓存 graph（~165 ms，超出回退 eager ~500 ms）；wedge sentinel——CUDA stream 探针失败即写 `/tmp/parakeet_wedged`，纳入 /health 存活判定。75% 的节省，代价是故障域从"单进程"扩大到"单卡"。
+
+### 成本账：-75% 的构成与 -88% 的取舍
+
+基线是 16 台 g6e.4xlarge 扛 ~62.3 RPS/GPU（mean 606 ms、p99 788 ms）。同一实例类型叠加 MPS 后每卡吞吐几乎持平（60.8 RPS）但实例数砍到 4 台——这 75% 完全来自消灭闲置，模型未动。换 g7e.4xlarge 后同样 4 台把每卡抬到 92.1 RPS（+51%）、mean 降到 352 ms，实例数不变：硬件换代比软件改造便宜。TensorRT + ONNX + MPS 再进一步到 111.6 RPS、2 台实例（-88%），边际收益是 2 台 GPU 与 +21% 吞吐，边际成本是每个微调周期一次 ONNX 重导出，生产选择了 75% 那条。分离模型侧同样务实：Sortformer warmup 后 mean 309→239 ms、σ 12.62→7.13 ms，60 秒录音拆 4×15 秒块，实时因子 0.016x。
+
 
 ## 实践启示
 
-1. **先量 request-to-SM 比例再决定买卡**：单请求只用 15–20% SM 时，扩容实例数是最贵的解。
-2. **按隔离需求选机制**：强隔离用 MIG、弹性超配用 MPS，两者可组合。
-3. **model instance 与 MPS 分区一对一**，并让 preferred batch sizes 与分区数对齐。
-4. **生产从 g7e.4xlarge + 4 实例起步**，p99 有余量再上调 `MPS_INSTANCE_COUNT`。
+1. **先测单请求算力占比，再决定扩容方式**：nvidia-smi 观察单请求 SM 占用；15–20% 量级走 MPS 软分区，单请求已占满 SM 的模型上软分区只会加剧争抢。
+2. **用 SLA 扫描定运行点，不用压测峰值**：并发 1→100、每档 5 轮均值，取"mean < 650 ms 且 p99 < 1,000 ms 的最后一个档位"为容量锚点——本案锚点是 4 GPU × 92.1 RPS，而非峰值 106 RPS。
+3. **model instance 与 MPS 分区保持一对一**：`MPS_INSTANCE_COUNT` 同时决定两者（`auto_config.py` 生成），preferred batch sizes [4, 8, 16] 与分区数对齐，避免调度粒度错位。
+4. **CUDA graph 预热信封必须覆盖全部生产形状**：预烧线上会出现的所有时长 × batch 组合（5/15/30/45/60 秒 + batch 2 × 61 秒）；信封外的形状在 MPS 下重捕 graph 会拖垮兄弟实例，eager 回退是保命项而非可选项。
+5. **把 wedge sentinel 接进健康检查**：CUDA stream 探针失败即写 sentinel 文件，/health 同时查存活与 sentinel，让不可恢复实例被编排层快速替换而不是拖垮整卡。
+6. **88% 方案留作二阶段**：TensorRT + ONNX 路线的 +21% 吞吐（111.6 vs 92.1 RPS）要付"每个微调周期重导出一次"的运维税；先跑通 75% 路径，确有容量压力再切换。
 
 ## 相关实体
 

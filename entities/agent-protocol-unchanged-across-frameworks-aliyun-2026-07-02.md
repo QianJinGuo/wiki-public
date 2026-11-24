@@ -1,7 +1,7 @@
 ---
 title: "Agent Protocol 不变层：跨框架的 6 个稳定 Runtime 对象"
 created: 2026-07-02
-updated: 2026-09-07
+updated: 2026-11-09
 type: entity
 tags: [agent, protocol, runtime, framework, architecture, langgraph, a2a, ag-ui]
 sources: [raw/articles/agent-protocol-unchanged-across-frameworks-aliyun-2026-07-02]
@@ -78,6 +78,38 @@ Agent Runtime 暴露给外部世界的契约回答的是：^[raw/articles/agent-
 4. **真正区分玩具 Agent 和生产 Agent 的，是状态持久化、中断恢复、可观测性和可评测性**——这是协议对象之外的 Runtime 实现能力层。^[raw/articles/agent-protocol-unchanged-across-frameworks-aliyun-2026-07-02.md]
 
 5. **值得看的不是某个框架 API，而是协议边界和 Runtime 抽象**——框架会更迭，但协议边界稳定的时间更长。当你理解这 6 个对象后，看新框架时就能快速判断：它只是换了一套 API 名字，还是解决了一个真实的 Runtime 问题？^[raw/articles/agent-protocol-unchanged-across-frameworks-aliyun-2026-07-02.md]
+
+## 深度分析
+
+### 为什么会沉淀出一个不变层
+
+框架层注定不稳定，因为它把两类变化速度完全不同的东西绑在一起：模型与产品形态的月级迭代，和"任务如何被启动、观测、中断、恢复"这类长期不变的结构问题。文章的信号是：十来个标准与框架——LangChain Agent Protocol、A2A、AITP、ACP、AG-UI、OpenAI Assistants、LangGraph Server API、Deep Agents、OpenTelemetry GenAI——没有一个完全收敛，却共同把中心从单次 chat completion 移向"长生命周期、可观测、可评测、可恢复、可协作的任务对象"。^[raw/articles/agent-protocol-unchanged-across-frameworks-aliyun-2026-07-02.md:99-164] 这是标准竞争的典型路径：先稳定的不是某个标准，而是谁也绕不开的对象词汇表。这 6 个对象不变，因为它们是任务生命周期的逻辑必经点，不是某家的 API 设计偏好。
+
+### 分层经济学：哪些层先标准化，哪些层永不统一
+
+文章实际给出一张跨层标准化的"难度光谱"。工具层最先标准化：JSON Schema 已是事实标准，MCP 把工具发现、定义、调用、资源读取从框架内部抽出来——因为它边界清晰、输入输出结构化、与 loop 承载方式解耦。^[raw/articles/agent-protocol-unchanged-across-frameworks-aliyun-2026-07-02.md:606-678] 事件流层次之：SSE 因 HTTP 原生、自带重连被判定为持久选择，可恢复流是跨网络部署的刚需。^[raw/articles/agent-protocol-unchanged-across-frameworks-aliyun-2026-07-02.md:705-733] 而执行模型、编排协议、多 Agent 协作被明确判定不会统一——问题空间太大。^[raw/articles/agent-protocol-unchanged-across-frameworks-aliyun-2026-07-02.md:993-996] 内在逻辑：**离模型越近的层越不稳定，离"任务记账"越近的层越稳定**，协议化因此自外向内推进。
+
+### 不变层为什么必须"低约束"：生态位与互操作
+
+不变层能成立，前提是只约束语义、不约束实现："最好的协议是低约束的，最好的 Runtime 是高内聚的"——协议只定义外部可依赖的边界，Runtime 在边界内保持实现自由。^[raw/articles/agent-protocol-unchanged-across-frameworks-aliyun-2026-07-02.md:933-953] 低约束正是互操作的杠杆：所有 Runtime 按统一语义表达 `Thread -> Run -> Step -> Artifact` 后，控制台、评测、审计系统不再需要理解各框架内部状态结构。^[raw/articles/agent-protocol-unchanged-across-frameworks-aliyun-2026-07-02.md:398] 生态已为碎片化付出代价：Trace 格式各自为战、框架绑定过深、混用多框架即失去统一视图，文章据此判断 Agent Tracing 的 OpenTelemetry 式标准化是迟早的事。^[raw/articles/agent-protocol-unchanged-across-frameworks-aliyun-2026-07-02.md:853-857]
+
+### 偏离不变层的代价：级联缺口与向后兼容负担
+
+映射表的另一面是缺失：缺口会级联。状态持久化是分水岭：没有持久化就无法崩溃后恢复、无法支持真正的 Human-in-the-Loop、无法分叉重放。^[raw/articles/agent-protocol-unchanged-across-frameworks-aliyun-2026-07-02.md:466] 中断/恢复是它的直接延伸：没有快照只能同步 ask-and-wait，Human-in-the-Loop 的基础设施不是 ask-user API，而是"状态快照 + 中断载荷 + 恢复指令 + 权限上下文"的组合；错误恢复同理，没有 Checkpoint 回滚，10 步任务第 8 步失败就得重跑前 7 步。^[raw/articles/agent-protocol-unchanged-across-frameworks-aliyun-2026-07-02.md:518-526] 时间维度上还有最贵的隐藏成本：Schema 演进——今天的 Checkpoint 三个月后还能否恢复？需要状态版本号、迁移函数、兼容窗口，而"真正难的不是保存，而是恢复"。^[raw/articles/agent-protocol-unchanged-across-frameworks-aliyun-2026-07-02.md:428-439] Checkpoint 链式版本控制因此只被标记为"可能持久"：概念承诺（类 Git）比实现承诺更耐久——与"协议对象比框架 API 更稳定"是同一逻辑。^[raw/articles/agent-protocol-unchanged-across-frameworks-aliyun-2026-07-02.md:962-972]
+
+## 实践启示
+
+1. **用"协议四问"审视新框架，而不是学它的 API**：它只是换 API 名字还是解决真实 Runtime 问题？强化的是执行模型、状态管理、工具协议还是流式事件？长期趋势还是阶段性流行？再查它能否稳定表达 6 对象、有无真正持久化和可恢复事件流。^[raw/articles/agent-protocol-unchanged-across-frameworks-aliyun-2026-07-02.md:42-45]
+
+2. **投入可迁移层，谨慎投入易变层**：协议对象模型、工具协议抽象、状态管理抽象是跨框架通用的设计模式，值得重点投入；特定框架执行模型深入 1-2 个即可，重 why 不重 API；多 Agent 模式碎片化严重，等标准出现再深入不迟。^[raw/articles/agent-protocol-unchanged-across-frameworks-aliyun-2026-07-02.md:1000-1010]
+
+3. **选型先查 6 对象覆盖表**：缺 Checkpoint 就过不了崩溃恢复、Human-in-the-Loop、分叉重放门槛；库形态缺可恢复流尚可接受，服务化后断线恢复是刚需；缺口能否后补，参照持久性判断——状态持久化、Error-as-Data、SSE 均为"持久"。^[raw/articles/agent-protocol-unchanged-across-frameworks-aliyun-2026-07-02.md:62-68]
+
+4. **持久化先分层再选型，Schema 演进是第一天的问题**：Conversation、Run State、Checkpoint、Artifact、Semantic Memory 是五层不同状态，"支持 Memory"的框架往往只支持一层——先说清保存哪层；自建 Checkpoint 就要同时设计版本号与迁移窗口，选托管则接受控制权让渡。^[raw/articles/agent-protocol-unchanged-across-frameworks-aliyun-2026-07-02.md:372-388]
+
+5. **并发语义写进协议而不是锁**：Thread 不是锁、Run 才是执行边界；同一 Thread 是否允许多 Run 并行（串行队列/拒绝/取消覆盖/分叉/乐观并发）必须作为 Run 创建语义显式暴露，否则消息顺序、Artifact 归属、事件去重都会变成不可复现的隐式行为。^[raw/articles/agent-protocol-unchanged-across-frameworks-aliyun-2026-07-02.md:402-426]
+
+6. **把错误当数据，把控制面当安全边界**：Error-as-Data 让 LLM 读错误信息自主决定重试、换工具或上报，仅系统级故障才 raise；工具一旦有真实副作用，权限、Guardrail、审批、预算、取消就从外围变成安全边界——这与 [[concepts/model-context-protocol-mcp|Model Context Protocol (MCP)]]（工具层先标准化）和 [[entities/agent-runtime-7-responsibilities-secondcurve-2026|Agent Runtime 7 大职责]] 划出的边界一致。^[raw/articles/agent-protocol-unchanged-across-frameworks-aliyun-2026-07-02.md:650-663]
 
 ## 与其他实体的关系
 

@@ -1,7 +1,7 @@
 ---
 title: "阿里 Token Foundry CODA：技能—策略协同进化的「协同进化陷阱」与可靠性评测协议"
 created: 2026-10-22
-updated: 2026-10-22
+updated: 2026-11-16
 type: entity
 tags: [agent, skill, self-evolution, co-evolution, evaluation, reliability, post-training, rl]
 sources: [raw/articles/alibaba-token-foundry-coda-skill-policy-coevolution-reliability-2026]
@@ -60,6 +60,20 @@ review_verdict: keep
 **对同义改写鲁棒是低成本的高价值验收项。** 工程上不需要复杂基准就能做第一道体检：把技能文档做语义等价重写，观察逐任务结果是否翻转；翻转比例高即说明模型学到了表面形式而非可迁移策略。^[raw/articles/alibaba-token-foundry-coda-skill-policy-coevolution-reliability-2026.md]
 
 **与安全侧的协同进化研究构成一对镜像。** SHE/SafeEvolve 关心「Harness–Policy 协同进化能否持续修复安全失败」→ [[entities/she-safeevolve-agent-safety-harness-policy-coevolution|SHE 与 SafeEvolve]]；CODA 关心「协同进化产生的高分能否在技能漂移后存活」。前者问进化是否有效，后者问进化的收益是否可携带，两者共同指向 [[concepts/harness-engineering-paradigm-shift|Harness 工程范式]] 里「评测必须与运行时变化对齐」的同一命题。^[raw/articles/alibaba-token-foundry-coda-skill-policy-coevolution-reliability-2026.md]
+
+## 深度分析
+
+### 依赖的三层结构：知识、组织方式与表面形式
+
+五个探针实际把「技能依赖」拆成三个深度：对技能中有效知识的依赖（信息缺失、完全移除）、对知识组织方式的依赖（技能库组成变化）、对具体表达形式的依赖（同义改写）。同义改写之所以最具诊断性，在于它是唯一不触碰知识内容、只动表层的变化，能把「表面形式过拟合」从其他脆弱性中单独分离出来。而 CR 正是这一层依赖的量化器：平均分接近但逐任务结果翻转，说明模型把技能当模板而非知识源使用。^[raw/articles/alibaba-token-foundry-coda-skill-policy-coevolution-reliability-2026.md:69-73,101-107]
+
+### 峰值最大化与下界保障是两个不可互换的目标
+
+协同进化本质上是对「模型×技能库」这一搭配的联合寻优：筛选以当前搭配的收益为准，迭代收敛到高分但互锁的组合；部署要求的却是对技能变化取最差的性能下界。一个点上的 argmax 不约束分布上的 min——这是目标函数错位而非工程瑕疵，也解释了为何理想化筛选与候选覆盖的强假设推不出可靠性、最差成功率必须独立成一个评测维度。^[raw/articles/alibaba-token-foundry-coda-skill-policy-coevolution-reliability-2026.md:55-61,91-95]
+
+### 频率错配让陷阱成为生产环境的结构性问题
+
+陷阱在生产中几乎必然触发，源于成本不对称：修订一条技能文档远比一次模型重训便宜，技能更新频率因此天然高于重训频率，「训练时的黄金搭配」在系统生命周期的大部分时间处于失效区间，高分只在训练快照上成立。CODA「初步审计方案」的定位由此可读作：它不是一次性基准，而是技能每次变更后都可重跑的回归测试——评测从上线前的一次性验收，变为随技能版本持续执行的常规检查。^[raw/articles/alibaba-token-foundry-coda-skill-policy-coevolution-reliability-2026.md:27-31,115-125]
 
 ## 关联
 

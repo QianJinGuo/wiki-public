@@ -1,7 +1,7 @@
 ---
 title: "策略效果类 Agent 评测体系与 Auto Rubrics：业务效果导向的可评、可控、可迭代"
 created: 2026-09-18
-updated: 2026-09-18
+updated: 2026-11-17
 type: entity
 tags: [agent-evaluation, llm-as-judge, rubrics, auto-rubrics, position-bias, stability-selection, ab-testing, strategy-agent, dpo, release-gating, taobao]
 sources: [raw/articles/strategy-agent-eval-auto-rubrics-taobao-2026]
@@ -50,6 +50,24 @@ provenance_state: extracted
 ## 结语三件事
 
 **可评**（分层指标/可信数据集/校准过的评估器）、**可控**（准入/护栏/灰度/回滚）、**可迭代**（评测结果回流到 Prompt/数据/模型/业务规则改进）。最深教训：评估器本身也需要被评估——未经校准的 Judge 带来的虚假信心比没有 Judge 更危险；每个关键评估器都需验证与人工/专家判断的一致性（位置偏见/稳定性/泛化能力/bad case 覆盖）。^[raw/articles/strategy-agent-eval-auto-rubrics-taobao-2026.md]
+
+## 深度分析
+
+### 三个陷阱如何推导出三层架构
+
+Layer 2 筛选层不是三个并列的可选方案，而是三个陷阱各自留下的"补丁"的堆叠。方案二的比较评估改造（绝对判断改为对比判断 + 强制三步推理，一致率 46%→84%）直接对应陷阱三：model A 一致率仅 16.7% 证明单次绝对判断在顺序扰动下结论可反转，而对比判断给了模型参照物，漂移空间被压缩；位置交换随机化则对应陷阱一——96%→50% 的虚假准确率正是 chosen 固定在 A 位造成的，随机化后回落到 69.3% 才是真实水位。方案三的 200 次 Bootstrap 稳定性筛选 + 5-Fold 交叉验证贪心，对应陷阱二——贪心从 330 条选出的 9 条 Rubric 中没有任何一条选中频率超过 80%（最高仅 30-40%），训练 78% vs 验证 56% 的 22 个百分点差距说明"按区分度排序逐步加入"本身就会拟合样本噪声。换句话说，三个陷阱不是事后教训，而是筛选层逐步升级的工程动因：每个方案解决一个独立的失效模式（方向、稳定性、泛化），三者串联才构成一个可信的 Judge。^[raw/articles/strategy-agent-eval-auto-rubrics-taobao-2026.md:266-290] ^[raw/articles/strategy-agent-eval-auto-rubrics-taobao-2026.md:554-636]
+
+### 每层架构都在补偿"信号稀缺"
+
+三元难题中的反馈稀缺（每天 3 组实验、T+1、半月仅约 100 条偏好对）不只是背景约束，它实际上决定了整套架构的形态。正因偏好对极贵，才不能走黑盒 RM 路线（冷启依赖大量标注、换场景需重训），只能用可解释的 Rubric 做评估器；正因样本少，每个数据点都要被榨出多重价值——同一份 <chosen, rejected> 数据集既是 Rule Miner 的挖掘原料（每对产出 5-15 条规则），又是违反率统计与交叉验证的评估样本，最后经 Golden Set 三次一致过滤成为 DPO 训练数据。Layer 3 "覆盖率低但精确度高"的设计（3 次独立判断 + 位置随机化，仅三次一致且方向正确才入选）本质是在稀缺信号下主动牺牲召回换精度：错误样本混入训练集的代价远高于少用几条数据。这与收敛判断四层漏斗中"过滤约九成、再过滤约八成"只留头部少量样本的取舍完全同构。^[raw/articles/strategy-agent-eval-auto-rubrics-taobao-2026.md:31-37] ^[raw/articles/strategy-agent-eval-auto-rubrics-taobao-2026.md:645-653]
+
+### 失效模式贯穿始终：评估器也会过拟合
+
+评估数据集那组衰减数字（86%→68%→55%）是全文最容易被低估的证据：它说明过拟合不是 Rubric 筛选环节的一次性事故，而是评估器作为模型本身的固有属性。数据模式分析先行的设计（先提取 chosen/rejected 参数差异分布与分位数，再注入生成 Prompt）是对"LLM 编造无数据支撑规则"的直接防御；Golden Set 与 Judge 验证集则是把"评估器需要被评估"制度化——如果只在训练分布上验证，Rubric Judge 的高准确率与陷阱一中 96% 的虚假数字没有本质区别。这与 [[entities/rubrics-survey-llm-evaluation-ruc-nlpir-2026|Rubrics 学术综述]]把显式评估标准视为质量接口的视角互补：综述从文献说明 Rubric 为何可控，本文用 55% 的泛化崩塌说明"接口本身也需回归测试"。^[raw/articles/strategy-agent-eval-auto-rubrics-taobao-2026.md:149-153] ^[raw/articles/strategy-agent-eval-auto-rubrics-taobao-2026.md:483-491]
+
+### 增量贡献口径与二元偏好是同一原则的两面
+
+"评测衡量策略相对于基准的增量贡献而非指标绝对值"（大促期间 GMV 天然上涨与策略无关）与"放弃打分、转为二元偏好判断"表面是两个决策，实际是同一原则：评估对象是策略的**相对效果**而非绝对水平。人工评分路线暴露的三个问题（分数有天花板、目标从 GMV 转向 ROI 即失效、Judge 无法在上线前对齐线上分数）全部源于把绝对值当评估对象；而偏好对天然是差分信号——chosen/rejected 之差已消去大盘、周期等共同环境因子，这正是 A/B 实验的统计逻辑在评测数据层面的复用。收敛判断中的贝叶斯收缩（数据天数越少评分越保守）是该原则的第三处落点：不绝对相信小样本的绝对表现，而是向基准水平收缩。三条线索共同解释了为什么这套体系能对齐离线与线上——它从数据构造层就把"环境共同项"差分掉了。^[raw/articles/strategy-agent-eval-auto-rubrics-taobao-2026.md:368-378] ^[raw/articles/strategy-agent-eval-auto-rubrics-taobao-2026.md:407-420] 关联背景可参见 [[concepts/llm-rl-algorithms-ppo-dpo-grpo-marl-evolution-2026|DPO 等 RL 算法谱系]] 中偏好数据用于对齐训练的一般框架。
 
 ## 与现有评测知识的关系
 

@@ -9,7 +9,7 @@ review_value: 7
 review_confidence: 7
 review_stars: 3
 created: 2026-06-01
-updated: 2026-09-10
+updated: 2026-11-20
 sources:
   - raw/articles/powering-agentic-ai-sales-strategy-with-amazon-bedrock-agent
 reviewed: 2026-09-07
@@ -233,6 +233,32 @@ Strands Interrupt 的设计值得特别关注：它不仅处理工具调用中�
 ### 5. MCP 作为 Agent 工具生态的标准化路径
 
 Field Advisor 在数分钟内接入超过 20 个 MCP 工具的能力，验证了 [[concepts/model-context-protocol-mcp|Model Context Protocol]] 作为工具集成协议的企业价值。AgentCore Gateway 作为 MCP 工具的单一注册中心，使新工具接入无需修改运行时部署——这与传统的点对点工具集成方式形成鲜明对比。值得注意的是，Remote Agent 与 MCP Tool 使用完全相同的接口包装，这意味着"MCP 生态"和"Remote Agent 生态"在 Supervisor 看来没有本质区别，统一了 [[concepts/multi-agent-collaboration-patterns|Multi-Agent Collaboration Patterns]] 中的工具/代理边界。 ^[raw/articles/powering-agentic-ai-sales-strategy-with-amazon-bedrock-agent.md]
+
+## 深度分析
+
+### 1. Agent 组合治理：编排层成为资产清单的隐含管理者
+
+Field Advisor 的 20+ 领域 Agent 问题，表面上是 UX 问题（用户不知道该用哪个），深层是组合治理问题：当每个 Agent 都是窄域专精资产时，谁拥有路由权、谁决定淘汰、谁为质量兜底——这些治理角色在传统软件组合管理中有成熟答案，在 Agent 组合中却普遍空白。Supervisor 的扁平工具目录（flat tool catalog）给出了一半答案：新 Agent 只需一条配置项即可接入，编排逻辑零改动，[[concepts/agent-role-specialization|Agent Role Specialization]] 的细化得以在组织内近乎自由地发生。但二阶效应同样清晰：接入成本趋零的系统天然缺乏淘汰压力，工具目录只会单调增长——正文没有展示任何"下线一个 Agent"的机制，这是所有扁平目录架构的共性盲区。[[concepts/orchestrator-worker-architecture|Orchestrator-Worker Architecture]] 的实践者应意识到：编排层在成为统一入口的同时，也隐式接管了组合资产清单的管理者角色，它需要的不只是路由智能，还有目录治理（谁在目录里、为什么、何时移除）。
+
+值得进一步注意的是治理控制点的实际位置：接入流程是"在 Registry 服务注册 MCP 配置，Supervisor 下次启动时自动发现"。这意味着 Registry 而非编排层才是事实上的治理闸门——目录变更被前移到了注册时点，而运行时的变更（Supervisor 重启后的工具集刷新）只是治理决定的执行。这种"注册时治理、运行时执行"的分离类似依赖管理中的 lockfile 机制：谁拥有注册权限，谁就实际拥有 Agent 组合的形态。组织若不显式设计 Registry 的审批流程，扁平目录的便利性会把治理缺口从"技术问题"转化为"组织问题"——没有下线机制的技术原因，只有没有下线流程的组织原因。Pass-through 模式在此有微妙价值：它让专家用户绕过路由直接触达特定 Agent，客观上保留了"目录项独立存在"的可感知性，部分缓解了编排层的黑盒化倾向；但它同时也意味着每个目录项必须独立维持可用性与质量，因为总有一条路径绕过 Supervisor 的统一错误熔断直达它。
+
+### 2. 在线优先评估与销售工作流的天然耦合
+
+AWS 推荐"从生产流量在线评估开始"，在销售场景中并非通用最佳实践，而是与该领域工作流结构强耦合的领域适配。销售查询高度个体化（客户特定、情境特定），离线测试集天然滞后：产品文档、定价策略、竞品情报持续变化，合成测试集的衰变速率远快于其构建成本所能支撑的更新周期。更关键的是一个正文未明说的结构性红利：HITL 写确认流程本身就是隐式评估信号源——销售代表每一次"批准/拒绝/修改" Agent 提议的 CRM 变更，都是一条免费的动作正确性（action correctness）标注，审批流与在线评估在数据层面互相喂养，评估不产生额外用户负担。这使得 [[concepts/eval-surface-rotation|Eval Surface Rotation]] 在此架构中近乎自动发生：生产流量持续刷新评估面，评估器消费的是 Observability traces 中已经存在的数据。对评估基础设施起步团队的启示是：先审视自己的工作流里是否已内嵌人类判断点，若有，评估系统应优先消费这些判断，而非另建标注通道。
+
+这一耦合还有第二个支点：请求的扇出结构。单个用户问题可能并行分叉到多个远程 Agent 与 MCP 工具，trace 因此天然成为评估的自然单元——评估的不是"回答对不对"这种终端语义，而是整条编排链路（路由选择、工具组合、各子 Agent 的贡献）的联合表现。当评估粒度与执行粒度对齐时，回归定位（哪个环节劣化了）可以直接从 trace 拓扑中读出，而无需重建调用现场。这解释了为什么 AWS 把 Observability 与 Evaluations 设计为消费同一份数据的两个面：观测数据即评估语料。反过来看，离线测试集在多 Agent 系统中的根本缺陷不是覆盖不足，而是无法模拟扇出后的组合行为——测试集能验证单个 Agent 在给定输入下的输出，却难以穷举 Supervisor 在真实查询下会做出怎样的路由与并行调度决策。
+
+### 3. HITL-as-code 的二阶效应：审计边界与责任链的重构
+
+选择 Strands Interrupt 而非独立 HITL 服务，除正文所述的基础设施简化外，还有三个未被讨论的二阶效应。其一，审计边界的迁移：暂停/恢复状态存于 Session Manager，意味着"谁在何时批准了什么"的完整问责链成为 Agent 会话状态的一部分而非独立审批系统的记录——事后合规审计必须读取 Agent 内存状态才能重建责任链，这改变了审计工具的对接面。其二，审批摩擦成为隐形基础设施：每周节省 2 小时的核心指标依赖审批交互保持低摩擦，Interrupt UX 的任何退化（确认步骤增多、上下文丢失、恢复失败）都会直接侵蚀这一收益，而这类退化在常规功能监控中不可见。其三，跨 Agent 中断带来同意归因的模糊：当远程 Agent 通过 Supervisor 的统一界面向用户请求同意时，用户批准的是一个无法归因到具体系统的动作——同意粒度与同意疲劳（consent fatigue）之间存在结构性张力：弹窗越精确，用户越疲劳；越粗略，同意的语义价值越低。[[concepts/agent-security-architecture|Agent Security Architecture]] 视角下，这意味着 contingent authorization 的实际安全强度取决于这一张力的管理方式，而非机制本身。
+
+还有一个容易被低估的行为学效应：Interrupt 状态由 Session Manager 持久化，用户可以在 Slack 提起请求、在 CRM 界面完成审批——审批与发起在渠道上是解耦的。这种渠道异构性改变了审批行为的分布：移动场景下的快速批准、桌面场景下的审慎核对，会形成不同的同意质量分层。企业若在此之上叠加合规要求（如高价值变更需二次确认），纯代码方案的优势会反过来变成约束——因为没有独立审批服务，就没有独立于会话生命周期的策略执行点，所有策略都必须以 Hook 的形式注入框架。这提示 HITL-as-code 是一个有边界条件的选择：当审批策略简单且与工作流同构时，它是优雅的简化；当审批策略开始需要独立的生命周期（越级审批、时效过期、代理批准）时，"纯代码"会逐渐长出一个事实上的审批服务，只是缺少正式的架构名义。
+
+### 4. 身份传播的双平面张力：人类主体与 Agent 主体
+
+AgentCore Identity 的 OAuth 传播机制在架构上制造了两个身份平面：人类主体身份（用于同意与问责）沿调用链传播到每个下游工具与 Agent；而跨账户调用又依赖 machine-to-machine token exchange，意味着 Agent 自身作为基础设施主体持有独立凭证。两个平面的权限语义并不对齐——[[concepts/agent-identity-portability|Agent Identity Portability]] 的理想是身份无缝流动，但最小权限原则要求每个 Agent 主体只持有其域内凭证。当 20+ 个领域 Agent 都能携带同一个销售代表的 OAuth token 行动时，任一 Agent 被攻破的爆炸半径是该代表可访问范围的并集，而非该 Agent 自身的领域范围。Contingent authorization 是补偿控制，但其性质是"同意门"而非"权限边界"：它限制未经询问的行为，不限制被攻破的 Agent 在绕过询问后的能力。这提示多 Agent 系统的身份设计需要回答一个正文未触及的问题：下游 Agent 收到上游传播的 token 时，应按"调用者身份"还是按"自身服务身份"界定自己的能力上限？Field Advisor 的扁平目录让这个问题更容易被忽视——工具/Agent 边界对模型透明的同时，权限边界也随之模糊。
+
+这一张力的深层原因在于委托语义的缺失。OAuth 的 on-behalf-of 模型假设一次委托对应一个明确的资源域，而 Supervisor 的路由决策在运行时才确定委托给哪个 Agent——委托范围由模型推理动态决定，而非由策略静态声明。这是多 Agent 系统与经典微服务安全模型的本质差异：微服务的服务间调用是编译期/部署期已知的静态拓扑，权限可以按边精确裁剪；Agent 系统的调用拓扑由模型的每次推理即时生成，权限边界必须覆盖模型可能选择的所有路径。实际的缓解方向是把权限声明从"Agent 能访问什么"改写为"Agent 在代表谁时能访问什么"——即把身份平面与权限平面按委托关系重新绑定。这也解释了为什么 MicroVM 会话隔离在此架构中承担了超出其名义的安全角色：当逻辑权限边界（token 传播）难以裁剪时，物理执行边界（每会话独立执行环境）成为最后的爆炸半径控制手段。
 
 ## 实践启示
 

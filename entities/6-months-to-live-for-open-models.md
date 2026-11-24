@@ -1,7 +1,7 @@
 ---
 title: "6 Months to Live for Open Models"
 created: 2026-07-24
-updated: 2026-09-07
+updated: 2026-11-19
 type: entity
 tags: [ai, open-source, open-models, regulation, ai-policy, frontier-models, distillation, china-ai]
 sources: [raw/articles/6-months-to-live-for-open-models]
@@ -30,7 +30,7 @@ This piece by Nathan Lambert (Interconnects) argues that open-weight AI models f
 - **Banning fails even on its own terms**: Without a global agreement, a U.S.-only ban on open models would not stop bad actors from accessing banned weights, while legitimate U.S. businesses and the open-source ecosystem would bear the costs. ^[raw/articles/6-months-to-live-for-open-models.md]
 - **Economic decelerationism of open models**: Open-weight models inherently reduce margin potential for frontier labs, slowing net investment and capex rollout — but this is a net positive for society by diffusing AI capabilities more broadly and giving stakeholders time to figure out hard governance problems. ^[raw/articles/6-months-to-live-for-open-models.md]
 
-## Deep Analysis
+## 深度分析
 
 ### The Policy Landscape: Two Fronts, One Existential Threat
 
@@ -52,7 +52,7 @@ Even setting aside normative questions, Lambert argues that a ban on open-weight
 
 The article positions open-weight models as inherently "decelerationist" for frontier labs but "accelerationist" for AI diffusion across the broader economy. This framing has deep implications: the open model economy's primary value is not in producing the single best model at any given moment, but in enabling widespread customization, domain-specific adaptation, and competitive pressure that prevents any single entity from controlling the technology's trajectory. The economic argument for open models is thus not just about efficiency but about the distribution of power — a value that is difficult to quantify but arguably more important in the long run than benchmark scores. ^[raw/articles/6-months-to-live-for-open-models.md]
 
-## Practical Insights
+## 实践启示
 
 1. **Watch for policy dominoes**: The White House's deliberations on executive orders regarding open models are the leading indicator. Any concrete action would trigger a cascade — monitor discussions about capability threshold regulation, entity list additions, and distillation-related legislation.
 2. **Build coalitions proactively**: Lambert's urgent call for coalition-building among open-source advocates is actionable. Organizations benefiting from open models (inference providers, fine-tuning companies, downstream product builders) should organize representation before policy decisions are locked in.

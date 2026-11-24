@@ -1,7 +1,7 @@
 ---
 title: "Distilling Agentic Systems：Agent 蒸馏系统级综述（模型 / 可复用资源 / Harness 三条主线）"
 created: 2026-10-20
-updated: 2026-10-20
+updated: 2026-11-11
 type: entity
 tags: [agent-distillation, harness, artifacts, skill, survey, knowledge-transfer, evaluation, distillation]
 sources: [raw/articles/distilling-agentic-systems-roadmap-2026]
@@ -52,6 +52,42 @@ Agent 的任务求解能力来自模型、可复用资源与执行控制的共�
 综述最后落到一个纯工程问题：哪些经验适合训练进模型，哪些适合保存为可编辑资源，哪些应转化为执行控制规则？给出的分配原则是——频繁使用且相对稳定的决策模式可以考虑参数化；经常变化的知识或具体操作规范适合保存在可更新资源中；验证、恢复与权限约束则通过显式控制逻辑实施。具体选择仍取决于成本、更新频率、可迁移性与安全要求。^[raw/articles/distilling-agentic-systems-roadmap-2026.md]
 
 同时必须承认经验会过期、工具会升级、权限会变化：保留知识之后还需要记录来源、适用条件和依赖关系，并支持修改、撤销与回滚——**持续积累经验也意味着持续维护经验**。这条结论与 [[concepts/context-engineering|上下文工程]] 里「上下文是会腐坏的资产」是同一件事在不同层级上的表述。^[raw/articles/distilling-agentic-systems-roadmap-2026.md]
+
+
+## 深度分析
+
+### 「文件格式不能决定分类」是把 Harness 升格为独立知识载体的关键判据
+
+综述最锋利的一刀，是把「这条知识保存在哪种载体里」的判定从存储形态中剥离出来：单独保存的模型适配器（如 LoRA 权重）仍属参数化知识，可调用的辅助脚本属 Artifacts，而决定何时调用脚本的机制属 Harnesses。分类依据是知识如何参与未来执行，而不是它叫什么、存在哪里。^[raw/articles/distilling-agentic-systems-roadmap-2026.md]
+
+这一判据的工程后果是：不能靠「整理文件夹」来治理 Agent 的知识结构——把工作流文件、脚本和控制逻辑混在一个目录里，不等于把它们归为一类知识。Harness 从「一堆配置文件」升格为与模型、资源并列的独立知识载体后，[[concepts/agent-harness-engineering-paradigm|Harness 工程范式]] 的对象才真正清晰：被设计、被版本化、被评估的是「何时调用什么」的控制逻辑本身。它与 [[concepts/when-not-to-harness-engineering|何时不用 Harness 工程]] 互为边界——正因为 Harness 是一类需要维护的知识，才有「何时不该把它做成 Harness」的成本问题。^[raw/articles/distilling-agentic-systems-roadmap-2026.md]
+
+### 学生自产轨迹上的教师指导：Agent 蒸馏区别于模型蒸馏的真正难点
+
+模型蒸馏假设学生的输入分布与教师一致；Agent 场景打破了这个假设——学生的每个动作都会改变后续状态与反馈，仅模仿教师轨迹覆盖不到自主执行中才会遇到的情形。综述为此指出的方向是在学生自产轨迹上引入教师指导，让教师信号作用于学生实际会经历的状态分布。^[raw/articles/distilling-agentic-systems-roadmap-2026.md]
+
+这与强化学习里 on-policy 与 off-policy 的分野同构：教师轨迹是 off-policy 数据，自产轨迹上的指导才逼近 on-policy 训练。对 [[concepts/agent-self-improvement-loops|Agent 自我改进循环]] 而言，这解释了为什么「回放自己跑过的记录再改进」比「照抄示范」更有效——前者在学生自己的分布上修正策略，后者只在教师的分布上积累偏差。^[raw/articles/distilling-agentic-systems-roadmap-2026.md]
+
+### 组件回退实验：把「分数提高」归因到具体载体
+
+综述的评估框架核心是一个因果设计：在控制其他组件、任务条件与执行预算的前提下，把某个蒸馏后的组件恢复到蒸馏前状态，观察学生行为与表现的变化——这正是因果推断中的消融/回退实验。它解决的归因问题是真实的：得分提升可能来自模型学习、新增技能、更好的路由，或仅仅更多执行预算，四者混在一起时「蒸馏收益」不可解释。^[raw/articles/distilling-agentic-systems-roadmap-2026.md]
+
+这条设计把评估从「看总分」推进到「看载体贡献」，与 [[concepts/agent-evaluation-benchmark-frameworks|Agent 评估基准框架]] 的问题意识一致但更细一层：基准框架回答「系统整体强不强」，回退实验回答「强在哪一层」。对自进化系统，这与 [[concepts/eval-optimizer-firewall|Eval-Optimizer 防火墙]] 的思路相通——改进主张必须先经过独立评估通道的检验，才能被记入账本。^[raw/articles/distilling-agentic-systems-roadmap-2026.md]
+
+### 持续维护是被蒸馏知识的一部分，而非蒸馏之后的附加项
+
+综述把「经验会过期、工具会升级、权限会变化」写进了分配原则本身：保留知识之后还需记录来源、适用条件与依赖关系，并支持修改、撤销与回滚。这意味着知识载体的选择不能只看「现在放哪里最有效」，还要看「过期后改哪里最便宜」——参数化知识的修改成本最高（重新训练），资源次之（可编辑），控制逻辑介于两者之间。^[raw/articles/distilling-agentic-systems-roadmap-2026.md]
+
+这与 [[concepts/agent-memory-lifecycle-philosophies|Agent 记忆生命周期哲学]] 中「记忆是需要治理的资产」的立场、以及 [[concepts/harness-component-expiry-and-build-to-delete|Harness 组件过期与 build-to-delete]] 的实践在逻辑上同源：经验积累与经验维护是同一件事的两个阶段，任何只做积累不做维护的蒸馏管线都会随时间净损耗价值。^[raw/articles/distilling-agentic-systems-roadmap-2026.md]
+
+## 实践启示
+
+1. **先分类，再选算法**：拿到一段可复用经验，先判断它属于参数化知识、可复用资源还是执行控制，再谈具体蒸馏方法；文件格式不构成分类依据。
+2. **可变知识不做参数化**：频繁变化的知识（API 约定、操作规范、权限边界）保存在可编辑资源里；只有频繁使用且相对稳定的决策模式才值得训练进模型——重训的成本远高于改一份 Skill 文档。
+3. **验证、恢复与权限约束写进 Harness 而非文档**：「出现回归就回滚」写在 Skill 文档里只是资源，做成运行时必经分支才是控制；凡是不执行就无效的约束，都应落在 Harness 层。
+4. **每条蒸馏收益都做组件回退实验**：加了一个 Skill 或一条控制规则后，把该组件恢复到蒸馏前状态对比表现，把收益归因到具体载体，避免把路由改善或预算增加误记为蒸馏收益。
+5. **教师指导作用于学生自产轨迹**：蒸馏管线应让学生先自主执行、再在其实际产生的轨迹上引入教师反馈，而不是只回放教师轨迹——覆盖学生真实分布的指导才可迁移。
+6. **把维护成本计入载体选择**：记录每条沉淀知识的来源、适用条件与依赖，并保留修改、撤销与回滚通道；持续积累经验必然意味着持续维护经验，只进不出的资源库会净损耗价值。
 
 ## 关联
 

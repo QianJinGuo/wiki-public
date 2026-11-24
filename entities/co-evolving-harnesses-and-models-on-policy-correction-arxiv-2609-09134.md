@@ -2,7 +2,7 @@
 title: "Co-Evolving Harnesses and Models（arXiv 2609.09134）：模仿专家轨迹会破坏 model–harness fit，on-policy 纠错才让两者可组合"
 description: "Salesforce 2026-09-08 arXiv 论文：7 个企业 Agent 任务上先进化 harness 再用专家轨迹 LoRA-SFT 弱模型，结果全线倒退 4-30 分（均值 -14.9）——模仿转移了知识却让弱模型套用无法执行的专家规划风格，破坏了 harness 与模型的匹配度。改用 on-policy expert correction（meta-MLE agent 定位失败轮次、专家只改写该轮）后均值 78.0%→79.7%，planning 失败占比仅 +0.7（模仿为 +13.5）"
 created: 2026-09-12
-updated: 2026-09-12
+updated: 2026-11-17
 type: entity
 tags: [agent, harness, harness-engineering, harness-evolution, co-evolution, on-policy-correction, imitation-learning, lora-sft, agentic-rl, post-training, enterprise-agent, model-harness-fit, gepa, arxiv, arxiv-2609-09134, salesforce]
 sources: [raw/articles/co-evolving-harnesses-and-models-on-policy-correction-arxiv-2609-09134]
@@ -97,6 +97,24 @@ Salesforce 团队（Zhou Yu 等 11 人）2026-09-08 提交的 arXiv 论文，回
 - **与 EvoTrainer（策略与 harness 共进化）互补**：EvoTrainer 走的是 RL 路线做 policy+harness 共进化，本论文走的是「弱模型 LoRA-SFT + 专家 on-policy 纠错」，并给出了「不该怎么做」的负向结论（全轨迹模仿会破坏 fit）。^[raw/articles/co-evolving-harnesses-and-models-on-policy-correction-arxiv-2609-09134.md]
 - **与 on-policy distillation 家族同源**：本论文的 on-policy expert correction 在方法上属于「在学生自己访问的分布上给监督」这一大类，与库内 on-policy distillation 相关实体共享动机，但监督粒度更细——不是逐 token 蒸馏，而是**只改写失败的那一个 turn**。^[raw/articles/co-evolving-harnesses-and-models-on-policy-correction-arxiv-2609-09134.md]
 - **对应「Agent 自进化的评估器瓶颈」**：论文用「知识缺失 / 规划缺陷」两桶分解来做失败归因，本质上是把评估从「分数」推进到「失败类型构成」，这正是自进化闭环里最难自动化的一环。^[raw/articles/co-evolving-harnesses-and-models-on-policy-correction-arxiv-2609-09134.md]
+
+## 深度分析
+
+### Harness 进化改变的是前沿位置，而不是终点
+
+harness 进化改变的不是任务终点，而是模型侧前沿的位置：上推前沿的同时暴露出新的余量。弱 Qwen 单独进化出的 harness 把 Qwen 从 29.2% 抬到 78.0%，同一 harness 换 Gemini 是 93.6%——15.6 分空隙即弱模型尚未兑现的余量。^[raw/articles/co-evolving-harnesses-and-models-on-policy-correction-arxiv-2609-09134.md:158-159] 轨迹证据显示专家「真在用」这些组件：93.6%–100% 的专家 rollout 触发几乎每项进化编辑，domain-computation recipe 使用率 94.2%，base Qwen 仅 30.8%。^[raw/articles/co-evolving-harnesses-and-models-on-policy-correction-arxiv-2609-09134.md:361-395] 向上迁移由此把「该不该做模型适配」变成可测量的探针：同 harness 上的专家-弱模型分差就是余量的量化。^[raw/articles/co-evolving-harnesses-and-models-on-policy-correction-arxiv-2609-09134.md:85-95]
+
+### 全轨迹模仿为什么破坏 fit：知识迁移成功了，规划节奏被搬走了
+
+模仿为何倒退？两个直觉解释都不成立。第一，知识没丢、scaffold 也照用：隐含知识失败桶从 46.2% 收窄到 44.5%，domain-computation recipe 使用率反从 30.8% 升到 76.1%。^[raw/articles/co-evolving-harnesses-and-models-on-policy-correction-arxiv-2609-09134.md:411-413] 真正断掉的是规划分布：planning 失败从 1.1% 涨到 14.6%（+13.5）——照搬了专家「早给答案」的风格，却没有支撑它的能力。^[raw/articles/co-evolving-harnesses-and-models-on-policy-correction-arxiv-2609-09134.md:413] 案例把机制落到具体轨迹：payroll 任务里微调后模型算出正确结果，却把一次性验证步骤放大成无界循环——重发同一查询 29 次、78 步内从未 finish，得分 0；^[raw/articles/co-evolving-harnesses-and-models-on-policy-correction-arxiv-2609-09134.md:663-676] Gemma 的 Webarena 案例同构：抄到简短输出形态，却跳过「先过滤再计数」规程，报出未过滤总数 351（真值 346）。^[raw/articles/co-evolving-harnesses-and-models-on-policy-correction-arxiv-2609-09134.md:678-691] 消融 I（同配方在 base harness 下反而 +6.3）说明教学信号无罪，罪在与「围绕原生规划风格进化出的 harness」的交互；^[raw/articles/co-evolving-harnesses-and-models-on-policy-correction-arxiv-2609-09134.md:405-406] 消融 II 换推理型 Gemma 仍复现倒退，排除「风格不匹配」的浅层解释。^[raw/articles/co-evolving-harnesses-and-models-on-policy-correction-arxiv-2609-09134.md:408-409]
+
+### On-policy 纠错为何可组合：监督落在学生自己访问的分布上
+
+替代方案的关键不是「专家出手」而是「在哪里出手」：从弱模型自己在进化 harness 下的 rollout 出发，由 MLE agent 定位唯一出错的 turn，专家只改写该 turn——一句纠正性策略加修正后的 tool call，前后步骤原样保留，每 turn 采样 3 个候选由裁判择优。^[raw/articles/co-evolving-harnesses-and-models-on-policy-correction-arxiv-2609-09134.md:619-635] 「最小编辑」保住了学生的规划分布，两个杠杆因此在算术上可加：78.0% → 79.7%，7 任务无一低于进化 harness 基线。^[raw/articles/co-evolving-harnesses-and-models-on-policy-correction-arxiv-2609-09134.md:440-442] 失败分解证实增益安全：planning 桶只动 +0.7（模仿为 +13.5），知识桶继续收窄 -3.0，整体硬失败率从 28.9% 降到 26.8%——拿到了与模仿同量的知识改善，没付规划坍塌的代价。^[raw/articles/co-evolving-harnesses-and-models-on-policy-correction-arxiv-2609-09134.md:443] 成本上 LoRA 单次训练不到一小时，可安全叠进每轮「进化 harness → 更新模型」的循环。^[raw/articles/co-evolving-harnesses-and-models-on-policy-correction-arxiv-2609-09134.md:601-607]
+
+### Table 1 数字怎么读：两臂对照与饱和区
+
+把 Table 1 读作受控实验，各均值行身份明确：行 1→2 是 harness 杠杆纯效应（+48.8），行 2→4 是向上迁移探针（+15.6），行 2→5 是模仿的破坏效应（-14.9），行 1→6 是同一信号在 base harness 的对照（+6.3）——两组差值把失败定位到交互项，行 2→7 是纠错的组合效应（+1.7）。^[raw/articles/co-evolving-harnesses-and-models-on-policy-correction-arxiv-2609-09134.md:160-357] 逐任务列信息更细：模仿倒退幅度高度不均——薪酬审计 -29.9 最深、Web 管理 -20.3、浏览器自动化 -16.0、异常检测仅 -4.2；^[raw/articles/co-evolving-harnesses-and-models-on-policy-correction-arxiv-2609-09134.md:271-299] 结合附录 A 的逐任务获胜编辑，凡编辑接近「配方级」、照做即可的任务破坏越小，而依赖 finish 工具与多步规程的任务规划节奏一断就塌。^[raw/articles/co-evolving-harnesses-and-models-on-policy-correction-arxiv-2609-09134.md:566-596] 纠错臂的分布是镜像：预算审批 -0.6、薪酬审计 -0.4 在噪声内（harness 已近天花），Web 管理 +5.6、股票告警 +2.2、代码重构 +2.2 仍有增量。^[raw/articles/co-evolving-harnesses-and-models-on-policy-correction-arxiv-2609-09134.md:329-357] 最后，均值会掩盖饱和：+1.7 里大部分来自少数未饱和任务，共进化循环应逐任务判断模型侧投入，而非只看均值。^[raw/articles/co-evolving-harnesses-and-models-on-policy-correction-arxiv-2609-09134.md:442]
 
 ## 相关
 

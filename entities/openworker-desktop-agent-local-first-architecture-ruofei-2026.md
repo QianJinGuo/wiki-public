@@ -1,7 +1,7 @@
 ---
 title: "OpenWorker — 吴恩达开源桌面 Agent：Local-First 运行时与四层控制架构"
 created: 2026-08-02
-updated: 2026-09-10
+updated: 2026-11-16
 type: entity
 tags: ['desktop-agent', 'agent-runtime', 'local-first', 'permission-engine', 'audit', 'openworker', 'agent-infra', 'ai-infra', 'workbuddy']
 sources: [raw/articles/openworker-desktop-agent-local-first-architecture-ruofei-2026]
@@ -70,6 +70,27 @@ OpenWorker 是 Andrew Ng（吴恩达）团队开源（MIT 许可）的本地优�
 四类检验场景：工作（会议资料→简报，检验文件读取/进度/交付物/引用）、生活（行程→计划，看"生成文件" vs "改外部日历"为什么不同风险）、架构（ADR/接口文档/事故记录→架构评审草稿，检验 Skill 复用与限定资料范围）、研发（仓库状态/Issue/测试输出→发布风险清单，最完整路径：文件+搜索+终端+权限+审计）。^[raw/articles/openworker-desktop-agent-local-first-architecture-ruofei-2026.md]
 
 首次试用任务模板（对应运行时合同）：目标 / 输入（只使用指定目录）/ 允许访问（读哪些、写哪里）/ 不要做（不发送邮件、不改日历、不读其他目录）/ 交付物（具体文件）/ 完成条件（可打开、含进展风险计划来源）/ 遇到情况先问我（资料矛盾、需要运行命令、需要访问外部系统）。^[raw/articles/openworker-desktop-agent-local-first-architecture-ruofei-2026.md]
+
+## 深度分析
+
+1. **local-first 的本质是数据与控制平面的默认归属，而非数据永不出设备。** OpenWorker 把 Agent 循环、会话、密钥、连接器令牌和审批状态放在本机，控制平面（风险分类、权限决策、Inbox、审计）与执行循环同侧运行，"数据放哪里、谁授权动作、动作在哪执行"三个问题得以在设备内闭环。选云模型或外部集成时数据仍会出设备，真正的承诺是：即使外发，决策权与审计记录仍留在用户可检查的本地运行时。这与托管运行路线互为补充——前者把控制权交给用户，后者交给平台。^[raw/articles/openworker-desktop-agent-local-first-architecture-ruofei-2026.md]
+
+2. **运行时合同是模型可替换性的前提，也是 Agent 工程从"调模型"走向"造系统"的分界线。** 模型只输出工具调用建议；工具参数/返回值、风险分类、工作区边界、进度、审批与审计这些合同全部由运行时持有，换模型不动合同，模型差异被隔离在 aisuite 适配层内。这与 [[entities/claude-fable-5-agent-runtime-contract-ruofei-2026|Fable 5 的 Runtime Contract]] 同构：模型成为可插拔组件后，工程重心自然落到合同与控制平面。
+
+3. **Skills-as-methods 与 runtime-as-authority 是 [[concepts/agent-harness-engineering-paradigm|harness 范式]]的一对关键分工。** SKILL.md 渐进式加载让任务方法以纯文本复用，而方法每一步执行仍要穿过风险分类与审批——说明书不能提权。可复用的知识放在便宜易改的技能层，不可协商的安全约束放在代码层，这正是 harness 工程中"知识与方法在上、权力与执行在下"结构的具体化。
+
+4. **四层职责划分是一次可迁移的工程分解，不只是读码地图。** 交互层与运行层分离（Surface/Runtime）使 Slack、CLI 等多入口可复用同一任务引擎；控制层独立成层让权限策略可单独演进与测试；资源与执行层用 Executor 抽象隔离 LocalExecutor 与未来沙箱。评估任何 Agent 代码库的成熟度，可以直接问：这四层是否各自有清晰的模块边界与替代实现？
+
+5. **与云优先产品对照出同一问题的两种解法。** [[entities/workbuddy-product-framework-agent-harness-anne-2026|WorkBuddy]] 用托管运行换企业级隔离与合规，OpenWorker 用本地运行换可读性与可改造性；共同点是把"任务完成"拆成 Progress/Artifacts/Audit 三份可查状态，聊天记录不再承担全部事实——这是桌面 Agent 走向生产环境的共同底线。^[raw/articles/openworker-desktop-agent-local-first-architecture-ruofei-2026.md]
+
+## 实践启示
+
+1. 评估本地/桌面 Agent 先问三个边界问题：数据默认放哪里、谁授权动作、动作在哪执行——local-first、审批、执行器隔离是三件不同的事，互不可替代。
+2. 设计 Agent 系统时把"模型建议"与"运行时决策"显式分开：工具调用只是提议，授权、执行与记录由独立控制平面完成，换模型即不需要改动安全策略。
+3. 命令允许列表必须解析 `;`、`&&`、管道、重定向与命令替换等 shell 操作符，纯字符串前缀匹配会放过拼接在后面的危险动作。
+4. 编写 Skill 时假定它不含任何权限：方法可复用，但每个有副作用的动作仍要走审批链路；不要在技能文档里承诺"自动发送/自动提交"类越权行为。
+5. 首次试用新 Agent 用窄边界任务模板（目标/输入目录/允许访问/不要做/交付物/完成条件/遇疑先问），先跑通一条无外部副作用的链路，再逐个放开连接器、后台任务与 Auto 权限。
+6. 验收"任务完成"看三份状态：Progress 说明走到哪、Artifacts 说明成品在哪、Audit 说明谁批准了什么，不以聊天记录为唯一事实来源。^[raw/articles/openworker-desktop-agent-local-first-architecture-ruofei-2026.md]
 
 ## 相关实体
 

@@ -1,7 +1,7 @@
 ---
 title: "T-Mem：腾讯 PCG 的「联想回忆」式长期记忆系统（EMNLP 2026）"
 created: 2026-09-14
-updated: 2026-09-14
+updated: 2026-11-10
 type: entity
 tags: [agent-memory, long-term-memory, retrieval, memory-graph, emnlp, tencent, agent, episodic-future-thinking]
 confidence: 0.75
@@ -50,6 +50,35 @@ T-Mem 用两条正交轴切分记忆问题：**方向轴**（描述性回忆 vs 
 - 记忆系统的价值不在于忠实归档对话流，而在于**写入时就预见未来会通过怎样的线索触及它**——这条被文章当作设计注脚的判断，可以当作评价任何记忆架构的第一性问题；
 - 「预判性写入」的代价必须被工程约束住（线索去重／合并／增量更新），否则每条记忆都铺路会让存储与写入开销失控；
 - 联想召回与相似召回不是替代关系，而是需要同时覆盖的两个象限——只补相似度会继续在 LoCoMo-Plus 类子集上崩掉。
+
+## 深度分析
+
+T-Mem 的激进之处是把检索的核心计算从**读取时挪到写入时**：相似度闸门是读时的一次过滤，触发线索是写时就铺好的路径——「记忆能否被找回」由读时的运气变成写时的设计决策。^[raw/articles/t-mem-anticipatory-memory-trigger-tencent-pcg-emnlp-2026.md:23]
+
+### 为什么联想召回在陪伴场景是刚需
+
+相似度检索隐含对称假设：查询与记忆处在同一表述空间。陪伴对话天然不对称——记忆出自数月前的偶然语境，查询来自当下任意语境，「海鲜过敏」与「团建去哪儿」毫无语义交叠。关系越长期措辞漂移越大，相似召回越衰减——文章称其为结构性盲区而非工程缺陷，道理在此。^[raw/articles/t-mem-anticipatory-memory-trigger-tencent-pcg-emnlp-2026.md:43]^[raw/articles/t-mem-anticipatory-memory-trigger-tencent-pcg-emnlp-2026.md:49]
+
+### 2×2 象限的分量在「联想」半边
+
+描述向的 QI/QIV 只是相似检索的强化；联想向的 QII/QIII 才是结构增量——前者预判事实的未来使用情境，后者在场景粒度往前多想几步。^[raw/articles/t-mem-anticipatory-memory-trigger-tencent-pcg-emnlp-2026.md:85] 「填满坐标系」的论证配上专为联想半边设计的认知子集基准，是基准先行路线：先造只有新假设才能通过的裁判，再用落差证明缺失的是半边能力。^[raw/articles/t-mem-anticipatory-memory-trigger-tencent-pcg-emnlp-2026.md:110]
+
+### 预判写入的经济学
+
+线索数随记忆数膨胀是最坏情形；T-Mem 用去重、合并与增量更新压住成本，本质是把检索成本**预付为存储与写入成本**——陪伴场景读多写少划算，日志型写多读少需重算。^[raw/articles/t-mem-anticipatory-memory-trigger-tencent-pcg-emnlp-2026.md:66] 写入链路全在后台、不占响应时间，正是这笔账的工程落实。^[raw/articles/t-mem-anticipatory-memory-trigger-tencent-pcg-emnlp-2026.md:93]
+
+### 跨域落差是更敏锐的体检指标
+
+主流系统从 LoCoMo 掉到 LoCoMo-Plus 平均掉 28–50 个百分点，T-Mem 只掉 5.45 个百分点。^[raw/articles/t-mem-anticipatory-memory-trigger-tencent-pcg-emnlp-2026.md:112] 落差度量的是**检索假设与任务分布的错配程度**：绝对分高只说明相似召回型任务够用，落差小才说明假设对叙事/因果连接同样成立。
+
+## 实践启示
+
+1. 写入时加「预判题」：这条信息将来会在什么情境被用到？答案存成可检索的线索字段——缺了它，存储再精细也是相似半边的内卷。^[raw/articles/t-mem-anticipatory-memory-trigger-tencent-pcg-emnlp-2026.md:53-59]
+2. 用双基准落差做体检：同一系统在两类评测各测一次，落差显著即检索假设单一，补触发机制比调排序更对症。^[raw/articles/t-mem-anticipatory-memory-trigger-tencent-pcg-emnlp-2026.md:108-112]
+3. 触发线索与事实同生命周期：合并、去重、失效连带处理，否则预判写入退化成线索垃圾场，拖垮读取端。^[raw/articles/t-mem-anticipatory-memory-trigger-tencent-pcg-emnlp-2026.md:66]
+4. 联想线索在候选生成阶段就放行，而非先过主题过滤再排序——踩中线索即进候选，是读取链路与传统方案的分水岭。^[raw/articles/t-mem-anticipatory-memory-trigger-tencent-pcg-emnlp-2026.md:95]
+5. 「场景切分→主题归类→事实抽取→场景—事实图」写入与「主题→场景→事实」读取，可搬进 [[entities/agent-memory-architecture|记忆架构]] 的中间层。^[raw/articles/t-mem-anticipatory-memory-trigger-tencent-pcg-emnlp-2026.md:93-95]
+6. 选型看任务分布：相似召回型（客服 FAQ）成熟方案即可；叙事/因果型（个人助理）必须挑检验过联想能力的——只有 LoCoMo-Plus 认知子集能单独验证。^[raw/articles/t-mem-anticipatory-memory-trigger-tencent-pcg-emnlp-2026.md:110]
 
 ## 相关
 

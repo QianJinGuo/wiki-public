@@ -1,11 +1,12 @@
 ---
 title: "Agent Evaluation & Benchmark Frameworks"
 created: 2026-05-21
-updated: 2026-09-10
+updated: 2026-11-10
 type: concept
 tags: [evaluation, benchmark, testing, agent, pass@k, quality, metrics]
 sources:
   - raw/articles/agent-eval-wallezhang-yaml-driven-agent-evaluation
+  - raw/articles/personal-health-agent-nature-full-anatomy-cuj11-tasks-chejianlu-2026-11-10
 summary: Agent 评测框架设计，涵盖 pass@k vs pass^k 双指标体系、六种评分器设计、CI/CD 集成、缓存机制、以及从传统测试金字塔到 Agent 评测的范式转变。
 ---
 
@@ -203,6 +204,24 @@ type Grader interface {
 ### 8.3 版本控制配合
 
 当 Agent 版本升级时，缓存失效是正常的。但如果评测结果出现大幅波动，要区分是模型升级导致的真实改进/退化，还是缓存失效导致的评测偏差。
+
+## 十、真实场景的评测脚手架：PHA 的 11 任务协议
+
+前面几节讲的是评测的**工程骨架**（指标、评分器、CI、缓存）。Nature 上的个人健康智能体（PHA，Google Research + DeepMind）给了一个**研究级脚手架的完整实例**：11 个基准任务、7000+ 条人工标注、累计 1,350 小时（专家 699 + 终端用户 651），每个任务都单独定义了金标准与统计方法。它的价值不在健康领域本身，而在于示范**「不同性质的任务不能用同一个指标」该怎么落地**。^[raw/articles/personal-health-agent-nature-full-anatomy-cuj11-tasks-chejianlu-2026-11-10.md]
+
+**一、按任务性质选金标准，而不是找一个统一分数**。11 个任务分四类金标准：**专家评分量表**（DS 分析计划、HC 教练设计、PHA 质量）、**客观执行结果**（DS 代码首次通过率靠 173 个单元测试；DE 题库靠标准答案；PHA 成本靠调用次数与响应时间）、**真实世界参照**（DE 症状差分诊断以患者最终诊断为准）、**用户与专家并排盲选**（DE 个性化问答、HC 可用性、PHA 体验）。只有 PHA 任务 3 这类可以直接量化的才用纯客观指标。^[raw/articles/personal-health-agent-nature-full-anatomy-cuj11-tasks-chejianlu-2026-11-10.md]
+
+**二、自动评分器必须先被人工标注验收**。DS 任务 1 的做法是完整范本：4 名数据科学专家先定 **26 项评分量表**（时间窗、数据转换、数据充分性、汇总统计、统计检验、整体对齐六个维度），10 名专家对 141 对查询—计划做 **354 条标注、6,157 个量表项，评分者一致性平均 80.2%**；再用这批标注训练基于 Gemini 的自动评分器，**与专家标注的组内相关系数 ICC = 0.838**，通过后才用它大规模打分。这就是第三节「评分器体系」里说的「先校准再放量」的研究版。^[raw/articles/personal-health-agent-nature-full-anatomy-cuj11-tasks-chejianlu-2026-11-10.md]
+
+**三、盲法与顺序平衡是设计出来的，不是声明出来的**。PHA 任务 1 用**拉丁方平衡顺序**，任务 2 是 50 persona × 3 系统 = 150 段合成对话盲评（5 名健康专家 750 项评分 + 20 名终端用户 3,000 项评分），DE 任务 3 的 17 名端用户在盲法随机顺序下做布尔量表与并排排序（Fleiss' K ≥ 0.684）。**凡是「偏好」类结论，都必须能回答「顺序偏差怎么控制」**。^[raw/articles/personal-health-agent-nature-full-anatomy-cuj11-tasks-chejianlu-2026-11-10.md]
+
+**四、统计方法与任务类型绑定**。论文对不同评测类型分别使用 Wilcoxon 符号秩检验、McNemar 检验、二项广义线性混合模型、Friedman + Wilcoxon 事后、Tukey HSD 校正与 Holm–Bonferroni 跨量表稳健性检验，全部双侧并报告效应量与置信区间——**不是所有任务都跑同一个 t 检验**。^[raw/articles/personal-health-agent-nature-full-anatomy-cuj11-tasks-chejianlu-2026-11-10.md]
+
+**五、同一份评测要能读出「谁感知到了差异」**。HC 智能体在专家侧胜率 64.5%–72.0%（相对提升约 10.2%），终端用户侧 61%–71%（相对提升约 3.5%）——专家感知到的优势明显大于用户。这个差距本身就是结论：**对安全与长期效果关键的细节，用户当场未必察觉**，只做用户偏好测试会系统性低估这类改进。^[raw/articles/personal-health-agent-nature-full-anatomy-cuj11-tasks-chejianlu-2026-11-10.md]
+
+**六、评测数据的开放程度决定结论的可复核性**。论文把数据分成四档并逐项标明：完整 WEAR-ME（N=1165，问卷 + Fitbit + 血检，需提交访问申请）、**50 persona 子集（GitHub 非限制性研究许可，可直接取用）**、用户中心设计的三层数据与标注（随补充信息）、题库（版权归属各自来源）。做评测的人可以直接用第 2 档复现「基于真实数据的虚构场景」这一手法——**用真实分布 + 合成画像，既保真又控变量**。^[raw/articles/personal-health-agent-nature-full-anatomy-cuj11-tasks-chejianlu-2026-11-10.md]
+
+**可直接搬走的四条**：①先定金标准类型，再选指标；②自动打分器先用人工标注验收（报一致性系数）；③偏好类结论必须做盲法 + 顺序平衡；④评测集规模不是关键，**标注质量与统计口径**才是（PHA 用 1,350 小时换 11 个可信任务，而不是 11 万个自动题）。^[raw/articles/personal-health-agent-nature-full-anatomy-cuj11-tasks-chejianlu-2026-11-10.md]
 
 ## 九、关联实体
 

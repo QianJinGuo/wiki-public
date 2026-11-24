@@ -2,7 +2,7 @@
 
 title: Amazon VPC Regional NAT Gateway 与 AZ NAT Gateway 全面对比
 created: 2026-07-10
-updated: 2026-08-01
+updated: 2026-11-11
 type: entity
 tags: [aws]
 sources: [raw/articles/amazon-vpc-regional-nat-gateway-与-az-nat-gateway-全面对比]
@@ -115,6 +115,33 @@ Regional NAT 网关与整个 VPC 关联，而不是某个子网。它会根据�
     
 
 更多细节可参考官方文档
+
+## 深度分析
+
+### 同一套计费公式，「换一个更省」是误区
+
+两种模式同价（美东 $0.045）：AZ 按网关·小时计，Regional 按活跃可用区·小时计，跨 3 区的一个区域网关与三个 AZ 网关成本相当，没有每区折扣；省的是人力而非账单，降本杠杆是用 VPC 端点绕开 NAT 处理费。 ^[raw/articles/amazon-vpc-regional-nat-gateway-与-az-nat-gateway-全面对比.md:166-177]
+
+### 自动跨区扩展是「最终一致」而非即时
+
+新可用区的 ENI 触发 RNAT 自动扩展，但官方上限约 60 分钟，期间跨区兜底可能产生跨区费用；叠加不支持私有 NAT、每 VPC 上限 5 个、模式转换会重置活跃连接，RNAT 不是无脑替换项。 ^[raw/articles/amazon-vpc-regional-nat-gateway-与-az-nat-gateway-全面对比.md:154-162]
+
+### 选型第一分叉是私有连接与区域覆盖
+
+需要私有 NAT 或部署在 GovCloud(US)/中国区时只能用 AZ 模式；排除后，多可用区公网出口、可用区频繁增减、想去掉公有子网的场景才进入 RNAT 主场。 ^[raw/articles/amazon-vpc-regional-nat-gateway-与-az-nat-gateway-全面对比.md:179-200]
+
+### 出口运维正从「配路由」走向「跑诊断」
+
+作者把选型逻辑沉淀成只读的 `vpc-egress-diagnostic` Skill：只调 describe-/get- 接口、只出报告、费用必给具体数字；规则库覆盖单点 NAT、跨区绕行、缺 S3/DynamoDB 端点、闲置网关、端口耗尽等七类。这条路线与 [[entities/aws-devops-agent-实战云网络故障自主调查与修复建议|AWS DevOps Agent 自主排查云网络故障]]、[[entities/aws-devops-agent-mcp-server打通混合云网络排障的最后一公里|MCP 打通混合云排障]] 同向，相对 [[entities/ec2-nat-instance-deploy-practice-aws-china-2026|EC2 NAT 实例自建出口]] 则是托管化的同题解答。 ^[raw/articles/amazon-vpc-regional-nat-gateway-与-az-nat-gateway-全面对比.md:284-321]
+
+## 实践启示
+
+1. 先筛硬约束：需私有 NAT、或在 GovCloud(US)/中国区，命中任意一条就用 AZ 模式。 ^[raw/articles/amazon-vpc-regional-nat-gateway-与-az-nat-gateway-全面对比.md:183-187]
+2. 「换一个 RNAT 更省钱」从选型理由里划掉：单价相同、按活跃区计费，省的是人力不是账单。 ^[raw/articles/amazon-vpc-regional-nat-gateway-与-az-nat-gateway-全面对比.md:166-175]
+3. 多可用区共用单个 zonal NAT 的部署优先改造：既是单点，又持续产生跨区绕行费。 ^[raw/articles/amazon-vpc-regional-nat-gateway-与-az-nat-gateway-全面对比.md:301-304]
+4. zonal 转 regional 会重置活跃连接，安排维护窗口；新可用区扩展最长约 60 分钟，告警按此设计。 ^[raw/articles/amazon-vpc-regional-nat-gateway-与-az-nat-gateway-全面对比.md:157-161]
+5. 高并发出口盯住端口耗尽：zonal 每 IP 约 5.5 万并发、上限 8 IP，RNAT 每区 32 IP 且自动扩容。 ^[raw/articles/amazon-vpc-regional-nat-gateway-与-az-nat-gateway-全面对比.md:107]
+6. 定期用只读 Skill 巡检出口，人工只处理带具体金额的高优项。
 
 ---
 ## 关联

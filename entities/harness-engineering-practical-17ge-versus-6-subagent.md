@@ -2,7 +2,7 @@
 
 title: Harness 模式 6-SubAgent 实战 — 17哥 versus 大模型评测平台（Git Submodule + Agent Handoff + Chrome DevTools MCP）
 created: 2026-06-10
-updated: 2026-09-07
+updated: 2026-11-17
 type: entity
 tags: [harness-engineering, vibe-coding, multi-agent, sub-agent, agent-handoff, git-submodule, claude-code, codex, mcp, chrome-devtools, case-study, 17ge, geekhome, versus]
 confidence: 0.85
@@ -254,6 +254,24 @@ next-step-prompt-e2e: "启动服务(后端8901/前端3001)并执行需求 {REQ-I
 6. **独立端口并行执行** — 集成测试 8899/3000，E2E 8901/3001，互不干扰 ^[raw/articles/harness-engineering-practical-17ge-versus-6-subagent.md]
 7. **事实源优先级** — 文档派生物地位，代码/测试/Makefile 优先 ^[raw/articles/harness-engineering-practical-17ge-versus-6-subagent.md]
 8. **量化 ROI** — 4 个功能升级验证 4x speedup（vs OpenAI 10x） ^[raw/articles/harness-engineering-practical-17ge-versus-6-subagent.md]
+
+## 深度分析
+
+### 从"人统筹状态"到"仓库承载状态"：范式迁移的真实成本与收益边界
+
+把 17哥 的两段实践并置看，Vibe Coding 与 Harness 的差别并不在"AI 写不写代码"，而在**状态的存放位置**：前者状态散落在聊天记录与人脑中，Agent 每轮都要靠人重新喂上下文；后者把状态固化进版本化制品，Agent 间流转不再经过人。迁移的真实成本体现在仓库结构上——暴力合并前后端两仓要动目录、CI 与上线流程，于是选择 Git Submodule 以最小侵入达成"单仓事实源"，再用 DUCC 脚本把子模块的同步复杂度封装成"一句话"操作。收益边界同样清晰：4 倍加速与 OpenAI 的 10 倍之间的差距，作者自己的归因是**校验闭环的可操作性**——平台 UI 交互不复杂、架构轻量，闭环才跑得起来；这意味着 Harness 的收益上限与被改造系统的复杂度负相关，越复杂的系统越难吃到全程自治的红利。^[raw/articles/harness-engineering-practical-17ge-versus-6-subagent.md]
+
+### 三层机制的咬合：Submodule 供事实、Handoff 传状态、MCP 闭验证
+
+六个 Sub-Agent 能自治流转，靠的是三套机制各管一层。**事实层**由单仓承担：主仓 CLAUDE.md 是全局作战地图，子仓 CLAUDE.md 是局部知识，跨仓知识从"人脑"搬进仓库才对 Agent 可见——这正呼应了"Agent 不能 in-context 访问的东西等于不存在"的判断。**状态层**由 Handoff YAML 承担：completed / awaiting_review / has_bugs / all_passed 四态构成一个显式状态机，`next-step-prompt` 让主会话无需理解任务细节即可启动下一个 Agent；实现上刻意把 Handoff 块写入主 session 而非本地文件，避免为持久化引入额外存储结构——状态的生命周期与一次需求流程等长，落盘反而是过度设计。**验证层**由 Chrome DevTools MCP 承担：`take_snapshot` 基于 a11y 树给元素发 uid，交互不再依赖脆弱的 CSS 选择器；集成测试与 E2E 分别绑在 8899/3000 与 8901/3001 两套端口上并行互不干扰，把"验证"从流水线的串行瓶颈变成并行环节。三层咬合的关键在 has_bugs 回路：测试 Agent 报 Bug → 主会话按前后端分类分发 → 修复后重跑测试，循环到 all_passed 为止——自治不是没有循环，而是把循环封闭在流水线内部。^[raw/articles/harness-engineering-practical-17ge-versus-6-subagent.md]
+
+### 人的不可替代位：流水线在审美与需求完整性上的双重失守
+
+这次实践最有价值的部分恰恰是失败数据。其一，E2E 环节几乎不产缺陷：90% 以上缺陷由 API 集成测试发现，唯一的样式类 Bug（长任务名导致元素遮挡）还是人工发现的——根因是测试 Agent 对 Bug 的认定比人类宽松，且不具备布局与美感评判能力，所以当前 Harness 只保证功能可用、不保证人觉得好看。其二，需求完整性失守：视频分类拆分升级时 Agent 遗漏了"模型管理"页面的改动，追因发现 PRD 本身就漏了，而人工审核 600+ 行 PRD 的成本高到审不出来的地步——唯一的强制人工卡点（PRD 审核）在信息量面前失效了。这两条失守线共同指向一个结论：**人没有退出流水线，而是从"写代码的人"变成了"审美与完整性的最后一道闸"**，且这道闸目前没有自动化替代品。与 [[concepts/harness-engineering-framework|Harness Engineering]] 的通用框架相比，这份实践的贡献正在于用真实数据标出了框架承诺与工业现实之间的缝隙。^[raw/articles/harness-engineering-practical-17ge-versus-6-subagent.md]
+
+### 文档熵增的治理定价：435W token 买的是"文档派生物"地位
+
+登录系统从 UUAP 换成 Passport 而 CLAUDE.md 未更新的案例揭示了 Harness 的隐性维护成本：文档熵增会直接劣化后续所有 Agent 的执行质量，因为文档就是 Agent 的世界观。`/goal` 式的一致性同步把治理变成了可定价的操作——8 分钟、约 435W token，换来全库文档与代码事实对齐。其设计精髓在**事实源优先级**（代码 > 测试 > 构建/CI 配置 > 类型与 schema > 环境变量示例 > 目录结构）与"只许改 Markdown、以子模块级 diff 全为文档文件作为完成条件"这两条硬约束的组合：前者把"谁是事实"仲裁权交给机器可验证的工件，后者用 diff 白名单把"不为迁就文档而改代码"从口号变成机械可检查的完成条件。这与 [[entities/agentic-harness-engineering-ahe|AHE 自动优化]] 追求的方向一致，但更朴素——不优化 Agent 本身，只优化 Agent 所依赖的世界描述。^[raw/articles/harness-engineering-practical-17ge-versus-6-subagent.md]
 
 ## 与既有相关实体的关系
 

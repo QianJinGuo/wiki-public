@@ -2,7 +2,7 @@
 
 title: Build a unified semantic layer across datasets with multi-dataset Topics in Amazon Quick
 created: 2026-07-10
-updated: 2026-09-10
+updated: 2026-11-13
 type: entity
 tags: [enterprise, reinforcement-learning, agent, aws]
 sources: [raw/articles/build-a-unified-semantic-layer-across-datasets-with-multi-da]
@@ -38,6 +38,39 @@ With multi-dataset Topics, this semantic layer now spans multiple datasets conne
 _Figure 1: Multi-dataset Topics architecture flow
 
 ---
+## 深度分析
+
+### 从单一大宽表到关系图语义层：统一机制如何演进
+
+传统模型下，语义层由「富化数据集」与 Topic 一对一构成：多表数据源必须在数据准备阶段预先联结成一张反范式大宽表，一个可视化也只能来自一个数据集。这一设计以避免运行时联结来换性能，适合早期简单场景，代价是数据冗余与口径分散。多数据集 Topics（公开预览）把模型反转：单个 Topic 最多挂载 12 个数据集，数据集之间用 JSON 声明联结键构成关系图，chat agent 回答问题时自动遍历——AI 引擎解析意图、定位相关列、按已定义关系构造 SQL 联结并返回统一答案，数据保持范式化、治理保持集中化，业务用户无需理解底层模式即可获得跨域答案。^[raw/articles/build-a-unified-semantic-layer-across-datasets-with-multi-da.md:28]
+
+本质上是把联结成本从入库时移回查询时，换取去重与治理单点化——与湖仓「存范式化、查时联结」的取舍同构。
+
+### NLQ 落地管线：四步把自然语言变成跨数据集 SQL
+
+跨数据集问题走一条确定性管线：意图解析（以列名、描述、同义词匹配用户词汇，定位度量与维度所在数据集）→ 关系遍历（沿联结键在关系图上找最短联结路径，把事实表接到所需维度表）→ SQL 生成（构造 JOIN、聚合与 GROUP BY）→ 结果呈现（返回可视化或表格，生成的 SQL 可被检查）。^[raw/articles/build-a-unified-semantic-layer-across-datasets-with-multi-da.md:53-61] 落地要点：过程透明可验证；grounding 质量是元数据的函数——富化与指令越丰富，模糊问题的解释越准。
+
+### 富化元数据即企业词汇表资产
+
+富化的本质是把组织词汇教给引擎：`TXN_DT` 对问「购买日期」的分析师毫无意义，列描述、同义词、semantic types（City/Currency/Date）正是弥合鸿沟的机制，且投资在用户每个问题上复利回收——它让多数据集 Topics 准确而不只是能用。^[raw/articles/build-a-unified-semantic-layer-across-datasets-with-multi-da.md:134] 富化还能不锁死在单一工具内：可从 AWS Glue Data Catalog 或 Databricks Unity Catalog 直接引入富化数据集，让语义元数据成为可迁移资产。这与 [[entities/metric-semantic-layer-how-lyft-governs-and-scales-key-data-definitions|Lyft 的指标语义层治理]] 是同一命题的两种实现：口径作为一等公民资产集中管理。
+
+### Custom instructions：把口径写成机器可执行的治理规则
+
+没有指令时引擎按字面解释：「今年」默认日历年，财年 4 月 1 日起的组织必须用指令覆盖默认。指令是持久化的业务规则——财年边界、「活跃客户」定义、退货率公式——写一次，对每个用户每个问题一致生效，指标口径从部落知识变成集中管理的治理资产。^[raw/articles/build-a-unified-semantic-layer-across-datasets-with-multi-da.md:216]
+
+### 数据建模约束：星型模式是 NLQ 时代的入场券
+
+最佳实践仍是经典纪律：以一个或多个中心事实表联结共享维度表的星型模式，避免环形联结与多对多关系。^[raw/articles/build-a-unified-semantic-layer-across-datasets-with-multi-da.md:212] 在 NLQ 场景下纪律有了新分量：引擎靠关系图遍历找联结路径，图越干净（hub-and-spoke 而非网状），路径越短越可预测，答案越可信——模式设计如今直接影响 NLQ 准确率而非仅查询性能。细节参见 [[entities/data-modeling-best-practices-for-amazon-quick-sight-multi-da|多数据集建模最佳实践]]。
+
+## 实践启示
+
+1. **先富化词汇表，再上多数据集。** 把列描述、同义词、语义类型当产品级资产维护；富化质量直接决定 NLQ 准确率，跳过这一步的 Topic 只会「能用而不准」。
+2. **建模沿用星型模式纪律。** 中心事实表 + 共享维度表，避免环形联结与多对多——引擎找的是图上最短联结路径，不是任意图路径。
+3. **把口径写成 custom instructions，而非口头约定。** 财年起始、「活跃客户 = 90 天内有购买」、退货率公式写成持久规则，全组织每个问题被一致解释；参见 [[entities/multi-dataset-topic-best-practices-for-amazon-quick-chat|多数据集 Topic 最佳实践]]。
+4. **治理在数据集层收敛，语义层不做第二套权限体系。** RLS/CLS 在数据集级强制执行并穿透 Topic 到达业务用户，发布只区分 Owner/Viewer——语义层是治理面的单点出口，而非新的权限孤岛。^[raw/articles/build-a-unified-semantic-layer-across-datasets-with-multi-da.md:250]
+5. **验收答案看生成的 SQL，不只看图表。** 用 Explanation 检查 JOIN 与 GROUP BY 是否用了正确数据集与关系，把可检验性纳入 BI 采纳流程——这是建立对 NLQ 信任、进而规模化 [[concepts/enterprise-ai-adoption|企业 AI 采纳]] 的关键一步。
+6. **元数据做成可迁移资产。** 优先经 AWS Glue Data Catalog / Databricks Unity Catalog 引入富化数据集，避免语义投资锁死在单一 BI 供应商内。
+
 ## 关联
 - 相关概念: [[concepts/harness-engineering-framework|Harness Engineering]]
 - 相关: Agent 架构

@@ -1,7 +1,7 @@
 ---
 title: "面向 Coding Agent 的多仓库 Git Worktree"
 created: 2026-08-05
-updated: 2026-08-05
+updated: 2026-11-11
 type: entity
 tags: [ai-coding, coding-agent, git, worktree, parallel-development, harness, multi-agent]
 sources: [raw/articles/面向-coding-agent-的多仓库-git-worktree]
@@ -85,6 +85,35 @@ Coding Agent 提升代码生成和任务执行速度，却不会让并发竞争�
 3. **明确方案边界**——本地 Git 引用只能协调单机并发；跨机器场景需要真正的全局协调机制
 
 「AI 可以替我们完成更多操作，但不能替我们理解系统。恰恰因为开发速度更快、并行规模更大，我们更需要掌握底层原理，并用清晰的架构约束 Agent 的行为。」^[raw/articles/面向-coding-agent-的多仓库-git-worktree.md]
+
+## 深度分析
+
+这篇文章的真正议题不是 worktree 命令，而是多 Agent 并行共享一套工程资源时，经典并发问题如何被吸收进工作流设计。
+
+### 复用 Git 互斥：把编号预占挂在现成的原子操作上
+
+REQ-ID 冲突是多进程读到相同状态、各自算出相同下一编号的竞争，与数据库「丢失更新」同构^[raw/articles/面向-coding-agent-的多仓库-git-worktree.md:142-150]。作者没有自建锁，而是把创建 `feat/<REQ-ID>` 分支作为编号预占：`git worktree add -b` 遇同名分支默认失败，Git 又禁止同一分支被多个 worktree 检出，两者叠加即单机互斥^[raw/articles/面向-coding-agent-的多仓库-git-worktree.md:152-158]。`.wt` 注册表只加速查询，分支创建才是最终裁决^[raw/articles/面向-coding-agent-的多仓库-git-worktree.md:160]。这与 [[entities/claude-code-agentic-harness-design-patterns|Claude Code Harness 设计模式]] 同取向：平台已有的失败语义往往就是最可靠的锁。
+
+### 确定性脚本与 Agent 推理的分工边界
+
+让 Agent 现场推理「如何初始化子模块」不仅耗 token，还因上下文差异产生不稳定行为^[raw/articles/面向-coding-agent-的多仓库-git-worktree.md:92]。wt.sh 把创建、初始化、端口分配固化为确定性流程，worktree-manager 只做意图理解与步骤编排——凡结果必须一致的操作都应降级为脚本调用，这是可复现系统与碰运气系统的分界。
+
+### 方案边界写进方案本身
+
+这套互斥依赖同一份本地 Git 引用空间，跨机器并行即失效，作者把适用前提直接写进方案^[raw/articles/面向-coding-agent-的多仓库-git-worktree.md:193-195]。并行度越高，声明适用前提的价值越大：边界是防止机制被误用的契约。
+
+### Skill 编排：把流程从人脑搬进仓库
+
+七个 Sub-Agent 的编排规则原本在 CLAUDE.md 中，迁移到 Skill 后，触发方式、状态流转、异常恢复集中管理，外部状态文件承担断点恢复，与 [[concepts/agent-orchestration-patterns|Agent 编排模式]] 的分层一致。稳定入口与可恢复状态比更聪明的模型更能保证流水线成功率。
+
+## 实践启示
+
+1. 为并行 Agent 分配资源，先找平台现成的原子操作（分支创建、唯一约束）挂预占动作，而不是自建锁。
+2. 初始化、配置类步骤固化成脚本，Agent 只编排不现场发明流程——省 token 更省排错。
+3. 并发机制要写明「何时失效」：单机 Git 互斥管不了跨机器编号。
+4. REQ-ID 这类唯一标识的生成时机应前移到资源创建阶段，与资源绑定。
+5. 多 Agent 工作流用 Skill 封装成一条指令启动，进度写外部状态文件，失败可从断点恢复。
+6. 并行度不会消掉经典并发问题，只会更快暴露——评审先问「这里的并发模型是什么」。
 
 ## 相关实体
 

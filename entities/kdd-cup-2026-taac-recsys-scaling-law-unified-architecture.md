@@ -1,7 +1,7 @@
 ---
 title: "KDD Cup 2026 TAAC 赛道：推荐系统的统一架构与 Scaling Law 公开考场"
 created: 2026-10-23
-updated: 2026-10-23
+updated: 2026-11-17
 type: entity
 tags: [recommendation, scaling-law, kdd-cup, architecture, industrial-recsys, unified-architecture, feature-crossing, sequence-modeling]
 sources: [raw/articles/kdd-cup-2026-taac-recsys-scaling-law-unified-architecture]
@@ -66,6 +66,24 @@ Meta 在最新一代广告推荐基础模型 GEM 上的判断是：大模型那�
 作者本人给出了诚实的边界：这离一条能像大模型那样画出曲线的真正 Scaling Law「还差得远」，目前只是一条具体线索——推荐系统不是不能 scale，而是要同时满足「有可堆叠的统一结构」与「有足够多的新信息可学」两个条件。^[raw/articles/kdd-cup-2026-taac-recsys-scaling-law-unified-architecture.md]
 
 可复核材料：两轮比赛的数据样本已公开在 HuggingFace（`TAAC2026`，限非商业研究）；论文附录给出两轮数据中每一类特征的覆盖率统计，官方基线与 starter kit 从数据加载到评测齐全；46 篇方案投稿中有 23 篇被 KDD Cup Workshop 接收，完整论文后续在「腾讯广告技术」发布。这场赛事自 2017 年办到本届已是第七届。^[raw/articles/kdd-cup-2026-taac-recsys-scaling-law-unified-architecture.md]
+
+## 深度分析
+
+### 延迟、单模型、时间切分：赛制约束如何反向塑造架构选择
+
+TAAC 赛制的每条规则都像一道过滤器，把「赢」的定义往「架构创新」方向压。推理超时即出局（工业赛道卡毫秒级延迟）意味着参数量直接计入成绩，不能靠堆深度换精度；「单模型禁集成」配合 AI 审代码加人工复核，把多模型平均这类刷分手段从规则层面清除。于是在 13913 人、5746 支队伍的同题作答里，排名差异几乎全部来自结构本身。^[raw/articles/kdd-cup-2026-taac-recsys-scaling-law-unified-architecture.md:104-114] 训练/测试集按时间先后切开且用户互不重叠，把「记住老用户」这条路也堵死——模型只能学可泛化的行为规律。^[raw/articles/kdd-cup-2026-taac-recsys-scaling-law-unified-architecture.md:110] 初赛 1/5 张 GPU 配一两百万条数据、复赛 7 张卡配几千万条的阶梯设计，让「小数据 trick 放大后失效」在赛程内就完成一轮淘汰。^[raw/articles/kdd-cup-2026-taac-recsys-scaling-law-unified-architecture.md:112]
+
+### CoSFormer 三路径对照实验为什么干净
+
+CoSFormer 拿下 Scaling Law 创新奖的那组对照，妙在三个变量被完全拆开：直接加宽只动容量不动信息；空 token 动容量但喂的是零信息；co-scaling 则让每类新 token 都绑定一种新预测信号（新预训练向量、用户-广告交叉、多时间跨度摘要），容量与信息同步增长。^[raw/articles/kdd-cup-2026-taac-recsys-scaling-law-unified-architecture.md:192-208] 三条曲线由此构成严格阶梯：加宽第一步就掉分，空 token 先小涨后回落，只有 co-scaling 一路向上、直到新信息开始重复才停。^[raw/articles/kdd-cup-2026-taac-recsys-scaling-law-unified-architecture.md:202-208] 这组实验把「容量」与「可学信号」两个通常纠缠的因子正交化了——加宽掉分说明纯粹多出的参数在推荐场景是负资产，空 token 的短暂上涨说明容量只提供拟合缓冲而非持续增益。CoSFormer 的价值不在提出新结构，而在给「算力往哪儿投」给出方向性答案。
+
+### 容量-信息耦合判据在六个方案中的普遍成立
+
+「新增容量必须绑定新增信息」不是 CoSFormer 一家的结论，而是获奖方案的共同主线索。UniTokenFormer 把「切多少 token、每份装什么」当成独立调节维度，发现同等规模下广告侧多分 token 比用户侧更管用，并据此把单个 block 做到约 10.6 亿稠密参数——分配即是在决定「容量去承载哪类信息」。^[raw/articles/kdd-cup-2026-taac-recsys-scaling-law-unified-architecture.md:126-130] QueryFormer 的 query 生成改造（字段先互换信息、query 再读字段后翻历史）本质是让「翻历史」花掉的容量先想清楚要找什么，回退该改动掉分排所有单项第一，说明这处容量-信息对齐是全模型最关键的一环。^[raw/articles/kdd-cup-2026-taac-recsys-scaling-law-unified-architecture.md:134-140] CRAFT 用意图 token 承载当下意图并在每层调控序列表示，维度加到 480 仍见涨，恰好划定「加宽仍有用」的边界：加宽有效的前提是有新东西可学。^[raw/articles/kdd-cup-2026-taac-recsys-scaling-law-unified-architecture.md:152-156,214] UniDAC 把较早行为压摘要、近期事件留全量并按场景各出一份摘要互换，1 亿扩到 10 亿参数靠的正是这种「信息前置整理」。^[raw/articles/kdd-cup-2026-taac-recsys-scaling-law-unified-architecture.md:146-149] 跨方案的一致性说明这不是某支队伍的 trick，而是推荐系统区别于 LLM 的结构性规律——LLM 的下一个 token 自带新信号，推荐系统的「新容量」与「新信号」必须显式绑定。
+
+### 统一 ≠ 一锅乱炖：MaskRec 与 UniDot 揭示的交互设计自由度
+
+MaskRec 拿下 Unified Block 创新奖的核心洞察是：token 进入同一空间后，信息流通本身是需要设计的成本项——按角色与来源场景规定谁能与谁交互，辅以全局与场景内两级记忆 token 汇总。^[raw/articles/kdd-cup-2026-taac-recsys-scaling-law-unified-architecture.md:172-176] 这与 UniDot（作者机构全部是 Meta）把向量内积请回来、每层显式计算并经 FM Highway 直送分类器，构成互补的一对：MaskRec 限制「谁能说话」，UniDot 保护「谁的话不被稀释」。^[raw/articles/kdd-cup-2026-taac-recsys-scaling-law-unified-architecture.md:162-170] FM Highway 尤其值得注意——内积这类低秩双线性项在深层网络里易被后续非线性反复搅和，给它开一条直通分类器的旁路，等于承认「浅层信号有价值，但得护送到终点」。两者共同说明统一架构不等于全连接默认设置，统一空间内的信息拓扑与通路设计是一大类可创新的自由度。这一发现与 [[entities/解构scaling-law优化架构数据的三重奏|解构 Scaling Law 的三重奏]] 的架构维度拆解互相印证，也和 [[entities/huawei-fuxi-recommendation-system-ascend-npu-scaling-law|华为伏羲 NPU 侧证据]] 一起，把「先统一才能 scale」从 Meta Kunlun 的单一案例扩展成跨厂商共识。^[raw/articles/kdd-cup-2026-taac-recsys-scaling-law-unified-architecture.md:74-88]
 
 ## 关联
 

@@ -1,7 +1,7 @@
 ---
 title: "MiniCPM-Robot：面壁智能开源具身智能 VLA 模型系列"
 created: 2026-07-22
-updated: 2026-09-10
+updated: 2026-11-18
 type: entity
 tags: [model, open-source, robot, vla, embodied-ai, chinese-ai, minicpm]
 sources: [raw/articles/waic-minicpm-1-5b-model-2026]
@@ -34,6 +34,26 @@ RobotTrack 基于面壁 MiniCPM4-0.5B 模型加 MLP 结构训练，参数规模�
 与两个模型同步亮相的还有 **PhyAI** 推理框架，由明体科技联合北京邮电大学、北京大学研发，专为具身智能端侧推理和云端大规模 RL 训练设计。在 RTX 5090 上运行 π0、π0.5、GR00T 等模型分别带来 2.9×、1.8× 和 2.3× 推理加速。面壁本次发布的机器人模型在发布当天即完成适配，推理帧率从 10Hz 提升至 33Hz（H20 上可达 37Hz）。 ^[raw/articles/waic-minicpm-1-5b-model-2026.md]
 
 在产业化落地方面，面壁与乐聚机器人合作推出展厅导览和园区巡检方案，机器人在无网络环境下纯本地完成讲解和异常识别。与吉利汽车合作训练的 VLA 模型通过自研 **RoboHarness** 框架（基于 4 月发布的 EmbodiedClaw 框架），将 VLM 多模态大模型、VLA 模型、机器人本体和导航系统整合，落地到吉利生产仓储场景，支持长链条任务规划与执行，并配有可治理的数据闭环实现模型持续进化。 ^[raw/articles/waic-minicpm-1-5b-model-2026.md]
+
+## 实践启示
+
+对想在端侧落地具身能力的团队，这条「面到点」路线给出了四个可复制的决策点：先解决记忆与算力的矛盾，再做部署减法，用数据闭环补长尾，最后靠框架编排把模型推进真实产线。
+
+### 1. 用视觉压缩换记忆，不要用算力硬扛
+
+若你的 VLA 只看「当前一帧」，优先评估视觉 Token 压缩加流式计算这条路径，而不是直接堆卡：RobotManip 证明带记忆的推理成本可以追平单帧反应式模型。记忆是硬差距而非锦上添花——RMBench 上 π0.5 仅 10 分（接近随机），RobotManip 拿到 53 分。评估长程记忆能力时，可参考 [[entities/embodied-memory-bench-emem-zju-2026|EMem-Bench]] 的四类记忆任务划分。^[raw/articles/waic-minicpm-1-5b-model-2026.md]
+
+### 2. 端侧部署先做减法：砍外接模块、砍云端依赖
+
+RobotTrack 用 0.9B 参数、原装摄像头和本地算力做到 5 帧/秒、约 180 毫秒端到端延迟，不外加感知模块或开发板，换来即时响应、隐私保护和弱网可用（电梯场景照常跟随）。选型时先问哪些环节可以被「小模型+系统级链路优化」替代，再谈功能上限。^[raw/articles/waic-minicpm-1-5b-model-2026.md]
+
+### 3. 长尾场景靠「自己找茬、自己补课」的数据闭环
+
+先大规模通用数据打底，再用仿真和真机试跑主动暴露短板（目标横穿、快速转向、遮挡、多人交叉），定向补采薄弱场景数据、逐轮迭代。这比一次性堆数据更可控，也更贴合真实场景的长尾分布——具身数据供给的产业侧格局可参考 [[entities/embodied-ai-data-market-landscape-97-players-44-billion-2026|具身数据产业格局]]。^[raw/articles/waic-minicpm-1-5b-model-2026.md]
+
+### 4. 模型之外，推理框架与任务编排决定落地速度
+
+发布当天完成 PhyAI 适配、帧率 10Hz 提到 33Hz，说明推理生态适配可以是「发布日动作」而非慢变量，端侧优化方法论可参考 [[concepts/inference-optimization|推理系统优化]]。RoboHarness 把 VLM、VLA、本体和导航当工具模块编排，配失败重试与数据闭环，让机器人在干活中持续进化——产线落地的门槛在系统能力，不在单模型跑分，闭环编排思路可对比 [[entities/embodiedskills-closed-loop-agentloop-vla-2026|EmbodiedSkills 闭环 AgentLoop]]。^[raw/articles/waic-minicpm-1-5b-model-2026.md]
 
 → [[raw/articles/waic-minicpm-1-5b-model-2026|原文存档]]
 

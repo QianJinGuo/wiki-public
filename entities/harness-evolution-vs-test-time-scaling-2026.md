@@ -2,7 +2,7 @@
 
 title: "Harness Evolution vs 多跑几遍实证"
 created: 2026-09-24
-updated: 2026-09-24
+updated: 2026-11-11
 type: entity
 tags: ['agent', 'harness', 'evaluation']
 sources: [raw/articles/harness-evolution-vs-test-time-scaling-2026]
@@ -16,7 +16,7 @@ provenance_state: extracted
 
 
 
-# 复杂的Harness Evolution，甚至不如多跑几遍
+**复杂的Harness Evolution，甚至不如多跑几遍**
 
 机器之心 2026-09-16 12:00 四川
 
@@ -51,7 +51,6 @@ provenance_state: extracted
 
 
 
-# 复杂的Harness Evolution，甚至不如多跑几遍
 
 机器之心 2026-09-16 12:00 四川
 
@@ -113,5 +112,37 @@ Harness Evolution 想做的，就是把这套人工迭代过程自动化。Agent
 第一种是 Parallel Sampling。Harness 从头到尾都不修改。同一个任务独立执行多次，再从候选结果中选择最终答案。可以把它理解为：不会就多做几遍。 ^[raw/articles/harness-evolution-vs-test-time-scaling-2026.md]
 
 第二种是 Sequential Refinement。Harness 同样固定，但后一次执行能够利用前一次留下的结果和反馈。不是从… ^[raw/articles/harness-evolution-vs-test-time-scaling-2026.md]
+
+
+## 深度分析
+
+### 公平对照的设计本身就是论文的核心贡献
+
+这项研究的方法论价值不亚于其结论。此前 Harness Evolution 工作（Meta-Harness、AHE、AEVO）报告增益时，几乎从不把 "同样的推理预算直接多跑几遍" 纳入对照组，因此 "进化收益" 与 "test-time scaling 收益" 在数字上天然混在一起。论文把四种预算花法——Parallel Sampling、Sequential Refinement、AHE 式 Harness Evolution、Harness Scaling——放到同一套极简初始 Harness（仅 bash 工具）上，统一 (K=5) 预算，才让真正的归因成为可能^[raw/articles/harness-evolution-vs-test-time-scaling-2026.md]。这个设计呼应了评测可比性的更一般原则：分数只有在计算与反馈对齐时才可比较，这正是 [[entities/benchmark-score-comparability-reference-traceability-zatona-2026|评估可追溯性]] 一类工作反复强调的教训。
+
+### 无 verifier 时的反向结果：进化可能越改越偏
+
+去掉 Unit Test 后的数字最刺眼：简单初始 Harness 均分 68.2，Parallel Sampling 升到 72.3，Harness Scaling 71.8，而 Harness Evolution 只有 67.4——低于什么都不改的起点^[raw/articles/harness-evolution-vs-test-time-scaling-2026.md]。作者的归因是：没有可靠外部信号时，Agent 对 "自己为什么错" 的诊断本身就不可靠，基于错误诊断的 Harness 修改是 "越改越偏" 而非 "越改越好"。这解释了为什么 "什么也不学习" 的 Parallel Sampling 反而最稳：它只利用模型输出的随机性，不累积诊断误差。这与 [[concepts/when-not-to-harness-engineering|何时不要 Harness Engineering]] 的边界判断一致——harness 复杂化的前提是存在可靠的反馈信号。
+
+### pass@1 才是 Harness 真实贡献的度量
+
+加入 Unit Test 后所有方法都大涨，但赢家依然是 Parallel Sampling（pass@1 平均 86.0）；Harness Evolution 的 pass@1 只有 75.8，其 pass@5（86.2）几乎与 Parallel Sampling 的单次尝试持平^[raw/articles/harness-evolution-vs-test-time-scaling-2026.md]。关键洞察在 first-try performance：如果进化真的发现了更好的 Harness，换上后第一次尝试就应该更成功；而实际观察到的是提升几乎全部来自 "多次尝试后挑最优"。这与 [[concepts/100-line-vs-managed-harness-tradeoff|100 行 vs 托管 harness 权衡]] 的张力同构——复杂的托管 harness 必须证明其增益在单次运行中就成立，而不是靠重试堆出来。
+
+### 迁移实验揭示的 task-specific adaptation
+
+作者把 Terminal-Bench 2.1 重新划分为 45 个进化任务、10 个 validation、34 个完全隔离的 test 任务，进化过程看不到 test set。结果：Claude Opus 4.6 从 63.3 到 64.5，GPT-5.4 纹丝不动（72.1→72.1），平均仅 +0.6 个百分点^[raw/articles/harness-evolution-vs-test-time-scaling-2026.md]。与参与优化的任务上的增益形成鲜明反差，说明进化的收益更像是对这批 benchmark 的 task-specific adaptation，而非可迁移的通用 Agent 架构改进。这正是 [[entities/vals-ai-cheating-on-the-rise-terminal-bench|Terminal-Bench 作弊审计]] 揭示的同一枚硬币的另一面：benchmark 分数的提升可能来自与任务分布的耦合，而非真实能力。
+
+### 对 Agent Evaluation 的更广含义
+
+论文的真正靶子是整个 Agent 评测文化。当一个带 Planner、Critic、Memory、多子 Agent 的复杂架构报告 +5 个百分点时，问题应该是：给一个极简 Agent 同样的二十次模型调用预算，它能涨多少？如果答案接近，复杂架构的 "算法价值" 就要重新衡量^[raw/articles/harness-evolution-vs-test-time-scaling-2026.md]。这一归因困境同样适用于 [[concepts/agent-self-improvement-loops|Agent 自改进循环]] 与 [[concepts/ahe-agentic-harness-engineering|AHE]] 的增益声明：未来评估应把 inference budget 与反馈等级写进实验协议，作为与算法创新同等级别的受控变量。
+
+## 实践启示
+
+1. **报告增益时必须带 compute-matched 对照组**：任何 "进化/优化让 Agent 提升 N 分" 的声明，都应同时报告 "同样预算下 Parallel Sampling 能涨多少"；缺了这一行的 benchmark 数字默认不可比。
+2. **先问有没有可靠 verifier，再谈自进化**：没有 Unit Test 级别外部反馈的场景里，Harness Evolution 连起点都守不住（67.4 < 68.2）；此时应把钱花在增加采样次数或获取外部信号上，而不是自动化 harness 修改。
+3. **用 pass@1 检验架构增益**：评估新 Agent 架构时，先看 first-try performance 是否提升；提升集中在 pass@k（k>1）说明收益来自重试而非架构本身。
+4. **进化实验必须隔离 test set**：自建 benchmark 进化实验时，划分进化/validation/test 三段并确保进化过程看不到 test set；只看参与优化任务上的增益会系统性高估。
+5. **复杂架构 ≠ 算法优势**：引入 Planner、Memory、Multi-Agent 模块前，先跑一个 compute-matched 的极简基线；极简基线打平即意味着复杂度没有换来算法价值。
+6. **Harness Evolution 的适用域是强反馈 + 高 harness 敏感度任务**：真正适合研究的任务需要长期 Memory、多工具协同、复杂 workflow，使 harness 质量成为决定成败的变量；强模型 + 简单任务上它没有发挥空间。
 
 → [[raw/articles/harness-evolution-vs-test-time-scaling-2026|原文存档]] ^[raw/articles/harness-evolution-vs-test-time-scaling-2026.md]

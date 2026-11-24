@@ -1,7 +1,7 @@
 ---
 title: "ScholarEvolve：让 Agent 读论文改自己的 Harness（UCSB × 微软）"
 created: 2026-10-21
-updated: 2026-10-21
+updated: 2026-11-14
 type: entity
 tags: [agent, harness, self-evolving, rsi, research-automation, benchmark]
 sources: [raw/articles/scholarevolve-research-guided-harness-evolution-ucsb-ms-2026]
@@ -73,6 +73,34 @@ AppWorld Challenge 的意义在于检验泛化：测试集包含训练与验证�
 ## 作者与出处
 
 第一作者 Jingbo Yang，UCSB 计算机系博士生，研究方向为大语言模型智能体、自进化系统、智能体记忆与高效推理，曾在微软研究实习，成果发表于 NeurIPS、ACL 等会议。^[raw/articles/scholarevolve-research-guided-harness-evolution-ucsb-ms-2026.md]
+
+## 深度分析
+
+### 把「改进信号源」从自身经验换成外部文献
+
+自我改进的常规路线（反思复盘、经验沉淀、失败轨迹分析）有一个共同天花板：能提出什么改进，受限于 Backbone 模型已有的知识。ScholarEvolve 的关键一步是引入模型知识之外的信号源——arXiv 上的最新研究，让「模型没见过的机制」也能进入候选池。这条路线与 [[concepts/agent-self-improvement-loops]] 中按改进信息源分类的框架互补：它不是让 Agent 更会反思，而是让它会「查资料」。
+
+### 模块化检索 + Topic Modeling：解决预算分配问题
+
+五模块划分（Tools / Context / Skills / Memory / Workflow）把「Agent 表现不好」翻译成「哪个模块缺什么能力」，让检索查询有明确落点，这与 [[entities/agent-harness-12-components-7-decisions]] 的组件化思路同源。更值得注意的设计是 Topic Modeling 去重：高相关论文往往方法雷同，直接取 top-k 会把实验预算烧在同一条技术路线上；按技术机制归类后，「压缩上下文」与「检索关键片段」这类机制不同的方案得以并存。本质上这是在解一个探索-利用问题——检索阶段强制多样性，评估阶段再做利用。
+
+### 组合评估是对抗组合爆炸的必要环节
+
+单个模块的最优改进组合后可能互相抵消，甚至劣化整体表现，因此跨模块组合评估不可或缺。这印证了 [[concepts/agent-harness-engineering-paradigm]] 的判断：Harness 是相互影响的系统，局部最优不等于全局最优。工程上的推论是：任何 Harness 改动都应保留「全量回归验证」环节，而不是只测被改的模块。
+
+### 无权重更新的自进化：RSI 的工程化收窄
+
+ScholarEvolve 只改 Harness 代码、不动模型参数，这与 [[entities/agent-self-improvement-six-mechanisms]] 里「从外部知识注入改进」的分支一致。这种收窄有两层意义：其一，改动可 git 管理、可回滚、可审计，比权重级自进化安全得多；其二，实验证明 Harness 层仍有 14 个百分点的可挖空间（AppWorld Challenge 49.6% 到 63.6%），说明当前 Agent 的瓶颈相当一部分在系统层而非模型层。消融实验进一步把增益来源拆开：移除文献指导、模块化搜索与 Topic Modeling 后性能逐步下降，说明提升不只来自「自动改代码」，更来自「如何寻找、组织和组合研究方法」这套元能力。窗口演化实验（三个时间窗、81.5% 收官）则示范了「终身学习」评测的设计方式：固定模型、滚动注入新文献、观察增益曲线。
+
+## 实践启示
+
+1. 诊断先行再检索：遇到 Agent 表现不稳，先按 Tools / Context / Skills / Memory / Workflow 定位问题模块，再带着明确职责去查方案，比笼统搜索「如何提升 Agent 效果」有效得多。
+2. 检索要保机制多样性：调研技术方案时不要只看最相关的几篇，按机制归类后再分配预算，避免整条团队路线锁死在单一方案上。
+3. 组合回归是底线：引入任何新组件（新记忆结构、新工具封装）后必须在完整 Harness 上回归验证，单独模块的离线收益不作数。
+4. 系统层仍有红利：不动模型、只改编排与管理方式，就能拿到两位数提升——团队在考虑换模型之前，值得先把 Harness 优化做满，这与 [[concepts/coding-harness-engineering]] 的「Harness 先于模型」思路一致。
+5. 候选必须有筛选闸门：论文方法不总有效，部分实现甚至降性能；自动化生成候选的同时，评估与筛选环节不可省略，判断力无法外包给流程。
+6. 让演化持续而非一次收敛：把「读新论文、试新机制」做成周期性流程（类似 ScholarEvolve 的研究窗口），而不是项目启动时一次性调研后就固化为常量。研究领域每月都有新的工具调用方法、记忆架构与推理策略出现，固化的 Harness 会随时间相对退化。
+7. 把文献消化做成流水线而非个人英雄主义：Research Agent 读论文、Coding Agent 落实现、实验决定去留的分工说明，「论文到工程」的转化本身可以被拆解为可自动化的岗位链，团队可以直接复用这个流水线形状。
 
 ## 关联
 

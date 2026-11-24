@@ -1,7 +1,7 @@
 ---
 title: "参数化 Memory 漫谈：从 MAML 到测试时学习的完整谱系"
 created: 2026-08-07
-updated: 2026-09-10
+updated: 2026-11-17
 type: entity
 tags: [parametric-memory, memory, meta-learning, maml, knowledge-editing, rome, memit, lora, icl, memory-layer, test-time-learning, ttt, titans, rag, agent-memory]
 sources: [raw/articles/parametric-memory-survey-chenzikang-alitech-2026]
@@ -82,6 +82,24 @@ review_category: tech
 - **Voyager**（2023）：技能库=程序化 Memory（验证过的 JS 函数，质量不变量）；程序载体三性质：精确回放/组合性（记忆条目第一次互相引用）/免遗忘。代价：泛化让渡给冻结基座
 - **可演化程序结构**：STOP/ADAS/AFlow/AlphaEvolve——LM 只当变异算子；AFlow 搜出的 workflow 让小模型以 GPT-4o 约 4.55% 推理开销超过 GPT-4o（「任务怎么拆」结构记忆顶掉参数容量）；AlphaEvolve 4×4 复矩阵 48 次标量乘破 Strassen 56 年纪录。**评估器移进记忆系统内部**（上限从生成器多强移到评估器多真）
 - **Self-Evolving Memory（2026）**：演化记忆机制本身——EvolveMem 演化检索配置（LoCoMo F1 0.305→0.543）；CluE 逐簇演化抽取 prompt（三类全正 +9.04%，对照 Mem0 增益翻号）；MemMA 探针自检回写（去探针掉 11.19 点）；**MemRL 在 episodic memory 上学 Q 值**（「语义相似≠任务相关」第一次拿到学习信号层面处理，ALFWorld 0.324→0.507）。套路已出现三次：MAML 学初始化、Meta-SGD 学学习率、Titans 学动量遗忘门、现在轮到经验系统演化 optimizer 自己 ^[raw/articles/parametric-memory-survey-chenzikang-alitech-2026.md]
+
+## 深度分析
+
+### 谱系排序的真实逻辑：一条「写入干扰递减、生命周期外移」的主轴
+
+七个谱系沿一条主轴展开：越靠后对主参数的写入干扰越小，生命周期责任越移出权重。谱系一（MAML/Meta-SGD）把记忆留在 θ，靠易改写初始化回避干扰，但二阶成本使 LLM 全参数版不可行^[raw/articles/parametric-memory-survey-chenzikang-alitech-2026.md:29-33]；谱系二（ROME/MEMIT）直面写入：MEMIT 以经验二阶矩保护常见激活方向、批量写入 critical MLP 层段，CounterFact 一万条编辑下 GPT-J 综合 85.8 vs ROME 50.3，但多次编辑仍呈 gradual→catastrophic 遗忘^[raw/articles/parametric-memory-survey-chenzikang-alitech-2026.md:53-60]；谱系三用 θ+φ 分离把记忆变成可插拔件，LoRA 训练参数减少一万倍，代价是「无生命周期管理」^[raw/articles/parametric-memory-survey-chenzikang-alitech-2026.md:65-69]。主轴尽头是谱系七：Reflexion 的 append-only 缓冲与 Adam 动量同构，写入干扰为零，容量却受窗口卡死^[raw/articles/parametric-memory-survey-chenzikang-alitech-2026.md:132]。
+
+### 四维权衡：可塑性 vs 稳定性 vs 容量 vs 读取成本
+
+用四个维度重读谱系能看到新结构。**谱系五证明可塑性与稳定性可在架构层面同时买到**：PKM 参数随 N 线性、FLOPs 随 top-k 增长（容量与计算解耦），Meta 2024 的 128B memory parameters 同 FLOPs 超 2× dense；Sparse Memory Finetuning 给出最关键的稳定性数字——同等新知识下旧能力损耗全量 -89%、LoRA -71%、sparse FT 仅 -11%，因槽位稀疏在坐标上，LoRA 稀疏在方向上（新旧方向仍串扰）^[raw/articles/parametric-memory-survey-chenzikang-alitech-2026.md:103-107]。谱系四（ICL）是极端角点：可塑性即时、写入零干扰，但 Δw 算完就丢、容量被 context 卡死^[raw/articles/parametric-memory-survey-chenzikang-alitech-2026.md:84]。谱系六补上「稳定但有寿命」的中间档：ARC-TTT 任务专属 LoRA 答完即弃换 8B 模型 53.0%，Titans 以惊讶度动量与数据依赖 weight decay 把遗忘变成门控，但状态随序列结束丢弃，跨会话仍需外部系统^[raw/articles/parametric-memory-survey-chenzikang-alitech-2026.md:115-118]。读取成本维度，FlashMemory 提醒写路径与读路径是两件事：物理 KV cache 压到 13.5% 精度反升，读取侧「记忆决策」同样可从固定启发式换成被训练的小模型^[raw/articles/parametric-memory-survey-chenzikang-alitech-2026.md:119-120]。
+
+### 为什么写入权重的路线总是败给生命周期问题
+
+横向对比谱系二与谱系三/七的失败模式，会发现一个不对称：知识编辑的失败在写入时刻之后才显现（连续编辑遗忘、事实编辑不覆盖时间/多跳/反事实/偏好/安全），而低秩增量与经验系统的失败在写入时刻之前就显式声明（LoRA 不管去重/冲突/验证，RAG 长期记忆的写入/寻址/生命周期五问无解）^[raw/articles/parametric-memory-survey-chenzikang-alitech-2026.md:60-61,126]。这解释了综述标题性的判断：谱系七的进化程序路线把评估器移进记忆系统内部，系统上限从「生成器多强」移到「评估器多真」——AFlow 让小模型以 GPT-4o 约 4.55% 推理开销反超 GPT-4o，AlphaEvolve 破 Strassen 56 年纪录，两者共同的杠杆都是淘汰准则而非生成能力^[raw/articles/parametric-memory-survey-chenzikang-alitech-2026.md:134]。2026 年的 Self-Evolving Memory 把这套逻辑推到机制层：Mem0 抽取策略在 personalization +29.96% 却在 problem-solving -3.70%（增益翻号），CluE 逐簇演化抽取 prompt 后三类全正 +9.04%，MemRL 在 episodic memory 上学 Q 值让「语义相似≠任务相关」第一次拿到学习信号层面的处理^[raw/articles/parametric-memory-survey-chenzikang-alitech-2026.md:135]。
+
+### 组合式落地：一条生产可用的混合栈
+
+对实践者，综述的建议是一张按时效分层的组合表而非选边站：跨会话事实与可审计证据放外部记忆（谱系七/RAG），会话内高频模式放 ICL/快记忆（零写入成本），单任务或单用户适配放 LoRA/QLoRA（θ+φ_user_A / θ+φ_project_X 分离是多记忆并存的天然形态）^[raw/articles/parametric-memory-survey-chenzikang-alitech-2026.md:69,124]。若必须写参数，谱系五+二组合是当前证据最强的路线：预训练即采用 memory-layer 架构，写入时 TF-IDF 定位新知识专属槽位只开 top-t 梯度，把「定位≠编辑最优位置」的老问题在架构层绕开^[raw/articles/parametric-memory-survey-chenzikang-alitech-2026.md:106-107]。决策只看两个量：写入时效边界（会话内/任务内/永久）决定记忆载体；评估器可信度决定反思回写路线（Reflexion 在 MBPP 假阳性下低于重试基线）的下限^[raw/articles/parametric-memory-survey-chenzikang-alitech-2026.md:132]。这条混合栈与外部记忆治理侧一致：参数写入的干扰/遗忘正是经验外移到 [[entities/agent-memory-main-contradiction-context-scheduling]]、[[entities/agent-memory-engineering-tax-aws-china-2026]] 与 [[concepts/rag-retrieval-augmented-generation]] 所述分层外部系统的底层原因^[raw/articles/parametric-memory-survey-chenzikang-alitech-2026.md:124]。
 
 ## 与其他实体的关系
 

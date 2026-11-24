@@ -2,7 +2,7 @@
 
 title: AWS 正式发布 Lambda MicroVMs：面向 AI 时代的无服务器安全代码执行环境
 created: 2026-07-10
-updated: 2026-08-01
+updated: 2026-11-16
 type: entity
 tags: [reinforcement-learning, aws]
 sources: [raw/articles/aws-正式发布-lambda-microvms面向-ai-时代的无服务器安全代码执行环境]
@@ -197,6 +197,40 @@ AI 编程助手的代码沙箱 | AI 生成的代码需要隔离执行，用户�
 本质
 
 ---
+## 深度分析
+
+### 1. "不可能三角"被打破的方式：把初始化成本从运行时挪到构建时
+
+EC2、容器、Lambda 函数各自的短板（隔离弱、状态无、启动慢）并非独立缺陷，而是三者把"环境初始化"与"请求处理"绑定在同一时间线上。MicroVM 的关键动作是采用 image-then-launch 模型：镜像本身就是一个已初始化、应用已在运行态的 Firecracker 快照，后续每次"启动"实质是快照恢复而非冷启动。这属于时间维度上的预计算——用一次性构建成本换取近乎瞬时的重复启动，使隔离强度与启动速度不再互斥。 ^[raw/articles/aws-正式发布-lambda-microvms面向-ai-时代的无服务器安全代码执行环境.md:74-78]
+
+### 2. 有状态执行把"状态管理责任"从应用层下沉到平台层
+
+传统 FaaS 以无状态为前提，代价是所有会话状态必须外推到数据库、缓存等应用自管组件。MicroVM 把内存、磁盘、运行中进程整体纳入托管生命周期：空闲即快照挂起、请求即快照还原，用户侧表现为"暂停从未发生"。这意味着编程模型从 Handler 函数回退到完整 Dockerfile + 任意进程——平台接管了原本最难自治的部分，应用层只需关心业务逻辑。 ^[raw/articles/aws-正式发布-lambda-microvms面向-ai-时代的无服务器安全代码执行环境.md:84-89]
+
+### 3. 会话亲和性用"笨办法"而非智能路由，是有意的架构取舍
+
+每个 VM 固定 URL，谁对应谁由应用自己记（映射存 DB）。这个反直觉设计让平台保持无状态、可水平扩展，把会话→VM 的映射、重建与回收全部留给应用层；平台只承诺两件事：隔离原语 + 稳定端点。理解这一点才能正确设计上层系统——不要期待平台替你做路由决策。 ^[raw/articles/aws-正式发布-lambda-microvms面向-ai-时代的无服务器安全代码执行环境.md:102-105]
+
+### 4. 在 AWS 计算版图中的生态位：补齐"不可信代码执行"这一层
+
+与 Lambda Functions 是互补关系（事件驱动主干 + 隔离执行节点），与 Bedrock AgentCore 是不同层级（底层计算原语 vs 上层 Agent 框架）——AgentCore 解决"Agent 怎么跑起来"，MicroVM 解决"Agent 产出的代码怎么安全执行"。此前团队基于 Firecracker 自建多租户隔离池的路线（参见 [[entities/firecracker-bedrock-agentcore-multi-tenant]]），如今被收敛为几次 API 调用，自建虚拟化栈的工程重量被平台吸收。 ^[raw/articles/aws-正式发布-lambda-microvms面向-ai-时代的无服务器安全代码执行环境.md:134-156]
+
+### 5. 计费模型与 Lambda 函数的经济学根本不同
+
+Baseline 持续计费 + active duration 意味着"空闲 ≠ 免费"，只是打了折；这与 Lambda 函数纯按调用计费的模型不同。隔离粒度（每用户 / 每会话 / 每任务一个 VM）的选择直接决定 VM 存活时长分布，进而决定成本曲线——粒度不仅是安全决策，也是财务决策。 ^[raw/articles/aws-正式发布-lambda-microvms面向-ai-时代的无服务器安全代码执行环境.md:156]
+
+## 实践启示
+
+1. **先做隔离粒度决策**：长交互场景（AI 编程助手、云端 IDE）选每用户一个 VM 以复用状态；一次性任务（漏洞扫描）选每任务一个 VM，跑完即毁、无残留风险。粒度选错，成本和体验会同时恶化。 ^[raw/articles/aws-正式发布-lambda-microvms面向-ai-时代的无服务器安全代码执行环境.md:111-117]
+
+2. **把 user→VM 映射表当作核心架构组件来设计**：亲和性靠应用层 DB 存映射，需要预先设计映射的存储、故障重建、VM 回收与过期清理逻辑，而不是依赖平台路由。 ^[raw/articles/aws-正式发布-lambda-microvms面向-ai-时代的无服务器安全代码执行环境.md:102-105]
+
+3. **"运行用户/AI 生成代码"的功能应默认落在 VM 级隔离内**：共享内核容器的隔离等级不足以承载真正不可信的代码；这正是 [[concepts/agent-sandbox]] 讨论的沙箱基座在云上的托管化实现，也不必再走 [[concepts/cloud-ai-infrastructure]] 式的自建路线。
+
+4. **按层选型而非单服务硬扛**：Agent 编排交给 AgentCore 或框架层，不可信代码的隔离执行交给 MicroVM，事件驱动短任务用普通 Lambda 函数，三者各司其职、互相调用。选型细节可对照 [[entities/lambda-microvms-vs-bedrock-agentcore-ai-agent-comparison]] 与第三方解读 [[entities/theburningmonk-com-2026-06-what-you-need-to-know-about-lambda-microvms]]。 ^[raw/articles/aws-正式发布-lambda-microvms面向-ai-时代的无服务器安全代码执行环境.md:146-163]
+
+5. **提前评估 ARM64-only 与区域约束**：当前规格仅提供 ARM64 架构，镜像构建需保证依赖与二进制兼容；可用区域限于美东、美西、爱尔兰、东京，中国区落地需确认路线图。 ^[raw/articles/aws-正式发布-lambda-microvms面向-ai-时代的无服务器安全代码执行环境.md:174-182]
+
 ## 关联
 - 相关概念: [[concepts/harness-engineering-framework|Harness Engineering]]
 

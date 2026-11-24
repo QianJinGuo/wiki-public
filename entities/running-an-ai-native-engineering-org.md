@@ -3,7 +3,7 @@
 title: "Running an AI-native engineering org"
 type: entity
 created: 2026-06-05
-updated: 2026-09-10
+updated: 2026-11-24
 tags: [article, newsletter, ai, agent]
 sources:
   - raw/articles/running-an-ai-native-engineering-org
@@ -18,85 +18,63 @@ review_category: practice
 
 # Running an AI-native engineering org
 
-URL: https://claude.com/blog/running-an-ai-native-engineering-org ^[raw/articles/running-an-ai-native-engineering-org.md]
+## 摘要
+
+Anthropic Claude Code 团队的实践表明：当智能体编码把"写代码"本身的成本压到接近零之后，工程瓶颈并未消失，而是迁移到了验证、代码审查和安全。因此 AI-native 工程组织不是"现有团队用上 AI 工具"，而是围绕 AI 的能力与局限重新设计组织结构、流程与角色，重写那些悄然失效的旧流程。文章给出了该团队重写后的四组新规范——即时化规划、先问 Claude 的上下文获取、信任但验证的代码审查、模糊化并重新索引的团队人队形——以及判断变革是否落地的三个度量。
+
+## 核心要点
+
+- 写代码、写测试、重构不再是瓶颈；验证、代码审查和安全接管了瓶颈的位置，工程经理的核心挑战从"确保产出"变成"确保 AI 产出的质量与安全性"。
+- 六个月路线图在第三个月就过时了：工程吞吐量变了，规划必须转向即时化（JIT planning）——原型、内部用户、反馈行动，取代设计文档和正式产品评审。
+- 上下文获取的新规范是"先问 Claude，而不是问代码作者"：既然所有 PR 都由 Claude 协助，"谁改的这行"不再是有效问题，要追问你真正需要知道的是什么。
+- 代码审查采取"信任但验证"的分层模型：Claude 处理风格、lint、抓 bug、补测试；人类保留在法律风险、信任边界/安全敏感代码、产品感与品味这些领域专长上。
+- 团队角色在模糊化：PM 大量写代码，工程师承接内容与设计；招聘重点索引两类人——有产品感的 creative builders 和深度系统专家，而降低原始吞吐量的权重。
+- 团队原则：全员 dogfood、组织尽量扁平（经理先做 IC）、明确授权每个人质疑并杀死失效的旧流程；具体怎么用 Claude 由各 pod 自主决定。
+- 三个数字判断变革是否落地：新人上手时间下降、PR 周期时间下降、Claude 辅助提交占比上升（该团队近四个月没见过非 Claude 辅助的提交）。
+- 切入点：挑你最"吵"的 workflow——最贵、最令人畏惧的那个——先问它是否还在服务目的，再问能否自动化。
 
 ## 深度分析
 
-### 1. AI-native 工程组织：从"用 AI"到"围绕 AI 组织"
-AI-native 工程组织不是"现有团队用 AI 工具"，而是"围绕 AI 的能力和局限重新设计组织结构、流程和角色"。 ^[raw/articles/running-an-ai-native-engineering-org.md]
+### 瓶颈迁移：从编写代码到验证、审查与安全
 
-### 2. 工程经理的新角色：AI 产出的质量守门人
-AI 生成代码的速度远超人类审查速度——工程经理的核心挑战从"确保产出"转变为"确保 AI 产出的质量和安全性"。 ^[raw/articles/running-an-ai-native-engineering-org.md]
+过去几十年，工程带宽是构建软件中最贵的部分，瀑布和敏捷的整套流程都是围绕这个成本设计的。作者从 2000 年代初做 Visual Studio 起经历了三轮交付方式的变革：CD-ROM 时代的硬性制造期限、在线分发带来的持续更新、以及如今围绕"写软件所需的时间和人力"的再一次重构。每一轮变革，旧的流程都不会自己退场——它们当初为填补某个缺口而设，缺口消失后流程仍在，只是开始失效。^[raw/articles/running-an-ai-native-engineering-org.md]
 
-### 3. 代码审查的规模化瓶颈
-AI 可以在 1 小时内生成相当于 1 周的代码量，但代码审查仍然是人类瓶颈——需要引入 AI 辅助审查和分层审查策略。 ^[raw/articles/running-an-ai-native-engineering-org.md]
+在 Claude Code 团队，打字写代码这一环被智能体编码拿掉后，瓶颈并没有消失，而是换成了验证、代码审查和安全。代码生成得越快，新问题就越尖锐：这段代码正确吗？将来怎么维护？工程负责人最常问作者的一个问题正是"人类怎么跟得上你们的代码审查节奏"。这解释了为什么工程经理的角色重心随之改变——从推动产出的数量，转向充当 AI 产出的质量守门人。组织的设计重心必须整体从"提高编码产能"挪到"提高验证产能"，而 AI 生成代码的速度远超人类审查速度，这个剪刀差正是新流程要解决的核心矛盾。
+
+### 规划转向即时化（JIT）：路线图的保质期只剩三个月
+
+旧规范的逻辑是：编码时间贵，所以要花大量时间前置规划。作者加入 Claude Code 团队时写过一份相当不错的六个月路线图，结果恰恰因为 Claude Code 本身，变化太快，第三个月就过时了。这是个有意思的自我指涉：团队用来提速的工具，正是让既有规划方式失效的原因。^[raw/articles/running-an-ai-native-engineering-org.md]
+
+作者的类比是 JIT 编译：在正确的时机做刚好够用的规划。规划载体从设计文档转向 PR 讨论和原型，领域变化太快所以基本不做正式产品评审；流程变成"先做原型 → 让大量内部用户用起来 → 立刻依据反馈行动"。这本质上承认了一个事实：当实施成本足够低时，"探索"比"预测"更便宜——与其花两周论证该做什么，不如花两天做出来给真实用户用。路线图应该按需即时生成而不是提前囤积，规划的价值从"答案的正确性"转移到"反馈循环的速度"。
+
+### 上下文获取：先问 Claude，再问能否自动化
+
+当代码由工程师手写时，多数问题的第一步是找到写这段代码的人——作者就是活的知识库。现在团队所有 PR 都有 Claude 协助，"谁改的这个地方"不再是充分的问题：作者身份被稀释了，提问也必须往深一层。新规范是先追问自己：你到底需要知道什么？是找回归的元凶、找能回答客户问题的专家，还是要某个决策的上下文？把这个真正的问题抛给 Claude，并考虑它能否结合更多数据和上下文直接回答。^[raw/articles/running-an-ai-native-engineering-org.md]
+
+更进一步的团队习惯是：无论问题是什么，都追加一句"有没有办法把它自动化？"。作者举例：每天早上让 Claude 汇总客户反馈渠道，从过去"端着咖啡手动做的事"变成了后台自动运行的事。这一条的普适性在于——任何一次人工信息查询，都值得被评估为潜在的自动化候选；今天回答一次问题的时间成本，可能已经高于把这个问题变成常驻自动化任务的边际成本。旧流程"悄然失效却不会自己退场"的问题，在这里的解法是制度化地质疑：团队明确授权每个成员质疑并杀死不再合理的流程。
+
+### 代码审查与团队构成：信任但验证
+
+代码审查是 AI-native 转型中人的因素最集中的环节。团队重度使用 Claude 的 Code Review：风格与 lint、PR 反馈请求、完整提交前抓 bug 并修复、补测试，全部交给 Claude。人类明确保留在"专长"上——法律审查要法务伙伴参与风险容忍度判断；信任边界和安全敏感代码要领域专家；产品经理和设计师要参与产品感与品味。关键警示是：信任与验证的平衡点会随模型进步持续移动，今天必须人审的东西，下一代模型可能就不需要了，所以这条人机分界线需要持续重估而不是一次划定。^[raw/articles/running-an-ai-native-engineering-org.md]
+
+角色边界随之模糊：PM 现在大量写代码，非传统编码背景的人能承担更多工程工作，工程师也接下内容与设计这类传统上非技术侧的工作。在人员配置上，团队重点索引两类画像：一是有产品感的 creative builders——对用产品解决问题充满好奇和热情的梦想家；二是深度系统专家——作者加入时发现团队缺系统背景的专家，而构建 Claude Code on the Web、确保 Claude 到处能跑恰恰需要这种能力。相反，被降低权重的指标是原始吞吐量，因为模型已经接管了它；真正该问的是"哪里仍然需要人类专长"，然后把人押在那里。
+
+推广过程的组织设计同样值得注意：少数原则作为不可协商的团队纪律统一执行（全员 dogfood、经理先做 IC 以保持扁平、围绕一个团队使命），其余放手让各 pod 自主摸索——如何用 Claude 做分诊、如何开站会、哪些 workflow 先"Claudified"。这个"原则统一、方法下放"的结构，正是为了让团队能随模型能力的变化快速调整局部实践，而不用等中央流程委员会批准。
 
 ## 实践启示
 
-### 1. 引入 AI 审查作为第一道防线
-AI 生成代码 → AI 自动审查 → 人类重点审查——三层审查模型解决规模化问题。^[raw/articles/running-an-ai-native-engineering-org.md]
-
-
-### 2. 重新定义工程师角色
-从"写代码的人"转变为"引导 AI 写代码 + 审查 AI 产出 + 设计系统架构的人"。^[raw/articles/running-an-ai-native-engineering-org.md]
-
-
-### 3. 投资审查基础设施
-审查工具（diff 可视化、AI 审查助手、自动测试）比写代码工具更重要。^[raw/articles/running-an-ai-native-engineering-org.md]
-
+1. 从"挑最吵的 workflow"开始：选你最贵、最令人畏惧或团队最不想面对的那个流程，问它是否还在服务目的、能否自动化——作者用它杀死了一场所有人都在低头用电脑的昂贵周会，一个问题就够了。
+2. 建立三层审查模型：AI 自动审查做第一道防线（风格、lint、bug、测试），人类只审领域专长（法律风险容忍度、安全敏感代码、产品感与品味），并把"重估人机分界线"设为随模型迭代的固定动作。
+3. 把路线图改成 JIT 制：用"原型 + 内部用户 + 反馈行动"替代长周期设计文档与正式产品评审，规划物按需生成、用完即弃，衡量标准是反馈循环的速度。
+4. 立下"先问 Claude，再问能否自动化"的上下文规范：把"找写代码的人"换成"把你真正需要知道的问题抛给 Claude"，并对每次人工查询评估其自动化潜力。
+5. 立刻开始跟踪三个数字：新人上手时间（目标：第一周就提交真实代码）、PR 周期时间（顺带暴露构建系统和 CI 跟不上的环节）、Claude 辅助提交占比——但别把吞吐量当成功指标，真正的指标是你原本要解决的那个问题。
+6. 把组织原则钉死、把方法留给小队：全员 dogfood、经理先做 IC、团队尽量扁平且围绕一个使命，同时明确授权每个成员质疑并杀死失效流程；具体怎么用 Claude 做分诊、怎么开站会、哪些 workflow 先"Claudified"，交给各 pod 自主决定。
 
 ## 相关实体
+
 - [[entities/cisco-preps-for-a-world-of-ai-agent-coworkers-frontier-model-threats]]
 - [[entities/how-we-made-window-join-parallel-and-vectorized]]
 - [[entities/products-are-out-brains-are-in]]
-- Investing In Stitch
 - [[entities/gemini-35-flash-more-expensive-but-google-plan-to-use-it-for-everything]]
 
 → [[raw/articles/running-an-ai-native-engineering-org|原文存档]] ^[raw/articles/running-an-ai-native-engineering-org.md]
-
-## 摘要
-
-
-
-
-[Video 4](https://www.youtube.com/watch?v=igO8iyca2_g) ^[raw/articles/running-an-ai-native-engineering-org.md]
-
-For years, engineering bandwidth was the expensive part of building applications. Every process we used to have around software planning and shipping, first waterfall and then agile, was built around that cost. ^[raw/articles/running-an-ai-native-engineering-org.md]
-
-I started my career in the early 2000s working on Visual Studio. In those days we shipped software on CD-ROMs with hard manufacturing deadlines. Once we could distribute software online, we began increasing to shipping updates continuously. Now we’re changing the way we work again, this time around the time and people it takes to write software. ^[raw/articles/running-an-ai-native-engineering-org.md]
-
-On the Claude Code team, writing code, writing tests, and refactoring rarely slows us down anymore. But the bottlenecks didn’t go away when agentic coding took away the actual need to type code. Verification, code review, and security took their place. ^[raw/articles/running-an-ai-native-engineering-org.md]
-
-We can all generate a lot of code really fast now, but this also brings up new questions: Is this code correct? How is it maintained? And one of the top questions I get from fellow engineering leaders: “How are humans keeping up with how you’re doing code reviews?” ^[raw/articles/running-an-ai-native-engineering-org.md]
-
-## The processes that quietly stopped working
-
-We all put processes in place for a reason, to close a gap or make something work better. But when that gap no longer exists and those processes become obsolete, they rarely go away on their own. When the Claude Code team began using agentic coding as our default way of working, a lot of our existing processes stopped working. Here are the norms we rewrote, and why. ^[raw/articles/running-an-ai-native-engineering-org.md]
-
-### Planning: shift roadmaps to just in time
-
-The old norm was to spend a lot more time pre-planning because coding time was expensive. When I first joined the Claude Code team, we wrote a pretty good six month roadmap, and then _because_ of Claude Code, so many things changed that it was out of date by month three. ^[raw/articles/running-an-ai-native-engineering-org.md]
-
-Engineering speed and throughput is different now, so the way we plan sprints has changed. I call it just-in-time (JIT) planning, almost like JIT compiling: how do you do just the right amount at the right time? Our planning ritual shifted away from design docs toward discussions in PRs or prototypes. The space moves fast so we don’t do a lot of product reviews. Our process now is let's prototype, get a lot of internal users on it, and start acting on their feedback. ^[raw/articles/running-an-ai-native-engineering-org.md]
-
-### Context gathering: ask Claude, not the author
-
-When engineers wrote code, the first step to getting an answer to most questions was to find the person who wrote the code. Now, since all our PRs are assisted by Claude, "Who made this change?" is no longer sufficient. Our new norm is to go a level deeper: what do you actually need to know? For instance: Are you looking for who caused a regression? An expert to answer a customer question? Or context on a decision? You ask Claude that question, and consider whether Claude can answer it directly, also with more data and context. ^[raw/articles/running-an-ai-native-engineering-org.md]
-
-On the Claude Code team, no matter what that question is, our process is to also ask “Is there a way to automate it?” For example, having Claude summarize customer feedback channels every morning went from a ritual I did manually with my coffee to something I just have running automatically in the background. ^[raw/articles/running-an-ai-native-engineering-org.md]
-
-### Code review: trust but verify
-
-We use [Code Review](https://code.claude.com/docs/en/code-review) heavily. Claude handles all the style and linting, PR feedback requests, catching bugs and fixing them before a full commit, and adding tests. Where we still definitely want a human is expertise. ^[raw/articles/running-an-ai-native-engineering-org.md]
-
-The new norm is human review where it matters: for legal review, I always want my legal partner involved in risk tolerance. For trust boundaries and security-sensitive code, I want the domain experts. Product managers and designers also need to be involved with product sense and taste. ^[raw/articles/running-an-ai-native-engineering-org.md]
-
-It’s important to continually evaluate, though, because the right balance of trust vs. verify will keep changing as the models improve. What you need humans for today might look different with the next model. ^[raw/articles/running-an-ai-native-engineering-org.md]
-
-### Team makeup: blurring roles
-
-Claude and AI have reshaped roles across the team. Our PMs code a lot now, which is fun to see. With Claude, you have nontraditional coders now being able to do more engineering, and you have engineers who take on things like content and design, work that were traditionally not on the technical side. ^[raw/articles/running-an-ai-native-engineering-org.md]
-
-On the Claude Code engineering team, I’ve indexed heavily on two profiles. One is creative builders with product sense: the dreamers who are deeply curious and passionate about shipping products that solve problems. The other one is engineers with deep systems expertise. For example, when I joined the team, I noticed we were missing experts with systems backgrounds and we needed that when building [Claude Code on the Web](https://www.anthropic.com/news/claude-code-on-the-web), to ensure we can run Claude everywhere. ^[raw/articles/running-an-ai-native-engineering-org.md]
-
-What I index on less, on the other hand, is raw throughput; the models handle that. The more important question is where you still need human expertise, and that's where I'd focus. ^[raw/articles/running-an-ai-native-engineering-org.md]

@@ -1,7 +1,7 @@
 ---
 title: "Marc Andreessen on Builder Culture in the Age of AI | The a16z Show"
 created: 2026-05-14
-updated: 2026-09-10
+updated: 2026-11-19
 type: entity
 tags: [newsletter, a16z, podcast, ai-culture, builder, future-of-work]
 review_value: 7
@@ -44,7 +44,7 @@ Traditional specialist roles (doing one thing well) are being replaced by "gener
 
 The conversation explores the changing dynamics of influence and information — the breakdown of traditional authority structures, the rise of new internet subcultures, and what this means for trust, culture, and generational attitudes. Andreessen examines how these shifts intersect with the AI moment. ^[raw/articles/marc-andreessen-on-builder-culture-in-the-age-of-ai-the-a16z-show.md]
 
-## Deep Analysis
+## 深度分析
 
 ### The Builder Thesis in Context
 
@@ -79,7 +79,7 @@ Andreessen's perspective, while compelling, has notable blind spots:
 
 ^[raw/articles/marc-andreessen-on-builder-culture-in-the-age-of-ai-the-a16z-show.md]
 
-## Practical Takeaways
+## 实践启示
 
 1. **Embrace expansion, not replacement thinking**: Frame AI adoption around "what can AI help me do that I couldn't before" rather than "what will AI replace." This mindset shift is critical for both individuals and organizations.
 2. **Cultivate builder culture**: Andreessen consistently emphasizes hands-on creation over theoretical discussion. In the AI era, this cultural trait becomes more valuable as AI amplifies builder output.

@@ -2,7 +2,7 @@
 
 title: "From silos to service topology: why Netflix built a real-time architecture"
 created: 2026-06-01
-updated: 2026-09-10
+updated: 2026-11-19
 type: entity
 tags: ['aws', 'netflix', 'observability', 'architecture', 'real-time']
 source: [[raw/articles/netflix-real-time-service-topology]]
@@ -21,227 +21,20 @@ review_category: tech
 
 ## 核心内容
 
--2615bd06b42e---4
+Netflix 在 Amazon 云上以数千个微服务支撑全球会员的娱乐体验，但传统可观测性工具各自只呈现碎片——指标显示症状、日志显示单服务行为、追踪显示单条请求流，凌晨 3 点的故障排查仍需工程师在多个工具间人工拼凑全局。文章介绍 Netflix 如何构建 Service Topology：一张基于真实流量、近实时更新的"活地图"，统一回答分布式排查中最核心的三个问题——谁在运行时真实依赖谁（而非配置文件里的理论依赖）、一次变更或停机的爆炸半径多大、故障根因在 upstream 还是自身。 ^[raw/articles/netflix-real-time-service-topology.md:25-45]
 
-## From Silos to Service Topology: Why Netflix Built a Real-Time Service Map
+这一需求源于四年内数千条工程师支持请求的模式分析，团队在历经外部图数据库评估与内部多轮原型迭代后沉淀出五条原则：实时性优先（每天多次部署的环境里陈旧的依赖图毫无价值）、规模改变一切、必须无缝融入既有可观测性生态、错误数据比缺失更危险、以及最重要的——任何单一数据源都讲不完整个故事。 ^[raw/articles/netflix-real-time-service-topology.md:55-83]
 
-_By_[ _Parth Jain_](https://www.linkedin.com/in/parth-jain-8a09abb6/), [_Rakesh Sukumar_](https://www.linkedin.com/in/raskuma/) _,_[_Yingwu Zhao_](https://www.linkedin.com/in/yingwu-zhao-62037418/) _,_[_Renzo Sanchez_](https://www.linkedin.com/in/renzosanchezsilva/) _ & _[_Nathan Fisher_](https://www.linkedin.com/in/nathfisher/) _ ^[raw/articles/netflix-real-time-service-topology.md]
-How we built a living map of our distributed infrastructure to help engineers understand dependencies, troubleshoot faster, and keep Netflix running smoothly for our members around the world. ^[raw/articles/netflix-real-time-service-topology.md]
+## 核心要点
 
-### The Puzzle with a Thousand Pieces
+- **三个数据源、三张独立图**：eBPF 网络流在内核层捕获真实通信、覆盖全部服务但缺应用语义；IPC 指标来自埋点服务、含端点/错误率/延迟等丰富应用上下文但依赖 instrumentation；端到端分布式追踪呈现真实请求路径与条件逻辑但受采样限制。三张图物理分区存储（图数据库分区 + 列式存储），可独立查询，也可并行遍历后取节点与边的并集融合为统一视图，亚秒级响应。 ^[raw/articles/netflix-real-time-service-topology.md:103-135,150]
+- **中介层解析是核心转换**：原始网络流只记录经负载均衡器、NAT 网关、API 网关等中介的逐跳路径，而拓扑需要应用级直连。三阶段聚合 pipeline（初始聚合 → 中介解析 → 健康状态富化）把逐跳记录重建为 A→B 直连边，分层处理同时天然分散流量、防止个别应用 100 倍流量差异造成的处理热点。 ^[raw/articles/netflix-real-time-service-topology.md:174-178]
+- **管道与存储**：多区域 Kafka 持续消费数百万条流日志；Apache Pekko Streams（Akka 的 fork）做分布式容错处理并自动分区工作负载、提供背压；拓扑持久化在 Netflix 自研图数据库（分布式 KV 存储之上的抽象层），经 gRPC API 暴露多跳遍历、按可用性层级与业务域过滤、分页与亚秒级查询。 ^[raw/articles/netflix-real-time-service-topology.md:170-182]
+- **活地图属性**：新服务开始调用即以近实时新鲜度出现在拓扑中，停止调用则边淡出，部署行为变化与健康状态实时反映——地图反映真实流量，而非设计文档中"应然"的架构。 ^[raw/articles/netflix-real-time-service-topology.md:208-217]
+- **时间旅行查询**：以时间窗聚合（layer-specific aggregators 跨窗口累积而非逐时间片离散存储）支持重建任意历史时点的拓扑、追踪依赖关系随时间的演变，同时控制存储成本。 ^[raw/articles/netflix-real-time-service-topology.md:204]
+- **路线图**：变更事件 overlay（部署/配置变更与拓扑并列展示以简化关联）、更丰富的端点级上下文，以及远期愿景——自动化根因分析智能体持续爬取拓扑图、跨依赖关联故障并结合历史模式自动给出疑似根因，Service Topology 即这一智能自动化的知识图谱基础。 ^[raw/articles/netflix-real-time-service-topology.md:223-227]
 
-Picture this: It's 3am, and an engineer gets paged. One of our critical services is showing elevated error rates. Members trying to watch their favorite films and series are seeing degraded experiences. The clock is ticking. ^[raw/articles/netflix-real-time-service-topology.md]
-
-A single service at the center of a web of dependencies — services, data stores, and call chains branching in every direction. Without a unified map, engineers have to reason about this structure from memory and scattered signals. ^[raw/articles/netflix-real-time-service-topology.md]
-
-In a system with thousands of microservices supporting our entertainment experience for members worldwide, answering these questions quickly can mean the difference between a minor blip and a major incident. ^[raw/articles/netflix-real-time-service-topology.md]
-
-We kept hearing variations of this story from engineers across Netflix. The tooling gap was clear: we had plenty of signals, but no unified way to understand how everything connected. ^[raw/articles/netflix-real-time-service-topology.md]
-
-### The Three Questions Every Engineer Asks
-
-When troubleshooting distributed systems, engineers fundamentally need to understand relationships: ^[raw/articles/netflix-real-time-service-topology.md]
-
-**Which services depend on each other?** Not just theoretical dependencies from configuration files or architecture diagrams, but actual runtime connections based on real traffic. ^[raw/articles/netflix-real-time-service-topology.md]
-
-**What's the blast radius?** When something breaks or needs to go down for maintenance, what else will be affected? Which teams need to be notified? ^[raw/articles/netflix-real-time-service-topology.md]
-
-**Where's the source?** Is my problem caused by an upstream issue, or am I the root cause that's cascading to others? ^[raw/articles/netflix-real-time-service-topology.md]
-
-Traditional observability tools show fragments of this picture. Metrics show symptoms and performance characteristics. Logs show individual service behavior. Traces show single request flows through the system. But none of them show the complete map of how everything connects — the steady-state topology of dependencies that forms the backbone of our distributed architecture. ^[raw/articles/netflix-real-time-service-topology.md]
-
-For an engineer at 3am, having to mentally stitch together information from multiple tools is slow, error-prone, and stressful. We needed something better: a unified view of service dependencies — a map showing how everything connects — with easy navigation to the detailed signals when you need to dig deeper. ^[raw/articles/netflix-real-time-service-topology.md]
-
-### Why This Matters More Than Ever
-
-Netflix runs on thousands of microservices working together to deliver entertainment to our members. When you press play on your favorite series, that single action triggers a cascade of service-to-service calls — authentication, recommendations tailored to your tastes, video encoding selection, playback optimization, and more. ^[raw/articles/netflix-real-time-service-topology.md]
-
-This architecture gives us tremendous flexibility and allows hundreds of engineering teams to innovate independently. But it also creates fundamental observability challenges. ^[raw/articles/netflix-real-time-service-topology.md]
-
-And these challenges were growing. New initiatives like our Live programming and Ads-supported plans require even more sophisticated monitoring and faster troubleshooting. Live events can't wait for lengthy incident investigations. The scale and real-time nature of these systems demanded better tooling. ^[raw/articles/netflix-real-time-service-topology.md]
-
-We analyzed thousands of support requests from our engineers over a four-year period. The patterns were consistent: ^[raw/articles/netflix-real-time-service-topology.md]
-
-  * "What are my upstream and downstream dependencies?"
-  * "Is this failure in my service, or is something I depend on broken?"
-  * "Which services will be impacted if I take this down for maintenance?"
-  * "Why is this service showing as 'Unknown' in my metrics?"
-  * "What changed in my call path recently that could explain this behavior?"
-
-Engineers were asking dependency questions constantly. We needed to provide answers — quickly, accurately, and in real-time. ^[raw/articles/netflix-real-time-service-topology.md]
-
-### Building on What We Learned
-
-We didn't start from scratch. Over the years, we explored various approaches to solving this problem — from evaluating external graph databases and vendor platforms to building internal prototypes with different storage technologies and data models. ^[raw/articles/netflix-real-time-service-topology.md]
-
-#### Each iteration taught us something valuable:
-
-**Real-time matters:** Dependency maps that are hours old are useless in dynamic environments where services deploy multiple times per day. We needed near real-time updates. ^[raw/articles/netflix-real-time-service-topology.md]
-
-**Scale changes everything:** Solutions that work at modest scale hit fundamental walls at Netflix scale. Storage systems that handle thousands of nodes struggle with our service count and traffic volume. ^[raw/articles/netflix-real-time-service-topology.md]
-
-**Integration is key:** Any solution needs seamless integration with our existing observability ecosystem. Engineers shouldn't have to learn entirely new tools or leave their existing workflows. ^[raw/articles/netflix-real-time-service-topology.md]
-
-**Data quality is critical:** Incomplete or incorrect dependency information is worse than no information — it leads to wrong conclusions during incidents. ^[raw/articles/netflix-real-time-service-topology.md]
-
-**Multiple perspectives needed:** We learned that no single source of dependency information tells the complete story. Network connectivity data lacks application context. Application metrics only cover instrumented services. We needed to combine multiple sources. ^[raw/articles/netflix-real-time-service-topology.md]
-
-These lessons shaped every decision we made in building Service Topology. ^[raw/articles/netflix-real-time-service-topology.md]
-
-### What We Needed: A Living Map
-
-We set out to build something specific: a living map of our infrastructure — one that updates in real-time as services deploy, as traffic patterns shift, as new dependencies form and old ones disappear. ^[raw/articles/netflix-real-time-service-topology.md]
-
-The requirements were clear: ^[raw/articles/netflix-real-time-service-topology.md]
-
-
-**Real-time updates, not stale snapshots:** In an environment where services deploy continuously, yesterday's topology map is archaeology, not observability. ^[raw/articles/netflix-real-time-service-topology.md]
-
-**Fast queries at scale:** When an engineer is troubleshooting at 3am, they can't wait minutes for a query to return. We needed sub-second response times for traversing the call graph. ^[raw/articles/netflix-real-time-service-topology.md]
-
-**Multiple layers:** Network-level connectivity doesn't tell the whole story. We needed to see both the network layer (what's actually talking to what) and the application layer (which APIs and endpoints are being called). ^[raw/articles/netflix-real-time-service-topology.md]
-
-**Rich context, not just connections:** Knowing Service A talks to Service B isn't enough. We needed to overlay health status, availability tiers, business domains, ownership information, and other metadata to make the information actionable. ^[raw/articles/netflix-real-time-service-topology.md]
-
-**Visual and programmatic access:** Engineers needed a UI for exploration and troubleshooting. But automated systems — resilience frameworks, blast radius calculators, incident response automation — needed programmatic API access. ^[raw/articles/netflix-real-time-service-topology.md]
-
-### Our Approach: Three Sources of Truth
-
-Three data sources produce three independent topology graphs — network, application, and request — each stored separately and queryable on their own or merged into a single unified view. ^[raw/articles/netflix-real-time-service-topology.md]
-
-Here's the key insight we arrived at: no single source tells the complete story. ^[raw/articles/netflix-real-time-service-topology.md]
-
-We built Service Topology by using three complementary sources to build separate dependency graphs — one from each perspective — that can be combined into a unified view or explored independently: ^[raw/articles/netflix-real-time-service-topology.md]
-
-Each source creates its own graph that is physically separate — the network layer in one graph database partition, the IPC layer in another partition, and the tracing layer using columnar storage optimized for analytical queries. This physical separation allows each layer to evolve independently and be queried in parallel. When users request a unified view, we execute traversal queries across all layers simultaneously and merge results, achieving sub-second response times even when combining all three layers. ^[raw/articles/netflix-real-time-service-topology.md]
-
-Each source creates its own graph of service relationships: ^[raw/articles/netflix-real-time-service-topology.md]
-
-#### 1\. eBPF Network Flows (Network Layer)
-
-We capture network flow records at the kernel level using eBPF technology — information about which services are connecting to which other services over the network. This gives us ground truth about actual network-level communication. ^[raw/articles/netflix-real-time-service-topology.md]
-
-The value: Comprehensive coverage. Every service shows up here because we're capturing actual network traffic, regardless of whether applications are instrumented. This layer provides topology at both cluster-level (which deployment clusters are communicating) and app-level (which applications are communicating). ^[raw/articles/netflix-real-time-service-topology.md]
-
-The limitation: Network-level information lacks application context. We know Service A connected to Service B's IP address using a specific protocol, but not which specific API endpoint or path was called (e.g., /api/v1/users vs /api/v1/orders). ^[raw/articles/netflix-real-time-service-topology.md]
-
-#### 2\. IPC Metrics (Application Layer)
-
-We collect Inter-Process Communication metrics from our instrumented services. These are the metrics applications emit when they make calls to other services via gRPC, GraphQL, REST, or other protocols. ^[raw/articles/netflix-real-time-service-topology.md]
-
-The value: Rich application context. We can see which specific endpoints were called, error rates, latency distributions, protocol details, and request/response characteristics. This layer provides app-level topology — since IPC metrics are emitted by applications, the natural granularity is application-to-application connections with endpoint details. ^[raw/articles/netflix-real-time-service-topology.md]
-
-The limitation: Only works for instrumented services. If a service doesn't emit IPC metrics, we won't see its application-level calls this way. ^[raw/articles/netflix-real-time-service-topology.md]
-
-#### 3\. End-to-End Tracing (Request Layer)
-
-We integrate distributed tracing information that follows individual requests as they flow through our system. We aggregate traces to build a unified topology graph, but also allow engineers to overlay individual traces on the topology to see specific request flows. ^[raw/articles/netflix-real-time-service-topology.md]
-
-The value: Shows actual request paths. Not just "Service A _can_ call Service B," but "Service A _did_ call Service B as part of serving this specific member request." This captures runtime behavior, including conditional logic and feature flags. Engineers can both see the aggregated pattern and drill into individual traces. We aggregate traces to build topology at both cluster-level and app-level, allowing engineers to view request patterns at the granularity most useful for their investigation. ^[raw/articles/netflix-real-time-service-topology.md]
-
-The limitation: Sampling. We can't trace every request without impacting performance, so we sample. This is excellent for understanding common flows, but may miss rarely-used code paths in the aggregated view. ^[raw/articles/netflix-real-time-service-topology.md]
-
-#### Bringing It Together: Multi-Layer Architecture
-
-Here's what makes this powerful: we build three separate graphs — one from each source — that create different perspectives on service relationships: ^[raw/articles/netflix-real-time-service-topology.md]
-
-  * **Network graph from eBPF flows:** Every connection, regardless of instrumentation
-  * **Application graph from IPC metrics:** Rich endpoint and protocol details
-  * **Request graph from tracing:** Actual runtime behavior and call paths
-
-Engineers can: 
-
-  * View each graph independently to focus on a specific perspective (pure network connectivity, application-level calls, or traced request flows)
-  * Combine them into a unified graph by querying multiple partitions in parallel and merging results — our system returns the union of nodes and edges from all requested layers while preserving each layer's distinct properties
-
-The unified view is especially powerful because: ^[raw/articles/netflix-real-time-service-topology.md]
-
-
-  * Network flows ensure completeness — we don't miss anything
-  * IPC metrics provide application details — we understand the "how" and "what"
-  * Tracing shows actual behavior — we see real request patterns
-
-Each source compensates for the limitations of the others. The result is a comprehensive, accurate, and contextualized view of service dependencies that can be explored from multiple angles. ^[raw/articles/netflix-real-time-service-topology.md]
-
-### From Flows to Graph: How We Built It
-
-Here's the high-level architecture (we'll dive deeper into engineering challenges in our next post): ^[raw/articles/netflix-real-time-service-topology.md]
-
-Flow logs travel from multi-region Kafka through three aggregation stages — initial batching, intermediary resolution, and final enrichment — before being persisted to the graph database and served via API. ^[raw/articles/netflix-real-time-service-topology.md]
-
-**Multi-Region Ingestion:** We consume flow logs from Kafka across multiple AWS regions where Netflix operates. This runs continuously, processing millions of flow records as they arrive. ^[raw/articles/netflix-real-time-service-topology.md]
-
-**Distributed Processing:** We use Apache Pekko Streams (a fork of Akka) to process these flows in a distributed, fault-tolerant pipeline. The system automatically partitions work across our Auto Scaling Groups to handle the volume and provides natural backpressure handling. ^[raw/articles/netflix-real-time-service-topology.md]
-
-**Three-Stage Distributed Aggregation** : We aggregate network flows through a three-stage pipeline that solves a fundamental challenge: network flow logs only show individual network hops through intermediaries (App A → Load Balancer → App B, or App A → NAT Gateway → App B), not the true application-level connections we need (App A → App B). ^[raw/articles/netflix-real-time-service-topology.md]
-
-Stage 2 resolves network intermediaries: raw flow logs show two separate hops (App A → Load Balancer → App B), but the resolved graph stores the direct application-to-application relationship (App A → App B). ^[raw/articles/netflix-real-time-service-topology.md]
-
-Stage 1 performs initial aggregation from Kafka. Stage 2 applies resolution logic — identifying network intermediaries (load balancers, NAT gateways, API gateways, proxies) and combining their incoming and outgoing flows to reconstruct direct application-to-application paths. Stage 3 performs final aggregation with health status integration before graph persistence. This graduated approach also prevents hot spots by distributing load across multiple points even when specific applications or network intermediaries see 100x more traffic than others. ^[raw/articles/netflix-real-time-service-topology.md]
-
-Graph Storage: We persist the topology in Netflix's graph database, an abstraction layer built on top of our distributed key-value storage infrastructure. This graph database is specifically designed for high-throughput graph operations at our scale, with fast multi-hop traversal capabilities. Each of our three data sources (network flows, IPC metrics, tracing) creates a separate graph that can be queried independently or merged. ^[raw/articles/netflix-real-time-service-topology.md]
-
-gRPC API: We expose the topology through a gRPC service that supports multi-hop traversal, filtering by availability tier and business domain, pagination for large result sets, and sub-second query response times. ^[raw/articles/netflix-real-time-service-topology.md]
-
-The technical details of building this at Netflix scale — handling Kafka lag, managing memory and garbage collection, optimizing distributed processing, debugging reactive streams — deserve their own discussion. We learned a lot, and we'll share those lessons in our next post. ^[raw/articles/netflix-real-time-service-topology.md]
-
-### What Engineers Can Do Now
-
-Today, the service topology map is helping engineers across Netflix: ^[raw/articles/netflix-real-time-service-topology.md]
-
-**Visualize Dependencies:** See upstream and downstream dependencies for any service, with the ability to filter by availability tier (Tier 0, Tier 1, etc.) and business domain. Choose between the unified view (combining all sources) or individual graph views (network-only, IPC-only, or trace-only) depending on what you're investigating. ^[raw/articles/netflix-real-time-service-topology.md]
-
-**Jump to Detailed Signals:** From any service in the topology, quickly navigate to logs, traces, and detailed metrics in their respective tools. No more hunting for the right service name or time window — the topology provides the context and the starting point. ^[raw/articles/netflix-real-time-service-topology.md]
-
-**Understand Blast Radius:** Before taking a service down for maintenance or making significant changes, see exactly what will be impacted. Identify which teams to notify and what to monitor. ^[raw/articles/netflix-real-time-service-topology.md]
-
-**Overlay Health Status:** See not just the topology, but which services in the call path are experiencing issues. This is integrated with health status tracking, so you can quickly identify if a problem you're seeing is actually originating somewhere else. ^[raw/articles/netflix-real-time-service-topology.md]
-
-**Query Programmatically:** Use our gRPC API to integrate topology information into automated systems. For example, our Platform Modernization Engineering team uses this to verify that critical Live services have proper availability tier classifications throughout their dependency chains. ^[raw/articles/netflix-real-time-service-topology.md]
-
-**Investigate Faster:** During incidents, quickly identify if a failure is local or if it's propagating from somewhere else in the call graph. Follow the failure pattern to find the root cause. ^[raw/articles/netflix-real-time-service-topology.md]
-
-**Plan Changes Confidently:** Understand the impact of proposed architectural changes or service migrations before implementing them. ^[raw/articles/netflix-real-time-service-topology.md]
-
-**Time Travel Through Topology:** Query what the topology looked like at specific points in the past. Understand what changed in dependencies around the time an issue started, or see how your service's dependency footprint has evolved over time. This time-travel capability is powered by time-window aggregation — instead of storing every time slice separately, we use layer-specific aggregators that accumulate topology data across windows, allowing us to reconstruct historical views efficiently without exploding storage costs. ^[raw/articles/netflix-real-time-service-topology.md]
-
-### The Living Map: Always Current
-
-What makes this truly useful is that it's a living map. It's not a static diagram drawn in a design document that goes out of date the moment it's published. It's continuously updated based on actual traffic: ^[raw/articles/netflix-real-time-service-topology.md]
-
-  * When a new service starts calling an API, it appears in the topology with near real-time freshness
-  * When a service stops making calls to a dependency, that edge fades from the graph
-  * When services deploy and their behavior changes, the topology reflects it
-  * When incidents impact service health, the status overlay updates in real-time
-
-This means engineers can trust what they see. The map reflects reality, not someone's idea of what the architecture should be. ^[raw/articles/netflix-real-time-service-topology.md]
-
-### The Journey Continues
-
-We're not done. We continue to evolve the system with new capabilities: ^[raw/articles/netflix-real-time-service-topology.md]
-
-Change Event Overlay: We're working to surface deployment events, configuration changes, and other mutations alongside the topology graph. Correlation becomes easier when you can see both the dependencies and what changed when. ^[raw/articles/netflix-real-time-service-topology.md]
-
-Richer Context: As we expand coverage and integrate more signals, we continue to enrich the topology with additional endpoint-level details, protocol information, and network path context. ^[raw/articles/netflix-real-time-service-topology.md]
-
-And looking further ahead, we're excited about something bigger: Automated root cause analysis. Imagine an intelligent agent that continuously crawls the topology graph, correlates failures across dependencies, understands historical patterns, and surfaces likely root causes automatically. Service topology provides the knowledge graph foundation that makes this kind of intelligent automation possible. ^[raw/articles/netflix-real-time-service-topology.md]
-
-### Why This Matters for Our Members
-
-This might seem like infrastructure — plumbing that our members never see directly. But it matters immensely to their experience. ^[raw/articles/netflix-real-time-service-topology.md]
-
-When engineers can quickly understand dependencies and identify issues, incidents get resolved faster. When we can model blast radius before making changes, we avoid disruptions. When automated systems can query dependency information programmatically, we can build smarter, more resilient systems. ^[raw/articles/netflix-real-time-service-topology.md]
-
-All of this translates to what matters most: our members getting to watch their favorite films and series, seamlessly, whenever they want. Whether it's a weekend binge of a beloved show, a live sports event, or discovering something new through our recommendations tailored to their tastes — we want it to just work. ^[raw/articles/netflix-real-time-service-topology.md]
-
-### What's Next in This Series
-
-This is the first in a series of posts about building Service Topology at Netflix. ^[raw/articles/netflix-real-time-service-topology.md]
-
-In our next post, we'll pull back the curtain on the engineering challenges we faced at scale: How do you handle Kafka consumer lag when ingesting millions of flow logs per second? What happens when distributed processing meets garbage collection pauses? How do you debug reactive streams that stall under load? How do you manage hot nodes in a distributed system? We'll share the real problems we hit in production and the solutions we developed. ^[raw/articles/netflix-real-time-service-topology.md]
-
-In future posts, we'll explore the lessons we learned that apply to any distributed system at scale, and where we're heading next with time travel capabilities and Automated root cause analysis. ^[raw/articles/netflix-real-time-service-topology.md]
-
+## 深度分析
 
 ### 多层图融合架构的核心洞察
 

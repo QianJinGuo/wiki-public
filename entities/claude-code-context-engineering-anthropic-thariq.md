@@ -2,7 +2,7 @@
 
 title: "Claude Code 上下文工程 —— Anthropic 团队的工程实践"
 created: 2026-06-10
-updated: 2026-09-07
+updated: 2026-11-21
 tags: [agent, anthropic, claude, code, llm, memory, prompt, tool-use, context-engineering]
 review_value: 7
 review_confidence: 7
@@ -22,15 +22,22 @@ review_category: practice
 
 - [[moc/memory-context-systems|MOC]]
 ## 深度分析
+### 命名升格：Prompt Engineering → Context Engineering
 
-Claude Code 上下文工程 —— Anthropic 团队的工程实践 ^[raw/articles/claude-code-context-engineering-anthropic-thariq.md]
-### 核心观点
-1. # Claude Code 上下文工程 —— Anthropic 团队的工程实践 ^[raw/articles/claude-code-context-engineering-anthropic-thariq.md]
-> 整理：Hermes Agent
-> 原文：https://mp.
-2. com/s/MGvMU0NENSV3cp4crUZnfA ^[raw/articles/claude-code-context-engineering-anthropic-thariq.md]
-> 官方原文：https://www.
-3. com/engineering/claude-code-context-engineering（Anthropic 工程博客） ^[raw/articles/claude-code-context-engineering-anthropic-thariq.md]
+Thariq 把 Anthropic Claude Code 团队的内部术语从"prompt engineering"正式替换为"context engineering"，并划出清晰分工：PE 只关心"这一轮提示词怎么写"，CE 关注"过去几轮模型看到了什么、接下来要让它看到什么"。CE 是 PE 的超集——除提示词本身外，还涵盖工具输出预算、状态分舱、subagent 隔离与自动摘要。^[raw/articles/claude-code-context-engineering-anthropic-thariq.md:22-26] 值得注意的是，这些实践（compaction、pre-query 优化、subagent 隔离）早已分散存在于 Claude Code、OpenClaw、Pi、Letta Code 等系统中，本文的价值更多是官方命名与标准化，而非发明新模式。^[raw/articles/claude-code-context-engineering-anthropic-thariq.md:48-51] 概念沉淀见 [[concepts/context-engineering]]。
+
+### 五大工程模式：把窗口当作被管理的资源
+
+文章将 Claude Code 的上下文实践归纳为五个可复用模式：隔离区 subagent（探索性读取下沉到子 agent，主对话只收摘要）；阈值触发的自动摘要（按比例丢弃最早消息段、摘要前置）；工具输出预算（每类工具给字符/token 上限，超限只留开头结尾与预览、完整内容落盘）；状态分舱（原始文档、工具输出、中间结论、决策日志分别保留）；narrow read 子代理（只读相关文件范围，压缩后回传主 agent）。^[raw/articles/claude-code-context-engineering-anthropic-thariq.md:28-33] 五个模式共享同一前提：主对话的上下文窗口是稀缺资源，必须像内存一样被主动分页与预算化管理，这与 [[concepts/context-management-agent-systems]] 的工作集理念一致。
+
+### Subagent 的本质是隔离，不是并行
+
+全文最反直觉的判断是 Anthropic 明确指出 subagent 存在的主要目的不是并行而是隔离——让子 agent 跑探索性 read，回来时只带回"读了什么 + 发现了什么"，避免原始工具输出污染主对话稀缺的窗口。^[raw/articles/claude-code-context-engineering-anthropic-thariq.md:35-38] 这把 subagent 从"并发加速器"重新定义为"上下文防火墙"：隔离的价值在压缩比而不在速度，子代理返回摘要而非完整过程正是为此设计。多 agent 协作模式的总览见 [[concepts/agent-orchestration-patterns]]。
+
+### 优化对象从文本质量转向 Harness 系统
+
+PE 与 CE 的对照表把执行者也分开了：PE 由人 + 模型执行，优化对象是文本质量；CE 的执行者是 Harness 系统，做 pre-query optimization，优化对象是系统性的窗口管理。^[raw/articles/claude-code-context-engineering-anthropic-thariq.md:40-46] 这意味着上下文工程的重心从"写好提示词"转移到 harness 架构设计——预算、分舱、隔离、摘要是 harness 的子系统而非提示词技巧，与 [[entities/agent-harness-context-management-working-set]] 的分析相互印证。文章还预判 CE 将取代 PE 成为讨论 LLM 工程的主流框架，并强调 CE 不是 PE 的对立面而是其超集：工程团队应把上下文管理当作独立子系统来建设。^[raw/articles/claude-code-context-engineering-anthropic-thariq.md:53-56]
+
 ## 一句话定位
 **Thariq Shihipar（Anthropic Claude Code 团队）** 公开撰文把"上下文管理"升格为"**上下文工程 (Context Engineering)**"——一个比 prompt engineering 范围更大的工程学科。 ^[raw/articles/claude-code-context-engineering-anthropic-thariq.md]
 4. 本文是 Anthropic 官方对"为什么需要做上下文工程 + 怎么做"的**第一次系统化表述**。 ^[raw/articles/claude-code-context-engineering-anthropic-thariq.md]

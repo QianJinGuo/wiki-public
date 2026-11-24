@@ -1,7 +1,7 @@
 ---
 title: "表征平等（Representational Equality）：9 个大模型 59 国价值观社会模拟评测（CL 2026）"
 created: 2026-09-18
-updated: 2026-09-18
+updated: 2026-11-14
 type: entity
 tags: [llm-evaluation, evaluation-methodology, representational-equality, cross-country, value-simulation, synthetic-respondents, fairness, alignment, world-values-survey]
 sources: [raw/articles/llm-representational-equality-cross-country-value-simulation-cl-2026]
@@ -47,6 +47,33 @@ provenance_state: extracted
 这篇文章的价值不在「某个模型更准」的排名，而在把**分布层面的评估公平性**做成可计算指标：用 CV/极差/基尼/最值比多指标交叉验证平等性，再用几何平均构造 AE 以避免「总体差但差距小」的伪平等，并用四类干预的对照实验证明「准确性提升 ≠ 平等改善」。这套思路与 [[concepts/evaluation-harness-design|评测 Harness 设计]]、[[concepts/agent-evaluation-benchmark-frameworks|Agent 评测基准框架]] 关心的「评测指标如何被优化目标反噬」同源，可直接迁移到 [[entities/ai-evals-methodology|AI Evals 方法论]] 中的分组公平性检查，也与 [[entities/polyworkbench-cross-lingual-long-horizon-agent-benchmark-paperweekly-2026|PolyWorkBench 跨语言 Agent 基准]] 形成「跨语言/跨群体评测」的同一主题簇。^[raw/articles/llm-representational-equality-cross-country-value-simulation-cl-2026.md]
 
 落到工程实践上，最可操作的结论是：**分组指标必须与总体指标并列报告**，且要注意检索增强式补偿的副作用——自改写查询会把模型先验带回来，而外部信息对「数字痕迹稀缺群体」本身就不可得，这会让补偿策略在最需要它的群体上失效。^[raw/articles/llm-representational-equality-cross-country-value-simulation-cl-2026.md]
+
+## 深度分析
+
+### 三指标合成评测框架：把分布公平变成可计算的量
+
+评测设计分三层：模拟准确性（1−JSD，维度内平均后 11 维等权汇总，防题目数量主导）、表征平等（各国准确性变异系数 CV，辅以极差、最值比、基尼交叉验证）、AE 综合指标（平均误差与平等做几何平均）。几何平均是关键一环：若只看平等，「对所有国家都差但差距小」的模型会拿到虚高平等分，联合指标让伪平等无法逃逸。这套「总体 + 分布 + 联合」三层结构与 [[concepts/evaluation-harness-design|评测 Harness 设计]] 的指标分层思路同源。
+
+### 准确性与平等性排序错位
+
+平均准确性最高的 GLM-4-9B 跨国表征平等反而较低；平均准确性并非最高的 ChatGLM3-6B 却拥有最高表征平等并夺得 AE 最佳。部分模型系列中参数规模增加只推高平均准确性，未稳定改善平等——能力与公平的提升是两条不同步的曲线。总体指标的领先无法推导出模型对各国有同样稳定的模拟能力，两个维度必须分别考察。这种「总体分掩盖分组退化」的结构与 [[concepts/agent-evaluation-benchmark-frameworks|Agent 评测基准框架]] 的问题一致。
+
+### 非对称趋同：弱表征群体被拉向强表征模式
+
+Llama-3-8B 对美墨人群的预测分布彼此接近且都更接近美国真实分布；扩展到 160 题后，约三分之二的题目中墨西哥预测更接近美国而非本国。趋同不是向共同平均模式对称收缩，而是弱表征群体单向向强表征群体的价值模式漂移——这是表征不平等的第二张面孔。结合人均 GDP、互联网使用率、GII、权力距离、个人主义等与准确性的正相关，可串成完整因果链：数据可见度差异 → 表征能力强弱分化 → 弱势群体被「翻译」成强势群体的镜像。
+
+### 四类干预：准确性与平等不同步
+
+母语提示提高多数语言—模型组合的准确性，但收益分配不均，不平等未实质缩小；持续后训练（六种语言）提高语言组层面准确性，但国家与题项层面分布不均（阿拉伯语国家 −1.2%~3.4%）；偏好对齐（DPO/GRPO）两维度均无系统性改善；只有补充相关群体信息在多数设置中同时改善两维度——但模型自改写查询的扩展检索会重新引入已有先验，且该策略对数字痕迹稀缺群体天然不可得。结论是结构性的：准确性提升 ≠ 平等改善，与 [[entities/ai-evals-methodology|AI Evals 方法论]] 的分组公平性检查直接对应。
+
+## 实践启示
+
+1. **分组指标与总体指标并列报告**：平均准确性之外固定报告 CV/极差/基尼等分布指标，否则「总体领先但覆盖失衡」的模型会被高估。
+2. **干预实验做双维度联检**：每次消融同时记录准确性与平等的变化，并定位增益落在哪些国家/语言群体——收益集中即是平等恶化的信号。
+3. **用 AE 类联合指标作硬门槛**：以几何平均联合误差与不平等，防「全员都差但差距小」的伪平等钻空子。
+4. **优先直接检索式群体信息补充，慎用模型自改写查询**：后者会把先验带回来抵消改善；且该策略对数字痕迹稀缺群体天然失效，不可作唯一补偿手段。
+5. **做非对称趋同专项检查**：不只测各群体自身准确性，还要仿照美墨对照测模型是否把弱表征群体的预测拉向强表征群体的真实分布，作为回归测试。
+6. **多语言场景选型别只看参数规模**：规模提升准确性不保证平等，应按 AE 与目标市场分组表现选型，与 [[entities/multilingual-ai|Multilingual AI]] 联动评估。
 
 ## 相关条目
 

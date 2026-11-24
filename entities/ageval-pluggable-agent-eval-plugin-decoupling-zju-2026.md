@@ -1,7 +1,7 @@
 ---
 title: "ageval：浙大 ZJU-REAL 开源的插件化解耦 Agent 评测底座"
 created: 2026-09-12
-updated: 2026-09-12
+updated: 2026-11-18
 type: entity
 tags: [agent, evaluation, harness, agent-eval, plugin, sandbox, open-source, coding-agent]
 sources: [raw/articles/ageval-pluggable-agent-eval-plugin-decoupling-zju-2026]
@@ -81,6 +81,35 @@ ageval 与已收录的评测工具/方法论形成互补而非重复：
 - [[entities/agent-evalkit-aws-opensource-cli-agent-eval-toolkit|AWS agent-evalkit]] 同样走「开源 CLI 评测工具包」路线，但 ageval 的差异化在**环境 × Agent 运行时二维插件矩阵**与不可变证据链；
 - [[entities/agent-evaluation-systematic-guide-metrics-to-closed-loop|从指标到闭环的系统化评测指南]] 关注评测指标体系与闭环流程，ageval 提供的是承载这套流程的执行底座；
 - [[entities/agent-evaluation-turing-meituan-2026|美团 Turing 评测]] 与 [[entities/agent-evaluation-four-layer-outcome-decision-action-reliability-aliexpress-2026|阿里四层评测框架]] 侧重评测维度建模，ageval 侧重「让不同维度、不同运行时下的结果可比且可复现」。
+
+## 深度分析
+
+换运行时导致评测结果不可比，本质是评测面未显式声明——模型能力与 Harness 能力混在同一个分数里。ageval 把执行环境与 Agent 运行时都做成可插拔插件，同一份 dataset 可在任意组合下重跑，等于把「评测面」从论文脚注升格为一等配置项：每项成绩绑定运行时版本与执行环境，混淆变量在基础设施层就被消除。这对可复现性是质变——复现者不再逆向猜测榜单背后的脚手架，拉取 lock.json 与轨迹文件即可重放。
+
+### 服务契约：一次接口稳定性的提前投资
+
+export/inject 声明式契约加 requires⊆capabilities 静态校验，是「用接口约束换长期演进自由」的典型交易：基座代码不含任何环境或 Agent 特定分支，接入 DeepSeek dsh 零源码改动，只提交一份插件声明。代价是契约需一次设计到位——capabilities 划分失当会被所有插件放大；收益是每接入一个新插件都在增值生态而非加深耦合，这与 [[concepts/coding-harness-engineering|Coding Harness 工程]] 中「以稳定原语承载多变上层」的思路同构。
+
+### 确定性流水线与 finally 清理：评测基建的卫生学
+
+lock→environment→run→evaluate→record 单向流水线把失败前置：lock 阶段静态拦截依赖与凭证问题，评分收敛在 evaluator.py 单点，cleanup 钩子挂在 finally，成功、失败、超时、中断四条路径都回收容器、注销网络、擦除凭证。这类卫生细节在 demo 里看不见，却决定评测系统能否长期无人值守运行——残留容器烧钱，残留凭证是安全事件。gold 延迟上传与打分容器断网同理：防泄题不靠纪律，靠让泄题在结构上不可行。
+
+### 不可变证据链：把复现从声明变成机制
+
+每次运行自动封存 lock.json（执行配置与拓扑快照）、result.json（评分细节）与 trajectory.jsonl（完整交互轨迹），Hub 上每项提交都携带这套证据，他人拉取配置即可一键复现。复现性因此不再是作者的自述，而是由归档格式保证的机制：证据链由流水线产出，与结果同生共死，无需事后补记；轨迹查看器按 Jobs→Tasks 逐轮回放，失败 task 附带重跑命令，复现与调试共用同一份数据。
+
+### 与 SWE-bench 式黑盒 Harness 的对照
+
+不少公开 benchmark 只公布模型名与分数，不说明用了哪套 Harness、不标沙箱版本与 Prompt 模板，外界难以复现——[[entities/programbench-swe-agent-benchmark|ProgramBench / SWE-agent 基准]] 一类以任务Validity为核心的基准（环境细节以原项目文档为准）若不绑定执行配置，跑分与复现就是两件事。ageval 反其道而行：成绩绑定运行时与环境，证据链随运行自动归档，复现是默认产出而非额外承诺。评测基建由此从一次性跑分脚本变成可审计的公共设施，正是 [[concepts/evaluation-harness-design|评测 Harness 设计]] 主张的显式评测面；对评测面随时间退化的担忧，则可与 [[concepts/eval-surface-rotation|评测面轮换]] 的视角互补。
+
+## 实践启示
+
+1. 报告评测结果时同时声明 Agent 运行时版本、执行环境与关键配置——缺这些元数据，分数既无法横向比较，也无法复现。
+2. 评测系统优先做静态前置校验（依赖图、凭证、能力匹配），把失败提前到最便宜的阶段，而非跑到一半崩溃。
+3. 用声明式契约（export/inject 加 requires⊆capabilities）替代硬编码分支：新环境、新 Agent 以插件接入，基座零改动。
+4. 资源清理必须挂 finally：容器、网络、临时凭证在成功与失败路径上都要回收，这是无人值守评测的前提。
+5. 参考答案在评分前对被测环境不可见，打分容器断网——防作弊靠结构隔离，不靠提示词纪律。
+6. 让 coding agent 经 CLI 加 Skills 编排评测（写 benchmark、迁移数据集、汇总对比报告），评测基建随之成为 agent 可日常操作的对象。
 
 ## 相关实体
 

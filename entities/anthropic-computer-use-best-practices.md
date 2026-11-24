@@ -4,7 +4,7 @@ title: "Anthropic 发布 Computer Use 最佳实践"
 type: entity
 tags: [agent, anthropic, api, browser, claude]
 created: 2026-05-21
-updated: 2026-09-07
+updated: 2026-11-21
 review_value: 7
 review_confidence: 8
 sources: [raw/articles/anthropic-computer-use-best-practices]
@@ -21,15 +21,21 @@ Anthropic 最新发布了 Computer Use 开发者最佳实践，核心建议是�
 
 ## 深度分析
 
-Anthropic 发布的这份最佳实践揭示了 Computer Use 技术落地的几个关键工程挑战。 ^[raw/articles/anthropic-computer-use-best-practices.md]
+### 坐标链路：点击准确率的第一性约束
 
-**坐标映射是精确点击的核心问题。** 当截图超过 API 上限被自动压缩时，返回的点击坐标基于压缩后尺寸，但执行时需要映射回原始分辨率。这个缩放比例的计算看似简单，却是导致"点击错位"的根本原因。macOS 的 2x DPI 更是加剧了这一问题——看似正常的屏幕截图实际上可能是原分辨率的 2 倍。 ^[raw/articles/anthropic-computer-use-best-practices.md]
+Computer Use 的准确率问题首先是一条工程链路而非模型能力问题：截图从采集、压缩、API 处理到坐标回映射，任何一环的尺寸失配都会让「点得准」变成「点得偏」。关键事实是，Claude 4.6 系列的图片上限为长边 1568px、总像素约 1.15MP，Opus 4.7 则放宽到长边 2576px、约 3.75MP；超限时 API 自动缩小图片，但返回坐标基于缩小后尺寸，客户端若不按比例映射回原分辨率，点击必然错位。 ^[raw/articles/anthropic-computer-use-best-practices.md] 推荐起始分辨率 1280×720 正是基于此：约占像素预算 80%、属训练数据常见尺寸、兼容性最好，Opus 4.7 则可直接上 1080p。macOS 的 2x DPI 是链路上最隐蔽的一环：1440p 屏幕默认截出 2880p 图像，静默超过全部上限。另一端是「目标太小」：4K 屏压到 720p 后，16 像素的复选框只剩约 5 像素，此时应开启 zoom、放大 UI 比例或改用键盘导航，而不是指望模型在模糊图上猜坐标。
 
-**多模型协作的架构思路值得关注。** 文档推荐的"Opus 做指挥官、Sonnet/Haiku 执行"模式，本质上是一种计算资源的梯度分配策略：推理能力强但成本高的 Opus 处理战略决策，执行密集且容错率高的点击操作交给专用模型。这比单纯用最强模型执行所有操作更具工程性价比。 ^[raw/articles/anthropic-computer-use-best-practices.md]
+### 分层算力：消息顺序、模型分工与思考档位
 
-**提示注入防御的三层设计体现了纵深防御思想。** 训练层的强化学习、实时的分类器、以及 human-in-the-loop，三层机制覆盖了从模型内化能力到运行时检测再到人工确认的完整链路。这种设计承认了没有任何单一防护层是完美的，需要多种机制互补。 ^[raw/articles/anthropic-computer-use-best-practices.md]
+文档在「怎么用模型」上给出了三个正交旋钮。其一是消息构造：文字指令放在截图之前，让模型先建立「要找什么」的目标认知再看图，顺序颠倒会直接降低准确率。其二是模型分工：Sonnet 4.6 点击精度最高且耐图片压缩，适合机械执行；Opus 4.7 推理强、像素预算更大；Haiku 4.5 主打低延迟。更进一步是「指挥官+执行者」的梯度分配——推理模型做战略决策，廉价模型做密集点击；advisor 模式（advisor_20260301 工具类型）把协作压缩进单次请求，大部分 token 按 Sonnet 价格计费，只需每隔约 20 轮提醒模型「还有 advisor 可用」。其三是思考档位：Opus 4.7 在 high 档已接近 max 档的 OSWorld 准确率而 token 消耗只有一半，max 档没有任何准确率收益，纯属浪费。背景参见 [[entities/claude-opus-4-7-launch|Opus 4.7 发布]]。 ^[raw/articles/anthropic-computer-use-best-practices.md]
 
-**教学模式的核心是示范而非指令。** 与其告诉 Claude 怎么操作，不如让它观察人类操作并从标注中学习。这种从"指令驱动"到"示范驱动"的转变，反映了具身 AI 的一种重要认知：理解目标意图比记忆具体步骤更有泛化能力。 ^[raw/articles/anthropic-computer-use-best-practices.md]
+### 防御与上下文：纵深防御和渐进记忆压缩
+
+提示注入防御的三层设计——训练层的强化学习、使用官方 computer_20251124 工具类型时零额外开销自动运行的实时分类器、不可逆操作前暂停请示的 human-in-the-loop——体现的是纵深防御思想：承认任何单一层都可能失效，用互补机制覆盖从模型内化、运行时检测到人工兜底的完整链路。长对话处理是同一思想的另一面：渐进的记忆压缩管线。缓存断点最多 4 个（1 个放系统提示、3 个放最新 tool_result）；滚动缓冲用 [Image omitted] 替换旧截图（keep_n=3、每 25 轮）；再由 LLM 压缩历史并强制保留 8 类信息（用户指令、任务模板、约束规则、已执行操作、错误与修复、进度追踪、当前状态、下一步）；服务端还提供 context_management 配合 compact-2026-01-12 beta 的自动压缩兜底。 ^[raw/articles/anthropic-computer-use-best-practices.md]
+
+### 示范优于指令：教学模式的泛化逻辑
+
+教学模式把「教」从指令改写为示范：用户手动执行一遍，系统录制每步操作并在截图上用蓝圈标注点击位置；回放时 Claude 收到步骤加标注截图。其关键性质是对 UI 变化的鲁棒性——按钮移位后，模型理解的是「要做什么」而不是「点哪里」，因此能在新布局中重新定位目标。三种回放模式（严格、自适应、目标导向）中官方推荐自适应。与指令驱动的本质差异是：指令绑定具体界面状态，示范传递的是目标意图，只有后者具备跨界面泛化的能力。Computer Use 方向的竞争与延伸可参见 [[entities/gemini-3-5-flash-computer-use|Gemini 3.5 Flash Computer Use]] 与 [[entities/codex-can-now-control-other-desktop-devices-via-computer-use|Codex 控制桌面设备]]。 ^[raw/articles/anthropic-computer-use-best-practices.md]
 
 ## 实践启示
 

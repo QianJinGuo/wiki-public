@@ -1,7 +1,7 @@
 ---
 title: "TencentDB Agent Memory：符号化短期记忆+分层式长期记忆"
 created: 2026-07-02
-updated: 2026-09-10
+updated: 2026-11-13
 type: entity
 tags: [tencent, agent, memory, short-term, long-term, hierarchical, persona, semantic-pyramid, memory-management, context-optimization]
 sources: [raw/articles/tencentdb-agent-memory-hierarchical, raw/articles/tencentdb-agent-memory-governance-ruofei-2026, raw/articles/tencentdb-agent-memory-team-memory-practice-2026-08-18]
@@ -192,6 +192,7 @@ Hermes 接入场景中，Gateway 把 capture、search、recall 暴露为 HTTP �
 - [[entities/attention-collapse-context-management|注意力塌陷与上下文管理]]
 - [[entities/tencentdb-agent-memory-long-term-pyramid|TencentDB Agent Memory 长期记忆金字塔]]
 - [[entities/agent-harness-context-management-working-set|Agent Harness 上下文管理工作集]]
+- [[entities/tencent-ontology-memory-rsi-coding-agent|不只是 Memory：Ontology 如何让 Coding Agent 越用越懂项目]] —— 同产品记忆层的语义层扩展：本体 + Memory + RSI 框架与三层项目图谱（Bug 定位 58%→65%）
 
 ## 来源
 

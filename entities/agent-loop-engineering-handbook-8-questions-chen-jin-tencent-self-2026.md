@@ -2,7 +2,7 @@
 
 title: "Agent Loop 工程手册 8 个未解问题 + SELF Protocol 治理薄壳：腾讯陈进的二手解读与单 Agent 实验"
 created: 2026-06-16
-updated: 2026-09-07
+updated: 2026-11-17
 type: entity
 tags: [agent, agent-loop, harness-engineering, multi-agent, multi-agent-topology, memory, guardrails, stopping-condition, self-evolution, self-protocol, tencent-cloud, chen-jin, 2026, second-hand-interpretation, single-agent, open-question, open-questions, anti-hallucination, cost-control, skill-failure, maker-checker]
 sources: [raw/articles/agent-loop-engineering-handbook-8-questions-chen-jin-tencent-self-2026]
@@ -135,6 +135,20 @@ LLM 当 judge 互打分会漂移——**上午 0.85，下午同样的输出 0.6*
 3. **8 个未解问题是真正的开放问题**，不是 8 个"答案"——作者在结尾直接说"任意一题选你最有感的回一下都行，评论区见"。**这是中文 AI 工程社区最该有的姿态**。 ^[raw/articles/agent-loop-engineering-handbook-8-questions-chen-jin-tencent-self-2026.md]
 4. **同模型盲区是 Maker-Checker 的致命缺陷**（题 2）——这是 Anthropic、OpenAI 都没公开解决的核心问题。 ^[raw/articles/agent-loop-engineering-handbook-8-questions-chen-jin-tencent-self-2026.md]
 5. **Token 成本是 Loop 落地的隐藏杀手**（题 8）——手册没讲怎么压，作者用 3 条土办法但承认不解渴。 ^[raw/articles/agent-loop-engineering-handbook-8-questions-chen-jin-tencent-self-2026.md]
+
+## 深度分析
+
+### 7 件套的本质：一张"失败模式对照表"而非工具清单
+把 7 件套的"解决什么"列读成主列，它其实是一份朴素 Prompt 链式调用的失败模式分类：没人定时触发（Automations）、多实例互踩文件（Worktrees）、每次从零教学（Skills）、只会聊天不能动手（Plugins）、自己给自己打高分（Sub-agents）、聊几句就忘（Memory）、失控烧钱与原地打转（Guardrails）。这说明手册的价值不在罗列组件，而在把每个组件锚定到一个明确的工程痛点上——补齐哪一件，取决于你先撞上哪个失败模式。
+
+### 4 个设计法：把 Loop 从"能转"推向"转得对"
+四个设计法有一条隐含的递进线。① Stopping Condition 被手册自己标注为"整本最值钱"——可验证目标把"什么算完成"的判断权从模型收回给工程侧，是对题 1 软目标漂移的事前防御；② Context 组装把工程师的角色从"写 Prompt 的人"改写为"设计 Context 如何自动生长的人"，与 [[concepts/context-engineering]] 的主流表述一致；③ 失败即输入把传统编程"出错就停"反转成"出错即喂回"，这是 Loop 与测试驱动传统最深的哲学分野；④ 6 种拓扑给出模式词典，但题 6 的辩论对抗翻车（两个 Agent 越聊越自信、一致同意一个错误结论）说明词典缺了"选型反例"维度——模式词典需要配套踩坑指南才可安全使用（参见 [[concepts/multi-agent-collaboration-patterns]]）。
+
+### 8 个未解问题可归约为三个母题——这正是其核心价值所在
+8 问不是并列清单：题 1（软目标停止）、题 2（同模型盲区）、题 7（防胡说）共享同一母题"谁有资格判定正确"；题 3（护栏在哪层）、题 4（记忆多大）、题 8（成本压缩）共享"有限 token 与注意力投向哪里"，与 [[concepts/context-window-economics]] 直接呼应；题 5（理解力腐蚀）、题 6（拓扑选型）则提醒工程主体仍是人。手册只回答了"怎么让 AI 转起来"，8 问覆盖的是"转得可信、转得便宜、转得久"——手册与实践之间的真实 gap 落在后者。这也是为什么作者把它当作全文核心价值而非附录：任意一题都是社区可认领的开放工单。
+
+### SELF Protocol：治理薄壳的三个可迁移设计判断
+SELF（~1500 行，30+ 天单 Agent）的价值不在三大模块本身，而在三个可复制的设计判断。其一，层次判断：明确不替代 Loop、不接管工具集，只做"转起来之后怎么不跑偏"的认知层——骨架/润滑层分工让治理可与 [[concepts/harness-loop-architecture]] 所述的执行骨架独立迭代。其二，分层护栏判断：认知类护栏做成可插拔薄壳（认知红线常需迭代），资源类护栏焊死在底层框架（预算红线该写死）——直接回答了题 3，且可推广到任何 Harness 的护栏设计。其三，诚实披露判断：268 次调用 / 20 失败 / 314 学习记录连同"同类失败仍在反复犯"一并公开，配合 Safe-Launch 四档递进入口与"关闭 SELF"零变更退出，把协议的信任建立在可审计数据而非宣传话术上。30 天攒 9 条"失败转技能"却仍有同类复犯，说明在题 4 记忆大小约束（参见 [[concepts/agent-memory-architecture]]）下，"失败沉淀→复用"闭环仍是开放问题——薄壳能兜住认知，兜不住记忆容量本身。
 
 ## 与其他 Loop/Harness 实体的关系
 

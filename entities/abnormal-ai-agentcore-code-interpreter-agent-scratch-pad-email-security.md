@@ -1,7 +1,7 @@
 ---
 title: "Abnormal AI：Agent 计算暂存区与零信任沙箱的生产实践"
 created: 2026-09-15
-updated: 2026-09-15
+updated: 2026-11-18
 type: entity
 tags: [agent, harness, sandbox, code-interpreter, bedrock-agentcore, production-agents, zero-trust, checkpointing, tiered-escalation, security, aws]
 sources: [raw/articles/abnormal-ai-agentcore-code-interpreter-agent-scratch-pad-email-security]
@@ -42,6 +42,25 @@ Abnormal 选择无外部网络的沙箱配置，理由只有两条但都很硬�
 4. **文件系统作为长任务的恢复点**——超过会话时长的操作（如模型训练）用文件做 checkpoint：用 Code Interpreter 做计算、把状态持久化到文件、在外部执行长任务、再重新调用 Code Interpreter 处理结果；文中 analyst agent 的跨天训练即用此模式。
 
 ^[raw/articles/abnormal-ai-agentcore-code-interpreter-agent-scratch-pad-email-security.md]
+
+## 深度分析
+
+### 分级升级是算力经济学
+
+三层管道实为一套算力定价体系：每层只处理上一层"没把握"的样本，Agent 算力作为最贵的一档资源，只在边际收益最高的样本上消耗。十亿/天流量中仅数万/天（约十万分之一量级）到达 Tier 3，这个比例是设计目标而非运行结果——与 [[concepts/context-window-economics]] 的视角同构，推理算力和上下文窗口一样是按 token 计价的稀缺资源。批处理 analyst agent 则把分级补成成本闭环：实时管道消化不了的误分类信号攒成每周约 100 个批任务，让昂贵算力以离线方式反哺便宜的 Tier 1 规则层。
+
+### 暂存区补上记忆与计算之间的缺口
+
+[[concepts/agent-memory-substrate-three-layer]] 关注状态的存续，本篇揭示的是另一块常被遗漏的底座：存进去的结论从哪来。计数、聚合、统计校验这类"语义推理不够用"的操作，放进上下文窗口浪费 token 且不可靠，放进持久记忆又用完即弃——暂存区正是介于两者之间的第三类状态：会话级、可执行、确定性。三者并列后 Agent 的状态架构才完整：上下文管"此刻知道什么"，记忆管"跨会话知道什么"，暂存区管"如何算出下一步"。
+
+### no-egress 同时是信任边界与能力取舍
+
+无出口沙箱的两条理由性质不同：可复现性是可靠性主张（外部输入无法污染会话，环境完全确定），防外泄是安全主张（即便被 prompt injection 拉偏，数据也出不去）。选 no-egress 等于用放弃实时获取外部数据的能力换这两项保证——是能力取舍而非免费午餐。[[concepts/agent-sandbox]] 把沙箱隔离作为选项之一，本篇给出选最严格档的判据：输入数据本身敏感且输出必须可审计时，确定性的价值高于联网能力。
+
+### 检查点把可靠性从会话时长中解耦
+
+Code Interpreter 的 TTL（15 分钟～8 小时）是硬性会话上限，而 analyst agent 的跨天训练天然超出任何单会话。文件系统检查点把"任务"与"会话"两个生命周期解耦：会话终结，任务状态仍在 [[entities/amazon-bedrock-agentcore-data-persistence-file-system-session-storage-efs-s3]] 持久层，重开会话从检查点续跑。它与 [[concepts/verifier-driven-development]] 互补——verifier 保证单次输出正确，checkpoint 保证长链路可恢复——两者齐备，Agent 才从一次性调用升级为可承载天级工作负载的可靠运行时。
+
 
 ## 与 wiki 既有覆盖的关系
 

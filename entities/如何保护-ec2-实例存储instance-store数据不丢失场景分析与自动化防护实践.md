@@ -2,7 +2,7 @@
 
 title: 如何保护 EC2 实例存储（Instance Store）数据不丢失：场景分析与自动化防护实践
 created: 2026-07-10
-updated: 2026-08-01
+updated: 2026-11-16
 type: entity
 tags: [aws]
 sources: [raw/articles/如何保护-ec2-实例存储instance-store数据不丢失场景分析与自动化防护实践]
@@ -149,6 +149,26 @@ review_category: practice
 
         --resources i-xxx \ ^[raw/articles/如何保护-ec2-实例存储instance-store数据不丢失场景分析与自动化防护实践.md]
 
+## 深度分析
+
+1. **“实例即数据”是架构取舍，不是可靠性疏漏。** Instance Store 直接暴露宿主机本地 NVMe，绕过 EBS 的网络虚拟化存储栈，才换来极致 IOPS 与低延迟；代价是数据生命周期与实例/物理机强绑定。任何让实例“换一台主机”的事件——停止、终止、Auto Recovery 迁移、平台维护——都会让本地数据不可逆消失。高性能与持久性天然互斥，因此防护思路只能是“降低生命周期被意外触发的概率 + 应用层自冗余”。
+
+2. **风险主体是系统自动化，而非人的误操作。** 21 个场景中真正来自人为操作的只占一部分，更多触发器藏在默认开启的系统行为里：Simplified Auto Recovery 默认开启、ASG 缩容、Karpenter 节点整合、Spot 两分钟回收、计划维护事件。每个自动化组件各持默认值，任何一处默认都可能是数据丢失的扳机，且这类“自动触发破坏”没有确认弹窗、难以追责，比误操作更隐蔽。^[raw/articles/如何保护-ec2-实例存储instance-store数据不丢失场景分析与自动化防护实践.md]
+
+3. **三层防御呈“覆盖面与精确度成反比”的结构。** API 层（DisableApiStop/DisableApiTermination + SCP）精确但覆盖窄：只拦截控制面请求，对 OS 内 shutdown、平台维护、ASG/Karpenter 缩容全部无效；自动化层（EventBridge + Lambda）解决的是元问题——保护配置本身会漂移、被遗忘、被新建实例绕过，所以防护机制需要自我巡检；架构层（多副本 + 多 AZ）是唯一覆盖不可控场景的兜底，但成本最高。正确用法是三层叠加，而非任选其一。
+
+4. **关闭 Auto Recovery 是 durability 与 availability 的显式对赌。** 混合实例（EBS root + 本地数据盘）被自动恢复迁移到新主机时本地数据即失；纯 Instance Store 实例反而不受简化自动恢复影响。关闭它意味着硬件故障时依赖监控告警 + 人工 stop/start，牺牲恢复速度换取数据存续——有状态本地存储场景的优先级排序由此明确：数据不可丢失 > 自动恢复可用性。
+
+5. **这是 ephemeral storage 工程的通用范式。** 本地 SSD、tmpfs、Kubernetes emptyDir/hostPath、Spark shuffle 目录都遵循同一模式：用持久性换性能，把可靠性上移到应用层副本。凡依赖本地临时盘的有状态服务都可套用同一张三层防护清单，该方案因此是跨平台的通用检查表。
+
+## 实践启示
+
+1. 用 `describe_instance_types` 的 `InstanceStorageSupported` 字段动态判断实例是否带本地盘，不要硬编码实例族列表——新类型一发布，硬编码就会漏防护。
+2. 在 Launch Template 里固化 DisableApiStop、DisableApiTermination、AutoRecovery=Disabled、关闭 Hibernation，让新实例“创建即受保护”；再配 SCP 按 `StopForbidden` 标签做组织级兜底（对所有 IAM 主体生效，跨 AZ 批量操作需分批）。
+3. 混合实例必须显式关闭 Auto Recovery，并接受“硬件故障需人工介入”的代价；同时保留 `StatusCheckFailed_System` 告警作为人工恢复的触发器。
+4. 集群场景把管控上移一层：ASG 固定 Min=Max=Desired 或禁用缩容策略，EKS 用 Karpenter `do-not-disrupt` annotation 与 WhenEmpty 合并策略，防止调度器缩容删数据。
+5. 手动配置必然漂移：EventBridge 监听 `running` 状态事件做实时保护，定时 cron 巡检检测并自动修复漂移，SNS 推送结果，让防护本身成为有人看护的闭环而非一次性配置。
+6. 防护只降概率、不消除风险：先质问是否真需要本地盘（io2 Block Express 等持久化存储可能已够用）；必须用时，多副本 + 多 AZ 是一切控制面措施的前提兜底。^[raw/articles/如何保护-ec2-实例存储instance-store数据不丢失场景分析与自动化防护实践.md]
 ---
 ## 关联
 - 相关概念: [[concepts/harness-engineering-framework|Harness Engineering]]

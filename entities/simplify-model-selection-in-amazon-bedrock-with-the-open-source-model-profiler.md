@@ -1,7 +1,7 @@
 ---
 title: "Simplify model selection in Amazon Bedrock with the open source Model Profiler"
 created: 2026-07-05
-updated: 2026-09-10
+updated: 2026-11-19
 type: entity
 tags: [ai, agent, llm, aws, bedrock, model-selection, open-source, devops, cloud-infrastructure]
 sources: [raw/articles/simplify-model-selection-in-amazon-bedrock-with-the-open-source-model-profiler]
@@ -63,7 +63,7 @@ The profiler offers two deployment paths:^[raw/articles/simplify-model-selection
 - **Local mode**: Runs entirely on your machine using existing AWS credentials. Data collection completes in ~81 seconds. No cloud infrastructure needed.
 - **AWS deployment**: Fully serverless architecture with automated daily data refresh via Step Functions + Lambda + S3 + CloudFront.
 
-## Deep Analysis
+## 深度分析
 
 ### The Model Selection Problem: Fragmentation as a Hidden Cost
 
@@ -98,7 +98,7 @@ The blog post presents three fictional but realistic use cases that illustrate t
 The Model Profiler fills a gap between AWS's infrastructure-level offerings (Bedrock API, pricing API) and application-level AI development tools. It is analogous to tools like LiteLLM (model routing/comparison) and LangSmith (observability), but specifically focused on the **pre-deployment model evaluation and selection** phase. Its open-source nature and MIT-0 license make it suitable for teams that want to customize or extend the catalog.^[raw/articles/simplify-model-selection-in-amazon-bedrock-with-the-open-source-model-profiler.md]
 
 
-## Practical Insights
+## 实践启示
 
 1. **Model discovery fragmentation is a real cost center in enterprise AI**: Teams spend disproportionate time on manual cross-referencing rather than model evaluation. Investing in automated discovery tools like the Model Profiler can reduce evaluation time by 10x and simultaneously improve evaluation thoroughness.
 

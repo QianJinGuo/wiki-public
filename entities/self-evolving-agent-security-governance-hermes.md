@@ -3,7 +3,7 @@ title: "自进化 Agent 安全治理：3 类污染风险与 5 道写入闸门"
 type: entity
 tags: [agent-security, self-evolving-agent, hermes, skill-governance, desensitization, prompt-injection, adversarial-learning, memory-security, write-gates, sandbox, emergency-response, enterprise-security]
 created: 2026-06-30
-updated: 2026-09-10
+updated: 2026-11-14
 review_value: 8
 review_confidence: 7
 sources: [raw/articles/self-evolving-agent-security-governance-hermes]
@@ -117,6 +117,38 @@ Hermes 把"安全"做成了"默认"——不需要单独配置安全规则，安
 
 
 → 相关实体：[[entities/harness-engineering-paradigm-comprehensive-2026|Harness Engineering 综合论述]]
+
+## 深度分析
+
+### 风险分类学：按污染机制而非攻击手法分类
+
+文章最有价值的是把「Agent 越学越歪」归成 3 类——学错（把个例当规律）、学脏（运行时数据持久化）、学危险（对话诱导写入假规则）——分类轴是污染机制而非攻击手法。这决定了防御的映射关系：学错是可靠性问题（闸门+验证），学脏是数据治理问题（脱敏管道+数据分级），学危险是对抗安全问题（注入防御+写入校验），三类问题需要完全不同的工具链，混在一起治理必然漏防。这一框架与 [[concepts/agent-security-threat-models]] 的威胁建模思路互补：先分类、再按类配防线。
+
+### 5 道闸门与 3 层脱敏：纵深防御的工程化落地
+
+5 道写入闸门（内容脱敏→Schema 校验→静态危险扫描→沙箱试跑→人工审核）的本质是「任何一道单独使用都不够」的叠加过滤器：闸门 2 让 Skill 可治理（结构化才谈得上扫描与回滚），闸门 4 沙箱试跑是发现「学错」最有效的手段，闸门 5 用 PR 流程把高危写入收敛到人工签字。3 层脱敏管道（采集端→写入时→读取时）同理——任何一层漏了，下一层还能兜住。这与 [[concepts/agent-security-architecture]] 的纵深防御原则完全一致，且比原则更具体：每层都有明确的检查项与失败处理。特别注意采集端脱敏「这一层最重要」的判断——源头干净，后续所有环节才安全。
+
+### 自我修改路径是攻击面的收束点
+
+3 道注入防御（输入分级、写入校验、关键词黑名单）看似常规，但文章点出本质：自进化 Agent 的安全就是「自我修改路径」的安全。传统注入攻击影响单次响应，而写入型注入把攻击固化为持久知识——这正是 [[concepts/prompt-injection-defense]] 在自进化场景下的升级形态，也与 [[entities/caitlyn-self-evolving-defense-skill-library-agent-injection-2026]] 针对的攻击面相同。输入分级的重心是把 USER 定位成「任务描述」而非「指令变更」；写入校验的独立函数设计则保证校验逻辑与被校验对象解耦，Agent 无法「说服」它。
+
+### 应急响应的设计围绕「污染是持久的」展开
+
+4 步应急（检测→隔离→回滚→复盘）有两个非标准设计值得注意：其一，Memory 是 append+dedup 结构，不能像 Skill 那样 git 回滚，需要单独清洗流程——存储结构直接决定应急能力；其二，「复盘结论必须变成代码」（加黑名单关键词、加 Schema 规则、加沙箱用例）把每次事故转化为防线增强，这是 [[concepts/agent-security-attack-defense]] 中对抗性学习闭环的具体化。隔离步骤要求标记影响范围（哪些任务用过、哪些 Memory 衍生），则承认了污染的传播性：脏知识会繁殖新的脏知识。
+
+### 与安全三步法的关系：部署时序 vs 运行时治理
+
+[[entities/agent-security-three-step-sequence-harness-governance-identity-crewai]] 给出的是部署顺序视角（先 Harness、再 Governance、后 Identity），本文给出的是运行时自进化视角（学错/学脏/学危险的三线防御），二者是同一治理体系在不同时间轴上的投影。「安全内嵌而不是外挂」的设计哲学——安装后防御默认就在那里——则与 [[entities/harness-engineering-paradigm-comprehensive-2026]] 的治理内嵌理念一脉相承。
+
+## 实践启示
+
+1. 先给自进化能力分类风险再上防线：学错用验证、学脏用脱敏、学危险用注入防御，三类问题不共用一套工具，治理前先判断自己暴露在哪一类。
+2. 写入路径上叠加独立过滤器：Schema 校验、危险扫描、沙箱试跑、人工审核一个都不能省，任何一道单独使用都防不住「误学」。
+3. 脱敏要在采集端做第一道：源头干净成本最低收益最大，写入时与读取时的扫描只是兜底，不要把脱敏全部押在最后一步。
+4. 数据分级是产品设计问题：密码、支付凭证、私聊内容、财务报表的处理方式要在产品设计阶段与安全、法务一起定，而不是事后补脱敏规则。
+5. Memory 的应急清洗要预设计划：append+dedup 结构无法 git 回滚，上线自进化功能前就要想清楚污染后的清洗路径。
+6. 复盘结论必须变成代码：每次事故后把结论落实为新的黑名单关键词、Schema 规则或沙箱用例，写在文档里的教训等于没有教训。
+7. 最坏情况是 bug 被当成最佳实践：监控不能只看报错，还要看 Skill 成功率骤降与工具调用频率异常——污染系统往往「运行正常」。
 
 ## 与现有知识的关联
 

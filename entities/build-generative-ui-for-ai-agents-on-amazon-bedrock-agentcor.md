@@ -2,7 +2,7 @@
 title: "Amazon Bedrock AgentCore AG-UI 协议：为 AI Agent 构建生成式 UI"
 description: "AWS 推出 AG-UI 协议，让 Agent 在 AgentCore Runtime 上动态生成交互式 UI，实现从纯文本对话到富交互界面的 Agent 体验升级。"
 created: 2026-07-01
-updated: 2026-09-07
+updated: 2026-11-17
 type: entity
 tags: [aws, bedrock, agentcore, agent, generative-ui, mcp]
 sources: [raw/articles/build-generative-ui-for-ai-agents-on-amazon-bedrock-agentcor]
@@ -154,6 +154,26 @@ CopilotKit + FAST 的完整部署包含：^[raw/articles/build-generative-ui-for
 - AgentCore Memory（对话持久化）^[raw/articles/build-generative-ui-for-ai-agents-on-amazon-bedrock-agentcor.md:244-244]
 - CopilotKit Runtime Lambda + API Gateway（前后端桥接）^[raw/articles/build-generative-ui-for-ai-agents-on-amazon-bedrock-agentcor.md:244-244]
 - AWS Amplify（前端托管）^[raw/articles/build-generative-ui-for-ai-agents-on-amazon-bedrock-agentcor.md:244-244]
+
+## 深度分析
+
+### 协议定位：三协议拼图的最后一块
+
+AG-UI 的价值要放进 AgentCore 的三协议架构里看：MCP 连接工具与数据，A2A 连接 Agent 与 Agent，AG-UI 补上 Agent 与用户之间的交互缺口，三者正交互补而非竞争；部署带 AG-UI 标志的容器时，AgentCore 充当透明代理，认证、会话隔离、扩缩容与可观测性全部下沉到平台侧，容器只需暴露 `POST /invocations` 与 `GET /ping`。^[raw/articles/build-generative-ui-for-ai-agents-on-amazon-bedrock-agentcor.md:32-32]
+
+生成式 UI、共享状态、人机协同三类交互的共同前提，是前后端之间存在一条标准事件通道^[raw/articles/build-generative-ui-for-ai-agents-on-amazon-bedrock-agentcor.md:22-22]；AG-UI 标准化的正是事件与状态流，而不是 UI 本身^[raw/articles/build-generative-ui-for-ai-agents-on-amazon-bedrock-agentcor.md:195-195]。[[concepts/model-context-protocol-mcp|MCP]] 与 AG-UI 于是构成一对协议化契约：一个管工具、一个管界面，边界清晰、互不越界。
+
+### 单一前端解析器：后端可替换性的工程支点
+
+FAST v0.4.1 的 `agui-strands-agent` 与 `agui-langgraph-agent` 两个模式共享同一个前端解析器^[raw/articles/build-generative-ui-for-ai-agents-on-amazon-bedrock-agentcor.md:34-34]，且产生完全相同的 AG-UI 事件^[raw/articles/build-generative-ui-for-ai-agents-on-amazon-bedrock-agentcor.md:141-141]；相比之下，HTTP 模式下每种 Agent 框架各需一个独立解析器，前端被迫感知后端差异，而 AG-UI 模式间切换只改一处配置，前端零改动^[raw/articles/build-generative-ui-for-ai-agents-on-amazon-bedrock-agentcor.md:177-177]。支撑这层解耦的还有两个工程细节：每请求重建 Agent 实例或编译图以获取当次请求的 Gateway MCP 工具，AgentCore Memory 按需 opt-in（`MEMORY_ID` 未设置时返回 `None`，可不部署 Memory 直接运行）^[raw/articles/build-generative-ui-for-ai-agents-on-amazon-bedrock-agentcor.md:66-68][raw/articles/build-generative-ui-for-ai-agents-on-amazon-bedrock-agentcor.md:107-107]。[[concepts/agent-backend-unification|后端统一]]思想在交互层的落地正在于此：协议契约固定在事件边界上，后端框架选择退化为可随时替换的实现细节。
+
+### 控制光谱与安全边界：自由度是要还的
+
+原文把生成式 UI 刻画为一条光谱：前端预定义组件、Agent 选择渲染并填数（本样本的位置）→ 声明式 UI 描述 → 完整 UI 表面前端嵌入；交给 Agent 的自由度越大，沙箱隔离与输入验证的义务越重^[raw/articles/build-generative-ui-for-ai-agents-on-amazon-bedrock-agentcor.md:195-195]。三个演示恰好对应三种交互原语：`useComponent` 注册组件后，CopilotKit 拦截 `TOOL_CALL_START/ARGS` 事件把图表内联渲染进对话^[raw/articles/build-generative-ui-for-ai-agents-on-amazon-bedrock-agentcor.md:201-212]；待办画布经 `STATE_SNAPSHOT` 事件双向同步，Agent 通过系统提示注入感知用户在 UI 侧的直接编辑^[raw/articles/build-generative-ui-for-ai-agents-on-amazon-bedrock-agentcor.md:216-223]；会议调度器把"等待用户输入"建模为一次工具调用往返，用户的选择以 `TOOL_CALL_RESULT` 回流后 Agent 继续执行^[raw/articles/build-generative-ui-for-ai-agents-on-amazon-bedrock-agentcor.md:227-242]。停留在受控端时，安全面主要收敛在组件参数 schema 上；一旦走向光谱另一端，[[concepts/agent-sandbox|沙箱隔离]]就从可选项变成前提条件。
+
+### 部署形态与成本边界
+
+两种落法的运维重量差异明显：FAST 内只需在 `infra-cdk/config.yaml` 选定 pattern 后执行 `cdk deploy`^[raw/articles/build-generative-ui-for-ai-agents-on-amazon-bedrock-agentcor.md:179-189]；CopilotKit 样本则一次性 provisioning Cognito 用户池、ECR、Runtime、Gateway、Memory、Runtime Lambda 加 API Gateway 与 Amplify 七类组件^[raw/articles/build-generative-ui-for-ai-agents-on-amazon-bedrock-agentcor.md:255-259]。文中特别提醒两个栈相互独立、需分别 teardown，且部分 CDK 配置会保留 ECR 仓库，须手动删除以免持续计费^[raw/articles/build-generative-ui-for-ai-agents-on-amazon-bedrock-agentcor.md:263-279]。对成本敏感的团队，这意味着一条"先 FAST 后 CopilotKit"的渐进路径：验证交互价值时不必一次背上完整组件栈。交互层越富，平台侧承接的认证、扩缩容与会话职责越多，与 [[entities/agentcore-managed-harness|AgentCore Managed Harness]] 的托管化思路同向。
 
 ## 实践启示
 

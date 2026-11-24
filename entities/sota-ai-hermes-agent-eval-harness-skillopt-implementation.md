@@ -8,7 +8,7 @@ review_value: 9
 review_confidence: 10
 sources:
   - raw/articles/sota-ai-hermes-agent-eval-harness-skillopt-implementation-2026-06-18
-updated: 2026-09-10
+updated: 2026-11-19
 related: [entities/skillopt, entities/skillopt-microsoft-train-skill-like-neural-network, entities/skillopt-microsoft-train-skill-hyman's-blog, entities/hermes-agent-skill-crossover-optimization, entities/skill-self-evolution-three-approaches, entities/agent-self-improvement-six-mechanisms, entities/ai-recursive-self-improvement-nanogpt-prime-intellect, entities/darwin-skill-2-huashu, entities/embabel, entities/pith-train-agent-native-moe-training-framework, entities/hermes-agent-12-layer-full-configuration-guide, entities/hermes-9-module-architecture, entities/harness-engineering-7-layers-openclaw-hermes-claude-code-p1aNu, entities/slim-cuhk-skill-lifecycle-agentic-rl, entities/deli-auto-research-skill-v2-continual-learning-self-improvement, entities/claude-code-vs-hermes-session-vs-goal-lifecycle]
 strategic_context: "[[queries/research-frontier-map|Frontier 1 — Harness/Skill 从个人能力到组织资产]]"
 provenance_state: inferred
@@ -296,6 +296,38 @@ regression_failures | rejection_reason | review_notes
 > Hermes Agent 已经具备一些拼图：轨迹保存、批量运行、工具统计、大输出持久化、审批系统、执行沙箱、测试体系。下一步不是再加一个"让模型反思"的 prompt，而是把这些拼图组织成一个完整评测闭环。 ^[raw/articles/sota-ai-hermes-agent-eval-harness-skillopt-implementation-2026-06-18.md]
 
 > 这个闭环一旦建立，skills 就不再只是手写经验文档，而会变成可训练、可验证、可回滚、可迁移的运行时资产。**这也是从 agent demo 走向 agent engineering 的分水岭。** ^[raw/articles/sota-ai-hermes-agent-eval-harness-skillopt-implementation-2026-06-18.md]
+
+## 深度分析
+
+### 环境快照是复现性的根基，而不仅是任务的包装
+
+把 TaskSet 理解成"环境快照"而非"prompt 列表"，本质上是把实验科学里的控制变量思想搬进 agent 评测。一个只有 prompt 的评测集，测到的其实是"模型 + 当时世界状态"的联合表现——repo 的依赖版本变了、fixture 文件被上一个任务改动了、目标格式规范更新了，分数都会漂移，而这种漂移会被误读成某个 skill patch 带来的效果。环境快照把世界状态钉死在 fixture 里：初始 git diff、允许与禁止的路径、验证命令、超时预算全部随任务一起冻结，于是任何两个 skill 版本之间的分数差，才可能唯一归因于 skill 本身。这正是第七节那个对比公式的隐含前提——`new_score > old_score` 只有在两次 evaluate 面对同一个世界时才是一个有意义的比较；快照缺失时，Selection Gate 比较的其实是两个不同的实验。
+
+更深一层，快照里的"禁止路径"和"验证命令"不只是执行环境的配置，它们同时就是验证契约的另一半：policy verifier 之所以能对一次执行给出可解释的判定，是因为快照预先声明了"什么算越界、什么算完成"。换句话说，复现性与可判定性是同一个设计的两面——只冻结输入而不冻结契约，得到的只是可重复的失败；只冻结契约而不冻结输入，verifier 的判定对象本身就不可比。这也解释了 6 阶段落地路径为什么把"离线 eval"排在第一步：先在受控世界里建立基线，后续接入轨迹、判定器和双 Gate 时，每一步的分数才有锚点可依。快照的另一个经常被忽略的收益是版本化：fixture 与验证契约一起进入版本管理后，评测集本身就变成了可 diff、可回滚、可演进的资产——某个任务发现设计缺陷时可以修快照而不是改分数历史，历史 run 仍能追溯到当时的快照版本重放验证。评测基础设施的成熟度，很大程度上就体现在"任务资产是否和代码一样被认真管理"上。
+
+### TrajectoryStore 的单一写入方原则：从日志目录到仲裁机构
+
+TrajectoryStore 常被当作日志目录，但它真正的架构价值在于"单一事实源"：只有 HarnessAdapter 一个写入方，所有下游消费者——verifier、Report & Replay、reflection、regression triage——读的是同一份结构化事件流。这消除了评测系统里最隐蔽的故障模式：同一个 run 存在多个互相矛盾的版本（模型自己复述的版本、adapter 内存里的版本、事后重放拼接的版本），任何基于它们的分数与结论都不可信。一个只有单一写入方、追加式的事件流，天然具备审计性质——任何分数都能追溯到产生它的原始证据，这在 patch 争议时是唯一的仲裁依据。
+
+"模型看到了什么"与"工具真实返回了什么"必须分开持久化，正是因为模型侧视图经过截断与摘要（persisted-output 机制给的是 preview 加路径），已经是二手证据；verifier 若只看模型视图，等于让被评者自己剪辑呈堂证供。单一事实源还让分数去抖与回归分诊脱离猜测：当某个任务分数在两个 skill 版本之间翻转时，不需要重新烧一次昂贵的 rollout，直接 replay 事件流就能定位翻转发生在理解、检索、工具调用、结果验证还是安全边界的哪一层。三类 regression 的分诊同理——domain 失败看任务域事件，runtime 失败看基础能力事件，safety 失败看 policy_events——分类的置信度完全取决于事件流的完整性。轨迹存档与事实仲裁的区别就在这里：前者是"存过"，后者是"随时可查证"。事件流里同时保存的 token_usage 和 duration_ms 还让成本进入评分维度——两个分数相同的候选 skill，一个是靠三次昂贵重试堆出来的，一个是一次干净通过，replay 一眼可辨。Agent 的 rollout 本身带模型非确定性噪声，同一任务多次运行的分数天然有方差；去抖不等于抹平噪声，而是让每一次分数波动都能被下钻到具体事件，把"分数奇怪"转化为"某个具体环节可解释的异常"。
+
+### 6 类 Verifier 是一条判定器成本-精度阶梯，而非并列选项
+
+六类 verifier 不该被看作六种并列的评分方式，而是一条按确定性与成本排序的阶梯。exact 与 artifact verifier 确定性最强、成本最低（毫秒级的字符串、hash、字段比较），适合做第一道闸门；execution verifier 要真正运行命令，成本中档，但能杀死"代码看起来对、跑起来错"这一类 exact/artifact 无法触及的假阳性；trace 与 policy verifier 依赖结构化事件流的存在——没有 TrajectoryStore 它们根本无从谈起——它们守护的是过程正确性与权限边界；judge verifier 最贵也最吵，方差来自模型本身，天然不适合文件 diff、命令执行、权限边界这类可确定验证。
+
+工程上的正确姿势是把阶梯当作升级路径：先用便宜的判定器把确定性错误筛掉，只把真正含糊的案例（开放问答、摘要、策略判断）escalate 给 judge，而不是让 judge 通吃全部分数。判死与放行要交给不同价的判定器——breakdown 输出的意义正在于此：final answer 的高分不能掩盖 trace 的低分（改对了代码却没跑测试），trace 的高分也不该因 final answer 的小瑕疵而判死（找到正确证据但输出缺字段，应指导 skill patch 而非一票否决）。每一维的错误由对应精度的判定器负责解释，总分永远不作为合入依据——平均分恰恰是掩盖 safety regression 的地方。这条阶梯还有一层经济学含义：判定成本决定了回归集的规模上限，贵的 judge 只能覆盖开放任务，便宜的 exact verifier 才能支撑高频跑的 critical regression set。judge 的方差虽可用更细的 rubric 和多次采样压低，但每次压低都让成本翻倍，这更说明 judge 的用量应留给阶梯顶端真正含糊的案例，而不是被当作万能默认。
+
+### 双 Gate 结构：让学术闭环敢在活体 agent 上运行
+
+SkillOpt 学术框架里的 held-out validation gate 是一个离线实验装置；要在一台正在服务真实用户的 agent 上演化 skill，单个 gate 远远不够。Selection Gate 回答"新 skill 是否更好"，Regression Gate 回答"旧能力是否还在"——两者必须同时在场，因为任何一次 patch 都是双侧行动：它在 selection split 上的提升，永远可能是以牺牲未覆盖能力为代价的。这正是"修好 A、打坏 B"的结构性根源——不是 optimizer 不小心，而是任何有限评测集都存在未观测的代价面。
+
+双 Gate 的设计里藏着一套不对称风险原则：selection 提升是收益项，可以用分数阈值裁量；safety regression 是一票否决项，哪怕任务成功率大涨也不许赎回。tie 默认拒绝则是保守先验——自然语言 skill 只增不减，上下文长度与规则冲突是单向累积的成本，无明确收益就等于净损失，这也与 bounded patch 和 rollback 优先于"让模型重写最佳实践"的取向一脉相承。三类 regression 的分层覆盖（domain / runtime / safety）进一步界定了风险边界：runtime regression 保护的是所有 skill 共享的底座能力，所以它属于整个系统而不属于某个 skill。正是"收益须证明、风险须清零、平局即拒绝"这三条，把一个原本只在论文里成立的优化循环，改造成风险有界、可回滚、敢在线上运行的机制——这是学术思想与生产系统之间真正的工程鸿沟所在。Report & Replay 是双 Gate 的最后一公里：每次接受或拒绝都不是一个孤立结论，而是附带失败样本、关键轨迹、分数变化与可复现命令的完整案卷，人和 optimizer 都能据此复核——一个不可解释的 gate 决策，在团队里活不过两个迭代周期。
+
+### Rejected Buffer 是会复利的失败资本
+
+大多数自改进系统只积累成功——合入的 skill 越来越多，失败的尝试被丢弃。Rejected Buffer 的反直觉之处在于：失败知识比成功知识更耐用。合入的正向规则会过时——环境变了、模型升级了、规则互相冲突需要修订；而"哪类规则听起来对但实际降分""哪些行为已被 existing skill 覆盖""哪种修复过于样本特化""哪类 patch 会触发安全回归"这类负面结论，在相当长的时间窗内保持有效，且极其紧凑——一条 rejection_reason 加 selection_score_delta 就能封存一次昂贵 rollout 换来的全部教训。
+
+它还是罕见的对人类与机器同时有效的资产：对 reviewer，它扮演 review history 的角色——好的工程团队不会只保存 merged PR，也会保留 rejected design 的理由；对 optimizer，它是负样本集，直接压缩后续候选规则的搜索空间，让 reflection 不再反复提出同类坏规则。最关键的是它的成本结构：Rejected Buffer 只进 skill 训练历史、不注入线上 prompt，所以它积累时几乎零运行时代价，却让每一次拒绝都变成后续所有候选 patch 的先验。第六阶段把它放在落地路径的最后一环也是这个道理——前五个阶段产生的每一次失败（gate 拒绝、regression 击杀）都自动成为它的进料，闭环转得越久，这本失败账簿的复利越厚。失败在这里不是损耗，而是复利。唯一的前提是记录质量：rejection_reason 必须写清楚拒绝的机制而非笼统的"效果不好"，否则负样本退化成噪音，optimizer 既学不到教训，reviewer 也无从复核——失败资本的价值完全取决于记账的认真程度。
 
 ## 十五、实践启示
 

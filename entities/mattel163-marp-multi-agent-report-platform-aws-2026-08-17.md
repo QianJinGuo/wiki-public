@@ -1,7 +1,7 @@
 ---
 title: "Mattel163 MARP：多智能体报告自动生成平台（异步长任务 × 证据链 × Agent-as-Code × 项目级凭证）"
 created: 2026-08-17
-updated: 2026-09-10
+updated: 2026-11-14
 type: entity
 tags: [multi-agent, aws, bedrock, agentcore, strands, agent-as-code, production, harness, async, security, anti-hallucination]
 sources: [raw/articles/mattel163-marp-multi-agent-report-platform-aws-2026-08-17]
@@ -65,6 +65,33 @@ MARP 构建 Agent Toolkit——"Terraform 式"的智能体定义部署工具：�
 - 报告生成本质是多智能体编排，对照 [[entities/agent-orchestration-multi-agent-systems|Agent Orchestration 多智能体系统]] 的模式分类。
 - 异步长任务 + 可观测流式输出属于生产级 Harness 工程范畴，参见 [[entities/harness-engineering-2026-why-it-matters|Harness Engineering]]。
 - 项目级凭证安全与 [[entities/agent-memory-main-contradiction-context-scheduling|Agent 记忆与上下文调度]] 的无害权设计互补（权限/记忆都须按会话最小化）。
+
+## 深度分析
+
+### 1. 异步长任务三件套：队列解耦、状态机恢复、流式透明
+
+MARP 以 SQS 解耦 + DynamoDB 状态机 + WebSocket 推送应对分钟级到小时级长任务：提交即返回任务 ID，状态沿 pending → running → completed/failed 流转，隔天登录仍能恢复视图；DLQ（重试 3 次）兜底限流与数据异常，任务不静默丢失。^[raw/articles/mattel163-marp-multi-agent-report-platform-aws-2026-08-17.md:126-135] 流式推送是信任机制而非体验优化——让用户"看着"智能体工作以建立信任。
+
+### 2. 证据链约束：把防幻觉做成结构性规则
+
+产出标准全落在可核验结构上：结论附未经修改的玩家英文原话、引用携带 role ID 与 VIP 等级、主题命名具体可操作、开放题与选择题交叉归纳、无上下文简短回复不得作证据且须达样本量门槛。^[raw/articles/mattel163-marp-multi-agent-report-platform-aws-2026-08-17.md:230-236] 对机器是结构性防幻觉；对人，凭 role ID 几分钟抽检即可建立信心，VIP 等级让建议按付费深度加权。^[raw/articles/mattel163-marp-multi-agent-report-platform-aws-2026-08-17.md:240-240]
+
+### 3. 两层配置化：能力边界与方法论解耦
+
+Agent-as-Code（YAML 声明模型/工具/记忆/认证）与分析模板（UX 方法论注入）构成两层体系：工程团队迭代能力边界，业务团队迭代专业方法论，新增场景 = 一个 YAML + 一次部署。^[raw/articles/mattel163-marp-multi-agent-report-platform-aws-2026-08-17.md:353-401] 对照评审背书成效：主题覆盖与人工高度一致，长尾主题捕捉更全——模板质量而非模型能力成为产出上限。^[raw/articles/mattel163-marp-multi-agent-report-platform-aws-2026-08-17.md:261-263]
+
+### 4. 权限跟着会话走：安全底线从提示词下沉到 IAM
+
+Cognito 认证后，凭证服务以动态 Session Policy 调 STS AssumeRole，S3 权限限于该用户项目前缀且 1 小时过期。^[raw/articles/mattel163-marp-multi-agent-report-platform-aws-2026-08-17.md:415-442] 提示词"必须用封装凭证的专用 S3 工具"只是软边界，硬边界是即使被注入、凭证也无越权能力；叠加会话级隔离（[[entities/agentcore-managed-harness|AgentCore Managed Harness]]）形成四层纵深防御。
+
+## 实践启示
+
+1. 长任务从第一天按"队列 + 状态机 + 流式推送"设计，同步超时调参无解。
+2. 定信任标准优先设计可核验结构（原文引用 + 唯一 ID + 样本量门槛），而非提示词禁令。^[raw/articles/mattel163-marp-multi-agent-report-platform-aws-2026-08-17.md:228-242]
+3. 领域专家不写代码也能定义智能体行为：方法论沉淀为模板即可新增报告类型。^[raw/articles/mattel163-marp-multi-agent-report-platform-aws-2026-08-17.md:217-227]
+4. 场景扩张前先建 Agent-as-Code 声明层，避免维护成本线性增长。
+5. 开放文件/数据库访问前先做项目级凭证收敛（动态 Session Policy + 自动过期），提示词只当软防线。^[raw/articles/mattel163-marp-multi-agent-report-platform-aws-2026-08-17.md:440-442]
+6. 对照评审是验证产出的最短路径：与人工报告同题对比，重点核查长尾主题覆盖。
 
 ## 相关概念
 

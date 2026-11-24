@@ -2,7 +2,7 @@
 
 title: "2026 年面向 LLM 的 RL 方法总结：从 PPO 到 DPO 到 GRPO，再到多智能体 RL"
 created: 2026-06-10
-updated: 2026-09-07
+updated: 2026-11-17
 tags: [agent, architecture, code, data, evaluation, fine-tuning, game, llm, mlops, nvidia, observability, open-source, prompt, rl, robotics, workflow]
 review_value: 7
 review_confidence: 7
@@ -46,6 +46,29 @@ moc_rebuilt: 2026-09-07
 - [[entities/ai-xiaolaoliu-business-agent-augmentation-layer-general-base-20260606|小刘商业 Agent 增强层通用基座]] — 基座+增强层论点短条
 - [[entities/local-vs-cloud-agent-onsite-context-debate-xingxiaozhao|本地 vs 云端 Agent 的现场之争：当下选本地，终局云端（行小招）]] — 当下本地终局云端的现场判断
 - [[entities/karpathy-autoresearch-software-development-niaowo|我把 Karpathy 的 AutoResearch 搬到了软件开发领域，效果炸了]] — AutoResearch迁移软开+交叉审核
+
+## 深度分析
+
+### 三种算法的分野：管线的重量换信号的能力
+把 PPO、DPO、GRPO 放在同一坐标系里看，真正的差别不在数学形式，而在"删掉了什么、留下了什么"。PPO 保留完整管线：策略、参考策略、奖励模型、critic 四个模型同驻显存，换来的是真探索能力——策略可以在采样中发明数据集里从未出现过的更优路径。DPO 用闭式变换把奖励模型吸收进一个监督损失，训练循环退化成一次普通微调，代价是彻底放弃探索：正确答案不在偏好对里，它就造不出来。GRPO 处在中间，砍掉 critic、用同组 rollout 的组内归一化当基线，保留 PPO 式的采样探索，显存省约一半——7B 训练从 16 张 H100 降到 8 张的量级。因此选型第一问不是"哪个更强"，而是任务需要探索还是只需拟合偏好：见 [[concepts/llm-rl-algorithms-ppo-dpo-grpo-marl-evolution-2026]] 的完整演进线。
+
+### 收敛与稳定性：三种脆弱性，三种排障方式
+三者的失稳模式截然不同。DPO 本质是监督损失，曲线可观测、收敛最可预期，但 β 是单一脆弱点：太低策略漂移，太高几乎不动，实践中多落在 0.1–0.5；且它对偏好数据质量敏感，数据边界就是能力边界。GRPO 的方差管理交给组大小 G（公开配置多在 16–32）：G 越大优势方差越低但 rollout 成本线性上升；全零/全一的退化组会让标准归一化爆炸或消失，需加 epsilon 并过滤此类 prompt；KL 系数按阶段设在 0.001–0.04 之间，防语言连贯性崩塌。PPO 的脆弱性最隐蔽：裁剪比、KL 系数、价值损失权重、学习率任一调错都表现为静默劣化，loss 曲线上看不出奖励模型随分布漂移而失效。共性结论是：RL 后训练的超参数是脆弱资产，任何一项出错都不会抛异常，只会悄悄变差。
+
+### 奖励信号才是真正的分水岭：RLVR 范式与 PRM/ORM 之辩
+退后一步看，五年演化的主轴是奖励来源：人类成对偏好 → 偏好对直接监督 → 可校验验证器 → LLM-judge。当下主导范式是 [[concepts/rlvr-reinforcement-learning-verified-reasoning]]：奖励来自测试运行器、答案校验器等验证器，捕捉"能否被证明正确"而非"人是否喜欢"。每种信号都有专属失败模式——RM 可被钻空子，偏好对不探索，验证器被逆向利用，judge 有偏见；详见 [[concepts/verifier-paradox]]。PRM 与 ORM 之争则已基本落定：DeepSeek-R1 用规则化结果奖励加 GRPO 达到步骤级推理，因为组内归一化本身就在做隐式的过程信用分配——成功与失败轨迹共享早期决策，梯度自然落在分叉步骤上。PRM 仅在四种情形仍必要：长程智能体任务、工具使用安全、多智能体训练、推理时搜索（beam/MCTS/best-of-N 导航）。
+
+### 从单智能体到 MARL：组基线失效之处，信用分配回归
+GRPO 的"免费过程监督"依赖一个隐含假设：同一条轨迹由同一个策略产出。多智能体场景下该假设破裂——规划者、求解者、批评者共同产出一条轨迹，团队级稀疏奖励无法区分谁的决定起了作用，均匀回传梯度会让每个智能体收到的信号大部分是关于其它智能体的噪声。文献收敛到三个杠杆：按智能体/按步的过程奖励（失败模式与角色相关时杠杆率最高）、价值分解（QMIX/COMA 家族，角色稳定且贡献可加时有效）、轨迹分解（Agent-Lightning 的 LightningRL，把多步轨迹切成可归因的 state-action-reward 转移）。工程侧的门槛已被框架层抹平：已有 LangChain/AutoGen 代码库走 [[entities/agent-lightning-v1-harnessed-agentic-rl-arxiv-2608-17528]] 的黑盒可观测性路线，从零构建则选步级 MDP 路线，二者共享 verl 训练引擎。纯结果奖励的 MARL 只在团队 2–3 个智能体、轨迹短、rollout 充足时才安全。
+
+## 实践启示
+
+1. **先选奖励信号，再选算法**：风格/语气/拒答塑形走 DPO（偏好对是天然格式）；数学/代码/逻辑推理走 GRPO + RLVR 配结果奖励；确有高质量 RM 和充足 GPU 时 PPO 仍是硬任务最优解，不必因其工程重量而否定。
+2. **把显存预算当作算法选型的硬约束**：PPO 四模型同驻约为策略权重 4 倍的开销；GRPO 无 critic 省约一半。预算不够探索需求时，GRPO 是"PPO 风格探索"的平价替代，而不是降级。
+3. **超参数按脆弱资产管理**：DPO 的 β（0.1–0.5）、GRPO 的 G（16–32）与退化组 epsilon、分阶段 KL 系数，逐项记录并监控；劣化是静默的，只有对比评估能发现。
+4. **从结果奖励起步，按证据加过程奖励**：先看失败 rollout——若多数结构正确却卡在同一步，才值得上 PRM，且优先生成式/LLM-as-PRM 路线以摊销标注成本；失败方式多样时，加大 G 比加标注更管用。
+5. **迭代优于一次性**：DPO 应基于最新策略重新采样偏好对做多轮；多角色工作流先做单智能体到饱和，再上 MARL，且从第一天就为按步/按智能体奖励留预算。
+6. **把验证器当新数据集来投资**：奖励形态（0/1 二值、稠密分级、过程加分）对训练结果的影响超过算法细节；验证器设计、judge 校准与 reward-hacking 防护是后训练ROI最高的投入。
 
 ## 延伸导航
 - [[moc/mlops-training-inference|MLOps：训练、推理与模型运维全景]]

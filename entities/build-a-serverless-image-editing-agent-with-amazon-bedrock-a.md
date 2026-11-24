@@ -2,7 +2,7 @@
 
 title: Build a serverless image editing agent with Amazon Bedrock AgentCore harness
 created: 2026-07-10
-updated: 2026-09-10
+updated: 2026-11-09
 type: entity
 tags: [rag, tool, claude, coding, harness]
 sources: [raw/articles/build-a-serverless-image-editing-agent-with-amazon-bedrock-a]
@@ -40,6 +40,33 @@ This application demonstrates the following AgentCore harness capabilities: ^[ra
   * **[AgentCore Gateway](<https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/gateway.html>) with MCP.** Three AWS Lambda-backed tools are exposed t
 
 ---
+## 深度分析
+
+### 配置即智能体：编排层下沉为 API 参数
+
+这篇文章最值得记下的不是图像编辑本身，而是 harness 把智能体收窄为一个配置对象的具体形态。create_harness 的全部参数就是智能体的全部行为：模型 ID、系统提示词、Gateway 挂载、maxIterations=10、timeoutSeconds=300，外加一个 memory ARN。^[raw/articles/build-a-serverless-image-editing-agent-with-amazon-bedrock-a.md:44-70] 文章明确说这就是"整个智能体"——没有编排循环、没有工具执行逻辑、没有流式解析、没有重试代码。^[raw/articles/build-a-serverless-image-editing-agent-with-amazon-bedrock-a.md:72] 这与 [[concepts/managed-agents-architecture|托管智能体架构]] 的判断一致：当工具调用模式足够"直"（收到提示、选工具、调用、返回），编排层可以整体产品化，行为变更从代码部署降级为一次 API 调用。^[raw/articles/build-a-serverless-image-editing-agent-with-amazon-bedrock-a.md:221]
+
+### 工具路由与安全边界的两层设计
+
+工具路由完全交给模型推理：工具 schema 声明在 AgentCore Gateway 上，描述文本（如 search_and_replace 明确写着"无需 mask，用于替换特定物体"）就是路由依据，模型读描述自己选，不需要任何路由代码。^[raw/articles/build-a-serverless-image-editing-agent-with-amazon-bedrock-a.md:76-100] 但路由自由不等于权限自由：allowedTools 把智能体显式钉在三个工具上，而不是通配符放行全部。^[raw/articles/build-a-serverless-image-editing-agent-with-amazon-bedrock-a.md:54-60] 外层再由一个 80 行的 Lambda 代理做浏览器凭证与 harness API 之间的安全边界，并控制哪些系统提示词允许进入。^[raw/articles/build-a-serverless-image-editing-agent-with-amazon-bedrock-a.md:36,215] "模型自由选 + 配置硬限权 + 代理控入口"三层叠加，是把 [[concepts/model-context-protocol-mcp|MCP]] 工具面收敛到最小权限面的一个可直接套用的模式。放到四层架构里看（React 前端、Lambda 代理、harness 智能体加记忆、三个调用 Stability AI 的工具 Lambda），唯一的新抽象只有 harness 智能体这一层，其余全是常规 AWS 组件。^[raw/articles/build-a-serverless-image-editing-agent-with-amazon-bedrock-a.md:33-38]
+
+### 记忆与逐次调用切换：上下文与模型解耦
+
+模型和人格都是逐次调用参数：前端按是否含编辑关键词把闲聊路由到 Haiku、把编辑路由到 Sonnet，还能按行业注入 persona 提示词，都不需要重新部署。^[raw/articles/build-a-serverless-image-editing-agent-with-amazon-bedrock-a.md:104,122-128] 关键在记忆层承担了模型切换的兼容性：AgentCore Memory 持有 30 天完整对话史，并把全部历史喂给当前生效的模型，所以 Haiku 接到"那换成蓝色呢"也能知道 blue 指的是车。^[raw/articles/build-a-serverless-image-editing-agent-with-amazon-bedrock-a.md:130] 这印证了 [[concepts/agent-memory-system-design|智能体记忆系统设计]] 里的一个取向——当记忆独立于模型存在时，换模型、换人格都变成无状态切换。
+
+### 微VM 旁路：确定性逻辑零 token 成本
+
+harness 是纯配置的，没有可以塞自定义逻辑的"智能体脚本"；InvokeAgentRuntimeCommand 就是官方留的旁路——直接在智能体所在的 microVM 上跑 shell 和 Python，绕过模型，不耗 token，智能体甚至不知道它发生过。^[raw/articles/build-a-serverless-image-editing-agent-with-amazon-bedrock-a.md:157-159] 用途全是确定性工作：喂模型前先缩图省输入 token、校验输出、抽结构化数据、贴水印。^[raw/articles/build-a-serverless-image-editing-agent-with-amazon-bedrock-a.md:157] 这实际上是给 [[concepts/agent-sandbox|智能体沙箱]] 加了一个第二执行面：模型面负责不确定决策，旁路面负责确定操作。
+
+**实践启示**
+
+1. 先判断工具调用模式是否"直"，再选 harness：需要 LangGraph 状态机或回合间自定义处理时直接用 AgentCore Runtime，两者同底层基础设施、可平滑迁移。^[raw/articles/build-a-serverless-image-editing-agent-with-amazon-bedrock-a.md:225-227]
+2. 工具描述即路由器：把"何时用/不用这个工具"写进 description，比写路由代码更可维护。^[raw/articles/build-a-serverless-image-editing-agent-with-amazon-bedrock-a.md:100]
+3. 工具权限用显式白名单而非通配符，配合代理层控制系统提示词入口，构成最小权限双闸。^[raw/articles/build-a-serverless-image-editing-agent-with-amazon-bedrock-a.md:54-60,215]
+4. 确定性后处理（水印、缩图、校验）放 microVM 旁路执行，不要烧模型 token。^[raw/articles/build-a-serverless-image-editing-agent-with-amazon-bedrock-a.md:134,157]
+5. 把记忆做成独立服务，模型切换才有零代码迁移上下文的可能。^[raw/articles/build-a-serverless-image-editing-agent-with-amazon-bedrock-a.md:104,130]
+6. 预览期产品没有原生 CDK construct 时，用一段 provisioning 脚本桥接，不要因此倒退回手写编排层。^[raw/articles/build-a-serverless-image-editing-agent-with-amazon-bedrock-a.md:217]
+
 ## 关联
 - 相关概念: [[concepts/harness-engineering-framework|Harness Engineering]]
 

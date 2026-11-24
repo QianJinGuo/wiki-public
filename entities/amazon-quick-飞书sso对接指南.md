@@ -2,7 +2,7 @@
 
 title: Amazon Quick 飞书SSO对接指南
 created: 2026-07-10
-updated: 2026-08-01
+updated: 2026-11-15
 type: entity
 tags: [agent, enterprise, aws]
 sources: [raw/articles/amazon-quick-飞书sso对接指南]
@@ -145,6 +145,33 @@ Quick Desktop 使用 OIDC 协议，具体要求：^[raw/articles/amazon-quick-�
   * email claim
 
 ---
+## 深度分析
+
+### 双协议分叉：为什么 Web 走 SAML、Desktop 走 OIDC
+
+这篇指南最有信息量的部分，是它揭示了同一 SaaS 产品的两种客户端形态在认证协议上的被迫分叉。Quick Web 走 IAM Identity Center 原生集成（SAML），而 Quick Desktop 必须走 OIDC（Public Client + PKCE + offline_access），原因在于飞书的 OAuth/OIDC 实现不满足桌面端要求：不支持 Public Client、PKCE、`offline_access`，也不提供标准 OIDC Discovery 端点。^[raw/articles/amazon-quick-飞书sso对接指南.md] 于是 Keycloak 被引入为"标准垫片"——向上对 Quick Desktop 提供合规 OIDC 服务，向下以 OAuth 客户端身份对接飞书。这是企业集成中反复出现的协议适配器模式：当身份源不遵循标准时，与其改造两端，不如插入一个可自托管的协议转换层。
+
+### 集成平台选型决定对接成本
+
+飞书侧有两个应用创建入口，对接成本差异被原文量化：集成平台（Anycross）支持 OIDC Discovery、标准 token 认证（`client_secret_basic`/`post`）与扁平 UserInfo 结构，Keycloak 内置 OIDC 零代码即可对接；原生自建应用三者皆缺，需自定义 SPI 插件。^[raw/articles/amazon-quick-飞书sso对接指南.md] 换言之，选错入口会把"配置问题"升级为"开发问题"。同理，飞书不支持 SCIM，用户同步只能靠 Lambda 定时拉取飞书开放 API 再调 IAM Identity Center 的 SCIM 接口来模拟原生同步——身份源的能力缺口最终都会转化为自建胶水代码的维护负担。
+
+### 失败点集中在"上游默认行为"
+
+原文把 First Broker Login 单独成节，称其为"对接中最容易被忽略的配置"：Keycloak 默认在首次联邦登录时插入 Review Profile 和邮箱验证步骤，而飞书作为可信企业 IdP 已完成身份验证，这些步骤只会中断登录流程。^[raw/articles/amazon-quick-飞书sso对接指南.md] 同类陷阱还有 `enterprise_email`→`email` 的 claim 映射（Quick Desktop 靠 token 中的 email 识别用户）与 Extension Access 创建后不可编辑。三个失败点形态一致：都是上游系统的默认行为，只在端到端联调时才暴露。
+
+### 自动化边界：API 覆盖度与可逆性
+
+原文用整节讨论 AI Agent 辅助配置，其分界标准值得注意：凡有 CLI 或 REST Admin API 的步骤（EC2/ALB/Route 53 创建、Keycloak realm/IdP/mapper/flow 配置）Agent 可全自动完成；凡只能进控制台且不可逆的步骤（飞书集成平台无公开 API、Extension Access 创建后不可编辑、IAM 变更需管理员审核）保留人工。^[raw/articles/amazon-quick-飞书sso对接指南.md] 这给出一条可迁移准则——API 覆盖度与可逆性共同决定配置工作的自动化上限。
+
+## 实践启示
+
+1. **优先走飞书集成平台（Anycross）而非原生自建应用**：Discovery、token 认证、UserInfo 三项全部标准，Keycloak 零代码对接；选原生平台则要自写 SPI 插件。
+2. **禁用 Keycloak First Broker Login 中的 Review Profile 与 Verify Existing Account By Email**，并在未配置 SMTP 时关闭 Email verification——否则用户首次登录会被邮件验证卡死。
+3. **配置 `enterprise_email`→`email` 的 Attribute Importer 映射**，保证 IdP token 的 email 与 Quick 用户 email 完全一致；"User not found"报错几乎都源于此。
+4. **Extension Access 提交前先用 `.well-known/openid-configuration` 核对所有端点值**：创建后不可编辑，填错只能删除重建。
+5. **变更身份来源前先规划**：IAM Identity Center 的 identity source 一旦变更会影响现有用户分配，且 Quick Desktop 仅企业版、`us-east-1` 身份区域可用。
+6. **运维基线**：EBS 走 DLM 每日快照、EC2 不分配公网 IP 仅走 Session Manager、`/auth/admin` 用 ALB 规则限管理员 IP；升级 Keycloak 前先打快照再 `docker compose pull && docker compose up -d`。
+
 ## 关联
 - 相关概念: [[concepts/harness-engineering-framework|Harness Engineering]]
 - 相关: Agent 架构

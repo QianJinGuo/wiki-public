@@ -1,7 +1,7 @@
 ---
 title: "AI Native 研发范式半年实践复盘：Skill→Plugin→分库协作→PDFE（阿里稳定性前端）"
 created: 2026-09-30
-updated: 2026-09-30
+updated: 2026-11-19
 type: entity
 tags: [ai-native, frontend, skill, plugin, pdfe, harness, team-collaboration, alibaba]
 confidence: 0.85
@@ -54,6 +54,33 @@ Skill 拆细后依赖链（R2C→设计规范→组件知识→MCP）少装一�
 ## 七、S2 验证清单与未决问题
 
 作者诚实列出尚未闭环的验证：应急助手故障覆盖数/真实诊断时长/建议采纳率无稳定口径，MTTR 是否缩短待测量；改 Prompt/换模型/调 Skill 缺少可反复比较的评测集；组织问题未答——PDFE 的业绩怎么算、跨端是长期安排还是特殊补位、缩短团队等待却承担更多判断的人如何被衡量。S2 验证表五对关系：AI 使用更普遍→返工/缺陷/维护成本是否改善；复用率提高→非标交互如何交付；跨端上线→结对评审投入是否值得；Skill 被下载→使用者能否完成真实任务；应急助手能生成建议→诊断是否准确/建议是否被采用/执行是否受控。尾声以《禅与摩托车维修艺术》铝片隐喻收束：Skill、Plugin、PDFE/AI 全栈不是终点，是那片高效解决当下问题的铝片。^[raw/articles/ai-native-stability-frontend-s1-retrospective-ali-2026-09-29.md]
+
+## 深度分析
+
+### 装配成本：AI 时代被重新定价的集成环节
+
+传统软件工程用包管理器解决了"依赖集成"，AI Coding 却把它重新变成新瓶颈：依赖粒度从"库"变成了规则、工具与协议的组合。Skill 越拆越细，依赖链上少装一环，AI 不会报错，而是继续产出——产出悄悄走偏，往往事情做完才发现漏了环节，现场补装把省下的时间又吃了回去^[raw/articles/ai-native-stability-frontend-s1-retrospective-ali-2026-09-29.md:137-141]。这种静默失败以"看起来完成了"的形态累积偏差，比显式失败更昂贵。Plugin 的价值因而不只是安装提速（六个 Skill 加两个 MCP 约十分钟，压到 `install_from_path` 一次装齐约三十秒），更在于把散落多处的规范收敛为插件内的单一事实源，让装配从依赖个人记忆变成可分发工件的工程问题^[raw/articles/ai-native-stability-frontend-s1-retrospective-ali-2026-09-29.md:180]。这也是 [[concepts/skill-engineering-principles|Skill 工程原则]] 中"结构服务于装配"论断的团队级实证。
+
+### 检查分层：把判断放到离代码最近的位置
+
+作者复盘的三条被证伪的路——上课、知识库、换平台——共同点是都发生在 AI 写代码之前，都要先要求人完成一个动作^[raw/articles/ai-native-stability-frontend-s1-retrospective-ali-2026-09-29.md:90]。Skill 的做法是把顺序倒过来：规则在代码产生的那一刻进入 AI 上下文^[raw/articles/ai-native-stability-frontend-s1-retrospective-ali-2026-09-29.md:92-94]。执行机制按"检查放在哪里"分三层：项目级 pre-commit（eslint+tsc，每次 commit 自动阻断）、Plugin /code-review（提 PR 前手动深度审查）、PreToolUse hook（AI 调 npm install 时自动拦截）^[raw/articles/ai-native-stability-frontend-s1-retrospective-ali-2026-09-29.md:174-179]。分层的实质是区分"高频低成本的机械检查"与"低频高成本的专业判断"——规范的执行力来自工具链上的位置，而非文档的完备程度，这正是 [[concepts/verifier-driven-development|验证器驱动开发]] 在研发流程上的落地。
+
+### 分库是节奏管理，不是目录整理
+
+"设计直接改正式代码"的幻想一周内破产：Tailwind/lucide-react 与正式库 x-ops、CSS Modules 冲突，内联 style、上千行单文件、大面积 any 涌入——但作者指出这些"每一处都可以修"，真正难修的是节奏冲突：设计面向多个迭代一起规划，前端一个 Sprint 只交付其中一部分，共用代码库导致发版要人工拆分本期与预研，成本比从零还原还高^[raw/articles/ai-native-stability-frontend-s1-retrospective-ali-2026-09-29.md:208-214]。分库（aiops-studio 与 an-aiops 物理隔离、共享同一份 Skill 规范、不共享发布节奏）的本质是承认两个角色有不同的时间尺度，用共享规范替代共享代码库^[raw/articles/ai-native-stability-frontend-s1-retrospective-ali-2026-09-29.md:216-228]。最重要的收益是试错的心理成本降低：原型库跑不起来也不影响线上。配套的 VersionShell 让原型可被指定、分享与比较，开始具备代码资产生命周期，评审不再是原型的终点^[raw/articles/ai-native-stability-frontend-s1-retrospective-ali-2026-09-29.md:239-247]。
+
+### 复合角色的 ROI 账本：生成变快之后，什么变贵了
+
+PDFE 不是设计出来的岗位，而是项目形态把人推到了那个位置：三月的应急助手 POC 一名前端加四名后端，无 PD 无设计师^[raw/articles/ai-native-stability-frontend-s1-retrospective-ali-2026-09-29.md:269-271]。"一行代码，三种判断"揭示了复合角色的判断密度：折叠与流式策略同时是产品信息优先级、设计呈现与前端工程三重决策^[raw/articles/ai-native-stability-frontend-s1-retrospective-ali-2026-09-29.md:282-288]。而全栈转型的四笔诚实账——需要结对、无法准确排期、评审成本高、维护成本高——共同指向一个结构性事实：AI 压低的是生成成本，验证、评审与维护成本相对上升，且不随生成速度同步下降^[raw/articles/ai-native-stability-frontend-s1-retrospective-ali-2026-09-29.md:302-308]。结论"有条件、有选择的全栈"按需求结构分流：标准 CRUD 页面交出去缩短排期等待，联动需求投入结对与评审，核心链路仍由领域专家主导^[raw/articles/ai-native-stability-frontend-s1-retrospective-ali-2026-09-29.md:315-321]。METR 对照实验中开发者实际慢 19% 却感觉快 20%，跨端时的主观提速感不可直接采信^[raw/articles/ai-native-stability-frontend-s1-retrospective-ali-2026-09-29.md:421-429]。
+
+## 实践启示
+
+1. **先盘点仓库，再写规范。** Skill 首先要解决"AI 现在在哪个项目里"，然后才轮到"应该怎么写"：团队三类技术栈体系互斥，一条在新项目里合理的建议放进老仓库可能恰好有害。写团队 Skill 前先按技术栈给仓库分类，再按类给出首选与不推荐项，让团队判断以结构化方式进入 [[concepts/ai-team-knowledge-harness|团队知识 Harness]]。^[raw/articles/ai-native-stability-frontend-s1-retrospective-ali-2026-09-29.md:102-114]
+2. **把规范挂进工具链，而不是停在文档里。** 按"机械检查自动化、专业判断显式化"分层：pre-commit hook 做高频机械检查，/code-review 做提 PR 前的深度审查，PreToolUse hook 拦截危险操作。变更人与 AI 使用同一份检查依据，评审才不会变成两套标准。^[raw/articles/ai-native-stability-frontend-s1-retrospective-ali-2026-09-29.md:172-179]
+3. **Skill 拆细之后，用 Plugin 收敛成单一事实源。** 拆细带来装配成本，少装一环就静默走偏。把 Skills、Commands、Agents、Hooks、MCP 打包成一个可安装单元，按工作流/规范/工具三层组织，安装从约十分钟降到约三十秒，首次执行因缺依赖而失败的情况也随之减少。^[raw/articles/ai-native-stability-frontend-s1-retrospective-ali-2026-09-29.md:137-145,180]
+4. **节奏不同的协作角色：分库 + 共享规范。** 当两类贡献者的迭代周期不同时，物理隔离仓库、共享同一份 Skill 规范、不共享发布节奏，比强行共用一套代码更可持续；分库同时把试错的心理成本降到足够低，这是协作形态能持续演化的前提。^[raw/articles/ai-native-stability-frontend-s1-retrospective-ali-2026-09-29.md:216-228]
+5. **跨端之前先算四笔账。** 结对编程、排期失准、评审瓶颈、维护断档——生成速度不等于交付速度。按需求结构分流：标准 CRUD 页面可由后端/PD 承接，联动需求要预算结对与评审投入，核心链路仍由领域专家主导，并把跨端过程沉淀成"目标→上下文→工具接入→多轮迭代→验证→沉淀"的回路。^[raw/articles/ai-native-stability-frontend-s1-retrospective-ali-2026-09-29.md:302-321,323-327]
+6. **用外部研究与评测集校准主观提速感。** Sonar 调查 38% 开发者认为审查 AI 代码更费精力、METR 实验实际慢 19% 感觉快 20%——团队应同步补质量底线（单测规范、增量覆盖率卡点）与可反复比较的评测集，把"感觉快"换成可测量的事实。^[raw/articles/ai-native-stability-frontend-s1-retrospective-ali-2026-09-29.md:421-434]
 
 ## 相关实体
 

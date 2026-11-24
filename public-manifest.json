@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "sourceRevision": "26473aaef0041172334e79701a7582da7876e536",
+  "sourceRevision": "acb8437b4f18def50cf625898d29b65aca94437a",
   "files": [
     {
       "path": "raw/articles/0.25秒识破未见攻击-lod-lvlm-jailbreak-detection-emnlp2026.md",
@@ -1778,6 +1778,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/5sftvwAZL4Hj5v40HZ1rVw"
     },
     {
+      "path": "raw/articles/agent-runtime-multi-agent-ontology-explainer-allentang-2026-11-10.md",
+      "title": "一文搞懂 Agent 架构：Agent Runtime、Multi-Agent、Ontology",
+      "sourceUrl": "https://mp.weixin.qq.com/s/FAyHyNgu_eYgMFKlIL3zKA"
+    },
+    {
       "path": "raw/articles/agent-self-evolution-four-gear-flywheel-tencent-2026.md",
       "title": "一篇讲透 Agent 自进化飞轮怎么搭：评测→记忆→落地→控制",
       "sourceUrl": "https://mp.weixin.qq.com/s/5VDN-T9K8Wr-DaQ15-I6CA"
@@ -1791,6 +1796,11 @@
       "path": "raw/articles/agent-self-evolution-skill-to-weights-taxonomy-aliexpress-2026.md",
       "title": "Agent 如何自己变强？从 Skill 到模型权重的进化全景图",
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzIzOTU0NTQ0MA==&mid=2247562373&idx=1&sn=b2afbd481dd9cbddc533641633f4bbe3"
+    },
+    {
+      "path": "raw/articles/agent-self-improvement-rsi-harness2-terminal-rsi-super-agent-review-2026-11-10.md",
+      "title": "RSI、Harness²、Claude 主循环与 Super-agent：近期 Agent 持续执行与自我改进的学习总结（万字）",
+      "sourceUrl": "https://mp.weixin.qq.com/s/AT9ycXVMrU43md1AIHUtcA"
     },
     {
       "path": "raw/articles/agent-self-improvement-six-mechanisms.md",
@@ -3676,6 +3686,11 @@
       "path": "raw/articles/anthropic-alignment-assessment-cybersecurity-incidents-additional-findings.md",
       "title": "Alignment assessment of cybersecurity incidents: additional findings",
       "sourceUrl": "https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents"
+    },
+    {
+      "path": "raw/articles/anthropic-always-on-agents-five-components-mozhi-2026-11-16.md",
+      "title": "Anthropic最新拆解：Always-on Agents（常驻智能体）的完整落地思路",
+      "sourceUrl": "https://mp.weixin.qq.com/s/C8CTefmyZFiTS-lUEJgMXg"
     },
     {
       "path": "raw/articles/anthropic-apple-foundation-models-claude.md",
@@ -5848,7 +5863,7 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/GZ1Czda3c3Bl1uqkLkzZbg"
     },
     {
-      "path": "raw/articles/claude-code-large-codebase-enterprise-deployment-anthropic-aihanshijì.md",
+      "path": "raw/articles/claude-code-large-codebase-enterprise-deployment-anthropic-aihanshijì.md",
       "title": "大厂代码库几百万行，Claude Code怎么跑起来的？Anthropic首次公开全套打法",
       "sourceUrl": "https://mp.weixin.qq.com/s/w38wMfQpOmcIJ53g5EfoVQ"
     },
@@ -7546,6 +7561,11 @@
       "path": "raw/articles/deepseek-super-agent-design-router-worker-architecture-2026-10-31.md",
       "title": "Super-agent 设计探索：迈向更自主的 Agent 系统",
       "sourceUrl": "https://mp.weixin.qq.com/s/zoS7GlReWPhfCjENGxXCdg"
+    },
+    {
+      "path": "raw/articles/deepseek-superagent-code-review-and-aliyun-flock-practice-2026-11-11.md",
+      "title": "关于 DeepSeek 的 SuperAgent，以及我们的实践",
+      "sourceUrl": "https://mp.weixin.qq.com/s/d6JQ8D3K2CIeOZxfM0s_3Q"
     },
     {
       "path": "raw/articles/deepseek-superagent-github-issue-to-pr-deployment-guide-jiagoux-2026-11-02.md",
@@ -11008,6 +11028,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/L3d1Gnb5ldyg7k1iJfDVtQ"
     },
     {
+      "path": "raw/articles/huolala-harness-engineering-stable-agent-practice-2026-11-09.md",
+      "title": "构建稳定的 AI Agent：Harness 工程的核心机制与实践思考（货拉拉风控分析 Agent）",
+      "sourceUrl": "https://mp.weixin.qq.com/s/4fp0WcVZqSPW8exB0VxpIg"
+    },
+    {
       "path": "raw/articles/hybrid-retrieval-vector-bm25-rrf-rerank-tutorial-2026-09-30.md",
       "title": "混合检索：向量 + BM25 + RRF + Rerank",
       "sourceUrl": "https://mp.weixin.qq.com/s/g6lVUS__LeZjSdKOINyR_A"
@@ -12026,6 +12051,11 @@
       "path": "raw/articles/kuaishou-agentx-self-iteration-recsys-2026.md",
       "title": "快手AgentX：推荐系统开始自我迭代",
       "sourceUrl": "https://mp.weixin.qq.com/s/h2PgHllv8MvF4phC8uSPUQ"
+    },
+    {
+      "path": "raw/articles/kuaishou-ecommerce-subsidy-uplift-llm-agent-marketing-custody-2026-11-10.md",
+      "title": "快手电商智能补贴实践：从经验发券走向目标驱动的智能营销托管",
+      "sourceUrl": "https://mp.weixin.qq.com/s/ZBVDlLEOOUfVph7XAZCDkQ"
     },
     {
       "path": "raw/articles/kuaishou-harness-engineering-ecommerce-delivery-pipeline-2026.md",
@@ -14558,6 +14588,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/rB51LZBmrUNTPDAjw017qA"
     },
     {
+      "path": "raw/articles/octop-team-mode-superagent-contrast-tencent-2026-11-16.md",
+      "title": "用 Super-agent 的理念，拆解 Octop 团队模式",
+      "sourceUrl": "https://mp.weixin.qq.com/s/5r_EhRzdgRgzg8kWmZDyRQ"
+    },
+    {
       "path": "raw/articles/off-switch-dual-use.md",
       "title": "An off switch for dual use knowledge in AI models",
       "sourceUrl": "https://www.anthropic.com/research/off-switch-dual-use"
@@ -14723,6 +14758,11 @@
       "sourceUrl": "https://www.xiaohongshu.com/explore/6a7bedd2000000003301054e?xsec_source=app_share&xsec_token=CBi29DWYi8HwMaddzA0i19WOow27W0IGtGRoYEky0C9FA="
     },
     {
+      "path": "raw/articles/ontology-four-core-technologies-rdf-owl-sparql-shacl-allentang-2026-11-11.md",
+      "title": "一文搞懂本体四大核心技术：RDF、OWL、SPARQL、SHACL",
+      "sourceUrl": "https://mp.weixin.qq.com/s/m3rwjlVZDBmrLfI1UTD4HQ"
+    },
+    {
       "path": "raw/articles/ontology-graph-rag-six-papers-wanzhuan-ai-2026.md",
       "title": "RAG 遇到瓶颈？试试\"本体+知识图谱\"：6 篇前沿论文揭秘检索增强新范式",
       "sourceUrl": "https://mp.weixin.qq.com/s/z5qYrcbkhtHft-55uA_XJQ"
@@ -14781,6 +14821,11 @@
       "path": "raw/articles/open-notebook-open-source-notebook-lm-alternative.md",
       "title": "Open Notebook：开源版 Google Notebook LM 替代品",
       "sourceUrl": "https://mp.weixin.qq.com/s/ACLLu6zMlnEgXcte7v1JYQ"
+    },
+    {
+      "path": "raw/articles/open-source-agent-harness-four-schools-openhands-dsh-pi-hermes-2026-11-09.md",
+      "title": "开源 Agent Harness 四大流派：OpenHands / DSH / Pi / Hermes",
+      "sourceUrl": "https://mp.weixin.qq.com/s/hTMbo3yQinpMD6kXwxhAPA"
     },
     {
       "path": "raw/articles/open-source-projects-leaving-github.md",
@@ -15403,6 +15448,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/_yuGIG6qR22TxdjKBvb7Sg"
     },
     {
+      "path": "raw/articles/palantir-ontology-sql-functions-ga-2026.md",
+      "title": "Palantir 又放大招！本体 SQL 转正，企业 Agent 查数变天",
+      "sourceUrl": "https://mp.weixin.qq.com/s/pChYCWjTGHu6L-qh3vXH_g"
+    },
+    {
       "path": "raw/articles/parallelworld-test-time-scaling-agentic-embodied-reasoning-2026.md",
       "title": "parallelworld-test-time-scaling-agentic-embodied-reasoning-2026",
       "sourceUrl": "https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651070119&idx=3&sn=0b5bcfa3dbbba88884cf9dbff0a0c6a9"
@@ -15516,6 +15566,16 @@
       "path": "raw/articles/personal-ai-memory-system-five-layer-tencent-2026.md",
       "title": "一文搞懂个人AI记忆系统构建全流程",
       "sourceUrl": "https://mp.weixin.qq.com/s/2Kz2JQK1r606S3quiCFUYg"
+    },
+    {
+      "path": "raw/articles/personal-health-agent-anatomy-nature-google-2026-11-09.md",
+      "title": "Nature 正刊：一个真正有用的个人健康 Agent 需要哪些能力（The anatomy of a personal health agent）",
+      "sourceUrl": "https://mp.weixin.qq.com/s/9pfJB8Vmmkj1nuxhadMNDQ"
+    },
+    {
+      "path": "raw/articles/personal-health-agent-nature-full-anatomy-cuj11-tasks-chejianlu-2026-11-10.md",
+      "title": "Nature 个人健康智能体全解剖：四类旅程、三个专家子智能体与 11 个基准任务",
+      "sourceUrl": "https://mp.weixin.qq.com/s/bDg6pKRzLQwHTEOpLdAl3w"
     },
     {
       "path": "raw/articles/personavlm-long-term-personalization.md",
@@ -15671,6 +15731,11 @@
       "path": "raw/articles/pointfive-token-reduction-not-cost-reduction.md",
       "title": "pointfive-token-reduction-not-cost-reduction",
       "sourceUrl": "https://www.pointfive.co/AI-Research"
+    },
+    {
+      "path": "raw/articles/polardb-x-defect-auto-repair-reproduction-gate-aliyun-2026-11-09.md",
+      "title": "稳定复现超 70% 的缺陷：报警到自动修复的 Agent 流水线实践（PolarDB-X）",
+      "sourceUrl": "https://mp.weixin.qq.com/s/4QN1l54pXdXrebdGlDOKzQ"
     },
     {
       "path": "raw/articles/polaris-voyage-research-platform-2026.md",
@@ -16208,6 +16273,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/aA2PFaabKNlDq96jhAdDkQ"
     },
     {
+      "path": "raw/articles/rag-production-failure-modes-chunking-embedding-retrieval-datapithu-2026-11-10.md",
+      "title": "别被 RAG 教程误导：真正难的是生产环境落地",
+      "sourceUrl": "https://mp.weixin.qq.com/s/tEHOKyRJBNvW2ZbaxZQ6Lg"
+    },
+    {
       "path": "raw/articles/rag-vector-knowledge-graph-ontology.md",
       "title": "rag-vector-knowledge-graph-ontology",
       "sourceUrl": "https://mp.weixin.qq.com/s/2pk4Mhr4nLMapJrTqpYX6Q"
@@ -16741,6 +16811,11 @@
       "path": "raw/articles/rsibench-agent-self-improvement-benchmark-arxiv-2026.md",
       "title": "RSIBench：探索 Agent 自我改进的新基础设施",
       "sourceUrl": "https://www.xiaohongshu.com/discovery/item/6a699801000000000f015440"
+    },
+    {
+      "path": "raw/articles/rsiflow-adaptive-self-improvement-workflow-meta-agent-2026-11-10.md",
+      "title": "拆解 RSIFlow 的五轮自进化：改模型、改 Harness，还是改结果？",
+      "sourceUrl": "https://mp.weixin.qq.com/s/PE3z5tYUP41CIyA69edMiw"
     },
     {
       "path": "raw/articles/rsihub-unified-rsi-experiment-benchmark-bytedance-sjtu-berkeley-2026-10-28.md",
@@ -18263,6 +18338,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/qsvb9pscxPHf0J1oWwDa_w"
     },
     {
+      "path": "raw/articles/taobao-ontology-ai-sql-coding-ontsql-agent-2026-11-11.md",
+      "title": "基于本体的 AI 数据研发落地：淘宝行业经营分析实战",
+      "sourceUrl": "https://mp.weixin.qq.com/s/rtav5KBF29LUcfX_2lUPUw"
+    },
+    {
       "path": "raw/articles/taobao-product-domain-agent-architecture.md",
       "title": "万级实时推理的商品领域Agent实践思考和总结",
       "sourceUrl": "https://mp.weixin.qq.com/s/VacWMG2oaAPq4vBsKEf7SA"
@@ -18298,6 +18378,11 @@
       "sourceUrl": "https://mp.weixin.qq.com/s/F-E3K8y-2X-BEyCIfkypJw"
     },
     {
+      "path": "raw/articles/taobao-xiaomi-routing-model-jev-system-one-alibaba-2026-11-10.md",
+      "title": "从淘小蜜分流模型的实践，聊聊 Jev 与 System One",
+      "sourceUrl": "https://mp.weixin.qq.com/s/mB5UfQylI1JPEmdiUx96PQ"
+    },
+    {
       "path": "raw/articles/taobo-multi-agent-agentcore-agentloop-2026-10-15.md",
       "title": "从单点探索到规模化运营：滔搏体育的企业级多智能体实践",
       "sourceUrl": "https://mp.weixin.qq.com/s/VgS9RSRuZKe_9WJIOniapg"
@@ -18306,6 +18391,11 @@
       "path": "raw/articles/taolive-digital-avatar-agent-harness-aware-training-arxiv-2608-15763.md",
       "title": "TaoLive Digital Avatar Agent Technical Report: Training Agents to Evolve with Their Harness",
       "sourceUrl": "https://arxiv.org/abs/2608.15763"
+    },
+    {
+      "path": "raw/articles/taolive-hat-harness-aware-training-practice-taobao-2026-10-09.md",
+      "title": "淘宝直播数字人互动 Harness-Aware Training 实践：让 Agent Model 随 Harness 一起进化",
+      "sourceUrl": "https://mp.weixin.qq.com/s/ajL2P5PY1HcQnJt_RFalnw"
     },
     {
       "path": "raw/articles/tapered-language-models-cosine-width-redistribution-mila-2026.md",
@@ -18441,6 +18531,11 @@
       "path": "raw/articles/tencent-omega-ai-bi-marmos-2026-08-03.md",
       "title": "tencent-omega-ai-bi-marmos-2026-08-03",
       "sourceUrl": "https://mp.weixin.qq.com/s/EF1nVNMhCwYivMFey7uI-g"
+    },
+    {
+      "path": "raw/articles/tencent-ontology-coding-agent-three-layer-graph-2026.md",
+      "title": "不只是Memory：Ontology如何让Coding Agent越用越懂项目？",
+      "sourceUrl": "https://mp.weixin.qq.com/s/2IUREDltOXzXECO7tWIoPA"
     },
     {
       "path": "raw/articles/tencent-ray-k8s-ai-workload-scheduling.md",
@@ -18891,6 +18986,11 @@
       "path": "raw/articles/tmall-ai-coding-practice-team-knowledge-base-npm.md",
       "title": "tmall ai coding practice team knowledge base npm",
       "sourceUrl": null
+    },
+    {
+      "path": "raw/articles/tmall-digital-employee-ai-native-pipeline-conceptual-2026-11-09.md",
+      "title": "数字员工：有关 AI Native 新流水线的思考（协同层 vs 执行层）",
+      "sourceUrl": "https://mp.weixin.qq.com/s/6LZ-rMnT7561TTQ8pb7FOg"
     },
     {
       "path": "raw/articles/tmall-digital-employee-flow-efficiency-collaboration-2026-10-26.md",

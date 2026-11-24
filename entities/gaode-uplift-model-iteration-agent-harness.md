@@ -1,7 +1,7 @@
 ---
 title: "面向复杂算法任务的 AI Agent：高德 Long-Running Harness 架构与 Uplift 模型迭代应用"
 created: 2026-06-09
-updated: 2026-09-07
+updated: 2026-11-24
 type: entity
 tags: [gaode, amap, uplift-model, long-running-agent, harness, durable-execution, critic-agent, self-healing, enterprise-ai, marketing-algorithm, ml-engineering, playwrigh, explicit-handoff, tool-registry, tracing-spans]
 sources:
@@ -138,30 +138,33 @@ L1: 基础设施层 (数据平台、训练平台、Git 存档)
 
 ## 深度分析
 
-### 1. Uplift Model + Agent Harness 的结合
-高德将 uplift model（因果推断中的增量效应模型）与 agent harness 结合——harness 控制实验分配和效果度量，uplift model 评估干预的因果效应。^[raw/articles/gaode-uplift-model-iteration-agent-long-running-harness.md]
+### 1. Uplift 建模：长跑 harness 内的因果增量估计
 
+Uplift 模型回答的是反事实问题——同一用户"发券 vs 不发券"的 GMV 差值。该系统把这条因果估计流水线整体嵌入 Long-Running Harness：Planner 锁定 31 天观测 + 7 天 RCT 样本，Critic 做 treatment 平衡度校验，离线仿真 AUUC 对比 online baseline 通过后才 ACCEPT。harness 不只让 agent 不丢进度，更把"实验设计—执行—度量—决策"固化成可断点续跑、可审计复算的状态机，让原本依赖工程师经验的隐性流程变成显式机器流程。 ^[raw/articles/gaode-uplift-model-iteration-agent-long-running-harness.md]
 
-### 2. 从 A/B 测试到 uplift model
-传统 A/B 测试只看平均效应，uplift model 看个体层面的增量效应——对 agent 系统的个性化优化尤其重要。^[raw/articles/gaode-uplift-model-iteration-agent-long-running-harness.md]
+### 2. 五层架构：实验分配与效果度量的机制保障
 
+L1 基础设施层提供实验的物理执行面（数据平台、训练平台、Git 存档）；L2 长跑引擎层用任务级 append-only 状态日志，把 1-2 天 wall clock 里的任何中断（laptop 睡眠、SSO 过期、kill -9）转成可续跑断点，并用外部任务 ID 而非 hash 去重——规避调度平台部署生效前快照旧 SQL 的重复提交。没有 L2 的持久化语义，26 万训练样本这类长任务根本无法无人值守。 ^[raw/articles/gaode-uplift-model-iteration-agent-long-running-harness.md]
 
-### 3. Harness 作为实验基础设施
-Agent harness 不只控制行为，还作为实验基础设施——控制变量、分配实验组、度量效果。^[raw/articles/gaode-uplift-model-iteration-agent-long-running-harness.md]
+### 3. 完整迭代案例：闭环自审是机制而非叙事
 
+时间线上两次险情全部被机器消化：T+09h laptop 睡眠时该步骤停在 started 未 completed，T+11h 唤醒后凭训练任务 ID 续接已在云上自跑 30 分钟的训练；T+18h SSO 过期由浏览器子 Agent 自动重登续接 CSV 拉取。而美食业务 JOIN key 100% 为空这类"套模板必得 0 行"的静默失败，靠 Critic 的确定性 Python assert（真实 COUNT 行数）而非 LLM-as-judge 拦下，再经 LogTriage 查上游口径、Repair 改 JOIN key，重跑出 7 位数行。42 小时工程师介入 = 0 的前提，是每步判断都落在可机检的真值上。 ^[raw/articles/gaode-uplift-model-iteration-agent-long-running-harness.md]
+
+### 4. 10 个 harness primitives：企业落地的对齐清单
+
+业界（Anthropic 的 harness 实践文章、OpenAI Agents SDK、MCP）已定义好"造 Agent 该有哪些零件"，缺的是企业生产平台上的公开案例。本系统做了诚实 audit 并补齐三项：Explicit Handoff 把 sub-agent 转交变成 journal 里可查的数据结构；MCP-style Tool Registry 用 @tool 装饰器自动注册并暴露 tools/list；Tracing Spans 与 OpenTelemetry 接轨。范式综述见 [[entities/agent-harness-engineering-survey-2026|Agent Harness Engineering Survey 2026]]。 ^[raw/articles/gaode-uplift-model-iteration-agent-long-running-harness.md]
+
+### 5. test-time compute per hypothesis 与 Kaggle 沙盒的分野
+
+原文把系统 framing 为"让 inference 多花一些，换 experiment 少跑几遍"：单条假设 1-2 天无人值守 vs 人工 3-5 天、工程师投入 -67%，本质是算法团队提前享受"2030 年推理占 AI compute 75%"的曲线。与 Kaggle 沙盒比拼单次模型能力不同，生产系统比的是"知道什么时候停下等人"——数据表权限申请这类治理动作主动暂停标记"等审批"。会自治不难，production-grade 难在自治与守规的边界。 ^[raw/articles/gaode-uplift-model-iteration-agent-long-running-harness.md]
 
 ## 实践启示
 
-### 1. Agent 优化：从平均效应到个体效应
-不要只优化 agent 的平均表现——用 uplift model 识别哪些用户/场景从优化中获益最多。^[raw/articles/gaode-uplift-model-iteration-agent-long-running-harness.md]
-
-
-### 2. Harness 内置实验能力
-在 harness 中内置 A/B 测试和 uplift 分析能力——让优化决策基于因果推断而非相关性。^[raw/articles/gaode-uplift-model-iteration-agent-long-running-harness.md]
-
-
-### 3. 迭代速度 > 单次优化幅度
-快速迭代小幅优化比慢速大幅重构更有效——harness 的实验能力支撑快速迭代。^[raw/articles/gaode-uplift-model-iteration-agent-long-running-harness.md]
+1. 每个有副作用的步骤记成 append-only 任务，去重用外部任务 ID 而非 hash——调度平台部署生效前会快照旧 SQL，重复提交会浪费 GPU 配额。 ^[raw/articles/gaode-uplift-model-iteration-agent-long-running-harness.md]
+2. 自审判断交给确定性 Python assert（真实行数/训练指标/评估 CSV），不用 LLM-as-judge——样本量极小时平台会 silent failure 返回 AUC=0.0，LLM judge 会自圆其说。 ^[raw/articles/gaode-uplift-model-iteration-agent-long-running-harness.md]
+3. UI-only 操作备好 Playwright + 三分浏览器子 Agent（Planner/Actor/Validator），成功脚本按"前端版本指纹"缓存回放，网页改版失效就重新生成。 ^[raw/articles/gaode-uplift-model-iteration-agent-long-running-harness.md]
+4. 碰到企业治理动作（如数据表权限申请）主动暂停标记"等审批"并产出申请单，审批后从同一断点续跑——不要让 Agent 自行绕过权限。 ^[raw/articles/gaode-uplift-model-iteration-agent-long-running-harness.md]
+5. 用单条假设迭代周期衡量自动化收益：1-2 天无人值守 vs 人工 3-5 天、工程师投入 -67%，比单次模型分数更接近 harness 的真实价值。 ^[raw/articles/gaode-uplift-model-iteration-agent-long-running-harness.md]
 
 ## 相关实体
 

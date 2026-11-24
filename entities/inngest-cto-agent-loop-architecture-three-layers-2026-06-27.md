@@ -1,7 +1,7 @@
 ---
 title: "Agent Loop 架构三层模型：Loop + Skill + Orchestrator"
 created: 2026-06-27
-updated: 2026-09-07
+updated: 2026-11-14
 type: entity
 tags: [agent-loop, durable-execution, orchestration, skill, checkpoint, self-building-agent, architecture]
 review_value: 8
@@ -130,6 +130,33 @@ Van Horn 框架 Stage 5 的五个挑战：^[raw/articles/inngest-cto-agent-loop-
 - 事后可观测
 
 这不是提示词问题，这是基础设施问题。
+
+## 深度分析
+
+### 三层模型把"状态"从进程内存搬进了执行引擎
+
+while loop 失败的根因不是代码写错，而是它把 loop 的全部状态——执行到哪一步、重试了几次、子任务处于什么状态——都放在进程内存里，进程一死状态清零。三层模型的本质是一次状态归属的迁移：Loop 只保留"心跳 + 决策"，Skill 保留"业务逻辑的步骤划分"，所有可恢复状态交给 Orchestrator 持久化。耐久执行六要素表格中每一项"while loop 为什么不行"，背后都是同一个共同原因。^[raw/articles/inngest-cto-agent-loop-architecture-three-layers-2026-06-27.md]
+
+### Loop 与 Skill 解耦是复利的前提
+
+如果能力写死在 loop 里（提示词内联），每加一个新能力就要改动所有 loop；解耦成独立 skill 后，"系统每学会一个新 skill，每个 loop 的能力都会增强"。独立部署单元还带来第三个红利：skill 可以被 agent 编写并注册——orchestration-aware agent 正是建立在"skill 是可注册资产"这一前提之上，提示词形态的能力做不到这一点。Van Horn 说"loop 是管道，skill 才是资产"，说的就是这次解耦。^[raw/articles/inngest-cto-agent-loop-architecture-three-layers-2026-06-27.md]
+
+### checkpoint 省钱机制的量化直觉
+
+step 级 checkpoint 的省钱价值容易被低估。设一个 loop 含 N 个 LLM 调用步骤：无 checkpoint 时第 N 步失败即重放全部 N 步；有 checkpoint 时只重放失败步。文中给出的量级是单系统 10-30 个 agent 并发运行，一次崩溃的重复开销等于所有 loop 已完成步骤的调用成本之和。当 LLM 调用是成本大头时，checkpoint 就从"正确性功能"升级为"成本控制功能"——两个价值共用同一个机制，这是该设计最经济的地方。^[raw/articles/inngest-cto-agent-loop-architecture-three-layers-2026-06-27.md]
+
+### "uptime ≠ 正确性"划清两种基础设施的边界
+
+容器编排（Kubernetes 式重启重试）解决的是进程级存活，耐久编排解决的是任务级进度：前者重启后从零开始，后者从上一个成功步骤继续。判断一个 agent 系统属于哪一类，只需问一个问题——进程重启后，一个已运行 80% 的 loop 是重新执行前 80%，还是直接执行剩余 20%？答案为前者，说明它只有 uptime，没有正确性。这也是"放进容器里跑"这句话真正的含义边界。^[raw/articles/inngest-cto-agent-loop-architecture-three-layers-2026-06-27.md]
+
+## 实践启示
+
+1. **评估 agent 基础设施先看状态归属**——问"执行到哪一步了这个状态存在哪"，比比较模型能力强弱更能预测系统在故障下的真实表现。
+2. **把可复用能力做成耐久 skill，而不是内联进 loop 的提示词**——只有可独立部署、可重试、可组合的 skill 才能被多个 loop 复用，也才能被 agent 自主编写和迭代。
+3. **LLM 调用密集的 loop 必须开 step 级 checkpoint**——同一机制同时买到正确性和成本控制，崩溃恢复不再为已完成的 LLM 调用重复付费。
+4. **给自建 skill 的 agent 配独立的 review loop**——部署不是终点；读取运行历史、评估表现、迭代 skill 的闭环才是能力爬坡的来源，否则 skill 会停留在首版水平。
+5. **用"凌晨 3 点审计"标准检验可观测性**——能回答"agent 昨晚部署了什么、哪个 step 失败、为什么重试三次"，可观测性才算达到信任层，写代码的不是人时尤其如此。
+6. **换模型不换架构**——把 LLM 当作 loop 内可替换的决策者；验证方法是整个换掉底层模型，确认耐久 skill 的行为不变。
 
 ## 与现有知识的关联
 

@@ -1,7 +1,7 @@
 ---
 title: "Agentic Environment Engineering：Harness 之上下一层门槛"
 created: 2026-06-27
-updated: 2026-09-07
+updated: 2026-11-11
 type: entity
 tags: [agent, environment-engineering, harness, loop-engineering, self-harness, feedback-loop, pomdp, architecture]
 review_value: 8
@@ -128,6 +128,33 @@ Harness 和 Environment 不是替代关系：^[raw/articles/agentic-environment-
 - **Boris Cherny**（Claude Code）：越来越多在写 loop，让 Agent 长时间处理 PR/CI/反馈聚类
 - **Karpathy** autoresearch：给 Agent 一个小而真实的 LLM 训练环境，自动改代码→训练→看指标→保留或丢弃
 - **清华 EurekAgent**：把 CLI agent sessions 放进 prepare-propose-implement 循环，围绕它设计权限工程、产物工程、预算工程、人在环工程
+
+## 深度分析
+
+### 五问是 POMDP 的工程入口
+
+五问正是 POMDP 的工程骨架：Agent 只能基于观察行动，观察却可能失真——输出正常而数据库已被改写，测试通过而失败路径已被删掉。[[concepts/loop-engineering-methodology|Loop Engineering 方法论]]的成立前提，恰是五问都有老实答案。Correctness 居首，因为反馈失真会被循环成倍放大。^[raw/articles/agentic-environment-engineering-jiagoux-2026-06-27.md:21-22,28]
+
+### 四个工程动作是风险递减链
+
+建模→合成→评估→演进是依赖链而非并列清单：合成失真则评估在错误世界上打分，评估带偏则演进把错误沉淀成记忆与训练数据。奖励带偏的六种失败全部发生在演进被放行之后，防线必须前移到合成与评估。[[concepts/agent-sandbox|Agent 沙箱]]对应的正是合成环节：用可控小现场换掉真实环境的昂贵与危险。^[raw/articles/agentic-environment-engineering-jiagoux-2026-06-27.md:25-26,35-39]
+
+### 机制进模型，策略留 Harness，反馈归环境
+
+模型 API 会持续吞掉机制层（结构化输出、工具调用、上下文缓存），但策略层——何时停、何时让人接管——必须留在团队手里；反馈质量只能由环境给出。线索合流的四条路线不约而同把重心挪向循环所依赖的事实源。^[raw/articles/agentic-environment-engineering-jiagoux-2026-06-27.md:20-23,33]
+
+### Self-Harness 的成败前提是环境可信
+
+反馈不可靠时，loop 越勤、Self-Harness 改得越积极，错误被强化得越快。[[concepts/agent-self-improvement-loops|Agent 自我改进循环]]与[[concepts/evaluation-harness-design|评估 Harness 设计]]因此互为上下游：先有可信任的评估，自我改进才有意义。^[raw/articles/agentic-environment-engineering-jiagoux-2026-06-27.md:22]
+
+## 实践启示
+
+1. 动手写 Agent 之前先写小环境契约：契约强迫你在第一行 prompt 之前回答五问。^[raw/articles/agentic-environment-engineering-jiagoux-2026-06-27.md:30-31]
+2. 预算与状态记录最常被删，恰是长循环烧钱与第二天重新摸索的直接解药。^[raw/articles/agentic-environment-engineering-jiagoux-2026-06-27.md:30-31]
+3. 给评估器配反钻规则探针：故意删测试、交空报告，看 Correctness 能否察觉。^[raw/articles/agentic-environment-engineering-jiagoux-2026-06-27.md:35-39]
+4. 合成环境上线前先校准 Fidelity：benchmark 分高不等于生产可用。^[raw/articles/agentic-environment-engineering-jiagoux-2026-06-27.md:28]
+5. 把轨迹沉淀当一等公民：记忆、Skill、训练数据的归档质量决定演进上限。^[raw/articles/agentic-environment-engineering-jiagoux-2026-06-27.md:25-26]
+6. 判断一条 loop 值不值得跑，先审它依赖的事实源：反馈不可信时，跑得越勤错得越快。^[raw/articles/agentic-environment-engineering-jiagoux-2026-06-27.md:22]
 
 ## 与现有知识的关联
 

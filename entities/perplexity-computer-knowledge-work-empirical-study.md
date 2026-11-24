@@ -1,5 +1,4 @@
 ---
-
 title: "Perplexity Computer Empirical Study: How AI Agents Reshape Knowledge Work"
 type: entity
 description: "Perplexity 与 Harvard Business School 联合发表的 Computer agent 真实部署实证研究 (arXiv 2606.07489)。首次全面量化 general-purpose agent vs 对话式 search 在 autonomy、efficiency、scope 三个维度的差异：Computer 平均执行 26 分钟 (vs Search 33 秒)，任务时间减少 87%，成本减少 94%；Computer 用户 59% 工作跨出主职业簇、Bloom Create-level 任务占 50% (vs Search 26%)。为 'agent 对知识工作的影响' 提供首批 HBS-rigorous 的生产数据。"
@@ -8,7 +7,7 @@ source_url:
 arxiv_url:
 tags: [agent, perplexity, perplexity-computer, empirical-study, hbs, productivity, autonomy, knowledge-work, harness, evaluation, multi-domain, harvard]
 created: 2026-06-10
-updated: 2026-09-10
+updated: 2026-11-24
 review_value: 9
 review_confidence: 8
 review_recommendation: strong
@@ -30,14 +29,20 @@ review_category: practice
 
 ## 深度分析
 
-### 1. 知识工作的实证研究
-Perplexity 的实证研究提供了 AI 对知识工作影响的量化数据——不只是"AI 有用"的定性断言，而是具体的效率提升、质量变化和使用模式数据。 ^[raw/articles/perplexity-computer-knowledge-work-empirical-study.md]
+### 1. 48x 自主执行：agent 与 assistant 的分界线
+10,000 对 matched-pair（相同初始 query）下，Computer 平均每 session 执行 26 分钟机器工作 vs Search 33 秒（48x）；中位数 9 分钟 vs 14 秒（40x），18 个领域全部落在 26-75x 区间，均值远高于中位数说明长尾复杂任务多。更长自主并未转化为放弃（user stop event 3.7% vs 3.4%），而 13% Computer query 触发 pause-for-user checkpoint（Search 0.3%）——自主运行是有意设计的 checkpoint 架构，不是失控。 ^[raw/articles/perplexity-computer-knowledge-work-empirical-study.md:71-95]
 
-### 2. Computer use vs structured API 的效率差异
-与 [[computer-use-45x-more-expensive-than-structured-apis]] 的结论一致——结构化 API 调用在知识工作场景中比 computer use（模拟人类操作）效率高得多。 ^[raw/articles/perplexity-computer-knowledge-work-empirical-study.md]
+### 2. 87% 时间 / 94% 成本：三种独立估计交叉验证
+tool-based 估计把 Computer tool calls 分为「Search 已覆盖」与「Do（人工须手动执行）」两类：Search + Human 平均 269 分钟 vs Computer + Human 36 分钟（87% 时间缩减）；叠加 BLS OEWS May 2025 领域工资后成本缩减 94%。LLM-based 估计（84% 时间 / 93% 成本）与 25 名用户访谈（5x-300x，中位 25x ≈ 96% 缩减）方向一致；break-even 显示 professional 需在 14-24 分钟（中位 18）内完成全部手动步骤才能持平，即使 per-tool time 高估 8x 或 oversight time 低估 12x，Computer 仍在 18 域全领先。 ^[raw/articles/perplexity-computer-knowledge-work-empirical-study.md:103-145]
 
-### 3. 知识工作者的行为变化
-AI 不只提升效率，还改变知识工作者的行为模式——从"搜索信息"转变为"验证 AI 提供的信息"，从"写初稿"转变为"编辑 AI 生成的初稿"。 ^[raw/articles/perplexity-computer-knowledge-work-empirical-study.md]
+### 3. 任务范围双向扩张：跨职业 59% + Create-level 50%
+横向：8 职业簇 8,000 用户中，Computer 用户 59% 的工作跨出主职业簇（Search 50%），增幅集中在 Management/Entrepreneurship、Digital Technology、Arts/Design、Healthcare；Search 的跨职业流量集中涌向 Digital Technology，Computer 则把工作 delegate 到更多原本需要 specialist 的域。纵向（认知层级）：Bloom higher-order cognition 76% vs 55%，Create-level 50% vs 26%（Search 大量停在 Remember-level 事实查询），abstract non-routine 71% vs 53%；每任务平均需 2.40 个 O*NET Knowledge areas vs 1.74（+38%），需 ≥3 个 knowledge domains 的比例 51% vs 17%。 ^[raw/articles/perplexity-computer-knowledge-work-empirical-study.md:147-177]
+
+### 4. Computer-only 任务：autonomous execution 的价值落点
+同一批 dual-product 用户中，23% Computer query 含至少一个 Search 完全不出现的 O*NET Task Statement（放宽到 ≤5 次出现为 38%，plateau 约 41%），集中在 software/web development、documentation production、data visualization/graphics——「Search 解释；Computer 产出」。结合任务类别分布（Research and Analysis 25.8%、Document and Asset Creation 18.6%），agent 价值主要在生成交付物而非信息检索。 ^[raw/articles/perplexity-computer-knowledge-work-empirical-study.md:185]
+
+### 5. 质量与交互循环重构：自主提升未牺牲质量
+matched multi-turn 样本中，meaningful next-turn dissatisfaction 为 Computer 1.3% vs Search 2.9%（55% 降低）；follow-up 任务推进率几乎相同（52.7% vs 52.9%），但构成改变——Computer 用户转向 review/revise（24.6%）与 extensions（14.2%），Search 偏 confirmations/retry/format 短指令（11.6% vs 9.9%）；connector call 达 12x 差距（1.19 vs 0.10 calls/session）。agent 把交互从「digest-and-execute」短循环重构为「review-and-extend」长循环。 ^[raw/articles/perplexity-computer-knowledge-work-empirical-study.md:91-95]
 
 ## 实践启示
 
@@ -49,6 +54,21 @@ AI 时代，验证信息的准确性和完整性比从零生成信息更重要�
 
 ### 3. 用实证数据驱动 AI 采用策略
 不要基于假设做 AI 采用决策——用 A/B 测试和实证数据量化实际影响。 ^[raw/articles/perplexity-computer-knowledge-work-empirical-study.md]
+
+### 4. 评估 agent 真实价值
+不要看 productivity 倍数，要看 autonomy x efficiency x scope 三维。Computer 48x 自主执行 + 87% 时间缩减 + 50% Create-level 三者一起才能证明 agent 价值。 ^[raw/articles/perplexity-computer-knowledge-work-empirical-study.md]
+
+### 5. 跨职业 delegate 是 agent 真正的 leverage
+59% 跨主职业簇 + 51% >=3 knowledge domains — agent 解放的是 specialist boundary，不是简单提速。 ^[raw/articles/perplexity-computer-knowledge-work-empirical-study.md]
+
+### 6. Operator -> Supervisor 范式迁移
+工程团队需要重新设计 user 交互，从「给工具给用户」转向「给 supervisor dashboard 给用户」(context / checkpoint / extension API)。 ^[raw/articles/perplexity-computer-knowledge-work-empirical-study.md]
+
+### 7. Pause-for-user checkpoint 设计
+13% pause 率是合理的；agent 设计应在关键决策点显式请求 user approval，而不是简单自动执行。 ^[raw/articles/perplexity-computer-knowledge-work-empirical-study.md]
+
+### 8. Connector call 重要性
+Computer 1.19 connector calls / session 是 agent 价值的关键 — agent 不只是 LLM + 内部 tool，而是要 reach into 用户的实际工作 services。 ^[raw/articles/perplexity-computer-knowledge-work-empirical-study.md]
 
 ## 相关实体
 - [[entities/perplexity-search-as-code-generation]]
@@ -234,14 +254,6 @@ User interviews： ^[raw/articles/perplexity-computer-knowledge-work-empirical-s
 | 数据 | 综合多源文献 | 105 天生产数据 + 8 域样本 |
 | 输出 | harness 设计原则 | agent 行为 / 经济量化 |
 
-## 实践启示
-
-1. **评估 agent 真实价值**：不要看 productivity 倍数，要看 autonomy x efficiency x scope 三维。Computer 48x 自主执行 + 87% 时间缩减 + 50% Create-level 三者一起才能证明 agent 价值。 ^[raw/articles/perplexity-computer-knowledge-work-empirical-study.md]
-2. **跨职业 delegate 是 agent 真正的 leverage**：59% 跨主职业簇 + 51% >=3 knowledge domains — agent 解放的是 specialist boundary，不是简单提速。 ^[raw/articles/perplexity-computer-knowledge-work-empirical-study.md]
-3. **Operator -> Supervisor 范式迁移**：工程团队需要重新设计 user 交互，从「给工具给用户」转向「给 supervisor dashboard 给用户」(context / checkpoint / extension API)。 ^[raw/articles/perplexity-computer-knowledge-work-empirical-study.md]
-4. **Pause-for-user checkpoint 设计**：13% pause 率是合理的；agent 设计应在关键决策点显式请求 user approval，而不是简单自动执行。 ^[raw/articles/perplexity-computer-knowledge-work-empirical-study.md]
-5. **Connector call 重要性**：Computer 1.19 connector calls / session 是 agent 价值的关键 — agent 不只是 LLM + 内部 tool，而是要 reach into 用户的实际工作 services。 ^[raw/articles/perplexity-computer-knowledge-work-empirical-study.md]
-
 ## 局限
 
 1. **观察窗口早，early adopter skew AI-native** — patterns 可能随主流用户进入而变化 ^[raw/articles/perplexity-computer-knowledge-work-empirical-study.md]
@@ -256,4 +268,3 @@ User interviews： ^[raw/articles/perplexity-computer-knowledge-work-empirical-s
 - Perplexity Computer 产品页：[https://www.perplexity.ai/products/computer](https://www.perplexity.ai/products/computer)
 - 同源前期工作 (Yang et al. 2025)：arXiv 2512.07828 — 「The Adoption and Usage of AI Agents: Early Evidence from Perplexity」
 - 同作者 HBS 系列：Brynjolfsson, Li, Raymond 2025 (QJE)；Cui et al. 2026 (Management Science)；Demirer/Musolff/Yang 2026 (NBER WP 35275)
-

@@ -1,7 +1,7 @@
 ---
 title: "OmniShow：极简干预统一多模态可控视频生成（ICML 2026）"
 created: 2026-08-21
-updated: 2026-09-10
+updated: 2026-11-11
 type: entity
 tags: [video-generation, multimodal, diffusion, paperweekly, icml-2026, architecture, generalist]
 sources: [raw/articles/omnishow-unified-multimodal-video-generation-icml-2026]
@@ -55,6 +55,35 @@ text prompt 负责全局语义与场景，reference images 锚定人物身份与
 ## 意义
 
 OmniShow 验证的不是具体技巧，而是一种设计哲学：面对能力越来越强的 base model，稀缺的不是"再加一个新结构"的勇气，而是克制地判断什么该改、什么不该改。先读懂模型原有输入结构，沿熟悉路径接入新条件，再用异构数据与分阶段训练把专才熔成通才。"少即是多"在这里是同时兑现参数效率、训练稳定性、任务统一性与应用可组合性的工程方法论。^[raw/articles/omnishow-unified-multimodal-video-generation-icml-2026.md]
+
+## 深度分析
+
+OmniShow 验证的不是模块，而是一种对 base model 已有资产的定价方式：预训练攒下的生成先验是主要资产，每个新结构都要论证为何值得动它。^[raw/articles/omnishow-unified-multimodal-video-generation-icml-2026.md:16-20]
+
+### 与"缺什么补什么"路线的分野
+
+惯性做法是给每类条件挂一套新网络，代价是先验在反复改造中被稀释。^[raw/articles/omnishow-unified-multimodal-video-generation-icml-2026.md:16-18] OmniShow 的对照不是"更少的模块"而是"更少的决定"：reference 与 pose 走原生 channel-concat，模型看到的输入仍近似熟悉的 I2V，task adaptation gap 压到极小。^[raw/articles/omnishow-unified-multimodal-video-generation-icml-2026.md:68-72] 成本上兑现：12.3B、音频模块仅增约 2.5%，对照 HuMo 为音频付出 +21.4%、体量 17B。^[raw/articles/omnishow-unified-multimodal-video-generation-icml-2026.md:140]
+
+### weight merging 涌现：可控性可以"长"出来
+
+先分训 R2V/A2V 两个专才再合并：audio modules 继承自 A2V，其余按 0.6/0.4 插值——偏向 A2V 因音画同步对权重扰动更敏感。^[raw/articles/omnishow-unified-multimodal-video-generation-icml-2026.md:106-108] 合并那一刻尚未训练 RA2V，zero-shot joint reference-audio 能力已经出现。^[raw/articles/omnishow-unified-multimodal-video-generation-icml-2026.md:112-114] 对多任务的启示：任务间公共基底可能比想象中大，专才练强后低损耗合流可能胜过从头联训。
+
+### gate norm 作为架构诊断信号
+
+音频 attention 一上来强度过大，会扰乱 pretrained feature distribution；OmniShow 让 gating vector 从 near-zero 缓慢生长，gate norm 反向成为诊断工具——揭示音频对各模块影响强弱，据此只在 dual-stream blocks 插入。^[raw/articles/omnishow-unified-multimodal-video-generation-icml-2026.md:88-94] 把"该插哪、插多重"从直觉变成可测量信号，是被低估的工程贡献。
+
+### 评测里最稀缺的两类证据
+
+HOIVG-Bench 五维评测专门拆穿单项偏科。^[raw/articles/omnishow-unified-multimodal-video-generation-icml-2026.md:122-124] 最有分量的是两处：RA2V 下音频加入后同步、一致性、画质同时提升而非此消彼长^[raw/articles/omnishow-unified-multimodal-video-generation-icml-2026.md:136]；EMTD 上 A2V 单项未被统一削弱，Sync-C 6.49、AES 1.51 全场最高^[raw/articles/omnishow-unified-multimodal-video-generation-icml-2026.md:146]——统一性不以牺牲单项为代价。
+
+## 实践启示
+
+1. **扩展基座先读输入结构**：新条件尽量沿 base model 熟悉的路径接入，把改动压到最小再谈效果。^[raw/articles/omnishow-unified-multimodal-video-generation-icml-2026.md:64-72]
+2. **为保真写显式目标**：想让被动条件变成主动目标，就为它设重建类损失（Reference Reconstruction Loss）。^[raw/articles/omnishow-unified-multimodal-video-generation-icml-2026.md:76-78]
+3. **连续模态用门控缓入**：新模块影响从 near-zero 初始化缓起，并把门控范数当诊断信号决定插入位置与强度。^[raw/articles/omnishow-unified-multimodal-video-generation-icml-2026.md:88-94]
+4. **异构数据分层提纯、分阶段训练**：完整多模态样本稀缺；先分训专才、合并提纯，pose 最后引入以免过早依赖强监督。^[raw/articles/omnishow-unified-multimodal-video-generation-icml-2026.md:100-110]
+5. **把 weight merging 当能力组合器**：专才合并可能涌现联合能力，值得主动试探而非默认重训。^[raw/articles/omnishow-unified-multimodal-video-generation-icml-2026.md:112-114]
+6. **评测须能拆穿偏科**：多条件任务按维度分别度量，防止单项高分、协同崩坏被总分掩盖。^[raw/articles/omnishow-unified-multimodal-video-generation-icml-2026.md:122-124]
 
 ## 相关实体
 

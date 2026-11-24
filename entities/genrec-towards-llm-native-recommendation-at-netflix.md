@@ -1,7 +1,7 @@
 ---
 title: "GenRec: Netflix LLM 原生推荐排序器"
 created: 2026-07-31
-updated: 2026-09-07
+updated: 2026-11-10
 type: entity
 tags: [recommendation-system, llm, context-engineering, post-training, netflix, ranker, vllm, production-system, scaling-laws]
 sources: [raw/articles/genrec-towards-llm-native-recommendation-at-netflix]
@@ -48,6 +48,33 @@ GenRec 架构 = decoder-only Transformer backbone + catalog-aware ranking head�
 ## 范式转移：LLM-Native 推荐
 
 GenRec 不只是"换一个 Transformer"，而是指向推荐系统的四个方向性变化：①从 feature engineering 到 context engineering——"prompt 就是新的 feature vector"；②从定制架构（two-tower、DLRM）到共享 foundation backbone——差异化来自数据与转写策略、post-training 目标与 reward、推理优化；③scaling laws 成为设计指南——LLM backbone 下更多数据与更大模型一致地提升质量；④从 RecSys 基础设施到 LLM 基础设施——GPU 加速、vLLM/Triton、批量与缓存，推荐 serving 栈越来越像通用 LLM 栈。^[raw/articles/genrec-towards-llm-native-recommendation-at-netflix.md]
+
+## 深度分析
+
+### 消融数据揭示的收益结构
+
+GenRec 的收益是三层叠加：Phase-1 领域适应相对开源基座带来约 10–20% 离线提升，Phase-2 排序后训练再加 35–50%，且 Phase-2 收益随 Phase-1 陈化扩大——两周后约 80%。^[raw/articles/genrec-towards-llm-native-recommendation-at-netflix.md:180-181] 两阶段频率差异本质是管理"陈化成本"：口味漂移越快，高频后训练价值越大。数据与模型 scaling 在 ~1B/~10B 骨干上曲线相似、仅绝对 MRR 不同^[raw/articles/genrec-towards-llm-native-recommendation-at-netflix.md:171-174]，与 [[concepts/scaling-laws|Scaling Laws]] 的预期一致。
+
+### 成本-质量三角的工程解法
+
+Serving 成本由模型大小、context 长度与推理模式三因子主导^[raw/articles/genrec-towards-llm-native-recommendation-at-netflix.md:143]，GenRec 对每个因子各给一解：更小/蒸馏骨干配更大数据、激进 context 压缩、prefill-only 单次前向打分全部候选^[raw/articles/genrec-towards-llm-native-recommendation-at-netflix.md:145-147]。Context 维度有量化证据：清洗压缩事件→找 MRR-事件数 elbow point→优化冗长度，三步把 token 砍到约 1/3 而离线指标几乎无退化^[raw/articles/genrec-towards-llm-native-recommendation-at-netflix.md:193-201]。成本近似正比于 context 长度——context 工程即成本工程。
+
+### 训练与推理的解耦设计
+
+训练时把交互日志转成对话以支撑 LM 目标与语言理解；推理时只做 verbalization + catalog-aware scoring head，完全不解码 assistant 消息^[raw/articles/genrec-towards-llm-native-recommendation-at-netflix.md:76-85]。Scoring head 以池化隐状态与条目 embedding 组合打分、全参数联合训练、超大目录退到 sampled softmax^[raw/articles/genrec-towards-llm-native-recommendation-at-netflix.md:131-139]——生成式 LLM 由此转为判别式排序器而不牺牲语义空间。prefill-only 与 [[entities/ai-infra-llm-efficient-inference-vllm|LLM 高效推理与 vLLM]] 的 serving 栈直接对接。
+
+### 判别式对齐而非完整 RL
+
+对齐业务目标（内容类型再平衡、长期满意度）走 reward-weighted loss：独立 reward 模型为每个样本给标量权重，高价值交互加权、低价值降权，比完整 RL 更简单且更省成本^[raw/articles/genrec-towards-llm-native-recommendation-at-netflix.md:114-125]。GRPO 有额外收益但因成本留给未来工作，与 [[concepts/llm-rl-algorithms-ppo-dpo-grpo-marl-evolution-2026|LLM RL 算法演化]] 中"方法越强成本越陡"的权衡一致：亿级样本高频刷新场景里，标量加权落在性价比拐点内。
+
+## 实践启示
+
+1. 把 context window 当新 feature budget：先做信号分级——高信号保留全细节、低信号省略、重复压缩、冷启动展开——再谈模型选型。^[raw/articles/genrec-towards-llm-native-recommendation-at-netflix.md:91-96]
+2. Context 优化从 elbow point 入手：MRR-事件数曲线找拐点再调冗长度，实测砍约 1/3 token 无离线退化，成本近似正比省下。^[raw/articles/genrec-towards-llm-native-recommendation-at-netflix.md:193-201]
+3. 两阶段频率分离：Phase-1 低频维护共享领域骨干，Phase-2 高频追新；Phase-2 收益随陈化扩大（两周后约 80%），排期应显式建模陈化成本。^[raw/articles/genrec-towards-llm-native-recommendation-at-netflix.md:180-181]
+4. 对齐优先 reward-weighted 而非完整 RL：标量权重即可覆盖业务再平衡与长期满意度，GRPO 等留给预算充足且收益明确的场景。
+5. 判别式任务用 prefill-only serving：打分/排序不需自回归解码，一次前向打分整个候选集是成本可行前提。
+6. 数据效率来自领域适应而非任务标签：10–40× 更少 Phase-2 标签追平产线排序器，冷启动先投领域适应预训练再投任务标注。^[raw/articles/genrec-towards-llm-native-recommendation-at-netflix.md:180-187]
 
 ## 相关实体
 

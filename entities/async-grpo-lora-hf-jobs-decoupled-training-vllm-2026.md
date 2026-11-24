@@ -1,7 +1,7 @@
 ---
 title: "Async GRPO with LoRA across HF Jobs：用 Storage Bucket 替代 NCCL 的解耦式异步 RL 训练"
 created: 2026-09-14
-updated: 2026-09-14
+updated: 2026-11-11
 type: entity
 tags: [post-training, grpo, lora, rl, vllm, inference, distributed-training, decoupled-training, huggingface, trl]
 confidence: 0.75
@@ -67,6 +67,32 @@ TRL 与 vLLM 都不需要为此改动：trainer 写 `/lora/<run>/.vllm_lora/`，
 - **Storage Bucket 当共享 FS** 是对 NCCL 的工程替代——牺牲跨节点通信，换取 Job 级别的部署自由（Job 之间不共享 localhost、没有共享本地盘，也无法跨节点通信）；
 - **版本化 adapter 名 + max_staleness+2 槽位** 是正确性约束，不是性能调优；
 - **proxy** 承担两件事：按 KV prefix 亲和路由 rollout、广播 adapter 更新。
+
+## 深度分析
+
+### KV prefix 亲和路由把 prefill 变成可复用资产
+
+路由器跟踪各 replica 的 16-token block hash，链式哈希以 adapter 名为种子：v3 缓存对 v4 永不命中，正确性与版本化命名闭环。公共前缀按 fan-out 剔除（多后继或全员持有即公共）；特定 block 最多的 replica 落后 ≤8 请求得 affinity，超限 spill，无匹配则轮询。64,728 rollouts 实测 affinity 84.5%、spill 1.3%、unmatched 14.2%，距 12.5% 理论下限仅 1.7pp，[[concepts/inference-optimization|推理侧优化]]空间接近榨干。^[raw/articles/async-grpo-lora-hf-jobs-decoupled-training-vllm-2026.md]
+
+### 一对相反指标定责，五轮迁移链
+
+`rollout_wait_s` 与 `backpressure_s` 此消彼长：满队列＋零等待＋高背压即训练慢，空队列＋等待上升即生成慢。Run 1 即样本：22.9s step 中 fwd+bwd 占 96%，队列钉在 476/512，两个 vLLM 实际没跑满。^[raw/articles/async-grpo-lora-hf-jobs-decoupled-training-vllm-2026.md] Run 2 只改 packing（samples/row 1→13），step 23s→5.9s、MFU 3.9%→19%，生成吞吐 4.6k→25k tok/s——vLLM 未动：慢下游掩盖上游真实性能。^[raw/articles/async-grpo-lora-hf-jobs-decoupled-training-vllm-2026.md] Run 3 关掉默认开启的 gradient checkpointing（16k 行仅 25GB），fwd+bwd 5.6→4.6s，但同步占比 8%→25%。^[raw/articles/async-grpo-lora-hf-jobs-decoupled-training-vllm-2026.md] Run 4 加第三个 replica 几乎无效：`max_inflight_tasks=128` 是 worker 全局上限，且 1.5B 在 H200 上 43 与 130 并发成本相近；Run 5 抬到 384 才兑现 3.9 倍加速，500 步 53 分钟。^[raw/articles/async-grpo-lora-hf-jobs-decoupled-training-vllm-2026.md]
+
+### 正确性余量
+
+五轮 mean staleness 1.5→2.0（上限 4）、ratio 0.9993–1.0004、126 次同步零失配：激进并发未侵蚀 on-policy 性质，奖励曲线与 Run 1 基本重合。^[raw/articles/async-grpo-lora-hf-jobs-decoupled-training-vllm-2026.md]
+
+### all-or-nothing 广播
+
+adapter 广播按 all-or-nothing：mount 滞后仅重试该 replica，其余失败即回滚——policy 名要么全网一致要么不存在，proxy 因此可伪装成 DP=1 单 server，TRL 自动选择 adapter-only 同步。^[raw/articles/async-grpo-lora-hf-jobs-decoupled-training-vllm-2026.md]
+
+## 实践启示
+
+1. 先读仪表盘再动代码：`rollout_wait_s` 与 `backpressure_s` 十分钟内定责瓶颈，五轮实验每轮始于上一轮读数。^[raw/articles/async-grpo-lora-hf-jobs-decoupled-training-vllm-2026.md]
+2. 小模型配大 GPU 时 batch=1 必然 latency-bound：packing 把 samples/row 提到 13 即得约 4 倍提速，不改模型代码。
+3. 对省内存默认值保持警惕：checkpointing 在装得下激活的小模型上是纯浪费，关掉后同步占比 25%。
+4. 客户端并发上限可能才是隐形瓶颈：第三个 replica 白加，直到 inflight 128→384 才兑现 3.9 倍加速——先排自家常量再扩硬件。
+5. 多 replica 状态变更必须 all-or-nothing：部分成功即回滚，否则同一 policy 名指向不同权重且 trainer 无从察觉。
 
 ## 相关
 

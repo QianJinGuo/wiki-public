@@ -1,7 +1,7 @@
 ---
 title: "ES 做 Agent 记忆层，召回率0.89"
 created: 2026-07-01
-updated: 2026-09-07
+updated: 2026-11-24
 type: entity
 tags: [agent, memory, elasticsearch, retrieval, hybrid-search, atlas]
 source: "[[raw/articles/es-agent-memory-layer-atlas-elasticsearch-2026]]"
@@ -35,17 +35,21 @@ review_category: practice
 
 ## 深度分析
 
-本文的核心贡献不在于"用 ES 做记忆"这个选择，而在于**分型 + 混合 + 生命周期**三位一体的架构设计。它将 Agent 记忆系统从"KV 存储 + 最近 N 条"的朴素模型提升到了信息检索系统的高度。^[raw/articles/es-agent-memory-layer-atlas-elasticsearch-2026.md]
+### 分型是把生命周期编码进存储层
 
-与同类方案的对比：
-- **Atlas（本文）**：ES 三索引 + BM25+dense 混合 + reranker + consolidation — 工程成熟度高，多租户场景最自然
-- **GBrain**：Markdown + Git 做存储，P@5=49.1%, R@5=97.9% — 可读性优先，适合个人助理，不适合高频写入
-- **Mem0 / Letta**：向量数据库 + 基础管理 — 有向量检索但无分型生命周期
-- **LangGraph**：状态机快照 — 适合工作流重放而非跨会话知识查询
+四种索引的本质差异不在字段多少，而在三组互斥的生命周期参数：episodic 只写不改、以 timestamp 为衰减源；semantic 低频写高频更、以 last_used_at 为衰减源并维护 use_count 与 supersession 链；procedural 带 success/failure 计数器且衰减恒为 1.0 豁免；catalog 干脆去掉 user_id 走公共货架。原文对"为什么不能合并成一个索引"的论证比结论更有价值：合并后 Painless decay_script 必须为不同衰减源写 if-else 分支，三套互斥的 update pattern 硬叠在一起，而 ES 的 schema-on-write mapping 也装不下"有的索引有 superseded_by、有的没有"这种差异——要么全量字段带大量 null，要么 nested 结构让查询复杂度暴涨。更深一层的启示是衰减源的选择编码了一种信息观：semantic 用 last_used_at 而非 timestamp，等于承认"信息的衰减驱动力是它有多频繁被需要，不是它有多旧"。[[concepts/memory-consolidation-decay]] 与 [[concepts/episodic-vs-semantic-memory-agent]] 分别从巩固机制与记忆类型学的角度印证了这套分型。^[raw/articles/es-agent-memory-layer-atlas-elasticsearch-2026.md]
 
-三索引分型的思路与 [[entities/harness-engineering]] 中的分层思想一致，都是将不同生命周期的信息用不同的策略管理。^[raw/articles/es-agent-memory-layer-atlas-elasticsearch-2026.md]
+### 混合召回的价值结构：两条腿各补对方的盲区
 
-文章末尾提出的三个通用设计原则值得反复读：衰减曲线是领域决策不是技术参数、混合检索 BM25+vector 互补不二选一、后台提炼和矛盾处理是必须的非可选。^[raw/articles/es-agent-memory-layer-atlas-elasticsearch-2026.md]
+单腿数字 dense 0.845、BM25 0.708、混合 0.889、reranker 单点贡献 0.238 的正确读法，不是"dense 为主、BM25 辅助"，而是两条腿为不同查询形态而设：BM25 抓版本号/错误码/人名这类精确 token，dense 抓"上次说的那个数据库偏好"这种零词法重叠的语义意图。Verbatim Pre-Recall 正是从这个结构推导出的设计——在 LLM 调用前用用户原话跑 BM25，因为 LLM 会把 "postgres v15.3 + pgvector 0.5.1" 泛化成 "PostgreSQL数据库"，恰好毁掉只有 BM25 能匹配的那部分 token；ablation 进一步证明 query expansion 反而降分，因为 paraphrase 提供的信息两条腿已经各自覆盖。RECALL_OVER_FETCH_K=80 则划定了 reranker 的能力边界：重排器只能重排进池的候选，K=10 时 consolidation 产生的近重复事实可能把 gold doc 挤出视野——召回上限在候选生成阶段就已注定。
+
+### 把召回率当成可回归的 CI 指标
+
+168 QA、3 个 persona、各约 250 条文档的评测集，配合 R@10≥0.85 / R@5≥0.75 / leaks=0 的 CI gate（Atlas 实测 0.89），让"记忆好不好"从体感变成回归测试；评测期间关闭 use_count 更新以保证可复现，这个细节说明作者把评测确定性放在了在线指标的真实性之上。同样工程化的是降级路径：cross-encoder 失败时不静默，记 error 日志并回退到 RRF 顺序——检索链路的每个环节都假设自己会挂。文章反复强调 Atlas 的数字只是参考值，正确用法是在自己集群上跑 BM25-only / dense-only / hybrid / no-reranker 四组 ablation，看每条腿在自己数据上的贡献分布；这种"别信我的数字，信你的实验"的姿态，与 [[entities/agent-memory-evaluation-landscape-taobao-survey]] 对记忆评测方法学的梳理相呼应。^[raw/articles/es-agent-memory-layer-atlas-elasticsearch-2026.md]
+
+### 生命周期闭环：提炼与矛盾处理是检索质量的隐性前提
+
+Consolidation 把原始事件转化为稳定事实——没有这一步，语料就是越长越大的日志文件，events-to-facts 比例失衡后，BM25 和 reranker 面对海量噪声文档的召回质量会急剧下降。Soft-supersession 补上非破坏性更新：旧事实永不删除（审计需要）但召回默认过滤（业务需要），链式标记支持任意长度追溯，harsh 矛盾（用户明确否认）对新事实扣 0.1 置信度直到后续交互再确认。两者的成本模型同样现实：每回合跑 consolidation 使 LLM 调用翻倍，产品场景应转夜间日批、接受约 24h 新鲜度损失；20 人内部工具场景直接砍掉 consolidation 改手工标记——自动提炼是为"用户不可见记忆管理"设计的，用户愿意配合标记时它并非必选项。这正是 [[concepts/when-not-to-memory-architecture]] 的核心论点：记忆组件的取舍取决于场景而非技术先进性。对照 GBrain 的 Markdown+Git 路线（P@5 49.1%、R@5 97.9%，人可读但 Git 不耐高频写入），分界线更清晰：个人助理信任优先选可读存储，多租户产品隔离优先选 ES 原生 DLS。这与 [[entities/harness-engineering]] 的分层思想一致：生命周期不同的信息，不该共享同一套管理策略。^[raw/articles/es-agent-memory-layer-atlas-elasticsearch-2026.md]
 
 ## 实践启示
 
@@ -54,6 +58,9 @@ review_category: practice
 - REFRESH=True（同轮可见）在生产场景换 async indexing + just-written register
 - 衰减源的优先级高于衰减值：sematic 用 last_used_at 而非 timestamp
 - Ablation 是评估每条腿贡献的唯一可靠方式 — 不要相信架构师的直觉，要相信 CI gate
+- RECALL_OVER_FETCH_K 决定召回上限：reranker 救不回没进候选池的 gold doc，consolidation 近重复多的语料要加宽候选池
+- 预召回喂用户原话不喂 LLM 改写：版本号/错误码被泛化掉的那一刻 BM25 腿就废了，query expansion 已被 ablation 证伪
+- consolidation 按场景取舍：每回合跑翻倍 LLM 成本，产品转夜间日批，20 人以下小团队手工标记更划算
 
 ## 相关实体
 

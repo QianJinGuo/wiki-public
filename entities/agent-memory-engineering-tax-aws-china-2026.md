@@ -9,7 +9,7 @@ author: AWS China Blog 编辑部
 publish_date: 2026-06-05
 ingested: 2026-06-05
 created: 2026-06-05
-updated: 2026-09-07
+updated: 2026-11-24
 review_value: 8
 review_confidence: 7
 review_recommendation: strong
@@ -168,14 +168,21 @@ Bedrock Prompt Caching 要求 **System Prompt 前缀逐字节匹配**。记忆�
 
 ## 深度分析
 
-### 1. Agent 记忆的工程税
-Agent memory 不是免费的——每增加一层记忆（短期→长期→元认知）都有工程成本：存储成本、检索延迟、一致性维护、过期清理。这篇文章量化了这些"记忆工程税"。 ^[raw/articles/存之有序治之有矩agent-记忆系统的工程实践与演进.md]
+### 1. 四条写入路径的哲学分叉：谁来回答"这条值得留吗"
 
-### 2. 与 Hermes 三层记忆架构的对比
-Hermes 的三层记忆（working set → session → persistent）与本文的短期→长期→元认知映射一致——核心权衡是"记忆深度"vs"工程税"。 ^[raw/articles/存之有序治之有矩agent-记忆系统的工程实践与演进.md]
+四条路径的分歧在判断者是谁，与 [[concepts/agent-memory-lifecycle-philosophies|记忆生命周期哲学]] 相互印证。Mem0 v2 双 LLM（提取+决策）语义上最鲁棒——能识别"我喜欢 Python"与"我讨厌 Python"是语义相反而非相似——代价是每次写入两次 LLM 调用，tradeoff 是"准确率 × 成本"；v3（2026-04）改 Single-pass ADD-only，决策下放检索层但哲学未变。OpenClaw Dreaming 反其道：Light→REM→Deep 后台 sweep（默认 cron `0 3 * * *`、opt-in 关闭），Deep 用六维权重（Relevance 0.30 / Frequency 0.24 / Query diversity·Recency 各 0.15 / Consolidation 0.10 / Conceptual richness 0.06）+ minScore/minRecallCount/minUniqueQueries 三重硬门槛做零 LLM 成本晋升，但权重被官方定为 internal details，用户级只暴露 enabled 和 cron 两个键，调参即二次开发。AgentCore Memory 把判断抽象成四种内置策略（Semantic/Summary/UserPreference/Episodic），统一 Extraction→Consolidation 流水线，覆写仅限 system prompt 指令且启用后 LLM 调用改由用户账号计费。第四条（workload-feedback，LinkedIn HLTM）不预判"什么重要"，从历史 query 分布学习，消融显示去掉该机制召回准确率降约 10 个百分点。^[raw/articles/存之有序治之有矩agent-记忆系统的工程实践与演进.md:128-201]
 
-### 3. 中国 AI 生态的 memory 实践
-AWS 中国团队在 agent memory 工程上的实践反映了中国的特殊情况：数据本地化要求影响记忆存储位置，合规要求影响记忆内容过滤。 ^[raw/articles/存之有序治之有矩agent-记忆系统的工程实践与演进.md]
+### 2. Prompt Cache 冲突的量化代价与"写入≠生效"
+
+Cache 冲突本质是计费问题：cache hit 0.1 倍、cache write 1.25 倍（Claude 系列，最低触发阈值 1024 tokens、TTL 5 分钟）。20 轮会话算例中冻结快照让约 3KB 记忆段成本降至约 16%，而第 4 轮往 system prompt 追加一条记忆即让 4035 tokens 前缀整体失效重走 cacheWrite。Hermes MemoryStore 用 `_system_prompt_snapshot` 让会话内注入值恒为快照而非 live 状态，代价是新写入对当前会话不可见。可迁移原则：**写入与生效不是同一件事，也不必同步发生**——记忆落盘与进入 Prompt 前缀解耦，Cache 稳定性与记忆时效各自取所需。^[raw/articles/存之有序治之有矩agent-记忆系统的工程实践与演进.md:223-348]
+
+### 3. 两类"换模型税"的不对称与 Embedding 迁移细节
+
+容量问题源于 [[concepts/llm-tokenizer|分词器差异]]：2200 英文字符约 550 Token，同字符数中文在 Claude 分词器下约 2200-3300 Token（Qwen/DeepSeek 更低）。Hermes 用字符级上限（MEMORY.md 2200 字符、USER.md 1375 字符），以跨语言精确换跨模型稳定。Embedding 替换是另一量级：维度相同（Titan v2 与 BGE-m3 均 1024 维）语义空间也不同，cosine 相似度不可迁移。四阶段方法论的工程细节：读路径切换以覆盖率 ≥99% 为门槛，剩余 1% 有回退老表/同步单条回填/推到 100% 三种策略；回填三坑是 RPM 配额、retry 边界（单条失败不阻塞整批）、新老路径配置漂移致向量分裂；观察期 1-2 周后老向量转 GLACIER 归档不删除；图存储还需追加"消解不变性验证"——同一对实体节点在新 embedding 下可能不再判为同一实体。^[raw/articles/存之有序治之有矩agent-记忆系统的工程实践与演进.md:352-471]
+
+### 4. 程序性记忆治理与"规模高估"下的务实路径
+
+Agent 自产 Skill 是 [[concepts/episodic-vs-semantic-memory-agent|程序性记忆]] 的数字化对应。Hermes Curator 三条可迁移原则——写入与治理分离（即时写、后台 7 天一轮）、provenance 一等公民（只治理 Agent 自产 Skill）、动作可逆（只 archive 不 delete，留 run.json + REPORT.md 审计）——与 OpenClaw Dreaming 同哲学，操作对象从事实换成 Skill；开放问题是 .usage.json 高频≠高质量（被误用的 Skill 反因高频被豁免淘汰）、治理 Agent 自身无公认评估方法论。^[raw/articles/存之有序治之有矩agent-记忆系统的工程实践与演进.md:491-506] 基础设施侧的反直觉判断：单用户几年抽取后的记忆往往仅几千到几万条、不足 GB 级，三层基础设施（S3 Files 陈述性层 + S3 Vectors 语义层 + Neptune 情景层）是特定规模/合规/多租户条件才值得铺开，务实路径是先跑一个语义层主力，每层由真实业务指标触发再补齐。^[raw/articles/存之有序治之有矩agent-记忆系统的工程实践与演进.md:629-631]
 
 ## 实践启示
 

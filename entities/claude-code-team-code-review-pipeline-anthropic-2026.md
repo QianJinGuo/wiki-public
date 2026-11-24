@@ -1,7 +1,7 @@
 ---
 title: "Claude Code 团队的代码审查流水线：当 agent 写 90% 的代码"
 created: 2026-10-20
-updated: 2026-10-26
+updated: 2026-11-15
 type: entity
 tags: [agent, agentic-coding, code-review, verification, harness, claude-code, anthropic, engineering, ci-cd, evals]
 sources: [raw/articles/claude-code-team-code-review-pipeline-anthropic-2026, raw/articles/claude-code-self-review-anthropic-2026]
@@ -82,6 +82,41 @@ Anthropic Claude Code 团队（Addy Osmani、Morgan Westlee Lunt、Qing Wang，2
 两个反直觉细节值得单独记：**其一，双 Agent 互审会失控**——一个 CLI 的 PR 由 Agent 写、Agent 审，一晚上来回拉扯 **50 多轮**，最后由 PR 主人手动叫停；根因是 Agent 对可改可不改的 Nit 也较真，一改就多一个 commit，新 commit 又唤醒 review。事后用 Git Blame 回查发现 **59% 的问题在第一轮审查时就已经存在**，说明多轮并未带来新发现。**其二，修复是对"轮数"设硬闸**——改为最多三轮，过不去就让作者退回方案层面思考，PR 平均审查轮数从 **2.08 降到 1.32**，需审五轮以上的从约 1/11 降到不足 2%。^[raw/articles/claude-code-self-review-anthropic-2026.md]
 
 人剩下的活也被重新定义：判断"该不该做"（外部提交仍保留人工审，只为有人能问一句"这事真有必要做吗"）、盯计费/自动更新器/CI 这类出事即重大事故的代码、以及会被当模板抄的架构。这与上文"审批权不可由 agent 代持"的结论形成闭环：**自动化抬高的是吞吐，人类的职责向风险定级与方向判断收敛**。^[raw/articles/claude-code-self-review-anthropic-2026.md]
+
+## 深度分析
+
+### 从「有没有人读过」到「哪道检查来拦」：审查的经济学
+
+最值得咀嚼的不是六层流水线本身，而是背后的成本模型。审查被当成一笔双向的账：读代码费人时，烂代码上线后救火同样费人时——只省前一头、后一头照涨，等于什么都没省。所以 revert 与 incident 率不是副产品指标，而是「省下的人时是否真实」的护栏。
+
+由此得出一个反直觉的结论：**审批强度应该是 blast radius 的函数，而不是代码质量的函数**。文档改动与 auto-updater 改动的差别不在「哪个更容易写错」，而在「错了炸多大、几分钟能撤销」。当 flag、revert、分阶段发布把撤销成本压到分钟级，低风险变更免掉人工审批就不再激进——可逆性是整套风险分级的地基。这与 [[concepts/verifier-driven-development|Verifier-Driven Development]] 的主线一致：质量由「谁来验、验不过怎么办」决定，而非由审阅仪式决定。
+
+### 生成与验证解耦：多 agent 投票把召回和精确拆开
+
+PR 层的 AI review 做了一次关键拆分：**发现 bug 的 agent 与确认 finding 的 agent 是两拨**。几个 hunter 并行找问题，另一组 verifier 对每条 finding 投票，票数不够就不发布，纯风格类意见直接丢弃，过滤器经 A/B 测试后才保留。这把召回率与精确率分给了不同角色：hunter 放开报，verifier 压噪声，人只看到幸存者。噪声本身也被行为化度量——每条评论按「人怎么回应」归类，并在已知干净的 PR 上统计误报诱导率；优先级写下来：先抓真 bug，其次减轮次。这与 [[entities/llm-as-a-verifier-framework|LLM-as-a-Verifier 框架]]、[[entities/owner-worker-verifier-architecture|Owner-Worker-Verifier 架构]] 的结构同源。
+
+一个易被忽略的细节是 Pre-existing 标签（「这毛病不是本次 PR 引入的」）。表面是防误伤，深层作用是**保护 agent 作者不被旧 bug 激怒进入修复循环**——作者若是 agent，一条旧 bug 的 finding 就足以点燃新一轮 commit 与审查。噪声治理在这里不只是体验问题，而是闭环稳定性的组成部分。
+
+### 收敛性：agent 间协作特有的失败模式
+
+一晚上 50 多轮审查与修复的 CLI PR 是全文最锋利的教训。根因不是某个 agent 犯傻，而是结构性差异：**人看到可改可不改的 nit，扫一眼就放过；agent 会认真去修**——修了就多一个 commit，新 commit 又唤醒 review，作者与审者都是 agent 时环路没有天然终止点。事后 `git blame` 回查更说明问题：reviewer 反复 flag 的内容约 59% 在第一遍审查时就已存在——它不是每轮发现新 bug，而是每轮多翻出几个旧 bug。
+
+值得注意的是，修复手段全是**结构性约束**而非提示词修补：三轮上限、过限即退回方案层、首轮后只审新增 diff、按 bug 类别 flag、不重复已发 finding。效果：单向通过率 65%→78%、≥5 轮 PR 从 8.9%→1.5%、平均轮次 2.08→1.32。迁移到任何 agent 协作场景这条规律都成立：**没有终止条件的 agent 环路会自己制造工作**，收敛必须落在协议上，而非靠「提醒模型」。这与 [[entities/agent-self-evolution-evaluator-bottleneck|评估器瓶颈]] 互证；reviewer 用事故集每日跑分、改动涨分才保留，则是 [[concepts/eval-optimizer-firewall|Eval-Optimizer Firewall]] 在审查域的实例。
+
+### 审批是治理设计：把「谁负责」编码进流程
+
+风险分级更深的一层：**分档由分类器读变更内容判定，而非提交者决定**，同时堵住两个博弈方向——低风险者冒充作者拿轻量路径，以及高风险作者给自己降档。第二个分类器专问「这一档是否仍需额外一个人」，trusted list 之外的作者一律加人，CI workflow 等路径永远要人。
+
+责任分配也被写成硬规则：agent 的 approval 永不顶人的名额；一次 approval 只覆盖一个具体 commit，之后落了 agent push 或手工 merge 就须重新批准；发起 agent 的人计入必需审批人，与亲手写同责。三条合起来，等于把「这段代码谁签字、签的是什么」用版本化方式钉死——否则 approval 会被 agent 随时再写再推的速度冲刷失效。共享上下文也换了方式：需要理解某块代码时，就让 Claude 现场写该切片的讲解——读你即将修改的模块，胜过逐行读学不到东西的琐碎 diff。
+
+## 实践启示
+
+1. **先给验证物，再放 agent 写**：把测试、构建、截图对比设计稿等可运行检查写进简短的 `CLAUDE.md`，要求 agent「贴出输出」而非「声称完成」；Boris Cherny 估计仅此一项就让最终质量提升 2–3 倍。
+2. **把 reviewer 当成被优化的产品**：把历史事故与 revert 做成专家确认的 eval 集，reviewer 每日跑分；prompt、工具或模型的任何改动必须涨分才保留。噪声按「人的回应」分类度量；优先级写下来——先抓真 bug，再减轮次。重复意见不手动纠，进 `REVIEW.md` 或改成 lint 规则，在源头修。
+3. **给 agent×agent 环路装终止条件**：轮数设硬上限，过限强制作者回到方案层；首轮后只复审新增 diff；按 bug 类别 flag 而非逐行；不重复已发 finding。根源差异：人扫一眼放过 nit，agent 必须去修——每个 nit 都是新 commit 与新一轮审查的种子。
+4. **审批分档由变更决定，不由作者决定**：写下风险分档，由分类器读变更内容判定，从严格起步按证据放宽；auth、计费、CI、发布路径用 CODEOWNERS 与分支保护永远要人；轻量路径只给 trusted list 上的可信作者。
+5. **守住审批的三条硬规则**：agent 的 approval 永不顶替人工名额；approval 绑定具体 commit，新 commit（agent push、手工 merge）到来即撤销重批；发起 agent 的人计入必需审批人——别让自动化的速度冲刷掉责任链。
+6. **用可逆性买吞吐**：merge queue 在最新 main 上带变更重跑全部检查；新行为藏 flag、内部先用、`latest` 领先 `stable`；坏构建一步 revert。事故复盘必答「哪一层本该抓到」；revert 与 incident 率是「省人时是否真实」的护栏指标。
 
 ## 关联
 

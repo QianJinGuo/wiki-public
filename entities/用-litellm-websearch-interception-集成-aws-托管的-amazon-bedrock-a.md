@@ -2,7 +2,7 @@
 
 title: 用 LiteLLM WebSearch Interception 集成 AWS 托管的 Amazon Bedrock AgentCore Web Search 能力
 created: 2026-07-10
-updated: 2026-08-01
+updated: 2026-11-15
 type: entity
 tags: [llm, openai, tool, claude, mcp]
 sources: [raw/articles/用-litellm-websearch-interception-集成-aws-托管的-amazon-bedrock-a]
@@ -113,6 +113,33 @@ LiteLLM 的 WebSearchInterceptionLogger 是一个标准 CustomLogger，在「拦
 ### 2.3 实现方案：子类化并重写 _exe
 
 ---
+## 深度分析
+
+### 拦截架构：为何只重写一个方法即可集成
+
+websearch interception 由标准 CustomLogger（WebSearchInterceptionLogger）实现，agentic loop 为「拦截模型产生的 web_search 工具调用 → 代为执行搜索 → 结果拼接回上下文 → 模型续写」，真正执行搜索的逻辑收敛于单一私有方法 _execute_search ^[raw/articles/用-litellm-websearch-interception-集成-aws-托管的-amazon-bedrock-a.md:81-109]。最小切口即继承后仅重写此方法，其余复用父类，无需 fork 或改封闭的 search_provider 枚举。另一约束：interception 强制非流式——pre-call hook 把 stream=True 改为 False，必须拿到完整响应才能捕获 tool_use。
+
+### AgentCore Web Search 的形态与接入
+
+它不是独立 REST API，而是 AgentCore Gateway 上的 MCP 连接器：协议 MCP、鉴权 AWS_IAM/SigV4、仅 us-east-1，query ≤200 字符、maxResults 1–25（默认 10）、按查询计费 ^[raw/articles/用-litellm-websearch-interception-集成-aws-托管的-amazon-bedrock-a.md:77]。接入三步：建 Gateway 服务角色、create-gateway（--authorizer-type AWS_IAM，免自建 IdP）、create-gateway-target 加 web-search connector ^[raw/articles/用-litellm-websearch-interception-集成-aws-托管的-amazon-bedrock-a.md:151-194]。实测细节：工具全名为 <target名>___WebSearch（三下划线），换 Gateway 前先 tools/list；target 加 --read-only 会导致工具列表为空。 ^[raw/articles/用-litellm-websearch-interception-集成-aws-托管的-amazon-bedrock-a.md:279]。
+
+### 请求/响应拦截的机制细节
+
+_execute_search 以 SigV4 手工签名 POST 到 Gateway /mcp 端点：凭证取 botocore 默认链（Pod 内即 IRSA，无 AK/SK），service 必须为 bedrock-agentcore，region 固定签 us-east-1 处理跨区 ^[raw/articles/用-litellm-websearch-interception-集成-aws-托管的-amazon-bedrock-a.md:241-252]。请求体为 JSON-RPC tools/call；响应解析 result.content[0].text 后二次 json.loads，把每条结果格式化为 Title/URL/Snippet（截断 500 字符）回注模型 ^[raw/articles/用-litellm-websearch-interception-集成-aws-托管的-amazon-bedrock-a.md:254-269]。
+
+### 权衡：interception vs 客户端 MCP 工具
+
+四条路径对比：维持 SearXNG（基线，需自维护）、暴露为 MCP 工具（客户端需声明工具）、fork 新增 provider（需 rebase 上游，过重）、子类化重写（采用）。选 AgentCore 而非原生 17 个托管 provider 的理由：免维护、查询留在 AWS 基础设施内、复用 IAM/IRSA、计费并入 AWS 账单；代价是仅 us-east-1 与按查询计费 ^[raw/articles/用-litellm-websearch-interception-集成-aws-托管的-amazon-bedrock-a.md:106-119]。取舍：interception 透明但强制非流式、大上下文耗时长（需对齐超时）；客户端 MCP 可流式但需声明工具。
+
+## 实践启示
+
+1. **最小切口优先于 fork**：枚举不含目标后端时，找逻辑收敛点（此处为唯一的 _execute_search）做单方法重写；并将其视为不稳定 API，升级前先用 inspect.signature 确认返回签名 ^[raw/articles/用-litellm-websearch-interception-集成-aws-托管的-amazon-bedrock-a.md:55,280]。
+2. **凭证集中在网关而非客户端**：Pod 用 IRSA 即可完成跨区 SigV4，无需 AK/SK；IAM 只需 InvokeGateway 一个动作，签名 service 写错直接 403 ^[raw/articles/用-litellm-websearch-interception-集成-aws-托管的-amazon-bedrock-a.md:217]。
+3. **部署细节决定成败**：LiteLLM proxy 模式强制在 config.yaml 同目录查找 callback 模块并完全忽略 PYTHONPATH，.py 必须与 config.yaml 同一 ConfigMap，否则 ImportError 进 CrashLoop ^[raw/articles/用-litellm-websearch-interception-集成-aws-托管的-amazon-bedrock-a.md:288-298,454]。
+4. **按查询计费必须配额管控**：注册为后端 MCP server 后，用 MCP Access Group + virtual key 形成授权闭环并关闭 Allow All Keys；IP 过滤与 key 授权是独立机制，成本控制应依靠后者 ^[raw/articles/用-litellm-websearch-interception-集成-aws-托管的-amazon-bedrock-a.md:397-410]。
+5. **分两段验证链路**：先在 Pod 内用独立 SigV4 脚本走 tools/list → tools/call（200 即链路通，403 仅缺 IAM），再端到端用 input_tokens 增大 + CloudWatch Invocations 交叉验证；DEBUG botocore 日志会打印 STS 临时凭证，仅限临时排查 ^[raw/articles/用-litellm-websearch-interception-集成-aws-托管的-amazon-bedrock-a.md:330-355]。
+6. **合规与可观测性**：条款禁止批量存储结果或构建竞争性索引、要求保留来源引用；Gateway 请求/响应日志默认关闭，需三步开启 vended log delivery 才能看到每次 query ^[raw/articles/用-litellm-websearch-interception-集成-aws-托管的-amazon-bedrock-a.md:357,448]。
+
 ## 关联
 - 相关概念: [[concepts/harness-engineering-framework|Harness Engineering]]
 - 相关: Agent 架构

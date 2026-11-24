@@ -1,7 +1,7 @@
 ---
 title: "How Yahoo enhances search retargeting using Amazon Bedrock"
 created: 2026-07-31
-updated: 2026-09-07
+updated: 2026-11-19
 type: entity
 tags: [yahoo, amazon-bedrock, advertising, search-retargeting, ai-case-study, dsp, audience-targeting]
 sources: [raw/articles/how-yahoo-enhances-search-retargeting-using-amazon-bedrock]
@@ -29,7 +29,7 @@ Yahoo modernized the keyword expansion engine powering its Search Retargeting (S
 - **Production impact**: Launched Q1 2025. Up to 600x increase in keyword expansion rates, 5x growth in audience reach, fivefold improvement in median broad expansion ratio, doubled maximum expansion ratio.
 - **Infrastructure choice**: Amazon Bedrock provided serverless access to multiple FMs, eliminating model hosting overhead, supporting batch and real-time inference, and enabling model upgrades via configuration change.
 
-## Deep Analysis
+## 深度分析
 
 ### Legacy Architecture: Word2Vec + LSH
 
@@ -107,7 +107,7 @@ Production launch: Q1 2025.^[raw/articles/how-yahoo-enhances-search-retargeting-
 The LLM-powered system frequently generated hundreds or even thousands of keywords in cases where LSH produced none. This translates into higher relevancy, stronger engagement, and improved conversion rates for advertisers. For Yahoo DSP, the system strengthens its competitive edge in programmatic advertising.^[raw/articles/how-yahoo-enhances-search-retargeting-using-amazon-bedrock.md]
 
 
-## Practical Lessons
+## 实践启示
 
 ### For Ad Tech Teams
 

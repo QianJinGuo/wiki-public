@@ -3,7 +3,7 @@
 title: "Harness Engineering 从理论到实战：行为正确性死结 + 上下文腐烂 + 可驾驭性 + Ashby 定律"
 description: "张海云Helen AI原生探索者 2026-06-02 Harness Engineering 第 4 篇：Böckeler 理论 + Karpathy 六行工作模式 + 行为正确性自我指涉死结（Anthropic 独立评估官/变异测试/OpenAI 人类不可省）+ 上下文腐烂 + Anthropic 两段式架构 + 可驾驭性架构判决 + Ashby 必要多样性定律"
 created: 2026-06-02
-updated: 2026-09-07
+updated: 2026-11-24
 type: entity
 tags: [harness-engineering, harness-engineering, beckeler, karpathy, agentic-engineering, software-3-0, 行为正确性, 上下文腐烂, context-rot, 可驾驭性, harnessability, ashby-law, 必要多样性, requisite-variety, 自我指涉验证, two-phase-architecture, 两段式架构, long-running-agent, 长时运行-agent, anthropic-cwc, 张海云, ai原生探索者, 缰绳时代]
 sources:
@@ -267,14 +267,20 @@ Böckeler 文章原话："**这还不够好**。" 但她也承认，**目前没�
 
 ## 深度分析
 
-### 1. Harness Engineering：从理论到实践的桥梁
-Helen 的这篇系统梳理将 harness engineering 从零散实践提升为理论框架——定义了 harness 的核心组件（工具注册、权限控制、上下文管理、错误处理）和实践模式。 ^[raw/articles/harness-engineering-theory-to-practice-helen.md]
+### 1. 从"定义护栏"到"拿什么定义"：理论与实战的交接点
+六行模式的枢纽是紧随其后的追问：拿什么"定义反馈循环"和"定义护栏"。Böckeler 框架的回答是两根缰绳缺一不可：只有引导会被 Agent 忽略，只有传感器会重复犯错。5 月传感器实验的公开数据反直觉：**计算性传感器可靠抓住绝大多数结构性问题，推理性传感器反而不稳定**——几十年的老工具成了 AI 时代最可靠的缰绳。（Software 3.0 语境见 [[entities/harness-engineering-第三代工程范式]]，完整理论框架见 [[entities/harness-engineering-systematic-framework]]。） ^[raw/articles/harness-engineering-theory-to-practice-helen.md:18-53]
 
-### 2. Harness 作为"AI 的操作系统"
-harness 不是简单的"工具包装器"，而是 AI agent 的"操作系统"——管理资源（工具、上下文、权限）、调度执行、处理错误、记录审计。与 [[agentic-ai-system-architecture-harness-skill-mcp]] 的五层架构对齐。 ^[raw/articles/harness-engineering-theory-to-practice-helen.md]
+### 2. 行为正确性死结：生成者与验证者共享同一个世界理解
+三小时退款场景给出失败谱系：第 60 分钟重复造轮子——网关客户端早已埋在另一个微服务里，命名不同没找到，linter 沉默；第 90 分钟金额存储从整数"分"漂移成浮点数，测试照样绿——测试也是 Agent 写的；第 150 分钟宣布完成：覆盖率 94%，人工审查却发现重复客户端、浮点隐患、两处 API 不一致、三个"对的测试验证错的逻辑"用例。死结是结构性的：Agent 同时生成代码和测试时，两者共享同一份"对世界的理解"——理解一偏，测试就忠实验证偏了的理解。三种头部解法都是降低而非消除：Anthropic 独立评估官用全新上下文、无写入权限、"默认失败契约"打破自我指涉；变异测试植入变异体检验测试质量，客观但最贵；OpenAI 最诚实——linter 硬门禁，功能正确性留给人。 ^[raw/articles/harness-engineering-theory-to-practice-helen.md:65-117]
 
-### 3. 理论框架的实践验证
-理论框架需要实践验证——harness engineering 的每个概念都应有对应的实现案例。Helen 的梳理提供了从"12 组件"到"7 决策"的实践路径。 ^[raw/articles/harness-engineering-theory-to-practice-helen.md]
+### 3. 上下文腐烂与文件系统记忆
+腐烂静默渐进：每步局部都合理、只有全局错了，传感器抓不住。Anthropic cwc-long-running-agents 两段式架构对症：初始化 Agent 只运行一次，生成结构化功能列表和进度追踪文件后退出；编码 Agent 反复唤醒，每次只聚焦一个功能——读进度文件→实现→测试→提交→更新进度文件→退出，下次会话从干净上下文开始。本质是**用文件系统替代上下文窗口做记忆**：进度文件、git 提交、测试结果不会腐烂，Agent 永远从硬状态重载。跨会话失忆不是 bug 而是 LLM 的物理属性，Harness 必须为它做工程设计。与 [[entities/agent-harness-context-management-working-set]] 同向：记忆外置为可持久化状态。 ^[raw/articles/harness-engineering-theory-to-practice-helen.md:119-153]
+
+### 4. 可驾驭性：三年前的技术选型决定今天的 AI 杠杆
+强类型语言自带类型系统这层传感器，成熟框架缩小 Agent 犯错空间，因此高可驾驭；大单体、自研框架、无 type hints 的 Python 则低。矛盾在于：技术债最重的遗留系统最需要 AI，却最难建 Harness。两个结论：三年前的选型（语言类型、单体 vs 微服务、测试纪律）决定今天能多大程度用上 AI 编码；技术架构评审应把"这个技术栈对 AI Agent 的可驾驭性如何"列为标准问题。 ^[raw/articles/harness-engineering-theory-to-practice-helen.md:155-177]
+
+### 5. Ashby 必要多样性：模型越强，需要的纪律越多
+控制论的 Law of Requisite Variety：控制系统的复杂度必须匹配被控对象。翻译到 Harness：更强模型意味着更大行动空间，出错方式从有限变成指数级，Harness 的多样性必须跟上。这解释了一个普遍困惑：模型从 GPT-3.5 升到 Claude Opus，质量提高而问题更诡异——弱模型犯语法级蠢错，linter 能抓住；强模型犯语义级巧错，逻辑自洽但方向偏了，所有传感器都检测不到。四条难题把 Harness Engineering 从控制加法题改写成"控制边界在哪里"的学科：知道什么不能控制，与知道什么能控制同样重要。 ^[raw/articles/harness-engineering-theory-to-practice-helen.md:179-198]
 
 ## 实践启示
 

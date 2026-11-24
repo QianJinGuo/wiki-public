@@ -4,7 +4,7 @@ title: "Self-Taught RLVR 综述"
 type: entity
 tags: [rlvr, self-training, post-training, distillation, multi-expert, jd, cii]
 created: "2026-05-20"
-updated: 2026-09-10
+updated: 2026-11-22
 review_value: 8
 review_confidence: 7
 review_recommendation: strong
@@ -49,10 +49,30 @@ review_category: tech
 **意义**：暗示新的model parallel training模式和scaling范式。 ^[raw/articles/self-taught-rlvr-jd-cii-2026.md]
 
 ## 深度分析
-**信息泄漏的数学本质**：OPSD的ill-posed问题揭示了一个深层矛盾——当teacher和student共享同一参数空间时，KL散度目标本质上无法区分"真正学会了"和"记住了参考答案"。RLSD的解耦方案（方向×幅度）实际上是用两个正交信号分别逼近原目标：200步>400步的效率提升并非来自算法本身优越，而是来自信号结构的优化组合。 ^[raw/articles/self-taught-rlvr-jd-cii-2026.md]
-**Near-Future Teacher的隐含假设**：NPO的核心洞察——"未来更强但同一条优化路径"——隐含了一个关键假设：训练过程的单调性。如果优化路径存在非单调跳跃（如large loss spikes导致的回退），near-future teacher的信号质量可能反而更差。AutoNPO的自动干预机制本质上是在线检测这种非单调性，在实践中需要配合loss curve监控。 ^[raw/articles/self-taught-rlvr-jd-cii-2026.md]
-**协同进化与Model Merge的对照**：CoPD的训练中蒸馏模式暗示了一种新的model parallel范式——不是让一个模型去多个expert那里学习，而是让多个expert在保持差异的同时相互拉近。这与model merge工作形成有趣对照：CoPD强调保持差异的同时降低吸收成本，而model merge强调直接融合。两条路径哪个更有scalability，还有待大规模验证。 ^[raw/articles/self-taught-rlvr-jd-cii-2026.md]
-**信号转化效率的工程意义**：CoPD发现a_p取决于行为重合度，意味着scaling expert数量时不能简单堆叠——需要先做行为对齐再做能力拓展。这对训练系统设计有直接启示：expert分支数受限于能保持足够overlap的并行训练架构。 ^[raw/articles/self-taught-rlvr-jd-cii-2026.md]
+
+### Ill-posed 目标函数：同参数空间自蒸馏的数学边界
+
+OPSD 的失败模式极具诊断价值：在极少数据上约 20 step 内快速收敛，随后出现信息泄漏——推理时引用并未真正看到的"参考解"，性能逐渐坍塌。 ^[raw/articles/self-taught-rlvr-jd-cii-2026.md:27] RLSD 的理论贡献在于证明这不是训练不稳定，而是目标函数 ill-posed：训练目标中存在不可消除的 mutual information gap I(Yt; R | X, Y0)，KL 散度永远降不下去，每一步训练都在把 x→r 的虚假相关性写进参数。 ^[raw/articles/self-taught-rlvr-jd-cii-2026.md:28]
+
+这意味着一个普适边界：当 teacher 与 student 共享同一参数空间时，"真正学会了"与"记住了参考答案"在 KL 目标下不可区分——问题不在实现而在目标结构，任何"注入特权信息后让模型教自己"的方案都必然撞上这堵墙。RLSD 的解法是放弃让单一目标同时承载两种信息：方向交给 [[concepts/rlvr-reinforcement-learning-verified-reasoning|RLVR]]（环境奖励决定每个 token 的强化/惩罚，可靠但稀疏），幅度交给自蒸馏（teacher/student 的 evidence ratio 决定每个 token 的更新力度，密集但单独使用不可靠）。 ^[raw/articles/self-taught-rlvr-jd-cii-2026.md:30-31] 两个信号正交互补，200 步训练超过 [[concepts/grpo-policy-optimization-2026|GRPO]] 400 步的效率提升来自信号结构的优化组合，而非某个算法本身更优越。 ^[raw/articles/self-taught-rlvr-jd-cii-2026.md:32]
+
+### Near-future teacher：S=Q/V 对信号两难的第三条路
+
+NPO 把"该引入什么辅助学习信号"形式化为有效学习信号 S=Q/V：足够强（高 Q，有新东西可学）且足够近（低 V，模型容易吸收）。 ^[raw/articles/self-taught-rlvr-jd-cii-2026.md:35] 两条现有路径各缺一角：从外部老师导入轨迹，Q 高但 V 太大；从经验回放抓自己过去的轨迹，V 低但 Q 被自身历史水平卡死。 ^[raw/articles/self-taught-rlvr-jd-cii-2026.md:37-38] Near-future checkpoint 之所以是天然 teacher，在于它同时满足两端：同一条优化进程走了若干步所以更强（Q 有保障），又离当前足够近所以容易被吸收（V 有保障）。 ^[raw/articles/self-taught-rlvr-jd-cii-2026.md:39]
+
+这一框架隐含一个关键假设：优化路径的单调性。若训练出现非单调回退，"未来更强"的前提被破坏，near-future 信号的 Q 反而可能下降。AutoNPO 从在线训练信号自动检测干预时机、自动挑选 S 最大的 guide checkpoint， ^[raw/articles/self-taught-rlvr-jd-cii-2026.md:41] 本质上是对该假设被违背时的在线补偿机制。57.88 → 62.84 → 63.15 且收敛速度和上限同时提升的结果说明：辅助信号的质量同时作用于收敛动力学与性能天花板两个维度，而非只影响其一。 ^[raw/articles/self-taught-rlvr-jd-cii-2026.md:42]
+
+### 信号转化效率 a_p：多 expert 吸收问题的统一度量
+
+CoPD 的统一效用框架把任何范式 P 的实际效用分解为 a_p×X(D₁,D₂) + b_p：信号转化效率 × 能力增量 + 额外损失（b_p ≤ 0）。 ^[raw/articles/self-taught-rlvr-jd-cii-2026.md:45-47] 两条现有路径恰好各坏一个自由度：mixed-data RLVR 多能力共享参数、梯度方向冲突，出现 seesaw 效应（b_p = −Φ）；静态 OPD pipeline 分开训练再蒸馏，专家能力传不过去（a_p 远小于 1，b_p = 0）。 ^[raw/articles/self-taught-rlvr-jd-cii-2026.md:49-50] 这个二维分解的价值在于指出两种失败不是同一种失败，不能用同一种方法修——也与 [[entities/on-policy-distillation-vs-offline-distillation-loster|on/off-policy 蒸馏对比]]中的静态 pipeline 失效模式相互印证。
+
+关键假说是 a_p 由 teacher-student 行为重合度 O 决定——越像越容易吸收。实验给出强支撑：overlap 与 OPD 增益的相关性 r=0.89； ^[raw/articles/self-taught-rlvr-jd-cii-2026.md:53] 且独立 RLVR 训练过程中 overlap 单调下降、KL 涨了一个数量级，静态 pipeline 恰好在吸收效率最低的时刻执行蒸馏。 ^[raw/articles/self-taught-rlvr-jd-cii-2026.md:54] 这把静态 OPD 的低效从"实现缺陷"重新定性为"结构性时序错位"。CoPD 的对策（训练中蒸馏而非训练后、多个 expert 分支互为师生、mutual OPD 拉近行为模式）正是把 a_p 的时间曲线本身变成可控对象——与 [[entities/relay-opd-handoff-trigger-online-distillation-zju-alibaba-2026|Relay-OPD]] 的"训练中择时蒸馏"属于同一方向。 ^[raw/articles/self-taught-rlvr-jd-cii-2026.md:55-57]
+
+### 三种 Self 的统一视角：自我指导的信号来源谱系
+
+三种框架是同一个问题——"自我指导的信号从哪里来"——在三个正交轴上的答案：RLSD 用特权信息（informed self）换信号可靠性，NPO 用时间差（temporal self）换信号亲近性，CoPD 用分支差异（parallel-self）换 overlap 可控性。三者的共同母题是规避"同参数空间自指信号退化"：都不让模型直接以当前的自己为老师，而是引入一个结构性不同的自我变体（看得更多 / 走得更远 / 走得不同）充当 teacher。
+
+对照 wiki 已有的 OPD 谱系（[[entities/xopd-on-policy-distillation-landscape-banana-2026|XOPD 综述]]），RLSD/CoPD 可视为 on-policy 自蒸馏在 RLVR 场景下的两条修正路线；而 CoPD 的多分支协同进化与 [[concepts/moe-mixture-of-experts-2025|MoE]] 路线的本质差别在于：后者在推理时组合专家，前者在训练时让专家互相塑造——这也正是其被解读为潜在新 model parallel training 与 scaling 范式的原因。开放问题有二：a_p 对 overlap 的依赖意味着 scaling expert 数量时不能简单堆叠，并行训练架构必须能在分支数增加时维持足够的行为重合度，这直接约束 expert 分支数的上限； ^[raw/articles/self-taught-rlvr-jd-cii-2026.md:54] 三个框架能否按训练阶段组合（informed + temporal + parallel）则尚无实验验证，本文仅给出了各自独立的有效性证据。 ^[raw/articles/self-taught-rlvr-jd-cii-2026.md:22-24]
 
 ## 实践启示
 **算法选择框架**：计算资源有限→优先RLSD解耦策略；追求性能上限→AutoNPO自动干预；多模态/多任务→CoPD协同进化。三种框架不是互斥的，可以按训练阶段组合使用。 ^[raw/articles/self-taught-rlvr-jd-cii-2026.md]
