@@ -1,11 +1,11 @@
 ---
 title: "Claude Code Enterprise vs GitHub Copilot 企业级对比"
 created: 2026-05-21
-updated: 2026-09-10
+updated: 2026-11-24
 type: comparison
 tags: [comparison, claude-code, github-copilot, enterprise, ai-coding, anthropic, microsoft]
 sources:
-  - raw/articles/claude-code-large-codebase-enterprise-deployment-anthropic-aihanshijì
+  - raw/articles/claude-code-large-codebase-enterprise-deployment-anthropic-aihanshijì
   - raw/articles/claude-code-open-source-model-enterprise-practice
   - raw/articles/github-copilot-individual-plans-flex-allotments
 confidence: high
@@ -145,7 +145,7 @@ Claude Code 的能力由 **Harness**（与模型同样重要）决定：^[raw/ar
 
 ## 相关实体
 
-- [[entities/claude-code-large-codebase-enterprise-deployment-anthropic-aihanshijì|Claude Code 大型代码库企业部署]]
+- [[entities/claude-code-large-codebase-enterprise-deployment-anthropic-aihanshijì|Claude Code 大型代码库企业部署]]
 - [[entities/claude-code-open-source-model-enterprise-practice|Claude Code 私有化部署实践]]
 - [[entities/github-copilot-individual-plans-flex-allotments|GitHub Copilot 定价方案]]
 

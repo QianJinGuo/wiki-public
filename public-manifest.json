@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "sourceRevision": "acb8437b4f18def50cf625898d29b65aca94437a",
+  "sourceRevision": "604e32628e9b64cf64b9f7d9e64971a11cef0add",
   "files": [
     {
       "path": "raw/articles/0.25秒识破未见攻击-lod-lvlm-jailbreak-detection-emnlp2026.md",
@@ -9621,6 +9621,11 @@
       "path": "raw/articles/google-pm-2026-five-developer-skills-shubham.md",
       "title": "谷歌PM公开：2026开发者五大新技能——问题塑形/上下文设计/审美/编排/判断力",
       "sourceUrl": null
+    },
+    {
+      "path": "raw/articles/google-self-improving-agent-harness-mozhi-2026-11-24.md",
+      "title": "解读自进化 Agent Harness的三代演进与统一框架",
+      "sourceUrl": "https://mp.weixin.qq.com/s/z4epxCfoYv-Q-LNg2ja6GQ?scene=1&click_id=1734402152"
     },
     {
       "path": "raw/articles/google-toolgrad-textual-gradients-tool-use.md",

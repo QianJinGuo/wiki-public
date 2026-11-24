@@ -1,10 +1,10 @@
 ---
 title: "agentic engineering 工程范式"
 created: 2026-06-12
-updated: 2026-09-10
+updated: 2026-11-24
 type: concept
 tags: [concept, agentic-engineering, karpathy, harness, verifier, paradigm]
-sources: [entities/karpathy-vibe-coding-agentic-engineering, entities/karpathy-最新访谈从-vibe-coding-到-agentic-engineering, entities/karpathy-vibe-coding-to-agentic-engineering]
+sources: [entities/karpathy-vibe-coding-agentic-engineering, entities/karpathy-最新访谈从-vibe-coding-到-agentic-engineering, entities/karpathy-vibe-coding-to-agentic-engineering, raw/articles/claude-code-之父最新访谈编程已经结束harness-将消失claude-code-将只有-100-行代码loop-才是未来, raw/articles/cat-wu-anthropic-pm-interview, raw/articles/jensen-huang-harrison-chase-harness-future-2026-07-16, raw/articles/karpathy-vibe-coding-agentic-engineering-v4, raw/articles/luo-fuli-ai-paradigm-shift]
 ---
 
 ## 定义
@@ -44,6 +44,36 @@ verifier 必须存在这条原则的具体化是 Claude Code 的 Plan Mode：写
 
 另一类质疑更根本：verifier 本身由谁验证？当 AI 产出超过人类理解能力时，人类 gate 就是形式主义。更具体地说，LLM-as-judge 存在已知的 self-enhancement bias——评审模型也用同一模型家族，会对同家族的输出有系统性偏爱。 ^[entities/karpathy-vibe-coding-to-agentic-engineering]
 
+## 播客交叉验证：Harness 的「消失」与「变厚」
+
+把 Boris Cherny、Cat Wu、黄仁勋 × Harrison Chase、Karpathy、罗福莉五期访谈并排看，会发现他们在回答同一个问题：模型变强之后，Harness 会变薄还是变厚？表面答案互相打架——Boris 预测 Claude Code 的产品外壳一年后只剩 100 行，Cat Wu 说「模型会把你的 Harness 当早餐吃掉」；黄仁勋却说未来公司建立在 Harness 之上，Karpathy 把 Harness 列为 agentic engineering 的一等公民。^[raw/articles/claude-code-之父最新访谈编程已经结束harness-将消失claude-code-将只有-100-行代码loop-才是未来.md:131-136, raw/articles/cat-wu-anthropic-pm-interview.md:45-58, raw/articles/jensen-huang-harrison-chase-harness-future-2026-07-16.md:54-70, raw/articles/karpathy-vibe-coding-agentic-engineering-v4.md:129-133]
+
+| 说话人 | 主张 | 指的是哪一层 | 证据 | 边界 |
+|---|---|---|---|---|
+| Boris Cherny | 产品外壳一年后可能只剩 100 行 | 能力补偿层 | Anthropic 内部已无手写代码，工程师用 loop 管理数百个 Agent | 他仍保留 loop、Agent 编排、工具接口；消失的是「因模型不够强而加的外壳」 |
+| Cat Wu | 模型会把 Harness 当早餐吃掉 | 能力补偿层 | Opus 4 之后不再需要提醒模型完成 20 个调用点 | Evals、权限、产品品味没有消失 |
+| 黄仁勋 | 未来的公司建立在 Harness 之上 | 治理与知识层 | Nemotron-3-Ultra 在 DeepAgents 中优化 Harness 后达 86%，逼近 Opus 的 87%，成本约十分之一 | 这是企业级「公司操作系统」命题，不是单次对话的脚手架 |
+| Karpathy | Agentic Engineering = Harness + Context + Verifier | 验证层 | 可验证性决定自动化上限；过程资产；Agent Control Plane 八项控制 | 他关心的是能否可靠交付，不是模型会不会写 |
+| 罗福莉 | 好框架可以让 7B 模型做到 12B 的事 | 能力放大层 | OpenClaw 三天体验；Skills 作为预训练拿不到的新数据形态 | 基座仍是智能中枢，框架不能替代 1T 基座 |
+
+这不是「谁对谁错」，而是同一个词指了两层。**能力补偿层**的存在理由是「模型还不会」：待办清单、强制步骤、提示词补丁、为防模型犯错而加的外壳。模型升级后，这层会被吃掉，所以 Boris 说 100 行、Cat Wu 说早餐。**治理与验证层**的存在理由是「模型会犯错、会越权、要有人负责」：评估集、权限、审计、回滚、工具接口、领域知识。模型越强，行动空间越大，这层反而变厚；黄仁勋的「公司操作系统」、Karpathy 的 verifier、Cat Wu 的 Evals 都在这一层。^[raw/articles/claude-code-之父最新访谈编程已经结束harness-将消失claude-code-将只有-100-行代码loop-才是未来.md:131-136, raw/articles/cat-wu-anthropic-pm-interview.md:45-58, raw/articles/jensen-huang-harrison-chase-harness-future-2026-07-16.md:32-70, raw/articles/karpathy-vibe-coding-agentic-engineering-v4.md:23-45, raw/articles/luo-fuli-ai-paradigm-shift.md:20-31]
+
+判断一项 Harness 组件该删还是该留，可以用三条规则：
+
+1. 它如果只是为了「让模型勉强能做到」，下一次模型升级就会把它删除。
+2. 它如果是为了「让模型出错时可发现、可回滚、可追责」，它会保留并变厚。
+3. 每次换模型，逐项问：它补的是能力，还是补的是责任？补能力的删，补责任的留。
+
+这套分层有两个边界。第一，它是 2026 年访谈的快照，模型能力曲线若突变，能力补偿层与治理层的分界会移动。第二，Boris 的 100 行是「产品外壳」预测，不是整个 Agent runtime；黄仁勋的命题是企业级的，不能直接套到个人项目；罗福莉的「7B 做到 12B」是框架放大能力的说法，不等于 7B 能替代 12B 基座，她仍强调 1T 入场券。^[raw/articles/claude-code-之父最新访谈编程已经结束harness-将消失claude-code-将只有-100-行代码loop-才是未来.md:131-136, raw/articles/jensen-huang-harrison-chase-harness-future-2026-07-16.md:54-58, raw/articles/luo-fuli-ai-paradigm-shift.md:20-31]
+
+五期原访谈：
+
+- [[entities/claude-code-之父最新访谈编程已经结束harness-将消失claude-code-将只有-100-行代码loop-才是未来|Boris Cherny：编程已经结束、harness 将消失]]
+- [[entities/cat-wu-anthropic-pm-interview|Cat Wu：Claude Code / Cowork 产品负责人访谈]]
+- [[entities/jensen-huang-harrison-chase-harness-future-2026|黄仁勋 × Harrison Chase：未来公司建立在 Harness 之上]]
+- [[entities/karpathy-vibe-coding-agentic-engineering-v4|Karpathy：从 Vibe Coding 到 Agentic Engineering]]
+- [[entities/luo-fuli-ai-paradigm-shift|罗福莉：AI 范式已然巨变]]
+
 ## 现实案例
 
 Hermes Agent 的 cronjob + skill 系统是 agentic engineering 的完整实现：harness = Hermes Agent runtime（cron, terminal, delegate_task），context = Memory + Skills + Wiki 三层注入，verifier = lint pre-commit gate + 用户 final review。三件套全部在同一个框架里走通，而非分散到不同工具。 ^[entities/hermes-agent]
@@ -63,6 +93,7 @@ harness / context / verifier 三件套不是独立的——它们之间有强依
 - [[concepts/verifier-driven-development|verifier-driven development]]
 - [[concepts/harness-engineering-paradigm-shift|harness engineering 范式迁移]]
 - [[concepts/harness-loop-architecture|harness 主循环架构]]
+- [[queries/podcast-knowledge-deconstruction|播客知识拆解：从单期摘要到跨期判断]]
 
 ## 进一步阅读
 
