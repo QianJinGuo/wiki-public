@@ -1,7 +1,7 @@
 ---
 title: "RAG 在知识密集型 Agent 中的最优实践是什么？"
 created: 2026-05-15
-updated: 2026-06-11
+updated: 2026-11-25
 type: moc
 tags: [rag, knowledge-retrieval, agent, vector-search, knowledge-graph]
 ---
@@ -19,8 +19,8 @@ tags: [rag, knowledge-retrieval, agent, vector-search, knowledge-graph]
 **关键问题**：如何划分知识块才能保证检索粒度与语义完整性？
 
 **相关研究**：
-- [[entities/rag-chunk-embedding-rerank-pipeline|RAG 分块向量化召回重排全链路 — 分块策略对召回效果的影响
-- [[entities/rag-chunking-vectorization-rerank-distillation|RAG 深度解析：分块向量化召回重排才是蒸馏同事 Skill 的关键 — 分块与 Skill 蒸馏的关系
+- [[entities/rag-chunk-embedding-rerank-pipeline|RAG 分块向量化召回重排全链路 — 分块策略对召回效果的影响]]
+- [[entities/rag-chunking-vectorization-rerank-distillation|RAG 深度解析：分块向量化召回重排才是蒸馏同事 Skill 的关键 — 分块与 Skill 蒸馏的关系]]
 
 **核心考量**：
 - 固定窗口分块 vs 语义分块
@@ -41,7 +41,7 @@ tags: [rag, knowledge-retrieval, agent, vector-search, knowledge-graph]
 **关键问题**：向量库、知识图谱、本体论各自适用场景是什么？如何组合？
 
 **相关研究**：
-- [[entities/rag-vector-knowledge-graph-ontology|向量库·知识图谱·本体论：RAG知识系统演进 — 三种知识组织形态的对比与演进
+- [[entities/rag-vector-knowledge-graph-ontology|向量库·知识图谱·本体论：RAG知识系统演进 — 三种知识组织形态的对比与演进]]
 
 **核心结论**：
 | 形态 | 适用场景 | 优势 | 劣势 |
@@ -65,7 +65,7 @@ tags: [rag, knowledge-retrieval, agent, vector-search, knowledge-graph]
 **关键问题**：如何将初筛结果进一步精排？
 
 **相关研究**：
-- [[entities/rag-chunk-embedding-rerank-pipeline|RAG 分块向量化召回重排全链路
+- [[entities/rag-chunk-embedding-rerank-pipeline|RAG 分块向量化召回重排全链路]]
 
 **核心策略**：
 - Cross-encoder reranking
@@ -77,7 +77,7 @@ tags: [rag, knowledge-retrieval, agent, vector-search, knowledge-graph]
 **关键问题**：企业知识库应该用 RAG 还是 LLM Wiki？
 
 **相关研究**：
-- [[entities/rag-vs-llm-wiki-enterprise-knowledge-base|RAG vs LLM Wiki 深度对比：企业知识库架构选型指南
+- [[entities/rag-vs-llm-wiki-enterprise-knowledge-base|RAG vs LLM Wiki 深度对比：企业知识库架构选型指南]]
 
 **核心结论**：
 - **RAG**：适合动态知识、快速更新、检索为主
@@ -107,11 +107,11 @@ Query → Rewrite → Retrieve → Rerank → Generate
 
 ## 相关实体
 
-- [[entities/rag-chunk-embedding-rerank-pipeline|RAG 分块向量化召回重排全链路
-- [[entities/rag-chunking-vectorization-rerank-distillation|RAG 深度解析：分块向量化召回重排才是蒸馏同事 Skill 的关键
-- [[entities/rag-vector-knowledge-graph-ontology|向量库·知识图谱·本体论：RAG知识系统演进
-- [[entities/rag-vs-llm-wiki-enterprise-knowledge-base|RAG vs LLM Wiki 深度对比：企业知识库架构选型指南
-- [[entities/how-we-made-window-join-parallel-and-vectorized|How we made WINDOW JOIN parallel and vectorized
+- [[entities/rag-chunk-embedding-rerank-pipeline|RAG 分块向量化召回重排全链路]]
+- [[entities/rag-chunking-vectorization-rerank-distillation|RAG 深度解析：分块向量化召回重排才是蒸馏同事 Skill 的关键]]
+- [[entities/rag-vector-knowledge-graph-ontology|向量库·知识图谱·本体论：RAG知识系统演进]]
+- [[entities/rag-vs-llm-wiki-enterprise-knowledge-base|RAG vs LLM Wiki 深度对比：企业知识库架构选型指南]]
+- [[entities/how-we-made-window-join-parallel-and-vectorized|How we made WINDOW JOIN parallel and vectorized]]
 
 ---
 

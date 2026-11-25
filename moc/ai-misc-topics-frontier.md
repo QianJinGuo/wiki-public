@@ -7,7 +7,7 @@ tags:
   - research-query
   - ai-misc-topics
 created: 2026-05-21
-updated: 2026-06-11
+updated: 2026-11-25
 sources: [queries/ai-misc-topics-topic-map]
 ---
 # AI 研究中的 Misc Topics 有哪些值得关注的前沿方向？
@@ -114,11 +114,11 @@ AI 领域存在许多跨方向、前沿性或尚未被系统性归类的研究�
 
 ## 相关实体
 
-- [[entities/build-real-time-voice-streaming-with-amazon-nova-sonic-and-webrtc|Nova Sonic 实时语音流 — 多模态音频基础模型突破
-- [[entities/直播预约-数据引擎具身智能的下一个决胜局|具身智能数据引擎 — 机器人训练数据与决胜局
-- [[entities/nvidia-edge-first-llms-av-robotics|NVIDIA 边缘优先 LLM — AV 与机器人边缘部署
-- [[entities/open-defense-initiative|Open Defense Initiative — AI 安全防御技术
-- [[entities/nvidia-gpu-kernel-translation-cute-python-julia|GPU Kernel Translation CuTe — 内核优化与算子融合
+- [[entities/build-real-time-voice-streaming-with-amazon-nova-sonic-and-webrtc|Nova Sonic 实时语音流 — 多模态音频基础模型突破]]
+- [[entities/直播预约-数据引擎具身智能的下一个决胜局|具身智能数据引擎 — 机器人训练数据与决胜局]]
+- [[entities/nvidia-edge-first-llms-av-robotics|NVIDIA 边缘优先 LLM — AV 与机器人边缘部署]]
+- [[entities/open-defense-initiative|Open Defense Initiative — AI 安全防御技术]]
+- [[entities/nvidia-gpu-kernel-translation-cute-python-julia|GPU Kernel Translation CuTe — 内核优化与算子融合]]
 
 ## 相关概念
 

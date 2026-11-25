@@ -2,7 +2,7 @@
 
 title: "MiTA：注意力也是 FFN——快权重视角下的 Mixture-of-Top-k Attention"
 created: 2026-10-13
-updated: 2026-10-13
+updated: 2026-11-25
 type: entity
 tags: [ai, attention, architecture, efficient-inference, fast-weights]
 sources: [raw/articles/mita-attention-as-ffn-fast-weights-neurips26-2026-10-12]

@@ -1,7 +1,7 @@
 ---
 title: "Claude Agent SDK Skills：可复用的专业知识体系 — Skill ≠ Tool ≠ Memory，渐进加载 + 4 方分工 + 团队 Skill 库设计"
 created: 2026-06-18
-updated: 2026-09-07
+updated: 2026-11-25
 type: entity
 tags: [claude-agent-sdk, skills, agent, architecture, anthropic, prompt-engineering]
 sources: [raw/articles/claude-agent-sdk-skills-reusable-knowledge]
@@ -91,24 +91,28 @@ description: [任务 + 适用场景 + 期望产物]
 3. **把权限写成建议** → "不要删除文件"只是建议，真正不能删除要靠 disallowed_tools/Hooks/沙箱
 4. **没有输出格式** → 父 Agent 难消费结果
 5. **没有维护机制** → Skill 是知识资产，会过期，需要 review + 版本管理 + 淘汰
-
 ## 深度分析与实践启示
 
-**1. 渐进加载与 Hermes Agent Skill 机制的对齐** ^[raw/articles/claude-agent-sdk-skills-reusable-knowledge.md]
+### 渐进加载的架构价值：上下文经济学视角
 
-文章描述的三层渐进加载（目录→SKILL.md→references/templates/scripts）与 Hermes Agent 的 `skill_view` / `skills_list` 机制完全同构：`skills_list` 返回目录+描述，`skill_view(name)` 加载 SKILL.md，`skill_view(name, file_path)` 按需读取 references 子文件。Hermes 在此基础上增加了 category 分类和 linked_files 自动发现。 ^[raw/articles/claude-agent-sdk-skills-reusable-knowledge.md]
+三层加载（目录 → SKILL.md → references/templates/scripts）本质上是在把上下文当作稀缺资源做预算分配。第一层的 name + description 相当于一张路由表：每个 Skill 只占几十 token，却让模型始终"知道自己会什么"；第二层按任务匹配才加载 SKILL.md，意味着与当前任务无关的规范根本不会进入上下文；第三层把长规范、模板、脚本的成本推迟到真正需要的时刻。原文的关键定位是：渐进加载既不是隐藏黑箱（模型始终能看到目录），也不是一次性倾倒（不把全部规范塞满启动上下文）^[raw/articles/claude-agent-sdk-skills-reusable-knowledge.md]。这与 Hermes Agent 的 `skills_list` / `skill_view` 两级机制完全同构，也印证了 harness 层"上下文窗口是最贵的运行时资源"这一管理思想 [[concepts/harness-context-window-management]]。
 
-**2. "Boundaries" 是被低估的设计维度** ^[raw/articles/claude-agent-sdk-skills-reusable-knowledge.md]
+### 4 方分工如何映射到真实团队工作流
 
-多数 Skill 指南只关注"做什么"，本文强调 Boundaries（不要做什么）是一等公民。这与 Hermes Agent SKILL.md 的"Pitfalls"节异曲同工——记录不应该做的事往往比记录应该做的事更有价值，因为错误模式是团队最容易重复踩的。 [[hermes-agent-skills-source-code-analysis-shuge]]
+Skills/Hooks/Subagents/MCP 的四句判断法可以直接映射为一次代码审查的组织结构：Skill 定义审查顺序与输出格式，Hooks 承担"不能改源码、不能碰生产库、记录所有工具调用"的硬约束，Subagent 把安全/测试/文档拆成可并行的专家角色，MCP 把 GitHub/Linear/Slack 等外部系统接入流程。**核心规则是职责不可互相替代**：Skill 写"应该检查安全问题"只是建议性知识，真正的阻断必须落在权限、Hooks 与运行环境层——"说"与"能"分属两个层面，混层是 Agent 产品最常见的事故来源^[raw/articles/claude-agent-sdk-skills-reusable-knowledge.md]。原文的企业平台视角进一步说明这不是纯技术分类——财务、研发、客服、内容团队各挂不同 Skill 集，权限 preset 随角色同步切换，可观测系统记录使用情况。Skill 由此从 prompt 文件升级为 Agent 产品里的"专业能力包"，四方分工因此成为产品化的分水岭^[raw/articles/claude-agent-sdk-skills-reusable-knowledge.md]。这也解释了为什么 Skill 库值得单独做治理：它既是知识层又是触发层，任何一层的腐化都会直接表现为 Agent 行为退化。
 
-**3. 4 方分工是 Agent 产品化的分水岭** ^[raw/articles/claude-agent-sdk-skills-reusable-knowledge.md]
+### 团队 Skill 库与 5 个坑的失败经济学
 
-Skills/Hooks/Subagents/MCP 四方分工不只是技术分类，更是产品化思维：把 Agent 从"一个大 prompt"拆解为可独立配置、独立版本管理、独立权限控制的模块。企业场景下不同团队挂不同 Skill 集（财务/研发/客服/内容），权限 preset 同步切换——这是 Agent 平台化的核心设计。 ^[raw/articles/claude-agent-sdk-skills-reusable-knowledge.md]
+原文的团队库经验值得单独强调：上来就建 engineering-best-practices 这类大而全 Skill，结局是"什么都沾一点、什么都触发、什么都不精确"^[raw/articles/claude-agent-sdk-skills-reusable-knowledge.md]。按任务拆分（code-review / test-generation / release-notes / incident-review 等）之后，每个 Skill 只需回答三个问题——什么时候用、具体怎么做、输出什么格式；共享规范不复制，而是放 references/ 让相关 Skill 引用，改一处全体受益。失败经济学的关键在触发层：description 是给模型判断"何时用"的线索而非给人看的简介，粒度错误会被系统性放大——太泛则什么都触发、太窄则要用时想不起来，这正是"Skill 太长"与"description 太泛"两个坑的共同根源 [[entities/regression-tax-skills-hurt-llm-agents]]。而"把权限写成建议"则是激励与执行混层：文本约束在模型侧只影响倾向，硬边界必须下沉到 disallowed_tools/Hooks/沙箱。需要指出，文章提供了清晰框架但缺落地度量：无触发准确率数据、无渐进 vs 全量加载的 token 对比、无团队库 breaking changes 的版本管理实践——这些空白恰好对应后续可观测性主题应补的运行时证据。
 
-**4. 局限性：偏概念框架，缺乏落地度量** ^[raw/articles/claude-agent-sdk-skills-reusable-knowledge.md]
+### 实践启示
 
-文章提供了清晰的概念框架和模板，但缺乏：(1) Skill 触发准确率的实际数据；(2) 渐进加载 vs 全量加载的 token 节省对比；(3) 团队 Skill 库的版本管理实践（如何处理 breaking changes）。作为系列第 11 篇偏概论性质，后续可观测性篇可能补充运行时数据。
+1. **description 按"任务类型 + 适用对象 + 期望产物"写**，并显式排除无关场景——它是触发器，不是简介。
+2. **SKILL.md 只放路由和核心流程**，长内容下沉到 references/templates/scripts，用"做 A 时读取 references/a.md"的引用式写法，而非堆砌——SKILL.md 的加载成本是每次触发的固定开销，应与触发频率成反比。
+3. **Boundaries 是一等公民**：显式写"不直接修改代码、不评论纯风格偏好、不把低置信度猜测写成确定结论"，边界能显著降低输出噪音。
+4. **安全约束永远不要只写在 Skill 里**——disallowed_tools、Hooks、沙箱才是执行层，文本只是建议；判断标准是"如果模型忽略这句话，坏事是否仍然不可能发生"。
+5. **用五条件过滤是否值得建 Skill**（重复出现 / 流程稳定 / 统一质量 / 易忘细节 / 需要版本管理）；不满足就直接写一次性 prompt，不要为临时提醒建文件——Skill 库的每一项都摊销触发层的噪音成本。
+6. **把 Skill 当知识资产管理**：变更进 code review、定期 review 内容、建立淘汰机制——知识资产会过期，写完即忘是最贵的坑。 [[hermes-agent-skills-source-code-analysis-shuge]]
 
 ## 系列上下文
 

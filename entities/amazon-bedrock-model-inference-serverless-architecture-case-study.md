@@ -5,7 +5,7 @@ title: "Amazon Bedrock 模型推理 Serverless 架构案例"
 type: entity
 tags: [agent, api, architecture, aws, inference, model]
 created: 2026-05-21
-updated: 2026-09-28
+updated: 2026-11-25
 review_value: 7
 review_confidence: 9
 sources: [raw/articles/amazon-bedrock-model-inference-serverless-architecture-case-study]

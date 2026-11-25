@@ -3,7 +3,7 @@ title: "Codex can now control other desktop devices via Computer Use"
 type: entity
 tags: [testingcatalog]
 created: 2026-05-19
-updated: 2026-09-07
+updated: 2026-11-25
 review_value: 7
 review_confidence: 7
 review_recommendation: worth-reading
@@ -12,6 +12,7 @@ reviewed: 2026-09-07
 review_verdict: keep
 review_category: practice
 ---
+# Codex can now control other desktop devices via Computer Use
 ## 核心要点
 - 评分：v=7 × c=7 = 49
 - OpenAI 正在开发 Codex 远程控制功能，即使笔记本锁屏或休眠状态也能工作 
@@ -29,14 +30,20 @@ review_category: practice
 → [[raw/articles/codex-can-now-control-other-desktop-devices-via-computer-use|原文存档]]^[raw/articles/codex-can-now-control-other-desktop-devices-via-computer-use.md]
 
 ## 深度分析
-**技术演进路径** ^[raw/articles/codex-can-now-control-other-desktop-devices-via-computer-use.md]
-OpenAI 的 Codex 远程控制能力正在经历两个阶段的演进。第一阶段（2026 年 5 月 14 日上线）实现了手机端对桌面设备的控制，用户可以在手机上审查输出、批准命令、切换模型并向 Codex 分配新任务。第二阶段则剑指更根本的限制——打破 Computer Use 对解锁状态会话的依赖，使 Agent 能在设备锁屏或休眠时依然保持控制能力 。 ^[raw/articles/codex-can-now-control-other-desktop-devices-via-computer-use.md]
-**竞品对标与差异化** ^[raw/articles/codex-can-now-control-other-desktop-devices-via-computer-use.md]
-Anthropic 的 Claude Code 在 2026 年 2 月已实现手机到机器的控制功能，但同样受制于 Mac 锁屏后的操作限制。这意味着 OpenAI 当前的开发计划直接对标 Anthropic，双方在"随时随地远程驱动桌面 Agent"这一方向上展开竞争。突破锁屏限制将成为下一代远程控制的核心差异化能力 。 ^[raw/articles/codex-can-now-control-other-desktop-devices-via-computer-use.md]
-**平台设备矩阵式控制愿景** ^[raw/articles/codex-can-now-control-other-desktop-devices-via-computer-use.md]
-除了解决锁屏唤醒问题，OpenAI 还在探索多设备互联模式——用户可以在 Mac Mini 等辅助设备上安装 Codex，从主设备直接操控。这种"设备网格"式控制架构若实现，将大幅扩展 Agent 的物理作业范围，使一个终端能够统筹调度多个异构设备协同工作 。 ^[raw/articles/codex-can-now-control-other-desktop-devices-via-computer-use.md]
-**安全与平台的博弈** ^[raw/articles/codex-can-now-control-other-desktop-devices-via-computer-use.md]
-绕过锁屏状态意味着挑战 macOS 的核心安全假设——系统默认认为锁屏意味着空闲、不可操作的会话状态。任何让 Agent 在锁屏会话中持续控制屏幕的方案都可能引发 Apple 的审查。这反映了 AI Agent 能力扩展与操作系统安全模型之间的结构性张力 。 ^[raw/articles/codex-can-now-control-other-desktop-devices-via-computer-use.md]
+**控制面与执行面的分离：这次补的是“最后一公里”**
+2026 年 5 月 14 日上线的移动端远程控制只解决了控制面问题——手机可以审查输出、批准命令、切换模型、向 Mac 上的 Codex 桌面应用派发新任务；但执行面仍由 Computer Use 承担，而 Computer Use 的前提是设备处于解锁且唤醒的图形会话，才能查看屏幕、移动光标、在应用里键入。文章点明瓶颈正在 Computer Use 本身：手机端随时可下达指令，桌面端却可能锁屏休眠，人必须走回机器登录，异步链路在物理世界断开。新开发的能力瞄准的正是这“最后一公里”。
+
+**锁屏限制是 OS 会话模型约束，不是网络可达性问题**
+Computer Use 需要活跃的图形会话（屏幕可读、输入可注入），而 macOS 默认把锁屏定义为“空闲、不可触碰”的会话状态。因此打破锁屏限制要解决的不是连通性（远程控制链路已通），而是绕过操作系统的会话生命周期假设——这与 [[concepts/agent-sandbox|Agent 沙箱]] 是两条相反的路线：沙箱给 Agent 一个受控环境来换取自由度，这里则要在用户的真实桌面会话内持续持有截图与输入能力。文章明确“发布时间未出现”，且报道本身属于传闻类（AI Rumours），最终能力形态仍可能变化；能否通过 Apple 的审核本身就是最大不确定性。
+
+**无 SSH 的跨设备控制：设备网格作为执行面的横向扩展**
+第二项工作是让 Codex 连接并控制其他运行 Codex 应用的桌面设备，例如在 Mac Mini 上安装后从主设备直接操作，且明确“不需要 SSH”。文章提到相关 UI 组件仍在开发中、未来用户将能连接并操作多台设备，指向“设备网格”形态。架构上值得注意的是：它不走 shell 层的远程登录，而是复用同一套 Computer Use 执行面——同一能力既能驱动本机 GUI，也能被转发到另一台机器的 GUI 上，“设备”由此成为 Agent 执行资源的调度单元，而不是一个个独立终端。
+
+**安全面：跨锁屏输入通道 + 无人值守批准的组合风险**
+若 Agent 在锁屏会话内持续驱动屏幕，系统内就存在一个跨锁屏存活的屏幕读取与输入注入通道，这本身是高价值攻击面，对应 [[concepts/agent-security-threat-models|Agent 安全威胁模型]] 中持久控制通道一类的问题。同时移动端“批准命令”把人类审批挪到了手机上：当审批者看不到桌面实际画面、更看不到锁屏内正在发生的操作时，批准的语义强度随之下降，无人值守 agentic loop 的风险被放大（循环结构可参考 [[concepts/harness-loop-architecture|Harness 循环架构]]）。经济性上也有一层代价：GUI 化执行显著比结构化 API 调用更贵更慢，把关键路径留在 GUI 层会放大成本与不稳定因素。
+
+**竞品与生态定位**
+Anthropic 在 2026 年 2 月已为 Claude Code 上线手机到机器的控制，但同样在 Mac 锁屏后受限；OpenAI 此举是对位竞争，“突破锁屏”将成为下一代远程控制的核心分水岭。同期同一来源的关联报道显示 Google 的 Gemini 桌面端也将加入带权限请求弹窗的 “Stream to Cursor” 输入流功能，说明桌面 Agent 争夺系统输入通道是 2026 年中的共同趋势——谁能先在锁屏会话内合法作业，谁就能把“异步远程作业”从演示变成默认能力，这也是该报道被定位为“同一个远程控制故事的第二拍”而非独立发布的原因。
 
 ## 实践启示
 **对 Agent 开发者的意义** ^[raw/articles/codex-can-now-control-other-desktop-devices-via-computer-use.md]

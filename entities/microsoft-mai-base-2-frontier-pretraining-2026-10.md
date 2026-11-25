@@ -1,7 +1,7 @@
 ---
 title: "MAI-Base-2：微软 AI 前沿预训练（80B/2.8T MoE、scaling ladder 与 Muon 规模化）"
 created: 2026-10-20
-updated: 2026-11-11
+updated: 2026-11-26
 type: entity
 tags: [pretraining, moe, scaling-laws, muon, microsoft, training-infrastructure, llm]
 sources: [raw/articles/microsoft-mai-base-2-frontier-pretraining-2026-10]
@@ -79,16 +79,25 @@ MAI-Base-2 目前处于 post-training 阶段，MAI-Base-3 的准备工作已开�
 ## 深度分析
 
 ### 三支柱中，难复制的是什么
-其中 scaling law 与 MFU 归因以流程形式公开；最难复制的是 co-design 的组织闭环与 16K 张 GB200 的资本门槛——公式可抄，闭环难抄。^[raw/articles/microsoft-mai-base-2-frontier-pretraining-2026-10.md:25-31]
+scaling science、model-infrastructure co-design、scaling data 三根支柱的可复制性递减：scaling law 与 MFU 归因以流程形式公开，任何能做小规模消融的团队都能照搬；数据纪律（organic-only、in-house 处理全部 token）是难一夜建立的慢变量；最难复制的是 co-design 的组织闭环（建模、数据、infra 须在同一反馈环内迭代）与 16K 张 GB200 的资本门槛。公式可抄，闭环难抄——文章把 "owning the full stack" 放在叙事开头正说明这点。^[raw/articles/microsoft-mai-base-2-frontier-pretraining-2026-10.md:25-31,19]
 
 ### 超参 law：把耦合超参解析化
-网格拟合 (LR, WD) 耦合的要点：单调 LR 时最优 WD 会漂移，一次给出联合最优。dropout law 把正则强度挂到激活参数量上——随规模变化的超参也走同一条流水线，而非逐个 ablate。^[raw/articles/microsoft-mai-base-2-frontier-pretraining-2026-10.md:49-59]
+网格拟合 (LR, WD) 耦合的要点：单调 LR 时最优 WD 会漂移，一次给出联合最优而非两轮独立扫描。$LR^* \times WD^* = 17.04/\text{steps}$ 以 steps 计价，隐含"每 step 计算量固定"，对 horizon 30T→50T 的迭代尤其方便。dropout law 把正则强度挂到激活参数量而非总参数量上，与 MoE 视角一致：影响训练动态的是被激活的参数。更值得学的元做法：随规模变化的超参也走同一条"小规模拟合 → 中规模验证 → 全量使用"流水线，而非逐个 ablate——把超参选择本身也 scaling 化。^[raw/articles/microsoft-mai-base-2-frontier-pretraining-2026-10.md:49-59]
 
 ### MFU 归因的顺序：先证 FLOPs，再修时间
-"每层 MoE" 的 EG FLOPs 优势早已成立，却被实现低效吃掉：dynamic routing 的内存碎片与极端负载预留、更细 expert 的 per-expert 开销。修复后 MFU 24%→35%，布局选择才翻转。要点：决策看修复后的时间，不看修复前的 FLOPs。^[raw/articles/microsoft-mai-base-2-frontier-pretraining-2026-10.md:65-75]
+"每层 MoE" 的 EG FLOPs 优势早已成立，却被实现低效吃掉：dynamic routing 的内存碎片与极端负载预留挤占了本可减少 activation recomputation 的显存，更细粒度 expert 又叠加 per-expert 开销。修复后 MFU 24%→35%，布局选择才翻转。方法论顺序：先证 FLOPs 方向，再归因时间损耗，修复后才解锁布局决策——看修复后的时间，不看修复前的 FLOPs。对照 [[entities/ultaep-moe-expert-load-balancing-300us|UltaEP MoE 负载均衡]]：极端负载在那里被当作独立问题用调度解决，MAI 则从内存占用结构上消除预留，两条路线都承认"极端负载的尾部成本是 MoE MFU 的主要杀手"。^[raw/articles/microsoft-mai-base-2-frontier-pretraining-2026-10.md:65-75]
+
+### Muon：收益在 dynamics，代价在 per-step
+Muon 的收益侧是动态更稳定 + 相对 AdamW 的大幅效率增益；代价侧是 per-step 开销，且随集群规模线性放大——16K GPU 上任何同步等待都被复制 16000 倍。三处优化各消一类开销：多 batch 预取消通信-计算串行；缓存 resharding metadata 消重复索引逻辑（稀疏 MoE 的同形状参数复用率极高）；router 等选定权重复制而非分片，跳过第一阶段通信，Newton-Schulz 后一次 all-gather。与 [[entities/deepseek-moe-parallel-strategy|DeepSeek MoE 并行策略]] 对照：DeepSeek 从并行切分入手，MAI 从 optimizer 状态分布入手，殊途同归于"通信墙下的局部最优"。^[raw/articles/microsoft-mai-base-2-frontier-pretraining-2026-10.md:79-87]
 
 ### 数据纪律与评测口径互为表里
-organic-only与 BPB、vendor 出题、decontamination 互为证据：不用蒸馏数据，就无需为评测污染辩护。这条方法论分叉是效率优势可归因于预训练本身的前提。^[raw/articles/microsoft-mai-base-2-frontier-pretraining-2026-10.md:33-39,97]
+organic-only 与 BPB、vendor 出题、decontamination 互为证据：不用蒸馏数据，就无需为评测污染辩护；BPB 规避 tokenizer 差异，为"4–12x FLOPs 效率"的跨家族对比提供可比基准。对 Kimi K3 等对手只有 post-trained checkpoint 可取这一 caveat 的显式声明，是对比诚实度的信号——效率归因链（归于预训练本身而非 post-training 泄漏）依赖这些口径全部成立。对照 [[entities/deepseek-v4-training-methodology|DeepSeek V4 训练方法论]]（organic 与蒸馏两条路线的正面分叉）与 [[concepts/llm-pretraining-vs-sft|预训练 vs SFT]]，这条分叉决定了"预训练配方"类知识能否被独立验证。^[raw/articles/microsoft-mai-base-2-frontier-pretraining-2026-10.md:33-39,97]
+
+### activation gradient clipping 作为廉价探针
+其收益随规模增长（大多数改动的效率增益各规模恒定），是少数"越大规模越值得引入"的候选。当诊断工具的用法更值得记录：一个被 clipping 标出的畸形样本——代码数据里 license header 在句中被截断——回溯定位到预处理流水线 bug。机制是梯度范数对分布外 token 序列敏感，clipping 触发率天然是数据管线的无标注质检信号，成本远低于单独跑数据审计；实践中可接入告警面。^[raw/articles/microsoft-mai-base-2-frontier-pretraining-2026-10.md:89-93]
+
+### 本文没有说的
+空白即信息：没有数据配比、没有 BPB 之外的 capability 评测、post-training 只说 "undergoing"。这篇"配方级"披露覆盖的是 pre-training 的 infrastructure 侧（scaling ladder、MFU 归因、Muon 通信、clipping），modeling 侧的杠杆（数据 mixture）仍封闭——应把它定位为"前沿实验室愿意公开的部分"的样本，而非预训练配方本身。^[raw/articles/microsoft-mai-base-2-frontier-pretraining-2026-10.md:19,99-107]
 
 ## 实践启示
 

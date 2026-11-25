@@ -3,7 +3,7 @@
 title: "实现复利工程：我是如何通过龙虾构建递归进化的 Agent 闭环"
 type: entity
 created: 2026-07-04
-updated: 2026-09-24
+updated: 2026-11-25
 tags: [wechat, ai]
 rating: v7c8
 sources:

@@ -1,7 +1,7 @@
 ---
 title: "Agent 即分布式系统：报销工具的三阶段进化（LLM 纯函数 → Agent Loop → Skill+MCP）"
 created: 2026-09-18
-updated: 2026-10-22
+updated: 2026-11-25
 type: entity
 tags: [agent, distributed-systems, harness, idempotency, state-persistence, mcp, skill, error-handling, durability, aws]
 sources: [raw/articles/从-llm-ocr-到分布式-agent一个报销工具的三次进化]

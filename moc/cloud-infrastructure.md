@@ -1,7 +1,7 @@
 ---
 title: "云基础设施如何支持 AI Agent 的大规模部署？"
 created: 2026-05-16
-updated: 2026-06-11
+updated: 2026-11-25
 type: moc
 tags: [cloud-infrastructure, ai-agent, deployment, serverless, scalability]
 ---
@@ -19,8 +19,8 @@ tags: [cloud-infrastructure, ai-agent, deployment, serverless, scalability]
 **关键挑战**：传统 GPU 实例需要长期保有，成本高昂；AI Agent  workloads 具有突发性特征，需要弹性扩缩容。
 
 **平台方案**：
-- [[entities/modal-truly-serverless-gpus|How to achieve truly serverless GPUs — Modal 实现的真正 serverless GPU 方案，按需弹性计费
-- [[entities/automate-progressive-rollouts-with-vercel-flags-vercel|Automate progressive rollouts with Vercel Flags — Vercel Flags 支持渐进式部署与特性开关
+- [[entities/modal-truly-serverless-gpus|How to achieve truly serverless GPUs — Modal 实现的真正 serverless GPU 方案，按需弹性计费]]
+- [[entities/automate-progressive-rollouts-with-vercel-flags-vercel|Automate progressive rollouts with Vercel Flags — Vercel Flags 支持渐进式部署与特性开关]]
 
 **核心能力**：
 - 冷启动延迟优化
@@ -32,7 +32,7 @@ tags: [cloud-infrastructure, ai-agent, deployment, serverless, scalability]
 **关键挑战**：大规模部署需要成本可预测，但 spot instance 有中断风险，reserved capacity 又缺乏弹性。
 
 **平台方案**：
-- [[entities/3rdfsmp|Archera — Insured cloud commitments for AWS, Azure, and Google — 为云承诺提供保险，降低预留 capacity 的风险
+- [[entities/3rdfsmp|Archera — Insured cloud commitments for AWS, Azure, and Google — 为云承诺提供保险，降低预留 capacity 的风险]]
 
 **核心能力**：
 - 精算云消费模型
@@ -66,9 +66,9 @@ tags: [cloud-infrastructure, ai-agent, deployment, serverless, scalability]
 
 ## 相关实体
 
-- [[entities/modal-truly-serverless-gpus|How to achieve truly serverless GPUs
-- [[entities/3rdfsmp|Archera — Insured cloud commitments
-- [[entities/automate-progressive-rollouts-with-vercel-flags-vercel|Automate progressive rollouts with Vercel Flags
+- [[entities/modal-truly-serverless-gpus|How to achieve truly serverless GPUs]]
+- [[entities/3rdfsmp|Archera — Insured cloud commitments]]
+- [[entities/automate-progressive-rollouts-with-vercel-flags-vercel|Automate progressive rollouts with Vercel Flags]]
 
 ---
 

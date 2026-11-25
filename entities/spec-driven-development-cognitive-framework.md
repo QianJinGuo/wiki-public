@@ -2,7 +2,7 @@
 
 title: "Spec-Driven AI 编程半年实战 — 有损管道、三工具比较与三大认知陷阱"
 created: 2026-07-07
-updated: 2026-09-15
+updated: 2026-11-25
 type: entity
 tags: [sdd, spec-driven-development, lossy-pipeline, spec-kit, openspec, kiro, cognitive-traps, intent-holder, verification, ai-coding, prompt-vs-spec]
 sources:
@@ -118,7 +118,7 @@ Spec Kit 四层管道每层约 15% 损耗，累积对齐度约 52%（0.85⁴ ≈
 
 ## 参考
 
-→ [raw/articles/d4MCEB91ppMVrNO4JQaI7Q|原文存档]
+→ 原文存档：`raw/articles/d4MCEB91ppMVrNO4JQaI7Q/article.md`
 
 [^1]: raw/articles/d4MCEB91ppMVrNO4JQaI7Q
 

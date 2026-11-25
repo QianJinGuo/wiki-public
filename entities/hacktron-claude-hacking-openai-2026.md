@@ -1,7 +1,7 @@
 ---
 title: "Hacktron AI 用 Claude 黑进 OpenAI：HEIC 图片 RCE 到内部 monorepo PoC 的 72 小时"
 created: 2026-09-24
-updated: 2026-09-24
+updated: 2026-11-25
 type: entity
 tags: [ai-security, llm-agent, pentest, claude, opus, exploit-chain, openai, discourse, libheif]
 sources: [raw/articles/claude黑进了openai]

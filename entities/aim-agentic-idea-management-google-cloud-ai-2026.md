@@ -1,7 +1,7 @@
 ---
 title: "AIM：贝叶斯优化式 Agentic Idea Management 自动化研究框架（Google Cloud AI，arXiv 2609.38445）"
 created: 2026-10-02
-updated: 2026-10-03
+updated: 2026-11-25
 type: entity
 tags: [aim, agentic-research, bayesian-optimization, idea-management, research-agent, google-cloud-ai, autolab, scientistone, explore-exploit, solution-auditor, arxiv]
 sources: [raw/articles/agentic-idea-manager-google-cloud-ai-2026]

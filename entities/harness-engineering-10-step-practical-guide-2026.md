@@ -1,7 +1,7 @@
 ---
 title: "Harness Engineering 实践指南：10 步路线图 + 8 失败模式 + 设计 Checklist — 系列第 15 篇收官"
 created: 2026-06-18
-updated: 2026-09-07
+updated: 2026-11-25
 type: entity
 tags: [harness-engineering, agent, architecture, engineering, production, devops, practical-guide]
 sources: [raw/articles/harness-engineering-10-step-practical-guide-2026]
@@ -95,24 +95,30 @@ Agent 面临的上下文腐烂、工具误用、成本失控、安全漏洞、�
 
 ## 深度分析与实践启示
 
-**1. 10 步路线图 vs Hermes Agent 的实现映射** ^[raw/articles/harness-engineering-10-step-practical-guide-2026.md]
+### 为什么是这个顺序：约束先于能力
 
-Hermes Agent 已实现路线图中的大部分步骤：Step 1 = AGENTS.md + CLAUDE.md（目标边界）；Step 2 = tools/ 目录（原子工具）；Step 3 = context management + compaction；Step 4 = session persistence + memory tool；Step 5 = disallowed_tools + hooks；Step 6 = pre-commit hooks + wiki-lint；Step 7 = Langfuse integration；Step 8 = cron + kanban（长程执行）；Step 9 = model routing（OpenRouter）。Step 10 持续迭代通过 skill_manage 和 session_search 实现。 [[entities/hermes-agent-skills-source-code-analysis-shuge]]^[raw/articles/harness-engineering-10-step-practical-guide-2026.md]
+10 步路线图的价值不在清单本身，而在排序逻辑：定义目标边界（Step 1）、设计原子工具集（Step 2）、配置安全护栏（Step 5）这些「限制 Agent 能做什么」的工作，被刻意排在能力扩展之前。文章给出两层支撑：Step 1 只需 30 分钟，但省掉它会让后续所有步骤方向跑偏——工具、上下文、验证的设计全部以「任务是什么、不能做什么、成功怎么算」为输入；护栏一章的论断则是护栏的目的不是防止 Agent 做坏事，而是把风险压在可接受范围内的同时不拖慢正常任务，太严的护栏会让 Agent 什么都做不了。这也解释了「先跑起来」的最小组合为什么是 Step 1/2/7：目标边界、最小工具集、基本 Trace 构成一个能产生反馈的最小运行单元，其余步骤是对反馈的响应，而非提前想象的完备性。参见 [[concepts/harness-engineering-framework|Harness Engineering Framework]]。^[raw/articles/harness-engineering-10-step-practical-guide-2026.md:31-41] ^[raw/articles/harness-engineering-10-step-practical-guide-2026.md:105]
 
+### 8 种失败模式的经济学：诊断路径是真正的资产
 
-**2. Progress File 模式与 Hermes Memory/Cron 的对比** ^[raw/articles/harness-engineering-10-step-practical-guide-2026.md]
+速查表每项都是「表现→诊断→缓解」三段式，最值得复用的不是缓解列而是诊断列：完成幻觉要查 Trace 最后几步是否真的调用了验证工具；上下文腐烂要定位质量开始下降的那一次 LLM 调用并回看当时的上下文构成；级联错误要从 Trace 开头找第一个偏差点。「按表现归类→沿诊断路径取证据→套用缓解」可以直接充当 Agent 事故的 post-mortem 骨架。另一个结构性观察是解法的收敛性：腐烂、溢出、误用、级联、失忆五种模式的缓解最终都落到同一组机制——Compaction、工具输出卸载、子 Agent 隔离、Progress File 即时更新。失败模式的多样性远大于解法的多样性，意味着 Harness 投资集中在少数机制上即可覆盖大部分故障面。^[raw/articles/harness-engineering-10-step-practical-guide-2026.md:187-253]
 
-文章推荐 Progress File（claude-progress.txt）作为跨 session 状态管理。Hermes 用 memory tool（持久化记忆）+ cron job（定时执行）+ kanban（任务板）三者组合实现等价功能。memory 适合持久事实，cron 适合定时触发，kanban 适合任务分解——比单一 Progress File 更结构化但也更复杂。 ^[raw/articles/harness-engineering-10-step-practical-guide-2026.md]
+### Checklist 是漂移保险，不是上线仪式
 
-**3. 8 种失败模式的实证价值** ^[raw/articles/harness-engineering-10-step-practical-guide-2026.md]
+18 项 Checklist 的正确用法不是上线前打钩一次，而是作为回归基线：每次改系统提示、换模型、加工具之后重过一遍。五大类恰好对应路线图里随时间最容易漂移的部分——上下文管理（提示膨胀悄悄破坏渐进式披露）、安全护栏（图省事逐步放空白名单）、成本控制（新增步骤引入昂贵调用）。文章强调 Harness 是持续迭代而非一次性构建，每周 review 是它的运行形态；Checklist 在这个循环里的角色是把「隐性漂移」翻译成「可检测项」。它与 [[concepts/evaluation-harness-design|评估设计]] 互补：评估度量 Agent 输出质量，Checklist 度量 Harness 自身的配置完整性——前者告诉你效果变没变，后者告诉你环境变了没有。^[raw/articles/harness-engineering-10-step-practical-guide-2026.md:255-296] ^[raw/articles/harness-engineering-10-step-practical-guide-2026.md:177-185]
 
-这 8 种失败模式不是理论推测，每种都有"表现→诊断→缓解"三段式，可直接用于 Agent 系统的 post-mortem 分析。尤其"完成幻觉"和"上下文腐烂"是生产中最常见的两类——前者靠计算型验证（不能只声明完成），后者靠 Compaction 策略（60% 阈值 + 重注入）。^[raw/articles/harness-engineering-10-step-practical-guide-2026.md]
+### 适用边界与保留意见
 
+作为收官篇它是提炼而非论证，三处数据缺口需要使用者自行补齐：10 步各步骤的实际耗时/成本、8 种模式的生产频率分布、18 项的优先级排序。路线图以单 Agent 编码场景为默认背景，对多 Agent 编排和非 coding 场景着墨有限；套用时步骤编号本身不重要，可迁移的是「约束先于能力、验证先于扩展、可观测先于优化」这条依赖链。^[raw/articles/harness-engineering-10-step-practical-guide-2026.md:29-41]
 
-**4. 局限性：缺乏度量基准** ^[raw/articles/harness-engineering-10-step-practical-guide-2026.md]
+### 实践要点
 
-作为收官篇偏总结性质，缺乏：(1) 10 步路线图各步骤的实际耗时/成本数据；(2) 8 种失败模式在生产中的频率分布；(3) Checklist 18 项的优先级排序。这些数据需要在具体项目中积累。^[raw/articles/harness-engineering-10-step-practical-guide-2026.md]
-
+1. **起步最小化**：只做 Step 1/2/7 跑起来，其余按实际问题加入，不为想象的场景提前完备。^[raw/articles/harness-engineering-10-step-practical-guide-2026.md:314-319]
+2. **验证分层**：计算型验证（测试/Linter/类型检查）优先，LLM Judge 只兜底计算型覆盖不到的质量维度。^[raw/articles/harness-engineering-10-step-practical-guide-2026.md:111-115]
+3. **长程任务不累积上下文**：Ralph Loop 每次迭代用干净上下文、从文件系统读状态，退出由 Feature List 的可计算 passes 驱动而非 Agent 自报。参见 [[concepts/harness-loop-architecture|Harness Loop 架构]]。^[raw/articles/harness-engineering-10-step-practical-guide-2026.md:136-164]
+4. **Compaction 阈值提前定**：上下文使用率 60% 即触发，且每次迭代重注入原始任务描述——腐烂的对策是预防性压缩，不是满了再救。^[raw/articles/harness-engineering-10-step-practical-guide-2026.md:199-205]
+5. **成本先做两件事**：模型路由 + Prompt 缓存通常即可省 60%+；子 Agent 隔离与输出卸载等上下文真正膨胀后再上。参见 [[concepts/context-engineering|上下文工程]]。^[raw/articles/harness-engineering-10-step-practical-guide-2026.md:166-175]
+6. **review 固定三问**：完成率在涨吗、成本趋势健康吗、最常见失败模式是什么；结论写进 AGENTS.md，让设计决策对未来的自己和接手者可见。^[raw/articles/harness-engineering-10-step-practical-guide-2026.md:177-185]
 
 ## 相关实体
 

@@ -7,7 +7,7 @@ tags:
   - openai-ecosystem
   - agent-development
 created: 2026-05-21
-updated: 2026-06-11
+updated: 2026-11-25
 ---
 
 # OpenAI 的 Ecosystem 战略与 Agent 开发者选型有什么关系？
@@ -26,7 +26,7 @@ OpenAI 通过 GPT 系列模型为 Agent 开发提供了从推理到多模态的�
 - 8B 小模型（如 GPT-4o-mini）在资源受限场景下提供高性价比选择
 
 **相关实体：**
-- [[entities/CVPR-2026-Highlight-让AI像电影人一样-看-视频-8B小模型反超GPT-5与Gemini-3-1-Pro|CVPR 2026 Highlight｜让AI像电影人一样「看」视频，8B小模型反超GPT-5与Gemini 3.1 Pro
+- [[entities/CVPR-2026-Highlight-让AI像电影人一样-看-视频-8B小模型反超GPT-5与Gemini-3-1-Pro|CVPR 2026 Highlight｜让AI像电影人一样「看」视频，8B小模型反超GPT-5与Gemini 3.1 Pro]]
 - 破案了为啥ChatGPT老想着稳稳地接住你
 
 ### 2. 开发者工具链成熟度
@@ -41,7 +41,7 @@ OpenAI 与 Anthropic 的竞争格局促使开发者考虑多平台策略：
 ### 4. OpenAI 内部动态影响生态稳定性
 
 管理层变动和技术路线调整可能影响开发者选型信心：
-- [[entities/奥特曼最险一战-前女cto当庭翻脸-openai权斗彻底打到台前-6bf26e92e29b|奥特曼最险一战：前女CTO当庭翻脸，OpenAI权斗彻底打到台前
+- [[entities/奥特曼最险一战-前女cto当庭翻脸-openai权斗彻底打到台前-6bf26e92e29b|奥特曼最险一战：前女CTO当庭翻脸，OpenAI权斗彻底打到台前]]
 
 ## 结论
 
@@ -53,6 +53,6 @@ OpenAI ecosystem 战略与 Agent 开发者选型的关系体现在三个层面�
 ## 相关主题
 
 - AI Agent Platforms Topic Map（已删除） — Agent 平台对比研究
-- [[queries/ai-agent-era-developer-toolchain-redesign|Developer Tooling — 开发者工具链
+- [[queries/ai-agent-era-developer-toolchain-redesign|Developer Tooling — 开发者工具链]]
 - [[moc/anthropic-ecosystem|Anthropic Ecosystem]] — 竞争对手生态对比
 - [[queries/ai-model-research-latest-directions|AI Model Research]] — 模型能力研究

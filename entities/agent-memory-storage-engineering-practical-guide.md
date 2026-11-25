@@ -2,7 +2,7 @@
 
 title: "记忆体系工程实战：从设计选型到生产落地 — 存储分层、诊断框架与架构模式"
 created: 2026-07-07
-updated: 2026-11-19
+updated: 2026-11-25
 type: entity
 tags: [agent-memory, memory-storage, sqlite, redis, pgvector, qdrant, weaviate, vector-database, memory-engineering, hermes-agent, pinecone, hybrid-retrieval, fts5, file-tree, markdown]
 sources:
@@ -120,6 +120,6 @@ hermes-agent 用进程内状态替代 Redis、用 SQLite FTS5 + sqlite-vec 做�
 
 ## 参考
 
-→ [raw/articles/yMBIpbWPhUOtWjqwBHNKqQ|原文存档]
+→ 原文存档：`raw/articles/yMBIpbWPhUOtWjqwBHNKqQ/article.md`
 
 [^1]: raw/articles/yMBIpbWPhUOtWjqwBHNKqQ

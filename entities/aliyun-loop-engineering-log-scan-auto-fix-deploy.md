@@ -1,7 +1,7 @@
 ---
 title: "阿里云 Loop Engineering 实战：日志扫描到预发部署的全自主闭环"
 created: 2026-07-07
-updated: 2026-09-07
+updated: 2026-11-25
 type: entity
 tags: [loop-engineering, agent, devops, automation, ali-cloud, self-healing, cicd, agent-monitoring]
 sources: [raw/articles/loop-engineering-实战实现从日志扫描到预发部署的全自主闭环]
@@ -82,4 +82,4 @@ Loop Engineering 的核心不在于自动化"写代码"，而在于设计出能�
 
 ## 参考
 
-→ [raw/articles/loop-engineering-实战实现从日志扫描到预发部署的全自主闭环|原文存档]
+→ [[raw/articles/loop-engineering-实战实现从日志扫描到预发部署的全自主闭环|原文存档]]

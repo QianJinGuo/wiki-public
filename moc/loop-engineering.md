@@ -1,7 +1,7 @@
 ---
 title: "Loop Engineering 主题地图 (MOC)"
 created: 2026-06-15
-updated: 2026-09-10
+updated: 2026-11-25
 type: moc
 tags: [moc, loop-engineering, harness, claude-code, peter-steinberger, boris-cherny, 2026, agent-paradigm, feedback-control]
 sources: [raw/articles/loop-engineering-infoq-boris-cherny-peter-steinberger, raw/articles/loop-engineering-peter-steinberger-boris-cherny, raw/articles/loop-engineering-工程现场-ruofei, entities/loop-engineering-feedback-control-system, entities/loop-engineering-addy-osmani-challengehub, entities/harness-engineering, entities/claude-code-core-internals]
@@ -85,11 +85,11 @@ sources: [raw/articles/loop-engineering-infoq-boris-cherny-peter-steinberger, ra
 
 ### 主 Entity（必读）
 
-- [[entities/loop-engineering-feedback-control-system|Loop Engineering: 把反馈循环放进工程现场 — **1781 字**，5 阶段循环 + 单 Agent vs Fleet + 现实案例（Claude Code/Codex/Hermes），由 3 篇 raw 蒸馏合并
+- [[entities/loop-engineering-feedback-control-system|Loop Engineering: 把反馈循环放进工程现场 — **1781 字**，5 阶段循环 + 单 Agent vs Fleet + 现实案例（Claude Code/Codex/Hermes），由 3 篇 raw 蒸馏合并]]
 
 ### 平行 Entity
 
-- [[entities/loop-engineering-addy-osmani-challengehub|Loop Engineering：不再写提示词，而是设计替你写提示词的循环 — **5864 字**，Addy Osmani 视角 + 6 大构件 + 5 阶段循环，含 Fleet Loop 拓扑 + Boris/Peter 公开访谈原始引用
+- [[entities/loop-engineering-addy-osmani-challengehub|Loop Engineering：不再写提示词，而是设计替你写提示词的循环 — **5864 字**，Addy Osmani 视角 + 6 大构件 + 5 阶段循环，含 Fleet Loop 拓扑 + Boris/Peter 公开访谈原始引用]]
 - [[entities/claude-code-loop-engineering-guide|Claude Code Loop 工程指南]]
 - [[entities/loop-engineering-concept-analysis-feixue-ali-2026|Loop Engineering 概念解析（飞书/阿里 2026）]]
 - [[entities/loop-engineering应该赞成还是反对|Loop Engineering：应该赞成还是反对]]
@@ -98,9 +98,9 @@ sources: [raw/articles/loop-engineering-infoq-boris-cherny-peter-steinberger, ra
 
 ### 上游 / 下游 Entity
 
-- [[entities/harness-engineering|Harness Engineering — Loop 是 Harness 的「编排层」
-- [[entities/claude-code-core-internals|Claude Code 核心机制 — `/loop` 命令的产品化实现
-- [[entities/agent-harness-architecture|Agent Harness 架构 — loop 运行的容器
+- [[entities/harness-engineering|Harness Engineering — Loop 是 Harness 的「编排层」]]
+- [[entities/claude-code-core-internals|Claude Code 核心机制 — `/loop` 命令的产品化实现]]
+- [[entities/agent-harness-architecture|Agent Harness 架构 — loop 运行的容器]]
 - [[concepts/agent-self-improvement-loops|Agent 自我改进循环]] — 抽象理论框架
 
 ---
@@ -135,15 +135,15 @@ sources: [raw/articles/loop-engineering-infoq-boris-cherny-peter-steinberger, ra
 
 ### Step 1：理解基础
 
-读 [[entities/loop-engineering-feedback-control-system|Loop Engineering: 把反馈循环放进工程现场 掌握 5 阶段循环 + closed-loop 概念。
+读 [[entities/loop-engineering-feedback-control-system|Loop Engineering: 把反馈循环放进工程现场]]，掌握 5 阶段循环 + closed-loop 概念。
 
 ### Step 2：看工程实现
 
-读 [[entities/loop-engineering-addy-osmani-challengehub|Loop Engineering:不再写提示词,而是设计替你写提示词的循环——先写刹车再写循环（6 来源深度合并：Addy Osmani / Boris Cherny+Peter Steinberger / 教科书 / 若飞 工程现场 / TechFarrari 批判 / 若飞 实用指南） 了解 Addy Osmani 视角的 6 大构件 + Fleet Loop 拓扑。
+读 [[entities/loop-engineering-addy-osmani-challengehub|Loop Engineering：不再写提示词，而是设计替你写提示词的循环]]，了解 Addy Osmani 视角的 6 大构件 + Fleet Loop 拓扑。
 
 ### Step 3：理解生态
 
-读 [[entities/harness-engineering|'Harness Engineering：AI 从 把 Loop 放回 Harness 框架，理解「Loop > Harness > Prompt」的层级。
+读 [[entities/harness-engineering|Harness Engineering]]，把 Loop 放回 Harness 框架，理解「Loop > Harness > Prompt」的层级。
 
 ### Step 4：实践
 

@@ -2,7 +2,7 @@
 
 title: "Agent 自进化评估瓶颈 — 外置 evaluator 是自动自进化的前提条件"
 created: 2026-07-07
-updated: 2026-09-13
+updated: 2026-11-25
 type: entity
 tags: [self-evolution, evaluator, reward-hacking, darwin-godel-machine, alphaevolve, deepseek-r1, self-rewarding, meta-rewarding, swe-bench-illusion, agent-evaluation, llm-as-judge, goodharts-law]
 sources:
@@ -115,7 +115,7 @@ review_category: tech
 
 ## 参考
 
-→ [raw/articles/tzxbqmBhPlQOarakeeMQaQ|原文存档]
+→ 原文存档：`raw/articles/tzxbqmBhPlQOarakeeMQaQ/article.md`
 
 [^1]: raw/articles/tzxbqmBhPlQOarakeeMQaQ
 

@@ -2,7 +2,7 @@
 
 title: "AI Agent 时代 CI/CD 生存指南 — 阿里 a1 CLI 生产级实践"
 created: 2026-07-07
-updated: 2026-09-15
+updated: 2026-11-25
 type: entity
 tags: [alibaba, ci-cd, ai-agent, a1-cli, gate-scripts, dynamic-smoke-test, dogfooding, beta-telemetry, deny-list, harness-ai-randomness, go-cli, release-engineering, self-healing-pipeline]
 sources:
@@ -144,7 +144,7 @@ a1 CLI 的做法带一层漂亮的自我指涉：工具在自己的 CI 流水线
 
 ## 参考
 
-→ [raw/articles/0NuS75Bcys0xNCp9wNl8aw|原文存档]
+→ 原文存档：`raw/articles/0NuS75Bcys0xNCp9wNl8aw/article.md`
 
 [^1]: raw/articles/0NuS75Bcys0xNCp9wNl8aw
 

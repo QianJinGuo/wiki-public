@@ -1,7 +1,7 @@
 ---
 title: "The Age of Reasoning：以显式认知状态为核心的推理架构（Metis Reasoning 白皮书）"
 created: 2026-10-21
-updated: 2026-10-24
+updated: 2026-11-25
 type: entity
 tags: [reasoning, architecture, epistemic-state, hallucination, verification, whitepaper]
 sources: [raw/articles/age-of-reasoning-epistemic-state-architecture-metis-2026]

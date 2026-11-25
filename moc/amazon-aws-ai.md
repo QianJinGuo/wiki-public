@@ -1,7 +1,7 @@
 ---
 title: "AWS AI 服务如何支撑企业级 Agent 应用？"
 created: "2026-05-15"
-updated: "2026-05-21"
+updated: "2026-11-25"
 type: moc
 tags: [topic-map, navigation, amazon-aws-ai, agent, enterprise, bedrock]
 sources:
@@ -77,16 +77,16 @@ QuickSight 作为 BI 工具，正在成为 Agent 输出可视化的重要载体�
 
 ## 相关实体
 
-- [[entities/amazon-bedrock-model-inference-serverless-architecture-case-study|Amazon Bedrock 无服务器推理架构 — Bedrock 企业级模型服务
-- [[entities/amazon-nova-manufacturing-intelligence|Amazon Nova Manufacturing Intelligence — 多模态 Embeddings 制造业应用
-- [[entities/build-real-time-voice-streaming-with-amazon-nova-sonic-and-webrtc|Nova Sonic 实时语音流 — 多模态语音生成
-- [[entities/gpu-virtualization-using-mig-technology-on-amazon-sagemaker-hyperpod|SageMaker HyperPod MIG GPU 虚拟化 — 多租户 Agent 部署优化
-- [[entities/aws-quicksight-dataset-qa-tara-case|QuickSight TARA 案例 — Agent 驱动的威胁评估分析
-- [[entities/aws-bedrock-halliburton-seismic-workflow-genai|Bedrock Halliburton 地震工作流 — 生成式 AI 油气勘探
+- [[entities/amazon-bedrock-model-inference-serverless-architecture-case-study|Amazon Bedrock 无服务器推理架构 — Bedrock 企业级模型服务]]
+- [[entities/amazon-nova-manufacturing-intelligence|Amazon Nova Manufacturing Intelligence — 多模态 Embeddings 制造业应用]]
+- [[entities/build-real-time-voice-streaming-with-amazon-nova-sonic-and-webrtc|Nova Sonic 实时语音流 — 多模态语音生成]]
+- [[entities/gpu-virtualization-using-mig-technology-on-amazon-sagemaker-hyperpod|SageMaker HyperPod MIG GPU 虚拟化 — 多租户 Agent 部署优化]]
+- [[entities/aws-quicksight-dataset-qa-tara-case|QuickSight TARA 案例 — Agent 驱动的威胁评估分析]]
+- [[entities/aws-bedrock-halliburton-seismic-workflow-genai|Bedrock Halliburton 地震工作流 — 生成式 AI 油气勘探]]
 
 ## 相关概念
 
-- [[concepts/harness-engineering-framework|Harness Engineering 框架 — Agent 编排与 Harness 工程
+- [[concepts/harness-engineering-framework|Harness Engineering 框架 — Agent 编排与 Harness 工程]]
 - [[concepts/agent-orchestration-patterns|Agent Orchestration Patterns]] — 多步骤 Agent 任务编排
 - [[concepts/inference-optimization|推理系统优化]] — LLM 推理性能与成本优化
 

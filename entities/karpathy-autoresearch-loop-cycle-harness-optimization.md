@@ -1,7 +1,7 @@
 ---
 title: "Karpathy AutoResearch Loop Cycle & Harness Optimization"
 created: 2026-07-07
-updated: 2026-09-23
+updated: 2026-11-25
 type: entity
 tags: [agent, harness, loop-engineering, karpathy, auto-research, llm-optimization, agent-framework]
 sources: [raw/articles/karpathy-autoresearch-loop-harness-76pct-agent-misconception]
@@ -123,4 +123,4 @@ Niklaus 实验最有战略含义的一点，是把"性能提升"从资本密集�
 
 ## 参考
 
-→ [raw/articles/karpathy-autoresearch-loop-harness-76pct-agent-misconception|原文存档]
+→ [[raw/articles/karpathy-autoresearch-loop-harness-76pct-agent-misconception|原文存档]]

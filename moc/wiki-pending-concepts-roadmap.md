@@ -1,7 +1,7 @@
 ---
 title: "Wiki 中 60+ 概念骨架的补建路线图（0 inlink + <2KB 模板）"
 created: 2026-06-11
-updated: 2026-09-05
+updated: 2026-11-25
 type: moc
 tags: [wiki-maintenance, concept-page, todo, roadmap, knowledge-gap, pending, skeleton, inlink-debt]
 sources: []
@@ -149,7 +149,7 @@ confidence: high
 
 - [[queries/llm-wiki-evaluation|LLM Wiki 评测方法]]（评测一次 ingest 的质量）
 - [[concepts/agent-memory-system-design|Agent 记忆系统设计]]（31 inlink，concept 范例）
-- [[entities/reverse-audit-prompt-paradigm-codex-5-line-version|反向审计 Prompt 范式（用 5 行 prompt 定期扫描知识库漏点）
+- [[entities/reverse-audit-prompt-paradigm-codex-5-line-version|反向审计 Prompt 范式（用 5 行 prompt 定期扫描知识库漏点）]]
 
 ## 待关联概念
 

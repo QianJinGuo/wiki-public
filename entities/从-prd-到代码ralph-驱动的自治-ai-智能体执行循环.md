@@ -3,7 +3,7 @@
 title: "从 PRD 到代码：Ralph 驱动的自治 AI 智能体执行循环"
 type: entity
 created: 2026-07-04
-updated: 2026-09-24
+updated: 2026-11-25
 tags: [wechat, ai]
 rating: v7c7
 sources:

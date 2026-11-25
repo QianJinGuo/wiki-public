@@ -1,7 +1,7 @@
 ---
 title: "NVIDIA ASPIRE：机器人技能库与持续学习新范式"
 created: 2026-07-02
-updated: 2026-09-10
+updated: 2026-11-25
 type: entity
 tags: [nvidia, robot, skill-library, embodied-ai, code-as-policy, continual-learning, jim-fan]
 sources: [nvidia-aspire-robot-skill-library-code-as-policy]
@@ -61,6 +61,26 @@ Jim Fan 提出的持续学习新范式触及了深度学习的根基：训练不
 ### 跨任务迁移能力的实证验证
 
 论文在 LIBERO-90 上积累 Skill Library，再直接迁移到未见过的 LIBERO-Pro Long 长任务，结果验证了 Skill Library 的厚度与泛化能力正相关。随着技能库丰富，机器人在新任务上的成功率从几乎不会持续提升到 31%。Robosuite 双臂物体交接任务更是从 20% 提升至 92%^[raw/articles/nvidia-aspire-robot-skill-library-code-as-policy.md:126-136]。这些数据说明**经验的代码化存储比参数微调更适合物理世界的持续学习**。
+
+### 一个失败案例的解剖：技能从「这台收音机」抽象到「一类规划失败」
+
+论文有个样本：机器人已识别收音机却始终无法靠近，Agent 诊断感知无误，原因是规划器给出的目标点全部落在障碍物碰撞缓冲区内。ASPIRE 据此沉淀的 Skill 并非「如何拿收音机」，而是一条通用策略——遇到此类规划失败时，改从 45°、90°、180° 等不同角度重新接近，直到找到无碰撞路径；此后目标换成微波炉或别的家具都可直接复用。这揭示了技能沉淀的单位不是物体实例而是失败模式类——抽象层级选对，一条经验即可覆盖无数未来场景^[raw/articles/nvidia-aspire-robot-skill-library-code-as-policy.md:52-60]。
+
+### Code as Policy 的两个历史缺陷：看不见与记不住
+
+在 ASPIRE 之前，Code as Policy 长期卡在两点上。一是失败不可诊断：系统只知道「任务没完成」，说不清是感知、抓取、规划还是恢复动作出了问题。二是不会长记性：任务结束，调试中发现的修复方案、恢复策略乃至 prompt 写法全部丢弃，下次同类问题从零重来。ASPIRE 的两个核心组件恰好分别对症——执行引擎解决「看不见」，技能库解决「记不住」。两个缺陷实则耦合：记住的前提是先看见，这也是执行引擎必须排在 pipeline 首位的原因^[raw/articles/nvidia-aspire-robot-skill-library-code-as-policy.md:76-82]。
+
+### Skill 的本质：喂给大模型的上下文，而非权重
+
+原文明确指出，Skill 本质上仍是一段喂给大模型的上下文，其中沉淀的是经过验证的 Code Repair Pattern^[raw/articles/nvidia-aspire-robot-skill-library-code-as-policy.md:48-50]。官方技能库中的条目更像「机器人程序员的踩坑笔记」，且粒度高度异质——从 SAM3 提示词写法、抽屉把手假检测过滤，到平面推动的 motion primitive 选择^[raw/articles/nvidia-aspire-robot-skill-library-code-as-policy.md:112-116]。这实质是知识载体的迁移：从连续浮点参数变为离散、可读、可版本管理的结构化文本——梯度权重无法以这种粒度表达「遇到某类故障该改哪行程序」，文本可以；且共享文本无需参数对齐，这正是多 Agent 经验汇总在工程上可行的原因。
+
+### Evolutionary Search：让物理世界充当测试判据
+
+第三阶段值得展开：Agent 不沿单条修复路径走到底，系统会生成多条候选控制程序，放进执行环境里跑，再依据幸存程序与失败轨迹继续迭代^[raw/articles/nvidia-aspire-robot-skill-library-code-as-policy.md:118-122]。这让「修程序」从一次性推理变成带选择压力的搜索，判据由物理世界亲自担任——单元测试的 pass/fail，在这里换成真实执行中的成功与碰撞。至此，coding agent 的「写代码、跑测试、看 trace、改 bug」循环在物理世界凑齐全部要素：控制程序即代码，执行引擎即测试框架，环境反馈即断言，技能库即回归资产。
+
+### 评测设计：覆盖三种失败机制
+
+三个基准分别对应泛化操作、接触密集型操作和长时程家庭任务，整体成绩全面超过此前的 Code as Policy 方法^[raw/articles/nvidia-aspire-robot-skill-library-code-as-policy.md:124-128]。这三种机制并非随意挑选——迁移不仅要证明「换个物体还认识」，还要扛住接触动力学的不确定性与长时程任务的误差累积，后者最容易暴露「记住的经验不完整」这类隐性缺陷。
 
 ## 实践启示
 

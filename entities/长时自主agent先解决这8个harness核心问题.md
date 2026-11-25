@@ -3,7 +3,7 @@
 title: "长时自主Agent，先解决这8个Harness核心问题"
 type: entity
 created: 2026-07-04
-updated: 2026-09-24
+updated: 2026-11-25
 tags: [wechat, ai]
 rating: v7c8
 sources:

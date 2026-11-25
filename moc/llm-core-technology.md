@@ -1,7 +1,7 @@
 ---
 title: "LLM 核心技术 主题地图 (MOC)"
 created: 2026-06-15
-updated: 2026-06-15
+updated: 2026-11-25
 type: moc
 tags: [moc, llm, reasoning, alignment, training, post-training, fine-tuning, sft, dpo, grpo, rlhf, 2026]
 sources: []
@@ -15,31 +15,31 @@ sources: []
 
 ## 训练方法与后训练
 
-- [[entities/deepseek-v4-training-methodology|DeepSeek V4 训练方法论 — MoE + 多阶段训练路线
-- [[entities/deepseek-v4-training-58-page-paper-deep-dive|DeepSeek V4 训练 58 页论文精读 — 完整技术细节
-- [[entities/baidu-wenxin-post-training-evolution|百度文心后训练演进 — 后训练策略迭代
-- [[entities/build-llm-from-scratch-7-chapters-zion|从零构建 LLM 七章 — 全栈训练教程
-- [[entities/building-blocks-for-foundation-model-training-and-inference-on-aws|AWS 基础模型训练推理构件 — 云端训练基础设施
+- [[entities/deepseek-v4-training-methodology|DeepSeek V4 训练方法论 — MoE + 多阶段训练路线]]
+- [[entities/deepseek-v4-training-58-page-paper-deep-dive|DeepSeek V4 训练 58 页论文精读 — 完整技术细节]]
+- [[entities/baidu-wenxin-post-training-evolution|百度文心后训练演进 — 后训练策略迭代]]
+- [[entities/build-llm-from-scratch-7-chapters-zion|从零构建 LLM 七章 — 全栈训练教程]]
+- [[entities/building-blocks-for-foundation-model-training-and-inference-on-aws|AWS 基础模型训练推理构件 — 云端训练基础设施]]
 
 ## 对齐技术：RLHF / DPO / GRPO
 
-- [[entities/2026-llm-rl-algorithms-deeplog-imba-ppo-dpo-grpo-marl|2026 LLM RL 算法全景 — DeepLog PPO/DPO/GRPO/MARL 对比
-- [[entities/aws-sagemaker-sft-dpo-tool-calling|SageMaker SFT/DPO Tool Calling — AWS 微调工具调用
-- [[entities/aws-reinforcement-fine-tuning-llm-as-judge|强化微调 + LLM Judge — AWS 的 RL 微调实践
-- [[entities/aws-grpo-rlvr-sagemaker-math-reasoning|GRPO/RLVR 数学推理 — AWS GRPO 实验结果
+- [[entities/2026-llm-rl-algorithms-deeplog-imba-ppo-dpo-grpo-marl|2026 LLM RL 算法全景 — DeepLog PPO/DPO/GRPO/MARL 对比]]
+- [[entities/aws-sagemaker-sft-dpo-tool-calling|SageMaker SFT/DPO Tool Calling — AWS 微调工具调用]]
+- [[entities/aws-reinforcement-fine-tuning-llm-as-judge|强化微调 + LLM Judge — AWS 的 RL 微调实践]]
+- [[entities/aws-grpo-rlvr-sagemaker-math-reasoning|GRPO/RLVR 数学推理 — AWS GRPO 实验结果]]
 - RLHF/DPO/GRPO 对齐 — 概念层面的三技术对比
 
 ## 推理模型
 
-- [[entities/deepseek-v4-flash-means-llm-steering-is-interesting-again|DeepSeek V4 Flash 与 LLM Steering — 推理能力新方向
-- [[entities/anthropic|Anthropic LLM 内省机制 — 模型自我认知
-- [[concepts/nvidia-telco-reasoning-models-nemo|推理模型 — 概念页
+- [[entities/deepseek-v4-flash-means-llm-steering-is-interesting-again|DeepSeek V4 Flash 与 LLM Steering — 推理能力新方向]]
+- [[entities/anthropic|Anthropic LLM 内省机制 — 模型自我认知]]
+- [[entities/nvidia-telco-reasoning-models-nemo|推理模型 — NVIDIA NeMo]]
 
 ## 上下文与推理效率
 
-- [[entities/accelerate-llm-model-loading-and-increase-context-windows-wi|加速 LLM 加载与扩展上下文 — 推理效率优化
-- [[entities/ai-infra-llm-efficient-inference-vllm|vLLM 高效推理 — 推理服务部署
-- [[entities/amazon-nova-lite-fine-tuning-cost-effective-vision-detection-model-tuning-case-and-practice|Nova Lite 微调 — 轻量级模型适配
+- [[entities/accelerate-llm-model-loading-and-increase-context-windows-wi|加速 LLM 加载与扩展上下文 — 推理效率优化]]
+- [[entities/ai-infra-llm-efficient-inference-vllm|vLLM 高效推理 — 推理服务部署]]
+- [[entities/amazon-nova-lite-fine-tuning-cost-effective-vision-detection-model-tuning-case-and-practice|Nova Lite 微调 — 轻量级模型适配]]
 
 ## 训练技术趋势
 
@@ -57,7 +57,7 @@ sources: []
 - [[moc/evaluation-and-benchmarks|Evaluation & Benchmarks]] — 训练后的质量验证
 - [[moc/anthropic-ecosystem|Anthropic 生态]] — Claude 模型迭代时间线
 - [[moc/openai-ecosystem|OpenAI 生态]] — GPT 模型系列
-- [[entities/harness-engineering|Harness Engineering — 模型之外的工程层
+- [[entities/harness-engineering|Harness Engineering — 模型之外的工程层]]
 
 ---
 

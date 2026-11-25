@@ -1,7 +1,7 @@
 ---
 title: "Anthropic 调查非预期模型行为（Unintended Model Actions）"
 created: 2026-10-13
-updated: 2026-10-13
+updated: 2026-11-25
 type: entity
 tags: [anthropic, ai-safety, agent, alignment]
 sources: [raw/articles/anthropic-investigating-unintended-model-actions]

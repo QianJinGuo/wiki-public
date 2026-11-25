@@ -1,7 +1,7 @@
 ---
 title: "Claude Code Loop Types — 官方四种循环模式分类法"
 created: 2026-07-07
-updated: 2026-10-21
+updated: 2026-11-25
 type: entity
 tags: [claude-code, loop-engineering, goal, schedule, auto-mode, dynamic-workflows, agent-framework]
 sources:
@@ -101,14 +101,14 @@ Claude Code 里 agent 的自动化触发有五种形态：/loop（时间表）�
 
 ## 与已有实体的关系
 - [[entities/claude-code-loop-engineering-guide|Claude Code Loop Engineering 完整攻略]] — 兔兔AGI 第三方教程，侧重实战技法；本实体是官方分类法，侧重模式选择决策
-- [[entities/aliyun-loop-engineering-log-scan-auto-fix-deploy|阿里云 Loop 实战」— 同为 Loop 实践，但本实体聚焦 Claude Code 的 CLI 命令级 loop 原语
+- [[entities/aliyun-loop-engineering-log-scan-auto-fix-deploy|阿里云 Loop 实战]] — 同为 Loop 实践，但本实体聚焦 Claude Code 的 CLI 命令级 loop 原语
 
 ## 参考
 
-→ [raw/articles/claude-code-loop-types-official-taxonomy-four-modes|原文存档 1]] ^[raw/articles/claude-code-loop-types-official-taxonomy-four-modes.md]
-→ [raw/articles/fyjE5EhnV1jKzE8NnscZDQ|原文存档 2 (AI寒武纪)] ^[raw/articles/claude-code-loop-types-official-taxonomy-four-modes.md]
-→ [raw/articles/anthropic-loop-four-types-practical-guide-jiagoux-2026-07-15|原文存档 3 (架构师)] ^[raw/articles/anthropic-loop-four-types-practical-guide-jiagoux-2026-07-15.md]
-→ [raw/articles/claude-code-loop-practical-cron-prompt-datathu-2026-08-06|原文存档 4 (数据派THU)] ^[raw/articles/claude-code-loop-practical-cron-prompt-datathu-2026-08-06.md]
+→ [[raw/articles/claude-code-loop-types-official-taxonomy-four-modes|原文存档 1]] ^[raw/articles/claude-code-loop-types-official-taxonomy-four-modes.md]
+→ `raw/articles/fyjE5EhnV1jKzE8NnscZDQ/article.md` — 原文存档 2 (AI寒武纪) ^[raw/articles/claude-code-loop-types-official-taxonomy-four-modes.md]
+→ [[raw/articles/anthropic-loop-four-types-practical-guide-jiagoux-2026-07-15|原文存档 3 (架构师)]] ^[raw/articles/anthropic-loop-four-types-practical-guide-jiagoux-2026-07-15.md]
+→ [[raw/articles/claude-code-loop-practical-cron-prompt-datathu-2026-08-06|原文存档 4 (数据派THU)]] ^[raw/articles/claude-code-loop-practical-cron-prompt-datathu-2026-08-06.md]
 
 ## 深度分析
 

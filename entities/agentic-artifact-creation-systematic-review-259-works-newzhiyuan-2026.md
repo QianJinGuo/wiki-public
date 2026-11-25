@@ -1,7 +1,7 @@
 ---
 title: "Agentic Artifact Creation 系统综述：AI创作如何从「会生成」走到「能交付」"
 created: 2026-09-09
-updated: 2026-10-02
+updated: 2026-11-25
 type: entity
 tags: [agent, agentic-creation, artifact, survey, verification, multi-agent, harness, evaluation, harness-engineering]
 sources: [raw/articles/agentic-artifact-creation-systematic-review-259-works-newzhiyuan-2026]

@@ -3,7 +3,7 @@
 title: "3.3万个Skills，为什么大多数都死在“安装”这一步？"
 type: entity
 created: 2026-07-04
-updated: 2026-09-24
+updated: 2026-11-25
 tags: [wechat, ai]
 rating: v9c8
 sources:

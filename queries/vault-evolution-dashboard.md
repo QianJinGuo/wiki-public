@@ -1,112 +1,62 @@
 ---
 title: Vault Evolution Dashboard
 created: 2026-06-10
-updated: 2026-09-05
+updated: 2026-11-25
 type: query
 tags: [dashboard, quality, metrics, evolution, emergence]
 ---
 
 # Vault Evolution Dashboard
 
-> 最后更新: 2026-09-05 | 数据源: vault-metrics(latest.json) + wiki-contradiction-scan + 目录实测
-> 口径: entities 总数含 ~124 个 type:redirect 重定向壳；concepts 含 learning/ 子目录 25 页
+> 2026-11-25 快照。数据来自 lint、`reports/checkup-2026-11-25.md` 与目录实测。这里的“层”是知识成熟度，不是文件夹层级。
 
-## 📊 规模快照 (2026-09-05)
+## 规模
 
-| 层 | 数量 | 2026-06-10 基线 | 变化 |
-|------|------|------|------|
-| raw/articles | 4154 | 1832 | +127% |
-| entities | 4178 | 2201 | +90% |
-| concepts | 164 | 74 | +122% |
-| comparisons | 32 | ~20 | +60% |
-| queries | 48 | 52 | -8% |
-| moc | 45 | 45 | 0 |
-| drafts | 24 | 20 | +20% |
+| 层 | 当前数量 | 作用 | 主要债务 |
+|----|---------:|------|----------|
+| L1 来源与实体 | 4,749 raw + 4,495 entities | 记录事实、案例、产品与人物 | 491 个实体孤儿、93 个推断段落 warning |
+| L2 概念与对比 | 178 concepts + 36 comparisons | 把重复现象压缩成可复用判断 | 概念/实体比约 1:25，仍偏薄 |
+| L3 张力与裁决 | 60 对候选 | 把冲突从“各说各话”变成可裁决问题 | 队列消费依赖逐对阅读 |
+| L4 维护与查询 | 55 queries | 仪表板、路线图、负结果与预测 | 多个 6–9 月视图已过期 |
+| L5 对外叙事 | 38 drafts | 综合、发布与复用 | 只占活跃页面 0.4%，输出仍偏少 |
 
-## 🧭 层级模型与当前瓶颈
+## 当前瓶颈
 
-涌现 = 让知识从下层向上层移动。各层当前状态：
+1. **导航曾比内容更差**：MOC 中大量 wikilink 被历史编辑截断，Lint 因只统计成对链接而没有报错。2026-11-25 已修复全部 MOC，并新增 malformed wikilink 检查。
+2. **概念层没有跟上实体层**：4,495 个 entities 只有 178 个 concepts。大量文章型实体在扮演概念页角色，重复解释同一机制。
+3. **孤儿主要是来源层**：1,994 个 true orphan 中，1,503 个是 raw sources、491 个是 entities。前者说明“抓到了但未合成”，后者说明“合成了但没接入网络”。
+4. **复审覆盖仍不足**：review coverage 62.0%，意味着约四成实体没有足够评分依据进入质量判断。
+5. **重复与 redirect 有历史成本**：750 个 `-N` 后缀疑似重复、1,324 个 redirect stubs。它们影响检索和链接图，但不能靠批量删除解决。
+6. **推断与来源混杂**：98 个 lint warnings 中绝大多数是历史页面的未引用推断段落，应随重写自然下降。
 
-| 层 | 承载 | 状态 | 瓶颈 |
-|------|------|------|------|
-| L1 事实层 | raw + entities | 厚（4154 + 4178） | 孤儿率 26.4%（1071 页 0 入链）、dup_suffix 618 |
-| L2 概念层 | concepts + comparisons | 薄（164 + 32 vs 4178 entity） | **概念缺位**：高入链主题无 concept hub 收拢 |
-| L3 张力层 | [!contradiction] + 裁决队列 | 机制已接通 | 队列消费速度：60 对待四裁，依赖每日 LLM 环节 |
-| L4 原理层 | 涌现稿（design axes） | 4 轮透镜 + 度量基线建立 | 节奏分化：度量轮月度、内容轮按素材，见 [[queries/emergence-lens-rotation]] |
-| L5 叙事层 | drafts / 月报 / 周报 | 事件驱动 | 选题应改从 L3 队列 + L4 涌现稿取材 |
+## 健康判断
 
-**判断（2026-09-05）**：摄入不再是瓶颈（日均 ~10+ raw 入库），L2 概念缺位与 L3 队列消费是当前两大瓶颈。每日质量闭环（vault-metrics → daily-checkup 三裁）只作用于 L1，向上合成依赖矛盾升级线与透镜轮。
+- **结构健康**：0 lint errors；索引、frontmatter、broken links、citations 全部通过。
+- **导航健康**：45 个 MOC 已无截断 wikilink，moc/ 与 queries/ 无孤儿。
+- **内容健康**：可用，但概念层偏薄、复审覆盖不足，不能把 0 errors 当成“知识都已验证”。
+- **发布健康**：公开投影有 2,716 个 book-quarantined 项，说明发布边界已被认真执行，而不是全库裸奔。
 
-## ⚡ 矛盾升级线（2026-09-05 接通）
+## 2026-11-25 已完成
 
-```
-wiki-contradiction-scan.py（每 12h）
-  ├─ callout 校验：23 个 [!contradiction] 全部解析（2026-09-05 修复 13 断链 + 18 误报）
-  ├─ 同 raw 立场冲突检测
-  └─ 裁决队列：同标签簇 × 评分差≥3，窄标签过滤 → metrics/contradiction-queue.json
-        ↓
-daily-checkup.py 日报「矛盾四裁队列」节（每日 LLM 环节消费）
-  ├─ debate        → 建 comparisons/ 对抗页 + 双向 contradicted_by
-  ├─ complementary → 互加 cross-link，记录 metrics/contradiction-dismissed.jsonl
-  └─ false         → 记录 dismissed（含孪生重复页对，转交去重）
-```
+- 重建 [[moc/wiki-master-map|知识库总导航]]，从单页清单改为按学习顺序和主题域进入。
+- 重建 [[moc/wiki-panorama-navigation|知识库全景导航]]，用当前规模和维护债务替代 6 月数字。
+- 修复 19 个 MOC 页面中的截断链接，并复核全部 45 个 MOC；补上关闭 `]]` 与错误目录前缀。
+- 把 `review-queue`、`review-report`、`wiki-topic-clusters`、`vault-evolution-dashboard` 从历史快照更新为当前维护入口。
+- 在 `scripts/wiki-lint.mjs` 增加 malformed wikilink 检查，防止同类问题复发。
+- 把 Syncthing 冲突副本、`.stfolder/` 与一次性 `scripts/tmp_*` 加入 `.gitignore`。
 
-当前队列：候选 1746 对 → 过滤后 60 对（已排除：已标记 / comparisons 已同台 / 已裁定）。
+## 下一轮优先级
 
-## 🔬 透镜制效果度量（基线 2026-09-05，复算：`python3 scripts/concept-gap-detector.py` + 各容器页）
+1. **补概念层**：从 [[moc/wiki-pending-concepts-roadmap|概念补建路线图]] 选 5 个高入链缺口，而不是继续增加新闻型 entity。
+2. **连接高价值孤儿实体**：优先给长篇、可复用、技术机制类页面补 1–2 个上下文入链。
+3. **消费矛盾四裁**：60 对候选逐批处理，真正对立的升级为 comparison。
+4. **清理重复后缀**：先做标题/正文指纹，再合并；不要只按 `-N` 机械删除。
+5. **提升 review coverage**：优先补 2026 下半年新增的未评分页面。
 
-| 度量 | 定义 | 基线 | 复算方式 |
-|------|------|------|----------|
-| D3 概念缺口 | 窄 tag（10~100 实体）无 concept 覆盖 | 133 → 128（-5） | 检测器自动 delta + metrics/concept-gaps-history.jsonl |
-| 负结果在册 | 有对照的变差证据 | 5 | [[queries/negative-results-registry|登记簿]] |
-| 台账判定吞吐 | 已判定/总条目 | 1/10 | [[queries/prediction-ledger|台账]] |
-| 对抗页产出 | 矛盾队列 → comparisons 对抗页 | 2 | git log |
-| 透镜新页引力 | 透镜轮新建页被入链数 | 0 轮龄（季度复测） | 入链图 |
-| 补页定额达成 | 各轮产出 vs 合约 | 4/4（度量轮免定额，合约 v2） | 轮换表 |
+## 导航
 
-节奏分化决议：度量轮月度、内容轮按素材触发、缺口大头转常规 quality 轮——透镜制角色是打样与发现结构性缺口，不是内容生产线。详见 [[drafts/wiki-emergent-viewpoints-2026-09-metrology|度量轮涌现稿]]。
-
-## 📏 质量指标 (vault-metrics 2026-09-05)
-
-| 指标 | 数值 | 说明 |
-|------|------|------|
-| review_coverage | 66.3% | 有 review_value 的实体占比 |
-| share ≥7 分 | 84.9% | 已评分实体的分值分布 |
-| orphan_entities | 1071 (26.4%) | 0 入链口径（entities/concepts/moc 入链） |
-| median in/out links | 2 / 6 | entity 层 |
-| dup_suffix 孪生页 | 618 | `-N` 后缀疑似重复 |
-| copy_paste_fingerprint | 1374 | 逐句脚注密度高的实体 |
-| book_quarantined | 1957 | 公开投影隔离 |
-| news_stale_90d | 138 | 新闻类过期 |
-
-### 标签簇 Top 8（矛盾候选空间）
-
-| 标签 | 实体数 | | 标签 | 实体数 |
-|------|--------|-|------|--------|
-| agent | 1293 | | aws | 390 |
-| ai | 660 | | security | 350 |
-| llm | 637 | | architecture | 348 |
-| harness | 281 | | memory | 279 |
-
-## 📜 历史里程碑
-
-- **2026-06-09/10 五阶段建设**：mode-3 深度分析覆盖、修复 598 断裂 raw 引用、零链接 944→0、292 孤儿 raw 转 entity、302 stubs 扩写。详见 git log 与 log.md 2026-06 段。
-- **2026-07 涌现观点①**：[[drafts/wiki-emergent-viewpoints-2026-07|结构信号透镜]]（矛盾扫描 + 链接统计撞库）。
-- **2026-08 涌现观点②**：[[drafts/wiki-emergent-viewpoints-2026-08-phd-lens|phd 七系统透镜]]，产出 [[concepts/eval-optimizer-firewall|评测防火墙]] 等补页与"经验抽象度"一等轴。
-- **2026-09-05 升级线接通**：扫描器修复（callout 块解析 + 目标跨目录解析 + 评分差配对），四裁接入每日 checkup 日报，13 断链 callout 修复 + 5 双向回执。
-
-## 🎯 下一步（按杠杆排序）
-
-1. **四裁队列消费**：每日 LLM 环节产出 debate/complementary/false 判定，debate 落 comparisons 页（已在 checkup 日报中，无需新流程）
-2. **透镜轮第一轮**：按 [[queries/emergence-lens-rotation]] 跑"时间切片"透镜
-3. **概念缺位检测**：从链接图推导候选 concept 页清单，更新 [[moc/wiki-pending-concepts-roadmap]]
-4. **prediction ledger**：抽取带时间预测的断言做到期回访（时间透镜的常量化）
-5. **孪生页清理**：618 dup_suffix 与裁决队列暴露的重复对，走既有 `--archive-file` 流程
-
-## 🔍 快速导航
-
-- [[Dashboard|Wiki 主页]]
-- [[queries/research-frontier-map|研究前沿地图]]
-- [[queries/engineering-practice-backlog|工程实践待办]]
-- [[queries/emergence-lens-rotation|涌现透镜轮换]]
-- [[queries/wiki-quality-dashboard|质量仪表板]]
+- [[moc/wiki-master-map|知识库总导航]]
+- [[queries/wiki-quality-dashboard|Quality Dashboard]]
+- [[queries/review-queue|Review Queue]]
+- [[queries/wiki-topic-clusters|主题聚类]]
+- [[moc/wiki-pending-concepts-roadmap|概念补建路线图]]

@@ -1,7 +1,7 @@
 ---
 title: "AI 编程进团队：高手经验沉淀为可复用工序"
 created: 2026-07-10
-updated: 2026-09-26
+updated: 2026-11-25
 type: entity
 tags: [agent, engineering, team-knowledge, workflow, expert-knowledge, process, harness-engineering]
 sources:

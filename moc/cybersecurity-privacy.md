@@ -8,7 +8,7 @@ tags:
   - ai-agent
   - security-challenges
 created: 2026-05-16
-updated: 2026-06-11
+updated: 2026-11-25
 sources:
   - raw/articles/cybersecurity-privacy-ai-agent-challenges
 ---
@@ -72,9 +72,9 @@ AI Agent 的核心特征是能够自主规划和执行多步任务，这大幅�
 - [[concepts/model-context-protocol-mcp]]
 
 ## 相关实体
-- [[entities/oz-multi-harness-cloud-agent-orchestration|Oz Multi-Harness Cloud Agent Orchestration (Warp)
-- [[entities/xz-utils-backdoor-maintainer-trust-hijack-2-years-on|xz-utils Backdoor 2 Years On — Maintainer Trust Hijack Pattern Beyond CVE Scanners
-- [[entities/ai-agents-security-survey-attack-defense|AI Agents Security Survey: Attack and Defense
+- [[entities/oz-multi-harness-cloud-agent-orchestration|Oz Multi-Harness Cloud Agent Orchestration (Warp)]]
+- [[entities/xz-utils-backdoor-maintainer-trust-hijack-2-years-on|xz-utils Backdoor 2 Years On — Maintainer Trust Hijack Pattern Beyond CVE Scanners]]
+- [[entities/ai-agents-security-survey-attack-defense|AI Agents Security Survey: Attack and Defense]]
 
 ## 相关主题
 

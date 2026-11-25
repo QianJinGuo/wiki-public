@@ -1,7 +1,7 @@
 ---
 title: "AI MediaKit 字幕无痕擦除：先判定「该擦还是该留」的理解式视频编辑与 ReFM 残差流匹配"
 created: 2026-09-22
-updated: 2026-09-22
+updated: 2026-11-25
 type: entity
 tags: [ai-mediakit, volcano-engine, bytedance, video-editing, video-inpainting, flow-matching, refm, multimodal, temporal-consistency, subtitle-removal, media-generation]
 sources: [raw/articles/ai-mediakit-video-subtitle-erasure-refm-volcano-2026]

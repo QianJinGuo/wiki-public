@@ -1,7 +1,7 @@
 ---
 title: "Amazon Bedrock Guardrails 代码生成工作流六大架构模式"
 created: 2026-07-24
-updated: 2026-09-26
+updated: 2026-11-25
 type: entity
 tags: [amazon, bedrock, guardrail, code-generation, ai-safety, architecture-pattern, aws]
 sources: [raw/articles/best-practices-for-applying-amazon-bedrock-guardrails-to-cod]

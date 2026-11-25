@@ -2,7 +2,7 @@
 
 title: "Why Drizzle ORM couldn't publish new releases on NPM for a month | vlt /vōlt/"
 created: 2026-06-26
-updated: 2026-10-12
+updated: 2026-11-25
 type: entity
 tags: [article]
 source: "[[raw/articles/blog-packument-size-limits]]"

@@ -1,7 +1,7 @@
 ---
 title: Wiki Topic Map 的结构与导航最佳实践？
 created: 2026-05-21
-updated: 2026-06-11
+updated: 2026-11-25
 type: moc
 tags: [meta, navigation, knowledge-management]
 sources:
@@ -29,7 +29,7 @@ confidence: high
 ## 导航最佳实践
 ### 1. 路径设计原则
 - **纵向深挖**：从 Topic Map → Entity/Concept → Raw Source
-- **横向关联**：通过 wikilink 跨目录连接，如 `[[entities/agent-harness-context-management-working-set|Context 作为 working set`
+- **横向关联**：通过 wikilink 跨目录连接，如 `[[entities/agent-harness-context-management-working-set|Context 作为 working set]]`
 - **最小跳转**：每个 Topic Map 页面至少包含 2 个跨目录链接
 
 ### 2. 分组策略
@@ -56,15 +56,15 @@ Agent 工具与运行时
 
 ### 3. 质量维护
 - **置信度标注**：`confidence: high/medium/low` 反映内容可靠性
-- **标签体系**：每个页面 `tags: []]` 便于聚合检索
+- **标签体系**：每个页面 `tags: []` 便于聚合检索
 - **健康度视图**：低置信、冲突、过期、未评分页面的维护视图
 
 ## 相关实体
 
-- [[entities/wiki-evolver|Wiki Evolver
-- [[entities/agent-harness-architecture-deep-dive-aksahy|Agent Harness 解析：智能体架构深度拆解
+- [[entities/wiki-evolver|Wiki Evolver]]
+- [[entities/agent-harness-architecture-deep-dive-aksahy|Agent Harness 解析：智能体架构深度拆解]]
 
 ## 相关知识
 - [[moc/wiki-master-map|Wiki Topic Map 原始页面]]
-- [[entities/agent-harness-context-management-working-set|Context 作为 working set
+- [[entities/agent-harness-context-management-working-set|Context 作为 working set]]
 - [[queries/vault-evolution-dashboard|Vault 演化仪表盘]]

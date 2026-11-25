@@ -1,7 +1,7 @@
 ---
 title: Cloud AI Infrastructure
 created: 2026-05-21
-updated: 2026-09-10
+updated: 2026-11-25
 type: concept
 tags: [cloud, ai-infrastructure, aws, azure, multi-tenant, workflow, genai]
 sources: [raw/articles/Microsoft-for-Startups-Microsoft-v2, raw/articles/amazon-cloudfront-deploy-guide-cloudfront-domain-multi-tenant-architecture, raw/articles/aws-bedrock-halliburton-seismic-workflow-genai, raw/articles/5237660-1]
@@ -96,7 +96,7 @@ provenance_state: merged
 -  — 多租户 CDN 架构
 -  — 主权云格局分析
 -  — Durable execution 编排平台
-- [[entities/agent-orchestration-multi-agent-systems|Agent Orchestration — AWS 编排工具矩阵
+- [[entities/agent-orchestration-multi-agent-systems|Agent Orchestration — AWS 编排工具矩阵]]
 
 ## 新增关联实体
 
@@ -113,7 +113,7 @@ provenance_state: merged
 -  — 具体应用场景
 
 **平行协作**:
-- [[entities/multi-agent-orchestration — 替代/补充方案
+- 多 Agent 编排 — 替代/补充方案
 -  — 替代/补充方案
 -  — 替代/补充方案
 

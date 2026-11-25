@@ -2,59 +2,66 @@
 title: 知识库全景导航
 type: moc
 created: 2026-06-18
-updated: 2026-06-18
-tags: [moc, navigation, index, meta]
-description: 知识库全景导航：按主题域浏览全部 2300+ 实体页。标签聚类 + 高价值优先。
+updated: 2026-11-25
+tags: [moc, navigation, index, meta, health]
+description: 知识库的规模快照、导航入口、维护债务与整理优先级。
 ---
 
 # 知识库全景导航
 
-## 主题 MOC（深度导航）
+> 2026-11-25 快照。这里描述“库现在是什么样”，不是知识结论本身。逐页目录见 `index.md`，推荐阅读顺序见 [[moc/wiki-master-map|知识库总导航]]。
 
-- [[moc/agent-engineering-guide|Agent 工程全景指南]] — harness/loop/记忆/子Agent/自改进
-- [[moc/claude-code-complete-guide|Claude Code 生态完全指南]] — 源码/Hooks/Skills/MCP/Managed Agents
-- [[moc/aws-cloud-ai-infrastructure|AWS 云 AI 基础设施]] — Bedrock/SageMaker/AgentCore/DevOps
-- [[moc/security-landscape|AI 安全态势全景]] — 供应链/Agent安全/漏洞/平台安全
-- [[moc/llm-research-frontiers|LLM 研究前沿]] — 架构/训练/推理/可解释性
-- [[moc/anthropic-ecosystem|Anthropic 生态与战略]] — 产品/战略/商业化/安全
+## 规模
 
-## 按标签浏览（高频标签 → index.md 对应区域）
+| 层 | 页面数 | 说明 |
+|----|-------:|------|
+| `entities/` | 4,495 | 文章型实体、产品、公司、人物与案例 |
+| `concepts/` | 178 | 跨文章复用的概念与方法 |
+| `comparisons/` | 36 | 明确对峙或选型对比 |
+| `queries/` | 55 | 仪表盘、专题判断与维护视图 |
+| `moc/` | 45 | 有顺序的阅读路径 |
+| `drafts/` | 38 | 对外输出与综合叙事 |
+| `raw/articles/` | 4,749 | 原始来源存档 |
+| 合计 | 9,596 | lint 的活跃页面口径 |
 
-| 标签 | 实体数 | 浏览方式 |
-|------|--------|----------|
-| agent | 806 | `grep "tags:.*agent" entities/` |
-| llm | 417 | `grep "tags:.*llm" entities/` |
-| security | 281 | [[moc/security-landscape]] |
-| architecture | 277 | `grep "tags:.*architecture" entities/` |
-| aws | 236 | [[moc/aws-cloud-ai-infrastructure]] |
-| claude-code | 187 | [[moc/claude-code-complete-guide]] |
-| anthropic | 164 | [[moc/anthropic-ecosystem]] |
-| evaluation | 173 | `grep "tags:.*evaluation" entities/` |
-| mlops | 166 | `grep "tags:.*mlops" entities/` |
-| rag | 157 | `grep "tags:.*rag" entities/` |
-| open-source | 167 | `grep "tags:.*open-source" entities/` |
-| newsletter | 144 | `grep "tags:.*newsletter" entities/` |
+## 怎么逛
 
-## 按价值分层
+| 目标 | 入口 | 说明 |
+|------|------|------|
+| 从零建立全局感 | [[moc/wiki-master-map|知识库总导航]] | 先看分层，再按主题下钻 |
+| 系统学习 | [[moc/learning-path|AI 知识体系学习路径]] | 按学习顺序而不是按文件夹浏览 |
+| 找某个主题 | `index.md` → 对应 MOC | `index.md` 是全量目录，MOC 是精选路径 |
+| 查当前质量 | [[queries/wiki-quality-dashboard|Wiki Quality Dashboard]] | lint、v×c、孤儿页与告警 |
+| 处理待办 | [[queries/review-queue|Review Queue]] | 复审、补来源、重写与归档候选 |
+| 看演化瓶颈 | [[queries/vault-evolution-dashboard|Vault 演化仪表板]] | L1 事实层到 L5 叙事层 |
 
-### ⭐ Ultra (v≥9, ~200 entities)
-高置信度核心知识，深度合成，多源交叉验证。
+## 当前结构信号
 
-### 🔷 Strong (v=7-8, ~900 entities)
-高质量独立来源，有明确技术洞察。
+以下数字来自 2026-11-25 的 lint 与日常质检，只作为整理优先级，不代表页面价值：
 
-### 🔹 Solid (v=5-6, ~1000 entities)
-标准质量，教程/综述/行业分析。
+| 信号 | 当前值 | 判读 |
+|------|-------:|------|
+| Lint errors | 0 | 结构底线正常 |
+| Lint warnings | 98 | 主要是历史页面的推断段落未附来源 |
+| True orphans | 1,994 | 其中 raw 1,503、entities 491；不等于都应删 |
+| 实体中位入链 | 2 | 长篇实体多，但网络连接仍偏中心化 |
+| 复审队列 | 245 | 需要逐页三裁，不宜批量处理 |
+| 矛盾四裁队列 | 60 | 需要逐对判 debate / complementary / false |
+| `-N` 后缀疑似重复 | 750 | 需要去重与 redirect 治理 |
+| Redirect stubs | 1,324 | 属于迁移成本，不是知识增长 |
+| 公开投影隔离 | 2,716 | 发布边界，不等于质量差 |
 
-### ◻️ Borderline (v=4, ~100 entities)
-边界线入库，有价值但需批判性吸收。
+## 整理优先级
 
-## 按时间浏览
+1. **先修导航**：MOC 的断链、过期数字和空入口，比继续增加页面更影响可用性。
+2. **再处理矛盾**：优先消费 `metrics/contradiction-queue.json`，把真正对立的主张升级为 comparison。
+3. **最后清孤儿**：优先给高价值实体补上游 MOC 或 concept 回链；低价值新闻页按复审流程归档，不做机械全连。
+4. **不追求“全库无警告”**：历史推断段落应随重写自然下降，不应为了清零而批量添加伪引用。
 
-- 最近 7 天新增：查看 `log.md` 最后 20 行
-- 最近 30 天：`find entities -name "*.md" -mtime -30`
-- 按月份归档：`git log --oneline --since="2026-06-01" | wc -l`
+## 导航边界
 
-## 孤立页面（需关注）
-
-106 个 true orphan（0 in-links + 0 out-links），占 2.3%。多为早期入库或小众主题。
+- `index.md` 是完整性清单，不承担阅读顺序。
+- `moc/` 只放“顺序有意义”的路径。
+- `queries/` 放可验证的判断、仪表板与维护视图。
+- `drafts/` 放已经综合到可以对外表达的内容。
+- `raw/articles/` 是不可变来源，不应为了降低孤儿率而反向改写。

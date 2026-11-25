@@ -1,7 +1,7 @@
 ---
 title: "ontology-driven-dev：把业务语义钉成 AI 原生应用地基的本体建模开发法"
 created: 2026-10-10
-updated: 2026-10-12
+updated: 2026-11-25
 type: entity
 tags: [ontology, agent-native, requirements-engineering, code-generation, open-source]
 sources: [raw/articles/ontology-driven-dev-semantics-asset-layer-2026-10-10]

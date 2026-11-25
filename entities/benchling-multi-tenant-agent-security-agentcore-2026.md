@@ -1,7 +1,7 @@
 ---
 title: "Benchling 多租户 AI Agent 安全架构：AgentCore Code Interpreter VPC 模式 + DNS Firewall 纵深防御"
 created: 2026-09-24
-updated: 2026-09-24
+updated: 2026-11-25
 type: entity
 tags: [agent-security, multi-tenant, sandbox, bedrock, agentcore, dns-firewall, data-exfiltration, benchling]
 sources: [raw/articles/how-benchling-secured-multi-tenant-ai-agents-with-amazon-bed]

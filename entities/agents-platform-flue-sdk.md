@@ -2,7 +2,7 @@
 
 title: "Bringing more agent harnesses and frameworks to Cloudflare, starting with Flue"
 created: 2026-06-26
-updated: 2026-10-12
+updated: 2026-11-25
 type: entity
 tags: [article]
 source: "[[raw/articles/agents-platform-flue-sdk]]"

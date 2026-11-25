@@ -2,7 +2,7 @@
 
 title: "Anthropic Dynamic Workflows 深度实战：JavaScript 编排脚本 + ultracode 模式 + /deep-research + 保存复用"
 created: 2026-06-10
-updated: 2026-09-07
+updated: 2026-11-25
 sources:
   - raw/articles/anthropic-dynamic-workflows-ultracode-deep-research-lyuyuebannzi
   - raw/articles/anthropic-dynamic-workflows-six-patterns-agent-parallel-pipeline
@@ -21,15 +21,25 @@ review_category: practice
 
 ## 深度分析
 
-Anthropic Dynamic Workflows 深度实战：JavaScript 编排脚本 + ultracode 模式 + /deep-research + 保存复用 ^[raw/articles/anthropic-dynamic-workflows-ultracode-deep-research-lyuyuebannzi.md]
-### 核心观点
-1. # Anthropic Dynamic Workflows 深度实战：JavaScript 编排脚本 + ultracode 模式 + /deep-research + 保存复用 ^[raw/articles/anthropic-dynamic-workflows-ultracode-deep-research-lyuyuebannzi.md]
-> 来源：林月半子的AI笔记（2026-06-05）
-> **关系**：与现有 5+ 译本（机器之心 / Thariq / 玉澄 / 架构师 JiaGouX）的同源不同公众号报道。
-2. 保留独家数据：ultracode 模式 + /deep-research + 3 步跑起来 + 编排者哲学（"AI 写编排代码 vs 人写编排代码"）。 ^[raw/articles/anthropic-dynamic-workflows-ultracode-deep-research-lyuyuebannzi.md]
-3. ## 一、Dynamic Workflows 是什么？ ^[raw/articles/anthropic-dynamic-workflows-ultracode-deep-research-lyuyuebannzi.md]
-4. 上周 Anthropic 发布了 Dynamic Workflows，24 小时不到就被人公开指控"抄袭"。 ^[raw/articles/anthropic-dynamic-workflows-ultracode-deep-research-lyuyuebannzi.md]
-5. 一个叫 Sisyphus Labs 的团队直接在推特上@了 Anthropic，说 Claude Code 新推的 **ultracode 模式**跟他们做的 OMO 工具里的 ultrawork 和 atlas 功能几乎一模一样。 ^[raw/articles/anthropic-dynamic-workflows-ultracode-deep-research-lyuyuebannzi.md]
+### 两篇来源拼出的完整图景
+
+第 1 来源给出本体与上手路径，第 2 来源补齐原语与模式。合成框架：Claude 现场写一段 JavaScript 编排脚本后台运行，脚本只管调度、不碰文件系统与 shell，主 Agent 睡到最后才读结果。与 subagent/skill 的分野在"谁握着计划"——subagent 逐轮判断、skill 按 prompt 走、workflow 由脚本决定下一步；subagent 的 10 份中间结果全部涌回对话上下文，workflow 只回传一份汇总。^[raw/articles/anthropic-dynamic-workflows-ultracode-deep-research-lyuyuebannzi.md:22-24,33-36,42-54]
+
+### 三种原语与六种模式：编排的最小词汇表
+
+agent(prompt, opts) 开上下文干净的子 Agent、可用 JSON Schema 约束输出；parallel(...) 是栅栏，全部跑完才放行；pipeline(items, ...) 流水过工序、先完成先走。开几个 Agent、用哪档模型由 Claude 按任务自定。六模式归三族：分流（分类即处理）、并行（扇出+汇总、生成+筛选、锦标赛）、制衡（对抗验证——验者与行者互不通气，结论只在"反驳失败"后算数）。^[raw/articles/anthropic-dynamic-workflows-six-patterns-agent-parallel-pipeline.md:32-38,106]
+
+### 结构性解药：偷懒、自夸、跑偏
+
+单上下文扛长任务有三样毛病：审 50 个文件到 35 个就宣布干完（偷懒）、验证自己的产出偏袒旧结论（自夸）、摘要反复压缩丢失约束（跑偏）。结构性解法：隔离让没人握着整个任务，独立验证 Agent 让验活与干活分家，短窗口摁住跑偏。^[raw/articles/anthropic-dynamic-workflows-six-patterns-agent-parallel-pipeline.md:42-53] /deep-research 即实例：多角度搜索、交叉核对来源、逐条表决，未过验证的结论直接剔除。^[raw/articles/anthropic-dynamic-workflows-ultracode-deep-research-lyuyuebannzi.md:84-92]
+
+### ultracode 与失败面：何时值得烧 token
+
+/effort ultracode 拉满推理并授权自动判断何时起 Workflow，复杂请求可拆成连续几个。^[raw/articles/anthropic-dynamic-workflows-ultracode-deep-research-lyuyuebannzi.md:71-78] 代价是 token 消耗明显更高，唯一判断标准：是否真需要比"一个上下文窗口"更多的算力——50 文件审计值得上，两行 bug 是杀鸡用牛刀。^[raw/articles/anthropic-dynamic-workflows-six-patterns-agent-parallel-pipeline.md:118-125]^[raw/articles/anthropic-dynamic-workflows-ultracode-deep-research-lyuyuebannzi.md:133-135] 失败面在扇出+汇总：parallel 栅栏若把全部分支产物回灌主上下文，就退化成 subagent 式臃肿；prompt 含 workflow 关键词即可能触发。^[raw/articles/anthropic-dynamic-workflows-ultracode-deep-research-lyuyuebannzi.md:50-52,62-64]
+
+### 沉淀与定位：编排权从人移向模型
+
+面板按 s 保存到 ~/.claude/workflows，沉淀的是一整套编排逻辑而非流程图；保存的是模板而非死脚本，重跑按任务自适应；运行有 ID 可恢复。^[raw/articles/anthropic-dynamic-workflows-ultracode-deep-research-lyuyuebannzi.md:104-111]^[raw/articles/anthropic-dynamic-workflows-six-patterns-agent-parallel-pipeline.md:109-114] 这条线指向同一结局：编排正从"人设计架构"挪向"模型自己决定"，人只说清什么算成功、信任边界在哪。^[raw/articles/anthropic-dynamic-workflows-ultracode-deep-research-lyuyuebannzi.md:14-18]^[raw/articles/anthropic-dynamic-workflows-six-patterns-agent-parallel-pipeline.md:129]
 
 ### 关联实体
 
@@ -39,6 +49,9 @@ Anthropic Dynamic Workflows 深度实战：JavaScript 编排脚本 + ultracode �
 - [[entities/openclaw-完全指南这可能是全网最新最全的系统化教程了32w字建议收藏-v2]]
 - [[entities/karpathy-最新访谈从-vibe-coding-到-agentic-engineering]]
 - [[entities/构建基于多智能体架构的深度思考交易系统-v2]]
+- [[concepts/agentic-workflow-patterns]]
+- [[concepts/multi-agent-context-isolation]]
+- [[concepts/context-window-economics]]
 
 ## 相关实体
 

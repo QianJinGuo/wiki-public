@@ -1,112 +1,44 @@
 ---
 title: Review Report
 created: 2026-06-10
-updated: 2026-07-22
+updated: 2026-11-25
 type: query
-tags: [review, quality, report]
+tags: [review, quality, report, dashboard]
 ---
 
 # Review Report
 
-> 自动生成于 2026-06-10 17:11
+> 本页原先保存 2026-06 的一次性低质量实体清单，已不适用于当前 9,596 页的规模。保留为复审入口，具体名单以每日质检报告和实时质量仪表板为准。
 
-## 📊 质量概览
+## 当前快照
 
-| 问题类型 | 数量 | 优先级 |
-|----------|------|--------|
-| v×c < 49 | 321 | 🟡 |
-| 无深度分析 | 7 | 🔴 |
-| 零链接 | 0 | 🔴 |
-| 模板化分析 | 282 | 🟡 |
-| uncategorized 标签 | 14 | 🟢 |
-| 无 raw 源 | 224 | 🟢 |
-| 孤儿实体 (0 in-links) | 249 | 🟡 |
+| 指标 | 数值 | 口径 |
+|------|-----:|------|
+| 活跃页面 | 9,596 | lint tracked pages |
+| 实体页 | 4,495 | `entities/` |
+| 有 review 覆盖 | 62.0% | fresh-checkup coverage |
+| 已评分且 v×c ≥ 7 | 94.5% | 以已评分实体为分母 |
+| 复审队列 | 245 | `reports/checkup-2026-11-25.md` |
+| 矛盾四裁队列 | 60 | 同标签、评分差 ≥3 的候选对 |
+| 结构错误 | 0 | lint errors |
 
-## 🟡 低质量实体 (v×c < 49)
+## 怎么复审
 
-| v×c | rv | rc | Slug |
-|-----|----|----|------|
-| 10 | 1 | 10 | [[entities/claude-code-tool-design-evolution-anthropic|
-| 10 | 1 | 10 |  |
-| 10 | 1 | 10 |  |
-| 10 | 1 | 10 | [[entities/coding-agent-architecture |
-| 16 | 2 | 8 |  |
-| 16 | 2 | 8 |  |
-| 18 | 2 | 9 |  |
-| 18 | 2 | 9 |  |
-| 20 | 4 | 5 |  |
-| 20 | 2 | 10 |  |
-| 20 | 2 | 10 | [[entities/ai-agent-exploration-path |
-| 21 | 3 | 7 |  |
-| 21 | 3 | 7 | [[entities/agentic-workflow-patterns |
-| 21 | 3 | 7 | [[entities/agent-evaluation-benchmark-frameworks |
-| 21 | 3 | 7 | [[entities/multi-agent-context-isolation |
-| 21 | 3 | 7 |  |
-| 21 | 3 | 7 | [[entities/harness-engineering-paradigm-shift |
-| 21 | 3 | 7 |  |
-| 21 | 3 | 7 |  |
-| 21 | 3 | 7 |  |
-| 21 | 3 | 7 |  |
-| 21 | 3 | 7 | [[entities/orchestrator-worker-architecture |
-| 21 | 3 | 7 |  |
-| 21 | 3 | 7 |  |
-| 27 | 3 | 9 |  |
-| 28 | 4 | 7 |  |
-| 28 | 4 | 7 |  |
-| 28 | 4 | 7 |  |
-| 28 | 4 | 7 |  |
-| 28 | 4 | 7 |  |
-| 28 | 4 | 7 |  |
-| 28 | 4 | 7 |  |
-| 28 | 4 | 7 |  |
-| 28 | 4 | 7 |  |
-| 28 | 4 | 7 |  |
-| 28 | 4 | 7 |  |
-| 30 | 5 | 6 |  |
-| 30 | 5 | 6 |  |
-| 30 | 5 | 6 |  |
-| 30 | 5 | 6 |  |
-| 30 | 5 | 6 |  |
-| 30 | 5 | 6 |  |
-| 30 | 5 | 6 |  |
-| 32 | 4 | 8 |  |
-| 32 | 4 | 8 |  |
-| 32 | 4 | 8 |  |
-| 35 | 5 | 7 | [[entities/ahe-agentic-harness-engineering |
-| 35 | 5 | 7 |  |
-| 35 | 5 | 7 |  |
-| 35 | 5 | 7 |  |
+1. 打开 [[queries/wiki-quality-dashboard|Wiki Quality Dashboard]] 看整体结构是否漂移。
+2. 打开 `reports/checkup-2026-11-25.md` 的“复审队列”，按页面证据逐项三裁：keep / refresh / archive。
+3. 需要补概念页时查 [[moc/wiki-pending-concepts-roadmap|概念补建路线图]]，不要重复造页。
+4. 处理对立主张时先看 [[queries/negative-results-registry|负结果登记簿]] 与 [[queries/prediction-ledger|预测台账]]，再决定是否建 comparison。
+5. 归档只走 `daily-checkup.py --archive-file`，保留 redirect 与回滚路径。
 
-... 还有 271 个
+## 优先顺序
 
-## 🟡 模板化分析 (需内容精炼)
+- **先修影响导航的错误**：断链、空入口、索引漂移。
+- **再处理高价值但证据不足的页面**：优先补来源与边界，不先追求字数。
+- **最后处理历史低分页**：新闻型、重复型和过期页面按批次裁决。
 
-- [[entities/llm-rl-algorithms-ppo-dpo-grpo-marl-evolution-2026
-- [[entities/llm-rl-algorithms-ppo-dpo-grpo-marl-evolution-2026
+## 相关入口
 
-... 还有 252 个
-
-## 🔴 无深度分析
-
-
-## 🟡 孤儿实体 (0 incoming links)
-
-- [[entities/llm-rl-algorithms-ppo-dpo-grpo-marl-evolution-2026
-- [[entities/agent-engineering-capability-map
-
-... 还有 219 个
-
-## 🟢 uncategorized 标签
-
-- [[entities/video-generation-models
-
-## 📋 改进建议
-
-1. **高优先级**: 无深度分析 + 零链接实体需立即修复
-2. **中优先级**: 模板化分析基于 raw 全文深化
-3. **低优先级**: uncategorized 标签重新分类
-4. **持续任务**: 孤儿实体添加 incoming links
-## 相关链接
-
-- [[queries/wiki-quality-dashboard|Wiki 质量仪表盘]]
-- [[moc/learning-path|学习路径]]
+- [[queries/review-queue|Review Queue]]
+- [[queries/wiki-quality-dashboard|Quality Dashboard]]
+- [[moc/wiki-panorama-navigation|知识库全景导航]]
+- [[moc/wiki-master-map|知识库总导航]]

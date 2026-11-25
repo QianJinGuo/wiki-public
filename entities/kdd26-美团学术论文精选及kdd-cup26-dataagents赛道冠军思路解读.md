@@ -1,7 +1,7 @@
 ---
 title: "KDD'26 美团 8 篇论文精选 + KDD Cup DataAgents 冠军思路"
 created: 2026-08-15
-updated: 2026-10-06
+updated: 2026-11-25
 type: entity
 tags: [meituan, kdd, recommendation, reward-model, agent-search, data-agents, multi-agent, harness, benchmark, industrial-recsys]
 sources: [raw/articles/kdd26-美团学术论文精选及kdd-cup26-dataagents赛道冠军思路解读]

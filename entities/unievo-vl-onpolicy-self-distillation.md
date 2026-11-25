@@ -1,7 +1,7 @@
 ---
 title: "UniEvo-VL: On-policy Self-Distillation for Multimodal Model Self-improvement"
 created: 2026-10-06
-updated: 2026-10-06
+updated: 2026-11-25
 type: entity
 tags: [multimodal, post-training, self-distillation, rlvr, vision-language]
 sources: [raw/articles/unievo-vl-onpolicy-self-distillation-2609.38721]

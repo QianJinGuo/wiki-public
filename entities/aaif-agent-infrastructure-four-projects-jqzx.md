@@ -1,7 +1,7 @@
 ---
 title: "AAIF 一次纳入四个 Agent 基础设施项目：Agent Skills / Open Responses / OpenEnv / OpenSandbox"
 created: 2026-10-24
-updated: 2026-10-24
+updated: 2026-11-25
 type: entity
 tags: [agent, standards, governance, agent-skills, mcp, sandbox, open-source, ecosystem]
 sources: [raw/articles/aaif-agent-infrastructure-four-projects-jqzx]

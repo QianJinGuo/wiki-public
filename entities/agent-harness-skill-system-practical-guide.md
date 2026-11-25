@@ -2,7 +2,7 @@
 
 title: "Agent Harness Skill 系统实战指南 — Reference/Action 类型、动态注入与 frontmatter 全解"
 created: 2026-07-07
-updated: 2026-11-19
+updated: 2026-11-25
 type: entity
 tags: [agent-harness, skills, skilmd, frontmatter, reference-skill, action-skill, dynamic-context, anthropic, agent-teams, context-engineering, harness-engineering]
 sources:
@@ -160,7 +160,7 @@ Skill 注入主 Agent 上下文、与主对话共享 token 预算；Subagent 独
 
 ## 参考
 
-→ [raw/articles/gaLEAjOz8xLAi8ABnG855g|原文存档]
+→ 原文存档：`raw/articles/gaLEAjOz8xLAi8ABnG855g/article.md`
 
 [^1]: raw/articles/gaLEAjOz8xLAi8ABnG855g
 

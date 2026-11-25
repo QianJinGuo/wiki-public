@@ -1,7 +1,7 @@
 ---
 title: "agentic engineering 工程范式"
 created: 2026-06-12
-updated: 2026-11-24
+updated: 2026-11-25
 type: concept
 tags: [concept, agentic-engineering, karpathy, harness, verifier, paradigm]
 sources: [entities/karpathy-vibe-coding-agentic-engineering, entities/karpathy-最新访谈从-vibe-coding-到-agentic-engineering, entities/karpathy-vibe-coding-to-agentic-engineering, raw/articles/claude-code-之父最新访谈编程已经结束harness-将消失claude-code-将只有-100-行代码loop-才是未来, raw/articles/cat-wu-anthropic-pm-interview, raw/articles/jensen-huang-harrison-chase-harness-future-2026-07-16, raw/articles/karpathy-vibe-coding-agentic-engineering-v4, raw/articles/luo-fuli-ai-paradigm-shift]

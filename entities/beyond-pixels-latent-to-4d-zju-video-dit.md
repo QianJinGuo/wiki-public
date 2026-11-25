@@ -1,7 +1,7 @@
 ---
 title: "Beyond Pixels / Latent-to-4D：从视频 latent 直接走向 4D 世界（浙大）"
 created: 2026-08-20
-updated: 2026-10-06
+updated: 2026-11-25
 type: entity
 tags: [video-generation, 4d, latent, diT, world-model, multimodal]
 sources: [raw/articles/beyond-pixels-latent-to-4d-zju-video-dit]

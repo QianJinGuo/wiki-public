@@ -1,7 +1,7 @@
 ---
 title: "Agent Harness 演化论：从一次 LLM 调用到完整运行时（四框架机制拆解）"
 created: 2026-09-07
-updated: 2026-10-19
+updated: 2026-11-25
 type: entity
 tags: [harness, agent, architecture, evolution, tencent, pi, opencode, codex, hermes, runtime]
 sources: [raw/articles/from-llm-call-to-complete-harness-tencent-tech-2026]

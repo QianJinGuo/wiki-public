@@ -1,7 +1,7 @@
 ---
 title: "Game-the-LLM-Reviewer：专防 AI 审稿「错杀」的开源 Skill（PaperWeekly）"
 created: 2026-09-24
-updated: 2026-09-24
+updated: 2026-11-25
 type: entity
 tags: [skill, agent, llm-reviewer, peer-review, paper-writing, iclr, prompt-engineering]
 sources: [raw/articles/重生之我在iclr连中八篇专防ai审稿错杀的skill来了]

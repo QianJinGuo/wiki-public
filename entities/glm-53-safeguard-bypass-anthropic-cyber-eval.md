@@ -1,7 +1,7 @@
 ---
 title: "GLM-5.3 安全护栏绕过三通道：Anthropic 网络能力扩散评估"
 created: 2026-10-01
-updated: 2026-10-02
+updated: 2026-11-25
 type: entity
 tags: [anthropic, glm, zhipu, safety, red-team, open-model, cyber-capability, evaluation, frontier-safety]
 sources: [raw/articles/research-glm-5-3-and-the-spread-of-advanced-cyber-capabilities]

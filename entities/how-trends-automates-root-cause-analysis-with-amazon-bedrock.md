@@ -1,7 +1,7 @@
 ---
 title: "TReNDS 自动化根因分析（Strands Agents + Bedrock）"
 created: 2026-08-08
-updated: 2026-10-02
+updated: 2026-11-25
 type: entity
 tags: [agent, rca, observability, aws, bedrock, strands, incident-response, lambda]
 sources: [raw/articles/how-trends-automates-root-cause-analysis-with-amazon-bedrock]

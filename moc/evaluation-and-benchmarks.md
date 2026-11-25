@@ -1,7 +1,7 @@
 ---
 title: "Evaluation & Benchmarks 主题地图 (MOC)"
 created: 2026-06-15
-updated: 2026-08-29
+updated: 2026-11-25
 type: moc
 tags: [moc, evaluation, benchmark, verifier, agent-eval, methodology, 2026]
 sources: []
@@ -17,30 +17,30 @@ Agent 和 LLM 的可靠性不在模型能力本身，而在你能不能**系统�
 
 ## 核心方法论
 
-- [[entities/ai-evals-methodology|AI Evals 方法论 — 评测的三种方法（自动/人工/A-B）及各自适用场景
-- [[entities/evals-three-methods-of-ai-evaluation|Evals 到底在评什么 — Langfuse Lotte Verheyden 的三方法拆解
-- [[entities/llm-as-a-verifier-a-general-purpose-verification-framework|LLM-as-a-Verifier — Stanford/Berkeley/NVIDIA 联合框架，20 字母 token 细粒度验证，平局率 27%→0%
-- [[entities/better-harness-eval-trace-methodology|Harness Eval Trace 方法论 — Agent harness 级评测的追踪方法论
-- [[entities/anthropic|Anthropic 解构 Agent Evals — 官方视角的 Agent 评测方法论
-- [[entities/spotify-llm-evals-funnel-not-fork|LLM Evals: Funnel not Fork — Spotify 实践：eval 是漏斗不是分叉，42% 上线实验因次级指标回滚
+- [[entities/ai-evals-methodology|AI Evals 方法论 — 评测的三种方法（自动/人工/A-B）及各自适用场景]]
+- [[entities/evals-three-methods-of-ai-evaluation|Evals 到底在评什么 — Langfuse Lotte Verheyden 的三方法拆解]]
+- [[entities/llm-as-a-verifier-a-general-purpose-verification-framework|LLM-as-a-Verifier — Stanford/Berkeley/NVIDIA 联合框架，20 字母 token 细粒度验证，平局率 27%→0%]]
+- [[entities/better-harness-eval-trace-methodology|Harness Eval Trace 方法论 — Agent harness 级评测的追踪方法论]]
+- [[entities/anthropic|Anthropic 解构 Agent Evals — 官方视角的 Agent 评测方法论]]
+- [[entities/spotify-llm-evals-funnel-not-fork|LLM Evals: Funnel not Fork — Spotify 实践：eval 是漏斗不是分叉，42% 上线实验因次级指标回滚]]
 - [[concepts/eval-optimizer-firewall|评测防火墙 — eval 与 optimizer 的信息/执行隔离：dev 轨迹隐藏、tests 不进镜像+拒评语义、oracle-zero 曲线、确定性检查先行]]
 
 ## Agent 评测工具与框架
 
-- [[entities/agent-evalkit-aws-opensource-cli-agent-eval-toolkit|Agent EvalKit — AWS 开源 CLI Agent 评测工具
-- [[entities/agent-eval-wallezhang-yaml-driven-agent-evaluation|YAML 驱动的 Agent 评测框架 — WalleZhang 声明式评测
-- [[entities/claw-swe-bench-harness-evaluation-benchmark-tokenrhythm|CLAW SWE-Bench — 首个 harness 影响评测基准，8 语言 350 任务
-- [[entities/claude-code-performance-benchmarking|Claude Code 性能基准测试 — 编码 Agent 性能量化
-- [[entities/build-custom-code-based-evaluators-in-amazon-bedrock-agentco|Bedrock 自定义评测器 — AWS 托管 Agent 评测构建
-- [[entities/agent-memory-evaluation-landscape-taobao-survey|Agent 记忆评测全景 — 淘宝团队记忆系统评测调研
+- [[entities/agent-evalkit-aws-opensource-cli-agent-eval-toolkit|Agent EvalKit — AWS 开源 CLI Agent 评测工具]]
+- [[entities/agent-eval-wallezhang-yaml-driven-agent-evaluation|YAML 驱动的 Agent 评测框架 — WalleZhang 声明式评测]]
+- [[entities/claw-swe-bench-harness-evaluation-benchmark-tokenrhythm|CLAW SWE-Bench — 首个 harness 影响评测基准，8 语言 350 任务]]
+- [[entities/claude-code-performance-benchmarking|Claude Code 性能基准测试 — 编码 Agent 性能量化]]
+- [[entities/build-custom-code-based-evaluators-in-amazon-bedrock-agentco|Bedrock 自定义评测器 — AWS 托管 Agent 评测构建]]
+- [[entities/agent-memory-evaluation-landscape-taobao-survey|Agent 记忆评测全景 — 淘宝团队记忆系统评测调研]]
 
 ## LLM 通用评测
 
-- [[entities/ai-job-interview-model-evaluation-mollick|Mollick AI 面试评测 — 用面试题做 LLM 评测
-- [[entities/adversarial-verification|对抗验证 — 红队/对抗测试方法论
-- [[entities/aws-reinforcement-fine-tuning-llm-as-judge|LLM-as-Judge 微调 — AWS 强化微调 + LLM 评委
-- [[entities/eva-bench-data-2-voice-agent|EVA-Bench Data 2.0 — 语音 Agent 评测基准
-- [[entities/ai-traffic-cyberthreat-benchmark-2026|AI 流量网络威胁基准 2026 — 安全领域专项基准
+- [[entities/ai-job-interview-model-evaluation-mollick|Mollick AI 面试评测 — 用面试题做 LLM 评测]]
+- [[entities/adversarial-verification|对抗验证 — 红队/对抗测试方法论]]
+- [[entities/aws-reinforcement-fine-tuning-llm-as-judge|LLM-as-Judge 微调 — AWS 强化微调 + LLM 评委]]
+- [[entities/eva-bench-data-2-voice-agent|EVA-Bench Data 2.0 — 语音 Agent 评测基准]]
+- [[entities/ai-traffic-cyberthreat-benchmark-2026|AI 流量网络威胁基准 2026 — 安全领域专项基准]]
 
 ## 验证 vs 评测：关键区分
 

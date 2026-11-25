@@ -1,7 +1,7 @@
 ---
 title: "OpenViking 三论文：VikingMem 记忆管理 + TrieHI 目录感知向量检索 + VikingRAG 分层按需读取"
 created: 2026-10-10
-updated: 2026-10-12
+updated: 2026-11-25
 type: entity
 tags: [agent, memory, vector-database, rag, openviking, context-engineering]
 sources: [raw/articles/openviking-context-db-vikingmem-triehi-vikingrag-2026-10-10, raw/articles/openviking-experience-memory-agent-evolution-loop-2026]

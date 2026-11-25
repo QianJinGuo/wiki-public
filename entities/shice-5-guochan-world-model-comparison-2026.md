@@ -1,7 +1,7 @@
 ---
 title: "实测5款国产世界模型：LingBot-World 2.0 / Zing-0.5 / HappyOyster / 爱诗R1 / HY-World 2.1 横评"
 created: 2026-09-24
-updated: 2026-09-24
+updated: 2026-11-25
 type: entity
 tags: [world-model, evaluation, lingbot, zing, happyoyster, hy-world, aishi-r1, interactive-generation]
 sources: [raw/articles/实测5款国产世界模型看清生成世界走到了哪一步]
