@@ -2,7 +2,7 @@
 title: "verify-data：一个端到端的数据验数 Agent Skill"
 description: "10类标准化SQL模板、基准表自动发现与降级策略、17步条件触发流程、5大场景识别。效率提升2-4小时→30分钟，评审级报告自动产出"
 created: 2026-06-10
-updated: 2026-09-10
+updated: 2026-11-26
 tags: [agent, architecture, code, data, database, observability, skill, data-validation, data-engineering, alibaba]
 review_value: 7
 review_confidence: 7
@@ -16,8 +16,6 @@ review_category: practice
 ---
 
 # verify-data：一个端到端的数据验数 Agent Skill
-
-→ [[raw/articles/verify-data-agent-skill-data-validation|原文存档]] ^[raw/articles/verify-data-agent-skill-data-validation.md]
 
 ## 摘要
 
@@ -98,31 +96,41 @@ Agent 根据用户输入自动识别验数场景：^[raw/articles/verify-data-ag
 
 ## 深度分析
 
-### Agent Skill 作为可复用 SOP 的设计模式
+### Skill 作为领域 SOP：把个人经验翻译成机器可执行的流程
 
-verify-data 展示了一种重要的 Agent 设计模式：**将领域专家的完整工作流程编码为可复用的 Agent Skill**。这不是简单的 prompt engineering，而是：^[raw/articles/verify-data-agent-skill-data-validation.md]
+verify-data 的定位不是“一个更会写 SQL 的模型”，而是把数据团队中“验数”这个原本依附于个人经验的 review 环节，整体翻译成一份机器可执行的 SOP。原文对 Agent Skill 的定义——规定 Agent 在特定场景下做什么、怎么做、有哪些约束和红线，触发后按流程执行而不是靠模型临时发挥——正是这种思路的概括。 ^[raw/articles/verify-data-agent-skill-data-validation.md:16-21]
 
-- 将领域知识（数据分层体系、验数最佳实践）结构化编码
-- 将决策逻辑（场景识别、基准表选择、降级策略）条件化
-- 将质量标准（4 条红线、19 条踩坑记录）制度化
+这种编码发生在三个层面：
 
-这种模式可以推广到其他需要领域专业知识的重复性工作流程。 ^[raw/articles/verify-data-agent-skill-data-validation.md]
+- **术语层**：ADS/DWS/DWD/DIM 分层体系、CUBE 表、基准表、血缘等词汇被显式写进 Skill，让 Agent 与研发、评审共享同一套语言，避免“同一张表各自表述”的沟通损耗 ^[raw/articles/verify-data-agent-skill-data-validation.md:22-33]
+- **流程层**：从信息收集、SQL 生成、执行到报告产出的全链路被固化为条件触发流程，架构上划分为用户交互层、核心引擎层、外部依赖与输出产物四部分 ^[raw/articles/verify-data-agent-skill-data-validation.md:100-106]
+- **约束层**：4 条红线不是建议而是强制——到了关键节点不满足条件就不会继续，从机制上堵死边缘场景的自由发挥空间 ^[raw/articles/verify-data-agent-skill-data-validation.md:96-98]
 
-### 数据质量作为 Agent 的一等公民
+与普通 prompt 工程的关键差异在于可迭代性：19 条踩坑记录沉淀在 Skill 定义内，Agent 不会重复犯已知错误。Skill 由此成为随使用而增量的组织知识库，而非一次性的提示词，这与 [[concepts/skill-engineering-principles]] 和 [[entities/agent-skill-spec-building-design-patterns]] 中的方法论相印证。 ^[raw/articles/verify-data-agent-skill-data-validation.md:92-94]
 
-verify-data 将数据验证从"上线前的人工 review 环节"提升为 Agent 能力的一等公民。这意味着：^[raw/articles/verify-data-agent-skill-data-validation.md]
+### 覆盖度问题的根因：隐性检查清单的显式化
 
-- 数据质量检查可以自动化、常态化，而非仅在上线前进行
-- 验证标准可以通过 Skill 定义持续迭代，而非依赖个人经验
-- 验证结果有结构化的证据链，可以追溯和审计
+五大痛点中“覆盖度不够”居首：多数开发者只跑总量对比 SQL，漏掉维度逐项对比、汇总行一致性、CUBE 完整性、关联膨胀检测。原文的量化感受很直观——一张表若有 5 个维度组合、7 个指标，只跑一条总量对比等于只检查了冰山一角。 ^[raw/articles/verify-data-agent-skill-data-validation.md:41-51]
 
-### 与传统 Data Observability 工具的互补
+更隐蔽的失效模式是“代码理解偏差”：验数 SQL 复刻了研发代码的 JOIN 膨胀逻辑，两边数据“一致”但都是错的。这说明手工验数的问题不只是“漏跑”，而是验证逻辑与被验证逻辑共享同一个错误假设——验证本身失去了独立性。 ^[raw/articles/verify-data-agent-skill-data-validation.md:47]
 
-verify-data 与 Data Observability 工具（如 Monte Carlo、Great Expectations）形成互补：^[raw/articles/verify-data-agent-skill-data-validation.md]
+verify-data 的对策是把资深评审头脑中的隐性检查清单转写为 10 类标准化模板，其中 SQL 9（关联膨胀检测）与 SQL 10（日期维度关联校验）被单独标出为评审最高频退回原因；17 步流程中的 Step 3.6/3.7/4.8 依据表特征（涉及 JOIN、含日期维度、CUBE 表）自动激活。覆盖度由此由流程结构保证，而非由个人责任心保证。 ^[raw/articles/verify-data-agent-skill-data-validation.md:66-70]
 
-- Data Observability 工具侧重**持续监控**（异常检测、schema 变更）
-- verify-data 侧重**发布前验证**（结构化验数、评审级报告）
-- 两者结合可以覆盖数据质量的全生命周期
+### 基准表发现与降级策略：面向不完美世界的工程取舍
+
+基准表选错会让整场验数作废——口径不同（按买家去重 vs 按访客去重）的对比“验了半天结论无效”。verify-data 用两阶段策略替代“凭感觉选名字差不多的表”：先通过血缘分析沿上下游依赖定位候选基准表，再按维度/指标匹配度精排，并支持多基准表联合覆盖。 ^[raw/articles/verify-data-agent-skill-data-validation.md:43-51] ^[raw/articles/verify-data-agent-skill-data-validation.md:68]
+
+同样值得注意的是 4 种降级策略（历史分区基准、聚合自洽性校验、外部参考数据源、单表内部一致性检查）。其设计哲学是：验数的目标是让任何表都能得到有意义的结论，而不是“找不到理想基准就放弃”。这把验证结果从二元通过与失败，变成有梯度、可标注置信度的判断。 ^[raw/articles/verify-data-agent-skill-data-validation.md:68]
+
+场景识别（S1 新模型上线到 S5 未知）则处理了“输入本身不完整”的现实：模糊描述被识别为需要澄清的场景而非强行执行，相当于给 Agent 留了一条“承认无知”的出口，避免在最薄弱的环节上自信地输出错误结论。 ^[raw/articles/verify-data-agent-skill-data-validation.md:72-82]
+
+### 证据链与效率：面向组织的 Agent 必须自带审计接口
+
+效率数字（2-4 小时压缩到 30 分钟以内）背后的结构性变化是分工重构：传统流程要求开发者手写 5-6 条 SQL、逐条执行、肉眼比对、写文档、送评审，全程在场；verify-data 一句话触发后自动完成取数、跑 SQL、写报告、推送通知，人只保留“看结论、做决策”。 ^[raw/articles/verify-data-agent-skill-data-validation.md:84-86]
+
+但让自动化在企业环境跑得通的关键不是速度而是证据链：7 节标准格式报告、PASS/WARNING/FAIL 三档结论判定、完整可执行 SQL 附录、自动归档到协作文档。评审人员要的是可复核的证据，“我跑了几条 SQL 应该没问题”式的主观判断过不了评审，这是业务方不信任手工验数的根源。 ^[raw/articles/verify-data-agent-skill-data-validation.md:37-51] ^[raw/articles/verify-data-agent-skill-data-validation.md:88-90]
+
+由此可归纳一条通用判断：面向组织而非个人的 Agent，产出必须自带审计接口。verify-data 与 Monte Carlo、Great Expectations 等 Data Observability 工具的关系也应放在这一框架下理解——后者覆盖持续监控（异常检测、schema 变更），verify-data 覆盖发布前验证（结构化验数、评审级报告），两者共同覆盖数据质量生命周期的两端，可参考 [[concepts/data-quality-framework]]。 ^[raw/articles/verify-data-agent-skill-data-validation.md:88-90]
 
 ## 实践启示
 

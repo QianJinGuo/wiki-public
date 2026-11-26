@@ -2,7 +2,7 @@
 title: "AI Native 混沌工程——Agent 军团 + 共享黑板的韧性验证平台"
 description: "千问AI平台混沌工程实践：9 层 Agent 军团 + Redis 共享黑板 + 三道安全闸门 + 双进化回路（经验反馈+AI 飞轮）+ A2A 标准化接入，单次验证闭环数天→40 分钟、SRE 专职→0.1 人执行"
 created: 2026-08-06
-updated: 2026-09-10
+updated: 2026-11-26
 review_value: 8
 review_confidence: 9
 type: entity
@@ -62,17 +62,21 @@ AI Native 三大硬性标准：①全链路 AI 驱动（任何环节不能有人
 
 ## 深度分析
 
-### 与算力风洞的关系
+### 为什么混沌工程需要 Agent，而不是更复杂的脚本
 
-[[entities/算力风洞-ai-native-gpu-stability-wind-tunnel|算力风洞（阿里云 GPU 集群 AI Native 稳定性验证）]] 聚焦 GPU 芯片引入的稳定性验证（全栈仿真/原子化故障/知识图谱自进化）；本文聚焦专有云 IaaS 通用混沌工程（9 层 Agent 军团 + 共享黑板 + 双进化回路 + 三道闸门）。两者同属阿里 AI Native 稳定性/韧性验证体系，但一个面向芯片级 GPU 仿真验证、一个面向业务系统故障注入闭环——能力层不同，构成姊妹实践。^[raw/articles/qwen-ai-native-chaos-engineering-agent-corps-2026-08-06.md]
+传统工具（Chaos Mesh/ChaosBlade/Gremlin）并非不能自动化，而是只能自动化"确定性"的部分：注入参数、恢复动作、检查项都是预定义的。混沌工程真正昂贵的部分恰在确定性之外——异常是不是注入造成的？该不该立即中止？多故障叠加后恢复顺序怎么排？这些判断依赖经验，而经验散落在个体 SRE 的记忆里，脚本无法调用。^[raw/articles/qwen-ai-native-chaos-engineering-agent-corps-2026-08-06.md:19-25] 换句话说：脚本压缩的是每一步的耗时，Agent 消除的是步骤之间那个"人"。这就是文中"10 倍效率不是优化 10%"的真实含义——前者是局部加速，后者是链路重组。^[raw/articles/qwen-ai-native-chaos-engineering-agent-corps-2026-08-06.md:34-40] 由此得出的设计判据很锋利：任何仍需人工卡点的环节都说明该环节没被 Agent 化，"单 Case 0 人执行干预"因此不是 KPI 而是架构验收标准——它逼着团队把诊断、恢复协调、报告这些"软环节"全部纳入 AI 链路，而不是只把最容易脚本化的注入环节做完就收工。^[raw/articles/qwen-ai-native-chaos-engineering-agent-corps-2026-08-06.md:36-44]
 
-### 共享黑板 vs 其他多 Agent 协作模式
+### 共享黑板：故障归因从"对话流"变成"可审计账本"
 
-共享黑板的设计要点：Agent 互不感知（只认数据结构不认对方）→ 可随时增删不影响其他 Agent；Redis Hash + Lua 原子写 + 乐观锁 + ACL 角色隔离 + SSE 推送——把"协作"简化为"读写约定字段"。这与 [[concepts/harness-engineering-framework|Harness 框架]] 中状态外部化的思想一致：跨 Agent 状态显式外置到共享介质，而非在对话流中隐式传递。^[raw/articles/qwen-ai-native-chaos-engineering-agent-corps-2026-08-06.md]
+混沌工程里最关键的认知问题是归因：观测到的异常究竟是注入导致，还是系统本来就有？回答它需要把同一时间线上的多类证据对齐——基线快照、注入参数、监控流、恢复动作、诊断结论，分别由不同 Agent 产生。共享黑板把这条时间线物化为一份带 version 的账本：Lua 原子写 + 乐观锁保证并发写不互相覆盖，"调试与审计"字段类让每一步留痕，按角色的 ACL 读写隔离保证诊断 Agent 读到的证据不被执行 Agent 的后续写入污染。^[raw/articles/qwen-ai-native-chaos-engineering-agent-corps-2026-08-06.md:48-50] 这比消息传递式协作多出一个常被低估的性质：归因依据不依赖任何一段"对话上下文"，而是外置成可回放的结构化状态——出问题时可以审计"当时谁在什么版本写入了什么"，而不是依赖某个 Agent 重新回忆。这与 [[concepts/harness-engineering-framework|Harness 框架]] 的状态外部化同源：跨 Agent 状态显式外置到共享介质，协作退化为"读写约定字段"，于是增删 Agent（如外部诊断 Agent 走 A2A 接入）不破坏归因链。^[raw/articles/qwen-ai-native-chaos-engineering-agent-corps-2026-08-06.md:52-56]
 
-### 安全左移与不可逆操作授权
+### 双回路的咬合：检索缓存 × 权重分配
 
-三道闸门 + 执行 Agent 唯一破坏性权限 + 强制双签 + 环境白名单硬规则，与 tdsql-harness 的"不可逆动作只能由用户明示触发"原则同构——混沌工程是制造故障的业务，安全边界的严格程度直接决定平台可用性。^[raw/articles/qwen-ai-native-chaos-engineering-agent-corps-2026-08-06.md]
+两条进化回路不是并列而是咬合的。经验反馈回路本质是内容缓存：诊断→产品 Agent 判值→用例入库→编排优先检索，命中即复用注入/恢复命令与监控配置，未命中才回退 LLM 生成——它降低的是"做一次实验"的边际成本。^[raw/articles/qwen-ai-native-chaos-engineering-agent-corps-2026-08-06.md:86-89] AI 飞轮回路本质是预算分配：报告→工单→修复结果回传，抬高真实缺陷高发区的故障权重、压低误报场景，它决定的是"下一次实验花在哪里"。两者互为放大器：飞轮把实验频率推向高发现区，缓存让这些重复实验变便宜，单位人力成本的发现率因此持续上升；反过来若只有权重回路没有用例沉淀，高频场景仍要现场生成方案，飞轮会被成本拖住。这套设计里藏着一个需要警惕的动力学：权重向"已发现缺陷的区域"收敛，本质是把探索变成开采，长期可能自我强化盲区。文中用两条机制对冲——验收标准要求"持续发现未知缺陷"而非只看命中率；产品 Agent 的领域知识检索让用例价值判定不只依赖历史权重。^[raw/articles/qwen-ai-native-chaos-engineering-agent-corps-2026-08-06.md:34-40] 更大的意义在组织层：策略迭代从月度级到日级，经验从个人记忆变成用例库与证据链，韧性第一次成为可复利的组织资产，而非随人员流动蒸发的隐性知识。^[raw/articles/qwen-ai-native-chaos-engineering-agent-corps-2026-08-06.md:95-105]
+
+### 成本、激励与安全边界：平台能不能长大
+
+成本结构被这次重构改写：过去每次实验的成本是"专职 SRE 全程人力"（线性、随规模增长），现在是一次性平台建设 + 每次实验的算力与并发限流成本（边际递减），人只剩触发与确认两件事（0.1 人执行）。^[raw/articles/qwen-ai-native-chaos-engineering-agent-corps-2026-08-06.md:95-105] 激励设计同样关键：新产品接入被压到 AgentCard + 三个 HTTP 端点，接入成本低于不接入的成本，产品团队才有动力"插 USB"；工单闭环把修复责任推回产品团队，平台方与接入方的分工（能力实现 vs 接入支撑）靠协议而非流程维系。^[raw/articles/qwen-ai-native-chaos-engineering-agent-corps-2026-08-06.md:91-93] 安全边界则规定了自主性的上限：三道闸门递进（参数校验→预检双签→恢复判定）、环境白名单是 LLM 判断不可绕过的硬规则、执行 Agent 唯一持有破坏性权限——自主性每扩大一档，闸门就前移一档。这与 [[entities/tdsql-harness-subtraction-l0-l3-tencent-2026-08-06|tdsql-harness 的不可逆动作授权边界]] 同构：混沌平台是制造故障的业务，授权边界的严格程度直接决定它能否被允许存在。^[raw/articles/qwen-ai-native-chaos-engineering-agent-corps-2026-08-06.md:78-84] 文末"认知卸载 vs 认知外包"的区分点破了边界的位置：机器接管注入-盯盘-写报告的重复劳动，SRE 的经验判断不被替代而是被解放。^[raw/articles/qwen-ai-native-chaos-engineering-agent-corps-2026-08-06.md:111-113] 这一模式也在横向复制：[[entities/算力风洞-ai-native-gpu-stability-wind-tunnel|算力风洞]] 把同一套 AI Native 韧性验证范式用于 GPU 芯片引入的全栈仿真验证，一个面向业务系统故障注入、一个面向芯片级稳定性，构成阿里 AI Native 稳定性体系的姊妹实践。
 
 ## 实践启示
 
