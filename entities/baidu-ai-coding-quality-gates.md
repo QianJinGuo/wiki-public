@@ -2,7 +2,7 @@
 
 title: "百度 AI Coding 质量关卡实践"
 created: "2026-07-14"
-updated: 2026-09-12
+updated: 2026-11-28
 type: "entity"
 tags: [agent, ai-coding, quality-assurance, code-review, engineering, baidu]
 confidence: 0.8
@@ -80,6 +80,22 @@ Operating Rules 近零开销但需前置维护，规则腐化会静默失效；C
 ### 关卡会在哪里失败
 
 契约盲区——JSON 契约只断言 Agent 想到的状态，越窄漏检越多；自检冒充验证——偷懒是压力下的默认行为，门禁必须写成显式禁止项（禁以 lint/build 替代 CR、禁 CDP 不可用时假装验证）；沉淀时滞——QA 高频问题要反向写入才生效；量化仍有争议——diff 阈值与 VET 容差依赖人工判断。可验证性最终来自**视角切换**（判定者不是写代码的人）与**契约化**（把验收固化为 `contract.md`/`rules.md`/`review.json` 供机器核对）。 ^[raw/articles/baidu-agent-engineering-quality-gates.md]
+
+### 约束与自由度的设计张力
+
+门禁越多，Agent 的自由度越低、绕过门禁的动机越强，这套体系能落地的前提是约束被设计成"时机上收紧、过程中放手"：规范按改动类型渐进加载，Agent 只在执行对应类型的任务时才载入补充上下文，平时不背全量规则；强制门禁只设在代码写完与 UI 触及浏览器两个关键时机，其余过程不干预。约束以"何时触发"而非"全程监控"的形态存在，工程团队才不会感到交付被显著拖慢。这与 [[entities/ai-coding-agent-quality-defense-five-control-mechanisms|AI Coding 质量五重防线]] 同属把防线做成显式触发器、而非隐式氛围的思路。 ^[raw/articles/baidu-agent-engineering-quality-gates.md:45-52]
+
+### 验证产物即数据资产
+
+每个关卡的输出都被固化为可机器核对的结构化产物：契约模式的验收记录写入 `contract.md`，Pipeline 的任务状态由纯文本 `task.log` 管理、结果按文件维度聚合为 `review.json`。产物化带来三重复利——中断后可依据文件状态恢复、跨任务可积累（visual-verify 的 Memory 机制）、流水线可汇总复核。验证因此不再是"看过即弃"的瞬时动作，而是一次写入、多处消费的数据流；QA 高频问题能反向写回 Rules 与 Skill 成为复利资产，技术前提正是这些产物可被后续环节读取。 ^[raw/articles/baidu-agent-engineering-quality-gates.md:66-75] ^[raw/articles/baidu-agent-engineering-quality-gates.md:123-127,133-138]
+
+### 视角分离被制度化而非口头化
+
+"自己写的看着都对"是人与模型共有的偏差，体系的应对不是提醒模型客观，而是把判定者与生产者在结构上隔开：开发期 CR 交给独立 subagent，相当于强制切换到 reviewer 位置；视觉走查的每个候选问题单独起 subagent 回 DOM 确认真伪；Pipeline 则用 CLI 子进程并发审查。分离靠进程边界成立，不依赖任何提示词自觉，这是整条链路可信度的结构性来源。 [[concepts/coding-harness-engineering|Coding Harness Engineering]] 强调的正是这种角色结构优先的工程化思路。 ^[raw/articles/baidu-agent-engineering-quality-gates.md:56-58] ^[raw/articles/baidu-agent-engineering-quality-gates.md:115] ^[raw/articles/baidu-agent-engineering-quality-gates.md:126]
+
+### 审查吞吐的批处理化
+
+Pipeline CR 把代码审查当成批计算问题做规模工程：按目录前 3 级分组，让同模块文件落在同一 chunk 共享上下文；bin-packing 把每个 chunk 压进 500 行以内，限定单次审查的上下文规模；再以 10 个以上 CLI 子进程并发、按文件聚合结果。这条"拆分—并发—归并"链路与 map-reduce 同构，使审查吞吐随资源近似线性扩展，一次提交的完整变更不再受单实例逐文件处理的吞吐上限约束。拆分同时是成本与恢复设计：`task.log` 让流水线可中断续跑，聚合出的 `review.json` 直接对接可视化报告、唤起 IDE 修复与按文件分组 git worktree 的批量修复闭环。 ^[raw/articles/baidu-agent-engineering-quality-gates.md:121-127] ^[raw/articles/baidu-agent-engineering-quality-gates.md:129]
 
 ## 实践启示
 

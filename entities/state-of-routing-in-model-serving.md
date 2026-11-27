@@ -2,7 +2,7 @@
 title: "State of Routing in Model Serving"
 description: "Netflix ML 模型服务路由架构演进：从 Switchboard 到 Lightbulb 的架构演进之路"
 created: 2026-06-10
-updated: 2026-09-10
+updated: 2026-11-28
 tags: [architecture, mlops, model-serving, routing, netflix, grpc, envoy, infrastructure, a-b-testing]
 review_value: 7
 review_confidence: 7
@@ -16,8 +16,6 @@ review_category: practice
 ---
 
 # State of Routing in Model Serving
-
-→ [[raw/articles/state-of-routing-in-model-serving|原文存档]] ^[raw/articles/state-of-routing-in-model-serving.md]
 
 ## 摘要
 
@@ -64,34 +62,29 @@ Lightbulb 的核心思路是**将路由服务从直接请求路径中移除**：
 
 ## 深度分析
 
-### Objective 模式的设计智慧
+### Objective：平台与客户端之间的路由契约
 
-Objective 抽象是整个架构的核心设计决策。它将业务用例（如"继续观看排序"）与具体模型实现解耦，使得：^[raw/articles/state-of-routing-in-model-serving.md]
+Objective 不是一枚普通的枚举标签，而是一份双向契约。客户端只需声明业务用例（例如"继续观看行的排序"），就把"用哪个模型、落在哪个集群分片、归入哪些实验组"的整串决策让渡给平台。原文将其概括为三重目的，实质可以归结为一笔交换：客户端放弃对模型选择的控制权，换来一次集成、长期免维护的稳定性——此后模型换代、影子发布、实验扩量，都不再需要客户端改一行代码。^[raw/articles/state-of-routing-in-model-serving.md]
 
-- 研究人员可以自由替换模型而无需通知客户端
-- A/B 测试配置独立于服务代码发布周期
-- 多个模型版本可以并行服务不同用户群体
+这份契约能够成立，前提是 Netflix 对"模型"的定义被放大为端到端工作流：预处理、特征计算、推理、后处理全部封装进 serving 层，路由因此发生在工作流粒度上——选中一个 Objective 等于选中一整套执行计划，而非一个孤立的评分函数。这也解释了为什么 AWS API Gateway 或独立的 service mesh 代理无法胜任：通用网关擅长按路径和 header 转发流量，却无法理解"这个请求属于哪个实验分组、需要补齐哪些特征事实、处于 shadow 还是 canary 生命周期"这类 ML 语境。抽象层级的选择决定了基础设施的选型边界。
 
-这种模式本质上是一种**服务网格中的虚拟服务抽象**，但专门为 ML serving 场景定制。 ^[raw/articles/state-of-routing-in-model-serving.md]
+### 规则即配置：把实验逻辑从发布周期中剥离
 
-### 从 Switchboard 到 Lightbulb 的架构演进启示
+Switchboard Rules 的实质是"配置即发布"思路在 ML 领域的完整落地。研究员用 JavaScript 配置产出规则文件，Switchboard 与 serving 集群同时订阅消费同一份配置；A/B 分流、默认模型、渐进切流都改在配置通道里完成，独立于任何服务的代码发版节奏。ML 迭代中频率最高的部分——实验假设的验证——被放进了迭代成本最低的通道，配置系统天然提供的版本化、动态加载与快速回滚，正好覆盖了实验"试错—止损"的闭环需求。^[raw/articles/state-of-routing-in-model-serving.md]
 
-这一演进体现了经典的**中心化 vs 去中心化**架构权衡：^[raw/articles/state-of-routing-in-model-serving.md]
+控制面与数据面的分工同样值得拆解。控制面串起"模型到分片的分配 → 依赖加载与验证 → VIP 映射下发"三步；数据面则按"查询用户实验分组 → 选定模型 → 路由到分片 → 执行工作流"处理每个请求。两条链路靠同一份规则对齐，平台还需额外机制防止规则同步的竞态。这种为一致性付出的复杂度并没有在后来的重构中消失，而是被部分继承——它说明中心化方案的隐性成本往往藏在配置一致性上，而非请求转发本身。
 
+### 规模的三重反噬：可用性、延迟与数据纯度
 
-| 维度 | Switchboard（中心化） | Lightbulb（去中心化） |
-|------|---------------------|---------------------|
-| 请求路径 | 经过中心路由服务 | 直接到达目标集群 |
-| 延迟 | +10-20ms | 接近零额外延迟 |
-| 故障影响 | 单点故障影响全部 | 局部故障隔离 |
-| 复杂度 | 集中管理简单 | 需要多组件协调 |
-| 配置传播 | 实时生效 | 通过 Envoy 配置分发 |
+Switchboard 在规模压力下暴露的不是单一故障，而是三种性质迥异的代价同时显形。可用性维度：它是全部 ML 驱动体验的共享依赖，一个坏版本或一群 noisy neighbor 就足以瘫痪所有下游调用方。延迟维度：额外的序列化/反序列化引入 10-20ms 开销并叠加尾部放大，对延迟敏感的客户端意味着直接超时。第三个代价最容易被低估：中心路由遮蔽了请求来源，真实流量与测试流量在日志里难以区分，而训练数据一旦混入测试流量就会失真，租户隔离只能靠持续的定制化来勉强维持。^[raw/articles/state-of-routing-in-model-serving.md]
 
-Netflix 的选择表明：在 ML serving 规模增长后，将路由逻辑下沉到 sidecar（Envoy）是更可持续的架构方向。 ^[raw/articles/state-of-routing-in-model-serving.md]
+第三点揭示了 ML 路由与通用流量路由的本质差异：通用系统的路由缺陷损耗的是可用性与延迟这类传统 SLO；而 ML 系统的路由不透明还会向上游污染训练数据、向下游抬升 MLOps 运维成本。评估一个 serving 路由层的维度清单里，"数据面可观测性"必须与传统 SLO 并列——这是 Netflix 用真实代价换来的判断。
 
-### 与 Envoy 生态的整合
+### Lightbulb：把在线路由决策降维成元数据查找
 
-Netflix 利用 Envoy 已有的集群路由能力，仅需补充 Lightbulb 来处理 Envoy 原生不支持的上下文感知路由。这体现了**最大化复用基础设施**的工程原则，避免重新发明轮子。 ^[raw/articles/state-of-routing-in-model-serving.md]
+Lightbulb 的重构没有推翻 Switchboard 的抽象，而是改变了"路由"发生的位置：从一个逐请求的在线决策，降维成一次可缓存的元数据查找。规则被拆成两半——Model Serving Configuration 回答"该用哪个模型"，Routing Rules 回答"该去哪个 VIP"；Lightbulb 只负责把请求上下文解析为 routingKey 与 ObjectiveConfig，前者放入 header 供 Envoy 以最小开销完成转发，后者随请求体传递、刻意不进 header 以免膨胀。载荷与元数据就此各走各的通道，序列化大 payload 的延迟税被整体免除。^[raw/articles/state-of-routing-in-model-serving.md]
+
+这一拆分的巧妙在于复用与隔离的平衡。Envoy 本就承载 Netflix 全部应用间出站流量，让它顺带承接集群路由几乎零边际成本，Lightbulb 只补齐它天然缺失的上下文感知与实验参数注入；路由层按租户隔离后，单一用例的错误激增不再向其他用例级联，不同用例悬殊的延迟要求也各自得到满足。代价是中心化的"简单"被换成多组件协调的"复杂"，而 Netflix 判断这笔交换在百万 QPS 规模下是划算的——先集中验证抽象，再把实现下沉到 sidecar，构成一条可复用的演进路径。相关演进细节另见 [[entities/netflix-switchboard-lightbulb-model-routing]]；这套路由抽象与 Netflix 后来自建的 LLM serving 平台 [[entities/in-house-llm-serving-at-netflix]] 形成上下游衔接，说明 Objective 级抽象具备跨模型形态的延续性。
 
 ## 实践启示
 

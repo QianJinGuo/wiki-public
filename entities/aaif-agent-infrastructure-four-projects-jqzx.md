@@ -1,7 +1,7 @@
 ---
 title: "AAIF 一次纳入四个 Agent 基础设施项目：Agent Skills / Open Responses / OpenEnv / OpenSandbox"
 created: 2026-10-24
-updated: 2026-11-25
+updated: 2026-11-27
 type: entity
 tags: [agent, standards, governance, agent-skills, mcp, sandbox, open-source, ecosystem]
 sources: [raw/articles/aaif-agent-infrastructure-four-projects-jqzx]
@@ -60,6 +60,22 @@ AAIF 大使、AI/ML 架构师 Médéric Hurier 给了一个可操作的判断框
 从竞争结构看，这是一次典型的**基础层商品化、竞争上移**：Skills 格式、Responses 接口、沙箱 API、训练环境这些层被共同治理后，差异化被迫回到模型能力、产品体验与成本。对做 Agent 平台的团队，短期收益是迁移成本下降；中期风险是「标准兼容」变成新的营销话术——声明支持与通过验证之间有巨大间隙，前者的成本接近零。
 
 另一个值得注意的张力是**开放与安全的时序**：Skills 的恶意样本里 62% 靠自然语言指令而非代码作恶，意味着传统查杀式审查在结构上失效，安全能力必须下沉到执行隔离（沙箱）与指令审核（策略层）。这两个能力恰好分属 OpenSandbox 与治理层的工作范围——四个项目被同一基金会托管，理论上让「标准 + 隔离 + 审核」有了协同设计的可能，但目前看不到联合的安全基线。
+
+### 治理让渡的时机学：为什么是现在捐
+
+把四个捐赠放进同一条时间线看，这不是慈善，而是标准竞争的第二阶段。Agent Skills 的路径最有代表性：先以开放标准的形态（2025 年 12 月公开）养成事实生态——70 多个平台集成、100 万份 Skills、近 2.8 亿次安装——等生态规模大到「由原厂单方决定规则」成为其他厂商的现实顾虑时，再把名称、Logo、GitHub 组织与域名一并移交基金会。^[raw/articles/aaif-agent-infrastructure-four-projects-jqzx.md:50-52]^[raw/articles/aaif-agent-infrastructure-four-projects-jqzx.md:74-84] 捐的时机选在标准已经胜出之后：先赢下采用，再锁定治理，让渡的是控制权，换回的是「规则不随单一公司战略转向」的可信度。这也是 Nashawaty 所说「在接口和工具上合作、再争夺上层能力」的微观机制——基础设施层的控制权让渡，恰恰是为了把竞争资源集中到还能差异化的层面。^[raw/articles/aaif-agent-infrastructure-four-projects-jqzx.md:98-100] 值得注意捐赠的「成色」：Anthropic 连商标与域名一起移交，等于把自家最成功的 Agent 生态资产置于外部治理之下，这种让渡深度本身是一个信号——它赌的是标准的网络效应比控制权更值钱。[[entities/agent-skills-comprehensive-survey|Agent Skills 综述]]^[raw/articles/aaif-agent-infrastructure-four-projects-jqzx.md:74-76]
+
+### Open Responses 与锁定的再平衡：云厂商为何比模型厂商更需要开放接口
+
+接口之所以是核心利益，因为它是迁移成本的技术载体：Agent 应用一旦深度绑定某家模型的专有请求、响应与工具调用格式，换模型就等于重写代码，锁定在接口层完成。^[raw/articles/aaif-agent-infrastructure-four-projects-jqzx.md:120-124] Open Responses 的微妙之处在于，它是 OpenAI 把自家 Responses API 格式开放成行业规范——把既有先发优势转化为全行业默认项，同时把竞争押回模型能力本身。而 AWS 的积极姿态揭示了另一层利益结构：对云厂商而言，接口越开放、模型越可替换，用户的工作负载越敢于落进自己的平台，这解释了为什么 Amazon Bedrock 支持 Responses API 并投入核心维护者；开放标准与商业竞争并不矛盾，只是竞争的战场从接口移开了。^[raw/articles/aaif-agent-infrastructure-four-projects-jqzx.md:126-134]
+
+### 安全审核对象的转移：从查杀代码到审查自然语言
+
+VirusTotal 的样本给出了一个结构性信号：6,637 份恶意技能中 62% 不含恶意代码，攻击指令直接写在技能文档的自然语言里。^[raw/articles/aaif-agent-infrastructure-four-projects-jqzx.md:150-154] 这意味着 Skills 的分发优势（一份 SKILL.md 就能教会所有兼容 Agent 一套流程）同时也是攻击的规模优势——恶意指令搭开放格式的分发渠道扩散，而以恶意代码为匹配对象的查杀式审查，对「写得礼貌的提示词」在结构上失明。当然要守住样本口径：这 3.5 万份只是提交到 VirusTotal 的样本，恶意比例不能外推到整个生态，更不能反推开放标准不安全。^[raw/articles/aaif-agent-infrastructure-four-projects-jqzx.md:156] 结构性结论是：信任锚点必须从「工件来源可信」下移到「运行时隔离 + 指令审核」（见 [[concepts/agent-sandbox|Agent 沙箱]]），这正是沙箱（执行侧）与治理流程（策略侧）需要协同设计的原因。^[raw/articles/aaif-agent-infrastructure-four-projects-jqzx.md:146-156]
+
+### 两道考题是同一道题：可验证性
+
+「开放之后是否安全」与「中立治理能否落地」收敛于同一个能力：可验证性。互操作要靠跨厂商一致性测试来证明，中立要靠外部维护者占比与提案透明度来证明——会员数只是输入指标。^[raw/articles/aaif-agent-infrastructure-four-projects-jqzx.md:112-116]^[raw/articles/aaif-agent-infrastructure-four-projects-jqzx.md:160-164] 半年后值得回看两个硬指标：通过同一套兼容性测试的厂商数、外部维护者在规范演进中的实际份额——捐赠只是开场，让竞争对手用同一套规则把事做成才是关键。^[raw/articles/aaif-agent-infrastructure-four-projects-jqzx.md:164-166]
 
 ## 实践启示
 

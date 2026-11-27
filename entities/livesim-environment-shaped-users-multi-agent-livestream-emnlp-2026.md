@@ -1,7 +1,7 @@
 ---
 title: "LiveSim — 环境塑造型用户的多智能体直播生态模拟（EMNLP 2026）"
 created: 2026-09-10
-updated: 2026-09-10
+updated: 2026-11-27
 type: entity
 tags: [user-simulation, multi-agent, live-streaming, emnlp, risk-control, behavioral-modeling, agent, llm, simulation]
 sources: [raw/articles/livesim-environment-shaped-users-multi-agent-livestream-emnlp-2026]
@@ -63,6 +63,21 @@ RBHS 机制把用户状态建模与"环境—行为"关系解耦，分四步迭�
 - **评测指标的换维**。HIT 只涨 2.35% 而 Consist 涨 21.14%，说明**用"下一步准确率"评价用户模拟器会系统性低估机制价值**。对 agent 评测体系而言，"过程保真度"应当与"结果正确率"并列成为一等指标。→ [[concepts/agent-evaluation-benchmark-frameworks|Agent 评测基准框架]]
 - **闭环仿真是风险干预的沙盒**。水军比例实验给出了一个可操作的结论：干预窗口在**前 10 轮**，且保护效果取决于能否估计用户的动态状态而非完整内部状态。未来 LiveSim 生成的交互轨迹还可用于训练干预智能体、合成稀缺风险样本。
 - **与已有工作族的关系**：LiveSim 是该团队"真实直播场景风险理解与治理"系列的第四篇——Live or Lie（KDD 2026，直播间级风险评估 MIL + LiveRisk 基准）、Deja Vu in Plots（SIGIR 2026，跨场次证据 + RAG-LLM 风险识别）、Outsmarting the Chameleon（KDD 2026，反事实解耦应对策略性 OOD），LiveSim 补上了"用户为什么会上当"的沙盒模拟侧。→ [[entities/taolive-hat-harness-aware-training-arxiv-2608-15763|淘宝直播 HAT Harness-Aware Training]] 是同一"直播场景 + 风险建模"问题域下的另一条技术路线（训练侧 Harness 感知）。
+### 补丁为何建在状态层而非行为层
+
+补丁定义为"环境信号→用户状态"的规律而非"刺激→行为"的映射，本质是降噪：单次行为随机，直接拟合会学到噪声；状态更稳定，补丁在其上可组合、可复用。^[raw/articles/livesim-environment-shaped-users-multi-agent-livestream-emnlp-2026.md:60-62]
+
+### 水军效应的边际结构：前 10% 贡献过半增幅
+
+近三倍的转化增幅并非随水军浓度线性展开：仅前 10% 水军就贡献超过一半增幅，说明环境操纵力在低浓度区边际收益最高、随后快速饱和，平台检测资源在低浓度时性价比最高。^[raw/articles/livesim-environment-shaped-users-multi-agent-livestream-emnlp-2026.md:88-90]
+
+### 粗粒度状态估计是保护策略的最小充分接口
+
+保护实验刻意不读取完整内部状态：仅凭兴趣/信任/欲望/疲劳四个粗粒度估计值，保护成功率已达 58.68%。这把模拟保真度与状态可观测性解耦，一个最小状态接口即可支撑及时保护。^[raw/articles/livesim-environment-shaped-users-multi-agent-livestream-emnlp-2026.md:96-98]
+
+### 从"给定人格"到"环境作为自变量"
+
+多数智能体社会模拟（→ [[entities/mit-social-simulation-arena-ssa-eval-2026-09-28|MIT 社会模拟竞技场]]）把人格当给定输入，观察群体涌现；LiveSim 把环境当自变量、状态改变当因变量，模拟从"复现现象"升级为可做因果归因的实验台。^[raw/articles/livesim-environment-shaped-users-multi-agent-livestream-emnlp-2026.md:26-30]
 
 ## 局限与边界
 

@@ -1,7 +1,7 @@
 ---
 title: "GraphPlanner — 图记忆网络驱动多智能体 LLM 工作流路由"
 created: 2026-07-12
-updated: 2026-09-10
+updated: 2026-11-27
 type: entity
 tags: [ai, multi-agent, routing, graph, llm, workflow, planning, research]
 confidence: 0.8
@@ -58,19 +58,25 @@ Router 是轻量级图策略网络，读 GARNet 聚合的图表示后输出下�
 
 ## 深度分析
 
-### 为什么图记忆优于扁平检索
+### 从调用轨迹到可传播信号：GARNet 的图构造细节
 
-一次调用的价值不由单字段决定，而由「query 类型 × 角色 × 模型」的组合关系决定；扁平检索（历史 traces 塞 context 或向量库）只能靠相似度猜测，异构图却把 accuracy-cost 建成边、角色建成共享 hub，等于把「哪个模型适合当 Planner」编码成可沿边传播的结构信号。role hub 也是跨任务对齐锚点：query 字面相似度可能极低，却共享「拆解 → 并行执行 → 汇总」的同一角色模式。
+论文把「一次调用留下什么」列成六字段清单：query 是什么、哪个模型被调用、扮演什么角色、输出了什么、成本多少、最终是否正确。^[raw/articles/给多智能体llm装上图记忆工作流路由器搞定调用协作规划.md:85-89] 六个字段各支撑一类判断：query 用于相似任务召回，model×role 组合累积能力画像，cost 与 correctness 把「值不值」变成可计算的量。GARNet 进而把信息分装进两张图——Workflow Memory Graph 只装本轮推理中生成的子问题、角色调用与中间回复，Historical Memory Graph 装历史任务的 query、response、LLM-role 交互与 accuracy-cost——再通过共享 role hub nodes 把两图对齐，当前决策因此能读取历史沉淀的协作模式，而非文本相似的历史条目。^[raw/articles/给多智能体llm装上图记忆工作流路由器搞定调用协作规划.md:91-99]
 
-### Router 何时能泛化到未见过的 workflow
+这解释了图记忆优于扁平检索的机制：向量相似度只作用于 query 文本，而「哪个模型适合当 Planner」是挂在 model×role 组合上的关系性知识，不在任何单条 trace 上。role hub 把角色升格为跨任务对齐键——字面毫不相似的任务，只要同走「拆解→执行→汇总」的分工模式，就能经由同一组 hub 复用历史经验——多智能体分工结构由此可复用（参见 [[concepts/multi-agent-collaboration-patterns|Multi-Agent Collaboration Patterns]]）。
 
-两条证据（out-of-domain 78%、unseen LLMs 稳定）的机制在于策略学到的是「角色 × 能力 × 成本」协作模式，而非模型名或任务模板。边界：新任务推理结构落在已知角色组合覆盖内（多跳拆解、可并行子问题、需一致化输出的聚合）时迁移最有效；需要三角色之外的能力（长程工具使用、环境交互、外部检索）时角色空间即成上限。
+### 为什么训练必须绕开端到端求导
 
-### 失败模式与边界
+动作空间换维是根因：每步决策是二元组 Action = Agent Role + LLM Backbone，对应 Planner 拆解 atomic sub-queries、Executor 作答、Summarizer 聚合三类基础角色。^[raw/articles/给多智能体llm装上图记忆工作流路由器搞定调用协作规划.md:60-72] 复杂的数学、代码、多跳推理先拆解、多 Executor 分头、最后汇总，简单问题则一步 Executor 完成，结构由策略而非模板决定。^[raw/articles/给多智能体llm装上图记忆工作流路由器搞定调用协作规划.md:74-80] 整个链条含离散角色选择、模型调用、子问题分解与结果汇总，无法直接求导，论文故将其建模为 MDP 并以 PPO 训练。^[raw/articles/给多智能体llm装上图记忆工作流路由器搞定调用协作规划.md:105-107] 奖励三项分工明确：答对给 task utility，每步调用计 computational cost，超参 α 调节 accuracy-cost 权衡；学到的产物不是固定工作流模板，而是按 query 自适应决定「是否规划、是否拆解、调用几个模型、何时收口」的动态策略。^[raw/articles/给多智能体llm装上图记忆工作流路由器搞定调用协作规划.md:109-117] 效率上，较 Router-R1 等 RL-based 方法训练 GPU compute 显著更低，决策由轻量级图策略网络完成。^[raw/articles/给多智能体llm装上图记忆工作流路由器搞定调用协作规划.md:133-135]
 
-- **角色集合写死**：仅 Planner / Executor / Summarizer，缺 Verifier / Critic / Tool-user，「必须验证或调用外部世界」的任务无法被正确表达。
-- **成本可观测性依赖**：部署时的延迟、限流、缓存命中难以在训练中刻画，α 调好的策略在生产可能偏离最优。
-- **记忆规模与静态评估**：冷启动弱、分布漂移污染能力画像；traces 累积使检索成本增长，需淘汰／衰减机制；且 14 任务 6 领域仍是基准数据集，缺带副作用的端到端验证。
+对照面在于：multi-round router（如 Router-R1 的「思考—路由—聚合」）虽可多次调用，本质仍是连续选 backbone，不显式建模角色分工与协作结构。^[raw/articles/给多智能体llm装上图记忆工作流路由器搞定调用协作规划.md:43-45] 动作空间换维后，优化目标即从「选对模型」变为「组织一次协作」。
+
+### 基准数字要分层审读
+
+14 个任务、6 个领域的两阶段设计本身构成一组消融。^[raw/articles/给多智能体llm装上图记忆工作流路由器搞定调用协作规划.md:121-133] Phase 1 固定工作流、只优化各 agent 的 backbone 选择，GraphPlanner 仍取得最高平均准确率——第一层增益来自图记忆改善了「角色-模型」分配；Phase 2 放开自由生成 workflow，优势扩大到约 9.3%——第二层增益来自 query-specific 的结构本身。分层看才能判断可迁移性：若你的场景工作流是写死的，只能拿到第一层增益。泛化证据同样分两类：out-of-domain 任务（LogicGrid、MGSM、CommonGen）取得 78% 平均准确率，优于 GraphRouter、RouterDC、Router-R1；加入训练时未见过的 LLM 仍稳定更优，论文将其归因于 LLM-role graph 与历史交互记忆学到的是可迁移的协作模式，而非「某模型在某任务上」的标签记忆。^[raw/articles/给多智能体llm装上图记忆工作流路由器搞定调用协作规划.md:137-143] 需要指出的空档：全文没有给出 token 开销或延迟的绝对数字，「成本更低」仅有训练 GPU compute 的定性对比，生产环境的推理成本收益仍需自行测量。
+
+### 部署模式与失败边界
+
+两种推理模式直接对应部署形态：Inductive 不依赖保留的历史交互、部署轻量；Transductive 复用历史 interaction memory、性能更高，可按需在效率与性能间切换。^[raw/articles/给多智能体llm装上图记忆工作流路由器搞定调用协作规划.md:145-151] 这组开关同时暴露了四条边界。其一，角色集合只有三个，缺 Verifier / Critic / Tool-user，「必须验证或调用外部世界」的任务在动作空间内无法表达，能力上限在建模阶段即被锁死。其二，α 在训练分布上调优，生产中的延迟、限流、缓存命中难以进入奖励刻画，策略可能偏离成本最优。其三，Transductive 的收益以「有干净历史」为前提——冷启动只能退回 Inductive 档位；而 traces 持续累积会推高检索成本，分布漂移则会污染能力画像，需要淘汰/衰减机制（参见 [[concepts/memory-consolidation-decay|Memory Consolidation & Decay]]）。其四，评估停留在基准数据集，缺带副作用的端到端验证；query-specific workflow 生成的结构决策如何审计与复用，仍是开放问题（参见 [[concepts/agentic-workflow-patterns|Agentic Workflow Patterns]]）。
 
 ## 实践启示
 

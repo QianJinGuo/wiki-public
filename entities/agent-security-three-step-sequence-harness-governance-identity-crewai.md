@@ -3,7 +3,7 @@
 title: "Agent 安全三步法：先 Harness、再 Governance、最后 Identity（顺序反了一切白做）"
 description: "CrewAI 2B+ executions 提炼的安全落地序列：Harness → Governance → Identity。错把 Identity/Auth 当第一步是 Fortune 500 反复踩的坑——花 3 个月建 IAM，发现要 secure 的东西根本不可靠。"
 created: 2026-06-09
-updated: 2026-09-07
+updated: 2026-11-28
 type: entity
 tags: [agent, security, crewai, sequencing, harness-first, governance, identity, iam, deployment]
 source: "[[raw/articles/youre-building-agent-security-in-the-wrong-order]]"
@@ -159,6 +159,34 @@ Harness（工具系统）是 agent 安全的第一道防线——限制 agent �
 
 ### 5. 与 [[xz-utils-backdoor-maintainer-trust-hijack-2-years-on]] 的联系
 xz 后门事件从反面验证了身份层的重要性——如果开源项目的维护者身份验证更严格（多签、多因素认证），后门植入的难度会显著增加。 ^[raw/articles/youre-building-agent-security-in-the-wrong-order.md]
+
+### 6. 倒序投资的市场结构根源：security 是 buying gate
+
+顺序颠倒往往不是团队的技术误判，而是预算结构使然：security 是 enterprise 采购的 buying gate，团队必须先讲 security 故事才能解锁预算，厂商于是跟随需求，把资金与产品都压在第 3 步上。 ^[raw/articles/youre-building-agent-security-in-the-wrong-order.md:L38-L39]
+
+作者并未否定这些产品——governance 是真实需求、identity 工作必要、它们解决真实问题——失效的是前提（harness 已存在）。评估安全采购的关键因此不是"产品好不好"，而是"序列走到哪一步了"：在第 1 步未完成时购入第 3 步的 enforcement 工具，买到的是无法生效的策略。 ^[raw/articles/youre-building-agent-security-in-the-wrong-order.md:L41]
+
+### 7. "没有 deadline 的问题"：quiet failure 与延迟可见性
+
+三步中只有 harness 的问题没有外部 deadline：governance 有审计与合规压力兜底，identity 有 CISO 问责链条推动，而 harness 缺陷只在 staging 里以 quiet failure 的形式存在，直到某天在 production 变得非常大声。 ^[raw/articles/youre-building-agent-security-in-the-wrong-order.md:L39]
+
+这解释了为什么理性团队也会系统性跳过第 1 步：组织资源天然流向有 deadline 和明确问责人的工作。harness 的失败信号——state 漂移、handoff 崩溃、失败时 hallucinate 而非 surface to human——没有天然的告警接收人，因此需要人为制造 deadline，例如把"一句话说清 agent 行为与失败面"设为进入第 2 步的硬性门控，否则 quiet failure 会持续被更紧急的安全议程掩盖。 ^[raw/articles/youre-building-agent-security-in-the-wrong-order.md:L20]
+
+### 8. Flows 的三属性本质是为第 3 步制造 known surface area
+
+CrewAI 把 deterministic routing、observable execution、escalation paths 在授予不同 agency 等级之前 wired in（第 1 步），表面是可靠性工程，实质是在为第 2、3 步准备前置条件：只有执行可观察、路由确定，agent 的实际行为面才是 known surface area，zero trust 与 least privilege 才能落在真实边界上而非猜测上。 ^[raw/articles/youre-building-agent-security-in-the-wrong-order.md:L30]
+
+这揭示三步之间不是并列而是因果链：第 3 步"不猜不可预测的 agent 会做什么"的能力，完全由第 1 步的可观察性供给。反之，在没有可观察 harness 的系统上做 runtime identity enforcement，等于对未知行为面执行策略——这正是倒序场景下安全层"完美但没用"的技术根源。 ^[raw/articles/youre-building-agent-security-in-the-wrong-order.md:L34]
+
+与 [[concepts/harness-as-product-surface]] 的"harness 即产品面"视角互补：可观察性不是运维便利，而是安全策略可定义性的来源——policy 能匹配现实的前提是执行本身可见。 ^[raw/articles/youre-building-agent-security-in-the-wrong-order.md:L47]
+
+### 9. 一句话描述是序列门控判据，且序列是循环而非一次性
+
+"exactly what this agent does / where it can fail / what happens when it fails" 这三个 exactly 常被读作沟通技巧，但作者把它定位为 harness 完成的可操作判据：只有能对 security team 一句话讲清行为、失败面、失败后果，才证明 surface area 已知，governance 才能自然落位、policy 才能匹配现实。 ^[raw/articles/youre-building-agent-security-in-the-wrong-order.md:L45]
+
+更进一步，序列在工程实践中不是一次性排序而是持续纪律：agent 的工具集、数据源、agency 等级会演化，每次扩张都会让"一句话描述"失效，需要回到第 1 步重新收敛，再重新过一遍 governance 与 identity 的 scoping。"差异几乎从不是智能，而是顺序"因此应读作对每轮扩展都要重走的循环，而非仅指项目起点。 ^[raw/articles/youre-building-agent-security-in-the-wrong-order.md:L49]
+
+这一循环观与 [[entities/agent-harness-engineering-survey-2026]] 中 harness 需随负载持续再工程的论点一致。 ^[raw/articles/youre-building-agent-security-in-the-wrong-order.md:L45-L47]
 
 ## 实践启示
 

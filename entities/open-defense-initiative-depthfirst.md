@@ -3,7 +3,7 @@ title: "Open Defense Initiative | depthfirst"
 type: entity
 tags: [open-defense-initiative, depthfirst, ai-security, vulnerability-discovery, open-source, ffmpeg, mythos, gpt-5-5-cyber]
 created: 2026-05-15
-updated: 2026-09-10
+updated: 2026-11-28
 review_value: 7
 review_confidence: 8
 review_recommendation: strong
@@ -64,17 +64,21 @@ depthfirst 的 "模型强度不够" 论点包含三个维度： ^[raw/articles/o
 
 ## 深度分析
 
-### 安全 AI 的 "军备不对称"
+### 攻防不对称与正在关闭的时间窗口
 
-depthfirst 揭示了一个关键不对称：攻击者只需找到一个漏洞，防御者需要找到所有漏洞。当 Frontier AI 使漏洞发现成本大幅降低时，攻击方获益更大——因为攻击方不需要覆盖所有漏洞，只需找到一个可利用的。Open Defense Initiative 的本质是**缩小微软/Google 级别组织与普通开源项目之间的安全能力鸿沟**。 ^[raw/articles/open-defense-initiative-depthfirst.md]
+网络安全的老论断在 AI 时代被急剧放大：攻击者只需找到一个可利用的漏洞，防御者却必须覆盖全部攻击面。Frontier 模型（Mythos、GPT-5.5 Cyber）已展示对被广泛审查代码库的自主漏洞发现与利用能力，而开源权重模型的快速追赶意味着这种能力很快将无过滤地扩散到恶意行为者手中。depthfirst 反复强调 "narrow window"——防御侧的加固必须在能力扩散完成之前落地。还有一个结构性事实值得注意：文章开篇承认 frontier 级别的安全能力此前只属于极少数大公司，因此 Open Defense Initiative 的真正野心不止是补贴扫描，而是把 frontier 级安全能力下放到每一个开源维护者手里——本质是一次防御能力的平权运动。当开源模型的廉价推理成为常态，防御平权不是慈善，而是对冲"攻击平权"的唯一手段：恶意行为者用开源模型武装自己的速度，决定了防御方必须抢跑的距离。 ^[raw/articles/open-defense-initiative-depthfirst.md] 相关背景可参见 [[entities/25-the-unbearable-cheapness-of-open-weight-models]] 与 [[concepts/ai-safety]]。
 
-### Harness 优于模型的安全范式
+### "模型强度不够"：垂直安全系统的三层范式
 
-depthfirst 的 $1K vs $10K 对比不仅是成本差异，更是技术范式的差异。Anthropic 的 Mythos 是通用大模型，depthfirst 的优势来自：（1）针对安全场景优化的推理 harness；（2）专注可利用性的后训练模型；（3）全系统上下文验证。这证明在垂直领域，专用系统比通用大模型更具性价比——对 AI 安全创业公司是重要信号。 ^[raw/articles/open-defense-initiative-depthfirst.md]
+$1,000 vs $10,000 的对比容易被读成价格战，其实是一次范式宣言。depthfirst 明确感谢 frontier lab 推进通用模型能力，但随即指出安全场景"太深、太依赖上下文"，通用模型加通用 harness 无法稳定产出可靠且可操作的漏洞报告。其解法是三层系统优化：其一，让模型高效推理代码执行的专用 harness；其二，针对漏洞可利用性（exploitability）做后训练的定制模型——目标是"确认 bug 可被利用"而非"发现 bug"；其三，以全系统上下文做验证来提高精度。FFmpeg 案例是最有力的证据：在 Anthropic 用最强模型跑了数百次扫描之后，depthfirst 仍以约十分之一的计算成本找到 12 个残留的内存损坏漏洞。这印证了 [[concepts/harness-engineering]] 的核心判断——垂直领域的竞争力来自系统级优化而非模型选型；对 AI 安全方向的创业公司而言，专有 harness 与后训练数据才是真正的护城河，而 frontier lab 的每一次通用能力跃升反而会压低其基座成本。这与 [[concepts/agent-security-architecture]] 中"防御设计先于攻击面"的思路一致：安全能力的分层（模型层/harness 层/验证层）让系统可以随基座模型升级而整体受益，而不必每次都从零重训。 ^[raw/articles/open-defense-initiative-depthfirst.md]
 
-### 开源安全的治理激励
+### 可利用性验证：从漏洞数量到确定性
 
-depthfirst 的验证机制（域名邮箱、SECURITY.md、signed commits、MAINTAINERS/CODEOWNERS）实质上要求申请项目具备基本的安全治理结构。这创造了正向激励：想要免费安全扫描？先把安全治理做规范。这是 "安全即激励" 的治理创新。 ^[raw/articles/open-defense-initiative-depthfirst.md]
+值得单独展开的是 "exploitability" 被当作第一性目标这一选择。传统扫描器以"报出问题"为产出，海量误报反而压垮维护者的审查带宽；depthfirst 把验证链路（发现 → 确认可利用 → 生成修复）做成平台工作流的核心，其供应链可达性分析（"知道什么可达，而不只是什么存在"）与动态测试同样指向确定性而非数量。FFmpeg 提交已被官方接受、细节进入协调披露流程，说明这套系统产出的是能走完完整披露链路的真漏洞，而不是跑分数字。由此，安全工具的评估标准应当改变：关注单个漏洞的真实发现成本与确认率，而非扫描次数或底层模型跑分——误报率也是成本，只是被记在了维护者的时间账户上。对维护者社区而言，这个转折点还有一层含义：当自动化系统能够附带修复建议时，安全工作从"人工 triage 一堆可疑报告"变成"审查少量高置信度结论"，维护者本就稀缺的注意力第一次成为被保护的资源而非被消耗的资源。
+
+### 验证机制即治理：身份、权限与激励设计
+
+Open Defense Initiative 的申请流程值得当作开源安全治理的参考实现来读。身份验证要求申请者通过项目域名邮箱、SECURITY.md 安全联系人或与 signed commits 匹配的邮箱自证与项目的绑定，GitHub/GitLab 账号须出现在 MAINTAINERS/CODEOWNERS 或治理文档中、或有持续的合并与 review 记录，另需在项目可验证的官方渠道（pinned issue 评论、签名消息、官网声明）公开确认；权限验证则要求 merge rights 或明确委托，并需第二位维护者背书。这套身份+权限的双因素设计直接针对"冒充维护者骗取防御工具"的风险——把高强度安全 AI 交给错误的人等同于制造定向供应链事故，与 [[entities/xz-utils-backdoor-maintainer-trust-hijack-2-years-on]] 暴露的维护者信任劫持问题同构。更巧妙的是激励闭环：项目想获得免费扫描额度，先得把安全治理文档补齐——"安全即激励"让补贴计划本身成为推动开源治理规范化的杠杆。而按 rolling basis 接收、以下游影响优先的滚动准入，则把 $5M 额度变成对关键基础设施的持续投资，而非一次性营销事件。 ^[raw/articles/open-defense-initiative-depthfirst.md]
 
 ## 实践启示
 

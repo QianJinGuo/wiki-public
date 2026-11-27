@@ -143,5 +143,5 @@ graph TD
 > 庖丁解牛，始于见全牛，终于游刃有余。24 章给你见全牛的地图，真正的游刃有余要在实践中练。
 ## 相关链接
 
-- [[concepts/learning/learning-path-blueprint|学习路径蓝图]]
+- 学习路径蓝图
 - [[queries/wiki-quality-dashboard|Wiki 质量仪表盘]]
